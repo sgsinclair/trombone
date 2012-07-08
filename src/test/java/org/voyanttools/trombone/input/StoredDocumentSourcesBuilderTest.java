@@ -24,16 +24,13 @@ package org.voyanttools.trombone.input;
 
 import static org.junit.Assert.*;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
