@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Website Feed</title>
+        <description>Website Feed coded manually</description>
+        <link>http://www.yourdomain.com</link>
+        <dc:creator>Me (me@example.com)</dc:creator>
+        <item>
+            <title>A Special Event</title>
+            <description>A Special Teleconference for our customers about our products</description>
+            <link>http://www.yourdomain.com/events.htm</link>
+        </item>
+        <item>
+            <title>Announcing new Products</title>
+            <description>Announcing a new line of products</description>
+            <link>http://www.yourdomain.com/products.htm</link>
+        </item>
+    </channel>
+</rss>
