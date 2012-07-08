@@ -43,6 +43,9 @@ import java.util.Map.Entry;
  */
 public class FlexibleParameters implements Cloneable, Serializable {
 
+	/**
+	 * the serialization ID
+	 */
 	private static final long serialVersionUID = 2825799029392893403L;
 
 	/* obsolete code, keep for now, see also CorpusTokenizer
@@ -214,6 +217,11 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	
 	}
 	
+	/**
+	 * Add the specified {@link Properties}
+	 * 
+	 * @param properties the {@link Properties} to add
+	 */
 	public synchronized void addProperties(Properties properties) {
 
 		if (properties == null) {
@@ -226,6 +234,11 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	
 	}
 
+	/**
+	 * Add the specified {@link FlexibleParameters}
+	 * 
+	 * @param properties the {@link FlexibleParameters} to add
+	 */
 	public synchronized void addProperties(FlexibleParameters properties) {
 		
 		if (properties == null) {
@@ -286,6 +299,11 @@ public class FlexibleParameters implements Cloneable, Serializable {
 		
 	}
 	
+	/**
+	 * Create a clone of this object.
+	 * 
+	 * @return a new instance of {@link FlexibleParameters}
+	 */
 	public synchronized FlexibleParameters deepClone() {
 		
 		final FlexibleParameters clone = new FlexibleParameters();
@@ -326,6 +344,11 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	}
 
 	
+	/**
+	 * Get a {@link Set} of keys used in these parameters
+	 * 
+	 * @return a {@link Set} of keys used in these parameters
+	 */
 	public synchronized Set<String> getKeys() { 
 	 	
 		return this.entries.keySet(); 
@@ -381,6 +404,7 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	 * is URL encoded (in UTF-8) and a name can have multiple values:
 	 * <code>type=one&type=two</code
 	 * @return a {@link String} view
+	 * @throws UnsupportedEncodingException in the extremely unlikely event that the encoding isn't supported
 	 */
 	public synchronized String getAsQueryString() throws UnsupportedEncodingException {
 
@@ -415,6 +439,7 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	 * specified default value if the key does not exist.
 	 * 
 	 * @param key the key for the parameter value
+	 * @param defaultValue the default value to use if the parameter is not defined
 	 * @return the paramater value as a float
 	 */
 	public synchronized float getParameterFloatValue(String key, float defaultValue) {
@@ -636,8 +661,8 @@ public class FlexibleParameters implements Cloneable, Serializable {
 
 	/**
 	 * Set the parameter, removing any previously existing values.
-	 * @param key
-	 * @param value
+	 * @param key the key of the parameter
+	 * @param value the Object to set
 	 */
 	private synchronized void setParameterWithObject(String key, Object value) {
 	
@@ -646,13 +671,6 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	
 	}
 
-	/* might be useful in Controller.sanitizeProperties()
-	public void removeParameter(String key) {
-		
-		this.entries.remove(key);
-		
-	}
-	*/
 	
 	@Override
 	public synchronized String toString() {
@@ -661,27 +679,37 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	
 	}
 	
+    /**
+     * Remove the parameter specified by this key.
+     * 
+     * @param key of the parameter to remove
+     */
     public synchronized void removeParameter(String key) { 
     	
     	this.entries.remove(key);
     	
     }
     
+    /**
+     * Get the number of parameters (keys).
+     * 
+     * @return the number of parameters (keys)
+     */
     public synchronized int getKeyCount() {
 
     	return this.entries.size();
 
     }
     
-    public synchronized int size() {
-
-    	int count = 0;
-    	for (List<String> values : this.entries.values()) { // yes, this could be optimized by maintining count in every instance method here above
-    		count += values.size();
-    	}
-    	
-    	return count;
-
-    }
-    
+//    public synchronized int size() {
+//
+//    	int count = 0;
+//    	for (List<String> values : this.entries.values()) { // yes, this could be optimized by maintining count in every instance method here above
+//    		count += values.size();
+//    	}
+//    	
+//    	return count;
+//
+//    }
+//    
 }

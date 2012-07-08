@@ -239,6 +239,9 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	 * 
 	 * @param id
 	 *            the ID of the StoredDocumentSource
+	 * @param prefix
+	 *            a prefix that specifies an identifier for the parameters used
+	 *            during expansion
 	 * @return the multiple expanded stored document source ids File for the
 	 *         specified StoredDocumentSource
 	 */

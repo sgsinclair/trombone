@@ -29,8 +29,9 @@ import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.Storage;
 
 /**
- * @author sgs
- *
+ * A file-system implementation of {@link Storage}.
+ * 
+ * @author Stéfan Sinclair
  */
 public class FileStorage implements Storage {
 	
@@ -50,10 +51,18 @@ public class FileStorage implements Storage {
 	 */
 	private FileStoredDocumentSourceStorage documentSourceStorage = null;
 
+	/**
+	 * Create a new instance in the default location.
+	 */
 	public FileStorage() {
 		this(new File(DEFAULT_TROMBOME_DIRECTORY));
 	}
 
+	/**
+	 * Create a new instance at the specified File location
+	 * 
+	 * @param storageLocation the file location to use for this storage
+	 */
 	public FileStorage(File storageLocation) {
 		this.storageLocation = storageLocation;
 		if (storageLocation.exists()==false) {

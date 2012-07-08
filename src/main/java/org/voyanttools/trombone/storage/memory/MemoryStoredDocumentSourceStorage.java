@@ -38,18 +38,33 @@ import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
- * @author sgs
- *
+ * An in-memory (RAM) implementation of the {@link StoredDocumentSourceStorage}.
+ * 
+ * @author Stéfan Sinclair
  */
-public class MemoryStoredDocumentSourceStorage implements
+class MemoryStoredDocumentSourceStorage implements
 		StoredDocumentSourceStorage {
 	
+	/**
+	 * a map of IDs to {@link StoredDocumentSource}s
+	 */
 	private Map<String, StoredDocumentSource> storedDocumentSourcesMap;
+	
+	/**
+	 * a map of IDs to byte arrays
+	 */
 	private Map<String, byte[]> byteArraysMap;
+	
+	/**
+	 * a map of IDs to lists of expanded {@link StoredDocumentSource}s
+	 */
 	private Map<String, List<StoredDocumentSource>> multipleExpandedStoredDocumentSourcesMap;
 	
 	
 	
+	/**
+	 * Create a new instance. This should only be done by {@link MemoryStorage}.
+	 */
 	MemoryStoredDocumentSourceStorage() {
 		this.storedDocumentSourcesMap = new HashMap<String, StoredDocumentSource>();
 		this.byteArraysMap = new HashMap<String, byte[]>();
@@ -86,7 +101,6 @@ public class MemoryStoredDocumentSourceStorage implements
 
 		// create the stored document source and store it
 		Metadata metadata = inputSource.getMetadata();
-		ByteArrayOutputStream byteArrayInputStream = new ByteArrayOutputStream();
 		StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
 		storedDocumentSourcesMap.put(id, storedDocumentSource);
 		return storedDocumentSource;

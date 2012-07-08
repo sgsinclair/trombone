@@ -23,10 +23,26 @@ package org.voyanttools.trombone.storage;
 
 import java.io.IOException;
 
+/**
+ * This interface defines methods for interacting with stored objects using a storage strategy defined by the
+ * implementing class.
+ * 
+ * @author Stéfan Sinclair
+ */
 public interface Storage {
 	
+	/**
+	 * Get the {@link StoredDocumentSourceStorage} for this type of Storage.
+	 * 
+	 * @return the {@link StoredDocumentSourceStorage}
+	 */
 	public StoredDocumentSourceStorage getStoredDocumentSourceStorage();
 	
+	/**
+	 * Destroy (delete) this storage.
+	 * 
+	 * @throws IOException thrown if an exception occurs during deletion
+	 */
 	public void destroy() throws IOException;
 
 }

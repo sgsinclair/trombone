@@ -27,20 +27,26 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
+ * An in-memory implementation of the {@link StoredDocumentSourceStorage}. This
+ * is typically faster (like for testing) but of course the size of the store is
+ * limited by memory and is transient.
+ * 
  * @author Stéfan Sinclair
- *
  */
 public class MemoryStorage implements Storage {
-	
-	StoredDocumentSourceStorage storedDocumentSourceStorage;
-	
+
+	/**
+	 * the {@link StoredDocumentSourceStorage} for this storage
+	 */
+	private StoredDocumentSourceStorage storedDocumentSourceStorage;
+
+	/**
+	 * Create a new instance of this class.
+	 */
 	public MemoryStorage() {
 		storedDocumentSourceStorage = new MemoryStoredDocumentSourceStorage();
 	}
 
-	/* (non-Javadoc)
-	 * @see org.voyanttools.trombone.storage.Storage#getStoredDocumentSourceStorage()
-	 */
 	public StoredDocumentSourceStorage getStoredDocumentSourceStorage() {
 		return storedDocumentSourceStorage;
 	}
