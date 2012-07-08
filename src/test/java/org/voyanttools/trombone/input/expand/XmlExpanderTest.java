@@ -50,8 +50,7 @@ public class XmlExpanderTest {
 	@Test
 	public void test() throws IOException {
 
-		File tempDirectory = TestHelper.getTemporaryTestStorageDirectory();
-		Storage storage = new FileStorage(tempDirectory);
+		Storage storage = TestHelper.getDefaultTestStorage();
 		StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 		
 		StoredDocumentSourceExpander storedDocumentSourceExpander;
@@ -127,7 +126,7 @@ public class XmlExpanderTest {
 			if (fileInputStream!=null) {fileInputStream.close();}
 		}
 		
-		FileUtils.deleteDirectory(tempDirectory);
+		storage.destroy();
 
 	}
 

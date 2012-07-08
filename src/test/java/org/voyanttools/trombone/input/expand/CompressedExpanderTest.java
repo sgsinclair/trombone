@@ -43,8 +43,7 @@ public class CompressedExpanderTest {
 	@Test
 	public void testCompressed() throws IOException {
 
-		File tempDirectory = TestHelper.getTemporaryTestStorageDirectory();
-		Storage storage = new FileStorage(tempDirectory);
+		Storage storage = TestHelper.getDefaultTestStorage();
 		StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 		StoredDocumentSourceExpander storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage);
 		
@@ -62,7 +61,8 @@ public class CompressedExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandCompressed(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 1, expandedSourceDocumentSources.size());
 
-		FileUtils.deleteDirectory(tempDirectory);
+		storage.destroy();
+
 	}
 
 }

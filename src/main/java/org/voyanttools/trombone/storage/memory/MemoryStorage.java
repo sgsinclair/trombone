@@ -11,7 +11,7 @@
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * Foobar is distributed in the hope that it will be useful,
+ * Trombone is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -19,35 +19,34 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.util;
+package org.voyanttools.trombone.storage.memory;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.UUID;
 
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.file.FileStorage;
-import org.voyanttools.trombone.storage.memory.MemoryStorage;
+import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
- * @author sgs
+ * @author Stéfan Sinclair
  *
  */
-public class TestHelper {
+public class MemoryStorage implements Storage {
 	
-	public static String RESOURCES_PATH = TestHelper.class.getResource("../texts").getFile();
-	public static final String DEFAULT_TROMBOME_DIRECTORY = FileStorage.DEFAULT_TROMBOME_DIRECTORY+"_test";
-	public static Storage getDefaultTestStorage() {
-		return new MemoryStorage();
-	}
-	public static File getTemporaryTestStorageDirectory() throws IOException {
-		File file = new File(FileStorage.DEFAULT_TROMBOME_DIRECTORY+"_test_"+UUID.randomUUID());
-		System.out.println("Temporary storage created: "+file.toString());
-		return file;
-	}
+	StoredDocumentSourceStorage storedDocumentSourceStorage;
 	
-	public static File getResource(String relativeToTexts) {
-		return new File(RESOURCES_PATH+"/"+relativeToTexts);
+	public MemoryStorage() {
+		storedDocumentSourceStorage = new MemoryStoredDocumentSourceStorage();
+	}
+
+	/* (non-Javadoc)
+	 * @see org.voyanttools.trombone.storage.Storage#getStoredDocumentSourceStorage()
+	 */
+	public StoredDocumentSourceStorage getStoredDocumentSourceStorage() {
+		return storedDocumentSourceStorage;
+	}
+
+	public void destroy() throws IOException {
+		storedDocumentSourceStorage = new MemoryStoredDocumentSourceStorage();
 	}
 
 }

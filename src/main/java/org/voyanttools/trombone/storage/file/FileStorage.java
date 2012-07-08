@@ -22,7 +22,9 @@
 package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
+import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -66,5 +68,8 @@ public class FileStorage implements Storage {
 		return documentSourceStorage;
 	}
 
+	public void destroy() throws IOException {
+		FileUtils.deleteDirectory(storageLocation);
+	}
 
 }

@@ -46,8 +46,7 @@ public class ArchiveExpanderTest {
 	@Test
 	public void testArchives() throws IOException {
 		
-		File tempDirectory = TestHelper.getTemporaryTestStorageDirectory();
-		Storage storage = new FileStorage(tempDirectory);
+		Storage storage = TestHelper.getDefaultTestStorage();
 		StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 		StoredDocumentSourceExpander storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage);
 		
@@ -59,14 +58,6 @@ public class ArchiveExpanderTest {
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Zip archive file should contain two content files", 2, expandedSourceDocumentSources.size());
-
-		// use the same file to ensure that we haven't created more stored documents (multiple stored documents should be stored as list)
-		// assume that "stored_document_sources" is the right file name
-		int fileCount = new File(tempDirectory, "stored_document_sources").list().length;
-		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.zip"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
-		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
-		assertEquals("same number of stored documents as before", fileCount, new File(tempDirectory, "stored_document_sources").list().length);
 
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.tar"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
@@ -83,7 +74,7 @@ public class ArchiveExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 2, expandedSourceDocumentSources.size());
 
-		FileUtils.deleteDirectory(tempDirectory);
+		storage.destroy();
 	}
 
 }

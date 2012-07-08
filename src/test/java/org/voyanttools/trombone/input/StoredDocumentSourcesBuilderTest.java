@@ -45,8 +45,7 @@ public class StoredDocumentSourcesBuilderTest {
 
 	@Test
 	public void test() throws IOException, URISyntaxException {
-		File tempDirectory = TestHelper.getTemporaryTestStorageDirectory();
-		Storage storage = new FileStorage(tempDirectory);
+		Storage storage = TestHelper.getDefaultTestStorage();
 		FlexibleParameters parameters = new FlexibleParameters();
 		parameters.addParameter("string", "this is a test");
 		parameters.addParameter("file", TestHelper.getResource("xml/rss.xml").toString());
@@ -54,7 +53,7 @@ public class StoredDocumentSourcesBuilderTest {
 		ExpandedStoredDocumentSourcesBuilder builder = new ExpandedStoredDocumentSourcesBuilder(storage.getStoredDocumentSourceStorage(), parameters);
 		List<StoredDocumentSource> storedDocumentSources = builder.getStoredDocumentSources();
 		assertEquals("we should have three documents", 3, storedDocumentSources.size());
-		FileUtils.deleteDirectory(tempDirectory);
+		storage.destroy();
 	}
 
 }

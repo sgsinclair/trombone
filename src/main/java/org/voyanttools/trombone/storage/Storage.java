@@ -21,8 +21,12 @@
  ******************************************************************************/
 package org.voyanttools.trombone.storage;
 
+import java.io.IOException;
+
 public interface Storage {
 	
 	public StoredDocumentSourceStorage getStoredDocumentSourceStorage();
+	
+	public void destroy() throws IOException;
 
 }
