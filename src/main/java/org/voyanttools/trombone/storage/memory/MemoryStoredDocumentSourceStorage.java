@@ -84,18 +84,18 @@ class MemoryStoredDocumentSourceStorage implements
 		
 		// store the bytes
 		InputStream inputStream = null;
-		OutputStream outputStream = null;
+		ByteArrayOutputStream byteArrayOutputStream = null;
 		try {
 			inputStream = inputSource.getInputStream();
-			ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-			IOUtils.copy(inputStream, outputStream);
+			byteArrayOutputStream = new ByteArrayOutputStream();
+			IOUtils.copy(inputStream, byteArrayOutputStream);
 			byteArraysMap.put(id, byteArrayOutputStream.toByteArray());
 		} finally {
 			if (inputStream != null) {
 				inputStream.close();
 			}
-			if (outputStream != null) {
-				outputStream.close();
+			if (byteArrayOutputStream != null) {
+				byteArrayOutputStream.close();
 			}
 		}
 

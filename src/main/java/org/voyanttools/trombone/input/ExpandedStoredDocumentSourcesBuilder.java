@@ -95,6 +95,7 @@ public class ExpandedStoredDocumentSourcesBuilder {
 		this.storedDocumentSourceStorage = storedDocumentSourceStorage;
 		this.expander = new StoredDocumentSourceExpander(
 				storedDocumentSourceStorage, parameters);
+		this.parameters = parameters;
 	}
 
 	/**

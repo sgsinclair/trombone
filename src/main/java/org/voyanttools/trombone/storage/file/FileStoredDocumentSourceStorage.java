@@ -23,7 +23,6 @@ package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,8 +30,11 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
@@ -48,7 +50,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	/**
 	 * the raw bytes file name
 	 */
-	private static final String RAW_BYTES_FILENAME = "raw_bytes";
+	private static final String RAW_BYTES_FILENAME = "raw_bytes.gz";
 
 	/**
 	 * the metadata file name
@@ -123,12 +125,18 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 		}
 
 		InputStream inputStream = null;
+		OutputStream zippedOutputStream = null;
 		try {
 			inputStream = inputSource.getInputStream();
-			FileUtils.copyInputStreamToFile(inputStream, rawbytesFile);
+			OutputStream fileOutputStream = new FileOutputStream(rawbytesFile);
+			zippedOutputStream  = new GZIPOutputStream(fileOutputStream);
+			IOUtils.copy(inputStream, zippedOutputStream);
 		} finally {
 			if (inputStream != null) {
 				inputStream.close();
+			}
+			if (zippedOutputStream != null) {
+				zippedOutputStream.close();
 			}
 		}
 
@@ -152,9 +160,10 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	}
 
 	public InputStream getStoredDocumentSourceInputStream(String id)
-			throws FileNotFoundException {
+			throws IOException {
 		File file = getRawbytesFile(id);
-		return new FileInputStream(file);
+		FileInputStream fileInputStream = new FileInputStream(file);		
+		return new GZIPInputStream(fileInputStream);
 	}
 	
 	public List<StoredDocumentSource> getMultipleExpandedStoredDocumentSources(

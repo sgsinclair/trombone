@@ -49,7 +49,7 @@ public class StoredDocumentSourcesBuilderTest {
 		parameters.addParameter("file", TestHelper.getResource("xml/").toString());
 		ExpandedStoredDocumentSourcesBuilder builder = new ExpandedStoredDocumentSourcesBuilder(storage.getStoredDocumentSourceStorage(), parameters);
 		List<StoredDocumentSource> storedDocumentSources = builder.getStoredDocumentSources();
-		assertEquals("we should have three documents", 3, storedDocumentSources.size());
+		assertEquals("we should have three documents", 6, storedDocumentSources.size());
 		storage.destroy();
 	}
 
