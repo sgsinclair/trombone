@@ -37,7 +37,8 @@ public class TestHelper {
 	
 	public static String RESOURCES_PATH = TestHelper.class.getResource("../texts").getFile();
 	public static final String DEFAULT_TROMBOME_DIRECTORY = FileStorage.DEFAULT_TROMBOME_DIRECTORY+"_test";
-	public static Storage getDefaultTestStorage() {
+	public static Storage getDefaultTestStorage() throws IOException {
+//		return new FileStorage(getTemporaryTestStorageDirectory());
 		return new MemoryStorage();
 	}
 	public static File getTemporaryTestStorageDirectory() throws IOException {
