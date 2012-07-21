@@ -53,5 +53,10 @@
   		<artifactId>commons-lang3</artifactId>
   		<version>3.1</version>
   	</dependency>
-  </dependencies>
+  <dependency>
+    <groupId>org.apache.tika</groupId>
+    <artifactId>tika-parsers</artifactId>
+    <version>1.2</version>
+  </dependency>
+    </dependencies>
 </project>
