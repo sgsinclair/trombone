@@ -74,7 +74,7 @@ class MemoryStoredDocumentSourceStorage implements
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.storage.StoredDocumentSourceStorage#getStoredDocumentSourceId(org.voyanttools.trombone.input.source.InputSource)
 	 */
-	public StoredDocumentSource getStoredDocumentSourceId(InputSource inputSource) throws IOException {
+	public StoredDocumentSource getStoredDocumentSource(InputSource inputSource) throws IOException {
 		String id = inputSource.getUniqueId();
 		
 		// check to see if it's already stored

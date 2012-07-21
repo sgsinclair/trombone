@@ -104,7 +104,7 @@ class CompressedExpander implements Expander {
 			childMetadata.setSource(Source.STREAM);
 			String id = DigestUtils.md5Hex(parentId+"uncompressed");
 			InputSource decompressedInputSource = new InputStreamInputSource(id, childMetadata, newInputStream);
-			StoredDocumentSource decompressedStoredDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(decompressedInputSource);
+			StoredDocumentSource decompressedStoredDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(decompressedInputSource);
 			expandedDocumentSources.addAll(this.expander.getExpandedStoredDocumentSources(decompressedStoredDocumentSource)); // expand this recursively
 
 			

@@ -92,7 +92,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 		}
 	}
 
-	public StoredDocumentSource getStoredDocumentSourceId(
+	public StoredDocumentSource getStoredDocumentSource(
 			InputSource inputSource) throws IOException {
 		Metadata metadata = inputSource.getMetadata();
 

@@ -146,7 +146,7 @@ public class ExpandedStoredDocumentSourcesBuilder {
 			throws IOException, URISyntaxException {
 		InputSource inputSource = new UriInputSource(uri);
 		StoredDocumentSource storedDocumentSource = this.storedDocumentSourceStorage
-				.getStoredDocumentSourceId(inputSource);
+				.getStoredDocumentSource(inputSource);
 		return this.expander
 				.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
@@ -164,7 +164,7 @@ public class ExpandedStoredDocumentSourcesBuilder {
 			throws IOException {
 		InputSource inputSource = new StringInputSource(string);
 		StoredDocumentSource storedDocumentSource = this.storedDocumentSourceStorage
-				.getStoredDocumentSourceId(inputSource);
+				.getStoredDocumentSource(inputSource);
 		return this.expander
 				.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
@@ -195,7 +195,7 @@ public class ExpandedStoredDocumentSourcesBuilder {
 		} else {
 			InputSource inputSource = new FileInputSource(file);
 			StoredDocumentSource storedDocumentSource = this.storedDocumentSourceStorage
-					.getStoredDocumentSourceId(inputSource);
+					.getStoredDocumentSource(inputSource);
 			storedDocumentSources.addAll(this.expander
 					.getExpandedStoredDocumentSources(storedDocumentSource));
 		}

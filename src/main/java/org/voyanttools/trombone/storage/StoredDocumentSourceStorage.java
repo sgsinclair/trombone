@@ -49,7 +49,7 @@ public interface StoredDocumentSourceStorage {
 	 * @throws IOException
 	 *             an IO exception during storage or retrieval
 	 */
-	public StoredDocumentSource getStoredDocumentSourceId(
+	public StoredDocumentSource getStoredDocumentSource(
 			InputSource inputSource) throws IOException;
 
 	/**

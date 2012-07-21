@@ -316,6 +316,6 @@ class XmlExpander implements Expander {
 		InputSource inputSource = new StringInputSource(id, metadata,
 				sw.toString());
 		return storedDocumentSourceStorage
-				.getStoredDocumentSourceId(inputSource);
+				.getStoredDocumentSource(inputSource);
 	}
 }

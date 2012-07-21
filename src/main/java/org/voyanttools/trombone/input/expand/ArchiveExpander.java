@@ -149,7 +149,7 @@ class ArchiveExpander implements Expander {
 					childMetadata.setSource(Source.STREAM);
 					String id = DigestUtils.md5Hex(parentId+filename);
 					InputSource inputSource = new InputStreamInputSource(id, childMetadata, new CloseShieldInputStream(archiveInputStream));
-					StoredDocumentSource storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+					StoredDocumentSource storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 					expandedDocumentSources.addAll(this.expander.getExpandedStoredDocumentSources(storedDocumentSource)); // expand this recursively
 				}
 			}
