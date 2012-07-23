@@ -48,12 +48,12 @@ public class CompressedExpanderTest {
 		List<StoredDocumentSource> expandedSourceDocumentSources;
 
 		inputSource = new FileInputSource(TestHelper.getResource("compressed/chars_latin1.txt.gz"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandCompressed(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 1, expandedSourceDocumentSources.size());
 
 		inputSource = new FileInputSource(TestHelper.getResource("compressed/chars_latin1.txt.bz2"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandCompressed(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 1, expandedSourceDocumentSources.size());
 

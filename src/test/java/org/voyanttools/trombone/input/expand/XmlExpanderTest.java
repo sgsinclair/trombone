@@ -61,7 +61,7 @@ public class XmlExpanderTest {
 		// make sure we have one document when no xmlDocumentXpath is specified
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage);
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
 		assertEquals("XML file with no Xpath should contain one document", 1, expandedSourceDocumentSources.size());
 
@@ -70,7 +70,7 @@ public class XmlExpanderTest {
 		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//item"});
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
 		assertEquals("XML file with no Xpath should contain one document", 2, expandedSourceDocumentSources.size());
 		inputStream = null;
@@ -89,7 +89,7 @@ public class XmlExpanderTest {
 		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//dc:creator"});
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
 		assertEquals("XML file with no Xpath should contain one document", 1, expandedSourceDocumentSources.size());
 		inputStream = null;
@@ -108,7 +108,7 @@ public class XmlExpanderTest {
 		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//item/title", "xmlDocumentsXpath=//item/description"});
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
 		assertEquals("XML file with no Xpath should contain one document", 2, expandedSourceDocumentSources.size());
 		inputStream = null;

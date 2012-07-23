@@ -27,6 +27,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
 
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.Source;
 
 /**
@@ -249,6 +250,33 @@ public class Metadata {
 			properties.setProperty("parent_"+key, this.properties.getProperty(key));
 		}
 		return new Metadata(properties);
+	}
+
+	public void setTitle(String value) {
+		this.properties.setProperty("title", value);
+	}
+
+	public void setAuthor(String value) {
+		this.properties.setProperty("author", value);
+	}
+	
+	public void setExtra(String key, String value) {
+		this.properties.setProperty("extra."+key, value);
+	}
+
+	public void setKeywords(String value) {
+		this.properties.setProperty("keywords", value);
+	}
+
+	public String getAuthor() {
+		return this.properties.getProperty("author", "");
+	}
+
+	public String getTitle() {
+		return this.properties.getProperty("title", "");
+	}
+	public String getKeywords() {
+		return this.properties.getProperty("keywords", "");
 	}
 
 }

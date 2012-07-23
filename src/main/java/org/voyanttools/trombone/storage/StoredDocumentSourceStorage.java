@@ -27,6 +27,7 @@ import java.util.List;
 
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.input.extract.ExtractableStoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 
 /**

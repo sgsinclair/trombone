@@ -60,7 +60,7 @@ public class FileStoredDocumentSourceStorageTest {
 
 		// create a first InputSource and get its information
 		InputSource inputSource1 = new StringInputSource(STRING_TEST);
-		StoredDocumentSource storedDocumentSource1 = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource1);
+		StoredDocumentSource storedDocumentSource1 = storedDocumentSourceStorage.getStoredDocumentSource(inputSource1);
 		String id1 = storedDocumentSource1.getId();
 		File inputSourceDirectory1 = ((FileStoredDocumentSourceStorage) storedDocumentSourceStorage).getDocumentSourceDirectory(id1);
 		long dir_modified = inputSourceDirectory1.lastModified();
@@ -81,7 +81,7 @@ public class FileStoredDocumentSourceStorageTest {
 		Assert.assertTrue("metadata from original and retrieved should be the same", inputSource1.getMetadata().equals(storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id1)));
 		
 		InputSource inputSource2 = new StringInputSource(STRING_TEST);
-		StoredDocumentSource storedDocumentSource2 = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource2);
+		StoredDocumentSource storedDocumentSource2 = storedDocumentSourceStorage.getStoredDocumentSource(inputSource2);
 		String id2 = storedDocumentSource2.getId();
 		Assert.assertEquals("old and new IDs should be identical", id1, id2);
 		

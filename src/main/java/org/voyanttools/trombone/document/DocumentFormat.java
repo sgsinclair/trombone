@@ -65,6 +65,16 @@ public enum DocumentFormat {
 	RTF("rtf"),
 	
 	/**
+	 * An Apple Pages file (.pages)
+	 */
+	PAGES("pages"),
+	
+	/**
+	 * An Open Document file (.odt).
+	 */
+	ODT("odt"),
+	
+	/**
 	 * An archive file ("ar", "cpio", "dump", "jar", "tar", "tgz", "tbz2", "zip")
 	 */
 	ARCHIVE("ar", "cpio", "dump", "jar", "tar.gz", "tar", "tgz", "zip"),

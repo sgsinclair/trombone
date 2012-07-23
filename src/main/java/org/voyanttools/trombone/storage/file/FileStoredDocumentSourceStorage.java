@@ -23,6 +23,7 @@ package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,8 +36,14 @@ import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.tika.detect.DefaultDetector;
+import org.apache.tika.detect.Detector;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.input.extract.ExtractableStoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -111,10 +118,25 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 			directory.mkdir(); // shouldn't need to create parents
 		}
 
-		// store metadata
+		storeStoredDocumentSourceMetadata(id, metadata);
+		
+		InputStream inputStream = null;
+		try {
+			inputStream = inputSource.getInputStream();
+			storeStoredDocumentSourceInputStream(id, inputStream);
+		} finally {
+			if (inputStream != null) {
+				inputStream.close();
+			}
+		}
+
+		return new StoredDocumentSource(directory.getName(), metadata);
+	}
+	
+	private void storeStoredDocumentSourceMetadata(String id, Metadata metadata) throws IOException {
 		OutputStream os = null;
 		try {
-			os = new FileOutputStream(metadataFile);
+			os = new FileOutputStream(getMetadataFile(id));
 			metadata.getProperties()
 					.storeToXML(
 							os,
@@ -123,25 +145,62 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 			if (os != null)
 				os.close();
 		}
-
-		InputStream inputStream = null;
+	}
+	
+	private void storeStoredDocumentSourceInputStream(String id, InputStream inputStream) throws IOException {
+		File rawbytesFile = getRawbytesFile(id);
 		OutputStream zippedOutputStream = null;
 		try {
-			inputStream = inputSource.getInputStream();
 			OutputStream fileOutputStream = new FileOutputStream(rawbytesFile);
 			zippedOutputStream  = new GZIPOutputStream(fileOutputStream);
 			IOUtils.copy(inputStream, zippedOutputStream);
-		} finally {
-			if (inputStream != null) {
-				inputStream.close();
-			}
+		}
+		finally {
 			if (zippedOutputStream != null) {
 				zippedOutputStream.close();
 			}
 		}
+	}
+
+	/*
+	public StoredDocumentSource getStoredDocumentSource(
+			ExtractableStoredDocumentSource extractableStoredDocumentSource)
+			throws IOException {
+
+		String id = extractableStoredDocumentSource.getUniqueId();
+		File directory = getDocumentSourceDirectory(id);
+		File metadataFile = getMetadataFile(id);
+		File rawbytesFile = getRawbytesFile(id);
+
+		// this directory and contents exists, so just return the DocumentSource
+		if (directory.exists()) {
+			if (metadataFile.exists() && rawbytesFile.exists()) {
+				// we'll grab the stored metadata in case it has more goodies
+				Metadata metadata = this.getStoredDocumentSourceMetadata(id);
+				return new StoredDocumentSource(id, metadata);
+			}
+			// let's keep going in case there was an error last time
+		} else {
+			directory.mkdir(); // shouldn't need to create parents
+		}
+
+		InputStream inputStream = null;
+		try {
+			inputStream = extractableStoredDocumentSource.getInputStream();
+			storeStoredDocumentSourceInputStream(id, inputStream);
+		} finally {
+			if (inputStream != null) {
+				inputStream.close();
+			}
+		}
+
+		Metadata metadata = extractableStoredDocumentSource.getMetadata();
+		storeStoredDocumentSourceMetadata(id, metadata);
 
 		return new StoredDocumentSource(directory.getName(), metadata);
+
 	}
+	*/
 
 	public Metadata getStoredDocumentSourceMetadata(String id)
 			throws IOException {
@@ -258,4 +317,5 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 		return new File(getDocumentSourceDirectory(id),
 				prefix+MULTIPLE_EXPANDED_STORED_DOCUMENT_SOURCE_IDS_FILENAME);
 	}
+
 }

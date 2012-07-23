@@ -52,22 +52,22 @@ public class ArchiveExpanderTest {
 		List<StoredDocumentSource> expandedSourceDocumentSources;
 		
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.zip"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Zip archive file should contain two content files", 2, expandedSourceDocumentSources.size());
 
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.tar"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Tar archive file should contain two content files", 2, expandedSourceDocumentSources.size());
 
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.tar.gz"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 2, expandedSourceDocumentSources.size());
 
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.tar.bz2"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSourceId(inputSource);
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 2, expandedSourceDocumentSources.size());
 
