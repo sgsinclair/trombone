@@ -50,6 +50,26 @@ public enum DocumentFormat {
 	XML("xml"),
 
 	/**
+	 * An XML document (.xml).
+	 */
+	RSS("xml"),
+
+	/**
+	 * An XML document (.xml).
+	 */
+	ATOM("xml"),
+
+	/**
+	 * An XML document (.xml).
+	 */
+	TEI("xml"),
+
+	/**
+	 * An XML document (.xml).
+	 */
+	TEICORPUS("xml"),
+	
+	/**
 	 * An MS Word file (.doc).
 	 */
 	MSWORD("doc"),
@@ -113,6 +133,18 @@ public enum DocumentFormat {
 	public boolean isSkippable() {
 		return false;
 		
+	}
+	
+	/**
+	 * Determine if this is an XML-based format.
+	 * 
+	 * @return whether or not this is an XML-based format
+	 */
+	public boolean isXml() {
+		for (String extension : extensions) {
+			if (extension.equals("xml")) return true;
+		}
+		return false;
 	}
 	
 	/**

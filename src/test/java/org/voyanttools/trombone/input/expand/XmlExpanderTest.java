@@ -85,6 +85,25 @@ public class XmlExpanderTest {
 			if (fileInputStream!=null) {fileInputStream.close();}
 		}
 		
+		// with no xmlDocumentXpath but splitDocuments we should have two for //item
+		parameters = new FlexibleParameters(new String[]{"inputFormat=RSS","splitDocuments=true"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
+		assertEquals("XML file with no Xpath should contain one document", 2, expandedSourceDocumentSources.size());
+		inputStream = null;
+		fileInputStream = null;
+		try {
+			inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(1).getId());
+			fileInputStream = new FileInputStream(TestHelper.getResource("xml/rss.xml.item2_xpath.xml"));
+			assertTrue(IOUtils.contentEquals(fileInputStream, inputStream));
+		}
+		finally {
+			if (inputStream!=null) {inputStream.close();}
+			if (fileInputStream!=null) {fileInputStream.close();}
+		}
+		
 		// with xmlDocumentXpath we should have one for dc:creator
 		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//dc:creator"});
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);

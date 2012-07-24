@@ -127,8 +127,24 @@ class XmlExpander implements Expander {
 
 		String[] xmlDocumentsXpaths = parameters
 				.getParameterValues("xmlDocumentsXpath");
+
+		// check to see if we need to set xmlDocumentsXpath using defaults for format
+		if (xmlDocumentsXpaths.length == 0 && parameters.getParameterBooleanValue("splitDocuments") && parameters.getParameterValue("inputFormat","").isEmpty()==false) {
+			DocumentFormat format = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat").toUpperCase());
+			switch (format) {
+			case RSS:
+				xmlDocumentsXpaths = new String[]{"//item"}; break;
+			case ATOM:
+				xmlDocumentsXpaths = new String[]{"//entry"}; break;
+			case TEICORPUS:
+				xmlDocumentsXpaths = new String[]{"//TEI"}; break;
+			}
+		}
+
 		String joinedXmlDocumentsXpaths = StringUtils.join(xmlDocumentsXpaths);
-		if (xmlDocumentsXpaths.length == 0) {
+		
+		
+		if (xmlDocumentsXpaths.length == 0) {			
 			childStoredDocumentSources.add(storedDocumentSource);
 			return childStoredDocumentSources;
 		}

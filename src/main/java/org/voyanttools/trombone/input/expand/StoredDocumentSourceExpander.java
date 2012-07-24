@@ -109,9 +109,7 @@ public class StoredDocumentSourceExpander implements Expander {
 		} else if (format == DocumentFormat.COMPRESSED) {
 			storedDocumentSources
 					.addAll(expandCompressed(storedDocumentSource));
-		} else if (format == DocumentFormat.XML
-				&& parameters.getParameterValue("xmlDocumentXpath", "")
-						.isEmpty() == false) {
+		} else if (format.isXml()) {
 			storedDocumentSources.addAll(expandXml(storedDocumentSource));
 		}
 
@@ -179,7 +177,7 @@ public class StoredDocumentSourceExpander implements Expander {
 			this.xmlExpander = new XmlExpander(storedDocumentSourceStorage,
 					parameters);
 		}
-		return this.xmlExpander
-				.getExpandedStoredDocumentSources(storedDocumentSource);
+		// this will deal fine when no expansion is needed
+		return this.xmlExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
 }
