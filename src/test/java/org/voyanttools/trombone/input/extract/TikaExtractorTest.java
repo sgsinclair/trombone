@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.document.Metadata;
@@ -58,6 +59,9 @@ public class TikaExtractorTest {
 		Metadata metadata;
 		String contents;
 		
+		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
+		line = line.substring(line.indexOf("I"));
+		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.pages"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
@@ -66,7 +70,7 @@ public class TikaExtractorTest {
 		assertEquals("author for Pages document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for Pages document", "test, Pages", metadata.getKeywords());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue("ensure we have some content in Pages", contents.contains("Il était une fois")==true);
+		assertTrue("ensure we have some content in Pages", contents.contains(line)==true);
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.doc"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -76,7 +80,7 @@ public class TikaExtractorTest {
 		assertEquals("author for MSWord (.doc) document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for MSWord (.doc) document", "test, MSWord", metadata.getKeywords());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue("ensure we have some content in MSWord (.doc)", contents.contains("Il était une fois")==true);
+		assertTrue("ensure we have some content in MSWord (.doc)", contents.contains(line)==true);
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.docx"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -86,7 +90,7 @@ public class TikaExtractorTest {
 		assertEquals("author for MSWord (.docx) document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for MSWord (.docx) document", "test, MSWord", metadata.getKeywords());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue("ensure we have some content in MSWord (.docx)", contents.contains("Il était une fois")==true);
+		assertTrue("ensure we have some content in MSWord (.docx)", contents.contains(line)==true);
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.rtf"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -96,7 +100,7 @@ public class TikaExtractorTest {
 		assertEquals("author for RTF document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for RTF document", "test, RTF", metadata.getKeywords());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue("ensure we have some content in RTF", contents.contains("Il était une fois")==true);
+		assertTrue("ensure we have some content in RTF", contents.contains(line)==true);
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.pdf"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -106,7 +110,7 @@ public class TikaExtractorTest {
 		assertEquals("author for PDF document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for PDF document", "test, PDF", metadata.getKeywords());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue("ensure we have some content in PDF", contents.contains("Il était une fois")==true);
+		assertTrue("ensure we have some content in PDF", contents.contains(line)==true);
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.htm"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -119,7 +123,7 @@ public class TikaExtractorTest {
 		assertTrue("strip out script tag from html", contents.contains("script")==false);
 		assertTrue("strip out style tag from html", contents.contains("style")==false);
 		assertTrue("strip out iframe tag from html", contents.contains("iframe")==false);
-		assertTrue("ensure we have some content in html", contents.contains("Il était une fois")==true);
+		assertTrue("ensure we have some content in html", contents.contains(line)==true);
 
 		storage.destroy();
 	}
