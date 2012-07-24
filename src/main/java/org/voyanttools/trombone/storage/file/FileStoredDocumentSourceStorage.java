@@ -23,7 +23,6 @@ package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,14 +35,8 @@ import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.tika.detect.DefaultDetector;
-import org.apache.tika.detect.Detector;
-import org.apache.tika.parser.AutoDetectParser;
-import org.apache.tika.parser.ParseContext;
-import org.apache.tika.parser.Parser;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
-import org.voyanttools.trombone.input.extract.ExtractableStoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -101,7 +94,6 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 
 	public StoredDocumentSource getStoredDocumentSource(
 			InputSource inputSource) throws IOException {
-		Metadata metadata = inputSource.getMetadata();
 
 		String id = inputSource.getUniqueId();
 		File directory = getDocumentSourceDirectory(id);
@@ -111,15 +103,13 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 		// this directory and contents exists, so just return the DocumentSource
 		if (directory.exists()) {
 			if (metadataFile.exists() && rawbytesFile.exists()) {
-				return new StoredDocumentSource(directory.getName(), metadata);
+				return new StoredDocumentSource(directory.getName(), inputSource.getMetadata());
 			}
 			// let's keep going in case there was an error last time
 		} else {
 			directory.mkdir(); // shouldn't need to create parents
 		}
 
-		storeStoredDocumentSourceMetadata(id, metadata);
-		
 		InputStream inputStream = null;
 		try {
 			inputStream = inputSource.getInputStream();
@@ -130,6 +120,9 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 			}
 		}
 
+		Metadata metadata = inputSource.getMetadata(); // get this after reading input stream in case it's changed (like after extraction)
+		
+		storeStoredDocumentSourceMetadata(id, metadata);
 		return new StoredDocumentSource(directory.getName(), metadata);
 	}
 	

@@ -27,6 +27,7 @@ import java.util.List;
 
 import org.voyanttools.trombone.document.DocumentFormat;
 import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -71,7 +72,7 @@ public class StoredDocumentSourceExtractor {
 			return storedDocumentSource;
 		}
 		else {
-			ExtractableStoredDocumentSource extractableStoredDocumentSource = new TikaExtractableStoredDocumentSource(tikaExtractor, storedDocumentSource, parameters);
+			InputSource extractableStoredDocumentSource = new TikaExtractableStoredDocumentSource(tikaExtractor, storedDocumentSource, parameters);
 			return  storedDocumentSourceStorage.getStoredDocumentSource(extractableStoredDocumentSource);
 		}
 	}

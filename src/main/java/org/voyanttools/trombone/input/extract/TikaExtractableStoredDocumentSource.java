@@ -24,8 +24,6 @@ package org.voyanttools.trombone.input.extract;
 import java.io.IOException;
 import java.io.InputStream;
 
-import javax.xml.transform.sax.TransformerHandler;
-
 import org.apache.commons.codec.digest.DigestUtils;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -36,7 +34,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  * @author sgs
  *
  */
-public class TikaExtractableStoredDocumentSource implements ExtractableStoredDocumentSource {
+public class TikaExtractableStoredDocumentSource implements InputSource {
 	
 	private String id;
 	

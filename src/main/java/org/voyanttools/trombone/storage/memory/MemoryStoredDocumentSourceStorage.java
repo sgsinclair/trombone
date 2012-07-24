@@ -34,7 +34,6 @@ import java.util.Map;
 import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
-import org.voyanttools.trombone.input.extract.ExtractableStoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -158,13 +157,6 @@ class MemoryStoredDocumentSourceStorage implements
 			List<StoredDocumentSource> archivedStoredDocumentSources,
 			String prefix) throws IOException {
 		this.multipleExpandedStoredDocumentSourcesMap.put(id+prefix, archivedStoredDocumentSources);
-	}
-
-	public StoredDocumentSource getStoredDocumentSource(
-			ExtractableStoredDocumentSource extractableStoredDocumentSource)
-			throws IOException {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }
