@@ -75,7 +75,7 @@ public class UriInputSource implements InputSource {
 		// establish connection to find other and default metadata
 		URLConnection c = null;
 		try {
-			c = uri.toURL().openConnection();
+			c = getURLConnection(uri, 15000, 10000);
 
 			// last modified of file
 			long modified = c.getLastModified();
@@ -104,10 +104,24 @@ public class UriInputSource implements InputSource {
 
 		this.id = DigestUtils.md5Hex(idBuilder.toString());
 	}
-
+	
+	private URLConnection getURLConnection(URI uri) throws MalformedURLException, IOException {
+		return getURLConnection(uri, 60000, 15000);
+	}
+	
+	private URLConnection getURLConnection(URI uri, int readTimeoutMilliseconds, int connectTimeoutMilliseconds) throws MalformedURLException, IOException {
+		URLConnection c = uri.toURL().openConnection();
+		c.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; Trombone)");
+        c.setReadTimeout(readTimeoutMilliseconds); 
+        c.setConnectTimeout(connectTimeoutMilliseconds);
+		return c;
+	}
+	
 	public InputStream getInputStream() throws MalformedURLException,
 			IOException {
-		return uri.toURL().openStream();
+		// let's hope that the connection is close when the stream is closed
+		URLConnection c = getURLConnection(uri);
+		return c.getInputStream();
 	}
 
 	public Metadata getMetadata() {
