@@ -142,10 +142,16 @@ public class TikaExtractor implements Extractor {
 	        }
 	        
 	        String extractedContent = sw.toString();
-	        if (storedDocumentSource.getMetadata().getDocumentFormat()==DocumentFormat.PDF) {
-	        	extractedContent = sw.toString().replaceAll("\\s+\\&\\#xD;\\s+", " ");
+	        DocumentFormat format = storedDocumentSource.getMetadata().getDocumentFormat();
+	        if (format==DocumentFormat.PDF) {
+	        	extractedContent = extractedContent.replaceAll("\\s+\\&\\#xD;\\s+", " ");
 	        	extractedContent = extractedContent.replaceAll("\\s+&nbsp;", " ");
 	        	extractedContent = extractedContent.replaceAll("<p/>", "");
+	        }
+	        else if (format==DocumentFormat.TEXT || format==DocumentFormat.UNKNOWN) {
+	        	extractedContent = extractedContent.replaceAll("&#xD;</p>", "</p>");
+	        	extractedContent = extractedContent.replaceAll("&#xD;&#xD;+", "</p>\n      <p>");
+	        	extractedContent = extractedContent.replaceAll("&#xD;", "<br />\n      ");
 	        }
 	        
 	        return new ByteArrayInputStream(extractedContent.getBytes("UTF-8"));

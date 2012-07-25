@@ -3,4 +3,5 @@
             <title>Announcing new Products</title>
             <description>Announcing a new line of products</description>
             <link>http://www.yourdomain.com/products.htm</link>
+            <author>Joe Blow</author>
         </item>

@@ -1,1 +1,1 @@
-﻿Il était une fois.Un texte intéressant et un test.
+﻿Il était une fois.Un <texte> intéressant & un test.

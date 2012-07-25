@@ -29,6 +29,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -62,6 +63,15 @@ public class TikaExtractorTest {
 		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		
+		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.txt"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("ensure we have two paragraphs in text", StringUtils.countMatches(contents, "<p>")==2);
+		assertTrue("ensure we've escaped & in text", contents.contains("&amp;")==true);
+		assertTrue("ensure we have some content in text", contents.contains(line)==true);
+
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.pages"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
