@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Trombone is a flexible text processing and analysis library used
+ cam * Trombone is a flexible text processing and analysis library used
  * primarily by Voyant Tools (voyant-tools.org).
  * 
  * Copyright (©) 2007-2012 Stéfan Sinclair & Geoffrey Rockwell
@@ -47,14 +47,15 @@ public class StoredDocumentSourceExtractor {
 	 */
 	private StoredDocumentSourceStorage storedDocumentSourceStorage;
 	
-	private TikaExtractor tikaExtractor;
+	private TikaExtractor tikaExtractor = null;
+	
+	private XmlExtractor xmlExtractor = null;
 
 	public StoredDocumentSourceExtractor(
 			StoredDocumentSourceStorage storedDocumentSourceStorage,
 			FlexibleParameters parameters) {
 		this.storedDocumentSourceStorage = storedDocumentSourceStorage;
 		this.parameters = parameters;
-		this.tikaExtractor = new TikaExtractor(storedDocumentSourceStorage);
 	}
 	
 	public List<StoredDocumentSource> getExtractedStoredDocumentSources(List<StoredDocumentSource> storedDocumentSources) throws IOException {
@@ -68,13 +69,16 @@ public class StoredDocumentSourceExtractor {
 	public StoredDocumentSource getExtractedStoredDocumentSources(
 			StoredDocumentSource storedDocumentSource) throws IOException {
 		DocumentFormat format = storedDocumentSource.getMetadata().getDocumentFormat();
-		if (format==DocumentFormat.XML) {
-			return storedDocumentSource;
+		InputSource extractedInputSource;
+		if (format.isXml()) {
+			if (xmlExtractor==null) {xmlExtractor = new XmlExtractor(storedDocumentSourceStorage, parameters);}
+			extractedInputSource =  xmlExtractor.getExtractableInputSource(storedDocumentSource);
 		}
 		else {
-			InputSource extractableStoredDocumentSource = new TikaExtractableStoredDocumentSource(tikaExtractor, storedDocumentSource, parameters);
-			return  storedDocumentSourceStorage.getStoredDocumentSource(extractableStoredDocumentSource);
+			if (tikaExtractor==null) {tikaExtractor = new TikaExtractor(storedDocumentSourceStorage, parameters);}
+			extractedInputSource =  tikaExtractor.getExtractableInputSource(storedDocumentSource);
 		}
+		return storedDocumentSourceStorage.getStoredDocumentSource(extractedInputSource);
 	}
 
 }

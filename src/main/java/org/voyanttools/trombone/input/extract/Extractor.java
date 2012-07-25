@@ -22,47 +22,14 @@
 package org.voyanttools.trombone.input.extract;
 
 import java.io.IOException;
-import java.io.InputStream;
 
-import org.apache.commons.codec.digest.DigestUtils;
-import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
  * @author sgs
  *
  */
-public class TikaExtractableStoredDocumentSource implements InputSource {
-	
-	private String id;
-	
-	private StoredDocumentSource storedDocumentSource;
-	
-	private Metadata metadata;
-	
-	private TikaExtractor tikaExtractor;
-
-	TikaExtractableStoredDocumentSource(TikaExtractor tikaExtractor, StoredDocumentSource storedDocumentSource, FlexibleParameters parameters) {
-		id = DigestUtils.md5Hex(storedDocumentSource.getId()+"-extracted");
-		this.tikaExtractor = tikaExtractor;
-		this.storedDocumentSource = storedDocumentSource;
-		this.metadata = storedDocumentSource.getMetadata();
-	}
-
-	public InputStream getInputStream() throws IOException {
-		InputSource inputSource = tikaExtractor.getInputSource(storedDocumentSource);
-		this.metadata = inputSource.getMetadata();		
-		return inputSource.getInputStream();
-	}
-
-	public Metadata getMetadata() {
-		return metadata;
-	}
-
-	public String getUniqueId() {
-		return id;
-	}
-
+public interface Extractor {
+	InputSource getExtractableInputSource(StoredDocumentSource storedDocumentSource) throws IOException;
 }

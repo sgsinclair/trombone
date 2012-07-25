@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <html>
  <head>
-  <title/>
+  <title>Titre du document test de HTML</title>
  </head>
  <body>
-  <p>Il était une fois un texte intéressant et un test.</p>
+  <p>Il était une fois.</p>
+  <p>un texte intéressant et un test.</p>
  </body>
 </html>
