@@ -64,7 +64,7 @@ public class UriInputSource implements InputSource {
 	 * @throws MalformedURLException
 	 *             thrown if the URI is malformed
 	 */
-	public UriInputSource(URI uri) throws MalformedURLException, IOException {
+	public UriInputSource(URI uri) throws IOException {
 		this.uri = uri;
 		this.metadata = new Metadata();
 		this.metadata.setLocation(uri.toString());
@@ -105,12 +105,18 @@ public class UriInputSource implements InputSource {
 		this.id = DigestUtils.md5Hex(idBuilder.toString());
 	}
 	
-	private URLConnection getURLConnection(URI uri) throws MalformedURLException, IOException {
+	private URLConnection getURLConnection(URI uri) throws IOException {
 		return getURLConnection(uri, 60000, 15000);
 	}
 	
-	private URLConnection getURLConnection(URI uri, int readTimeoutMilliseconds, int connectTimeoutMilliseconds) throws MalformedURLException, IOException {
-		URLConnection c = uri.toURL().openConnection();
+	private URLConnection getURLConnection(URI uri, int readTimeoutMilliseconds, int connectTimeoutMilliseconds) throws IOException {
+		URLConnection c;
+		try {
+			c = uri.toURL().openConnection();
+		}
+		catch (MalformedURLException e) {
+			throw new IllegalArgumentException("Attempt to use a malformed URL: "+uri, e);
+		}
 		c.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; Trombone)");
         c.setReadTimeout(readTimeoutMilliseconds); 
         c.setConnectTimeout(connectTimeoutMilliseconds);

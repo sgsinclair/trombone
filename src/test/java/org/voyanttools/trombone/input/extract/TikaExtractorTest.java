@@ -33,7 +33,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
-import org.voyanttools.trombone.input.ExpandedStoredDocumentSourcesBuilder;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.storage.Storage;

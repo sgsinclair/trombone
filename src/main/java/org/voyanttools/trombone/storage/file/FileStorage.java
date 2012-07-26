@@ -64,6 +64,7 @@ public class FileStorage implements Storage {
 	 * @param storageLocation the file location to use for this storage
 	 */
 	public FileStorage(File storageLocation) {
+		System.out.println("Trombone FileStorage location: "+storageLocation);
 		this.storageLocation = storageLocation;
 		if (storageLocation.exists()==false) {
 			storageLocation.mkdirs();

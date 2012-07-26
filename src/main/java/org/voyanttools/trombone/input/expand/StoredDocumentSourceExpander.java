@@ -27,6 +27,7 @@ import java.util.List;
 
 import org.voyanttools.trombone.document.DocumentFormat;
 import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -96,7 +97,17 @@ public class StoredDocumentSourceExpander implements Expander {
 		this.xmlExpander = null;
 		this.parameters = parameters;
 	}
-
+	
+	
+	public List<StoredDocumentSource> getExpandedStoredDocumentSources(List<InputSource> inputSources) throws IOException {
+		List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
+		for (InputSource inputSource : inputSources) {
+			StoredDocumentSource storedDocumentSource = this.storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+			storedDocumentSources.addAll(getExpandedStoredDocumentSources(storedDocumentSource));
+		}
+		return storedDocumentSources;
+	}
+	
 	public List<StoredDocumentSource> getExpandedStoredDocumentSources(
 			StoredDocumentSource storedDocumentSource) throws IOException {
 
