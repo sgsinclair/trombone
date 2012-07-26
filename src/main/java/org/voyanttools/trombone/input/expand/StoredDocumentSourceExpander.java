@@ -24,6 +24,11 @@ package org.voyanttools.trombone.input.expand;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import org.voyanttools.trombone.document.DocumentFormat;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -101,10 +106,23 @@ public class StoredDocumentSourceExpander implements Expander {
 	
 	public List<StoredDocumentSource> getExpandedStoredDocumentSources(List<InputSource> inputSources) throws IOException {
 		List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
+		ExecutorService executor = Executors.newCachedThreadPool();
+		List<Future<StoredDocumentSource>> list = new ArrayList<Future<StoredDocumentSource>>();
 		for (InputSource inputSource : inputSources) {
-			StoredDocumentSource storedDocumentSource = this.storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
-			storedDocumentSources.addAll(getExpandedStoredDocumentSources(storedDocumentSource));
+			Callable<StoredDocumentSource> worker = new CallableExpander(this.storedDocumentSourceStorage, inputSource);
+			Future<StoredDocumentSource> submit = executor.submit(worker);
+			list.add(submit);	
 		}
+		try {
+			for (Future<StoredDocumentSource> future : list) {
+				storedDocumentSources.add(future.get());
+			}
+		} catch (InterruptedException e) {
+			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
+		} catch (ExecutionException e) {
+			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
+		}
+		executor.shutdown();
 		return storedDocumentSources;
 	}
 	
@@ -190,5 +208,22 @@ public class StoredDocumentSourceExpander implements Expander {
 		}
 		// this will deal fine when no expansion is needed
 		return this.xmlExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+	}
+
+	private class CallableExpander implements Callable<StoredDocumentSource> {
+
+		private StoredDocumentSourceStorage storedDocumentSourceStorage;
+		private InputSource inputSource;
+		public CallableExpander(StoredDocumentSourceStorage storedDocumentSourceStorage,
+				InputSource inputSource) {
+			this.storedDocumentSourceStorage = storedDocumentSourceStorage;
+			this.inputSource = inputSource;
+		}
+
+		@Override
+		public StoredDocumentSource call() throws Exception {
+			return this.storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		}
+		
 	}
 }

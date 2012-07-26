@@ -24,6 +24,7 @@ package org.voyanttools.trombone.storage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -156,4 +157,5 @@ public interface StoredDocumentSourceStorage {
 	public void setMultipleExpandedStoredDocumentSources(String id,
 			List<StoredDocumentSource> archivedStoredDocumentSources,
 			String prefix) throws IOException;
+
 }

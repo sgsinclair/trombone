@@ -24,6 +24,11 @@ package org.voyanttools.trombone.input.extract;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import org.voyanttools.trombone.document.DocumentFormat;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -60,10 +65,26 @@ public class StoredDocumentSourceExtractor {
 	
 	public List<StoredDocumentSource> getExtractedStoredDocumentSources(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		List<StoredDocumentSource> extractedStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		ExecutorService executor = Executors.newCachedThreadPool();
+		List<Future<StoredDocumentSource>> list = new ArrayList<Future<StoredDocumentSource>>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			extractedStoredDocumentSources.add(getExtractedStoredDocumentSources(storedDocumentSource));
+			Callable<StoredDocumentSource> worker = new CallableExtractor(this, storedDocumentSource);
+			Future<StoredDocumentSource> submit = executor.submit(worker);
+			list.add(submit);	
 		}
+		try {
+			for (Future<StoredDocumentSource> future : list) {
+				extractedStoredDocumentSources.add(future.get());
+			}
+		} catch (InterruptedException e) {
+			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
+		} catch (ExecutionException e) {
+			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
+		}
+		executor.shutdown();
+	
 		return extractedStoredDocumentSources;
+
 	}
 
 	public StoredDocumentSource getExtractedStoredDocumentSources(
@@ -79,6 +100,25 @@ public class StoredDocumentSourceExtractor {
 			extractedInputSource =  tikaExtractor.getExtractableInputSource(storedDocumentSource);
 		}
 		return storedDocumentSourceStorage.getStoredDocumentSource(extractedInputSource);
+	}
+	
+	private class CallableExtractor implements Callable<StoredDocumentSource> {
+		
+		private StoredDocumentSourceExtractor extractor;
+		private StoredDocumentSource storedDocumentSource;
+
+		public CallableExtractor(
+				StoredDocumentSourceExtractor storedDocumentSourceExtractor,
+				StoredDocumentSource storedDocumentSource) {
+			this.extractor = storedDocumentSourceExtractor;
+			this.storedDocumentSource = storedDocumentSource;
+		}
+
+		@Override
+		public StoredDocumentSource call() throws Exception {
+			return this.extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		}
+		
 	}
 
 }

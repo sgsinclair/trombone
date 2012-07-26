@@ -38,6 +38,7 @@ import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.storage.AbstractStoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -45,7 +46,7 @@ import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
  * 
  * @author Stéfan Sinclair
  */
-class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
+class FileStoredDocumentSourceStorage extends AbstractStoredDocumentSourceStorage {
 
 	/**
 	 * the raw bytes file name

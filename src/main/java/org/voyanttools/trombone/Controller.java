@@ -63,7 +63,7 @@ public class Controller {
 	private void run() throws IOException {
 		
 		// this will all change to use tools instead
-		Storage storage = new MemoryStorage();
+		Storage storage = new FileStorage();
 		if (InputSourcesBuilder.hasParameterSources(parameters)) {
 			InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
 			List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
