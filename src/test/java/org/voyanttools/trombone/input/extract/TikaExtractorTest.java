@@ -64,7 +64,7 @@ public class TikaExtractorTest {
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.txt"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have two paragraphs in text", StringUtils.countMatches(contents, "<p>")==2);
@@ -73,7 +73,7 @@ public class TikaExtractorTest {
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.pages"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("title for Pages document", "Titre du document test de Pages", metadata.getTitle());
 		assertEquals("author for Pages document", "Stéfan Sinclair", metadata.getAuthor());
@@ -83,7 +83,7 @@ public class TikaExtractorTest {
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.doc"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("title for MSWord (.doc) document", "Titre du document test de MSWord", metadata.getTitle());
 		assertEquals("author for MSWord (.doc) document", "Stéfan Sinclair", metadata.getAuthor());
@@ -93,7 +93,7 @@ public class TikaExtractorTest {
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.docx"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("title for MSWord (.docx) document", "Titre du document test de MSWord", metadata.getTitle());
 		assertEquals("author for MSWord (.docx) document", "Stéfan Sinclair", metadata.getAuthor());
@@ -103,7 +103,7 @@ public class TikaExtractorTest {
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.rtf"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("title for RTF document", "Titre du document test de RTF", metadata.getTitle());
 		assertEquals("author for RTF document", "Stéfan Sinclair", metadata.getAuthor());
@@ -113,7 +113,7 @@ public class TikaExtractorTest {
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.pdf"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("title for PDF document", "Titre du document test de PDF", metadata.getTitle());
 		assertEquals("author for PDF document", "Stéfan Sinclair", metadata.getAuthor());
@@ -123,7 +123,7 @@ public class TikaExtractorTest {
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.htm"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("title for HTML document", "Titre du document test de HTML", metadata.getTitle());
 		assertEquals("author for HTML document", "Stéfan Sinclair", metadata.getAuthor());

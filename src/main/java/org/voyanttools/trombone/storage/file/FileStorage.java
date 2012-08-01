@@ -25,6 +25,8 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.lucene.store.NIOFSDirectory;
+import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -50,6 +52,8 @@ public class FileStorage implements Storage {
 	 * the handler for InputSource operations
 	 */
 	private FileStoredDocumentSourceStorage documentSourceStorage = null;
+	
+	private LuceneManager luceneManager = null;
 
 	/**
 	 * Create a new instance in the default location.
@@ -57,6 +61,8 @@ public class FileStorage implements Storage {
 	public FileStorage() {
 		this(new File(DEFAULT_TROMBOME_DIRECTORY));
 	}
+	
+	
 
 	/**
 	 * Create a new instance at the specified File location
@@ -80,6 +86,16 @@ public class FileStorage implements Storage {
 
 	public void destroy() throws IOException {
 		FileUtils.deleteDirectory(storageLocation);
+	}
+
+	@Override
+	public LuceneManager getLuceneManager() throws IOException {
+		if (luceneManager==null) {
+			File dir = new File(storageLocation, "lucene");
+			if (dir.exists()==false) {dir.mkdirs();}
+			luceneManager = new LuceneManager(new NIOFSDirectory(dir));
+		}
+		return luceneManager;
 	}
 
 }

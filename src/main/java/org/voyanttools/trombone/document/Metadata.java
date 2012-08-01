@@ -279,4 +279,11 @@ public class Metadata {
 		return this.properties.getProperty("keywords", "");
 	}
 
+	public void setLanguageCode(String lang) {
+		this.properties.setProperty("lang", lang);
+	}
+
+	public String getLanguageCode() {
+		return this.properties.getProperty("lang", "");
+	}
 }

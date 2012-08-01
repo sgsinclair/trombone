@@ -19,34 +19,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.storage;
-
-import java.io.IOException;
-
-import org.voyanttools.trombone.lucene.LuceneManager;
+package org.voyanttools.trombone.input.index;
 
 /**
- * This interface defines methods for interacting with stored objects using a storage strategy defined by the
- * implementing class.
- * 
- * @author Stéfan Sinclair
+ * @author sgs
+ *
  */
-public interface Storage {
-	
-	/**
-	 * Get the {@link StoredDocumentSourceStorage} for this type of Storage.
-	 * 
-	 * @return the {@link StoredDocumentSourceStorage}
-	 */
-	public StoredDocumentSourceStorage getStoredDocumentSourceStorage();
-	
-	public LuceneManager getLuceneManager() throws IOException;
-	
-	/**
-	 * Destroy (delete) this storage.
-	 * 
-	 * @throws IOException thrown if an exception occurs during deletion
-	 */
-	public void destroy() throws IOException;
+public interface Indexer {
 
 }

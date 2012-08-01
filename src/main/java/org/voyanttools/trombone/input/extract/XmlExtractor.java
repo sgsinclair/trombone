@@ -50,6 +50,8 @@ import net.sf.saxon.lib.NamespaceConstant;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.tika.Tika;
+import org.apache.tika.exception.TikaException;
 import org.voyanttools.trombone.document.DocumentFormat;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -60,6 +62,9 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
+
+import com.cybozu.labs.langdetect.DetectorFactory;
+import com.cybozu.labs.langdetect.LangDetectException;
 
 /**
  * @author sgs
@@ -246,6 +251,18 @@ public class XmlExtractor implements Extractor {
 						"Unable to transform node during XML extraction: "+storedDocumentSource);
 			}
 	
+	        try {
+				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
+				String text = new Tika().parseToString(new ByteArrayInputStream(sw.toString().getBytes("UTF-8")));
+				detector.append(text);
+				String lang = detector.detect();
+				metadata.setLanguageCode(lang);
+			} catch (LangDetectException e) {
+				throw new IOException("Unable to detect language", e);
+			} catch (TikaException e) {
+				throw new IOException("Unable to extract text for language detection", e);
+			}
+
 	        return new ByteArrayInputStream(sw.toString().getBytes("UTF-8"));
 			
 		}

@@ -19,34 +19,36 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.storage;
+package org.voyanttools.trombone.lucene.analysis;
 
-import java.io.IOException;
+import java.io.Reader;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.voyanttools.trombone.lucene.LuceneManager;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
+import org.apache.lucene.analysis.snowball.SnowballFilter;
 
 /**
- * This interface defines methods for interacting with stored objects using a storage strategy defined by the
- * implementing class.
- * 
- * @author Stéfan Sinclair
+ * @author sgs
+ *
  */
-public interface Storage {
+public class MultiLingualStemAnalyzer extends LexicalAnalyzer {
+
+	private StemmableLanguage sl;
 	
-	/**
-	 * Get the {@link StoredDocumentSourceStorage} for this type of Storage.
-	 * 
-	 * @return the {@link StoredDocumentSourceStorage}
+	public MultiLingualStemAnalyzer(String lang) {
+		StemmableLanguage sl = lang.length()==2 ? StemmableLanguage.fromCode(lang) : StemmableLanguage.valueOf(lang);
+	}
+	
+	/* (non-Javadoc)
+	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
 	 */
-	public StoredDocumentSourceStorage getStoredDocumentSourceStorage();
-	
-	public LuceneManager getLuceneManager() throws IOException;
-	
-	/**
-	 * Destroy (delete) this storage.
-	 * 
-	 * @throws IOException thrown if an exception occurs during deletion
-	 */
-	public void destroy() throws IOException;
+	@Override
+	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
+		TokenStreamComponents tsc = super.createComponents(fieldName, reader);
+		return new TokenStreamComponents(tsc.getTokenizer(), new SnowballFilter(tsc.getTokenStream(), StringUtils.capitalize(sl.name().toLowerCase())));
+	}
 
 }

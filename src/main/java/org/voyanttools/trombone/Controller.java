@@ -27,6 +27,7 @@ import java.util.List;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
 import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
+import org.voyanttools.trombone.input.index.LuceneIndexer;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.storage.Storage;
@@ -71,7 +72,8 @@ public class Controller {
 			List<StoredDocumentSource> expandedDocs = sourcesExpander.getExpandedStoredDocumentSources(inputSources);
 			StoredDocumentSourceExtractor extractedBuilder = new StoredDocumentSourceExtractor(storage.getStoredDocumentSourceStorage(), parameters);
 			List<StoredDocumentSource> extractedDocs = extractedBuilder.getExtractedStoredDocumentSources(expandedDocs);
-			System.err.println(extractedDocs.size());
+			LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
+			luceneIndexer.index(extractedDocs);
 		}
 		// TODO Auto-generated method stub
 		

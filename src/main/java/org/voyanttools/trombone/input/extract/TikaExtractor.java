@@ -24,6 +24,7 @@ package org.voyanttools.trombone.input.extract;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.io.StringWriter;
 
 import javax.xml.transform.OutputKeys;
@@ -33,6 +34,7 @@ import javax.xml.transform.sax.TransformerHandler;
 import javax.xml.transform.stream.StreamResult;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.tika.Tika;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
@@ -49,6 +51,9 @@ import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.xml.sax.SAXException;
+
+import com.cybozu.labs.langdetect.DetectorFactory;
+import com.cybozu.labs.langdetect.LangDetectException;
 
 /**
  * @author sgs
@@ -153,6 +158,19 @@ public class TikaExtractor implements Extractor {
 	        	extractedContent = extractedContent.replaceAll("&#xD;&#xD;+", "</p>\n      <p>");
 	        	extractedContent = extractedContent.replaceAll("&#xD;", "<br />\n      ");
 	        }
+	        
+	        try {
+				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
+				String text = new Tika().parseToString(new ByteArrayInputStream(extractedContent.getBytes("UTF-8")));
+				detector.append(text);
+				String lang = detector.detect();
+				metadata.setLanguageCode(lang);
+			} catch (LangDetectException e) {
+				throw new IOException("Unable to detect language", e);
+			} catch (TikaException e) {
+				throw new IOException("Unable to extract text for language detection", e);
+			}
+	        
 	        
 	        return new ByteArrayInputStream(extractedContent.getBytes("UTF-8"));
 		}

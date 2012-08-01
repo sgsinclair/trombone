@@ -62,7 +62,7 @@ public class XmlExtractorTest {
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.xml"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for XML document", "", metadata.getTitle());
@@ -73,7 +73,7 @@ public class XmlExtractorTest {
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlContentXpath=//p"}));
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.xml"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for XML document", "", metadata.getTitle());
@@ -85,7 +85,7 @@ public class XmlExtractorTest {
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlContentXpath=//body"}));
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.xml"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for XML document", "", metadata.getTitle());
@@ -97,7 +97,7 @@ public class XmlExtractorTest {
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"inputFormat=RSS"}));
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSources(storedDocumentSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for RSS feed", "Website Feed", metadata.getTitle());

@@ -21,8 +21,13 @@
  ******************************************************************************/
 package org.voyanttools.trombone.storage.memory;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.store.NIOFSDirectory;
+import org.apache.lucene.store.RAMDirectory;
+import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -40,6 +45,8 @@ public class MemoryStorage implements Storage {
 	 */
 	private StoredDocumentSourceStorage storedDocumentSourceStorage;
 
+	private LuceneManager luceneManager = null;
+
 	/**
 	 * Create a new instance of this class.
 	 */
@@ -55,4 +62,11 @@ public class MemoryStorage implements Storage {
 		storedDocumentSourceStorage = new MemoryStoredDocumentSourceStorage();
 	}
 
+	@Override
+	public LuceneManager getLuceneManager() throws CorruptIndexException, IOException {
+		if (luceneManager==null) {
+			luceneManager = new LuceneManager(new RAMDirectory());
+		}
+		return luceneManager;
+	}
 }

@@ -19,34 +19,31 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.storage;
+package org.voyanttools.trombone.lucene.analysis;
 
 import java.io.IOException;
 
-import org.voyanttools.trombone.lucene.LuceneManager;
-
 /**
- * This interface defines methods for interacting with stored objects using a storage strategy defined by the
- * implementing class.
- * 
- * @author Stéfan Sinclair
+ * @author sgs
+ *
  */
-public interface Storage {
-	
+public class EnglishMorphologicalTokenizer extends MorphologicalTokenizer {
+
 	/**
-	 * Get the {@link StoredDocumentSourceStorage} for this type of Storage.
 	 * 
-	 * @return the {@link StoredDocumentSourceStorage}
 	 */
-	public StoredDocumentSourceStorage getStoredDocumentSourceStorage();
-	
-	public LuceneManager getLuceneManager() throws IOException;
-	
-	/**
-	 * Destroy (delete) this storage.
-	 * 
-	 * @throws IOException thrown if an exception occurs during deletion
+	public EnglishMorphologicalTokenizer() {
+//		super.
+		// TODO Auto-generated constructor stub
+	}
+
+	/* (non-Javadoc)
+	 * @see org.apache.lucene.analysis.TokenStream#incrementToken()
 	 */
-	public void destroy() throws IOException;
+	@Override
+	public boolean incrementToken() throws IOException {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }
