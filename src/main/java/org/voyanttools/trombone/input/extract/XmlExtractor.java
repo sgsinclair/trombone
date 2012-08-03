@@ -31,6 +31,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -51,7 +52,9 @@ import net.sf.saxon.lib.NamespaceConstant;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tika.Tika;
+import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.exception.TikaException;
+import org.apache.tika.parser.xml.XMLParser;
 import org.voyanttools.trombone.document.DocumentFormat;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -253,9 +256,15 @@ public class XmlExtractor implements Extractor {
 						"Unable to transform node during XML extraction: "+storedDocumentSource);
 			}
 	
+			String string = sw.toString();
+			byte[] bytes = string.getBytes("UTF-8");
+			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
 	        try {
+	        	Properties p = System.getProperties();
 				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
-				String text = new Tika().parseToString(new ByteArrayInputStream(sw.toString().getBytes("UTF-8")));
+				byteArrayInputStream.mark(0);
+				String text = new Tika(new DefaultDetector(), new XMLParser()).parseToString(byteArrayInputStream);
+				byteArrayInputStream.reset();
 				detector.append(text);
 				String lang = detector.detect();
 				metadata.setLanguageCode(lang);
@@ -267,7 +276,7 @@ public class XmlExtractor implements Extractor {
 	        
 	        isProcessed = true;
 
-	        return new ByteArrayInputStream(sw.toString().getBytes("UTF-8"));
+	        return new ByteArrayInputStream(bytes);
 			
 		}
 

@@ -60,6 +60,7 @@ public class XmlExtractorTest {
 		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		
+		/*
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.xml"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
@@ -92,7 +93,7 @@ public class XmlExtractorTest {
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have stripped out other content", contents.contains("<head>")==false);
 		assertTrue("ensure we have some content in XML with a single node xmlContentXpath parameter", contents.contains(line)==true);
-		
+		*/
 		// try with RSS input format
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"inputFormat=RSS"}));
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
