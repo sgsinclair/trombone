@@ -85,12 +85,12 @@ public class LuceneIndexer implements Indexer {
 		ExecutorService executor = Executors.newCachedThreadPool();
 		List<Future<Integer>> list = new ArrayList<Future<Integer>>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			Callable<Integer> worker = new CallableIndexer(storage, storedDocumentSource);
-			Future<Integer> submit = executor.submit(worker);
+			Runnable worker = new Indexer(storage, storedDocumentSource);
+			Future submit = executor.submit(worker);
 			list.add(submit);	
 		}
 		try {
-			for (Future<Integer> future : list) {
+			for (Future future : list) {
 				future.get();
 			}
 		} catch (InterruptedException e) {
@@ -103,66 +103,76 @@ public class LuceneIndexer implements Indexer {
 		
 	}
 	
-	private class CallableIndexer implements Callable<Integer> {
+	private class Indexer implements Runnable {
 
 		private Storage storage;
 		private StoredDocumentSource storedDocumentSource;
 		private LuceneManager luceneManager;
-		public CallableIndexer(Storage storage,
+		private String id;
+		private String string = null;
+		public Indexer(Storage storage,
 				StoredDocumentSource storedDocumentSource) throws IOException {
 			this.storage = storage;
 			this.storedDocumentSource = storedDocumentSource;
 			this.luceneManager = storage.getLuceneManager();
+			this.id = storedDocumentSource.getId();
+		}
+		
+		private String getString() throws IOException {
+			if (this.string == null) {
+				InputStream is = null;
+				try {
+					is = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
+					StringWriter sw = new StringWriter();
+					IOUtils.copy(is, sw);
+					string = sw.toString();
+				}
+				finally {
+					if (is!=null) is.close();
+				}
+			}
+			return string;
 		}
 		
 		@Override
-		public Integer call() throws IOException  {
+		public void run()  {
 			
-			// start by looking to see if this document source is already indexed
-			String id = storedDocumentSource.getId();
-			int index = luceneManager.getLuceneDocumentId(id);
-			if (index > -1) return index;
-			
-			InputStream is = null;
-			String string;
+
 			try {
-				is = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
-				StringWriter sw = new StringWriter();
-				IOUtils.copy(is, sw);
-				string = sw.toString();
-			}
-			finally {
-				if (is!=null) is.close();
-			}
-			
-			
-			storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
+				int index = luceneManager.getLuceneDocumentId(id);
+//				if (index>-1) return; // got it, let's bail
+					
 
-			FieldType ft = new FieldType(TextField.TYPE_NOT_STORED);
-			ft.setStoreTermVectors(true);
-			ft.setStoreTermVectorOffsets(true);
-			ft.setStoreTermVectorPositions(true);
-			ft.setStored(true);
-			
-			Document document;
-			
-			// create lexical document
-			document = new Document();
-			document.add(new StoredField("id", id+"-lexical"));
-			document.add(new Field("lexical", string, ft));		
-			luceneManager.addDocument(document);
+				FieldType ft = new FieldType(TextField.TYPE_STORED);
+				ft.setStoreTermVectors(true);
+				ft.setStoreTermVectorOffsets(true);
+				ft.setStoreTermVectorPositions(true);
+				ft.setStored(true);
+				
+				Document document = new Document();
 
-			String lang = storedDocumentSource.getMetadata().getLanguageCode();
-			StemmableLanguage stemmableLanguage = StemmableLanguage.fromCode(lang);
-			if (stemmableLanguage!=null) {
+				// create lexical document
 				document = new Document();
-				document.add(new StoredField("id", id+"-stemmed"));
-				document.add(new Field("stemmed-"+lang, string, ft));		
+				document.add(new StoredField("id", id+"-lexical"));
+				document.add(new Field("lexical", getString(), ft));
+				
+				// next look for stemmed index if needed
+				String lang = storedDocumentSource.getMetadata().getLanguageCode();
+				StemmableLanguage stemmableLanguage = StemmableLanguage.fromCode(lang);
+				if (stemmableLanguage!=null) {
+					document.add(new Field("stemmed-"+lang, getString(), ft));		
+				}
+				
+				if (storedDocumentSource.getMetadata().getLanguageCode().equals("en")) {
+					document.add(new Field("lemmatized-en", getString(), ft));
+				}
+				
 				luceneManager.addDocument(document);
 			}
-			
-			
-			return null;
+			catch (IOException e) {
+				throw new RuntimeException("Unable to index stored document: "+storedDocumentSource, e);
+			}
+
 		}
 		
 	}

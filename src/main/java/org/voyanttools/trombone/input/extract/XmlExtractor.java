@@ -166,6 +166,8 @@ public class XmlExtractor implements Extractor {
 		
 		private Metadata metadata;
 		
+		private boolean isProcessed = false;
+		
 		private ExtractableXmlInputSource(String id, StoredDocumentSource storedDocumentSource) {
 			this.id = id;
 			this.storedDocumentSourceId = storedDocumentSource.getId();
@@ -262,6 +264,8 @@ public class XmlExtractor implements Extractor {
 			} catch (TikaException e) {
 				throw new IOException("Unable to extract text for language detection", e);
 			}
+	        
+	        isProcessed = true;
 
 	        return new ByteArrayInputStream(sw.toString().getBytes("UTF-8"));
 			
@@ -285,8 +289,8 @@ public class XmlExtractor implements Extractor {
 		}
 
 		@Override
-		public Metadata getMetadata() {
-			return this.metadata;
+		public Metadata getMetadata() throws IOException {
+			return isProcessed ? this.metadata : storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id);
 		}
 
 		@Override

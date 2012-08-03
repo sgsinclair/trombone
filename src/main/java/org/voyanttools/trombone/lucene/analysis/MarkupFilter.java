@@ -21,34 +21,36 @@
  ******************************************************************************/
 package org.voyanttools.trombone.lucene.analysis;
 
-import java.io.Reader;
-import java.util.HashMap;
-import java.util.Map;
+import static org.uimafit.util.JCasUtil.*;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
-import org.apache.lucene.analysis.snowball.SnowballFilter;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.tcas.Annotation;
+import org.uimafit.component.JCasAnnotator_ImplBase;
+
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 /**
- * @author sgs
- *
+ * @author Richard Eckart, Stéfan Sinclair
  */
-public class MultiLingualStemAnalyzer extends LexicalAnalyzer {
+public class MarkupFilter extends JCasAnnotator_ImplBase {
 
-	private StemmableLanguage sl;
-	
-	public MultiLingualStemAnalyzer(String lang) {
-		sl = lang.length()==2 ? StemmableLanguage.fromCode(lang) : StemmableLanguage.valueOf(lang);
-	}
-	
-	/* (non-Javadoc)
-	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
-	 */
 	@Override
-	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
-		TokenStreamComponents tsc = super.createComponents(fieldName, reader);
-		return new TokenStreamComponents(tsc.getTokenizer(), new SnowballFilter(tsc.getTokenStream(), StringUtils.capitalize(sl.name().toLowerCase())));
+	public void process(JCas aJcas) throws AnalysisEngineProcessException {
+		List<Annotation> toRemove = new ArrayList<Annotation>();
+		for (Token t : select(aJcas, Token.class)) {
+			String text = t.getCoveredText();
+			if (text.startsWith("<") && (text.endsWith(">"))) {
+				toRemove.add(t);
+			}
+		}
+		
+		for (Annotation a: toRemove) {
+			a.removeFromIndexes();
+		}
 	}
 
 }

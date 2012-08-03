@@ -51,8 +51,9 @@ public interface InputSource {
 	 * Get the {@link Metadata} associated with this input source.
 	 * 
 	 * @return the {@link Metadata} associated with this input source.
+	 * @throws IOException 
 	 */
-	public Metadata getMetadata();
+	public Metadata getMetadata() throws IOException;
 
 	/**
 	 * Get the unique ID associate with this input source. This should me a hash

@@ -49,6 +49,10 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 			@Override
 			Analyzer getAnalyzer() {return new MultiLingualStemAnalyzer("en");}
 		},
+		LEMMATIZED_EN("lemmatized-en") {
+			@Override
+			Analyzer getAnalyzer() {return new EnglishMorphologicalAnalyzer();}
+		},
 		LEXICAL("lexical");
 //		MORPH_EN("morph-en");
 		
@@ -63,7 +67,7 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 		
 		public static AnalyzerName getName(String name) {
 			for (AnalyzerName n : values()) {
-				if (n.name == name) {return n;}
+				if (n.name.equals(name)) {return n;}
 			}
 			return null;
 		}

@@ -22,33 +22,20 @@
 package org.voyanttools.trombone.lucene.analysis;
 
 import java.io.Reader;
-import java.util.HashMap;
-import java.util.Map;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
-import org.apache.lucene.analysis.snowball.SnowballFilter;
 
 /**
  * @author sgs
  *
  */
-public class MultiLingualStemAnalyzer extends LexicalAnalyzer {
+public class EnglishMorphologicalAnalyzer extends Analyzer {
 
-	private StemmableLanguage sl;
-	
-	public MultiLingualStemAnalyzer(String lang) {
-		sl = lang.length()==2 ? StemmableLanguage.fromCode(lang) : StemmableLanguage.valueOf(lang);
-	}
-	
-	/* (non-Javadoc)
-	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
-	 */
 	@Override
-	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
-		TokenStreamComponents tsc = super.createComponents(fieldName, reader);
-		return new TokenStreamComponents(tsc.getTokenizer(), new SnowballFilter(tsc.getTokenStream(), StringUtils.capitalize(sl.name().toLowerCase())));
+	protected TokenStreamComponents createComponents(String fieldName,
+			Reader reader) {
+		return new TokenStreamComponents(new EnglishMorphologicalTokenizer(reader));
 	}
+
 
 }
