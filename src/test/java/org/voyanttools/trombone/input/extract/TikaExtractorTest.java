@@ -35,6 +35,7 @@ import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.input.source.StringInputSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -45,9 +46,31 @@ import org.voyanttools.trombone.util.TestHelper;
  *
  */
 public class TikaExtractorTest {
+	
+	@Test
+	public void testStrings() throws IOException, URISyntaxException {
+		Storage storage = TestHelper.getDefaultTestStorage();
+		StoredDocumentSourceStorage storeDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
+		FlexibleParameters parameters = new FlexibleParameters();
+		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, parameters);
+		
+		InputSource inputSource;
+		StoredDocumentSource storedDocumentSource;
+		StoredDocumentSource extractedStoredDocumentSource;
+		Metadata metadata;
+		String contents;
+		
+//		inputSource = new StringInputSource("This is a test.");
+//		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+//		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		
+		inputSource = new StringInputSource("<html><body>This is <b>a</b> test.</body></html>");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+	}
 
 	@Test
-	public void test() throws IOException, URISyntaxException {
+	public void testFormats() throws IOException, URISyntaxException {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		StoredDocumentSourceStorage storeDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 		FlexibleParameters parameters = new FlexibleParameters();
@@ -131,7 +154,6 @@ public class TikaExtractorTest {
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("strip out script tag from html", contents.contains("script")==false);
 		assertTrue("strip out style tag from html", contents.contains("style")==false);
-		assertTrue("strip out iframe tag from html", contents.contains("iframe")==false);
 		assertTrue("ensure we have some content in html", contents.contains(line)==true);
 
 		storage.destroy();

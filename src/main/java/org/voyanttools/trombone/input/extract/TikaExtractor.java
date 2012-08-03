@@ -43,6 +43,7 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.html.DefaultHtmlMapper;
 import org.apache.tika.parser.html.HtmlMapper;
+import org.apache.tika.parser.html.IdentityHtmlMapper;
 import org.voyanttools.trombone.document.DocumentFormat;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
@@ -74,7 +75,7 @@ public class TikaExtractor implements Extractor {
 		detector = new DefaultDetector();
 		parser = new AutoDetectParser(detector);
 		context.set(Parser.class, parser);
-		context.set(HtmlMapper.class, new CustomHtmlMapper());
+		context.set(HtmlMapper.class, new TromboneHtmlMapper());
 	}
 
 	public InputSource getExtractableInputSource(StoredDocumentSource storedDocumentSource) throws IOException {
@@ -82,6 +83,19 @@ public class TikaExtractor implements Extractor {
 	}
 
 	private class CustomHtmlMapper extends DefaultHtmlMapper {
+		
+		@Override
+		public String mapSafeElement(String name) {
+			String s = super.mapSafeElement(name);
+			return s;
+		}
+
+		@Override
+		public String mapSafeAttribute(String elementName, String attributeName) {
+			// TODO Auto-generated method stub
+			return super.mapSafeAttribute(elementName, attributeName);
+		}
+
 		public boolean isDiscardElement(String name) {
 			return super.isDiscardElement(name) || name.equalsIgnoreCase("iframe");
 		}
