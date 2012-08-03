@@ -25,7 +25,6 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -60,13 +59,31 @@ public class TikaExtractorTest {
 		Metadata metadata;
 		String contents;
 		
-//		inputSource = new StringInputSource("This is a test.");
-//		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-//		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		inputSource = new StringInputSource("This is <b>a</b> test.");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("Text string shouldn't contain tags", contents.contains("&lt;b&gt;a&lt;/b&gt;"));
 		
 		inputSource = new StringInputSource("<html><body>This is <b>a</b> test.</body></html>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
+		
+		inputSource = new StringInputSource("<test>This is <b>a</b> test.</test>");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("XML-looking string shouldn't contain tags", contents.contains("&lt;b&gt;a&lt;/b&gt;"));
+		
+		parameters.setParameter("inputFormat", "XML");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, parameters);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("XML-declared string should contain tags", contents.contains("<b>a</b>"));
+		
 	}
 
 	@Test

@@ -105,7 +105,17 @@ public class StoredDocumentSourceExtractor {
 
 	public StoredDocumentSource getExtractedStoredDocumentSource(
 			StoredDocumentSource storedDocumentSource) throws IOException {
-		DocumentFormat format = storedDocumentSource.getMetadata().getDocumentFormat();
+		
+		DocumentFormat format;
+		
+		String inputFormatString = parameters.getParameterValue("inputFormat", "");
+		if (inputFormatString.isEmpty()==false) {
+			format = DocumentFormat.valueOf(inputFormatString);
+		}
+		else {
+			format = storedDocumentSource.getMetadata().getDocumentFormat();
+		}
+
 		InputSource extractedInputSource;
 		if (format.isXml()) {
 			if (xmlExtractor==null) {xmlExtractor = new XmlExtractor(storedDocumentSourceStorage, parameters);}

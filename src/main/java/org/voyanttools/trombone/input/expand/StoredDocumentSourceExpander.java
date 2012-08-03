@@ -103,7 +103,11 @@ public class StoredDocumentSourceExpander implements Expander {
 		this.parameters = parameters;
 	}
 	
-	
+	public List<StoredDocumentSource> getExpandedStoredDocumentSources(InputSource inputSource) throws IOException {
+		List<InputSource> inputSources = new ArrayList<InputSource>();
+		inputSources.add(inputSource);
+		return getExpandedStoredDocumentSources(inputSources);
+	}
 	public List<StoredDocumentSource> getExpandedStoredDocumentSources(List<InputSource> inputSources) throws IOException {
 		List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
 		ExecutorService executor = Executors.newCachedThreadPool();
@@ -131,8 +135,16 @@ public class StoredDocumentSourceExpander implements Expander {
 
 		List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
 
-		DocumentFormat format = storedDocumentSource.getMetadata()
-				.getDocumentFormat();
+		DocumentFormat format;
+		
+		String inputFormatString = parameters.getParameterValue("inputFormat", "");
+		if (inputFormatString.isEmpty()==false) {
+			format = DocumentFormat.valueOf(inputFormatString);
+		}
+		else {
+			format = storedDocumentSource.getMetadata().getDocumentFormat();
+		}
+
 		if (format == DocumentFormat.ARCHIVE) {
 			storedDocumentSources.addAll(expandArchive(storedDocumentSource));
 		} else if (format == DocumentFormat.COMPRESSED) {
