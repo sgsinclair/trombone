@@ -25,6 +25,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -39,7 +40,11 @@ import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.google.gson.Gson;
+import com.google.gson.internal.StringMap;
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+import com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver;
 
 /**
  * @author sgs
@@ -49,21 +54,34 @@ public class DocumentStorerTest {
 
 	@Test
 	public void test() throws IOException, ParserConfigurationException, SAXException {
+		
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"string=test","string=another test"});
 		Storage storage = TestHelper.getDefaultTestStorage();
 		DocumentStorer tool = new DocumentStorer(storage, parameters);
 		tool.run();
+		
+		// ensure we have two documents
 		assertEquals(2, tool.getStoredDocumentSources().size());
 		
+		XStream xstream;
 		
-		XStream xstream = new XStream();
+		// serialize to XML
+		xstream = new XStream();
 		xstream.autodetectAnnotations(true);
 		String xml = xstream.toXML(tool);
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	    DocumentBuilder builder = factory.newDocumentBuilder();
-	    Document doc = builder.parse(new InputSource(new StringReader(xml)));
-	    assertEquals("storedDocuments", doc.getFirstChild().getNodeName()); // root node should be "storedDocuments"
-	    assertEquals(5, doc.getFirstChild().getChildNodes().getLength()); // all children of the root, including text nodes
-	    assertEquals(2, StringUtils.countMatches(xml, "<id>")); // two documents, so two IDs
+		assertTrue(xml.startsWith("<storedDocuments>"));
+	    assertEquals(1, StringUtils.countMatches(xml, "<ids>")); // two documents, so two IDs
+	    assertEquals(2, StringUtils.countMatches(xml, "<string>")); // two documents, so two IDs
+	    
+	    // serialize to JSON
+		xstream = new XStream(new JsonHierarchicalStreamDriver());
+		xstream.autodetectAnnotations(true);
+		String json = xstream.toXML(tool);
+		Gson gson = new Gson();
+		StringMap<StringMap> obj = gson.fromJson(json, StringMap.class);
+		StringMap<ArrayList> sd = obj.get("storedDocuments");
+		ArrayList<String> ids = (ArrayList<String>) sd.get("ids");
+		assertEquals(2, ids.size());
+    
 	}
 }

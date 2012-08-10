@@ -43,7 +43,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 @XStreamAlias("storedDocuments")
 public class DocumentStorer extends AbstractTool {
 
-	@XStreamImplicit(itemFieldName="id")
+	//@XStreamImplicit(itemFieldName="id")
 	private List<String> ids = new ArrayList<String>();
 	
 	@XStreamOmitField
