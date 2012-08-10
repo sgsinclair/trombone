@@ -22,8 +22,16 @@
 package org.voyanttools.trombone;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.DocsAndPositionsEnum;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.Terms;
+import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.util.AttributeImpl;
+import org.apache.lucene.util.AttributeSource;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
 import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
@@ -74,6 +82,30 @@ public class Controller {
 			List<StoredDocumentSource> extractedDocs = extractedBuilder.getExtractedStoredDocumentSources(expandedDocs);
 			LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
 			luceneIndexer.index(extractedDocs);
+			
+			IndexReader reader = storage.getLuceneManager().getIndexReader();
+			Terms terms = reader.getTermVector(0, "lemmatized-en");
+			TermsEnum termsEnum = null;
+			DocsAndPositionsEnum docsAndPositionsEnum = null;
+			
+			termsEnum = terms.iterator(termsEnum);
+			while(termsEnum.next()!=null) {
+//				AttributeSource attributes = termsEnum.attributes();
+//				Iterator<AttributeImpl> attributesIterator = attributes.getAttributeImplsIterator();
+//				AttributeImpl attributeImpl;
+//				while (attributesIterator.hasNext()) {
+//					attributeImpl = attributesIterator.next();
+//					System.err.println(attributeImpl);
+//				}
+				docsAndPositionsEnum = termsEnum.docsAndPositions(null, docsAndPositionsEnum, true);
+				for (int i=0, len=docsAndPositionsEnum.freq(); i<len; i++) {
+					System.err.println(termsEnum.term().utf8ToString()+": "+docsAndPositionsEnum.startOffset());
+					docsAndPositionsEnum.nextPosition();
+					
+				}
+//				System.err.println(termsEnum.term().utf8ToString()+": "+docsAndPositionsEnum..freq());
+//				System.err.println(docsAndPositionsEnum);
+			}
 		}
 		// TODO Auto-generated method stub
 		

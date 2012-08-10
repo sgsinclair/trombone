@@ -151,6 +151,11 @@
 			<artifactId>icu4j</artifactId>
 			<version>49.1</version>
 		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.2</version>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

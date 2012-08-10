@@ -34,6 +34,7 @@ import static org.uimafit.util.JCasUtil.select;
 import org.apache.commons.io.IOUtils;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
@@ -54,6 +55,7 @@ public class EnglishMorphologicalTokenizer extends Tokenizer {
 
 	private PositionIncrementAttribute posIncr;
 	private CharTermAttribute termAtt;
+	private OffsetAttribute offsetAttribute;
 	private Iterator<Token> tokensIterator;
 	
 	/**
@@ -64,6 +66,7 @@ public class EnglishMorphologicalTokenizer extends Tokenizer {
 		
 		posIncr = addAttribute(PositionIncrementAttribute.class);
 		termAtt = addAttribute(CharTermAttribute.class);
+		offsetAttribute = addAttribute(OffsetAttribute.class);
 		
 		JCas jcas;
 		try {
@@ -116,6 +119,7 @@ public class EnglishMorphologicalTokenizer extends Tokenizer {
 		String lemma = token.getLemma().getValue();
 		termAtt.append(lemma);
 		termAtt.setLength(lemma.length());
+		offsetAttribute.setOffset(token.getBegin(), token.getEnd());
 		posIncr.setPositionIncrement(1);
 		return tokensIterator.hasNext();
 	}

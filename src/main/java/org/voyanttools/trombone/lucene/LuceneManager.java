@@ -68,8 +68,6 @@ public class LuceneManager {
 	
 	private DirectoryReader directoryReader = null;
 	
-	private IndexReader reader = null;
-	
 	private IndexWriter indexWriter = null;
 	
 	private IndexSearcher indexSearcher = null;
@@ -116,7 +114,7 @@ public class LuceneManager {
 		document.add(new FloatField("version", luceneDocumentVersion, Field.Store.YES));
 		IndexWriter writer = getIndexWriter();
 		writer.addDocument(document);
-		reader = directoryReader.open(writer, false);
+		directoryReader = DirectoryReader.open(writer, false);
 		return getLuceneDocumentId(document.getField("id").stringValue());
 	}
 
@@ -125,6 +123,10 @@ public class LuceneManager {
 			indexWriter = new IndexWriter(directory , indexWriterConfig);
 		}
 		return indexWriter;
+	}
+
+	public IndexReader getIndexReader() {
+		return directoryReader;
 	}
 
 

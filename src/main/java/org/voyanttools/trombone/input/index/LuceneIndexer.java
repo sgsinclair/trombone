@@ -53,6 +53,7 @@ import org.apache.lucene.document.FieldType;
 import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
+import org.apache.lucene.index.FieldInfo.IndexOptions;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
@@ -144,10 +145,10 @@ public class LuceneIndexer implements Indexer {
 					
 
 				FieldType ft = new FieldType(TextField.TYPE_STORED);
+				ft.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
 				ft.setStoreTermVectors(true);
 				ft.setStoreTermVectorOffsets(true);
 				ft.setStoreTermVectorPositions(true);
-				ft.setStored(true);
 				
 				Document document = new Document();
 
