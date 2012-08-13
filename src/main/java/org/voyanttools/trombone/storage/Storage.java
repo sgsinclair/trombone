@@ -49,4 +49,7 @@ public interface Storage {
 	 */
 	public void destroy() throws IOException;
 
+	public String storeString(String joinedIds) throws IOException;
+
+	public String retrieveString(String id) throws IOException;
 }

@@ -27,7 +27,7 @@ import java.io.IOException;
  * @author sgs
  *
  */
-public interface Tool {
+public interface RunnableTool {
 
 	public void run() throws IOException;
 

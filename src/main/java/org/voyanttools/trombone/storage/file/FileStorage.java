@@ -24,6 +24,7 @@ package org.voyanttools.trombone.storage.file;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.voyanttools.trombone.lucene.LuceneManager;
@@ -98,4 +99,23 @@ public class FileStorage implements Storage {
 		return luceneManager;
 	}
 
+	@Override
+	public String storeString(String string) throws IOException {
+		String id = DigestUtils.md5Hex(string);
+		FileUtils.writeStringToFile(new File(getObjectStoreDirectory(),  id), string, "UTF-8");
+		return id;
+	}
+
+	private File getObjectStoreDirectory() {
+		return new File(storageLocation,"object-storage");
+	}
+
+
+
+	@Override
+	public String retrieveString(String id) throws IOException {
+		File file = new File(getObjectStoreDirectory(),  id);
+		if (file.exists()==false) throw new IOException("An attempt was made to read a store string that that does not exist: "+id);
+		return FileUtils.readFileToString(file);
+	}
 }

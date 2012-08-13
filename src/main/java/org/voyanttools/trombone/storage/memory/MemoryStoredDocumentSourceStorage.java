@@ -111,7 +111,13 @@ class MemoryStoredDocumentSourceStorage extends AbstractStoredDocumentSourceStor
 	 */
 	public Metadata getStoredDocumentSourceMetadata(String id)
 			throws IOException {
-		return storedDocumentSourcesMap.get(id).getMetadata();
+		return getStoredDocumentSource(id).getMetadata();
+	}
+	
+	private StoredDocumentSource getStoredDocumentSource(String id) throws IOException {
+		StoredDocumentSource storedDocumentSource = storedDocumentSourcesMap.get(id);
+		if (storedDocumentSource==null) throw new IOException("A stored document was requested but could not be located: "+id);
+		return storedDocumentSource;
 	}
 
 	/* (non-Javadoc)

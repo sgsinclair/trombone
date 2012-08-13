@@ -25,10 +25,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.codec.digest.DigestUtils;
+import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.InputSourcesBuilder;
+import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -39,39 +40,44 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import edu.stanford.nlp.util.StringUtils;
 
 /**
- * @author Stéfan Sinclair
+ * @author sgs
+ *
  */
-@XStreamAlias("storedDocuments")
-public class DocumentStorer extends AbstractTool {
+@XStreamAlias("expandedStoredDocuments")
+public class DocumentExpander extends AbstractTool {
 
 	private String storedId = null;
 	
 	@XStreamOmitField
 	private List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
-
+	
 	/**
+	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentStorer(Storage storage, FlexibleParameters parameters) {
+	public DocumentExpander(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
 
 	@Override
 	public void run() throws IOException {
-		InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
-		List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
-		List<String> ids = new ArrayList<String>();
-		
-		// make sure that all input sources are stored
+		String sid = parameters.getParameterValue("storedId");
+		String[] ids = storage.retrieveString(sid).split("\n");
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		for (InputSource inputSource : inputSources) {
-			StoredDocumentSource storedDocumentSource = storedDocumentStorage.getStoredDocumentSource(inputSource);
-			storedDocumentSources.add(storedDocumentSource);
-			ids.add(storedDocumentSource.getId());
+		List<InputSource> inputSources = new ArrayList<InputSource>();
+		StoredDocumentSourceExpander expander = new StoredDocumentSourceExpander(storedDocumentStorage, parameters);
+		for (String id : ids) {
+			Metadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
+			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
+			storedDocumentSources.addAll(expander.getExpandedStoredDocumentSources(storedDocumentSource));
 		}
 
+		List<String> expandedIds = new ArrayList<String>();
+		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+			expandedIds.add(storedDocumentSource.getId());
+		}
 		
-		String joinedIds = StringUtils.join(ids,"\n");
+		String joinedIds = StringUtils.join(expandedIds,"\n");
 		storedId = storage.storeString(joinedIds);
 
 	}
@@ -80,8 +86,4 @@ public class DocumentStorer extends AbstractTool {
 		return storedDocumentSources;
 	}
 
-	public String getStoredId() {
-		return storedId;
-	}
-	
 }

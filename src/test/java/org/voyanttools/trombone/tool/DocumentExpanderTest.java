@@ -24,15 +24,11 @@ package org.voyanttools.trombone.tool;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
-import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
@@ -40,32 +36,41 @@ import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
 import com.google.gson.Gson;
 import com.google.gson.internal.StringMap;
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver;
 
 /**
  * @author sgs
- * 
+ *
  */
-public class DocumentStorerTest {
+public class DocumentExpanderTest {
+
+	@Test(expected=IOException.class)
+	public void testDocumentNotStored() throws IOException {
+		FlexibleParameters parameters = new FlexibleParameters(new String[]{"storedId=1"});
+		Storage storage = TestHelper.getDefaultTestStorage();
+		DocumentExpander tool = new DocumentExpander(storage, parameters);
+		tool.run();
+	}
 
 	@Test
-	public void test() throws IOException, ParserConfigurationException, SAXException {
-		
-		FlexibleParameters parameters = new FlexibleParameters(new String[]{"string=test","string=another test"});
+	public void test() throws IOException {
+		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("archive/archive.zip")});
 		Storage storage = TestHelper.getDefaultTestStorage();
 		DocumentStorer storer = new DocumentStorer(storage, parameters);
 		storer.run();
+		String storedId = storer.getStoredId();
 		
+		parameters.setParameter("storedId", storedId);
+		
+		DocumentExpander expander = new DocumentExpander(storage, parameters);
+		expander.run();
+		List<StoredDocumentSource> storedDocumentSources = expander.getStoredDocumentSources();
+
 		// ensure we have two documents
-		List<StoredDocumentSource> storedDocumentSources = storer.getStoredDocumentSources();
 		assertEquals(2, storedDocumentSources.size());
 		
 		XStream xstream;
@@ -73,9 +78,10 @@ public class DocumentStorerTest {
 		// serialize to XML
 		xstream = new XStream();
 		xstream.autodetectAnnotations(true);
-		String xml = xstream.toXML(storer);
-		assertTrue(xml.startsWith("<storedDocuments>"));
-	    
+		String xml = xstream.toXML(expander);
+		assertTrue(xml.startsWith("<expandedStoredDocuments>"));
+		
+		
 	    Matcher matcher = Pattern.compile("<storedId>(.+?)</storedId>").matcher(xml);
 	    assertTrue(matcher.find()); // we should match
 	    String id = matcher.group(1);
@@ -83,16 +89,16 @@ public class DocumentStorerTest {
 	    for (int i=0, len=ids.length; i<len; i++) {
 	    	assertEquals(ids[i],storedDocumentSources.get(i).getId());
 	    }
-	    
+
 	    // serialize to JSON
 		xstream = new XStream(new JsonHierarchicalStreamDriver());
 		xstream.autodetectAnnotations(true);
-		String json = xstream.toXML(storer);
+		String json = xstream.toXML(expander);
 		Gson gson = new Gson();
 		StringMap<StringMap> obj = gson.fromJson(json, StringMap.class);
-		StringMap<String> sd = obj.get("storedDocuments");
+		StringMap<String> sd = obj.get("expandedStoredDocuments");
 		String idString = (String) sd.get("storedId");
 		assertEquals(id, idString);
-    
 	}
+
 }

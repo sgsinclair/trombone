@@ -30,7 +30,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public abstract class AbstractTool implements Tool {
+public abstract class AbstractTool implements RunnableTool {
 
 	@XStreamOmitField
 	protected FlexibleParameters parameters;

@@ -23,7 +23,10 @@ package org.voyanttools.trombone.storage.memory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.apache.lucene.store.RAMDirectory;
@@ -40,6 +43,8 @@ import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
  */
 public class MemoryStorage implements Storage {
 
+	private Map<String, Object> storedObjectsMap = new HashMap<String, Object>();
+	
 	/**
 	 * the {@link StoredDocumentSourceStorage} for this storage
 	 */
@@ -68,5 +73,20 @@ public class MemoryStorage implements Storage {
 			luceneManager = new LuceneManager(new RAMDirectory());
 		}
 		return luceneManager;
+	}
+
+	@Override
+	public String storeString(String string) {
+		String id = DigestUtils.md5Hex(string);
+		storedObjectsMap.put(id, string);
+		return id;
+	}
+
+	@Override
+	public String retrieveString(String id) throws IOException {
+		Object string = (String) storedObjectsMap.get(id);
+		if (string==null) throw new IOException("Unable to find stored string with the ID: "+id);
+		if (string instanceof String == false) throw new IOException("An object was stored with this ID but it's not a string: "+id);
+		return (String) string;
 	}
 }

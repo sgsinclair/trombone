@@ -108,6 +108,7 @@ public class StoredDocumentSourceExpander implements Expander {
 		inputSources.add(inputSource);
 		return getExpandedStoredDocumentSources(inputSources);
 	}
+
 	public List<StoredDocumentSource> getExpandedStoredDocumentSources(List<InputSource> inputSources) throws IOException {
 		List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
 		ExecutorService executor = Executors.newCachedThreadPool();
