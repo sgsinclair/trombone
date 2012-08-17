@@ -71,8 +71,7 @@ public class DocumentStorer extends AbstractTool {
 		}
 
 		
-		String joinedIds = StringUtils.join(ids,"\n");
-		storedId = storage.storeString(joinedIds);
+		storedId = storage.storeStrings(ids);
 
 	}
 

@@ -62,7 +62,7 @@ public class DocumentExpander extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		String sid = parameters.getParameterValue("storedId");
-		String[] ids = storage.retrieveString(sid).split("\n");
+		List<String> ids = storage.retrieveStrings(sid);
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		List<InputSource> inputSources = new ArrayList<InputSource>();
 		StoredDocumentSourceExpander expander = new StoredDocumentSourceExpander(storedDocumentStorage, parameters);
@@ -77,8 +77,7 @@ public class DocumentExpander extends AbstractTool {
 			expandedIds.add(storedDocumentSource.getId());
 		}
 		
-		String joinedIds = StringUtils.join(expandedIds,"\n");
-		storedId = storage.storeString(joinedIds);
+		storedId = storage.storeStrings(expandedIds);
 
 	}
 

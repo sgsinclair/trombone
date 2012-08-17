@@ -23,7 +23,9 @@ package org.voyanttools.trombone.storage.memory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -33,6 +35,8 @@ import org.apache.lucene.store.RAMDirectory;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * An in-memory implementation of the {@link StoredDocumentSourceStorage}. This
@@ -88,5 +92,19 @@ public class MemoryStorage implements Storage {
 		if (string==null) throw new IOException("Unable to find stored string with the ID: "+id);
 		if (string instanceof String == false) throw new IOException("An object was stored with this ID but it's not a string: "+id);
 		return (String) string;
+	}
+
+	@Override
+	public String storeStrings(Collection<String> strings) throws IOException {
+		String string = StringUtils.join(strings, "\n");
+		return storeString(string);
+	}
+
+	@Override
+	public List<String> retrieveStrings(String id) throws IOException {
+		Object string = (String) storedObjectsMap.get(id);
+		if (string==null) throw new IOException("Unable to find stored string with the ID: "+id);
+		if (string instanceof String == false) throw new IOException("An object was stored with this ID but it's not a string: "+id);
+		return StringUtils.split((String) string, "\n");
 	}
 }

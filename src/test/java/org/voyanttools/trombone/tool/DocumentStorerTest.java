@@ -79,9 +79,9 @@ public class DocumentStorerTest {
 	    Matcher matcher = Pattern.compile("<storedId>(.+?)</storedId>").matcher(xml);
 	    assertTrue(matcher.find()); // we should match
 	    String id = matcher.group(1);
-	    String[] ids = storage.retrieveString(id).split("\n");
-	    for (int i=0, len=ids.length; i<len; i++) {
-	    	assertEquals(ids[i],storedDocumentSources.get(i).getId());
+	    List<String> ids = storage.retrieveStrings(id);
+	    for (int i=0, len=ids.size(); i<len; i++) {
+	    	assertEquals(ids.get(i),storedDocumentSources.get(i).getId());
 	    }
 	    
 	    // serialize to JSON

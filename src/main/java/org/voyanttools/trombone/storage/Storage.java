@@ -22,6 +22,8 @@
 package org.voyanttools.trombone.storage;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.List;
 
 import org.voyanttools.trombone.lucene.LuceneManager;
 
@@ -49,7 +51,11 @@ public interface Storage {
 	 */
 	public void destroy() throws IOException;
 
-	public String storeString(String joinedIds) throws IOException;
+	public String storeStrings(Collection<String> strings) throws IOException;
+	
+	public String storeString(String string) throws IOException;
 
 	public String retrieveString(String id) throws IOException;
+	
+	public List<String> retrieveStrings(String id) throws IOException;
 }
