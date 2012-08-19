@@ -28,8 +28,8 @@ import java.util.List;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
+import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -43,8 +43,8 @@ import edu.stanford.nlp.util.StringUtils;
  * @author sgs
  *
  */
-@XStreamAlias("expandedStoredDocuments")
-public class DocumentExpander extends AbstractTool {
+@XStreamAlias("extractedStoredDocuments")
+public class DocumentExtractor extends AbstractTool {
 
 	private String storedId = null;
 	
@@ -55,8 +55,9 @@ public class DocumentExpander extends AbstractTool {
 	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentExpander(Storage storage, FlexibleParameters parameters) {
+	public DocumentExtractor(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -64,42 +65,33 @@ public class DocumentExpander extends AbstractTool {
 		String sid = parameters.getParameterValue("storedId");
 		List<String> ids = storage.retrieveStrings(sid);
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		
-		List<StoredDocumentSource> expandableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		List<StoredDocumentSource> extractableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		for (String id : ids) {
 			Metadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
 			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
-			expandableStoredDocumentSources.add(storedDocumentSource);
+			extractableStoredDocumentSources.add(storedDocumentSource);
 		}
-
-		run(expandableStoredDocumentSources);
+		run(extractableStoredDocumentSources);
 
 	}
 	
-	void run(List<StoredDocumentSource> expandableStoredDocumentSources) throws IOException {
-		
+	void run(List<StoredDocumentSource> extractableStoredDocumentSources) throws IOException {
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
+		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentStorage, parameters);
+		storedDocumentSources = extractor.getExtractedStoredDocumentSources(extractableStoredDocumentSources);
 		
-		StoredDocumentSourceExpander expander = new StoredDocumentSourceExpander(storedDocumentStorage, parameters);
-		
-		for (StoredDocumentSource storedDocumentSource : expandableStoredDocumentSources) {
-			storedDocumentSources.addAll(expander.getExpandedStoredDocumentSources(storedDocumentSource));
-		}
-		
-		List<String> expandedIds = new ArrayList<String>();
+		List<String> extractedIds = new ArrayList<String>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			expandedIds.add(storedDocumentSource.getId());
-		}
-		
-		storedId = storage.storeStrings(expandedIds);
-		
+			extractedIds.add(storedDocumentSource.getId());
+		}		
+		storedId = storage.storeStrings(extractedIds);
 	}
 
 	public List<StoredDocumentSource> getStoredDocumentSources() {
 		return storedDocumentSources;
 	}
-
-	public String getStoredId() {
+	
+	String getStoredId() {
 		return storedId;
 	}
 

@@ -102,9 +102,7 @@ public class MemoryStorage implements Storage {
 
 	@Override
 	public List<String> retrieveStrings(String id) throws IOException {
-		Object string = (String) storedObjectsMap.get(id);
-		if (string==null) throw new IOException("Unable to find stored string with the ID: "+id);
-		if (string instanceof String == false) throw new IOException("An object was stored with this ID but it's not a string: "+id);
-		return StringUtils.split((String) string, "\n");
+		String string = retrieveString(id);
+		return StringUtils.split(string, "\n");
 	}
 }

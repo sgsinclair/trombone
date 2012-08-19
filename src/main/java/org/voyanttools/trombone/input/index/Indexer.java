@@ -21,10 +21,15 @@
  ******************************************************************************/
 package org.voyanttools.trombone.input.index;
 
+import java.io.IOException;
+import java.util.List;
+
+import org.voyanttools.trombone.document.StoredDocumentSource;
+
 /**
  * @author sgs
  *
  */
 public interface Indexer {
-
+	public void index(List<StoredDocumentSource> storedDocumentSources) throws IOException;
 }

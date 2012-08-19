@@ -27,35 +27,30 @@ import java.util.List;
 
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
-import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
+import org.voyanttools.trombone.input.index.Indexer;
+import org.voyanttools.trombone.input.index.LuceneIndexer;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
  *
  */
-@XStreamAlias("expandedStoredDocuments")
-public class DocumentExpander extends AbstractTool {
+public class DocumentIndexer extends AbstractTool {
 
 	private String storedId = null;
 	
 	@XStreamOmitField
-	private List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
-	
+	private List<StoredDocumentSource> indexableStoredDocumentSources = null;
 	/**
 	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentExpander(Storage storage, FlexibleParameters parameters) {
+	public DocumentIndexer(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
 
@@ -64,39 +59,28 @@ public class DocumentExpander extends AbstractTool {
 		String sid = parameters.getParameterValue("storedId");
 		List<String> ids = storage.retrieveStrings(sid);
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		
-		List<StoredDocumentSource> expandableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		List<StoredDocumentSource> indexableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		for (String id : ids) {
 			Metadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
 			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
-			expandableStoredDocumentSources.add(storedDocumentSource);
+			indexableStoredDocumentSources.add(storedDocumentSource);
 		}
-
-		run(expandableStoredDocumentSources);
-
+		run(indexableStoredDocumentSources);
 	}
 	
-	void run(List<StoredDocumentSource> expandableStoredDocumentSources) throws IOException {
-		
-		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		
-		StoredDocumentSourceExpander expander = new StoredDocumentSourceExpander(storedDocumentStorage, parameters);
-		
-		for (StoredDocumentSource storedDocumentSource : expandableStoredDocumentSources) {
-			storedDocumentSources.addAll(expander.getExpandedStoredDocumentSources(storedDocumentSource));
-		}
-		
-		List<String> expandedIds = new ArrayList<String>();
-		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			expandedIds.add(storedDocumentSource.getId());
-		}
-		
-		storedId = storage.storeStrings(expandedIds);
-		
+	void run(List<StoredDocumentSource> indexableStoredDocumentSources) throws IOException {
+		Indexer indexer = new LuceneIndexer(storage, parameters);
+		indexer.index(indexableStoredDocumentSources);
+		this.indexableStoredDocumentSources = indexableStoredDocumentSources;
+		List<String> extractedIds = new ArrayList<String>();
+		for (StoredDocumentSource storedDocumentSource : indexableStoredDocumentSources) {
+			extractedIds.add(storedDocumentSource.getId());
+		}		
+		storedId = storage.storeStrings(extractedIds);
 	}
 
 	public List<StoredDocumentSource> getStoredDocumentSources() {
-		return storedDocumentSources;
+		return indexableStoredDocumentSources;
 	}
 
 	public String getStoredId() {
