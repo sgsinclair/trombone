@@ -126,6 +126,8 @@ public class CorpusBuilder extends AbstractTool {
 		
 		// corpus doesn't exist, so create it
 		if (corpus.size()==0) {
+			
+			// FIXME: we're rereading *and* re-analyzing all documents here, but we could be just reading the analyzed docs
 			StoredDocumentSourceStorage docStorage = storage.getStoredDocumentSourceStorage();
 			StringWriter writer = new StringWriter();
 			writer.write("<corpus>");
