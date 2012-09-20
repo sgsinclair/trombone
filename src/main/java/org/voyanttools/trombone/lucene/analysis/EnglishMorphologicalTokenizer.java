@@ -123,5 +123,9 @@ public class EnglishMorphologicalTokenizer extends Tokenizer {
 		posIncr.setPositionIncrement(1);
 		return tokensIterator.hasNext();
 	}
+	
+	public void end() {
+		System.err.println(offsetAttribute.endOffset());
+	}
 
 }

@@ -41,7 +41,10 @@ import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
+import org.voyanttools.trombone.tool.RunnableTool;
+import org.voyanttools.trombone.tool.StepEnabledCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.TestHelper;
 
 /**
  * @author sgs
@@ -72,7 +75,14 @@ public class Controller {
 	private void run() throws IOException {
 		
 		// this will all change to use tools instead
-		Storage storage = new FileStorage();
+		Storage storage = parameters.getParameterValue("storage","").equals("file") ? new FileStorage() : new MemoryStorage();
+		
+		RunnableTool tool = new StepEnabledCorpusCreator(storage, parameters);
+		tool.run();
+
+		/*
+		
+		
 		if (InputSourcesBuilder.hasParameterSources(parameters)) {
 			InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
 			List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
@@ -107,7 +117,7 @@ public class Controller {
 //				System.err.println(docsAndPositionsEnum);
 			}
 		}
-		// TODO Auto-generated method stub
+		*/
 		
 	}
 

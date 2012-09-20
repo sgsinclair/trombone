@@ -108,5 +108,5 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 	  public String toString() {
 	    return "KitchenSinkPerFieldAnalyzerWrapper(" + fieldAnalyzers + ", default=" + defaultAnalyzer + ")";
 	  }
-
+	  
 }

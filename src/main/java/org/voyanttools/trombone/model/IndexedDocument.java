@@ -19,15 +19,47 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.lucene.analysis;
+package org.voyanttools.trombone.model;
 
-import org.apache.lucene.analysis.TokenStream;
+import java.io.IOException;
+
+import org.voyanttools.trombone.document.Metadata;
+import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.storage.Storage;
 
 /**
  * @author sgs
  *
  */
-public abstract class MorphologicalTokenizer extends TokenStream {
+public class IndexedDocument {
 
+	private String id;
+	
+	private Metadata metadata = null;
+	
+	private Storage storage;
+	
+	/**
+	 * 
+	 */
+	IndexedDocument(Storage storage, String id) {
+		this.storage = storage;
+		this.id = id;
+	}
 
+	public String getId() {
+		return id;
+	}
+
+	public StoredDocumentSource asStoredDocumentSource() throws IOException {
+		return new StoredDocumentSource(getId(), getMetadata());
+	}
+
+	public Metadata getMetadata() throws IOException {
+		if (metadata==null) {
+			metadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(getId());
+		}
+		return metadata;
+	}
+	
 }

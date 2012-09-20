@@ -30,6 +30,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.voyanttools.trombone.lucene.LuceneManager;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -131,5 +132,12 @@ public class FileStorage implements Storage {
 	public List<String> retrieveStrings(String id) throws IOException {
 		String string = retrieveString(id);
 		return StringUtils.split(string, "\n");
+	}
+
+
+
+	@Override
+	public Corpus getCorpus(String id) {
+		return new Corpus(this, id);
 	}
 }

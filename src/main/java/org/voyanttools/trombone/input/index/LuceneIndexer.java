@@ -35,6 +35,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.RunnableFuture;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.lucene.analysis.Analyzer;
@@ -53,16 +54,20 @@ import org.apache.lucene.document.FieldType;
 import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
+import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.FieldInfo.IndexOptions;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Version;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.lucene.analysis.StemmableLanguage;
+import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -84,15 +89,31 @@ public class LuceneIndexer implements Indexer {
 	public void index(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
 		ExecutorService executor = Executors.newCachedThreadPool();
-		List<Future<Integer>> list = new ArrayList<Future<Integer>>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 			Runnable worker = new Indexer(storage, storedDocumentSource);
-			Future submit = executor.submit(worker);
+			executor.execute(worker);
+		}
+		executor.shutdown();
+		while (!executor.isTerminated()) {
+//			executor.
+		}
+		storage.getLuceneManager().commit();
+	}
+	
+	/*
+	private List<ProtoIndexedDocument> getProtoIndexedDocuments(List<StoredDocumentSource> storedDocumentSources) throws CorruptIndexException, LockObtainFailedException, IOException {
+		List<ProtoIndexedDocument> protoIndexedDocuments = new ArrayList<ProtoIndexedDocument>();
+		storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
+		ExecutorService executor = Executors.newCachedThreadPool();
+		List<Future<ProtoIndexedDocument>> list = new ArrayList<Future<ProtoIndexedDocument>>();
+		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+			Callable<ProtoIndexedDocument> worker = new Indexer(storage, storedDocumentSource);
+			Future<ProtoIndexedDocument> submit = executor.submit(worker);
 			list.add(submit);	
 		}
 		try {
-			for (Future future : list) {
-				future.get();
+			for (Future<ProtoIndexedDocument> future : list) {
+				protoIndexedDocuments.add(future.get());
 			}
 		} catch (InterruptedException e) {
 			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
@@ -101,8 +122,71 @@ public class LuceneIndexer implements Indexer {
 		}
 		executor.shutdown();
 		storage.getLuceneManager().commit();
+		return protoIndexedDocuments;
 		
 	}
+
+	private List<IndexedDocument> getIndexedDocuments(List<ProtoIndexedDocument> protoIndexedDocuments) throws IOException {
+		List<IndexedDocument> indexedDocuments = new ArrayList<IndexedDocument>();
+		ExecutorService executor = Executors.newCachedThreadPool();
+		List<Future<IndexedDocument>> list = new ArrayList<Future<IndexedDocument>>();
+		for (ProtoIndexedDocument protoIndexedDocument : protoIndexedDocuments) {		
+			Callable<IndexedDocument> worker = new IndexDocumentMaker(storage, protoIndexedDocument);
+			Future<IndexedDocument> submit = executor.submit(worker);
+			list.add(submit);	
+		}
+		try {
+			for (Future<IndexedDocument> future : list) {
+				indexedDocuments.add(future.get());
+			}
+		} catch (InterruptedException e) {
+			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
+		} catch (ExecutionException e) {
+			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
+		}
+		executor.shutdown();
+		return indexedDocuments;
+		
+	}
+	
+	private class ProtoIndexedDocument {
+		private int doc;
+		private StoredDocumentSource storedDocumentSource;
+		private ProtoIndexedDocument(Integer doc, StoredDocumentSource storedDocumentSource) {
+			this.doc = doc;
+			this.storedDocumentSource = storedDocumentSource;
+		}
+	}
+	
+	private class IndexDocumentMaker implements Callable<IndexedDocument> {
+
+		private Storage storage;
+		private ProtoIndexedDocument protoIndexedDocument;
+		public IndexDocumentMaker(Storage storage,
+				ProtoIndexedDocument protoIndexedDocument) {
+			this.storage = storage;
+			this.protoIndexedDocument = protoIndexedDocument;
+		}
+
+		@Override
+		public IndexedDocument call() throws Exception {
+			String id = protoIndexedDocument.storedDocumentSource.getId();
+			StoredDocumentSourceStorage documentStorage = storage.getStoredDocumentSourceStorage();
+			if (documentStorage.hasIndexedDocument(id)) {
+				return documentStorage.getIndexedDocument(id);
+			}
+			int docId = protoIndexedDocument.doc > -1 ? protoIndexedDocument.doc : storage.getLuceneManager().getLuceneDocumentId(id);
+			IndexReader reader = storage.getLuceneManager().getIndexReader();
+			Document document = reader.document(docId)
+			DocumentStoredFieldVisitor
+			document.getField("a").
+			storage.getLuceneManager().
+			return new IndexedDocument();
+		}
+		
+	}
+	*/
+	
 	
 	private class Indexer implements Runnable {
 
@@ -138,10 +222,9 @@ public class LuceneIndexer implements Indexer {
 		@Override
 		public void run()  {
 			
-
 			try {
 				int index = luceneManager.getLuceneDocumentId(id);
-//				if (index>-1) return; // got it, let's bail
+				if (index>-1) return; // new ProtoIndexedDocument(index, storedDocumentSource); // got it, let's bail
 					
 
 				FieldType ft = new FieldType(TextField.TYPE_STORED);
@@ -157,15 +240,18 @@ public class LuceneIndexer implements Indexer {
 				document.add(new StoredField("id", id+"-lexical"));
 				document.add(new Field("lexical", getString(), ft));
 				
-				// next look for stemmed index if needed
-				String lang = storedDocumentSource.getMetadata().getLanguageCode();
-				StemmableLanguage stemmableLanguage = StemmableLanguage.fromCode(lang);
-				if (stemmableLanguage!=null) {
-					document.add(new Field("stemmed-"+lang, getString(), ft));		
-				}
 				
 				if (storedDocumentSource.getMetadata().getLanguageCode().equals("en")) {
+					// FIXME: deal with other lemmatization languages
 					document.add(new Field("lemmatized-en", getString(), ft));
+				}
+				else {
+					// next look for stemmed index if needed
+					String lang = storedDocumentSource.getMetadata().getLanguageCode();
+					StemmableLanguage stemmableLanguage = StemmableLanguage.fromCode(lang);
+					if (stemmableLanguage!=null) {
+						document.add(new Field("stemmed-"+lang, getString(), ft));		
+					}
 				}
 				
 				luceneManager.addDocument(document);
@@ -173,7 +259,6 @@ public class LuceneIndexer implements Indexer {
 			catch (IOException e) {
 				throw new RuntimeException("Unable to index stored document: "+storedDocumentSource, e);
 			}
-
 		}
 		
 	}

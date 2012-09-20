@@ -33,6 +33,7 @@ import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.apache.lucene.store.RAMDirectory;
 import org.voyanttools.trombone.lucene.LuceneManager;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -104,5 +105,10 @@ public class MemoryStorage implements Storage {
 	public List<String> retrieveStrings(String id) throws IOException {
 		String string = retrieveString(id);
 		return StringUtils.split(string, "\n");
+	}
+	
+	@Override
+	public Corpus getCorpus(String id) {
+		return new Corpus(this, id);
 	}
 }

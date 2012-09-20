@@ -100,7 +100,12 @@ public class StepEnabledCorpusCreator extends AbstractTool {
 		}
 		
 		if (nextCorpusCreatorStep.equals("corpus")) {
-			
+			CorpusBuilder builder = new CorpusBuilder(storage, parameters);
+			if (storedDocumentSources==null) {builder.run();}
+			else {builder.run(storedDocumentSources);}
+//			storedDocumentSources = builder.getStoredDocumentSources();
+			storedId = builder.getStoredId();
+			nextCorpusCreatorStep = "done";
 		}
 	}
 	

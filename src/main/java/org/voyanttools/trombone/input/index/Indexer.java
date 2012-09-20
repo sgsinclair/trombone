@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.model.IndexedDocument;
 
 /**
  * @author sgs

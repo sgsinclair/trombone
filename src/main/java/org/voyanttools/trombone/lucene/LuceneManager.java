@@ -110,12 +110,11 @@ public class LuceneManager {
 		getIndexWriter().commit();
 		
 	}
-	public int addDocument(Document document) throws CorruptIndexException, IOException {
+	public void addDocument(Document document) throws CorruptIndexException, IOException {
 		document.add(new FloatField("version", luceneDocumentVersion, Field.Store.YES));
 		IndexWriter writer = getIndexWriter();
 		writer.addDocument(document);
 		directoryReader = DirectoryReader.open(writer, false);
-		return getLuceneDocumentId(document.getField("id").stringValue());
 	}
 
 	public IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {
