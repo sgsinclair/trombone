@@ -22,6 +22,8 @@
 package org.voyanttools.trombone.model;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -40,7 +42,9 @@ public class Corpus implements Iterable<IndexedDocument> {
 	private Storage storage;
 	private String id;
 	
-	Map<String, IndexedDocument> documents = null;
+	List<IndexedDocument> documentsList = null;
+	Map<String, Integer> documentsMap = null;
+	
 	
 	/**
 	 * @param id 
@@ -52,32 +56,39 @@ public class Corpus implements Iterable<IndexedDocument> {
 		this.id = id;
 	}
 	
-	private Map<String, IndexedDocument> getDocumentsMap() throws IOException {
-		if (documents==null) {
-			documents = new LinkedHashMap<String, IndexedDocument>();
+	private List<IndexedDocument> getDocumentsList() throws IOException {
+		if (documentsList==null) {
+			documentsMap = new HashMap<String, Integer>();
+			documentsList = new ArrayList<IndexedDocument>();
 			List<StoredDocumentSource> storedDocumentSources = storage.getStoredDocumentSourceStorage().getMultipleExpandedStoredDocumentSources(id);
 			for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 				String id = storedDocumentSource.getId();
-				documents.put(id, new IndexedDocument(storage, id));
+				documentsMap.put(id, documentsList.size());
+				documentsList.add(new IndexedDocument(storage, id));
 			}
 		}
-		return documents;
+		return documentsList;
 	}
 
 	public IndexedDocument getDocument(String id) throws IOException {
-		return getDocumentsMap().get(id);
+		if (documentsMap==null) {getDocumentsList();} // this builds the map
+		return getDocument(documentsMap.get(id));
 	}
 
 	@Override
 	public Iterator<IndexedDocument> iterator() {
 		try {
-			return getDocumentsMap().values().iterator();
+			return getDocumentsList().iterator();
 		} catch (IOException e) {
 			throw new RuntimeException("Unable to load corpus documents.");
 		}
 	}
 
 	public int size() throws IOException {
-		return getDocumentsMap().size();
+		return getDocumentsList().size();
+	}
+
+	public IndexedDocument getDocument(int docIndex) throws IOException {
+		return getDocumentsList().get(docIndex);
 	}
 }

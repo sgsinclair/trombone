@@ -22,58 +22,54 @@
 package org.voyanttools.trombone.tool;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-import com.thoughtworks.xstream.annotations.XStreamOmitField;
-
 /**
  * @author sgs
  *
  */
-public abstract class AbstractTool implements RunnableTool {
+public class DocumentFrequencies extends AbstractTool {
 
-	@XStreamOmitField
-	protected FlexibleParameters parameters;
-	
-	@XStreamOmitField
-	protected Storage storage;
-	
 	/**
-	 * @param storage 
-	 * 
+	 * @param storage
+	 * @param parameters
 	 */
-	public AbstractTool(Storage storage, FlexibleParameters parameters) {
-		this.storage = storage;
-		this.parameters = parameters;
+	public DocumentFrequencies(Storage storage, FlexibleParameters parameters) {
+		super(storage, parameters);
+		// TODO Auto-generated constructor stub
+	}
+
+	/* (non-Javadoc)
+	 * @see org.voyanttools.trombone.tool.RunnableTool#run()
+	 */
+	@Override
+	public void run() throws IOException {
+		if (parameters.containsKey("query")) {
+			// FIXME: complete query document frequencies
+		}
+		else {
+			runAllTerms();
+		}
+	}
+	
+	private void runAllTerms() throws IOException {
+		
+		Corpus corpus = storage.getCorpus(parameters.getParameterValue("corpus"));
+		
+		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
+		
+		StoredToLuceneDocumentsMapper mapper = new StoredToLuceneDocumentsMapper(storage, ids);
+		
+		
 		
 	}
 
-	protected List<String> getCorpusStoredDocumentIdsFromParameters(Corpus corpus) throws IOException {
-		
-		List<String> ids = new ArrayList<String>();
-		
-		// add IDs
-		for (String docId : parameters.getParameterValues("docId")) {
-			ids.add(docId);
-		}
-		
-		// add indices
-		for (int docIndex : parameters.getParameterIntValues("docIndex")) {
-			ids.add(corpus.getDocument(docIndex).getId());
-		}
-		
-		// no docs defined, so consider all
-		if (ids.isEmpty()) {
-			for (IndexedDocument doc : corpus) {ids.add(doc.getId());}
-		}
-		
-		return ids;
-		
-	}
 }
