@@ -27,8 +27,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 import org.apache.lucene.search.DocIdSet;
-import org.apache.lucene.util.SortedVIntList;
+import org.apache.lucene.search.DocIdSetIterator;
+
+import org.apache.lucene.util.OpenBitSet;
+import org.apache.lucene.util.OpenBitSetIterator;
 import org.voyanttools.trombone.storage.Storage;
 
 /**
@@ -41,7 +45,7 @@ public class StoredToLuceneDocumentsMapper {
 	private Map<Integer, Integer> luceneIds;
 	private Map<String, Integer> corpusIds;
 	private int[] sortedLuceneIds;
-	private DocIdSet docIdSet = null; // initialize this lazily
+	private OpenBitSet docIdOpenBitSet = null; // initialize this lazily
 	
 	/**
 	 * @param ids 
@@ -62,9 +66,19 @@ public class StoredToLuceneDocumentsMapper {
 		Arrays.sort(sortedLuceneIds);
 	}
 	
-	public DocIdSet getDocIdSet() {
-		if (docIdSet==null) {docIdSet = new SortedVIntList(sortedLuceneIds);}
-		return docIdSet;
+	public DocIdSetIterator getDocIdSetIterator() {
+		return new OpenBitSetIterator(docIdOpenBitSet);
+	}
+	
+	public OpenBitSet getDocIdOpenBitSet() {
+		if (docIdOpenBitSet==null) {
+			OpenBitSet obs = new OpenBitSet(sortedLuceneIds.length);
+			for (int i : sortedLuceneIds) {
+				obs.set((long) i);
+			}
+			docIdOpenBitSet = obs;
+		}
+		return docIdOpenBitSet;
 	}
 
 

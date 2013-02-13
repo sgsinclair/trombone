@@ -22,23 +22,8 @@
 package org.voyanttools.trombone.lucene;
 
 import java.io.IOException;
-import java.io.Reader;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.AnalyzerWrapper;
-import org.apache.lucene.analysis.CharReader;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
-import org.apache.lucene.analysis.charfilter.HTMLStripCharFilter;
-import org.apache.lucene.analysis.core.KeywordAnalyzer;
-import org.apache.lucene.analysis.core.KeywordTokenizer;
-import org.apache.lucene.analysis.core.LowerCaseFilter;
-import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
-import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
-import org.apache.lucene.analysis.snowball.SnowballFilter;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FloatField;
@@ -55,8 +40,6 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Version;
 import org.voyanttools.trombone.lucene.analysis.KitchenSinkPerFieldAnalyzerWrapper;
-import org.voyanttools.trombone.lucene.analysis.LexicalAnalyzer;
-import org.voyanttools.trombone.lucene.analysis.MultiLingualStemAnalyzer;
 
 /**
  * @author sgs
@@ -72,8 +55,8 @@ public class LuceneManager {
 	
 	private IndexSearcher indexSearcher = null;
 	
-	private Version version = Version.LUCENE_40;
-	private float luceneDocumentVersion = 4.0f;
+	private Version version = Version.LUCENE_41;
+	private float luceneDocumentVersion = 4.1f;
 
 	
 	private Analyzer analyzer = new KitchenSinkPerFieldAnalyzerWrapper();
@@ -114,7 +97,9 @@ public class LuceneManager {
 		document.add(new FloatField("version", luceneDocumentVersion, Field.Store.YES));
 		IndexWriter writer = getIndexWriter();
 		writer.addDocument(document);
+		writer.commit();
 		directoryReader = DirectoryReader.open(writer, false);
+		indexSearcher = new IndexSearcher(directoryReader);
 	}
 
 	public IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {

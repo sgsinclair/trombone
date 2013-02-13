@@ -42,7 +42,9 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.RunnableTool;
-import org.voyanttools.trombone.tool.StepEnabledCorpusCreator;
+import org.voyanttools.trombone.tool.StepEnabledIndexedCorpusCreator;
+import org.voyanttools.trombone.tool.ToolRunner;
+import org.voyanttools.trombone.tool.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -53,7 +55,14 @@ import org.voyanttools.trombone.util.TestHelper;
 public class Controller {
 
 	private FlexibleParameters parameters;
+	private Storage storage;
+
 	public Controller(FlexibleParameters parameters) {
+		this(parameters.getParameterValue("storage","").equals("file") ? new FileStorage() : new MemoryStorage(), parameters);
+	}
+
+	public Controller(Storage storage, FlexibleParameters parameters) {
+		this.storage = storage;
 		this.parameters = parameters;
 	}
 
@@ -74,11 +83,14 @@ public class Controller {
 
 	private void run() throws IOException {
 		
-		// this will all change to use tools instead
-		Storage storage = parameters.getParameterValue("storage","").equals("file") ? new FileStorage() : new MemoryStorage();
+		ToolRunner toolRunner = new ToolRunner(storage, parameters);
+		toolRunner.run();
+		ToolSerializer toolSerializer = new ToolSerializer(parameters, toolRunner);
+		toolSerializer.run();
 		
-		RunnableTool tool = new StepEnabledCorpusCreator(storage, parameters);
-		tool.run();
+		
+//		RunnableTool tool = new StepEnabledCorpusCreator(storage, parameters);
+//		tool.run();
 
 		/*
 		

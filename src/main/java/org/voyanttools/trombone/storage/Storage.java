@@ -60,5 +60,6 @@ public interface Storage {
 	
 	public List<String> retrieveStrings(String id) throws IOException;
 
-	public Corpus getCorpus(String id);
+	public CorpusStorage getCorpusStorage();
+	
 }

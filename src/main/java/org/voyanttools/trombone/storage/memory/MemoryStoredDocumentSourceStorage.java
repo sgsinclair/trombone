@@ -35,7 +35,6 @@ import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.document.Metadata;
 import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.storage.AbstractStoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -43,7 +42,7 @@ import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
  * 
  * @author Stéfan Sinclair
  */
-class MemoryStoredDocumentSourceStorage extends AbstractStoredDocumentSourceStorage {
+class MemoryStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	
 	/**
 	 * a map of IDs to {@link StoredDocumentSource}s
@@ -163,6 +162,13 @@ class MemoryStoredDocumentSourceStorage extends AbstractStoredDocumentSourceStor
 			List<StoredDocumentSource> archivedStoredDocumentSources,
 			String prefix) throws IOException {
 		this.multipleExpandedStoredDocumentSourcesMap.put(id+prefix, archivedStoredDocumentSources);
+	}
+
+	@Override
+	public void updateStoredDocumentSourceMetadata(String id, Metadata metadata)
+			throws IOException {
+		// is this really necessary since the metadata is probably already in memory? could it have been cloned?
+		storedDocumentSourcesMap.put(id, new StoredDocumentSource(id, metadata));
 	}
 
 }

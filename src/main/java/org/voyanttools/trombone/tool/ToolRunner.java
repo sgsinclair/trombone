@@ -22,54 +22,56 @@
 package org.voyanttools.trombone.tool;
 
 import java.io.IOException;
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
-import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+
+import com.ibm.icu.util.Calendar;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
-public class DocumentFrequencies extends AbstractTool {
-
+@XStreamAlias("results")
+public class ToolRunner implements RunnableTool {
+	
+	private long duration;
+	
+	private FlexibleParameters parameters;
+	
+	@XStreamOmitField
+	private Storage storage;
+	
+	List<RunnableTool> results = new ArrayList<RunnableTool>();
+	
 	/**
-	 * @param storage
-	 * @param parameters
+	 * 
 	 */
-	public DocumentFrequencies(Storage storage, FlexibleParameters parameters) {
-		super(storage, parameters);
-		// TODO Auto-generated constructor stub
-	}
-
-	/* (non-Javadoc)
-	 * @see org.voyanttools.trombone.tool.RunnableTool#run()
-	 */
-	@Override
-	public void run() throws IOException {
-		if (parameters.containsKey("query")) {
-			// FIXME: complete query document frequencies
-		}
-		else {
-			runAllTerms();
-		}
+	public ToolRunner(Storage storage, FlexibleParameters parameters) {
+		this.storage = storage;
+		this.parameters = parameters;
 	}
 	
-	private void runAllTerms() throws IOException {
+	public void run() throws IOException {
 		
-		Corpus corpus = storage.getCorpus(parameters.getParameterValue("corpus"));
+		long start = Calendar.getInstance().getTimeInMillis();
+		ToolFactory toolFactory = new ToolFactory(storage, parameters);
+		toolFactory.run();
+		List<RunnableTool> tools = toolFactory.getRunnableTools();
+		for (RunnableTool tool : tools) {
+			tool.run();
+			results.add(tool);
+		}
 		
-		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
-		
-		StoredToLuceneDocumentsMapper mapper = new StoredToLuceneDocumentsMapper(storage, ids);
-		
-		
-		
+		duration = Calendar.getInstance().getTimeInMillis() - start;
 	}
-
+	
+	public List<RunnableTool> getRunnableToolResults() {
+		return results;
+	}
+	
 }

@@ -23,6 +23,9 @@ package org.voyanttools.trombone.tool;
 
 import java.io.IOException;
 
+import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.util.FlexibleParameters;
+
 /**
  * @author sgs
  *

@@ -19,22 +19,47 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.storage;
+package org.voyanttools.trombone.storage.memory;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-import java.util.concurrent.Callable;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
-import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.storage.CorpusStorage;
 
 /**
  * @author sgs
  *
  */
-public abstract class AbstractStoredDocumentSourceStorage implements
-		StoredDocumentSourceStorage {
+class MemoryCorpusStorage implements CorpusStorage {
+	
+	private Map<String, Corpus> corpusMap = new HashMap<String, Corpus>();
+
+	@Override
+	public Corpus getCorpus(String id) throws IOException {
+		if (corpusMap.containsKey(id)) {
+			return corpusMap.get(id);
+		}
+		else {
+			throw new IOException("This corpus was not found. It's possible that it's been removed or that it never existed (that the corpus ID is wrong)");
+		}
+	}
+
+	@Override
+	public void storeCorpus(Corpus corpus) throws IOException {
+		String id = corpus.getId();
+		if (corpusMap.containsKey(id)) {
+			throw new IOException("This corpus already exists: "+id);
+		}
+		else {
+			corpusMap.put(id, corpus);
+		}
+	}
+
+	@Override
+	public boolean corpusExists(String id) {
+		return corpusMap.containsKey(id);
+	}
 
 }

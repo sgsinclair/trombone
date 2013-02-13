@@ -42,10 +42,13 @@ import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -61,7 +64,6 @@ public class CorpusBuilder extends AbstractTool {
 	 */
 	public CorpusBuilder(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		// TODO Auto-generated constructor stub
 	}
 
 	/* (non-Javadoc)
@@ -83,24 +85,26 @@ public class CorpusBuilder extends AbstractTool {
 	
 	void run(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		
+		// build a hash set of the ids to check against the corpus
+		Set<String> ids = new HashSet<String>();
+		for (StoredDocumentSource sds : storedDocumentSources) {
+			ids.add(sds.getId());
+		}
+
 		// first see if we can load an existing corpus
 		if (parameters.containsKey("corpus")) {
-			Corpus corpus = storage.getCorpus(parameters.getParameterValue("corpus"));
-			if (corpus!=null) {
-				
-				// build a hash set of the ids to check against the corpus
-				Set<String> ids = new HashSet<String>();
-				for (StoredDocumentSource sds : storedDocumentSources) {
-					ids.add(sds.getId());
-				}
+			Corpus corpus = storage.getCorpusStorage().getCorpus(parameters.getParameterValue("corpus"));
+			if (corpus!=null) {		
 				
 				// add documents that aren't in the corpus already
 				List<StoredDocumentSource> corpusStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 				boolean overlap = true;
 				for (IndexedDocument document : corpus) {
-					if (ids.contains(document.getId())==false) {
+					String id = document.getId();
+					if (ids.contains(id)==false) {
 						overlap = false;
 						corpusStoredDocumentSources.add(document.asStoredDocumentSource());
+						ids.add(id);
 					}
 				}
 				
@@ -115,81 +119,29 @@ public class CorpusBuilder extends AbstractTool {
 			}
 		}
 		
-		// now let's try to create a single document from all stored documents
-		StringBuilder idsString = new StringBuilder("corpus");
-		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			idsString.append(storedDocumentSource.getId());
+		StringBuilder sb = new StringBuilder();
+		for (String id : ids) {
+			sb.append(id);
 		}
 		
-		String storedId = DigestUtils.md5Hex(idsString.toString());
-		Corpus corpus = storage.getCorpus(storedId);
-		
-		// corpus doesn't exist, so create it
-		if (corpus.size()==0) {
-			
-			// FIXME: we're rereading *and* re-analyzing all documents here, but we could be just reading the analyzed docs
-			StoredDocumentSourceStorage docStorage = storage.getStoredDocumentSourceStorage();
-			StringWriter writer = new StringWriter();
-			writer.write("<corpus>");
-			for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-				InputStream is = null;
-				try {
-					is = docStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId());
-					IOUtils.copy(is, writer);
-				}
-				finally {
-					if (is!=null) is.close();
-				}
-			}
-			writer.write("</corpus>");
-			
-			InputStream stream = new ByteArrayInputStream(writer.toString().getBytes("UTF-8"));
-			Metadata metadata = new Metadata();
-			InputSource inputSource = new InputStreamInputSource(storedId, metadata, stream);
-			
-			// store document
-			StoredDocumentSource storedDocumentSource = docStorage.getStoredDocumentSource(inputSource);
-			
-			// store list of documents
-			docStorage.setMultipleExpandedStoredDocumentSources(storedId, storedDocumentSources);
-			
-			// index
-			List<StoredDocumentSource> indexableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
-			indexableStoredDocumentSources.add(storedDocumentSource);
-			DocumentIndexer indexer = new DocumentIndexer(storage, parameters);
-			indexer.run(indexableStoredDocumentSources);
-			
-			
+		storedId = DigestUtils.md5Hex(sb.toString());
+		CorpusMetadata metadata = new CorpusMetadata(storedId);
+		metadata.setDocumentIds(ids);
+		Corpus corpus = new Corpus(storage, metadata);
+		if (storage.getCorpusStorage().corpusExists(storedId)==false) {
+			storage.getCorpusStorage().storeCorpus(corpus);
 		}
 		
 		
 		
-//		
-//		IndexReader reader = storage.getLuceneManager().getIndexReader();
-//		reader.d
-//		ExecutorService executor = Executors.newCachedThreadPool();
-//		List<Future<IndexedDocument>> list = new ArrayList<Future<IndexedDocument>>();
-//		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {		
-//			Callable<Map<String, Integer>> worker = new IndexDocumentMaker(storage, protoIndexedDocument);
-//			Future<IndexedDocument> submit = executor.submit(worker);
-//			list.add(submit);	
-//		}
-//		try {
-//			for (Future<IndexedDocument> future : list) {
-//				indexedDocuments.add(future.get());
-//			}
-//		} catch (InterruptedException e) {
-//			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
-//		} catch (ExecutionException e) {
-//			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
-//		}
-//		executor.shutdown();
+		if (parameters.containsKey("corpus")==false) {
+			parameters.addParameter("corpus", storedId);
+		}
 
 	}
 
 	public String getStoredId() {
-		// TODO Auto-generated method stub
-		return null;
+		return storedId;
 	}
 
 }

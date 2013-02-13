@@ -34,6 +34,7 @@ import org.apache.lucene.store.NIOFSDirectory;
 import org.apache.lucene.store.RAMDirectory;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -55,6 +56,8 @@ public class MemoryStorage implements Storage {
 	 */
 	private StoredDocumentSourceStorage storedDocumentSourceStorage;
 
+	private CorpusStorage corpusStorage;
+	
 	private LuceneManager luceneManager = null;
 
 	/**
@@ -62,12 +65,17 @@ public class MemoryStorage implements Storage {
 	 */
 	public MemoryStorage() {
 		storedDocumentSourceStorage = new MemoryStoredDocumentSourceStorage();
+		corpusStorage = new MemoryCorpusStorage();
 	}
 
 	public StoredDocumentSourceStorage getStoredDocumentSourceStorage() {
 		return storedDocumentSourceStorage;
 	}
 
+	public CorpusStorage getCorpusStorage() {
+		return corpusStorage;
+	}
+	
 	public void destroy() throws IOException {
 		storedDocumentSourceStorage = new MemoryStoredDocumentSourceStorage();
 	}
@@ -107,8 +115,4 @@ public class MemoryStorage implements Storage {
 		return StringUtils.split(string, "\n");
 	}
 	
-	@Override
-	public Corpus getCorpus(String id) {
-		return new Corpus(this, id);
-	}
 }

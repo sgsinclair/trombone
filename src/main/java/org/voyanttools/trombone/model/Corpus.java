@@ -25,13 +25,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.file.FileStorage;
 
 /**
  * @author sgs
@@ -40,30 +37,23 @@ import org.voyanttools.trombone.storage.file.FileStorage;
 public class Corpus implements Iterable<IndexedDocument> {
 
 	private Storage storage;
-	private String id;
+	private CorpusMetadata corpusMetadata;
 	
 	List<IndexedDocument> documentsList = null;
-	Map<String, Integer> documentsMap = null;
+	Map<String, Integer> documentPositionsMap = null;
 	
 	
-	/**
-	 * @param id 
-	 * @param fileStorage 
-	 * 
-	 */
-	public Corpus(Storage storage, String id) {
+	public Corpus(Storage storage, CorpusMetadata corpusMetadata) {
 		this.storage = storage;
-		this.id = id;
+		this.corpusMetadata = corpusMetadata;
 	}
-	
+
 	private List<IndexedDocument> getDocumentsList() throws IOException {
 		if (documentsList==null) {
-			documentsMap = new HashMap<String, Integer>();
+			documentPositionsMap = new HashMap<String, Integer>();
 			documentsList = new ArrayList<IndexedDocument>();
-			List<StoredDocumentSource> storedDocumentSources = storage.getStoredDocumentSourceStorage().getMultipleExpandedStoredDocumentSources(id);
-			for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-				String id = storedDocumentSource.getId();
-				documentsMap.put(id, documentsList.size());
+			for (String id : corpusMetadata.getDocumentIds()) {
+				documentPositionsMap.put(id, documentsList.size());
 				documentsList.add(new IndexedDocument(storage, id));
 			}
 		}
@@ -71,8 +61,8 @@ public class Corpus implements Iterable<IndexedDocument> {
 	}
 
 	public IndexedDocument getDocument(String id) throws IOException {
-		if (documentsMap==null) {getDocumentsList();} // this builds the map
-		return getDocument(documentsMap.get(id));
+		if (documentPositionsMap==null) {getDocumentsList();} // this builds the map
+		return getDocument(documentPositionsMap.get(id));
 	}
 
 	@Override
@@ -85,10 +75,31 @@ public class Corpus implements Iterable<IndexedDocument> {
 	}
 
 	public int size() throws IOException {
-		return getDocumentsList().size();
+		return corpusMetadata.getDocumentIds().size();
 	}
 
 	public IndexedDocument getDocument(int docIndex) throws IOException {
 		return getDocumentsList().get(docIndex);
+	}
+
+	public int[] getTotalTokensCounts(TokenType tokenType) throws IOException {
+		int[] counts = new int[size()];
+		int index = 0;
+		for (IndexedDocument document : this) {
+			counts[index++] = document.getMetadata().getTotalTokensCount(tokenType);
+		}
+		return counts;
+	}
+
+	public String getId() {
+		return corpusMetadata.getId();
+	}
+
+	public CorpusMetadata getCorpusMetadata() {
+		return corpusMetadata;
+	}
+
+	public int getDocumentPosition(String corpusId) {
+		return documentPositionsMap.get(corpusId);
 	}
 }

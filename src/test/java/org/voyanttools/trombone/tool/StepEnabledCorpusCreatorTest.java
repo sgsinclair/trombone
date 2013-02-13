@@ -24,7 +24,7 @@ public class StepEnabledCorpusCreatorTest {
 		// do a first pass one step at a time and make sure we get the right next steps
 		
 		// store
-		StepEnabledCorpusCreator creator = new StepEnabledCorpusCreator(storage, parameters);
+		StepEnabledIndexedCorpusCreator creator = new StepEnabledIndexedCorpusCreator(storage, parameters);
 		creator.run();
 		nextStep = creator.getNextCorpusCreatorStep();
 		assertEquals("expand", nextStep);
@@ -97,7 +97,7 @@ public class StepEnabledCorpusCreatorTest {
 		
 		// now do a full pass with a new text
 		parameters = new FlexibleParameters(new String[]{"string=test","file="+TestHelper.getResource("formats/chars.rtf")});
-		creator = new StepEnabledCorpusCreator(storage, parameters);
+		creator = new StepEnabledIndexedCorpusCreator(storage, parameters);
 		creator.run();
 		assertEquals(storedCorpusId, creator.getStoredId());
 

@@ -29,6 +29,7 @@ import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.Source;
+import org.voyanttools.trombone.model.TokenType;
 
 /**
  * This encapsulates various types of metadata about content, including {@link Source},
@@ -285,5 +286,21 @@ public class Metadata {
 
 	public String getLanguageCode() {
 		return this.properties.getProperty("lang", "");
+	}
+
+	public void setTotalTokensCount(TokenType tokenType, int total) {
+		this.properties.setProperty("totalTokensCount-"+tokenType.name(), String.valueOf(total));
+	}
+
+	public void setLastTokenPositionIndex(TokenType tokenType, int lastPosition) {
+		this.properties.setProperty("lastTokenPositionIndex-"+tokenType.name(), String.valueOf(lastPosition));
+	}
+
+	public void setLastTokenOffsetIndex(TokenType tokenType, int lastOffset) {
+		this.properties.setProperty("lastTokenStartOffset-"+tokenType.name(), String.valueOf(lastOffset));
+	}
+
+	public int getTotalTokensCount(TokenType tokenType) {
+		return Integer.parseInt(this.properties.getProperty("totalTokensCount-"+tokenType, "0"));
 	}
 }

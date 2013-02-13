@@ -19,36 +19,38 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.lucene.analysis;
+package org.voyanttools.trombone.model;
 
-import java.io.Reader;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.Properties;
 
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
-import org.apache.lucene.analysis.charfilter.HTMLStripCharFilter;
-import org.apache.lucene.analysis.core.LowerCaseFilter;
-import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
-import org.apache.lucene.util.Version;
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
  *
  */
-public class LexicalAnalyzer extends Analyzer {
+public class CorpusMetadata extends Properties {
 	
-	private Version version = Version.LUCENE_41;
+	public CorpusMetadata(String id) {
+		super();
+		this.setProperty("id", id);
+	}
+	
+	public List<String> getDocumentIds() {
+		return Arrays.asList(this.getProperty("documentIds", "").split(","));
+	}
 
-	/* (non-Javadoc)
-	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
-	 */
-	@Override
-	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
-		Reader filter =  new HTMLStripCharFilter(reader);
-		Tokenizer tokenizer = new ICUTokenizer(filter);
-		TokenStream stream = new LowerCaseFilter(version, tokenizer);
-		return new TokenStreamComponents(tokenizer, stream);
+	public String getId() {
+		return getProperty("id");
+	}
+
+	public void setDocumentIds(Collection<String> ids) {
+		this.setProperty("documentIds", StringUtils.join(ids, ","));
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -157,5 +157,7 @@ public interface StoredDocumentSourceStorage {
 	public void setMultipleExpandedStoredDocumentSources(String id,
 			List<StoredDocumentSource> archivedStoredDocumentSources,
 			String prefix) throws IOException;
+	
+	public void updateStoredDocumentSourceMetadata(String id, Metadata metadata) throws IOException;
 
 }

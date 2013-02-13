@@ -36,13 +36,13 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  *
  */
 @XStreamAlias("stepEnabledCorpusCreator")
-public class StepEnabledCorpusCreator extends AbstractTool {
+public class StepEnabledIndexedCorpusCreator extends AbstractTool {
 
 	private String nextCorpusCreatorStep = "";
 	
 	private String storedId;
 	
-	public StepEnabledCorpusCreator(Storage storage, FlexibleParameters parameters) {
+	public StepEnabledIndexedCorpusCreator(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
 

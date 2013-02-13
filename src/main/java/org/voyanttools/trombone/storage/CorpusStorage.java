@@ -19,36 +19,22 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.lucene.analysis;
+package org.voyanttools.trombone.storage;
 
-import java.io.Reader;
+import java.io.IOException;
 
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
-import org.apache.lucene.analysis.charfilter.HTMLStripCharFilter;
-import org.apache.lucene.analysis.core.LowerCaseFilter;
-import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
-import org.apache.lucene.util.Version;
+import org.voyanttools.trombone.model.Corpus;
 
 /**
  * @author sgs
  *
  */
-public class LexicalAnalyzer extends Analyzer {
-	
-	private Version version = Version.LUCENE_41;
+public interface CorpusStorage {
 
-	/* (non-Javadoc)
-	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
-	 */
-	@Override
-	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
-		Reader filter =  new HTMLStripCharFilter(reader);
-		Tokenizer tokenizer = new ICUTokenizer(filter);
-		TokenStream stream = new LowerCaseFilter(version, tokenizer);
-		return new TokenStreamComponents(tokenizer, stream);
-	}
+	public Corpus getCorpus(String id) throws IOException;
+	
+	public boolean corpusExists(String id);
+	
+	public void storeCorpus(Corpus corpus) throws IOException;
 
 }

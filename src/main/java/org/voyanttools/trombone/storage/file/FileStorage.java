@@ -31,6 +31,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -58,6 +59,9 @@ public class FileStorage implements Storage {
 	 * the handler for InputSource operations
 	 */
 	private FileStoredDocumentSourceStorage documentSourceStorage = null;
+	
+	
+	private CorpusStorage corpusStorage = null;
 	
 	private LuceneManager luceneManager = null;
 
@@ -134,10 +138,11 @@ public class FileStorage implements Storage {
 		return StringUtils.split(string, "\n");
 	}
 
-
-
 	@Override
-	public Corpus getCorpus(String id) {
-		return new Corpus(this, id);
+	public CorpusStorage getCorpusStorage() {
+		if (corpusStorage==null) {
+			corpusStorage = new FileCorpusStorage(this, storageLocation);
+		}
+		return corpusStorage;
 	}
 }
