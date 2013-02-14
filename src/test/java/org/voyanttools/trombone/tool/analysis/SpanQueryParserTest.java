@@ -71,14 +71,14 @@ public class SpanQueryParserTest {
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		
-		List<SpanQuery> spanQueries;
+		Map<String, SpanQuery> spanQueriesMap;
 		SpanQuery spanQuery;
 		Spans spans;
 		
 		// single term
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark"}, TokenType.lexical, true);
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark"}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
@@ -86,9 +86,9 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 
 		// single term (ignore quotes)
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"\"dark\""}, TokenType.lexical, true);
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"\"dark\""}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
@@ -96,15 +96,15 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 		
 		// two separate terms (not collapsed)
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark","best"}, TokenType.lexical, true);
-		assertEquals(2, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark","best"}, TokenType.lexical, true);
+		assertEquals(2, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
 		assertEquals(3,spans.start());
 		assertFalse(spans.next());
-		spanQuery = spanQueries.get(1);
+		spanQuery = spanQueriesMap.get("best");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(1,spans.doc());
@@ -112,15 +112,31 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 
 		// two separate terms (not collapsed)
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark;best"}, TokenType.lexical, true);
-		assertEquals(2, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark;best"}, TokenType.lexical, true);
+		assertEquals(2, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
 		assertEquals(3,spans.start());
 		assertFalse(spans.next());
-		spanQuery = spanQueries.get(1);
+		spanQuery = spanQueriesMap.get("best");
+		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
+		spans.next();
+		assertEquals(1,spans.doc());
+		assertEquals(3,spans.start());
+		assertFalse(spans.next());
+		
+		// two separate terms (not collapsed), with spaces
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{" dark ; best "}, TokenType.lexical, true);
+		assertEquals(2, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark");
+		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
+		spans.next();
+		assertEquals(0,spans.doc());
+		assertEquals(3,spans.start());
+		assertFalse(spans.next());
+		spanQuery = spanQueriesMap.get("best");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(1,spans.doc());
@@ -128,9 +144,9 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 		
 		// comma-separated terms (collapased)
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark,best"}, TokenType.lexical, true);
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark,best"}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark,best");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
@@ -141,9 +157,9 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 		
 		// wildcards
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dar*,b*t"}, TokenType.lexical, true); // dark and best
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dar*,b*t"}, TokenType.lexical, true); // dark and best
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dar*,b*t");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
@@ -154,24 +170,25 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 
 		// two separate wildcards (not collapsed)
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dar*;bes*"}, TokenType.lexical, true);
-		assertEquals(2, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dar*;bes*"}, TokenType.lexical, true);
+		assertEquals(2, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dar*");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
 		assertEquals(3,spans.start());
 		assertFalse(spans.next());
-		spanQuery = spanQueries.get(1);
+		spanQuery = spanQueriesMap.get("bes*");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(1,spans.doc());
 		assertEquals(3,spans.start());
 		assertFalse(spans.next());
+
 		// phrase
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark and"}, TokenType.lexical, true);
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark and"}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark and");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
@@ -180,9 +197,9 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 		
 		// phrase with wildcards
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dar* an*"}, TokenType.lexical, true);
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dar* an*"}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dar* an*");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
@@ -191,9 +208,9 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 
 		// phrase with wildcards
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark stormy~2"}, TokenType.lexical, true);
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"dark stormy~2"}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark stormy~2");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());
@@ -202,9 +219,9 @@ public class SpanQueryParserTest {
 		assertFalse(spans.next());
 
 		// phrase with wildcards (ignored quotes)
-		spanQueries = spanQueryParser.getSpanQueries(atomicReader, new String[]{"\"dark stormy\"~2"}, TokenType.lexical, true);
-		assertEquals(1, spanQueries.size());
-		spanQuery = spanQueries.get(0);
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"\"dark stormy\"~2"}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("dark stormy~2");
 		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());

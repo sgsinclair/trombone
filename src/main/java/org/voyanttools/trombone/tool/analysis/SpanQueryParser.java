@@ -3,8 +3,10 @@ package org.voyanttools.trombone.tool.analysis;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,28 +34,30 @@ public class SpanQueryParser {
 	
 	
 	
-	public List<SpanQuery> getSpanQueries(IndexReader reader, String[] queries, TokenType tokenType, boolean collapse) throws IOException {
-		List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+	public Map<String, SpanQuery> getSpanQueries(IndexReader reader, String[] queries, TokenType tokenType, boolean collapse) throws IOException {
+		Map<String, SpanQuery> spanQueries = new HashMap<String, SpanQuery>();
 		// separate queries are always treated as individual (not to be collapsed)
 		for (String query : queries) {
 			// queries can also be separated by the query separator (semi-colon): one,two;three,four
 			for (String q : QUERY_SEPARATOR.split(query.replace(QUOTE, EMPTY).trim())) {
-				spanQueries.addAll(getSpanQueries(reader, q, tokenType, collapse));
+				spanQueries.putAll(getSpanQueries(reader, q.trim(), tokenType, collapse));
 			}
 		}
 		return spanQueries;
 	}
 	
-	private List<SpanQuery> getSpanQueries(IndexReader reader, String query, TokenType tokenType, boolean collapse) throws IOException {
-		List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+	private Map<String, SpanQuery> getSpanQueries(IndexReader reader, String query, TokenType tokenType, boolean collapse) throws IOException {
+		Map<String, SpanQuery> spanQueries = new HashMap<String, SpanQuery>();
 		for (String termQuery : TERM_SEPARATOR.split(query)) {
+			
+			termQuery = termQuery.trim();
 			
 			// determine if we have a single query or a phrase (with whitespace and optional quotes)
 			String[] parts = WHITESPACE_PATTERN.split(termQuery);
 			
 			// we have a regular term (can be a wildcard, but it's not a phrase)
 			if (parts.length==1) {
-				spanQueries.addAll(getSingleTermSpanQueries(reader, termQuery, tokenType, collapse));
+				spanQueries.putAll(getSingleTermSpanQueries(reader, termQuery, tokenType, collapse));
 			}
 			
 			// we have a phrase, let's create a SpanNear
@@ -70,43 +74,42 @@ public class SpanQueryParser {
 
 				List<SpanQuery> nearSpanQueries = new ArrayList<SpanQuery>();
 				for (String part : parts) {
-					nearSpanQueries.addAll(getSingleTermSpanQueries(reader, part, tokenType, true));
+					nearSpanQueries.addAll(getSingleTermSpanQueries(reader, part, tokenType, true).values());
 				}
-				spanQueries.add(new SpanNearQuery(nearSpanQueries.toArray(new SpanQuery[0]), slop, slop==0));
+				spanQueries.put(termQuery, new SpanNearQuery(nearSpanQueries.toArray(new SpanQuery[0]), slop, slop==0));
 			}
 		}
 		
 		// we need to build a SpanOr Query if we have multiple items and we're collapsing
 		if (collapse && spanQueries.size()>1) {
 			SpanOrQuery spanOrQuery = new SpanOrQuery();
-			for (SpanQuery sq : spanQueries) {
+			for (SpanQuery sq : spanQueries.values()) {
 				spanOrQuery.addClause(sq);
 			}
-			return Arrays.asList((SpanQuery) spanOrQuery);
+			spanQueries.clear();
+			spanQueries.put(query, spanOrQuery);
 		}
-		else {
-			return spanQueries;
-		}
+		return spanQueries;
 	}
 	
-	private List<SpanQuery> getSingleTermSpanQueries(IndexReader reader, String termQuery, TokenType tokenType, boolean collapse) throws IOException {
-		List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+	private Map<String, SpanQuery> getSingleTermSpanQueries(IndexReader reader, String termQuery, TokenType tokenType, boolean collapse) throws IOException {
+		Map<String, SpanQuery> spanQueries = new HashMap<String, SpanQuery>();
 		if (termQuery.contains(WILDCARD_ASTERISK) || termQuery.contains(WILDCARD_QUESTION)) { // contains a wildcard
 			WildcardQuery wildcard = new WildcardQuery(new Term(tokenType.name(), termQuery));
 			SpanQuery query = (SpanQuery) new SpanMultiTermQueryWrapper<WildcardQuery>(wildcard).rewrite(reader);
 			if (collapse) { // treat all wildcard variants as a single term
-				spanQueries.add(query);
+				spanQueries.put(termQuery, query);
 			}
 			else { // separate each wildcard term into its own query
 				Set<Term> terms = new HashSet<Term>();
 				query.extractTerms(terms);
 				for (Term term : terms) {
-					spanQueries.add(new SpanTermQuery(term));
+					spanQueries.put(term.text(), new SpanTermQuery(term));
 				}
 			}
 		}
 		else { // regular term (we hope)
-			spanQueries.add(new SpanTermQuery(new Term(tokenType.name(), termQuery)));
+			spanQueries.put(termQuery, new SpanTermQuery(new Term(tokenType.name(), termQuery)));
 		}
 		return spanQueries;
 	}
