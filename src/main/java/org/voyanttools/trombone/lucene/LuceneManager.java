@@ -112,6 +112,10 @@ public class LuceneManager {
 	public IndexReader getIndexReader() {
 		return directoryReader;
 	}
+	
+	public Analyzer getAnalyzer() {
+		return analyzer;
+	}
 
 
 }

@@ -109,4 +109,5 @@ public class DocumentTermFrequencyStatsQueue extends PriorityQueue<DocumentTermF
 		}
 	}
 	
+	
 }

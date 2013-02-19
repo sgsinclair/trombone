@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.analysis;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
@@ -43,7 +44,9 @@ import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
+import org.voyanttools.trombone.util.TestHelper;
 
 /**
  * @author sgs
@@ -54,6 +57,8 @@ public class SpanQueryParserTest {
 	@Test
 	public void test() throws IOException {
 		
+//		File storageDirectory = TestHelper.getTemporaryTestStorageDirectory();
+//		Storage storage = new FileStorage(storageDirectory);
 		Storage storage = new MemoryStorage();
 		Document document;
 		LuceneManager luceneManager = storage.getLuceneManager();
@@ -67,7 +72,7 @@ public class SpanQueryParserTest {
 		document.add(new TextField("lexical", "It was the best of times it was the worst of times.", Field.Store.YES));
 		luceneManager.addDocument(document);	
 		
-		SpanQueryParser spanQueryParser = new SpanQueryParser();
+		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		
@@ -85,6 +90,20 @@ public class SpanQueryParserTest {
 		assertEquals(3,spans.start());
 		assertFalse(spans.next());
 
+		// single term with case (this gets converted to lower case)
+		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"It"}, TokenType.lexical, true);
+		assertEquals(1, spanQueriesMap.size());
+		spanQuery = spanQueriesMap.get("it");
+		spans = spanQuery.getSpans(atomicReader.getContext(), bits, termsMap);
+		spans.next();
+		assertEquals(0,spans.doc());
+		assertEquals(0,spans.start());
+		spans.next();
+		assertEquals(1,spans.doc());
+		assertEquals(0,spans.start());
+		spans.next();
+		assertEquals(6,spans.start());
+		
 		// single term (ignore quotes)
 		spanQueriesMap = spanQueryParser.getSpanQueries(atomicReader, new String[]{"\"dark\""}, TokenType.lexical, true);
 		assertEquals(1, spanQueriesMap.size());

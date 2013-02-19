@@ -81,5 +81,9 @@ public class StoredToLuceneDocumentsMapper {
 		return docIdOpenBitSet;
 	}
 
+	public int getDocumentPositionFromLuceneDocumentIndex(int luceneDocumentIndex) {
+		return luceneIds.get(luceneDocumentIndex);
+	}
+
 
 }

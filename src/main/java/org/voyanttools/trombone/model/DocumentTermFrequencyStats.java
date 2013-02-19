@@ -67,5 +67,8 @@ public class DocumentTermFrequencyStats {
 	public float getRelativeFrequency() {
 		return rel;
 	}
+	public int getDocumentIndex() {
+		return docIndex;
+	}
 
 }

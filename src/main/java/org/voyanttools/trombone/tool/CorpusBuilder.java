@@ -85,11 +85,13 @@ public class CorpusBuilder extends AbstractTool {
 	
 	void run(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		
-		// build a hash set of the ids to check against the corpus
-		Set<String> ids = new HashSet<String>();
+		List<String> sortedIds = new ArrayList<String>();
 		for (StoredDocumentSource sds : storedDocumentSources) {
-			ids.add(sds.getId());
+			sortedIds.add(sds.getId());
 		}
+
+		// build a hash set of the ids to check against the corpus
+		Set<String> ids = new HashSet<String>(sortedIds);
 
 		// first see if we can load an existing corpus
 		if (parameters.containsKey("corpus")) {
@@ -104,6 +106,7 @@ public class CorpusBuilder extends AbstractTool {
 					if (ids.contains(id)==false) {
 						overlap = false;
 						corpusStoredDocumentSources.add(document.asStoredDocumentSource());
+						sortedIds.add(id);
 						ids.add(id);
 					}
 				}
@@ -120,13 +123,13 @@ public class CorpusBuilder extends AbstractTool {
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		for (String id : ids) {
+		for (String id : sortedIds) {
 			sb.append(id);
 		}
 		
 		storedId = DigestUtils.md5Hex(sb.toString());
 		CorpusMetadata metadata = new CorpusMetadata(storedId);
-		metadata.setDocumentIds(ids);
+		metadata.setDocumentIds(sortedIds);
 		Corpus corpus = new Corpus(storage, metadata);
 		if (storage.getCorpusStorage().corpusExists(storedId)==false) {
 			storage.getCorpusStorage().storeCorpus(corpus);

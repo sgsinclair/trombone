@@ -94,6 +94,7 @@ public class LuceneIndexer implements Indexer {
 	}
 
 	public void index(List<StoredDocumentSource> storedDocumentSources) throws IOException {
+		
 		storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
 		ExecutorService executor = Executors.newCachedThreadPool();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
@@ -158,6 +159,7 @@ public class LuceneIndexer implements Indexer {
 				document = new Document();
 				document.add(new StringField("id", id, Field.Store.YES));
 				document.add(new Field("lexical", getString(), ft));
+//				System.err.println(id+": "+getString());
 				
 				// TODO: add lemmatization
 				/*

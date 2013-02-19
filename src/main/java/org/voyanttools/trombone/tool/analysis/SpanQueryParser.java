@@ -1,6 +1,7 @@
 package org.voyanttools.trombone.tool.analysis;
 
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,6 +12,9 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.WildcardQuery;
@@ -31,7 +35,12 @@ public class SpanQueryParser {
 	private final static String WILDCARD_QUESTION = "?";
 	private final static Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
 	private final static Pattern SLOP_PATTERN = Pattern.compile("~(\\d+)$");
+	private Analyzer analyzer;
 	
+	
+	public SpanQueryParser(Analyzer analyzer) {
+		this.analyzer = analyzer;
+	}
 	
 	
 	public Map<String, SpanQuery> getSpanQueries(IndexReader reader, String[] queries, TokenType tokenType, boolean collapse) throws IOException {
@@ -104,14 +113,26 @@ public class SpanQueryParser {
 				Set<Term> terms = new HashSet<Term>();
 				query.extractTerms(terms);
 				for (Term term : terms) {
+					// we don't need to analyze term here since it's already from the index
 					spanQueries.put(term.text(), new SpanTermQuery(term));
 				}
 			}
 		}
 		else { // regular term (we hope)
-			spanQueries.put(termQuery, new SpanTermQuery(new Term(tokenType.name(), termQuery)));
+			Term term = getAnalyzedTerm(tokenType, termQuery); // analyze it first
+			spanQueries.put(term.text(), new SpanTermQuery(term));
 		}
 		return spanQueries;
+	}
+	
+	private Term getAnalyzedTerm(TokenType tokenType, String term) throws IOException {
+		TokenStream tokenStream = analyzer.tokenStream(tokenType.name(), new StringReader(term));
+		CharTermAttribute termAtt = tokenStream.addAttribute(CharTermAttribute.class);
+		StringBuilder sb = new StringBuilder();
+		while (tokenStream.incrementToken()) {
+			sb.append(termAtt.toString());
+		}
+		return new Term(tokenType.name(), sb.toString());
 	}
 
 }

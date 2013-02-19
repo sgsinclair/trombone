@@ -52,7 +52,7 @@ public class Corpus implements Iterable<IndexedDocument> {
 		if (documentsList==null) {
 			documentPositionsMap = new HashMap<String, Integer>();
 			documentsList = new ArrayList<IndexedDocument>();
-			for (String id : corpusMetadata.getDocumentIds()) {
+			for (String id : getDocumentIds()) {
 				documentPositionsMap.put(id, documentsList.size());
 				documentsList.add(new IndexedDocument(storage, id));
 			}
@@ -75,7 +75,7 @@ public class Corpus implements Iterable<IndexedDocument> {
 	}
 
 	public int size() throws IOException {
-		return corpusMetadata.getDocumentIds().size();
+		return getDocumentIds().size();
 	}
 
 	public IndexedDocument getDocument(int docIndex) throws IOException {
@@ -101,5 +101,9 @@ public class Corpus implements Iterable<IndexedDocument> {
 
 	public int getDocumentPosition(String corpusId) {
 		return documentPositionsMap.get(corpusId);
+	}
+
+	public List<String> getDocumentIds() {
+		return corpusMetadata.getDocumentIds();
 	}
 }

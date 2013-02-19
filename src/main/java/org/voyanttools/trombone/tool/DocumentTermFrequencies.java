@@ -27,6 +27,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,6 +36,7 @@ import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
@@ -43,6 +45,7 @@ import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
 import org.apache.lucene.search.spans.SpanOrQuery;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanTermQuery;
+import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
@@ -109,33 +112,68 @@ public class DocumentTermFrequencies extends AbstractTool {
 	 */
 	@Override
 	public void run() throws IOException {
+		Corpus corpus = storage.getCorpusStorage().getCorpus(parameters.getParameterValue("corpus"));
+		StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
+		run(corpus, corpusMapper);
+	}
+	
+	private void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		if (parameters.containsKey("query")) {
-			SpanQueryParser spanQueryParser = new SpanQueryParser();
-			AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-//			SpanQuery spanQuery = spanQueryParser.getSpanQuery(atomicReader, parameters.getParameterValues("query"), tokenType, isQueryCollapse);
-			//spanQuery.getSpans(context, acceptDocs, termContexts)
+			runQueries(corpus, corpusMapper);
 		}
 		else {
-			runAllTerms();
+			runAllTerms(corpus, corpusMapper);
 		}
 	}
 	
-	private void runAllTerms() throws IOException {
-		Corpus corpus = storage.getCorpusStorage().getCorpus(parameters.getParameterValue("corpus"));
-		runAllTerms(corpus);
+	private void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
+		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, parameters.getParameterValues("query"), tokenType, isQueryCollapse);
+		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
+		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
+		int size = start+limit;
+		DocumentTermFrequencyStatsQueue queue = new DocumentTermFrequencyStatsQueue(size, documentTermFrequencyStatsSort);
+		int[] totalTokenCounts = corpus.getTotalTokensCounts(tokenType);
+		int lastDoc = -1;
+		int docIndexInCorpus = -1; // this should always be changed on the first span
+		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
+			String queryString = spanQueryEntry.getKey();
+			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);			
+			while(spans.next()) {
+				int doc = spans.doc();
+				if (doc != lastDoc) {
+					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
+					lastDoc = doc;
+				}
+				int start = spans.start();
+				if (positionsMap.containsKey(docIndexInCorpus)==false) {
+					positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
+				}
+				positionsMap.get(docIndexInCorpus).add(start);
+			}
+			for (Map.Entry<Integer, List<Integer>> entry : positionsMap.entrySet()) {
+				List<Integer> positionsList = entry.getValue();
+				int freq = positionsList.size();
+				int[] positions = new int[positionsList.size()];
+				for (int i=0; i<positions.length; i++) {
+					positions[i] = positionsList.get(i);
+				}
+				int documentPosition = entry.getKey();
+				float rel = (float) freq / totalTokenCounts[documentPosition];
+				queue.insertWithOverflow(new DocumentTermFrequencyStats(documentPosition, queryString, freq, rel, isNeedsPositions ? positions : null, null));
+			}
+			positionsMap.clear(); // prepare for new entries
+		}
+		setDocumentTermsFromQueue(queue);
 	}
-	private void runAllTerms(Corpus corpus) throws IOException {
-		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
-		StoredToLuceneDocumentsMapper mapper = new StoredToLuceneDocumentsMapper(storage, ids);
-		runAllTerms(corpus, mapper);
-	}
-	
-	private void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper mapper) throws IOException {
+
+	private void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		
 		int size = start+limit;
 		
 		int[] totalTokensCounts = corpus.getTotalTokensCounts(tokenType);
-		Bits docIdSet = mapper.getDocIdOpenBitSet();
+		Bits docIdSet = corpusMapper.getDocIdOpenBitSet();
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		
@@ -176,7 +214,7 @@ public class DocumentTermFrequencies extends AbstractTool {
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
-					
+					System.err.println(doc);
 					String corpusId = filteredDocsMap.get(doc);
 					int documentPosition = corpus.getDocumentPosition(corpusId);
 					int totalTokensCount = totalTokensCounts[documentPosition];
@@ -206,10 +244,18 @@ public class DocumentTermFrequencies extends AbstractTool {
 				break; // no more terms
 			}
 		}
-		for (int i=0; i<queue.size(); i++) {
+		setDocumentTermsFromQueue(queue);
+	}
+
+	private void setDocumentTermsFromQueue(DocumentTermFrequencyStatsQueue queue) {
+		for (int i=0, len=queue.size(); i<len; i++) {
 			documentTerms.add(queue.pop());
 		}
 		Collections.reverse(documentTerms);
+	}
+
+	public List<DocumentTermFrequencyStats> getDocumentTermFrequencyStats() {
+		return documentTerms;
 	}
 
 }
