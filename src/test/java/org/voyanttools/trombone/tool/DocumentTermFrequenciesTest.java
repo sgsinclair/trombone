@@ -73,6 +73,9 @@ public class DocumentTermFrequenciesTest {
 		documentTermFrequencies.run();		
 		// we sort by reverse frequency by default
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
+		for (DocumentTermFrequencyStats stat : statsList) {
+			System.err.println(stat);
+		}
 //		assertEquals(2, statsList.size());
 //		stats = statsList.get(0);
 //		assertEquals(1, stats.getDocumentIndex());

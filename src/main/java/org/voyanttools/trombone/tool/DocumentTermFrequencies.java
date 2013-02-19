@@ -177,26 +177,6 @@ public class DocumentTermFrequencies extends AbstractTool {
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		
-		// first we map our filtered list of lucene document numbers to the corpus id
-		Terms idTerms = atomicReader.terms("id");
-		TermsEnum idTermsEnum = idTerms.iterator(null);
-		DocsEnum idDocsEnum = null;
-		Map<Integer, String> filteredDocsMap = new HashMap<Integer, String>();
-		while(true) {
-			BytesRef term = idTermsEnum.next();
-			if (term != null) {
-				idDocsEnum = idTermsEnum.docs(docIdSet, idDocsEnum);
-				while (true) {
-					int docId = idDocsEnum.nextDoc();
-					if (docId!=DocsEnum.NO_MORE_DOCS) {
-						filteredDocsMap.put(docId, term.utf8ToString());
-					}
-					else {break;}
-				}
-			}
-			else {break;}
-		}
-		
 		// now we look for our term frequencies
 		Terms terms = atomicReader.terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
@@ -215,8 +195,7 @@ public class DocumentTermFrequencies extends AbstractTool {
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
 					System.err.println(doc);
-					String corpusId = filteredDocsMap.get(doc);
-					int documentPosition = corpus.getDocumentPosition(corpusId);
+					int documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
 					int totalTokensCount = totalTokensCounts[documentPosition];
 
 					int freq = docsAndPositionsEnum.freq();
@@ -233,10 +212,8 @@ public class DocumentTermFrequencies extends AbstractTool {
 							positions[i] = docsAndPositionsEnum.nextPosition();
 							offsets[i] = docsAndPositionsEnum.startOffset();
 						}
-					}
-					
+					}					
 					queue.insertWithOverflow(new DocumentTermFrequencyStats(documentPosition, termString, freq, rel, positions, offsets));
-					
 					doc = docsAndPositionsEnum.nextDoc();
 				}
 			}
