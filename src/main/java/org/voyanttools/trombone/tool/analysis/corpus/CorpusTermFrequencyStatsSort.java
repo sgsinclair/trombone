@@ -19,50 +19,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.model;
+package org.voyanttools.trombone.tool.analysis.corpus;
 
-import java.io.IOException;
-
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
-import org.voyanttools.trombone.storage.Storage;
-
-import com.thoughtworks.xstream.annotations.XStreamOmitField;
-
-/**
- * @author sgs
- *
- */
-public class IndexedDocument {
-
-	private String id;
-	
-	private Metadata metadata = null;
-	
-	@XStreamOmitField
-	private Storage storage;
-	
-	/**
-	 * 
-	 */
-	IndexedDocument(Storage storage, String id) {
-		this.storage = storage;
-		this.id = id;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public StoredDocumentSource asStoredDocumentSource() throws IOException {
-		return new StoredDocumentSource(getId(), getMetadata());
-	}
-
-	public Metadata getMetadata() throws IOException {
-		if (metadata==null) {
-			metadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(getId());
-		}
-		return metadata;
-	}
-	
+public enum CorpusTermFrequencyStatsSort {
+	rawFrequencyAsc, rawFrequencyDesc, termAsc, termDesc;
 }

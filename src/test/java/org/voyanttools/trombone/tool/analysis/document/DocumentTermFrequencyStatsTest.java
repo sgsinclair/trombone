@@ -25,7 +25,6 @@ import static org.junit.Assert.*;
 
 import org.apache.lucene.util.BytesRef;
 import org.junit.Test;
-import org.voyanttools.trombone.model.DocumentTermFrequencyStats;
 
 /**
  * @author sgs

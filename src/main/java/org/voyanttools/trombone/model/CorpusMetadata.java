@@ -26,12 +26,16 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.converters.collections.MapConverter;
+
 import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
  *
  */
+@XStreamConverter(value=MapConverter.class)
 public class CorpusMetadata extends Properties {
 	
 	public CorpusMetadata(String id) {

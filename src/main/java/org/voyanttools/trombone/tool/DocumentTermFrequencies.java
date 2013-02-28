@@ -50,10 +50,10 @@ import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.DocumentTermFrequencyStats;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
+import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStats;
 import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStatsQueue;
 import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStatsSort;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -64,23 +64,13 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class DocumentTermFrequencies extends AbstractTool {
+public class DocumentTermFrequencies extends AbstractTermFrequencies {
 	
-	private int total = 0;
 
 	private List<DocumentTermFrequencyStats> documentTerms = new ArrayList<DocumentTermFrequencyStats>();
 	
 	@XStreamOmitField
-	private int start;
-	
-	@XStreamOmitField
-	private int limit;
-	
-	@XStreamOmitField
 	private DocumentTermFrequencyStatsSort documentTermFrequencyStatsSort;
-	
-	@XStreamOmitField
-	private TokenType tokenType;
 	
 	@XStreamOmitField
 	boolean isNeedsPositions;
@@ -88,9 +78,6 @@ public class DocumentTermFrequencies extends AbstractTool {
 	@XStreamOmitField
 	boolean isNeedsOffsets;
 
-	@XStreamOmitField
-	boolean isQueryCollapse;
-	
 	
 	/**
 	 * @param storage
@@ -98,35 +85,13 @@ public class DocumentTermFrequencies extends AbstractTool {
 	 */
 	public DocumentTermFrequencies(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		start = parameters.getParameterIntValue("start", 0);
-		limit = parameters.getParameterIntValue("start", 50);
 		documentTermFrequencyStatsSort = DocumentTermFrequencyStatsSort.relativeFrequencyDesc;
-		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
 		isNeedsPositions = parameters.getParameterBooleanValue("includeTokenIndexPositions");
 		isNeedsOffsets = parameters.getParameterBooleanValue("includeTokenCharacterOffsets");
-		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
 	}
 
-	/* (non-Javadoc)
-	 * @see org.voyanttools.trombone.tool.RunnableTool#run()
-	 */
-	@Override
-	public void run() throws IOException {
-		Corpus corpus = storage.getCorpusStorage().getCorpus(parameters.getParameterValue("corpus"));
-		StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
-		run(corpus, corpusMapper);
-	}
 	
-	private void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
-		if (parameters.containsKey("query")) {
-			runQueries(corpus, corpusMapper);
-		}
-		else {
-			runAllTerms(corpus, corpusMapper);
-		}
-	}
-	
-	private void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, parameters.getParameterValues("query"), tokenType, isQueryCollapse);
@@ -168,7 +133,7 @@ public class DocumentTermFrequencies extends AbstractTool {
 		setDocumentTermsFromQueue(queue);
 	}
 
-	private void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		
 		int size = start+limit;
 		
@@ -188,21 +153,15 @@ public class DocumentTermFrequencies extends AbstractTool {
 			BytesRef term = termsEnum.next();
 			
 			if (term != null) {
-				
 				termString = term.utf8ToString();
-
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
-					System.err.println(doc);
 					int documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
 					int totalTokensCount = totalTokensCounts[documentPosition];
-
 					int freq = docsAndPositionsEnum.freq();
 					float rel = (float) freq / totalTokensCount;
-					
 					if (freq>0) {total++;} // make sure we track that this could be a hit
-					
 					int[] positions = null;
 					int[] offsets = null;
 					if (isNeedsPositions || isNeedsOffsets) {

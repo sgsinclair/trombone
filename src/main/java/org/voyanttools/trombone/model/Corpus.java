@@ -30,16 +30,22 @@ import java.util.Map;
 
 import org.voyanttools.trombone.storage.Storage;
 
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
 /**
  * @author sgs
  *
  */
 public class Corpus implements Iterable<IndexedDocument> {
 
+	@XStreamOmitField
 	private Storage storage;
+
 	private CorpusMetadata corpusMetadata;
 	
-	List<IndexedDocument> documentsList = null;
+	List<IndexedDocument> documents = null;
+	
+	@XStreamOmitField
 	Map<String, Integer> documentPositionsMap = null;
 	
 	
@@ -49,15 +55,15 @@ public class Corpus implements Iterable<IndexedDocument> {
 	}
 
 	private List<IndexedDocument> getDocumentsList() throws IOException {
-		if (documentsList==null) {
+		if (documents==null) {
 			documentPositionsMap = new HashMap<String, Integer>();
-			documentsList = new ArrayList<IndexedDocument>();
+			documents = new ArrayList<IndexedDocument>();
 			for (String id : getDocumentIds()) {
-				documentPositionsMap.put(id, documentsList.size());
-				documentsList.add(new IndexedDocument(storage, id));
+				documentPositionsMap.put(id, documents.size());
+				documents.add(new IndexedDocument(storage, id));
 			}
 		}
-		return documentsList;
+		return documents;
 	}
 
 	public IndexedDocument getDocument(String id) throws IOException {
@@ -105,5 +111,15 @@ public class Corpus implements Iterable<IndexedDocument> {
 
 	public List<String> getDocumentIds() {
 		return corpusMetadata.getDocumentIds();
+	}
+
+	public int getTotalTokensCount(TokenType tokenType) throws IOException {
+		// TODO: this should probably be drawn from the corpus metadata instead
+		int totalTokensCount = 0;
+		for (int i : getTotalTokensCounts(tokenType)) {
+			totalTokensCount += i;
+		
+		}
+		return totalTokensCount;
 	}
 }

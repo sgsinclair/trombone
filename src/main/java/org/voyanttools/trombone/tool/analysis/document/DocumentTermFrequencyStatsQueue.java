@@ -27,7 +27,6 @@ import java.util.List;
 
 import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.PriorityQueue;
-import org.voyanttools.trombone.model.DocumentTermFrequencyStats;
 
 /**
  * @author sgs

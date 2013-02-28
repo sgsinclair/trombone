@@ -10,9 +10,9 @@ import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
 import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.model.DocumentTermFrequencyStats;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
+import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStats;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 public class DocumentTermFrequenciesTest {
