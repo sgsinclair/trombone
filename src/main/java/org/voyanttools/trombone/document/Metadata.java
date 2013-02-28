@@ -217,7 +217,7 @@ public class Metadata {
 			return DocumentFormat.fromFile(new File(getLocation()));
 		}
 
-		if (source == Source.URI) {
+		else if (source == Source.URI) {
 
 			// first try to guess from file name
 			URI uri;
@@ -236,8 +236,16 @@ public class Metadata {
 
 			return getDefaultFormat();
 		}
+		
+		else if (source == Source.STREAM) {
+			String location = getLocation();
+			if (location != null && location.isEmpty() == false) {
+				return DocumentFormat.fromFilename(location);
+				
+			}
+		}
 
-		return DocumentFormat.UNKNOWN;
+		return getDefaultFormat();
 
 	}
 

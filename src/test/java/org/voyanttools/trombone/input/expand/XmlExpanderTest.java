@@ -142,6 +142,25 @@ public class XmlExpanderTest {
 			if (fileInputStream!=null) {fileInputStream.close();}
 		}
 		
+		
+		// RSS documents within a zip archive (nested expansion)
+		parameters = new FlexibleParameters(new String[]{"inputFormat=RSS","splitDocuments=true"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new FileInputSource(TestHelper.getResource("archive/rss.xml.zip"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		assertEquals("XML file with no Xpath should contain one document", 2, expandedSourceDocumentSources.size());
+		inputStream = null;
+		fileInputStream = null;
+		try {
+			inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(1).getId());
+			fileInputStream = new FileInputStream(TestHelper.getResource("xml/rss.xml.item2_xpath.xml"));
+			assertTrue(IOUtils.contentEquals(fileInputStream, inputStream));
+		}
+		finally {
+			if (inputStream!=null) {inputStream.close();}
+			if (fileInputStream!=null) {fileInputStream.close();}
+		}
 		storage.destroy();
 
 	}

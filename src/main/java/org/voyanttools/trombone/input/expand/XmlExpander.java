@@ -176,6 +176,10 @@ class XmlExpander implements Expander {
 							.getId());
 			DocumentBuilderFactory factory = DocumentBuilderFactory
 					.newInstance();
+			factory.setFeature("http://xml.org/sax/features/validation", false);
+			factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+			factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+			factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			doc = builder.parse(inputStream);
 
@@ -233,8 +237,8 @@ class XmlExpander implements Expander {
 
 			List<Node> docs;
 			try {
-				docs = XPathAPI.selectListOfNodes(doc.getFirstChild(),
-						xmlDocumentsXpaths[i], doc.getFirstChild());
+				docs = XPathAPI.selectListOfNodes(doc.getDocumentElement(),
+						xmlDocumentsXpaths[i], doc.getDocumentElement());
 			} catch (XPathException e) {
 				throw new IllegalArgumentException(
 						"A problem was encountered proccesing this XPath query: "
@@ -243,7 +247,7 @@ class XmlExpander implements Expander {
 			if (docs.isEmpty()) {
 				continue;
 			}
-			Node newParentNode = doc.getFirstChild().cloneNode(false);
+			Node newParentNode = doc.getDocumentElement().cloneNode(false);
 			for (Node node : docs) {
 				newParentNode.appendChild(node);
 			}
@@ -277,8 +281,8 @@ class XmlExpander implements Expander {
 		List<StoredDocumentSource> childStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		List<Node> docs;
 		try {
-			docs = XPathAPI.selectListOfNodes(doc.getFirstChild(),
-					xmlDocumentsXpath, doc.getFirstChild());
+			docs = XPathAPI.selectListOfNodes(doc.getDocumentElement(),
+					xmlDocumentsXpath, doc.getDocumentElement());
 		} catch (XPathException e) {
 			throw new IllegalArgumentException(
 					"A problem was encountered proccesing this XPath query: "

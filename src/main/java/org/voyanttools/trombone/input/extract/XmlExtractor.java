@@ -189,6 +189,10 @@ public class XmlExtractor implements Extractor {
 						.getStoredDocumentSourceInputStream(storedDocumentSourceId);
 				DocumentBuilderFactory factory = DocumentBuilderFactory
 						.newInstance();
+				factory.setFeature("http://xml.org/sax/features/validation", false);
+				factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+				factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+				factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
 				DocumentBuilder builder = factory.newDocumentBuilder();
 				doc = builder.parse(inputStream);
 
@@ -224,7 +228,7 @@ public class XmlExtractor implements Extractor {
 			
 			List<Node> docs;
 			try {
-				docs = XPathAPI.selectListOfNodes(doc.getFirstChild(), xmlContentXpath, doc.getFirstChild());
+				docs = XPathAPI.selectListOfNodes(doc.getDocumentElement(), xmlContentXpath, doc.getDocumentElement());
 			} catch (XPathException e) {
 				throw new IllegalArgumentException(
 						"A problem was encountered proccesing this XPath query: " + xmlContentXpath, e);
@@ -239,7 +243,7 @@ public class XmlExtractor implements Extractor {
 			
 			// encapsulate child nodes in document root
 			else {
-				newParentNode = doc.getFirstChild().cloneNode(false);
+				newParentNode = doc.getDocumentElement().cloneNode(false);
 				for (Node node : docs) {
 					newParentNode.appendChild(node);
 				}
@@ -280,12 +284,12 @@ public class XmlExtractor implements Extractor {
 			
 		}
 
-		private String getNodesAsStringFromParametersValue(Node doc, String parameterKey) {
+		private String getNodesAsStringFromParametersValue(Document doc, String parameterKey) {
 			String xpath = parameters.getParameterValue(parameterKey,"");
 			if (xpath.isEmpty()==false) {
 				List<String> titles;
 				try {
-					titles = XPathAPI.selectNodeListAsStrings(doc.getFirstChild(), xpath);
+					titles = XPathAPI.selectNodeListAsStrings(doc.getDocumentElement(), xpath);
 				}
 				catch (XPathException e) {
 					throw new IllegalArgumentException(

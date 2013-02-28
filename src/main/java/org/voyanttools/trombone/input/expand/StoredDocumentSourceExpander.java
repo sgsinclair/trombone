@@ -103,6 +103,7 @@ public class StoredDocumentSourceExpander implements Expander {
 		this.parameters = parameters;
 	}
 	
+	/*
 	public List<StoredDocumentSource> getExpandedStoredDocumentSources(InputSource inputSource) throws IOException {
 		List<InputSource> inputSources = new ArrayList<InputSource>();
 		inputSources.add(inputSource);
@@ -130,6 +131,7 @@ public class StoredDocumentSourceExpander implements Expander {
 		executor.shutdown();
 		return storedDocumentSources;
 	}
+	*/
 	
 	public List<StoredDocumentSource> getExpandedStoredDocumentSources(
 			StoredDocumentSource storedDocumentSource) throws IOException {
@@ -138,12 +140,13 @@ public class StoredDocumentSourceExpander implements Expander {
 
 		DocumentFormat format;
 		
+		format = storedDocumentSource.getMetadata().getDocumentFormat();
+
 		String inputFormatString = parameters.getParameterValue("inputFormat", "");
 		if (inputFormatString.isEmpty()==false) {
-			format = DocumentFormat.valueOf(inputFormatString);
-		}
-		else {
-			format = storedDocumentSource.getMetadata().getDocumentFormat();
+			if (format!=DocumentFormat.ARCHIVE) { // make sure it's not a zip file
+				format = DocumentFormat.valueOf(inputFormatString);
+			}
 		}
 
 		if (format == DocumentFormat.ARCHIVE) {
