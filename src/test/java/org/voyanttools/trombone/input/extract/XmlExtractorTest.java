@@ -105,6 +105,8 @@ public class XmlExtractorTest {
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
 		assertTrue("ensure we have three lines of description in RSS feed", StringUtils.countMatches(contents, "<description>")==2);
+		
+		storage.destroy();
 
 	}
 
