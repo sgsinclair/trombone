@@ -26,6 +26,7 @@ package org.voyanttools.trombone.model;
 import java.util.List;
 
 
+
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
@@ -54,12 +55,12 @@ public class CorpusConverter implements Converter {
 	public void marshal(Object source, HierarchicalStreamWriter writer,
 			MarshallingContext context) {
 		final Corpus corpus = (Corpus) source;
-		CorpusMetadata metadata = corpus.getCorpusMetadata();
+		PropertiesWrapper metadata = corpus.getCorpusMetadata();
 		
-		context.convertAnother(metadata, new MetadataConverter());
+		context.convertAnother(metadata);
 
 		ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documents", List.class);
-        for (IndexedDocument doc : corpus) {
+        for (DocumentContainer doc : corpus) {
         	context.convertAnother(doc);
         }
         writer.endNode();

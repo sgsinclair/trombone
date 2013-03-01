@@ -40,18 +40,20 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
  * @author Stéfan Sinclair
  */
 //@XStreamConverter(MetadataConverter.class)
-public class DocumentMetadata extends Properties {
+public class DocumentMetadata implements PropertiesWrapper {
 
+	private Properties properties;
+	
 	public DocumentMetadata(Properties properties) {
-		super();
-		// copy the properties rather than setting defaults
-		for (String key : properties.stringPropertyNames()) {
-			setProperty(key, properties.getProperty(key));
-		}
+		this.properties = properties;
 	}
 
 	public DocumentMetadata() {
-		super();
+		properties = new Properties();
+	}
+	
+	public boolean equals(DocumentMetadata metadata) {
+		return properties.equals(metadata.properties);
 	}
 
 	/**
@@ -66,6 +68,10 @@ public class DocumentMetadata extends Properties {
 		setProperty("location", location);
 	}
 
+	private void setProperty(String key, String value) {
+		properties.setProperty(key, value);
+	}
+
 	/**
 	 * Get the location of the source. This is a String representation that will
 	 * depend on the {@link Source} but may include a file name, a URI, "memory"
@@ -75,6 +81,12 @@ public class DocumentMetadata extends Properties {
 	 */
 	public String getLocation() {
 		return getProperty("location");
+	}
+	
+	
+
+	private String getProperty(String key) {
+		return properties.getProperty(key);
 	}
 
 	/**
@@ -128,6 +140,10 @@ public class DocumentMetadata extends Properties {
 //	public boolean equals(Metadata metadata) {
 //		return this.equals(metadata);
 //	}
+
+	private String getProperty(String key, String defaultValue) {
+		return properties.getProperty(key, defaultValue);
+	}
 
 	/**
 	 * Set the {@link DocumentFormat} of the metadata
@@ -231,11 +247,11 @@ public class DocumentMetadata extends Properties {
 	 * @return a new child Metadata object
 	 */
 	public DocumentMetadata asParent() {
-		Properties properties = new Properties();
-		for (String key : stringPropertyNames()) {
-			properties.setProperty("parent_"+key, getProperty(key));
+		Properties newProperties = new Properties();
+		for (String key : properties.stringPropertyNames()) {
+			newProperties.setProperty("parent_"+key, getProperty(key));
 		}
-		return new DocumentMetadata(properties);
+		return new DocumentMetadata(newProperties);
 	}
 
 	public void setTitle(String value) {
@@ -288,4 +304,9 @@ public class DocumentMetadata extends Properties {
 	public int getTotalTokensCount(TokenType tokenType) {
 		return Integer.parseInt(getProperty("totalTokensCount-"+tokenType, "0"));
 	}
+
+	public Properties getProperties() {
+		return properties;
+	}
+
 }

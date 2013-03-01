@@ -130,7 +130,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 		OutputStream os = null;
 		try {
 			os = new FileOutputStream(getMetadataFile(id));
-			metadata.storeToXML(
+			metadata.getProperties().storeToXML(
 							os,
 							"This file was created by Trombone to store properties associated with the bytes stream in the same directory.");
 		} finally {

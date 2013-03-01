@@ -21,56 +21,15 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 import java.util.Properties;
 
-
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.converters.collections.MapConverter;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
  *
  */
-public class CorpusMetadata implements PropertiesWrapper {
-	
-	private Properties properties;
-	
-	public CorpusMetadata(String id) {
-		properties = new Properties();
-		setProperty("id", id);
-	}
-	
-	public List<String> getDocumentIds() {
-		return Arrays.asList(getProperty("documentIds", "").split(","));
-	}
-
-	public String getId() {
-		return getProperty("id");
-	}
-
-	public void setDocumentIds(Collection<String> ids) {
-		setProperty("documentIds", StringUtils.join(ids, ","));
-	}
-	
-	private String getProperty(String key) {
-		return properties.getProperty(key);
-	}
-	
-	private String getProperty(String key, String defaultValue) {
-		return properties.getProperty(key, defaultValue);
-	}
-	
-	private void setProperty(String key, String value) {
-		properties.setProperty(key, value);
-	}
-
-	public Properties getProperties() {
-		return properties;
-	}
-
+@XStreamConverter(PropertiesWrapperConverter.class)
+public interface PropertiesWrapper {	
+	public Properties getProperties();
 }

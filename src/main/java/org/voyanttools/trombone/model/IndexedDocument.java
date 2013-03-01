@@ -26,23 +26,18 @@ import java.io.IOException;
 import org.voyanttools.trombone.storage.Storage;
 
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
-import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
-public class IndexedDocument {
+@XStreamConverter(DocumentConverter.class)
+public class IndexedDocument implements DocumentContainer {
 
-	@XStreamOmitField
 	private String id;
 	
-	@XStreamImplicit
-	@XStreamConverter(MetadataConverter.class)
 	private DocumentMetadata metadata = null;
 	
-	@XStreamOmitField
 	private Storage storage;
 	
 	/**

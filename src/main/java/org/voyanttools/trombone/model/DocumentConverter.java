@@ -1,7 +1,7 @@
 package org.voyanttools.trombone.model;
 
-import java.util.Properties;
-
+import java.io.IOException;
+import java.util.List;
 
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
@@ -10,28 +10,36 @@ import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
-public class MetadataConverter implements Converter {
+public class DocumentConverter implements Converter {
 
-	public MetadataConverter() {
+	public DocumentConverter() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public boolean canConvert(Class type) {
-		return DocumentMetadata.class == type || CorpusMetadata.class == type;
+		return DocumentContainer.class.isAssignableFrom(type);
 	}
 
 	@Override
 	public void marshal(Object source, HierarchicalStreamWriter writer,
 			MarshallingContext context) {
 		
-		Properties properties = ((CorpusMetadata) source).getProperties();
-		for (String key : properties.stringPropertyNames()) {
-			System.err.println(key);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, key, String.class);
-	        context.convertAnother(properties.getProperty(key));
-	        writer.endNode();
+		final DocumentContainer doc = (DocumentContainer) source;
+
+		PropertiesWrapper metadata;
+		try {
+			metadata = doc.getMetadata();
+		} catch (IOException e) {
+			throw new RuntimeException("Unable to get document metadata during serialization: "+doc);
 		}
+		
+		writer.startNode("");
+		ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
+		writer.setValue(doc.getId());
+		writer.endNode();
+		context.convertAnother(metadata);
+		writer.endNode();
 
 	}
 
