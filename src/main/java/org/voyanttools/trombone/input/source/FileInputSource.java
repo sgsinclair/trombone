@@ -28,7 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.voyanttools.trombone.document.Metadata;
+import org.voyanttools.trombone.model.DocumentMetadata;
 
 /**
  * An {@link InputSource} associated with a real, local {@link File} (not a directory).
@@ -50,7 +50,7 @@ public class FileInputSource implements InputSource {
 	/**
 	 * the metadata for this input source
 	 */
-	private Metadata metadata;
+	private DocumentMetadata metadata;
 
 	/**
 	 * Create a new instance with the specified {@link File}.
@@ -70,7 +70,7 @@ public class FileInputSource implements InputSource {
 		}
 		this.file = file;
 
-		this.metadata = new Metadata();
+		this.metadata = new DocumentMetadata();
 		this.metadata.setLocation(file.toString());
 		this.metadata.setSource(Source.FILE);
 		this.metadata.setModified(file.lastModified());
@@ -84,7 +84,7 @@ public class FileInputSource implements InputSource {
 		return new BufferedInputStream(new FileInputStream(file));
 	}
 
-	public Metadata getMetadata() {
+	public DocumentMetadata getMetadata() {
 		return this.metadata;
 	}
 

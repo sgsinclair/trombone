@@ -30,12 +30,15 @@ import java.util.Map;
 
 import org.voyanttools.trombone.storage.Storage;
 
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamConverter(CorpusConverter.class)
 public class Corpus implements Iterable<IndexedDocument> {
 
 	@XStreamOmitField

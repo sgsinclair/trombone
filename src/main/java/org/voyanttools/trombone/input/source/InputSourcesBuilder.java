@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.voyanttools.trombone.document.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

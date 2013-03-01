@@ -26,9 +26,9 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 
 /**
  * This interface defines methods for interacting with
@@ -54,19 +54,19 @@ public interface StoredDocumentSourceStorage {
 			InputSource inputSource) throws IOException;
 
 	/**
-	 * Get the {@link Metadata} associated with the {@link StoredDocumentSource}
+	 * Get the {@link DocumentMetadata} associated with the {@link StoredDocumentSource}
 	 * specified by the ID.
 	 * 
 	 * @param id
 	 *            the ID of the {@link StoredDocumentSource}
-	 * @return the {@link Metadata} associated with the
+	 * @return the {@link DocumentMetadata} associated with the
 	 *         {@link StoredDocumentSource} specified by the ID
 	 * @throws IOException
 	 *             an IO exception during retrieval of the
 	 *             {@link StoredDocumentSource} (including if the
 	 *             StoredDocumentSource doesn't exist)
 	 */
-	public Metadata getStoredDocumentSourceMetadata(String id)
+	public DocumentMetadata getStoredDocumentSourceMetadata(String id)
 			throws IOException;
 
 	/**
@@ -158,6 +158,6 @@ public interface StoredDocumentSourceStorage {
 			List<StoredDocumentSource> archivedStoredDocumentSources,
 			String prefix) throws IOException;
 	
-	public void updateStoredDocumentSourceMetadata(String id, Metadata metadata) throws IOException;
+	public void updateStoredDocumentSourceMetadata(String id, DocumentMetadata metadata) throws IOException;
 
 }

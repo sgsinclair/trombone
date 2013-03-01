@@ -55,11 +55,11 @@ import org.apache.tika.Tika;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.parser.xml.XMLParser;
-import org.voyanttools.trombone.document.DocumentFormat;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
+import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
@@ -167,7 +167,7 @@ public class XmlExtractor implements Extractor {
 
 		private StoredDocumentSource storedDocumentSource;
 		
-		private Metadata metadata;
+		private DocumentMetadata metadata;
 		
 		private boolean isProcessed = false;
 		
@@ -302,7 +302,7 @@ public class XmlExtractor implements Extractor {
 		}
 
 		@Override
-		public Metadata getMetadata() throws IOException {
+		public DocumentMetadata getMetadata() throws IOException {
 			return isProcessed ? this.metadata : storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id);
 		}
 

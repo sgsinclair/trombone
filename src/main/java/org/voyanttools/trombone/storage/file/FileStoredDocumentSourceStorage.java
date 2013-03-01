@@ -35,9 +35,9 @@ import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -120,18 +120,17 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 			}
 		}
 
-		Metadata metadata = inputSource.getMetadata(); // get this after reading input stream in case it's changed (like after extraction)
+		DocumentMetadata metadata = inputSource.getMetadata(); // get this after reading input stream in case it's changed (like after extraction)
 		
 		storeStoredDocumentSourceMetadata(id, metadata);
 		return new StoredDocumentSource(directory.getName(), metadata);
 	}
 	
-	private void storeStoredDocumentSourceMetadata(String id, Metadata metadata) throws IOException {
+	private void storeStoredDocumentSourceMetadata(String id, DocumentMetadata metadata) throws IOException {
 		OutputStream os = null;
 		try {
 			os = new FileOutputStream(getMetadataFile(id));
-			metadata.getProperties()
-					.storeToXML(
+			metadata.storeToXML(
 							os,
 							"This file was created by Trombone to store properties associated with the bytes stream in the same directory.");
 		} finally {
@@ -195,7 +194,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	}
 	*/
 
-	public Metadata getStoredDocumentSourceMetadata(String id)
+	public DocumentMetadata getStoredDocumentSourceMetadata(String id)
 			throws IOException {
 
 		Properties properties = new Properties();
@@ -207,7 +206,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 			if (is != null)
 				is.close();
 		}
-		return new Metadata(properties);
+		return new DocumentMetadata(properties);
 
 	}
 
@@ -232,7 +231,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 		
 		List<String> lines = FileUtils.readLines(file);
 		for (String line : lines) {
-			Metadata metadata = getStoredDocumentSourceMetadata(line.trim());
+			DocumentMetadata metadata = getStoredDocumentSourceMetadata(line.trim());
 			multipleExpandedStoredDocumentSources.add(new StoredDocumentSource(line, metadata));
 		}
 		
@@ -312,7 +311,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	}
 
 	@Override
-	public void updateStoredDocumentSourceMetadata(String id, Metadata metadata) throws IOException {
+	public void updateStoredDocumentSourceMetadata(String id, DocumentMetadata metadata) throws IOException {
 		storeStoredDocumentSourceMetadata(id, metadata);
 	}
 

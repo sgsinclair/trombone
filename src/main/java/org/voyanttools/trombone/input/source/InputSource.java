@@ -24,8 +24,8 @@ package org.voyanttools.trombone.input.source;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -48,12 +48,12 @@ public interface InputSource {
 	public InputStream getInputStream() throws IOException;
 
 	/**
-	 * Get the {@link Metadata} associated with this input source.
+	 * Get the {@link DocumentMetadata} associated with this input source.
 	 * 
-	 * @return the {@link Metadata} associated with this input source.
+	 * @return the {@link DocumentMetadata} associated with this input source.
 	 * @throws IOException 
 	 */
-	public Metadata getMetadata() throws IOException;
+	public DocumentMetadata getMetadata() throws IOException;
 
 	/**
 	 * Get the unique ID associate with this input source. This should me a hash

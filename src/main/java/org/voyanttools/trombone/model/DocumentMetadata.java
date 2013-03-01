@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.document;
+package org.voyanttools.trombone.model;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,7 +29,8 @@ import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.Source;
-import org.voyanttools.trombone.model.TokenType;
+
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 
 /**
  * This encapsulates various types of metadata about content, including {@link Source},
@@ -38,42 +39,19 @@ import org.voyanttools.trombone.model.TokenType;
  * 
  * @author Stéfan Sinclair
  */
-public class Metadata {
+//@XStreamConverter(MetadataConverter.class)
+public class DocumentMetadata extends Properties {
 
-	/**
-	 * the internal store for the metadata
-	 */
-	private Properties properties;
-
-	/**
-	 * Create a new, empty instance of Metadata
-	 */
-	public Metadata() {
-		this(new Properties());
+	public DocumentMetadata(Properties properties) {
+		super();
+		// copy the properties rather than setting defaults
+		for (String key : properties.stringPropertyNames()) {
+			setProperty(key, properties.getProperty(key));
+		}
 	}
 
-	/**
-	 * Create a new instance of this object with the specified
-	 * {@link Properties}
-	 * 
-	 * @param properties
-	 *            the initial metadata {@link Properties} to use
-	 */
-	public Metadata(Properties properties) {
-		this.properties = properties;
-	}
-
-	/**
-	 * Get a {@link Properties} representation of the metadata.
-	 * 
-	 * @return a {@link Properties} representation of the metadata
-	 */
-	public Properties getProperties() {
-		return this.properties;
-	}
-
-	public String toString() {
-		return this.properties.toString();
+	public DocumentMetadata() {
+		super();
 	}
 
 	/**
@@ -85,7 +63,7 @@ public class Metadata {
 	 *            the location of the source
 	 */
 	public void setLocation(String location) {
-		this.properties.setProperty("location", location);
+		setProperty("location", location);
 	}
 
 	/**
@@ -96,7 +74,7 @@ public class Metadata {
 	 * @return the location of the source
 	 */
 	public String getLocation() {
-		return this.properties.getProperty("location");
+		return getProperty("location");
 	}
 
 	/**
@@ -106,7 +84,7 @@ public class Metadata {
 	 *            the {@link Source}
 	 */
 	public void setSource(Source source) {
-		this.properties.setProperty("source", source.name().toLowerCase());
+		setProperty("source", source.name().toLowerCase());
 	}
 
 	/**
@@ -115,7 +93,7 @@ public class Metadata {
 	 * @return the {@link Source} ({@link Source#UNKNOWN} if unknown)
 	 */
 	public Source getSource() {
-		String source = this.properties.getProperty("source");
+		String source = getProperty("source");
 		return source == null || source.isEmpty() ? Source.UNKNOWN : Source.valueOf(source.toUpperCase());
 	}
 
@@ -126,7 +104,7 @@ public class Metadata {
 	 *            timestamp (milliseconds since January 1, 1970 GMT)
 	 */
 	public void setModified(long modified) {
-		this.properties.setProperty("modified", String.valueOf(modified));
+		setProperty("modified", String.valueOf(modified));
 	}
 
 	/**
@@ -137,7 +115,7 @@ public class Metadata {
 	 *         if unknown
 	 */
 	public long getModified() {
-		return Long.valueOf(this.properties.getProperty("modified", "0"));
+		return Long.valueOf(getProperty("modified", "0"));
 	}
 
 	/**
@@ -147,9 +125,9 @@ public class Metadata {
 	 *            the metadata to compare to this one
 	 * @return whether or not they are the same
 	 */
-	public boolean equals(Metadata metadata) {
-		return properties.equals(metadata.properties);
-	}
+//	public boolean equals(Metadata metadata) {
+//		return this.equals(metadata);
+//	}
 
 	/**
 	 * Set the {@link DocumentFormat} of the metadata
@@ -158,8 +136,7 @@ public class Metadata {
 	 *            the {@link DocumentFormat} of the metadata
 	 */
 	public void setDefaultFormat(DocumentFormat format) {
-		this.properties.setProperty("defaultFormat", format.name()
-				.toLowerCase());
+		setProperty("defaultFormat", format.name().toLowerCase());
 	}
 
 	/**
@@ -172,7 +149,7 @@ public class Metadata {
 	 *         {@link DocumentFormat#UNKNOWN} if unknown)
 	 */
 	public DocumentFormat getDefaultFormat() {
-		String format = this.properties.getProperty("defaultFormat");
+		String format = getProperty("defaultFormat");
 		if (format != null && format.isEmpty() == false) {
 			return DocumentFormat.valueOf(format.toUpperCase());
 		}
@@ -189,7 +166,7 @@ public class Metadata {
 	 * @param documentFormat the {@link DocumentFormat} of the metadata 
 	 */
 	public void setDocumentFormat(DocumentFormat documentFormat) {
-		this.properties.setProperty("format", documentFormat.name().toLowerCase());
+		setProperty("format", documentFormat.name().toLowerCase());
 	}
 	
 	/**
@@ -206,7 +183,7 @@ public class Metadata {
 	public DocumentFormat getDocumentFormat() throws IOException {
 
 		// try regular format
-		String format = this.properties.getProperty("format");
+		String format = getProperty("format");
 		if (format != null && format.isEmpty() == false) {
 			return DocumentFormat.valueOf(format.toUpperCase());
 		}
@@ -253,62 +230,62 @@ public class Metadata {
 	 * Creates a new child Metadata object with this object as its parent.
 	 * @return a new child Metadata object
 	 */
-	public Metadata asParent() {
+	public DocumentMetadata asParent() {
 		Properties properties = new Properties();
-		for (String key : this.properties.stringPropertyNames()) {
-			properties.setProperty("parent_"+key, this.properties.getProperty(key));
+		for (String key : stringPropertyNames()) {
+			properties.setProperty("parent_"+key, getProperty(key));
 		}
-		return new Metadata(properties);
+		return new DocumentMetadata(properties);
 	}
 
 	public void setTitle(String value) {
-		this.properties.setProperty("title", value);
+		setProperty("title", value);
 	}
 
 	public void setAuthor(String value) {
-		this.properties.setProperty("author", value);
+		setProperty("author", value);
 	}
 	
 	public void setExtra(String key, String value) {
-		this.properties.setProperty("extra."+key, value);
+		setProperty("extra."+key, value);
 	}
 
 	public void setKeywords(String value) {
-		this.properties.setProperty("keywords", value);
+		setProperty("keywords", value);
 	}
 
 	public String getAuthor() {
-		return this.properties.getProperty("author", "");
+		return getProperty("author", "");
 	}
 
 	public String getTitle() {
-		return this.properties.getProperty("title", "");
+		return getProperty("title", "");
 	}
 	public String getKeywords() {
-		return this.properties.getProperty("keywords", "");
+		return getProperty("keywords", "");
 	}
 
 	public void setLanguageCode(String lang) {
-		this.properties.setProperty("lang", lang);
+		setProperty("lang", lang);
 	}
 
 	public String getLanguageCode() {
-		return this.properties.getProperty("lang", "");
+		return getProperty("lang", "");
 	}
 
 	public void setTotalTokensCount(TokenType tokenType, int total) {
-		this.properties.setProperty("totalTokensCount-"+tokenType.name(), String.valueOf(total));
+		setProperty("totalTokensCount-"+tokenType.name(), String.valueOf(total));
 	}
 
 	public void setLastTokenPositionIndex(TokenType tokenType, int lastPosition) {
-		this.properties.setProperty("lastTokenPositionIndex-"+tokenType.name(), String.valueOf(lastPosition));
+		setProperty("lastTokenPositionIndex-"+tokenType.name(), String.valueOf(lastPosition));
 	}
 
 	public void setLastTokenOffsetIndex(TokenType tokenType, int lastOffset) {
-		this.properties.setProperty("lastTokenStartOffset-"+tokenType.name(), String.valueOf(lastOffset));
+		setProperty("lastTokenStartOffset-"+tokenType.name(), String.valueOf(lastOffset));
 	}
 
 	public int getTotalTokensCount(TokenType tokenType) {
-		return Integer.parseInt(this.properties.getProperty("totalTokensCount-"+tokenType, "0"));
+		return Integer.parseInt(getProperty("totalTokensCount-"+tokenType, "0"));
 	}
 }

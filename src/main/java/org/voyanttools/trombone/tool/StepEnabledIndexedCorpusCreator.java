@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
-import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 

@@ -30,11 +30,11 @@ import java.util.regex.Pattern;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.compress.compressors.CompressorException;
 import org.apache.commons.compress.compressors.CompressorStreamFactory;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.input.source.Source;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -86,7 +86,7 @@ class CompressedExpander implements Expander {
 			return expandedDocumentSources;
 		}
 		
-		Metadata metadata = storedDocumentSource.getMetadata();
+		DocumentMetadata metadata = storedDocumentSource.getMetadata();
 		String filename = metadata.getLocation();
 		if (filename==null || filename.isEmpty()==true) {filename="uncompressed";}
 		
@@ -97,7 +97,7 @@ class CompressedExpander implements Expander {
 			BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
 			InputStream newInputStream = new CompressorStreamFactory().createCompressorInputStream(bufferedInputStream);
 			
-			Metadata childMetadata = metadata.asParent();
+			DocumentMetadata childMetadata = metadata.asParent();
 			String modifiedFilename = Pattern.compile("\\.(bzip2|bz2|gz|gzip|xz)$", Pattern.CASE_INSENSITIVE).matcher(filename).replaceFirst("");
 			childMetadata.setLocation(modifiedFilename);
 			childMetadata.setModified(metadata.getModified());

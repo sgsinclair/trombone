@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.voyanttools.trombone.document.Metadata;
+import org.voyanttools.trombone.model.DocumentMetadata;
 
 /**
  * An {@link InputSource} associated with a (transient) {@link InputStream}
@@ -48,7 +48,7 @@ public class InputStreamInputSource implements InputSource {
 	/**
 	 * the metadata for this input source
 	 */
-	private Metadata metadata;
+	private DocumentMetadata metadata;
 
 	/**
 	 * Create a new instance with all of the needed information.
@@ -66,7 +66,7 @@ public class InputStreamInputSource implements InputSource {
 	 *            source (which the caller should take care to close when
 	 *            finished)
 	 */
-	public InputStreamInputSource(String id, Metadata metadata,
+	public InputStreamInputSource(String id, DocumentMetadata metadata,
 			InputStream inputStream) {
 		this.id = id;
 		this.metadata = metadata;
@@ -77,7 +77,7 @@ public class InputStreamInputSource implements InputSource {
 		return this.inputStream;
 	}
 
-	public Metadata getMetadata() {
+	public DocumentMetadata getMetadata() {
 		return this.metadata;
 	}
 

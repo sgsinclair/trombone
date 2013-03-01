@@ -29,10 +29,10 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -54,7 +54,7 @@ public class XmlExtractorTest {
 		InputSource inputSource;
 		StoredDocumentSource storedDocumentSource;
 		StoredDocumentSource extractedStoredDocumentSource;
-		Metadata metadata;
+		DocumentMetadata metadata;
 		String contents;
 		
 		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();

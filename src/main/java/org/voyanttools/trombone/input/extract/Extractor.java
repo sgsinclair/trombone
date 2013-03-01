@@ -23,8 +23,8 @@ package org.voyanttools.trombone.input.extract;
 
 import java.io.IOException;
 
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 
 /**
  * @author sgs

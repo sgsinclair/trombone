@@ -32,9 +32,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -99,7 +99,7 @@ class MemoryStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 		}
 
 		// create the stored document source and store it
-		Metadata metadata = inputSource.getMetadata();
+		DocumentMetadata metadata = inputSource.getMetadata();
 		StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
 		storedDocumentSourcesMap.put(id, storedDocumentSource);
 		return storedDocumentSource;
@@ -108,7 +108,7 @@ class MemoryStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.storage.StoredDocumentSourceStorage#getStoredDocumentSourceMetadata(java.lang.String)
 	 */
-	public Metadata getStoredDocumentSourceMetadata(String id)
+	public DocumentMetadata getStoredDocumentSourceMetadata(String id)
 			throws IOException {
 		return getStoredDocumentSource(id).getMetadata();
 	}
@@ -165,7 +165,7 @@ class MemoryStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	}
 
 	@Override
-	public void updateStoredDocumentSourceMetadata(String id, Metadata metadata)
+	public void updateStoredDocumentSourceMetadata(String id, DocumentMetadata metadata)
 			throws IOException {
 		// is this really necessary since the metadata is probably already in memory? could it have been cloned?
 		storedDocumentSourcesMap.put(id, new StoredDocumentSource(id, metadata));

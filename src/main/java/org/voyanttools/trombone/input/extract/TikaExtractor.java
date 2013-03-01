@@ -44,11 +44,11 @@ import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.html.DefaultHtmlMapper;
 import org.apache.tika.parser.html.HtmlMapper;
 import org.apache.tika.parser.html.IdentityHtmlMapper;
-import org.voyanttools.trombone.document.DocumentFormat;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputStreamInputSource;
+import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.xml.sax.SAXException;
@@ -106,7 +106,7 @@ public class TikaExtractor implements Extractor {
 		
 		private String id;
 		private StoredDocumentSource storedDocumentSource;
-		private Metadata metadata;
+		private DocumentMetadata metadata;
 		private boolean isProcessed = false;
 		
 		private ExtractableTikaInputSource(String id, StoredDocumentSource storedDocumentSource) {
@@ -192,7 +192,7 @@ public class TikaExtractor implements Extractor {
 		}
 
 		@Override
-		public Metadata getMetadata() throws IOException {
+		public DocumentMetadata getMetadata() throws IOException {
 			
 			return isProcessed ? this.metadata : storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id);
 		}

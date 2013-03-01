@@ -31,6 +31,7 @@ import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
 import org.voyanttools.trombone.input.source.UriInputSource;
+import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.util.EmbeddedWebServer;
 
 /**

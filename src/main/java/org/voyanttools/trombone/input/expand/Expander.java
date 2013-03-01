@@ -24,7 +24,7 @@ package org.voyanttools.trombone.input.expand;
 import java.io.IOException;
 import java.util.List;
 
-import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 
 /**
  * A strategy for expanding a {@link StoredDocumentSource}, including for

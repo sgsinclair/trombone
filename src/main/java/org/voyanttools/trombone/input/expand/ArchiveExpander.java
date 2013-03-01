@@ -36,12 +36,12 @@ import org.apache.commons.compress.archivers.ArchiveInputStream;
 import org.apache.commons.compress.archivers.ArchiveStreamFactory;
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 import org.apache.commons.io.input.CloseShieldInputStream;
-import org.voyanttools.trombone.document.DocumentFormat;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.input.source.Source;
+import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -134,7 +134,7 @@ class ArchiveExpander implements Expander {
 		
 		ArchiveEntry archiveEntry = archiveInputStream.getNextEntry();
 		String parentId = parentStoredDocumentSource.getId();
-		Metadata parentMetadata = parentStoredDocumentSource.getMetadata();
+		DocumentMetadata parentMetadata = parentStoredDocumentSource.getMetadata();
 		while (archiveEntry != null) {
 			
 			if (archiveEntry.isDirectory()==false) {
@@ -143,7 +143,7 @@ class ArchiveExpander implements Expander {
 
 				// skip directories and skippable files
 				if (DocumentFormat.isSkippable(file)==false) {
-					Metadata childMetadata = parentMetadata.asParent();
+					DocumentMetadata childMetadata = parentMetadata.asParent();
 					childMetadata.setLocation(file.toString());
 					childMetadata.setModified(archiveEntry.getLastModifiedDate().getTime());
 					childMetadata.setSource(Source.STREAM);

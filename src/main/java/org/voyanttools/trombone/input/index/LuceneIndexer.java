@@ -69,11 +69,11 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.Version;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.lucene.analysis.StemmableLanguage;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
@@ -208,7 +208,7 @@ public class LuceneIndexer implements Indexer {
 					}
 					else {break;}
 				}
-				Metadata metadata = storedDocumentSource.getMetadata();
+				DocumentMetadata metadata = storedDocumentSource.getMetadata();
 				metadata.setTotalTokensCount(TokenType.lexical, total);
 				metadata.setLastTokenPositionIndex(TokenType.lexical, lastPosition);
 				metadata.setLastTokenOffsetIndex(TokenType.lexical, lastOffset);

@@ -46,12 +46,12 @@ import net.sf.saxon.lib.NamespaceConstant;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.voyanttools.trombone.document.DocumentFormat;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.input.source.StringInputSource;
+import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
@@ -149,7 +149,7 @@ class XmlExpander implements Expander {
 			return childStoredDocumentSources;
 		}
 
-		Metadata parentMetadata = storedDocumentSource.getMetadata();
+		DocumentMetadata parentMetadata = storedDocumentSource.getMetadata();
 		String parentId = storedDocumentSource.getId();
 		String multipleExpandedStoredDocumentSourcesPrefix = DigestUtils
 				.md5Hex(joinedXmlDocumentsXpaths);
@@ -231,7 +231,7 @@ class XmlExpander implements Expander {
 	 */
 	private List<StoredDocumentSource> getChildStoredDocumentSources(
 			Document doc, String[] xmlDocumentsXpaths, String parentId,
-			Metadata parentMetadata) throws IOException {
+			DocumentMetadata parentMetadata) throws IOException {
 		List<StoredDocumentSource> childStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		for (int i = 0, len = xmlDocumentsXpaths.length; i < len; i++) {
 
@@ -277,7 +277,7 @@ class XmlExpander implements Expander {
 	 */
 	private List<StoredDocumentSource> getChildStoredDocumentSources(
 			Document doc, String xmlDocumentsXpath, String parentId,
-			Metadata parentMetadata) throws IOException {
+			DocumentMetadata parentMetadata) throws IOException {
 		List<StoredDocumentSource> childStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		List<Node> docs;
 		try {
@@ -316,7 +316,7 @@ class XmlExpander implements Expander {
 	 *             an exception that occurs during IO processing
 	 */
 	private StoredDocumentSource getChildStoredDocumentSource(Node node,
-			String parentId, Metadata parentMetadata, String location)
+			String parentId, DocumentMetadata parentMetadata, String location)
 			throws IOException {
 		StringWriter sw = new StringWriter(); // no need to close
 		Result streamResult = new StreamResult(sw);
@@ -327,7 +327,7 @@ class XmlExpander implements Expander {
 					"Unable to transform node from stored document: "
 							+ parentId + " (" + parentMetadata + ")");
 		}
-		Metadata metadata = parentMetadata.asParent();
+		DocumentMetadata metadata = parentMetadata.asParent();
 		metadata.setModified(parentMetadata.getModified());
 		metadata.setSource(Source.STRING);
 		metadata.setLocation(location);

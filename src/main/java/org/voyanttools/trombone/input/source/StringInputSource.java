@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.voyanttools.trombone.document.Metadata;
+import org.voyanttools.trombone.model.DocumentMetadata;
 
 /**
  * An {@link InputSource} associated with an in-memory string.
@@ -48,7 +48,7 @@ public class StringInputSource implements InputSource {
 	/**
 	 * the metadata for this input source
 	 */
-	private Metadata metadata;
+	private DocumentMetadata metadata;
 	
 	/**
 	 * Create a new instance with a string (the content).
@@ -57,7 +57,7 @@ public class StringInputSource implements InputSource {
 	 */
 	public StringInputSource(String string) {
 		this.string = string;
-		this.metadata = new Metadata();
+		this.metadata = new DocumentMetadata();
 		this.metadata.setLocation("memory");
 		this.metadata.setSource(Source.STRING);
 		this.id = DigestUtils.md5Hex(string);
@@ -76,7 +76,7 @@ public class StringInputSource implements InputSource {
 	 *            modified)
 	 * @param string the string associated with this input source
 	 */
-	public StringInputSource(String id, Metadata metadata, String string) {
+	public StringInputSource(String id, DocumentMetadata metadata, String string) {
 		this.id = id;
 		this.metadata = metadata;
 		this.string = string;
@@ -86,7 +86,7 @@ public class StringInputSource implements InputSource {
 		return new ByteArrayInputStream(string.getBytes("UTF-8"));
 	}
 
-	public Metadata getMetadata() {
+	public DocumentMetadata getMetadata() {
 		return this.metadata;
 	}
 	

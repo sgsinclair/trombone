@@ -29,8 +29,8 @@ import java.net.URI;
 import java.net.URLConnection;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.voyanttools.trombone.document.DocumentFormat;
-import org.voyanttools.trombone.document.Metadata;
+import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentMetadata;
 
 /**
  * An {@link InputSource} associated with a URI.
@@ -52,7 +52,7 @@ public class UriInputSource implements InputSource {
 	/**
 	 * the metadata for this input source
 	 */
-	private Metadata metadata;
+	private DocumentMetadata metadata;
 
 	/**
 	 * Create a new instance with the specified URI.
@@ -66,7 +66,7 @@ public class UriInputSource implements InputSource {
 	 */
 	public UriInputSource(URI uri) throws IOException {
 		this.uri = uri;
-		this.metadata = new Metadata();
+		this.metadata = new DocumentMetadata();
 		this.metadata.setLocation(uri.toString());
 		this.metadata.setSource(Source.URI);
 
@@ -130,7 +130,7 @@ public class UriInputSource implements InputSource {
 		return c.getInputStream();
 	}
 
-	public Metadata getMetadata() {
+	public DocumentMetadata getMetadata() {
 		return this.metadata;
 	}
 

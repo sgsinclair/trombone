@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 
+
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.collections.MapConverter;
 
@@ -35,16 +36,17 @@ import edu.stanford.nlp.util.StringUtils;
  * @author sgs
  *
  */
-@XStreamConverter(value=MapConverter.class)
-public class CorpusMetadata extends Properties {
+public class CorpusMetadata {
+	
+	private Properties properties;
 	
 	public CorpusMetadata(String id) {
-		super();
-		this.setProperty("id", id);
+		properties = new Properties();
+		setProperty("id", id);
 	}
 	
 	public List<String> getDocumentIds() {
-		return Arrays.asList(this.getProperty("documentIds", "").split(","));
+		return Arrays.asList(getProperty("documentIds", "").split(","));
 	}
 
 	public String getId() {
@@ -52,9 +54,23 @@ public class CorpusMetadata extends Properties {
 	}
 
 	public void setDocumentIds(Collection<String> ids) {
-		this.setProperty("documentIds", StringUtils.join(ids, ","));
-		// TODO Auto-generated method stub
-		
+		setProperty("documentIds", StringUtils.join(ids, ","));
+	}
+	
+	private String getProperty(String key) {
+		return properties.getProperty(key);
+	}
+	
+	private String getProperty(String key, String defaultValue) {
+		return properties.getProperty(key, defaultValue);
+	}
+	
+	private void setProperty(String key, String value) {
+		properties.setProperty(key, value);
+	}
+
+	public Properties getProperties() {
+		return properties;
 	}
 
 }

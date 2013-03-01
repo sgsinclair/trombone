@@ -24,8 +24,8 @@ package org.voyanttools.trombone.input.source;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 /**
@@ -57,7 +57,7 @@ public class StoredDocumentSourceInputSource implements InputSource {
 	 * @see org.voyanttools.trombone.input.source.InputSource#getMetadata()
 	 */
 	@Override
-	public Metadata getMetadata() {
+	public DocumentMetadata getMetadata() {
 		return storedDocumentSource.getMetadata();
 	}
 

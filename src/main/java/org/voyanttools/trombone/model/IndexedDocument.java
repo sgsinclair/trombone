@@ -23,10 +23,10 @@ package org.voyanttools.trombone.model;
 
 import java.io.IOException;
 
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
@@ -35,9 +35,12 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  */
 public class IndexedDocument {
 
+	@XStreamOmitField
 	private String id;
 	
-	private Metadata metadata = null;
+	@XStreamImplicit
+	@XStreamConverter(MetadataConverter.class)
+	private DocumentMetadata metadata = null;
 	
 	@XStreamOmitField
 	private Storage storage;
@@ -58,7 +61,7 @@ public class IndexedDocument {
 		return new StoredDocumentSource(getId(), getMetadata());
 	}
 
-	public Metadata getMetadata() throws IOException {
+	public DocumentMetadata getMetadata() throws IOException {
 		if (metadata==null) {
 			metadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(getId());
 		}

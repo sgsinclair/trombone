@@ -37,13 +37,13 @@ import java.util.concurrent.Future;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.lucene.index.IndexReader;
-import org.voyanttools.trombone.document.Metadata;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -76,7 +76,7 @@ public class CorpusBuilder extends AbstractTool {
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		List<StoredDocumentSource> indexableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		for (String id : ids) {
-			Metadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
+			DocumentMetadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
 			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
 			indexableStoredDocumentSources.add(storedDocumentSource);
 		}

@@ -33,11 +33,12 @@ import org.apache.commons.io.IOUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.voyanttools.trombone.document.StoredDocumentSource;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
 import org.voyanttools.trombone.input.source.UriInputSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.EmbeddedWebServer;
@@ -78,6 +79,8 @@ public class FileStoredDocumentSourceStorageTest {
 			if (inputStream != null) inputStream.close();
 		}	
 		Assert.assertTrue("raw contents should be the same", contents.equals(STRING_TEST));
+		DocumentMetadata m1 = inputSource1.getMetadata();
+		DocumentMetadata m2 = storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id1);
 		Assert.assertTrue("metadata from original and retrieved should be the same", inputSource1.getMetadata().equals(storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id1)));
 		
 		InputSource inputSource2 = new StringInputSource(STRING_TEST);

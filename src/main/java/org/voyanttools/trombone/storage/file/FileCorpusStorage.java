@@ -64,7 +64,7 @@ public class FileCorpusStorage implements CorpusStorage {
 				FileInputStream fis = null;
 				try {
 					fis = new FileInputStream(metadataFile);
-					metadata.loadFromXML(fis);
+					metadata.getProperties().loadFromXML(fis);
 					fis.close();
 				}
 				finally {
@@ -94,7 +94,7 @@ public class FileCorpusStorage implements CorpusStorage {
 			OutputStream os = null;
 			try {
 				os = new FileOutputStream(metadataFile);
-				corpus.getCorpusMetadata().storeToXML(os, "This is a Trombone Corpus Metadata file");
+				corpus.getCorpusMetadata().getProperties().storeToXML(os, "This is a Trombone Corpus Metadata file");
 				os.close();
 			}
 			finally {

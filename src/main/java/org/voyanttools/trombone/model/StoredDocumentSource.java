@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.document;
+package org.voyanttools.trombone.model;
 
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -41,23 +41,23 @@ public class StoredDocumentSource {
 	/**
 	 * the document's known metadata
 	 */
-	private Metadata metadata;
+	private DocumentMetadata metadata;
 	
 	/**
-	 * Create a new instance of this object with the specified Id and {@link Metadata}
+	 * Create a new instance of this object with the specified Id and {@link DocumentMetadata}
 	 * @param id the stored document source's ID
-	 * @param metadata the stored document source's {@link Metadata}
+	 * @param metadata the stored document source's {@link DocumentMetadata}
 	 */
-	public StoredDocumentSource(String id, Metadata metadata) {
+	public StoredDocumentSource(String id, DocumentMetadata metadata) {
 		this.id = id;
 		this.metadata = metadata;
 	}
 
 	/**
-	 * Get this stored document source's {@link Metadata}
-	 * @return this stored document source's {@link Metadata}
+	 * Get this stored document source's {@link DocumentMetadata}
+	 * @return this stored document source's {@link DocumentMetadata}
 	 */
-	public Metadata getMetadata() {
+	public DocumentMetadata getMetadata() {
 		return metadata;
 	}
 
