@@ -71,21 +71,37 @@ public class DocumentTermFrequenciesTest {
 		parameters.removeParameter("query");
 		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
 		documentTermFrequencies.run();		
-		// we sort by reverse frequency by default
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
-		for (DocumentTermFrequencyStats stat : statsList) {
-			System.err.println(stat);
-		}
-//		assertEquals(2, statsList.size());
-//		stats = statsList.get(0);
-//		assertEquals(1, stats.getDocumentIndex());
-//		assertEquals("it was", stats.getTerm());
-//		assertEquals(2, stats.getRawFrequency());
-//		stats = statsList.get(1);
-//		assertEquals(0, stats.getDocumentIndex());
-//		assertEquals("it was", stats.getTerm());
-//		assertEquals(1, stats.getRawFrequency());
+		assertEquals(14, statsList.size());
+		stats = statsList.get(0);
+		assertEquals("it", stats.getTerm());
+		assertEquals(2, stats.getRawFrequency());
 		
+		parameters.setParameter("limit", 1);
+		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies.run();		
+		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
+		assertEquals(1, statsList.size());
+		stats = statsList.get(0);
+		assertEquals("it", stats.getTerm());
+		assertEquals(2, stats.getRawFrequency());
+		
+		parameters.setParameter("start", 1);
+		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies.run();		
+		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
+		assertEquals(1, statsList.size());
+		stats = statsList.get(0);
+		assertEquals("of", stats.getTerm());
+		assertEquals(2, stats.getRawFrequency());
+		
+		parameters.setParameter("start", 50);
+		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies.run();		
+		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
+		assertEquals(0, statsList.size());
+		
+		storage.destroy();
 		
 	}
 

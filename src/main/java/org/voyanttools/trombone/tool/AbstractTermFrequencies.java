@@ -60,7 +60,7 @@ public abstract class AbstractTermFrequencies extends AbstractTool {
 			FlexibleParameters parameters) {
 		super(storage, parameters);
 		start = parameters.getParameterIntValue("start", 0);
-		limit = parameters.getParameterIntValue("start", 50);
+		limit = parameters.getParameterIntValue("limit", 50);
 		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
 		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
 	}

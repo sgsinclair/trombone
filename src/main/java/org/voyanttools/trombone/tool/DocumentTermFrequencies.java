@@ -184,7 +184,7 @@ public class DocumentTermFrequencies extends AbstractTermFrequencies {
 	}
 
 	private void setDocumentTermsFromQueue(DocumentTermFrequencyStatsQueue queue) {
-		for (int i=0, len=queue.size(); i<len; i++) {
+		for (int i=0, len = queue.size()-start; i<len; i++) {
 			documentTerms.add(queue.pop());
 		}
 		Collections.reverse(documentTerms);

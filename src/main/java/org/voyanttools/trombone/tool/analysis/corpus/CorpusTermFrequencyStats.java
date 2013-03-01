@@ -6,8 +6,8 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 public class CorpusTermFrequencyStats {
 
-	private String termString;
-	private int termFreq;
+	private String term;
+	private int rawFreq;
 	private int[] documentFreqs;
 	
 	@XStreamOmitField
@@ -16,18 +16,22 @@ public class CorpusTermFrequencyStats {
 	
 	public CorpusTermFrequencyStats(String termString, int termFreq,
 			int[] documentFreqs) {
-		this.termString = termString;
-		this.termFreq = termFreq;
+		this.term = termString;
+		this.rawFreq = termFreq;
 		this.documentFreqs = documentFreqs;
 	}
 
 	public int getRawFrequency() {
-		return this.termFreq;
+		return this.rawFreq;
 	}
 	
 	public String getNormalizedTerm() {
-		if (normalizedString==null) {normalizedString = Normalizer.normalize(termString, Normalizer.Form.NFD);}
+		if (normalizedString==null) {normalizedString = Normalizer.normalize(term, Normalizer.Form.NFD);}
 		return normalizedString;
+	}
+
+	public Object getTerm() {
+		return term;
 	}
 	
 

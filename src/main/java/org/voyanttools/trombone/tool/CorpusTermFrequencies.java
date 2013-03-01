@@ -57,6 +57,8 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 	
 	@XStreamOmitField
 	private CorpusTermFrequencyStatsSort corpusTermFrequencyStatsSort;
+	
+	private boolean includeDocumentDistribution = false;
 
 	/**
 	 * @param storage
@@ -98,7 +100,7 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 					documentFreqs[documentPosition] = freq;
 					doc = docsEnum.nextDoc();
 				}
-				queue.insertWithOverflow(new CorpusTermFrequencyStats(termString, termFreq, documentFreqs));
+				queue.insertWithOverflow(new CorpusTermFrequencyStats(termString, termFreq, includeDocumentDistribution ? documentFreqs : null));
 			}
 			else {
 				break; // no more terms
@@ -108,7 +110,7 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 	}
 
 	private void seCorpusTermsFromQueue(CorpusTermFrequencyStatsQueue queue) {
-		for (int i=0, len=queue.size(); i<len; i++) {
+		for (int i=0, len = queue.size()-start; i<len; i++) {
 			corpusTerms.add(queue.pop());
 		}
 		Collections.reverse(corpusTerms);
@@ -118,6 +120,10 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 	protected void runQueries(Corpus corpus,
 			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		// FIXME
+	}
+
+	List<CorpusTermFrequencyStats> getCorpusTermFrequencyStats() {
+		return corpusTerms;
 	}
 
 }
