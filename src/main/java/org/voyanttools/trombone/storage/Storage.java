@@ -27,6 +27,7 @@ import java.util.List;
 
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.Keywords;
 
 /**
  * This interface defines methods for interacting with stored objects using a storage strategy defined by the
@@ -61,5 +62,5 @@ public interface Storage {
 	public List<String> retrieveStrings(String id) throws IOException;
 
 	public CorpusStorage getCorpusStorage();
-	
+
 }

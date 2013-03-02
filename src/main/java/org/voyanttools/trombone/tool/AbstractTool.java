@@ -27,6 +27,7 @@ import java.util.List;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -75,5 +76,13 @@ public abstract class AbstractTool implements RunnableTool {
 		
 		return ids;
 		
+	}
+	
+	protected Keywords getStopwords() throws IOException {
+		Keywords keywords = new Keywords();
+		if (parameters.containsKey("stopList")) {
+			keywords.load(storage, parameters.getParameterValues("stopList"));
+		}
+		return keywords;
 	}
 }

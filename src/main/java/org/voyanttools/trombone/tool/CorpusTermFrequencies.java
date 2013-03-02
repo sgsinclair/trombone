@@ -37,6 +37,7 @@ import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermFrequencyStats;
 import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermFrequencyStatsSort;
@@ -58,6 +59,7 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 	@XStreamOmitField
 	private CorpusTermFrequencyStatsSort corpusTermFrequencyStatsSort;
 	
+	@XStreamOmitField
 	private boolean includeDocumentDistribution = false;
 
 	/**
@@ -70,6 +72,7 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 	}
 
 	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+		Keywords stopwords = getStopwords();
 		
 		int size = start+limit;
 		
@@ -89,6 +92,8 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 			
 			if (term != null) {
 				termString = term.utf8ToString();
+				total++;
+				if (stopwords.isKeyword(termString)) {continue;}
 				docsEnum = termsEnum.docs(docIdSet, docsEnum, DocsEnum.FLAG_FREQS);
 				int doc = docsEnum.nextDoc();
 				int termFreq = 0;

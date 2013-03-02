@@ -126,6 +126,7 @@ public class DocumentTermFrequencies extends AbstractTermFrequencies {
 				}
 				int documentPosition = entry.getKey();
 				float rel = (float) freq / totalTokenCounts[documentPosition];
+				total++;
 				queue.insertWithOverflow(new DocumentTermFrequencyStats(documentPosition, queryString, freq, rel, isNeedsPositions ? positions : null, null));
 			}
 			positionsMap.clear(); // prepare for new entries
@@ -154,6 +155,8 @@ public class DocumentTermFrequencies extends AbstractTermFrequencies {
 			
 			if (term != null) {
 				termString = term.utf8ToString();
+				total+=termsEnum.docFreq();
+				// FIXME: check for stopwords
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
