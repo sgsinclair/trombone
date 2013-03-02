@@ -38,14 +38,18 @@ public class KeywordsTest {
 		// try with a URL
 		EmbeddedWebServer webServer = new EmbeddedWebServer();
 		webServer.start();
-		keywords = new Keywords();
-		String uri = "http://localhost:"+webServer.getPort()+"/keywords/stop.en.taporware.txt";
-		keywords.load(storage, new String[]{uri+",testzz","testaa"});
-		assertTrue(keywords.isKeyword("the"));
-		assertTrue(keywords.isKeyword("testzz"));
-		assertTrue(keywords.isKeyword("testaa"));
-		assertFalse(keywords.isKeyword("word"));
-		webServer.stop();
+		try {
+			keywords = new Keywords();
+			String uri = "http://localhost:"+webServer.getPort()+"/keywords/stop.en.taporware.txt";
+			keywords.load(storage, new String[]{uri+",testzz","testaa"});
+			assertTrue(keywords.isKeyword("the"));
+			assertTrue(keywords.isKeyword("testzz"));
+			assertTrue(keywords.isKeyword("testaa"));
+			assertFalse(keywords.isKeyword("word"));
+		}
+		finally {
+			webServer.stop();
+		}
 		
 		storage.destroy();
 		
