@@ -25,7 +25,7 @@ public class DocumentTermFrequenciesTest {
 		document = new Document();
 		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
 		luceneManager.addDocument(document);
-		DocumentTerm stats;
+		DocumentTerm documentTerm;
 		
 		FlexibleParameters parameters;
 		
@@ -41,65 +41,65 @@ public class DocumentTermFrequenciesTest {
 		parameters.setParameter("tool", "DocumentTermFrequencies");
 		
 		DocumentTermsCounter documentTermFrequencies;
-		List<DocumentTerm> statsList;
+		List<DocumentTerm> documentTerms;
 		
 		parameters.setParameter("query", "dar*");
 		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
-		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
-		assertEquals(1, statsList.size());
-		stats = statsList.get(0);
-		assertEquals("dark", stats.getTerm());
-		assertEquals(1, stats.getRawFrequency());
-		assertEquals(0, stats.getDocumentIndex());
+		documentTerms = documentTermFrequencies.getDocumentTerms();
+		assertEquals(1, documentTerms.size());
+		documentTerm = documentTerms.get(0);
+		assertEquals("dark", documentTerm.getTerm());
+		assertEquals(1, documentTerm.getRawFrequency());
+		assertEquals(0, documentTerm.getDocumentIndex());
 		
 		parameters.setParameter("query", "it was");
 		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
 		// we sort by reverse frequency by default
-		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
-		assertEquals(2, statsList.size());
-		stats = statsList.get(0);
-		assertEquals(1, stats.getDocumentIndex());
-		assertEquals("it was", stats.getTerm());
-		assertEquals(2, stats.getRawFrequency());
-		stats = statsList.get(1);
-		assertEquals(0, stats.getDocumentIndex());
-		assertEquals("it was", stats.getTerm());
-		assertEquals(1, stats.getRawFrequency());
+		documentTerms = documentTermFrequencies.getDocumentTerms();
+		assertEquals(2, documentTerms.size());
+		documentTerm = documentTerms.get(0);
+		assertEquals(1, documentTerm.getDocumentIndex());
+		assertEquals("it was", documentTerm.getTerm());
+		assertEquals(2, documentTerm.getRawFrequency());
+		documentTerm = documentTerms.get(1);
+		assertEquals(0, documentTerm.getDocumentIndex());
+		assertEquals("it was", documentTerm.getTerm());
+		assertEquals(1, documentTerm.getRawFrequency());
 		
 		parameters.removeParameter("query");
 		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
-		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
-		assertEquals(14, statsList.size());
-		stats = statsList.get(0);
-		assertEquals("it", stats.getTerm());
-		assertEquals(2, stats.getRawFrequency());
+		documentTerms = documentTermFrequencies.getDocumentTerms();
+		assertEquals(14, documentTerms.size());
+		documentTerm = documentTerms.get(0);
+		assertEquals("it", documentTerm.getTerm());
+		assertEquals(2, documentTerm.getRawFrequency());
 		
 		parameters.setParameter("limit", 1);
 		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
-		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
-		assertEquals(1, statsList.size());
-		stats = statsList.get(0);
-		assertEquals("it", stats.getTerm());
-		assertEquals(2, stats.getRawFrequency());
+		documentTerms = documentTermFrequencies.getDocumentTerms();
+		assertEquals(1, documentTerms.size());
+		documentTerm = documentTerms.get(0);
+		assertEquals("it", documentTerm.getTerm());
+		assertEquals(2, documentTerm.getRawFrequency());
 		
 		parameters.setParameter("start", 1);
 		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
-		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
-		assertEquals(1, statsList.size());
-		stats = statsList.get(0);
-		assertEquals("of", stats.getTerm());
-		assertEquals(2, stats.getRawFrequency());
+		documentTerms = documentTermFrequencies.getDocumentTerms();
+		assertEquals(1, documentTerms.size());
+		documentTerm = documentTerms.get(0);
+		assertEquals("of", documentTerm.getTerm());
+		assertEquals(2, documentTerm.getRawFrequency());
 		
 		parameters.setParameter("start", 50);
 		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
-		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
-		assertEquals(0, statsList.size());
+		documentTerms = documentTermFrequencies.getDocumentTerms();
+		assertEquals(0, documentTerms.size());
 		
 		storage.destroy();
 		

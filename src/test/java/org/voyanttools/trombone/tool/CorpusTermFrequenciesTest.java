@@ -39,45 +39,45 @@ public class CorpusTermFrequenciesTest {
 		
 		parameters.setParameter("tool", "CorpusTermFrequencies");
 		
-		CorpusTerm stats;
+		CorpusTerm corpusTerm;
 		CorpusTermsCounter corpusTermFrequencies;
-		List<CorpusTerm> statsList;
+		List<CorpusTerm> corpusTerms;
 		
 		// all terms 
 		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
-		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
-		assertEquals(15, statsList.size());
-		stats = statsList.get(0);
-		assertEquals("it", stats.getTerm());
-		assertEquals(3, stats.getRawFrequency());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(15, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("it", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFrequency());
 		
 		// limit 1 (top frequency word)
 		parameters.setParameter("limit", "1");
 		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
-		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
-		assertEquals(1, statsList.size());
-		stats = statsList.get(0);
-		assertEquals("it", stats.getTerm());
-		assertEquals(3, stats.getRawFrequency());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("it", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFrequency());
 
 		// start 1, limit 1
 		parameters.setParameter("start", "1");
 		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
-		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
-		assertEquals(1, statsList.size());
-		stats = statsList.get(0);
-		assertEquals("was", stats.getTerm());
-		assertEquals(3, stats.getRawFrequency());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("was", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFrequency());
 
 		// start 50, limit 1 (empty)
 		parameters.setParameter("start", "50");
 		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
-		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
-		assertEquals(0, statsList.size());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(0, corpusTerms.size());
 		
 		storage.destroy();
 		

@@ -1,9 +1,10 @@
-package org.voyanttools.trombone.tool.analysis.corpus;
+package org.voyanttools.trombone.tool.analysis;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.voyanttools.trombone.model.CorpusTerm;
+import org.voyanttools.trombone.tool.analysis.CorpusTermsQueue;
 
 public class CorpusTermsQueueTest {
 
@@ -16,7 +17,7 @@ public class CorpusTermsQueueTest {
 		CorpusTermsQueue queue;
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new CorpusTermsQueue(2, CorpusTermsSort.rawFrequencyDesc);
+		queue = new CorpusTermsQueue(2, CorpusTerm.Sort.rawFrequencyDesc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -26,7 +27,7 @@ public class CorpusTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new CorpusTermsQueue(CorpusTermsSort.rawFrequencyDesc);
+		queue = new CorpusTermsQueue(CorpusTerm.Sort.rawFrequencyDesc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -36,7 +37,7 @@ public class CorpusTermsQueueTest {
 		assertEquals("z", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new CorpusTermsQueue(2, CorpusTermsSort.rawFrequencyAsc);
+		queue = new CorpusTermsQueue(2, CorpusTerm.Sort.rawFrequencyAsc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -45,7 +46,7 @@ public class CorpusTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new CorpusTermsQueue(CorpusTermsSort.rawFrequencyAsc);
+		queue = new CorpusTermsQueue(CorpusTerm.Sort.rawFrequencyAsc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -54,7 +55,7 @@ public class CorpusTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 
 		// ascending term alphabet, then descending term frequency
-		queue = new CorpusTermsQueue(2, CorpusTermsSort.termAsc);
+		queue = new CorpusTermsQueue(2, CorpusTerm.Sort.termAsc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -63,7 +64,7 @@ public class CorpusTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 
 		// ascending term alphabet, then descending term frequency
-		queue = new CorpusTermsQueue(CorpusTermsSort.termAsc);
+		queue = new CorpusTermsQueue(CorpusTerm.Sort.termAsc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -72,7 +73,7 @@ public class CorpusTermsQueueTest {
 		assertEquals("é", queue.poll().getTerm());
 		
 		// descending term alphabet, then descending term frequency
-		queue = new CorpusTermsQueue(2, CorpusTermsSort.termDesc);
+		queue = new CorpusTermsQueue(2, CorpusTerm.Sort.termDesc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -81,7 +82,7 @@ public class CorpusTermsQueueTest {
 		assertEquals("z", queue.poll().getTerm());
 		
 		// descending term alphabet, then descending term frequency
-		queue = new CorpusTermsQueue(CorpusTermsSort.termDesc);
+		queue = new CorpusTermsQueue(CorpusTerm.Sort.termDesc);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);

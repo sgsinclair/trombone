@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool.analysis.corpus;
+package org.voyanttools.trombone.tool.analysis;
 
 import java.util.Comparator;
 
@@ -21,11 +21,11 @@ public class CorpusTermsQueue {
 	private java.util.PriorityQueue<CorpusTerm> unlimitedSizeQueue = null;
 	
 
-	public CorpusTermsQueue(CorpusTermsSort sort) {
+	public CorpusTermsQueue(CorpusTerm.Sort sort) {
 		this(Integer.MAX_VALUE, sort);
 	}
 
-	public CorpusTermsQueue(int size, CorpusTermsSort sort) {
+	public CorpusTermsQueue(int size, CorpusTerm.Sort sort) {
 		Comparator<CorpusTerm> comparator = CorpusTerm.getComparator(sort);
 		if (size==Integer.MAX_VALUE) {
 			unlimitedSizeQueue = new java.util.PriorityQueue<CorpusTerm>(11, comparator);
@@ -35,26 +35,25 @@ public class CorpusTermsQueue {
 		}
 	}
 
-	private class LimitedSizeQueue<CorpusTermFrequencyStats> extends org.apache.lucene.util.PriorityQueue<CorpusTermFrequencyStats> {
+	private class LimitedSizeQueue<CorpusTerm> extends org.apache.lucene.util.PriorityQueue<CorpusTerm> {
 
-		Comparator<CorpusTermFrequencyStats> comparator;
+		Comparator<CorpusTerm> comparator;
 		
-		public LimitedSizeQueue(int maxSize, Comparator<CorpusTermFrequencyStats> comparator) {
+		public LimitedSizeQueue(int maxSize, Comparator<CorpusTerm> comparator) {
 			super(maxSize);
 			this.comparator = comparator;
 		}
 
 		@Override
-		protected boolean lessThan(CorpusTermFrequencyStats a,
-				CorpusTermFrequencyStats b) {
+		protected boolean lessThan(CorpusTerm a, CorpusTerm b) {
 			return comparator.compare(a, b) < 0;
 		}
 		
 	}
 
-	public void offer(CorpusTerm corpusTermFrequencyStats) {
-		if (limitedSizeQueue!=null) {limitedSizeQueue.insertWithOverflow(corpusTermFrequencyStats);}
-		else if (unlimitedSizeQueue!=null) {unlimitedSizeQueue.offer(corpusTermFrequencyStats);}
+	public void offer(CorpusTerm corpusTerm) {
+		if (limitedSizeQueue!=null) {limitedSizeQueue.insertWithOverflow(corpusTerm);}
+		else if (unlimitedSizeQueue!=null) {unlimitedSizeQueue.offer(corpusTerm);}
 	}
 
 	public int size() {

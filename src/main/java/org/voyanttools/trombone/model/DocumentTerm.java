@@ -22,8 +22,7 @@
 package org.voyanttools.trombone.model;
 
 import java.text.Normalizer;
-
-import org.apache.lucene.util.BytesRef;
+import java.util.Comparator;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
@@ -32,6 +31,10 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  *
  */
 public class DocumentTerm {
+
+	public enum Sort {
+		rawFrequencyAsc, rawFrequencyDesc, relativeFrequencyAsc, relativeFrequencyDesc, termAsc, termDesc;
+	}
 
 	private int docIndex;
 	private String term;
@@ -70,5 +73,97 @@ public class DocumentTerm {
 	public int getDocumentIndex() {
 		return docIndex;
 	}
+	public static Comparator<DocumentTerm> getComparator(Sort sort) {
+		switch (sort) {
+		case rawFrequencyAsc:
+			return RawFrequencyAscendingComparator;
+		case termAsc:
+			return TermAscendingComparator;
+		case termDesc:
+			return TermDescendingComparator;
+		case rawFrequencyDesc:
+			return RawFrequencyDescendingComparator;
+		case relativeFrequencyAsc:
+			return RelativeFrequencyAscendingComparator;
+		default: // relativeDesc
+			return RelativeFrequencyDescendingComparator;
+		}
+	}
+	private static Comparator<DocumentTerm> TermAscendingComparator = new Comparator<DocumentTerm>() {
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			int i = term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+			if (i==0) {
+				return term1.freq - term2.freq;
+			}
+			return i;
+		}
+	};
 
+	private static Comparator<DocumentTerm> TermDescendingComparator = new Comparator<DocumentTerm>() {
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			int i = term1.getNormalizedTerm().compareTo(term2.getNormalizedTerm());
+			if (i==0) {
+				return term1.freq - term2.freq;
+			}
+			return i;
+		}
+	};
+
+	private static Comparator<DocumentTerm> RawFrequencyDescendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			if (term1.freq==term2.freq) {
+				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+			}
+			else {
+				return term1.freq - term2.freq;
+			}
+		}
+		
+	};
+	
+	private static Comparator<DocumentTerm> RawFrequencyAscendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			if (term1.freq==term2.freq) {
+				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+			}
+			else {
+				return term2.freq - term1.freq;
+			}
+		}
+		
+	};
+
+	private static Comparator<DocumentTerm> RelativeFrequencyAscendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			if (term1.rel==term2.rel) {
+				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+			}
+			else {
+				return term2.freq - term1.freq;
+			}
+		}
+		
+	};
+
+	private static Comparator<DocumentTerm> RelativeFrequencyDescendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			if (term1.rel==term2.rel) {
+				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+			}
+			else {
+				return term1.freq - term2.freq;
+			}
+		}
+		
+	};
 }

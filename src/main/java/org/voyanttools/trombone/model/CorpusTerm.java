@@ -3,11 +3,13 @@ package org.voyanttools.trombone.model;
 import java.text.Normalizer;
 import java.util.Comparator;
 
-import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermsSort;
-
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 public class CorpusTerm {
+
+	public enum Sort {
+		rawFrequencyAsc, rawFrequencyDesc, termAsc, termDesc;
+	}
 
 	private String term;
 	private int rawFreq;
@@ -37,7 +39,7 @@ public class CorpusTerm {
 		return term;
 	}
 	
-	public static Comparator<CorpusTerm> getComparator(CorpusTermsSort sort) {
+	public static Comparator<CorpusTerm> getComparator(Sort sort) {
 		switch (sort) {
 		case rawFrequencyAsc:
 			return RawFrequencyAscendingComparator;
@@ -52,10 +54,10 @@ public class CorpusTerm {
 	
 	private static Comparator<CorpusTerm> TermAscendingComparator = new Comparator<CorpusTerm>() {
 		@Override
-		public int compare(CorpusTerm ctfs1, CorpusTerm ctfs2) {
-			int i = ctfs2.getNormalizedTerm().compareTo(ctfs1.getNormalizedTerm());
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			int i = term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			if (i==0) {
-				return ctfs1.rawFreq - ctfs2.rawFreq;
+				return term1.rawFreq - term2.rawFreq;
 			}
 			return i;
 		}
@@ -63,10 +65,10 @@ public class CorpusTerm {
 
 	private static Comparator<CorpusTerm> TermDescendingComparator = new Comparator<CorpusTerm>() {
 		@Override
-		public int compare(CorpusTerm ctfs1, CorpusTerm ctfs2) {
-			int i = ctfs1.getNormalizedTerm().compareTo(ctfs2.getNormalizedTerm());
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			int i = term1.getNormalizedTerm().compareTo(term2.getNormalizedTerm());
 			if (i==0) {
-				return ctfs1.rawFreq - ctfs2.rawFreq;
+				return term1.rawFreq - term2.rawFreq;
 			}
 			return i;
 		}
@@ -75,12 +77,12 @@ public class CorpusTerm {
 	private static Comparator<CorpusTerm> RawFrequencyDescendingComparator = new Comparator<CorpusTerm>() {
 
 		@Override
-		public int compare(CorpusTerm ctfs1, CorpusTerm ctfs2) {
-			if (ctfs1.rawFreq==ctfs2.rawFreq) {
-				return ctfs2.getNormalizedTerm().compareTo(ctfs1.getNormalizedTerm());
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			if (term1.rawFreq==term2.rawFreq) {
+				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return ctfs1.rawFreq - ctfs2.rawFreq;
+				return term1.rawFreq - term2.rawFreq;
 			}
 		}
 		
@@ -89,12 +91,12 @@ public class CorpusTerm {
 	private static Comparator<CorpusTerm> RawFrequencyAscendingComparator = new Comparator<CorpusTerm>() {
 
 		@Override
-		public int compare(CorpusTerm ctfs1, CorpusTerm ctfs2) {
-			if (ctfs1.rawFreq==ctfs2.rawFreq) {
-				return ctfs2.getNormalizedTerm().compareTo(ctfs1.getNormalizedTerm());
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			if (term1.rawFreq==term2.rawFreq) {
+				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return ctfs2.rawFreq - ctfs1.rawFreq;
+				return term2.rawFreq - term1.rawFreq;
 			}
 		}
 		

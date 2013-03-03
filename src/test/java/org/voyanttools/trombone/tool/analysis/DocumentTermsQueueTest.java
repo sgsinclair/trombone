@@ -19,13 +19,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool.analysis.document;
+package org.voyanttools.trombone.tool.analysis;
 
 import static org.junit.Assert.*;
 
 import org.apache.lucene.util.BytesRef;
 import org.junit.Test;
 import org.voyanttools.trombone.model.DocumentTerm;
+import org.voyanttools.trombone.tool.analysis.DocumentTermsQueue;
 
 /**
  * @author sgs
@@ -42,58 +43,58 @@ public class DocumentTermsQueueTest {
 		DocumentTermsQueue queue;
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.relativeFrequencyDesc);
-		queue.insertWithOverflow(d1);
-		queue.insertWithOverflow(d2);
-		queue.insertWithOverflow(d3);
-		queue.insertWithOverflow(d4);
-		assertEquals(3, (int) queue.pop().getRelativeFrequency());
-		assertEquals("é", queue.pop().getTerm());
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.relativeFrequencyDesc);
+		queue.offer(d1);
+		queue.offer(d2);
+		queue.offer(d3);
+		queue.offer(d4);
+		assertEquals(3, (int) queue.poll().getRelativeFrequency());
+		assertEquals("é", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.relativeFrequencyAsc);
-		queue.insertWithOverflow(d1);
-		queue.insertWithOverflow(d2);
-		queue.insertWithOverflow(d3);
-		queue.insertWithOverflow(d4);
-		assertEquals(2, (int) queue.pop().getRelativeFrequency());
-		assertEquals("a", queue.pop().getTerm());
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.relativeFrequencyAsc);
+		queue.offer(d1);
+		queue.offer(d2);
+		queue.offer(d3);
+		queue.offer(d4);
+		assertEquals(2, (int) queue.poll().getRelativeFrequency());
+		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.rawFrequencyDesc);
-		queue.insertWithOverflow(d1);
-		queue.insertWithOverflow(d2);
-		queue.insertWithOverflow(d3);
-		queue.insertWithOverflow(d4);
-		assertEquals(3, queue.pop().getRawFrequency());
-		assertEquals("a", queue.pop().getTerm());
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.rawFrequencyDesc);
+		queue.offer(d1);
+		queue.offer(d2);
+		queue.offer(d3);
+		queue.offer(d4);
+		assertEquals(3, queue.poll().getRawFrequency());
+		assertEquals("a", queue.poll().getTerm());
 		
 		// ascending raw frequency, then ascending alphabet		
-		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.rawFrequencyAsc);
-		queue.insertWithOverflow(d1);
-		queue.insertWithOverflow(d2);
-		queue.insertWithOverflow(d3);
-		queue.insertWithOverflow(d4);
-		assertEquals(2, queue.pop().getRawFrequency());
-		assertEquals("a", queue.pop().getTerm());
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.rawFrequencyAsc);
+		queue.offer(d1);
+		queue.offer(d2);
+		queue.offer(d3);
+		queue.offer(d4);
+		assertEquals(2, queue.poll().getRawFrequency());
+		assertEquals("a", queue.poll().getTerm());
 		
 		// ascending term alphabet, then descending term frequency
-		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.termAsc);
-		queue.insertWithOverflow(d1);
-		queue.insertWithOverflow(d2);
-		queue.insertWithOverflow(d3);
-		queue.insertWithOverflow(d4);
-		assertEquals(1, queue.pop().getRawFrequency());
-		assertEquals("a", queue.pop().getTerm());
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.termAsc);
+		queue.offer(d1);
+		queue.offer(d2);
+		queue.offer(d3);
+		queue.offer(d4);
+		assertEquals(1, queue.poll().getRawFrequency());
+		assertEquals("a", queue.poll().getTerm());
 
 		// descending term alphabet, then descending term frequency
-		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.termDesc);
-		queue.insertWithOverflow(d1);
-		queue.insertWithOverflow(d2);
-		queue.insertWithOverflow(d3);
-		queue.insertWithOverflow(d4);
-		assertEquals(3, queue.pop().getRawFrequency());
-		assertEquals("z", queue.pop().getTerm());
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.termDesc);
+		queue.offer(d1);
+		queue.offer(d2);
+		queue.offer(d3);
+		queue.offer(d4);
+		assertEquals(3, queue.poll().getRawFrequency());
+		assertEquals("z", queue.poll().getTerm());
 
 	}
 
