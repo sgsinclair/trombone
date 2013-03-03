@@ -37,11 +37,11 @@ import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermFrequencyStats;
-import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermFrequencyStatsSort;
-import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermFrequencyStatsQueue;
+import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermsSort;
+import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermsQueue;
 import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStats;
 import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStatsQueue;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -54,10 +54,10 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  */
 public class CorpusTermsCounter extends AbstractTermsCounter {
 	
-	private List<CorpusTermFrequencyStats> corpusTerms = new ArrayList<CorpusTermFrequencyStats>();
+	private List<CorpusTerm> corpusTerms = new ArrayList<CorpusTerm>();
 	
 	@XStreamOmitField
-	private CorpusTermFrequencyStatsSort corpusTermFrequencyStatsSort;
+	private CorpusTermsSort corpusTermFrequencyStatsSort;
 	
 	@XStreamOmitField
 	private boolean includeDocumentDistribution = false;
@@ -68,7 +68,7 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 	 */
 	public CorpusTermsCounter(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		corpusTermFrequencyStatsSort = CorpusTermFrequencyStatsSort.rawFrequencyDesc;
+		corpusTermFrequencyStatsSort = CorpusTermsSort.rawFrequencyDesc;
 	}
 
 	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
@@ -84,7 +84,7 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 		Terms terms = atomicReader.terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
 		DocsEnum docsEnum = null;
-		CorpusTermFrequencyStatsQueue queue = new CorpusTermFrequencyStatsQueue(size, corpusTermFrequencyStatsSort);
+		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermFrequencyStatsSort);
 		String termString;
 		while(true) {
 			
@@ -105,7 +105,7 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 					documentFreqs[documentPosition] = freq;
 					doc = docsEnum.nextDoc();
 				}
-				queue.offer(new CorpusTermFrequencyStats(termString, termFreq, includeDocumentDistribution ? documentFreqs : null));
+				queue.offer(new CorpusTerm(termString, termFreq, includeDocumentDistribution ? documentFreqs : null));
 			}
 			else {
 				break; // no more terms
@@ -114,7 +114,7 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 		seCorpusTermsFromQueue(queue);
 	}
 
-	private void seCorpusTermsFromQueue(CorpusTermFrequencyStatsQueue queue) {
+	private void seCorpusTermsFromQueue(CorpusTermsQueue queue) {
 		for (int i=0, len = queue.size()-start; i<len; i++) {
 			corpusTerms.add(queue.poll());
 		}
@@ -127,7 +127,7 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 		// FIXME
 	}
 
-	List<CorpusTermFrequencyStats> getCorpusTermFrequencyStats() {
+	List<CorpusTerm> getCorpusTermFrequencyStats() {
 		return corpusTerms;
 	}
 

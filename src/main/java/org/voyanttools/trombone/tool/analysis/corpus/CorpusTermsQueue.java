@@ -2,34 +2,36 @@ package org.voyanttools.trombone.tool.analysis.corpus;
 
 import java.util.Comparator;
 
+import org.voyanttools.trombone.model.CorpusTerm;
+
 /**
- * This is essentially a priority queue for {@link CorpusTermFrequencyStats}. This is somewhat
+ * This is essentially a priority queue for {@link CorpusTerm}. This is somewhat
  * optimized for memory and performance when a size is given. Don't specify an arbitrarily
  * large size, either use the constructor without a size or specify {@link Integer#MAX_VALUE}.
  * 
  * @author Stéfan Sinclair
  * @since 4.0
  */
-public class CorpusTermFrequencyStatsQueue {
+public class CorpusTermsQueue {
 	
 	// used when a size is given – use the Lucene implementation for better memory management (only top items are kept)
-	private org.apache.lucene.util.PriorityQueue<CorpusTermFrequencyStats> limitedSizeQueue = null;
+	private org.apache.lucene.util.PriorityQueue<CorpusTerm> limitedSizeQueue = null;
 	
 	// use the Java implementation to allow the queue to grow arbitrarily big
-	private java.util.PriorityQueue<CorpusTermFrequencyStats> unlimitedSizeQueue = null;
+	private java.util.PriorityQueue<CorpusTerm> unlimitedSizeQueue = null;
 	
 
-	public CorpusTermFrequencyStatsQueue(CorpusTermFrequencyStatsSort sort) {
+	public CorpusTermsQueue(CorpusTermsSort sort) {
 		this(Integer.MAX_VALUE, sort);
 	}
 
-	public CorpusTermFrequencyStatsQueue(int size, CorpusTermFrequencyStatsSort sort) {
-		Comparator<CorpusTermFrequencyStats> comparator = CorpusTermFrequencyStats.getComparator(sort);
+	public CorpusTermsQueue(int size, CorpusTermsSort sort) {
+		Comparator<CorpusTerm> comparator = CorpusTerm.getComparator(sort);
 		if (size==Integer.MAX_VALUE) {
-			unlimitedSizeQueue = new java.util.PriorityQueue<CorpusTermFrequencyStats>(11, comparator);
+			unlimitedSizeQueue = new java.util.PriorityQueue<CorpusTerm>(11, comparator);
 		}
 		else {
-			limitedSizeQueue = new LimitedSizeQueue<CorpusTermFrequencyStats>(size, comparator);
+			limitedSizeQueue = new LimitedSizeQueue<CorpusTerm>(size, comparator);
 		}
 	}
 
@@ -50,7 +52,7 @@ public class CorpusTermFrequencyStatsQueue {
 		
 	}
 
-	public void offer(CorpusTermFrequencyStats corpusTermFrequencyStats) {
+	public void offer(CorpusTerm corpusTermFrequencyStats) {
 		if (limitedSizeQueue!=null) {limitedSizeQueue.insertWithOverflow(corpusTermFrequencyStats);}
 		else if (unlimitedSizeQueue!=null) {unlimitedSizeQueue.offer(corpusTermFrequencyStats);}
 	}
@@ -61,7 +63,7 @@ public class CorpusTermFrequencyStatsQueue {
 		return 0;
 	}
 
-	public CorpusTermFrequencyStats poll() {
+	public CorpusTerm poll() {
 		if (limitedSizeQueue!=null) {return limitedSizeQueue.pop();}
 		else if (unlimitedSizeQueue!=null) {return unlimitedSizeQueue.poll();}
 		return null;

@@ -10,9 +10,9 @@ import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
 import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
+import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermFrequencyStats;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 public class CorpusTermFrequenciesTest {
@@ -39,9 +39,9 @@ public class CorpusTermFrequenciesTest {
 		
 		parameters.setParameter("tool", "CorpusTermFrequencies");
 		
-		CorpusTermFrequencyStats stats;
+		CorpusTerm stats;
 		CorpusTermsCounter corpusTermFrequencies;
-		List<CorpusTermFrequencyStats> statsList;
+		List<CorpusTerm> statsList;
 		
 		// all terms 
 		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);

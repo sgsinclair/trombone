@@ -21,6 +21,6 @@
  ******************************************************************************/
 package org.voyanttools.trombone.tool.analysis.corpus;
 
-public enum CorpusTermFrequencyStatsSort {
+public enum CorpusTermsSort {
 	rawFrequencyAsc, rawFrequencyDesc, termAsc, termDesc;
 }
