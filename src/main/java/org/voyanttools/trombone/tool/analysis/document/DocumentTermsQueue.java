@@ -27,22 +27,28 @@ import java.util.List;
 
 import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.PriorityQueue;
+import org.voyanttools.trombone.model.DocumentTerm;
 
 /**
  * @author sgs
  *
  */
-public class DocumentTermFrequencyStatsQueue extends PriorityQueue<DocumentTermFrequencyStats> {
-	private DocumentTermFrequencyStatsSort sort;
+public class DocumentTermsQueue extends PriorityQueue<DocumentTerm> {
+	
+	public enum Sort {
+		rawFrequencyAsc, rawFrequencyDesc, relativeFrequencyAsc, relativeFrequencyDesc, termAsc, termDesc;
+	}
+	
+	private Sort sort;
 
-	public DocumentTermFrequencyStatsQueue(int size, DocumentTermFrequencyStatsSort sort) {
+	public DocumentTermsQueue(int size, Sort sort) {
 		super(size, false);
 		this.sort = sort;
 	}
 	
 	@Override
-	protected boolean lessThan(DocumentTermFrequencyStats a,
-			DocumentTermFrequencyStats b) {
+	protected boolean lessThan(DocumentTerm a,
+			DocumentTerm b) {
 		int ai, bi;
 		float af, bf;
 		String ab, bb;

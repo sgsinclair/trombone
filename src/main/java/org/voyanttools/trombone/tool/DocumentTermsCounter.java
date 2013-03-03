@@ -50,12 +50,11 @@ import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
-import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStats;
-import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStatsQueue;
-import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStatsSort;
+import org.voyanttools.trombone.tool.analysis.document.DocumentTermsQueue;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -67,10 +66,10 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class DocumentTermsCounter extends AbstractTermsCounter {
 	
 
-	private List<DocumentTermFrequencyStats> documentTerms = new ArrayList<DocumentTermFrequencyStats>();
+	private List<DocumentTerm> documentTerms = new ArrayList<DocumentTerm>();
 	
 	@XStreamOmitField
-	private DocumentTermFrequencyStatsSort documentTermFrequencyStatsSort;
+	private DocumentTermsQueue.Sort documentTermFrequencyStatsSort;
 	
 	@XStreamOmitField
 	boolean isNeedsPositions;
@@ -85,7 +84,7 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 	 */
 	public DocumentTermsCounter(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		documentTermFrequencyStatsSort = DocumentTermFrequencyStatsSort.relativeFrequencyDesc;
+		documentTermFrequencyStatsSort = DocumentTermsQueue.Sort.relativeFrequencyDesc;
 		isNeedsPositions = parameters.getParameterBooleanValue("includeTokenIndexPositions");
 		isNeedsOffsets = parameters.getParameterBooleanValue("includeTokenCharacterOffsets");
 	}
@@ -98,7 +97,7 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
 		int size = start+limit;
-		DocumentTermFrequencyStatsQueue queue = new DocumentTermFrequencyStatsQueue(size, documentTermFrequencyStatsSort);
+		DocumentTermsQueue queue = new DocumentTermsQueue(size, documentTermFrequencyStatsSort);
 		int[] totalTokenCounts = corpus.getTotalTokensCounts(tokenType);
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
@@ -127,7 +126,7 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 				int documentPosition = entry.getKey();
 				float rel = (float) freq / totalTokenCounts[documentPosition];
 				total++;
-				queue.insertWithOverflow(new DocumentTermFrequencyStats(documentPosition, queryString, freq, rel, isNeedsPositions ? positions : null, null));
+				queue.insertWithOverflow(new DocumentTerm(documentPosition, queryString, freq, rel, isNeedsPositions ? positions : null, null));
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
@@ -147,7 +146,7 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 		Terms terms = atomicReader.terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
 		DocsAndPositionsEnum docsAndPositionsEnum = null;
-		DocumentTermFrequencyStatsQueue queue = new DocumentTermFrequencyStatsQueue(size, documentTermFrequencyStatsSort);
+		DocumentTermsQueue queue = new DocumentTermsQueue(size, documentTermFrequencyStatsSort);
 		String termString;
 		while(true) {
 			
@@ -175,7 +174,7 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 							offsets[i] = docsAndPositionsEnum.startOffset();
 						}
 					}					
-					queue.insertWithOverflow(new DocumentTermFrequencyStats(documentPosition, termString, freq, rel, positions, offsets));
+					queue.insertWithOverflow(new DocumentTerm(documentPosition, termString, freq, rel, positions, offsets));
 					doc = docsAndPositionsEnum.nextDoc();
 				}
 			}
@@ -186,14 +185,14 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 		setDocumentTermsFromQueue(queue);
 	}
 
-	private void setDocumentTermsFromQueue(DocumentTermFrequencyStatsQueue queue) {
+	private void setDocumentTermsFromQueue(DocumentTermsQueue queue) {
 		for (int i=0, len = queue.size()-start; i<len; i++) {
 			documentTerms.add(queue.pop());
 		}
 		Collections.reverse(documentTerms);
 	}
 
-	public List<DocumentTermFrequencyStats> getDocumentTermFrequencyStats() {
+	public List<DocumentTerm> getDocumentTermFrequencyStats() {
 		return documentTerms;
 	}
 

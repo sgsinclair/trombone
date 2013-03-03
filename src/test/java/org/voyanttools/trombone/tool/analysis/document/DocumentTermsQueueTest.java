@@ -25,23 +25,24 @@ import static org.junit.Assert.*;
 
 import org.apache.lucene.util.BytesRef;
 import org.junit.Test;
+import org.voyanttools.trombone.model.DocumentTerm;
 
 /**
  * @author sgs
  *
  */
-public class DocumentTermFrequencyStatsTest {
+public class DocumentTermsQueueTest {
 
 	@Test
 	public void test() {
-		DocumentTermFrequencyStats d1 = new DocumentTermFrequencyStats(1, "a", 1, 1, null, null);
-		DocumentTermFrequencyStats d2 = new DocumentTermFrequencyStats(1, "z", 2, 2, null, null);
-		DocumentTermFrequencyStats d3 = new DocumentTermFrequencyStats(1, "é", 3, 4, null, null);
-		DocumentTermFrequencyStats d4 = new DocumentTermFrequencyStats(1, "a", 3, 3, null, null);
-		DocumentTermFrequencyStatsQueue queue;
+		DocumentTerm d1 = new DocumentTerm(1, "a", 1, 1, null, null);
+		DocumentTerm d2 = new DocumentTerm(1, "z", 2, 2, null, null);
+		DocumentTerm d3 = new DocumentTerm(1, "é", 3, 4, null, null);
+		DocumentTerm d4 = new DocumentTerm(1, "a", 3, 3, null, null);
+		DocumentTermsQueue queue;
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermFrequencyStatsQueue(2, DocumentTermFrequencyStatsSort.relativeFrequencyDesc);
+		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.relativeFrequencyDesc);
 		queue.insertWithOverflow(d1);
 		queue.insertWithOverflow(d2);
 		queue.insertWithOverflow(d3);
@@ -50,7 +51,7 @@ public class DocumentTermFrequencyStatsTest {
 		assertEquals("é", queue.pop().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermFrequencyStatsQueue(2, DocumentTermFrequencyStatsSort.relativeFrequencyAsc);
+		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.relativeFrequencyAsc);
 		queue.insertWithOverflow(d1);
 		queue.insertWithOverflow(d2);
 		queue.insertWithOverflow(d3);
@@ -59,7 +60,7 @@ public class DocumentTermFrequencyStatsTest {
 		assertEquals("a", queue.pop().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermFrequencyStatsQueue(2, DocumentTermFrequencyStatsSort.rawFrequencyDesc);
+		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.rawFrequencyDesc);
 		queue.insertWithOverflow(d1);
 		queue.insertWithOverflow(d2);
 		queue.insertWithOverflow(d3);
@@ -68,7 +69,7 @@ public class DocumentTermFrequencyStatsTest {
 		assertEquals("a", queue.pop().getTerm());
 		
 		// ascending raw frequency, then ascending alphabet		
-		queue = new DocumentTermFrequencyStatsQueue(2, DocumentTermFrequencyStatsSort.rawFrequencyAsc);
+		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.rawFrequencyAsc);
 		queue.insertWithOverflow(d1);
 		queue.insertWithOverflow(d2);
 		queue.insertWithOverflow(d3);
@@ -77,7 +78,7 @@ public class DocumentTermFrequencyStatsTest {
 		assertEquals("a", queue.pop().getTerm());
 		
 		// ascending term alphabet, then descending term frequency
-		queue = new DocumentTermFrequencyStatsQueue(2, DocumentTermFrequencyStatsSort.termAsc);
+		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.termAsc);
 		queue.insertWithOverflow(d1);
 		queue.insertWithOverflow(d2);
 		queue.insertWithOverflow(d3);
@@ -86,7 +87,7 @@ public class DocumentTermFrequencyStatsTest {
 		assertEquals("a", queue.pop().getTerm());
 
 		// descending term alphabet, then descending term frequency
-		queue = new DocumentTermFrequencyStatsQueue(2, DocumentTermFrequencyStatsSort.termDesc);
+		queue = new DocumentTermsQueue(2, DocumentTermsQueue.Sort.termDesc);
 		queue.insertWithOverflow(d1);
 		queue.insertWithOverflow(d2);
 		queue.insertWithOverflow(d3);

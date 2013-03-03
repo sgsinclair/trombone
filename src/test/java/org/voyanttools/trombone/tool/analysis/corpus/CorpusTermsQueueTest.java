@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.voyanttools.trombone.model.CorpusTerm;
 
-public class CorpusTermFrequencyStatsTest {
+public class CorpusTermsQueueTest {
 
 	@Test
 	public void test() {

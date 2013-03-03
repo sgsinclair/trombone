@@ -10,9 +10,9 @@ import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
 import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
+import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStats;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 public class DocumentTermFrequenciesTest {
@@ -25,7 +25,7 @@ public class DocumentTermFrequenciesTest {
 		document = new Document();
 		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
 		luceneManager.addDocument(document);
-		DocumentTermFrequencyStats stats;
+		DocumentTerm stats;
 		
 		FlexibleParameters parameters;
 		
@@ -41,7 +41,7 @@ public class DocumentTermFrequenciesTest {
 		parameters.setParameter("tool", "DocumentTermFrequencies");
 		
 		DocumentTermsCounter documentTermFrequencies;
-		List<DocumentTermFrequencyStats> statsList;
+		List<DocumentTerm> statsList;
 		
 		parameters.setParameter("query", "dar*");
 		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);

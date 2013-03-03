@@ -38,12 +38,12 @@ import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
+import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermsSort;
 import org.voyanttools.trombone.tool.analysis.corpus.CorpusTermsQueue;
-import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStats;
-import org.voyanttools.trombone.tool.analysis.document.DocumentTermFrequencyStatsQueue;
+import org.voyanttools.trombone.tool.analysis.document.DocumentTermsQueue;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;

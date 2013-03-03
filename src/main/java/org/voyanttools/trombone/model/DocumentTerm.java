@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool.analysis.document;
+package org.voyanttools.trombone.model;
 
 import java.text.Normalizer;
 
@@ -31,7 +31,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class DocumentTermFrequencyStats {
+public class DocumentTerm {
 
 	private int docIndex;
 	private String term;
@@ -41,7 +41,7 @@ public class DocumentTermFrequencyStats {
 	private float rel;
 	private int[] positions;
 	private int[] offsets;
-	public DocumentTermFrequencyStats(int docIndex, String term, int freq, float rel, int[] positions, int[] offsets) {
+	public DocumentTerm(int docIndex, String term, int freq, float rel, int[] positions, int[] offsets) {
 		this.docIndex = docIndex;
 		this.term = term;
 		this.freq = freq;
