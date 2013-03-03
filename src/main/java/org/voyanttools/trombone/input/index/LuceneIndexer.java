@@ -184,18 +184,20 @@ public class LuceneIndexer implements Indexer {
 				Terms terms = reader.getTermVector(docId, "lexical");
 				TermsEnum termsEnum = terms.iterator(null);
 				DocsAndPositionsEnum docsAndPositionsEnum = null;
-				int total = 0;
+				int totalTokens = 0;
+				int totalTypes =  0;
 				int lastOffset = 0;
 				int lastPosition = 0;
 				while (true) {
 					BytesRef term = termsEnum.next();
 					if (term!=null) {
+						totalTypes++;
 						docsAndPositionsEnum = termsEnum.docsAndPositions(MultiFields.getLiveDocs(reader), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 						while (true) {
 							int doc = docsAndPositionsEnum.nextDoc();
 							if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
 								int freq = docsAndPositionsEnum.freq();
-								total++;
+								totalTokens++;
 								for (int i=0; i<freq; i++) {
 									int pos = docsAndPositionsEnum.nextPosition();
 									if (pos>lastPosition) {lastPosition=pos;}
@@ -209,7 +211,8 @@ public class LuceneIndexer implements Indexer {
 					else {break;}
 				}
 				DocumentMetadata metadata = storedDocumentSource.getMetadata();
-				metadata.setTotalTokensCount(TokenType.lexical, total);
+				metadata.setTotalTypesCount(TokenType.lexical, totalTypes);
+				metadata.setTotalTokensCount(TokenType.lexical, totalTokens);
 				metadata.setLastTokenPositionIndex(TokenType.lexical, lastPosition);
 				metadata.setLastTokenOffsetIndex(TokenType.lexical, lastOffset);
 				storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(id, metadata);

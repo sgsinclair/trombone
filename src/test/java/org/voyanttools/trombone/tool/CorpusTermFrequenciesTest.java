@@ -40,11 +40,11 @@ public class CorpusTermFrequenciesTest {
 		parameters.setParameter("tool", "CorpusTermFrequencies");
 		
 		CorpusTermFrequencyStats stats;
-		CorpusTermFrequencies corpusTermFrequencies;
+		CorpusTermsCounter corpusTermFrequencies;
 		List<CorpusTermFrequencyStats> statsList;
 		
-		// all terms (default size 50, but actually 15 terms)
-		corpusTermFrequencies = new CorpusTermFrequencies(storage, parameters);
+		// all terms 
+		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
 		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
 		assertEquals(15, statsList.size());
@@ -54,7 +54,7 @@ public class CorpusTermFrequenciesTest {
 		
 		// limit 1 (top frequency word)
 		parameters.setParameter("limit", "1");
-		corpusTermFrequencies = new CorpusTermFrequencies(storage, parameters);
+		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
 		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
 		assertEquals(1, statsList.size());
@@ -64,7 +64,7 @@ public class CorpusTermFrequenciesTest {
 
 		// start 1, limit 1
 		parameters.setParameter("start", "1");
-		corpusTermFrequencies = new CorpusTermFrequencies(storage, parameters);
+		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
 		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
 		assertEquals(1, statsList.size());
@@ -74,7 +74,7 @@ public class CorpusTermFrequenciesTest {
 
 		// start 50, limit 1 (empty)
 		parameters.setParameter("start", "50");
-		corpusTermFrequencies = new CorpusTermFrequencies(storage, parameters);
+		corpusTermFrequencies = new CorpusTermsCounter(storage, parameters);
 		corpusTermFrequencies.run();
 		statsList = corpusTermFrequencies.getCorpusTermFrequencyStats();
 		assertEquals(0, statsList.size());

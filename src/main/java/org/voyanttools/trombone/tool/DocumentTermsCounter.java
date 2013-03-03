@@ -64,7 +64,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class DocumentTermFrequencies extends AbstractTermFrequencies {
+public class DocumentTermsCounter extends AbstractTermsCounter {
 	
 
 	private List<DocumentTermFrequencyStats> documentTerms = new ArrayList<DocumentTermFrequencyStats>();
@@ -83,7 +83,7 @@ public class DocumentTermFrequencies extends AbstractTermFrequencies {
 	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentTermFrequencies(Storage storage, FlexibleParameters parameters) {
+	public DocumentTermsCounter(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		documentTermFrequencyStatsSort = DocumentTermFrequencyStatsSort.relativeFrequencyDesc;
 		isNeedsPositions = parameters.getParameterBooleanValue("includeTokenIndexPositions");

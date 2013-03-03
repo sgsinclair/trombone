@@ -36,7 +36,7 @@ public class DocumentTermFrequencyStatsQueue extends PriorityQueue<DocumentTermF
 	private DocumentTermFrequencyStatsSort sort;
 
 	public DocumentTermFrequencyStatsQueue(int size, DocumentTermFrequencyStatsSort sort) {
-		super(size);
+		super(size, false);
 		this.sort = sort;
 	}
 	

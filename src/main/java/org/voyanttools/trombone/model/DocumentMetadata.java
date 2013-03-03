@@ -293,6 +293,10 @@ public class DocumentMetadata implements PropertiesWrapper {
 		setProperty("totalTokensCount-"+tokenType.name(), String.valueOf(total));
 	}
 
+	public void setTotalTypesCount(TokenType tokenType, int totalTypes) {
+		setProperty("totalTokensCount-"+tokenType.name(), String.valueOf(totalTypes));
+	}
+
 	public void setLastTokenPositionIndex(TokenType tokenType, int lastPosition) {
 		setProperty("lastTokenPositionIndex-"+tokenType.name(), String.valueOf(lastPosition));
 	}
@@ -308,5 +312,6 @@ public class DocumentMetadata implements PropertiesWrapper {
 	public Properties getProperties() {
 		return properties;
 	}
+
 
 }

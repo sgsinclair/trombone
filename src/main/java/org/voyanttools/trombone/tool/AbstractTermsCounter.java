@@ -35,7 +35,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public abstract class AbstractTermFrequencies extends AbstractTool {
+public abstract class AbstractTermsCounter extends AbstractTool {
 
 	protected int total = 0;
 
@@ -56,11 +56,11 @@ public abstract class AbstractTermFrequencies extends AbstractTool {
 	 * @param storage
 	 * @param parameters
 	 */
-	public AbstractTermFrequencies(Storage storage,
+	public AbstractTermsCounter(Storage storage,
 			FlexibleParameters parameters) {
 		super(storage, parameters);
 		start = parameters.getParameterIntValue("start", 0);
-		limit = parameters.getParameterIntValue("limit", 50);
+		limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
 		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
 		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
 	}

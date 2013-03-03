@@ -40,11 +40,11 @@ public class DocumentTermFrequenciesTest {
 		
 		parameters.setParameter("tool", "DocumentTermFrequencies");
 		
-		DocumentTermFrequencies documentTermFrequencies;
+		DocumentTermsCounter documentTermFrequencies;
 		List<DocumentTermFrequencyStats> statsList;
 		
 		parameters.setParameter("query", "dar*");
-		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
 		assertEquals(1, statsList.size());
@@ -54,7 +54,7 @@ public class DocumentTermFrequenciesTest {
 		assertEquals(0, stats.getDocumentIndex());
 		
 		parameters.setParameter("query", "it was");
-		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
 		// we sort by reverse frequency by default
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
@@ -69,7 +69,7 @@ public class DocumentTermFrequenciesTest {
 		assertEquals(1, stats.getRawFrequency());
 		
 		parameters.removeParameter("query");
-		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
 		assertEquals(14, statsList.size());
@@ -78,7 +78,7 @@ public class DocumentTermFrequenciesTest {
 		assertEquals(2, stats.getRawFrequency());
 		
 		parameters.setParameter("limit", 1);
-		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
 		assertEquals(1, statsList.size());
@@ -87,7 +87,7 @@ public class DocumentTermFrequenciesTest {
 		assertEquals(2, stats.getRawFrequency());
 		
 		parameters.setParameter("start", 1);
-		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
 		assertEquals(1, statsList.size());
@@ -96,7 +96,7 @@ public class DocumentTermFrequenciesTest {
 		assertEquals(2, stats.getRawFrequency());
 		
 		parameters.setParameter("start", 50);
-		documentTermFrequencies = new DocumentTermFrequencies(storage, parameters);
+		documentTermFrequencies = new DocumentTermsCounter(storage, parameters);
 		documentTermFrequencies.run();		
 		statsList = documentTermFrequencies.getDocumentTermFrequencyStats();
 		assertEquals(0, statsList.size());

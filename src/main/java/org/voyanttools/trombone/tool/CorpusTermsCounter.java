@@ -52,7 +52,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class CorpusTermFrequencies extends AbstractTermFrequencies {
+public class CorpusTermsCounter extends AbstractTermsCounter {
 	
 	private List<CorpusTermFrequencyStats> corpusTerms = new ArrayList<CorpusTermFrequencyStats>();
 	
@@ -66,7 +66,7 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 	 * @param storage
 	 * @param parameters
 	 */
-	public CorpusTermFrequencies(Storage storage, FlexibleParameters parameters) {
+	public CorpusTermsCounter(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		corpusTermFrequencyStatsSort = CorpusTermFrequencyStatsSort.rawFrequencyDesc;
 	}
@@ -105,7 +105,7 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 					documentFreqs[documentPosition] = freq;
 					doc = docsEnum.nextDoc();
 				}
-				queue.insertWithOverflow(new CorpusTermFrequencyStats(termString, termFreq, includeDocumentDistribution ? documentFreqs : null));
+				queue.offer(new CorpusTermFrequencyStats(termString, termFreq, includeDocumentDistribution ? documentFreqs : null));
 			}
 			else {
 				break; // no more terms
@@ -116,7 +116,7 @@ public class CorpusTermFrequencies extends AbstractTermFrequencies {
 
 	private void seCorpusTermsFromQueue(CorpusTermFrequencyStatsQueue queue) {
 		for (int i=0, len = queue.size()-start; i<len; i++) {
-			corpusTerms.add(queue.pop());
+			corpusTerms.add(queue.poll());
 		}
 		Collections.reverse(corpusTerms);
 	}
