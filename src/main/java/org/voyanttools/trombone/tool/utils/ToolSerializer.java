@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.utils;
 
 import java.io.FileWriter;
 import java.io.IOException;

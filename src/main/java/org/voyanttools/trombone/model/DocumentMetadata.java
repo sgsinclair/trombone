@@ -301,6 +301,10 @@ public class DocumentMetadata implements PropertiesWrapper {
 		setProperty("lastTokenPositionIndex-"+tokenType.name(), String.valueOf(lastPosition));
 	}
 
+	public int getLastTokenPositionIndex(TokenType tokenType) {
+		return Integer.parseInt(getProperty("lastTokenPositionIndex-"+tokenType.name(), "0"));
+	}
+	
 	public void setLastTokenOffsetIndex(TokenType tokenType, int lastOffset) {
 		setProperty("lastTokenStartOffset-"+tokenType.name(), String.valueOf(lastOffset));
 	}

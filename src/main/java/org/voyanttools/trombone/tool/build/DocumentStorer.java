@@ -19,19 +19,19 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
-import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -40,59 +40,48 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import edu.stanford.nlp.util.StringUtils;
 
 /**
- * @author sgs
- *
+ * @author Stéfan Sinclair
  */
-@XStreamAlias("extractedStoredDocuments")
-public class DocumentExtractor extends AbstractTool {
+@XStreamAlias("storedDocuments")
+class DocumentStorer extends AbstractTool {
 
 	private String storedId = null;
 	
 	@XStreamOmitField
 	private List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
-	
+
 	/**
-	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentExtractor(Storage storage, FlexibleParameters parameters) {
+	DocumentStorer(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void run() throws IOException {
-		String sid = parameters.getParameterValue("storedId");
-		List<String> ids = storage.retrieveStrings(sid);
-		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		List<StoredDocumentSource> extractableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
-		for (String id : ids) {
-			DocumentMetadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
-			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
-			extractableStoredDocumentSources.add(storedDocumentSource);
-		}
-		run(extractableStoredDocumentSources);
-
-	}
-	
-	void run(List<StoredDocumentSource> extractableStoredDocumentSources) throws IOException {
-		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentStorage, parameters);
-		storedDocumentSources = extractor.getExtractedStoredDocumentSources(extractableStoredDocumentSources);
+		InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
+		List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
+		List<String> ids = new ArrayList<String>();
 		
-		List<String> extractedIds = new ArrayList<String>();
-		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			extractedIds.add(storedDocumentSource.getId());
-		}		
-		storedId = storage.storeStrings(extractedIds);
+		// make sure that all input sources are stored
+		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
+		for (InputSource inputSource : inputSources) {
+			StoredDocumentSource storedDocumentSource = storedDocumentStorage.getStoredDocumentSource(inputSource);
+			storedDocumentSources.add(storedDocumentSource);
+			ids.add(storedDocumentSource.getId());
+		}
+
+		
+		storedId = storage.storeStrings(ids);
+
 	}
 
-	public List<StoredDocumentSource> getStoredDocumentSources() {
+	List<StoredDocumentSource> getStoredDocumentSources() {
 		return storedDocumentSources;
 	}
-	
+
 	String getStoredId() {
 		return storedId;
 	}
-
+	
 }

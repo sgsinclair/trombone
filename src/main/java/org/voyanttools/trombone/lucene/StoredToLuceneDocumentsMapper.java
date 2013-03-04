@@ -22,13 +22,12 @@
 package org.voyanttools.trombone.lucene;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.DocIdSetIterator;
 
 import org.apache.lucene.util.OpenBitSet;
@@ -42,8 +41,9 @@ import org.voyanttools.trombone.storage.Storage;
 public class StoredToLuceneDocumentsMapper {
 
 //	private String[] documentIds;
-	private Map<Integer, Integer> luceneIds;
-	private Map<String, Integer> corpusIds;
+	private Map<Integer, Integer> lucenedIdToDocumentPositionMap;
+	private Map<String, Integer> documentIdToLuceneId;
+	private Map<Integer, String> luceneIdToDocumentId;
 	private int[] sortedLuceneIds;
 	private OpenBitSet docIdOpenBitSet = null; // initialize this lazily
 	
@@ -54,16 +54,37 @@ public class StoredToLuceneDocumentsMapper {
 	 * 
 	 */
 	public StoredToLuceneDocumentsMapper(Storage storage, List<String> documentIds) throws IOException {
-		luceneIds = new HashMap<Integer, Integer>(documentIds.size());
-		corpusIds = new HashMap<String, Integer>(documentIds.size());
-		sortedLuceneIds = new int[documentIds.size()];
-		for (int i=0, len=documentIds.size(); i<len; i++) {
-			int luceneDocId = storage.getLuceneManager().getLuceneDocumentId(documentIds.get(i));
-			sortedLuceneIds[i] = luceneDocId;
-			luceneIds.put(luceneDocId, i);
-			corpusIds.put(documentIds.get(i), luceneDocId);
+		this(documentIds, getLuceneIds(storage, documentIds));
+	}
+	
+	private static int[] getLuceneIds(Storage storage, List<String> documentIds) throws IOException {
+		int[] luceneIds = new int[documentIds.size()];
+		for (int i=0; i<documentIds.size(); i++) {
+			luceneIds[i] = storage.getLuceneManager().getLuceneDocumentId(documentIds.get(i));
 		}
-		Arrays.sort(sortedLuceneIds);
+		return luceneIds;
+	}
+	
+	private StoredToLuceneDocumentsMapper(List<String> documentIds, int[] luceneIds) {
+		this.lucenedIdToDocumentPositionMap = new HashMap<Integer, Integer>(documentIds.size());
+		this.documentIdToLuceneId = new HashMap<String, Integer>(documentIds.size());
+		this.sortedLuceneIds = new int[documentIds.size()];
+		for (int i=0, len=luceneIds.length; i<len; i++) {
+			int luceneDocId = luceneIds[i];
+			this.sortedLuceneIds[i] = luceneDocId;
+			this.lucenedIdToDocumentPositionMap.put(luceneDocId, i);
+			this.documentIdToLuceneId.put(documentIds.get(i), luceneDocId);
+		}
+		Arrays.sort(this.sortedLuceneIds);
+		
+	}
+	
+	public StoredToLuceneDocumentsMapper subSet(int[] luceneDocumentIds) {
+		List<String> documentIds = new ArrayList<String>();
+		for (int luceneDocumentId : luceneDocumentIds) {
+			documentIds.add(luceneIdToDocumentId.get(luceneDocumentId));
+		}
+		return new StoredToLuceneDocumentsMapper(documentIds, luceneDocumentIds);
 	}
 	
 	public DocIdSetIterator getDocIdSetIterator() {
@@ -82,7 +103,7 @@ public class StoredToLuceneDocumentsMapper {
 	}
 
 	public int getDocumentPositionFromLuceneDocumentIndex(int luceneDocumentIndex) {
-		return luceneIds.get(luceneDocumentIndex);
+		return lucenedIdToDocumentPositionMap.get(luceneDocumentIndex);
 	}
 
 

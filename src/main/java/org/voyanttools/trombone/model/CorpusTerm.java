@@ -3,6 +3,8 @@ package org.voyanttools.trombone.model;
 import java.text.Normalizer;
 import java.util.Comparator;
 
+import org.voyanttools.trombone.model.Kwic.Sort;
+
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 public class CorpusTerm {
@@ -101,4 +103,6 @@ public class CorpusTerm {
 		}
 		
 	};
+
+
 }

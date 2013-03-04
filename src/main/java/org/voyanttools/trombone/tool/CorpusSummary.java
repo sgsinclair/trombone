@@ -5,8 +5,12 @@ import java.io.IOException;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("corpusSummary")
 public class CorpusSummary extends AbstractTool {
 	
 	private Corpus corpus;
@@ -23,5 +27,5 @@ public class CorpusSummary extends AbstractTool {
 			doc.getMetadata(); // make sure metadata is loaded
 		}
 	}
-
 }
+

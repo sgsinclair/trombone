@@ -127,11 +127,14 @@ public class SpanQueryParser {
 	
 	private Term getAnalyzedTerm(TokenType tokenType, String term) throws IOException {
 		TokenStream tokenStream = analyzer.tokenStream(tokenType.name(), new StringReader(term));
+		tokenStream.reset();
 		CharTermAttribute termAtt = tokenStream.addAttribute(CharTermAttribute.class);
 		StringBuilder sb = new StringBuilder();
 		while (tokenStream.incrementToken()) {
 			sb.append(termAtt.toString());
 		}
+		tokenStream.end();
+		tokenStream.close();
 		return new Term(tokenType.name(), sb.toString());
 	}
 

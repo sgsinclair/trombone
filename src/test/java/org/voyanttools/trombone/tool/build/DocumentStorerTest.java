@@ -19,59 +19,54 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.build;
 
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.build.DocumentStorer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
 import com.google.gson.Gson;
 import com.google.gson.internal.StringMap;
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver;
 
 /**
  * @author sgs
- *
+ * 
  */
-public class DocumentExpanderTest {
-
-	@Test(expected=IOException.class)
-	public void testDocumentNotStored() throws IOException {
-		FlexibleParameters parameters = new FlexibleParameters(new String[]{"storedId=1"});
-		Storage storage = TestHelper.getDefaultTestStorage();
-		DocumentExpander tool = new DocumentExpander(storage, parameters);
-		tool.run();
-	}
+public class DocumentStorerTest {
 
 	@Test
-	public void test() throws IOException {
-		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("archive/archive.zip")});
+	public void test() throws IOException, ParserConfigurationException, SAXException {
+		
+		FlexibleParameters parameters = new FlexibleParameters(new String[]{"string=test","string=another test"});
 		Storage storage = TestHelper.getDefaultTestStorage();
 		DocumentStorer storer = new DocumentStorer(storage, parameters);
 		storer.run();
-		String storedId = storer.getStoredId();
 		
-		parameters.setParameter("storedId", storedId);
-		
-		DocumentExpander expander = new DocumentExpander(storage, parameters);
-		expander.run();
-		List<StoredDocumentSource> storedDocumentSources = expander.getStoredDocumentSources();
-
 		// ensure we have two documents
+		List<StoredDocumentSource> storedDocumentSources = storer.getStoredDocumentSources();
 		assertEquals(2, storedDocumentSources.size());
 		
 		XStream xstream;
@@ -79,10 +74,9 @@ public class DocumentExpanderTest {
 		// serialize to XML
 		xstream = new XStream();
 		xstream.autodetectAnnotations(true);
-		String xml = xstream.toXML(expander);
-		assertTrue(xml.startsWith("<expandedStoredDocuments>"));
-		
-		
+		String xml = xstream.toXML(storer);
+		assertTrue(xml.startsWith("<storedDocuments>"));
+	    
 	    Matcher matcher = Pattern.compile("<storedId>(.+?)</storedId>").matcher(xml);
 	    assertTrue(matcher.find()); // we should match
 	    String id = matcher.group(1);
@@ -90,16 +84,16 @@ public class DocumentExpanderTest {
 	    for (int i=0, len=ids.size(); i<len; i++) {
 	    	assertEquals(ids.get(i),storedDocumentSources.get(i).getId());
 	    }
-
+	    
 	    // serialize to JSON
 		xstream = new XStream(new JsonHierarchicalStreamDriver());
 		xstream.autodetectAnnotations(true);
-		String json = xstream.toXML(expander);
+		String json = xstream.toXML(storer);
 		Gson gson = new Gson();
 		StringMap<StringMap> obj = gson.fromJson(json, StringMap.class);
-		StringMap<String> sd = obj.get("expandedStoredDocuments");
+		StringMap<String> sd = obj.get("storedDocuments");
 		String idString = (String) sd.get("storedId");
 		assertEquals(id, idString);
+    
 	}
-
 }

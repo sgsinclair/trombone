@@ -27,34 +27,27 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
-import org.apache.lucene.search.WildcardQuery;
-import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
-import org.apache.lucene.search.spans.SpanOrQuery;
 import org.apache.lucene.search.spans.SpanQuery;
-import org.apache.lucene.search.spans.SpanTermQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentTerm;
-import org.voyanttools.trombone.model.TokenType;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentTermsQueue;
 import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
+import org.voyanttools.trombone.tool.utils.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -63,7 +56,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class DocumentTermsCounter extends AbstractTermsCounter {
+public class DocumentTerms extends AbstractTerms {
 	
 
 	private List<DocumentTerm> documentTerms = new ArrayList<DocumentTerm>();
@@ -82,7 +75,7 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentTermsCounter(Storage storage, FlexibleParameters parameters) {
+	public DocumentTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		documentTermsSort = DocumentTerm.Sort.relativeFrequencyDesc;
 		isNeedsPositions = parameters.getParameterBooleanValue("includeTokenIndexPositions");
@@ -90,10 +83,11 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 	}
 
 	
-	protected void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException {
+	
 		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, parameters.getParameterValues("query"), tokenType, isQueryCollapse);
+		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
 		int size = start+limit;
@@ -133,8 +127,12 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 		setDocumentTermsFromQueue(queue);
 	}
 
+//	public DocumentTerms getAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) {
+//		
+//	}
 	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		
+		Keywords stopwords = this.getStopwords();
 		int size = start+limit;
 		
 		int[] totalTokensCounts = corpus.getTotalTokensCounts(tokenType);
@@ -154,8 +152,8 @@ public class DocumentTermsCounter extends AbstractTermsCounter {
 			
 			if (term != null) {
 				termString = term.utf8ToString();
+				if (stopwords.isKeyword(termString)) {continue;}				
 				total+=termsEnum.docFreq();
-				// FIXME: check for stopwords
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {

@@ -24,13 +24,20 @@ package org.voyanttools.trombone.tool;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.search.spans.SpanQuery;
+import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
@@ -39,6 +46,8 @@ import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.CorpusTermsQueue;
+import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
+import org.voyanttools.trombone.tool.utils.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -47,7 +56,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class CorpusTermsCounter extends AbstractTermsCounter {
+public class CorpusTerms extends AbstractTerms {
 	
 	private List<CorpusTerm> corpusTerms = new ArrayList<CorpusTerm>();
 	
@@ -55,18 +64,20 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 	private CorpusTerm.Sort corpusTermSort;
 	
 	@XStreamOmitField
-	private boolean includeDocumentDistribution = false;
+	private boolean includeDistribution = false;
 
 	/**
 	 * @param storage
 	 * @param parameters
 	 */
-	public CorpusTermsCounter(Storage storage, FlexibleParameters parameters) {
+	public CorpusTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+		includeDistribution = parameters.getParameterBooleanValue("includeDocumentDistribution");
 		corpusTermSort = CorpusTerm.Sort.rawFrequencyDesc;
 	}
 
 	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+		
 		Keywords stopwords = getStopwords();
 		
 		int size = start+limit;
@@ -100,16 +111,16 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 					documentFreqs[documentPosition] = freq;
 					doc = docsEnum.nextDoc();
 				}
-				queue.offer(new CorpusTerm(termString, termFreq, includeDocumentDistribution ? documentFreqs : null));
+				queue.offer(new CorpusTerm(termString, termFreq, includeDistribution ? documentFreqs : null));
 			}
 			else {
 				break; // no more terms
 			}
 		}
-		seCorpusTermsFromQueue(queue);
+		setTermsFromQueue(queue);
 	}
 
-	private void seCorpusTermsFromQueue(CorpusTermsQueue queue) {
+	private void setTermsFromQueue(CorpusTermsQueue queue) {
 		for (int i=0, len = queue.size()-start; i<len; i++) {
 			corpusTerms.add(queue.poll());
 		}
@@ -118,9 +129,44 @@ public class CorpusTermsCounter extends AbstractTermsCounter {
 
 	@Override
 	protected void runQueries(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
-		// FIXME
-	}
+			StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException {
+		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
+		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, queries, tokenType, isQueryCollapse);
+		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
+		Map<Integer, AtomicInteger> positionsMap = new HashMap<Integer, AtomicInteger>();
+		int size = start+limit;
+		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
+		int lastDoc = -1;
+		int docIndexInCorpus = -1; // this should always be changed on the first span
+		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
+			String queryString = spanQueryEntry.getKey();
+			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);			
+			while(spans.next()) {
+				int doc = spans.doc();
+				if (doc != lastDoc) {
+					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
+					lastDoc = doc;
+				}
+				if (positionsMap.containsKey(docIndexInCorpus)==false) {
+					positionsMap.put(docIndexInCorpus, new AtomicInteger(1));
+				}
+				else {
+					positionsMap.get(docIndexInCorpus).incrementAndGet();
+				}
+			}
+			int freqs[] = new int[corpus.size()];
+			int freq = 0;
+			for (Map.Entry<Integer, AtomicInteger> entry : positionsMap.entrySet()) {
+				int f = entry.getValue().intValue();
+				freq+=f;
+				freqs[entry.getKey()] = f;
+			}
+			total++;
+			queue.offer(new CorpusTerm(queryString, freq, includeDistribution ? freqs : null));
+			positionsMap.clear(); // prepare for new entries
+		}
+		setTermsFromQueue(queue);	}
 
 	List<CorpusTerm> getCorpusTerms() {
 		return corpusTerms;

@@ -22,6 +22,8 @@
 package org.voyanttools.trombone;
 
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.Iterator;
 import java.util.List;
 
@@ -41,10 +43,10 @@ import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.RunnableTool;
-import org.voyanttools.trombone.tool.StepEnabledIndexedCorpusCreator;
-import org.voyanttools.trombone.tool.ToolRunner;
-import org.voyanttools.trombone.tool.ToolSerializer;
+import org.voyanttools.trombone.tool.CorpusCreator;
+import org.voyanttools.trombone.tool.utils.RunnableTool;
+import org.voyanttools.trombone.tool.utils.ToolRunner;
+import org.voyanttools.trombone.tool.utils.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -56,16 +58,27 @@ public class Controller {
 
 	private FlexibleParameters parameters;
 	private Storage storage;
+	private Writer writer;
 
-	public Controller(FlexibleParameters parameters) {
-		this(parameters.getParameterValue("storage","").equals("file") ? new FileStorage() : new MemoryStorage(), parameters);
+	public Controller(FlexibleParameters parameters) throws IOException {
+		this(parameters, getWriter(parameters));
 	}
 
-	public Controller(Storage storage, FlexibleParameters parameters) {
+	public Controller(FlexibleParameters parameters, Writer writer) throws IOException {
+		this(parameters.getParameterValue("storage","").equals("file") ? new FileStorage() : new MemoryStorage(), parameters, writer);
+	}
+	
+	public Controller(Storage storage, FlexibleParameters parameters, Writer writer) throws IOException {
 		this.storage = storage;
 		this.parameters = parameters;
+		this.writer = writer;
 	}
+	
 
+	private static Writer getWriter(FlexibleParameters parameters) {
+		return new OutputStreamWriter(System.out);
+	}
+	
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -81,12 +94,12 @@ public class Controller {
 		controller.run();
 	}
 
-	private void run() throws IOException {
+	public void run() throws IOException {
 		
 		ToolRunner toolRunner = new ToolRunner(storage, parameters);
 		toolRunner.run();
 		ToolSerializer toolSerializer = new ToolSerializer(parameters, toolRunner);
-		toolSerializer.run();
+		toolSerializer.run(writer);
 		
 		
 //		RunnableTool tool = new StepEnabledCorpusCreator(storage, parameters);

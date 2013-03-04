@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.build;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -46,6 +46,7 @@ import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import edu.stanford.nlp.util.StringUtils;
@@ -54,7 +55,7 @@ import edu.stanford.nlp.util.StringUtils;
  * @author sgs
  *
  */
-public class CorpusBuilder extends AbstractTool {
+class CorpusBuilder extends AbstractTool {
 
 	private String storedId = null;
 
@@ -62,7 +63,7 @@ public class CorpusBuilder extends AbstractTool {
 	 * @param storage
 	 * @param parameters
 	 */
-	public CorpusBuilder(Storage storage, FlexibleParameters parameters) {
+	CorpusBuilder(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
 
@@ -143,7 +144,7 @@ public class CorpusBuilder extends AbstractTool {
 
 	}
 
-	public String getStoredId() {
+	String getStoredId() {
 		return storedId;
 	}
 

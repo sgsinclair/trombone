@@ -19,70 +19,62 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.utils;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.IndexedDocument;
-import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.ibm.icu.util.Calendar;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
-public abstract class AbstractTool implements RunnableTool {
-
-	@XStreamOmitField
-	protected FlexibleParameters parameters;
+@XStreamAlias("results")
+public class ToolRunner implements RunnableTool {
+	
+	private long duration;
+	
+	private FlexibleParameters parameters;
 	
 	@XStreamOmitField
-	protected Storage storage;
+	private Storage storage;
+	
+	@XStreamImplicit
+	List<RunnableTool> results = new ArrayList<RunnableTool>();
 	
 	/**
-	 * @param storage 
 	 * 
 	 */
-	public AbstractTool(Storage storage, FlexibleParameters parameters) {
+	public ToolRunner(Storage storage, FlexibleParameters parameters) {
 		this.storage = storage;
 		this.parameters = parameters;
-		
-	}
-
-	protected List<String> getCorpusStoredDocumentIdsFromParameters(Corpus corpus) throws IOException {
-		
-		List<String> ids = new ArrayList<String>();
-		
-		// add IDs
-		for (String docId : parameters.getParameterValues("docId")) {
-			ids.add(docId);
-		}
-		
-		// add indices
-		for (int docIndex : parameters.getParameterIntValues("docIndex")) {
-			ids.add(corpus.getDocument(docIndex).getId());
-		}
-		
-		// no docs defined, so consider all
-		if (ids.isEmpty()) {
-			for (IndexedDocument doc : corpus) {ids.add(doc.getId());}
-		}
-		
-		return ids;
-		
 	}
 	
-	protected Keywords getStopwords() throws IOException {
-		Keywords keywords = new Keywords();
-		if (parameters.containsKey("stopList")) {
-			keywords.load(storage, parameters.getParameterValues("stopList"));
+	public void run() throws IOException {
+		
+		long start = Calendar.getInstance().getTimeInMillis();
+		ToolFactory toolFactory = new ToolFactory(storage, parameters);
+		toolFactory.run();
+		List<RunnableTool> tools = toolFactory.getRunnableTools();
+		for (RunnableTool tool : tools) {
+			tool.run();
+			results.add(tool);
 		}
-		return keywords;
+		
+		duration = Calendar.getInstance().getTimeInMillis() - start;
 	}
+	
+	public List<RunnableTool> getRunnableToolResults() {
+		return results;
+	}
+	
 }

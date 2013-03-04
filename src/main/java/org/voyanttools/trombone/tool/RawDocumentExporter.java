@@ -31,6 +31,8 @@ import java.io.Writer;
 import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.utils.RawSerializable;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

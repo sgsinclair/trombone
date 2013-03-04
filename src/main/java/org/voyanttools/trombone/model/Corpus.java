@@ -100,6 +100,15 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return counts;
 	}
 
+	public int[] getLastTokenPositions(TokenType tokenType) throws IOException {
+		int[] counts = new int[size()];
+		int index = 0;
+		for (IndexedDocument document : this) {
+			counts[index++] = document.getMetadata().getLastTokenPositionIndex(tokenType);
+		}
+		return counts;
+	}
+
 	public String getId() {
 		return corpusMetadata.getId();
 	}

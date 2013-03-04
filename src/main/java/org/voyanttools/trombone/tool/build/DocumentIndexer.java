@@ -19,68 +19,73 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.codec.digest.DigestUtils;
+import org.voyanttools.trombone.input.index.Indexer;
+import org.voyanttools.trombone.input.index.LuceneIndexer;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.InputSourcesBuilder;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
-import edu.stanford.nlp.util.StringUtils;
-
 /**
- * @author Stéfan Sinclair
+ * @author sgs
+ *
  */
-@XStreamAlias("storedDocuments")
-public class DocumentStorer extends AbstractTool {
+class DocumentIndexer extends AbstractTool {
 
 	private String storedId = null;
 	
 	@XStreamOmitField
-	private List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
-
+	private List<StoredDocumentSource> indexableStoredDocumentSources = null;
 	/**
+	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentStorer(Storage storage, FlexibleParameters parameters) {
+	public DocumentIndexer(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
 
 	@Override
 	public void run() throws IOException {
-		InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
-		List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
-		List<String> ids = new ArrayList<String>();
-		
-		// make sure that all input sources are stored
+		String sid = parameters.getParameterValue("storedId");
+		List<String> ids = storage.retrieveStrings(sid);
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		for (InputSource inputSource : inputSources) {
-			StoredDocumentSource storedDocumentSource = storedDocumentStorage.getStoredDocumentSource(inputSource);
-			storedDocumentSources.add(storedDocumentSource);
-			ids.add(storedDocumentSource.getId());
+		List<StoredDocumentSource> indexableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		for (String id : ids) {
+			DocumentMetadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
+			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
+			indexableStoredDocumentSources.add(storedDocumentSource);
 		}
-
-		
-		storedId = storage.storeStrings(ids);
-
-	}
-
-	public List<StoredDocumentSource> getStoredDocumentSources() {
-		return storedDocumentSources;
-	}
-
-	public String getStoredId() {
-		return storedId;
+		run(indexableStoredDocumentSources);
 	}
 	
+	void run(List<StoredDocumentSource> indexableStoredDocumentSources) throws IOException {
+		Indexer indexer = new LuceneIndexer(storage, parameters);
+		indexer.index(indexableStoredDocumentSources);
+		this.indexableStoredDocumentSources = indexableStoredDocumentSources;
+		List<String> extractedIds = new ArrayList<String>();
+		for (StoredDocumentSource storedDocumentSource : indexableStoredDocumentSources) {
+			extractedIds.add(storedDocumentSource.getId());
+		}		
+		storedId = storage.storeStrings(extractedIds);
+	}
+
+	List<StoredDocumentSource> getStoredDocumentSources() {
+		return indexableStoredDocumentSources;
+	}
+
+	String getStoredId() {
+		return storedId;
+	}
+
 }

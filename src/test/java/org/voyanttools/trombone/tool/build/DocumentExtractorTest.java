@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.build;
 
 import static org.junit.Assert.*;
 
@@ -13,6 +13,8 @@ import org.apache.tika.io.IOUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.build.DocumentExtractor;
+import org.voyanttools.trombone.tool.build.DocumentStorer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 

@@ -29,6 +29,8 @@ import java.util.Collection;
 import java.util.List;
 
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.utils.RunnableTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

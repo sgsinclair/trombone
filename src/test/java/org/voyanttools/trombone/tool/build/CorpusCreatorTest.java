@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.build;
 
 import static org.junit.Assert.*;
 
@@ -7,12 +7,13 @@ import java.io.IOException;
 import org.junit.Test;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
 import com.thoughtworks.xstream.XStream;
 
-public class StepEnabledCorpusCreatorTest {
+public class CorpusCreatorTest {
 
 	@Test
 	public void testSteps() throws IOException {
@@ -24,7 +25,7 @@ public class StepEnabledCorpusCreatorTest {
 		// do a first pass one step at a time and make sure we get the right next steps
 		
 		// store
-		StepEnabledIndexedCorpusCreator creator = new StepEnabledIndexedCorpusCreator(storage, parameters);
+		RealCorpusCreator creator = new RealCorpusCreator(storage, parameters);
 		creator.run();
 		nextStep = creator.getNextCorpusCreatorStep();
 		assertEquals("expand", nextStep);
@@ -97,7 +98,7 @@ public class StepEnabledCorpusCreatorTest {
 		
 		// now do a full pass with a new text
 		parameters = new FlexibleParameters(new String[]{"string=test","file="+TestHelper.getResource("formats/chars.rtf")});
-		creator = new StepEnabledIndexedCorpusCreator(storage, parameters);
+		creator = new RealCorpusCreator(storage, parameters);
 		creator.run();
 		assertEquals(storedCorpusId, creator.getStoredId());
 

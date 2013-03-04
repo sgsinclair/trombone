@@ -24,14 +24,45 @@ package org.voyanttools.trombone.tool;
 import java.io.IOException;
 
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.build.RealCorpusCreator;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
-public interface RunnableTool {
+@XStreamAlias("stepEnabledCorpusCreator")
+public class CorpusCreator extends AbstractTool {
 
-	public void run() throws IOException;
+	private String nextCorpusCreatorStep = "";
+	
+	private String storedId;
+	
+	@XStreamOmitField
+	private RealCorpusCreator realCorpusCreator;
+	
+	public CorpusCreator(Storage storage, FlexibleParameters parameters) {
+		super(storage, parameters);
+		realCorpusCreator = new RealCorpusCreator(storage, parameters);
+	}
+
+	@Override
+	public void run() throws IOException {
+		realCorpusCreator.run();
+		nextCorpusCreatorStep = realCorpusCreator.getNextCorpusCreatorStep();
+		storedId = realCorpusCreator.getStoredId();
+	}
+	
+//	String getNextCorpusCreatorStep() {
+//		return nextCorpusCreatorStep;
+//	}
+//	
+	public String getStoredId() {
+		return storedId;
+	}
 
 }

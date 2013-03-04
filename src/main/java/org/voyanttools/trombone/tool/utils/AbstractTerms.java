@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.utils;
 
 import java.io.IOException;
 
@@ -35,7 +35,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public abstract class AbstractTermsCounter extends AbstractTool {
+public abstract class AbstractTerms extends AbstractTool {
 
 	protected int total = 0;
 
@@ -56,7 +56,7 @@ public abstract class AbstractTermsCounter extends AbstractTool {
 	 * @param storage
 	 * @param parameters
 	 */
-	public AbstractTermsCounter(Storage storage,
+	public AbstractTerms(Storage storage,
 			FlexibleParameters parameters) {
 		super(storage, parameters);
 		start = parameters.getParameterIntValue("start", 0);
@@ -77,14 +77,14 @@ public abstract class AbstractTermsCounter extends AbstractTool {
 
 	private void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		if (parameters.containsKey("query")) {
-			runQueries(corpus, corpusMapper);
+			runQueries(corpus, corpusMapper, parameters.getParameterValues("query"));
 		}
 		else {
 			runAllTerms(corpus, corpusMapper);
 		}
 	}
 	
-	protected abstract void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException;
+	protected abstract void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException;
 	protected abstract void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException;
 
 }

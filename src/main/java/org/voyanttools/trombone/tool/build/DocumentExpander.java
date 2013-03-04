@@ -19,38 +19,44 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.voyanttools.trombone.input.index.Indexer;
-import org.voyanttools.trombone.input.index.LuceneIndexer;
+import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
  *
  */
-public class DocumentIndexer extends AbstractTool {
+@XStreamAlias("expandedStoredDocuments")
+class DocumentExpander extends AbstractTool {
 
 	private String storedId = null;
 	
 	@XStreamOmitField
-	private List<StoredDocumentSource> indexableStoredDocumentSources = null;
+	private List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
+	
 	/**
 	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentIndexer(Storage storage, FlexibleParameters parameters) {
+	DocumentExpander(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
 
@@ -59,31 +65,42 @@ public class DocumentIndexer extends AbstractTool {
 		String sid = parameters.getParameterValue("storedId");
 		List<String> ids = storage.retrieveStrings(sid);
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		List<StoredDocumentSource> indexableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		
+		List<StoredDocumentSource> expandableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		for (String id : ids) {
 			DocumentMetadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
 			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
-			indexableStoredDocumentSources.add(storedDocumentSource);
+			expandableStoredDocumentSources.add(storedDocumentSource);
 		}
-		run(indexableStoredDocumentSources);
+
+		run(expandableStoredDocumentSources);
+
 	}
 	
-	void run(List<StoredDocumentSource> indexableStoredDocumentSources) throws IOException {
-		Indexer indexer = new LuceneIndexer(storage, parameters);
-		indexer.index(indexableStoredDocumentSources);
-		this.indexableStoredDocumentSources = indexableStoredDocumentSources;
-		List<String> extractedIds = new ArrayList<String>();
-		for (StoredDocumentSource storedDocumentSource : indexableStoredDocumentSources) {
-			extractedIds.add(storedDocumentSource.getId());
-		}		
-		storedId = storage.storeStrings(extractedIds);
+	void run(List<StoredDocumentSource> expandableStoredDocumentSources) throws IOException {
+		
+		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
+		
+		StoredDocumentSourceExpander expander = new StoredDocumentSourceExpander(storedDocumentStorage, parameters);
+		
+		for (StoredDocumentSource storedDocumentSource : expandableStoredDocumentSources) {
+			storedDocumentSources.addAll(expander.getExpandedStoredDocumentSources(storedDocumentSource));
+		}
+		
+		List<String> expandedIds = new ArrayList<String>();
+		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+			expandedIds.add(storedDocumentSource.getId());
+		}
+		
+		storedId = storage.storeStrings(expandedIds);
+		
 	}
 
-	public List<StoredDocumentSource> getStoredDocumentSources() {
-		return indexableStoredDocumentSources;
+	List<StoredDocumentSource> getStoredDocumentSources() {
+		return storedDocumentSources;
 	}
 
-	public String getStoredId() {
+	String getStoredId() {
 		return storedId;
 	}
 
