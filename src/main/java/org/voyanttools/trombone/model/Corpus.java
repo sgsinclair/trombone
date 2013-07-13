@@ -30,15 +30,12 @@ import java.util.Map;
 
 import org.voyanttools.trombone.storage.Storage;
 
-import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
-@XStreamConverter(CorpusConverter.class)
 public class Corpus implements Iterable<IndexedDocument> {
 
 	@XStreamOmitField
@@ -91,11 +88,11 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return getDocumentsList().get(docIndex);
 	}
 
-	public int[] getTotalTokensCounts(TokenType tokenType) throws IOException {
+	public int[] getTokensCounts(TokenType tokenType) throws IOException {
 		int[] counts = new int[size()];
 		int index = 0;
 		for (IndexedDocument document : this) {
-			counts[index++] = document.getMetadata().getTotalTokensCount(tokenType);
+			counts[index++] = document.getMetadata().getTokensCount(tokenType);
 		}
 		return counts;
 	}
@@ -125,10 +122,10 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return corpusMetadata.getDocumentIds();
 	}
 
-	public int getTotalTokensCount(TokenType tokenType) throws IOException {
+	public int getTokensCount(TokenType tokenType) throws IOException {
 		// TODO: this should probably be drawn from the corpus metadata instead
 		int totalTokensCount = 0;
-		for (int i : getTotalTokensCounts(tokenType)) {
+		for (int i : getTokensCounts(tokenType)) {
 			totalTokensCount += i;
 		
 		}

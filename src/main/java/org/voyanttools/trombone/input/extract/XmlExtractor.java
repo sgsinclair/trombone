@@ -50,6 +50,7 @@ import javax.xml.xpath.XPathException;
 import net.sf.saxon.lib.NamespaceConstant;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tika.Tika;
 import org.apache.tika.detect.DefaultDetector;
@@ -116,6 +117,7 @@ public class XmlExtractor implements Extractor {
 			Map<String, String> defaultsMap = new HashMap<String, String>();
 			switch(format) {
 			case RSS:
+			case RSS2:
 				defaultsMap.put("xmlContentXpath", "//item/description");
 				defaultsMap.put("xmlTitleXpath", parameters.getParameterBooleanValue("splitDocuments") ? "//item/title" : "//channel/title");
 				defaultsMap.put("xmlAuthorXpath", parameters.getParameterBooleanValue("splitDocuments") ? "//item/author|//item/dc:creator" : "//channel/author|//channel/dc:creator");
@@ -210,13 +212,13 @@ public class XmlExtractor implements Extractor {
 			// try to find title if needed
 			String title = getNodesAsStringFromParametersValue(doc, "xmlTitleXpath");
 			if (title.isEmpty()==false) {
-				metadata.setTitle(title);
+				metadata.setTitle(StringEscapeUtils.escapeXml(title));
 			}
 
 			// try to find title if needed
 			String author = getNodesAsStringFromParametersValue(doc, "xmlAuthorXpath");
 			if (author.isEmpty()==false) {
-				metadata.setAuthor(author);
+				metadata.setAuthor(StringEscapeUtils.escapeXml(author));
 			}
 
 			String xmlContentXpath = parameters.getParameterValue("xmlContentXpath","");
@@ -260,7 +262,7 @@ public class XmlExtractor implements Extractor {
 						"Unable to transform node during XML extraction: "+storedDocumentSource);
 			}
 	
-			String string = sw.toString();
+			String string = StringEscapeUtils.unescapeXml(sw.toString());
 			byte[] bytes = string.getBytes("UTF-8");
 			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
 	        try {

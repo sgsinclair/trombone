@@ -133,6 +133,7 @@ class XmlExpander implements Expander {
 			DocumentFormat format = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat").toUpperCase());
 			switch (format) {
 			case RSS:
+			case RSS2:
 				xmlDocumentsXpaths = new String[]{"//item"}; break;
 			case ATOM:
 				xmlDocumentsXpaths = new String[]{"//entry"}; break;

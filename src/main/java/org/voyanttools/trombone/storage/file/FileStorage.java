@@ -47,7 +47,7 @@ public class FileStorage implements Storage {
 	/**
 	 * the default file-system location for storage
 	 */
-	public static final String DEFAULT_TROMBOME_DIRECTORY = System.getProperty("java.io.tmpdir") + File.separator + "trombone4_0";
+	public static final File DEFAULT_TROMBOME_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), "trombone4_0");
 	
 	
 	/**
@@ -69,7 +69,7 @@ public class FileStorage implements Storage {
 	 * Create a new instance in the default location.
 	 */
 	public FileStorage() {
-		this(new File(DEFAULT_TROMBOME_DIRECTORY));
+		this(DEFAULT_TROMBOME_DIRECTORY);
 	}
 	
 	

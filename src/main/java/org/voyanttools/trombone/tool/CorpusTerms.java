@@ -50,15 +50,17 @@ import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
 import org.voyanttools.trombone.tool.utils.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("corpusTerms")
 public class CorpusTerms extends AbstractTerms {
 	
-	private List<CorpusTerm> corpusTerms = new ArrayList<CorpusTerm>();
+	private List<CorpusTerm> terms = new ArrayList<CorpusTerm>();
 	
 	@XStreamOmitField
 	private CorpusTerm.Sort corpusTermSort;
@@ -78,7 +80,7 @@ public class CorpusTerms extends AbstractTerms {
 
 	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		
-		Keywords stopwords = getStopwords();
+		Keywords stopwords = getStopwords(corpus);
 		
 		int size = start+limit;
 		
@@ -98,7 +100,6 @@ public class CorpusTerms extends AbstractTerms {
 			
 			if (term != null) {
 				termString = term.utf8ToString();
-				total++;
 				if (stopwords.isKeyword(termString)) {continue;}
 				docsEnum = termsEnum.docs(docIdSet, docsEnum, DocsEnum.FLAG_FREQS);
 				int doc = docsEnum.nextDoc();
@@ -111,7 +112,10 @@ public class CorpusTerms extends AbstractTerms {
 					documentFreqs[documentPosition] = freq;
 					doc = docsEnum.nextDoc();
 				}
-				queue.offer(new CorpusTerm(termString, termFreq, includeDistribution ? documentFreqs : null));
+				if (termFreq>0) {
+					total++;
+					queue.offer(new CorpusTerm(termString, termFreq, includeDistribution ? documentFreqs : null));
+				}
 			}
 			else {
 				break; // no more terms
@@ -122,9 +126,9 @@ public class CorpusTerms extends AbstractTerms {
 
 	private void setTermsFromQueue(CorpusTermsQueue queue) {
 		for (int i=0, len = queue.size()-start; i<len; i++) {
-			corpusTerms.add(queue.poll());
+			terms.add(queue.poll());
 		}
-		Collections.reverse(corpusTerms);
+		Collections.reverse(terms);
 	}
 
 	@Override
@@ -169,7 +173,7 @@ public class CorpusTerms extends AbstractTerms {
 		setTermsFromQueue(queue);	}
 
 	List<CorpusTerm> getCorpusTerms() {
-		return corpusTerms;
+		return terms;
 	}
 
 }

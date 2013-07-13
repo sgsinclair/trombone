@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.model.DocumentMetadata;
 
 /**
@@ -60,6 +61,7 @@ public class StringInputSource implements InputSource {
 		this.metadata = new DocumentMetadata();
 		this.metadata.setLocation("memory");
 		this.metadata.setSource(Source.STRING);
+		this.metadata.setTitle(StringUtils.abbreviate(string.trim().replaceAll("\\s+", " "),50));
 		this.id = DigestUtils.md5Hex(string);
 	}
 	

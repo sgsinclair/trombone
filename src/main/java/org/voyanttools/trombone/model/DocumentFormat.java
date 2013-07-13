@@ -57,6 +57,11 @@ public enum DocumentFormat {
 	/**
 	 * An XML document (.xml).
 	 */
+	RSS2("xml"),
+
+	/**
+	 * An XML document (.xml).
+	 */
 	ATOM("xml"),
 
 	/**

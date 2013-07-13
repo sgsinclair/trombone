@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.TransformerConfigurationException;
@@ -185,6 +187,35 @@ public class TikaExtractor implements Extractor {
 			} catch (TikaException e) {
 				throw new IOException("Unable to extract text for language detection", e);
 			}
+	        
+	        if (parameters.containsKey("inputRemoveUntil")) {
+	        	Pattern pattern = Pattern.compile(parameters.getParameterValue("inputRemoveUntil"));
+	        	Matcher matcher = pattern.matcher(extractedContent);
+	        	if (matcher.find()) {
+	        		extractedContent = extractedContent.substring(matcher.start());
+	        	}
+	        }
+	        if (parameters.containsKey("inputRemoveUntilAfter")) {
+	        	Pattern pattern = Pattern.compile(parameters.getParameterValue("inputRemoveUntilAfter"));
+	        	Matcher matcher = pattern.matcher(extractedContent);
+	        	if (matcher.find()) {
+	        		extractedContent = extractedContent.substring(matcher.end());
+	        	}
+	        }
+	        if (parameters.containsKey("inputRemoveFrom")) {
+	        	Pattern pattern = Pattern.compile(parameters.getParameterValue("inputRemoveFrom"));
+	        	Matcher matcher = pattern.matcher(extractedContent);
+	        	if (matcher.find()) {
+	        		extractedContent = extractedContent.substring(0, matcher.start()-1);
+	        	}
+	        }
+	        if (parameters.containsKey("inputRemoveFromAfter")) {
+	        	Pattern pattern = Pattern.compile(parameters.getParameterValue("inputRemoveFromAfter"));
+	        	Matcher matcher = pattern.matcher(extractedContent);
+	        	if (matcher.find()) {
+	        		extractedContent = extractedContent.substring(0, matcher.end());
+	        	}
+	        }
 	        
 	        isProcessed = true;
 	        

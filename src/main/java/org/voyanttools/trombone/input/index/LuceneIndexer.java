@@ -197,7 +197,7 @@ public class LuceneIndexer implements Indexer {
 							int doc = docsAndPositionsEnum.nextDoc();
 							if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
 								int freq = docsAndPositionsEnum.freq();
-								totalTokens++;
+								totalTokens+=freq;
 								for (int i=0; i<freq; i++) {
 									int pos = docsAndPositionsEnum.nextPosition();
 									if (pos>lastPosition) {lastPosition=pos;}
@@ -211,8 +211,8 @@ public class LuceneIndexer implements Indexer {
 					else {break;}
 				}
 				DocumentMetadata metadata = storedDocumentSource.getMetadata();
-				metadata.setTotalTypesCount(TokenType.lexical, totalTypes);
-				metadata.setTotalTokensCount(TokenType.lexical, totalTokens);
+				metadata.setTypesCount(TokenType.lexical, totalTypes);
+				metadata.setTokensCount(TokenType.lexical, totalTokens);
 				metadata.setLastTokenPositionIndex(TokenType.lexical, lastPosition);
 				metadata.setLastTokenOffsetIndex(TokenType.lexical, lastOffset);
 				storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(id, metadata);

@@ -92,7 +92,7 @@ public class DocumentTerms extends AbstractTerms {
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
 		int size = start+limit;
 		DocumentTermsQueue queue = new DocumentTermsQueue(size, documentTermsSort);
-		int[] totalTokenCounts = corpus.getTotalTokensCounts(tokenType);
+		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
@@ -132,10 +132,10 @@ public class DocumentTerms extends AbstractTerms {
 //	}
 	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		
-		Keywords stopwords = this.getStopwords();
+		Keywords stopwords = this.getStopwords(corpus);
 		int size = start+limit;
 		
-		int[] totalTokensCounts = corpus.getTotalTokensCounts(tokenType);
+		int[] totalTokensCounts = corpus.getTokensCounts(tokenType);
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSet();
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());

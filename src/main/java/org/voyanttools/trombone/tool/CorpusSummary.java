@@ -5,11 +5,14 @@ import java.io.IOException;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.converter.CorpusSummaryConverter;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 
+@XStreamConverter(CorpusSummaryConverter.class)
 @XStreamAlias("corpusSummary")
 public class CorpusSummary extends AbstractTool {
 	
@@ -17,7 +20,6 @@ public class CorpusSummary extends AbstractTool {
 
 	public CorpusSummary(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -26,6 +28,10 @@ public class CorpusSummary extends AbstractTool {
 		for (IndexedDocument doc : corpus) {
 			doc.getMetadata(); // make sure metadata is loaded
 		}
+	}
+	
+	public Corpus getCorpus() {
+		return corpus;
 	}
 }
 

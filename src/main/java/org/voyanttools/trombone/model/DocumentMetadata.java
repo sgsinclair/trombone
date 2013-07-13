@@ -27,10 +27,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
 
-import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.Source;
-
-import com.thoughtworks.xstream.annotations.XStreamConverter;
 
 /**
  * This encapsulates various types of metadata about content, including {@link Source},
@@ -282,19 +279,19 @@ public class DocumentMetadata implements PropertiesWrapper {
 	}
 
 	public void setLanguageCode(String lang) {
-		setProperty("lang", lang);
+		setProperty("language", lang);
 	}
 
 	public String getLanguageCode() {
-		return getProperty("lang", "");
+		return getProperty("language", "");
 	}
 
-	public void setTotalTokensCount(TokenType tokenType, int total) {
-		setProperty("totalTokensCount-"+tokenType.name(), String.valueOf(total));
+	public void setTokensCount(TokenType tokenType, int total) {
+		setProperty("tokensCount-"+tokenType.name(), String.valueOf(total));
 	}
 
-	public void setTotalTypesCount(TokenType tokenType, int totalTypes) {
-		setProperty("totalTokensCount-"+tokenType.name(), String.valueOf(totalTypes));
+	public void setTypesCount(TokenType tokenType, int totalTypes) {
+		setProperty("typesCount-"+tokenType.name(), String.valueOf(totalTypes));
 	}
 
 	public void setLastTokenPositionIndex(TokenType tokenType, int lastPosition) {
@@ -309,8 +306,8 @@ public class DocumentMetadata implements PropertiesWrapper {
 		setProperty("lastTokenStartOffset-"+tokenType.name(), String.valueOf(lastOffset));
 	}
 
-	public int getTotalTokensCount(TokenType tokenType) {
-		return Integer.parseInt(getProperty("totalTokensCount-"+tokenType, "0"));
+	public int getTokensCount(TokenType tokenType) {
+		return Integer.parseInt(getProperty("tokensCount-"+tokenType, "0"));
 	}
 
 	public Properties getProperties() {
