@@ -50,6 +50,7 @@ import javax.xml.xpath.XPathException;
 import net.sf.saxon.lib.NamespaceConstant;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tika.Tika;
@@ -64,8 +65,11 @@ import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
+
+import ucar.ma2.ArrayBoolean.D1;
 
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.LangDetectException;
@@ -129,9 +133,9 @@ public class XmlExtractor implements Extractor {
 				break;
 			case TEI:
 			case TEICORPUS:
-				defaultsMap.put("xmlContentXpath", "//text");
-				defaultsMap.put("xmlTitleXpath", "//teiHeader//title");
-				defaultsMap.put("xmlAuthorXpath", "//teiHeader//author");
+				defaultsMap.put("xmlContentXpath", "//*[local-name()='text']");
+				defaultsMap.put("xmlTitleXpath", "//*[local-name()='teiHeader']//*[local-name()='title']");
+				defaultsMap.put("xmlAuthorXpath", "//*[local-name()='teiHeader']//*[local-name()='author']");
 				break;
 			}
 			
@@ -262,15 +266,14 @@ public class XmlExtractor implements Extractor {
 						"Unable to transform node during XML extraction: "+storedDocumentSource);
 			}
 	
-			String string = StringEscapeUtils.unescapeXml(sw.toString());
-			byte[] bytes = string.getBytes("UTF-8");
-			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
+			String string = sw.toString();
+//			String string = StringEscapeUtils.unescapeXml(sw.toString());
+//			byte[] bytes = string.getBytes("UTF-8");
+//			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
 	        try {
 	        	Properties p = System.getProperties();
 				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
-				byteArrayInputStream.mark(0);
-				String text = new Tika(new DefaultDetector(), new XMLParser()).parseToString(byteArrayInputStream);
-				byteArrayInputStream.reset();
+				String text = new Tika(new DefaultDetector(), new XMLParser()).parseToString(new ByteArrayInputStream(string.getBytes("UTF-8")));
 				detector.append(text);
 				String lang = detector.detect();
 				metadata.setLanguageCode(lang);
@@ -282,7 +285,7 @@ public class XmlExtractor implements Extractor {
 	        
 	        isProcessed = true;
 
-	        return new ByteArrayInputStream(bytes);
+	        return new ByteArrayInputStream(StringEscapeUtils.unescapeXml(string).getBytes("UTF-8"));
 			
 		}
 
