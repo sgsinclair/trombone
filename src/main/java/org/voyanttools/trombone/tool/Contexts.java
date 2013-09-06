@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,16 +19,21 @@ import org.voyanttools.trombone.tool.analysis.KwicsQueue;
 import org.voyanttools.trombone.tool.utils.AbstractContextTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-public class Kwics extends AbstractContextTerms {
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
+@XStreamAlias("contexts")
+public class Contexts extends AbstractContextTerms {
 	
-	private List<Kwic> kwics = new ArrayList<Kwic>();
+	private List<Kwic> contexts = new ArrayList<Kwic>();
 	
-	private Kwic.Sort kwicsSort;
+	@XStreamOmitField
+	private Kwic.Sort contextsSort;
 	
 
-	public Kwics(Storage storage, FlexibleParameters parameters) {
+	public Contexts(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		kwicsSort = Kwic.Sort.valueOfForgivingly(parameters.getParameterValue("sortBy", ""));
+		contextsSort = Kwic.Sort.valueOfForgivingly(parameters.getParameterValue("sortBy", ""));
 	}
 
 	public List<Kwic> getKwics(AtomicReader atomicReader, StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus) throws IOException {
@@ -42,7 +46,7 @@ public class Kwics extends AbstractContextTerms {
 	private List<Kwic> getKwics(AtomicReader atomicReader, StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus, Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
-		KwicsQueue queue = new KwicsQueue(limit, kwicsSort);
+		KwicsQueue queue = new KwicsQueue(limit, contextsSort);
 		for (Map.Entry<Integer, Collection<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(luceneDoc);
@@ -71,7 +75,7 @@ public class Kwics extends AbstractContextTerms {
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(atomicReader, luceneDoc, lastToken, documentSpansData, false);
 
 		// build kwics
-		KwicsQueue queue = new KwicsQueue(limit, kwicsSort);
+		KwicsQueue queue = new KwicsQueue(limit, contextsSort);
 		String document = atomicReader.document(luceneDoc).get(tokenType.name());
 		for (DocumentSpansData dsd : documentSpansData) {
 			for (int[] data : dsd.spansData) {
@@ -110,14 +114,14 @@ public class Kwics extends AbstractContextTerms {
 			throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		this.kwics = getKwics(reader, corpusMapper, corpus);
+		this.contexts = getKwics(reader, corpusMapper, corpus);
 	}
 
 	@Override
 	protected void runAllTerms(Corpus corpus,
 			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		this.kwics = getKwics(reader, corpusMapper, corpus);
+		this.contexts = getKwics(reader, corpusMapper, corpus);
 	}
 
 

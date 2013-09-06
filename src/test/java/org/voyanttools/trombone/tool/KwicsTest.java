@@ -35,11 +35,11 @@ public class KwicsTest {
 		creator.run();
 		parameters.setParameter("corpus", creator.getStoredId());
 		
-		Kwics kwics;
+		Contexts kwics;
 		
 		parameters.setParameter("tool", "Kwics");
 		parameters.setParameter("query", "it was");
-		kwics = new Kwics(storage, parameters);
+		kwics = new Contexts(storage, parameters);
 		kwics.run();
 	}
 

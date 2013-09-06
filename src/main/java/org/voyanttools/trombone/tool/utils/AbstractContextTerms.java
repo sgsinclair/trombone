@@ -25,8 +25,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
@@ -50,7 +52,9 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 public abstract class AbstractContextTerms extends AbstractTerms {
 	
 	protected int context;
+	protected int limit;
 	protected String[] queries;
+	protected Set<Integer> positions;
 
 	/**
 	 * @param storage
@@ -59,7 +63,12 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 	public AbstractContextTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		this.queries = parameters.getParameterValues("query");
-		this.context = parameters.getParameterIntValue("limit", 5);
+		this.context = parameters.getParameterIntValue("context", 5);
+		this.limit = parameters.getParameterIntValue("limit", 5);
+		this.positions = new HashSet<Integer>();
+		for (String i : parameters.getParameterValues("position")) {
+			this.positions.add(Integer.parseInt(i));
+		}
 	}
 	
 	protected Map<Integer, Collection<DocumentSpansData>> getDocumentSpansData(AtomicReader atomicReader, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException {
@@ -99,6 +108,7 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 					if (!hasNext) {break;}
 					lastDoc = doc;
 				}
+				if (this.positions.isEmpty()==false && this.positions.contains(spans.start())==false) {continue;} // skip 
 				spansDocDataList.add(new int[]{spans.start(), spans.end()});
 				total++;
 			}
