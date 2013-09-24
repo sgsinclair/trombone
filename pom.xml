@@ -118,6 +118,7 @@
 			<artifactId>langdetect</artifactId>
 			<version>1.2.2</version>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 			<artifactId>de.tudarmstadt.ukp.dkpro.core.tokit-asl</artifactId>
@@ -144,6 +145,7 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/de.tudarmstadt.ukp.dkpro.core.treetagger-model-en-20111109.0.jar</systemPath>
 		</dependency>
+		-->
 		<!-- there's a conflict for ICU between DKPro and Lucene, so we'll specify 
 			this version -->
 		<dependency>
@@ -171,7 +173,13 @@
 			<artifactId>lucene-highlighter</artifactId>
 			<version>4.1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.2.0</version>
+		</dependency>
 	</dependencies>
+	<!-- 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -190,6 +198,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	 -->
 	<repositories>
 		<repository>
 			<id>Github Imaginatio</id>

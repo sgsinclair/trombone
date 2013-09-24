@@ -49,10 +49,11 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 			@Override
 			Analyzer getAnalyzer() {return new MultiLingualStemAnalyzer("en");}
 		},
-		LEMMATIZED_EN("lemmatized-en") {
-			@Override
-			Analyzer getAnalyzer() {return new EnglishMorphologicalAnalyzer();}
-		},
+		// TODO: re-enable lemmatization
+//		LEMMATIZED_EN("lemmatized-en") {
+//			@Override
+//			Analyzer getAnalyzer() {return new EnglishMorphologicalAnalyzer();}
+//		},
 		LEXICAL("lexical");
 //		MORPH_EN("morph-en");
 		
