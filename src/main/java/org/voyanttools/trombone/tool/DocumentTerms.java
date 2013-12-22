@@ -56,6 +56,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
+@XStreamAlias("documentTerms")
 public class DocumentTerms extends AbstractTerms {
 	
 
