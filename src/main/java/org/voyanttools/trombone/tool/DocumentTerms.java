@@ -50,12 +50,14 @@ import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
 import org.voyanttools.trombone.tool.utils.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("documentTerms")
 public class DocumentTerms extends AbstractTerms {
 	
 
