@@ -88,7 +88,7 @@ public class StoredToLuceneDocumentsMapper {
 	}
 	
 	public DocIdSetIterator getDocIdSetIterator() {
-		return new OpenBitSetIterator(docIdOpenBitSet);
+		return new OpenBitSetIterator(getDocIdOpenBitSet());
 	}
 	
 	public OpenBitSet getDocIdOpenBitSet() {
