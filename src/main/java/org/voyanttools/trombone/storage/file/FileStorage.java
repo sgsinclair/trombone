@@ -109,11 +109,22 @@ public class FileStorage implements Storage {
 	}
 
 	@Override
+	public boolean hasStoredString(String id) {
+		return getFile(id).exists();
+	}
+
+	@Override
 	public String storeString(String string) throws IOException {
 		String id = DigestUtils.md5Hex(string);
-		FileUtils.writeStringToFile(new File(getObjectStoreDirectory(),  id), string, "UTF-8");
+		storeString(string, id);
 		return id;
 	}
+	
+	@Override
+	public void storeString(String string, String id) throws IOException {
+		FileUtils.writeStringToFile(getFile(id), string, "UTF-8");		
+	}
+
 
 	@Override
 	public String storeStrings(Collection<String> strings) throws IOException {
@@ -121,13 +132,9 @@ public class FileStorage implements Storage {
 		return storeString(string);
 	}
 	
-	private File getObjectStoreDirectory() {
-		return new File(storageLocation,"object-storage");
-	}
-
 	@Override
 	public String retrieveString(String id) throws IOException {
-		File file = new File(getObjectStoreDirectory(),  id);
+		File file = getFile(id);
 		if (file.exists()==false) throw new IOException("An attempt was made to read a store string that that does not exist: "+id);
 		return FileUtils.readFileToString(file);
 	}
@@ -145,4 +152,13 @@ public class FileStorage implements Storage {
 		}
 		return corpusStorage;
 	}
+
+	private File getObjectStoreDirectory() {
+		return new File(storageLocation,"object-storage");
+	}
+
+	private File getFile(String id) {
+		return new File(getObjectStoreDirectory(),  id);
+	}
+
 }

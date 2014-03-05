@@ -91,8 +91,13 @@ public class MemoryStorage implements Storage {
 	@Override
 	public String storeString(String string) {
 		String id = DigestUtils.md5Hex(string);
-		storedObjectsMap.put(id, string);
+		storeString(string, id);
 		return id;
+	}
+	
+	@Override
+	public void storeString(String string, String id) {
+		storedObjectsMap.put(id, string);
 	}
 
 	@Override
@@ -113,6 +118,11 @@ public class MemoryStorage implements Storage {
 	public List<String> retrieveStrings(String id) throws IOException {
 		String string = retrieveString(id);
 		return StringUtils.split(string, "\n");
+	}
+
+	@Override
+	public boolean hasStoredString(String id) {
+		return storedObjectsMap.containsKey(id);
 	}
 	
 }

@@ -53,9 +53,13 @@ public interface Storage {
 	 */
 	public void destroy() throws IOException;
 
+	public boolean hasStoredString(String id);
+	
 	public String storeStrings(Collection<String> strings) throws IOException;
 	
 	public String storeString(String string) throws IOException;
+	
+	public void storeString(String string, String id) throws IOException;
 
 	public String retrieveString(String id) throws IOException;
 	

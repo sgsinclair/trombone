@@ -76,7 +76,13 @@ public class ToolFactory extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		String[] toolNames = parameters.getParameterValues("tool");
-		List<String> tools = Arrays.asList(toolNames);
+		List<String> tools = new ArrayList<String>();
+		for (String toolName : toolNames) {
+			for (String tn : toolName.split(",\\s*")) {
+				tools.add(tn);
+			}
+		}
+		Arrays.asList(toolNames);
 		runnableTools = getRunnableTools(tools);
 	}
 	

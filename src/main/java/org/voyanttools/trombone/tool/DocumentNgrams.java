@@ -21,7 +21,11 @@
  ******************************************************************************/
 package org.voyanttools.trombone.tool;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -103,9 +107,11 @@ public class DocumentNgrams extends AbstractTerms {
 			
 			ngrams = getFilteredNgrams(ngrams, lastToken);
 			
+			// temporary thing
+			BufferedWriter writer = new BufferedWriter(new FileWriter(new File("/Users/sgs/Downloads/game.of.thrones.edited/game.of.thrones.edited-ngrams.xml")));
 			
 			String document = atomicReader.document(luceneDoc).get(tokenType.name());
-			System.out.println("<documentNgrams lastPosition='"+lastToken+"' count='"+ngrams.size()+"'>");
+			writer.write("<documentNgrams lastPosition='"+lastToken+"' count='"+ngrams.size()+"'>");
 			StringBuilder positionsBuilder = new StringBuilder();
 			for (int i=0, ilen=ngrams.size(); i<ilen; i++) {
 				Ngram ngram = ngrams.get(i);
@@ -119,9 +125,10 @@ public class DocumentNgrams extends AbstractTerms {
 						original = document.substring(sparseSimplifiedTermInfoArray[positions[0]].startOffset, sparseSimplifiedTermInfoArray[positions[1]].endOffset).replaceAll("\\s+", " ");
 					}
 				}
-				System.out.println("\t<documentNgram docIndex='"+ngram.corpusDocumentIndex+"' length='"+ngram.length+"' positions='"+positionsBuilder+"'>"+StringEscapeUtils.escapeXml(original)+"</documentNgram>");
+				writer.write("\t<documentNgram docIndex='"+ngram.corpusDocumentIndex+"' length='"+ngram.length+"' positions='"+positionsBuilder+"'>"+StringEscapeUtils.escapeXml(original)+"</documentNgram>");
 			}
-			System.out.println("</documentNgrams>");
+			writer.write("</documentNgrams>");
+			writer.close();
 			/*
 			System.out.println("{\n\tlastPosition: "+lastToken+",\n\tstrings: [");
 			for (int i=0, ilen=ngrams.size(); i<ilen; i++) {
