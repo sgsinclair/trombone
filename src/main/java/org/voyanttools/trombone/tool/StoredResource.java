@@ -37,8 +37,8 @@ public class StoredResource extends AbstractTool {
 				this.id = this.storage.storeString(this.parameters.getParameterValue("storeResource"));
 			}
 		}
-		else if (this.parameters.containsKey("retrieveResource")) {
-			String id = this.parameters.getParameterValue("retrieveResource");
+		else if (this.parameters.containsKey("retrieveResourceId")) {
+			String id = this.parameters.getParameterValue("retrieveResourceId");
 			this.resource = this.storage.retrieveString(id);
 			this.id = id;
 		}

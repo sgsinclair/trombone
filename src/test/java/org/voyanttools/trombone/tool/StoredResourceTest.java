@@ -34,7 +34,7 @@ public class StoredResourceTest {
 		
 		// test retrieving resource
 		parameters = new FlexibleParameters();
-		parameters.addParameter("retrieveResource", generatedid);
+		parameters.addParameter("retrieveResourceId", generatedid);
 		storedResource = new StoredResource(storage, parameters);
 		storedResource.run();
 		assertEquals(test, storedResource.getResource());
@@ -51,7 +51,7 @@ public class StoredResourceTest {
 		
 		// test retrieving resource
 		parameters = new FlexibleParameters();
-		parameters.addParameter("retrieveResource", specifiedId);
+		parameters.addParameter("retrieveResourceId", specifiedId);
 		storedResource = new StoredResource(storage, parameters);
 		storedResource.run();
 		assertEquals(test, storedResource.getResource());
