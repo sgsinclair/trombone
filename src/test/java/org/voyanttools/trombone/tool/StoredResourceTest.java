@@ -18,7 +18,7 @@ public class StoredResourceTest {
 		FlexibleParameters parameters = new FlexibleParameters();
 		
 		// test verifying resource that doesn't exist
-		parameters.setParameter("verifyResource", "doesNotExist");
+		parameters.setParameter("verifyResourceId", "doesNotExist");
 		StoredResource storedResource = new StoredResource(storage, parameters);
 		storedResource.run();
 		assertEquals(storedResource.getResourceId(), ""); // should be blank if doesn't exist

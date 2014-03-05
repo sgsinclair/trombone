@@ -22,8 +22,8 @@ public class StoredResource extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
-		if (this.parameters.containsKey("verifyResource")) {
-			String id = this.parameters.getParameterValue("verifyResource");
+		if (this.parameters.containsKey("verifyResourceId")) {
+			String id = this.parameters.getParameterValue("verifyResourceId");
 			if (this.storage.hasStoredString(id)) {
 				this.id = id;
 			}
