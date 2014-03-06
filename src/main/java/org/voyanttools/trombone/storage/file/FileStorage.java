@@ -22,9 +22,16 @@
 package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
@@ -159,6 +166,42 @@ public class FileStorage implements Storage {
 
 	private File getFile(String id) {
 		return new File(getObjectStoreDirectory(),  id);
+	}
+
+
+	@Override
+	public boolean isStored(String id) {
+		return getFile(id).exists();
+	}
+
+	@Override
+	public String store(Object obj) throws IOException {
+		String id = UUID.randomUUID().toString();
+		store(obj, id);
+		return id;
+	}
+
+
+
+	@Override
+	public void store(Object obj, String id) throws IOException {
+		File file = getFile(id);
+		FileOutputStream fileOutputStream = new FileOutputStream(file);
+		ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
+		out.writeObject(obj);
+		out.close();
+	}
+
+
+
+	@Override
+	public Object retrieve(String id) throws IOException, ClassNotFoundException {
+		File file = getFile(id);
+		FileInputStream fileInputStream = new FileInputStream(file);
+		ObjectInputStream in = new ObjectInputStream(fileInputStream);
+		Object obj = in.readObject();
+		in.close();
+		return obj;
 	}
 
 }

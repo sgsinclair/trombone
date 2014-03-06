@@ -27,6 +27,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.lucene.index.CorruptIndexException;
@@ -123,6 +124,29 @@ public class MemoryStorage implements Storage {
 	@Override
 	public boolean hasStoredString(String id) {
 		return storedObjectsMap.containsKey(id);
+	}
+
+	@Override
+	public boolean isStored(String id) {
+		return storedObjectsMap.containsKey(id);
+	}
+
+	@Override
+	public String store(Object obj) throws IOException {
+		String id = UUID.randomUUID().toString();
+		store(obj, id);
+		return id;
+	}
+
+	@Override
+	public void store(Object obj, String id) throws IOException {
+		storedObjectsMap.put(id, obj);
+	}
+
+	@Override
+	public Object retrieve(String id) throws IOException,
+			ClassNotFoundException {
+		return storedObjectsMap.get(id);
 	}
 	
 }
