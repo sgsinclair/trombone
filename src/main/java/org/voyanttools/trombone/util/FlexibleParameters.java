@@ -563,11 +563,24 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	 */
 	public synchronized String[] getParameterValues(String key) {
 		
-		final List<String> values = this.entries.get(key);
-		return values == null ? new String[0] : (String[]) values.toArray(new String[] {});
-	
+		return getParameterValues(key, new String[0]);
 	}
 	
+	/**
+	 * Gets an array of {@link String}s for the specified key. If the key is not
+	 * defined, then an empty array of Strings is returned.
+	 * 
+	 * @param key the key for the parameter
+	 * @param defaultValue the default String array
+	 * @return an array of {@link String}s for the specified key
+	 */
+	public synchronized String[] getParameterValues(String key, String[] defaultValue) {
+		
+		final List<String> values = this.entries.get(key);
+		return values == null ? defaultValue : (String[]) values.toArray(new String[] {});
+	
+	}
+
 	/**
 	 * Gets a boolean value for the key (based on the first value for that key).
 	 * This will return false if the key is not defined, if the value is empty

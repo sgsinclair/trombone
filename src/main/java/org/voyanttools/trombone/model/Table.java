@@ -9,6 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.math3.linear.RealMatrix;
+
+import edu.stanford.nlp.util.ArrayUtils;
 import edu.stanford.nlp.util.StringUtils;
 
 /**
@@ -28,7 +31,7 @@ public class Table implements Serializable {
 		}
 	};
 	
-	String[][] values;
+	String[][] values = new String[0][0];
 
 	Map<String, Integer> columnsMap = new HashMap<String, Integer>();
 	
@@ -66,6 +69,8 @@ public class Table implements Serializable {
 	public static String getSerializedId(String id) {
 		return Table.class.toString()+"-"+Table.serialVersionUID+"-"+id;
 	}
+	
+	
 
 	public String toTsv() {
 		StringBuilder tsv = new StringBuilder();
@@ -87,7 +92,23 @@ public class Table implements Serializable {
 		}
 		return tsv.toString().substring(0, tsv.length()-1);
 	}
+
+	public String[] getColumn(String string) {
+		int column = StringUtils.isNumeric(string) ? Integer.parseInt(string) : columnsMap.get(string);
+		String[] vals = new String[values.length];
+		for (int i=0; i<vals.length; i++) {
+			vals[i] = values[i][column];
+		}
+		return vals;
+	}
 	
+	public double[] getColumnAsDoubles(String string) {
+		return ArrayUtils.toDoubleArray(getColumn(string));
+	}
+
+	public int getColumnsCount() {
+		return values[0].length;
+	}
 	
 //	public double[] getColumnAsDoubles(int index) {
 //		
