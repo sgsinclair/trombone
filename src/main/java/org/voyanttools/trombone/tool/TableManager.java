@@ -11,10 +11,13 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 /**
  * @author sgs
  *
  */
+@XStreamAlias("table")
 public class TableManager extends AbstractTool {
 	
 	private String id = "";
@@ -46,8 +49,11 @@ public class TableManager extends AbstractTool {
 					throw new RuntimeException(e);
 				}
 			}
+			else if (this.parameters.getParameterBooleanValue("verify")) {
+				this.id = "";
+			}
 		}
-		if (this.table==null) {
+		if (this.id==null) {
 			throw new IllegalArgumentException("No table ID and no table data provided.");
 		}
 //		else if (this.parameters.containsKey("retrieveTableId")) {
