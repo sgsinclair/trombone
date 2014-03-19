@@ -6,7 +6,7 @@ package org.voyanttools.trombone.tool;
 import java.io.IOException;
 import java.util.UUID;
 
-import org.voyanttools.trombone.model.Table;
+import org.voyanttools.trombone.model.table.Table;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;

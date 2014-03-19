@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.voyanttools.trombone.model;
+package org.voyanttools.trombone.model.table;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -93,8 +93,11 @@ public class Table implements Serializable {
 		return tsv.toString().substring(0, tsv.length()-1);
 	}
 
-	public String[] getColumn(String string) {
-		int column = StringUtils.isNumeric(string) ? Integer.parseInt(string) : columnsMap.get(string);
+	public String[] getColumn(String column) {
+		return getColumn(StringUtils.isNumeric(column) ? Integer.parseInt(column) : columnsMap.get(column));
+	}
+	
+	public String[] getColumn(int column) {
 		String[] vals = new String[values.length];
 		for (int i=0; i<vals.length; i++) {
 			vals[i] = values[i][column];
@@ -102,10 +105,14 @@ public class Table implements Serializable {
 		return vals;
 	}
 	
-	public double[] getColumnAsDoubles(String string) {
-		return ArrayUtils.toDoubleArray(getColumn(string));
+	public double[] getColumnAsDoubles(String column) {
+		return ArrayUtils.toDoubleArray(getColumn(column));
 	}
 
+	public double[] getColumnAsDoubles(int column) {
+		return ArrayUtils.toDoubleArray(getColumn(column));
+	}
+	
 	public int getColumnsCount() {
 		return values[0].length;
 	}
