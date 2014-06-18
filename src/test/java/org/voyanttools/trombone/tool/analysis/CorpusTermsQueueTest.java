@@ -10,10 +10,10 @@ public class CorpusTermsQueueTest {
 
 	@Test
 	public void test() {
-		CorpusTerm d1 = new CorpusTerm("a", 1, null);
-		CorpusTerm d2 = new CorpusTerm("z", 2, null);
-		CorpusTerm d3 = new CorpusTerm("é", 3, null);
-		CorpusTerm d4 = new CorpusTerm("a", 3, null);
+		CorpusTerm d1 = new CorpusTerm("a", 1, null, null);
+		CorpusTerm d2 = new CorpusTerm("z", 2, null, null);
+		CorpusTerm d3 = new CorpusTerm("é", 3, null, null);
+		CorpusTerm d4 = new CorpusTerm("a", 3, null, null);
 		CorpusTermsQueue queue;
 
 		// descending raw frequency, then ascending ascending alphabet

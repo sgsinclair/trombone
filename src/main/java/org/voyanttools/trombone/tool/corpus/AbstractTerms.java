@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool.utils;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 
@@ -27,6 +27,7 @@ import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -70,18 +71,26 @@ public abstract class AbstractTerms extends AbstractTool {
 	 */
 	@Override
 	public void run() throws IOException {
-		Corpus corpus = storage.getCorpusStorage().getCorpus(parameters.getParameterValue("corpus"));
+		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
 		StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
 		run(corpus, corpusMapper);
 	}
 
 	private void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		if (parameters.containsKey("query")) {
-			runQueries(corpus, corpusMapper, parameters.getParameterValues("query"));
+			String[] queries =  parameters.getParameterValues("query");
+			if (queries.length==1 && queries[0].isEmpty()) {
+				runAllTerms(corpus, corpusMapper);
+			}
+			runQueries(corpus, corpusMapper, queries);
 		}
 		else {
 			runAllTerms(corpus, corpusMapper);
 		}
+	}
+	
+	public int getTotal() {
+		return total;
 	}
 	
 	protected abstract void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException;

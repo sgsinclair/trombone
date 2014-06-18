@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.AtomicReader;
@@ -16,7 +17,6 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.KwicsQueue;
-import org.voyanttools.trombone.tool.utils.AbstractContextTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -30,9 +30,16 @@ public class Contexts extends AbstractContextTerms {
 	@XStreamOmitField
 	private Kwic.Sort contextsSort;
 	
+	@XStreamOmitField
+	private boolean isStrip;
+	
+	@XStreamOmitField
+	private Pattern tagsPattern = Pattern.compile("<\\/?\\w.*?>");
+	
 
 	public Contexts(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+		isStrip = parameters.getParameterBooleanValue("stripTags");
 		contextsSort = Kwic.Sort.valueOfForgivingly(parameters.getParameterValue("sortBy", ""));
 	}
 
@@ -100,12 +107,16 @@ public class Contexts extends AbstractContextTerms {
 				
 				String right = StringUtils.substring(document, termsOfInterest.get(keywordend-1).getEndOffset()+1, termsOfInterest.get(rightend).getEndOffset());
 				
-				queue.offer(new Kwic(corpusDocumentIndex, dsd.queryString, analyzedMiddle, keywordstart, left, middle, right));
+				queue.offer(new Kwic(corpusDocumentIndex, stripIf(dsd.queryString), stripIf(analyzedMiddle), keywordstart, stripIf(left), stripIf(middle), stripIf(right)));
 			}
 		}
 		
 		return queue;
 		
+	}
+	
+	private String stripIf(String string) {
+		return isStrip ? tagsPattern.matcher(string).replaceAll("") : string;
 	}
 
 	@Override

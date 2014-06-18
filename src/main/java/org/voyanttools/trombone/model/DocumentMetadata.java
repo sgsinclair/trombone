@@ -314,5 +314,8 @@ public class DocumentMetadata implements PropertiesWrapper {
 		return properties;
 	}
 
+	public int getTypesCount(TokenType tokenType) {
+		return Integer.parseInt(getProperty("typesCount-"+tokenType, "0"));
+	}
 
 }

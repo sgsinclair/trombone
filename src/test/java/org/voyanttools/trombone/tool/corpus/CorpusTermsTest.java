@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import static org.junit.Assert.*;
 
@@ -14,6 +14,7 @@ import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
+import org.voyanttools.trombone.tool.corpus.CorpusTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 public class CorpusTermsTest {

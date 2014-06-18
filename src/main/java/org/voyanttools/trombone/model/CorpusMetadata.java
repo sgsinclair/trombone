@@ -73,4 +73,27 @@ public class CorpusMetadata implements PropertiesWrapper {
 		return properties;
 	}
 
+	public void setCreatedTime(long time) {
+		properties.setProperty("createdTime", String.valueOf(time));
+	}
+
+	public long getCreatedTime() {
+		return Long.valueOf(properties.getProperty("createdTime", "0"));
+	}
+
+	public void setTokensCount(TokenType tokenType, int totalWordTokens) {
+		properties.setProperty("tokensCount-"+tokenType.name(), String.valueOf(totalWordTokens));
+	}
+
+	public void setTypesCount(TokenType tokenType, int totalWordTokens) {
+		properties.setProperty("typesCount-"+tokenType.name(), String.valueOf(totalWordTokens));
+	}
+	
+	public int getTokensCount(TokenType tokenType) {
+		return Integer.valueOf(properties.getProperty("tokensCount-"+tokenType.name(), "0"));
+	}
+	
+	public int getTypesCount(TokenType tokenType) {
+		return Integer.valueOf(properties.getProperty("typesCount-"+tokenType.name(), "0"));
+	}
 }

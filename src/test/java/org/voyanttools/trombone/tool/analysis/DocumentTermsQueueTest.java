@@ -36,10 +36,10 @@ public class DocumentTermsQueueTest {
 
 	@Test
 	public void test() {
-		DocumentTerm d1 = new DocumentTerm(1, "a", 1, 1, null, null);
-		DocumentTerm d2 = new DocumentTerm(1, "z", 2, 2, null, null);
-		DocumentTerm d3 = new DocumentTerm(1, "é", 3, 4, null, null);
-		DocumentTerm d4 = new DocumentTerm(1, "a", 3, 3, null, null);
+		DocumentTerm d1 = new DocumentTerm(1, "a", "a", 1, 1, null, null);
+		DocumentTerm d2 = new DocumentTerm(1, "b", "z", 2, 2, null, null);
+		DocumentTerm d3 = new DocumentTerm(1, "c", "é", 3, 4, null, null);
+		DocumentTerm d4 = new DocumentTerm(1, "d", "a", 3, 3, null, null);
 		DocumentTermsQueue queue;
 
 		// descending raw frequency, then ascending ascending alphabet

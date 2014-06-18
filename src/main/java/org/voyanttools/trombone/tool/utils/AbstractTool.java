@@ -65,12 +65,18 @@ public abstract class AbstractTool implements RunnableTool {
 		
 		// add IDs
 		for (String docId : parameters.getParameterValues("docId")) {
-			ids.add(docId);
+			if (docId.isEmpty()==false) {
+				ids.add(docId);
+			}
 		}
 		
 		// add indices
-		for (int docIndex : parameters.getParameterIntValues("docIndex")) {
-			ids.add(corpus.getDocument(docIndex).getId());
+		// check first if we have real values
+		String[] docIndices = parameters.getParameterValues("docIndex");
+		if (docIndices.length>0 && docIndices[0].isEmpty()==false) {
+			for (int docIndex : parameters.getParameterIntValues("docIndex")) {
+				ids.add(corpus.getDocument(docIndex).getId());
+			}
 		}
 		
 		// no docs defined, so consider all
@@ -82,6 +88,9 @@ public abstract class AbstractTool implements RunnableTool {
 		
 	}
 	
+	public FlexibleParameters getParameters() {
+		return parameters;
+	}
 	protected Keywords getStopwords(Corpus corpus) throws IOException {
 		Keywords keywords = new Keywords();
 		if (parameters.containsKey("stopList")) {

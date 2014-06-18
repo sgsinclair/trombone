@@ -46,8 +46,8 @@ import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentCollocatesQueue;
 import org.voyanttools.trombone.tool.analysis.KwicsQueue;
-import org.voyanttools.trombone.tool.utils.AbstractContextTerms;
-import org.voyanttools.trombone.tool.utils.AbstractContextTerms.DocumentSpansData;
+import org.voyanttools.trombone.tool.corpus.AbstractContextTerms;
+import org.voyanttools.trombone.tool.corpus.AbstractContextTerms.DocumentSpansData;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

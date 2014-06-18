@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool.utils;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,15 +45,24 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
 /**
  * @author sgs
  *
  */
 public abstract class AbstractContextTerms extends AbstractTerms {
 	
+	@XStreamOmitField
 	protected int context;
+	
+	@XStreamOmitField
 	protected int limit;
+
+	@XStreamOmitField
 	protected String[] queries;
+
+	@XStreamOmitField
 	protected Set<Integer> positions;
 
 	/**

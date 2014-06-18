@@ -52,7 +52,7 @@ public class DocumentTermsQueue {
 		}
 	}
 	
-	private class LimitedSizeQueue<DocumentTerm> extends org.apache.lucene.util.PriorityQueue<DocumentTerm> {
+	private class LimitedSizeQueue<DocumentTermWithDistributions> extends org.apache.lucene.util.PriorityQueue<DocumentTerm> {
 
 		Comparator<DocumentTerm> comparator;
 		
@@ -84,74 +84,5 @@ public class DocumentTermsQueue {
 		else if (unlimitedSizeQueue!=null) {return unlimitedSizeQueue.poll();}
 		return null;
 	}
-
-//	@Override
-//	protected boolean lessThan(DocumentTerm a,
-//			DocumentTerm b) {
-//		int ai, bi;
-//		float af, bf;
-//		String ab, bb;
-//		switch(sort) {
-//			case rawFrequencyAsc:
-//				ai = a.getRawFrequency();
-//				bi = b.getRawFrequency();
-//				if (ai==bi) {
-//					ab = a.getNormalizedTerm();
-//					bb = b.getNormalizedTerm();
-//					return ab.compareTo(bb) > 0;
-//				}
-//				else {return ai>bi;}
-//			case rawFrequencyDesc:
-//				ai = a.getRawFrequency();
-//				bi = b.getRawFrequency();
-//				if (ai==bi) {
-//					ab = a.getNormalizedTerm();
-//					bb = b.getNormalizedTerm();
-//					return ab.compareTo(bb) > 0;
-//				}
-//				else {return ai<bi;}
-//			case relativeFrequencyAsc:
-//				af = a.getRelativeFrequency();
-//				bf = b.getRelativeFrequency();
-//				if (af==bf) {
-//					ab = a.getNormalizedTerm();
-//					bb = b.getNormalizedTerm();
-//					return ab.compareTo(bb) > 0;
-//				}
-//				else {return af>bf;}
-//			case termAsc:
-//				ab = a.getNormalizedTerm();
-//				bb = b.getNormalizedTerm();
-//				if (ab.equals(bb)) {
-//					ai = a.getRawFrequency();
-//					bi = b.getRawFrequency();
-//					return ai<bi;
-//				}
-//				else {
-//					return ab.compareTo(bb) > 0;
-//				}
-//			case termDesc:
-//				ab = a.getNormalizedTerm();
-//				bb = b.getNormalizedTerm();
-//				if (ab.equals(bb)) {
-//					ai = a.getRawFrequency();
-//					bi = b.getRawFrequency();
-//					return ai<bi;
-//				}
-//				else {
-//					return ab.compareTo(bb) < 0;
-//				}
-//			default: // relativeFrequencyDesc
-//				af = a.getRelativeFrequency();
-//				bf = b.getRelativeFrequency();
-//				if (af==bf) {
-//					ab = a.getNormalizedTerm();
-//					bb = b.getNormalizedTerm();
-//					return ab.compareTo(bb) > 0;
-//				}
-//				else {return af<bf;}
-//		}
-//	}
-//	
 	
 }

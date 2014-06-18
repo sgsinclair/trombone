@@ -19,12 +19,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -47,10 +48,10 @@ import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentTermsQueue;
 import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
-import org.voyanttools.trombone.tool.utils.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
@@ -58,19 +59,26 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  *
  */
 @XStreamAlias("documentTerms")
-public class DocumentTerms extends AbstractTerms {
+@XStreamConverter(DocumentTermsConverter.class)
+public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTerm> {
 	
 
-	private List<DocumentTerm> documentTerms = new ArrayList<DocumentTerm>();
+	private List<DocumentTerm> terms = new ArrayList<DocumentTerm>();
 	
 	@XStreamOmitField
 	private DocumentTerm.Sort documentTermsSort;
+	
+	@XStreamOmitField
+	boolean withDistributions;
 	
 	@XStreamOmitField
 	boolean isNeedsPositions;
 	
 	@XStreamOmitField
 	boolean isNeedsOffsets;
+	
+	@XStreamOmitField
+	int distributionBins;
 
 	
 	/**
@@ -79,9 +87,11 @@ public class DocumentTerms extends AbstractTerms {
 	 */
 	public DocumentTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		documentTermsSort = DocumentTerm.Sort.relativeFrequencyDesc;
-		isNeedsPositions = parameters.getParameterBooleanValue("includeTokenIndexPositions");
-		isNeedsOffsets = parameters.getParameterBooleanValue("includeTokenCharacterOffsets");
+		documentTermsSort = DocumentTerm.Sort.relativeFrequencyDesc;		
+		withDistributions = parameters.getParameterBooleanValue("withDistributions");
+		distributionBins = parameters.getParameterIntValue("bins", 10);
+		isNeedsPositions = withDistributions || parameters.getParameterBooleanValue("withPositions");
+		isNeedsOffsets = parameters.getParameterBooleanValue("withOffsets");
 	}
 
 	
@@ -97,9 +107,11 @@ public class DocumentTerms extends AbstractTerms {
 		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
+		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
+
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
-			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);			
+			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), docIdSet, termContexts);			
 			while(spans.next()) {
 				int doc = spans.doc();
 				if (doc != lastDoc) {
@@ -120,9 +132,10 @@ public class DocumentTerms extends AbstractTerms {
 					positions[i] = positionsList.get(i);
 				}
 				int documentPosition = entry.getKey();
-				float rel = (float) freq / totalTokenCounts[documentPosition];
+				String docId = corpusMapper.getDocumentIdFromDocumentPosition(documentPosition);
+
 				total++;
-				queue.offer(new DocumentTerm(documentPosition, queryString, freq, rel, isNeedsPositions ? positions : null, null));
+				queue.offer(new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], isNeedsPositions ? positions : null, null));
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
@@ -138,7 +151,7 @@ public class DocumentTerms extends AbstractTerms {
 		int size = start+limit;
 		
 		int[] totalTokensCounts = corpus.getTokensCounts(tokenType);
-		Bits docIdSet = corpusMapper.getDocIdOpenBitSet();
+		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		
@@ -160,10 +173,10 @@ public class DocumentTerms extends AbstractTerms {
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
 					int documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
+					String docId = corpusMapper.getDocumentIdFromLuceneDocumentIndex(doc);
 					int totalTokensCount = totalTokensCounts[documentPosition];
 					int freq = docsAndPositionsEnum.freq();
-					float rel = (float) freq / totalTokensCount;
-					if (freq>0) {total++;} // make sure we track that this could be a hit
+//					if (freq>0) {total++;} // make sure we track that this could be a hit
 					int[] positions = null;
 					int[] offsets = null;
 					if (isNeedsPositions || isNeedsOffsets) {
@@ -174,7 +187,7 @@ public class DocumentTerms extends AbstractTerms {
 							offsets[i] = docsAndPositionsEnum.startOffset();
 						}
 					}					
-					queue.offer(new DocumentTerm(documentPosition, termString, freq, rel, positions, offsets));
+					queue.offer(new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, positions, offsets));
 					doc = docsAndPositionsEnum.nextDoc();
 				}
 			}
@@ -187,13 +200,19 @@ public class DocumentTerms extends AbstractTerms {
 
 	private void setDocumentTermsFromQueue(DocumentTermsQueue queue) {
 		for (int i=0, len = queue.size()-start; i<len; i++) {
-			documentTerms.add(queue.poll());
+			terms.add(queue.poll());
 		}
-		Collections.reverse(documentTerms);
+		Collections.reverse(terms);
 	}
 
 	public List<DocumentTerm> getDocumentTerms() {
-		return documentTerms;
+		return terms;
+	}
+
+
+	@Override
+	public Iterator<DocumentTerm> iterator() {
+		return terms.iterator();
 	}
 
 }

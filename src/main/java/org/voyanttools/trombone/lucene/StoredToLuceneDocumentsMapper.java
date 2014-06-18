@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.lucene.search.DocIdSetIterator;
-
+import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.OpenBitSet;
 import org.apache.lucene.util.OpenBitSetIterator;
 import org.voyanttools.trombone.storage.Storage;
@@ -44,6 +44,7 @@ public class StoredToLuceneDocumentsMapper {
 	private Map<Integer, Integer> lucenedIdToDocumentPositionMap;
 	private Map<String, Integer> documentIdToLuceneId;
 	private Map<Integer, String> luceneIdToDocumentId;
+	private List<String> documentIds;
 	private int[] sortedLuceneIds;
 	private OpenBitSet docIdOpenBitSet = null; // initialize this lazily
 	
@@ -69,11 +70,15 @@ public class StoredToLuceneDocumentsMapper {
 		this.lucenedIdToDocumentPositionMap = new HashMap<Integer, Integer>(documentIds.size());
 		this.documentIdToLuceneId = new HashMap<String, Integer>(documentIds.size());
 		this.sortedLuceneIds = new int[documentIds.size()];
+		this.luceneIdToDocumentId = new HashMap<Integer, String>();
+		this.documentIds = documentIds;
 		for (int i=0, len=luceneIds.length; i<len; i++) {
+			String documentId = documentIds.get(i);
 			int luceneDocId = luceneIds[i];
 			this.sortedLuceneIds[i] = luceneDocId;
 			this.lucenedIdToDocumentPositionMap.put(luceneDocId, i);
-			this.documentIdToLuceneId.put(documentIds.get(i), luceneDocId);
+			this.documentIdToLuceneId.put(documentId, luceneDocId);
+			this.luceneIdToDocumentId.put(luceneDocId, documentId);
 		}
 		Arrays.sort(this.sortedLuceneIds);
 		
@@ -105,6 +110,24 @@ public class StoredToLuceneDocumentsMapper {
 	public int getDocumentPositionFromLuceneDocumentIndex(int luceneDocumentIndex) {
 		return lucenedIdToDocumentPositionMap.get(luceneDocumentIndex);
 	}
+	
+	public String getDocumentIdFromLuceneDocumentIndex(int doc) {
+		return luceneIdToDocumentId.get(doc);
+	}
+	
+	public String getDocumentIdFromDocumentPosition(int documentPosition) {
+		return documentIds.get(documentPosition); 
+	}
 
+
+
+	public OpenBitSet getDocIdOpenBitSetFromStoredDocumentIds(
+			List<String> storedDocumentIds) {
+		OpenBitSet obs = new OpenBitSet(storedDocumentIds.size());
+		for (String id : storedDocumentIds) {
+			obs.set((long) documentIdToLuceneId.get(id));
+		}
+		return obs;
+	}
 
 }

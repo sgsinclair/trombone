@@ -10,6 +10,7 @@ import java.io.IOException;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -19,7 +20,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  */
 public class TableManagerTest {
 	
-	@Test(expected=IllegalArgumentException.class)
+	//@Test(expected=IllegalArgumentException.class)
 	public void testNoTable () throws IOException {
 		Storage storage = new MemoryStorage();
 		FlexibleParameters parameters = new FlexibleParameters();
@@ -29,10 +30,20 @@ public class TableManagerTest {
 
 	@Test
 	public void test() throws IOException {
-		Storage storage = new MemoryStorage();
+		Storage storage = new FileStorage();
 		FlexibleParameters parameters = new FlexibleParameters();		
 		TableManager tableManager;
 		
+		parameters = new FlexibleParameters();
+		parameters.setParameter("table", "1");
+		parameters.setParameter("verify", "true");
+		tableManager = new TableManager(storage, parameters);
+		tableManager.run();
+		String generatedid = tableManager.getTableId();
+		assertTrue(generatedid.isEmpty());
+		
+		
+		/*
 		// test storing new resources without id
 		parameters = new FlexibleParameters();
 		String testString = "0	1\n2	3";
@@ -65,6 +76,7 @@ public class TableManagerTest {
 		tableManager = new TableManager(storage, parameters);
 		tableManager.run();
 		assertEquals(testString, tableManager.getTable().toTsv());
+		*/
 	}
 
 }

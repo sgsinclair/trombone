@@ -44,10 +44,13 @@ import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
+import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
+
+import com.ibm.icu.util.Calendar;
 
 import edu.stanford.nlp.util.StringUtils;
 
@@ -131,7 +134,18 @@ class CorpusBuilder extends AbstractTool {
 		storedId = DigestUtils.md5Hex(sb.toString());
 		CorpusMetadata metadata = new CorpusMetadata(storedId);
 		metadata.setDocumentIds(sortedIds);
+		metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
 		Corpus corpus = new Corpus(storage, metadata);
+		DocumentMetadata documentMetadata;
+		int totalWordTokens = 0;
+		int totalWordTypes = 0;
+		for (IndexedDocument doc : corpus) {
+			documentMetadata = doc.getMetadata();
+			totalWordTokens += documentMetadata.getTokensCount(TokenType.lexical);
+			totalWordTypes +=  documentMetadata.getTypesCount(TokenType.lexical);
+		}
+		metadata.setTokensCount(TokenType.lexical, totalWordTokens);
+		metadata.setTypesCount(TokenType.lexical, totalWordTypes);
 		if (storage.getCorpusStorage().corpusExists(storedId)==false) {
 			storage.getCorpusStorage().storeCorpus(corpus);
 		}

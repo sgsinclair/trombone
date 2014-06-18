@@ -54,10 +54,13 @@ public class RealCorpusCreator extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
+		run(parameters.getParameterIntValue("steps"));
+	}
+	
+	public void run(int steps) throws IOException {
 		nextCorpusCreatorStep = parameters.getParameterValue("nextCorpusCreatorStep", "store");
 		int timeout = parameters.getParameterIntValue("timeoutSeconds");
 		long start = Calendar.getInstance().getTimeInMillis();
-		int steps = parameters.getParameterIntValue("steps");
 		
 		// this is used to go from one step to the next in a single pass, without needing to deal with storedId
 		List<StoredDocumentSource> storedDocumentSources = null;

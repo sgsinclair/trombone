@@ -19,12 +19,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -44,13 +45,14 @@ import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.Keywords;
+import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.CorpusTermsQueue;
 import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
-import org.voyanttools.trombone.tool.utils.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
@@ -58,7 +60,8 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  *
  */
 @XStreamAlias("corpusTerms")
-public class CorpusTerms extends AbstractTerms {
+@XStreamConverter(CorpusTermsConverter.class)
+public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	
 	private List<CorpusTerm> terms = new ArrayList<CorpusTerm>();
 	
@@ -66,15 +69,15 @@ public class CorpusTerms extends AbstractTerms {
 	private CorpusTerm.Sort corpusTermSort;
 	
 	@XStreamOmitField
-	private boolean includeDistribution = false;
-
+	private boolean withDistributions = false;
+	
 	/**
 	 * @param storage
 	 * @param parameters
 	 */
 	public CorpusTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		includeDistribution = parameters.getParameterBooleanValue("includeDocumentDistribution");
+		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		corpusTermSort = CorpusTerm.Sort.rawFrequencyDesc;
 	}
 
@@ -94,6 +97,7 @@ public class CorpusTerms extends AbstractTerms {
 		DocsEnum docsEnum = null;
 		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
 		String termString;
+		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
 		while(true) {
 			
 			BytesRef term = termsEnum.next();
@@ -104,17 +108,20 @@ public class CorpusTerms extends AbstractTerms {
 				docsEnum = termsEnum.docs(docIdSet, docsEnum, DocsEnum.FLAG_FREQS);
 				int doc = docsEnum.nextDoc();
 				int termFreq = 0;
-				int[] documentFreqs = new int[corpus.size()];
+				int[] documentRawFreqs = new int[corpus.size()];
+				float[] documentRelativeFreqs = new float[corpus.size()];
+				int documentPosition = 0;
 				while(doc!=DocsEnum.NO_MORE_DOCS) {
 					int freq = docsEnum.freq();
 					termFreq += freq;
-					int documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
-					documentFreqs[documentPosition] = freq;
+					documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
+					documentRawFreqs[documentPosition] = freq;
+					documentRelativeFreqs[documentPosition] = (float) freq/tokensCounts[documentPosition];
 					doc = docsEnum.nextDoc();
 				}
 				if (termFreq>0) {
 					total++;
-					queue.offer(new CorpusTerm(termString, termFreq, includeDistribution ? documentFreqs : null));
+					queue.offer(new CorpusTerm(termString, termFreq, withDistributions ? documentRawFreqs : null, withDistributions ? documentRelativeFreqs : null));
 				}
 			}
 			else {
@@ -143,6 +150,7 @@ public class CorpusTerms extends AbstractTerms {
 		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
+		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);			
@@ -159,21 +167,29 @@ public class CorpusTerms extends AbstractTerms {
 					positionsMap.get(docIndexInCorpus).incrementAndGet();
 				}
 			}
-			int freqs[] = new int[corpus.size()];
+			int[] rawFreqs = new int[corpus.size()];
+			float[] relativeFreqs = new float[corpus.size()];
 			int freq = 0;
 			for (Map.Entry<Integer, AtomicInteger> entry : positionsMap.entrySet()) {
 				int f = entry.getValue().intValue();
+				int documentPosition = entry.getKey();
 				freq+=f;
-				freqs[entry.getKey()] = f;
+				rawFreqs[documentPosition] = f;
+				relativeFreqs[documentPosition] = (float) f/tokensCounts[documentPosition];
 			}
 			total++;
-			queue.offer(new CorpusTerm(queryString, freq, includeDistribution ? freqs : null));
+			queue.offer(new CorpusTerm(queryString, freq, withDistributions ? rawFreqs : null, withDistributions ? relativeFreqs : null));
 			positionsMap.clear(); // prepare for new entries
 		}
 		setTermsFromQueue(queue);	}
 
 	List<CorpusTerm> getCorpusTerms() {
 		return terms;
+	}
+
+	@Override
+	public Iterator<CorpusTerm> iterator() {
+		return terms.iterator();
 	}
 
 }

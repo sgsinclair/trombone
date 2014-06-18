@@ -34,12 +34,10 @@ public class DocumentConverter implements Converter {
 			throw new RuntimeException("Unable to get document metadata during serialization: "+doc);
 		}
 		
-		writer.startNode("");
 		ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
 		writer.setValue(doc.getId());
 		writer.endNode();
 		context.convertAnother(metadata);
-		writer.endNode();
 
 	}
 

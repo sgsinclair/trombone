@@ -15,17 +15,19 @@ public class CorpusTerm {
 
 	private String term;
 	private int rawFreq;
-	private int[] documentFreqs;
+	private int[] rawFreqs;
+	private float[] relativeFreqs;
 	
 	@XStreamOmitField
 	private String normalizedString = null;
 	
 	
 	public CorpusTerm(String termString, int termFreq,
-			int[] documentFreqs) {
+			int[] rawFreqs, float[] relativeFreqs) {
 		this.term = termString;
 		this.rawFreq = termFreq;
-		this.documentFreqs = documentFreqs;
+		this.rawFreqs = rawFreqs;
+		this.relativeFreqs = relativeFreqs;
 	}
 
 	public int getRawFrequency() {
@@ -39,6 +41,26 @@ public class CorpusTerm {
 
 	public String getTerm() {
 		return term;
+	}
+	
+	public int[] getRawDistributions(int bins) {
+		if (rawFreqs==null) return new int[0];
+		if (bins==0) {bins=rawFreqs.length;} // nothing set, so use corpus length
+		int[] distributions = new int[bins];
+		for(int position=0, len=rawFreqs.length; position<len; position++) {
+			distributions[(int) (position*bins/len)]+=rawFreqs[position];
+		}
+		return distributions;
+	}
+
+	public float[] getRelativeDistributions(int bins) {
+		if (relativeFreqs==null) return new float[0];
+		if (bins==0) {bins=relativeFreqs.length;} // nothing set, so use corpus length
+		float[] distributions = new float[bins];
+		for(int position=0, len=relativeFreqs.length; position<len; position++) {
+			distributions[(int) (position*bins/len)]+=relativeFreqs[position]; // TODO: this needs to be averaged?
+		}
+		return distributions;
 	}
 	
 	public static Comparator<CorpusTerm> getComparator(Sort sort) {
@@ -103,6 +125,4 @@ public class CorpusTerm {
 		}
 		
 	};
-
-
 }

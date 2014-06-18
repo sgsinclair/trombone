@@ -26,7 +26,7 @@ import java.io.IOException;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.utils.AbstractContextTerms;
+import org.voyanttools.trombone.tool.corpus.AbstractContextTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

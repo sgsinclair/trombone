@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
+import org.voyanttools.trombone.tool.corpus.Contexts;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 public class KwicsTest {

@@ -47,7 +47,7 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentTermsQueue;
-import org.voyanttools.trombone.tool.utils.AbstractTerms;
+import org.voyanttools.trombone.tool.corpus.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import edu.stanford.nlp.util.StringUtils;

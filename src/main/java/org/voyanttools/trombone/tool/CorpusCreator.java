@@ -52,7 +52,7 @@ public class CorpusCreator extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
-		realCorpusCreator.run();
+		realCorpusCreator.run(Integer.MAX_VALUE);
 		nextCorpusCreatorStep = realCorpusCreator.getNextCorpusCreatorStep();
 		storedId = realCorpusCreator.getStoredId();
 	}

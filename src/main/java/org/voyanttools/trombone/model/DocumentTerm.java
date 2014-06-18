@@ -36,25 +36,29 @@ public class DocumentTerm {
 		rawFrequencyAsc, rawFrequencyDesc, relativeFrequencyAsc, relativeFrequencyDesc, termAsc, termDesc;
 	}
 
-	private int docIndex;
-	private String term;
+	protected int docIndex;
+	protected String docId;
+	protected String term;
 	@XStreamOmitField
-	private String normalizedString;
-	private int freq;
-	private float rel;
-	private int[] positions;
-	private int[] offsets;
-	public DocumentTerm(int docIndex, String term, int freq, float rel, int[] positions, int[] offsets) {
+	protected String normalizedString;
+	protected int rawFreq;
+	protected int totalTermsCount;
+	protected float relativeFreq;
+	protected int[] positions;
+	protected int[] offsets;
+	public DocumentTerm(int docIndex, String docId, String term, int rawFreq, int totalTokens, int[] positions, int[] offsets) {
 		this.docIndex = docIndex;
+		this.docId = docId;
 		this.term = term;
-		this.freq = freq;
-		this.rel = rel;
+		this.rawFreq = rawFreq;
+		this.totalTermsCount = totalTokens;
+		this.relativeFreq = totalTokens > 0 ? (float) rawFreq / totalTokens : 0;
 		this.positions = positions;
 		this.offsets = offsets;
 		this.normalizedString = null;
 	}
 	public int getRawFrequency() {
-		return freq;
+		return rawFreq;
 	}
 	public String getNormalizedTerm() {
 		if (normalizedString==null) {normalizedString = Normalizer.normalize(term, Normalizer.Form.NFD);}
@@ -65,14 +69,26 @@ public class DocumentTerm {
 	}
 	@Override
 	public String toString() {
-		return "("+docIndex+") "+term+": "+freq+" ("+rel+")";
+		return "("+docIndex+") "+term+": "+rawFreq+" ("+relativeFreq+")";
 	}
+
 	public float getRelativeFrequency() {
-		return rel;
+		return relativeFreq;
 	}
+
 	public int getDocumentIndex() {
 		return docIndex;
 	}
+
+	public int[] getDistributions(int bins) {
+		if (positions==null || bins ==0) return new int[0];
+		int[] distributions = new int[bins];
+		for(int position : positions) {
+			distributions[(int) (position*bins/totalTermsCount)]++;
+		}
+		return distributions;
+	}
+	
 	public static Comparator<DocumentTerm> getComparator(Sort sort) {
 		switch (sort) {
 		case rawFrequencyAsc:
@@ -94,7 +110,7 @@ public class DocumentTerm {
 		public int compare(DocumentTerm term1, DocumentTerm term2) {
 			int i = term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			if (i==0) {
-				return term1.freq - term2.freq;
+				return term1.rawFreq - term2.rawFreq;
 			}
 			return i;
 		}
@@ -105,7 +121,7 @@ public class DocumentTerm {
 		public int compare(DocumentTerm term1, DocumentTerm term2) {
 			int i = term1.getNormalizedTerm().compareTo(term2.getNormalizedTerm());
 			if (i==0) {
-				return term1.freq - term2.freq;
+				return term1.rawFreq - term2.rawFreq;
 			}
 			return i;
 		}
@@ -115,11 +131,11 @@ public class DocumentTerm {
 
 		@Override
 		public int compare(DocumentTerm term1, DocumentTerm term2) {
-			if (term1.freq==term2.freq) {
+			if (term1.rawFreq==term2.rawFreq) {
 				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return term1.freq - term2.freq;
+				return term1.rawFreq - term2.rawFreq;
 			}
 		}
 		
@@ -129,11 +145,11 @@ public class DocumentTerm {
 
 		@Override
 		public int compare(DocumentTerm term1, DocumentTerm term2) {
-			if (term1.freq==term2.freq) {
+			if (term1.rawFreq==term2.rawFreq) {
 				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return term2.freq - term1.freq;
+				return term2.rawFreq - term1.rawFreq;
 			}
 		}
 		
@@ -143,11 +159,11 @@ public class DocumentTerm {
 
 		@Override
 		public int compare(DocumentTerm term1, DocumentTerm term2) {
-			if (term1.rel==term2.rel) {
+			if (term1.relativeFreq==term2.relativeFreq) {
 				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return term2.freq - term1.freq;
+				return term2.rawFreq - term1.rawFreq;
 			}
 		}
 		
@@ -157,13 +173,24 @@ public class DocumentTerm {
 
 		@Override
 		public int compare(DocumentTerm term1, DocumentTerm term2) {
-			if (term1.rel==term2.rel) {
+			if (term1.relativeFreq==term2.relativeFreq) {
 				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return term1.freq - term2.freq;
+				return term1.rawFreq - term2.rawFreq;
 			}
 		}
 		
 	};
+	public int getTotalTermsCount() {
+		return totalTermsCount;
+	}
+	
+	public int getDocIndex() {
+		return docIndex;
+	}
+	
+	public String getDocId() {
+		return docId;
+	}
 }
