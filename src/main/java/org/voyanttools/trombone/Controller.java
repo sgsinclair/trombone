@@ -43,7 +43,7 @@ import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.CorpusCreator;
+import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.tool.utils.RunnableTool;
 import org.voyanttools.trombone.tool.utils.ToolRunner;
 import org.voyanttools.trombone.tool.utils.ToolSerializer;

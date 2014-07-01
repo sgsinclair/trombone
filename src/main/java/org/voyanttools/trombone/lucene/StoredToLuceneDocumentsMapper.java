@@ -130,4 +130,8 @@ public class StoredToLuceneDocumentsMapper {
 		return obs;
 	}
 
+	public int getLuceneIdFromDocumentId(String id) {
+		return documentIdToLuceneId.get(id);
+	}
+
 }

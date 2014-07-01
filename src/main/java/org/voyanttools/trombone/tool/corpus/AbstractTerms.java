@@ -36,7 +36,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public abstract class AbstractTerms extends AbstractTool {
+public abstract class AbstractTerms extends AbstractCorpusTool {
 
 	protected int total = 0;
 
@@ -76,7 +76,7 @@ public abstract class AbstractTerms extends AbstractTool {
 		run(corpus, corpusMapper);
 	}
 
-	private void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
 		if (parameters.containsKey("query")) {
 			String[] queries =  parameters.getParameterValues("query");
 			if (queries.length==1 && queries[0].isEmpty()) {

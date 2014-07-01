@@ -59,34 +59,6 @@ public abstract class AbstractTool implements RunnableTool {
 		
 	}
 
-	protected List<String> getCorpusStoredDocumentIdsFromParameters(Corpus corpus) throws IOException {
-		
-		List<String> ids = new ArrayList<String>();
-		
-		// add IDs
-		for (String docId : parameters.getParameterValues("docId")) {
-			if (docId.isEmpty()==false) {
-				ids.add(docId);
-			}
-		}
-		
-		// add indices
-		// check first if we have real values
-		String[] docIndices = parameters.getParameterValues("docIndex");
-		if (docIndices.length>0 && docIndices[0].isEmpty()==false) {
-			for (int docIndex : parameters.getParameterIntValues("docIndex")) {
-				ids.add(corpus.getDocument(docIndex).getId());
-			}
-		}
-		
-		// no docs defined, so consider all
-		if (ids.isEmpty()) {
-			for (IndexedDocument doc : corpus) {ids.add(doc.getId());}
-		}
-		
-		return ids;
-		
-	}
 	
 	public FlexibleParameters getParameters() {
 		return parameters;

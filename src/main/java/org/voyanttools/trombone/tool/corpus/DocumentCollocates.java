@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -46,8 +46,6 @@ import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentCollocatesQueue;
 import org.voyanttools.trombone.tool.analysis.KwicsQueue;
-import org.voyanttools.trombone.tool.corpus.AbstractContextTerms;
-import org.voyanttools.trombone.tool.corpus.AbstractContextTerms.DocumentSpansData;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
@@ -218,7 +216,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 		return documentCollocatesQueue;
 	}
 
-	List<DocumentCollocate> getDocumentCollocates() {
+	public List<DocumentCollocate> getDocumentCollocates() {
 		return collocates;
 	}
 }

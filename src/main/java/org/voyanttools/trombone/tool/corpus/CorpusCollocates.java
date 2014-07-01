@@ -19,14 +19,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.corpus.AbstractContextTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

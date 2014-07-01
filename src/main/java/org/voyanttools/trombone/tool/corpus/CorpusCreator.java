@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 
@@ -29,7 +29,6 @@ import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
@@ -38,29 +37,19 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 @XStreamAlias("stepEnabledCorpusCreator")
 public class CorpusCreator extends AbstractTool {
 
-	private String nextCorpusCreatorStep = "";
-	
 	private String storedId;
-	
-	@XStreamOmitField
-	private RealCorpusCreator realCorpusCreator;
 	
 	public CorpusCreator(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		realCorpusCreator = new RealCorpusCreator(storage, parameters);
 	}
 
 	@Override
 	public void run() throws IOException {
+		RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);
 		realCorpusCreator.run(Integer.MAX_VALUE);
-		nextCorpusCreatorStep = realCorpusCreator.getNextCorpusCreatorStep();
 		storedId = realCorpusCreator.getStoredId();
 	}
 	
-//	String getNextCorpusCreatorStep() {
-//		return nextCorpusCreatorStep;
-//	}
-//	
 	public String getStoredId() {
 		return storedId;
 	}

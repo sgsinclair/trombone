@@ -1,7 +1,7 @@
 package org.voyanttools.trombone.model;
 
 public enum TokenType {
-	lexical;
+	lexical, other;
 		
 	/**
 	 * Get a valid TokenType if one is available from a normalized version of the String argument, or default to {@link TokenType.lexcical} if not.

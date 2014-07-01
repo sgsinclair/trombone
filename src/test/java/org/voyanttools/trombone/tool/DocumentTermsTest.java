@@ -13,6 +13,7 @@ import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
+import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.tool.corpus.DocumentTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 

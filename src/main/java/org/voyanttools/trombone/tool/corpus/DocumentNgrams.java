@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Trombone.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.corpus;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -47,7 +47,6 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentTermsQueue;
-import org.voyanttools.trombone.tool.corpus.AbstractTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import edu.stanford.nlp.util.StringUtils;

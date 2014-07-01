@@ -8,7 +8,6 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.DocumentContainer;
 import org.voyanttools.trombone.model.TokenType;
-import org.voyanttools.trombone.tool.CorpusSummary;
 
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
