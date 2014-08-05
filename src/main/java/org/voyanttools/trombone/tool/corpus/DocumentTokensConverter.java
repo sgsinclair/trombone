@@ -44,78 +44,15 @@ public class DocumentTokensConverter implements Converter {
 		
 		DocumentTokens documentTokens = (DocumentTokens) source;
 		
-        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documents", List.class);
-        for (Map.Entry<String, List<DocumentToken>> entry : documentTokens.getDocumentTokens().entrySet()) {
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "document", String.class); // not written in JSON
-
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class); // not written in JSON
-	        writer.setValue(entry.getKey());
-	        writer.endNode();
+        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", List.class);
+        for (DocumentToken documentToken :  documentTokens.getDocumentTokens()) {
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "token", String.class);
 	        
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", List.class);
-	        for (DocumentToken documentToken : entry.getValue()) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "token", String.class);
-		        
-		        context.convertAnother(documentToken);
-		        
-		        writer.endNode();
-	        }
-	        writer.endNode();
-	        
-	        
+	        context.convertAnother(documentToken);
 	        
 	        writer.endNode();
-        	
         }
         writer.endNode();
-		
-		/*
-        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
-		writer.setValue(String.valueOf(documentTerms.getTotal()));
-		writer.endNode();
-		
-		FlexibleParameters parameters = documentTerms.getParameters();
-		int bins = parameters.getParameterIntValue("distributionBins", 10);
-		boolean withRawDistributions = parameters.getParameterBooleanValue("withDistributions");
-		
-        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
-		for (DocumentTerm documentTerm : documentTerms) {
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", String.class); // not written in JSON
-	        
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-			writer.setValue(documentTerm.getTerm());
-			writer.endNode();
-			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-			writer.setValue(String.valueOf(documentTerm.getRawFrequency()));
-			writer.endNode();
-
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-			writer.setValue(String.valueOf(documentTerm.getRelativeFrequency()));
-			writer.endNode();
-			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTermsCount", Integer.class);
-			writer.setValue(String.valueOf(documentTerm.getTotalTermsCount()));
-			writer.endNode();
-			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
-			writer.setValue(String.valueOf(documentTerm.getDocIndex()));
-			writer.endNode();
-			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docId", String.class);
-			writer.setValue(documentTerm.getDocId());
-			writer.endNode();
-
-			if (withRawDistributions) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-		        context.convertAnother(documentTerm.getDistributions(bins));
-		        writer.endNode();
-			}
-			
-			writer.endNode();
-		}
-		writer.endNode();		// TODO Auto-generated method stub
-		*/
 
 	}
 

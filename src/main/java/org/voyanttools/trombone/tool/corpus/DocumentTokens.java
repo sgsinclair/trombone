@@ -39,7 +39,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 @XStreamConverter(DocumentTokensConverter.class)
 public class DocumentTokens extends AbstractCorpusTool {
 
-	private Map<String, List<DocumentToken>> documentTokens = new HashMap<String, List<DocumentToken>>();
+	private List<DocumentToken> documentTokens = new ArrayList<DocumentToken>();
 	
 	@XStreamOmitField
 	private List<String> ids = new ArrayList<String>();
@@ -72,9 +72,21 @@ public class DocumentTokens extends AbstractCorpusTool {
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		List<TermInfo> termInfos = new ArrayList<TermInfo>();
 		TermInfo termInfo;
-		int maxPos = start+limit;
+		int documentStart = start;
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
+		String skipToDocId = parameters.getParameterValue("skipToDocId", "");
+		boolean isSkipping = true;
 		for (String id : ids) {
+			if (skipToDocId.isEmpty()==false) {
+				if (isSkipping && skipToDocId.equals(id)) {
+					isSkipping=false;
+				}
+				else {
+					continue;
+				}
+			}
+			int maxPos = documentStart+limit;
+
 			int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(id);
 			Terms terms = reader.getTermVector(luceneDoc, tokenType.name());
 			TermsEnum termsEnum = terms.iterator(null);
@@ -86,7 +98,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 					DocsAndPositionsEnum docsAndPositionsEnum = termsEnum.docsAndPositions(null, null, DocsAndPositionsEnum.FLAG_OFFSETS);
 					for (int i=0, len = docsAndPositionsEnum.freq(); i<len; i++) {
 						int pos = docsAndPositionsEnum.nextPosition();
-						if (pos >= start && pos<maxPos) { // out of range
+						if (pos >= documentStart && pos<maxPos) { // out of range
 							if (!docFreqs.containsKey(termString)) {
 								docFreqs.put(termString, len);
 							}
@@ -97,29 +109,29 @@ public class DocumentTokens extends AbstractCorpusTool {
 				else {break;}
 			}
 			Collections.sort(termInfos);
-			int star = start < termInfos.size()-1 ? start : termInfos.size()-1;
-			int len = start+limit < termInfos.size() ? start+limit : termInfos.size();
 			List<DocumentToken> tokens = new ArrayList<DocumentToken>();
 			String document = reader.document(luceneDoc).get(tokenType.name());
 			String string;
 			int lastEndOffset = 0;
-			for (int i=star; i<len; i++) {
+			int corpusDocumentIndexPosition = corpus.getDocumentPosition(id);
+			for (int i=0, len=termInfos.size(); i<len; i++) {
 				termInfo = termInfos.get(i);
-				if (i>star) {
+				if (i>0) { // add filler between tokens
 					string = StringUtils.substring(document, lastEndOffset, termInfo.getStartOffset());
-					tokens.add(new DocumentToken(stripper.strip(string), TokenType.other, -1, lastEndOffset, termInfo.getStartOffset(), -1)); // -1 position
+					documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, stripper.strip(string), TokenType.other, -1, lastEndOffset, termInfo.getStartOffset(), -1)); // -1 position
+					if (len+1<termInfos.size()) {len++;} // extend loop by one
 				}
 				string = StringUtils.substring(document, termInfo.getStartOffset(), termInfo.getEndOffset());
-				tokens.add(new DocumentToken(string, tokenType, termInfo.getPosition(), termInfo.getStartOffset(), termInfo.getEndOffset(), docFreqs.get(termInfo.getText())));
+				documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, string, tokenType, termInfo.getPosition(), termInfo.getStartOffset(), termInfo.getEndOffset(), docFreqs.get(termInfo.getText())));
 				lastEndOffset = termInfo.getEndOffset();
 			}
-			documentTokens.put(id, tokens);
 			termInfos.clear();
+			documentStart = 0; // reset to the start of next document
 		}
 	}
 
 
-	public Map<String, List<DocumentToken>> getDocumentTokens() {
+	public List<DocumentToken> getDocumentTokens() {
 		return documentTokens;
 	}
 

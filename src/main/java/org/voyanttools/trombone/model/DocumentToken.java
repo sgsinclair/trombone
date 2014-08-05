@@ -9,6 +9,10 @@ package org.voyanttools.trombone.model;
  */
 public class DocumentToken implements Comparable<DocumentToken> {
 	
+	private String docId;
+	
+	private int docIndex;
+	
 	private String term;
 	
 	private TokenType tokenType;
@@ -24,7 +28,9 @@ public class DocumentToken implements Comparable<DocumentToken> {
 	/**
 	 * 
 	 */
-	public DocumentToken(String term, TokenType tokenType, int position, int startOffset, int endOffset, int rawFreq) {
+	public DocumentToken(String docId, int docIndex, String term, TokenType tokenType, int position, int startOffset, int endOffset, int rawFreq) {
+		this.docId = docId;
+		this.docIndex = docIndex;
 		this.term = term;
 		this.tokenType = tokenType;
 		this.rawFreq = rawFreq;

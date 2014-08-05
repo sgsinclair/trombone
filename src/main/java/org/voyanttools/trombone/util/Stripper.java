@@ -14,7 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Stripper {
 
 	public enum TYPE {
-		all, blocks, none;
+		all, keepblocks, none;
 		
 		public static TYPE getForgivingly(String type) {
 			if (type!=null && type.isEmpty()==false) {
@@ -22,6 +22,7 @@ public class Stripper {
 				for (TYPE t : values()) {
 					if (normalizedType.equals(t.name())) return t;
 				}
+				if (type.equals("true")) {return all;}
 			}
 			return none;
 		}
@@ -33,7 +34,7 @@ public class Stripper {
 	
 	private String[] blockTags = new String[]{"p","div"};
 	
-	private Pattern notBlockTags = Pattern.compile("<\\/?\\w+\\b.*?>");
+	private Pattern notBlockTags = Pattern.compile("<\\/?(?!(" + StringUtils.join(blockTags, "|") +"))\\w+\\b.*?>");
 	
 	private Pattern isBlockTags = Pattern.compile("<(\\/?)(" + StringUtils.join(blockTags, "|") + ")\\b.*?>");
 	
@@ -55,7 +56,7 @@ public class Stripper {
 		if (type==TYPE.all) {
 			return allTags.matcher(string).replaceAll("");
 		}
-		else if (type==TYPE.blocks) {
+		else if (type==TYPE.keepblocks && string.contains("<")) {
 			string = notBlockTags.matcher(string).replaceAll("");
 			string = isBlockTags.matcher(string).replaceAll("<!--$1$2-->");
 			return string;

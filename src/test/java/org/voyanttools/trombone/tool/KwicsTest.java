@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.corpus.Contexts;
+import org.voyanttools.trombone.tool.corpus.DocumentContexts;
 import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -37,11 +37,11 @@ public class KwicsTest {
 		creator.run();
 		parameters.setParameter("corpus", creator.getStoredId());
 		
-		Contexts kwics;
+		DocumentContexts kwics;
 		
 		parameters.setParameter("tool", "Kwics");
 		parameters.setParameter("query", "it was");
-		kwics = new Contexts(storage, parameters);
+		kwics = new DocumentContexts(storage, parameters);
 		kwics.run();
 	}
 
