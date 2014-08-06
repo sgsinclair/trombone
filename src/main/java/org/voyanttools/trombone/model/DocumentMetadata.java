@@ -259,6 +259,18 @@ public class DocumentMetadata implements PropertiesWrapper {
 		setProperty("author", value);
 	}
 	
+	public void setPubPlace(String value) {
+		setProperty("pubPlace", value);
+	}
+	
+	public void setPubDate(String value) {
+		setProperty("pubDate", value);
+	}
+	
+	public void setPublisher(String value) {
+		setProperty("publisher", value);
+	}
+	
 	public void setExtra(String key, String value) {
 		setProperty("extra."+key, value);
 	}

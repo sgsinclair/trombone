@@ -108,7 +108,7 @@ public class StoredDocumentSourceExtractor {
 		
 		DocumentFormat format;
 		
-		String inputFormatString = parameters.getParameterValue("inputFormat", "");
+		String inputFormatString = parameters.getParameterValue("inputFormat", "").toUpperCase();
 		if (inputFormatString.isEmpty()==false) {
 			format = DocumentFormat.valueOf(inputFormatString);
 		}

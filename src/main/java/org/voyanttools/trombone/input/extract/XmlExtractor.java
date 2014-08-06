@@ -26,6 +26,7 @@ import it.svario.xpathapi.jaxp.XPathAPI;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -50,7 +51,6 @@ import javax.xml.xpath.XPathException;
 import net.sf.saxon.lib.NamespaceConstant;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tika.Tika;
@@ -65,11 +65,8 @@ import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
-
-import ucar.ma2.ArrayBoolean.D1;
 
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.LangDetectException;
@@ -78,8 +75,10 @@ import com.cybozu.labs.langdetect.LangDetectException;
  * @author sgs
  *
  */
-public class XmlExtractor implements Extractor {
-
+public class XmlExtractor implements Extractor, Serializable {
+	
+	
+	private static final long serialVersionUID = -8659873836740839314L;
 	private StoredDocumentSourceStorage storedDocumentSourceStorage;
 	private FlexibleParameters parameters;
 	
@@ -137,6 +136,14 @@ public class XmlExtractor implements Extractor {
 				defaultsMap.put("xmlTitleXpath", "//*[local-name()='teiHeader']//*[local-name()='title']");
 				defaultsMap.put("xmlAuthorXpath", "//*[local-name()='teiHeader']//*[local-name()='author']");
 				break;
+			case EEBODREAM:
+				defaultsMap.put("xmlContentXpath", "/EEBO/ETS/EEBO//TEXT/BODY");
+				defaultsMap.put("xmlTitleXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/TITLE[1]");
+				defaultsMap.put("xmlAuthorXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/AUTHOR");
+				defaultsMap.put("xmlPubPlaceXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBPLACE");
+				defaultsMap.put("xmlPublisherXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBLISHER");
+				defaultsMap.put("xmlPubDateXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/DATE");
+				break;
 			}
 			
 			// update parameters
@@ -148,7 +155,7 @@ public class XmlExtractor implements Extractor {
 			}
 		}
 		
-		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath"};
+		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath","xmlPubPlaceXpath","xmlPublisherXpath","xmlPubDateXpath"};
 		StringBuilder parametersBuilder = new StringBuilder();
 		for (String p : relevantParameters) {
 			if (parameters.getParameterValue(p, "").isEmpty()==false) {
@@ -161,7 +168,7 @@ public class XmlExtractor implements Extractor {
 			return new StoredDocumentSourceInputSource(storedDocumentSourceStorage, storedDocumentSource);
 		}
 		
-		return new ExtractableXmlInputSource(DigestUtils.md5Hex(storedDocumentSource.getId()+relevantParameters), storedDocumentSource);
+		return new ExtractableXmlInputSource(DigestUtils.md5Hex(storedDocumentSource.getId()+relevantParameters+String.valueOf(serialVersionUID)), storedDocumentSource);
 	}
 
 	private class ExtractableXmlInputSource implements InputSource {
@@ -219,12 +226,30 @@ public class XmlExtractor implements Extractor {
 				metadata.setTitle(StringEscapeUtils.escapeXml11(title));
 			}
 
-			// try to find title if needed
+			// try to find author if needed
 			String author = getNodesAsStringFromParametersValue(doc, "xmlAuthorXpath");
 			if (author.isEmpty()==false) {
 				metadata.setAuthor(StringEscapeUtils.escapeXml11(author));
 			}
 
+			// try to find publplace if needed
+			String pubPlace = getNodesAsStringFromParametersValue(doc, "xmlPubPlaceXpath");
+			if (pubPlace.isEmpty()==false) {
+				metadata.setPubPlace(StringEscapeUtils.escapeXml11(pubPlace));
+			}
+
+			// try to find title if needed
+			String publisher = getNodesAsStringFromParametersValue(doc, "xmlPublisherXpath");
+			if (publisher.isEmpty()==false) {
+				metadata.setPublisher(StringEscapeUtils.escapeXml11(publisher));
+			}
+
+			// try to find title if needed
+			String pubDate = getNodesAsStringFromParametersValue(doc, "xmlPubDateXpath");
+			if (pubDate.isEmpty()==false) {
+				metadata.setPubDate(StringEscapeUtils.escapeXml11(pubDate));
+			}
+			
 			String xmlContentXpath = parameters.getParameterValue("xmlContentXpath","");
 			// we don't need to extract content from the source, so just use the source XML
 			
