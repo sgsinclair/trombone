@@ -216,13 +216,13 @@ public class XmlExtractor implements Extractor {
 			// try to find title if needed
 			String title = getNodesAsStringFromParametersValue(doc, "xmlTitleXpath");
 			if (title.isEmpty()==false) {
-				metadata.setTitle(StringEscapeUtils.escapeXml(title));
+				metadata.setTitle(StringEscapeUtils.escapeXml11(title));
 			}
 
 			// try to find title if needed
 			String author = getNodesAsStringFromParametersValue(doc, "xmlAuthorXpath");
 			if (author.isEmpty()==false) {
-				metadata.setAuthor(StringEscapeUtils.escapeXml(author));
+				metadata.setAuthor(StringEscapeUtils.escapeXml11(author));
 			}
 
 			String xmlContentXpath = parameters.getParameterValue("xmlContentXpath","");
