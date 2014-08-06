@@ -99,8 +99,9 @@ public class LuceneIndexer implements Indexer {
 		
 		int processors = Runtime.getRuntime().availableProcessors();
 		ExecutorService executor = Executors.newFixedThreadPool(processors);
+		boolean verbose = parameters.getParameterBooleanValue("verbose");
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			Runnable worker = new Indexer(storage, storedDocumentSource);
+			Runnable worker = new Indexer(storage, storedDocumentSource, verbose);
 			executor.execute(worker);
 		}
 		executor.shutdown();
@@ -117,12 +118,14 @@ public class LuceneIndexer implements Indexer {
 		private LuceneManager luceneManager;
 		private String id;
 		private String string = null;
+		private boolean verbose;
 		public Indexer(Storage storage,
-				StoredDocumentSource storedDocumentSource) throws IOException {
+				StoredDocumentSource storedDocumentSource, boolean verbose) throws IOException {
 			this.storage = storage;
 			this.storedDocumentSource = storedDocumentSource;
 			this.luceneManager = storage.getLuceneManager();
 			this.id = storedDocumentSource.getId();
+			this.verbose = verbose;
 		}
 		
 		private String getString() throws IOException {
@@ -143,6 +146,10 @@ public class LuceneIndexer implements Indexer {
 		
 		@Override
 		public void run()  {
+			
+			if (verbose) {
+				System.out.println("indexing "+storedDocumentSource.getMetadata());
+			}
 			
 			try {
 				int index = luceneManager.getLuceneDocumentId(id);

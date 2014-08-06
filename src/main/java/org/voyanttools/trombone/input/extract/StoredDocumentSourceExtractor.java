@@ -81,8 +81,9 @@ public class StoredDocumentSourceExtractor {
 		int processors = Runtime.getRuntime().availableProcessors();
 		ExecutorService executor = Executors.newFixedThreadPool(processors);
 		List<Future<StoredDocumentSource>> list = new ArrayList<Future<StoredDocumentSource>>();
+		boolean verbose = parameters.getParameterBooleanValue("verbose");
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			Callable<StoredDocumentSource> worker = new CallableExtractor(this, storedDocumentSource);
+			Callable<StoredDocumentSource> worker = new CallableExtractor(this, storedDocumentSource, verbose);
 			Future<StoredDocumentSource> submit = executor.submit(worker);
 			list.add(submit);	
 		}
@@ -130,17 +131,20 @@ public class StoredDocumentSourceExtractor {
 		
 		private StoredDocumentSourceExtractor extractor;
 		private StoredDocumentSource storedDocumentSource;
+		private boolean verbose;
 
 		public CallableExtractor(
 				StoredDocumentSourceExtractor storedDocumentSourceExtractor,
-				StoredDocumentSource storedDocumentSource) {
+				StoredDocumentSource storedDocumentSource,
+				boolean verbose) {
 			this.extractor = storedDocumentSourceExtractor;
 			this.storedDocumentSource = storedDocumentSource;
+			this.verbose = verbose;
 		}
 
 		@Override
 		public StoredDocumentSource call() throws Exception {
-			System.out.println(storedDocumentSource.getMetadata());
+			if (verbose) {System.out.println("extracting "+storedDocumentSource.getMetadata());}
 			return this.extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		}
 		
