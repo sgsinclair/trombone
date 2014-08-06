@@ -21,10 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.input.extract;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -81,7 +78,8 @@ public class StoredDocumentSourceExtractor {
 	
 	public List<StoredDocumentSource> getExtractedStoredDocumentSources(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		List<StoredDocumentSource> extractedStoredDocumentSources = new ArrayList<StoredDocumentSource>();
-		ExecutorService executor = Executors.newCachedThreadPool();
+		int processors = Runtime.getRuntime().availableProcessors();
+		ExecutorService executor = Executors.newFixedThreadPool(processors);
 		List<Future<StoredDocumentSource>> list = new ArrayList<Future<StoredDocumentSource>>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 			Callable<StoredDocumentSource> worker = new CallableExtractor(this, storedDocumentSource);
@@ -142,6 +140,7 @@ public class StoredDocumentSourceExtractor {
 
 		@Override
 		public StoredDocumentSource call() throws Exception {
+			System.out.println(storedDocumentSource.getMetadata());
 			return this.extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		}
 		
