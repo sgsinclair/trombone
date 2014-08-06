@@ -96,7 +96,9 @@ public class LuceneIndexer implements Indexer {
 	public void index(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		
 		storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
-		ExecutorService executor = Executors.newCachedThreadPool();
+		
+		int processors = Runtime.getRuntime().availableProcessors();
+		ExecutorService executor = Executors.newFixedThreadPool(processors);
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 			Runnable worker = new Indexer(storage, storedDocumentSource);
 			executor.execute(worker);
