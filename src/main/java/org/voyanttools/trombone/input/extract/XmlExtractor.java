@@ -305,7 +305,10 @@ public class XmlExtractor implements Extractor, Serializable {
 					metadata.setLanguageCode(lang);
 				}
 			} catch (LangDetectException e) {
-				throw new IOException("Unable to detect language", e);
+				// fail silently
+				if (parameters.getParameterBooleanValue("verbose")) {
+					System.out.println("Unable to detect language for "+storedDocumentSource.getMetadata());
+				}
 			} catch (TikaException e) {
 				throw new IOException("Unable to extract text for language detection", e);
 			}

@@ -179,11 +179,16 @@ public class TikaExtractor implements Extractor {
 	        try {
 				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
 				String text = new Tika().parseToString(new ByteArrayInputStream(extractedContent.getBytes("UTF-8")));
-				detector.append(text);
-				String lang = detector.detect();
-				metadata.setLanguageCode(lang);
+				if (text.trim().isEmpty()==false) {
+					detector.append(text);
+					String lang = detector.detect();
+					metadata.setLanguageCode(lang);
+				}
 			} catch (LangDetectException e) {
-				throw new IOException("Unable to detect language", e);
+				// fail silently
+				if (parameters.getParameterBooleanValue("verbose")) {
+					System.out.println("Unable to detect language for "+storedDocumentSource.getMetadata());
+				}
 			} catch (TikaException e) {
 				throw new IOException("Unable to extract text for language detection", e);
 			}
