@@ -182,33 +182,35 @@ public class LuceneIndexer implements Indexer {
 				int docId = luceneManager.getLuceneDocumentId(id);
 				IndexReader reader = luceneManager.getIndexReader();
 				Terms terms = reader.getTermVector(docId, "lexical");
-				TermsEnum termsEnum = terms.iterator(null);
-				DocsAndPositionsEnum docsAndPositionsEnum = null;
 				int totalTokens = 0;
 				int totalTypes =  0;
 				int lastOffset = 0;
 				int lastPosition = 0;
-				while (true) {
-					BytesRef term = termsEnum.next();
-					if (term!=null) {
-						totalTypes++;
-						docsAndPositionsEnum = termsEnum.docsAndPositions(MultiFields.getLiveDocs(reader), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
-						while (true) {
-							int doc = docsAndPositionsEnum.nextDoc();
-							if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
-								int freq = docsAndPositionsEnum.freq();
-								totalTokens+=freq;
-								for (int i=0; i<freq; i++) {
-									int pos = docsAndPositionsEnum.nextPosition();
-									if (pos>lastPosition) {lastPosition=pos;}
-									int offset = docsAndPositionsEnum.startOffset();
-									if (offset>lastOffset) {lastOffset=offset;}
+				if (terms!=null) {
+					TermsEnum termsEnum = terms.iterator(null);
+					DocsAndPositionsEnum docsAndPositionsEnum = null;
+					while (true) {
+						BytesRef term = termsEnum.next();
+						if (term!=null) {
+							totalTypes++;
+							docsAndPositionsEnum = termsEnum.docsAndPositions(MultiFields.getLiveDocs(reader), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
+							while (true) {
+								int doc = docsAndPositionsEnum.nextDoc();
+								if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
+									int freq = docsAndPositionsEnum.freq();
+									totalTokens+=freq;
+									for (int i=0; i<freq; i++) {
+										int pos = docsAndPositionsEnum.nextPosition();
+										if (pos>lastPosition) {lastPosition=pos;}
+										int offset = docsAndPositionsEnum.startOffset();
+										if (offset>lastOffset) {lastOffset=offset;}
+									}
 								}
+								else {break;}
 							}
-							else {break;}
 						}
+						else {break;}
 					}
-					else {break;}
 				}
 				DocumentMetadata metadata = storedDocumentSource.getMetadata();
 				metadata.setTypesCount(TokenType.lexical, totalTypes);
