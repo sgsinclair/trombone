@@ -75,6 +75,11 @@ public enum DocumentFormat {
 	TEICORPUS("xml"),
 	
 	/**
+	 * Specialized format for treating EEBO XML files
+	 */
+	EEBODREAM("xml"),
+	
+	/**
 	 * An MS Word file (.doc).
 	 */
 	MSWORD("doc"),
