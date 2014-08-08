@@ -169,6 +169,7 @@ public class LuceneIndexer implements Indexer {
 				// create lexical document
 				document = new Document();
 				document.add(new StringField("id", id, Field.Store.YES));
+				document.add(new StringField("version", String.valueOf(VERSION), Field.Store.YES));
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				
@@ -176,8 +177,7 @@ public class LuceneIndexer implements Indexer {
 					String key = (String) entries.getKey();
 					String value = (String) entries.getValue();
 					if (key!=null && value!=null && value.isEmpty()==false) {
-						document.add(new TextField(key, value, Field.Store.NO));
-						System.err.println(key+": "+value);
+						document.add(new TextField(key, value, Field.Store.YES));
 					}
 				}
 				// TODO: add lemmatization

@@ -19,12 +19,19 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
  *
  */
 @XStreamAlias("corpusQueryDocumentCounts")
+@XStreamConverter(CorpusQueryDocumentCounter.CorpusQueryDocumentCounterConverter.class)
 public class CorpusQueryDocumentCounter extends AbstractTerms {
 	
 	Map<String, Integer> counts = new HashMap<String, Integer>();
@@ -60,4 +67,30 @@ public class CorpusQueryDocumentCounter extends AbstractTerms {
 		throw new IllegalArgumentException("You need to provide at least one query parameter for this tool");
 	}
 
+	public static class CorpusQueryDocumentCounterConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return type.isAssignableFrom(CorpusQueryDocumentCounter.class);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer,
+				MarshallingContext context) {
+			CorpusQueryDocumentCounter counter = (CorpusQueryDocumentCounter) source;
+			for (Map.Entry<String, Integer> count : counter.counts.entrySet()) {
+				writer.startNode(count.getKey());
+				writer.setValue(String.valueOf(count.getValue()));
+				writer.endNode();
+			}
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader,
+				UnmarshallingContext context) {
+			// we don't unmarshal
+			return null;
+		}
+		
+	}
 }
