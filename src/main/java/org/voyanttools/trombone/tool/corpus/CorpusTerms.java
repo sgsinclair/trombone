@@ -37,18 +37,19 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.CorpusTermsQueue;
-import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -141,9 +142,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	@Override
 	protected void runQueries(Corpus corpus,
 			StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException {
-		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, queries, tokenType, isQueryCollapse);
+		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
+		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, AtomicInteger> positionsMap = new HashMap<Integer, AtomicInteger>();
 		int size = start+limit;
@@ -153,7 +154,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
-			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);			
+			SpanQuery spanQuery = spanQueryEntry.getValue();
+			Spans spans = spanQuery.getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);			
 			while(spans.next()) {
 				int doc = spans.doc();
 				if (doc != lastDoc) {

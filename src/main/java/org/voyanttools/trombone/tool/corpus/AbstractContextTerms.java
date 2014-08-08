@@ -36,13 +36,14 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -82,8 +83,8 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 	
 	protected Map<Integer, Collection<DocumentSpansData>> getDocumentSpansData(AtomicReader atomicReader, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException {
 		
-		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, queries, tokenType, isQueryCollapse);
+		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
+		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		
 		Collection<DocumentSpansData> documentSpansDataList = new ArrayList<DocumentSpansData>();
@@ -91,7 +92,8 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 //		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
-			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);
+			SpanQuery spanQuery = spanQueryEntry.getValue();
+			Spans spans = spanQuery.getSpans(atomicReader.getContext(), corpusMapper.getDocIdOpenBitSet(), termContexts);
 
 			// we're going to go through all the span for all documents so that we can then
 			// parallelize the searching of kwics

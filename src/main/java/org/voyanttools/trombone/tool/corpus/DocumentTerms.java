@@ -42,12 +42,12 @@ import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentTermsQueue;
-import org.voyanttools.trombone.tool.analysis.SpanQueryParser;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -97,9 +97,9 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	
 	protected void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException {
 	
-		SpanQueryParser spanQueryParser = new SpanQueryParser(storage.getLuceneManager().getAnalyzer());
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueries(atomicReader, queries, tokenType, isQueryCollapse);
+		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
+		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
 		int size = start+limit;
