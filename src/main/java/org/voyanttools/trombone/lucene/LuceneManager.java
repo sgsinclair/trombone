@@ -33,12 +33,15 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Version;
+import org.voyanttools.trombone.input.index.LuceneIndexer;
 import org.voyanttools.trombone.lucene.analysis.KitchenSinkPerFieldAnalyzerWrapper;
 
 /**
@@ -67,9 +70,17 @@ public class LuceneManager {
 		this.directory = directory;
 	}
 	
+	
 	public int getLuceneDocumentId(String documentId) throws IOException {
+		return getLuceneDocumentId(documentId, LuceneIndexer.VERSION);
+	}
+	
+	public int getLuceneDocumentId(String documentId, int version) throws IOException {
 		if (DirectoryReader.indexExists(directory)==false) {return -1;}
-		TopDocs topDocs = getIndexSearcher().search(new TermQuery(new Term("id", documentId)), 1);
+		BooleanQuery query = new BooleanQuery();
+		query.add(new TermQuery(new Term("id", documentId)), Occur.MUST);
+		query.add(new TermQuery(new Term("version", String.valueOf(version))), Occur.MUST);
+		TopDocs topDocs = getIndexSearcher().search(query, 1);
 		return topDocs.totalHits==1 ? topDocs.scoreDocs[0].doc : -1;
 	}
 	

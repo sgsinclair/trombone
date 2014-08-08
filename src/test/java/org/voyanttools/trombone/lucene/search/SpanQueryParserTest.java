@@ -90,7 +90,7 @@ public class SpanQueryParserTest {
 		// single term with case (this gets converted to lower case)
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"It"}, TokenType.lexical, true);
 		assertEquals(1, queriesMap.size());
-		query = queriesMap.get("it");
+		query = queriesMap.get("It");
 		spans = query.getSpans(atomicReader.getContext(), bits, termsMap);
 		spans.next();
 		assertEquals(0,spans.doc());

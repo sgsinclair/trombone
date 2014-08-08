@@ -35,6 +35,7 @@ public class FlexibleQueryParserTest {
 		luceneManager.addDocument(document);
 		document = new Document();
 		document.add(new TextField("lexical", "It was the best of times it was the worst of times.", Field.Store.YES));
+		document.add(new TextField("author", "me", Field.Store.NO));
 		luceneManager.addDocument(document);	
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
@@ -57,7 +58,7 @@ public class FlexibleQueryParserTest {
 		// single term with case (this gets converted to lower case)
 		queriesMap = queryParser.getQueriesMap(new String[]{"It"}, TokenType.lexical, true);
 		assertEquals(1, queriesMap.size());
-		query = queriesMap.get("it");
+		query = queriesMap.get("It");
 		collector = new TotalHitCountCollector();
 		indexSearcher.search(query, collector);
 		assertEquals(2, collector.getTotalHits());
@@ -165,6 +166,23 @@ public class FlexibleQueryParserTest {
 		collector = new TotalHitCountCollector();
 		indexSearcher.search(query, collector);
 		assertEquals(1, collector.getTotalHits());
+		
+		// two terms, both of which must occur
+		queriesMap = queryParser.getQueriesMap(new String[]{"+it,+dark"}, TokenType.lexical, true);
+		assertEquals(1, queriesMap.size());
+		query = queriesMap.get("+it,+dark");
+		collector = new TotalHitCountCollector();
+		indexSearcher.search(query, collector);
+		assertEquals(1, collector.getTotalHits());
+
+		// two terms, including one from another field
+		queriesMap = queryParser.getQueriesMap(new String[]{"+author:me,+it"}, TokenType.lexical, true);
+		assertEquals(1, queriesMap.size());
+		query = queriesMap.get("+author:me,+it");
+		collector = new TotalHitCountCollector();
+		indexSearcher.search(query, collector);
+		assertEquals(1, collector.getTotalHits());
+
 	}
 
 }

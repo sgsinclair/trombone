@@ -85,6 +85,8 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  */
 public class LuceneIndexer implements Indexer {
 	
+	public static final int VERSION = 0; // changes to this force re-indexing of stored documents
+	
 	private Storage storage;
 	private FlexibleParameters parameters;
 
@@ -170,6 +172,14 @@ public class LuceneIndexer implements Indexer {
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				
+				for (Map.Entry<Object, Object> entries : storedDocumentSource.getMetadata().getProperties().entrySet()) {
+					String key = (String) entries.getKey();
+					String value = (String) entries.getValue();
+					if (key!=null && value!=null && value.isEmpty()==false) {
+						document.add(new TextField(key, value, Field.Store.NO));
+						System.err.println(key+": "+value);
+					}
+				}
 				// TODO: add lemmatization
 				/*
 				if (storedDocumentSource.getMetadata().getLanguageCode().equals("en")) {

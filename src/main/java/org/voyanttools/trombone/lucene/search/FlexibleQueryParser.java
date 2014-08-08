@@ -7,6 +7,7 @@ package org.voyanttools.trombone.lucene.search;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -51,12 +52,16 @@ public class FlexibleQueryParser extends AbstractQueryParser {
 	}
 
 	@Override
-	protected Query getOrQuery(Collection<Query> queries) throws IOException {
-		BooleanQuery q = new BooleanQuery();
-		for (Query query : queries) {
-			q.add(query, Occur.SHOULD);
+	protected Query getBooleanQuery(Map<String, Query> queriesMap) throws IOException {
+		BooleanQuery query = new BooleanQuery();
+		for (Map.Entry<String, Query> entry : queriesMap.entrySet()) {
+			String key = entry.getKey();
+			Query q = entry.getValue();
+			if (key.startsWith("+")) {query.add(q, Occur.MUST);}
+			else if (key.startsWith("-")) {query.add(q, Occur.MUST_NOT);}
+			else {query.add(q, Occur.SHOULD);}
 		}
-		return q;
+		return query;
 	}
 
 	@Override

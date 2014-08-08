@@ -46,9 +46,10 @@ public class SpanQueryParser extends AbstractQueryParser {
 	}
 
 	@Override
-	protected Query getOrQuery(Collection<Query> queries) throws IOException {
+	protected Query getBooleanQuery(Map<String, Query> queriesMap) throws IOException {
+		// note that we don't support and queries for spans
 		SpanOrQuery spanOrQuery = new SpanOrQuery();
-		for (Query query : queries) {
+		for (Query query : queriesMap.values()) {
 			spanOrQuery.addClause((SpanQuery) query);
 		}
 		return spanOrQuery;

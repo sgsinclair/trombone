@@ -38,6 +38,7 @@ public abstract class AbstractQueryParser {
 	protected final static Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
 	protected final static Pattern SLOP_PATTERN = Pattern.compile("~(\\d+)$");
 	protected final static String FIELD_SEPARATOR = ":";
+	protected final static String OPERATOR_AND = "+";
 	protected IndexReader indexReader;
 	protected Analyzer analyzer;
 
@@ -117,7 +118,7 @@ public abstract class AbstractQueryParser {
 		
 		// we need to build a SpanOr Query if we have multiple items and we're collapsing
 		if (collapse && queriesMap.size()>1) {			
-			Query q = getOrQuery(queriesMap.values());
+			Query q = getBooleanQuery(queriesMap);
 			queriesMap.clear();
 			queriesMap.put(query, q);
 		}
@@ -143,7 +144,7 @@ public abstract class AbstractQueryParser {
 		}
 		else { // regular term (we hope)
 			Term term = getAnalyzedTerm(tokenType, termQuery); // analyze it first
-			queriesMap.put(term.text(), getTermQuery(term));
+			queriesMap.put(termQuery, getTermQuery(term));
 		}
 		return queriesMap;
 	}
@@ -155,6 +156,8 @@ public abstract class AbstractQueryParser {
 	 * @return a new {@link Term}
 	 */
 	protected Term getTerm(String term, TokenType tokenType) {
+		// strip operators
+		if (term.startsWith(OPERATOR_AND)) {term=term.substring(1);}
 		String field = tokenType.name(); // default
 		if (term.contains(FIELD_SEPARATOR)) {
 			int pos = term.indexOf(FIELD_SEPARATOR);
@@ -164,7 +167,7 @@ public abstract class AbstractQueryParser {
 		return new Term(field, term);
 	}
 	
-	protected abstract Query getOrQuery(Collection<Query> queries) throws IOException;
+	protected abstract Query getBooleanQuery(Map<String, Query> queriesMap) throws IOException;
 
 	protected abstract Query getNearQuery(Query[] queries, int slop, boolean inOrder);
 
