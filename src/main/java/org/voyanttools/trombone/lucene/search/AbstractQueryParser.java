@@ -37,6 +37,7 @@ public abstract class AbstractQueryParser {
 	protected final static String WILDCARD_QUESTION = "?";
 	protected final static Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
 	protected final static Pattern SLOP_PATTERN = Pattern.compile("~(\\d+)$");
+	protected final static String FIELD_SEPARATOR = ":";
 	protected IndexReader indexReader;
 	protected Analyzer analyzer;
 
@@ -48,8 +49,9 @@ public abstract class AbstractQueryParser {
 		this.analyzer = analyzer;
 	}
 
-	protected Term getAnalyzedTerm(TokenType tokenType, String term) throws IOException {
-		TokenStream tokenStream = analyzer.tokenStream(tokenType.name(), new StringReader(term));
+	protected Term getAnalyzedTerm(TokenType tokenType, String termString) throws IOException {
+		Term term = getTerm(termString, tokenType); // first ensure that we've stripped any prefixes
+		TokenStream tokenStream = analyzer.tokenStream(term.field(), new StringReader(term.text()));
 		tokenStream.reset();
 		CharTermAttribute termAtt = tokenStream.addAttribute(CharTermAttribute.class);
 		StringBuilder sb = new StringBuilder();
@@ -58,7 +60,7 @@ public abstract class AbstractQueryParser {
 		}
 		tokenStream.end();
 		tokenStream.close();
-		return new Term(tokenType.name(), sb.toString());
+		return new Term(term.field(), sb.toString());
 	}
 	
 	public Map<String, Query> getQueriesMap(String[] queries, TokenType tokenType, boolean collapse) throws IOException {
@@ -125,16 +127,17 @@ public abstract class AbstractQueryParser {
 	private Map<String, Query> getSingleTermQueries(String termQuery, TokenType tokenType, boolean collapse) throws IOException {
 		Map<String, Query> queriesMap = new HashMap<String, Query>();
 		if (termQuery.contains(WILDCARD_ASTERISK) || termQuery.contains(WILDCARD_QUESTION)) { // contains a wildcard
-			Query query = getWildCardQuery(new Term(tokenType.name(), termQuery));
+			Term term = getTerm(termQuery, tokenType);
+			Query query = getWildCardQuery(term);
 			if (collapse) { // treat all wildcard variants as a single term
 				queriesMap.put(termQuery, query);
 			}
 			else { // separate each wildcard term into its own query
 				Set<Term> terms = new HashSet<Term>();
 				query.extractTerms(terms);
-				for (Term term : terms) {
+				for (Term t : terms) {
 					// we don't need to analyze term here since it's already from the index
-					queriesMap.put(term.text(), getTermQuery(term));
+					queriesMap.put(t.text(), getTermQuery(t));
 				}
 			}
 		}
@@ -143,6 +146,22 @@ public abstract class AbstractQueryParser {
 			queriesMap.put(term.text(), getTermQuery(term));
 		}
 		return queriesMap;
+	}
+	
+	/**
+	 * This is to ensure that we're dealing with field prefixes
+	 * @param term this is the original term string
+	 * @param tokenType this is the default to use if no field prefix is present
+	 * @return a new {@link Term}
+	 */
+	protected Term getTerm(String term, TokenType tokenType) {
+		String field = tokenType.name(); // default
+		if (term.contains(FIELD_SEPARATOR)) {
+			int pos = term.indexOf(FIELD_SEPARATOR);
+			field = term.substring(0, pos);
+			term = term.substring(pos+1);
+		}
+		return new Term(field, term);
 	}
 	
 	protected abstract Query getOrQuery(Collection<Query> queries) throws IOException;
