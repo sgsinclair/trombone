@@ -58,13 +58,13 @@ public class LuceneManager {
 	
 	private IndexSearcher indexSearcher = null;
 	
-	private Version version = Version.LUCENE_41;
+	public static Version VERSION = Version.LUCENE_4_9;
 	private float luceneDocumentVersion = 4.1f;
 
 	
 	private Analyzer analyzer = new KitchenSinkPerFieldAnalyzerWrapper();
 	
-	private IndexWriterConfig indexWriterConfig = new IndexWriterConfig(version, analyzer);
+	private IndexWriterConfig indexWriterConfig = new IndexWriterConfig(VERSION, analyzer);
 	
 	public LuceneManager(Directory directory) throws CorruptIndexException, IOException {
 		this.directory = directory;

@@ -31,6 +31,7 @@ import org.apache.lucene.analysis.charfilter.HTMLStripCharFilter;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
 import org.apache.lucene.util.Version;
+import org.voyanttools.trombone.lucene.LuceneManager;
 
 /**
  * @author sgs
@@ -38,8 +39,6 @@ import org.apache.lucene.util.Version;
  */
 public class LexicalAnalyzer extends Analyzer {
 	
-	private Version version = Version.LUCENE_41;
-
 	/* (non-Javadoc)
 	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
 	 */
@@ -47,7 +46,7 @@ public class LexicalAnalyzer extends Analyzer {
 	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
 		Reader filter =  new HTMLStripCharFilter(reader);
 		Tokenizer tokenizer = new ICUTokenizer(filter);
-		TokenStream stream = new LowerCaseFilter(version, tokenizer);
+		TokenStream stream = new LowerCaseFilter(LuceneManager.VERSION, tokenizer);
 		return new TokenStreamComponents(tokenizer, stream);
 	}
 
