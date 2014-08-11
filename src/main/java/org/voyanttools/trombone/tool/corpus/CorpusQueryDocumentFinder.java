@@ -8,13 +8,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TotalHitCountCollector;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
-import org.voyanttools.trombone.lucene.search.FlexibleQueryParser;
+import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.SimpleDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
@@ -25,6 +23,7 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -66,13 +65,15 @@ public class CorpusQueryDocumentFinder extends AbstractTerms {
 			StoredToLuceneDocumentsMapper corpusMapper, String[] queries)
 			throws IOException {
 		total = corpus.size();
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		FlexibleQueryParser queryParser = new FlexibleQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
-		Map<String, Query> queriesMap = queryParser.getQueriesMap(queries, tokenType, true);
+//		FlexibleQueryParser queryParser = new FlexibleQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
+//		Map<String, Query> queriesMap = queryParser.getQueriesMap(queries, tokenType, true);
 		IndexSearcher indexSearcher = storage.getLuceneManager().getIndexSearcher();
-		for (Map.Entry<String, Query> entries : queriesMap.entrySet()) {
+		
+		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(storage.getLuceneManager(), tokenType);
+		for (String queryString : queries) {
+			Query query = queryParser.parse(queryString);
 			SimpleDocIdsCollector collector = new SimpleDocIdsCollector();
-			indexSearcher.search(entries.getValue(), collector);
+			indexSearcher.search(query, collector);
 			String[] ids = new String[collector.getTotalHits()];
 			if (includeDocIds) {
 				List<Integer> docIds = collector.getDocIds();
@@ -80,7 +81,7 @@ public class CorpusQueryDocumentFinder extends AbstractTerms {
 					ids[i] = corpusMapper.getDocumentIdFromLuceneDocumentIndex(docIds.get(i));
 				}
 			}
-			counts.put(entries.getKey(), ids);
+			counts.put(query.toString(), ids);
 		}
 	}
 
@@ -101,13 +102,18 @@ public class CorpusQueryDocumentFinder extends AbstractTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer,
 				MarshallingContext context) {
 			CorpusQueryDocumentFinder finder = (CorpusQueryDocumentFinder) source;
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "queries", Map.class);
 			for (Map.Entry<String, String[]> count : finder.counts.entrySet()) {
-				writer.startNode(count.getKey());
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "queries", String.class); // not written in JSON
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "query", String.class);
+				writer.setValue(count.getKey());
+				writer.endNode();
 				writer.startNode("count");
 				writer.setValue(String.valueOf(count.getValue().length));
 				writer.endNode();
 				writer.endNode();
 			}
+			writer.endNode();
 		}
 
 		@Override

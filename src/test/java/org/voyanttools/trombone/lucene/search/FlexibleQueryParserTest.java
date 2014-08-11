@@ -4,12 +4,17 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Random;
 
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.MockAnalyzer;
+import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TotalHitCountCollector;
@@ -21,6 +26,14 @@ import org.voyanttools.trombone.storage.memory.MemoryStorage;
 
 public class FlexibleQueryParserTest {
 
+	@Test
+	public void testSimpleQueryParser() {
+//		Analyzer analyzer = new SimpleAnalyzer(LuceneManager.VERSION);
+//	    SimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(luceneManag, "lexical");
+//	    Query q = parser.parse("a:test test2");
+//	    System.err.println(q);
+	}
+	
 	@Test
 	public void test() throws IOException {
 
