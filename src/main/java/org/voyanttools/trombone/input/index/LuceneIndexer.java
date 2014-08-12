@@ -85,8 +85,6 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  */
 public class LuceneIndexer implements Indexer {
 	
-	public static final int VERSION = 0; // changes to this force re-indexing of stored documents
-	
 	private Storage storage;
 	private FlexibleParameters parameters;
 
@@ -95,7 +93,13 @@ public class LuceneIndexer implements Indexer {
 		this.parameters = parameters;
 	}
 
-	public void index(List<StoredDocumentSource> storedDocumentSources) throws IOException {
+	public String index(List<StoredDocumentSource> storedDocumentSources) throws IOException {
+		
+		List<String> ids = new ArrayList<String>();
+		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+			ids.add(storedDocumentSource.getId());
+		}
+		String corpusId = storage.storeStrings(ids);
 		
 		storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
 		
@@ -103,7 +107,7 @@ public class LuceneIndexer implements Indexer {
 		ExecutorService executor = Executors.newFixedThreadPool(processors);
 		boolean verbose = parameters.getParameterBooleanValue("verbose");
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			Runnable worker = new Indexer(storage, storedDocumentSource, verbose);
+			Runnable worker = new Indexer(storage, storedDocumentSource, corpusId, verbose);
 			executor.execute(worker);
 		}
 		executor.shutdown();
@@ -111,6 +115,9 @@ public class LuceneIndexer implements Indexer {
 //			executor.
 		}
 		storage.getLuceneManager().commit();
+		
+		return corpusId;
+		
 	}
 	
 	private class Indexer implements Runnable {
@@ -118,14 +125,16 @@ public class LuceneIndexer implements Indexer {
 		private Storage storage;
 		private StoredDocumentSource storedDocumentSource;
 		private LuceneManager luceneManager;
+		private String corpusId;
 		private String id;
 		private String string = null;
 		private boolean verbose;
 		public Indexer(Storage storage,
-				StoredDocumentSource storedDocumentSource, boolean verbose) throws IOException {
+				StoredDocumentSource storedDocumentSource, String corpusId, boolean verbose) throws IOException {
 			this.storage = storage;
 			this.storedDocumentSource = storedDocumentSource;
 			this.luceneManager = storage.getLuceneManager();
+			this.corpusId = corpusId;
 			this.id = storedDocumentSource.getId();
 			this.verbose = verbose;
 		}
@@ -155,7 +164,12 @@ public class LuceneIndexer implements Indexer {
 			
 			try {
 				int index = luceneManager.getLuceneDocumentId(id);
-				if (index>-1) return; // new ProtoIndexedDocument(index, storedDocumentSource); // got it, let's bail
+				if (index>-1) {
+					Document document = luceneManager.getLuceneDocument(corpusId, id);
+					if (index>-1) { return; } // we already have this
+					document.add(new StringField("corpus", corpusId, Field.Store.YES));
+					luceneManager.updateDocument(new Term("id", id), document);
+				};
 					
 
 				FieldType ft = new FieldType(TextField.TYPE_STORED);
@@ -169,7 +183,7 @@ public class LuceneIndexer implements Indexer {
 				// create lexical document
 				document = new Document();
 				document.add(new StringField("id", id, Field.Store.YES));
-				document.add(new StringField("version", String.valueOf(VERSION), Field.Store.YES));
+				document.add(new StringField("corpus", corpusId, Field.Store.YES));
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				

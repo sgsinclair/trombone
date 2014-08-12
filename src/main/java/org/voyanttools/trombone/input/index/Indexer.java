@@ -32,5 +32,5 @@ import org.voyanttools.trombone.model.StoredDocumentSource;
  *
  */
 public interface Indexer {
-	public void index(List<StoredDocumentSource> storedDocumentSources) throws IOException;
+	public String index(List<StoredDocumentSource> storedDocumentSources) throws IOException;
 }

@@ -21,24 +21,9 @@
  ******************************************************************************/
 package org.voyanttools.trombone.tool.build;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringWriter;
-import java.io.Writer;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.lucene.index.IndexReader;
-import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -46,13 +31,10 @@ import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.ibm.icu.util.Calendar;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -75,18 +57,41 @@ class CorpusBuilder extends AbstractTool {
 	 */
 	@Override
 	public void run() throws IOException {
+		// we shouldn't get here without a storedId parameter
 		String sid = parameters.getParameterValue("storedId");
-		List<String> ids = storage.retrieveStrings(sid);
-		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		List<StoredDocumentSource> indexableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
-		for (String id : ids) {
-			DocumentMetadata metadata = storedDocumentStorage.getStoredDocumentSourceMetadata(id);
-			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
-			indexableStoredDocumentSources.add(storedDocumentSource);
-		}
-		run(indexableStoredDocumentSources);
+		run(sid);
 	}
 	
+	void run(String corpusId, List<StoredDocumentSource> storedDocumentSources) throws IOException {
+		// we should only get here during the corpus creator sequeence – 
+		// the storedDocumentSource isn't used as a parameter, but it helps enforce the sequence
+		run(corpusId);
+	}
+	
+	private void run(String corpusId) throws IOException {
+		// store and compute the corpus if it hasn't been stored
+		if (storage.getCorpusStorage().corpusExists(corpusId)==false) {
+			List<String> documentIds = storage.retrieveStrings(corpusId);
+			CorpusMetadata metadata = new CorpusMetadata(corpusId);
+			metadata.setDocumentIds(documentIds);
+			metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
+			Corpus corpus = new Corpus(storage, metadata);
+			DocumentMetadata documentMetadata;
+			int totalWordTokens = 0;
+			int totalWordTypes = 0;
+			for (IndexedDocument doc : corpus) {
+				documentMetadata = doc.getMetadata();
+				totalWordTokens += documentMetadata.getTokensCount(TokenType.lexical);
+				totalWordTypes +=  documentMetadata.getTypesCount(TokenType.lexical);
+			}
+			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
+			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
+			storage.getCorpusStorage().storeCorpus(corpus);
+		}
+		this.storedId = corpusId;
+	}
+
+	/*
 	void run(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		
 		List<String> sortedIds = new ArrayList<String>();
@@ -157,6 +162,7 @@ class CorpusBuilder extends AbstractTool {
 		}
 
 	}
+	*/
 
 	String getStoredId() {
 		return storedId;

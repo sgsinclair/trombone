@@ -111,7 +111,7 @@ public class RealCorpusCreator extends AbstractTool {
 		if (nextCorpusCreatorStep.equals("corpus")) {
 			CorpusBuilder builder = new CorpusBuilder(storage, parameters);
 			if (storedDocumentSources==null) {builder.run();}
-			else {builder.run(storedDocumentSources);}
+			else {builder.run(storedId, storedDocumentSources);}
 //			storedDocumentSources = builder.getStoredDocumentSources();
 			storedId = builder.getStoredId();
 			nextCorpusCreatorStep = "done";

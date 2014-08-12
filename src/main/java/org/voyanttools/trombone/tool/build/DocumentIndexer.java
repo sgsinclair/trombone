@@ -70,14 +70,9 @@ class DocumentIndexer extends AbstractTool {
 	}
 	
 	void run(List<StoredDocumentSource> indexableStoredDocumentSources) throws IOException {
-		Indexer indexer = new LuceneIndexer(storage, parameters);
-		indexer.index(indexableStoredDocumentSources);
 		this.indexableStoredDocumentSources = indexableStoredDocumentSources;
-		List<String> extractedIds = new ArrayList<String>();
-		for (StoredDocumentSource storedDocumentSource : indexableStoredDocumentSources) {
-			extractedIds.add(storedDocumentSource.getId());
-		}		
-		storedId = storage.storeStrings(extractedIds);
+		Indexer indexer = new LuceneIndexer(storage, parameters);
+		storedId = indexer.index(indexableStoredDocumentSources);
 	}
 
 	List<StoredDocumentSource> getStoredDocumentSources() {
