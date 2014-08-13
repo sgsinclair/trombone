@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.codec.digest.DigestUtils;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.model.StoredDocumentSource;
@@ -37,7 +36,6 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author Stéfan Sinclair

@@ -25,16 +25,11 @@ import java.io.IOException;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.FloatField;
-import org.apache.lucene.document.StringField;
-import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.index.IndexableField;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
@@ -46,7 +41,6 @@ import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Version;
-import org.voyanttools.trombone.input.index.LuceneIndexer;
 import org.voyanttools.trombone.lucene.analysis.KitchenSinkPerFieldAnalyzerWrapper;
 
 /**
@@ -76,12 +70,16 @@ public class LuceneManager {
 		this.directory = directory;
 	}
 	
-	public Query getCorpusDocumentQuery(String corpusId, String documentId) throws IOException {
+	public static Query getCorpusDocumentQuery(String corpusId, String documentId) {
 		BooleanQuery query = new BooleanQuery();
 		if (corpusId!=null) {query.add(new TermQuery(new Term("corpus", corpusId)), Occur.MUST);}
 		query.add(new TermQuery(new Term("id", documentId)), Occur.MUST);
 		query.add(new TermQuery(new Term("version", String.valueOf(VERSION))), Occur.MUST);
 		return query;
+	}
+	
+	public static Query getDocumentQuery(String documentId) {
+		return getCorpusDocumentQuery(null, documentId);
 	}
 	
 	private int getLuceneDocumentId(Query query) throws IOException {
@@ -95,6 +93,11 @@ public class LuceneManager {
 		return id > -1 ? getIndexSearcher().doc(id) : null;
 	}
 
+	public Document getLuceneDocument(String documentId) throws IOException {
+		int id = getLuceneDocumentId(documentId);
+		return id > -1 ? getIndexSearcher().doc(id) : null;
+	}
+	
 	public int getLuceneDocumentId(String corpusId, String documentId) throws IOException {
 		Query query = getCorpusDocumentQuery(corpusId, documentId);
 		return getLuceneDocumentId(query);
@@ -106,20 +109,26 @@ public class LuceneManager {
 	}
 	
 	public IndexSearcher getIndexSearcher() throws CorruptIndexException, IOException {
-		if (indexSearcher == null) {
+		return getIndexSearcher(false);
+	}
+	
+	private IndexSearcher getIndexSearcher(boolean replace) throws CorruptIndexException, IOException {
+		if (indexSearcher == null || replace) {
 			indexSearcher = new IndexSearcher(getDirectoryReader());
 		}
 		return indexSearcher;
 	}
 	
-	private DirectoryReader getDirectoryReader() throws CorruptIndexException, IOException {
-		if (directoryReader == null) {
+	public DirectoryReader getDirectoryReader() throws CorruptIndexException, IOException {
+		return getDirectoryReader(false);
+	}
+	
+	private DirectoryReader getDirectoryReader(boolean replace) throws CorruptIndexException, IOException {
+		if (directoryReader == null || replace) {
 			directoryReader = DirectoryReader.open(directory);
 		}
 		return directoryReader;
-		
 	}
-	
 
 	public void commit() throws CorruptIndexException, LockObtainFailedException, IOException {
 		getIndexWriter().commit();
@@ -127,28 +136,26 @@ public class LuceneManager {
 	}
 	
 	public void addDocument(Document document) throws CorruptIndexException, IOException {
-		document.add(new StringField("version", VERSION.name(), Field.Store.YES));
 		IndexWriter writer = getIndexWriter();
 		writer.addDocument(document);
-		writer.commit();
-		directoryReader = DirectoryReader.open(writer, false);
-		indexSearcher = new IndexSearcher(directoryReader);
+		writer.close();
+		// make sure to reload reader and searcher
+		directoryReader = getDirectoryReader(true);
+		indexSearcher = getIndexSearcher(true);
 	}
+//
+//	public void updateDocument(Term term, Document document) throws CorruptIndexException, IOException {
+//		document.add(new FloatField("version", luceneDocumentVersion, Field.Store.YES));
+//		IndexWriter writer = getIndexWriter();
+//		writer.addDocument(document);
+//		writer.commit();
+//		directoryReader = DirectoryReader.open(writer, false);
+//		indexSearcher = new IndexSearcher(directoryReader);
+//	}
 
-	public void updateDocument(Term term, Document document) throws CorruptIndexException, IOException {
-		document.add(new FloatField("version", luceneDocumentVersion, Field.Store.YES));
-		IndexWriter writer = getIndexWriter();
-		writer.addDocument(document);
-		writer.commit();
-		directoryReader = DirectoryReader.open(writer, false);
-		indexSearcher = new IndexSearcher(directoryReader);
-	}
-	
-	public IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {
-		if (indexWriter == null) {
-			indexWriter = new IndexWriter(directory , indexWriterConfig);
-		}
-		return indexWriter;
+	// TODO: make this block across threads so that only one writer can exist at a time
+	public synchronized IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {
+		return new IndexWriter(directory , indexWriterConfig);
 	}
 
 	public IndexReader getIndexReader() throws IOException {

@@ -8,6 +8,8 @@ import java.util.List;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexWriter;
 import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.CorpusTerm;
@@ -23,10 +25,12 @@ public class CorpusTermsTest {
 	public void test() throws IOException {
 		Storage storage = new MemoryStorage();
 		Document document;
-		LuceneManager luceneManager = storage.getLuceneManager();
+		DirectoryReader directoryReader = storage.getLuceneManager().getDirectoryReader();
+		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
 		document = new Document();
 		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
-		luceneManager.addDocument(document);
+		indexWriter.addDocument(document);
+		indexWriter.commit();
 		
 		FlexibleParameters parameters;
 		

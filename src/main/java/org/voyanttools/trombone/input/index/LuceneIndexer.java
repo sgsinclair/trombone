@@ -27,6 +27,7 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +37,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.RunnableFuture;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.lucene.analysis.Analyzer;
@@ -54,6 +56,7 @@ import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.FieldInfo.IndexOptions;
 import org.apache.lucene.index.IndexReader;
@@ -64,8 +67,10 @@ import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.Version;
@@ -101,37 +106,142 @@ public class LuceneIndexer implements Indexer {
 		}
 		String corpusId = storage.storeStrings(ids);
 		
-		storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
-		
-		int processors = Runtime.getRuntime().availableProcessors();
-		ExecutorService executor = Executors.newFixedThreadPool(processors);
+		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
+		IndexReader indexReader = DirectoryReader.open(indexWriter, true);
+		IndexSearcher indexSearcher = new IndexSearcher(indexReader);		
 		boolean verbose = parameters.getParameterBooleanValue("verbose");
+		int processors = Runtime.getRuntime().availableProcessors();
+		ExecutorService executor;
+		
+		// index
+		executor = Executors.newFixedThreadPool(processors);
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			Runnable worker = new Indexer(storage, storedDocumentSource, corpusId, verbose);
+			Runnable worker = new StoredDocumentSourceIndexer(storage, indexWriter, indexSearcher, storedDocumentSource, corpusId, verbose);
 			executor.execute(worker);
 		}
 		executor.shutdown();
-		while (!executor.isTerminated()) {
-//			executor.
+		try {
+			executor.awaitTermination(100, TimeUnit.SECONDS);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		storage.getLuceneManager().commit();
+		
+		// analyze – re-open a fresh reader
+		indexWriter.close(); // release ASAP;
+		indexReader = DirectoryReader.open(indexWriter.getDirectory());
+		indexWriter = null; // reset for other calls
+		indexSearcher = new IndexSearcher(indexReader);
+		executor = Executors.newFixedThreadPool(processors);
+		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+			Runnable worker = new IndexedDocumentAnalyzer(storage, indexReader, indexSearcher, storedDocumentSource, corpusId, verbose);
+			executor.execute(worker);
+		}
+		executor.shutdown();
+		try {
+			executor.awaitTermination(100, TimeUnit.SECONDS);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return corpusId;
 		
 	}
 	
-	private class Indexer implements Runnable {
+	private class IndexedDocumentAnalyzer implements Runnable {
+		
+		private Storage storage;
+		private StoredDocumentSource storedDocumentSource;
+		private IndexReader indexReader;
+		private IndexSearcher indexSearcher;
+		private String corpusId;
+		private String id;
+		private boolean verbose;
+		public IndexedDocumentAnalyzer(Storage storage, IndexReader indexReader, IndexSearcher indexSearcher,
+				StoredDocumentSource storedDocumentSource, String corpusId, boolean verbose) throws IOException {
+			this.storage = storage;
+			this.indexReader = indexReader;
+			this.indexSearcher = indexSearcher;
+			this.storedDocumentSource = storedDocumentSource;
+			this.corpusId = corpusId;
+			this.id = storedDocumentSource.getId();
+			this.verbose = verbose;
+		}
+
+		@Override
+		public void run() {
+
+			
+			if (verbose) {
+				System.out.println("analyzing indexed document "+storedDocumentSource.getMetadata());
+			}
+			
+			Query query = LuceneManager.getCorpusDocumentQuery(corpusId,  id);
+			TopDocs topDocs;
+			try {
+				topDocs = indexSearcher.search(query, 1);
+				int docId = topDocs.scoreDocs[0].doc;
+				Terms terms = indexReader.getTermVector(docId, "lexical");
+				int totalTokens = 0;
+				int totalTypes =  0;
+				int lastOffset = 0;
+				int lastPosition = 0;
+				if (terms!=null) {
+					TermsEnum termsEnum = terms.iterator(null);
+					DocsAndPositionsEnum docsAndPositionsEnum = null;
+					while (true) {
+						BytesRef term = termsEnum.next();
+						if (term!=null) {
+							totalTypes++;
+							docsAndPositionsEnum = termsEnum.docsAndPositions(MultiFields.getLiveDocs(indexReader), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
+							while (true) {
+								int doc = docsAndPositionsEnum.nextDoc();
+								if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
+									int freq = docsAndPositionsEnum.freq();
+									totalTokens+=freq;
+									for (int i=0; i<freq; i++) {
+										int pos = docsAndPositionsEnum.nextPosition();
+										if (pos>lastPosition) {lastPosition=pos;}
+										int offset = docsAndPositionsEnum.startOffset();
+										if (offset>lastOffset) {lastOffset=offset;}
+									}
+								}
+								else {break;}
+							}
+						}
+						else {break;}
+					}
+				}
+				DocumentMetadata metadata = storedDocumentSource.getMetadata();
+				metadata.setTypesCount(TokenType.lexical, totalTypes);
+				metadata.setTokensCount(TokenType.lexical, totalTokens);
+				metadata.setLastTokenPositionIndex(TokenType.lexical, lastPosition);
+				metadata.setLastTokenOffsetIndex(TokenType.lexical, lastOffset);
+				storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(id, metadata);
+			} catch (IOException e) {
+				throw new RuntimeException("Unable to query document during index analysis.", e);
+			}
+		}
+		
+	}
+	
+	private class StoredDocumentSourceIndexer implements Runnable {
 
 		private Storage storage;
 		private StoredDocumentSource storedDocumentSource;
+		private IndexWriter indexWriter;
+		private IndexSearcher indexSearcher;
 		private LuceneManager luceneManager;
 		private String corpusId;
 		private String id;
 		private String string = null;
 		private boolean verbose;
-		public Indexer(Storage storage,
+		public StoredDocumentSourceIndexer(Storage storage, IndexWriter indexWriter, IndexSearcher indexSearcher,
 				StoredDocumentSource storedDocumentSource, String corpusId, boolean verbose) throws IOException {
 			this.storage = storage;
+			this.indexWriter = indexWriter;
+			this.indexSearcher = indexSearcher;
 			this.storedDocumentSource = storedDocumentSource;
 			this.luceneManager = storage.getLuceneManager();
 			this.corpusId = corpusId;
@@ -163,13 +273,19 @@ public class LuceneIndexer implements Indexer {
 			}
 			
 			try {
-				int index = luceneManager.getLuceneDocumentId(id);
-				if (index>-1) {
-					Document document = luceneManager.getLuceneDocument(corpusId, id);
-					if (index>-1) { return; } // we already have this
-					document.add(new StringField("corpus", corpusId, Field.Store.YES));
-					luceneManager.updateDocument(new Term("id", id), document);
-				};
+				
+				Query query = LuceneManager.getDocumentQuery(id);
+				TopDocs topDocs = indexSearcher.search(query, 1);
+				Document document;
+				if (topDocs.totalHits>0) {
+					document = indexSearcher.doc(topDocs.scoreDocs[0].doc);
+					// check to see if this corpus is already part of the document, and add it if not
+					if (!Arrays.asList(document.getValues("corpus")).contains(corpusId)) {
+						document.add(new StringField("corpus", corpusId, Field.Store.YES));
+						indexWriter.updateDocument(new Term("id", id), document);
+					}
+					return;
+				}
 					
 
 				FieldType ft = new FieldType(TextField.TYPE_STORED);
@@ -178,12 +294,13 @@ public class LuceneIndexer implements Indexer {
 				ft.setStoreTermVectorOffsets(true);
 				ft.setStoreTermVectorPositions(true);
 				
-				Document document = new Document();
+				document = new Document();
 
 				// create lexical document
 				document = new Document();
 				document.add(new StringField("id", id, Field.Store.YES));
 				document.add(new StringField("corpus", corpusId, Field.Store.YES));
+				document.add(new StringField("version", LuceneManager.VERSION.name(), Field.Store.YES));
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				
@@ -194,6 +311,8 @@ public class LuceneIndexer implements Indexer {
 						document.add(new TextField(key, value, Field.Store.YES));
 					}
 				}
+				
+				
 				// TODO: add lemmatization
 				/*
 				if (storedDocumentSource.getMetadata().getLanguageCode().equals("en")) {
@@ -210,49 +329,8 @@ public class LuceneIndexer implements Indexer {
 				}
 				*/
 				
-				luceneManager.addDocument(document);
+				indexWriter.addDocument(document);
 				
-				int docId = luceneManager.getLuceneDocumentId(id);
-				IndexReader reader = luceneManager.getIndexReader();
-				Terms terms = reader.getTermVector(docId, "lexical");
-				int totalTokens = 0;
-				int totalTypes =  0;
-				int lastOffset = 0;
-				int lastPosition = 0;
-				if (terms!=null) {
-					TermsEnum termsEnum = terms.iterator(null);
-					DocsAndPositionsEnum docsAndPositionsEnum = null;
-					while (true) {
-						BytesRef term = termsEnum.next();
-						if (term!=null) {
-							totalTypes++;
-							docsAndPositionsEnum = termsEnum.docsAndPositions(MultiFields.getLiveDocs(reader), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
-							while (true) {
-								int doc = docsAndPositionsEnum.nextDoc();
-								if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
-									int freq = docsAndPositionsEnum.freq();
-									totalTokens+=freq;
-									for (int i=0; i<freq; i++) {
-										int pos = docsAndPositionsEnum.nextPosition();
-										if (pos>lastPosition) {lastPosition=pos;}
-										int offset = docsAndPositionsEnum.startOffset();
-										if (offset>lastOffset) {lastOffset=offset;}
-									}
-								}
-								else {break;}
-							}
-						}
-						else {break;}
-					}
-				}
-				DocumentMetadata metadata = storedDocumentSource.getMetadata();
-				metadata.setTypesCount(TokenType.lexical, totalTypes);
-				metadata.setTokensCount(TokenType.lexical, totalTokens);
-				metadata.setLastTokenPositionIndex(TokenType.lexical, lastPosition);
-				metadata.setLastTokenOffsetIndex(TokenType.lexical, lastOffset);
-				storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(id, metadata);
-				
-
 			}
 			catch (IOException e) {
 				throw new RuntimeException("Unable to index stored document: "+storedDocumentSource, e);
