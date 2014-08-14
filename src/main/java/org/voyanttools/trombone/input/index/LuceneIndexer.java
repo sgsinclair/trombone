@@ -149,6 +149,12 @@ public class LuceneIndexer implements Indexer {
 			e.printStackTrace();
 		}
 		
+		storage.getLuceneManager().getDirectoryReader(true); // force reload
+		
+		
+		
+		
+		
 		return corpusId;
 		
 	}
