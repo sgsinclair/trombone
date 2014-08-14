@@ -86,12 +86,12 @@
 		<dependency>
 			<groupId>it.svario.xpathapi</groupId>
 			<artifactId>xpathapi-jaxp</artifactId>
-			<version>0.3</version>
+			<version>0.4</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>9.4</version>
+			<version>9.5.1-6</version>
 		</dependency>
 
 		<dependency>

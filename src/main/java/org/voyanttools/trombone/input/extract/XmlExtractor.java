@@ -21,7 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.input.extract;
 
-import it.svario.xpathapi.jaxp.XPathAPI;
+//import it.svario.xpathapi.jaxp.XPathAPI;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -46,9 +46,14 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathException;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 
 import net.sf.saxon.lib.NamespaceConstant;
+import net.sf.saxon.xpath.XPathFactoryImpl;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
@@ -66,6 +71,7 @@ import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.cybozu.labs.langdetect.DetectorFactory;
@@ -86,6 +92,8 @@ public class XmlExtractor implements Extractor, Serializable {
 	 * the Transformer used to produce XML output from nodes
 	 */
 	private Transformer transformer;
+	
+	private XPathFactory xpathFactory;
 
 	public XmlExtractor(
 			StoredDocumentSourceStorage storedDocumentSourceStorage,
@@ -100,6 +108,9 @@ public class XmlExtractor implements Extractor, Serializable {
 		}
 		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+		
+		xpathFactory = new XPathFactoryImpl();
+		
 		// for some reason XPathAPI doesn't work properly with the default
 		// XPathFactory, so we'll use Saxon
 		System.setProperty("javax.xml.xpath.XPathFactory:"
@@ -257,26 +268,26 @@ public class XmlExtractor implements Extractor, Serializable {
 				return storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSourceId);
 			}
 			
-			List<Node> docs;
+			NodeList nodeList;
+			XPath xpath = xpathFactory.newXPath();
 			try {
-				docs = XPathAPI.selectListOfNodes(doc.getDocumentElement(), xmlContentXpath, doc.getDocumentElement());
-			} catch (XPathException e) {
+				nodeList = (NodeList) xpath.evaluate(xmlContentXpath, doc.getDocumentElement(), XPathConstants.NODESET);
+			} catch (XPathExpressionException e) {
 				throw new IllegalArgumentException(
 						"A problem was encountered proccesing this XPath query: " + xmlContentXpath, e);
 			}
 			
 			Node newParentNode;
-			
 			// just use the single node as root
-			if (docs.size()==1) {
-				newParentNode = docs.get(0);
+			if (nodeList.getLength()==1) {
+				newParentNode = nodeList.item(0);
 			}
 			
 			// encapsulate child nodes in document root
 			else {
 				newParentNode = doc.getDocumentElement().cloneNode(false);
-				for (Node node : docs) {
-					newParentNode.appendChild(node);
+				for (int i=0, len=nodeList.getLength(); i<len; i++) {
+					newParentNode.appendChild(nodeList.item(i));
 				}
 			}
 			
@@ -320,17 +331,21 @@ public class XmlExtractor implements Extractor, Serializable {
 		}
 
 		private String getNodesAsStringFromParametersValue(Document doc, String parameterKey) {
-			String xpath = parameters.getParameterValue(parameterKey,"");
-			if (xpath.isEmpty()==false) {
-				List<String> titles;
+			String xpathString = parameters.getParameterValue(parameterKey,"");
+			if (xpathString.isEmpty()==false) {
+				Set<String> titles = new HashSet<String>();
+				XPath xpath = xpathFactory.newXPath();
+				NodeList nodeList;
 				try {
-					titles = XPathAPI.selectNodeListAsStrings(doc.getDocumentElement(), xpath);
+					nodeList = (NodeList) xpath.evaluate(xpathString, doc.getDocumentElement(), XPathConstants.NODESET);
 				}
-				catch (XPathException e) {
+				catch (XPathExpressionException e) {
 					throw new IllegalArgumentException(
-							"A problem was encountered proccesing this XPath query: " + xpath, e);
+							"A problem was encountered proccesing this XPath query: " + xpathString, e);
 				}
-				Set set = new HashSet(titles); // eliminate duplicates
+				for (int i=0, len=nodeList.getLength(); i<len; i++) {
+					titles.add(nodeList.item(i).getTextContent());
+				}
 				return StringUtils.join(titles,", ").trim();
 			}
 			return "";
