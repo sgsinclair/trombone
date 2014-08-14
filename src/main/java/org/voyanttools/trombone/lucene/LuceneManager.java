@@ -163,6 +163,10 @@ public class LuceneManager {
 	public Analyzer getAnalyzer() {
 		return analyzer;
 	}
+	
+	public boolean directoryExists() throws IOException {
+		return DirectoryReader.indexExists(directory);
+	}
 
 
 }

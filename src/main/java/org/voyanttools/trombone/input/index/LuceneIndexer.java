@@ -23,67 +23,40 @@ package org.voyanttools.trombone.input.index;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
-import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.RunnableFuture;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.charfilter.HTMLStripCharFilter;
-import org.apache.lucene.analysis.core.KeywordAnalyzer;
-import org.apache.lucene.analysis.core.LowerCaseFilter;
-import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
-import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
-import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.FieldInfo.IndexOptions;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.MultiFields;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.store.Directory;
-import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Bits;
-import org.apache.lucene.util.Bits.MatchAllBits;
 import org.apache.lucene.util.BytesRef;
-import org.apache.lucene.util.Version;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.lucene.analysis.StemmableLanguage;
 import org.voyanttools.trombone.model.DocumentMetadata;
-import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
@@ -108,52 +81,78 @@ public class LuceneIndexer implements Indexer {
 		}
 		String corpusId = storage.storeStrings(ids);
 		
-		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter(); // make sure this has been initialized
-		IndexReader indexReader = DirectoryReader.open(indexWriter, true);
-		IndexSearcher indexSearcher = new IndexSearcher(indexReader);		
-		boolean verbose = parameters.getParameterBooleanValue("verbose");
-		int processors = Runtime.getRuntime().availableProcessors();
-		ExecutorService executor;
-		
-		// index
-		executor = Executors.newFixedThreadPool(processors);
+		// determine if we need to modify the Lucene index
+		boolean directoryExists = storage.getLuceneManager().directoryExists();
+		IndexSearcher indexSearcher = directoryExists ? storage.getLuceneManager().getIndexSearcher() : null;
+		TopDocs topDocs;
+		Collection<StoredDocumentSource> storedDocumentSourceForLucene = new ArrayList<StoredDocumentSource>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			Runnable worker = new StoredDocumentSourceIndexer(storage, indexWriter, indexSearcher, storedDocumentSource, corpusId, verbose);
-			executor.execute(worker);
-		}
-		executor.shutdown();
-		try {
-			executor.awaitTermination(100, TimeUnit.SECONDS);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		// analyze – re-open a fresh reader
-		indexWriter.close(); // release ASAP;
-		indexReader = DirectoryReader.open(indexWriter.getDirectory());
-		indexWriter = null; // reset for other calls
-		indexSearcher = new IndexSearcher(indexReader);
-		executor = Executors.newFixedThreadPool(processors);
-		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			if (storedDocumentSource.getMetadata().getLastTokenPositionIndex(TokenType.lexical)==0) { // don't re-analyze
-				Runnable worker = new IndexedDocumentAnalyzer(storage, indexReader, indexSearcher, storedDocumentSource, corpusId, verbose);
-				executor.execute(worker);
+			if (!directoryExists) {
+				storedDocumentSourceForLucene.add(storedDocumentSource);
+			}
+			else {
+				// look for corpus and document (if corpus isn't there, we still need to update doc)
+				topDocs = indexSearcher.search(LuceneManager.getCorpusDocumentQuery(corpusId, storedDocumentSource.getId()), 1);
+				if (topDocs.totalHits==0) { // not found
+					storedDocumentSourceForLucene.add(storedDocumentSource);
+				}
 			}
 		}
-		executor.shutdown();
-		try {
-			executor.awaitTermination(100, TimeUnit.SECONDS);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		if (storedDocumentSourceForLucene.isEmpty()==false) {
+			
+			// index documents (or at least add corpus to document if not already there), we need to get a new writer
+			IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
+			IndexReader indexReader = DirectoryReader.open(indexWriter, true);
+			indexSearcher = new IndexSearcher(indexReader);		
+			boolean verbose = parameters.getParameterBooleanValue("verbose");
+			int processors = Runtime.getRuntime().availableProcessors();
+			ExecutorService executor;
+			
+			// index
+			executor = Executors.newFixedThreadPool(processors);
+			for (StoredDocumentSource storedDocumentSource : storedDocumentSourceForLucene) {
+				Runnable worker = new StoredDocumentSourceIndexer(storage, indexWriter, indexSearcher, storedDocumentSource, corpusId, verbose);
+				executor.execute(worker);
+			}
+			executor.shutdown();
+			try {
+				executor.awaitTermination(10, TimeUnit.MINUTES); // max 10 minutes run time
+			} catch (InterruptedException e) {
+				throw new RuntimeException("Lucene indexing has run out of time", e);
+			}
+			finally {
+				indexWriter.close();
+				storage.getLuceneManager().getDirectoryReader(true); // force reload			
+			}
+			
+			// now determine which documents need to be analyzed
+			Collection<StoredDocumentSource> storedDocumentSourceForAnalysis = new ArrayList<StoredDocumentSource>();
+			for (StoredDocumentSource storedDocumentSource : storedDocumentSourceForLucene) {
+				if (storedDocumentSource.getMetadata().getLastTokenPositionIndex(TokenType.lexical)==0) { // don't re-analyze
+					storedDocumentSourceForAnalysis.add(storedDocumentSource);
+				}
+			}
+			
+			if (storedDocumentSourceForAnalysis.isEmpty()==false) {
+				indexSearcher = storage.getLuceneManager().getIndexSearcher();
+				executor = Executors.newFixedThreadPool(processors);
+				for (StoredDocumentSource storedDocumentSource : storedDocumentSourceForAnalysis) {
+					if (storedDocumentSource.getMetadata().getLastTokenPositionIndex(TokenType.lexical)==0) { // don't re-analyze
+						Runnable worker = new IndexedDocumentAnalyzer(storage, indexSearcher, storedDocumentSource, corpusId, verbose);
+						executor.execute(worker);
+					}
+				}
+				executor.shutdown();
+				try {
+					executor.awaitTermination(100, TimeUnit.SECONDS);
+				} catch (InterruptedException e) {
+					throw new RuntimeException("Lucene document analysis run out of time", e);
+				}
+			}
+			
+			
 		}
-		
-		storage.getLuceneManager().getDirectoryReader(true); // force reload
-		
-		
-		
-		
 		
 		return corpusId;
 		
@@ -168,10 +167,10 @@ public class LuceneIndexer implements Indexer {
 		private String corpusId;
 		private String id;
 		private boolean verbose;
-		public IndexedDocumentAnalyzer(Storage storage, IndexReader indexReader, IndexSearcher indexSearcher,
+		public IndexedDocumentAnalyzer(Storage storage, IndexSearcher indexSearcher,
 				StoredDocumentSource storedDocumentSource, String corpusId, boolean verbose) throws IOException {
 			this.storage = storage;
-			this.indexReader = indexReader;
+			this.indexReader = indexSearcher.getIndexReader();
 			this.indexSearcher = indexSearcher;
 			this.storedDocumentSource = storedDocumentSource;
 			this.corpusId = corpusId;
