@@ -45,9 +45,6 @@ public class SimpleDocIdsCollector extends TotalHitCountCollector {
 			} catch (IOException e) {
 				throw new RuntimeException("Unable to read Lucene document.");
 			}
-			for (IndexableField f : document.getFields()) {
-				System.err.println(f.name()+": "+f.stringValue());
-			}
 			String id = document.get("id");
 			docIds.add(id);
 		}

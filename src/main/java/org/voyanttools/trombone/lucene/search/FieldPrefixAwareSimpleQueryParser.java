@@ -10,7 +10,6 @@ import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
-import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.TokenType;
 
 /**
@@ -19,17 +18,25 @@ import org.voyanttools.trombone.model.TokenType;
  */
 public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	
-	private LuceneManager luceneManager;
-	
 	private static String PREFIX_SEPARATOR = ":";
 	
 	private TokenType tokenType;
 
-	public FieldPrefixAwareSimpleQueryParser(LuceneManager luceneManager, TokenType tokenType) {
-		super(luceneManager.getAnalyzer(), tokenType.name());
-		this.tokenType = tokenType;
-		this.luceneManager = luceneManager;
+	public FieldPrefixAwareSimpleQueryParser(Analyzer analyzer) {
+		this(analyzer, TokenType.lexical);
 	}
+	
+	private FieldPrefixAwareSimpleQueryParser(Analyzer analyzer, TokenType tokenType) {
+		super(analyzer, tokenType.name());
+		this.tokenType = tokenType;
+	}
+	
+	@Override
+  public Query parse(String queryText) {
+		// hack to support prefixes in phrases – put the prefix within the quotes
+		String modifiedQueryText = queryText.replaceAll("\\b(\\w+):\"","\"$1:");
+		return super.parse(modifiedQueryText);
+  }
 	
 	@Override
 	protected Query newDefaultQuery(String text) {

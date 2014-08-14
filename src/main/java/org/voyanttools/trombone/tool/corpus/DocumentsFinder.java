@@ -68,7 +68,7 @@ public class DocumentsFinder extends AbstractTerms {
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		total = corpus.size();
 		IndexSearcher indexSearcher = storage.getLuceneManager().getIndexSearcher();
-		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(storage.getLuceneManager(), tokenType);
+		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(storage.getLuceneManager().getAnalyzer());
 		boolean createNewCorpus = parameters.getParameterBooleanValue("createNewCorpus");
 		for (String queryString : queries) {
 			Query query = queryParser.parse(queryString);
