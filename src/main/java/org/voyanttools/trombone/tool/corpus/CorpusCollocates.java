@@ -23,7 +23,6 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -47,8 +46,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runQueries(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper, java.lang.String[])
 	 */
 	@Override
-	protected void runQueries(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper, String[] queries)
+	protected void runQueries(Corpus corpus, String[] queries)
 			throws IOException {
 		
 		// TODO Auto-generated method stub
@@ -59,8 +57,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runAllTerms(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper)
 	 */
 	@Override
-	protected void runAllTerms(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runAllTerms(Corpus corpus) throws IOException {
 		// TODO Auto-generated method stub
 
 	}

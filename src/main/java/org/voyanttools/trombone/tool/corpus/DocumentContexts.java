@@ -112,19 +112,16 @@ public class DocumentContexts extends AbstractContextTerms {
 	}
 
 	@Override
-	protected void runQueries(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper, String[] queries)
-			throws IOException {
+	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		this.contexts = getKwics(reader, corpusMapper, corpus);
+		this.contexts = getKwics(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
 	}
 
 	@Override
-	protected void runAllTerms(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runAllTerms(Corpus corpus) throws IOException {
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		this.contexts = getKwics(reader, corpusMapper, corpus);
+		this.contexts = getKwics(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
 	}
 
 

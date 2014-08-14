@@ -69,22 +69,19 @@ public class DocumentCollocates extends AbstractContextTerms {
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runQueries(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper, java.lang.String[])
 	 */
 	@Override
-	protected void runQueries(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper, String[] queries)
-			throws IOException {
+	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		this.collocates = getCollocates(reader, corpusMapper, corpus);
+		this.collocates = getCollocates(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
 	}
 
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runAllTerms(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper)
 	 */
 	@Override
-	protected void runAllTerms(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runAllTerms(Corpus corpus) throws IOException {
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
-		this.collocates = getCollocates(reader, corpusMapper, corpus);
+		this.collocates = getCollocates(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
 	}
 
 	private List<DocumentCollocate> getCollocates(AtomicReader reader,

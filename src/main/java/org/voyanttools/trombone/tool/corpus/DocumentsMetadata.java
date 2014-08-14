@@ -7,12 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -24,7 +21,8 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 @XStreamAlias("documentsMetadata")
 public class DocumentsMetadata extends AbstractCorpusTool {
 	
-	List<IndexedDocument> documents = new ArrayList<IndexedDocument>();
+	private int total = 0;
+	private List<IndexedDocument> documents = new ArrayList<IndexedDocument>();
 
 	/**
 	 * @param storage
@@ -35,10 +33,16 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 	}
 
 	@Override
-	protected void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper)
-			throws IOException {
+	protected void run(Corpus corpus) throws IOException {
+		total = corpus.size();
+		int start = parameters.getParameterIntValue("start", 0);
+		int limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
+		int index = 0;
 		for (IndexedDocument doc : corpus) {
-			documents.add(doc);
+			if (index>=start && documents.size()<limit) {
+				documents.add(doc);
+			}
+			index++;
 		}
 	}
 

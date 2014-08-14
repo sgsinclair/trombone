@@ -66,26 +66,18 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
 	}
 
-	/* (non-Javadoc)
-	 * @see org.voyanttools.trombone.tool.RunnableTool#run()
-	 */
-	@Override
-	public void run() throws IOException {
-		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
-		StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
-		run(corpus, corpusMapper);
-	}
 
-	protected void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	@Override
+	protected void run(Corpus corpus) throws IOException {
 		if (parameters.containsKey("query")) {
 			String[] queries =  parameters.getParameterValues("query");
 			if (queries.length==1 && queries[0].isEmpty()) {
-				runAllTerms(corpus, corpusMapper);
+				runAllTerms(corpus);
 			}
-			runQueries(corpus, corpusMapper, queries);
+			runQueries(corpus, queries);
 		}
 		else {
-			runAllTerms(corpus, corpusMapper);
+			runAllTerms(corpus);
 		}
 	}
 	
@@ -93,7 +85,8 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 		return total;
 	}
 	
-	protected abstract void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException;
-	protected abstract void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException;
+	protected abstract void runQueries(Corpus corpus, String[] queries) throws IOException;
+//	protected abstract void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException;
+	protected abstract void runAllTerms(Corpus corpus) throws IOException;
 
 }

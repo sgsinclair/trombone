@@ -87,12 +87,13 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		corpusTermSort = CorpusTerm.Sort.rawFrequencyDesc;
 	}
 
-	protected void runAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runAllTerms(Corpus corpus) throws IOException {
 		
 		Keywords stopwords = getStopwords(corpus);
 		
 		int size = start+limit;
 		
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSet();
 		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
@@ -145,8 +146,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 
 	@Override
-	protected void runQueries(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException {
+	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
@@ -157,6 +157,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			SpanQuery spanQuery = spanQueryEntry.getValue();

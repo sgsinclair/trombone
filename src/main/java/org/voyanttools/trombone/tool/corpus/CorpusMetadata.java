@@ -5,7 +5,6 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -32,8 +31,7 @@ public class CorpusMetadata extends AbstractCorpusTool {
 	}
 
 	@Override
-	protected void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper)
-			throws IOException {
+	protected void run(Corpus corpus) throws IOException {
 		metadata = corpus.getCorpusMetadata();
 	}
 

@@ -72,8 +72,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 
 	@Override
-	protected void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper)
-			throws IOException {
+	protected void run(Corpus corpus) throws IOException {
 		IndexReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		List<TermInfo> termInfos = new ArrayList<TermInfo>();
@@ -82,6 +81,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 		String skipToDocId = parameters.getParameterValue("skipToDocId", "");
 		boolean isSkipping = true;
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		for (String id : ids) {
 			if (skipToDocId.isEmpty()==false) {
 				if (isSkipping && skipToDocId.equals(id)) {

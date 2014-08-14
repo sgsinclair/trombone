@@ -31,8 +31,9 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
-		StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
-		run(corpus, corpusMapper);
+		run(corpus);
+//		StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
+//		run(corpus, corpusMapper);
 	}
 	
 	protected List<String> getCorpusStoredDocumentIdsFromParameters(Corpus corpus) throws IOException {
@@ -63,7 +64,14 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 		return ids;
 		
 	}
-	protected abstract void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException;
+	
+	@Deprecated
+	protected StoredToLuceneDocumentsMapper getStoredToLuceneDocumentsMapper(Corpus corpus) throws IOException {
+		return new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
+	}
+	
+	protected abstract void run(Corpus corpus) throws IOException;
+//	protected abstract void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException;
 
 
 }

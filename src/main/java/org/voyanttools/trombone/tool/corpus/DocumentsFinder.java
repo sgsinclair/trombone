@@ -59,8 +59,7 @@ public class DocumentsFinder extends AbstractTerms {
 	}
 	
 	@Override
-	public void run() throws IOException {
-		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
+	protected void run(Corpus corpus) throws IOException {
 		corpusId = corpus.getId();
 		runQueries(corpus, parameters.getParameterValues("query"));
 	}
@@ -101,17 +100,10 @@ public class DocumentsFinder extends AbstractTerms {
 	}
 	
 	@Override
-	protected void runQueries(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper, String[] queries)
-			throws IOException {
-		runQueries(corpus, queries);
+	protected void runAllTerms(Corpus corpus) throws IOException {
+		throw new IllegalArgumentException("You need to provide one or more queries for this tool.");
 	}
-
-	@Override
-	protected void runAllTerms(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
-		throw new IllegalArgumentException("You need to provide at least one query parameter for this tool");
-	}
+	
 
 	public static class DocumentsFinderConverter implements Converter {
 
@@ -154,4 +146,6 @@ public class DocumentsFinder extends AbstractTerms {
 		}
 		
 	}
+
+
 }

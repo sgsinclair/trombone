@@ -65,18 +65,14 @@ public class DocumentNgrams extends AbstractTerms {
 	}
 
 	@Override
-	protected void runQueries(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper, String[] queries)
-			throws IOException {
-		// TODO Auto-generated method stub
-		
+	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 	}
 
 	@Override
-	protected void runAllTerms(Corpus corpus,
-			StoredToLuceneDocumentsMapper corpusMapper) throws IOException {
+	protected void runAllTerms(Corpus corpus) throws IOException {
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		DocIdSetIterator it = corpusMapper.getDocIdSetIterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
 			int luceneDoc = it.docID();
