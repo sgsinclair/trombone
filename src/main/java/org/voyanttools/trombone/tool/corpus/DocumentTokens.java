@@ -30,13 +30,19 @@ import org.voyanttools.trombone.util.Stripper;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
  *
  */
 @XStreamAlias("documentTokens")
-@XStreamConverter(DocumentTokensConverter.class)
+@XStreamConverter(DocumentTokens.DocumentTokensConverter.class)
 public class DocumentTokens extends AbstractCorpusTool {
 
 	private List<DocumentToken> documentTokens = new ArrayList<DocumentToken>();
@@ -133,6 +139,49 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 	public List<DocumentToken> getDocumentTokens() {
 		return documentTokens;
+	}
+
+	public static class DocumentTokensConverter implements Converter {
+
+		/* (non-Javadoc)
+		 * @see com.thoughtworks.xstream.converters.ConverterMatcher#canConvert(java.lang.Class)
+		 */
+		@Override
+		public boolean canConvert(Class type) {
+			return DocumentTokens.class.isAssignableFrom(type);
+		}
+
+		/* (non-Javadoc)
+		 * @see com.thoughtworks.xstream.converters.Converter#marshal(java.lang.Object, com.thoughtworks.xstream.io.HierarchicalStreamWriter, com.thoughtworks.xstream.converters.MarshallingContext)
+		 */
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer,
+				MarshallingContext context) {
+			
+			
+			DocumentTokens documentTokens = (DocumentTokens) source;
+			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", List.class);
+	        for (DocumentToken documentToken :  documentTokens.getDocumentTokens()) {
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "token", String.class);
+		        
+		        context.convertAnother(documentToken);
+		        
+		        writer.endNode();
+	        }
+	        writer.endNode();
+
+		}
+
+		/* (non-Javadoc)
+		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
+		 */
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader,
+				UnmarshallingContext context) {
+			return null;
+		}
+
 	}
 
 }
