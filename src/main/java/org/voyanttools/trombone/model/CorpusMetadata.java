@@ -21,14 +21,21 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 
-
 import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.converters.collections.MapConverter;
+import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 import edu.stanford.nlp.util.StringUtils;
 
@@ -95,5 +102,56 @@ public class CorpusMetadata implements PropertiesWrapper {
 	
 	public int getTypesCount(TokenType tokenType) {
 		return Integer.valueOf(properties.getProperty("typesCount-"+tokenType.name(), "0"));
+	}
+	
+	public static class CorpusMetadataConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return CorpusMetadata.class == type;
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer,
+				MarshallingContext context) {
+			final CorpusMetadata corpusMetadata = ((CorpusMetadata) source);
+			
+			
+//			writer.startNode("id");
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
+			writer.setValue(corpusMetadata.getId());
+			writer.endNode();
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documentsCount", Integer.class);
+			writer.setValue(String.valueOf(corpusMetadata.getDocumentIds().size()));
+			writer.endNode();
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "createdTime", Integer.class);
+			writer.setValue(String.valueOf(String.valueOf(corpusMetadata.getCreatedTime())));
+			writer.endNode();
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "createdDate", String.class);
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTimeInMillis(corpusMetadata.getCreatedTime());
+			writer.setValue(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(calendar.getTime()));
+			writer.endNode();
+
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lexicalTokensCount", Integer.class);
+			writer.setValue(String.valueOf(corpusMetadata.getTokensCount(TokenType.lexical)));
+			writer.endNode();
+
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lexicalTypesCount", Integer.class);
+			writer.setValue(String.valueOf(corpusMetadata.getTypesCount(TokenType.lexical)));
+			writer.endNode();
+
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader,
+				UnmarshallingContext context) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 	}
 }

@@ -20,7 +20,7 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 @XStreamAlias("corpus")
 public class CorpusMetadata extends AbstractCorpusTool {
 
-	@XStreamConverter(CorpusMetadataConverter.class)
+	@XStreamConverter(org.voyanttools.trombone.model.CorpusMetadata.CorpusMetadataConverter.class)
 	org.voyanttools.trombone.model.CorpusMetadata metadata = null;
 	
 	/**
