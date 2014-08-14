@@ -129,7 +129,9 @@ public class FileStorage implements Storage {
 	
 	@Override
 	public void storeString(String string, String id) throws IOException {
-		FileUtils.writeStringToFile(getFile(id), string, "UTF-8");		
+		if (!isStored(id)) {
+			FileUtils.writeStringToFile(getFile(id), string, "UTF-8");		
+		}
 	}
 
 
