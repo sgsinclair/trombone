@@ -121,7 +121,7 @@ public class LuceneManager {
 		return getDirectoryReader(false);
 	}
 	
-	private DirectoryReader getDirectoryReader(boolean replace) throws CorruptIndexException, IOException {
+	public DirectoryReader getDirectoryReader(boolean replace) throws CorruptIndexException, IOException {
 		if (directoryReader == null || replace) {
 			directoryReader = DirectoryReader.open(directory);
 		}
