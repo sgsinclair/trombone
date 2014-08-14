@@ -72,6 +72,8 @@ import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
+import org.apache.lucene.util.Bits;
+import org.apache.lucene.util.Bits.MatchAllBits;
 import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.Version;
 import org.voyanttools.trombone.lucene.LuceneManager;
@@ -134,8 +136,10 @@ public class LuceneIndexer implements Indexer {
 		indexSearcher = new IndexSearcher(indexReader);
 		executor = Executors.newFixedThreadPool(processors);
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			Runnable worker = new IndexedDocumentAnalyzer(storage, indexReader, indexSearcher, storedDocumentSource, corpusId, verbose);
-			executor.execute(worker);
+			if (storedDocumentSource.getMetadata().getLastTokenPositionIndex(TokenType.lexical)==0) { // don't re-analyze
+				Runnable worker = new IndexedDocumentAnalyzer(storage, indexReader, indexSearcher, storedDocumentSource, corpusId, verbose);
+				executor.execute(worker);
+			}
 		}
 		executor.shutdown();
 		try {
@@ -194,7 +198,7 @@ public class LuceneIndexer implements Indexer {
 						BytesRef term = termsEnum.next();
 						if (term!=null) {
 							totalTypes++;
-							docsAndPositionsEnum = termsEnum.docsAndPositions(MultiFields.getLiveDocs(indexReader), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
+							docsAndPositionsEnum = termsEnum.docsAndPositions(new Bits.MatchAllBits(indexReader.maxDoc()), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 							while (true) {
 								int doc = docsAndPositionsEnum.nextDoc();
 								if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
