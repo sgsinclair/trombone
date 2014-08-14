@@ -64,8 +64,6 @@ public class LuceneManager {
 	
 	private Analyzer analyzer = new KitchenSinkPerFieldAnalyzerWrapper();
 	
-	private IndexWriterConfig indexWriterConfig = new IndexWriterConfig(VERSION, analyzer);
-	
 	public LuceneManager(Directory directory) throws CorruptIndexException, IOException {
 		this.directory = directory;
 	}
@@ -155,7 +153,7 @@ public class LuceneManager {
 
 	// TODO: make this block across threads so that only one writer can exist at a time
 	public synchronized IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {
-		return new IndexWriter(directory , indexWriterConfig);
+		return new IndexWriter(directory , new IndexWriterConfig(VERSION, analyzer));
 	}
 
 	public IndexReader getIndexReader() throws IOException {

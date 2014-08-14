@@ -4,25 +4,27 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.Filter;
-import org.apache.lucene.search.FilteredQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
-import org.voyanttools.trombone.lucene.LuceneCorpusDocumentFilter;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.SimpleDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -42,6 +44,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(DocumentsFinder.DocumentsFinderConverter.class)
 public class DocumentsFinder extends AbstractTerms {
 	
+	String corpusId = null;
 	boolean includeDocIds;
 	Map<String, String[]> queryDocumentidsMap = new HashMap<String, String[]>();
 
@@ -58,6 +61,7 @@ public class DocumentsFinder extends AbstractTerms {
 	@Override
 	public void run() throws IOException {
 		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
+		corpusId = corpus.getId();
 		runQueries(corpus, parameters.getParameterValues("query"));
 	}
 
@@ -65,6 +69,7 @@ public class DocumentsFinder extends AbstractTerms {
 		total = corpus.size();
 		IndexSearcher indexSearcher = storage.getLuceneManager().getIndexSearcher();
 		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(storage.getLuceneManager(), tokenType);
+		boolean createNewCorpus = parameters.getParameterBooleanValue("createNewCorpus");
 		for (String queryString : queries) {
 			Query query = queryParser.parse(queryString);
 			BooleanQuery corpusQuery = new BooleanQuery();
@@ -72,17 +77,27 @@ public class DocumentsFinder extends AbstractTerms {
 			corpusQuery.add(new TermQuery(new Term("corpus", corpus.getId())), Occur.MUST);
 			SimpleDocIdsCollector collector = new SimpleDocIdsCollector();
 			indexSearcher.search(corpusQuery, collector);
-			String[] ids = new String[collector.getTotalHits()];
-			if (includeDocIds) {
-				StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
-				List<Integer> docIds = collector.getDocIds();
-				for(int i=0, len=ids.length; i<len; i++) {
-					ids[i] = corpusMapper.getDocumentIdFromLuceneDocumentIndex(docIds.get(i));
-				}
-			}
-			queryDocumentidsMap.put(query.toString(), ids);
+			queryDocumentidsMap.put(query.toString(), collector.getDocIds().toArray(new String[0]));
 		}
-		System.err.println(queryDocumentidsMap);
+		if (createNewCorpus) {
+			Set<String> ids = new HashSet<String>();
+			for(String[] strings : queryDocumentidsMap.values()) {
+				ids.addAll(Arrays.asList(strings));
+			}
+			if (ids.size()<corpus.size()) { // no need if we have all the documents
+				List<String> keepers = new ArrayList<String>();
+				for (String id : corpus.getDocumentIds()) {
+					if (ids.contains(id)) {
+						keepers.add(id);
+					}
+				}
+				corpusId = storage.storeStrings(keepers);
+				FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=index"});
+				RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
+				realCorpusCreator.run(); // make sure to create corpus
+				corpusId = realCorpusCreator.getStoredId();
+			}
+		}
 	}
 	
 	@Override
@@ -109,6 +124,9 @@ public class DocumentsFinder extends AbstractTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer,
 				MarshallingContext context) {
 			DocumentsFinder finder = (DocumentsFinder) source;
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "corpus", String.class);
+			writer.setValue(finder.corpusId);
+			writer.endNode();
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "queries", Map.class);
 			for (Map.Entry<String, String[]> count : finder.queryDocumentidsMap.entrySet()) {
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "queries", String.class); // not written in JSON

@@ -40,7 +40,7 @@ import com.ibm.icu.util.Calendar;
  * @author sgs
  *
  */
-class CorpusBuilder extends AbstractTool {
+public class CorpusBuilder extends AbstractTool {
 
 	private String storedId = null;
 
@@ -48,7 +48,7 @@ class CorpusBuilder extends AbstractTool {
 	 * @param storage
 	 * @param parameters
 	 */
-	CorpusBuilder(Storage storage, FlexibleParameters parameters) {
+	public CorpusBuilder(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
 
@@ -68,7 +68,7 @@ class CorpusBuilder extends AbstractTool {
 		run(corpusId);
 	}
 	
-	private void run(String corpusId) throws IOException {
+	void run(String corpusId) throws IOException {
 		// store and compute the corpus if it hasn't been stored
 		if (storage.getCorpusStorage().corpusExists(corpusId)==false) {
 			List<String> documentIds = storage.retrieveStrings(corpusId);
