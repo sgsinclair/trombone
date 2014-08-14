@@ -71,7 +71,7 @@ public class DocumentNgrams extends AbstractTerms {
 	@Override
 	protected void runAllTerms(Corpus corpus) throws IOException {
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		DocIdSetIterator it = corpusMapper.getDocIdSetIterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {

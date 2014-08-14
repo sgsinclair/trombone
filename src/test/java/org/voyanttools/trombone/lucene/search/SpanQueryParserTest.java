@@ -68,7 +68,7 @@ public class SpanQueryParserTest {
 		document.add(new TextField("lexical", "It was the best of times it was the worst of times.", Field.Store.YES));
 		luceneManager.addDocument(document);	
 		
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		
 		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
 		

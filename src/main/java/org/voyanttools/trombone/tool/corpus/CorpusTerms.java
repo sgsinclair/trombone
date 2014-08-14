@@ -96,7 +96,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSet();
 		
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		
 		// now we look for our term frequencies
 		Terms terms = atomicReader.terms(tokenType.name());
@@ -147,7 +147,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 
 	@Override
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();

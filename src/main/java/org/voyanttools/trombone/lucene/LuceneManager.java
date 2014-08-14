@@ -156,10 +156,6 @@ public class LuceneManager {
 		return new IndexWriter(directory , new IndexWriterConfig(VERSION, analyzer));
 	}
 
-	public IndexReader getIndexReader() throws IOException {
-		return SlowCompositeReaderWrapper.wrap(directoryReader);
-	}
-	
 	public Analyzer getAnalyzer() {
 		return analyzer;
 	}

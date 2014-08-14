@@ -73,7 +73,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 	@Override
 	protected void run(Corpus corpus) throws IOException {
-		IndexReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getIndexReader());
+		IndexReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		List<TermInfo> termInfos = new ArrayList<TermInfo>();
 		TermInfo termInfo;
