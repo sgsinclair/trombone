@@ -37,6 +37,7 @@ import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
@@ -104,6 +105,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 	
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(atomicReader), corpus);
 		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
@@ -113,7 +115,6 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
@@ -158,10 +159,10 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int size = start+limit;
 		
 		int[] totalTokensCounts = corpus.getTokensCounts(tokenType);
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
-		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(atomicReader), corpus);
+
+		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		
 		// now we look for our term frequencies
 		Terms terms = atomicReader.terms(tokenType.name());

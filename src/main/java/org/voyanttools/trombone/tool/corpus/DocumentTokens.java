@@ -11,11 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
@@ -73,7 +75,9 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 	@Override
 	protected void run(Corpus corpus) throws IOException {
-		IndexReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		List<TermInfo> termInfos = new ArrayList<TermInfo>();
 		TermInfo termInfo;
@@ -81,7 +85,6 @@ public class DocumentTokens extends AbstractCorpusTool {
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 		String skipToDocId = parameters.getParameterValue("skipToDocId", "");
 		boolean isSkipping = true;
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		for (String id : ids) {
 			if (skipToDocId.isEmpty()==false) {
 				if (isSkipping && skipToDocId.equals(id)) {

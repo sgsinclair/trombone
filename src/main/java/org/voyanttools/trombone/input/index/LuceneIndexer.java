@@ -103,7 +103,7 @@ public class LuceneIndexer implements Indexer {
 			
 			// index documents (or at least add corpus to document if not already there), we need to get a new writer
 			IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
-			IndexReader indexReader = DirectoryReader.open(indexWriter, true);
+			DirectoryReader indexReader = DirectoryReader.open(indexWriter, true);
 			indexSearcher = new IndexSearcher(indexReader);		
 			boolean verbose = parameters.getParameterBooleanValue("verbose");
 			int processors = Runtime.getRuntime().availableProcessors();
@@ -122,8 +122,9 @@ public class LuceneIndexer implements Indexer {
 				throw new RuntimeException("Lucene indexing has run out of time", e);
 			}
 			finally {
-				indexWriter.close();
-				storage.getLuceneManager().getDirectoryReader(true); // force reload			
+				indexWriter.commit();
+				indexReader = DirectoryReader.open(indexWriter, true);
+				storage.getLuceneManager().setDirectoryReader(indexReader); // make sure it's available afterwards				
 			}
 			
 			// now determine which documents need to be analyzed
@@ -135,7 +136,7 @@ public class LuceneIndexer implements Indexer {
 			}
 			
 			if (storedDocumentSourceForAnalysis.isEmpty()==false) {
-				indexSearcher = storage.getLuceneManager().getIndexSearcher();
+				indexSearcher = new IndexSearcher(indexReader);
 				executor = Executors.newFixedThreadPool(processors);
 				for (StoredDocumentSource storedDocumentSource : storedDocumentSourceForAnalysis) {
 					if (storedDocumentSource.getMetadata().getLastTokenPositionIndex(TokenType.lexical)==0) { // don't re-analyze
@@ -188,6 +189,7 @@ public class LuceneIndexer implements Indexer {
 			
 			Query query = LuceneManager.getCorpusDocumentQuery(corpusId,  id);
 			TopDocs topDocs;
+			
 			try {
 				topDocs = indexSearcher.search(query, 1);
 				int docId = topDocs.scoreDocs[0].doc;

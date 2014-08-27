@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
@@ -114,14 +115,17 @@ public class DocumentContexts extends AbstractContextTerms {
 	@Override
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
+
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		this.contexts = getKwics(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+		this.contexts = getKwics(reader, corpusMapper, corpus);
 	}
 
 	@Override
 	protected void runAllTerms(Corpus corpus) throws IOException {
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		this.contexts = getKwics(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+		this.contexts = getKwics(reader, corpusMapper, corpus);
 	}
 
 

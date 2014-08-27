@@ -25,6 +25,9 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
+import org.apache.lucene.index.AtomicReader;
+import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.search.IndexSearcher;
 import org.junit.Test;
 import org.voyanttools.trombone.Controller;
 import org.voyanttools.trombone.model.Corpus;
@@ -39,7 +42,7 @@ import org.voyanttools.trombone.util.TestHelper;
  */
 public class StoredToLuceneDocumentMapperTest {
 
-	// FIXME: test ordering and subsetting @Test
+	@Test
 	public void test() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();		
 		FlexibleParameters parameters;
@@ -59,8 +62,8 @@ public class StoredToLuceneDocumentMapperTest {
 		creator.run();
 		
 		Corpus corpus = storage.getCorpusStorage().getCorpus(corpusId);
-
-		StoredToLuceneDocumentsMapper mapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
+		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		StoredToLuceneDocumentsMapper corpusMapper = StoredToLuceneDocumentsMapper.getInstance(new IndexSearcher(atomicReader), corpus);
 		
 		storage.destroy();
 	}

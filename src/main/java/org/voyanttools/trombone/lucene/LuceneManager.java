@@ -42,6 +42,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Version;
 import org.voyanttools.trombone.lucene.analysis.KitchenSinkPerFieldAnalyzerWrapper;
+import org.voyanttools.trombone.model.Corpus;
 
 /**
  * @author sgs
@@ -76,6 +77,13 @@ public class LuceneManager {
 		return query;
 	}
 	
+	public static Query getCorpusQuery(Corpus corpus) {
+		BooleanQuery query = new BooleanQuery();
+		query.add(new TermQuery(new Term("corpus", corpus.getId())), Occur.MUST);
+		query.add(new TermQuery(new Term("version", String.valueOf(VERSION))), Occur.MUST);
+		return query;
+	}
+
 	public static Query getDocumentQuery(String documentId) {
 		return getCorpusDocumentQuery(null, documentId);
 	}
@@ -153,7 +161,7 @@ public class LuceneManager {
 
 	// TODO: make this block across threads so that only one writer can exist at a time
 	public synchronized IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {
-		return new IndexWriter(directory , new IndexWriterConfig(VERSION, analyzer));
+		return new IndexWriter(directory, new IndexWriterConfig(VERSION, analyzer));
 	}
 
 	public Analyzer getAnalyzer() {
@@ -164,5 +172,8 @@ public class LuceneManager {
 		return DirectoryReader.indexExists(directory);
 	}
 
+	public void setDirectoryReader(DirectoryReader indexReader) {
+		this.directoryReader = indexReader;
+	}
 
 }

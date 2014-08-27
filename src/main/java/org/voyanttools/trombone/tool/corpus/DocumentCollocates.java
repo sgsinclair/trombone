@@ -37,6 +37,7 @@ import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
@@ -72,7 +73,8 @@ public class DocumentCollocates extends AbstractContextTerms {
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		this.collocates = getCollocates(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+		this.collocates = getCollocates(reader, corpusMapper, corpus);
 	}
 
 	/* (non-Javadoc)
@@ -81,7 +83,8 @@ public class DocumentCollocates extends AbstractContextTerms {
 	@Override
 	protected void runAllTerms(Corpus corpus) throws IOException {
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		this.collocates = getCollocates(reader, getStoredToLuceneDocumentsMapper(corpus), corpus);
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+		this.collocates = getCollocates(reader, corpusMapper, corpus);
 	}
 
 	private List<DocumentCollocate> getCollocates(AtomicReader reader,

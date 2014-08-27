@@ -1,6 +1,6 @@
 package org.voyanttools.trombone.tool.corpus;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,15 +8,12 @@ import java.util.List;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexWriter;
 import org.junit.Test;
-import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
-import org.voyanttools.trombone.tool.corpus.CorpusTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 public class CorpusTermsTest {
@@ -25,12 +22,11 @@ public class CorpusTermsTest {
 	public void test() throws IOException {
 		Storage storage = new MemoryStorage();
 		Document document;
-		DirectoryReader directoryReader = storage.getLuceneManager().getDirectoryReader();
 		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
 		document = new Document();
 		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
 		indexWriter.addDocument(document);
-		indexWriter.commit();
+		indexWriter.close();
 		
 		FlexibleParameters parameters;
 		
@@ -76,7 +72,7 @@ public class CorpusTermsTest {
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
-		assertEquals(15, corpusTerms.size());
+		assertEquals(12, corpusTerms.size());
 		corpusTerm = corpusTerms.get(0);
 		assertEquals("it", corpusTerm.getTerm());
 		assertEquals(3, corpusTerm.getRawFrequency());
@@ -115,7 +111,7 @@ public class CorpusTermsTest {
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
-		assertEquals(7, corpusTerms.size());
+		assertEquals(6, corpusTerms.size());
 		
 		storage.destroy();
 		

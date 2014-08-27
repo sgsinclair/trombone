@@ -28,10 +28,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.search.DocIdSetIterator;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.OpenBitSet;
 import org.apache.lucene.util.OpenBitSetIterator;
+import org.voyanttools.trombone.lucene.search.SimpleDocIdsCollector;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 
 /**
@@ -47,6 +52,7 @@ public class StoredToLuceneDocumentsMapper {
 	private List<String> documentIds;
 	private int[] sortedLuceneIds;
 	private OpenBitSet docIdOpenBitSet = null; // initialize this lazily
+	private int maxDocs;
 	
 	/**
 	 * @param ids 
@@ -54,10 +60,25 @@ public class StoredToLuceneDocumentsMapper {
 	 * @throws IOException 
 	 * 
 	 */
-	public StoredToLuceneDocumentsMapper(Storage storage, List<String> documentIds) throws IOException {
-		this(documentIds, getLuceneIds(storage, documentIds));
+	public static StoredToLuceneDocumentsMapper getInstance(IndexSearcher searcher, Corpus corpus) throws IOException {
+		return getInstance(searcher, LuceneManager.getCorpusQuery(corpus), corpus.getDocumentIds());
 	}
 	
+	private static StoredToLuceneDocumentsMapper getInstance(IndexSearcher searcher, Query query, List<String> documentIds) throws IOException {
+		SimpleDocIdsCollector collector = new SimpleDocIdsCollector();
+		searcher.search(query, collector);
+		Map<String, Integer> map = collector.getDocIdsMap();
+		if (documentIds.size()!=map.size()) {
+			throw new IllegalStateException("Corpus mapper has mismatched number of documents.");
+		}
+		int[] luceneIds = new int[documentIds.size()];
+		for (int i=0, len = documentIds.size(); i<len; i++) {
+			luceneIds[i] = map.get(documentIds.get(i));
+		}
+		return new StoredToLuceneDocumentsMapper(documentIds, luceneIds, searcher.getIndexReader().maxDoc());
+	}
+	
+	/*
 	private static int[] getLuceneIds(Storage storage, List<String> documentIds) throws IOException {
 		int[] luceneIds = new int[documentIds.size()];
 		for (int i=0; i<documentIds.size(); i++) {
@@ -65,8 +86,10 @@ public class StoredToLuceneDocumentsMapper {
 		}
 		return luceneIds;
 	}
+	*/
 	
-	private StoredToLuceneDocumentsMapper(List<String> documentIds, int[] luceneIds) {
+	private StoredToLuceneDocumentsMapper(List<String> documentIds, int[] luceneIds, int maxDocs) {
+		this.maxDocs = maxDocs;
 		this.lucenedIdToDocumentPositionMap = new HashMap<Integer, Integer>(documentIds.size());
 		this.documentIdToLuceneId = new HashMap<String, Integer>(documentIds.size());
 		this.sortedLuceneIds = new int[documentIds.size()];
@@ -89,7 +112,7 @@ public class StoredToLuceneDocumentsMapper {
 		for (int luceneDocumentId : luceneDocumentIds) {
 			documentIds.add(luceneIdToDocumentId.get(luceneDocumentId));
 		}
-		return new StoredToLuceneDocumentsMapper(documentIds, luceneDocumentIds);
+		return new StoredToLuceneDocumentsMapper(documentIds, luceneDocumentIds, maxDocs);
 	}
 	
 	public DocIdSetIterator getDocIdSetIterator() {
@@ -98,7 +121,7 @@ public class StoredToLuceneDocumentsMapper {
 	
 	public OpenBitSet getDocIdOpenBitSet() {
 		if (docIdOpenBitSet==null) {
-			OpenBitSet obs = new OpenBitSet(sortedLuceneIds.length);
+			OpenBitSet obs = new OpenBitSet(maxDocs);
 			for (int i : sortedLuceneIds) {
 				obs.set((long) i);
 			}

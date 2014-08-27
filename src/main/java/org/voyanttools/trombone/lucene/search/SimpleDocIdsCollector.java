@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.document.Document;
@@ -24,7 +26,7 @@ import org.apache.lucene.search.TotalHitCountCollector;
 public class SimpleDocIdsCollector extends TotalHitCountCollector {
 	
 	Set<Integer> luceneDocIds = new HashSet<Integer>();
-	Collection<String> docIds = new HashSet<String>();
+	Map<String, Integer> docIds = new HashMap<String, Integer>();
 	
 	AtomicReader atomicReader = null;
 	
@@ -46,16 +48,24 @@ public class SimpleDocIdsCollector extends TotalHitCountCollector {
 				throw new RuntimeException("Unable to read Lucene document.");
 			}
 			String id = document.get("id");
-			docIds.add(id);
+			docIds.put(id, doc);
 		}
 		luceneDocIds.add(doc);
 		super.collect(doc);
 	}
 	
 	public Collection<String> getDocIds() {
-		return docIds;
+		return docIds.keySet();
 	}
 	
+	/**
+	 * Note that the mapped ids will probably only be useful if operating on a single reader.
+	 * @return
+	 */
+	public Map<String, Integer> getDocIdsMap() {
+		return docIds;
+	}
+
 	@Override
 	public void setNextReader(AtomicReaderContext context) {
 		atomicReader = context.reader();

@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.search.IndexSearcher;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
@@ -66,8 +68,8 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	}
 	
 	@Deprecated
-	protected StoredToLuceneDocumentsMapper getStoredToLuceneDocumentsMapper(Corpus corpus) throws IOException {
-		return new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
+	protected StoredToLuceneDocumentsMapper getStoredToLuceneDocumentsMapper(IndexSearcher searcher, Corpus corpus) throws IOException {
+		return StoredToLuceneDocumentsMapper.getInstance(searcher, corpus);
 	}
 	
 	protected abstract void run(Corpus corpus) throws IOException;

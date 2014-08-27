@@ -40,6 +40,7 @@ import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
@@ -71,8 +72,10 @@ public class DocumentNgrams extends AbstractTerms {
 	@Override
 	protected void runAllTerms(Corpus corpus) throws IOException {
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
+		
+		
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(atomicReader), corpus);
 		DocIdSetIterator it = corpusMapper.getDocIdSetIterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
 			int luceneDoc = it.docID();
