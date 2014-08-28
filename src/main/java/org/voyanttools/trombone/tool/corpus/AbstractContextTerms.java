@@ -58,9 +58,6 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 	protected int context;
 	
 	@XStreamOmitField
-	protected int limit;
-
-	@XStreamOmitField
 	protected String[] queries;
 
 	@XStreamOmitField
@@ -74,7 +71,6 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		super(storage, parameters);
 		this.queries = parameters.getParameterValues("query");
 		this.context = parameters.getParameterIntValue("context", 5);
-		this.limit = parameters.getParameterIntValue("limit", 5);
 		this.positions = new HashSet<Integer>();
 		for (String i : parameters.getParameterValues("position")) {
 			this.positions.add(Integer.parseInt(i));
