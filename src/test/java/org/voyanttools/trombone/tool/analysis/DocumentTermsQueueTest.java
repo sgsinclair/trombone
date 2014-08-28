@@ -22,6 +22,7 @@
 package org.voyanttools.trombone.tool.analysis;
 
 import static org.junit.Assert.*;
+import junit.framework.Assert;
 
 import org.apache.lucene.util.BytesRef;
 import org.junit.Test;
@@ -48,8 +49,8 @@ public class DocumentTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(3, (int) queue.poll().getRelativeFrequency());
-		assertEquals("é", queue.poll().getTerm());
+		assertEquals(1, (int) queue.poll().getRelativeFrequency());
+		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
 		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.relativeFrequencyAsc);
@@ -57,8 +58,8 @@ public class DocumentTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(2, (int) queue.poll().getRelativeFrequency());
-		assertEquals("a", queue.poll().getTerm());
+		assertEquals(1, queue.poll().getRelativeFrequency(), .1);
+		assertEquals("é", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
 		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.rawFrequencyDesc);

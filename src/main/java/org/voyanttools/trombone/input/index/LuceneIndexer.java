@@ -122,10 +122,19 @@ public class LuceneIndexer implements Indexer {
 				throw new RuntimeException("Lucene indexing has run out of time", e);
 			}
 			finally {
-				indexWriter.commit();
-				indexReader = DirectoryReader.open(indexWriter, true);
-				storage.getLuceneManager().setDirectoryReader(indexReader); // make sure it's available afterwards				
+				
+				try {
+					indexWriter.commit();
+				}
+				catch (IOException e) {
+					indexWriter.close(); // this may also throw an exception, but docs say to close on commit error
+					throw e;
+				}
 			}
+			
+			indexReader = DirectoryReader.open(indexWriter, true);
+			storage.getLuceneManager().setDirectoryReader(indexReader); // make sure it's available afterwards				
+
 			
 			// now determine which documents need to be analyzed
 			Collection<StoredDocumentSource> storedDocumentSourceForAnalysis = new ArrayList<StoredDocumentSource>();

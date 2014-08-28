@@ -22,6 +22,8 @@
 package org.voyanttools.trombone.lucene;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collection;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
@@ -142,13 +144,18 @@ public class LuceneManager {
 	}
 	
 	public void addDocument(Document document) throws CorruptIndexException, IOException {
-		IndexWriter writer = getIndexWriter();
-		writer.addDocument(document);
-		writer.close();
-		// make sure to reload reader and searcher
-		directoryReader = getDirectoryReader(true);
-		indexSearcher = getIndexSearcher(true);
+		addDocuments(Arrays.asList(new Document[]{document}));
 	}
+	
+	public void addDocuments(Collection<Document> documents) throws CorruptIndexException, IOException {
+		IndexWriter writer = getIndexWriter();
+		for (Document document : documents) {
+			writer.addDocument(document);
+		}
+		writer.commit();
+		setDirectoryReader(DirectoryReader.open(writer, true));
+	}
+
 //
 //	public void updateDocument(Term term, Document document) throws CorruptIndexException, IOException {
 //		document.add(new FloatField("version", luceneDocumentVersion, Field.Store.YES));
@@ -161,7 +168,10 @@ public class LuceneManager {
 
 	// TODO: make this block across threads so that only one writer can exist at a time
 	public synchronized IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {
-		return new IndexWriter(directory, new IndexWriterConfig(VERSION, analyzer));
+		if (indexWriter==null) {
+			indexWriter = new IndexWriter(directory, new IndexWriterConfig(VERSION, analyzer));
+		}
+		return indexWriter;
 	}
 
 	public Analyzer getAnalyzer() {
@@ -174,6 +184,7 @@ public class LuceneManager {
 
 	public void setDirectoryReader(DirectoryReader indexReader) {
 		this.directoryReader = indexReader;
+		this.indexSearcher = new IndexSearcher(directoryReader);
 	}
 
 }

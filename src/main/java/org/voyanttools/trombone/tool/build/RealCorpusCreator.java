@@ -54,13 +54,14 @@ public class RealCorpusCreator extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
-		run(parameters.getParameterIntValue("steps"));
+		run(parameters.getParameterIntValue("steps", Integer.MAX_VALUE));
 	}
 	
 	public void run(int steps) throws IOException {
 		nextCorpusCreatorStep = parameters.getParameterValue("nextCorpusCreatorStep", "store");
 		int timeout = parameters.getParameterIntValue("timeoutSeconds");
 		long start = Calendar.getInstance().getTimeInMillis();
+		int step = 0;
 		
 		// this is used to go from one step to the next in a single pass, without needing to deal with storedId
 		List<StoredDocumentSource> storedDocumentSources = null;
@@ -72,7 +73,7 @@ public class RealCorpusCreator extends AbstractTool {
 			storedId = storer.getStoredId();
 			nextCorpusCreatorStep = "expand";
 			if (timeout>0 && Calendar.getInstance().getTimeInMillis()-start>timeout) {return;}
-			if (steps>0 && ++steps>=steps) {return;}
+			if (steps>0 && ++step>=steps) {return;}
 		}
 		
 		if (nextCorpusCreatorStep.equals("expand")) {
@@ -83,7 +84,7 @@ public class RealCorpusCreator extends AbstractTool {
 			storedId = expander.getStoredId();
 			nextCorpusCreatorStep = "extract";
 			if (timeout>0 && Calendar.getInstance().getTimeInMillis()-start>timeout) {return;}
-			if (steps>0 && ++steps>=steps) {return;}
+			if (steps>0 && ++step>=steps) {return;}
 		}
 		
 		if (nextCorpusCreatorStep.equals("extract")) {
@@ -94,7 +95,7 @@ public class RealCorpusCreator extends AbstractTool {
 			storedId = extractor.getStoredId();
 			nextCorpusCreatorStep = "index";
 			if (timeout>0 && Calendar.getInstance().getTimeInMillis()-start>timeout) {return;}
-			if (steps>0 && ++steps>=steps) {return;}
+			if (steps>0 && ++step>=steps) {return;}
 		}
 		
 		if (nextCorpusCreatorStep.equals("index")) {
@@ -105,7 +106,7 @@ public class RealCorpusCreator extends AbstractTool {
 			storedId = indexer.getStoredId();
 			nextCorpusCreatorStep = "corpus";
 			if (timeout>0 && Calendar.getInstance().getTimeInMillis()-start>timeout) {return;}
-			if (steps>0 && ++steps>=steps) {return;}
+			if (steps>0 && ++step>=steps) {return;}
 		}
 		
 		if (nextCorpusCreatorStep.equals("corpus")) {

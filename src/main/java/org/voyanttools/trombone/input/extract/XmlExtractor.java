@@ -134,7 +134,7 @@ public class XmlExtractor implements Extractor, Serializable {
 			case RSS2:
 				defaultsMap.put("xmlContentXpath", "//item/description");
 				defaultsMap.put("xmlTitleXpath", parameters.getParameterBooleanValue("splitDocuments") ? "//item/title" : "//channel/title");
-				defaultsMap.put("xmlAuthorXpath", parameters.getParameterBooleanValue("splitDocuments") ? "//item/author|//item/dc:creator" : "//channel/author|//channel/dc:creator");
+				defaultsMap.put("xmlAuthorXpath", parameters.getParameterBooleanValue("splitDocuments") ? "//item/author|//item/*[local-name()='creator']" : "//channel/author|//channel/*[local-name()='creator']");
 				break;
 			case ATOM:
 				defaultsMap.put("xmlContentXpath", "//summary or //content");
