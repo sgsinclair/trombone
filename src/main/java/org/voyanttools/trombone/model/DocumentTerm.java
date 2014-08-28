@@ -69,7 +69,7 @@ public class DocumentTerm {
 	}
 	@Override
 	public String toString() {
-		return "("+docIndex+") "+term+": "+rawFreq+" ("+relativeFreq+")";
+		return "(doc "+docIndex+") "+term+": "+rawFreq+" ("+relativeFreq+")";
 	}
 
 	public float getRelativeFrequency() {
@@ -163,7 +163,7 @@ public class DocumentTerm {
 				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return term2.rawFreq - term1.rawFreq;
+				return Float.compare(term2.relativeFreq,  term1.relativeFreq);
 			}
 		}
 		
@@ -177,7 +177,7 @@ public class DocumentTerm {
 				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
 			}
 			else {
-				return term1.rawFreq - term2.rawFreq;
+				return Float.compare(term1.relativeFreq,  term2.relativeFreq);
 			}
 		}
 		
