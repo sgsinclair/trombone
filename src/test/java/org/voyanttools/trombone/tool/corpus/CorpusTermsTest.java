@@ -21,12 +21,11 @@ public class CorpusTermsTest {
 	@Test
 	public void test() throws IOException {
 		Storage storage = new MemoryStorage();
-		Document document;
-		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
-		document = new Document();
+		
+		// add an additional document to the corpus
+		Document document = new Document();
 		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
-		indexWriter.addDocument(document);
-		indexWriter.close();
+		storage.getLuceneManager().addDocument(document);
 		
 		FlexibleParameters parameters;
 		
