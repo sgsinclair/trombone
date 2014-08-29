@@ -39,6 +39,8 @@ import org.voyanttools.trombone.input.source.Source;
 //@XStreamConverter(MetadataConverter.class)
 public class DocumentMetadata implements PropertiesWrapper {
 
+	private transient int index = 0;
+	
 	private Properties properties;
 	
 	public DocumentMetadata(Properties properties) {
@@ -334,4 +336,11 @@ public class DocumentMetadata implements PropertiesWrapper {
 		return getSource().name()+": "+getLocation();
 	}
 
+	public void setIndex(int index) {
+		this.index = index;
+	}
+	
+	public int getIndex() {
+		return index;
+	}
 }

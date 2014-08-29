@@ -22,8 +22,10 @@
 package org.voyanttools.trombone.model;
 
 import java.io.IOException;
+import java.util.Comparator;
 
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 
@@ -39,6 +41,22 @@ public class IndexedDocument implements DocumentContainer {
 	private DocumentMetadata metadata = null;
 	
 	private Storage storage;
+	
+	public enum Sort {
+		INDEXASC, INDEXDESC, TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC;
+
+		public static Sort getForgivingly(FlexibleParameters parameters) {
+			String sort = parameters.getParameterValue("sort", "").toUpperCase();
+			String sortPrefix = "INDEX";
+			if (sort.startsWith("TITLE")) {sortPrefix="TITLE";}
+			else if (sort.startsWith("AUTHOR")) {sortPrefix="AUTHOR";}
+			String dir = parameters.getParameterValue("dir", "").toUpperCase();
+			String dirSuffix = "ASC";
+			if (dir.endsWith("DESC")) {dirSuffix="DESC";}
+			return valueOf(sortPrefix+dirSuffix);
+		}
+		
+	}
 	
 	/**
 	 * 
@@ -63,4 +81,142 @@ public class IndexedDocument implements DocumentContainer {
 		return metadata;
 	}
 	
+	public static class IndexedDocumentPriorityQueue {
+		
+		// used when a size is given – use the Lucene implementation for better memory management (only top items are kept)
+		private org.apache.lucene.util.PriorityQueue<IndexedDocument> limitedSizeQueue = null;
+		
+		// use the Java implementation to allow the queue to grow arbitrarily big
+		private java.util.PriorityQueue<IndexedDocument> unlimitedSizeQueue = null;
+
+		public IndexedDocumentPriorityQueue(IndexedDocument.Sort sort) {
+			this(Integer.MAX_VALUE, sort);
+		}
+
+		public IndexedDocumentPriorityQueue(int size, IndexedDocument.Sort sort) {
+			Comparator<IndexedDocument> comparator = IndexedDocument.getComparator(sort);
+			if (size==Integer.MAX_VALUE) {
+				unlimitedSizeQueue = new java.util.PriorityQueue<IndexedDocument>(11, comparator);
+			}
+			else {
+				limitedSizeQueue = new LimitedSizeQueue<IndexedDocument>(size, comparator);
+			}
+		}
+		
+		private class LimitedSizeQueue<IndexedDocument> extends org.apache.lucene.util.PriorityQueue<IndexedDocument> {
+
+			Comparator<IndexedDocument> comparator;
+			
+			public LimitedSizeQueue(int maxSize, Comparator<IndexedDocument> comparator) {
+				super(maxSize);
+				this.comparator = comparator;
+			}
+
+			@Override
+			protected boolean lessThan(IndexedDocument a, IndexedDocument b) {
+				return comparator.compare(a, b) < 0;
+			}
+			
+		}
+
+		public void offer(IndexedDocument document) {
+			if (limitedSizeQueue!=null) {limitedSizeQueue.insertWithOverflow(document);}
+			else if (unlimitedSizeQueue!=null) {unlimitedSizeQueue.offer(document);}
+		}
+		
+		public int size() {
+			if (limitedSizeQueue!=null) {return limitedSizeQueue.size();}
+			else if (unlimitedSizeQueue!=null) {return unlimitedSizeQueue.size();}
+			return 0;
+		}
+
+		public IndexedDocument poll() {
+			if (limitedSizeQueue!=null) {return limitedSizeQueue.pop();}
+			else if (unlimitedSizeQueue!=null) {return unlimitedSizeQueue.poll();}
+			return null;
+		}	
+	}
+
+	public static Comparator<IndexedDocument> getComparator(Sort sort) {
+		switch(sort) {
+		case INDEXDESC:
+			return IndexDescComparator;
+		case TITLEASC:
+			return TitleAscComparator;
+		case TITLEDESC:
+			return TitleDescComparator;
+		case AUTHORASC:
+			return AuthorAscComparator;
+		case AUTHORDESC:
+			return AuthorDescComparator;
+		default:
+			return IndexAscComparator;
+		}
+	}
+	
+	private static Comparator<IndexedDocument> IndexAscComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Integer.compare(doc1.getMetadata().getIndex(), doc2.getMetadata().getIndex());
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> IndexDescComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Integer.compare(doc2.getMetadata().getIndex(), doc1.getMetadata().getIndex());
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> TitleAscComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return doc2.getMetadata().getTitle().compareTo(doc1.getMetadata().getTitle());
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> TitleDescComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return doc1.getMetadata().getTitle().compareTo(doc2.getMetadata().getTitle());
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> AuthorAscComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return doc2.getMetadata().getAuthor().compareTo(doc1.getMetadata().getAuthor());
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> AuthorDescComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return doc1.getMetadata().getAuthor().compareTo(doc2.getMetadata().getAuthor());
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
 }

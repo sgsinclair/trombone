@@ -19,7 +19,7 @@ public class CorpusTerm {
 			if (sort.startsWith("TERM")) {sortPrefix = "TERM";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
-			if (dir.startsWith("ASC")) {dirSuffix="ASC";}
+			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
 			return valueOf(sortPrefix+dirSuffix);
 		}
 	}
