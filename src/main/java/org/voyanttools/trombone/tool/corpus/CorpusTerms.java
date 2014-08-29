@@ -85,7 +85,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	public CorpusTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
-		corpusTermSort = CorpusTerm.Sort.rawFrequencyDesc;
+		corpusTermSort = CorpusTerm.Sort.getForgivingly(parameters);;
 	}
 
 	protected void runAllTerms(Corpus corpus) throws IOException {
@@ -186,8 +186,10 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				rawFreqs[documentPosition] = f;
 				relativeFreqs[documentPosition] = (float) f/tokensCounts[documentPosition];
 			}
-			total++;
-			queue.offer(new CorpusTerm(queryString, freq, withDistributions ? rawFreqs : null, withDistributions ? relativeFreqs : null));
+			if (freq>0) { // we may have terms from other documents not in this corpus
+				total++;
+				queue.offer(new CorpusTerm(queryString, freq, withDistributions ? rawFreqs : null, withDistributions ? relativeFreqs : null));
+			}
 			positionsMap.clear(); // prepare for new entries
 		}
 		setTermsFromQueue(queue);	}

@@ -44,6 +44,14 @@ public class CorpusTermsTest {
 		CorpusTerms corpusTermFrequencies;
 		List<CorpusTerm> corpusTerms;
 
+		// we don't want "document" from the first document
+		parameters.setParameter("query", "document*");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(0, corpusTerms.size());
+		
+		
 		parameters.setParameter("query", "dar*");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();		

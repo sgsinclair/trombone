@@ -4,13 +4,24 @@ import java.text.Normalizer;
 import java.util.Comparator;
 
 import org.voyanttools.trombone.model.Kwic.Sort;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 public class CorpusTerm {
 
 	public enum Sort {
-		rawFrequencyAsc, rawFrequencyDesc, termAsc, termDesc;
+		RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC;
+
+		public static Sort getForgivingly(FlexibleParameters parameters) {
+			String sort = parameters.getParameterValue("sort", "").toUpperCase();
+			String sortPrefix = "RAWFREQ"; // default
+			if (sort.startsWith("TERM")) {sortPrefix = "TERM";}
+			String dir = parameters.getParameterValue("dir", "").toUpperCase();
+			String dirSuffix = "DESC";
+			if (dir.startsWith("ASC")) {dirSuffix="ASC";}
+			return valueOf(sortPrefix+dirSuffix);
+		}
 	}
 
 	private String term;
@@ -65,11 +76,11 @@ public class CorpusTerm {
 	
 	public static Comparator<CorpusTerm> getComparator(Sort sort) {
 		switch (sort) {
-		case rawFrequencyAsc:
+		case RAWFREQASC:
 			return RawFrequencyAscendingComparator;
-		case termAsc:
+		case TERMASC:
 			return TermAscendingComparator;
-		case termDesc:
+		case TERMDESC:
 			return TermDescendingComparator;
 		default: // rawFrequencyDesc
 			return RawFrequencyDescendingComparator;
