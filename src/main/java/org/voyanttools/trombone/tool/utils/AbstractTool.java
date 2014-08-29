@@ -71,7 +71,7 @@ public abstract class AbstractTool implements RunnableTool {
 				for (IndexedDocument document : corpus) {
 					String lang = document.getMetadata().getLanguageCode();
 					if (langs.containsKey(lang)==false) {
-						if (lang.equals("en")) {langs.put(lang, "stop.en.taporware.txt");}
+						if (lang.isEmpty() || lang.equals("en")) {langs.put(lang, "stop.en.taporware.txt");}
 						else if (lang.equals("de")) {langs.put(lang, "stop.de.german.txt");}
 						else if (lang.equals("fr")) {langs.put(lang, "stop.fr.veronis.txt");}
 						else if (lang.equals("hu")) {langs.put(lang, "stop.hu.hungarian.txt");}
