@@ -43,12 +43,13 @@ public class IndexedDocument implements DocumentContainer {
 	private Storage storage;
 	
 	public enum Sort {
-		INDEXASC, INDEXDESC, TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC;
+		INDEXASC, INDEXDESC, TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC, TERMSCOUNTLEXICALASC, TERMSCOUNTLEXICALDESC;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "INDEX";
 			if (sort.startsWith("TITLE")) {sortPrefix="TITLE";}
+			if (sort.startsWith("TERMSCOUNT")) {sortPrefix="TERMSCOUNTLEXICAL";} // TODO: support other kinds of term counts
 			else if (sort.startsWith("AUTHOR")) {sortPrefix="AUTHOR";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "ASC";
@@ -149,6 +150,10 @@ public class IndexedDocument implements DocumentContainer {
 			return AuthorAscComparator;
 		case AUTHORDESC:
 			return AuthorDescComparator;
+		case TERMSCOUNTLEXICALASC:
+			return TermsCountLexicalAscComparator;
+		case TERMSCOUNTLEXICALDESC:
+			return TermsCountLexicalDescComparator;
 		default:
 			return IndexAscComparator;
 		}
@@ -214,6 +219,28 @@ public class IndexedDocument implements DocumentContainer {
 		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
 			try {
 				return doc1.getMetadata().getAuthor().compareTo(doc2.getMetadata().getAuthor());
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+
+	private static Comparator<IndexedDocument> TermsCountLexicalAscComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Integer.compare(doc1.getMetadata().getTokensCount(TokenType.lexical), doc2.getMetadata().getTokensCount(TokenType.lexical));
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> TermsCountLexicalDescComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Integer.compare(doc2.getMetadata().getTokensCount(TokenType.lexical), doc1.getMetadata().getTokensCount(TokenType.lexical));
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}

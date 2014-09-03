@@ -94,7 +94,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	 */
 	public DocumentTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		documentTermsSort = DocumentTerm.Sort.relativeFrequencyDesc;		
+		documentTermsSort = DocumentTerm.Sort.getForgivingly(parameters);		
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		distributionBins = parameters.getParameterIntValue("bins", 10);
 		isNeedsPositions = withDistributions || parameters.getParameterBooleanValue("withPositions");
@@ -141,9 +141,11 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				}
 				int documentPosition = entry.getKey();
 				String docId = corpusMapper.getDocumentIdFromDocumentPosition(documentPosition);
-
-				total++;
-				queue.offer(new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], isNeedsPositions ? positions : null, null));
+				if (freq>0) {
+					total++;
+					queue.offer(new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], isNeedsPositions ? positions : null, null));
+					
+				}
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
@@ -176,8 +178,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			
 			if (term != null) {
 				termString = term.utf8ToString();
-				if (stopwords.isKeyword(termString)) {continue;}				
-				total+=termsEnum.docFreq();
+				if (stopwords.isKeyword(termString)) {continue;}
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
@@ -195,9 +196,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 							positions[i] = docsAndPositionsEnum.nextPosition();
 							offsets[i] = docsAndPositionsEnum.startOffset();
 						}
-					}					
-					queue.offer(new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, positions, offsets));
-					doc = docsAndPositionsEnum.nextDoc();
+					}
+					if (freq>0) {
+						total++;
+						queue.offer(new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, positions, offsets));
+						doc = docsAndPositionsEnum.nextDoc();
+					}
 				}
 			}
 			else {

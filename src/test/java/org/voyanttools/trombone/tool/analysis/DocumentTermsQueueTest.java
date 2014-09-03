@@ -44,7 +44,7 @@ public class DocumentTermsQueueTest {
 		DocumentTermsQueue queue;
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.relativeFrequencyDesc);
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.RELATIVEFREQDESC);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -53,7 +53,7 @@ public class DocumentTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.relativeFrequencyAsc);
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.RELATIVEFREQASC);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -62,7 +62,7 @@ public class DocumentTermsQueueTest {
 		assertEquals("é", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
-		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.rawFrequencyDesc);
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.RAWFREQDESC);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -71,7 +71,7 @@ public class DocumentTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 		
 		// ascending raw frequency, then ascending alphabet		
-		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.rawFrequencyAsc);
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.RAWFREQASC);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -80,7 +80,7 @@ public class DocumentTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 		
 		// ascending term alphabet, then descending term frequency
-		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.termAsc);
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.TERMASC);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
@@ -89,7 +89,7 @@ public class DocumentTermsQueueTest {
 		assertEquals("a", queue.poll().getTerm());
 
 		// descending term alphabet, then descending term frequency
-		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.termDesc);
+		queue = new DocumentTermsQueue(2, DocumentTerm.Sort.TERMDESC);
 		queue.offer(d1);
 		queue.offer(d2);
 		queue.offer(d3);
