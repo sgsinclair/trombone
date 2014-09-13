@@ -47,7 +47,9 @@ public abstract class AbstractTool implements RunnableTool {
 	protected FlexibleParameters parameters;
 	
 	@XStreamOmitField
-	protected Storage storage;
+	protected transient Storage storage;
+	
+	private static int VERSION = 1;
 	
 	/**
 	 * @param storage 
@@ -58,8 +60,11 @@ public abstract class AbstractTool implements RunnableTool {
 		this.parameters = parameters;
 		
 	}
-
 	
+	public int getVersion() {
+		return VERSION;
+	}
+
 	public FlexibleParameters getParameters() {
 		return parameters;
 	}

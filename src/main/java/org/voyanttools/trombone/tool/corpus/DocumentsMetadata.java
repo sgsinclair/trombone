@@ -89,13 +89,14 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		
 		int start = parameters.getParameterIntValue("start", 0);
 		int limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
+		
 		int size = start+limit;
-		IndexedDocumentPriorityQueue queue = new IndexedDocument.IndexedDocumentPriorityQueue(size, sort);
+		IndexedDocumentPriorityQueue queue = new IndexedDocument.IndexedDocumentPriorityQueue(size > corpus.size() ? size : corpus.size(), sort);
 		for (String id : ids) {
 			IndexedDocument document = corpus.getDocument(id);
 			document.getMetadata().setIndex(corpus.getDocumentPosition(id)); // make sure index is set
 			queue.offer(document);
-			if (queue.size()>=size && sort==Sort.INDEXASC) {break;} // we don't need to look any further since docs in order
+			//if (queue.size()>=size && sort==Sort.INDEXASC) {break;} // we don't need to look any further since docs in order
 		}
 		
 		for (int i=0, len = queue.size()-start; i<len; i++) {
@@ -103,6 +104,11 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		}
 		Collections.reverse(documents);
 
+	}
+	
+	@Override
+	public int getVersion() {
+		return super.getVersion()+2;
 	}
 
 

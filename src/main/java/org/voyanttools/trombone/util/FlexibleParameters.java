@@ -27,12 +27,15 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import java.util.Map.Entry;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * This class encapsulates flexible parameters that map keys to values, except
@@ -688,7 +691,23 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	@Override
 	public synchronized String toString() {
 	
-		return this.entries.toString();
+		// we'll create our own string to have a reliable ordering of map entries
+		List<String> keys = new ArrayList<String>();
+		keys.addAll(entries.keySet());
+		Collections.sort(keys);
+		StringBuilder sb = new StringBuilder();
+		for (String key : keys) {
+			sb.append("{").append(key).append(":");
+			String[] strings = getParameterValues(key);
+			if (strings.length==1) {
+				sb.append(strings[0]);
+			}
+			else {
+				sb.append("[").append(StringUtils.join(strings, ",")).append("]");
+			}
+			sb.append("}");
+		}
+		return sb.toString();
 	
 	}
 	

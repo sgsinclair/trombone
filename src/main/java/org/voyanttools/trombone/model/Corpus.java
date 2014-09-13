@@ -114,7 +114,8 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return corpusMetadata;
 	}
 
-	public int getDocumentPosition(String corpusId) {
+	public int getDocumentPosition(String corpusId) throws IOException {
+		if (documentPositionsMap==null) {getDocumentsList();} // this builds the map
 		return documentPositionsMap.get(corpusId);
 	}
 

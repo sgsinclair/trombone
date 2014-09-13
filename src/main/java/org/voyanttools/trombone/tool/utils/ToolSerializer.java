@@ -27,14 +27,9 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.List;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver;
 import com.thoughtworks.xstream.io.json.JsonWriter;
@@ -48,6 +43,8 @@ public class ToolSerializer implements RunnableTool {
 	private FlexibleParameters parameters;
 	
 	private RunnableTool runnableTool;
+	
+	private static final int VERSION = 1;
 
 	/**
 	 * @throws IOException 
@@ -98,5 +95,10 @@ public class ToolSerializer implements RunnableTool {
 			run(writer);
 			writer.close();
 		}
+	}
+
+	@Override
+	public int getVersion() {
+		return VERSION;
 	}
 }

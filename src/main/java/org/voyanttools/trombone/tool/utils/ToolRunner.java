@@ -22,16 +22,25 @@
 package org.voyanttools.trombone.tool.utils;
 
 import java.io.IOException;
+import java.io.ObjectStreamClass;
+import java.io.Reader;
+import java.io.Serializable;
+import java.io.Writer;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.io.IOUtils;
+import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-import com.ibm.icu.util.Calendar;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -41,14 +50,12 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  *
  */
 @XStreamAlias("results")
-public class ToolRunner implements RunnableTool {
+public class ToolRunner extends AbstractTool {
 	
 	private long duration;
 	
-	private FlexibleParameters parameters;
-	
 	@XStreamOmitField
-	private Storage storage;
+	private Writer writer;
 	
 	@XStreamImplicit
 	List<RunnableTool> results = new ArrayList<RunnableTool>();
@@ -56,27 +63,62 @@ public class ToolRunner implements RunnableTool {
 	/**
 	 * 
 	 */
-	public ToolRunner(Storage storage, FlexibleParameters parameters) {
-		this.storage = storage;
-		this.parameters = parameters;
+	public ToolRunner(Storage storage, FlexibleParameters parameters, Writer writer) {
+		super(storage, parameters);
+		this.writer = writer;
 	}
 	
 	public void run() throws IOException {
-		
-		long start = Calendar.getInstance().getTimeInMillis();
+
 		ToolFactory toolFactory = new ToolFactory(storage, parameters);
 		toolFactory.run();
 		List<RunnableTool> tools = toolFactory.getRunnableTools();
+		
+		StringBuilder sb = new StringBuilder("cache-ToolRunner-").append(getVersion());
 		for (RunnableTool tool : tools) {
-			tool.run();
-			results.add(tool);
+			sb.append("-").append(tool.getClass().getSimpleName()).append(tool.getVersion());
+		}
+		sb.append("-").append(DigestUtils.md5Hex(parameters.toString()));
+		
+		String id = sb.toString();
+		
+		boolean hasParameterSources = InputSourcesBuilder.hasParameterSources(parameters);
+		if (parameters.getParameterBooleanValue("noCache")==false && parameters.getParameterBooleanValue("reCache")==false && hasParameterSources==false && storage.isStored(id)) {
+			Reader reader = storage.retrieveStringReader(id);
+			IOUtils.copy(reader, writer);
+			reader.close();
+			writer.flush();
+		}
+		else {
+			long start = Calendar.getInstance().getTimeInMillis();
+			for (RunnableTool tool : tools) {
+				tool.run();
+				results.add(tool);
+			}
+			duration = Calendar.getInstance().getTimeInMillis() - start;
+
+			ToolSerializer toolSerializer = new ToolSerializer(parameters, this);
+			if (parameters.getParameterBooleanValue("noCache") || hasParameterSources==true) { // use the configured writer directly
+				toolSerializer.run(writer); 
+			}
+			else { // try to cache
+				Writer cacheWriter = storage.getStoreStringWriter(id);
+				toolSerializer.run(cacheWriter);
+				cacheWriter.close();
+				Reader reader = storage.retrieveStringReader(id);
+				IOUtils.copy(reader, writer); // now write from cache
+				reader.close();
+				writer.flush();
+			}
 		}
 		
-		duration = Calendar.getInstance().getTimeInMillis() - start;
 	}
+	
+
 	
 	public List<RunnableTool> getRunnableToolResults() {
 		return results;
 	}
-	
+
+
 }

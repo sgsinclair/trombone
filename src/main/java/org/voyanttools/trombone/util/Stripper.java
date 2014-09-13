@@ -14,29 +14,29 @@ import org.apache.commons.lang3.StringUtils;
 public class Stripper {
 
 	public enum TYPE {
-		all, keepblocks, none;
+		ALL, BLOCKSONLY, NONE;
 		
 		public static TYPE getForgivingly(String type) {
 			if (type!=null && type.isEmpty()==false) {
-				String normalizedType = type.toLowerCase();
+				String normalizedType = type.toUpperCase();
 				for (TYPE t : values()) {
 					if (normalizedType.equals(t.name())) return t;
 				}
-				if (type.equals("true")) {return all;}
+				if (type.equals("TRUE")) {return ALL;}
 			}
-			return none;
+			return NONE;
 		}
 	}
 	
 	private TYPE type;
 	
-	private Pattern allTags = Pattern.compile("<\\/?\\w+.*?>");
+	private Pattern allTags = Pattern.compile("<\\/?\\w+.*?>", Pattern.DOTALL);
 	
 	private String[] blockTags = new String[]{"p","div"};
 	
-	private Pattern notBlockTags = Pattern.compile("<\\/?(?!(" + StringUtils.join(blockTags, "|") +"))\\w+\\b.*?>");
+	private Pattern notBlockTags = Pattern.compile("<\\/?(?!(" + StringUtils.join(blockTags, "|") +"))\\w+\\b.*?>", Pattern.DOTALL);
 	
-	private Pattern isBlockTags = Pattern.compile("<(\\/?)(" + StringUtils.join(blockTags, "|") + ")\\b.*?>");
+	private Pattern isBlockTags = Pattern.compile("<(\\/?)(" + StringUtils.join(blockTags, "|") + ")\\b.*?>", Pattern.DOTALL);
 	
 	/**
 	 * 
@@ -53,12 +53,12 @@ public class Stripper {
 	}
 	
 	public String strip(String string) {
-		if (type==TYPE.all) {
+		if (type==TYPE.ALL) {
 			return allTags.matcher(string).replaceAll("");
 		}
-		else if (type==TYPE.keepblocks && string.contains("<")) {
+		else if (type==TYPE.BLOCKSONLY && string.contains("<")) {
 			string = notBlockTags.matcher(string).replaceAll("");
-			string = isBlockTags.matcher(string).replaceAll("<!--$1$2-->");
+			// string = isBlockTags.matcher(string).replaceAll("<!--$1$2-->");
 			return string;
 		}
 		else {return string;}

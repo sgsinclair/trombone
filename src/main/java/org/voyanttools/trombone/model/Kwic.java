@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.io.Serializable;
 import java.text.Normalizer;
 import java.util.Comparator;
 
@@ -30,7 +31,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class Kwic {
+public class Kwic implements Serializable {
 	
 	public enum Sort {
 		termAsc, termDesc, positionAsc, positionDesc;

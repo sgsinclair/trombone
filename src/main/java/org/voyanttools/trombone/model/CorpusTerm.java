@@ -1,5 +1,6 @@
 package org.voyanttools.trombone.model;
 
+import java.io.Serializable;
 import java.text.Normalizer;
 import java.util.Comparator;
 
@@ -8,7 +9,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
-public class CorpusTerm {
+public class CorpusTerm implements Serializable {
 
 	public enum Sort {
 		RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC;
@@ -26,6 +27,7 @@ public class CorpusTerm {
 
 	private String term;
 	private int rawFreq;
+	private float relativeFreq;
 	private int[] rawFreqs;
 	private float[] relativeFreqs;
 	
@@ -33,16 +35,21 @@ public class CorpusTerm {
 	private String normalizedString = null;
 	
 	
-	public CorpusTerm(String termString, int termFreq,
+	public CorpusTerm(String termString, int termFreq, float relativeFreq,
 			int[] rawFreqs, float[] relativeFreqs) {
 		this.term = termString;
 		this.rawFreq = termFreq;
+		this.relativeFreq = relativeFreq;
 		this.rawFreqs = rawFreqs;
 		this.relativeFreqs = relativeFreqs;
 	}
 
-	public int getRawFrequency() {
+	public int getRawFreq() {
 		return this.rawFreq;
+	}
+	
+	public float getRelativeFreq() {
+		return relativeFreq;
 	}
 	
 	private String getNormalizedTerm() {
@@ -136,4 +143,5 @@ public class CorpusTerm {
 		}
 		
 	};
+
 }

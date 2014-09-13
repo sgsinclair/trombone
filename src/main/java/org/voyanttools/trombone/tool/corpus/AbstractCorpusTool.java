@@ -22,7 +22,6 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  */
 public abstract class AbstractCorpusTool extends AbstractTool {
 
-
 	public AbstractCorpusTool(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
@@ -60,7 +59,7 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 		
 		// no docs defined, so consider all
 		if (ids.isEmpty()) {
-			for (IndexedDocument doc : corpus) {ids.add(doc.getId());}
+			ids.addAll(corpus.getDocumentIds());
 		}
 		
 		return ids;

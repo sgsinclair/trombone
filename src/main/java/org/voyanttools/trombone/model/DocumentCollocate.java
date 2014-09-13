@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.io.Serializable;
 import java.text.Normalizer;
 import java.util.Comparator;
 
@@ -32,7 +33,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class DocumentCollocate {
+public class DocumentCollocate  implements Serializable {
 
 	private int docIndex;
 	private String keyword;

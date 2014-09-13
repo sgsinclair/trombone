@@ -23,7 +23,9 @@ package org.voyanttools.trombone.storage;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Reader;
 import java.io.Serializable;
+import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
 
@@ -75,7 +77,11 @@ public interface Storage {
 	public void store(Object obj, String id) throws IOException;
 	
 	public Object retrieve(String id) throws IOException, ClassNotFoundException;
+	
+	public Reader retrieveStringReader(String id) throws IOException;
 
 	public CorpusStorage getCorpusStorage();
+
+	public Writer getStoreStringWriter(String id) throws IOException;
 
 }

@@ -78,6 +78,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	@XStreamOmitField
 	private boolean withDistributions = false;
 	
+	@XStreamOmitField
+	private int totalTokens = 0; // used to calculate relative frequencies
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -86,6 +89,10 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		super(storage, parameters);
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		corpusTermSort = CorpusTerm.Sort.getForgivingly(parameters);;
+	}
+	
+	public int getVersion() {
+		return super.getVersion()+3;
 	}
 
 	protected void runAllTerms(Corpus corpus) throws IOException {
@@ -104,7 +111,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		DocsEnum docsEnum = null;
 		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
 		String termString;
-		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
+		int tokensCounts[] = corpus.getTokensCounts(tokenType);
+		int totalTokens = corpus.getTokensCount(tokenType);
 		while(true) {
 			
 			BytesRef term = termsEnum.next();
@@ -121,6 +129,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				while(doc!=DocsEnum.NO_MORE_DOCS) {
 					int freq = docsEnum.freq();
 					termFreq += freq;
+					this.totalTokens += freq;
 					documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
 					documentRawFreqs[documentPosition] = freq;
 					documentRelativeFreqs[documentPosition] = (float) freq/tokensCounts[documentPosition];
@@ -128,7 +137,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				}
 				if (termFreq>0) {
 					total++;
-					queue.offer(new CorpusTerm(termString, termFreq, withDistributions ? documentRawFreqs : null, withDistributions ? documentRelativeFreqs : null));
+					queue.offer(new CorpusTerm(termString, termFreq, (float) termFreq / totalTokens, withDistributions ? documentRawFreqs : null, withDistributions ? documentRelativeFreqs : null));
 				}
 			}
 			else {
@@ -159,6 +168,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
+		int totalTokens = corpus.getTokensCount(tokenType);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			SpanQuery spanQuery = spanQueryEntry.getValue();
@@ -187,8 +197,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				relativeFreqs[documentPosition] = (float) f/tokensCounts[documentPosition];
 			}
 			if (freq>0) { // we may have terms from other documents not in this corpus
+				this.totalTokens += freq;
 				total++;
-				queue.offer(new CorpusTerm(queryString, freq, withDistributions ? rawFreqs : null, withDistributions ? relativeFreqs : null));
+				queue.offer(new CorpusTerm(queryString, freq, (float) freq / totalTokens, withDistributions ? rawFreqs : null, withDistributions ? relativeFreqs : null));
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
@@ -241,9 +252,13 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				writer.endNode();
 				
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-				writer.setValue(String.valueOf(corpusTerm.getRawFrequency()));
+				writer.setValue(String.valueOf(corpusTerm.getRawFreq()));
 				writer.endNode();
 
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
+				writer.setValue(String.valueOf((float) corpusTerm.getRawFreq() / corpusTerms.totalTokens));
+				writer.endNode();
+				
 				if (withRawDistributions) {
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
 			        context.convertAnother(corpusTerm.getRawDistributions(bins));

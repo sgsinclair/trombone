@@ -10,10 +10,10 @@ public class CorpusTermsQueueTest {
 
 	@Test
 	public void test() {
-		CorpusTerm d1 = new CorpusTerm("a", 1, null, null);
-		CorpusTerm d2 = new CorpusTerm("z", 2, null, null);
-		CorpusTerm d3 = new CorpusTerm("é", 3, null, null);
-		CorpusTerm d4 = new CorpusTerm("a", 3, null, null);
+		CorpusTerm d1 = new CorpusTerm("a", 1, 1, null, null);
+		CorpusTerm d2 = new CorpusTerm("z", 2, 1, null, null);
+		CorpusTerm d3 = new CorpusTerm("é", 3, 1, null, null);
+		CorpusTerm d4 = new CorpusTerm("a", 3, 1, null, null);
 		CorpusTermsQueue queue;
 
 		// descending raw frequency, then ascending ascending alphabet
@@ -23,7 +23,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d3);
 		queue.offer(d4);
 		assertEquals(queue.size(), 2);
-		assertEquals(3, (int) queue.poll().getRawFrequency());
+		assertEquals(3, (int) queue.poll().getRawFreq());
 		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
@@ -33,7 +33,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d3);
 		queue.offer(d4);
 		assertEquals(queue.size(), 4);
-		assertEquals(1, (int) queue.poll().getRawFrequency());
+		assertEquals(1, (int) queue.poll().getRawFreq());
 		assertEquals("z", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
@@ -42,7 +42,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(2, (int) queue.poll().getRawFrequency());
+		assertEquals(2, (int) queue.poll().getRawFreq());
 		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
@@ -51,7 +51,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(3, (int) queue.poll().getRawFrequency());
+		assertEquals(3, (int) queue.poll().getRawFreq());
 		assertEquals("a", queue.poll().getTerm());
 
 		// ascending term alphabet, then descending term frequency
@@ -60,7 +60,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(1, queue.poll().getRawFrequency());
+		assertEquals(1, queue.poll().getRawFreq());
 		assertEquals("a", queue.poll().getTerm());
 
 		// ascending term alphabet, then descending term frequency
@@ -69,7 +69,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(2, queue.poll().getRawFrequency());
+		assertEquals(2, queue.poll().getRawFreq());
 		assertEquals("é", queue.poll().getTerm());
 		
 		// descending term alphabet, then descending term frequency
@@ -78,7 +78,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(3, queue.poll().getRawFrequency());
+		assertEquals(3, queue.poll().getRawFreq());
 		assertEquals("z", queue.poll().getTerm());
 		
 		// descending term alphabet, then descending term frequency
@@ -87,7 +87,7 @@ public class CorpusTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(1, queue.poll().getRawFrequency());
+		assertEquals(1, queue.poll().getRawFreq());
 		assertEquals("a", queue.poll().getTerm());
 		
 	}

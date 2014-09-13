@@ -49,7 +49,7 @@ public class DocumentTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(1, (int) queue.poll().getRelativeFrequency());
+		assertEquals(1000000, (int) queue.poll().getRelativeFrequency());
 		assertEquals("a", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet
@@ -58,7 +58,7 @@ public class DocumentTermsQueueTest {
 		queue.offer(d2);
 		queue.offer(d3);
 		queue.offer(d4);
-		assertEquals(1, queue.poll().getRelativeFrequency(), .1);
+		assertEquals(1000000, queue.poll().getRelativeFrequency(), .1);
 		assertEquals("é", queue.poll().getTerm());
 
 		// descending raw frequency, then ascending ascending alphabet

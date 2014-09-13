@@ -163,7 +163,7 @@ public class IndexedDocument implements DocumentContainer {
 		@Override
 		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
 			try {
-				return Integer.compare(doc1.getMetadata().getIndex(), doc2.getMetadata().getIndex());
+				return Integer.compare(doc2.getMetadata().getIndex(), doc1.getMetadata().getIndex());
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -174,7 +174,7 @@ public class IndexedDocument implements DocumentContainer {
 		@Override
 		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
 			try {
-				return Integer.compare(doc2.getMetadata().getIndex(), doc1.getMetadata().getIndex());
+				return Integer.compare(doc1.getMetadata().getIndex(), doc2.getMetadata().getIndex());
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}

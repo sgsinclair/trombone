@@ -25,10 +25,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Reader;
 import java.io.Serializable;
+import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -206,4 +210,17 @@ public class FileStorage implements Storage {
 		return obj;
 	}
 
+	@Override
+	public Reader retrieveStringReader(String id) throws IOException {
+		File file = getFile(id);
+		return new FileReader(file);
+	}
+
+
+
+	@Override
+	public Writer getStoreStringWriter(String id) throws IOException {
+		File file = getFile(id);
+		return new FileWriter(file);
+	}
 }

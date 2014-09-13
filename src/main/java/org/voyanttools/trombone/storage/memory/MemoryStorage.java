@@ -23,6 +23,10 @@ package org.voyanttools.trombone.storage.memory;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -149,4 +153,25 @@ public class MemoryStorage implements Storage {
 		return storedObjectsMap.get(id);
 	}
 	
+	@Override
+	public Reader retrieveStringReader(String id) throws IOException {
+		return new StringReader(retrieveString(id));
+	}
+
+	@Override
+	public Writer getStoreStringWriter(String id) throws IOException {
+		return new MemoryStorageStringWriter(id);
+	}
+	
+	private class MemoryStorageStringWriter extends StringWriter {
+		private String id;
+		private MemoryStorageStringWriter(String id) {
+			this.id = id;
+		}
+		@Override
+		public void close() throws IOException {
+			storeString(id, this.toString());
+		}
+		
+	}
 }

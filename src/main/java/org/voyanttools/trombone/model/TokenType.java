@@ -1,6 +1,8 @@
 package org.voyanttools.trombone.model;
 
-public enum TokenType {
+import java.io.Serializable;
+
+public enum TokenType implements Serializable {
 	lexical, other;
 		
 	/**

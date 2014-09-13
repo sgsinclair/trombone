@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -43,7 +44,7 @@ import edu.stanford.nlp.util.StringUtils;
  * @author sgs
  *
  */
-public class CorpusMetadata implements PropertiesWrapper {
+public class CorpusMetadata implements PropertiesWrapper, Serializable {
 	
 	private Properties properties;
 	

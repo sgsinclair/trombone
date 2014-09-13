@@ -13,7 +13,6 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -22,7 +21,6 @@ import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
@@ -49,6 +47,8 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 	private List<DocumentToken> documentTokens = new ArrayList<DocumentToken>();
 	
+	private int total = 0;
+	
 	@XStreamOmitField
 	private List<String> ids = new ArrayList<String>();
 
@@ -60,7 +60,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 	
 	@XStreamOmitField
 	private TokenType tokenType;
-
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -75,6 +75,9 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 	@Override
 	protected void run(Corpus corpus) throws IOException {
+		
+		total = Integer.MAX_VALUE;
+
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
 
@@ -85,8 +88,9 @@ public class DocumentTokens extends AbstractCorpusTool {
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 		String skipToDocId = parameters.getParameterValue("skipToDocId", "");
 		boolean isSkipping = true;
+		int tokensCounter = 0;
 		for (String id : ids) {
-			if (skipToDocId.isEmpty()==false) {
+			if (skipToDocId.isEmpty()==false && isSkipping==true) {
 				if (isSkipping && skipToDocId.equals(id)) {
 					isSkipping=false;
 				}
@@ -124,6 +128,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 			String string;
 			int lastEndOffset = 0;
 			int corpusDocumentIndexPosition = corpus.getDocumentPosition(id);
+			int lastDocumentTokenPositionIndex = corpus.getDocument(id).getMetadata().getLastTokenPositionIndex(tokenType);
 			for (int i=0, len=termInfos.size(); i<len; i++) {
 				termInfo = termInfos.get(i);
 				if (i>0) { // add filler between tokens
@@ -134,12 +139,22 @@ public class DocumentTokens extends AbstractCorpusTool {
 				string = StringUtils.substring(document, termInfo.getStartOffset(), termInfo.getEndOffset());
 				documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, string, tokenType, termInfo.getPosition(), termInfo.getStartOffset(), termInfo.getEndOffset(), docFreqs.get(termInfo.getText())));
 				lastEndOffset = termInfo.getEndOffset();
+				tokensCounter++;
+				if (i+1==len && termInfo.getPosition()==lastDocumentTokenPositionIndex) {
+					string = StringUtils.substring(document, lastEndOffset);
+					documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, stripper.strip(string), TokenType.other, -1, lastEndOffset, lastEndOffset+string.length(), -1)); // -1 position
+				}
 			}
+			if (tokensCounter>=limit) {break;}
 			termInfos.clear();
 			documentStart = 0; // reset to the start of next document
 		}
 	}
 
+	@Override
+	public int getVersion() {
+		return super.getVersion()+5;
+	}
 
 	public List<DocumentToken> getDocumentTokens() {
 		return documentTokens;
@@ -165,6 +180,9 @@ public class DocumentTokens extends AbstractCorpusTool {
 			
 			DocumentTokens documentTokens = (DocumentTokens) source;
 			
+			writer.startNode("total");
+			writer.setValue(String.valueOf(documentTokens.total));
+			writer.endNode();
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", List.class);
 	        for (DocumentToken documentToken :  documentTokens.getDocumentTokens()) {
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "token", String.class);

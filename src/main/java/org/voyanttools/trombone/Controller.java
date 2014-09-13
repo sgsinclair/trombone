@@ -96,10 +96,11 @@ public class Controller {
 
 	public void run() throws IOException {
 		
-		ToolRunner toolRunner = new ToolRunner(storage, parameters);
+		ToolRunner toolRunner = new ToolRunner(storage, parameters, writer);
 		toolRunner.run();
-		ToolSerializer toolSerializer = new ToolSerializer(parameters, toolRunner);
-		toolSerializer.run(writer);
+		
+//		ToolSerializer toolSerializer = new ToolSerializer(parameters, toolRunner);
+//		toolSerializer.run(writer);
 		
 		
 //		RunnableTool tool = new StepEnabledCorpusCreator(storage, parameters);

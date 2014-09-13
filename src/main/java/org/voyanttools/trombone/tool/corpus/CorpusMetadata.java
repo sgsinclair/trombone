@@ -4,6 +4,7 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
@@ -17,8 +18,13 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
  *
  */
 @XStreamAlias("corpus")
-public class CorpusMetadata extends AbstractCorpusTool {
+public class CorpusMetadata extends AbstractCorpusTool  {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1953143503582284656L;
+	
 	@XStreamConverter(org.voyanttools.trombone.model.CorpusMetadata.CorpusMetadataConverter.class)
 	org.voyanttools.trombone.model.CorpusMetadata metadata = null;
 	
