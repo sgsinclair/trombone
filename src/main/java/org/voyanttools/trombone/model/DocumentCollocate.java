@@ -298,6 +298,10 @@ public class DocumentCollocate  implements Serializable {
 		return term;
 	}
 	
+	public String getKeyword() {
+		return keyword;
+	}
+	
 	public int getContextRawFrequency() {
 		return raw;
 	}
@@ -310,4 +314,5 @@ public class DocumentCollocate  implements Serializable {
 	public float getDocumentRelativeFrequency() {
 		return docRel;
 	}
+
 }

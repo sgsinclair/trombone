@@ -43,6 +43,7 @@ import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentCollocate;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.DocumentCollocatesQueue;
@@ -93,10 +94,12 @@ public class DocumentCollocates extends AbstractContextTerms {
 		return getCollocates(reader, corpusMapper, corpus, documentSpansDataMap);
 	}
 
-	private List<DocumentCollocate> getCollocates(AtomicReader reader,
+	List<DocumentCollocate> getCollocates(AtomicReader reader,
 			StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus,
 			Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 
+		Keywords stopwords = getStopwords(corpus);
+		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		DocumentCollocate.Sort documentCollocatesSort = DocumentCollocate.Sort.valueOfForgivingly(parameters);
 		DocumentCollocatesQueue queue = new DocumentCollocatesQueue(limit, documentCollocatesSort);
@@ -104,7 +107,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(luceneDoc);
 			int lastToken = totalTokens[corpusDocIndex];
-			DocumentCollocatesQueue q = getCollocates(reader, luceneDoc, corpusDocIndex, lastToken, dsd.getValue());
+			DocumentCollocatesQueue q = getCollocates(reader, luceneDoc, corpusDocIndex, lastToken, dsd.getValue(), stopwords);
 			DocumentCollocate c;
 			while ((c = q.poll()) != null) {
 				queue.offer(c);
@@ -123,7 +126,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 
 	private DocumentCollocatesQueue getCollocates(AtomicReader atomicReader,
 			int luceneDoc, int corpusDocIndex, int lastToken,
-			Collection<DocumentSpansData> documentSpansData) throws IOException {
+			Collection<DocumentSpansData> documentSpansData, Keywords stopwords) throws IOException {
 		
 		
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(atomicReader, luceneDoc, lastToken, documentSpansData, true);
@@ -150,6 +153,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 				for (int i=leftstart; i<keywordstart-1; i++) {
 					contextTotalTokens++;
 					String term = termsOfInterest.get(i).getText();
+					if (stopwords.isKeyword(term)) {continue;}
 					stringsOfInterestMap.put(term, 0);
 					if (termsMap.containsKey(term)) {termsMap.get(term).getAndIncrement();}
 					else {termsMap.put(term, new AtomicInteger(1));}
@@ -160,6 +164,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 				for (int i=keywordend+1; i<rightend+1; i++) {
 					contextTotalTokens++;
 					String term = termsOfInterest.get(i).getText();
+					if (stopwords.isKeyword(term)) {continue;}
 					stringsOfInterestMap.put(term, 0);
 					if (termsMap.containsKey(term)) {termsMap.get(term).getAndIncrement();}
 					else {termsMap.put(term, new AtomicInteger(1));}

@@ -32,7 +32,7 @@ public class CorpusTerm implements Serializable {
 	private float[] relativeFreqs;
 	
 	@XStreamOmitField
-	private String normalizedString = null;
+	private transient String normalizedString = null;
 	
 	
 	public CorpusTerm(String termString, int termFreq, float relativeFreq,

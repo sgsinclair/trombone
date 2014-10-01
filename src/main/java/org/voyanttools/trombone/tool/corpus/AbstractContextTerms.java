@@ -178,11 +178,13 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 			if (term!=null) {
 				String termString = term.utf8ToString();
 				DocsAndPositionsEnum docsAndPositionsEnum = termsEnum.docsAndPositions(null, null, DocsAndPositionsEnum.FLAG_OFFSETS);
-				docsAndPositionsEnum.nextDoc();
-				for (int i=0, len = docsAndPositionsEnum.freq(); i<len; i++) {
-					int pos = docsAndPositionsEnum.nextPosition();
-					if (termsOfInterest.containsKey(pos)) {
-						termsOfInterest.put(pos, new TermInfo(termString, docsAndPositionsEnum.startOffset(), docsAndPositionsEnum.endOffset(), pos, 1));
+				if (docsAndPositionsEnum!=null) {
+					docsAndPositionsEnum.nextDoc();
+					for (int i=0, len = docsAndPositionsEnum.freq(); i<len; i++) {
+						int pos = docsAndPositionsEnum.nextPosition();
+						if (termsOfInterest.containsKey(pos)) {
+							termsOfInterest.put(pos, new TermInfo(termString, docsAndPositionsEnum.startOffset(), docsAndPositionsEnum.endOffset(), pos, 1));
+						}
 					}
 				}
 			}

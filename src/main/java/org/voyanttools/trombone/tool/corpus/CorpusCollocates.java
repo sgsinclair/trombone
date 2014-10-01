@@ -22,16 +22,43 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
+import org.apache.lucene.index.AtomicReader;
+import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.search.IndexSearcher;
+import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusCollocate;
+import org.voyanttools.trombone.model.CorpusCollocate.CorpusCollocateQueue;
+import org.voyanttools.trombone.model.DocumentCollocate;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.corpus.AbstractContextTerms.DocumentSpansData;
 import org.voyanttools.trombone.util.FlexibleParameters;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("corpusCollocates")
 public class CorpusCollocates extends AbstractContextTerms {
+
+	private List<CorpusCollocate> collocates = new ArrayList<CorpusCollocate>();
+	
+	@Override
+	public int getVersion() {
+		return super.getVersion()+2;
+	}
 
 	/**
 	 * @param storage
@@ -39,7 +66,6 @@ public class CorpusCollocates extends AbstractContextTerms {
 	 */
 	public CorpusCollocates(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		// TODO Auto-generated constructor stub
 	}
 
 	/* (non-Javadoc)
@@ -48,9 +74,11 @@ public class CorpusCollocates extends AbstractContextTerms {
 	@Override
 	protected void runQueries(Corpus corpus, String[] queries)
 			throws IOException {
-		
-		// TODO Auto-generated method stub
-
+		this.queries = queries; // FIXME: this should be set by superclass
+		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(reader, corpusMapper, queries);
+		this.collocates = getCollocates(reader, corpusMapper, corpus, documentSpansDataMap);
 	}
 
 	/* (non-Javadoc)
@@ -58,8 +86,66 @@ public class CorpusCollocates extends AbstractContextTerms {
 	 */
 	@Override
 	protected void runAllTerms(Corpus corpus) throws IOException {
-		// TODO Auto-generated method stub
+		// FIXME: what to do with empty no queries?
+	}
 
+
+	private List<CorpusCollocate> getCollocates(AtomicReader reader,
+			StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus,
+			Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
+		
+		FlexibleParameters localParameters = parameters.clone();
+		localParameters.setParameter("limit", Integer.MAX_VALUE); // we need all collocates for documents in order to determine corpus collocates
+		localParameters.setParameter("start", 0);
+		DocumentCollocates documentCollocatesTool = new DocumentCollocates(storage, localParameters);
+		List<DocumentCollocate> documentCollocates = documentCollocatesTool.getCollocates(reader, corpusMapper, corpus, documentSpansDataMap);
+		Map<String, Set<DocumentCollocate>> keywordDocumentCollocatesMap = new HashMap<String, Set<DocumentCollocate>>();
+		for (DocumentCollocate documentCollocate : documentCollocates) {
+			String keyword = documentCollocate.getKeyword();
+			if (!keywordDocumentCollocatesMap.containsKey(keyword)) {
+				keywordDocumentCollocatesMap.put(keyword, new HashSet<DocumentCollocate>());
+			}
+			keywordDocumentCollocatesMap.get(keyword).add(documentCollocate);
+		}
+		
+		CorpusCollocate.Sort sort = CorpusCollocate.Sort.getForgivingly(parameters);
+		CorpusCollocateQueue queue = new CorpusCollocateQueue(start+limit, sort);
+		
+		// now build corpus collocates
+		for (Map.Entry<String, Set<DocumentCollocate>> keywordDocumentCollocaatesEntry : keywordDocumentCollocatesMap.entrySet()) {
+
+			int keywordRawFrequency = 0;
+			// build map (group) for context terms
+			Map<String, Set<DocumentCollocate>> contextTermDocumentCollocatesMap = new HashMap<String, Set<DocumentCollocate>>();
+			for (DocumentCollocate documentCollocate : keywordDocumentCollocaatesEntry.getValue()) {
+				String contextTerm = documentCollocate.getTerm();
+				if (!contextTermDocumentCollocatesMap.containsKey(contextTerm)) {
+					contextTermDocumentCollocatesMap.put(contextTerm, new HashSet<DocumentCollocate>());
+				}
+				contextTermDocumentCollocatesMap.get(contextTerm).add(documentCollocate);
+				keywordRawFrequency += documentCollocate.getDocumentRawFrequency();
+			}
+			
+			String keyword = keywordDocumentCollocaatesEntry.getKey();
+			for (Map.Entry<String, Set<DocumentCollocate>> contextTermCollocatesEntry : contextTermDocumentCollocatesMap.entrySet()) {
+				int[] frequencies = new int[corpus.size()];
+				int contextTermTotal = 0;
+				for (DocumentCollocate documentCollocate : contextTermCollocatesEntry.getValue()) {
+					contextTermTotal += documentCollocate.getContextRawFrequency();
+				}
+				total++;
+				CorpusCollocate c = new CorpusCollocate(keyword, keywordRawFrequency, contextTermCollocatesEntry.getKey(), contextTermTotal);
+				queue.offer(c);
+			}
+			
+		}
+		
+		List<CorpusCollocate> list = new ArrayList<CorpusCollocate>();
+		for (int i=0, len = queue.size()-start; i<len; i++) {
+			list.add(queue.poll());
+		}
+		Collections.reverse(list);
+		return list;
 	}
 
 }
