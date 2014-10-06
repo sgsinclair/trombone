@@ -23,7 +23,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -49,8 +49,8 @@ import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.analysis.CorpusTermsQueue;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -76,6 +76,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	private CorpusTerm.Sort corpusTermSort;
 	
 	@XStreamOmitField
+	private Comparator<CorpusTerm> comparator;
+	
+	@XStreamOmitField
 	private boolean withDistributions = false;
 	
 	@XStreamOmitField
@@ -88,7 +91,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	public CorpusTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
-		corpusTermSort = CorpusTerm.Sort.getForgivingly(parameters);;
+		corpusTermSort = CorpusTerm.Sort.getForgivingly(parameters);
+		comparator = CorpusTerm.getComparator(corpusTermSort);
 	}
 	
 	public int getVersion() {
@@ -109,7 +113,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		Terms terms = reader.terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
 		DocsEnum docsEnum = null;
-		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
+		
+		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, size);
 		String termString;
 		int tokensCounts[] = corpus.getTokensCounts(tokenType);
 		int totalTokens = corpus.getTokensCount(tokenType);
@@ -144,16 +149,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				break; // no more terms
 			}
 		}
-		setTermsFromQueue(queue);
+		this.terms.addAll(queue.getOrderedList(start));
 	}
-
-	private void setTermsFromQueue(CorpusTermsQueue queue) {
-		for (int i=0, len = queue.size()-start; i<len; i++) {
-			terms.add(queue.poll());
-		}
-		Collections.reverse(terms);
-	}
-
+	
 	@Override
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
@@ -164,7 +162,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, AtomicInteger> positionsMap = new HashMap<Integer, AtomicInteger>();
 		int size = start+limit;
-		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
+		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, size);
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
@@ -203,7 +201,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
-		setTermsFromQueue(queue);	}
+		this.terms.addAll(queue.getOrderedList());
+	}
 
 	List<CorpusTerm> getCorpusTerms() {
 		return terms;

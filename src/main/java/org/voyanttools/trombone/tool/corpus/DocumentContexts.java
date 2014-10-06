@@ -3,10 +3,9 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.AtomicReader;
@@ -17,8 +16,8 @@ import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.analysis.KwicsQueue;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.FlexibleQueue;
 import org.voyanttools.trombone.util.Stripper;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -32,10 +31,13 @@ public class DocumentContexts extends AbstractContextTerms {
 	@XStreamOmitField
 	private Kwic.Sort contextsSort;
 	
+	@XStreamOmitField
+	private Comparator<Kwic> comparator;
 
 	public DocumentContexts(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		contextsSort = Kwic.Sort.valueOfForgivingly(parameters.getParameterValue("sortBy", ""));
+		comparator = Kwic.getComparator(contextsSort);
 	}
 
 	public List<Kwic> getKwics(AtomicReader atomicReader, StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus) throws IOException {
@@ -48,30 +50,22 @@ public class DocumentContexts extends AbstractContextTerms {
 	private List<Kwic> getKwics(AtomicReader atomicReader, StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus, Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
-		KwicsQueue queue = new KwicsQueue(limit, contextsSort);
+		FlexibleQueue<Kwic> queue = new FlexibleQueue(comparator, limit);
 		for (Map.Entry<Integer, Collection<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(luceneDoc);
 			int lastToken = totalTokens[corpusDocIndex];
-			KwicsQueue q = getKwics(atomicReader, dsd.getKey(), corpusDocIndex, lastToken, dsd.getValue());
-			Kwic k;
-			while ((k = q.poll()) != null) {
+			FlexibleQueue<Kwic> q = getKwics(atomicReader, dsd.getKey(), corpusDocIndex, lastToken, dsd.getValue());
+			for (Kwic k : q.getUnorderedList()) {
 				queue.offer(k);
 			}
 		}
 		
-		
-		List<Kwic> localKwics = new ArrayList<Kwic>();
-		Kwic k;
-		while ((k = queue.poll()) != null) {
-			localKwics.add(k);
-		}
-		Collections.reverse(localKwics);
-		return localKwics;
+		return queue.getOrderedList();
 	}
 	
 	
-	private KwicsQueue getKwics(AtomicReader atomicReader, int luceneDoc, int corpusDocumentIndex,
+	private FlexibleQueue<Kwic> getKwics(AtomicReader atomicReader, int luceneDoc, int corpusDocumentIndex,
 			int lastToken, Collection<DocumentSpansData> documentSpansData) throws IOException {
 
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(atomicReader, luceneDoc, lastToken, documentSpansData, false);
@@ -79,7 +73,7 @@ public class DocumentContexts extends AbstractContextTerms {
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 
 		// build kwics
-		KwicsQueue queue = new KwicsQueue(limit, contextsSort);
+		FlexibleQueue<Kwic> queue = new FlexibleQueue<Kwic>(comparator, limit);
 		String document = atomicReader.document(luceneDoc).get(tokenType.name());
 		for (DocumentSpansData dsd : documentSpansData) {
 			for (int[] data : dsd.spansData) {

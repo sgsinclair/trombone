@@ -76,6 +76,7 @@ public class CorpusTermsTest {
 		
 		// all terms 
 		parameters.removeParameter("query");
+		parameters.removeParameter("limit");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
@@ -85,7 +86,8 @@ public class CorpusTermsTest {
 		assertEquals(3, corpusTerm.getRawFreq());
 		
 		// limit 1 (top frequency word)
-		parameters.setParameter("limit", "1");
+		parameters.setParameter("limit", 1);
+//		parameters.removeParameter("limit");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();

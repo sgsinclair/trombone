@@ -57,9 +57,9 @@ public class DocumentCollocatesTest {
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
 		documentCollocate = documentCollocatesList.get(0);
-		assertEquals(documentCollocate.getTerm(), "should");
+		assertEquals("should", documentCollocate.getTerm());
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
-		assertEquals(documentCollocate.getTerm(), "world");
+		assertEquals("world", documentCollocate.getTerm());
 		
 		// run with terms relative frequency of context terms sort
 		parameters.setParameter("sort", "rawDesc");
@@ -67,9 +67,9 @@ public class DocumentCollocatesTest {
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
 		documentCollocate = documentCollocatesList.get(0);
-		assertEquals(documentCollocate.getTerm(), "should");
+		assertEquals("should", documentCollocate.getTerm());
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
-		assertEquals(documentCollocate.getTerm(), "world");
+		assertEquals("world", documentCollocate.getTerm());
 
 		// run with terms relative frequency of context terms sort
 		parameters.setParameter("sort", DocumentCollocate.Sort.docRelDesc.name());
@@ -79,7 +79,7 @@ public class DocumentCollocatesTest {
 		documentCollocate = documentCollocatesList.get(0);
 		assertEquals(documentCollocate.getTerm(), "to");
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
-		assertEquals(documentCollocate.getTerm(), "world");
+		assertEquals("world", documentCollocate.getTerm());
 		
 		// run with terms relative frequency of context terms sort
 		parameters.setParameter("sort", "docRawDesc");
@@ -89,7 +89,7 @@ public class DocumentCollocatesTest {
 		documentCollocate = documentCollocatesList.get(0);
 		assertEquals(documentCollocate.getTerm(), "to");
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
-		assertEquals(documentCollocate.getTerm(), "world");
+		assertEquals("world", documentCollocate.getTerm());
 	}
 
 }

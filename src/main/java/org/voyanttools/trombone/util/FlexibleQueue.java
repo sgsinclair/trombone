@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.voyanttools.trombone.model;
+package org.voyanttools.trombone.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,18 +44,40 @@ public class FlexibleQueue<T> {
 		else if (luceneQueue!=null) {luceneQueue.insertWithOverflow(element);}
 	}
 
-	public List<T> getList() {
+	public List<T> getOrderedList() {
+		return getOrderedList(0);
+	}
+	
+	public List<T> getOrderedList(int start) {
 		
 		if (list!=null) {
+			if (start>=list.size()) { // nothing beyond start, clear and return
+				list.clear();
+				return list;
+			}
 			Collections.sort(list, comparator);
 		}
 		
 		if (luceneQueue!=null) {
 			list = new ArrayList<T>();
+			if (start>=luceneQueue.size()) { // nothing beyond start, return empty
+				return list;
+			}
 			for (int i=0, len=luceneQueue.size(); i<len; i++) {
 				list.add(luceneQueue.pop());
 			}
 			Collections.reverse(list);
+		}
+		return list.subList(start, list.size());
+	}
+	
+	public List<T> getUnorderedList() {
+		
+		if (luceneQueue!=null) {
+			list = new ArrayList<T>();
+			for (Object o : luceneQueue.getHeap()) {
+				list.add((T) o);
+			}
 		}
 		return list;
 	}
@@ -69,6 +91,10 @@ public class FlexibleQueue<T> {
 			this.comparator = comparator;
 		}
 		
+		private Object[] getHeap() {
+			return getHeapArray();
+		}
+
 		@Override
 		protected boolean lessThan(T a, T b) {
 			return comparator.compare(b, a) < 0;

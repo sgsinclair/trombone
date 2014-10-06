@@ -37,9 +37,9 @@ import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusCollocate;
 import org.voyanttools.trombone.model.DocumentCollocate;
-import org.voyanttools.trombone.model.FlexibleQueue;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -139,7 +139,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 			
 		}
 		
-		return flexibleQueue.getList();
+		return flexibleQueue.getOrderedList();
 	}
 
 	List<CorpusCollocate> getCorpusCollocates() {

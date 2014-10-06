@@ -24,15 +24,13 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
@@ -44,11 +42,11 @@ import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentCollocate;
 import org.voyanttools.trombone.model.Keywords;
-import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.analysis.DocumentCollocatesQueue;
-import org.voyanttools.trombone.tool.analysis.KwicsQueue;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.FlexibleQueue;
+
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
@@ -57,6 +55,13 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 public class DocumentCollocates extends AbstractContextTerms {
 
 	private List<DocumentCollocate> collocates = new ArrayList<DocumentCollocate>();
+	
+	@XStreamOmitField
+	private DocumentCollocate.Sort sort;
+	
+	@XStreamOmitField
+	private Comparator<DocumentCollocate> comparator;
+	
 		
 	/**
 	 * @param storage
@@ -65,6 +70,8 @@ public class DocumentCollocates extends AbstractContextTerms {
 	public DocumentCollocates(Storage storage,
 			FlexibleParameters parameters) {
 		super(storage, parameters);
+		sort = DocumentCollocate.Sort.valueOfForgivingly(parameters);
+		comparator = DocumentCollocate.getComparator(sort);
 	}
 
 	/* (non-Javadoc)
@@ -101,30 +108,21 @@ public class DocumentCollocates extends AbstractContextTerms {
 		Keywords stopwords = getStopwords(corpus);
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
-		DocumentCollocate.Sort documentCollocatesSort = DocumentCollocate.Sort.valueOfForgivingly(parameters);
-		DocumentCollocatesQueue queue = new DocumentCollocatesQueue(limit, documentCollocatesSort);
+		FlexibleQueue<DocumentCollocate> queue = new FlexibleQueue<DocumentCollocate>(comparator, limit);
 		for (Map.Entry<Integer, Collection<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(luceneDoc);
 			int lastToken = totalTokens[corpusDocIndex];
-			DocumentCollocatesQueue q = getCollocates(reader, luceneDoc, corpusDocIndex, lastToken, dsd.getValue(), stopwords);
-			DocumentCollocate c;
-			while ((c = q.poll()) != null) {
+			FlexibleQueue<DocumentCollocate> q = getCollocates(reader, luceneDoc, corpusDocIndex, lastToken, dsd.getValue(), stopwords);
+			for (DocumentCollocate c : q.getUnorderedList()) {
 				queue.offer(c);
 			}
 		}
 		
-		
-		List<DocumentCollocate> localCollocates = new ArrayList<DocumentCollocate>();
-		DocumentCollocate c;
-		while ((c = queue.poll()) != null) {
-			localCollocates.add(c);
-		}
-		Collections.reverse(localCollocates);
-		return localCollocates;
+		return queue.getOrderedList();
 	}
 
-	private DocumentCollocatesQueue getCollocates(AtomicReader atomicReader,
+	private FlexibleQueue<DocumentCollocate> getCollocates(AtomicReader atomicReader,
 			int luceneDoc, int corpusDocIndex, int lastToken,
 			Collection<DocumentSpansData> documentSpansData, Keywords stopwords) throws IOException {
 		
@@ -194,7 +192,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 			else {break;}
 		}
 
-		DocumentCollocatesQueue documentCollocatesQueue = new DocumentCollocatesQueue(limit, DocumentCollocate.Sort.valueOfForgivingly(parameters));
+		FlexibleQueue<DocumentCollocate> documentCollocatesQueue = new FlexibleQueue(comparator, limit);
 		
 		for (Map.Entry<String, Map<String, AtomicInteger>> keywordMapEntry : mapOfTermsMap.entrySet()) {
 			String keyword = keywordMapEntry.getKey();

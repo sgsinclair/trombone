@@ -175,7 +175,7 @@ public class DocumentTerm {
 					}
 				}
 				else {
-					return Float.compare(term1.relativeFreq, term2.relativeFreq);
+					return Float.compare(term2.relativeFreq, term1.relativeFreq);
 				}
 			}
 			else {
@@ -243,7 +243,7 @@ public class DocumentTerm {
 						return Integer.compare(term2.docIndex, term1.docIndex);
 					}
 					else {
-						return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+						return term1.getNormalizedTerm().compareTo(term2.getNormalizedTerm());
 					}
 				}
 				else {
@@ -251,7 +251,7 @@ public class DocumentTerm {
 				}
 			}
 			else {
-				return Float.compare(term1.relativeFreq,  term2.relativeFreq);
+				return Float.compare(term2.relativeFreq,  term1.relativeFreq);
 			}
 		}
 		

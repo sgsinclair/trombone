@@ -30,19 +30,24 @@ public class CorpusCollocatesTest {
 		
 		parameters.setParameter("corpus", creator.getStoredId());
 		parameters.setParameter("query", "human");
-		parameters.setParameter("limit", 10);
 		
 		CorpusCollocates corpusCollocates;
 		List<CorpusCollocate> corpusCollocatesList;
 		CorpusCollocate corpusCollocate;
 		
+		parameters.removeParameter("limit"); // make sure no limit
 		corpusCollocates = new CorpusCollocates(storage, parameters);
 		corpusCollocates.run();
 		corpusCollocatesList = corpusCollocates.getCorpusCollocates();
 		corpusCollocate = corpusCollocatesList.get(0);
 		assertEquals(corpusCollocate.getContextTerm(), "should");
 		
-		
+		parameters.setParameter("limit", 10); // try with limit
+		corpusCollocates = new CorpusCollocates(storage, parameters);
+		corpusCollocates.run();
+		corpusCollocatesList = corpusCollocates.getCorpusCollocates();
+		corpusCollocate = corpusCollocatesList.get(0);
+		assertEquals(corpusCollocate.getContextTerm(), "should");
 		
 		
 	}

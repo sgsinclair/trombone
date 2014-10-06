@@ -121,10 +121,10 @@ public class CorpusTerm implements Serializable {
 		@Override
 		public int compare(CorpusTerm term1, CorpusTerm term2) {
 			if (term1.rawFreq==term2.rawFreq) {
-				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+				return term1.getNormalizedTerm().compareTo(term2.getNormalizedTerm());
 			}
 			else {
-				return term1.rawFreq - term2.rawFreq;
+				return term2.rawFreq - term1.rawFreq;
 			}
 		}
 		
@@ -143,5 +143,10 @@ public class CorpusTerm implements Serializable {
 		}
 		
 	};
+	
+	@Override
+	public String toString() {
+		return "{"+term+": "+rawFreq+" ("+relativeFreq+")";
+	}
 
 }

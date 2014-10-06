@@ -131,10 +131,10 @@ public class DocumentCollocate  implements Serializable {
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			
 			if (documentCollocate1.contextDocRelDiff==documentCollocate2.contextDocRelDiff) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.contextDocRelDiff > documentCollocate2.contextDocRelDiff ? 1 : -1;
+				return documentCollocate1.contextDocRelDiff > documentCollocate2.contextDocRelDiff ? -1 : 1;
 			}
 		}
 		
@@ -146,7 +146,7 @@ public class DocumentCollocate  implements Serializable {
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			
 			if (documentCollocate1.contextDocRelDiff==documentCollocate2.contextDocRelDiff) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
 				return documentCollocate2.contextDocRelDiff > documentCollocate1.contextDocRelDiff ? 1 : -1;
@@ -160,10 +160,10 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.raw==documentCollocate2.raw) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.raw - documentCollocate2.raw;
+				return documentCollocate2.raw - documentCollocate1.raw;
 			}
 		}
 		
@@ -174,10 +174,10 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.raw==documentCollocate2.raw) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate2.raw - documentCollocate1.raw;
+				return documentCollocate1.raw - documentCollocate2.raw;
 			}
 		}
 		
@@ -190,7 +190,7 @@ public class DocumentCollocate  implements Serializable {
 				return documentCollocate1.contextDocRelDiff > documentCollocate2.contextDocRelDiff ? 1 : -1;
 			}
 			else {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 		}
 	};
@@ -202,7 +202,7 @@ public class DocumentCollocate  implements Serializable {
 				return documentCollocate1.contextDocRelDiff > documentCollocate2.contextDocRelDiff ? 1 : -1;
 			}
 			else {
-				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
+				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
 			}
 		}
 	};
@@ -212,10 +212,10 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.rel==documentCollocate2.rel) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.rel > documentCollocate2.rel ? 1 : -1;
+				return documentCollocate1.rel > documentCollocate2.rel ? -1 : 1;
 			}
 		}
 		
@@ -226,10 +226,10 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.rel==documentCollocate2.rel) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate2.rel > documentCollocate1.rel ? 1 : -1;
+				return documentCollocate1.rel > documentCollocate2.rel ? 1 : -1;
 			}
 		}
 		
@@ -240,10 +240,10 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.docRel==documentCollocate2.docRel) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return Float.compare(documentCollocate1.docRel, documentCollocate2.docRel);
+				return Float.compare(documentCollocate2.docRel, documentCollocate1.docRel);
 			}
 		}
 		
@@ -254,10 +254,10 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.docRel==documentCollocate2.docRel) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return Float.compare(documentCollocate2.docRel, documentCollocate1.docRel);
+				return Float.compare(documentCollocate1.docRel, documentCollocate2.docRel);
 			}
 		}
 		
@@ -268,10 +268,10 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.docRaw==documentCollocate2.docRaw) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.docRaw - documentCollocate2.docRaw;
+				return documentCollocate2.docRaw - documentCollocate1.docRaw;
 			}
 		}
 		
@@ -282,7 +282,7 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			if (documentCollocate1.docRel==documentCollocate2.docRel) {
-				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
+				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
 				return documentCollocate2.docRaw - documentCollocate1.docRaw;

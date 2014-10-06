@@ -24,6 +24,7 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -48,8 +49,8 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.analysis.DocumentTermsQueue;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -76,6 +77,9 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	private DocumentTerm.Sort documentTermsSort;
 	
 	@XStreamOmitField
+	private Comparator<DocumentTerm> comparator;
+	
+	@XStreamOmitField
 	boolean withDistributions;
 	
 	@XStreamOmitField
@@ -94,7 +98,8 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	 */
 	public DocumentTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		documentTermsSort = DocumentTerm.Sort.getForgivingly(parameters);		
+		documentTermsSort = DocumentTerm.Sort.getForgivingly(parameters);
+		comparator = DocumentTerm.getComparator(documentTermsSort);
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		distributionBins = parameters.getParameterIntValue("bins", 10);
 		isNeedsPositions = withDistributions || parameters.getParameterBooleanValue("withPositions");
@@ -111,7 +116,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
 		int size = start+limit;
-		DocumentTermsQueue queue = new DocumentTermsQueue(size, documentTermsSort);
+		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
 		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
 		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
@@ -149,7 +154,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
-		setDocumentTermsFromQueue(queue);
+		terms.addAll(queue.getOrderedList(start));
 	}
 
 //	public DocumentTerms getAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) {
@@ -170,7 +175,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		Terms terms = atomicReader.terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
 		DocsAndPositionsEnum docsAndPositionsEnum = null;
-		DocumentTermsQueue queue = new DocumentTermsQueue(size, documentTermsSort);
+		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
 		String termString;
 		while(true) {
 			
@@ -208,14 +213,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				break; // no more terms
 			}
 		}
-		setDocumentTermsFromQueue(queue);
-	}
-
-	private void setDocumentTermsFromQueue(DocumentTermsQueue queue) {
-		for (int i=0, len = queue.size()-start; i<len; i++) {
-			terms.add(queue.poll());
-		}
-		Collections.reverse(terms);
+		this.terms.addAll(queue.getOrderedList(start));
 	}
 
 	public List<DocumentTerm> getDocumentTerms() {
