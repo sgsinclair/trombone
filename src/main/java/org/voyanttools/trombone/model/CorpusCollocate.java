@@ -41,9 +41,13 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 		this.contextTermRawFreq = contextTermRawFrequency;
 	}
 	
-	public String getNormalizedContextTerm() {
+	private String getNormalizedContextTerm() {
 		if (normalizedContextTerm==null) {normalizedContextTerm = Normalizer.normalize(contextTerm, Normalizer.Form.NFD);}
 		return normalizedContextTerm;
+	}
+	
+	public String getContextTerm() {
+		return contextTerm;
 	}
 	
 	public int getContextTermRawFrequency() {
@@ -102,62 +106,6 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 					corpusCollocate2.getNormalizedContextTerm().compareTo(corpusCollocate1.getNormalizedContextTerm());
 		}
 	};
-	
-	public static class CorpusCollocateQueue {
-		
-		// used when a size is given – use the Lucene implementation for better memory management (only top items are kept)
-		private org.apache.lucene.util.PriorityQueue<CorpusCollocate> limitedSizeQueue = null;
-		
-		// use the Java implementation to allow the queue to grow arbitrarily big
-		private java.util.PriorityQueue<CorpusCollocate> unlimitedSizeQueue = null;
-
-		public CorpusCollocateQueue(CorpusCollocate.Sort sort) {
-			this(Integer.MAX_VALUE, sort);
-		}
-
-		public CorpusCollocateQueue(int size, CorpusCollocate.Sort sort) {
-			Comparator<CorpusCollocate> comparator = CorpusCollocate.getComparator(sort);
-			if (size==Integer.MAX_VALUE) {
-				unlimitedSizeQueue = new java.util.PriorityQueue<CorpusCollocate>(11, comparator);
-			}
-			else {
-				limitedSizeQueue = new LimitedSizeQueue<CorpusCollocate>(size, comparator);
-			}
-		}
-		
-		private class LimitedSizeQueue<CorpusCollocate> extends org.apache.lucene.util.PriorityQueue<CorpusCollocate> {
-
-			Comparator<CorpusCollocate> comparator;
-			
-			public LimitedSizeQueue(int maxSize, Comparator<CorpusCollocate> comparator) {
-				super(maxSize);
-				this.comparator = comparator;
-			}
-
-			@Override
-			protected boolean lessThan(CorpusCollocate a, CorpusCollocate b) {
-				return comparator.compare(b, a) < 0;
-			}
-			
-		}
-
-		public void offer(CorpusCollocate corpusCollocate) {
-			if (limitedSizeQueue!=null) {limitedSizeQueue.insertWithOverflow(corpusCollocate);}
-			else if (unlimitedSizeQueue!=null) {unlimitedSizeQueue.offer(corpusCollocate);}
-		}
-		
-		public int size() {
-			if (limitedSizeQueue!=null) {return limitedSizeQueue.size();}
-			else if (unlimitedSizeQueue!=null) {return unlimitedSizeQueue.size();}
-			return 0;
-		}
-
-		public CorpusCollocate poll() {
-			if (limitedSizeQueue!=null) {return limitedSizeQueue.pop();}
-			else if (unlimitedSizeQueue!=null) {return unlimitedSizeQueue.poll();}
-			return null;
-		}
-	}
 
 	@Override
 	public int compareTo(CorpusCollocate o) {

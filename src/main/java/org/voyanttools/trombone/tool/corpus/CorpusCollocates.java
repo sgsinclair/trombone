@@ -24,8 +24,6 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -38,10 +36,9 @@ import org.apache.lucene.search.IndexSearcher;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusCollocate;
-import org.voyanttools.trombone.model.CorpusCollocate.CorpusCollocateQueue;
 import org.voyanttools.trombone.model.DocumentCollocate;
+import org.voyanttools.trombone.model.FlexibleQueue;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.corpus.AbstractContextTerms.DocumentSpansData;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -109,7 +106,9 @@ public class CorpusCollocates extends AbstractContextTerms {
 		}
 		
 		CorpusCollocate.Sort sort = CorpusCollocate.Sort.getForgivingly(parameters);
-		CorpusCollocateQueue queue = new CorpusCollocateQueue(start+limit, sort);
+		
+		FlexibleQueue<CorpusCollocate> flexibleQueue = new FlexibleQueue<CorpusCollocate>(CorpusCollocate.getComparator(sort), start+limit);
+		
 		
 		// now build corpus collocates
 		for (Map.Entry<String, Set<DocumentCollocate>> keywordDocumentCollocaatesEntry : keywordDocumentCollocatesMap.entrySet()) {
@@ -135,17 +134,16 @@ public class CorpusCollocates extends AbstractContextTerms {
 				}
 				total++;
 				CorpusCollocate c = new CorpusCollocate(keyword, keywordRawFrequency, contextTermCollocatesEntry.getKey(), contextTermTotal);
-				queue.offer(c);
+				flexibleQueue.offer(c);
 			}
 			
 		}
 		
-		List<CorpusCollocate> list = new ArrayList<CorpusCollocate>();
-		for (int i=0, len = queue.size()-start; i<len; i++) {
-			list.add(queue.poll());
-		}
-		Collections.reverse(list);
-		return list;
+		return flexibleQueue.getList();
+	}
+
+	List<CorpusCollocate> getCorpusCollocates() {
+		return collocates;
 	}
 
 }

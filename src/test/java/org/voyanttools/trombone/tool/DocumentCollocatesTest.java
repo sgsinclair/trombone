@@ -17,9 +17,16 @@ public class DocumentCollocatesTest {
 
 	@Test
 	public void test() throws IOException {
-		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr.txt")});
-		Storage storage = TestHelper.getDefaultTestStorage();		
+		Storage storage = TestHelper.getDefaultTestStorage();
+		
+		// add another file to the storage
+		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr/udhr-fr.txt")});
 		CorpusCreator creator = new CorpusCreator(storage, parameters);
+		creator.run();
+		
+		// add the testing file to the storage
+		parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr/udhr-en.txt")});
+		creator = new CorpusCreator(storage, parameters);
 		creator.run();
 		parameters.setParameter("corpus", creator.getStoredId());
 		parameters.setParameter("query", "human");
@@ -65,7 +72,7 @@ public class DocumentCollocatesTest {
 		assertEquals(documentCollocate.getTerm(), "world");
 
 		// run with terms relative frequency of context terms sort
-		parameters.setParameter("sort", "docRelDesc");
+		parameters.setParameter("sort", DocumentCollocate.Sort.docRelDesc.name());
 		documentCollocates = new DocumentCollocates(storage, parameters);
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
