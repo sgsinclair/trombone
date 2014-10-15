@@ -28,5 +28,12 @@ public class FieldPrefixAwareSimpleQueryParserTest {
 		// phrase
 		query = parser.parse("author:\"me test\"");
 		assertEquals("author:\"me test\"", query.toString());
+		
+		// range
+		query = parser.parse("lexical:[a-c]");
+		assertEquals("lexical:[a TO c]",query.toString());
+
+		
+		
 	}
 }
