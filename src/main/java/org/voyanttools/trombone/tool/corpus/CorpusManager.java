@@ -52,7 +52,7 @@ public class CorpusManager extends AbstractTool {
 		this.id = realCorpusCreator.getStoredId();
 	}
 	
-	static Corpus getCorpus(Storage storage, FlexibleParameters parameters) throws IOException {
+	public static Corpus getCorpus(Storage storage, FlexibleParameters parameters) throws IOException {
 		CorpusManager corpusManager = new CorpusManager(storage, parameters);
 		corpusManager.run();
 		return corpusManager.getCorpus();

@@ -37,8 +37,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
+import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.ToolFactory;
+import org.voyanttools.trombone.tool.corpus.CorpusExporter;
+import org.voyanttools.trombone.tool.corpus.CorpusManager;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -73,6 +78,15 @@ public class ToolRunner extends AbstractTool {
 		ToolFactory toolFactory = new ToolFactory(storage, parameters);
 		toolFactory.run();
 		List<RunnableTool> tools = toolFactory.getRunnableTools();
+		
+		// handle alternative tools
+		if (tools.size()==1) {
+			RunnableTool tool = tools.get(0);
+			if (tool instanceof CorpusExporter) {
+				((CorpusExporter) tool).run(CorpusManager.getCorpus(storage, parameters), writer);
+				return;
+			}
+		}
 		
 		StringBuilder sb = new StringBuilder("cache-ToolRunner-").append(getVersion());
 		for (RunnableTool tool : tools) {

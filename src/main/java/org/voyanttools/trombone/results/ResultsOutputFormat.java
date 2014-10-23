@@ -95,6 +95,21 @@ public enum ResultsOutputFormat {
 			return "application/xml;charset=UTF-8";
 
 		}
+	},
+	
+	zip {
+		@Override
+		public XStream getXStream() {
+
+			return new XStream();
+			
+		}
+
+		@Override
+		public String getContentType() {
+			return "application/zip";
+
+		}
 	};
 
 	public static ResultsOutputFormat getResultsOutputFormat(String outputFormat) {

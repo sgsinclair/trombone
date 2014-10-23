@@ -64,11 +64,12 @@ public class FlexibleQueue<T> {
 				return list;
 			}
 			for (int i=0, len=luceneQueue.size(); i<len; i++) {
+				
 				list.add(luceneQueue.pop());
 			}
 			Collections.reverse(list);
 		}
-		return list.subList(start, list.size());
+		return new ArrayList<T>(list.subList(start, list.size()));
 	}
 	
 	public List<T> getUnorderedList() {

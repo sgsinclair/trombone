@@ -21,11 +21,12 @@ import org.voyanttools.trombone.util.FlexibleQueue;
 import org.voyanttools.trombone.util.Stripper;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 @XStreamAlias("documentContexts")
 public class DocumentContexts extends AbstractContextTerms {
-	
+
 	private List<Kwic> contexts = new ArrayList<Kwic>();
 	
 	@XStreamOmitField
@@ -57,7 +58,9 @@ public class DocumentContexts extends AbstractContextTerms {
 			int lastToken = totalTokens[corpusDocIndex];
 			FlexibleQueue<Kwic> q = getKwics(atomicReader, dsd.getKey(), corpusDocIndex, lastToken, dsd.getValue());
 			for (Kwic k : q.getUnorderedList()) {
-				queue.offer(k);
+				if (k!=null){
+					queue.offer(k);
+				}
 			}
 		}
 		
@@ -97,7 +100,6 @@ public class DocumentContexts extends AbstractContextTerms {
 				if (rightend>lastToken) {rightend=lastToken;}
 				
 				String right = StringUtils.substring(document, termsOfInterest.get(keywordend-1).getEndOffset()+1, termsOfInterest.get(rightend).getEndOffset());
-				
 				queue.offer(new Kwic(corpusDocumentIndex, stripper.strip(dsd.queryString), stripper.strip(analyzedMiddle), keywordstart, stripper.strip(left), stripper.strip(middle), stripper.strip(right)));
 			}
 		}
