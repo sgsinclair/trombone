@@ -163,6 +163,13 @@ public class TikaExtractor implements Extractor {
 	        	}
 	        }
 	        
+	        // set a title from the location if we still don't have a title
+	        if (metadata.getTitle().isEmpty()) {
+	        	if (metadata.getLocation().isEmpty()==false) {
+	        		metadata.setTitle(metadata.getLocation());
+	        	}
+	        }
+	        
 	        String extractedContent = sw.toString();
 	        DocumentFormat format = storedDocumentSource.getMetadata().getDocumentFormat();
 	        if (format==DocumentFormat.PDF) {
