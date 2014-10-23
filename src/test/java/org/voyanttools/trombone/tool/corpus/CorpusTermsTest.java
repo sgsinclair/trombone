@@ -33,6 +33,7 @@ public class CorpusTermsTest {
 		parameters.addParameter("string",  "It was a dark and stormy night.");
 		parameters.addParameter("string", "It was the best of times it was the worst of times.");
 		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
+		parameters.addParameter("noCache", 1);
 
 		RealCorpusCreator creator = new RealCorpusCreator(storage, parameters);
 		creator.run();
@@ -43,9 +44,44 @@ public class CorpusTermsTest {
 		CorpusTerm corpusTerm;
 		CorpusTerms corpusTermFrequencies;
 		List<CorpusTerm> corpusTerms;
+		
+		parameters.setParameter("query", "dar*");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("dar*", corpusTerm.getTerm());
+		assertEquals(1, corpusTerm.getRawFreq());
+//		assertEquals(0, corpusTerm);
+		
+		// we're expanding the term here
+		parameters.setParameter("query", "dar*");
+		parameters.setParameter(AbstractTerms.QUERY_EXPAND_PARAMETER_NAME, "true");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("dark", corpusTerm.getTerm());
+		assertEquals(1, corpusTerm.getRawFreq());
+//		assertEquals(0, corpusTerm);
+		
+		parameters.removeParameter(AbstractTerms.QUERY_EXPAND_PARAMETER_NAME);
+		parameters.setParameter("query", "\"it was\"");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		// we sort by reverse frequency by default
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+//		assertEquals(1, corpusTerm.getDocumentIndex());
+		assertEquals("\"it was\"", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
+
 
 		// we don't want "document" from the first document
-		parameters.setParameter("query", "document*");
+		parameters.setParameter("query", "document");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();		
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
@@ -58,20 +94,10 @@ public class CorpusTermsTest {
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
 		assertEquals(1, corpusTerms.size());
 		corpusTerm = corpusTerms.get(0);
-		assertEquals("dark", corpusTerm.getTerm());
+		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
 //		assertEquals(0, corpusTerm);
 		
-		parameters.setParameter("query", "it was");
-		corpusTermFrequencies = new CorpusTerms(storage, parameters);
-		corpusTermFrequencies.run();		
-		// we sort by reverse frequency by default
-		corpusTerms = corpusTermFrequencies.getCorpusTerms();
-		assertEquals(1, corpusTerms.size());
-		corpusTerm = corpusTerms.get(0);
-//		assertEquals(1, corpusTerm.getDocumentIndex());
-		assertEquals("it was", corpusTerm.getTerm());
-		assertEquals(3, corpusTerm.getRawFreq());
 
 		
 		// all terms 

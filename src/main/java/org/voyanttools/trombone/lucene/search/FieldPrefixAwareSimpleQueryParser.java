@@ -5,6 +5,7 @@ package org.voyanttools.trombone.lucene.search;
 
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,14 +30,15 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	
 	private static String PREFIX_SEPARATOR = ":";
 	private static Pattern RANGE_PATTERN = Pattern.compile("^\\[([\\p{L}0-9]+)-([\\p{L}0-9]+)\\]$");
+	protected static TokenType DEFAULT_TOKENTYPE = TokenType.lexical;
 	
 //	private TokenType tokenType = null;
 
 	public FieldPrefixAwareSimpleQueryParser(Analyzer analyzer) {
-		this(analyzer, TokenType.lexical);
+		this(analyzer, DEFAULT_TOKENTYPE);
 	}
 	
-	private FieldPrefixAwareSimpleQueryParser(Analyzer analyzer, TokenType tokenType) {
+	public FieldPrefixAwareSimpleQueryParser(Analyzer analyzer, TokenType tokenType) {
 		super(analyzer,  Collections.singletonMap(tokenType.name(), 1.0F));
 	}
 	
@@ -44,13 +46,22 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 			Map<String, Float> weights) {
 		super(analyzer, weights);
 	}
+	
+	public Map<String, Query> getQueriesMap(String[] queries) {
+		Map<String, Query> map = new HashMap<String, Query>();
+		for (String query : queries) {
+			if (query.trim().isEmpty()) {continue;}
+			map.put(query, parse(query));
+		}
+		return map;
+	}
 
 	@Override
-  public Query parse(String queryText) {
-		// hack to support prefixes in phrases – put the prefix within the quotes
-		String modifiedQueryText = queryText.replaceAll("\\b(\\w+):\"","\"$1:");
-		return super.parse(modifiedQueryText);
-  }
+	public Query parse(String queryText) {
+			// hack to support prefixes in phrases – put the prefix within the quotes
+			String modifiedQueryText = queryText.replaceAll("\\b(\\w+):\"","\"$1:");
+			return super.parse(modifiedQueryText);
+	}
 	
 	@Override
 	protected Query newDefaultQuery(String text) {
@@ -86,7 +97,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 		else {return new PrefixQuery(new Term(text.substring(0, pos), text.substring(pos + 1)));}
 	}
 	
-	private Query newRangeQuery(Matcher matcher) {
+	protected Query newRangeQuery(Matcher matcher) {
 	    BooleanQuery bq = new BooleanQuery(true);
 	    for (Map.Entry<String,Float> entry : weights.entrySet()) {
 	    	Query trq = newRangeQuery(entry.getKey(), matcher);
@@ -96,7 +107,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	    return simplify(bq);
 	}
 	
-	private Query newRangeQuery(String field, Matcher matcher) {
+	protected Query newRangeQuery(String field, Matcher matcher) {
 		String start = matcher.group(1);
 		String end = matcher.group(2);
 		return TermRangeQuery.newStringRange(field, start, end, true, true);

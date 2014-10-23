@@ -30,7 +30,7 @@ import org.voyanttools.trombone.model.TokenType;
  */
 public abstract class AbstractQueryParser {
 	protected final static Pattern QUERY_SEPARATOR = Pattern.compile(";");	
-	protected final static Pattern TERM_SEPARATOR = Pattern.compile(",");
+	protected final static Pattern TERM_SEPARATOR = Pattern.compile("[,\\|]");
 	protected final static String QUOTE = "\"";
 	protected final static String EMPTY = "";
 	protected final static String WILDCARD_ASTERISK = "*";

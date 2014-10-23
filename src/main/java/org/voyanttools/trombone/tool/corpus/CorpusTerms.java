@@ -37,12 +37,14 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
@@ -96,7 +98,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+3;
+		return super.getVersion()+4;
 	}
 
 	protected void runAllTerms(Corpus corpus) throws IOException {
@@ -157,8 +159,10 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
 
-		SpanQueryParser spanQueryParser = new SpanQueryParser(reader, storage.getLuceneManager().getAnalyzer());
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
+		FieldPrefixAwareSimpleSpanQueryParser spanQueryParser = new FieldPrefixAwareSimpleSpanQueryParser(reader, storage.getLuceneManager().getAnalyzer());
+		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, isQueryExpand);
+//		SpanQueryParser spanQueryParser = new SpanQueryParser(reader, storage.getLuceneManager().getAnalyzer());
+//		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, AtomicInteger> positionsMap = new HashMap<Integer, AtomicInteger>();
 		int size = start+limit;
