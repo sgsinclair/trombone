@@ -337,6 +337,7 @@ public class DocumentMetadata implements PropertiesWrapper {
 	}
 
 	public void setIndex(int index) {
+		setProperty("index", String.valueOf(index));
 		this.index = index;
 	}
 	
