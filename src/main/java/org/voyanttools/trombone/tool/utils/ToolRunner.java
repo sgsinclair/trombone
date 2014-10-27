@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.utils;
 
 import java.io.IOException;
 import java.io.ObjectStreamClass;
+import java.io.OutputStream;
 import java.io.Reader;
 import java.io.Serializable;
 import java.io.Writer;
@@ -60,7 +61,10 @@ public class ToolRunner extends AbstractTool {
 	private long duration;
 	
 	@XStreamOmitField
-	private Writer writer;
+	private Writer writer = null;
+	
+	@XStreamOmitField
+	private OutputStream outputStream = null;
 	
 	@XStreamImplicit
 	List<RunnableTool> results = new ArrayList<RunnableTool>();
@@ -73,6 +77,11 @@ public class ToolRunner extends AbstractTool {
 		this.writer = writer;
 	}
 	
+	public ToolRunner(Storage storage, FlexibleParameters parameters, OutputStream outputStream) {
+		super(storage, parameters);
+		this.outputStream = outputStream;
+	}
+
 	public void run() throws IOException {
 
 		ToolFactory toolFactory = new ToolFactory(storage, parameters);
@@ -83,7 +92,10 @@ public class ToolRunner extends AbstractTool {
 		if (tools.size()==1) {
 			RunnableTool tool = tools.get(0);
 			if (tool instanceof CorpusExporter) {
-				((CorpusExporter) tool).run(CorpusManager.getCorpus(storage, parameters), writer);
+				if (outputStream==null) {
+					throw new IllegalArgumentException("The CorpusExporter tool requires the outputFormat=zip parameter to be set (or otherwise an OutputStream to be used instead of a Writer).");
+				}
+				((CorpusExporter) tool).run(CorpusManager.getCorpus(storage, parameters), outputStream);
 				return;
 			}
 		}

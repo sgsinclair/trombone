@@ -42,7 +42,7 @@ public enum DocumentFormat {
 	/**
 	 * An HTML document (.htm, .html, .xhtml).
 	 */
-	HTML("htm", "html", "xhtml"),
+	HTML("html", "htm", "xhtml"),
 
 	/**
 	 * An XML document (.xml).
@@ -107,12 +107,12 @@ public enum DocumentFormat {
 	/**
 	 * An archive file ("ar", "cpio", "dump", "jar", "tar", "tgz", "tbz2", "zip")
 	 */
-	ARCHIVE("ar", "cpio", "dump", "jar", "tar.gz", "tar", "tgz", "zip"),
+	ARCHIVE("zip", "cpio", "dump", "jar", "tar.gz", "tar", "tgz", "ar"),
 	
 	/**
 	 * A compressed file ("bzip2", "bz2", "gzip", "gz", "pack200", "xz")
 	 */
-	COMPRESSED("bzip2", "bz2", "gzip", "gz", "pack200", "xz"),
+	COMPRESSED("gz", "bz2", "gzip", "bzip2", "pack200", "xz"),
 	
 	/**
 	 * A file that will be skipped ("png", "gif", "jpg", "jpeg", "bmp", "psd", "css", "js", "json")
@@ -155,6 +155,10 @@ public enum DocumentFormat {
 			if (extension.equals("xml")) return true;
 		}
 		return false;
+	}
+	
+	public String getDefaultExtension() {
+		return extensions[0];
 	}
 	
 	/**

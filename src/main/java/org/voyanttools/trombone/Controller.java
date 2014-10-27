@@ -22,6 +22,7 @@
 package org.voyanttools.trombone;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Iterator;
@@ -58,7 +59,7 @@ public class Controller {
 
 	private FlexibleParameters parameters;
 	private Storage storage;
-	private Writer writer;
+	private Writer writer = null;
 
 	public Controller(FlexibleParameters parameters) throws IOException {
 		this(parameters, getWriter(parameters));
@@ -74,6 +75,10 @@ public class Controller {
 		this.writer = writer;
 	}
 	
+	public Controller(Storage storage, FlexibleParameters parameters) throws IOException {
+		this.storage = storage;
+		this.parameters = parameters;
+	}
 
 	private static Writer getWriter(FlexibleParameters parameters) {
 		return new OutputStreamWriter(System.out);
@@ -94,6 +99,16 @@ public class Controller {
 		controller.run();
 	}
 
+	public void run(OutputStream outputStream) throws IOException {
+		ToolRunner toolRunner = new ToolRunner(storage, parameters, outputStream);
+		toolRunner.run();
+	}
+	
+	public void run(Writer writer) throws IOException {
+		ToolRunner toolRunner = new ToolRunner(storage, parameters, writer);
+		toolRunner.run();
+	}
+	
 	public void run() throws IOException {
 		
 		ToolRunner toolRunner = new ToolRunner(storage, parameters, writer);

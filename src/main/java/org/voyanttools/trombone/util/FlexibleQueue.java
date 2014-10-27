@@ -69,7 +69,8 @@ public class FlexibleQueue<T> {
 			}
 			Collections.reverse(list);
 		}
-		return new ArrayList<T>(list.subList(start, list.size()));
+		// provide a sublist if need be
+		return start>0 ? new ArrayList<T>(list.subList(start, list.size())) : list;
 	}
 	
 	public List<T> getUnorderedList() {
