@@ -252,7 +252,16 @@ public class DocumentMetadata implements PropertiesWrapper {
 		}
 		return new DocumentMetadata(newProperties);
 	}
-
+	
+	/**
+	 * Creates a new child Metadata object with this object as its parent, including provided parent ID.
+	 * @return a new child Metadata object
+	 */
+	public DocumentMetadata asParent(String id) {
+		DocumentMetadata metadata = asParent();
+		metadata.setProperty("parent_id",id);
+		return metadata;
+	}
 	public void setTitle(String value) {
 		setProperty("title", value);
 	}
@@ -308,6 +317,22 @@ public class DocumentMetadata implements PropertiesWrapper {
 		setProperty("typesCount-"+tokenType.name(), String.valueOf(totalTypes));
 	}
 
+	public void setTypesCountMean(TokenType tokenType, float mean) {
+		setProperty("typesCountMean-"+tokenType.name(), String.valueOf(mean));
+	}
+	
+	public float getTypesCountMean(TokenType tokenType) {
+		return Float.parseFloat(getProperty("typesCountMean-"+tokenType.name(), "0"));
+	}
+	
+	public void setTypesCountStdDev(TokenType tokenType, float mean) {
+		setProperty("typesCountStdDev-"+tokenType.name(), String.valueOf(mean));
+	}
+
+	public float getTypesCountStdDev(TokenType tokenType) {
+		return Float.parseFloat(getProperty("typesCountStdDev-"+tokenType.name(), "0"));
+	}
+
 	public void setLastTokenPositionIndex(TokenType tokenType, int lastPosition) {
 		setProperty("lastTokenPositionIndex-"+tokenType.name(), String.valueOf(lastPosition));
 	}
@@ -344,4 +369,5 @@ public class DocumentMetadata implements PropertiesWrapper {
 	public int getIndex() {
 		return index;
 	}
+
 }

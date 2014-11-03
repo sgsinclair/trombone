@@ -34,6 +34,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
@@ -207,6 +208,7 @@ public class LuceneIndexer implements Indexer {
 				int totalTypes =  0;
 				int lastOffset = 0;
 				int lastPosition = 0;
+				DescriptiveStatistics stats = new DescriptiveStatistics();
 				if (terms!=null) {
 					TermsEnum termsEnum = terms.iterator(null);
 					DocsAndPositionsEnum docsAndPositionsEnum = null;
@@ -219,6 +221,7 @@ public class LuceneIndexer implements Indexer {
 								int doc = docsAndPositionsEnum.nextDoc();
 								if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
 									int freq = docsAndPositionsEnum.freq();
+									stats.addValue(freq);
 									totalTokens+=freq;
 									for (int i=0; i<freq; i++) {
 										int pos = docsAndPositionsEnum.nextPosition();
@@ -236,6 +239,8 @@ public class LuceneIndexer implements Indexer {
 				DocumentMetadata metadata = storedDocumentSource.getMetadata();
 				metadata.setTypesCount(TokenType.lexical, totalTypes);
 				metadata.setTokensCount(TokenType.lexical, totalTokens);
+				metadata.setTypesCountMean(TokenType.lexical, (float) stats.getMean());
+				metadata.setTypesCountStdDev(TokenType.lexical, (float) stats.getStandardDeviation());
 				metadata.setLastTokenPositionIndex(TokenType.lexical, lastPosition);
 				metadata.setLastTokenOffsetIndex(TokenType.lexical, lastOffset);
 				storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(id, metadata);
