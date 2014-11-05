@@ -23,16 +23,35 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
+import org.apache.lucene.index.AtomicReader;
+import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.index.DocsEnum;
+import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.apache.lucene.index.Terms;
+import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.util.Bits;
+import org.apache.lucene.util.BytesRef;
+import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
+import org.voyanttools.trombone.model.CorpusTerm;
+import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.corpus.AbstractCorpusTool;
+import org.voyanttools.trombone.tool.corpus.CorpusTerms;
+import org.voyanttools.trombone.tool.corpus.CorpusTermMinimals;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.ibm.icu.util.Calendar;
 
@@ -40,7 +59,7 @@ import com.ibm.icu.util.Calendar;
  * @author sgs
  *
  */
-public class CorpusBuilder extends AbstractTool {
+public class CorpusBuilder extends AbstractCorpusTool {
 
 	private String storedId = null;
 
@@ -76,93 +95,32 @@ public class CorpusBuilder extends AbstractTool {
 			metadata.setDocumentIds(documentIds);
 			metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
 			Corpus corpus = new Corpus(storage, metadata);
-			DocumentMetadata documentMetadata;
-			int totalWordTokens = 0;
-			int totalWordTypes = 0;
-			for (IndexedDocument doc : corpus) {
-				documentMetadata = doc.getMetadata();
-				totalWordTokens += documentMetadata.getTokensCount(TokenType.lexical);
-				totalWordTypes +=  documentMetadata.getTypesCount(TokenType.lexical);
-			}
-			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
-			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
-			storage.getCorpusStorage().storeCorpus(corpus);
+			run(corpus);
 		}
 		this.storedId = corpusId;
 	}
-
-	/*
-	void run(List<StoredDocumentSource> storedDocumentSources) throws IOException {
-		
-		List<String> sortedIds = new ArrayList<String>();
-		for (StoredDocumentSource sds : storedDocumentSources) {
-			sortedIds.add(sds.getId());
-		}
-
-		// build a hash set of the ids to check against the corpus
-		Set<String> ids = new HashSet<String>(sortedIds);
-
-		// first see if we can load an existing corpus
-		if (parameters.containsKey("corpus")) {
-			Corpus corpus = storage.getCorpusStorage().getCorpus(parameters.getParameterValue("corpus"));
-			if (corpus!=null) {		
-				
-				// add documents that aren't in the corpus already
-				List<StoredDocumentSource> corpusStoredDocumentSources = new ArrayList<StoredDocumentSource>();
-				boolean overlap = true;
-				for (IndexedDocument document : corpus) {
-					String id = document.getId();
-					if (ids.contains(id)==false) {
-						overlap = false;
-						corpusStoredDocumentSources.add(document.asStoredDocumentSource());
-						sortedIds.add(id);
-						ids.add(id);
-					}
-				}
-				
-				// we have overlap and the two sets are the same size, so just use the current corpus
-				if (overlap && ids.size() == corpus.size()) {
-					storedId = parameters.getParameterValue("corpus");
-					return;
-				}
-				
-				// we're adding document to an existing corpus, so prepend the corpus documents that aren't here
-				storedDocumentSources.addAll(0, corpusStoredDocumentSources);
-			}
-		}
-		
-		StringBuilder sb = new StringBuilder();
-		for (String id : sortedIds) {
-			sb.append(id);
-		}
-		
-		storedId = DigestUtils.md5Hex(sb.toString());
-		CorpusMetadata metadata = new CorpusMetadata(storedId);
-		metadata.setDocumentIds(sortedIds);
-		metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
-		Corpus corpus = new Corpus(storage, metadata);
-		DocumentMetadata documentMetadata;
+	
+	@Override
+	public void run(Corpus corpus) throws IOException {
 		int totalWordTokens = 0;
 		int totalWordTypes = 0;
 		for (IndexedDocument doc : corpus) {
-			documentMetadata = doc.getMetadata();
+			DocumentMetadata documentMetadata = doc.getMetadata();
 			totalWordTokens += documentMetadata.getTokensCount(TokenType.lexical);
 			totalWordTypes +=  documentMetadata.getTypesCount(TokenType.lexical);
 		}
+		CorpusMetadata metadata = corpus.getCorpusMetadata();
 		metadata.setTokensCount(TokenType.lexical, totalWordTokens);
 		metadata.setTypesCount(TokenType.lexical, totalWordTypes);
-		if (storage.getCorpusStorage().corpusExists(storedId)==false) {
-			storage.getCorpusStorage().storeCorpus(corpus);
-		}
 		
-		
-		
-		if (parameters.containsKey("corpus")==false) {
-			parameters.addParameter("corpus", storedId);
-		}
 
+		// run this to store data and avoid concurrent requests later on (we don't need values locally)
+		CorpusTermMinimals corpusTermsMinimal = new CorpusTermMinimals(storage, parameters);
+		corpusTermsMinimal.run(corpus);
+		
+		storage.getCorpusStorage().storeCorpus(corpus);
 	}
-	*/
+
 
 	String getStoredId() {
 		return storedId;

@@ -73,7 +73,7 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 
 
 	@Override
-	protected void run(Corpus corpus) throws IOException {
+	public void run(Corpus corpus) throws IOException {
 		if (parameters.containsKey("query")) {
 			String[] queries =  parameters.getParameterValues("query");
 			if (queries.length==1 && queries[0].isEmpty()) {

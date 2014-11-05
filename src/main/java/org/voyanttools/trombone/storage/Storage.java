@@ -29,6 +29,7 @@ import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
 
+import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Keywords;
@@ -83,5 +84,13 @@ public interface Storage {
 	public CorpusStorage getCorpusStorage();
 
 	public Writer getStoreStringWriter(String id) throws IOException;
+	
+	public DB getDB(String id, boolean readOnly);
+
+	/**
+	 * Storage-specific treatment for closing {@link DB}s.
+	 * @param db
+	 */
+	public void closeDB(DB db);
 
 }

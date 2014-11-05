@@ -61,7 +61,7 @@ public class CorpusExporter extends AbstractCorpusTool {
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractCorpusTool#run(org.voyanttools.trombone.model.Corpus)
 	 */
 	@Override
-	protected void run(Corpus corpus) throws IOException {
+	public void run(Corpus corpus) throws IOException {
 		this.corpus = corpus;
 	}
 
@@ -121,14 +121,20 @@ public class CorpusExporter extends AbstractCorpusTool {
 		String filename = "";
 		if (documentFilename.length>0) {
 			Properties properties = metadata.getProperties();
-			for (String part : documentFilename) {
-				if (filename.isEmpty()==false) {filename+=" - ";}
-				String p = (String) properties.get(part);
-				if (p!=null && p.trim().isEmpty()==false) {
-					filename+=p;
-				}
-				else {
-					filename+="unknown "+part;
+			for (String fn : documentFilename) {
+				for (String part : fn.split(",")) {
+					part = part.trim();
+					if (filename.isEmpty()==false) {filename+=" - ";}
+					String p = (String) properties.get(part);
+					if (p!=null && p.trim().isEmpty()==false) {
+						if (p.length()>20) {
+							p = p.substring(0, 20)+"…";
+						}
+						filename+=p;
+					}
+					else {
+						filename+="unknown "+part;
+					}
 				}
 			}
 			filename = URLEncoder.encode(filename, "UTF-8");

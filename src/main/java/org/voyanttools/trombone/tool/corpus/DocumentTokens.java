@@ -74,7 +74,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 
 	@Override
-	protected void run(Corpus corpus) throws IOException {
+	public void run(Corpus corpus) throws IOException {
 		
 		total = Integer.MAX_VALUE;
 
@@ -102,6 +102,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 			int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(id);
 			Terms terms = reader.getTermVector(luceneDoc, tokenType.name());
+			if (terms==null) {continue;}
 			TermsEnum termsEnum = terms.iterator(null);
 			Map<String, Integer> docFreqs = new HashMap<String, Integer>();
 			while(true) {

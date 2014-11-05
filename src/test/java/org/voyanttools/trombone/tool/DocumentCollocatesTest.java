@@ -8,6 +8,7 @@ import java.util.List;
 import org.junit.Test;
 import org.voyanttools.trombone.model.DocumentCollocate;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.tool.corpus.DocumentCollocates;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -17,7 +18,8 @@ public class DocumentCollocatesTest {
 
 	@Test
 	public void test() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+//		Storage storage = TestHelper.getDefaultTestStorage();
+		Storage storage = new FileStorage(TestHelper.getTemporaryTestStorageDirectory());
 		
 		// add another file to the storage
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr/udhr-fr.txt")});

@@ -50,7 +50,7 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 	}
 
 	@Override
-	protected void run(Corpus corpus) throws IOException {
+	public void run(Corpus corpus) throws IOException {
 		
 		Sort sort = IndexedDocument.Sort.getForgivingly(parameters);
 

@@ -35,12 +35,13 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class DocumentTerm {
 
 	public enum Sort {
-		RAWFREQASC, RAWFREQDESC, RELATIVEFREQASC, RELATIVEFREQDESC, TERMASC, TERMDESC;
+		RAWFREQASC, RAWFREQDESC, RELATIVEFREQASC, RELATIVEFREQDESC, TERMASC, TERMDESC, TFIDFASC, TFIDFDESC;
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "RELATIVEFREQ"; // default
 			if (sort.startsWith("RAWFREQ")) {sortPrefix = "RAWFREQ";}
 			if (sort.startsWith("TERM")) {sortPrefix = "TERM";}
+			if (sort.startsWith("TFIDF")) {sortPrefix = "TFIDF";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
@@ -56,18 +57,27 @@ public class DocumentTerm {
 	protected int rawFreq;
 	protected int totalTermsCount;
 	protected float relativeFreq;
+	protected float zscore;
+	protected float zscoreRatio;
+	protected float tfidf;
 	protected int[] positions;
 	protected int[] offsets;
-	public DocumentTerm(int docIndex, String docId, String term, int rawFreq, int totalTokens, int[] positions, int[] offsets) {
+	protected CorpusTermMinimal corpusTermMinimal;
+	
+	public DocumentTerm(int docIndex, String docId, String term, int rawFreq, int totalTokens, float zscore, int[] positions, int[] offsets, CorpusTermMinimal corpusTermMinimal) {
 		this.docIndex = docIndex;
 		this.docId = docId;
 		this.term = term;
 		this.rawFreq = rawFreq;
 		this.totalTermsCount = totalTokens;
 		this.relativeFreq = totalTokens > 0 ? ((float) rawFreq / totalTokens) * 1000000 : 0;
+		this.zscore = zscore;
 		this.positions = positions;
 		this.offsets = offsets;
 		this.normalizedString = null;
+		this.tfidf = Float.NaN;
+		this.zscoreRatio = Float.NaN;
+		this.corpusTermMinimal = corpusTermMinimal;
 	}
 	public int getRawFrequency() {
 		return rawFreq;
@@ -76,6 +86,7 @@ public class DocumentTerm {
 		if (normalizedString==null) {normalizedString = Normalizer.normalize(term, Normalizer.Form.NFD);}
 		return normalizedString;
 	}
+	
 	public String getTerm() {
 		return term;
 	}
@@ -86,6 +97,10 @@ public class DocumentTerm {
 
 	public float getRelativeFrequency() {
 		return relativeFreq;
+	}
+	
+	public float getZscore() {
+		return zscore;
 	}
 
 	public int getDocumentIndex() {
@@ -113,6 +128,10 @@ public class DocumentTerm {
 			return RawFrequencyDescendingComparator;
 		case RELATIVEFREQASC:
 			return RelativeFrequencyAscendingComparator;
+		case TFIDFASC:
+			return TfIdfAscendingComparator;
+		case TFIDFDESC:
+			return TfIdfDescendingComparator;
 		default: // relativeDesc
 			return RelativeFrequencyDescendingComparator;
 		}
@@ -256,6 +275,38 @@ public class DocumentTerm {
 		}
 		
 	};
+	
+	private static Comparator<DocumentTerm> TfIdfDescendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			float f1 = term1.getTfIdf();
+			float f2 = term2.getTfIdf();
+			if (f1==f2) {
+				return TermAscendingComparator.compare(term1, term2);
+			}
+			else {
+				return Float.compare(f2, f1);
+			}
+		}
+		
+	};
+	
+	private static Comparator<DocumentTerm> TfIdfAscendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			float f1 = term1.getTfIdf();
+			float f2 = term2.getTfIdf();
+			if (f1==f2) {
+				return TermAscendingComparator.compare(term1, term2);
+			}
+			else {
+				return Float.compare(f1, f2);
+			}
+		}
+		
+	};
 	public int getTotalTermsCount() {
 		return totalTermsCount;
 	}
@@ -266,5 +317,23 @@ public class DocumentTerm {
 	
 	public String getDocId() {
 		return docId;
+	}
+	public float getZscoreRatio() {
+		if (corpusTermMinimal!=null && Float.isNaN(zscoreRatio)) {
+			float corpusZscore = corpusTermMinimal.getZscore();
+			if (zscore!=0 && corpusZscore!=0) {
+				zscoreRatio = zscore > corpusZscore ? zscore / corpusZscore : -(corpusZscore / zscore);
+			}
+		}
+		return zscoreRatio;
+	}
+	public float getTfIdf() {
+		if (corpusTermMinimal!=null && Float.isNaN(tfidf)) {
+			int inDocuments = corpusTermMinimal.getInDocumentsCount();
+			if (inDocuments>0) {
+				this.tfidf = ((float) rawFreq / (float) totalTermsCount) * (float) Math.log10((float) corpusTermMinimal.getDocumentsCount() / (float) inDocuments);
+			}
+		}
+		return tfidf;
 	}
 }

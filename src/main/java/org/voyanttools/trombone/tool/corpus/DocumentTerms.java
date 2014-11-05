@@ -46,6 +46,8 @@ import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusTermMinimal;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
@@ -122,8 +124,11 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 
+		Map<String, CorpusTermMinimal> corpusTermMinimals = CorpusTermMinimals.getCorpusTermMinimalsMap(storage, corpus, tokenType);
+		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
+			CorpusTermMinimal corpusTermMinimal = corpusTermMinimals.get(queryString);
 			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), docIdSet, termContexts);			
 			while(spans.next()) {
 				int doc = spans.doc();
@@ -146,9 +151,15 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				}
 				int documentPosition = entry.getKey();
 				String docId = corpusMapper.getDocumentIdFromDocumentPosition(documentPosition);
+				DocumentMetadata documentMetadata = corpus.getDocument(docId).getMetadata();
+				float mean = documentMetadata.getTypesCountMean(tokenType);
+				float stdDev = documentMetadata.getTypesCountStdDev(tokenType);
+
 				if (freq>0) {
 					total++;
-					queue.offer(new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], isNeedsPositions ? positions : null, null));
+					float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
+					DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], zscore, positions, null, corpusTermMinimal);
+					queue.offer(documentTerm);
 					
 				}
 			}
@@ -171,6 +182,8 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		
+		Map<String, CorpusTermMinimal> corpusTermMinimals = CorpusTermMinimals.getCorpusTermMinimalsMap(storage, corpus, tokenType);
+
 		// now we look for our term frequencies
 		Terms terms = atomicReader.terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
@@ -184,19 +197,23 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			if (term != null) {
 				termString = term.utf8ToString();
 				if (stopwords.isKeyword(termString)) {continue;}
+				CorpusTermMinimal corpusTermMinimal = corpusTermMinimals.get(termString);
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
 					int documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
 					String docId = corpusMapper.getDocumentIdFromLuceneDocumentIndex(doc);
+					DocumentMetadata documentMetadata = corpus.getDocument(docId).getMetadata();
+					float mean = documentMetadata.getTypesCountMean(tokenType);
+					float stdDev = documentMetadata.getTypesCountStdDev(tokenType);
 					int totalTokensCount = totalTokensCounts[documentPosition];
 					int freq = docsAndPositionsEnum.freq();
 //					if (freq>0) {total++;} // make sure we track that this could be a hit
-					int[] positions = null;
-					int[] offsets = null;
+					int[] positions = new int[freq];
+					int[] offsets = new int[freq];
 					if (isNeedsPositions || isNeedsOffsets) {
-						positions = new int[freq];
-						offsets = new int[freq];
+//						positions = new int[freq];
+//						offsets = new int[freq];
 						for (int i=0; i<freq; i++) {
 							positions[i] = docsAndPositionsEnum.nextPosition();
 							offsets[i] = docsAndPositionsEnum.startOffset();
@@ -204,7 +221,9 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 					}
 					if (freq>0) {
 						total++;
-						queue.offer(new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, positions, offsets));
+						float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
+						DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
+						queue.offer(documentTerm);
 						doc = docsAndPositionsEnum.nextDoc();
 					}
 				}
@@ -266,6 +285,18 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
 				writer.setValue(String.valueOf(documentTerm.getRelativeFrequency()));
+				writer.endNode();
+				
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "zscore", Float.class);
+				writer.setValue(String.valueOf(documentTerm.getZscore()));
+				writer.endNode();
+				
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "zscoreRatio", Float.class);
+				writer.setValue(String.valueOf(documentTerm.getZscoreRatio()));
+				writer.endNode();
+				
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tfidf", Float.class);
+				writer.setValue(String.valueOf(documentTerm.getTfIdf()));
 				writer.endNode();
 				
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTermsCount", Integer.class);

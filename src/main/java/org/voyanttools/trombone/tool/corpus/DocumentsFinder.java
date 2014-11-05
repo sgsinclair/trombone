@@ -59,7 +59,7 @@ public class DocumentsFinder extends AbstractTerms {
 	}
 	
 	@Override
-	protected void run(Corpus corpus) throws IOException {
+	public void run(Corpus corpus) throws IOException {
 		corpusId = corpus.getId();
 		runQueries(corpus, parameters.getParameterValues("query"));
 	}

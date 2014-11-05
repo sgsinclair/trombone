@@ -199,7 +199,8 @@ public class XmlExtractor implements Extractor, Serializable {
 			this.id = id;
 			this.storedDocumentSourceId = storedDocumentSource.getId();
 			this.storedDocumentSource = storedDocumentSource;
-			this.metadata = storedDocumentSource.getMetadata();
+			this.metadata = storedDocumentSource.getMetadata().asParent(storedDocumentSourceId);
+			this.metadata.setLocation(storedDocumentSource.getMetadata().getLocation());
 		}
 
 		@Override

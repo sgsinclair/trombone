@@ -37,7 +37,7 @@ public class CorpusMetadata extends AbstractCorpusTool  {
 	}
 
 	@Override
-	protected void run(Corpus corpus) throws IOException {
+	public void run(Corpus corpus) throws IOException {
 		metadata = corpus.getCorpusMetadata();
 	}
 

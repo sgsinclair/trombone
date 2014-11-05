@@ -37,6 +37,8 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.apache.lucene.store.RAMDirectory;
+import org.mapdb.DB;
+import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.CorpusStorage;
@@ -173,5 +175,21 @@ public class MemoryStorage implements Storage {
 			storeString(id, this.toString());
 		}
 		
+	}
+
+	@Override
+	public DB getDB(String id, boolean readOnly) {
+		if (!isStored(id)) {
+			DBMaker maker = DBMaker.newMemoryDB()
+					.transactionDisable()
+					.closeOnJvmShutdown();
+			DB db = readOnly ? maker.readOnly().make() : maker.make();
+			storedObjectsMap.put(id, db);
+		}
+		return (DB) storedObjectsMap.get(id);
+	}
+	
+	public void closeDB(DB db) {
+		// do nothing since we need to keep the engine open for potential future requests
 	}
 }

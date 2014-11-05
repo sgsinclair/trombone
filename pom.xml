@@ -190,6 +190,11 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.3.2</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.mapdb</groupId>
+		    <artifactId>mapdb</artifactId>
+		    <version>1.0.6</version>
+		</dependency>
 	</dependencies>
 	<!-- 
 	<dependencyManagement>

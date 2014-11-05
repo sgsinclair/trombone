@@ -71,7 +71,7 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 		return StoredToLuceneDocumentsMapper.getInstance(searcher, corpus);
 	}
 	
-	protected abstract void run(Corpus corpus) throws IOException;
+	public abstract void run(Corpus corpus) throws IOException;
 //	protected abstract void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException;
 
 

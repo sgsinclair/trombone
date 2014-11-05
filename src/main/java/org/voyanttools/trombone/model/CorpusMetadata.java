@@ -97,6 +97,14 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 		properties.setProperty("typesCount-"+tokenType.name(), String.valueOf(totalWordTokens));
 	}
 	
+	public void setTypesCountMean(TokenType tokenType, float f) {
+		properties.setProperty("typesCountMean"+tokenType.name(), String.valueOf(f));
+	}
+
+	public void setTypesCountStdDev(TokenType tokenType, float f) {
+		properties.setProperty("typesCountMean"+tokenType.name(), String.valueOf(f));
+	}
+	
 	public int getTokensCount(TokenType tokenType) {
 		return Integer.valueOf(properties.getProperty("tokensCount-"+tokenType.name(), "0"));
 	}
@@ -105,6 +113,13 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 		return Integer.valueOf(properties.getProperty("typesCount-"+tokenType.name(), "0"));
 	}
 	
+	public float getTypesCountMean(TokenType tokenType) {
+		return Float.valueOf(properties.getProperty("typesCountMean-"+tokenType.name(), "0"));
+	}
+	public float getTypesCountStdDev(TokenType tokenType) {
+		return Float.valueOf(properties.getProperty("typesCountStdDev-"+tokenType.name(), "0"));
+	}
+
 	public static class CorpusMetadataConverter implements Converter {
 
 		@Override
@@ -155,4 +170,5 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 		}
 
 	}
+
 }

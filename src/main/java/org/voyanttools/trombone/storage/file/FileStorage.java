@@ -40,6 +40,8 @@ import java.util.UUID;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.store.NIOFSDirectory;
+import org.mapdb.DB;
+import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.CorpusStorage;
@@ -222,5 +224,21 @@ public class FileStorage implements Storage {
 	public Writer getStoreStringWriter(String id) throws IOException {
 		File file = getFile(id);
 		return new FileWriter(file);
+	}
+
+
+
+	@Override
+	public DB getDB(String id, boolean readOnly) {
+		DBMaker maker = DBMaker.newFileDB(getFile(id))
+			.transactionDisable()
+			.closeOnJvmShutdown()
+			.mmapFileEnableIfSupported();
+		if (readOnly) {return maker.readOnly().make();}
+		else {return maker.make();}
+	}
+	
+	public void closeDB(DB db) {
+		db.close();
 	}
 }

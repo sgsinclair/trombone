@@ -144,7 +144,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				}
 				if (termFreq>0) {
 					total++;
-					queue.offer(new CorpusTerm(termString, termFreq, (float) termFreq / totalTokens, withDistributions ? documentRawFreqs : null, withDistributions ? documentRelativeFreqs : null));
+					queue.offer(new CorpusTerm(termString, termFreq, (float) termFreq / totalTokens, documentRawFreqs, documentRelativeFreqs));
 				}
 			}
 			else {
@@ -201,7 +201,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			if (freq>0) { // we may have terms from other documents not in this corpus
 				this.totalTokens += freq;
 				total++;
-				queue.offer(new CorpusTerm(queryString, freq, (float) freq / totalTokens, withDistributions ? rawFreqs : null, withDistributions ? relativeFreqs : null));
+				queue.offer(new CorpusTerm(queryString, freq, (float) freq / totalTokens, rawFreqs, relativeFreqs));
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
@@ -260,6 +260,14 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
 				writer.setValue(String.valueOf((float) corpusTerm.getRawFreq() / corpusTerms.totalTokens));
+				writer.endNode();
+				
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativePeakedness", Float.class);
+				writer.setValue(String.valueOf(corpusTerm.getPeakedness()));
+				writer.endNode();
+				
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeSkewness", Float.class);
+				writer.setValue(String.valueOf(corpusTerm.getSkewness()));
 				writer.endNode();
 				
 				if (withRawDistributions) {
