@@ -39,13 +39,17 @@ import org.voyanttools.trombone.lucene.LuceneManager;
  */
 public class LexicalAnalyzer extends Analyzer {
 	
+	@Override
+	protected Reader initReader(String fieldName, Reader reader) {
+		return new HTMLStripCharFilter(reader);
+	}
+	
 	/* (non-Javadoc)
 	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
 	 */
 	@Override
 	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
-		Reader filter =  new HTMLStripCharFilter(reader);
-		Tokenizer tokenizer = new ICUTokenizer(filter);
+		Tokenizer tokenizer = new ICUTokenizer(reader);
 		TokenStream stream = new LowerCaseFilter(LuceneManager.VERSION, tokenizer);
 		return new TokenStreamComponents(tokenizer, stream);
 	}
