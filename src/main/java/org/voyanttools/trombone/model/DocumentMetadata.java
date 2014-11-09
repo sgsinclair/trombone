@@ -25,9 +25,12 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Comparator;
 import java.util.Properties;
 
 import org.voyanttools.trombone.input.source.Source;
+import org.voyanttools.trombone.model.IndexedDocument.Sort;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
  * This encapsulates various types of metadata about content, including {@link Source},
@@ -37,8 +40,8 @@ import org.voyanttools.trombone.input.source.Source;
  * @author Stéfan Sinclair
  */
 //@XStreamConverter(MetadataConverter.class)
-public class DocumentMetadata implements PropertiesWrapper {
-
+public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentMetadata> {
+	
 	private transient int index = 0;
 	
 	private Properties properties;
@@ -278,6 +281,10 @@ public class DocumentMetadata implements PropertiesWrapper {
 		setProperty("pubDate", value);
 	}
 	
+	public String getPubDate() {
+		return getProperty("pubDate", "");
+	}
+	
 	public void setPublisher(String value) {
 		setProperty("publisher", value);
 	}
@@ -369,5 +376,62 @@ public class DocumentMetadata implements PropertiesWrapper {
 	public int getIndex() {
 		return index;
 	}
+	
+	static Comparator<DocumentMetadata> AuthorAscendingComparator = new Comparator<DocumentMetadata>() {
+		@Override
+		public int compare(DocumentMetadata o1, DocumentMetadata o2) {
+			if (o1.getAuthor().equals(o2.getAuthor())) {return o1.compareTo(o2);}
+			return o1.getAuthor().compareTo(o2.getAuthor());
+		}
+	};
 
-}
+	static Comparator<DocumentMetadata> AuthorDescendingComparator = new Comparator<DocumentMetadata>() {
+		@Override
+		public int compare(DocumentMetadata o1, DocumentMetadata o2) {
+			if (o1.getAuthor().equals(o2.getAuthor())) {return o1.compareTo(o2);}
+			return o1.getAuthor().compareTo(o2.getAuthor());
+		}
+	};
+	
+	static Comparator<DocumentMetadata> TitleAscendingComparator = new Comparator<DocumentMetadata>() {
+		@Override
+		public int compare(DocumentMetadata o1, DocumentMetadata o2) {
+			if (o1.getTitle().equals(o2.getTitle())) {return o1.compareTo(o2);}
+			return o1.getTitle().compareTo(o2.getTitle());
+		}
+	};
+
+	static Comparator<DocumentMetadata> TitleDescendingComparator = new Comparator<DocumentMetadata>() {
+		@Override
+		public int compare(DocumentMetadata o1, DocumentMetadata o2) {
+			if (o1.getTitle().equals(o2.getTitle())) {return o1.compareTo(o2);}
+			return o1.getTitle().compareTo(o2.getTitle());
+		}
+	};
+	
+	static Comparator<DocumentMetadata> PubDateAscendingComparator = new Comparator<DocumentMetadata>() {
+		@Override
+		public int compare(DocumentMetadata o1, DocumentMetadata o2) {
+			if (o1.getPubDate().equals(o2.getPubDate())) {return o1.compareTo(o2);}
+			return o1.getPubDate().compareTo(o2.getPubDate());
+		}
+	};
+
+	static Comparator<DocumentMetadata> PubDateDescendingComparator = new Comparator<DocumentMetadata>() {
+		@Override
+		public int compare(DocumentMetadata o1, DocumentMetadata o2) {
+			if (o1.getPubDate().equals(o2.getPubDate())) {return o1.compareTo(o2);}
+			return o1.getPubDate().compareTo(o2.getPubDate());
+		}
+	};
+	
+	@Override
+	public int compareTo(DocumentMetadata o) {
+		// don't use static comparators since we may get bounced back here
+		
+		if (getTitle().equals(o.getTitle())==false) {return getTitle().compareTo(o.getTitle());}
+		if (getAuthor().equals(o.getAuthor())==false) {return getAuthor().compareTo(o.getAuthor());}
+		if (getPubDate().equals(o.getPubDate())==false) {return getPubDate().compareTo(o.getPubDate());}
+		return Integer.compare(hashCode(), o.hashCode()); // give up
+		
+	}}

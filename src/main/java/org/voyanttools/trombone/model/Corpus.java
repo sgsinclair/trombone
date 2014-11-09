@@ -132,4 +132,5 @@ public class Corpus implements Iterable<IndexedDocument> {
 		}
 		return totalTokensCount;
 	}
+
 }

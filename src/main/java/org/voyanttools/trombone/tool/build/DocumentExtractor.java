@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
@@ -80,6 +81,11 @@ class DocumentExtractor extends AbstractTool {
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentStorage, parameters);
 		storedDocumentSources = extractor.getExtractedStoredDocumentSources(extractableStoredDocumentSources);
+		
+		// sort documents if needed
+		if (parameters.containsKey("sort")) {
+			Collections.sort(storedDocumentSources, StoredDocumentSource.getComparator(parameters));
+		}
 		
 		List<String> extractedIds = new ArrayList<String>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {

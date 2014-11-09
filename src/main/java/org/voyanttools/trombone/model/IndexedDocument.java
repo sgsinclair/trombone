@@ -34,7 +34,7 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
  *
  */
 @XStreamConverter(DocumentConverter.class)
-public class IndexedDocument implements DocumentContainer {
+public class IndexedDocument implements DocumentContainer, Comparable<IndexedDocument> {
 
 	private String id;
 	
@@ -43,7 +43,7 @@ public class IndexedDocument implements DocumentContainer {
 	private Storage storage;
 	
 	public enum Sort {
-		INDEXASC, INDEXDESC, TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC, TERMSCOUNTLEXICALASC, TERMSCOUNTLEXICALDESC;
+		INDEXASC, INDEXDESC, TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC, TERMSCOUNTLEXICALASC, TERMSCOUNTLEXICALDESC, PUBDATEASC, PUBDATEDESC;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
@@ -51,18 +51,18 @@ public class IndexedDocument implements DocumentContainer {
 			if (sort.startsWith("TITLE")) {sortPrefix="TITLE";}
 			if (sort.startsWith("TERMSCOUNT")) {sortPrefix="TERMSCOUNTLEXICAL";} // TODO: support other kinds of term counts
 			else if (sort.startsWith("AUTHOR")) {sortPrefix="AUTHOR";}
+			else if (sort.startsWith("PUBDATE")) {sortPrefix="PUBDATE";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "ASC";
 			if (dir.endsWith("DESC")) {dirSuffix="DESC";}
 			return valueOf(sortPrefix+dirSuffix);
 		}
-		
 	}
 	
 	/**
 	 * 
 	 */
-	IndexedDocument(Storage storage, String id) {
+	public IndexedDocument(Storage storage, String id) {
 		this.storage = storage;
 		this.id = id;
 	}
@@ -154,6 +154,10 @@ public class IndexedDocument implements DocumentContainer {
 			return TermsCountLexicalAscComparator;
 		case TERMSCOUNTLEXICALDESC:
 			return TermsCountLexicalDescComparator;
+		case PUBDATEASC:
+			return PubDateAscendingComparator;
+		case PUBDATEDESC:
+			return PubDateDescendingComparator;
 		default:
 			return IndexAscComparator;
 		}
@@ -246,4 +250,45 @@ public class IndexedDocument implements DocumentContainer {
 			}
 		}
 	};
+
+	private static Comparator<IndexedDocument> PubDateDescendingComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				String d1 = doc1.getMetadata().getPubDate();
+				String d2 = doc2.getMetadata().getPubDate();
+				if (d1.equals(d2)) {
+					return TitleAscComparator.compare(doc1, doc2);
+				}
+				else {
+					return d2.compareTo(d1);
+				}
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> PubDateAscendingComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				String d1 = doc1.getMetadata().getPubDate();
+				String d2 = doc2.getMetadata().getPubDate();
+				if (d1.equals(d2)) {
+					return TitleAscComparator.compare(doc1, doc2);
+				}
+				else {
+					return d1.compareTo(d2);
+				}
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	@Override
+	public int compareTo(IndexedDocument o) {
+		return IndexAscComparator.compare(this, o);
+	}
 }

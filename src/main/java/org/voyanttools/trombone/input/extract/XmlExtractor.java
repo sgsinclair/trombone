@@ -148,7 +148,7 @@ public class XmlExtractor implements Extractor, Serializable {
 				defaultsMap.put("xmlAuthorXpath", "//*[local-name()='teiHeader']//*[local-name()='author']");
 				break;
 			case EEBODREAM:
-				defaultsMap.put("xmlContentXpath", "/EEBO/ETS/EEBO//TEXT/BODY");
+				defaultsMap.put("xmlContentXpath", "/EEBO/TEXTS/TEXT");
 				defaultsMap.put("xmlTitleXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/TITLE[1]");
 				defaultsMap.put("xmlAuthorXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/AUTHOR");
 				defaultsMap.put("xmlPubPlaceXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBPLACE");

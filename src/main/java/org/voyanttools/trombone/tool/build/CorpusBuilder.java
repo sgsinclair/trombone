@@ -22,6 +22,8 @@
 package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -59,7 +61,7 @@ import com.ibm.icu.util.Calendar;
  * @author sgs
  *
  */
-public class CorpusBuilder extends AbstractCorpusTool {
+public class CorpusBuilder extends AbstractTool {
 
 	private String storedId = null;
 
@@ -90,37 +92,31 @@ public class CorpusBuilder extends AbstractCorpusTool {
 	void run(String corpusId) throws IOException {
 		// store and compute the corpus if it hasn't been stored
 		if (storage.getCorpusStorage().corpusExists(corpusId)==false) {
+			
+			Calendar start = Calendar.getInstance();
 			List<String> documentIds = storage.retrieveStrings(corpusId);
+			
+			int totalWordTokens = 0;
+			int totalWordTypes = 0;
+			List<IndexedDocument> indexedDocuments = new ArrayList<IndexedDocument>();
+			for (String documentId : documentIds) {
+				IndexedDocument doc = new IndexedDocument(storage, documentId);
+				DocumentMetadata documentMetadata = doc.getMetadata();
+				totalWordTokens += documentMetadata.getTokensCount(TokenType.lexical);
+				totalWordTypes +=  documentMetadata.getTypesCount(TokenType.lexical);
+				indexedDocuments.add(doc);
+			}
+			
 			CorpusMetadata metadata = new CorpusMetadata(corpusId);
 			metadata.setDocumentIds(documentIds);
 			metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
+			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
+			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
 			Corpus corpus = new Corpus(storage, metadata);
-			run(corpus);
+			storage.getCorpusStorage().storeCorpus(corpus);
 		}
 		this.storedId = corpusId;
 	}
-	
-	@Override
-	public void run(Corpus corpus) throws IOException {
-		int totalWordTokens = 0;
-		int totalWordTypes = 0;
-		for (IndexedDocument doc : corpus) {
-			DocumentMetadata documentMetadata = doc.getMetadata();
-			totalWordTokens += documentMetadata.getTokensCount(TokenType.lexical);
-			totalWordTypes +=  documentMetadata.getTypesCount(TokenType.lexical);
-		}
-		CorpusMetadata metadata = corpus.getCorpusMetadata();
-		metadata.setTokensCount(TokenType.lexical, totalWordTokens);
-		metadata.setTypesCount(TokenType.lexical, totalWordTypes);
-		
-
-		// run this to store data and avoid concurrent requests later on (we don't need values locally)
-		CorpusTermMinimals corpusTermsMinimal = new CorpusTermMinimals(storage, parameters);
-		corpusTermsMinimal.run(corpus);
-		
-		storage.getCorpusStorage().storeCorpus(corpus);
-	}
-
 
 	String getStoredId() {
 		return storedId;

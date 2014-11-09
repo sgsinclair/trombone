@@ -21,7 +21,10 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.util.Comparator;
+
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 
 /**
@@ -32,7 +35,23 @@ import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
  * @author Stéfan Sinclair
  */
 public class StoredDocumentSource {
-
+	
+	enum Sort {
+		TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC, PUBDATEASC, PUBDATEDESC;
+		
+		public static Sort getForgivingly(FlexibleParameters parameters) {
+			String sort = parameters.getParameterValue("sort", "").toUpperCase();
+			String sortPrefix = "TITLE";
+			if (sort.startsWith("AUTHOR")) {sortPrefix="AUTHOR";}
+			else if (sort.startsWith("PUBDATE")) {sortPrefix="PUBDATE";}
+			String dir = parameters.getParameterValue("dir", "").toUpperCase();
+			String dirSuffix = "ASC";
+			if (dir.endsWith("DESC")) {dirSuffix="DESC";}
+			return valueOf(sortPrefix+dirSuffix);
+		}
+		
+	};
+	
 	/**
 	 * the document's ID (to allow the storage to retrieve it)
 	 */
@@ -73,4 +92,71 @@ public class StoredDocumentSource {
 	public String toString() {
 		return id+" "+metadata;
 	}
+
+	public static Comparator<StoredDocumentSource> getComparator(FlexibleParameters parameters) {
+		Sort sort = Sort.getForgivingly(parameters);
+		return getComparator(sort);
+	}
+	
+	public static Comparator<StoredDocumentSource> getComparator(Sort sort) {
+		switch(sort) {
+			case AUTHORASC:
+				return AuthorAscendingComparator;
+			case AUTHORDESC:
+				return AuthorDescendingComparator;	
+			case PUBDATEASC:
+				return PubDateAscendingComparator;
+			case PUBDATEDESC:
+				return PubDateDescendingComparator;	
+			case TITLEDESC:
+				return TitleDescendingComparator;
+			default:
+				return TitleAscendingComparator;
+			}
+	}
+
+	
+	private static Comparator<StoredDocumentSource> AuthorAscendingComparator =  new Comparator<StoredDocumentSource>() {
+		@Override
+		public int compare(StoredDocumentSource doc1, StoredDocumentSource doc2) {
+			return DocumentMetadata.AuthorAscendingComparator.compare(doc1.metadata, doc2.metadata);
+		}
+	};
+	
+	private static Comparator<StoredDocumentSource> AuthorDescendingComparator =  new Comparator<StoredDocumentSource>() {
+		@Override
+		public int compare(StoredDocumentSource doc1, StoredDocumentSource doc2) {
+			return DocumentMetadata.AuthorDescendingComparator.compare(doc1.metadata, doc2.metadata);
+		}
+	};
+	
+	private static Comparator<StoredDocumentSource> PubDateAscendingComparator =  new Comparator<StoredDocumentSource>() {
+		@Override
+		public int compare(StoredDocumentSource doc1, StoredDocumentSource doc2) {
+			return DocumentMetadata.PubDateAscendingComparator.compare(doc1.metadata, doc2.metadata);
+		}
+	};
+	
+	private static Comparator<StoredDocumentSource> PubDateDescendingComparator =  new Comparator<StoredDocumentSource>() {
+		@Override
+		public int compare(StoredDocumentSource doc1, StoredDocumentSource doc2) {
+			return DocumentMetadata.PubDateDescendingComparator.compare(doc1.metadata, doc2.metadata);
+		}
+	};
+	
+	private static Comparator<StoredDocumentSource> TitleAscendingComparator =  new Comparator<StoredDocumentSource>() {
+		@Override
+		public int compare(StoredDocumentSource doc1, StoredDocumentSource doc2) {
+			return DocumentMetadata.TitleAscendingComparator.compare(doc1.metadata, doc2.metadata);
+		}
+	};
+	
+	private static Comparator<StoredDocumentSource> TitleDescendingComparator =  new Comparator<StoredDocumentSource>() {
+		@Override
+		public int compare(StoredDocumentSource doc1, StoredDocumentSource doc2) {
+			return DocumentMetadata.TitleDescendingComparator.compare(doc1.metadata, doc2.metadata);
+		}
+	};
+
+
 }
