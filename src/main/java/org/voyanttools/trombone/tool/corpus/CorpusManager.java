@@ -6,6 +6,7 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusAliasDB;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
@@ -40,9 +41,20 @@ public class CorpusManager extends AbstractTool {
 		if (parameters.containsKey("corpus")) {
 			String corpusId = parameters.getParameterValue("corpus");
 			
+			// lookup for an alias
+			if (corpusId.length()<32) { // MD5 should be 32 characters
+				CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, true);
+				String id = corpusAliasDB.get(corpusId);
+				if (id!=null && id.isEmpty()==false) {
+					corpusId = id;
+				}
+				corpusAliasDB.close();
+			}
+			
 			// check if corpus exists and return it if so
 			if (storage.getCorpusStorage().corpusExists(corpusId)) {
 				this.id = corpusId;
+				checkActions();
 				return;
 			}
 		}
@@ -50,12 +62,21 @@ public class CorpusManager extends AbstractTool {
 		RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);
 		realCorpusCreator.run();
 		this.id = realCorpusCreator.getStoredId();
+		checkActions();
 	}
 	
 	public static Corpus getCorpus(Storage storage, FlexibleParameters parameters) throws IOException {
 		CorpusManager corpusManager = new CorpusManager(storage, parameters);
 		corpusManager.run();
 		return corpusManager.getCorpus();
+	}
+	
+	private void checkActions() {
+		if (parameters.containsKey("addAlias")) {
+			CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, false);
+			corpusAliasDB.put(parameters.getParameterValue("addAlias"), this.id);
+			corpusAliasDB.close();
+		}
 	}
 
 	private Corpus getCorpus() throws IOException {

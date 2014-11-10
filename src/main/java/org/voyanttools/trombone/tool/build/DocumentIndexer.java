@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.voyanttools.trombone.input.index.Indexer;
@@ -70,9 +71,17 @@ class DocumentIndexer extends AbstractTool {
 	}
 	
 	void run(List<StoredDocumentSource> indexableStoredDocumentSources) throws IOException {
+		
+		Calendar start = Calendar.getInstance();
+		log("Starting document indexing.");
+
 		this.indexableStoredDocumentSources = indexableStoredDocumentSources;
 		Indexer indexer = new LuceneIndexer(storage, parameters);
 		storedId = indexer.index(indexableStoredDocumentSources);
+		
+		log("Finished indexing of "+indexableStoredDocumentSources.size()+" documents.", start);
+
+		
 	}
 
 	List<StoredDocumentSource> getStoredDocumentSources() {

@@ -144,7 +144,7 @@ public class StoredDocumentSourceExtractor {
 
 		@Override
 		public StoredDocumentSource call() throws Exception {
-			if (verbose) {System.out.println("extracting "+storedDocumentSource.getMetadata());}
+//			if (verbose) {System.out.println("extracting "+storedDocumentSource.getMetadata());}
 			return this.extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		}
 		

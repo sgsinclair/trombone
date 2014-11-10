@@ -118,9 +118,11 @@ public class LuceneIndexer implements Indexer {
 			}
 			executor.shutdown();
 			try {
-				executor.awaitTermination(10, TimeUnit.MINUTES); // max 10 minutes run time
+				if (!executor.awaitTermination(parameters.getParameterIntValue("luceneIndexingTimeout", 60*10), TimeUnit.SECONDS)) { // default 10 minutes
+					throw new InterruptedException("Lucene indexing has run out of time.");
+				}
 			} catch (InterruptedException e) {
-				throw new RuntimeException("Lucene indexing has run out of time", e);
+				throw new RuntimeException("Lucene indexing has been interrupted.", e);
 			}
 			finally {
 				
@@ -156,7 +158,9 @@ public class LuceneIndexer implements Indexer {
 				}
 				executor.shutdown();
 				try {
-					executor.awaitTermination(100, TimeUnit.SECONDS);
+					if (!executor.awaitTermination(parameters.getParameterIntValue("luceneAnalysisTimeout", 60*10), TimeUnit.SECONDS)) { // default 10 minutes
+						throw new InterruptedException("Lucene analysis has run out of time.");
+					}
 				} catch (InterruptedException e) {
 					throw new RuntimeException("Lucene document analysis run out of time", e);
 				}
@@ -194,7 +198,7 @@ public class LuceneIndexer implements Indexer {
 
 			
 			if (verbose) {
-				System.out.println("analyzing indexed document "+storedDocumentSource.getMetadata());
+//				System.out.println("analyzing indexed document "+storedDocumentSource.getMetadata());
 			}
 			
 			Query query = LuceneManager.getCorpusDocumentQuery(corpusId,  id);
@@ -260,7 +264,7 @@ public class LuceneIndexer implements Indexer {
 		private LuceneManager luceneManager;
 		private String corpusId;
 		private String id;
-		private String string = null;
+//		private String string = null;
 		private boolean verbose;
 		public StoredDocumentSourceIndexer(Storage storage, IndexWriter indexWriter, IndexSearcher indexSearcher,
 				StoredDocumentSource storedDocumentSource, String corpusId, boolean verbose) throws IOException {
@@ -275,7 +279,8 @@ public class LuceneIndexer implements Indexer {
 		}
 		
 		private String getString() throws IOException {
-			if (this.string == null) {
+			String string = "";
+//			if (this.string == null) {
 				InputStream is = null;
 				try {
 					is = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
@@ -286,7 +291,7 @@ public class LuceneIndexer implements Indexer {
 				finally {
 					if (is!=null) is.close();
 				}
-			}
+//			}
 			return string;
 		}
 		

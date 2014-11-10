@@ -21,6 +21,7 @@ import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
+import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -31,7 +32,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  */
 public class CorpusTermMinimals extends AbstractCorpusTool {
 	
-	private Map<String, CorpusTermMinimal> corpusTermMinimals = null;
+	private CorpusTermMinimalsDB corpusTermMinimalsDB = null;
 	
 	private TokenType tokenType;
 
@@ -45,12 +46,14 @@ public class CorpusTermMinimals extends AbstractCorpusTool {
 
 	@Override
 	public void run(Corpus corpus) throws IOException {
+		run(corpus, true);
+	}
+	
+	public void run(Corpus corpus, boolean readOnly) throws IOException {
 
-		String dbId = "mapdb-"+corpus.getId()+"-corpusTermMinimals-"+getVersion()+"-all";
-		DB db = storage.getDB(dbId, false);
-		corpusTermMinimals = db.getHashMap("corpusTermMinimals-"+tokenType.name());
+		corpusTermMinimalsDB = new CorpusTermMinimalsDB(storage, corpus, tokenType, readOnly);
 		
-		if (corpusTermMinimals.isEmpty()) {
+		if (corpusTermMinimalsDB.isEmpty()) {
 			AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 			StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
 			Bits docIdSet = corpusMapper.getDocIdOpenBitSet();
@@ -99,22 +102,24 @@ public class CorpusTermMinimals extends AbstractCorpusTool {
 			
 			for (CorpusTermMinimal c : corpusTermMinimalsList) {
 				c.setZscore((float) c.getRawFreq()-mean/stdDev);
-				corpusTermMinimals.put(c.getTerm(), c);
+				corpusTermMinimalsDB.put(c.getTerm(), c);
 			}
 			
-			db.commit();
-			storage.closeDB(db);			
+			corpusTermMinimalsDB.commit();
+			corpusTermMinimalsDB.close();
+			corpusTermMinimalsDB = new CorpusTermMinimalsDB(storage, corpus, tokenType, true); // reopen as read-only
+
 		}
 	}
 	
-	protected static Map<String, CorpusTermMinimal> getCorpusTermMinimalsMap(Storage storage, Corpus corpus, TokenType tokenType) throws IOException {
+	protected static CorpusTermMinimalsDB getCorpusTermMinimalsDB(Storage storage, Corpus corpus, TokenType tokenType) throws IOException {
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"tokenType="+tokenType.name()});
 		CorpusTermMinimals ctm = new CorpusTermMinimals(storage, parameters);
-		ctm.run(corpus);
-		return ctm.getCorpusTermMinimalsMap();
+		ctm.run(corpus, true);
+		return ctm.getCorpusTermMinimalsDB();
 	}
 
-	public Map<String, CorpusTermMinimal> getCorpusTermMinimalsMap() {
-		return corpusTermMinimals;
+	public CorpusTermMinimalsDB getCorpusTermMinimalsDB() {
+		return corpusTermMinimalsDB;
 	}
 }

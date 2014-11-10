@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
@@ -79,6 +80,9 @@ class DocumentExpander extends AbstractTool {
 	
 	void run(List<StoredDocumentSource> expandableStoredDocumentSources) throws IOException {
 		
+		Calendar start = Calendar.getInstance();
+		log("Starting document expansion.");
+
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		
 		StoredDocumentSourceExpander expander = new StoredDocumentSourceExpander(storedDocumentStorage, parameters);
@@ -93,6 +97,9 @@ class DocumentExpander extends AbstractTool {
 		}
 		
 		storedId = storage.storeStrings(expandedIds);
+		
+		log("Finished expansion of "+expandedIds.size()+" documents.", start);
+
 		
 	}
 

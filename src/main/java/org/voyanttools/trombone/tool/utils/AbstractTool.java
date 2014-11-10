@@ -22,7 +22,10 @@
 package org.voyanttools.trombone.tool.utils;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,6 +54,12 @@ public abstract class AbstractTool implements RunnableTool {
 	
 	private static int VERSION = 1;
 	
+	@XStreamOmitField
+	private boolean isVerbose;
+	
+	@XStreamOmitField
+	private DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss.SSS");
+	
 	/**
 	 * @param storage 
 	 * 
@@ -58,11 +67,26 @@ public abstract class AbstractTool implements RunnableTool {
 	public AbstractTool(Storage storage, FlexibleParameters parameters) {
 		this.storage = storage;
 		this.parameters = parameters;
-		
+		this.isVerbose = parameters.getParameterBooleanValue("verbose");
 	}
 	
 	public int getVersion() {
 		return VERSION;
+	}
+	
+	protected boolean isVerbose() {
+		return isVerbose;
+	}
+	
+	protected void log(String string) {
+		log(string, null);
+	}
+	
+	protected void log(String string, Calendar start) {
+		if (isVerbose()) {
+			Calendar now = Calendar.getInstance();
+			System.out.println(dateFormat.format(now.getTime())+"\t"+string+(start!=null ? "("+(now.getTimeInMillis()-start.getTimeInMillis())+" ms)" : ""));
+		}
 	}
 
 	public FlexibleParameters getParameters() {

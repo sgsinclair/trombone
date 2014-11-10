@@ -47,6 +47,7 @@ import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
+import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
@@ -124,11 +125,11 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 
-		Map<String, CorpusTermMinimal> corpusTermMinimals = CorpusTermMinimals.getCorpusTermMinimalsMap(storage, corpus, tokenType);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimals.getCorpusTermMinimalsDB(storage, corpus, tokenType);
 		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
-			CorpusTermMinimal corpusTermMinimal = corpusTermMinimals.get(queryString);
+			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), docIdSet, termContexts);			
 			while(spans.next()) {
 				int doc = spans.doc();
@@ -165,6 +166,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
+		corpusTermMinimalsDB.close();
 		terms.addAll(queue.getOrderedList(start));
 	}
 
@@ -182,7 +184,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		
-		Map<String, CorpusTermMinimal> corpusTermMinimals = CorpusTermMinimals.getCorpusTermMinimalsMap(storage, corpus, tokenType);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimals.getCorpusTermMinimalsDB(storage, corpus, tokenType);
 
 		// now we look for our term frequencies
 		Terms terms = atomicReader.terms(tokenType.name());
@@ -197,7 +199,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			if (term != null) {
 				termString = term.utf8ToString();
 				if (stopwords.isKeyword(termString)) {continue;}
-				CorpusTermMinimal corpusTermMinimal = corpusTermMinimals.get(termString);
+				CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(termString);
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
@@ -232,6 +234,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				break; // no more terms
 			}
 		}
+		corpusTermMinimalsDB.close();
 		this.terms.addAll(queue.getOrderedList(start));
 	}
 

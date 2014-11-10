@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.voyanttools.trombone.input.source.InputSource;
@@ -57,6 +58,10 @@ class DocumentStorer extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
+		
+		Calendar start = Calendar.getInstance();
+		log("Starting document storage");
+		
 		InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
 		List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
 		List<String> ids = new ArrayList<String>();
@@ -71,6 +76,9 @@ class DocumentStorer extends AbstractTool {
 
 		
 		storedId = storage.storeStrings(ids);
+		
+		log("Finished storage of "+ids.size()+" documents.", start);
+
 
 	}
 

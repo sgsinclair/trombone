@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
@@ -78,6 +79,10 @@ class DocumentExtractor extends AbstractTool {
 	}
 	
 	void run(List<StoredDocumentSource> extractableStoredDocumentSources) throws IOException {
+		
+		Calendar start = Calendar.getInstance();
+		log("Starting document extraction.");
+
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentStorage, parameters);
 		storedDocumentSources = extractor.getExtractedStoredDocumentSources(extractableStoredDocumentSources);
@@ -92,6 +97,8 @@ class DocumentExtractor extends AbstractTool {
 			extractedIds.add(storedDocumentSource.getId());
 		}		
 		storedId = storage.storeStrings(extractedIds);
+		log("Finished extraction of "+extractedIds.size()+" documents.", start);
+
 	}
 
 	List<StoredDocumentSource> getStoredDocumentSources() {

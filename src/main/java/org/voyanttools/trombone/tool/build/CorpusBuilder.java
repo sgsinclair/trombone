@@ -112,7 +112,13 @@ public class CorpusBuilder extends AbstractTool {
 			metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
 			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
 			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
+						
 			Corpus corpus = new Corpus(storage, metadata);
+			
+			// run here to avoid concurrent requests later, even though we don't use the results
+			CorpusTermMinimals corpusTermMinimals = new CorpusTermMinimals(storage, parameters);
+			corpusTermMinimals.run(corpus, false);
+
 			storage.getCorpusStorage().storeCorpus(corpus);
 		}
 		this.storedId = corpusId;
