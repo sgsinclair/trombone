@@ -24,10 +24,12 @@ package org.voyanttools.trombone.input.extract;
 //import it.svario.xpathapi.jaxp.XPathAPI;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.io.StringWriter;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -40,12 +42,15 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Result;
+import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathException;
@@ -154,6 +159,7 @@ public class XmlExtractor implements Extractor, Serializable {
 				defaultsMap.put("xmlPubPlaceXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBPLACE");
 				defaultsMap.put("xmlPublisherXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBLISHER");
 				defaultsMap.put("xmlPubDateXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/DATE");
+				defaultsMap.put("xmlExtractorTemplate", "dream-extraction.xsl");
 				break;
 			}
 			
@@ -231,6 +237,37 @@ public class XmlExtractor implements Extractor, Serializable {
 				if (inputStream != null)
 					inputStream.close();
 			}
+			
+			if (parameters.containsKey("xmlExtractorTemplate")) {
+
+				Source source = null;
+				String xmlExtractorTemplate = parameters.getParameterValue("xmlExtractorTemplate");
+				URL templateUrl = this.getClass().getResource("/org/voyanttools/trombone/templates/"+xmlExtractorTemplate);
+				File file = new File(templateUrl.getFile());
+				if (file.exists()) {
+					source = new StreamSource(file);
+				}
+				
+				if (source!=null) {
+					DOMResult result = new DOMResult();
+					try {
+						Transformer extractorTransformer = TransformerFactory.newInstance().newTransformer(source);
+						extractorTransformer.transform(new DOMSource(doc), result);
+					} catch (TransformerException e) {
+						throw new IOException("Unable to transform document during expansion "+metadata, e);
+					}
+					try {
+						doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
+					} catch (ParserConfigurationException e) {
+						throw new IllegalStateException("Unable to create new XML document during templated extraction.", e);
+					}
+					doc = (Document) result.getNode();
+				}
+				else {
+					throw new IOException("Unable to find extractor template "+xmlExtractorTemplate);
+				}
+			}
+			
 			
 			// try to find title if needed
 			String title = getNodesAsStringFromParametersValue(doc, "xmlTitleXpath");
