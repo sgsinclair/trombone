@@ -92,11 +92,12 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		
 		int size = start+limit;
 		IndexedDocumentPriorityQueue queue = new IndexedDocument.IndexedDocumentPriorityQueue(size > corpus.size() ? size : corpus.size(), sort);
+		int index = 0;
 		for (String id : ids) {
 			IndexedDocument document = corpus.getDocument(id);
 			document.getMetadata().setIndex(corpus.getDocumentPosition(id)); // make sure index is set
 			queue.offer(document);
-			//if (queue.size()>=size && sort==Sort.INDEXASC) {break;} // we don't need to look any further since docs in order
+			if (++index>=size && sort==Sort.INDEXASC) {break;} // we don't need to look any further since docs in order
 		}
 		
 		for (int i=0, len = queue.size()-start; i<len; i++) {
