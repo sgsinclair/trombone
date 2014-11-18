@@ -4,21 +4,33 @@
 package org.voyanttools.trombone.lucene.search;
 
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.index.Terms;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FuzzyQuery;
+import org.apache.lucene.search.MultiTermQuery.RewriteMethod;
+import org.apache.lucene.search.MultiTermQueryWrapperFilter;
 import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.BooleanClause.Occur;
+import org.apache.lucene.search.TermQuery;
+import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
+import org.apache.lucene.search.spans.SpanOrQuery;
+import org.apache.lucene.search.spans.SpanQuery;
+import org.apache.lucene.search.spans.SpanTermQuery;
 import org.apache.lucene.search.TermRangeQuery;
 import org.voyanttools.trombone.model.TokenType;
 
@@ -31,21 +43,24 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	private static String PREFIX_SEPARATOR = ":";
 	private static Pattern RANGE_PATTERN = Pattern.compile("^\\[([\\p{L}0-9]+)-([\\p{L}0-9]+)\\]$");
 	protected static TokenType DEFAULT_TOKENTYPE = TokenType.lexical;
+	protected IndexReader reader;
+
 	
 //	private TokenType tokenType = null;
 
-	public FieldPrefixAwareSimpleQueryParser(Analyzer analyzer) {
-		this(analyzer, DEFAULT_TOKENTYPE);
+	public FieldPrefixAwareSimpleQueryParser(IndexReader reader, Analyzer analyzer) {
+		this(reader, analyzer, DEFAULT_TOKENTYPE);
 	}
 	
-	public FieldPrefixAwareSimpleQueryParser(Analyzer analyzer, TokenType tokenType) {
+	public FieldPrefixAwareSimpleQueryParser(IndexReader reader, Analyzer analyzer, TokenType tokenType) {
 		super(analyzer,  Collections.singletonMap(tokenType.name(), 1.0F));
+		this.reader = reader;
 	}
 	
-	public FieldPrefixAwareSimpleQueryParser(Analyzer analyzer,
-			Map<String, Float> weights) {
+	public FieldPrefixAwareSimpleQueryParser(IndexReader reader, Analyzer analyzer, Map<String, Float> weights) {
 		super(analyzer, weights);
 	}
+	
 	
 	public Map<String, Query> getQueriesMap(String[] queries) {
 		Map<String, Query> map = new HashMap<String, Query>();
@@ -56,6 +71,38 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 		return map;
 	}
 
+	public Map<String, Query> getQueriesMap(String[] queries, boolean isQueryExpand) throws IOException {
+		Map<String, Query> map = new HashMap<String, Query>();
+		for (String queryString : queries) {
+			if (queryString.trim().isEmpty()) {continue;}
+			boolean isReallyQueryExpand = isQueryExpand;
+			if (queryString.startsWith("^")) {
+				isReallyQueryExpand = true;
+				queryString = queryString.substring(1);
+			}
+			Query query = parse(queryString);
+			if (isReallyQueryExpand && query instanceof TermQuery == false) {
+				if (query instanceof PrefixQuery) {
+					// SpanMultiTermQueryWrapper's rewrite method extracts terms properly (PrefixQuery no longer does) 
+					SpanOrQuery spanOrQuery = (SpanOrQuery) new SpanMultiTermQueryWrapper<PrefixQuery>((PrefixQuery) query).rewrite(reader);
+					for (SpanQuery sq : spanOrQuery.getClauses()) {
+						map.put(sq.toString(DEFAULT_TOKENTYPE.name()), new TermQuery(((SpanTermQuery) sq).getTerm()));
+					}
+				}
+				else if (query instanceof BooleanQuery) {
+					for (BooleanClause bc : ((BooleanQuery) query).getClauses()) {
+						map.put(bc.getQuery().toString(DEFAULT_TOKENTYPE.name()), bc.getQuery());
+					}
+				}
+			}
+			else {
+				map.put(queryString, (Query) query);
+			}
+			
+		}
+		return map;
+	}
+	
 	@Override
 	public Query parse(String queryText) {
 			// hack to support prefixes in phrases – put the prefix within the quotes

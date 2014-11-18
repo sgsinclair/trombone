@@ -33,7 +33,7 @@ import java.util.Set;
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.search.IndexSearcher;
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusCollocate;
 import org.voyanttools.trombone.model.DocumentCollocate;
@@ -72,10 +72,9 @@ public class CorpusCollocates extends AbstractContextTerms {
 	protected void runQueries(Corpus corpus, String[] queries)
 			throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
-		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(reader, corpusMapper, queries);
-		this.collocates = getCollocates(reader, corpusMapper, corpus, documentSpansDataMap);
+		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
+		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper.getAtomicReader(), corpusMapper, queries);
+		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpus, documentSpansDataMap);
 	}
 
 	/* (non-Javadoc)
@@ -88,7 +87,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 
 
 	private List<CorpusCollocate> getCollocates(AtomicReader reader,
-			StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus,
+			CorpusMapper corpusMapper, Corpus corpus,
 			Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		FlexibleParameters localParameters = parameters.clone();

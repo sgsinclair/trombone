@@ -63,7 +63,7 @@ public class StoredToLuceneDocumentMapperTest {
 		
 		Corpus corpus = storage.getCorpusStorage().getCorpus(corpusId);
 		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = StoredToLuceneDocumentsMapper.getInstance(new IndexSearcher(atomicReader), corpus);
+		CorpusMapper corpusMapper = new CorpusMapper(atomicReader, corpus);
 		
 		storage.destroy();
 	}

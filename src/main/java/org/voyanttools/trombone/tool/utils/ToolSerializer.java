@@ -55,7 +55,7 @@ public class ToolSerializer implements RunnableTool {
 		this.runnableTool = runnableTool;
 	}
 	
-	public void run(Writer writer) {
+	public void run(Writer writer) throws IOException {
 		
 		if (this.runnableTool instanceof ToolRunner) {
 			List<RunnableTool> tools = ((ToolRunner) runnableTool).getRunnableToolResults();
@@ -64,7 +64,8 @@ public class ToolSerializer implements RunnableTool {
 			}
 		}
 		
-		XStream xs;
+		XStream xs = null;
+		final Writer fileWriter = parameters.containsKey("outputFile") ? new FileWriter(parameters.getParameterValue("outputFile")) : null;
 		if (parameters.getParameterValue("outputFormat", "").equals("xml")) {
 			xs = new XStream();
 		}
@@ -72,15 +73,19 @@ public class ToolSerializer implements RunnableTool {
 			xs = new XStream(new JsonHierarchicalStreamDriver() {
 				@Override
 				public HierarchicalStreamWriter createWriter(Writer writer) {
-					return new JsonWriter(writer, JsonWriter.DROP_ROOT_MODE);
+					return new JsonWriter(fileWriter!=null ? fileWriter : writer, JsonWriter.DROP_ROOT_MODE);
+			
 				}
 			});
 		}
-		
 		if (xs == null) return; // don't serialize results, therefore no output data is emitted
-			
+		
 		xs.autodetectAnnotations(true);
-		xs.toXML(runnableTool, writer);
+		xs.toXML(runnableTool, fileWriter!=null ? fileWriter : writer);
+		if (fileWriter!=null) {
+			fileWriter.close();
+		}
+		
 		
 	}
 

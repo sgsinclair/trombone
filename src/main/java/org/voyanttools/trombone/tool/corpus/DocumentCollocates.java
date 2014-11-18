@@ -38,7 +38,7 @@ import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentCollocate;
 import org.voyanttools.trombone.model.Keywords;
@@ -80,9 +80,8 @@ public class DocumentCollocates extends AbstractContextTerms {
 	@Override
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
-		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
-		this.collocates = getCollocates(reader, corpusMapper, corpus);
+		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
+		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpus);
 	}
 
 	/* (non-Javadoc)
@@ -90,19 +89,18 @@ public class DocumentCollocates extends AbstractContextTerms {
 	 */
 	@Override
 	protected void runAllTerms(Corpus corpus) throws IOException {
-		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
-		this.collocates = getCollocates(reader, corpusMapper, corpus);
+		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
+		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpus);
 	}
 
 	private List<DocumentCollocate> getCollocates(AtomicReader reader,
-			StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus) throws IOException {
+			CorpusMapper corpusMapper, Corpus corpus) throws IOException {
 		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(reader, corpusMapper, queries);
 		return getCollocates(reader, corpusMapper, corpus, documentSpansDataMap);
 	}
 
 	List<DocumentCollocate> getCollocates(AtomicReader reader,
-			StoredToLuceneDocumentsMapper corpusMapper, Corpus corpus,
+			CorpusMapper corpusMapper, Corpus corpus,
 			Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 
 		Keywords stopwords = getStopwords(corpus);
@@ -111,7 +109,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 		FlexibleQueue<DocumentCollocate> queue = new FlexibleQueue<DocumentCollocate>(comparator, limit);
 		for (Map.Entry<Integer, Collection<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
-			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(luceneDoc);
+			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			int lastToken = totalTokens[corpusDocIndex];
 			FlexibleQueue<DocumentCollocate> q = getCollocates(reader, luceneDoc, corpusDocIndex, lastToken, dsd.getValue(), stopwords);
 			for (DocumentCollocate c : q.getUnorderedList()) {

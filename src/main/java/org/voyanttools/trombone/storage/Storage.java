@@ -93,4 +93,6 @@ public interface Storage {
 	 */
 	public void closeDB(DB db);
 
+	public boolean existsDB(String name);
+
 }

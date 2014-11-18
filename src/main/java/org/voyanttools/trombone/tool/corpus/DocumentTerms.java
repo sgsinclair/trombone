@@ -43,7 +43,7 @@ import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
@@ -112,9 +112,8 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
 	
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(atomicReader), corpus);
-		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
+		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
+		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
@@ -125,16 +124,16 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimals.getCorpusTermMinimalsDB(storage, corpus, tokenType);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(storage, corpusMapper.getAtomicReader(), corpus, tokenType);
 		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
-			Spans spans = spanQueryEntry.getValue().getSpans(atomicReader.getContext(), docIdSet, termContexts);			
+			Spans spans = spanQueryEntry.getValue().getSpans(corpusMapper.getAtomicReader().getContext(), docIdSet, termContexts);			
 			while(spans.next()) {
 				int doc = spans.doc();
 				if (doc != lastDoc) {
-					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
+					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
 					lastDoc = doc;
 				}
 				int start = spans.start();
@@ -179,15 +178,14 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int size = start+limit;
 		
 		int[] totalTokensCounts = corpus.getTokensCounts(tokenType);
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(atomicReader), corpus);
+		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimals.getCorpusTermMinimalsDB(storage, corpus, tokenType);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(storage, corpusMapper.getAtomicReader(), corpus, tokenType);
 
 		// now we look for our term frequencies
-		Terms terms = atomicReader.terms(tokenType.name());
+		Terms terms = corpusMapper.getAtomicReader().terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
 		DocsAndPositionsEnum docsAndPositionsEnum = null;
 		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
@@ -203,8 +201,8 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
 				int doc = docsAndPositionsEnum.nextDoc();
 				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
-					int documentPosition = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(doc);
-					String docId = corpusMapper.getDocumentIdFromLuceneDocumentIndex(doc);
+					int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
+					String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
 					DocumentMetadata documentMetadata = corpus.getDocument(docId).getMetadata();
 					float mean = documentMetadata.getTypesCountMean(tokenType);
 					float stdDev = documentMetadata.getTypesCountStdDev(tokenType);

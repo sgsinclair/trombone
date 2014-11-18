@@ -241,4 +241,8 @@ public class FileStorage implements Storage {
 	public void closeDB(DB db) {
 		db.close();
 	}
+	
+	public boolean existsDB(String id) {
+		return getFile(id).exists();
+	}
 }

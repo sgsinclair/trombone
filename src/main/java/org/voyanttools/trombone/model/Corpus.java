@@ -125,12 +125,15 @@ public class Corpus implements Iterable<IndexedDocument> {
 
 	public int getTokensCount(TokenType tokenType) throws IOException {
 		// TODO: this should probably be drawn from the corpus metadata instead
+		return corpusMetadata.getTokensCount(tokenType);
+		/*
 		int totalTokensCount = 0;
 		for (int i : getTokensCounts(tokenType)) {
 			totalTokensCount += i;
 		
 		}
 		return totalTokensCount;
+		*/
 	}
 
 }

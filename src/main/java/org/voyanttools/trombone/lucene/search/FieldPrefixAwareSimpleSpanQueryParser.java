@@ -26,6 +26,7 @@ import org.apache.lucene.search.spans.SpanNearQuery;
 import org.apache.lucene.search.spans.SpanOrQuery;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanTermQuery;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.TokenType;
 
 /**
@@ -34,16 +35,13 @@ import org.voyanttools.trombone.model.TokenType;
  */
 public class FieldPrefixAwareSimpleSpanQueryParser extends
 		FieldPrefixAwareSimpleQueryParser {
-
-	private IndexReader indexReader;
 	
 	/**
 	 * @param analyzer
 	 * @param weights
 	 */
 	public FieldPrefixAwareSimpleSpanQueryParser(IndexReader indexReader, Analyzer analyzer) {
-		super(analyzer);
-		this.indexReader = indexReader;
+		super(indexReader, analyzer);
 	}
 	
 	@Override
@@ -177,7 +175,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	
 	private SpanQuery getQuery(PrefixQuery query) {
 		try {
-			return (SpanQuery) new SpanMultiTermQueryWrapper<PrefixQuery>((PrefixQuery) query).rewrite(indexReader);
+			return (SpanQuery) new SpanMultiTermQueryWrapper<PrefixQuery>((PrefixQuery) query).rewrite(reader);
 		} catch (IOException e) {
 			throw new IllegalStateException("Unable to expand queries from Lucene index for query: "+query.toString());
 		}

@@ -180,10 +180,9 @@ public class MemoryStorage implements Storage {
 	@Override
 	public DB getDB(String id, boolean readOnly) {
 		if (!isStored(id)) {
-			DBMaker maker = DBMaker.newMemoryDB()
+			DB db = DBMaker.newMemoryDB()
 					.transactionDisable()
-					.closeOnJvmShutdown();
-			DB db = readOnly ? maker.readOnly().make() : maker.make();
+					.closeOnJvmShutdown().make();
 			storedObjectsMap.put(id, db);
 		}
 		return (DB) storedObjectsMap.get(id);
@@ -191,5 +190,8 @@ public class MemoryStorage implements Storage {
 	
 	public void closeDB(DB db) {
 		// do nothing since we need to keep the engine open for potential future requests
+	}
+	public boolean existsDB(String id) {
+		return storedObjectsMap.containsKey(id);
 	}
 }

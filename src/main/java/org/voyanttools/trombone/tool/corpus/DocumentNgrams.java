@@ -41,7 +41,7 @@ import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.util.BytesRef;
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
@@ -69,16 +69,15 @@ public class DocumentNgrams extends AbstractTerms {
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		
 		
-		AtomicReader atomicReader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(atomicReader), corpus);
-		DocIdSetIterator it = corpusMapper.getDocIdSetIterator();
+		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
+		DocIdSetIterator it = corpusMapper.getDocIdBitSet().iterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
 			int luceneDoc = it.docID();
-			int corpusDocumentIndex = corpusMapper.getDocumentPositionFromLuceneDocumentIndex(luceneDoc);
+			int corpusDocumentIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			int lastToken = totalTokens[corpusDocumentIndex];	
 			
 			// build single grams as seed for ngrams
-			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpus, atomicReader, luceneDoc, lastToken);
+			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpus, corpusMapper.getAtomicReader(), luceneDoc, lastToken);
 			
 			Map<String, List<int[]>> stringPositionsMap = new HashMap<String, List<int[]>>();
 			List<Gram> grams = new ArrayList<Gram>();
@@ -103,7 +102,8 @@ public class DocumentNgrams extends AbstractTerms {
 			// temporary thing
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File("/Users/sgs/Downloads/game.of.thrones.edited/game.of.thrones.edited-ngrams.xml")));
 			
-			String document = atomicReader.document(luceneDoc).get(tokenType.name());
+			String document = corpus.getDocument(corpusDocumentIndex).getDocumentString();
+//			String document = atomicReader.document(luceneDoc).get(tokenType.name());
 			writer.write("<documentNgrams lastPosition='"+lastToken+"' count='"+ngrams.size()+"'>");
 			StringBuilder positionsBuilder = new StringBuilder();
 			for (int i=0, ilen=ngrams.size(); i<ilen; i++) {

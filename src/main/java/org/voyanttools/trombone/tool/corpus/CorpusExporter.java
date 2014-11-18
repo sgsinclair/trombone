@@ -27,7 +27,7 @@ import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.search.IndexSearcher;
 import org.voyanttools.trombone.input.source.Source;
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -94,11 +94,10 @@ public class CorpusExporter extends AbstractCorpusTool {
 			}
 		}
 		else {
-			AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-			StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+			CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 			for (IndexedDocument document : corpus) {
 				String fileEntryName = getFileEntryName(document.getMetadata(), documentFilename, nameMapper);
-				String string = reader.document(corpusMapper.getLuceneIdFromDocumentId(document.getId())).get(TokenType.lexical.name());
+				String string = document.getDocumentString();
 				if (format.equals("TXT") || format.equals("TEXT")) {
 					string = stripper.strip(string);
 					if (fileEntryName.endsWith("txt")==false) {fileEntryName+=".txt";}

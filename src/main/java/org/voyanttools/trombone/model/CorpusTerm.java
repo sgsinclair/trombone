@@ -5,7 +5,6 @@ import java.text.Normalizer;
 import java.util.Comparator;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
-import org.voyanttools.trombone.model.Kwic.Sort;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -13,12 +12,13 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class CorpusTerm implements Serializable {
 
 	public enum Sort {
-		RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC, RELATIVEPEAKEDNESSASC, RELATIVEPEAKEDNESSDESC, RELATIVESKEWNESSASC, RELATIVESKEWNESSDESC;
+		INDOCUMENTSCOUNTASC, INDOCUMENTSCOUNTDESC, RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC, RELATIVEPEAKEDNESSASC, RELATIVEPEAKEDNESSDESC, RELATIVESKEWNESSASC, RELATIVESKEWNESSDESC;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "RAWFREQ"; // default
 			if (sort.startsWith("TERM")) {sortPrefix = "TERM";}
+			else if (sort.startsWith("INDOCUMENTSCOUNT")) {sortPrefix = "INDOCUMENTSCOUNT";}
 			else if (sort.startsWith("RELATIVEPEAK")) {sortPrefix = "RELATIVEPEAKEDNESS";}
 			else if (sort.startsWith("RELATIVESKEW")) {sortPrefix = "RELATIVESKEWNESS";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
@@ -26,14 +26,19 @@ public class CorpusTerm implements Serializable {
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
 			return valueOf(sortPrefix+dirSuffix);
 		}
+
+		public boolean needDistributions() {			
+			return this==RELATIVEPEAKEDNESSASC || this==RELATIVEPEAKEDNESSDESC || this==RELATIVESKEWNESSASC || this==RELATIVESKEWNESSDESC;
+		}
 	}
 
 	private String term;
 	private int rawFreq;
-	private float relativeFreq;
+	private int totalTokens;
 	private int[] rawFreqs;
 	
-	private int inDocumentsCount = 0;
+	private int inDocumentsCount;
+	private int totalDocuments;
 	
 	private float relativePeakedness = Float.NaN;
 	
@@ -47,14 +52,21 @@ public class CorpusTerm implements Serializable {
 	@XStreamOmitField
 	private transient DescriptiveStatistics relativeStats = null;
 	
-	public CorpusTerm(String termString, int termFreq, float relativeFreq,
-			int[] rawFreqs, float[] relativeFreqs) {
+	public CorpusTerm(String termString, int rawFreq, int totalTokens, int inDocumentsCount, int totalDocuments) {
+		this(termString, rawFreq, totalTokens, inDocumentsCount, totalDocuments, null, null);
+	}
+	
+	public CorpusTerm(String termString, int rawFreq, int totalTokens, int inDocumentsCount, int totalDocuments, int[] rawFreqs, float[] relativeFreqs) {
 		this.term = termString;
-		this.rawFreq = termFreq;
-		this.relativeFreq = relativeFreq;
+		this.rawFreq = rawFreq;
+		this.totalTokens = totalTokens;
+		this.inDocumentsCount = inDocumentsCount;
+		this.totalDocuments = totalDocuments;
 		this.rawFreqs = rawFreqs;
-		this.relativeStats = new DescriptiveStatistics(relativeFreqs.length);
-		for (float f : relativeFreqs) {relativeStats.addValue(f);}
+		if (relativeFreqs!=null) {
+			this.relativeStats = new DescriptiveStatistics(relativeFreqs.length);
+			for (float f : relativeFreqs) {relativeStats.addValue(f);}
+		}
 	}
 
 	public int getRawFreq() {
@@ -62,7 +74,7 @@ public class CorpusTerm implements Serializable {
 	}
 	
 	public float getRelativeFreq() {
-		return relativeFreq;
+		return (float) rawFreq / (float) totalTokens;
 	}
 	
 	private String getNormalizedTerm() {
@@ -75,14 +87,14 @@ public class CorpusTerm implements Serializable {
 	}
 	
 	public float getPeakedness() {
-		if (Float.isNaN(relativePeakedness)) {
+		if (Float.isNaN(relativePeakedness) && relativeStats!=null) {
 			relativePeakedness = (float) relativeStats.getKurtosis();
 		}
 		return relativePeakedness;
 	}
 	
 	public float getSkewness() {
-		if (Float.isNaN(relativeSkewness)) {
+		if (Float.isNaN(relativeSkewness) && relativeStats!=null) {
 			relativeSkewness = (float) relativeStats.getSkewness();
 		}
 		return relativeSkewness;
@@ -108,11 +120,6 @@ public class CorpusTerm implements Serializable {
 	}
 	
 	public int getInDocumentsCount() {
-		if (inDocumentsCount==0) {
-			for (int f : rawFreqs) {
-				if (f>0) {inDocumentsCount++;}
-			}
-		}
 		return inDocumentsCount;
 	}
 	
@@ -132,6 +139,10 @@ public class CorpusTerm implements Serializable {
 			return RelativeSkewnessDescendingComparator;
 		case TERMDESC:
 			return TermDescendingComparator;
+		case INDOCUMENTSCOUNTASC:
+			return InDocumentsCountAscendingComparator;
+		case INDOCUMENTSCOUNTDESC:
+			return InDocumentsCountDescendingComparator;
 		default: // rawFrequencyDesc
 			return RawFrequencyDescendingComparator;
 		}
@@ -168,6 +179,31 @@ public class CorpusTerm implements Serializable {
 			}
 			else {
 				return term2.rawFreq - term1.rawFreq;
+			}
+		}
+		
+	};
+
+	private static Comparator<CorpusTerm> InDocumentsCountAscendingComparator = new Comparator<CorpusTerm>() {
+		@Override
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			if (term1.inDocumentsCount==term2.inDocumentsCount) {
+				return term1.getNormalizedTerm().compareTo(term2.getNormalizedTerm());
+			}
+			else {
+				return term1.inDocumentsCount - term2.inDocumentsCount;
+			}
+		}
+		
+	};
+	private static Comparator<CorpusTerm> InDocumentsCountDescendingComparator = new Comparator<CorpusTerm>() {
+		@Override
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			if (term1.inDocumentsCount==term2.inDocumentsCount) {
+				return term1.getNormalizedTerm().compareTo(term2.getNormalizedTerm());
+			}
+			else {
+				return term2.inDocumentsCount - term1.inDocumentsCount;
 			}
 		}
 		
@@ -248,7 +284,7 @@ public class CorpusTerm implements Serializable {
 	};
 	@Override
 	public String toString() {
-		return "{"+term+": "+rawFreq+" ("+relativeFreq+")";
+		return "{"+term+": "+rawFreq+" ("+getRelativeFreq()+")";
 	}
 
 }

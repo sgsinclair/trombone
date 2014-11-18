@@ -22,8 +22,11 @@
 package org.voyanttools.trombone.model;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.Comparator;
 
+import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -81,6 +84,14 @@ public class IndexedDocument implements DocumentContainer, Comparable<IndexedDoc
 		}
 		return metadata;
 	}
+	
+	public String getDocumentString() throws IOException {
+		InputStream is = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
+		String string = IOUtils.toString(is, "UTF-8");
+		is.close();
+		return string;
+	}
+
 	
 	public static class IndexedDocumentPriorityQueue {
 		
@@ -291,4 +302,5 @@ public class IndexedDocument implements DocumentContainer, Comparable<IndexedDoc
 	public int compareTo(IndexedDocument o) {
 		return IndexAscComparator.compare(this, o);
 	}
+
 }

@@ -14,13 +14,14 @@ import java.util.Set;
 
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
-import org.apache.lucene.search.BooleanClause.Occur;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
-import org.voyanttools.trombone.lucene.search.SimpleDocIdsCollector;
+import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.IndexedDocument.IndexedDocumentPriorityQueue;
@@ -54,23 +55,26 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		
 		Sort sort = IndexedDocument.Sort.getForgivingly(parameters);
 
+		CorpusMapper corpusMapper = this.getStoredToLuceneDocumentsMapper(corpus);
 		List<String> ids = new ArrayList<String>(); // maintain insertion order, especially for no queries
 		if (parameters.containsKey("query")) {
 			Map<String, Float> weights = new HashMap<String, Float>();
 			weights.put("title", 1f);
 			weights.put("author", 1f);
-			SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(storage.getLuceneManager().getAnalyzer(), weights);
-			
 			IndexSearcher indexSearcher = storage.getLuceneManager().getIndexSearcher();
+			SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(indexSearcher.getIndexReader(), storage.getLuceneManager().getAnalyzer(), weights);
+			
 			Set<String> idsSet = new HashSet<String>();
 			for (String queryString : parameters.getParameterValues("query")) {
 				Query query = queryParser.parse(queryString);
 				BooleanQuery corpusQuery = new BooleanQuery();
 				corpusQuery.add(query, Occur.MUST);
 				corpusQuery.add(new TermQuery(new Term("corpus", corpus.getId())), Occur.MUST);
-				SimpleDocIdsCollector collector = new SimpleDocIdsCollector();
+				LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
 				indexSearcher.search(corpusQuery, collector);
-				idsSet.addAll(collector.getDocIds());
+				for (int doc : collector.getLuceneDocIds()) {
+					idsSet.add(corpusMapper.getDocumentIdFromLuceneId(doc));
+				}
 			}
 			
 			if (sort==Sort.INDEXASC) {

@@ -23,7 +23,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
@@ -52,11 +52,6 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 	@XStreamOmitField
 	protected boolean isQueryCollapse;
 	
-	@XStreamOmitField
-	protected boolean isQueryExpand;
-	
-	public static String QUERY_EXPAND_PARAMETER_NAME = "queryExpand";
-
 	/**
 	 * @param storage
 	 * @param parameters
@@ -68,14 +63,13 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 		limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
 		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
 		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
-		isQueryExpand = parameters.getParameterBooleanValue(QUERY_EXPAND_PARAMETER_NAME);
 	}
 
 
 	@Override
 	public void run(Corpus corpus) throws IOException {
 		if (parameters.containsKey("query")) {
-			String[] queries =  parameters.getParameterValues("query");
+			String[] queries =  getQueries(); // parameters.getParameterValues("query");
 			if (queries.length==1 && queries[0].isEmpty()) {
 				runAllTerms(corpus);
 			}

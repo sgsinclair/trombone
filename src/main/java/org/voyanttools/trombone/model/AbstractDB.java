@@ -7,10 +7,15 @@ public abstract class AbstractDB {
 	
 	protected DB db;
 	protected Storage storage;
+	private final static String PREFIX = "mapdb-";
 
 	public AbstractDB(Storage storage, String dbId, boolean readOnly) {
 		this.storage = storage;
-		db = storage.getDB("mapbd-"+dbId, readOnly);
+		setDB(dbId, readOnly);
+	}
+	
+	protected void setDB(String dbId, boolean readOnly) {
+		db = storage.getDB(getName(dbId), readOnly);
 	}
 	
 	public void commit() {
@@ -19,5 +24,14 @@ public abstract class AbstractDB {
 	public void close() {
 		storage.closeDB(db);
 	}
+	
+	private static String getName(String dbId) {
+		return PREFIX+dbId;
+	}
+
+	protected static boolean exists(Storage storage, String name) {
+		return storage.existsDB(getName(name));
+	}
+
 
 }

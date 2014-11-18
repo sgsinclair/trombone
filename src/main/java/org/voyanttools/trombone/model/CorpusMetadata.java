@@ -98,11 +98,19 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 	}
 	
 	public void setTypesCountMean(TokenType tokenType, float f) {
-		properties.setProperty("typesCountMean"+tokenType.name(), String.valueOf(f));
+		setTypesCountMean(tokenType.name(), f);
 	}
 
+	public void setTypesCountMean(String field, float f) {
+		properties.setProperty("typesCountMean"+field, String.valueOf(f));
+	}
+	
 	public void setTypesCountStdDev(TokenType tokenType, float f) {
-		properties.setProperty("typesCountMean"+tokenType.name(), String.valueOf(f));
+		setTypesCountStdDev(tokenType.name(), f);
+	}
+	
+	public void setTypesCountStdDev(String field, float f) {
+		properties.setProperty("typesCountMean"+field, String.valueOf(f));
 	}
 	
 	public int getTokensCount(TokenType tokenType) {

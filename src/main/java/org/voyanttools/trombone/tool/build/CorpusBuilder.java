@@ -23,39 +23,21 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Calendar;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.CorruptIndexException;
-import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
-import org.apache.lucene.index.Terms;
-import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.util.Bits;
-import org.apache.lucene.util.BytesRef;
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
-import org.voyanttools.trombone.model.CorpusTerm;
-import org.voyanttools.trombone.model.CorpusTermMinimal;
+import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
-import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.corpus.AbstractCorpusTool;
-import org.voyanttools.trombone.tool.corpus.CorpusTerms;
-import org.voyanttools.trombone.tool.corpus.CorpusTermMinimals;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
-import org.voyanttools.trombone.util.FlexibleQueue;
-
-import com.ibm.icu.util.Calendar;
 
 /**
  * @author sgs
@@ -93,6 +75,8 @@ public class CorpusBuilder extends AbstractTool {
 		// store and compute the corpus if it hasn't been stored
 		if (storage.getCorpusStorage().corpusExists(corpusId)==false) {
 			
+			boolean verbose = parameters.getParameterBooleanValue("verbose");
+			
 			Calendar start = Calendar.getInstance();
 			List<String> documentIds = storage.retrieveStrings(corpusId);
 			
@@ -115,9 +99,13 @@ public class CorpusBuilder extends AbstractTool {
 						
 			Corpus corpus = new Corpus(storage, metadata);
 			
-			// run here to avoid concurrent requests later, even though we don't use the results
-			CorpusTermMinimals corpusTermMinimals = new CorpusTermMinimals(storage, parameters);
-			corpusTermMinimals.run(corpus, false);
+			start = Calendar.getInstance();
+
+			if (verbose) {log("Starting corpus terms index.");}
+			AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+			// create and close to avoid concurrent requests later 
+			CorpusTermMinimalsDB.getInstance(storage, reader, corpus, TokenType.lexical).close();
+			if (verbose) {log("Finished corpus terms index.", start);}
 
 			storage.getCorpusStorage().storeCorpus(corpus);
 		}

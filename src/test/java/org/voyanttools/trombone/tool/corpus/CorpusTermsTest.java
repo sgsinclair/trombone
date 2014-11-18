@@ -8,7 +8,6 @@ import java.util.List;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.IndexWriter;
 import org.junit.Test;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.storage.Storage;
@@ -57,17 +56,15 @@ public class CorpusTermsTest {
 		
 		// we're expanding the term here
 		parameters.setParameter("query", "dar*");
-		parameters.setParameter(AbstractTerms.QUERY_EXPAND_PARAMETER_NAME, "true");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();		
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
 		assertEquals(1, corpusTerms.size());
 		corpusTerm = corpusTerms.get(0);
-		assertEquals("dark", corpusTerm.getTerm());
+		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
 //		assertEquals(0, corpusTerm);
 		
-		parameters.removeParameter(AbstractTerms.QUERY_EXPAND_PARAMETER_NAME);
 		parameters.setParameter("query", "\"it was\"");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();		

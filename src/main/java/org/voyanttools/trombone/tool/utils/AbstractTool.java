@@ -35,10 +35,13 @@ import java.util.Set;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.Keywords;
+import org.voyanttools.trombone.model.VariantsDB;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -118,5 +121,32 @@ public abstract class AbstractTool implements RunnableTool {
 			}
 		}
 		return keywords;
+	}
+	
+	protected String[] getQueries() throws IOException {
+		return	getQueries(parameters.getParameterValues("query"));
+	}
+	protected String[] getQueries(String[] queryStrings) throws IOException {
+		List<String> queries = new ArrayList<String>();
+		VariantsDB variantsDB = null;
+//			if (parameters.containsKey("variants")) {
+//				variantsDB = new VariantsDB(storage, parameters.getParameterValue("variants"), true);
+//			}
+		for (String query : queryStrings) {
+			if (variantsDB!=null) {
+				String[] variants = variantsDB.get(query);
+				if (variants==null) {
+					queries.add(query);
+				}
+				else {
+					queries.add("("+StringUtils.join(variants, "|")+")");
+				}
+			}
+			else {
+				queries.add(query);
+			}
+		}
+		if (variantsDB!=null) {variantsDB.close();}
+		return queries.toArray(new String[0]);
 	}
 }

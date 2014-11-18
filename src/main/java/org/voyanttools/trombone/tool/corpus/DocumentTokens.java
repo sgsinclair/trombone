@@ -19,7 +19,7 @@ import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
-import org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.model.TokenType;
@@ -78,8 +78,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 		
 		total = Integer.MAX_VALUE;
 
-		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		StoredToLuceneDocumentsMapper corpusMapper = getStoredToLuceneDocumentsMapper(new IndexSearcher(reader), corpus);
+		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		List<TermInfo> termInfos = new ArrayList<TermInfo>();
@@ -101,7 +100,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 			int maxPos = documentStart+limit;
 
 			int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(id);
-			Terms terms = reader.getTermVector(luceneDoc, tokenType.name());
+			Terms terms = corpusMapper.getAtomicReader().getTermVector(luceneDoc, tokenType.name());
 			if (terms==null) {continue;}
 			TermsEnum termsEnum = terms.iterator(null);
 			Map<String, Integer> docFreqs = new HashMap<String, Integer>();
@@ -125,7 +124,8 @@ public class DocumentTokens extends AbstractCorpusTool {
 			}
 			Collections.sort(termInfos);
 			List<DocumentToken> tokens = new ArrayList<DocumentToken>();
-			String document = reader.document(luceneDoc).get(tokenType.name());
+			String document = corpus.getDocument(id).getDocumentString();
+//			String document = reader.document(luceneDoc).get(tokenType.name());
 			String string;
 			int lastEndOffset = 0;
 			int corpusDocumentIndexPosition = corpus.getDocumentPosition(id);

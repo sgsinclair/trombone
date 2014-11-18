@@ -135,6 +135,11 @@ public class LuceneIndexer implements Indexer {
 				}
 			}
 			
+			// this should almost never be called
+			if (parameters.containsKey("forceMerge")) {
+				indexWriter.forceMerge(parameters.getParameterIntValue("forceMerge"));
+			}
+			
 			indexReader = DirectoryReader.open(indexWriter, true);
 			storage.getLuceneManager().setDirectoryReader(indexReader); // make sure it's available afterwards				
 
@@ -299,7 +304,7 @@ public class LuceneIndexer implements Indexer {
 		public void run()  {
 			
 			if (verbose) {
-				System.out.println("indexing "+storedDocumentSource.getMetadata());
+//				System.out.println("indexing "+storedDocumentSource.getMetadata());
 			}
 			
 			try {
@@ -318,7 +323,7 @@ public class LuceneIndexer implements Indexer {
 				}
 					
 
-				FieldType ft = new FieldType(TextField.TYPE_STORED);
+				FieldType ft = new FieldType(TextField.TYPE_STORED); // store for easier updating later if needed
 				ft.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
 				ft.setStoreTermVectors(true);
 				ft.setStoreTermVectorOffsets(true);
@@ -338,7 +343,7 @@ public class LuceneIndexer implements Indexer {
 					String key = (String) entries.getKey();
 					String value = (String) entries.getValue();
 					if (key!=null && value!=null && value.isEmpty()==false) {
-						document.add(new TextField(key, value, Field.Store.YES));
+						document.add(new TextField(key, value, Field.Store.YES)); // store for easier updating later if needed
 					}
 				}
 				
