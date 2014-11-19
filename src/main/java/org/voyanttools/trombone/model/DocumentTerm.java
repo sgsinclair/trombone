@@ -107,11 +107,21 @@ public class DocumentTerm {
 		return docIndex;
 	}
 
-	public int[] getDistributions(int bins) {
+	public int[] getRawDistributions(int bins) {
 		if (positions==null || bins ==0) return new int[0];
 		int[] distributions = new int[bins];
 		for(int position : positions) {
 			distributions[(int) (position*bins/totalTermsCount)]++;
+		}
+		return distributions;
+	}
+	
+	public float[] getRelativeDistributions(int bins) {
+		if (positions==null || bins ==0) return new float[0];
+		int[] rawDistributions = getRawDistributions(bins);
+		float[] distributions = new float[bins];
+		for (int i=0, len = rawDistributions.length; i<len; i++) {
+			distributions[i] = (float) rawDistributions[i] / totalTermsCount;
 		}
 		return distributions;
 	}

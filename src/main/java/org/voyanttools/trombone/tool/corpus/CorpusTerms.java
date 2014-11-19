@@ -424,8 +424,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			writer.endNode();
 			
 			FlexibleParameters parameters = corpusTerms.getParameters();
-			String freqsMode = parameters.getParameterValue("withDistributions");
-			
+			String freqsMode = parameters.getParameterValue("withDistributions");			
 			boolean withRawDistributions = freqsMode != null && freqsMode.equals("raw");
 			boolean withRelativeDistributions = freqsMode != null && !withRawDistributions && (freqsMode.equals("relative") || parameters.getParameterBooleanValue("withDistributions"));		
 			boolean inDocumentsCountOnly = parameters.getParameterBooleanValue("inDocumentsCountOnly");

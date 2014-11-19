@@ -274,8 +274,10 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			writer.endNode();
 			
 			FlexibleParameters parameters = documentTerms.getParameters();
+			String freqsMode = parameters.getParameterValue("withDistributions");			
+			boolean withRawDistributions = freqsMode != null && freqsMode.equals("raw");
+			boolean withRelativeDistributions = freqsMode != null && !withRawDistributions && (freqsMode.equals("relative") || parameters.getParameterBooleanValue("withDistributions"));		
 			int bins = parameters.getParameterIntValue("bins", 10);
-			boolean withRawDistributions = parameters.getParameterBooleanValue("withDistributions");
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
 			for (DocumentTerm documentTerm : documentTerms) {
@@ -319,7 +321,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 				if (withRawDistributions) {
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-			        context.convertAnother(documentTerm.getDistributions(bins));
+			        context.convertAnother(documentTerm.getRawDistributions(bins));
+			        writer.endNode();
+				}
+				if (withRelativeDistributions) {
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
+			        context.convertAnother(documentTerm.getRelativeDistributions(bins));
 			        writer.endNode();
 				}
 				
