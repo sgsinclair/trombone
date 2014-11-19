@@ -74,12 +74,10 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 
 	@Override
-	public void run(Corpus corpus) throws IOException {
+	public void run(CorpusMapper corpusMapper) throws IOException {
 		
 		total = Integer.MAX_VALUE;
-
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-
+		Corpus corpus = corpusMapper.getCorpus();
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		List<TermInfo> termInfos = new ArrayList<TermInfo>();
 		TermInfo termInfo;

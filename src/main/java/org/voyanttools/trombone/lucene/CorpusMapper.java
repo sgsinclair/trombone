@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.lucene.index.AtomicReader;
+import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
@@ -49,6 +50,7 @@ import org.voyanttools.trombone.storage.Storage;
  */
 public class CorpusMapper {
 	
+	Storage storage;
 	AtomicReader reader;
 	IndexSearcher searcher;
 	Corpus corpus;
@@ -59,20 +61,17 @@ public class CorpusMapper {
 	private Map<String, Integer> documentIdToLuceneIdMap = null;
 	private Map<Integer, String> luceneIdToDocumentIdMap = null;
 
-	/**
-	 * @param ids 
-	 * @param storage 
-	 * @throws IOException 
-	 * 
-	 */
-	public CorpusMapper (AtomicReader reader, Corpus corpus) {
-		this.reader = reader;
+	public CorpusMapper(Storage storage, Corpus corpus) throws IOException {
+		this.storage = storage;
 		this.corpus = corpus;
 	}
 	
+	public Storage getStorage() {
+		return storage;
+	}
 
-	public CorpusMapper(Storage storage, Corpus corpus) throws IOException {
-		this(SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader()), corpus);
+	public Corpus getCorpus() {
+		return corpus;
 	}
 
 
@@ -92,7 +91,7 @@ public class CorpusMapper {
 	
 	public synchronized DocIdBitSet getDocIdBitSet() throws IOException {
 		if (docIdBitSet==null) {
-			BitSet bitSet = new BitSet(reader.numDocs());
+			BitSet bitSet = new BitSet(getAtomicReader().numDocs());
 			DocIdSetIterator docIdSetIterator = getDocIdSet().iterator();
 			int doc = docIdSetIterator.nextDoc();
 			while (doc!=DocIdSetIterator.NO_MORE_DOCS) {
@@ -106,28 +105,25 @@ public class CorpusMapper {
 	
 	private synchronized DocIdSet getDocIdSet() throws IOException {
 		if (docIdSet==null) {
-			docIdSet = getCorpusFilter().getDocIdSet(reader.getContext(), reader.getLiveDocs());
+			docIdSet = getCorpusFilter().getDocIdSet(getAtomicReader().getContext(), getAtomicReader().getLiveDocs());
 		}
 		return docIdSet;
 	}
 
 
-	public AtomicReader getAtomicReader() {
+	public AtomicReader getAtomicReader() throws IOException {
+		if (reader==null) {
+			reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		}
 		return reader;
 	}
 	
-	public IndexSearcher getSearcher() {
+	public IndexSearcher getSearcher() throws IOException {
 		if (searcher==null) {
-			searcher = new IndexSearcher(reader);
+			searcher = new IndexSearcher(getAtomicReader());
 		}
 		return searcher;
 	}
-
-
-	public Corpus getCorpus() {
-		return corpus;
-	}
-
 
 	public int getDocumentPositionFromLuceneId(int doc) throws IOException {
 		String id = getDocumentIdFromLuceneId(doc);
@@ -156,7 +152,7 @@ public class CorpusMapper {
 	}
 	
 	private void buildMapsFromTermsEnum() throws IOException {
-		Terms terms = reader.terms("id");
+		Terms terms = getAtomicReader().terms("id");
 		TermsEnum termsEnum = terms.iterator(null);
 		BytesRef bytesRef = termsEnum.next();
 		DocIdBitSet docIdBitSet = getDocIdBitSet();
@@ -184,12 +180,13 @@ public class CorpusMapper {
 
 	public Bits getDocIdOpenBitSetFromStoredDocumentIds(
 			List<String> documentIds) throws IOException {
-		BitSet bitSet = new BitSet(reader.numDocs());
+		BitSet bitSet = new BitSet(getAtomicReader().numDocs());
 		for (String id : documentIds) {
 			bitSet.set(getLuceneIdFromDocumentId(id));
 		}
 		return new DocIdBitSet(bitSet);
 	}
+
 
 
 	/**

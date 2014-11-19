@@ -2,6 +2,7 @@ package org.voyanttools.trombone.model;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -15,6 +16,7 @@ import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.FilteredDocIdSet;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.queries.CorpusFilter;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -37,6 +39,9 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 	}
 	public CorpusTermMinimal get(String term) {
 		return map.get(term);
+	}
+	public Collection<CorpusTermMinimal> values() {
+		return map.values();
 	}
 	private static String getName(Corpus corpus, String field) {
 		return corpus.getId()+"-corpusTermMinimals-"+field;
@@ -104,6 +109,11 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 			corpusTermMinimalsDB.close();
 		}
 		return new CorpusTermMinimalsDB(storage, corpus, field, true);
+	}
+	public static CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, TokenType tokenType) throws IOException {
+		return getInstance(corpusMapper.getStorage(), corpusMapper.getAtomicReader(), corpusMapper. getCorpus(), tokenType);
+		// TODO Auto-generated method stub
+		
 	}
 
 }

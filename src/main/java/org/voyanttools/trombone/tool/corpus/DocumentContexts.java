@@ -14,6 +14,7 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -41,13 +42,6 @@ public class DocumentContexts extends AbstractContextTerms {
 		comparator = Kwic.getComparator(contextsSort);
 	}
 
-	public List<Kwic> getKwics(AtomicReader atomicReader, CorpusMapper corpusMapper, Corpus corpus) throws IOException {
-		
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(atomicReader, corpusMapper, queries);
-		return getKwics(atomicReader, corpusMapper, corpus, documentSpansDataMap);
-
-	}
-	
 	private List<Kwic> getKwics(AtomicReader atomicReader, CorpusMapper corpusMapper, Corpus corpus, Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
@@ -110,17 +104,14 @@ public class DocumentContexts extends AbstractContextTerms {
 	}
 
 	@Override
-	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
-		this.queries = queries; // FIXME: this should be set by superclass
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-		this.contexts = getKwics(corpusMapper.getAtomicReader(), corpusMapper, corpus);
+	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
+		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper.getAtomicReader(), corpusMapper, queries);
+		this.contexts = getKwics(corpusMapper.getAtomicReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 
 	@Override
-	protected void runAllTerms(Corpus corpus) throws IOException {
-		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-		this.contexts = getKwics(corpusMapper.getAtomicReader(), corpusMapper, corpus);
+	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		runQueries(corpusMapper, stopwords, new String[0]); // doesn't make much sense without queries
 	}
 
 

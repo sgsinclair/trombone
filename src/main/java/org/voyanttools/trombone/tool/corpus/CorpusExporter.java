@@ -61,8 +61,8 @@ public class CorpusExporter extends AbstractCorpusTool {
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractCorpusTool#run(org.voyanttools.trombone.model.Corpus)
 	 */
 	@Override
-	public void run(Corpus corpus) throws IOException {
-		this.corpus = corpus;
+	public void run(CorpusMapper corpusMapper) throws IOException {
+		this.corpus = corpusMapper.getCorpus();
 	}
 
 	public void run(Corpus corpus, OutputStream outputStream) throws IOException {
@@ -94,7 +94,6 @@ public class CorpusExporter extends AbstractCorpusTool {
 			}
 		}
 		else {
-			CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 			for (IndexedDocument document : corpus) {
 				String fileEntryName = getFileEntryName(document.getMetadata(), documentFilename, nameMapper);
 				String string = document.getDocumentString();

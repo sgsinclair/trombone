@@ -51,11 +51,10 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 	}
 
 	@Override
-	public void run(Corpus corpus) throws IOException {
+	public void run(CorpusMapper corpusMapper) throws IOException {
 		
 		Sort sort = IndexedDocument.Sort.getForgivingly(parameters);
-
-		CorpusMapper corpusMapper = this.getStoredToLuceneDocumentsMapper(corpus);
+		Corpus corpus = corpusMapper.getCorpus();
 		List<String> ids = new ArrayList<String>(); // maintain insertion order, especially for no queries
 		if (parameters.containsKey("query")) {
 			Map<String, Float> weights = new HashMap<String, Float>();
