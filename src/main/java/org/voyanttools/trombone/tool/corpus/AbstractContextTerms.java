@@ -36,7 +36,6 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.search.Query;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
@@ -77,8 +76,9 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		}
 	}
 	
-	protected Map<Integer, Collection<DocumentSpansData>> getDocumentSpansData(AtomicReader atomicReader, CorpusMapper corpusMapper, String[] queries) throws IOException {
+	protected Map<Integer, Collection<DocumentSpansData>> getDocumentSpansData(CorpusMapper corpusMapper, String[] queries) throws IOException {
 		
+		AtomicReader atomicReader = corpusMapper.getAtomicReader();
 		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();

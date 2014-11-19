@@ -93,6 +93,10 @@ public class CorpusTerm implements Serializable {
 		}
 	}
 
+	public CorpusTerm(CorpusTermMinimal corpusTermMinimal, int totalTokens) {
+		this(corpusTermMinimal.getTerm(), corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal.getInDocumentsCount(), corpusTermMinimal.getDocumentsCount(), null, null, 0);
+	}
+
 	public int getRawFreq() {
 		return this.rawFreq;
 	}

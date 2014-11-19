@@ -23,22 +23,18 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
-import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
@@ -114,11 +110,11 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		return super.getVersion()+1;
 	}
 
+	@Override
+	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 	
-	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
-	
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
+		Corpus corpus = corpusMapper.getCorpus();
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
@@ -177,13 +173,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 //	public DocumentTerms getAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) {
 //		
 //	}
-	protected void runAllTerms(Corpus corpus) throws IOException {
+	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		
-		Keywords stopwords = this.getStopwords(corpus);
 		int size = start+limit;
 		
+		Corpus corpus = corpusMapper.getCorpus();
 		int[] totalTokensCounts = corpus.getTokensCounts(tokenType);
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		

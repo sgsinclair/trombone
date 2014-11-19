@@ -35,11 +35,9 @@ import java.util.Map;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
-import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
@@ -61,15 +59,14 @@ public class DocumentNgrams extends AbstractTerms {
 	}
 
 	@Override
-	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
+	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 	}
 
 	@Override
-	protected void runAllTerms(Corpus corpus) throws IOException {
+	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		Corpus corpus = corpusMapper.getCorpus();
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		
-		
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 		DocIdSetIterator it = corpusMapper.getDocIdBitSet().iterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
 			int luceneDoc = it.docID();
@@ -77,7 +74,7 @@ public class DocumentNgrams extends AbstractTerms {
 			int lastToken = totalTokens[corpusDocumentIndex];	
 			
 			// build single grams as seed for ngrams
-			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpus, corpusMapper.getAtomicReader(), luceneDoc, lastToken);
+			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpusMapper, luceneDoc, lastToken);
 			
 			Map<String, List<int[]>> stringPositionsMap = new HashMap<String, List<int[]>>();
 			List<Gram> grams = new ArrayList<Gram>();
@@ -283,10 +280,10 @@ public class DocumentNgrams extends AbstractTerms {
 		return newgrams;
 	}
 
-	private SimplifiedTermInfo[] getSparseSimplifiedTermInfoArray(Corpus corpus, AtomicReader atomicReader, int luceneDoc, int lastTokenOffset) throws IOException {
+	private SimplifiedTermInfo[] getSparseSimplifiedTermInfoArray(CorpusMapper corpusMapper, int luceneDoc, int lastTokenOffset) throws IOException {
 		
-		Keywords stopwords = this.getStopwords(corpus);
-		Terms terms = atomicReader.getTermVector(luceneDoc, tokenType.name());
+		Keywords stopwords = this.getStopwords(corpusMapper.getCorpus());
+		Terms terms = corpusMapper.getAtomicReader().getTermVector(luceneDoc, tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
 		SimplifiedTermInfo[] simplifiedTermInfoArray = new SimplifiedTermInfo[lastTokenOffset+1];
 		while(true) {

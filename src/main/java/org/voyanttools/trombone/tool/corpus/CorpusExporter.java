@@ -6,8 +6,6 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
@@ -21,19 +19,12 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.output.WriterOutputStream;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
-import org.apache.lucene.search.IndexSearcher;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
-import org.voyanttools.trombone.model.StoredDocumentSource;
-import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.Stripper;
@@ -61,8 +52,8 @@ public class CorpusExporter extends AbstractCorpusTool {
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractCorpusTool#run(org.voyanttools.trombone.model.Corpus)
 	 */
 	@Override
-	public void run(Corpus corpus) throws IOException {
-		this.corpus = corpus;
+	public void run(CorpusMapper corpusMapper) throws IOException {
+		this.corpus = corpusMapper.getCorpus();
 	}
 
 	public void run(Corpus corpus, OutputStream outputStream) throws IOException {
@@ -94,7 +85,6 @@ public class CorpusExporter extends AbstractCorpusTool {
 			}
 		}
 		else {
-			CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
 			for (IndexedDocument document : corpus) {
 				String fileEntryName = getFileEntryName(document.getMetadata(), documentFilename, nameMapper);
 				String string = document.getDocumentString();

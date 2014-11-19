@@ -4,9 +4,8 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
-import java.io.Serializable;
 
-import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -37,8 +36,8 @@ public class CorpusMetadata extends AbstractCorpusTool  {
 	}
 
 	@Override
-	public void run(Corpus corpus) throws IOException {
-		metadata = corpus.getCorpusMetadata();
+	public void run(CorpusMapper corpusMapper) throws IOException {
+		metadata = corpusMapper.getCorpus().getCorpusMetadata();
 	}
 
 }

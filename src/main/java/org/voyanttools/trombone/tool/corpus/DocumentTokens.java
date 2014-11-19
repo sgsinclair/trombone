@@ -11,12 +11,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -74,12 +71,10 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 
 	@Override
-	public void run(Corpus corpus) throws IOException {
+	public void run(CorpusMapper corpusMapper) throws IOException {
 		
 		total = Integer.MAX_VALUE;
-
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-
+		Corpus corpus = corpusMapper.getCorpus();
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		List<TermInfo> termInfos = new ArrayList<TermInfo>();
 		TermInfo termInfo;

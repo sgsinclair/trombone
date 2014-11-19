@@ -31,12 +31,11 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
-import org.apache.lucene.search.IndexSearcher;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusCollocate;
 import org.voyanttools.trombone.model.DocumentCollocate;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -69,20 +68,19 @@ public class CorpusCollocates extends AbstractContextTerms {
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runQueries(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper, java.lang.String[])
 	 */
 	@Override
-	protected void runQueries(Corpus corpus, String[] queries)
+	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries)
 			throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper.getAtomicReader(), corpusMapper, queries);
-		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpus, documentSpansDataMap);
+		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
+		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runAllTerms(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper)
 	 */
 	@Override
-	protected void runAllTerms(Corpus corpus) throws IOException {
-		// FIXME: what to do with empty no queries?
+	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		runQueries(corpusMapper, stopwords, new String[0]); // doesn't make much sense without a query
 	}
 
 
@@ -126,7 +124,6 @@ public class CorpusCollocates extends AbstractContextTerms {
 			
 			String keyword = keywordDocumentCollocaatesEntry.getKey();
 			for (Map.Entry<String, Set<DocumentCollocate>> contextTermCollocatesEntry : contextTermDocumentCollocatesMap.entrySet()) {
-				int[] frequencies = new int[corpus.size()];
 				int contextTermTotal = 0;
 				for (DocumentCollocate documentCollocate : contextTermCollocatesEntry.getValue()) {
 					contextTermTotal += documentCollocate.getContextRawFrequency();

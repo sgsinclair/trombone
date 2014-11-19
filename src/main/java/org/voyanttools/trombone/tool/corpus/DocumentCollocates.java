@@ -32,10 +32,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsEnum;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -78,26 +76,19 @@ public class DocumentCollocates extends AbstractContextTerms {
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runQueries(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper, java.lang.String[])
 	 */
 	@Override
-	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
-		this.queries = queries; // FIXME: this should be set by superclass
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpus);
+	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
+		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
+		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.utils.AbstractTerms#runAllTerms(org.voyanttools.trombone.model.Corpus, org.voyanttools.trombone.lucene.StoredToLuceneDocumentsMapper)
 	 */
 	@Override
-	protected void runAllTerms(Corpus corpus) throws IOException {
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
-		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpus);
+	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		runQueries(corpusMapper, stopwords, new String[0]); // doesn't make much sense without query
 	}
 
-	private List<DocumentCollocate> getCollocates(AtomicReader reader,
-			CorpusMapper corpusMapper, Corpus corpus) throws IOException {
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(reader, corpusMapper, queries);
-		return getCollocates(reader, corpusMapper, corpus, documentSpansDataMap);
-	}
 
 	List<DocumentCollocate> getCollocates(AtomicReader reader,
 			CorpusMapper corpusMapper, Corpus corpus,

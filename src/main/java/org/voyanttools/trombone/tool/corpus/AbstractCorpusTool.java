@@ -7,12 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
-import org.apache.lucene.search.IndexSearcher;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -33,9 +29,8 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
-		run(corpus);
-//		StoredToLuceneDocumentsMapper corpusMapper = new StoredToLuceneDocumentsMapper(storage, corpus.getDocumentIds());
-//		run(corpus, corpusMapper);
+		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
+		run(corpusMapper);
 	}
 	
 	protected List<String> getCorpusStoredDocumentIdsFromParameters(Corpus corpus) throws IOException {
@@ -68,13 +63,10 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	}
 	
 	protected CorpusMapper getStoredToLuceneDocumentsMapper(Corpus corpus) throws IOException {
-		
-		AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		return new CorpusMapper(storage, corpus);
 	}
 	
-	public abstract void run(Corpus corpus) throws IOException;
-//	protected abstract void run(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) throws IOException;
+	public abstract void run(CorpusMapper corpusMapper) throws IOException;
 
 
 }

@@ -12,8 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.BooleanClause.Occur;
@@ -25,6 +23,7 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -59,15 +58,10 @@ public class DocumentsFinder extends AbstractTerms {
 		super(storage, parameters);
 		includeDocIds = parameters.getParameterBooleanValue("includeDocIds");
 	}
-	
-	@Override
-	public void run(Corpus corpus) throws IOException {
-		corpusId = corpus.getId();
-		runQueries(corpus, parameters.getParameterValues("query"));
-	}
 
-	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
-		CorpusMapper corpusMapper = getStoredToLuceneDocumentsMapper(corpus);
+	@Override
+	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
+		Corpus corpus = corpusMapper.getCorpus();
 		total = corpus.size();
 		
 		IndexSearcher indexSearcher = corpusMapper.getSearcher();
@@ -116,7 +110,7 @@ public class DocumentsFinder extends AbstractTerms {
 	}
 	
 	@Override
-	protected void runAllTerms(Corpus corpus) throws IOException {
+	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		throw new IllegalArgumentException("You need to provide one or more queries for this tool.");
 	}
 	

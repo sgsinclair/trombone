@@ -24,10 +24,9 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -67,16 +66,17 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 
 
 	@Override
-	public void run(Corpus corpus) throws IOException {
+	public void run(CorpusMapper corpusMapper) throws IOException {
+		Keywords stopwords = getStopwords(corpusMapper.getCorpus());
 		if (parameters.containsKey("query")) {
 			String[] queries =  getQueries(); // parameters.getParameterValues("query");
 			if (queries.length==1 && queries[0].isEmpty()) {
-				runAllTerms(corpus);
+				runAllTerms(corpusMapper, stopwords);
 			}
-			runQueries(corpus, queries);
+			runQueries(corpusMapper, stopwords, queries);
 		}
 		else {
-			runAllTerms(corpus);
+			runAllTerms(corpusMapper, stopwords);
 		}
 	}
 	
@@ -84,8 +84,7 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 		return total;
 	}
 	
-	protected abstract void runQueries(Corpus corpus, String[] queries) throws IOException;
-//	protected abstract void runQueries(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper, String[] queries) throws IOException;
-	protected abstract void runAllTerms(Corpus corpus) throws IOException;
+	protected abstract void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException;
+	protected abstract void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException;
 
 }
