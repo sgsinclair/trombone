@@ -2,9 +2,12 @@ package org.voyanttools.trombone.model;
 
 import java.io.Serializable;
 import java.text.Normalizer;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
+import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -53,19 +56,40 @@ public class CorpusTerm implements Serializable {
 	private transient DescriptiveStatistics relativeStats = null;
 	
 	public CorpusTerm(String termString, int rawFreq, int totalTokens, int inDocumentsCount, int totalDocuments) {
-		this(termString, rawFreq, totalTokens, inDocumentsCount, totalDocuments, null, null);
+		this(termString, rawFreq, totalTokens, inDocumentsCount, totalDocuments, null, null, 0);
 	}
 	
-	public CorpusTerm(String termString, int rawFreq, int totalTokens, int inDocumentsCount, int totalDocuments, int[] rawFreqs, float[] relativeFreqs) {
+	public CorpusTerm(String termString, int rawFreq, int totalTokens, int inDocumentsCount, int totalDocuments, int[] rawFreqs, float[] relativeFreqs, int bins) {
 		this.term = termString;
 		this.rawFreq = rawFreq;
 		this.totalTokens = totalTokens;
 		this.inDocumentsCount = inDocumentsCount;
 		this.totalDocuments = totalDocuments;
-		this.rawFreqs = rawFreqs;
-		if (relativeFreqs!=null) {
+		if (rawFreqs==null || rawFreqs.length==0 || bins==0 || rawFreqs.length==bins) {
+			this.rawFreqs = rawFreqs;
+		}
+		else {
+			this.rawFreqs = new int[bins];
+			for(int position=0, len=rawFreqs.length; position<len; position++) {
+				this.rawFreqs[(int) (position*bins/len)]+=rawFreqs[position];
+			}
+		}
+		if (relativeFreqs==null || relativeFreqs.length==0 || bins==0) {
+			// do nothing, keep stats as null
+		}
+		else if (bins==0 | bins==relativeFreqs.length) {
 			this.relativeStats = new DescriptiveStatistics(relativeFreqs.length);
 			for (float f : relativeFreqs) {relativeStats.addValue(f);}
+		}
+		else {
+			SummaryStatistics[] stats = new SummaryStatistics[bins];
+			for(int position=0, len=rawFreqs.length; position<len; position++) {
+				int pos = (int) (position*bins/len);
+				if (stats[pos]==null) {stats[pos]=new SummaryStatistics();}
+				stats[pos].addValue(relativeFreqs[position]);
+			}
+			this.relativeStats = new DescriptiveStatistics(relativeFreqs.length);
+			for (SummaryStatistics stat : stats) {relativeStats.addValue(stat.getMean());}
 		}
 	}
 
@@ -100,21 +124,17 @@ public class CorpusTerm implements Serializable {
 		return relativeSkewness;
 	}
 	
-	public int[] getRawDistributions(int bins) {
-		if (rawFreqs==null) return new int[0];
-		if (bins==0) {bins=rawFreqs.length;} // nothing set, so use corpus length
-		int[] distributions = new int[bins];
-		for(int position=0, len=rawFreqs.length; position<len; position++) {
-			distributions[(int) (position*bins/len)]+=rawFreqs[position];
-		}
-		return distributions;
+	public int[] getRawDistributions() {
+		return rawFreqs;
 	}
 
-	public float[] getRelativeDistributions(int bins) {
-		if (bins==0) {bins=(int) relativeStats.getN();} // nothing set, so use corpus length
-		float[] distributions = new float[bins];
-		for(int position=0, len=(int) relativeStats.getN(); position<len; position++) {
-			distributions[(int) (position*bins/len)]+=relativeStats.getElement(position); // TODO: this needs to be averaged?
+	public float[] getRelativeDistributions() {
+		if (relativeStats==null || relativeStats.getN()==0) {
+			return new float[0];
+		}
+		float[] distributions = new float[(int) relativeStats.getN()];
+		for(int position=0, len=distributions.length; position<len; position++) {
+			distributions[position]=(float) relativeStats.getElement(position); // TODO: this needs to be averaged?
 		}
 		return distributions;
 	}

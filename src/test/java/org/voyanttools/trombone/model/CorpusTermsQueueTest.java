@@ -12,10 +12,10 @@ public class CorpusTermsQueueTest {
 
 	@Test
 	public void test() {
-		CorpusTerm d1 = new CorpusTerm("a", 1, 1, 1, 1, new int[1], new float[1]);
-		CorpusTerm d2 = new CorpusTerm("z", 2, 1, 1, 1, new int[1], new float[1]);
-		CorpusTerm d3 = new CorpusTerm("é", 3, 1, 1, 1, new int[1], new float[1]);
-		CorpusTerm d4 = new CorpusTerm("a", 3, 1, 1, 1, new int[1], new float[1]);
+		CorpusTerm d1 = new CorpusTerm("a", 1, 1, 1, 1);
+		CorpusTerm d2 = new CorpusTerm("z", 2, 1, 1, 1);
+		CorpusTerm d3 = new CorpusTerm("é", 3, 1, 1, 1);
+		CorpusTerm d4 = new CorpusTerm("a", 3, 1, 1, 1);
 		FlexibleQueue<CorpusTerm> queue;
 		List<CorpusTerm> list;
 

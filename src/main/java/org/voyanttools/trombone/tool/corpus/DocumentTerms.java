@@ -108,6 +108,11 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		isNeedsPositions = withDistributions || parameters.getParameterBooleanValue("withPositions");
 		isNeedsOffsets = parameters.getParameterBooleanValue("withOffsets");
 	}
+	
+	@Override
+	public int getVersion() {
+		return super.getVersion()+1;
+	}
 
 	
 	protected void runQueries(Corpus corpus, String[] queries) throws IOException {
@@ -269,7 +274,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			writer.endNode();
 			
 			FlexibleParameters parameters = documentTerms.getParameters();
-			int bins = parameters.getParameterIntValue("distributionBins", 10);
+			int bins = parameters.getParameterIntValue("bins", 10);
 			boolean withRawDistributions = parameters.getParameterBooleanValue("withDistributions");
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);

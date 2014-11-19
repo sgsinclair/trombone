@@ -106,13 +106,14 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	 */
 	public CorpusTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+		withDistributions = !parameters.getParameterValue("withDistributions","").isEmpty();
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		corpusTermSort = CorpusTerm.Sort.getForgivingly(parameters);
 		comparator = CorpusTerm.getComparator(corpusTermSort);
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+4;
+		return super.getVersion()+5;
 	}
 
 	protected void runAllTerms(Corpus corpus) throws IOException {
@@ -134,6 +135,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int tokensCounts[] = corpus.getTokensCounts(tokenType);
 		int totalTokens = corpus.getTokensCount(tokenType);
 		int corpusSize = corpus.size();
+		int bins = parameters.getParameterIntValue("bins", corpusSize);
 		while(true) {
 			
 			BytesRef term = termsEnum.next();
@@ -162,7 +164,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				}
 				if (termFreq>0) {
 					total++;
-					queue.offer(new CorpusTerm(termString, termFreq, totalTokens, inDocumentsCount, corpusSize, documentRawFreqs, documentRelativeFreqs));
+					queue.offer(new CorpusTerm(termString, termFreq, totalTokens, inDocumentsCount, corpusSize, documentRawFreqs, documentRelativeFreqs, bins));
 				}
 			}
 			else {
@@ -322,7 +324,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			relativeFreqs[documentPosition] = (float) f/tokensCounts[documentPosition];
 		}
 		if (freq>0) { // we may have terms from other documents not in this corpus
-			CorpusTerm corpusTerm = new CorpusTerm(queryString, freq, totalTokens, corpus.size(), corpus.size(), rawFreqs, relativeFreqs);
+			CorpusTerm corpusTerm = new CorpusTerm(queryString, freq, totalTokens, corpus.size(), corpus.size(), rawFreqs, relativeFreqs, parameters.getParameterIntValue("bins", corpus.size()));
 			offer(queue, corpusTerm);
 		}
 	}
@@ -426,7 +428,6 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			
 			boolean withRawDistributions = freqsMode != null && freqsMode.equals("raw");
 			boolean withRelativeDistributions = freqsMode != null && !withRawDistributions && (freqsMode.equals("relative") || parameters.getParameterBooleanValue("withDistributions"));		
-			int bins = parameters.getParameterIntValue("distributionBins");
 			boolean inDocumentsCountOnly = parameters.getParameterBooleanValue("inDocumentsCountOnly");
 			
 			
@@ -463,13 +464,13 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 					
 					if (withRawDistributions) {
 				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-				        context.convertAnother(corpusTerm.getRawDistributions(bins));
+				        context.convertAnother(corpusTerm.getRawDistributions());
 				        writer.endNode();
 					}
 					
 					if (withRelativeDistributions) {
 				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-				        context.convertAnother(corpusTerm.getRelativeDistributions(bins));
+				        context.convertAnother(corpusTerm.getRelativeDistributions());
 				        writer.endNode();
 					}
 				}
