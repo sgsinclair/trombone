@@ -69,11 +69,8 @@ public class DocumentsFinder extends AbstractTerms {
 		boolean createNewCorpus = parameters.getParameterBooleanValue("createNewCorpus");
 		for (String queryString : getQueries(queries)) {
 			Query query = queryParser.parse(queryString);
-			BooleanQuery corpusQuery = new BooleanQuery();
-			corpusQuery.add(query, Occur.MUST);
-			corpusQuery.add(new TermQuery(new Term("corpus", corpus.getId())), Occur.MUST);
 			LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-			indexSearcher.search(corpusQuery, collector);
+			indexSearcher.search(query, corpusMapper, collector);
 			if (createNewCorpus) {
 				Set<Integer> docs = collector.getLuceneDocIds();
 				String[] ids = new String[docs.size()];
