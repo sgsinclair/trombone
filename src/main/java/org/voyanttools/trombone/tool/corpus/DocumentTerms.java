@@ -125,7 +125,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(storage, corpusMapper.getAtomicReader(), corpus, tokenType);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
@@ -182,7 +182,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(storage, corpusMapper.getAtomicReader(), corpus, tokenType);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 
 		// now we look for our term frequencies
 		Terms terms = corpusMapper.getAtomicReader().terms(tokenType.name());

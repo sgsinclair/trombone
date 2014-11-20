@@ -28,6 +28,7 @@ import java.util.List;
 
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
@@ -102,9 +103,9 @@ public class CorpusBuilder extends AbstractTool {
 			start = Calendar.getInstance();
 
 			if (verbose) {log("Starting corpus terms index.");}
-			AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+			CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
 			// create and close to avoid concurrent requests later 
-			CorpusTermMinimalsDB.getInstance(storage, reader, corpus, TokenType.lexical).close();
+			CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical).close();
 			if (verbose) {log("Finished corpus terms index.", start);}
 
 			storage.getCorpusStorage().storeCorpus(corpus);

@@ -207,7 +207,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			}
 			else if (query instanceof SpanTermQuery) {
 				if (corpusTermMinimalsDB==null) {
-					corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(storage, corpusMapper.getAtomicReader(), corpusMapper.getCorpus(), ((SpanTermQuery) query).getTerm().field());
+					corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, ((SpanTermQuery) query).getTerm().field());
 				}
 				addToQueueFromTermWithoutDistributions(queue, queryString, ((SpanTermQuery) query).getTerm(), corpusTermMinimalsDB, corpusMapper.getCorpus().size());
 			}
@@ -224,7 +224,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			String queryString = entry.getKey();
 			if (query instanceof TermQuery) {
 				if (corpusTermMinimalsDB==null) {
-					corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(storage, corpusMapper.getAtomicReader(), corpusMapper.getCorpus(), ((TermQuery) query).getTerm().field());
+					corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, ((TermQuery) query).getTerm().field());
 				}
 				addToQueueFromTermWithoutDistributions(queue, queryString, ((TermQuery) query).getTerm(), corpusTermMinimalsDB, corpusMapper.getCorpus().size());
 			}
@@ -245,7 +245,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 
 	private void addToQueueFromQueryWithoutDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Query query) throws IOException {
 		LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-		corpusMapper.getSearcher().search(query, corpusMapper.getCorpusFilter(), collector);
+		corpusMapper.getSearcher().search(query, corpusMapper, collector);
 		CorpusTerm corpusTerm = new CorpusTerm(queryString, collector.getRawFreq(), totalTokens, collector.getInDocumentsCount(), corpusMapper.getCorpus().size());
 		offer(queue, corpusTerm);
 	}
@@ -273,15 +273,19 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int[] rawFreqs = new int[corpus.size()];
 		float[] relativeFreqs = new float[corpus.size()];
 		int freq = 0;
+		int inDocumentsCount = 0;
 		for (Map.Entry<Integer, AtomicInteger> entry : positionsMap.entrySet()) {
 			int f = entry.getValue().intValue();
 			int documentPosition = entry.getKey();
-			freq+=f;
+			if (f>0) {
+				freq+=f;
+				inDocumentsCount++;
+			}
 			rawFreqs[documentPosition] = f;
 			relativeFreqs[documentPosition] = (float) f/tokensCounts[documentPosition];
 		}
 		if (freq>0) { // we may have terms from other documents not in this corpus
-			CorpusTerm corpusTerm = new CorpusTerm(queryString, freq, totalTokens, corpus.size(), corpus.size(), rawFreqs, relativeFreqs, parameters.getParameterIntValue("bins", corpus.size()));
+			CorpusTerm corpusTerm = new CorpusTerm(queryString, freq, totalTokens, inDocumentsCount, corpus.size(), rawFreqs, relativeFreqs, parameters.getParameterIntValue("bins", corpus.size()));
 			offer(queue, corpusTerm);
 		}
 	}

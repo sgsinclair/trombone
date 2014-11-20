@@ -13,11 +13,8 @@ import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.DocIdSetIterator;
-import org.apache.lucene.search.FilteredDocIdSet;
-import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.queries.CorpusFilter;
 import org.voyanttools.trombone.storage.Storage;
 
 public class CorpusTermMinimalsDB extends AbstractDB {
@@ -49,10 +46,14 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 	private synchronized static boolean exists(Storage storage, Corpus corpus, String field) {
 		return AbstractDB.exists(storage, getName(corpus, field));
 	}
-	public synchronized static CorpusTermMinimalsDB getInstance(Storage storage, AtomicReader reader, Corpus corpus, TokenType tokenType) throws IOException {
-		return getInstance(storage, reader, corpus, tokenType.name());
+	public static synchronized CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, TokenType tokenType) throws IOException {
+		return getInstance(corpusMapper, tokenType.name());
 	}
-	public synchronized static CorpusTermMinimalsDB getInstance(Storage storage, AtomicReader reader, Corpus corpus, String field) throws IOException {
+
+	public static synchronized CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, String field) throws IOException {
+		Storage storage = corpusMapper.getStorage();
+		AtomicReader reader = corpusMapper.getAtomicReader();
+		Corpus corpus = corpusMapper.getCorpus();
 		if (!exists(storage, corpus, field)) {
 			Terms terms = reader.terms(field);
 			TermsEnum termsEnum = terms.iterator(null);
@@ -61,8 +62,7 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 			int documentsCount = corpus.size();
 			DescriptiveStatistics stats = new DescriptiveStatistics();
 			List<CorpusTermMinimal> corpusTermMinimalsList = new ArrayList<CorpusTermMinimal>();
-			CorpusFilter corpusFilter = new CorpusFilter(corpus);
-			DocIdSet docIdSet = corpusFilter.getDocIdSet(reader.getContext(), reader.getLiveDocs());
+			DocIdSet docIdSet = corpusMapper.getDocIdBitSet();
 			DocIdSetIterator docIdSetIterator;
 			int doc;
 			int termFreq;
@@ -112,10 +112,4 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 		}
 		return new CorpusTermMinimalsDB(storage, corpus, field, true);
 	}
-	public static synchronized CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, TokenType tokenType) throws IOException {
-		return getInstance(corpusMapper.getStorage(), corpusMapper.getAtomicReader(), corpusMapper. getCorpus(), tokenType);
-		// TODO Auto-generated method stub
-		
-	}
-
 }

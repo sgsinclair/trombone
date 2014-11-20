@@ -24,23 +24,23 @@ package org.voyanttools.trombone.lucene;
 import java.io.IOException;
 import java.util.BitSet;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.index.AtomicReaderContext;
 import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSet;
-import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.DocIdBitSet;
-import org.voyanttools.trombone.lucene.queries.CorpusFilter;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -48,15 +48,13 @@ import org.voyanttools.trombone.storage.Storage;
  * @author sgs
  *
  */
-public class CorpusMapper {
+public class CorpusMapper extends Filter {
 	
 	Storage storage;
 	AtomicReader reader;
 	IndexSearcher searcher;
 	Corpus corpus;
 	private List<String> documentIds = null;
-	private CorpusFilter corpusFilter = null;
-	private DocIdSet docIdSet = null;
 	private DocIdBitSet docIdBitSet = null;
 	private Map<String, Integer> documentIdToLuceneIdMap = null;
 	private Map<Integer, String> luceneIdToDocumentIdMap = null;
@@ -82,35 +80,13 @@ public class CorpusMapper {
 		return documentIds;
 	}
 	
-	public synchronized Filter getCorpusFilter() {
-		if (corpusFilter==null) {
-			corpusFilter = new CorpusFilter(corpus);
-		}
-		return corpusFilter;
-	}
-	
 	public synchronized DocIdBitSet getDocIdBitSet() throws IOException {
 		if (docIdBitSet==null) {
-			BitSet bitSet = new BitSet(getAtomicReader().numDocs());
-			DocIdSetIterator docIdSetIterator = getDocIdSet().iterator();
-			int doc = docIdSetIterator.nextDoc();
-			while (doc!=DocIdSetIterator.NO_MORE_DOCS) {
-				bitSet.set(doc);
-				doc = docIdSetIterator.nextDoc();
-			}
-			docIdBitSet = new DocIdBitSet(bitSet);
+			build();
 		}
 		return docIdBitSet;
 	}
 	
-	private synchronized DocIdSet getDocIdSet() throws IOException {
-		if (docIdSet==null) {
-			docIdSet = getCorpusFilter().getDocIdSet(getAtomicReader().getContext(), getAtomicReader().getLiveDocs());
-		}
-		return docIdSet;
-	}
-
-
 	public AtomicReader getAtomicReader() throws IOException {
 		if (reader==null) {
 			reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
@@ -133,45 +109,51 @@ public class CorpusMapper {
 
 	public int getLuceneIdFromDocumentId(String id) throws IOException {
 		if (documentIdToLuceneIdMap==null) {
-			buildMaps();
+			build();
 		}
 		return documentIdToLuceneIdMap.get(id);
 	}
 
 	public String getDocumentIdFromLuceneId(int doc) throws IOException {
 		if (luceneIdToDocumentIdMap==null) {
-			buildMaps();
+			build();
 		}
 		return luceneIdToDocumentIdMap.get(doc);
 	}
 
-	private void buildMaps() throws IOException {
+	private void build() throws IOException {
 		luceneIdToDocumentIdMap =  new HashMap<Integer, String>();
 		documentIdToLuceneIdMap = new HashMap<String, Integer>();
-		buildMapsFromTermsEnum();
+		buildFromTermsEnum();
 	}
 	
-	private void buildMapsFromTermsEnum() throws IOException {
+	/**
+	 * This should not be called, except from the private build() method.
+	 * @throws IOException
+	 */
+	private void buildFromTermsEnum() throws IOException {
 		Terms terms = getAtomicReader().terms("id");
 		TermsEnum termsEnum = terms.iterator(null);
 		BytesRef bytesRef = termsEnum.next();
-		DocIdBitSet docIdBitSet = getDocIdBitSet();
 		DocsEnum docsEnum = null;
 		int doc;
 		String id;
+		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
+		BitSet bitSet = new BitSet(getAtomicReader().numDocs());
 		while (bytesRef!=null) {
-			docsEnum = termsEnum.docs(docIdBitSet, docsEnum, DocsEnum.FLAG_NONE);
+			docsEnum = termsEnum.docs(getAtomicReader().getLiveDocs(), docsEnum, DocsEnum.FLAG_NONE);
 			doc = docsEnum.nextDoc();
 			if (doc!=DocsEnum.NO_MORE_DOCS) {
 				id = bytesRef.utf8ToString();
-				while (doc!=DocsEnum.NO_MORE_DOCS) {
+				if (ids.contains(id)) {
+					bitSet.set(doc);
 					documentIdToLuceneIdMap.put(id, doc);
 					luceneIdToDocumentIdMap.put(doc, id);
-					doc = docsEnum.nextDoc(); // can we have multiple documents with same ID in the same corpus?
 				}
 			}
 			bytesRef = termsEnum.next();
 		}
+		docIdBitSet = new DocIdBitSet(bitSet);
 	}
 	
 	public String getDocumentIdFromDocumentPosition(int documentPosition) {
@@ -187,115 +169,9 @@ public class CorpusMapper {
 		return new DocIdBitSet(bitSet);
 	}
 
-
-
-	/**
-	 * @param ids 
-	 * @param storage 
-	 * @throws IOException 
-	 * 
-	 */
-	/*
-	public static StoredToLuceneDocumentsMapper getInstance(IndexSearcher searcher, Corpus corpus) throws IOException {
-		return getInstance(searcher, LuceneManager.getCorpusQuery(corpus), corpus.getDocumentIds());
+	@Override
+	public DocIdSet getDocIdSet(AtomicReaderContext context, Bits acceptDocs) throws IOException {
+		return getDocIdBitSet(); // this ignores the context and acceptDocs arguments, let's hope that's not a problem :)
 	}
-	*/
-	
-	/*
-	private static StoredToLuceneDocumentsMapper getInstance(IndexSearcher searcher, Query query, List<String> documentIds) throws IOException {
-		SimpleDocIdsCollector collector = new SimpleDocIdsCollector();
-		searcher.search(query, collector);
-		Map<String, Integer> map = collector.getDocIdsMap();
-		if (documentIds.size()!=map.size()) {
-			throw new IllegalStateException("Corpus mapper has mismatched number of documents.");
-		}
-		int[] luceneIds = new int[documentIds.size()];
-		for (int i=0, len = documentIds.size(); i<len; i++) {
-			luceneIds[i] = map.get(documentIds.get(i));
-		}
-		return new StoredToLuceneDocumentsMapper(documentIds, luceneIds, searcher.getIndexReader().maxDoc());
-	}
-	*/
-	
-	/*
-	private static int[] getLuceneIds(Storage storage, List<String> documentIds) throws IOException {
-		int[] luceneIds = new int[documentIds.size()];
-		for (int i=0; i<documentIds.size(); i++) {
-			luceneIds[i] = storage.getLuceneManager().getLuceneDocumentId(documentIds.get(i));
-		}
-		return luceneIds;
-	}
-	*/
-	
-	/*
-	private StoredToLuceneDocumentsMapper(List<String> documentIds, int[] luceneIds, int maxDocs) {
-		this.maxDocs = maxDocs;
-		this.lucenedIdToDocumentPositionMap = new HashMap<Integer, Integer>(documentIds.size());
-		this.documentIdToLuceneId = new HashMap<String, Integer>(documentIds.size());
-		this.sortedLuceneIds = new int[documentIds.size()];
-		this.luceneIdToDocumentId = new HashMap<Integer, String>();
-		this.documentIds = documentIds;
-		for (int i=0, len=luceneIds.length; i<len; i++) {
-			String documentId = documentIds.get(i);
-			int luceneDocId = luceneIds[i];
-			this.sortedLuceneIds[i] = luceneDocId;
-			this.lucenedIdToDocumentPositionMap.put(luceneDocId, i);
-			this.documentIdToLuceneId.put(documentId, luceneDocId);
-			this.luceneIdToDocumentId.put(luceneDocId, documentId);
-		}
-		Arrays.sort(this.sortedLuceneIds);
-		
-	}
-	
-	public StoredToLuceneDocumentsMapper subSet(int[] luceneDocumentIds) {
-		List<String> documentIds = new ArrayList<String>();
-		for (int luceneDocumentId : luceneDocumentIds) {
-			documentIds.add(luceneIdToDocumentId.get(luceneDocumentId));
-		}
-		return new StoredToLuceneDocumentsMapper(documentIds, luceneDocumentIds, maxDocs);
-	}
-	
-	public DocIdSetIterator getDocIdSetIterator() {
-		return new OpenBitSetIterator(getDocIdOpenBitSet());
-	}
-	
-	public OpenBitSet getDocIdOpenBitSet() {
-		if (docIdOpenBitSet==null) {
-			OpenBitSet obs = new OpenBitSet(maxDocs);
-			for (int i : sortedLuceneIds) {
-				obs.set((long) i);
-			}
-			docIdOpenBitSet = obs;
-		}
-		return docIdOpenBitSet;
-	}
-
-	public int getDocumentPositionFromLuceneDocumentIndex(int luceneDocumentIndex) {
-		return lucenedIdToDocumentPositionMap.get(luceneDocumentIndex);
-	}
-	
-	public String getDocumentIdFromLuceneDocumentIndex(int doc) {
-		return luceneIdToDocumentId.get(doc);
-	}
-	
-	public String getDocumentIdFromDocumentPosition(int documentPosition) {
-		return documentIds.get(documentPosition); 
-	}
-
-
-
-	public OpenBitSet getDocIdOpenBitSetFromStoredDocumentIds(
-			List<String> storedDocumentIds) {
-		OpenBitSet obs = new OpenBitSet(storedDocumentIds.size());
-		for (String id : storedDocumentIds) {
-			obs.set((long) documentIdToLuceneId.get(id));
-		}
-		return obs;
-	}
-
-	public int getLuceneIdFromDocumentId(String id) {
-		return documentIdToLuceneId.get(id);
-	}
-	*/
 
 }
