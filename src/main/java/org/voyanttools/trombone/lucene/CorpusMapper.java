@@ -30,11 +30,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.index.AtomicReader;
-<<<<<<< HEAD
 import org.apache.lucene.index.AtomicReaderContext;
-=======
-import org.apache.lucene.index.CorruptIndexException;
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
@@ -86,41 +82,15 @@ public class CorpusMapper extends Filter {
 	
 	public synchronized DocIdBitSet getDocIdBitSet() throws IOException {
 		if (docIdBitSet==null) {
-<<<<<<< HEAD
 			build();
-=======
-			BitSet bitSet = new BitSet(getAtomicReader().numDocs());
-			DocIdSetIterator docIdSetIterator = getDocIdSet().iterator();
-			int doc = docIdSetIterator.nextDoc();
-			while (doc!=DocIdSetIterator.NO_MORE_DOCS) {
-				bitSet.set(doc);
-				doc = docIdSetIterator.nextDoc();
-			}
-			docIdBitSet = new DocIdBitSet(bitSet);
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 		}
 		return docIdBitSet;
 	}
 	
-<<<<<<< HEAD
 	public AtomicReader getAtomicReader() throws IOException {
 		if (reader==null) {
 			reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		}
-=======
-	private synchronized DocIdSet getDocIdSet() throws IOException {
-		if (docIdSet==null) {
-			docIdSet = getCorpusFilter().getDocIdSet(getAtomicReader().getContext(), getAtomicReader().getLiveDocs());
-		}
-		return docIdSet;
-	}
-
-
-	public AtomicReader getAtomicReader() throws IOException {
-		if (reader==null) {
-			reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		}
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 		return reader;
 	}
 	
@@ -157,15 +127,11 @@ public class CorpusMapper extends Filter {
 		buildFromTermsEnum();
 	}
 	
-<<<<<<< HEAD
 	/**
 	 * This should not be called, except from the private build() method.
 	 * @throws IOException
 	 */
 	private void buildFromTermsEnum() throws IOException {
-=======
-	private void buildMapsFromTermsEnum() throws IOException {
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 		Terms terms = getAtomicReader().terms("id");
 		TermsEnum termsEnum = terms.iterator(null);
 		BytesRef bytesRef = termsEnum.next();
@@ -203,120 +169,10 @@ public class CorpusMapper extends Filter {
 		return new DocIdBitSet(bitSet);
 	}
 
-<<<<<<< HEAD
 	@Override
 	public DocIdSet getDocIdSet(AtomicReaderContext context, Bits acceptDocs) throws IOException {
 		return getDocIdBitSet(); // this ignores the context and acceptDocs arguments, let's hope that's not a problem :)
-=======
-
-
-	/**
-	 * @param ids 
-	 * @param storage 
-	 * @throws IOException 
-	 * 
-	 */
-	/*
-	public static StoredToLuceneDocumentsMapper getInstance(IndexSearcher searcher, Corpus corpus) throws IOException {
-		return getInstance(searcher, LuceneManager.getCorpusQuery(corpus), corpus.getDocumentIds());
-	}
-	*/
-	
-	/*
-	private static StoredToLuceneDocumentsMapper getInstance(IndexSearcher searcher, Query query, List<String> documentIds) throws IOException {
-		SimpleDocIdsCollector collector = new SimpleDocIdsCollector();
-		searcher.search(query, collector);
-		Map<String, Integer> map = collector.getDocIdsMap();
-		if (documentIds.size()!=map.size()) {
-			throw new IllegalStateException("Corpus mapper has mismatched number of documents.");
-		}
-		int[] luceneIds = new int[documentIds.size()];
-		for (int i=0, len = documentIds.size(); i<len; i++) {
-			luceneIds[i] = map.get(documentIds.get(i));
-		}
-		return new StoredToLuceneDocumentsMapper(documentIds, luceneIds, searcher.getIndexReader().maxDoc());
-	}
-	*/
-	
-	/*
-	private static int[] getLuceneIds(Storage storage, List<String> documentIds) throws IOException {
-		int[] luceneIds = new int[documentIds.size()];
-		for (int i=0; i<documentIds.size(); i++) {
-			luceneIds[i] = storage.getLuceneManager().getLuceneDocumentId(documentIds.get(i));
-		}
-		return luceneIds;
-	}
-	*/
-	
-	/*
-	private StoredToLuceneDocumentsMapper(List<String> documentIds, int[] luceneIds, int maxDocs) {
-		this.maxDocs = maxDocs;
-		this.lucenedIdToDocumentPositionMap = new HashMap<Integer, Integer>(documentIds.size());
-		this.documentIdToLuceneId = new HashMap<String, Integer>(documentIds.size());
-		this.sortedLuceneIds = new int[documentIds.size()];
-		this.luceneIdToDocumentId = new HashMap<Integer, String>();
-		this.documentIds = documentIds;
-		for (int i=0, len=luceneIds.length; i<len; i++) {
-			String documentId = documentIds.get(i);
-			int luceneDocId = luceneIds[i];
-			this.sortedLuceneIds[i] = luceneDocId;
-			this.lucenedIdToDocumentPositionMap.put(luceneDocId, i);
-			this.documentIdToLuceneId.put(documentId, luceneDocId);
-			this.luceneIdToDocumentId.put(luceneDocId, documentId);
-		}
-		Arrays.sort(this.sortedLuceneIds);
-		
-	}
-	
-	public StoredToLuceneDocumentsMapper subSet(int[] luceneDocumentIds) {
-		List<String> documentIds = new ArrayList<String>();
-		for (int luceneDocumentId : luceneDocumentIds) {
-			documentIds.add(luceneIdToDocumentId.get(luceneDocumentId));
-		}
-		return new StoredToLuceneDocumentsMapper(documentIds, luceneDocumentIds, maxDocs);
-	}
-	
-	public DocIdSetIterator getDocIdSetIterator() {
-		return new OpenBitSetIterator(getDocIdOpenBitSet());
-	}
-	
-	public OpenBitSet getDocIdOpenBitSet() {
-		if (docIdOpenBitSet==null) {
-			OpenBitSet obs = new OpenBitSet(maxDocs);
-			for (int i : sortedLuceneIds) {
-				obs.set((long) i);
-			}
-			docIdOpenBitSet = obs;
-		}
-		return docIdOpenBitSet;
 	}
 
-	public int getDocumentPositionFromLuceneDocumentIndex(int luceneDocumentIndex) {
-		return lucenedIdToDocumentPositionMap.get(luceneDocumentIndex);
-	}
-	
-	public String getDocumentIdFromLuceneDocumentIndex(int doc) {
-		return luceneIdToDocumentId.get(doc);
-	}
-	
-	public String getDocumentIdFromDocumentPosition(int documentPosition) {
-		return documentIds.get(documentPosition); 
-	}
-
-
-
-	public OpenBitSet getDocIdOpenBitSetFromStoredDocumentIds(
-			List<String> storedDocumentIds) {
-		OpenBitSet obs = new OpenBitSet(storedDocumentIds.size());
-		for (String id : storedDocumentIds) {
-			obs.set((long) documentIdToLuceneId.get(id));
-		}
-		return obs;
-	}
-
-	public int getLuceneIdFromDocumentId(String id) {
-		return documentIdToLuceneId.get(id);
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
-	}
 
 }

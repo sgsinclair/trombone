@@ -10,10 +10,6 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-<<<<<<< HEAD
-=======
-import org.voyanttools.trombone.model.Corpus;
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.storage.Storage;
@@ -41,15 +37,9 @@ public class DocumentContexts extends AbstractContextTerms {
 		comparator = Kwic.getComparator(contextsSort);
 	}
 
-<<<<<<< HEAD
 	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpusMapper.getCorpus().getLastTokenPositions(tokenType);
-=======
-	private List<Kwic> getKwics(AtomicReader atomicReader, CorpusMapper corpusMapper, Corpus corpus, Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
-		
-		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 		FlexibleQueue<Kwic> queue = new FlexibleQueue(comparator, limit);
 		for (Map.Entry<Integer, Collection<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
@@ -110,13 +100,8 @@ public class DocumentContexts extends AbstractContextTerms {
 
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-<<<<<<< HEAD
 		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
 		this.contexts = getKwics(corpusMapper, documentSpansDataMap);
-=======
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper.getAtomicReader(), corpusMapper, queries);
-		this.contexts = getKwics(corpusMapper.getAtomicReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 	}
 
 	@Override

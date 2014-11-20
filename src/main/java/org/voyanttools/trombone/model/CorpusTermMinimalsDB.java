@@ -15,10 +15,6 @@ import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-<<<<<<< HEAD
-=======
-import org.voyanttools.trombone.lucene.queries.CorpusFilter;
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 import org.voyanttools.trombone.storage.Storage;
 
 public class CorpusTermMinimalsDB extends AbstractDB {
@@ -116,13 +112,4 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 		}
 		return new CorpusTermMinimalsDB(storage, corpus, field, true);
 	}
-<<<<<<< HEAD
-=======
-	public static CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, TokenType tokenType) throws IOException {
-		return getInstance(corpusMapper.getStorage(), corpusMapper.getAtomicReader(), corpusMapper. getCorpus(), tokenType);
-		// TODO Auto-generated method stub
-		
-	}
-
->>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 }
