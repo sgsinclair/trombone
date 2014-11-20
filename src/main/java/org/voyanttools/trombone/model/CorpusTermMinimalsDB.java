@@ -46,13 +46,13 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 	private static String getName(Corpus corpus, String field) {
 		return corpus.getId()+"-corpusTermMinimals-"+field;
 	}
-	private static boolean exists(Storage storage, Corpus corpus, String field) {
+	private synchronized static boolean exists(Storage storage, Corpus corpus, String field) {
 		return AbstractDB.exists(storage, getName(corpus, field));
 	}
-	public static CorpusTermMinimalsDB getInstance(Storage storage, AtomicReader reader, Corpus corpus, TokenType tokenType) throws IOException {
+	public synchronized static CorpusTermMinimalsDB getInstance(Storage storage, AtomicReader reader, Corpus corpus, TokenType tokenType) throws IOException {
 		return getInstance(storage, reader, corpus, tokenType.name());
 	}
-	public static CorpusTermMinimalsDB getInstance(Storage storage, AtomicReader reader, Corpus corpus, String field) throws IOException {
+	public synchronized static CorpusTermMinimalsDB getInstance(Storage storage, AtomicReader reader, Corpus corpus, String field) throws IOException {
 		if (!exists(storage, corpus, field)) {
 			Terms terms = reader.terms(field);
 			TermsEnum termsEnum = terms.iterator(null);
@@ -77,9 +77,11 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 					doc = docIdSetIterator.nextDoc();
 					termFreq = 0;
 					inDocumentsCount=0;
-					docsEnumDoc = -1;
-					while (doc!=DocIdSetIterator.NO_MORE_DOCS) {
-						docsEnumDoc = docsEnum.advance(doc);
+					docsEnumDoc = docsEnum.nextDoc();
+					while (doc!=DocIdSetIterator.NO_MORE_DOCS && docsEnumDoc!=DocsEnum.NO_MORE_DOCS) {
+						if (doc>docsEnumDoc) {
+							docsEnumDoc = docsEnum.advance(doc);
+						}
 						if (docsEnumDoc!=DocsEnum.NO_MORE_DOCS) {
 							termFreq += docsEnum.freq();
 							inDocumentsCount++;
@@ -110,7 +112,7 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 		}
 		return new CorpusTermMinimalsDB(storage, corpus, field, true);
 	}
-	public static CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, TokenType tokenType) throws IOException {
+	public static synchronized CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, TokenType tokenType) throws IOException {
 		return getInstance(corpusMapper.getStorage(), corpusMapper.getAtomicReader(), corpusMapper. getCorpus(), tokenType);
 		// TODO Auto-generated method stub
 		

@@ -46,13 +46,15 @@ public class IndexedDocument implements DocumentContainer, Comparable<IndexedDoc
 	private Storage storage;
 	
 	public enum Sort {
-		INDEXASC, INDEXDESC, TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC, TERMSCOUNTLEXICALASC, TERMSCOUNTLEXICALDESC, PUBDATEASC, PUBDATEDESC;
+		INDEXASC, INDEXDESC, TITLEASC, TITLEDESC, AUTHORASC, AUTHORDESC, TOKENSCOUNTLEXICALASC, TOKENSCOUNTLEXICALDESC, TYPESCOUNTLEXICALASC, TYPESCOUNTLEXICALDESC, TYPETOKENRATIOLEXICALASC, TYPETOKENRATIOLEXICALDESC, PUBDATEASC, PUBDATEDESC;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "INDEX";
 			if (sort.startsWith("TITLE")) {sortPrefix="TITLE";}
-			if (sort.startsWith("TERMSCOUNT")) {sortPrefix="TERMSCOUNTLEXICAL";} // TODO: support other kinds of term counts
+			if (sort.startsWith("TOKENSCOUNT")) {sortPrefix="TOKENSCOUNTLEXICAL";} // TODO: support other kinds of term counts
+			if (sort.startsWith("TYPESCOUNT")) {sortPrefix="TYPESCOUNTLEXICAL";} // TODO: support other kinds of term counts
+			if (sort.startsWith("TYPETOKEN")) {sortPrefix="TYPETOKENRATIOLEXICAL";} // TODO: support other kinds of term counts
 			else if (sort.startsWith("AUTHOR")) {sortPrefix="AUTHOR";}
 			else if (sort.startsWith("PUBDATE")) {sortPrefix="PUBDATE";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
@@ -161,10 +163,18 @@ public class IndexedDocument implements DocumentContainer, Comparable<IndexedDoc
 			return AuthorAscComparator;
 		case AUTHORDESC:
 			return AuthorDescComparator;
-		case TERMSCOUNTLEXICALASC:
+		case TOKENSCOUNTLEXICALASC:
 			return TermsCountLexicalAscComparator;
-		case TERMSCOUNTLEXICALDESC:
+		case TOKENSCOUNTLEXICALDESC:
 			return TermsCountLexicalDescComparator;
+		case TYPESCOUNTLEXICALASC:
+			return TypesCountLexicalAscComparator;
+		case TYPESCOUNTLEXICALDESC:
+			return TypesCountLexicalDescComparator;
+		case TYPETOKENRATIOLEXICALASC:
+			return TypeTokenRatioLexicalAscComparator;
+		case TYPETOKENRATIOLEXICALDESC:
+			return TypeTokenRatioLexicalDescComparator;
 		case PUBDATEASC:
 			return PubDateAscendingComparator;
 		case PUBDATEDESC:
@@ -240,11 +250,33 @@ public class IndexedDocument implements DocumentContainer, Comparable<IndexedDoc
 		}
 	};
 
+	private static Comparator<IndexedDocument> TypesCountLexicalAscComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Integer.compare(doc2.getMetadata().getTypesCount(TokenType.lexical), doc1.getMetadata().getTypesCount(TokenType.lexical));
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> TypesCountLexicalDescComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Integer.compare(doc1.getMetadata().getTypesCount(TokenType.lexical), doc2.getMetadata().getTypesCount(TokenType.lexical));
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
 	private static Comparator<IndexedDocument> TermsCountLexicalAscComparator =  new Comparator<IndexedDocument>() {
 		@Override
 		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
 			try {
-				return Integer.compare(doc1.getMetadata().getTokensCount(TokenType.lexical), doc2.getMetadata().getTokensCount(TokenType.lexical));
+				return Integer.compare(doc2.getMetadata().getTokensCount(TokenType.lexical), doc1.getMetadata().getTokensCount(TokenType.lexical));
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -255,13 +287,35 @@ public class IndexedDocument implements DocumentContainer, Comparable<IndexedDoc
 		@Override
 		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
 			try {
-				return Integer.compare(doc2.getMetadata().getTokensCount(TokenType.lexical), doc1.getMetadata().getTokensCount(TokenType.lexical));
+				return Integer.compare(doc1.getMetadata().getTokensCount(TokenType.lexical), doc2.getMetadata().getTokensCount(TokenType.lexical));
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
 		}
 	};
 
+	private static Comparator<IndexedDocument> TypeTokenRatioLexicalAscComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Float.compare((float) doc2.getMetadata().getTypesCount(TokenType.lexical)/(float) doc2.getMetadata().getTokensCount(TokenType.lexical), (float) doc1.getMetadata().getTypesCount(TokenType.lexical)/(float) doc1.getMetadata().getTokensCount(TokenType.lexical));
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
+	private static Comparator<IndexedDocument> TypeTokenRatioLexicalDescComparator =  new Comparator<IndexedDocument>() {
+		@Override
+		public int compare(IndexedDocument doc1, IndexedDocument doc2) {
+			try {
+				return Float.compare((float) doc1.getMetadata().getTypesCount(TokenType.lexical)/(float) doc1.getMetadata().getTokensCount(TokenType.lexical), (float) doc2.getMetadata().getTypesCount(TokenType.lexical)/ (float) doc2.getMetadata().getTokensCount(TokenType.lexical));
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	
 	private static Comparator<IndexedDocument> PubDateDescendingComparator =  new Comparator<IndexedDocument>() {
 		@Override
 		public int compare(IndexedDocument doc1, IndexedDocument doc2) {

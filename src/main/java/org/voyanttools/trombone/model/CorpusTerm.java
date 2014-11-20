@@ -208,6 +208,20 @@ public class CorpusTerm implements Serializable {
 		
 	};
 
+	private static Comparator<CorpusTerm> RawFrequencyAscendingComparator = new Comparator<CorpusTerm>() {
+
+		@Override
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			if (term1.rawFreq==term2.rawFreq) {
+				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
+			}
+			else {
+				return term1.rawFreq - term2.rawFreq;
+			}
+		}
+		
+	};
+	
 	private static Comparator<CorpusTerm> InDocumentsCountAscendingComparator = new Comparator<CorpusTerm>() {
 		@Override
 		public int compare(CorpusTerm term1, CorpusTerm term2) {
@@ -233,20 +247,7 @@ public class CorpusTerm implements Serializable {
 		
 	};
 	
-	private static Comparator<CorpusTerm> RawFrequencyAscendingComparator = new Comparator<CorpusTerm>() {
 
-		@Override
-		public int compare(CorpusTerm term1, CorpusTerm term2) {
-			if (term1.rawFreq==term2.rawFreq) {
-				return term2.getNormalizedTerm().compareTo(term1.getNormalizedTerm());
-			}
-			else {
-				return term2.rawFreq - term1.rawFreq;
-			}
-		}
-		
-	};
-	
 	private static Comparator<CorpusTerm> RelativePeakednessAscendingComparator = new Comparator<CorpusTerm>() {
 
 		@Override

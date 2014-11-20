@@ -112,7 +112,7 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 	
 	@Override
 	public int getVersion() {
-		return super.getVersion()+2;
+		return super.getVersion()+8;
 	}
 
 
