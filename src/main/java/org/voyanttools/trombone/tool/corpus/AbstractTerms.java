@@ -24,6 +24,10 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
+<<<<<<< HEAD
+=======
+import org.voyanttools.trombone.model.Corpus;
+>>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;

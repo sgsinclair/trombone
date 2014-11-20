@@ -71,7 +71,11 @@ public class CorpusCollocates extends AbstractContextTerms {
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries)
 			throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
+<<<<<<< HEAD
 		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
+=======
+		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper.getAtomicReader(), corpusMapper, queries);
+>>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 

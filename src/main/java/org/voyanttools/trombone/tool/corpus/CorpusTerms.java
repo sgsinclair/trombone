@@ -161,7 +161,10 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				total++;
 				this.totalTokens+=corpusTermMinimal.getRawFreq();
 				CorpusTerm corpusTerm = new CorpusTerm(corpusTermMinimal, totalTokens);
+<<<<<<< HEAD
 				System.err.println(corpusTerm);
+=======
+>>>>>>> 1188f2e92189734b70f52c9d0f93efbc82e2f2d2
 				queue.offer(corpusTerm);
 				
 			}
