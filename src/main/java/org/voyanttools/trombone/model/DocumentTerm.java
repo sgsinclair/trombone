@@ -256,7 +256,7 @@ public class DocumentTerm {
 				}
 			}
 			else {
-				return Float.compare(term2.relativeFreq,  term1.relativeFreq);
+				return Float.compare(term1.relativeFreq,  term2.relativeFreq);
 			}
 		}
 		
