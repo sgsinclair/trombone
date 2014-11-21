@@ -160,7 +160,7 @@ public class CorpusMapper extends Filter {
 		return getCorpusDocumentIds().get(documentPosition);
 	}
 
-	public Bits getDocIdOpenBitSetFromStoredDocumentIds(
+	public DocIdBitSet getDocIdOpenBitSetFromStoredDocumentIds(
 			List<String> documentIds) throws IOException {
 		BitSet bitSet = new BitSet(getAtomicReader().numDocs());
 		for (String id : documentIds) {

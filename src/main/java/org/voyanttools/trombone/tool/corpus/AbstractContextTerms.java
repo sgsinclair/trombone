@@ -40,6 +40,7 @@ import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
+import org.apache.lucene.util.DocIdBitSet;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.storage.Storage;
@@ -85,11 +86,15 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		
 		Collection<DocumentSpansData> documentSpansDataList = new ArrayList<DocumentSpansData>();
 		
+		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());
+		
+		DocIdBitSet docIdBitSet = ids.size()==corpusMapper.getCorpus().size() ? corpusMapper.getDocIdBitSet() : corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(ids);
+		
 //		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			SpanQuery spanQuery = spanQueryEntry.getValue();
-			Spans spans = spanQuery.getSpans(atomicReader.getContext(), corpusMapper.getDocIdBitSet(), termContexts);
+			Spans spans = spanQuery.getSpans(atomicReader.getContext(), docIdBitSet, termContexts);
 
 			// we're going to go through all the span for all documents so that we can then
 			// parallelize the searching of kwics
