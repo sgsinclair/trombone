@@ -71,50 +71,44 @@ public class LuceneManager {
 		this.directory = directory;
 	}
 	
-	public static Query getCorpusDocumentQuery(String corpusId, String documentId) {
-		BooleanQuery query = new BooleanQuery();
-		if (corpusId!=null) {query.add(new TermQuery(new Term("corpus", corpusId)), Occur.MUST);}
-		query.add(new TermQuery(new Term("id", documentId)), Occur.MUST);
-		query.add(new TermQuery(new Term("version", String.valueOf(VERSION))), Occur.MUST);
-		return query;
-	}
+//	public static Query getCorpusDocumentQuery(String corpusId, String documentId) {
+//		BooleanQuery query = new BooleanQuery();
+//		if (corpusId!=null) {query.add(new TermQuery(new Term("corpus", corpusId)), Occur.MUST);}
+//		query.add(new TermQuery(new Term("id", documentId)), Occur.MUST);
+//		query.add(new TermQuery(new Term("version", String.valueOf(VERSION))), Occur.MUST);
+//		return query;
+//	}
 	
-	public static Query getCorpusQuery(Corpus corpus) {
-		BooleanQuery query = new BooleanQuery();
-		query.add(new TermQuery(new Term("corpus", corpus.getId())), Occur.MUST);
-		query.add(new TermQuery(new Term("version", String.valueOf(VERSION))), Occur.MUST);
-		return query;
-	}
 
-	public static Query getDocumentQuery(String documentId) {
-		return getCorpusDocumentQuery(null, documentId);
-	}
+//	public static Query getDocumentQuery(String documentId) {
+//		return getCorpusDocumentQuery(null, documentId);
+//	}
 	
-	private int getLuceneDocumentId(Query query) throws IOException {
-		if (DirectoryReader.indexExists(directory)==false) {return -1;}
-		TopDocs topDocs = getIndexSearcher().search(query, 1);
-		return topDocs.totalHits==1 ? topDocs.scoreDocs[0].doc : -1;
-	}
+//	private int getLuceneDocumentId(Query query) throws IOException {
+//		if (DirectoryReader.indexExists(directory)==false) {return -1;}
+//		TopDocs topDocs = getIndexSearcher().search(query, 1);
+//		return topDocs.totalHits==1 ? topDocs.scoreDocs[0].doc : -1;
+//	}
 	
-	public Document getLuceneDocument(String corpusId, String documentId) throws IOException {
-		int id = getLuceneDocumentId(corpusId, documentId);
-		return id > -1 ? getIndexSearcher().doc(id) : null;
-	}
-
-	public Document getLuceneDocument(String documentId) throws IOException {
-		int id = getLuceneDocumentId(documentId);
-		return id > -1 ? getIndexSearcher().doc(id) : null;
-	}
+//	public Document getLuceneDocument(String corpusId, String documentId) throws IOException {
+//		int id = getLuceneDocumentId(corpusId, documentId);
+//		return id > -1 ? getIndexSearcher().doc(id) : null;
+//	}
+//
+//	public Document getLuceneDocument(String documentId) throws IOException {
+//		int id = getLuceneDocumentId(documentId);
+//		return id > -1 ? getIndexSearcher().doc(id) : null;
+//	}
 	
-	public int getLuceneDocumentId(String corpusId, String documentId) throws IOException {
-		Query query = getCorpusDocumentQuery(corpusId, documentId);
-		return getLuceneDocumentId(query);
-	}
-	
-	public int getLuceneDocumentId(String documentId) throws IOException {
-		Query query = getCorpusDocumentQuery(null, documentId);
-		return getLuceneDocumentId(query);
-	}
+//	public int getLuceneDocumentId(String corpusId, String documentId) throws IOException {
+//		Query query = getCorpusDocumentQuery(corpusId, documentId);
+//		return getLuceneDocumentId(query);
+//	}
+//	
+//	public int getLuceneDocumentId(String documentId) throws IOException {
+//		Query query = getCorpusDocumentQuery(null, documentId);
+//		return getLuceneDocumentId(query);
+//	}
 	
 	public IndexSearcher getIndexSearcher() throws CorruptIndexException, IOException {
 		return getIndexSearcher(false);

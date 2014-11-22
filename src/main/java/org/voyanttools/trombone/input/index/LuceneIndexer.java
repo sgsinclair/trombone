@@ -43,13 +43,16 @@ import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.FieldInfo.IndexOptions;
+import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
@@ -83,21 +86,25 @@ public class LuceneIndexer implements Indexer {
 		String corpusId = storage.storeStrings(ids);
 		
 		// determine if we need to modify the Lucene index
-		boolean directoryExists = storage.getLuceneManager().directoryExists();
-		IndexSearcher indexSearcher = directoryExists ? storage.getLuceneManager().getIndexSearcher() : null;
-		TopDocs topDocs;
 		Collection<StoredDocumentSource> storedDocumentSourceForLucene = new ArrayList<StoredDocumentSource>();
-		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-			if (!directoryExists) {
-				storedDocumentSourceForLucene.add(storedDocumentSource);
+		if (storage.getLuceneManager().directoryExists()) {
+			AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+			Terms terms = reader.terms("id");
+			if (terms==null) {
+				storedDocumentSourceForLucene.addAll(storedDocumentSources);
 			}
 			else {
-				// look for corpus and document (if corpus isn't there, we still need to update doc)
-				topDocs = indexSearcher.search(LuceneManager.getCorpusDocumentQuery(corpusId, storedDocumentSource.getId()), 1);
-				if (topDocs.totalHits==0) { // not found
-					storedDocumentSourceForLucene.add(storedDocumentSource);
+				TermsEnum termsEnum = terms.iterator(null);		
+				for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+					String id = storedDocumentSource.getId();
+					if (!termsEnum.seekExact(new BytesRef(id))) {
+						storedDocumentSourceForLucene.add(storedDocumentSource);
+					}
 				}
 			}
+		}
+		else {
+			storedDocumentSourceForLucene.addAll(storedDocumentSources);
 		}
 		
 		if (storedDocumentSourceForLucene.isEmpty()==false) {
@@ -105,7 +112,7 @@ public class LuceneIndexer implements Indexer {
 			// index documents (or at least add corpus to document if not already there), we need to get a new writer
 			IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
 			DirectoryReader indexReader = DirectoryReader.open(indexWriter, true);
-			indexSearcher = new IndexSearcher(indexReader);		
+			IndexSearcher indexSearcher = new IndexSearcher(indexReader);		
 			boolean verbose = parameters.getParameterBooleanValue("verbose");
 			int processors = Runtime.getRuntime().availableProcessors();
 			ExecutorService executor;
@@ -206,11 +213,11 @@ public class LuceneIndexer implements Indexer {
 //				System.out.println("analyzing indexed document "+storedDocumentSource.getMetadata());
 			}
 			
-			Query query = LuceneManager.getCorpusDocumentQuery(corpusId,  id);
+			Query query = new TermQuery(new Term("id", id)); 
 			TopDocs topDocs;
 			
 			try {
-				topDocs = indexSearcher.search(query, 1);
+				topDocs = indexSearcher.search(query, 1); // there may be multiple documents in the index but they should have the same text
 				int docId = topDocs.scoreDocs[0].doc;
 				Terms terms = indexReader.getTermVector(docId, "lexical");
 				int totalTokens = 0;
@@ -309,33 +316,25 @@ public class LuceneIndexer implements Indexer {
 			
 			try {
 				
-				Query query = LuceneManager.getDocumentQuery(id);
-				TopDocs topDocs = indexSearcher.search(query, 1);
-				Document document;
-				if (topDocs.totalHits>0) {
-					document = indexSearcher.doc(topDocs.scoreDocs[0].doc);
-					// check to see if this corpus is already part of the document, and add it if not
-					if (!Arrays.asList(document.getValues("corpus")).contains(corpusId)) {
-						document.add(new StringField("corpus", corpusId, Field.Store.YES));
-						indexWriter.updateDocument(new Term("id", id), document);
-					}
+				TopDocs topDocs = indexSearcher.search(new TermQuery(new Term("id", id)), 1);
+				if (topDocs.totalHits>0) { // already indexed
 					return;
 				}
 					
 
-				FieldType ft = new FieldType(TextField.TYPE_STORED); // store for easier updating later if needed
+				FieldType ft = new FieldType(TextField.TYPE_NOT_STORED);
 				ft.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
 				ft.setStoreTermVectors(true);
 				ft.setStoreTermVectorOffsets(true);
 				ft.setStoreTermVectorPositions(true);
 				
-				document = new Document();
+				Document document = new Document();
 
 				// create lexical document
 				document = new Document();
-				document.add(new StringField("id", id, Field.Store.YES));
-				document.add(new StringField("corpus", corpusId, Field.Store.YES));
-				document.add(new StringField("version", LuceneManager.VERSION.name(), Field.Store.YES));
+				document.add(new StringField("id", id, Field.Store.NO));
+//				document.add(new StringField("corpus", corpusId, Field.Store.NO));
+				document.add(new StringField("version", LuceneManager.VERSION.name(), Field.Store.NO));
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				
@@ -343,7 +342,7 @@ public class LuceneIndexer implements Indexer {
 					String key = (String) entries.getKey();
 					String value = (String) entries.getValue();
 					if (key!=null && value!=null && value.isEmpty()==false) {
-						document.add(new TextField(key, value, Field.Store.YES)); // store for easier updating later if needed
+						document.add(new TextField(key, value, Field.Store.NO)); // store for easier updating later if needed
 					}
 				}
 				
