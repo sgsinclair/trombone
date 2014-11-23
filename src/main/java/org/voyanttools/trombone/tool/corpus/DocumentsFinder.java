@@ -71,7 +71,7 @@ public class DocumentsFinder extends AbstractTerms {
 			Query query = queryParser.parse(queryString);
 			LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
 			indexSearcher.search(query, corpusMapper, collector);
-			if (createNewCorpus) {
+			if (createNewCorpus || includeDocIds) {
 				Set<Integer> docs = collector.getLuceneDocIds();
 				String[] ids = new String[docs.size()];
 				int i =0;
