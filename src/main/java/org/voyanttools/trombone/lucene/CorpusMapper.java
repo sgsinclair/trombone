@@ -22,6 +22,7 @@
 package org.voyanttools.trombone.lucene;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -54,7 +55,7 @@ public class CorpusMapper extends Filter {
 	AtomicReader reader;
 	IndexSearcher searcher;
 	Corpus corpus;
-	private List<String> documentIds = null;
+	private List<Integer> luceneIds = null;
 	private DocIdBitSet docIdBitSet = null;
 	private Map<String, Integer> documentIdToLuceneIdMap = null;
 	private Map<Integer, String> luceneIdToDocumentIdMap = null;
@@ -74,10 +75,14 @@ public class CorpusMapper extends Filter {
 
 
 	private synchronized List<String> getCorpusDocumentIds() {
-		if (documentIds==null) {
-			documentIds = corpus.getDocumentIds();
+		return corpus.getDocumentIds();
+	}
+	
+	public synchronized List<Integer> getLuceneIds() throws IOException {
+		if (luceneIds==null) {
+			build();
 		}
-		return documentIds;
+		return luceneIds;
 	}
 	
 	public synchronized DocIdBitSet getDocIdBitSet() throws IOException {
@@ -124,6 +129,7 @@ public class CorpusMapper extends Filter {
 	private void build() throws IOException {
 		luceneIdToDocumentIdMap =  new HashMap<Integer, String>();
 		documentIdToLuceneIdMap = new HashMap<String, Integer>();
+		luceneIds = new ArrayList<Integer>();
 		buildFromTermsEnum();
 	}
 	
@@ -140,13 +146,15 @@ public class CorpusMapper extends Filter {
 		String id;
 		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
 		BitSet bitSet = new BitSet(getAtomicReader().numDocs());
+		Bits liveBits = getAtomicReader().getLiveDocs();
 		while (bytesRef!=null) {
-			docsEnum = termsEnum.docs(getAtomicReader().getLiveDocs(), docsEnum, DocsEnum.FLAG_NONE);
+			docsEnum = termsEnum.docs(liveBits, docsEnum, DocsEnum.FLAG_NONE);
 			doc = docsEnum.nextDoc();
 			if (doc!=DocsEnum.NO_MORE_DOCS) {
 				id = bytesRef.utf8ToString();
 				if (ids.contains(id)) {
 					bitSet.set(doc);
+					luceneIds.add(doc);
 					documentIdToLuceneIdMap.put(id, doc);
 					luceneIdToDocumentIdMap.put(doc, id);
 				}
