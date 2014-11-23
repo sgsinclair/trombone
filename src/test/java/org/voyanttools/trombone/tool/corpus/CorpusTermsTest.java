@@ -52,7 +52,6 @@ public class CorpusTermsTest {
 		corpusTerm = corpusTerms.get(0);
 		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
-//		assertEquals(0, corpusTerm);
 		
 		// we're expanding the term here
 		parameters.setParameter("query", "dar*");
@@ -63,7 +62,6 @@ public class CorpusTermsTest {
 		corpusTerm = corpusTerms.get(0);
 		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
-//		assertEquals(0, corpusTerm);
 		
 		parameters.setParameter("query", "\"it was\"");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
@@ -93,7 +91,6 @@ public class CorpusTermsTest {
 		corpusTerm = corpusTerms.get(0);
 		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
-//		assertEquals(0, corpusTerm);
 		
 
 		
@@ -106,8 +103,8 @@ public class CorpusTermsTest {
 		assertEquals(12, corpusTerms.size());
 		
 		corpusTerm = corpusTerms.get(0);
-		// FIXME assertEquals("it", corpusTerm.getTerm());
-		// FIXME assertEquals(3, corpusTerm.getRawFreq());
+		assertEquals("it", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
 		
 		// limit 1 (top frequency word)
 		parameters.setParameter("limit", 1);
@@ -117,8 +114,8 @@ public class CorpusTermsTest {
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
 		assertEquals(1, corpusTerms.size());
 		corpusTerm = corpusTerms.get(0);
-		// FIXME assertEquals("it", corpusTerm.getTerm());
-		// FIXME assertEquals(3, corpusTerm.getRawFreq());
+		assertEquals("it", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
 
 		// start 1, limit 1
 		parameters.setParameter("start", "1");
@@ -127,8 +124,8 @@ public class CorpusTermsTest {
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
 		assertEquals(1, corpusTerms.size());
 		corpusTerm = corpusTerms.get(0);
-		// FIXME assertEquals("was", corpusTerm.getTerm());
-		// FIXME assertEquals(3, corpusTerm.getRawFreq());
+		assertEquals("was", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
 
 		// start 50, limit 1 (empty)
 		parameters.setParameter("start", "50");
