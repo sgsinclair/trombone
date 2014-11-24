@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
@@ -101,10 +102,11 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+5;
+		return super.getVersion()+6;
 	}
 
-	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributions(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+	@Deprecated // this seems slower
+	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsFromReaderTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
 		Terms terms = corpusMapper.getAtomicReader().terms(tokenType.name());
 		TermsEnum termsEnum = terms.iterator(null);
@@ -145,7 +147,59 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		}
 		return queue;
 	}
-	
+
+	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
+		
+		AtomicReader reader = corpusMapper.getAtomicReader();
+		Map<String, Map<Integer, Integer>> rawFreqsMap = new HashMap<String, Map<Integer, Integer>>();
+		TermsEnum termsEnum = null;
+		for (int doc : corpusMapper.getLuceneIds()) {
+			Terms terms = reader.getTermVector(doc, "lexical");
+			if (terms!=null) {
+				termsEnum = terms.iterator(termsEnum);
+				if (termsEnum!=null) {
+					BytesRef bytesRef = termsEnum.next();
+					while (bytesRef!=null) {
+						String term = bytesRef.utf8ToString();
+						if (!stopwords.isKeyword(term)) {
+							if (!rawFreqsMap.containsKey(term)) {
+								rawFreqsMap.put(term, new HashMap<Integer, Integer>());
+							}
+							rawFreqsMap.get(term).put(corpusMapper.getDocumentPositionFromLuceneId(doc), (int) termsEnum.totalTermFreq());
+						}
+						bytesRef = termsEnum.next();
+					}
+				}
+			}
+		}
+		
+		int corpusSize = corpusMapper.getCorpus().size();
+		int[] tokensCounts = corpusMapper.getCorpus().getTokensCounts(tokenType);
+		int bins = parameters.getParameterIntValue("bins", corpusSize);
+		int[] documentRawFreqs;
+		float[] documentRelativeFreqs;
+		int documentPosition;
+		int termFreq;
+		int freq;
+		for (Map.Entry<String, Map<Integer, Integer>> termsMap : rawFreqsMap.entrySet()) {
+			String termString = termsMap.getKey();
+			documentRawFreqs = new int[corpusSize];
+			documentRelativeFreqs = new float[corpusSize];
+			termFreq = 0;
+			for (Map.Entry<Integer, Integer> docsMap : termsMap.getValue().entrySet()) {
+				documentPosition = docsMap.getKey();
+				freq = docsMap.getValue();
+				termFreq+=freq;
+				totalTokens+=freq;
+				documentRawFreqs[documentPosition] = freq;
+				documentRelativeFreqs[documentPosition] = (float) freq/tokensCounts[documentPosition];
+			}
+			total++;
+			queue.offer(new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins));
+		}
+		return queue;
+	}
 	/**
 	 * Offer all terms in the corpus without any distribution information (this is very efficient since it uses CorpusTermsMinimalDB map).
 	 * @param corpusMapper
@@ -170,7 +224,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		
 		FlexibleQueue<CorpusTerm> queue = withDistributions || corpusTermSort.needDistributions() ?
-			runAllTermsWithDistributions(corpusMapper, stopwords) :
+//				runAllTermsWithDistributionsFromReaderTerms(corpusMapper, stopwords) :
+			runAllTermsWithDistributionsDocumentTermVectors(corpusMapper, stopwords) :
 			runAllTermsWithoutDistributions(corpusMapper, stopwords);
 		this.terms.addAll(queue.getOrderedList(start));
 

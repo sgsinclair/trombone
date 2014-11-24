@@ -29,6 +29,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
@@ -173,7 +174,68 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 //	public DocumentTerms getAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) {
 //		
 //	}
+	
+	private void runAllTermsFromDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, start+limit);
+		AtomicReader reader = corpusMapper.getAtomicReader();
+		Corpus corpus = corpusMapper.getCorpus();
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
+		TermsEnum termsEnum = null;
+		DocsAndPositionsEnum docsAndPositionsEnum = null;
+		Bits allBits = new Bits.MatchAllBits(reader.numDocs());
+		for (int doc : corpusMapper.getLuceneIds()) {
+			int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
+			String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
+			DocumentMetadata metadata = corpus.getDocument(docId).getMetadata();
+			float mean = metadata.getTypesCountMean(tokenType);
+			float stdDev = metadata.getTypesCountStdDev(tokenType);
+			int totalTokensCount = metadata.getTokensCount(tokenType);
+			Terms terms = reader.getTermVector(doc, "lexical");
+			if (terms!=null) {
+				termsEnum = terms.iterator(termsEnum);
+				if (termsEnum!=null) {
+					BytesRef bytesRef = termsEnum.next();
+					
+					while (bytesRef!=null) {
+						String termString = bytesRef.utf8ToString();
+						if (!stopwords.isKeyword(termString)) {
+							CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(termString);
+							if (!stopwords.isKeyword(termString)) {
+								int[] positions = null;
+								int[] offsets = null;
+								int freq;
+								if (isNeedsPositions || isNeedsOffsets) {
+									docsAndPositionsEnum = termsEnum.docsAndPositions(allBits, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
+									docsAndPositionsEnum.nextDoc();
+									freq = docsAndPositionsEnum.freq();
+									positions = new int[freq];
+									offsets = new int[freq];
+									for (int i=0; i<freq; i++) {
+										positions[i] = docsAndPositionsEnum.nextPosition();
+										offsets[i] = docsAndPositionsEnum.startOffset();
+									}
+								}
+								else {
+									freq = (int) termsEnum.totalTermFreq();
+								}
+								float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
+								DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
+								queue.offer(documentTerm);
+							}
+						}
+						bytesRef = termsEnum.next();
+					}
+				}
+			}
+		}
+		corpusTermMinimalsDB.close();
+		this.terms.addAll(queue.getOrderedList(start));
+	}
+
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		runAllTermsFromDocumentTermVectors(corpusMapper, stopwords);
+	}
+	private void runAllTermsFromReader(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		
 		int size = start+limit;
 		
