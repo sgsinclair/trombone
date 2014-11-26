@@ -21,12 +21,14 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	private transient String normalizedKeyword = null;
 
 	public enum Sort {
-		RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC;
+		RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC, CONTEXTTERMASC, CONTEXTTERMDESC, CONTEXTTERMRAWFREQASC, CONTEXTTERMRAWFREQDESC;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "RAWFREQ"; // default
 			if (sort.startsWith("TERM")) {sortPrefix = "TERM";}
+			if (sort.startsWith("CONTEXTTERM")) {sortPrefix = "CONTEXTTERM";}
+			if (sort.startsWith("CONTEXTTERMRAWFREQ")) {sortPrefix = "CONTEXTTERMRAWFREQ";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
@@ -62,16 +64,38 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	public static Comparator<CorpusCollocate> getComparator(Sort sort) {
 		switch (sort) {
 		case RAWFREQASC:
-			return ContextTermRawFrequencyAscendingComparator;
+			return RawFrequencyAscendingComparator;
 		case TERMASC:
-			return ContextTermAscendingComparator;
+			return TermAscendingComparator;
 		case TERMDESC:
+			return TermDescendingComparator;
+		case CONTEXTTERMASC:
+			return ContextTermAscendingComparator;
+		case CONTEXTTERMDESC:
 			return ContextTermDescendingComparator;
-		default: // rawFrequencyDesc
+		case CONTEXTTERMRAWFREQASC:
+			return ContextTermRawFrequencyAscendingComparator;
+		case CONTEXTTERMRAWFREQDESC:
 			return ContextTermRawFrequencyDescendingComparator;
+		default: // rawFrequencyDesc
+			return RawFrequencyDescendingComparator;
 		}
 	}
-	
+
+	private static Comparator<CorpusCollocate> RawFrequencyAscendingComparator =  new Comparator<CorpusCollocate>() {
+		@Override
+		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
+			return corpusCollocate1.compareTo(corpusCollocate2);
+		}
+	};
+
+	private static Comparator<CorpusCollocate> RawFrequencyDescendingComparator =  new Comparator<CorpusCollocate>() {
+		@Override
+		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
+			return corpusCollocate2.compareTo(corpusCollocate1);
+		}
+	};
+
 	private static Comparator<CorpusCollocate> ContextTermRawFrequencyAscendingComparator =  new Comparator<CorpusCollocate>() {
 		@Override
 		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
@@ -88,7 +112,7 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 			return corpusCollocate1.compareTo(corpusCollocate2); // this is essentially the default comparasion algorithm, reversed
 		}
 	};
-	
+
 	private static Comparator<CorpusCollocate> ContextTermAscendingComparator =  new Comparator<CorpusCollocate>() {
 		@Override
 		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
@@ -106,30 +130,49 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 					corpusCollocate2.getNormalizedContextTerm().compareTo(corpusCollocate1.getNormalizedContextTerm());
 		}
 	};
+	
+	private static Comparator<CorpusCollocate> TermAscendingComparator =  new Comparator<CorpusCollocate>() {
+		@Override
+		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
+			return corpusCollocate1.keyword.equals(corpusCollocate2.keyword) ? 
+					corpusCollocate1.compareTo(corpusCollocate2) : 
+					corpusCollocate1.getNormalizedKeyword().compareTo(corpusCollocate2.getNormalizedKeyword());
+		}
+	};
+	
+	private static Comparator<CorpusCollocate> TermDescendingComparator =  new Comparator<CorpusCollocate>() {
+		@Override
+		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
+			return corpusCollocate1.keyword.equals(corpusCollocate2.keyword) ? 
+					corpusCollocate1.compareTo(corpusCollocate2) : 
+					corpusCollocate2.getNormalizedKeyword().compareTo(corpusCollocate1.getNormalizedKeyword());
+		}
+	};
 
 	@Override
 	public int compareTo(CorpusCollocate o) {
 		
-		// first by context term desending frequency
-		if (contextTermRawFreq!=o.contextTermRawFreq) {
-			return Integer.compare(o.contextTermRawFreq, contextTermRawFreq);
-		}
-		
-		// next by ascending context term
-		if (!contextTerm.equals(o.contextTerm)) {
-			return getNormalizedContextTerm().compareTo(o.getNormalizedContextTerm());
-		}
-		
-		// next by descending keyword raw frequency
+		// first by keyword raw frequency
 		if (keywordRawFreq!=o.keywordRawFreq) {
 			return Integer.compare(o.keywordRawFreq, keywordRawFreq);
 		}
-		
+
 		// next by ascending keyword term
 		if (!keyword.equals(o.keyword)) {
 			return getNormalizedKeyword().compareTo(o.getNormalizedKeyword());
 		}
-		
+
+
+		// next by context term desending frequency
+		if (contextTermRawFreq!=o.contextTermRawFreq) {
+			return Integer.compare(o.contextTermRawFreq, contextTermRawFreq);
+		}
+
+		// next by ascending context term
+		if (!contextTerm.equals(o.contextTerm)) {
+			return getNormalizedContextTerm().compareTo(o.getNormalizedContextTerm());
+		}
+
 		// next by hashcode
 		return Integer.compare(hashCode(), o.hashCode());
 	}
