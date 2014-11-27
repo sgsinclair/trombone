@@ -315,4 +315,8 @@ public class DocumentCollocate  implements Serializable {
 		return docRel;
 	}
 
+	public int getDocIndex() {
+		return docIndex;
+	}
+
 }

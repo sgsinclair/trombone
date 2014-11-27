@@ -111,6 +111,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 		for (Map.Entry<String, Set<DocumentCollocate>> keywordDocumentCollocaatesEntry : keywordDocumentCollocatesMap.entrySet()) {
 
 			int keywordRawFrequency = 0;
+			HashSet<Integer> seenDocumentIds = new HashSet<Integer>();
 			// build map (group) for context terms
 			Map<String, Set<DocumentCollocate>> contextTermDocumentCollocatesMap = new HashMap<String, Set<DocumentCollocate>>();
 			for (DocumentCollocate documentCollocate : keywordDocumentCollocaatesEntry.getValue()) {
@@ -119,7 +120,10 @@ public class CorpusCollocates extends AbstractContextTerms {
 					contextTermDocumentCollocatesMap.put(contextTerm, new HashSet<DocumentCollocate>());
 				}
 				contextTermDocumentCollocatesMap.get(contextTerm).add(documentCollocate);
-				keywordRawFrequency += documentCollocate.getDocumentRawFrequency();
+				if (!seenDocumentIds.contains(documentCollocate.getDocIndex())) {
+					keywordRawFrequency += documentCollocate.getDocumentRawFrequency();
+					seenDocumentIds.add(documentCollocate.getDocIndex());
+				}
 			}
 			
 			String keyword = keywordDocumentCollocaatesEntry.getKey();
