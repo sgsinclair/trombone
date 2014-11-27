@@ -40,14 +40,14 @@ public class CorpusCollocatesTest {
 		corpusCollocates.run();
 		corpusCollocatesList = corpusCollocates.getCorpusCollocates();
 		corpusCollocate = corpusCollocatesList.get(0);
-		assertEquals(corpusCollocate.getContextTerm(), "should");
+		assertEquals(corpusCollocate.getContextTerm(), "world");
 		
 		parameters.setParameter("limit", 10); // try with limit
 		corpusCollocates = new CorpusCollocates(storage, parameters);
 		corpusCollocates.run();
 		corpusCollocatesList = corpusCollocates.getCorpusCollocates();
 		corpusCollocate = corpusCollocatesList.get(0);
-		assertEquals(corpusCollocate.getContextTerm(), "should");
+		assertEquals(corpusCollocate.getContextTerm(), "world");
 		
 		
 	}

@@ -102,7 +102,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+6;
+		return super.getVersion()+7;
 	}
 
 	@Deprecated // this seems slower
@@ -236,7 +236,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
 		if (parameters.getParameterBooleanValue("inDocumentsCountOnly")) { // no spans required to count per-document frequencies
 			FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
-			Map<String, Query> queriesMap = parser.getQueriesMap(getQueries(), false);
+			Map<String, Query> queriesMap = parser.getQueriesMap(queries, false);
 			runQueriesInDocumentsCountOnly(corpusMapper, queue, queriesMap);
 		}
 		else {
