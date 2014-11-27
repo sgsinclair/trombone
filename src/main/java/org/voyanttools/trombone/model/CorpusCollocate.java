@@ -8,9 +8,9 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 
 public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	
-	private String keyword;
+	private String term;
 	
-	private int keywordRawFreq;
+	private int rawFreq;
 	
 	private String contextTerm;
 	
@@ -37,8 +37,8 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	}
 	
 	public CorpusCollocate(String keyword, int keywordRawFrequency, String contextTerm, int contextTermRawFrequency) {
-		this.keyword = keyword;
-		this.keywordRawFreq = keywordRawFrequency;
+		this.term = keyword;
+		this.rawFreq = keywordRawFrequency;
 		this.contextTerm = contextTerm;
 		this.contextTermRawFreq = contextTermRawFrequency;
 	}
@@ -57,7 +57,7 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	}
 	
 	private String getNormalizedKeyword() {
-		if (normalizedKeyword==null) {normalizedKeyword = Normalizer.normalize(keyword, Normalizer.Form.NFD);}
+		if (normalizedKeyword==null) {normalizedKeyword = Normalizer.normalize(term, Normalizer.Form.NFD);}
 		return normalizedKeyword;
 	}
 
@@ -134,7 +134,7 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	private static Comparator<CorpusCollocate> TermAscendingComparator =  new Comparator<CorpusCollocate>() {
 		@Override
 		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
-			return corpusCollocate1.keyword.equals(corpusCollocate2.keyword) ? 
+			return corpusCollocate1.term.equals(corpusCollocate2.term) ? 
 					corpusCollocate1.compareTo(corpusCollocate2) : 
 					corpusCollocate1.getNormalizedKeyword().compareTo(corpusCollocate2.getNormalizedKeyword());
 		}
@@ -143,7 +143,7 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	private static Comparator<CorpusCollocate> TermDescendingComparator =  new Comparator<CorpusCollocate>() {
 		@Override
 		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
-			return corpusCollocate1.keyword.equals(corpusCollocate2.keyword) ? 
+			return corpusCollocate1.term.equals(corpusCollocate2.term) ? 
 					corpusCollocate1.compareTo(corpusCollocate2) : 
 					corpusCollocate2.getNormalizedKeyword().compareTo(corpusCollocate1.getNormalizedKeyword());
 		}
@@ -153,12 +153,12 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	public int compareTo(CorpusCollocate o) {
 		
 		// first by keyword raw frequency
-		if (keywordRawFreq!=o.keywordRawFreq) {
-			return Integer.compare(o.keywordRawFreq, keywordRawFreq);
+		if (rawFreq!=o.rawFreq) {
+			return Integer.compare(o.rawFreq, rawFreq);
 		}
 
 		// next by ascending keyword term
-		if (!keyword.equals(o.keyword)) {
+		if (!term.equals(o.term)) {
 			return getNormalizedKeyword().compareTo(o.getNormalizedKeyword());
 		}
 
@@ -178,7 +178,7 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	}
 	
 	public String toString() {
-		return new StringBuilder("{corpus collocate - context: ").append(contextTerm).append(" (").append(contextTermRawFreq).append("); keyword: ").append(keyword).append(" (").append(keywordRawFreq).append(")}").toString();
+		return new StringBuilder("{corpus collocate - context: ").append(contextTerm).append(" (").append(contextTermRawFreq).append("); keyword: ").append(term).append(" (").append(rawFreq).append(")}").toString();
 	}
 
 

@@ -182,8 +182,10 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		TermsEnum termsEnum = null;
 		DocsAndPositionsEnum docsAndPositionsEnum = null;
+		Bits docIdBitSet =  corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		Bits allBits = new Bits.MatchAllBits(reader.numDocs());
 		for (int doc : corpusMapper.getLuceneIds()) {
+			if (!docIdBitSet.get(doc)) {continue;}
 			int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
 			String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
 			DocumentMetadata metadata = corpus.getDocument(docId).getMetadata();
