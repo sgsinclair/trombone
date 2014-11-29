@@ -56,6 +56,13 @@ public class InputSourcesBuilder {
 			inputSources.addAll(getInputSources(new File(file)));
 		}
 
+		for (String file : parameters.getParameterValues("upload")) {
+			File f = new File(file);
+			InputSource inputSource = new FileInputSource(f);
+			inputSource.getMetadata().setLocation(f.getName());
+			inputSources.add(inputSource);
+		}
+		
 		for (String string : parameters.getParameterValues("string")) {
 			inputSources.add(new StringInputSource(string));
 		}
