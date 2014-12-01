@@ -134,17 +134,19 @@ public abstract class AbstractTool implements RunnableTool {
 //			}
 		for (String query : queryStrings) {
 			for (String q : query.split("\\s*,\\s*")) {
-				if (variantsDB!=null) {
-					String[] variants = variantsDB.get(q);
-					if (variants==null) {
-						queries.add(q);
+				if (!q.trim().isEmpty()) {
+					if (variantsDB!=null) {
+						String[] variants = variantsDB.get(q);
+						if (variants==null) {
+							queries.add(q);
+						}
+						else {
+							queries.add("("+StringUtils.join(variants, "|")+")");
+						}
 					}
 					else {
-						queries.add("("+StringUtils.join(variants, "|")+")");
+						queries.add(q);
 					}
-				}
-				else {
-					queries.add(q);
 				}
 			}
 		}

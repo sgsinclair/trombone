@@ -56,7 +56,9 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		Sort sort = IndexedDocument.Sort.getForgivingly(parameters);
 		Corpus corpus = corpusMapper.getCorpus();
 		List<String> ids = new ArrayList<String>(); // maintain insertion order, especially for no queries
-		if (parameters.containsKey("query")) {
+		String[] queries = getQueries();
+		
+		if (queries.length>0) {
 			Map<String, Float> weights = new HashMap<String, Float>();
 			weights.put("title", 1f);
 			weights.put("author", 1f);
@@ -64,7 +66,7 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 			SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(indexSearcher.getIndexReader(), storage.getLuceneManager().getAnalyzer(), weights);
 			
 			Set<String> idsSet = new HashSet<String>();
-			for (String queryString : parameters.getParameterValues("query")) {
+			for (String queryString : queries) {
 				Query query = queryParser.parse(queryString);
 				LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
 				indexSearcher.search(query, corpusMapper, collector);
