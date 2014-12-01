@@ -41,35 +41,35 @@ public class CorpusCollocateTest {
 		
 		// default comparator
 		Collections.sort(list);
-		assertEquals(list.get(0).getContextTermRawFrequency(), 12);
-		assertEquals(list.get(1).getContextTerm(), "a");
-		assertEquals(list.get(list.size()-1).getContextTermRawFrequency(), 9);
+		assertEquals(8, list.get(0).getContextTermRawFrequency());
+		assertEquals("c", list.get(1).getContextTerm());
+		assertEquals(10, list.get(list.size()-1).getContextTermRawFrequency());
 
 		// same as above (default comparator)
 		Collections.sort(list, CorpusCollocate.getComparator(CorpusCollocate.Sort.RAWFREQDESC));
-		assertEquals(list.get(0).getContextTermRawFrequency(), 9);
-		assertEquals(list.get(1).getContextTerm(), "b");
-		assertEquals(list.get(list.size()-1).getContextTermRawFrequency(), 12);
+		assertEquals(10, list.get(0).getContextTermRawFrequency());
+		assertEquals("b", list.get(1).getContextTerm());
+		assertEquals(8, list.get(list.size()-1).getContextTermRawFrequency());
 		
 		// same as above (default comparator)
 		Collections.sort(list, CorpusCollocate.getComparator(CorpusCollocate.Sort.RAWFREQASC));
-		assertEquals(list.get(0).getContextTermRawFrequency(), 12);
+		assertEquals(8, list.get(0).getContextTermRawFrequency());
 		assertEquals(list.get(list.size()-2).getContextTerm(), "b");
-		assertEquals(list.get(list.size()-1).getContextTermRawFrequency(), 9);
+		assertEquals(10, list.get(list.size()-1).getContextTermRawFrequency());
 		
 		Collections.sort(list, CorpusCollocate.getComparator(CorpusCollocate.Sort.TERMASC));
 		assertEquals(list.get(0).getContextTerm(), "b");
 		assertEquals(list.get(0).getContextTermRawFrequency(), 10);
 		assertEquals(list.get(list.size()-1).getContextTerm(), "b");
 		assertEquals(list.get(list.size()-2).getContextTerm(), "c");
-		assertEquals(list.get(list.size()-2).getContextTermRawFrequency(), 8);
+		assertEquals(12, list.get(list.size()-2).getContextTermRawFrequency());
 		
 		Collections.sort(list, CorpusCollocate.getComparator(CorpusCollocate.Sort.TERMDESC));
 		assertEquals(list.get(0).getContextTerm(), "c");
-		assertEquals(list.get(1).getContextTerm(), "a");
-		assertEquals(list.get(1).getContextTermRawFrequency(), 11);
-		assertEquals(list.get(list.size()-1).getContextTerm(), "b");
-		assertEquals(list.get(list.size()-1).getContextTermRawFrequency(), 9);
+		assertEquals("c", list.get(1).getContextTerm());
+		assertEquals(10, list.get(1).getContextTermRawFrequency());
+		assertEquals("a", list.get(list.size()-1).getContextTerm());
+		assertEquals(10, list.get(list.size()-1).getContextTermRawFrequency());
 	}
 
 }

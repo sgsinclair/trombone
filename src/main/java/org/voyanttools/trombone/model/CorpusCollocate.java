@@ -159,18 +159,18 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 
 		// next by ascending keyword term
 		if (!term.equals(o.term)) {
-			return getNormalizedKeyword().compareTo(o.getNormalizedKeyword());
+			return o.getNormalizedKeyword().compareTo(getNormalizedKeyword());
 		}
 
 
 		// next by context term desending frequency
 		if (contextTermRawFreq!=o.contextTermRawFreq) {
-			return Integer.compare(o.contextTermRawFreq, contextTermRawFreq);
+			return Integer.compare(contextTermRawFreq, o.contextTermRawFreq);
 		}
 
 		// next by ascending context term
 		if (!contextTerm.equals(o.contextTerm)) {
-			return getNormalizedContextTerm().compareTo(o.getNormalizedContextTerm());
+			return o.getNormalizedContextTerm().compareTo(getNormalizedContextTerm());
 		}
 
 		// next by hashcode
