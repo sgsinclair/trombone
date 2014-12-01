@@ -106,6 +106,7 @@ public class TikaExtractorTest {
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("chars_utf8.txt", metadata.getTitle());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have two paragraphs in text", StringUtils.countMatches(contents, "<p>")==2);
 		assertTrue("ensure we've escaped & in text", contents.contains("&amp;")==true);
