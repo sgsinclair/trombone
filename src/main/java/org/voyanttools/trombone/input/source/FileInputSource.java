@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 
 /**
@@ -74,6 +75,7 @@ public class FileInputSource implements InputSource {
 		this.metadata.setLocation(file.toString());
 		this.metadata.setSource(Source.FILE);
 		this.metadata.setModified(file.lastModified());
+		this.metadata.setTitle(file.getName()); // default to filename
 		String id = metadata.getLocation()
 				+ String.valueOf(metadata.getModified())
 				+ String.valueOf(file.length());

@@ -29,10 +29,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.io.StringWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
@@ -53,7 +54,6 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathException;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
@@ -274,7 +274,7 @@ public class XmlExtractor implements Extractor, Serializable {
 			if (title.isEmpty()==false) {
 				metadata.setTitle(StringEscapeUtils.escapeXml11(title));
 			}
-
+			
 			// try to find author if needed
 			String author = getNodesAsStringFromParametersValue(doc, "xmlAuthorXpath");
 			if (author.isEmpty()==false) {

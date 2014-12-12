@@ -102,6 +102,7 @@ class CompressedExpander implements Expander {
 			childMetadata.setLocation(modifiedFilename);
 			childMetadata.setModified(metadata.getModified());
 			childMetadata.setSource(Source.STREAM);
+			childMetadata.setTitle(modifiedFilename);
 			String id = DigestUtils.md5Hex(parentId+"uncompressed");
 			InputSource decompressedInputSource = new InputStreamInputSource(id, childMetadata, newInputStream);
 			StoredDocumentSource decompressedStoredDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(decompressedInputSource);

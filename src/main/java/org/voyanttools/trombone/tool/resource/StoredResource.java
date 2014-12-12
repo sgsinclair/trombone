@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool;
+package org.voyanttools.trombone.tool.resource;
 
 import java.io.IOException;
 

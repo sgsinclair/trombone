@@ -25,7 +25,6 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -48,9 +47,7 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.html.DefaultHtmlMapper;
 import org.apache.tika.parser.html.HtmlMapper;
-import org.apache.tika.parser.html.IdentityHtmlMapper;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -164,37 +161,6 @@ public class TikaExtractor implements Extractor {
 	        	}
 	        	else {
 	        		metadata.setExtra(name, value);
-	        	}
-	        }
-	        
-	        // set a title from the location if we still don't have a title
-	        if (metadata.getTitle().isEmpty()) {
-	        	String location = metadata.getLocation();
-	        	if (location.isEmpty()==false) {
-	        		Source source = metadata.getSource();
-	        		if (source==Source.FILE || source==Source.STREAM) { // just file name, not full path
-		        		metadata.setTitle(new File(location).getName());
-	        		}
-	        		else if (source==Source.URI) {
-	        			try {
-							URI uri = new URI(location);
-							String path = uri.getPath();
-							if (path.isEmpty() || path.equals("/")) { // no path, use host
-				        		metadata.setTitle(uri.getHost());
-							}
-							else if (path.endsWith("/")) { // ends in slash, use full path
-				        		metadata.setTitle(path);
-							}
-							else { // try to use file part of URI
-								metadata.setTitle(new File(path).getName());
-							}
-						} catch (URISyntaxException e) {
-			        		metadata.setTitle(location);
-						}
-	        		}
-	        		else {
-		        		metadata.setTitle(location);
-	        		}
 	        	}
 	        }
 	        

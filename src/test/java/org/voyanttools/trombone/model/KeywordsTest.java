@@ -1,8 +1,7 @@
 package org.voyanttools.trombone.model;
 
-import static org.junit.Assert.*;
-
-import java.io.IOException;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.voyanttools.trombone.storage.Storage;
@@ -27,7 +26,7 @@ public class KeywordsTest {
 		assertFalse(keywords.isKeyword("word"));
 		
 		// try from stored data
-		String id = storage.storeStrings(keywords.keywords);
+		String id = storage.storeStrings(keywords.getKeywords());
 		keywords = new Keywords();
 		keywords.load(storage, new String[]{"keywords-"+id});
 		assertTrue(keywords.isKeyword("the"));

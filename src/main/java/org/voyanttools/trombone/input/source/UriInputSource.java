@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.input.source;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -68,8 +69,21 @@ public class UriInputSource implements InputSource {
 		this.uri = uri;
 		this.metadata = new DocumentMetadata();
 		this.metadata.setLocation(uri.toString());
+		
 		this.metadata.setSource(Source.URI);
 
+		String path = uri.getPath();
+		if (path.isEmpty() || path.equals("/")) { // no path, use host
+    		metadata.setTitle(uri.getHost());
+		}
+		else if (path.endsWith("/")) { // ends in slash, use full path
+    		metadata.setTitle(path);
+		}
+		else { // try to use file part of URI
+			metadata.setTitle(new File(path).getName());
+		}
+
+		
 		StringBuilder idBuilder = new StringBuilder(uri.toString());
 
 		// establish connection to find other and default metadata

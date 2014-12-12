@@ -38,10 +38,13 @@ import org.voyanttools.trombone.input.source.UriInputSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 /**
  * @author sgs
  *
  */
+@XStreamAlias("keywords")
 public class Keywords {
 	
 	private static String COMMA_SEPARATOR = ",";
@@ -50,7 +53,7 @@ public class Keywords {
 	private static String KEYWORDS_PREFIX = "keywords-";
 	private static String COMMENT = "#";
 	
-	Set<String> keywords;
+	private Set<String> keywords;
 
 	/**
 	 * 
@@ -109,6 +112,10 @@ public class Keywords {
 				keywords.add(ref);
 			}
 		}
+	}
+	
+	Collection<String> getKeywords() {
+		return keywords;
 	}
 	
 	private void add(Collection<String> keywords) {
