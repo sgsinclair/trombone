@@ -26,8 +26,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.text.Normalizer;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -59,7 +63,7 @@ public class Keywords {
 	 * 
 	 */
 	public Keywords() {
-		keywords = new HashSet<String>();
+		keywords = new LinkedHashSet<String>();
 	}
 	
 	public boolean isKeyword(String keyword) {
@@ -112,6 +116,18 @@ public class Keywords {
 				keywords.add(ref);
 			}
 		}
+	}
+	
+	public void sort() {
+		List<String> strings = new ArrayList<String>(keywords);
+		strings.sort(new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+				return Normalizer.normalize(s1, Normalizer.Form.NFD).compareToIgnoreCase(Normalizer.normalize(s2, Normalizer.Form.NFD));
+			}
+		});
+		keywords.clear();
+		keywords.addAll(strings);
 	}
 	
 	Collection<String> getKeywords() {
