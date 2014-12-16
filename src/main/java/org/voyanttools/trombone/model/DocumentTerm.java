@@ -106,6 +106,10 @@ public class DocumentTerm {
 	public int getDocumentIndex() {
 		return docIndex;
 	}
+	
+	public int[] getOffsets() {
+		return offsets;
+	}
 
 	public int[] getRawDistributions(int bins) {
 		if (positions==null || bins ==0) return new int[0];
