@@ -338,6 +338,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			boolean withRelativeDistributions = freqsMode != null && !withRawDistributions && (freqsMode.equals("relative") || parameters.getParameterBooleanValue("withDistributions"));		
 			int bins = parameters.getParameterIntValue("bins", 10);
 			boolean withOffsets = parameters.getParameterBooleanValue("withOffsets");
+			boolean withPositions = parameters.getParameterBooleanValue("withPositions");
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
 			for (DocumentTerm documentTerm : documentTerms) {
@@ -393,6 +394,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				if (withOffsets) {
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "offsets", List.class);
 			        context.convertAnother(documentTerm.getOffsets());
+			        writer.endNode();
+				}
+				
+				if (withPositions) {
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "positions", List.class);
+			        context.convertAnother(documentTerm.getPositions());
 			        writer.endNode();
 				}
 				
