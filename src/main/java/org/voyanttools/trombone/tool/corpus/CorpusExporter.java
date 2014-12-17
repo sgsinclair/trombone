@@ -151,7 +151,15 @@ public class CorpusExporter extends AbstractCorpusTool {
 					filename = URLEncoder.encode(filename, "UTF-8");
 				}
 			}
-			filename+="."+metadata.getDocumentFormat().getDefaultExtension(); // add an extension
+			
+			// add an extension
+			Properties properties = metadata.getProperties();
+			if (properties.containsKey("parent_location")) {
+				filename+="."+DocumentFormat.fromFilename(properties.getProperty("parent_location")).getDefaultExtension();
+			}
+			else {
+				filename+="."+metadata.getDocumentFormat().getDefaultExtension(); // add an extension
+			}
 		}	
 
 		if (nameMapper.containsKey(filename)) {

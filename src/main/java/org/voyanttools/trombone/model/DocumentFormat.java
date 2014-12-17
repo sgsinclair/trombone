@@ -158,7 +158,7 @@ public enum DocumentFormat {
 	}
 	
 	public String getDefaultExtension() {
-		return extensions[0];
+		return extensions.length==0 ? "unknown" : extensions[0];
 	}
 	
 	/**
