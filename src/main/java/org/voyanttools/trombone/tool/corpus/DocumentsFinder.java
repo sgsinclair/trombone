@@ -102,6 +102,7 @@ public class DocumentsFinder extends AbstractTerms {
 				RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
 				realCorpusCreator.run(); // make sure to create corpus
 				corpusId = realCorpusCreator.getStoredId();
+				total = ids.size();
 			}
 		}
 	}
@@ -124,6 +125,13 @@ public class DocumentsFinder extends AbstractTerms {
 				MarshallingContext context) {
 			DocumentsFinder finder = (DocumentsFinder) source;
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "corpus", String.class);
+			writer.setValue(finder.corpusId);
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documentsCount", Integer.class);
+			writer.setValue(String.valueOf(finder.total));
+			writer.endNode();
+
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "corpus", String.class);
 			writer.setValue(finder.corpusId);
 			writer.endNode();
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "queries", Map.class);
