@@ -39,6 +39,8 @@ public class CorpusExporter extends AbstractCorpusTool {
 	
 	private Pattern FILENAME_PATTERN = Pattern.compile("^(.+?)(\\.[{\\p{L}\\d]+)$");
 	
+	private Pattern FILENAME_UNWANTED_CHARACTERS = Pattern.compile("[^\\{L}\\d -]");
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -116,8 +118,9 @@ public class CorpusExporter extends AbstractCorpusTool {
 					if (filename.isEmpty()==false) {filename+=" - ";}
 					String p = (String) properties.get(part);
 					if (p!=null && p.trim().isEmpty()==false) {
-						if (p.length()>20) {
-							p = p.substring(0, 20)+"…";
+						p = FILENAME_UNWANTED_CHARACTERS.matcher(p).replaceAll("");
+						if (p.length()>25) {
+							p = p.substring(0, 25);
 						}
 						filename+=p;
 					}
@@ -126,7 +129,7 @@ public class CorpusExporter extends AbstractCorpusTool {
 					}
 				}
 			}
-			filename = URLEncoder.encode(filename, "UTF-8");
+//			filename = URLEncoder.encode(filename, "UTF-8"); // we're replacing characters instead
 		}
 		
 		if (filename.isEmpty()) {
