@@ -98,7 +98,7 @@ public class DocumentsFinder extends AbstractTerms {
 					}
 				}
 				corpusId = storage.storeStrings(keepers);
-				FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=index"});
+				FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=corpus"});
 				RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
 				realCorpusCreator.run(); // make sure to create corpus
 				corpusId = realCorpusCreator.getStoredId();
