@@ -45,8 +45,10 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(DocumentsFinder.DocumentsFinderConverter.class)
 public class DocumentsFinder extends AbstractTerms {
 	
-	String corpusId = null;
-	boolean includeDocIds;
+	private String corpusId = null;
+	private boolean includeDocIds;
+	private boolean withDistributions;
+	private int[] distributions;
 	Map<String, String[]> queryDocumentidsMap = new HashMap<String, String[]>();
 
 	/**
@@ -57,6 +59,8 @@ public class DocumentsFinder extends AbstractTerms {
 			FlexibleParameters parameters) {
 		super(storage, parameters);
 		includeDocIds = parameters.getParameterBooleanValue("includeDocIds");
+		withDistributions = parameters.getParameterBooleanValue("withDistributions");
+		distributions = new int[parameters.getParameterIntValue("bins", 0)];
 	}
 
 	@Override
@@ -71,7 +75,7 @@ public class DocumentsFinder extends AbstractTerms {
 			Query query = queryParser.parse(queryString);
 			LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
 			indexSearcher.search(query, corpusMapper, collector);
-			if (createNewCorpus || includeDocIds) {
+			if (createNewCorpus || includeDocIds || withDistributions) {
 				Set<Integer> docs = collector.getLuceneDocIds();
 				String[] ids = new String[docs.size()];
 				int i =0;
@@ -83,6 +87,18 @@ public class DocumentsFinder extends AbstractTerms {
 			}
 			else {
 				queryDocumentidsMap.put(query.toString(), new String[collector.getInDocumentsCount()]);
+			}
+		}
+		if (withDistributions && distributions.length>0) {
+			Set<String> matches = new HashSet<String>();
+			for (Map.Entry<String, String[]> entry : queryDocumentidsMap.entrySet()) {
+				matches.addAll(Arrays.asList(entry.getValue()));
+			}
+			List<String> ids = corpus.getDocumentIds();
+			for (int i=0, len=ids.size(); i<len; i++) {
+				if (matches.contains(ids.get(i))) {
+					distributions[i*distributions.length/len]++;
+				}
 			}
 		}
 		if (createNewCorpus) {
@@ -146,6 +162,11 @@ public class DocumentsFinder extends AbstractTerms {
 				if (finder.includeDocIds) {
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIds", Map.class);
 			        context.convertAnother(count.getValue());
+			        writer.endNode();
+				}
+				if (finder.withDistributions) {
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIds", Integer.class);
+			        context.convertAnother(finder.distributions);
 			        writer.endNode();
 				}
 				writer.endNode();
