@@ -165,7 +165,7 @@ public class DocumentsFinder extends AbstractTerms {
 			        writer.endNode();
 				}
 				if (finder.withDistributions) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIds", Integer.class);
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", Map.class);
 			        context.convertAnother(finder.distributions);
 			        writer.endNode();
 				}
