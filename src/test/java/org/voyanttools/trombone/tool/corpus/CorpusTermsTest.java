@@ -143,6 +143,28 @@ public class CorpusTermsTest {
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
 		assertEquals(6, corpusTerms.size());
 		
+		// with bins, no query, more bins than tokens
+		parameters.removeParameter("start");
+		parameters.removeParameter("limit");
+		parameters.removeParameter("stopList");
+		parameters.setParameter("bins", 1000);
+		parameters.setParameter("withDistributions", "true");
+		parameters.removeParameter("query");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(parameters.getParameterIntValue("bins"), corpusTerms.get(0).getRawDistributions().length);
+		assertEquals(12, corpusTerms.size());
+		
+		// with bins and query, more bins than tokens
+		parameters.setParameter("withDistributions", "true");
+		parameters.setParameter("query", "dark");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(parameters.getParameterIntValue("bins"), corpusTerms.get(0).getRawDistributions().length);
+		assertEquals(1, corpusTerms.size());
+		
 		storage.destroy();
 		
 	}
