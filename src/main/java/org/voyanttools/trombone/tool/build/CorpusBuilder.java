@@ -31,6 +31,7 @@ import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
+import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
@@ -77,35 +78,28 @@ public class CorpusBuilder extends AbstractTool {
 		if (storage.getCorpusStorage().corpusExists(corpusId)==false) {
 			
 			boolean verbose = parameters.getParameterBooleanValue("verbose");
-			
-			Calendar start = Calendar.getInstance();
+						
 			List<String> documentIds = storage.retrieveStrings(corpusId);
-			
-			int totalWordTokens = 0;
-			int totalWordTypes = 0;
-			List<IndexedDocument> indexedDocuments = new ArrayList<IndexedDocument>();
-			for (String documentId : documentIds) {
-				IndexedDocument doc = new IndexedDocument(storage, documentId);
-				DocumentMetadata documentMetadata = doc.getMetadata();
-				totalWordTokens += documentMetadata.getTokensCount(TokenType.lexical);
-				totalWordTypes +=  documentMetadata.getTypesCount(TokenType.lexical);
-				indexedDocuments.add(doc);
-			}
-			
 			CorpusMetadata metadata = new CorpusMetadata(corpusId);
 			metadata.setDocumentIds(documentIds);
-			metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
-			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
-			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
-						
 			Corpus corpus = new Corpus(storage, metadata);
 			
-			start = Calendar.getInstance();
-
+			Calendar start = Calendar.getInstance();
 			if (verbose) {log("Starting corpus terms index.");}
 			CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
 			// create and close to avoid concurrent requests later 
-			CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical).close();
+			CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical);
+			
+			int totalWordTokens = 0;
+			int totalWordTypes = 0;
+			for (CorpusTermMinimal corpusTermMinimal : corpusTermMinimalsDB.values()) {
+				totalWordTokens += corpusTermMinimal.getRawFreq();
+				totalWordTypes++;
+			}
+			corpusTermMinimalsDB.close();
+			metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
+			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
+			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
 			if (verbose) {log("Finished corpus terms index.", start);}
 
 			storage.getCorpusStorage().storeCorpus(corpus);

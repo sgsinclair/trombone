@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
@@ -114,10 +115,19 @@ public class DocumentsFinder extends AbstractTerms {
 					}
 				}
 				corpusId = storage.storeStrings(keepers);
-				FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=corpus"});
-				RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
-				realCorpusCreator.run(); // make sure to create corpus
-				corpusId = realCorpusCreator.getStoredId();
+				if (parameters.getParameterBooleanValue("temporaryCorpus")) {
+					corpusId = "tmp."+UUID.randomUUID().toString()+corpusId;
+					org.voyanttools.trombone.model.CorpusMetadata corpusMetadata = new org.voyanttools.trombone.model.CorpusMetadata(corpusId);
+					corpusMetadata.setDocumentIds(ids);
+					Corpus tempCorpus = new Corpus(storage, corpusMetadata);
+					storage.getCorpusStorage().storeCorpus(tempCorpus);
+				}
+				else {
+					FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=corpus"});
+					RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
+					realCorpusCreator.run(); // make sure to create corpus
+					corpusId = realCorpusCreator.getStoredId();
+				}
 				total = ids.size();
 			}
 		}
