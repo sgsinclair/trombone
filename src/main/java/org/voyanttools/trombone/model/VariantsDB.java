@@ -5,6 +5,8 @@ package org.voyanttools.trombone.model;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.List;
 import java.util.Map;
@@ -32,8 +34,13 @@ public class VariantsDB extends AbstractDB {
 		super(storage, "variants-"+dbId, readOnly);
 		map = db.getHashMap("variants");
 		if (map.isEmpty()) {
-			URL variantsUrl = this.getClass().getResource("/org/voyanttools/trombone/variants/"+dbId+".txt");
-			File file = new File(variantsUrl.getFile());
+			URI variantsUrl;
+			try {
+				variantsUrl = this.getClass().getResource("/org/voyanttools/trombone/variants/"+dbId+".txt").toURI();
+			} catch (URISyntaxException e) {
+				throw new IOException("Unable to find local variants directory", e);
+			}
+			File file = new File(variantsUrl.getPath());
 			if (file.exists()) {
 				db.close();
 				setDB("variants-"+dbId, false);

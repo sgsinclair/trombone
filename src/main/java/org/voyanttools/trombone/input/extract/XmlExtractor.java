@@ -242,8 +242,14 @@ public class XmlExtractor implements Extractor, Serializable {
 
 				Source source = null;
 				String xmlExtractorTemplate = parameters.getParameterValue("xmlExtractorTemplate");
-				URL templateUrl = this.getClass().getResource("/org/voyanttools/trombone/templates/"+xmlExtractorTemplate);
-				File file = new File(templateUrl.getFile());
+			
+				URI templateUrl;
+				try {
+					templateUrl = this.getClass().getResource("/org/voyanttools/trombone/templates/"+xmlExtractorTemplate).toURI();
+				} catch (URISyntaxException e1) {
+					throw new IOException("Unable to find local template directory", e1);
+				}
+				File file = new File(templateUrl);
 				if (file.exists()) {
 					source = new StreamSource(file);
 				}

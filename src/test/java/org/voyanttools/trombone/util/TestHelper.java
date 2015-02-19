@@ -23,6 +23,8 @@ package org.voyanttools.trombone.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.UUID;
 
 import org.voyanttools.trombone.storage.Storage;
@@ -35,8 +37,6 @@ import org.voyanttools.trombone.storage.memory.MemoryStorage;
  */
 public class TestHelper {
 	
-	public static String RESOURCES_PATH = TestHelper.class.getResource("../texts").getFile();
-	public static final String DEFAULT_TROMBOME_DIRECTORY = FileStorage.DEFAULT_TROMBOME_DIRECTORY+"_test";
 	public static Storage getDefaultTestStorage() throws IOException {
 //		return new FileStorage(getTemporaryTestStorageDirectory());
 		return new MemoryStorage();
@@ -47,8 +47,19 @@ public class TestHelper {
 		return file;
 	}
 	
-	public static File getResource(String relativeToTexts) {
-		return new File(RESOURCES_PATH+"/"+relativeToTexts);
+	public static String getResourcesPath() throws IOException {
+		URI uri;
+		try {
+			uri = TestHelper.class.getResource("../texts").toURI();
+		} catch (URISyntaxException e) {
+			throw new IOException("Unable to find local test directory", e);
+		}
+		return uri.getPath();
+		
+	}
+	
+	public static File getResource(String relativeToTexts) throws IOException {
+		return new File(getResourcesPath(), relativeToTexts);
 	}
 
 }

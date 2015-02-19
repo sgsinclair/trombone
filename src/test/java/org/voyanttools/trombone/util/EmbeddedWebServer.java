@@ -40,7 +40,7 @@ public class EmbeddedWebServer {
     private int port;
 
     public EmbeddedWebServer() throws IOException {
-    	this(DEFAULT_PORT, TestHelper.RESOURCES_PATH);
+    	this(DEFAULT_PORT, TestHelper.getResourcesPath());
     }
     public EmbeddedWebServer(int port, String contentsDirectory) throws IOException {
 

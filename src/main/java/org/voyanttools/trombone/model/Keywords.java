@@ -99,7 +99,13 @@ public class Keywords {
 				}
 			}
 			else if (ref.startsWith(STOPWORDS_FILE_PREFIX)) {
-				String dir = this.getClass().getResource("/org/voyanttools/trombone/keywords").getFile();
+				URI uri;
+				try {
+					uri = this.getClass().getResource("/org/voyanttools/trombone/keywords").toURI();
+				} catch (URISyntaxException e) {
+					throw new IOException("Unable to find local stopwords directory", e);
+				}
+				File dir = new File(uri.getPath());
 				File file = new File(dir, ref);
 				List<String> refs = FileUtils.readLines(file);
 				add(refs);
