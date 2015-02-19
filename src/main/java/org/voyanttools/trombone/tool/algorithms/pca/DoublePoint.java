@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.apache.commons.math3.stat.clustering.Clusterable;
 import org.voyanttools.trombone.model.RawAnalysisType;
-import org.voyanttools.trombone.tool.analysis.AnalysisTool;
+import org.voyanttools.trombone.tool.corpus.AnalysisTool;
 
 /**
  * @author Andrew MacDonald
