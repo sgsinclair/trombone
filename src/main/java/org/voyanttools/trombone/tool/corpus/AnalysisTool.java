@@ -98,7 +98,11 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 	
 	@SuppressWarnings("unchecked")
 	private List<CorpusTerm> getCorpusTypes(CorpusMapper corpusMapper) throws IOException {
-		CorpusTerms ct = new CorpusTerms(storage, parameters);
+		FlexibleParameters params = parameters.clone();
+		// remove bins so that CorpusTerm.getRawDistributions is divided into documents
+		params.removeParameter("bins");
+		
+		CorpusTerms ct = new CorpusTerms(storage, params);
 		ct.run(corpusMapper);
 		
 		Iterator<CorpusTerm> it = ct.iterator();
