@@ -2,9 +2,9 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.SortedSet;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -20,6 +20,17 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 
 import Jama.Matrix;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+
+@XStreamAlias("pcaAnalysis")
+@XStreamConverter(PCA.PCAConverter.class)
 public class PCA extends AnalysisTool {
 
 	private List<RawPCAType> pcaTypes;
@@ -125,6 +136,83 @@ public class PCA extends AnalysisTool {
 			double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
 			AnalysisTool.filterTypesByTarget(this.pcaTypes, targetVector, distance, initialTypes);
 			this.maxOutputDataItemCount = this.pcaTypes.size();
+		}
+	}
+	
+	public static class PCAConverter implements Converter {
+
+		/* (non-Javadoc)
+		 * @see com.thoughtworks.xstream.converters.ConverterMatcher#canConvert(java.lang.Class)
+		 */
+		@Override
+		public boolean canConvert(Class type) {
+			return PCA.class.isAssignableFrom(type);
+		}
+
+		/* (non-Javadoc)
+		 * @see com.thoughtworks.xstream.converters.Converter#marshal(java.lang.Object, com.thoughtworks.xstream.io.HierarchicalStreamWriter, com.thoughtworks.xstream.converters.MarshallingContext)
+		 */
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer,
+				MarshallingContext context) {
+			
+			PCA pca = (PCA) source;
+
+	        
+			final List<RawPCAType> pcaTypes = pca.pcaTypes;
+			
+			final List<PrincipleComponent> principalComponents = pca.principalComponents;
+			
+			writer.addAttribute("totalTypes", String.valueOf(pca.maxOutputDataItemCount));
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "principalComponents", Map.Entry.class);
+			for (PrincipleComponent pc : principalComponents) {
+				writer.startNode("principalComponent");
+				writer.addAttribute("eigenValue", String.valueOf(pc.eigenValue));
+				float[] vectorFloat = new float[pc.eigenVector.length];
+				for (int i = 0, size = pc.eigenVector.length; i < size; i++)  {
+					vectorFloat[i] = (float) pc.eigenVector[i];
+				}
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "eigenVectors", vectorFloat.getClass());
+				context.convertAnother(vectorFloat);
+				writer.endNode();
+				
+				writer.endNode();
+			}
+			writer.endNode();
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.Entry.class);
+			for (RawPCAType pcaType : pcaTypes) {
+				writer.startNode("token");
+				writer.addAttribute("term", pcaType.getType());
+				writer.addAttribute("rawFreq", String.valueOf(pcaType.getRawFreq()));
+				writer.addAttribute("relativeFreq", String.valueOf(pcaType.getRelativeFreq()));
+				writer.addAttribute("cluster", String.valueOf(pcaType.getCluster()));
+				writer.addAttribute("clusterCenter", String.valueOf(pcaType.isClusterCenter()));
+				
+				double[] vectorDouble = pcaType.getVector();
+				float[] vectorFloat = new float[vectorDouble.length];
+				for (int i = 0, size = vectorDouble.length; i < size; i++) {
+					vectorFloat[i] = (float) vectorDouble[i];
+				}
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "vector", vectorFloat.getClass());
+	            context.convertAnother(vectorFloat);
+	            writer.endNode();
+				
+	        	writer.endNode();
+			}
+			writer.endNode();
+	        
+
+		}
+
+		/* (non-Javadoc)
+		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
+		 */
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader,
+				UnmarshallingContext context) {
+			return null;
 		}
 	}
 
