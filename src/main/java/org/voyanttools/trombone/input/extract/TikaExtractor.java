@@ -42,6 +42,9 @@ import org.apache.tika.Tika;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
+import org.apache.tika.io.IOUtils;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
@@ -121,13 +124,20 @@ public class TikaExtractor implements Extractor {
 		@Override
 		public InputStream getInputStream() throws IOException {
 			org.apache.tika.metadata.Metadata extractedMetadata = new org.apache.tika.metadata.Metadata();
+	
+// added this to override poor unicode detection for non-ascii characters, but upgrade of tika have resolved the issue
+//			if (metadata.getDocumentFormat()==DocumentFormat.TEXT) {
+//				extractedMetadata.set(Metadata.CONTENT_TYPE, MediaType.TEXT_PLAIN.toString());
+//			}
 			
 	        StringWriter sw = new StringWriter(); 
 	        SAXTransformerFactory factory = (SAXTransformerFactory) 
 	                 SAXTransformerFactory.newInstance(); 
 	        
+	        
 	        // Try with a document containing various tables and formattings 
 	        InputStream input = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId());
+	        
 	        try { 
 	            TransformerHandler handler = factory.newTransformerHandler(); 
 	            handler.getTransformer().setOutputProperty(OutputKeys.METHOD, "html"); 
