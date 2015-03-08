@@ -8,6 +8,7 @@ import java.util.List;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
+import org.junit.Assert;
 import org.junit.Test;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.storage.Storage;
@@ -80,7 +81,19 @@ public class CorpusTermsTest {
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();		
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
-		assertEquals(0, corpusTerms.size());
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals(0, corpusTerm.getRawFreq());
+		
+		parameters.setParameter("withDistributions", "true");
+		parameters.setParameter("query", "document");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals(0, corpusTerm.getRawFreq());
+		parameters.removeParameter("withDistributions");
 		
 		
 		parameters.setParameter("query", "dar*");
@@ -101,11 +114,30 @@ public class CorpusTermsTest {
 		corpusTermFrequencies.run();
 		corpusTerms = corpusTermFrequencies.getCorpusTerms();
 		assertEquals(12, corpusTerms.size());
+		for (CorpusTerm ct : corpusTerms) {
+			if (ct.getTerm().equals("document")) { // make sure we don't have "document" from first doc
+				Assert.assertFalse(ct.getTerm().equals("document"));
+			}
+		}
 		
 		corpusTerm = corpusTerms.get(0);
 		assertEquals("it", corpusTerm.getTerm());
 		assertEquals(3, corpusTerm.getRawFreq());
+
+		// make sure same thing with distributions
+		parameters.setParameter("withDistributions", "true");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(12, corpusTerms.size());
+		for (CorpusTerm ct : corpusTerms) {
+			if (ct.getTerm().equals("document")) { // make sure we don't have "document" from first doc
+				Assert.assertFalse(ct.getTerm().equals("document"));
+			}
+		}
+		parameters.removeParameter("withDistributions");
 		
+
 		// limit 1 (top frequency word)
 		parameters.setParameter("limit", 1);
 //		parameters.removeParameter("limit");

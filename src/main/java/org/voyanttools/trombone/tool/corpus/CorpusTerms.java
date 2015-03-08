@@ -290,10 +290,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	
 	private void addToQueueFromTermWithoutDistributions(FlexibleQueue<CorpusTerm> queue, String queryString, Term term, CorpusTermMinimalsDB corpusTermMinimalsDB, int corpusSize) throws IOException {
 		CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(term.text());
-		if (corpusTermMinimal!=null) { // null indicates that query term doesn't exist
-			CorpusTerm corpusTerm = new CorpusTerm(term.text(), corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal.getInDocumentsCount(), corpusSize);
-			offer(queue, corpusTerm);
-		}
+		CorpusTerm corpusTerm = new CorpusTerm(term.text(), corpusTermMinimal==null ? 0 : corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal==null ? 0 :corpusTermMinimal.getInDocumentsCount(), corpusSize);
+		offer(queue, corpusTerm);
 	}
 
 	private void addToQueueFromQueryWithoutDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Query query) throws IOException {
@@ -337,18 +335,15 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			rawFreqs[documentPosition] = f;
 			relativeFreqs[documentPosition] = (float) f/tokensCounts[documentPosition];
 		}
-		if (freq>0) { // we may have terms from other documents not in this corpus
-			CorpusTerm corpusTerm = new CorpusTerm(queryString, freq, totalTokens, inDocumentsCount, corpus.size(), rawFreqs, relativeFreqs, parameters.getParameterIntValue("bins", corpus.size()));
-			offer(queue, corpusTerm);
-		}
+		CorpusTerm corpusTerm = new CorpusTerm(queryString, freq, totalTokens, inDocumentsCount, corpus.size(), rawFreqs, relativeFreqs, parameters.getParameterIntValue("bins", corpus.size()));
+		offer(queue, corpusTerm);
 	}
 	
 	private void offer(FlexibleQueue<CorpusTerm> queue, CorpusTerm corpusTerm) {
-		if (corpusTerm.getRawFreq()>0) {
-			queue.offer(corpusTerm);
-			total++;
-			totalTokens+=corpusTerm.getRawFreq();
-		}
+		// we need to offer this even if rawfreq is 0 since we want to show query results for non matches
+		queue.offer(corpusTerm);
+		total++;
+		totalTokens+=corpusTerm.getRawFreq();
 	}
 
 	List<CorpusTerm> getCorpusTerms() {
