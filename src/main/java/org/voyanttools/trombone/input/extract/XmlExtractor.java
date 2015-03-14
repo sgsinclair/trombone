@@ -305,12 +305,8 @@ public class XmlExtractor implements Extractor, Serializable {
 				metadata.setPubDate(StringEscapeUtils.escapeXml11(pubDate));
 			}
 			
-			String xmlContentXpath = parameters.getParameterValue("xmlContentXpath","");
-			// we don't need to extract content from the source, so just use the source XML
-			
-			if (xmlContentXpath.isEmpty()) {
-				return storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSourceId);
-			}
+			// if no XPath is defined, consider the whole source XML (but allow for additional metadata ot be identified
+			String xmlContentXpath = parameters.getParameterValue("xmlContentXpath","/");
 			
 			NodeList nodeList;
 			XPath xpath = xpathFactory.newXPath();
