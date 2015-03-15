@@ -45,6 +45,7 @@ import javax.xml.xpath.XPathException;
 import net.sf.saxon.lib.NamespaceConstant;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
@@ -129,9 +130,9 @@ class XmlExpander implements Expander {
 				.getParameterValues("xmlDocumentsXpath");
 
 		// check to see if we need to set xmlDocumentsXpath using defaults for format
-		if (xmlDocumentsXpaths.length == 0 && parameters.getParameterBooleanValue("splitDocuments") && parameters.getParameterValue("inputFormat","").isEmpty()==false) {
-			DocumentFormat format = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat").toUpperCase());
-			switch (format) {
+		if (xmlDocumentsXpaths.length == 0 && parameters.getParameterValue("inputFormat","").isEmpty()==false) {
+			DocumentFormat specifiedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
+			switch (specifiedFormat) {
 			case RSS:
 			case RSS2:
 				xmlDocumentsXpaths = new String[]{"//item"}; break;
@@ -139,7 +140,10 @@ class XmlExpander implements Expander {
 				xmlDocumentsXpaths = new String[]{"//entry"}; break;
 			case TEICORPUS:
 				xmlDocumentsXpaths = new String[]{"//TEI"}; break;
+			case DTOC:
+				xmlDocumentsXpaths = new String[]{"//*[local-name()='div' and ('chapter'=@*[local-name()='type'] or 'forward'=@*[local-name()='type'] or 'index'=@*[local-name()='type'])]"}; break;
 			}
+
 		}
 
 		String joinedXmlDocumentsXpaths = StringUtils.join(xmlDocumentsXpaths);
@@ -210,6 +214,7 @@ class XmlExpander implements Expander {
 		storedDocumentSourceStorage.setMultipleExpandedStoredDocumentSources(
 				parentId, childStoredDocumentSources,
 				multipleExpandedStoredDocumentSourcesPrefix);
+		
 		return childStoredDocumentSources;
 	}
 

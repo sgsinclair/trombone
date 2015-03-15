@@ -161,6 +161,10 @@ public class XmlExtractor implements Extractor, Serializable {
 				defaultsMap.put("xmlPubDateXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/DATE");
 				defaultsMap.put("xmlExtractorTemplate", "dream-extraction.xsl");
 				break;
+			case DTOC:
+				defaultsMap.put("xmlTitleXpath", "(//head//title)[1]");
+				defaultsMap.put("xmlAuthorXpath", "(//head//author)[1]");
+				break;
 			}
 			
 			// update parameters

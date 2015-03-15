@@ -80,6 +80,11 @@ public enum DocumentFormat {
 	EEBODREAM("xml"),
 	
 	/**
+	 * Specialized format for treating Dynamic Table of Context files
+	 */
+	DTOC("xml"),
+	
+	/**
 	 * An MS Word file (.doc).
 	 */
 	MSWORD("doc"),
