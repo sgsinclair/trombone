@@ -333,7 +333,7 @@ class XmlExpander implements Expander {
 					"Unable to transform node from stored document: "
 							+ parentId + " (" + parentMetadata + ")");
 		}
-		DocumentMetadata metadata = parentMetadata.asParent();
+		DocumentMetadata metadata = parentMetadata.asParent(parentId);
 		metadata.setModified(parentMetadata.getModified());
 		metadata.setSource(Source.STRING);
 		metadata.setLocation(location);

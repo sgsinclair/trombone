@@ -243,12 +243,13 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 		return getDefaultFormat();
 
 	}
-
+	
 	/**
-	 * Creates a new child Metadata object with this object as its parent.
+	 * Creates a new child Metadata object with this object as its parent, including provided parent ID.
 	 * @return a new child Metadata object
 	 */
-	public DocumentMetadata asParent() {
+	public DocumentMetadata asParent(String id) {
+		properties.setProperty("id", id);
 		Properties newProperties = new Properties();
 		for (String key : properties.stringPropertyNames()) {
 			newProperties.setProperty("parent_"+key, getProperty(key));
@@ -256,15 +257,6 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 		return new DocumentMetadata(newProperties);
 	}
 	
-	/**
-	 * Creates a new child Metadata object with this object as its parent, including provided parent ID.
-	 * @return a new child Metadata object
-	 */
-	public DocumentMetadata asParent(String id) {
-		DocumentMetadata metadata = asParent();
-		metadata.setProperty("parent_id",id);
-		return metadata;
-	}
 	public void setTitle(String value) {
 		setProperty("title", value);
 	}
