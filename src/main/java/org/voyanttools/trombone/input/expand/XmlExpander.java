@@ -141,7 +141,7 @@ class XmlExpander implements Expander {
 			case TEICORPUS:
 				xmlDocumentsXpaths = new String[]{"//TEI"}; break;
 			case DTOC:
-				xmlDocumentsXpaths = new String[]{"//*[local-name()='div' and ('chapter'=@*[local-name()='type'] or 'forward'=@*[local-name()='type'] or 'index'=@*[local-name()='type'])]"}; break;
+				xmlDocumentsXpaths = new String[]{"//*[local-name()='div' and 'chapter'=@*[local-name()='type']]"}; break;
 			}
 
 		}
