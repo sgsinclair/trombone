@@ -65,7 +65,7 @@ public class XmlExtractorTest {
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
-		assertEquals("title for XML document", "chars_utf8.xml", metadata.getTitle());
+		assertEquals("", metadata.getTitle());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have some content in XML", contents.contains(line)==true);
 

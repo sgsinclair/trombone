@@ -357,7 +357,8 @@ public class XmlExtractor implements Extractor, Serializable {
 	        try {
 	        	Properties p = System.getProperties();
 				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
-				String text = new Tika(new DefaultDetector(), new XMLParser()).parseToString(new ByteArrayInputStream(string.getBytes("UTF-8")));
+				// use default detector and parser
+				String text = new Tika(new DefaultDetector(), new XmlOrHtmlTikaParser()).parseToString(new ByteArrayInputStream(string.getBytes("UTF-8")));
 				if (text.trim().isEmpty()==false) {
 					detector.append(text);
 					String lang = detector.detect();
