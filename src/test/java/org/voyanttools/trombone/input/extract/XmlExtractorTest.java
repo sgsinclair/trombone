@@ -103,6 +103,7 @@ public class XmlExtractorTest {
 		assertEquals("title for RSS feed", "Website Feed", metadata.getTitle());
 //		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
 		assertTrue("ensure we have three lines of description in RSS feed", StringUtils.countMatches(contents, "<description>")==2);
 		

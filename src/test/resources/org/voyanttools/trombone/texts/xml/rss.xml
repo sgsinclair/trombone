@@ -8,7 +8,7 @@
         <dc:creator>Me (me@example.com)</dc:creator>
         <item>
             <title>A Special Event</title>
-            <description>A Special Teleconference for our customers about our products</description>
+            <description><!-- comment -->A Special Teleconference for our customers about our products</description>
             <link>http://www.yourdomain.com/events.htm</link>
             <author>Joe Blow</author>
         </item>

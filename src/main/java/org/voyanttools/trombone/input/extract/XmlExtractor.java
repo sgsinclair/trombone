@@ -228,6 +228,7 @@ public class XmlExtractor implements Extractor, Serializable {
 				factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
 				factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
 				factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
+				factory.setIgnoringComments(true);
 				DocumentBuilder builder = factory.newDocumentBuilder();
 				doc = builder.parse(inputStream);
 
