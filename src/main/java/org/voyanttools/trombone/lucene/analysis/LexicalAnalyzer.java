@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.lucene.analysis;
 
+import java.io.IOException;
 import java.io.Reader;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -41,7 +42,11 @@ public class LexicalAnalyzer extends Analyzer {
 	
 	@Override
 	protected Reader initReader(String fieldName, Reader reader) {
-		return new HTMLStripCharFilter(reader);
+		try {
+			return new HTMLCharFilter(reader);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 	
 	/* (non-Javadoc)

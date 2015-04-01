@@ -46,7 +46,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 	private List<DocumentToken> documentTokens = new ArrayList<DocumentToken>();
 	
-	private Pattern otherTokensPattern = Pattern.compile("<[/?]?\\w.*?>");
+	private Pattern otherTokensPattern = Pattern.compile("<[/?]?\\w.*?>", Pattern.DOTALL);
 	
 	private int total = 0;
 	
@@ -172,8 +172,12 @@ public class DocumentTokens extends AbstractCorpusTool {
 			}
 			start = matcher.start();
 			String tag =  matcher.group();
+			TokenType tokenType;
+			if (tag.charAt(1)=='/') {tokenType=TokenType.closetag;}
+			else if (tag.substring(0, tag.length()-1).trim().endsWith("/")) {tokenType = TokenType.emptytag;}
+			else {tokenType = TokenType.opentag;}
 			if (tag.charAt(1)!='?') { // skip tag declarations
-				documentTokens.add(new DocumentToken(documentId, documentIndex, tag, tag.length() > 1 && tag.charAt(1)=='/' ? TokenType.closetag : TokenType.opentag, -1, startoffset+start, startoffset+start+tag.length(), -1)); // -1 position
+				documentTokens.add(new DocumentToken(documentId, documentIndex, tag, tokenType, -1, startoffset+start, startoffset+start+tag.length(), -1)); // -1 position
 			}
 			start += tag.length();
 		}

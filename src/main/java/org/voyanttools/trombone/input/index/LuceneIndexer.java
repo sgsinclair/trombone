@@ -334,7 +334,7 @@ public class LuceneIndexer implements Indexer {
 				document = new Document();
 				document.add(new StringField("id", id, Field.Store.NO));
 //				document.add(new StringField("corpus", corpusId, Field.Store.NO));
-				document.add(new StringField("version", LuceneManager.VERSION.name(), Field.Store.NO));
+				document.add(new StringField("version", LuceneManager.VERSION.toString(), Field.Store.NO));
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				
