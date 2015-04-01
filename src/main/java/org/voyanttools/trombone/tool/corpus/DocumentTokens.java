@@ -9,6 +9,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.DocsAndPositionsEnum;
@@ -44,6 +46,8 @@ public class DocumentTokens extends AbstractCorpusTool {
 
 	private List<DocumentToken> documentTokens = new ArrayList<DocumentToken>();
 	
+	private Pattern otherTokensPattern = Pattern.compile("<[/?]?\\w.*?>");
+	
 	private int total = 0;
 	
 	@XStreamOmitField
@@ -66,6 +70,7 @@ public class DocumentTokens extends AbstractCorpusTool {
 		super(storage, parameters);
 		start = parameters.getParameterIntValue("start", 0);
 		limit = parameters.getParameterIntValue("limit", 50);
+		if (limit==0) {limit=Integer.MAX_VALUE;}
 		tokenType = TokenType.lexical;
 	}
 
@@ -127,10 +132,12 @@ public class DocumentTokens extends AbstractCorpusTool {
 			int lastDocumentTokenPositionIndex = corpus.getDocument(id).getMetadata().getLastTokenPositionIndex(tokenType);
 			for (int i=0, len=termInfos.size(); i<len; i++) {
 				termInfo = termInfos.get(i);
-				if (i>0) { // add filler between tokens
+				if ((i==0 && start==0 )|| i > 0) { // get content before first token or filler between tokens
 					string = StringUtils.substring(document, lastEndOffset, termInfo.getStartOffset());
-					documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, stripper.strip(string), TokenType.other, -1, lastEndOffset, termInfo.getStartOffset(), -1)); // -1 position
-					if (len+1<termInfos.size()) {len++;} // extend loop by one
+					List<DocumentToken> documentOtherTokens = getDocumentOtherTokens(stripper.strip(string), id, corpusDocumentIndexPosition, lastEndOffset);
+					documentTokens.addAll(documentOtherTokens);
+					// TODO: does this counter need to change?
+					// if (len+1<termInfos.size()) {len++;} // extend loop by one
 				}
 				string = StringUtils.substring(document, termInfo.getStartOffset(), termInfo.getEndOffset());
 				documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, string, tokenType, termInfo.getPosition(), termInfo.getStartOffset(), termInfo.getEndOffset(), docFreqs.get(termInfo.getText())));
@@ -138,7 +145,8 @@ public class DocumentTokens extends AbstractCorpusTool {
 				tokensCounter++;
 				if (i+1==len && termInfo.getPosition()==lastDocumentTokenPositionIndex) {
 					string = StringUtils.substring(document, lastEndOffset);
-					documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, stripper.strip(string), TokenType.other, -1, lastEndOffset, lastEndOffset+string.length(), -1)); // -1 position
+					List<DocumentToken> documentOtherTokens = getDocumentOtherTokens(stripper.strip(string), id, corpusDocumentIndexPosition, lastEndOffset);
+					documentTokens.addAll(documentOtherTokens);
 				}
 			}
 			if (tokensCounter>=limit) {break;}
@@ -150,6 +158,30 @@ public class DocumentTokens extends AbstractCorpusTool {
 	@Override
 	public int getVersion() {
 		return super.getVersion()+5;
+	}
+	
+	private List<DocumentToken> getDocumentOtherTokens(String string, String documentId, int documentIndex, int startoffset) {
+		// <doc>this <b>is very<i><c>important </c></i> </b>test</doc>
+		List<DocumentToken> documentTokens = new ArrayList<DocumentToken>();
+		Matcher matcher = otherTokensPattern.matcher(string);
+		start = 0;
+		while (matcher.find()) {
+			if (matcher.start()>start) {
+				String text = string.substring(start, matcher.start());
+				documentTokens.add(new DocumentToken(documentId, documentIndex, text, TokenType.other, -1, startoffset+start, startoffset+start+text.length(), -1)); // -1 position
+			}
+			start = matcher.start();
+			String tag =  matcher.group();
+			if (tag.charAt(1)!='?') { // skip tag declarations
+				documentTokens.add(new DocumentToken(documentId, documentIndex, tag, tag.length() > 1 && tag.charAt(1)=='/' ? TokenType.closetag : TokenType.opentag, -1, startoffset+start, startoffset+start+tag.length(), -1)); // -1 position
+			}
+			start += tag.length();
+		}
+		if (start<string.length()) {
+			String text = string.substring(start, string.length());
+			documentTokens.add(new DocumentToken(documentId, documentIndex, text, TokenType.other, -1, startoffset+start, startoffset+start+text.length(), -1)); // -1 position
+		}
+		return documentTokens;
 	}
 
 	public List<DocumentToken> getDocumentTokens() {

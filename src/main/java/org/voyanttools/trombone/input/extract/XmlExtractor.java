@@ -184,10 +184,13 @@ public class XmlExtractor implements Extractor, Serializable {
 			}
 		}
 		
+		/* This was skipped, but we probably need to extract anyway to strip XML comments, detect language, etc.
+		 * 
 		// no special parameters and nothing to extract from XML, so just return the original stored document
 		if (parametersBuilder.length()==0) {
 			return new StoredDocumentSourceInputSource(storedDocumentSourceStorage, storedDocumentSource);
 		}
+		*/
 		
 		return new ExtractableXmlInputSource(DigestUtils.md5Hex(storedDocumentSource.getId()+relevantParameters+String.valueOf(serialVersionUID)), storedDocumentSource);
 	}
