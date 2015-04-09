@@ -102,7 +102,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+7;
+		return super.getVersion()+8;
 	}
 
 	@Deprecated // this seems slower

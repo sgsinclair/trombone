@@ -21,6 +21,7 @@ import org.apache.lucene.queryparser.simple.SimpleQueryParser;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FuzzyQuery;
+import org.apache.lucene.search.MatchAllDocsQuery;
 import org.apache.lucene.search.MultiTermQuery.RewriteMethod;
 import org.apache.lucene.search.MultiTermQueryWrapperFilter;
 import org.apache.lucene.search.PrefixQuery;
@@ -82,11 +83,22 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 			}
 			Query query = parse(queryString);
 			if (isReallyQueryExpand && query instanceof TermQuery == false) {
+				boolean isPrefixNotQuery = query instanceof BooleanQuery && ((BooleanQuery) query).clauses().size()==2 && ((BooleanQuery) query).clauses().get(0).getQuery() instanceof PrefixQuery && ((BooleanQuery) query).clauses().get(1).getQuery() instanceof MatchAllDocsQuery;				if (isPrefixNotQuery) {
+					query = ((BooleanQuery) query).clauses().get(0).getQuery();
+				}
 				if (query instanceof PrefixQuery) {
 					// SpanMultiTermQueryWrapper's rewrite method extracts terms properly (PrefixQuery no longer does) 
 					SpanOrQuery spanOrQuery = (SpanOrQuery) new SpanMultiTermQueryWrapper<PrefixQuery>((PrefixQuery) query).rewrite(reader);
 					for (SpanQuery sq : spanOrQuery.getClauses()) {
-						map.put(sq.toString(DEFAULT_TOKENTYPE.name()), new TermQuery(((SpanTermQuery) sq).getTerm()));
+						if (isPrefixNotQuery) {
+							BooleanQuery bq = new BooleanQuery();
+							bq.add(new TermQuery(((SpanTermQuery) sq).getTerm()), Occur.MUST_NOT);
+							bq.add(new MatchAllDocsQuery(), Occur.MUST);
+							map.put("-"+sq.toString(DEFAULT_TOKENTYPE.name()), bq);
+						}
+						else {
+							map.put(sq.toString(DEFAULT_TOKENTYPE.name()), new TermQuery(((SpanTermQuery) sq).getTerm()));
+						}
 					}
 				}
 				else if (query instanceof BooleanQuery) {

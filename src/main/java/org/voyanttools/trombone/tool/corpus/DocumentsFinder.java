@@ -63,6 +63,11 @@ public class DocumentsFinder extends AbstractTerms {
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		distributions = new int[parameters.getParameterIntValue("bins", 0)];
 	}
+	
+	@Override
+	public int getVersion() {
+		return super.getVersion()+1;
+	}
 
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {

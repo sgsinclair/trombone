@@ -197,6 +197,45 @@ public class CorpusTermsTest {
 		assertEquals(parameters.getParameterIntValue("bins"), corpusTerms.get(0).getRawDistributions().length);
 		assertEquals(1, corpusTerms.size());
 		
+		// testing with not
+		parameters.setParameter("query", "-was,-dark,-light");
+		parameters.removeParameter("withDistributions");
+		parameters.setParameter("inDocumentsCountOnly", "true");
+		parameters.removeParameter("bins");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(2, corpusTerms.get(0).getRawFreq()); // neither document has light
+		assertEquals(1, corpusTerms.get(1).getRawFreq()); // dark occurs in 1
+		assertEquals(0, corpusTerms.get(2).getRawFreq()); // was occurs in both
+		assertEquals(3, corpusTerms.size());
+		
+		// testing with not – for now only concerned with inDocumentsCountOnly
+		parameters.setParameter("query", "-was,-dark,-light");
+		parameters.removeParameter("withDistributions");
+		parameters.setParameter("inDocumentsCountOnly", "true");
+		parameters.removeParameter("bins");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(2, corpusTerms.get(0).getRawFreq()); // neither document has light
+		assertEquals(1, corpusTerms.get(1).getRawFreq()); // dark occurs in 1
+		assertEquals(0, corpusTerms.get(2).getRawFreq()); // was occurs in both
+		assertEquals(3, corpusTerms.size());
+		
+		// testing with not – for now only concerned with inDocumentsCountOnly
+		parameters.setParameter("query", "^-wa*,-dar*,-ligh*");
+		parameters.removeParameter("withDistributions");
+		parameters.setParameter("inDocumentsCountOnly", "true");
+		parameters.removeParameter("bins");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(2, corpusTerms.get(0).getRawFreq()); // neither document has light
+		assertEquals(1, corpusTerms.get(1).getRawFreq()); // dark occurs in 1
+		assertEquals(0, corpusTerms.get(2).getRawFreq()); // was occurs in both
+		assertEquals(3, corpusTerms.size());
+		
 		storage.destroy();
 		
 	}
