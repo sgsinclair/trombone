@@ -39,7 +39,7 @@ public class CorpusExporter extends AbstractCorpusTool {
 	
 	private Pattern FILENAME_PATTERN = Pattern.compile("^(.+?)(\\.[{\\p{L}\\d]+)$");
 	
-	private Pattern FILENAME_UNWANTED_CHARACTERS = Pattern.compile("[^\\{L}\\d -]");
+	private Pattern FILENAME_UNWANTED_CHARACTERS = Pattern.compile("[^\\p{L}\\d -]");
 	
 	/**
 	 * @param storage
