@@ -78,6 +78,8 @@ public class RawDocumentExporter extends AbstractTool implements RawSerializable
 			if (InputSourcesBuilder.hasParameterSources(parameters)) {
 				
 			}
+
+			id = parameters.getParameterValue("docId");
 			inputStream = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
 			if (inputStream==null) {
 				throw new IOException("Document not found: "+id);

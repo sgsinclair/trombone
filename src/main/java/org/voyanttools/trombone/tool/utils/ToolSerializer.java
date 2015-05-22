@@ -59,8 +59,9 @@ public class ToolSerializer implements RunnableTool {
 		
 		if (this.runnableTool instanceof ToolRunner) {
 			List<RunnableTool> tools = ((ToolRunner) runnableTool).getRunnableToolResults();
-			if (tools.isEmpty()==false && tools.get(tools.size()-1) instanceof RawSerializable) {
-				
+			if (tools.size()==1 && tools.get(0) instanceof RawSerializable) {
+				((RawSerializable) tools.get(0)).serialize(writer);
+				return;
 			}
 		}
 		
