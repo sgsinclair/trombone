@@ -58,14 +58,14 @@ public class TikaExtractorTest {
 		StoredDocumentSource extractedStoredDocumentSource;
 		DocumentMetadata metadata;
 		String contents;
-		
+
 		inputSource = new StringInputSource("This is <b>a</b> test.");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("Text string shouldn't contain tags", contents.contains("&lt;b&gt;a&lt;/b&gt;"));
-		
-		inputSource = new StringInputSource("<html><body>This is <b>a</b> test.</body></html>");
+
+		inputSource = new StringInputSource("<html><body><div>This is <b>a</b> test.</div></body></html>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));

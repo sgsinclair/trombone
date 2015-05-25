@@ -25,17 +25,29 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.sax.SAXTransformerFactory;
 import javax.xml.transform.sax.TransformerHandler;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.tika.Tika;
@@ -57,6 +69,8 @@ import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import com.cybozu.labs.langdetect.DetectorFactory;
@@ -81,7 +95,7 @@ public class TikaExtractor implements Extractor {
 		detector = new DefaultDetector();
 		parser = new AutoDetectParser(detector);
 		context.set(Parser.class, parser);
-		context.set(HtmlMapper.class, new TromboneHtmlMapper());
+		context.set(HtmlMapper.class, new CustomHtmlMapper());
 	}
 
 	public InputSource getExtractableInputSource(StoredDocumentSource storedDocumentSource) throws IOException {
@@ -92,14 +106,12 @@ public class TikaExtractor implements Extractor {
 		
 		@Override
 		public String mapSafeElement(String name) {
-			String s = super.mapSafeElement(name);
-			return s;
+			return name.toLowerCase();
 		}
 
 		@Override
 		public String mapSafeAttribute(String elementName, String attributeName) {
-			// TODO Auto-generated method stub
-			return super.mapSafeAttribute(elementName, attributeName);
+			return attributeName.toLowerCase();
 		}
 
 		public boolean isDiscardElement(String name) {
@@ -138,6 +150,7 @@ public class TikaExtractor implements Extractor {
 	        // Try with a document containing various tables and formattings 
 	        InputStream input = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId());
 	        
+	        // do a first pass to convert various formats to simple HTML
 	        try { 
 	            TransformerHandler handler = factory.newTransformerHandler(); 
 	            handler.getTransformer().setOutputProperty(OutputKeys.METHOD, "html"); 
@@ -156,6 +169,8 @@ public class TikaExtractor implements Extractor {
 			} finally { 
 	            input.close(); 
 	        }
+	        String extractedContent = sw.toString();
+
 	        
 	        for (String name : extractedMetadata.names()) {
 	        	String value = extractedMetadata.get(name);
@@ -174,7 +189,13 @@ public class TikaExtractor implements Extractor {
 	        	}
 	        }
 	        
-	        String extractedContent = sw.toString();
+	        // now extract the body from the simple HTML – we should be able to cheat since we already have processed content
+	        int start = extractedContent.indexOf("<body");
+	        int end = extractedContent.indexOf("</body");
+	        if (start > -1 && end > -1) {
+	        	extractedContent = extractedContent.substring(start, end);
+	        }
+	        
 	        DocumentFormat format = storedDocumentSource.getMetadata().getDocumentFormat();
 	        if (format==DocumentFormat.PDF) {
 	        	extractedContent = extractedContent.replaceAll("\\s+\\&\\#xD;\\s+", " ");
