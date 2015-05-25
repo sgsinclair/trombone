@@ -322,6 +322,7 @@ public class LuceneIndexer implements Indexer {
 				}
 					
 
+				// this is used by lexical and the metadata (expecting term vectors to be present)
 				FieldType ft = new FieldType(TextField.TYPE_NOT_STORED);
 				ft.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
 				ft.setStoreTermVectors(true);
@@ -342,7 +343,8 @@ public class LuceneIndexer implements Indexer {
 					String key = (String) entries.getKey();
 					String value = (String) entries.getValue();
 					if (key!=null && value!=null && value.isEmpty()==false) {
-						document.add(new TextField(key, value, Field.Store.NO)); // store for easier updating later if needed
+						// store term vector so that we can build term DB
+						document.add(new Field(key, value, ft)); // store for easier updating later if needed
 					}
 				}
 				

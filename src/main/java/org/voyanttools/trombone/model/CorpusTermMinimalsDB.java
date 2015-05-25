@@ -8,10 +8,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
 import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsEnum;
+import org.apache.lucene.index.IndexableField;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.util.BytesRef;
@@ -50,12 +52,12 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 
 	public static synchronized CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, String field) throws IOException {
 		if (!exists(corpusMapper, field)) {
-			if (corpusMapper.getCorpus().size()==corpusMapper.getAtomicReader().numDocs()) {
-				buildFromReaderTerms(corpusMapper, field); // TODO: is this any faster than going through documents?
-			}
-			else {
+//			if (corpusMapper.getCorpus().size()==corpusMapper.getAtomicReader().numDocs()) {
+//				buildFromReaderTerms(corpusMapper, field); // TODO: is this any faster than going through documents?
+//			}
+//			else {
 				buildFromDocumentTermVectors(corpusMapper, field);
-			}
+//			}
 		}
 		return new CorpusTermMinimalsDB(corpusMapper, field, true);
 	}
@@ -65,7 +67,7 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 		Map<String, AtomicInteger> rawFreqsMap = new HashMap<String, AtomicInteger>();
 		TermsEnum termsEnum = null;
 		for (int doc : corpusMapper.getLuceneIds()) {
-			Terms terms = reader.getTermVector(doc, "lexical");
+			Terms terms = reader.getTermVector(doc, field);
 			if (terms!=null) {
 				termsEnum = terms.iterator(termsEnum);
 				if (termsEnum!=null) {

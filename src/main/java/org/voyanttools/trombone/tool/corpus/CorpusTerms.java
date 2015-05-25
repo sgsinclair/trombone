@@ -271,21 +271,25 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		if (corpusTermMinimalsDB!=null) {corpusTermMinimalsDB.close();}
 	}
 	private void runQueriesInDocumentsCountOnly(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, Map<String, Query> queriesMap) throws IOException {
-		CorpusTermMinimalsDB corpusTermMinimalsDB = null; // only create it if we need it
+		Map<String, CorpusTermMinimalsDB> corpusTermMinimalsDBMap = new HashMap<String, CorpusTermMinimalsDB>();
+//		CorpusTermMinimalsDB corpusTermMinimalsDB = null; // only create it if we need it
 		for (Map.Entry<String, Query> entry : queriesMap.entrySet()) {
 			Query query = entry.getValue();
 			String queryString = entry.getKey();
 			if (query instanceof TermQuery) {
-				if (corpusTermMinimalsDB==null) {
-					corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, ((TermQuery) query).getTerm().field());
+				String field = ((TermQuery) query).getTerm().field();
+				if (corpusTermMinimalsDBMap.containsKey(field)==false) {
+					corpusTermMinimalsDBMap.put(field, CorpusTermMinimalsDB.getInstance(corpusMapper, field));
 				}
-				addToQueueFromTermWithoutDistributions(queue, queryString, ((TermQuery) query).getTerm(), corpusTermMinimalsDB, corpusMapper.getCorpus().size());
+				addToQueueFromTermWithoutDistributions(queue, queryString, ((TermQuery) query).getTerm(), corpusTermMinimalsDBMap.get(field), corpusMapper.getCorpus().size());
 			}
 			else {
 				addToQueueFromQueryWithoutDistributions(corpusMapper, queue, queryString, query);
 			}
 		}
-		if (corpusTermMinimalsDB!=null) {corpusTermMinimalsDB.close();}
+		for (CorpusTermMinimalsDB corpusTermMinimalsDB : corpusTermMinimalsDBMap.values()) {
+			corpusTermMinimalsDB.close();
+		}
 	}
 	
 	private void addToQueueFromTermWithoutDistributions(FlexibleQueue<CorpusTerm> queue, String queryString, Term term, CorpusTermMinimalsDB corpusTermMinimalsDB, int corpusSize) throws IOException {
