@@ -221,27 +221,41 @@ public class CA extends AnalysisTool {
 	        
 			final List<RawCAType> caTypes = ca.caTypes;
 			
-			final double[] dimensions = ca.dimensionPercentages;
-			
-			writer.addAttribute("totalTypes", String.valueOf(ca.maxOutputDataItemCount));
-			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", Map.Entry.class);
-			for (double d : dimensions) {
-				writer.startNode("dimension");
-				writer.addAttribute("percentage", String.valueOf(d));
-				writer.endNode();
-			}
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
+			writer.setValue(String.valueOf(ca.maxOutputDataItemCount));
 			writer.endNode();
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.Entry.class);
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", List.class);
+	        context.convertAnother(ca.dimensionPercentages);
+	        writer.endNode();
+			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.class);
 			for (RawCAType caType : caTypes) {
 				writer.startNode("token");
-				writer.addAttribute("term", caType.getType());
-				writer.addAttribute("category", getCategoryName(caType.getCategory()));
-				writer.addAttribute("rawFreq", String.valueOf(caType.getRawFreq()));
-				writer.addAttribute("relativeFreq", String.valueOf(caType.getRelativeFreq()));
-				writer.addAttribute("cluster", String.valueOf(caType.getCluster()));
-				writer.addAttribute("clusterCenter", String.valueOf(caType.isClusterCenter()));
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
+				writer.setValue(caType.getType());
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "category", String.class);
+				writer.setValue(String.valueOf(caType.getCategory()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+				writer.setValue(String.valueOf(caType.getRawFreq()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
+				writer.setValue(String.valueOf(caType.getRelativeFreq()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cluster", Integer.class);
+				writer.setValue(String.valueOf(caType.getCluster()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "clusterCenter", Boolean.class);
+				writer.setValue(String.valueOf(caType.isClusterCenter()));
+				writer.endNode();
 				
 				double[] vectorDouble = caType.getVector();
 				float[] vectorFloat = new float[vectorDouble.length];
