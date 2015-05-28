@@ -36,6 +36,10 @@ public class DocumentContexts extends AbstractContextTerms {
 		contextsSort = Kwic.Sort.valueOfForgivingly(parameters.getParameterValue("sortBy", ""));
 		comparator = Kwic.getComparator(contextsSort);
 	}
+	
+	public int getVersion() {
+		return super.getVersion()+1;
+	}
 
 	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
@@ -84,7 +88,7 @@ public class DocumentContexts extends AbstractContextTerms {
 				
 				int leftstart = keywordstart - context;
 				if (leftstart<0) {leftstart=0;}
-				String left = StringUtils.substring(document, termsOfInterest.get(leftstart).getStartOffset(), termsOfInterest.get(keywordstart).getStartOffset()-1);
+				String left = StringUtils.substring(document, termsOfInterest.get(leftstart).getStartOffset(), termsOfInterest.get(keywordstart).getStartOffset());
 
 				int rightend = keywordend + context;
 				if (rightend>lastToken) {rightend=lastToken;}
