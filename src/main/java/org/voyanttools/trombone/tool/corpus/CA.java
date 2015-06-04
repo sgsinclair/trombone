@@ -181,11 +181,6 @@ public class CA extends AnalysisTool {
 		this.maxOutputDataItemCount = this.caTypes.size();
 	}
 	
-	private static String getCategoryName(int category) {
-		if (category == RawCAType.PART) return "part";
-		else return "word";
-	}
-	
 	public static class CAConverter implements Converter {
 
 		/* (non-Javadoc)
