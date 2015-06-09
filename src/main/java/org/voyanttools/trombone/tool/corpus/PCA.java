@@ -2,6 +2,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -90,8 +91,7 @@ public class PCA extends AnalysisTool {
 		int numDocs = corpus.size();
 		
 		double[] targetVector = null;
-		List<String> initialTypes = new ArrayList<String>();
-//		List<String> initialTypes = new ArrayList<String>(Arrays.asList(this.properties.getParameterValues("type")));
+		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
 //		if (target != null) this.properties.setParameter("type", "");
 		
 		double[][] result = null;
@@ -134,7 +134,7 @@ public class PCA extends AnalysisTool {
 		if (target != null) {
 			double[][] minMax = AnalysisTool.getMinMax(result);
 			double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
-			AnalysisTool.filterTypesByTarget(this.pcaTypes, targetVector, distance, initialTypes);
+			AnalysisTool.filterTypesByTarget(this.pcaTypes, targetVector, distance, initialTerms);
 			this.maxOutputDataItemCount = this.pcaTypes.size();
 		}
 	}

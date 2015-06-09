@@ -2,6 +2,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -72,8 +73,7 @@ public class CA extends AnalysisTool {
 		int numDocs = corpus.size();
 		
 		double[] targetVector = null;
-		List<String> initialTypes = new ArrayList<String>();
-//		List<String> initialTypes = new ArrayList<String>(Arrays.asList(this.properties.getParameterValues("type")));
+		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
 //		if (target != null) this.properties.setParameter("type", "");
 		
 		if (numDocs > 2 && docId == null) { // FIXME CA needs at least 3 columns to function properly
@@ -103,7 +103,7 @@ public class CA extends AnalysisTool {
 		    }
 			
 			if (target != null) {
-				this.doFilter(targetVector, initialTypes);
+				this.doFilter(targetVector, initialTerms);
 			}
 			
 			for (i = 0; i < numDocs; i++) {
@@ -144,7 +144,7 @@ public class CA extends AnalysisTool {
 		    }
 			
 			if (target != null) {
-				this.doFilter(targetVector, initialTypes);
+				this.doFilter(targetVector, initialTerms);
 			}
 			
 			IndexedDocument doc;
