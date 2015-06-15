@@ -5,12 +5,12 @@ package org.voyanttools.trombone.model;
  */
 public class RawCAType extends RawPCAType {
 
-	public static final int WORD = 0;
-	public static final int PART = 1;
+	public static final String WORD = "term";
+	public static final String PART = "part";
 	
-	private final int category;
+	private final String category;
 	
-	public RawCAType(String type, int rawFreq, double relativeFreq, double[] vector, int category) {
+	public RawCAType(String type, int rawFreq, double relativeFreq, double[] vector, String category) {
 		super(type, rawFreq, relativeFreq, vector);
 		if (category != WORD && category != PART) {
 			category = WORD;
@@ -18,7 +18,7 @@ public class RawCAType extends RawPCAType {
 		this.category = category;
 	}
 	
-	public int getCategory() {
+	public String getCategory() {
 		return this.category;
 	}
 

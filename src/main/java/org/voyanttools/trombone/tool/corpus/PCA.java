@@ -2,6 +2,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -90,8 +91,7 @@ public class PCA extends AnalysisTool {
 		int numDocs = corpus.size();
 		
 		double[] targetVector = null;
-		List<String> initialTypes = new ArrayList<String>();
-//		List<String> initialTypes = new ArrayList<String>(Arrays.asList(this.properties.getParameterValues("type")));
+		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
 //		if (target != null) this.properties.setParameter("type", "");
 		
 		double[][] result = null;
@@ -134,7 +134,7 @@ public class PCA extends AnalysisTool {
 		if (target != null) {
 			double[][] minMax = AnalysisTool.getMinMax(result);
 			double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
-			AnalysisTool.filterTypesByTarget(this.pcaTypes, targetVector, distance, initialTypes);
+			AnalysisTool.filterTypesByTarget(this.pcaTypes, targetVector, distance, initialTerms);
 			this.maxOutputDataItemCount = this.pcaTypes.size();
 		}
 	}
@@ -163,12 +163,18 @@ public class PCA extends AnalysisTool {
 			
 			final List<PrincipleComponent> principalComponents = pca.principalComponents;
 			
-			writer.addAttribute("totalTypes", String.valueOf(pca.maxOutputDataItemCount));
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
+			writer.setValue(String.valueOf(pca.maxOutputDataItemCount));
+			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "principalComponents", Map.Entry.class);
 			for (PrincipleComponent pc : principalComponents) {
 				writer.startNode("principalComponent");
-				writer.addAttribute("eigenValue", String.valueOf(pc.eigenValue));
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "eigenValue", Double.class);
+				writer.setValue(String.valueOf(pc.eigenValue));
+				writer.endNode();
+				
 				float[] vectorFloat = new float[pc.eigenVector.length];
 				for (int i = 0, size = pc.eigenVector.length; i < size; i++)  {
 					vectorFloat[i] = (float) pc.eigenVector[i];
@@ -181,14 +187,29 @@ public class PCA extends AnalysisTool {
 			}
 			writer.endNode();
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.Entry.class);
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.class);
 			for (RawPCAType pcaType : pcaTypes) {
 				writer.startNode("token");
-				writer.addAttribute("term", pcaType.getType());
-				writer.addAttribute("rawFreq", String.valueOf(pcaType.getRawFreq()));
-				writer.addAttribute("relativeFreq", String.valueOf(pcaType.getRelativeFreq()));
-				writer.addAttribute("cluster", String.valueOf(pcaType.getCluster()));
-				writer.addAttribute("clusterCenter", String.valueOf(pcaType.isClusterCenter()));
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
+				writer.setValue(pcaType.getType());
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+				writer.setValue(String.valueOf(pcaType.getRawFreq()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
+				writer.setValue(String.valueOf(pcaType.getRelativeFreq()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cluster", Integer.class);
+				writer.setValue(String.valueOf(pcaType.getCluster()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "clusterCenter", Boolean.class);
+				writer.setValue(String.valueOf(pcaType.isClusterCenter()));
+				writer.endNode();
 				
 				double[] vectorDouble = pcaType.getVector();
 				float[] vectorFloat = new float[vectorDouble.length];

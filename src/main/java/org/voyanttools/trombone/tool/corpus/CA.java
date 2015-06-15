@@ -2,6 +2,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -72,8 +73,7 @@ public class CA extends AnalysisTool {
 		int numDocs = corpus.size();
 		
 		double[] targetVector = null;
-		List<String> initialTypes = new ArrayList<String>();
-//		List<String> initialTypes = new ArrayList<String>(Arrays.asList(this.properties.getParameterValues("type")));
+		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
 //		if (target != null) this.properties.setParameter("type", "");
 		
 		if (numDocs > 2 && docId == null) { // FIXME CA needs at least 3 columns to function properly
@@ -103,7 +103,7 @@ public class CA extends AnalysisTool {
 		    }
 			
 			if (target != null) {
-				this.doFilter(targetVector, initialTypes);
+				this.doFilter(targetVector, initialTerms);
 			}
 			
 			for (i = 0; i < numDocs; i++) {
@@ -144,7 +144,7 @@ public class CA extends AnalysisTool {
 		    }
 			
 			if (target != null) {
-				this.doFilter(targetVector, initialTypes);
+				this.doFilter(targetVector, initialTerms);
 			}
 			
 			IndexedDocument doc;
@@ -179,11 +179,6 @@ public class CA extends AnalysisTool {
 		double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
 		AnalysisTool.filterTypesByTarget(this.caTypes, targetVector, distance, initialTypes);
 		this.maxOutputDataItemCount = this.caTypes.size();
-	}
-	
-	private static String getCategoryName(int category) {
-		if (category == RawCAType.PART) return "part";
-		else return "word";
 	}
 	
 	public static class CAConverter implements Converter {
@@ -221,27 +216,41 @@ public class CA extends AnalysisTool {
 	        
 			final List<RawCAType> caTypes = ca.caTypes;
 			
-			final double[] dimensions = ca.dimensionPercentages;
-			
-			writer.addAttribute("totalTypes", String.valueOf(ca.maxOutputDataItemCount));
-			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", Map.Entry.class);
-			for (double d : dimensions) {
-				writer.startNode("dimension");
-				writer.addAttribute("percentage", String.valueOf(d));
-				writer.endNode();
-			}
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
+			writer.setValue(String.valueOf(ca.maxOutputDataItemCount));
 			writer.endNode();
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.Entry.class);
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", List.class);
+	        context.convertAnother(ca.dimensionPercentages);
+	        writer.endNode();
+			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.class);
 			for (RawCAType caType : caTypes) {
 				writer.startNode("token");
-				writer.addAttribute("term", caType.getType());
-				writer.addAttribute("category", getCategoryName(caType.getCategory()));
-				writer.addAttribute("rawFreq", String.valueOf(caType.getRawFreq()));
-				writer.addAttribute("relativeFreq", String.valueOf(caType.getRelativeFreq()));
-				writer.addAttribute("cluster", String.valueOf(caType.getCluster()));
-				writer.addAttribute("clusterCenter", String.valueOf(caType.isClusterCenter()));
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
+				writer.setValue(caType.getType());
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "category", String.class);
+				writer.setValue(String.valueOf(caType.getCategory()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+				writer.setValue(String.valueOf(caType.getRawFreq()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
+				writer.setValue(String.valueOf(caType.getRelativeFreq()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cluster", Integer.class);
+				writer.setValue(String.valueOf(caType.getCluster()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "clusterCenter", Boolean.class);
+				writer.setValue(String.valueOf(caType.isClusterCenter()));
+				writer.endNode();
 				
 				double[] vectorDouble = caType.getVector();
 				float[] vectorFloat = new float[vectorDouble.length];
