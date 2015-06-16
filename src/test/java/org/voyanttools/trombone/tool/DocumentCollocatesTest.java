@@ -79,7 +79,7 @@ public class DocumentCollocatesTest {
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
 		documentCollocate = documentCollocatesList.get(0);
-		assertEquals(documentCollocate.getTerm(), "to");
+		assertEquals("the", documentCollocate.getTerm());
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
 		assertEquals("world", documentCollocate.getTerm());
 		
@@ -89,7 +89,7 @@ public class DocumentCollocatesTest {
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
 		documentCollocate = documentCollocatesList.get(0);
-		assertEquals(documentCollocate.getTerm(), "to");
+		assertEquals("the", documentCollocate.getTerm());
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
 		assertEquals("world", documentCollocate.getTerm());
 	}

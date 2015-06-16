@@ -39,12 +39,24 @@ public class Kwic implements Serializable {
 		public static Sort valueOfForgivingly(String string) {
 			string = string.toLowerCase();
 			for (Sort t : values()) {
-				if (t.name().equals(string)) return t;
+				if (t.name().equalsIgnoreCase(string)) return t;
 			}
 			return termAsc;
 		}
 	}
 
+	public enum OverlapStrategy {
+		none, first, merge;
+
+		public static OverlapStrategy valueOfForgivingly(String string) {
+			string = string.toLowerCase();
+			for (OverlapStrategy t : values()) {
+				if (t.name().equals(string)) return t;
+			}
+			return none;
+		}
+	}
+	
 	int docIndex;
 	
 	String query;
@@ -85,8 +97,10 @@ public class Kwic implements Serializable {
 		switch(sort) {
 		case termDesc:
 			return TermDescendingComparator;
-		case positionAsc: // FIXME
-		case positionDesc: // FIXME
+		case positionAsc:
+			return PositionAscendingComparator;
+		case positionDesc:
+			return PositionDescendingComparator;
 		default: // termAsc
 			return TermAscendingComparator;
 		}
@@ -95,15 +109,51 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> TermAscendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
+			int i = kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
 			if (i==0) {
-				return kwic2.position - kwic1.position;
+				return kwic1.position - kwic2.position;
 			}
 			return i;
 		}
 	};
 
 	private static Comparator<Kwic> TermDescendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			if (kwic1.position==kwic2.position) {
+				if (kwic1.docIndex==kwic2.docIndex) {
+					return kwic1.docIndex - kwic2.docIndex;
+				}
+				else {
+					return kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
+				}
+				
+			}
+			else {
+				return kwic2.position - kwic1.position;
+			}
+		}
+	};
+	
+	private static Comparator<Kwic> PositionAscendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			if (kwic1.position==kwic2.position) {
+				if (kwic1.docIndex==kwic2.docIndex) {
+					return kwic1.docIndex - kwic2.docIndex;
+				}
+				else {
+					return kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
+				}
+				
+			}
+			else {
+				return kwic1.position - kwic2.position;
+			}
+		}
+	};
+
+	private static Comparator<Kwic> PositionDescendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
 			int i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
@@ -116,5 +166,15 @@ public class Kwic implements Serializable {
 	
 	public String toString() {
 		return new StringBuilder(String.valueOf(docIndex)).append(".").append(position).append(" (").append(term).append("): ").append(left).append(" ***").append(middle).append("*** ").append(right).toString().replaceAll("\\s+", " ").trim();
+	}
+
+	public String getLeft() {
+		return left;
+	}
+	public String getMiddle() {
+		return middle;
+	}
+	public String getRight() {
+		return right;
 	}
 }

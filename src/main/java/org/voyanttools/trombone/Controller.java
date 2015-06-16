@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -80,8 +81,13 @@ public class Controller {
 		this.parameters = parameters;
 	}
 
-	private static Writer getWriter(FlexibleParameters parameters) {
-		return new OutputStreamWriter(System.out);
+	private static Writer getWriter(FlexibleParameters parameters) throws IOException {
+		if (parameters.containsKey("outputFile")) {
+			return new FileWriter(parameters.getParameterValue("outputFile"));
+		}
+		else {
+			return new OutputStreamWriter(System.out);
+		}
 	}
 	
 	/**
@@ -94,9 +100,17 @@ public class Controller {
 		}
 
 		final FlexibleParameters parameters = new FlexibleParameters(args);
-
-		final Controller controller = new Controller(parameters);
-		controller.run();
+		
+		if (parameters.containsKey("outputFile")) {
+			Writer writer = new FileWriter(parameters.getParameterValue("outputFile"));
+			final Controller controller = new Controller(parameters, writer);		
+			controller.run();
+			writer.close();
+		}
+		else {
+			final Controller controller = new Controller(parameters);		
+			controller.run();
+		}
 	}
 
 	public void run(OutputStream outputStream) throws IOException {

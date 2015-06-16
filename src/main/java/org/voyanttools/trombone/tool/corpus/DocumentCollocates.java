@@ -77,7 +77,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 	 */
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
+		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
 		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 
@@ -92,13 +92,13 @@ public class DocumentCollocates extends AbstractContextTerms {
 
 	List<DocumentCollocate> getCollocates(AtomicReader reader,
 			CorpusMapper corpusMapper, Corpus corpus,
-			Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
+			Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 
 		Keywords stopwords = getStopwords(corpus);
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		FlexibleQueue<DocumentCollocate> queue = new FlexibleQueue<DocumentCollocate>(comparator, limit);
-		for (Map.Entry<Integer, Collection<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
+		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			int lastToken = totalTokens[corpusDocIndex];
@@ -113,7 +113,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 
 	private FlexibleQueue<DocumentCollocate> getCollocates(AtomicReader atomicReader,
 			int luceneDoc, int corpusDocIndex, int lastToken,
-			Collection<DocumentSpansData> documentSpansData, Keywords stopwords) throws IOException {
+			List<DocumentSpansData> documentSpansData, Keywords stopwords) throws IOException {
 		
 		
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(atomicReader, luceneDoc, lastToken, documentSpansData, true);
@@ -148,7 +148,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 
 				int rightend = keywordend + context;
 				if (rightend>lastToken) {rightend=lastToken;}
-				for (int i=keywordend+1; i<rightend+1; i++) {
+				for (int i=keywordend; i<rightend; i++) {
 					contextTotalTokens++;
 					String term = termsOfInterest.get(i).getText();
 					if (stopwords.isKeyword(term)) {continue;}

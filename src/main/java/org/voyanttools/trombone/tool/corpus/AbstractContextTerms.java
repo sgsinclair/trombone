@@ -77,7 +77,7 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		}
 	}
 	
-	protected Map<Integer, Collection<DocumentSpansData>> getDocumentSpansData(CorpusMapper corpusMapper, String[] queries) throws IOException {
+	protected Map<Integer, List<DocumentSpansData>> getDocumentSpansData(CorpusMapper corpusMapper, String[] queries) throws IOException {
 		
 		AtomicReader atomicReader = corpusMapper.getAtomicReader();
 		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
@@ -128,23 +128,24 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		
 		
 		// build a map to organize by document for efficiency
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = new HashMap<Integer, Collection<DocumentSpansData>>();
+		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = new HashMap<Integer, List<DocumentSpansData>>();
 		for (DocumentSpansData dsd : documentSpansDataList) {
 			if (!documentSpansDataMap.containsKey(dsd.luceneDoc)) {
 				documentSpansDataMap.put(dsd.luceneDoc, new ArrayList<DocumentSpansData>());
 			}
 			documentSpansDataMap.get(dsd.luceneDoc).add(dsd);
 		}
+		
 		return documentSpansDataMap;
 	}
 
-	protected Map<Integer, TermInfo> getTermsOfInterest(AtomicReader atomicReader, int luceneDoc, int lastToken, Collection<DocumentSpansData> documentSpansData, boolean fill) throws IOException	{
+	protected Map<Integer, TermInfo> getTermsOfInterest(AtomicReader atomicReader, int luceneDoc, int lastToken, List<DocumentSpansData> documentSpansData, boolean fill) throws IOException	{
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(documentSpansData, lastToken, fill);
 		fillTermsOfInterest(atomicReader, luceneDoc, termsOfInterest);
 		return termsOfInterest;
 	}
 	
-	private Map<Integer, TermInfo> getTermsOfInterest(Collection<DocumentSpansData> documentSpansData, int lastToken, boolean fill)	{
+	private Map<Integer, TermInfo> getTermsOfInterest(List<DocumentSpansData> documentSpansData, int lastToken, boolean fill)	{
 		// construct a set of terms of interest
 		Map<Integer, TermInfo> termsOfInterest = new HashMap<Integer, TermInfo>();
 		for (DocumentSpansData dsd : documentSpansData) {
@@ -164,7 +165,7 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 				}
 				
 				// add right
-				int rightend = keywordend + context;
+				int rightend = keywordend-1 + context;
 				if (rightend>lastToken) {rightend=lastToken;}
 				for (int i = fill ? keywordend : rightend, len = rightend+1; i < len; i++) {
 					termsOfInterest.put(i, null);
@@ -208,7 +209,8 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		}
 		@Override
 		public int compareTo(DocumentSpansData dsd) {
-			return luceneDoc - dsd.luceneDoc;
+			// order by document and then position of first term
+			return  luceneDoc==dsd.luceneDoc ?  spansData[0][0] - dsd.spansData[0][0] : luceneDoc - dsd.luceneDoc;
 		}
 	}
 }

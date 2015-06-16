@@ -125,6 +125,10 @@ public class CorpusMapper extends Filter {
 		}
 		return luceneIdToDocumentIdMap.get(doc);
 	}
+	
+	public int getLuceneIdFromDocumentPosition(int doc) throws IOException {
+		return getLuceneIdFromDocumentId(getDocumentIdFromDocumentPosition(doc));
+	}
 
 	private void build() throws IOException {
 		luceneIdToDocumentIdMap =  new HashMap<Integer, String>();

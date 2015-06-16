@@ -71,7 +71,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries)
 			throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
+		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
 		this.collocates = getCollocates(corpusMapper.getAtomicReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 
@@ -86,7 +86,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 
 	private List<CorpusCollocate> getCollocates(AtomicReader reader,
 			CorpusMapper corpusMapper, Corpus corpus,
-			Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
+			Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		FlexibleParameters localParameters = parameters.clone();
 		localParameters.setParameter("limit", Integer.MAX_VALUE); // we need all collocates for documents in order to determine corpus collocates

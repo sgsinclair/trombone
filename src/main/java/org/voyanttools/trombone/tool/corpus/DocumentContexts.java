@@ -3,7 +3,9 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,22 +32,25 @@ public class DocumentContexts extends AbstractContextTerms {
 	
 	@XStreamOmitField
 	private Comparator<Kwic> comparator;
+	
+	private Kwic.OverlapStrategy overlapStrategy;
 
 	public DocumentContexts(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		contextsSort = Kwic.Sort.valueOfForgivingly(parameters.getParameterValue("sortBy", ""));
 		comparator = Kwic.getComparator(contextsSort);
+		overlapStrategy = Kwic.OverlapStrategy.valueOfForgivingly(parameters.getParameterValue("overlapStrategy", ""));
 	}
 	
 	public int getVersion() {
 		return super.getVersion()+1;
 	}
 
-	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap) throws IOException {
+	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpusMapper.getCorpus().getLastTokenPositions(tokenType);
 		FlexibleQueue<Kwic> queue = new FlexibleQueue(comparator, limit);
-		for (Map.Entry<Integer, Collection<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
+		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			int lastToken = totalTokens[corpusDocIndex];
@@ -62,9 +67,9 @@ public class DocumentContexts extends AbstractContextTerms {
 	
 	
 	private FlexibleQueue<Kwic> getKwics(CorpusMapper corpusMapper, int luceneDoc, int corpusDocumentIndex,
-			int lastToken, Collection<DocumentSpansData> documentSpansData) throws IOException {
+			int lastToken, List<DocumentSpansData> documentSpansData) throws IOException {
 
-		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getAtomicReader(), luceneDoc, lastToken, documentSpansData, false);
+		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getAtomicReader(), luceneDoc, lastToken, documentSpansData, overlapStrategy==Kwic.OverlapStrategy.merge);
 		
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 
@@ -72,39 +77,107 @@ public class DocumentContexts extends AbstractContextTerms {
 		FlexibleQueue<Kwic> queue = new FlexibleQueue<Kwic>(comparator, limit);
 		String document = corpusMapper.getCorpus().getDocument(corpusDocumentIndex).getDocumentString();
 		//String document = atomicReader.document(luceneDoc).get(tokenType.name());
+		
+		// we start by creating a list of all positions in the document, as well as map to help us retrieve the span for each one
+		List<int[]> datas = new ArrayList<int[]>();
+		Map<Integer, String> queriesMap = new HashMap<Integer, String>();
+		
 		for (DocumentSpansData dsd : documentSpansData) {
-			for (int[] data : dsd.spansData) {
-				int keywordstart = data[0];
-				int keywordend = data[1];
-				
-				String middle = StringUtils.substring(document, termsOfInterest.get(keywordstart).getStartOffset(), termsOfInterest.get(keywordend-1).getEndOffset());
-				
-				String[] parts = new String[keywordend-keywordstart];
-				for (int i=0; i<keywordend-keywordstart; i++) {
-					parts[i] = termsOfInterest.get(keywordstart+i).getText();
-				}
-				String analyzedMiddle = StringUtils.join(parts, " ");
-				
-				
-				int leftstart = keywordstart - context;
-				if (leftstart<0) {leftstart=0;}
-				String left = StringUtils.substring(document, termsOfInterest.get(leftstart).getStartOffset(), termsOfInterest.get(keywordstart).getStartOffset());
-
-				int rightend = keywordend + context;
-				if (rightend>lastToken) {rightend=lastToken;}
-				
-				String right = StringUtils.substring(document, termsOfInterest.get(keywordend-1).getEndOffset()+1, termsOfInterest.get(rightend).getEndOffset());
-				queue.offer(new Kwic(corpusDocumentIndex, stripper.strip(dsd.queryString), stripper.strip(analyzedMiddle), keywordstart, stripper.strip(left), stripper.strip(middle), stripper.strip(right)));
+			for (int[] dsddata : dsd.spansData) {
+				datas.add(dsddata);
+				queriesMap.put(dsddata[0], dsd.queryString);
 			}
 		}
 		
-		return queue;
+		Collections.sort(datas, new Comparator<int[]>() {
+		    @Override
+		    public int compare(int[] o1, int[] o2) {
+		        return o1[0] - o2[0];
+		    }
+		});
 		
-	}
+		// now we can go through and consider each position, filtering as needed
 
+		int previousrightend = -1;
+		
+		for (int i=0, len=datas.size(); i<len; i++) {
+			int[] data = datas.get(i);
+
+			int keywordstart = data[0];
+			int keywordend = data[1];
+			
+			String middle = StringUtils.substring(document, termsOfInterest.get(keywordstart).getStartOffset(), termsOfInterest.get(keywordend-1).getEndOffset());
+			
+			String[] parts = new String[keywordend-keywordstart];
+			for (int k=0; k<keywordend-keywordstart; k++) {
+				parts[k] = termsOfInterest.get(keywordstart+k).getText();
+			}
+			String analyzedMiddle = StringUtils.join(parts, " ");
+			
+			
+			int leftstart = keywordstart - context;
+			
+			// check to see if we need to shift left based on previous kwic
+			if (overlapStrategy==Kwic.OverlapStrategy.merge && leftstart<previousrightend) {
+				leftstart = previousrightend < keywordstart ? previousrightend : keywordstart;
+			}
+			
+			if (leftstart<0) {leftstart=0;}
+			
+			// make a simple check to see if we're overlapping with the previous kwic
+			if (overlapStrategy==Kwic.OverlapStrategy.first && leftstart < previousrightend) {continue;}
+			
+			// make a simple check to see if we're overlapping with the previous kwic
+			if (overlapStrategy==Kwic.OverlapStrategy.merge) {
+				if (keywordstart < previousrightend) {continue;} // we have to drop one
+				if (leftstart <= previousrightend) {leftstart=previousrightend+1;}
+			}
+			
+			int rightend = keywordend-1 + context;
+			if (rightend>lastToken) {rightend=lastToken;}
+			
+			
+			if (overlapStrategy==Kwic.OverlapStrategy.merge) { // see if we need to collapse with next one
+				if (i+1<len) { // make sure there's a next one
+					int[] nextData = datas.get(i+1);
+					if (nextData[0]-(context*2)<=rightend) {
+						int span = nextData[1]-keywordstart; // this is the span between the end of this keyword and the start of the next
+						int margin = (int) Math.floor(((context*2)-span)/2);
+						if (margin>context) {margin=context;}
+						if (leftstart<keywordstart-margin) {
+							leftstart=keywordstart-margin;
+							if (leftstart<=previousrightend) {leftstart = previousrightend+1;}
+						}
+						if (rightend<nextData[1]-1+margin) {
+							rightend=nextData[1]-1+margin > lastToken ? lastToken : nextData[1]-1+margin;
+						}
+						i++; // make sure to increment to skip next one
+					}
+				}
+			}
+			
+			
+			String left = leftstart < keywordstart ? StringUtils.substring(document, termsOfInterest.get(leftstart).getStartOffset(), termsOfInterest.get(keywordstart).getStartOffset()) : "";
+			
+			String right = rightend > keywordend-1 ? StringUtils.substring(document, termsOfInterest.get(keywordend-1).getEndOffset(), termsOfInterest.get(rightend).getEndOffset()) : "";
+			
+			queue.offer(new Kwic(corpusDocumentIndex, stripper.strip(queriesMap.get(keywordstart)), stripper.strip(analyzedMiddle), keywordstart, stripper.strip(left), stripper.strip(middle), stripper.strip(right)));
+		
+			previousrightend = rightend;			
+		}
+		
+
+		return queue;
+
+	}
+	
+	List<Kwic> getContexts() {
+		return contexts;
+	}
+	
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		Map<Integer, Collection<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
+		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
 		this.contexts = getKwics(corpusMapper, documentSpansDataMap);
 	}
 
@@ -113,6 +186,16 @@ public class DocumentContexts extends AbstractContextTerms {
 		runQueries(corpusMapper, stopwords, new String[0]); // doesn't make much sense without queries
 	}
 
+	private class DocumentStringSpansDataOccurrence {
+		private String string;
+		private int start;
+		private int end;
+		private DocumentStringSpansDataOccurrence(String string, int start, int end) {
+			this.string = string;
+			this.start = start;
+			this.end = end;
+		}
+	}
 
 
 
