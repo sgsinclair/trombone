@@ -21,9 +21,6 @@
  ******************************************************************************/
 package org.voyanttools.trombone.tool.corpus;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,7 +29,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
@@ -46,14 +42,13 @@ import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.CorpusTermMinimal;
-import org.voyanttools.trombone.model.DocumentTerm;
-import org.voyanttools.trombone.model.Gram;
 import org.voyanttools.trombone.model.Keywords;
-import org.voyanttools.trombone.model.Ngram;
+import org.voyanttools.trombone.model.DocumentNgram;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
+
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
@@ -61,20 +56,39 @@ import org.voyanttools.trombone.util.FlexibleQueue;
  */
 public class DocumentNgrams extends AbstractTerms {
 	
+	@XStreamOmitField
 	private int minLength;
 	
+	@XStreamOmitField
 	private int minRawFreq;
 	
-	private List<Ngram> ngrams = new ArrayList<Ngram>();
+	@XStreamOmitField
+	private int maxLength;
+	
+	private List<DocumentNgram> ngrams = new ArrayList<DocumentNgram>();
+	
+	@XStreamOmitField
+	private Comparator<DocumentNgram> comparator;
+
 
 	public DocumentNgrams(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		minLength = parameters.getParameterIntValue("minLength", 1);
+		maxLength = parameters.getParameterIntValue("maxLength", Integer.MAX_VALUE);
 		minRawFreq = parameters.getParameterIntValue("minRawFreq", 2);
+		DocumentNgram.Sort sort = DocumentNgram.Sort.getForgivingly(parameters);
+		comparator = DocumentNgram.getComparator(sort);
 	}
+	
+	
 
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
+		this.ngrams = getNgrams(corpusMapper, stopwords, queries);
+	}
+	
+
+	List<DocumentNgram> getNgrams(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
 		Corpus corpus = corpusMapper.getCorpus();
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
@@ -111,42 +125,48 @@ public class DocumentNgrams extends AbstractTerms {
 		}
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
-		StringBuilder realStringBuilder = new StringBuilder();
-		String realString;
+		StringBuilder realTermBuilder = new StringBuilder();
+		String realTerm;
+		List<DocumentNgram> allNgrams = new ArrayList<DocumentNgram>();
 		for (Map.Entry<Integer, Map<String, List<int[]>>> docEntry : docTermPositionsMap.entrySet()) {
 			docIndexInCorpus = docEntry.getKey();
 			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpusMapper, corpusMapper.getLuceneIdFromDocumentPosition(docIndexInCorpus), totalTokens[docIndexInCorpus]);
-			List<SimplifiedTermInfo> simplifiedTermInfosToKeepList = new ArrayList<SimplifiedTermInfo>();
 			Map<String, List<int[]>> realStringsMap = new HashMap<String, List<int[]>>();
 			for (Map.Entry<String, List<int[]>> termEntry : docEntry.getValue().entrySet()) {
 //				new Ngram(docIndexInCorpus, term, positions, length)
 				for (int[] positions : termEntry.getValue()) {
 					for (int i=positions[0]; i<positions[1]; i++) {
-						realStringBuilder.append(sparseSimplifiedTermInfoArray[i].term).append(" ");
+						realTermBuilder.append(sparseSimplifiedTermInfoArray[i].term).append(" ");
 					}
-					realString = realStringBuilder.toString();
-					realStringBuilder.setLength(0);
-					if (realStringsMap.containsKey(realString) == false) {
-						realStringsMap.put(realString, new ArrayList<int[]>());
+					realTerm = realTermBuilder.toString();
+					realTermBuilder.setLength(0);
+					if (realStringsMap.containsKey(realTerm) == false) {
+						realStringsMap.put(realTerm, new ArrayList<int[]>());
 					}
-					realStringsMap.get(realString).add(new int[]{positions[0], positions[1]-1});
+					realStringsMap.get(realTerm).add(new int[]{positions[0], positions[1]-1});
 				}
 			}
-			List<Ngram> ngrams = new ArrayList<Ngram>();
-			for (Map.Entry<String, List<int[]>> realStringMap : realStringsMap.entrySet()) {
-				List<int[]> values = realStringMap.getValue();
-				ngrams.add(new Ngram(docIndexInCorpus, realStringMap.getKey(), values, values.get(0)[1]+1-values.get(0)[0]));
+			List<DocumentNgram> ngrams = new ArrayList<DocumentNgram>();
+			for (Map.Entry<String, List<int[]>> realTermMap : realStringsMap.entrySet()) {
+				List<int[]> values = realTermMap.getValue();
+				ngrams.add(new DocumentNgram(docIndexInCorpus, realTermMap.getKey(), values, values.get(0)[1]+1-values.get(0)[0]));
 			}
 			ngrams = getNextNgrams(ngrams, sparseSimplifiedTermInfoArray, docIndexInCorpus, 2);			
 			//ngrams = getFilteredNgrams(ngrams, totalTokens[docIndexInCorpus]);
-			this.ngrams.addAll(ngrams);
+			allNgrams.addAll(ngrams);
 		}
+		return allNgrams;
 	}
 
 	@Override
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		this.ngrams.addAll(getNgrams(corpusMapper, stopwords));
+	}
+
+	List<DocumentNgram> getNgrams(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
+		FlexibleQueue<DocumentNgram> queue = new FlexibleQueue<DocumentNgram>(comparator, start+limit);
 		
 		DocIdSetIterator it = corpusMapper.getDocIdBitSet().iterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
@@ -158,7 +178,6 @@ public class DocumentNgrams extends AbstractTerms {
 			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpusMapper, luceneDoc, lastToken);
 			
 			Map<String, List<int[]>> stringPositionsMap = new HashMap<String, List<int[]>>();
-			List<Gram> grams = new ArrayList<Gram>();
 			for (int i=0, len=sparseSimplifiedTermInfoArray.length; i<len; i++) {
 				if (sparseSimplifiedTermInfoArray[i]!=null && sparseSimplifiedTermInfoArray[i].term.isEmpty()==false) {
 					if (stringPositionsMap.containsKey(sparseSimplifiedTermInfoArray[i].term)==false) {
@@ -172,56 +191,30 @@ public class DocumentNgrams extends AbstractTerms {
 				}
 			}
 			
-			List<Ngram> ngrams = getNgramsFromStringPositions(stringPositionsMap, corpusDocumentIndex, 1);
+			List<DocumentNgram> ngrams = getNgramsFromStringPositions(stringPositionsMap, corpusDocumentIndex, 1);
 			ngrams = getNextNgrams(ngrams, sparseSimplifiedTermInfoArray, corpusDocumentIndex, 2);
 			
 			ngrams = getFilteredNgrams(ngrams, lastToken);
 			
-			/*
-			String document = corpus.getDocument(corpusDocumentIndex).getDocumentString();
-//			String document = atomicReader.document(luceneDoc).get(tokenType.name());
-			StringBuilder positionsBuilder = new StringBuilder();
-			for (int i=0, ilen=ngrams.size(); i<ilen; i++) {
-				Ngram ngram = ngrams.get(i);
-				positionsBuilder.setLength(0); 
-				String original = "";
-				for (int j=0, jlen= ngram.getPositions().size(); j<jlen; j++) {
-					int[] positions = ngram.getPositions().get(j);
-					positionsBuilder.append(positions[0]).append(",").append(positions[1]);
-					if (j+1<jlen) positionsBuilder.append(";");
-					if (j==0) {
-						original = document.substring(sparseSimplifiedTermInfoArray[positions[0]].startOffset, sparseSimplifiedTermInfoArray[positions[1]].endOffset).replaceAll("\\s+", " ");
-					}
+			for (DocumentNgram ngram : ngrams) {
+				if (ngram.getLength()>=minLength && ngram.getLength()<=maxLength) {
+					queue.offer(ngram);
 				}
 			}
-			*/
-			/*
-			System.out.println("{\n\tlastPosition: "+lastToken+",\n\tstrings: [");
-			for (int i=0, ilen=ngrams.size(); i<ilen; i++) {
-				Ngram ngram = ngrams.get(i);
-				System.out.println("\t\t{\n\t\t\tstring: \""+ngram.term+"\",\n\t\t\tlength: "+ngram.length+",\n\t\t\tpositions: [");
-				for (int j=0, jlen= ngram.positions.size(); j<jlen; j++) {
-					int positions[] = ngram.positions.get(j);
-					System.out.println("\t\t\t\t["+positions[0]+","+positions[1]+"]"+(j+1==jlen ? "" : ","));
-				}
-				System.out.println("\t\t\t]\n\t\t}"+(i+1==ilen ? "" : ","));
-			}
-			System.out.println("\t]\n}");
-			*/
-			
-			this.ngrams.addAll(ngrams);
 		}
+		
+		return queue.getOrderedList(start);
 		
 		
 	}
 	
-	private List<Ngram> getFilteredNgrams(List<Ngram> ngrams, int lastToken) {
+	private List<DocumentNgram> getFilteredNgrams(List<DocumentNgram> ngrams, int lastToken) {
 		// sort by length
 		Collections.sort(ngrams);
 		
-		List<Ngram> filteredNgrams = new ArrayList<Ngram>();
+		List<DocumentNgram> filteredNgrams = new ArrayList<DocumentNgram>();
 		boolean[] occupied = new boolean[lastToken];
-		for (Ngram ngram : ngrams) {
+		for (DocumentNgram ngram : ngrams) {
 			if (ngram.getLength()<minLength) {continue;}
 			boolean keep = true;
 			for (int[] positions : ngram.getPositions()) {
@@ -242,9 +235,9 @@ public class DocumentNgrams extends AbstractTerms {
 		return filteredNgrams;		
 	}
 	
-	private List<Ngram> getNextNgrams(List<Ngram> ngrams, SimplifiedTermInfo[] sparseSimplifiedTermInfoArray, int corpusDocumentIndex, int length) {
+	private List<DocumentNgram> getNextNgrams(List<DocumentNgram> ngrams, SimplifiedTermInfo[] sparseSimplifiedTermInfoArray, int corpusDocumentIndex, int length) {
 		Map<String, List<int[]>> stringPositionsMap = new HashMap<String, List<int[]>>();
-		for (Ngram ngram : ngrams) {
+		for (DocumentNgram ngram : ngrams) {
 			for (int[] positions : ngram.getPositions()) {
 				for (int i=positions[1]+1; i<sparseSimplifiedTermInfoArray.length;i++) {
 					if (sparseSimplifiedTermInfoArray[i]!=null) {
@@ -264,25 +257,26 @@ public class DocumentNgrams extends AbstractTerms {
 				}
 			}
 		}
-		List<Ngram> newngrams = getNgramsFromStringPositions(stringPositionsMap, corpusDocumentIndex, length);
-		if (newngrams.isEmpty()==false) {
+		List<DocumentNgram> newngrams = getNgramsFromStringPositions(stringPositionsMap, corpusDocumentIndex, length);
+		if (newngrams.isEmpty()==false && length <= maxLength) {
 			newngrams.addAll(getNextNgrams(newngrams, sparseSimplifiedTermInfoArray, corpusDocumentIndex, length+1));
 		}
 		return newngrams;
 	}
 	
 
-	private List<Ngram> getNgramsFromStringPositions(Map<String, List<int[]>> stringPositionsMap, int corpusDocumentIndex, int length) {
-		List<Ngram> ngrams = new ArrayList<Ngram>();
+	private List<DocumentNgram> getNgramsFromStringPositions(Map<String, List<int[]>> stringPositionsMap, int corpusDocumentIndex, int length) {
+		List<DocumentNgram> ngrams = new ArrayList<DocumentNgram>();
 		for (Map.Entry<String, List<int[]>> stringPositions : stringPositionsMap.entrySet()) {
 			List<int[]> values = stringPositions.getValue();
 			if (values.size()>=minRawFreq) {
-				ngrams.add(new Ngram(corpusDocumentIndex, stringPositions.getKey(), values, length));
+				ngrams.add(new DocumentNgram(corpusDocumentIndex, stringPositions.getKey(), values, length));
 			}
 		}
 		return ngrams;
 	}
-	
+
+	/*
 	private List<Gram> getFilteredGrams(List<Gram> grams, int lastToken) {
 		
 		// sort by length
@@ -302,7 +296,10 @@ public class DocumentNgrams extends AbstractTerms {
 		return grams;
 		
 	}
+	*/
 	
+	
+	/*
 	private List<Gram> getNextGrams(String[] termsArray, List<Gram> grams) {
 		System.err.println(grams.get(0).getLength()+" "+grams.size());
 		List<Gram> newgrams = new ArrayList<Gram>();
@@ -332,6 +329,7 @@ public class DocumentNgrams extends AbstractTerms {
 		}
 		return newgrams;
 	}
+	*/
 
 	private SimplifiedTermInfo[] getSparseSimplifiedTermInfoArray(CorpusMapper corpusMapper, int luceneDoc, int lastTokenOffset) throws IOException {
 		
@@ -382,7 +380,7 @@ public class DocumentNgrams extends AbstractTerms {
 	}
 
 
-	List<Ngram> getNgrams() {
+	List<DocumentNgram> getNgrams() {
 		return ngrams;
 	}
 }

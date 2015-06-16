@@ -70,7 +70,7 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 		Keywords stopwords = getStopwords(corpusMapper.getCorpus());
 		if (parameters.containsKey("query")) {
 			String[] queries =  getQueries(); // parameters.getParameterValues("query");
-			if (queries.length==1 && queries[0].isEmpty()) {
+			if (queries.length==0 || (queries.length==1 && queries[0].isEmpty())) {
 				runAllTerms(corpusMapper, stopwords);
 			}
 			runQueries(corpusMapper, stopwords, queries);

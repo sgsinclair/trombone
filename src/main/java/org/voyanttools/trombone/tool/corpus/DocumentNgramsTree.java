@@ -20,7 +20,7 @@ import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Gram;
 import org.voyanttools.trombone.model.Keywords;
-import org.voyanttools.trombone.model.Ngram;
+import org.voyanttools.trombone.model.DocumentNgram;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -49,7 +49,7 @@ public class DocumentNgramsTree extends DocumentNgrams {
 		createTree(getNgrams());
 	}
 	
-	private void createTree(List<Ngram> ngrams) {
+	private void createTree(List<DocumentNgram> ngrams) {
 		// TODO Auto-generated method stub
 		
 	}
