@@ -173,5 +173,4 @@ public class DocumentNgram implements Comparable<DocumentNgram> {
 		}
 		
 	};
-
 }

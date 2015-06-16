@@ -69,6 +69,17 @@ public class DocumentNgrams extends AbstractTerms {
 	
 	@XStreamOmitField
 	private Comparator<DocumentNgram> comparator;
+	
+	private enum Filter {
+		NONE, LENGTHFIRST, RAWFREQFIRST, POSITIONFIRST;
+		private static Filter getForgivingly(FlexibleParameters parameters) {
+			String filter = parameters.getParameterValue("overlapFilter", "").toUpperCase();
+			String sortPrefix = "NONE"; // default
+			if (filter.startsWith("LENGTH")) {return LENGTHFIRST;}
+			else if (filter.startsWith("RAWFREQ")) {return RAWFREQFIRST;}
+			else {return NONE;}
+		}
+	}
 
 
 	public DocumentNgrams(Storage storage, FlexibleParameters parameters) {
@@ -101,6 +112,7 @@ public class DocumentNgrams extends AbstractTerms {
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		Map<Integer, Map<String, List<int[]>>> docTermPositionsMap = new HashMap<Integer, Map<String, List<int[]>>>();
+		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 //			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = spanQueryEntry.getValue().getSpans(corpusMapper.getAtomicReader().getContext(), docIdSet, termContexts);	
@@ -128,6 +140,7 @@ public class DocumentNgrams extends AbstractTerms {
 		StringBuilder realTermBuilder = new StringBuilder();
 		String realTerm;
 		List<DocumentNgram> allNgrams = new ArrayList<DocumentNgram>();
+		OverlapFilter filter = getDocumentNgramsOverlapFilter(parameters);
 		for (Map.Entry<Integer, Map<String, List<int[]>>> docEntry : docTermPositionsMap.entrySet()) {
 			docIndexInCorpus = docEntry.getKey();
 			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpusMapper, corpusMapper.getLuceneIdFromDocumentPosition(docIndexInCorpus), totalTokens[docIndexInCorpus]);
@@ -153,7 +166,7 @@ public class DocumentNgrams extends AbstractTerms {
 			}
 			ngrams = getNextNgrams(ngrams, sparseSimplifiedTermInfoArray, docIndexInCorpus, 2);			
 			//ngrams = getFilteredNgrams(ngrams, totalTokens[docIndexInCorpus]);
-			allNgrams.addAll(ngrams);
+			allNgrams.addAll(filter.getFilteredNgrams(ngrams, totalTokens[docIndexInCorpus]));
 		}
 		return allNgrams;
 	}
@@ -168,6 +181,7 @@ public class DocumentNgrams extends AbstractTerms {
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		FlexibleQueue<DocumentNgram> queue = new FlexibleQueue<DocumentNgram>(comparator, start+limit);
 		
+		OverlapFilter filter = getDocumentNgramsOverlapFilter(parameters);
 		DocIdSetIterator it = corpusMapper.getDocIdBitSet().iterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
 			int luceneDoc = it.docID();
@@ -194,7 +208,7 @@ public class DocumentNgrams extends AbstractTerms {
 			List<DocumentNgram> ngrams = getNgramsFromStringPositions(stringPositionsMap, corpusDocumentIndex, 1);
 			ngrams = getNextNgrams(ngrams, sparseSimplifiedTermInfoArray, corpusDocumentIndex, 2);
 			
-			ngrams = getFilteredNgrams(ngrams, lastToken);
+			ngrams = filter.getFilteredNgrams(ngrams, lastToken);
 			
 			for (DocumentNgram ngram : ngrams) {
 				if (ngram.getLength()>=minLength && ngram.getLength()<=maxLength) {
@@ -208,6 +222,7 @@ public class DocumentNgrams extends AbstractTerms {
 		
 	}
 	
+	/*
 	private List<DocumentNgram> getFilteredNgrams(List<DocumentNgram> ngrams, int lastToken) {
 		// sort by length
 		Collections.sort(ngrams);
@@ -234,6 +249,7 @@ public class DocumentNgrams extends AbstractTerms {
 		}
 		return filteredNgrams;		
 	}
+	*/
 	
 	private List<DocumentNgram> getNextNgrams(List<DocumentNgram> ngrams, SimplifiedTermInfo[] sparseSimplifiedTermInfoArray, int corpusDocumentIndex, int length) {
 		Map<String, List<int[]>> stringPositionsMap = new HashMap<String, List<int[]>>();
@@ -356,7 +372,65 @@ public class DocumentNgrams extends AbstractTerms {
 		}
 		return simplifiedTermInfoArray;
 	}
+	
+	private OverlapFilter getDocumentNgramsOverlapFilter(FlexibleParameters parameters) {
+		Filter filter = Filter.getForgivingly(parameters);
+		switch (filter) {
+			case LENGTHFIRST: return new LengthFirstOverlapFilter();
+			case RAWFREQFIRST: return new RawFreqFirstOverlapFilter();
+			default: return new NoOverlapFilter();
+		}
+	}
 
+
+	private interface OverlapFilter {
+		List<DocumentNgram> getFilteredNgrams(List<DocumentNgram> ngrams, int lastToken);
+	}
+	
+	private abstract class FirstOverlapFilter implements OverlapFilter {
+		private Comparator<DocumentNgram> comparator;
+		private FirstOverlapFilter(Comparator<DocumentNgram> comparator) {
+			this.comparator = comparator;
+		}
+		public List<DocumentNgram> getFilteredNgrams(List<DocumentNgram> ngrams, int lastToken) {
+			Collections.sort(ngrams, comparator);
+			List<DocumentNgram> filteredNgrams = new ArrayList<DocumentNgram>();
+			boolean[] occupied = new boolean[lastToken];
+			for (DocumentNgram ngram : ngrams) {
+				boolean keep = true;
+				for (int[] positions : ngram.getPositions()) {
+					for (int i=positions[0]; i<positions[1]+1; i++) {
+						if (i>=lastToken || occupied[i]) {
+							keep=false;
+							break;
+						}
+						else {occupied[i]=true;}
+					}
+				}
+				if (keep) {
+					filteredNgrams.add(ngram);
+					if (filteredNgrams.size()>=limit) {break;}
+				}
+			}
+			return filteredNgrams;		
+		}
+	}
+	
+	private class NoOverlapFilter implements OverlapFilter {
+		public List<DocumentNgram> getFilteredNgrams(List<DocumentNgram> ngrams, int lastToken) {
+			return ngrams;
+		}
+	}
+	private class LengthFirstOverlapFilter extends FirstOverlapFilter {
+		private LengthFirstOverlapFilter() {
+			super(DocumentNgram.getComparator(DocumentNgram.Sort.LENGTHDESC));
+		}
+	}
+	private class RawFreqFirstOverlapFilter extends FirstOverlapFilter {
+		private RawFreqFirstOverlapFilter() {
+			super(DocumentNgram.getComparator(DocumentNgram.Sort.RAWFREQDESC));
+		}
+	}
 
 	private class SimplifiedTermInfo {
 		private String term;

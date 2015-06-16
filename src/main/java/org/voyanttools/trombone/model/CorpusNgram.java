@@ -69,6 +69,10 @@ public class CorpusNgram {
 			return TermAscendingComparator;
 		case TERMDESC:
 			return TermDescendingComparator;
+		case LENGTHASC:
+			return LengthAscendingComparator;
+		case LENGTHDESC:
+			return LengthDescendingComparator;
 		default: // rawFrequencyDesc
 			return RawFrequencyDescendingComparator;
 		}	
