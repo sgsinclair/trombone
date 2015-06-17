@@ -108,7 +108,6 @@ public class DocumentNgrams extends AbstractTerms {
 //		int size = start+limit;
 ////		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
 //		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
-		int lastDoc = -1;
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		Map<Integer, Map<String, List<int[]>>> docTermPositionsMap = new HashMap<Integer, Map<String, List<int[]>>>();
@@ -117,6 +116,7 @@ public class DocumentNgrams extends AbstractTerms {
 //			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = spanQueryEntry.getValue().getSpans(corpusMapper.getAtomicReader().getContext(), docIdSet, termContexts);	
 			Map<Integer, List<int[]>> documentAndPositionsMap = new HashMap<Integer, List<int[]>>();
+			int lastDoc = -1;
 			while(spans.next()) {
 				int doc = spans.doc();
 				if (doc != lastDoc) {
@@ -134,6 +134,7 @@ public class DocumentNgrams extends AbstractTerms {
 				}
 				docTermPositionsMap.get(doc).put(queryString, entry.getValue());
 			}
+			documentAndPositionsMap.clear();
 		}
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
