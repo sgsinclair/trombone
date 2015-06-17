@@ -35,7 +35,7 @@ public class CorpusNgram {
 	private String term;
 	private int rawFreq;
 	private int length;
-	private int[] rawFreqs;
+	private int[] distributions;
 
 	@XStreamOmitField
 	private transient String normalizedString = null;
@@ -49,7 +49,7 @@ public class CorpusNgram {
 	public CorpusNgram(String term, int length, int[] rawFreqs) {
 		this.term = term;
 		this.length = length;
-		this.rawFreqs = rawFreqs;
+		this.distributions = rawFreqs;
 		this.rawFreq = 0;
 		for (int i : rawFreqs) {
 			this.rawFreq+=i;

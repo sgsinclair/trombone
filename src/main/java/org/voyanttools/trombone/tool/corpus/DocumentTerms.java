@@ -220,6 +220,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 								else {
 									freq = (int) termsEnum.totalTermFreq();
 								}
+								total+=freq;
 								float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
 								DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
 								queue.offer(documentTerm);
