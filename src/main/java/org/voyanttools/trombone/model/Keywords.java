@@ -29,6 +29,7 @@ import java.net.URISyntaxException;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -126,7 +127,7 @@ public class Keywords {
 	
 	public void sort() {
 		List<String> strings = new ArrayList<String>(keywords);
-		strings.sort(new Comparator<String>() {
+		Collections.sort(strings, new Comparator<String>() {
 			@Override
 			public int compare(String s1, String s2) {
 				return Normalizer.normalize(s1, Normalizer.Form.NFD).compareToIgnoreCase(Normalizer.normalize(s2, Normalizer.Form.NFD));
