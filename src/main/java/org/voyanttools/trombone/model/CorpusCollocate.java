@@ -99,7 +99,6 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	private static Comparator<CorpusCollocate> ContextTermRawFrequencyAscendingComparator =  new Comparator<CorpusCollocate>() {
 		@Override
 		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
-			
 			return corpusCollocate1.contextTermRawFreq==corpusCollocate2.contextTermRawFreq ?
 					corpusCollocate1.compareTo(corpusCollocate2) :
 					Integer.compare(corpusCollocate1.contextTermRawFreq, corpusCollocate2.contextTermRawFreq);
@@ -109,7 +108,9 @@ public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	private static Comparator<CorpusCollocate> ContextTermRawFrequencyDescendingComparator =  new Comparator<CorpusCollocate>() {
 		@Override
 		public int compare(CorpusCollocate corpusCollocate1, CorpusCollocate corpusCollocate2) {
-			return corpusCollocate1.compareTo(corpusCollocate2); // this is essentially the default comparasion algorithm, reversed
+			return corpusCollocate1.contextTermRawFreq==corpusCollocate2.contextTermRawFreq ?
+					corpusCollocate1.compareTo(corpusCollocate2) :
+					Integer.compare(corpusCollocate2.contextTermRawFreq, corpusCollocate1.contextTermRawFreq);
 		}
 	};
 
