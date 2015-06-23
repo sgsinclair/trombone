@@ -120,6 +120,8 @@ public class DocumentCollocates extends AbstractContextTerms {
 
 		Map<String, Map<String, AtomicInteger>> mapOfTermsMap = new HashMap<String, Map<String, AtomicInteger>>();
 		
+		Map<String, Integer> queryStringFrequencyMap = new HashMap<String, Integer>();
+		
 		// this keeps track of the terms we want to lookup total document frequencies
 		Map<String, Integer> stringsOfInterestMap = new HashMap<String, Integer>();
 		
@@ -128,10 +130,12 @@ public class DocumentCollocates extends AbstractContextTerms {
 
 			Map<String, AtomicInteger> termsMap = new HashMap<String, AtomicInteger>();
 			
+			queryStringFrequencyMap.put(dsd.queryString, dsd.spansData.length);
+			
 			int contextTotalTokens = 0;
 
 			for (int[] data : dsd.spansData) {
-				
+								
 				int keywordstart = data[0];
 				int keywordend = data[1];
 				
@@ -146,6 +150,12 @@ public class DocumentCollocates extends AbstractContextTerms {
 					else {termsMap.put(term, new AtomicInteger(1));}
 				}
 
+				for (int i=keywordstart; i<keywordend; i++) {
+					String term = termsOfInterest.get(i).getText();
+					if (stopwords.isKeyword(term)) {continue;}
+					stringsOfInterestMap.put(term, 0);
+				}
+				
 				int rightend = keywordend + context;
 				if (rightend>lastToken) {rightend=lastToken;}
 				for (int i=keywordend; i<rightend; i++) {
@@ -185,6 +195,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 		
 		for (Map.Entry<String, Map<String, AtomicInteger>> keywordMapEntry : mapOfTermsMap.entrySet()) {
 			String keyword = keywordMapEntry.getKey();
+			int keywordContextRawFrequency = queryStringFrequencyMap.get(keyword);
 			
 			Map<String, AtomicInteger> termsMap = keywordMapEntry.getValue();
 
@@ -194,12 +205,19 @@ public class DocumentCollocates extends AbstractContextTerms {
 				contextTotalTokens += termsMapEntry.getValue().intValue();
 			}
 			
+			/*
+			 * 	public DocumentCollocate(int corpusDocumentIndex, String keyword, String term,
+			int keywordContextRawFrequency, int termContextRawFrequency, int termDocumentRawFrequency,
+			int totalContextTokens, int totalDocumentTokens) {
+
+			 */
 			// and now to create document collocate objects
 			for (Map.Entry<String, AtomicInteger> termsMapEntry : termsMap.entrySet()) {
 				String term = termsMapEntry.getKey();
-				int documentTermRawFrequency = stringsOfInterestMap.get(term);
-				int contextTermRawFrequency = termsMapEntry.getValue().intValue();
-				DocumentCollocate documentCollocate = new DocumentCollocate(corpusDocIndex, keyword, term, contextTermRawFrequency, ((float) contextTermRawFrequency)/contextTotalTokens, documentTermRawFrequency, ((float) documentTermRawFrequency)/documentTotalTokens);
+				int termDocumentRawFrequency = stringsOfInterestMap.get(term);
+				int termContextRawFrequency = termsMapEntry.getValue().intValue();
+				DocumentCollocate documentCollocate = new DocumentCollocate(corpusDocIndex, keyword, term, keywordContextRawFrequency, termContextRawFrequency, termDocumentRawFrequency, contextTotalTokens, documentTotalTokens);
+//				DocumentCollocate documentCollocate = new DocumentCollocate(corpusDocIndex, keyword, term, contextTermRawFrequency, ((float) contextTermRawFrequency)/contextTotalTokens, documentTermRawFrequency, ((float) documentTermRawFrequency)/documentTotalTokens);
 				documentCollocatesQueue.offer(documentCollocate);
 			}
 			

@@ -121,7 +121,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 				}
 				contextTermDocumentCollocatesMap.get(contextTerm).add(documentCollocate);
 				if (!seenDocumentIds.contains(documentCollocate.getDocIndex())) {
-					keywordRawFrequency += documentCollocate.getDocumentRawFrequency();
+					keywordRawFrequency += documentCollocate.getKeywordContextRawFrequency();
 					seenDocumentIds.add(documentCollocate.getDocIndex());
 				}
 			}

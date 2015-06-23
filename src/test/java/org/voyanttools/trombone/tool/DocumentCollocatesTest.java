@@ -43,7 +43,7 @@ public class DocumentCollocatesTest {
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
 		documentCollocate = documentCollocatesList.get(0);
-		assertEquals(documentCollocate.getTerm(), "should");
+		assertEquals("1", documentCollocate.getTerm());
 
 		// run with terms sort
 		parameters.setParameter("sort", "termAsc");
@@ -59,7 +59,7 @@ public class DocumentCollocatesTest {
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
 		documentCollocate = documentCollocatesList.get(0);
-		assertEquals("should", documentCollocate.getTerm());
+		assertEquals("1", documentCollocate.getTerm());
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
 		assertEquals("world", documentCollocate.getTerm());
 		
@@ -79,7 +79,7 @@ public class DocumentCollocatesTest {
 		documentCollocates.run();
 		documentCollocatesList = documentCollocates.getDocumentCollocates();
 		documentCollocate = documentCollocatesList.get(0);
-		assertEquals("the", documentCollocate.getTerm());
+		assertEquals("1", documentCollocate.getTerm());
 		documentCollocate = documentCollocatesList.get(documentCollocatesList.size()-1);
 		assertEquals("world", documentCollocate.getTerm());
 		

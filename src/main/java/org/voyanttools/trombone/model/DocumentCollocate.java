@@ -37,16 +37,17 @@ public class DocumentCollocate  implements Serializable {
 
 	private int docIndex;
 	private String keyword;
+	private int keywordContextRawFrequency;
 	private String term;
 	@XStreamOmitField
 	private String normalizedString = null;
 	@XStreamOmitField
 	private String normalizedTerm;
-	private int raw;
-	private float rel;
-	private int docRaw;
-	private float docRel;
-	private float contextDocRelDiff;
+	private int termContextRawFrequency;
+	private float termContextRelativeFrequency;
+	private int termDocumentRawFrequency;
+	private float termDocumentRelativeFrequency;
+	private float termContextDocumentRelativeFrequencyDifference;
 	
 	public enum Sort {
 		termAsc,
@@ -88,16 +89,17 @@ public class DocumentCollocate  implements Serializable {
 	}
 	
 	public DocumentCollocate(int corpusDocumentIndex, String keyword, String term,
-			int contextTermRawFrequency, float contextTermRelativeFrequency, int documentTermRawFrequency,
-			float documentTermRelativeFrequency) {
+			int keywordContextRawFrequency, int termContextRawFrequency, int termDocumentRawFrequency,
+			int contextTotalTokens, int documentTotalTokens) {
 		this.docIndex = corpusDocumentIndex;
 		this.keyword = keyword;
+		this.keywordContextRawFrequency = keywordContextRawFrequency;
 		this.term = term;
-		this.raw = contextTermRawFrequency;
-		this.rel = contextTermRelativeFrequency;
-		this.docRaw = documentTermRawFrequency;
-		this.docRel = documentTermRelativeFrequency;
-		contextDocRelDiff = contextTermRelativeFrequency-documentTermRelativeFrequency;
+		this.termContextRawFrequency = termContextRawFrequency;
+		this.termContextRelativeFrequency = termContextRawFrequency / contextTotalTokens;
+		this.termDocumentRawFrequency = termDocumentRawFrequency;
+		this.termDocumentRelativeFrequency = termDocumentRawFrequency / documentTotalTokens;
+		termContextDocumentRelativeFrequencyDifference = termContextRelativeFrequency-termDocumentRelativeFrequency;
 		
 	}
 
@@ -130,11 +132,11 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			
-			if (documentCollocate1.contextDocRelDiff==documentCollocate2.contextDocRelDiff) {
+			if (documentCollocate1.termContextDocumentRelativeFrequencyDifference==documentCollocate2.termContextDocumentRelativeFrequencyDifference) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.contextDocRelDiff > documentCollocate2.contextDocRelDiff ? -1 : 1;
+				return documentCollocate1.termContextDocumentRelativeFrequencyDifference > documentCollocate2.termContextDocumentRelativeFrequencyDifference ? -1 : 1;
 			}
 		}
 		
@@ -145,11 +147,11 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			
-			if (documentCollocate1.contextDocRelDiff==documentCollocate2.contextDocRelDiff) {
+			if (documentCollocate1.termContextDocumentRelativeFrequencyDifference==documentCollocate2.termContextDocumentRelativeFrequencyDifference) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate2.contextDocRelDiff > documentCollocate1.contextDocRelDiff ? 1 : -1;
+				return documentCollocate2.termContextDocumentRelativeFrequencyDifference > documentCollocate1.termContextDocumentRelativeFrequencyDifference ? 1 : -1;
 			}
 		}
 		
@@ -159,11 +161,11 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.raw==documentCollocate2.raw) {
+			if (documentCollocate1.termContextRawFrequency==documentCollocate2.termContextRawFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate2.raw - documentCollocate1.raw;
+				return documentCollocate2.termContextRawFrequency - documentCollocate1.termContextRawFrequency;
 			}
 		}
 		
@@ -173,11 +175,11 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.raw==documentCollocate2.raw) {
+			if (documentCollocate1.termContextRawFrequency==documentCollocate2.termContextRawFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.raw - documentCollocate2.raw;
+				return documentCollocate1.termContextRawFrequency - documentCollocate2.termContextRawFrequency;
 			}
 		}
 		
@@ -187,7 +189,7 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {			
 			if (documentCollocate1.term.equals(documentCollocate2.term)) {
-				return documentCollocate1.contextDocRelDiff > documentCollocate2.contextDocRelDiff ? 1 : -1;
+				return documentCollocate1.termContextDocumentRelativeFrequencyDifference > documentCollocate2.termContextDocumentRelativeFrequencyDifference ? 1 : -1;
 			}
 			else {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
@@ -199,7 +201,7 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {			
 			if (documentCollocate1.term.equals(documentCollocate2.term)) {
-				return documentCollocate1.contextDocRelDiff > documentCollocate2.contextDocRelDiff ? 1 : -1;
+				return documentCollocate1.termContextDocumentRelativeFrequencyDifference > documentCollocate2.termContextDocumentRelativeFrequencyDifference ? 1 : -1;
 			}
 			else {
 				return documentCollocate2.getNormalizedTerm().compareTo(documentCollocate1.getNormalizedTerm());
@@ -211,11 +213,11 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.rel==documentCollocate2.rel) {
+			if (documentCollocate1.termContextRelativeFrequency==documentCollocate2.termContextRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.rel > documentCollocate2.rel ? -1 : 1;
+				return documentCollocate1.termContextRelativeFrequency > documentCollocate2.termContextRelativeFrequency ? -1 : 1;
 			}
 		}
 		
@@ -225,11 +227,11 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.rel==documentCollocate2.rel) {
+			if (documentCollocate1.termContextRelativeFrequency==documentCollocate2.termContextRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate1.rel > documentCollocate2.rel ? 1 : -1;
+				return documentCollocate1.termContextRelativeFrequency > documentCollocate2.termContextRelativeFrequency ? 1 : -1;
 			}
 		}
 		
@@ -239,11 +241,11 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.docRel==documentCollocate2.docRel) {
+			if (documentCollocate1.termDocumentRelativeFrequency==documentCollocate2.termDocumentRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return Float.compare(documentCollocate2.docRel, documentCollocate1.docRel);
+				return Float.compare(documentCollocate2.termDocumentRelativeFrequency, documentCollocate1.termDocumentRelativeFrequency);
 			}
 		}
 		
@@ -253,11 +255,11 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.docRel==documentCollocate2.docRel) {
+			if (documentCollocate1.termDocumentRelativeFrequency==documentCollocate2.termDocumentRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return Float.compare(documentCollocate1.docRel, documentCollocate2.docRel);
+				return Float.compare(documentCollocate1.termDocumentRelativeFrequency, documentCollocate2.termDocumentRelativeFrequency);
 			}
 		}
 		
@@ -267,11 +269,11 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.docRaw==documentCollocate2.docRaw) {
+			if (documentCollocate1.termDocumentRawFrequency==documentCollocate2.termDocumentRawFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate2.docRaw - documentCollocate1.docRaw;
+				return documentCollocate2.termDocumentRawFrequency - documentCollocate1.termDocumentRawFrequency;
 			}
 		}
 		
@@ -281,17 +283,17 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			if (documentCollocate1.docRel==documentCollocate2.docRel) {
+			if (documentCollocate1.termDocumentRelativeFrequency==documentCollocate2.termDocumentRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
 			else {
-				return documentCollocate2.docRaw - documentCollocate1.docRaw;
+				return documentCollocate2.termDocumentRawFrequency - documentCollocate1.termDocumentRawFrequency;
 			}
 		}
 		
 	};
 	public String toString() {
-		return "("+keyword+") "+term+": "+raw+" ("+rel+") / "+docRaw+" ("+docRel+"); difference: "+contextDocRelDiff;
+		return "("+keyword+") "+term+": "+termContextRawFrequency+" ("+termContextRelativeFrequency+") / "+termDocumentRawFrequency+" ("+termDocumentRelativeFrequency+"); difference: "+termContextDocumentRelativeFrequencyDifference;
 	}
 
 	public String getTerm() {
@@ -302,17 +304,21 @@ public class DocumentCollocate  implements Serializable {
 		return keyword;
 	}
 	
+	public int getKeywordContextRawFrequency() {
+		return keywordContextRawFrequency;
+	}
+	
 	public int getContextRawFrequency() {
-		return raw;
+		return termContextRawFrequency;
 	}
-	public float getContextRelativeFrequency() {
-		return rel;
+	public float getTermContextRelativeFrequency() {
+		return termContextRelativeFrequency;
 	}
-	public int getDocumentRawFrequency() {
-		return docRaw;
+	public int getTermDocumentRawFrequency() {
+		return termDocumentRawFrequency;
 	}
-	public float getDocumentRelativeFrequency() {
-		return docRel;
+	public float getTermDocumentRelativeFrequency() {
+		return termDocumentRelativeFrequency;
 	}
 
 	public int getDocIndex() {
