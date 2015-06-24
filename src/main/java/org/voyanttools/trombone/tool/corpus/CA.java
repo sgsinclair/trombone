@@ -99,7 +99,7 @@ public class CA extends AnalysisTool {
 		    	int rawFreq = term.getRawFreq();
 		    	double relFreq = (double) rawFreq / corpus.getTokensCount(TokenType.lexical);
 		    	
-		    	this.caTypes.add(new RawCAType(term.getTerm(), rawFreq, relFreq, v, RawCAType.WORD));
+		    	this.caTypes.add(new RawCAType(term.getTerm(), rawFreq, relFreq, v, RawCAType.WORD, -1));
 		    }
 			
 			if (target != null) {
@@ -116,7 +116,7 @@ public class CA extends AnalysisTool {
 		    	
 		    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
 			    
-		    	this.caTypes.add(new RawCAType(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCAType.PART));
+		    	this.caTypes.add(new RawCAType(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCAType.PART, corpus.getDocumentPosition(doc.getId())));
 		    }
 			
 			if (clusters > 0) {
@@ -140,7 +140,7 @@ public class CA extends AnalysisTool {
 		    	
 		    	if (docTerm.getTerm().equals(target)) targetVector = v;
 		    	
-		    	this.caTypes.add(new RawCAType(docTerm.getTerm(), docTerm.getRawFrequency(), docTerm.getRelativeFrequency(), v, RawCAType.WORD));
+		    	this.caTypes.add(new RawCAType(docTerm.getTerm(), docTerm.getRawFrequency(), docTerm.getRelativeFrequency(), v, RawCAType.WORD, -1));
 		    }
 			
 			if (target != null) {
@@ -165,7 +165,7 @@ public class CA extends AnalysisTool {
 		    	
 		    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
 			    
-		    	this.caTypes.add(new RawCAType(docTitle, tokensPerBin, 0.0, v, RawCAType.PART));
+		    	this.caTypes.add(new RawCAType(docTitle, tokensPerBin, 0.0, v, RawCAType.PART, corpus.getDocumentPosition(doc.getId())));
 		    }
 			
 			if (clusters > 0) {
@@ -234,6 +234,10 @@ public class CA extends AnalysisTool {
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "category", String.class);
 				writer.setValue(String.valueOf(caType.getCategory()));
+				writer.endNode();
+				
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+				writer.setValue(String.valueOf(caType.getDocIndex()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
