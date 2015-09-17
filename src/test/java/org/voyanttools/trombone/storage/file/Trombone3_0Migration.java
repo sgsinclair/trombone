@@ -12,6 +12,7 @@ import java.util.UUID;
 import net.lingala.zip4j.core.ZipFile;
 import net.lingala.zip4j.exception.ZipException;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.voyanttools.trombone.model.Corpus;
@@ -46,6 +47,9 @@ public class Trombone3_0Migration {
 		for (IndexedDocument doc : corpus) {
 			Assert.assertFalse(doc.getMetadata().getTitle().equals("rawbytes"));
 		}
+		
+		storage.destroy();
+		FileUtils.deleteDirectory(base);
 		
 	}
 	

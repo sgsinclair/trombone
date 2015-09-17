@@ -43,7 +43,7 @@ public class CorpusManager extends AbstractTool {
 			String corpusId = parameters.getParameterValue("corpus");
 			
 			// lookup for an alias
-			if (corpusId.length()<32) { // MD5 should be 32 characters
+			if (corpusId.length()<32 && CorpusAliasDB.exists(storage)) { // MD5 should be 32 characters
 				CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, true);
 				String id = corpusAliasDB.get(corpusId);
 				if (id!=null && id.isEmpty()==false) {
