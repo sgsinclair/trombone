@@ -3,21 +3,17 @@
  */
 package org.voyanttools.trombone.storage.file;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Migrator;
-import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -25,8 +21,8 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import com.thoughtworks.xstream.XStream;
 
 /**
- * @author sgs
- *
+ * This is the migration utility for Trombone 3.0.
+ * @author Stéfan Sinclair
  */
 public class FileTrombone3_0Migrator implements Migrator {
 
@@ -46,20 +42,23 @@ public class FileTrombone3_0Migrator implements Migrator {
 
 	@Override
 	public String getMigratedCorpusId() throws IOException {
+		
+		// read in the list of documents for the older corpus metadata file
 		File oldCorpusDirectory = getMigrationSourceCorpusDirectory(storage, id);
 		FlexibleParameters corpusMetadata = getOldFlexibleParameters(new File(oldCorpusDirectory, "corpus-metadata.xml"));
 		String[] ids = corpusMetadata.getParameterValues("documentIds");
 
 		// this part somewhat reproduces {@link DocumentStorer}, but custom setting metadata along the way
+		// we use the rawbytes instead of the tokens to simplify and to allow the new code to do better extraction
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		List<String> storedIds = new ArrayList<String>();
 		for (String id : ids) {
 			File documentDirectory = new File(oldCorpusDirectory, id);
 			InputSource inputSource = new FileInputSource(new File(documentDirectory, "rawbytes"));
 			DocumentMetadata documentMetadata = inputSource.getMetadata();
-			documentMetadata.setSource(Source.STREAM); // claim that this is a stream
+			documentMetadata.setSource(Source.STREAM); // claim that this is a stream since it shouldn't be recoverable
 			documentMetadata.setLocation("Trombone 3.0 Migration");
-			documentMetadata.setTitle("");
+			documentMetadata.setTitle(""); // we don't want the default "rawbytes" title for a file
 			StoredDocumentSource storedDocumentSource = storedDocumentStorage.getStoredDocumentSource(inputSource);
 			storedIds.add(storedDocumentSource.getId());
 		}
