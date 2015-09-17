@@ -59,11 +59,17 @@ class DocumentStorer extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		
-		Calendar start = Calendar.getInstance();
-		log("Starting document storage");
-		
 		InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
 		List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
+		run(inputSources);
+		
+	}
+
+	private void run(List<InputSource> inputSources) throws IOException {
+
+		Calendar start = Calendar.getInstance();
+		log("Starting document storage");
+
 		List<String> ids = new ArrayList<String>();
 		
 		// make sure that all input sources are stored
@@ -79,9 +85,9 @@ class DocumentStorer extends AbstractTool {
 		
 		log("Finished storage of "+ids.size()+" documents.", start);
 
-
+		
 	}
-
+	
 	List<StoredDocumentSource> getStoredDocumentSources() {
 		return storedDocumentSources;
 	}

@@ -45,6 +45,7 @@ import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.CorpusStorage;
+import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -60,7 +61,12 @@ public class FileStorage implements Storage {
 	/**
 	 * the default file-system location for storage
 	 */
-	public static final File DEFAULT_TROMBOME_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), "trombone4_0");
+	public static final String DEFAULT_TROMBOME_DIRECTORY_NAME = "trombone4_0";
+
+	/**
+	 * the default file-system location for storage
+	 */
+	public static final File DEFAULT_TROMBOME_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), DEFAULT_TROMBOME_DIRECTORY_NAME);
 	
 	
 	/**
@@ -173,6 +179,10 @@ public class FileStorage implements Storage {
 	}
 
 	private File getFile(String id) {
+		if (id==null) {
+			System.err.println(getObjectStoreDirectory()+"\t"+id);
+			
+		}
 		return new File(getObjectStoreDirectory(),  id);
 	}
 
@@ -245,4 +255,10 @@ public class FileStorage implements Storage {
 	public boolean existsDB(String id) {
 		return getFile(id).exists();
 	}
+
+	@Override
+	public Migrator getMigrator(String id) throws IOException {
+		return FileMigrationFactory.getMigrator(this, id);
+	}
+	
 }

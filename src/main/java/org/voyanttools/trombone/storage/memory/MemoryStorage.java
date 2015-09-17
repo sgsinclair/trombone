@@ -42,6 +42,7 @@ import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.CorpusStorage;
+import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -194,4 +195,10 @@ public class MemoryStorage implements Storage {
 	public boolean existsDB(String id) {
 		return storedObjectsMap.containsKey(id);
 	}
+
+	@Override
+	public Migrator getMigrator(String id) throws IOException {
+		return null; // not possible to migrate from memory
+	}
+
 }
