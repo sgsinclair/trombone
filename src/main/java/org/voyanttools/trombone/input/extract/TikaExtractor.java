@@ -171,8 +171,11 @@ public class TikaExtractor implements Extractor {
 	        // now extract the body from the simple HTML – we should be able to cheat since we already have processed content
 	        int start = extractedContent.indexOf("<body");
 	        int end = extractedContent.indexOf("</body");
-	        if (start > -1 && end > -1) {
-	        	extractedContent = extractedContent.substring(start, end);
+	        if (start > -1 && end > start) {
+	        	int startend = extractedContent.indexOf('>', start)+1;
+	        	if (startend>start && startend<end) {
+		        	extractedContent = extractedContent.substring(startend+1, end);
+	        	}
 	        }
 	        
 	        DocumentFormat format = storedDocumentSource.getMetadata().getDocumentFormat();
