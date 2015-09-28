@@ -32,4 +32,8 @@ public class CorpusAliasDB extends AbstractDB {
 	public String get(String alias) {
 		return map.get(alias);
 	}
+	
+	public static boolean exists(Storage storage) {
+		return AbstractDB.exists(storage, "corpus-alias");
+	}
 }

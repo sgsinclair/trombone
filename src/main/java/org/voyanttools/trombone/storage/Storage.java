@@ -82,6 +82,15 @@ public interface Storage {
 	public Reader retrieveStringReader(String id) throws IOException;
 
 	public CorpusStorage getCorpusStorage();
+	
+	/**
+	 * Tries to get a migrator to convert a corpus from an older version to the current version.
+	 * @param id the ID of the corpus to try to migrate
+	 * @return a Migrator to perform the conversion
+	 * @throws IOException
+	 */
+	public Migrator getMigrator(String id) throws IOException;
+	
 
 	public Writer getStoreStringWriter(String id) throws IOException;
 	

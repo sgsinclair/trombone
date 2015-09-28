@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAliasDB;
+import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
@@ -42,7 +43,7 @@ public class CorpusManager extends AbstractTool {
 			String corpusId = parameters.getParameterValue("corpus");
 			
 			// lookup for an alias
-			if (corpusId.length()<32) { // MD5 should be 32 characters
+			if (corpusId.length()<32 && CorpusAliasDB.exists(storage)) { // MD5 should be 32 characters
 				CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, true);
 				String id = corpusAliasDB.get(corpusId);
 				if (id!=null && id.isEmpty()==false) {
@@ -57,6 +58,15 @@ public class CorpusManager extends AbstractTool {
 				checkActions();
 				return;
 			}
+			
+			// check of a previous format exists and return it if so
+			Migrator migrator = storage.getMigrator(corpusId);
+			if (migrator!=null) {
+				this.id = migrator.getMigratedCorpusId();
+				checkActions();
+				return;
+			}
+			
 		}
 		
 		RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);

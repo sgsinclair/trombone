@@ -59,6 +59,13 @@ public class TikaExtractorTest {
 		DocumentMetadata metadata;
 		String contents;
 
+		// duplicate
+		inputSource = new StringInputSource("<html><body><section><div>This is <b>a</b> test.</div></section></body></html>");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
+
 		inputSource = new StringInputSource("This is <b>a</b> test.");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
@@ -70,6 +77,13 @@ public class TikaExtractorTest {
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
+		
+		inputSource = new StringInputSource("<html><body><section><div>This is <b>a</b> test.</div></section></body></html>");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
+		assertTrue("HTML string should contain HTML5 tags", contents.contains("<section>"));
 		
 		inputSource = new StringInputSource("<test>This is <b>a</b> test.</test>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);

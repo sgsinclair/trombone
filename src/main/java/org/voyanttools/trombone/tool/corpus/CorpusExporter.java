@@ -122,7 +122,7 @@ public class CorpusExporter extends AbstractCorpusTool {
 						if (p.length()>25) {
 							p = p.substring(0, 25);
 						}
-						filename+=p;
+						filename+=p.trim();
 					}
 					else {
 						filename+="unknown "+part;
@@ -135,7 +135,7 @@ public class CorpusExporter extends AbstractCorpusTool {
 		if (filename.isEmpty()) {
 			filename = metadata.getLocation();
 		}
-			
+		
 		// try to get the document format based on the filename only (so http://example.come/ might be UNKNOWN even if it's html)
 		DocumentFormat format = DocumentFormat.fromFilename(filename);
 		if (format==DocumentFormat.UNKNOWN) {
