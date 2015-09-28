@@ -34,7 +34,7 @@ public class Stripper {
 	
 	private String[] blockTags = new String[]{"p","div"};
 	
-	private Pattern notBlockTags = Pattern.compile("<\\/?(?!(" + StringUtils.join(blockTags, "|") +"))\\w+\\b.*?>", Pattern.DOTALL);
+	private Pattern notBlockTags = Pattern.compile("<\\/?(?!((" + StringUtils.join(blockTags, "|") +")(\\s+|>)))\\w+\\b.*?>", Pattern.DOTALL);
 	
 	private Pattern isBlockTags = Pattern.compile("<(\\/?)(" + StringUtils.join(blockTags, "|") + ")\\b.*?>", Pattern.DOTALL);
 	
