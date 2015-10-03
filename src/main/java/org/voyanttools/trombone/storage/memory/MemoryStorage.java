@@ -41,6 +41,8 @@ import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.nlp.NlpAnnotator;
+import org.voyanttools.trombone.nlp.NlpAnnotatorFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
@@ -67,6 +69,8 @@ public class MemoryStorage implements Storage {
 	private CorpusStorage corpusStorage;
 	
 	private LuceneManager luceneManager = null;
+
+	private NlpAnnotatorFactory nlpAnnotatorFactory = new NlpAnnotatorFactory();
 
 	/**
 	 * Create a new instance of this class.
@@ -201,4 +205,8 @@ public class MemoryStorage implements Storage {
 		return null; // not possible to migrate from memory
 	}
 
+	@Override
+	public NlpAnnotator getNlpAnnotator(String languageCode) {
+		return nlpAnnotatorFactory.getNlpAnnotator(languageCode);
+	}
 }

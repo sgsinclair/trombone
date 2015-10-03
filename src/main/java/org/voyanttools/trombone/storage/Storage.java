@@ -33,6 +33,7 @@ import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.Keywords;
+import org.voyanttools.trombone.nlp.NlpAnnotator;
 
 /**
  * This interface defines methods for interacting with stored objects using a storage strategy defined by the
@@ -103,5 +104,13 @@ public interface Storage {
 	public void closeDB(DB db);
 
 	public boolean existsDB(String name);
+	
+	/**
+	 * Retrieve an NLP Annotator for the specified language (this gives the storage a chance to reuse
+	 * an annotator, especially when loading language-specific models is expensive).
+	 * @param languageCode
+	 * @return
+	 */
+	public NlpAnnotator getNlpAnnotator(String languageCode);
 
 }

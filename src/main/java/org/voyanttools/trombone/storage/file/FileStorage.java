@@ -23,7 +23,6 @@ package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -31,7 +30,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Reader;
-import java.io.Serializable;
 import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
@@ -43,11 +41,12 @@ import org.apache.lucene.store.NIOFSDirectory;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.nlp.NlpAnnotator;
+import org.voyanttools.trombone.nlp.NlpAnnotatorFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Migrator;
-import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
 import edu.stanford.nlp.util.StringUtils;
 
@@ -83,6 +82,8 @@ public class FileStorage implements Storage {
 	private CorpusStorage corpusStorage = null;
 	
 	private LuceneManager luceneManager = null;
+	
+	private NlpAnnotatorFactory nlpAnnotatorFactory = new NlpAnnotatorFactory();
 
 	/**
 	 * Create a new instance in the default location.
@@ -259,6 +260,13 @@ public class FileStorage implements Storage {
 	@Override
 	public Migrator getMigrator(String id) throws IOException {
 		return FileMigrationFactory.getMigrator(this, id);
+	}
+
+
+
+	@Override
+	public NlpAnnotator getNlpAnnotator(String languageCode) {
+		return nlpAnnotatorFactory.getNlpAnnotator(languageCode);
 	}
 	
 }
