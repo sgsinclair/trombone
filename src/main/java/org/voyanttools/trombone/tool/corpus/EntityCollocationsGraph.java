@@ -43,6 +43,10 @@ public class EntityCollocationsGraph extends AbstractTerms {
 	public EntityCollocationsGraph(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
+	
+	public int getVersion() {
+		return super.getVersion()+1;
+	}
 
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractCorpusTool#run(org.voyanttools.trombone.lucene.CorpusMapper)

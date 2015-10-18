@@ -39,7 +39,7 @@ public class CorpusEntities extends AbstractTerms {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+1;
+		return super.getVersion()+2;
 	}
 
 	/* (non-Javadoc)

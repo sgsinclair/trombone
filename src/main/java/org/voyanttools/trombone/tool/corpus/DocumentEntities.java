@@ -5,9 +5,11 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -37,24 +39,17 @@ public class DocumentEntities extends AbstractCorpusTool {
 	public DocumentEntities(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
+	
+	public int getVersion() {
+		return super.getVersion();
+	}
 
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractCorpusTool#run(org.voyanttools.trombone.lucene.CorpusMapper)
 	 */
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
-		
-		// build a simple list of types
-		Collection<EntityType> types = new HashSet<EntityType>();
-		for (String type : parameters.getParameterValues("type")) {
-			for (String t : type.split(",\\s*")) {
-				EntityType et = EntityType.getForgivingly(t);
-				if (et!=EntityType.unknnown) {
-					types.add(et);
-				}
-			}
-		}
-		
+				
 		for (IndexedDocument indexedDocument : corpusMapper.getCorpus()) {
 			// only check for "withDistributions" though this will actually shift to this class
 			// TODO: offset to token mapping should happen here instead of in the annotator
@@ -71,11 +66,28 @@ public class DocumentEntities extends AbstractCorpusTool {
 				String lang = indexedDocument.getMetadata().getLanguageCode();
 				if (lang.equals("en")) {
 					NlpAnnotator nlpAnnotator = storage.getNlpAnnotator(lang);
-					entitiesList = nlpAnnotator.getEntities(corpusMapper, indexedDocument, types, parameters);
+					// get all types that are recognized (though not ordinals and numbers)
+					entitiesList = nlpAnnotator.getEntities(corpusMapper, indexedDocument, new HashSet<EntityType>(), parameters);
 					storage.store(entitiesList, id);
 				}
 			}
-			entities.addAll(entitiesList);
+			
+			// build a simple list of types to keep
+			Set<EntityType> types = new HashSet<EntityType>();
+			for (String type : parameters.getParameterValues("type")) {
+				for (String t : type.split(",\\s*")) {
+					EntityType et = EntityType.getForgivingly(t);
+					if (et!=EntityType.unknnown) {
+						types.add(et);
+					}
+				}
+			}
+
+			for (DocumentEntity entity : entitiesList) {
+				if (types.isEmpty() || types.contains(entity.getType())) {
+					entities.add(entity);
+				}
+			}
 		}
 	}
 	
