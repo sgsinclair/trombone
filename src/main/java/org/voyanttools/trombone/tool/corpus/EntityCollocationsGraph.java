@@ -146,7 +146,13 @@ public class EntityCollocationsGraph extends AbstractTerms {
 		
 		@Override
 		public int compareTo(Edge o) {
-			return Integer.compare(count, o.count);
+			int i = Integer.compare(count, o.count);
+			if (i==0) {
+				return Integer.compare(corpusEntities[0].getRawFreq()+corpusEntities[1].getRawFreq(),o.corpusEntities[0].getRawFreq()+o.corpusEntities[1].getRawFreq());
+			}
+			else {
+				return i;
+			}
 		}
 	}
 

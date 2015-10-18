@@ -161,5 +161,9 @@ public class CorpusEntity implements Serializable, Cloneable {
 		}
 		
 	};
+
+	public int getRawFreq() {
+		return rawFreq;
+	}
 	
 }
