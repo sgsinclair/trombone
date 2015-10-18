@@ -26,7 +26,6 @@ import org.voyanttools.trombone.model.EntityType;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import edu.stanford.nlp.ling.CoreAnnotations.CharacterOffsetBeginAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.CharacterOffsetEndAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.MentionsAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.NormalizedNamedEntityTagAnnotation;

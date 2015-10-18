@@ -56,7 +56,9 @@ public class DocumentEntities extends AbstractCorpusTool {
 		}
 		
 		for (IndexedDocument indexedDocument : corpusMapper.getCorpus()) {
-			String id = "document-entities-"+String.valueOf(this.getVersion())+DigestUtils.md5Hex(indexedDocument.getId()+parameters.toString());
+			// only check for "withDistributions" though this will actually shift to this class
+			// TODO: offset to token mapping should happen here instead of in the annotator
+			String id = "cached-document-entities-"+String.valueOf(this.getVersion())+DigestUtils.md5Hex(indexedDocument.getId()+parameters.getParameterValue("withDistributions",""));
 			List<DocumentEntity> entitiesList = new ArrayList<DocumentEntity>();
 			if (storage.isStored(id)) {
 				try {
