@@ -38,6 +38,7 @@ import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
+import org.apache.lucene.document.SortedSetDocValuesField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.DirectoryReader;
@@ -344,6 +345,7 @@ public class LuceneIndexer implements Indexer {
 					String value = (String) entries.getValue();
 					if (key!=null && value!=null && value.isEmpty()==false) {
 						// store term vector so that we can build term DB
+						document.add(new SortedSetDocValuesField(key, new BytesRef(value)));
 						document.add(new Field(key, value, ft)); // store for easier updating later if needed
 					}
 				}

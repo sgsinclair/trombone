@@ -32,6 +32,7 @@ import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -77,6 +78,8 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.ls.DOMImplementationLS;
+import org.w3c.dom.ls.LSSerializer;
 import org.xml.sax.SAXException;
 
 import com.cybozu.labs.langdetect.DetectorFactory;
@@ -133,42 +136,52 @@ public class XmlExtractor implements Extractor, Serializable {
 		
 		if (parameters.getParameterValue("inputFormat","").isEmpty()==false) {
 			DocumentFormat format = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat").toUpperCase());
-			Map<String, String> defaultsMap = new HashMap<String, String>();
+			Map<String, String[]> defaultsMap = new HashMap<String, String[]>();
 			switch(format) {
 			case RSS:
 			case RSS2:
-				defaultsMap.put("xmlContentXpath", "//item/description");
-				defaultsMap.put("xmlTitleXpath", parameters.getParameterBooleanValue("splitDocuments") ? "//item/title" : "//channel/title");
-				defaultsMap.put("xmlAuthorXpath", parameters.getParameterBooleanValue("splitDocuments") ? "//item/author|//item/*[local-name()='creator']" : "//channel/author|//channel/*[local-name()='creator']");
+				defaultsMap.put("xmlContentXpath", new String[]{"//item/description"});
+				defaultsMap.put("xmlTitleXpath", new String[]{parameters.getParameterBooleanValue("splitDocuments") ? "//item/title" : "//channel/title"});
+				defaultsMap.put("xmlAuthorXpath", new String[]{parameters.getParameterBooleanValue("splitDocuments") ? "//item/author|//item/*[local-name()='creator']" : "//channel/author|//channel/*[local-name()='creator']"});
 				break;
 			case ATOM:
-				defaultsMap.put("xmlContentXpath", "//summary or //content");
-				defaultsMap.put("xmlTitleXpath", "//title");
-				defaultsMap.put("xmlAuthorXpath", "//author");
+				defaultsMap.put("xmlContentXpath", new String[]{"//summary or //content"});
+				defaultsMap.put("xmlTitleXpath", new String[]{"//title"});
+				defaultsMap.put("xmlAuthorXpath", new String[]{"//author"});
 				break;
 			case TEI:
 			case TEICORPUS:
-				defaultsMap.put("xmlContentXpath", "//*[local-name()='text']");
-				defaultsMap.put("xmlTitleXpath", "//*[local-name()='teiHeader']//*[local-name()='title']");
-				defaultsMap.put("xmlAuthorXpath", "//*[local-name()='teiHeader']//*[local-name()='author']");
+				defaultsMap.put("xmlContentXpath", new String[]{"//*[local-name()='text']"});
+				defaultsMap.put("xmlTitleXpath", new String[]{"//*[local-name()='teiHeader']//*[local-name()='title']"});
+				defaultsMap.put("xmlAuthorXpath", new String[]{"//*[local-name()='teiHeader']//*[local-name()='author']"});
 				break;
 			case EEBODREAM:
-				defaultsMap.put("xmlContentXpath", "/EEBO/TEXTS/TEXT");
-				defaultsMap.put("xmlTitleXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/TITLE[1]");
-				defaultsMap.put("xmlAuthorXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/AUTHOR");
-				defaultsMap.put("xmlPubPlaceXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBPLACE");
-				defaultsMap.put("xmlPublisherXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBLISHER");
-				defaultsMap.put("xmlPubDateXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/DATE");
-				defaultsMap.put("xmlExtractorTemplate", "dream-extraction.xsl");
+				defaultsMap.put("xmlContentXpath", new String[]{"/EEBO/TEXTS/TEXT"});
+//				defaultsMap.put("xmlTitleXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/TITLE[1]");
+//				defaultsMap.put("xmlAuthorXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/AUTHOR");
+//				defaultsMap.put("xmlPubPlaceXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBPLACE");
+//				defaultsMap.put("xmlPublisherXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBLISHER");
+				defaultsMap.put("xmlTitleXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/title|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/title"});
+				defaultsMap.put("xmlAuthorXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/persName|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/author"});
+				defaultsMap.put("xmlPubDateXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/publicationStmt/date|/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/date"});
+				defaultsMap.put("xmlPubPlaceXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/publicationStmt/pubPlace|/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/pubPlace"});
+				defaultsMap.put("xmlPublisherXpath", new String[]{"/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/publisher"}); // don't look at opendata part for now because publisher may be there but with child nodes
+				defaultsMap.put("xmlExtraMetadataXpath", new String[]{
+					"authorSex=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/sex",
+					"authorLink=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/idno[@type eq 'viaf']/@ref",
+					"titleLink=(/EEBO/dreamheader/opendata/teiHeader/fileDesc/sourceDesc/ref[@type eq 'oclc']/@target)[1]",
+					"tcpId=/EEBO/dreamheader/opendata/teiHeader/fileDesc/idno[@type eq 'tcp']"
+				});
+				defaultsMap.put("xmlExtractorTemplate", new String[]{"dream-extraction.xsl"});
 				break;
 			case DTOC:
-				defaultsMap.put("xmlTitleXpath", "(//head//title)[1]");
-				defaultsMap.put("xmlAuthorXpath", "(//head//author)[1]");
+				defaultsMap.put("xmlTitleXpath", new String[]{"(//head//title)[1]"});
+				defaultsMap.put("xmlAuthorXpath", new String[]{"(//head//author)[1]"});
 				break;
 			}
 			
 			// update parameters
-			for (Map.Entry<String, String> entry : defaultsMap.entrySet()) {
+			for (Map.Entry<String, String[]> entry : defaultsMap.entrySet()) {
 				String key = entry.getKey();
 				if (parameters.getParameterValue(key,"").isEmpty()==true) {
 					parameters.setParameter(key, entry.getValue());
@@ -176,11 +189,14 @@ public class XmlExtractor implements Extractor, Serializable {
 			}
 		}
 		
-		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath","xmlPubPlaceXpath","xmlPublisherXpath","xmlPubDateXpath"};
+		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath","xmlPubPlaceXpath","xmlPublisherXpath","xmlPubDateXpath","xmlExtraMetadataXpath"};
 		StringBuilder parametersBuilder = new StringBuilder();
 		for (String p : relevantParameters) {
 			if (parameters.getParameterValue(p, "").isEmpty()==false) {
-				parametersBuilder.append(p).append(parameters.getParameterValue(p));
+				parametersBuilder.append(p);
+				for (String s : parameters.getParameterValues(p)) {
+					parametersBuilder.append(s);
+				}
 			}
 		}
 		
@@ -276,6 +292,9 @@ public class XmlExtractor implements Extractor, Serializable {
 						throw new IllegalStateException("Unable to create new XML document during templated extraction.", e);
 					}
 					doc = (Document) result.getNode();
+//					   DOMImplementationLS domImplementation = (DOMImplementationLS) doc.getImplementation();
+//					    LSSerializer lsSerializer = domImplementation.createLSSerializer();
+//					    System.out.println(lsSerializer.writeToString(doc).substring(0, 3000));
 				}
 				else {
 					throw new IOException("Unable to find extractor template "+xmlExtractorTemplate);
@@ -311,6 +330,18 @@ public class XmlExtractor implements Extractor, Serializable {
 			String pubDate = getNodesAsStringFromParametersValue(doc, "xmlPubDateXpath");
 			if (pubDate.isEmpty()==false) {
 				metadata.setPubDate(StringEscapeUtils.escapeXml11(pubDate));
+			}
+			
+			for (String extra : parameters.getParameterValues("xmlExtraMetadataXpath")) {
+				String[] parts = extra.split("=");
+				if (parts.length>1) {
+					String key = parts[0].trim();
+					String xpath = StringUtils.join(Arrays.copyOfRange(parts, 1, parts.length)).trim();
+					String value = getNodesAsStringFromXpath(doc, xpath);
+					if (value.isEmpty()==false) {
+						metadata.setExtra(key, value);
+					}
+				}
 			}
 			
 			// if no XPath is defined, consider the whole source XML (but allow for additional metadata ot be identified
@@ -381,8 +412,12 @@ public class XmlExtractor implements Extractor, Serializable {
 
 		private String getNodesAsStringFromParametersValue(Document doc, String parameterKey) {
 			String xpathString = parameters.getParameterValue(parameterKey,"");
+			return getNodesAsStringFromXpath(doc, xpathString);
+		}
+
+		private String getNodesAsStringFromXpath(Document doc, String xpathString) {
 			if (xpathString.isEmpty()==false) {
-				Set<String> titles = new HashSet<String>();
+				Set<String> values = new HashSet<String>();
 				XPath xpath = xpathFactory.newXPath();
 				NodeList nodeList;
 				try {
@@ -393,13 +428,13 @@ public class XmlExtractor implements Extractor, Serializable {
 							"A problem was encountered proccesing this XPath query: " + xpathString, e);
 				}
 				for (int i=0, len=nodeList.getLength(); i<len; i++) {
-					titles.add(nodeList.item(i).getTextContent());
+					values.add(nodeList.item(i).getTextContent());
 				}
-				return StringUtils.join(titles,", ").trim();
+				return StringUtils.join(values,", ").trim();
 			}
 			return "";
 		}
-
+		
 		@Override
 		public DocumentMetadata getMetadata() throws IOException {
 			return isProcessed ? this.metadata : storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id);
