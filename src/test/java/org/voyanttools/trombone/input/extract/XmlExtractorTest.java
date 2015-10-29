@@ -107,6 +107,15 @@ public class XmlExtractorTest {
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
 		assertTrue("ensure we have three lines of description in RSS feed", StringUtils.countMatches(contents, "<description>")==2);
 		
+		// make sure that we can keep multiple values for metadata
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlTitleXpath=//title"}));
+		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		// this should be blank rather than the title tag (for generic XML)
+		assertEquals("title for RSS feed", "Website Feed", metadata.getTitle());
+
 		storage.destroy();
 
 	}

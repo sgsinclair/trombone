@@ -303,33 +303,33 @@ public class XmlExtractor implements Extractor, Serializable {
 			
 			
 			// try to find title if needed
-			String title = getNodesAsStringFromParametersValue(doc, "xmlTitleXpath");
-			if (title.isEmpty()==false) {
-				metadata.setTitle(StringEscapeUtils.escapeXml11(title));
+			String[] titles = getNodesAsStringsFromParametersValue(doc, "xmlTitleXpath");
+			if (titles.length>0) {
+				metadata.setTitles(titles);
 			}
 			
 			// try to find author if needed
-			String author = getNodesAsStringFromParametersValue(doc, "xmlAuthorXpath");
-			if (author.isEmpty()==false) {
-				metadata.setAuthor(StringEscapeUtils.escapeXml11(author));
+			String[] authors = getNodesAsStringsFromParametersValue(doc, "xmlAuthorXpath");
+			if (authors.length>0) {
+				metadata.setAuthors(authors);
 			}
 
 			// try to find publplace if needed
-			String pubPlace = getNodesAsStringFromParametersValue(doc, "xmlPubPlaceXpath");
-			if (pubPlace.isEmpty()==false) {
-				metadata.setPubPlace(StringEscapeUtils.escapeXml11(pubPlace));
+			String[] pubPlaces = getNodesAsStringsFromParametersValue(doc, "xmlPubPlaceXpath");
+			if (pubPlaces.length>0) {
+				metadata.setPubPlaces(pubPlaces);
 			}
 
 			// try to find title if needed
-			String publisher = getNodesAsStringFromParametersValue(doc, "xmlPublisherXpath");
-			if (publisher.isEmpty()==false) {
-				metadata.setPublisher(StringEscapeUtils.escapeXml11(publisher));
+			String[] publishers = getNodesAsStringsFromParametersValue(doc, "xmlPublisherXpath");
+			if (publishers.length>0) {
+				metadata.setPublishers(publishers);
 			}
 
 			// try to find title if needed
-			String pubDate = getNodesAsStringFromParametersValue(doc, "xmlPubDateXpath");
-			if (pubDate.isEmpty()==false) {
-				metadata.setPubDate(StringEscapeUtils.escapeXml11(pubDate));
+			String[] pubDates = getNodesAsStringsFromParametersValue(doc, "xmlPubDateXpath");
+			if (pubDates.length>0) {
+				metadata.setPubDates(pubDates);
 			}
 			
 			for (String extra : parameters.getParameterValues("xmlExtraMetadataXpath")) {
@@ -337,9 +337,9 @@ public class XmlExtractor implements Extractor, Serializable {
 				if (parts.length>1) {
 					String key = parts[0].trim();
 					String xpath = StringUtils.join(Arrays.copyOfRange(parts, 1, parts.length)).trim();
-					String value = getNodesAsStringFromXpath(doc, xpath);
-					if (value.isEmpty()==false) {
-						metadata.setExtra(key, value);
+					String[] values = getNodesAsStringsFromXpath(doc, xpath);
+					if (values.length>0) {
+						metadata.setExtras(key, values);
 					}
 				}
 			}
@@ -410,12 +410,13 @@ public class XmlExtractor implements Extractor, Serializable {
 			
 		}
 
-		private String getNodesAsStringFromParametersValue(Document doc, String parameterKey) {
+		private String[] getNodesAsStringsFromParametersValue(Document doc, String parameterKey) {
 			String xpathString = parameters.getParameterValue(parameterKey,"");
-			return getNodesAsStringFromXpath(doc, xpathString);
+			return getNodesAsStringsFromXpath(doc, xpathString);
 		}
 
-		private String getNodesAsStringFromXpath(Document doc, String xpathString) {
+		private String[] getNodesAsStringsFromXpath(Document doc, String xpathString) {
+			String[] strings = new String[0];
 			if (xpathString.isEmpty()==false) {
 				Set<String> values = new HashSet<String>();
 				XPath xpath = xpathFactory.newXPath();
@@ -430,9 +431,9 @@ public class XmlExtractor implements Extractor, Serializable {
 				for (int i=0, len=nodeList.getLength(); i<len; i++) {
 					values.add(nodeList.item(i).getTextContent());
 				}
-				return StringUtils.join(values,", ").trim();
+				return values.toArray(strings);
 			}
-			return "";
+			return strings;
 		}
 		
 		@Override

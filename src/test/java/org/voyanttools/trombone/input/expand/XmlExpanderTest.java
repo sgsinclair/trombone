@@ -142,7 +142,6 @@ public class XmlExpanderTest {
 			if (fileInputStream!=null) {fileInputStream.close();}
 		}
 		
-		
 		// RSS documents within a zip archive (nested expansion)
 		parameters = new FlexibleParameters(new String[]{"inputFormat=RSS","splitDocuments=true"});
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);

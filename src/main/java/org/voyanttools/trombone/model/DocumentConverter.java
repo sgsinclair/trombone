@@ -49,7 +49,7 @@ public class DocumentConverter implements Converter {
 					writer.endNode();
 				}
 				else {
-					ExtendedHierarchicalStreamWriterHelper.startNode(writer, key, Arrays.class);
+					ExtendedHierarchicalStreamWriterHelper.startNode(writer, key, List.class);
 					context.convertAnother(values);
 					writer.endNode();
 				}
