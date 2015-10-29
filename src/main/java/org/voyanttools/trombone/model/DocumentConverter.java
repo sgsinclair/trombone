@@ -1,7 +1,10 @@
 package org.voyanttools.trombone.model;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
+
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
@@ -27,9 +30,9 @@ public class DocumentConverter implements Converter {
 		
 		final DocumentContainer doc = (DocumentContainer) source;
 
-		PropertiesWrapper metadata;
+		FlexibleParameters params;
 		try {
-			metadata = doc.getMetadata();
+			params = doc.getMetadata().getFlexibleParameters();
 		} catch (IOException e) {
 			throw new RuntimeException("Unable to get document metadata during serialization: "+doc);
 		}
@@ -37,7 +40,21 @@ public class DocumentConverter implements Converter {
 		ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
 		writer.setValue(doc.getId());
 		writer.endNode();
-		context.convertAnother(metadata);
+		for (String key : params.getKeys()) {
+			String[] values = params.getParameterValues(key);
+			if (values.length>0) {
+				if (values.length==1) {
+					ExtendedHierarchicalStreamWriterHelper.startNode(writer, key, String.class);
+					writer.setValue(values[0]);
+					writer.endNode();
+				}
+				else {
+					ExtendedHierarchicalStreamWriterHelper.startNode(writer, key, Arrays.class);
+					context.convertAnother(values);
+					writer.endNode();
+				}
+			}
+		}
 
 	}
 

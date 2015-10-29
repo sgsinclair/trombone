@@ -26,10 +26,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Comparator;
-import java.util.Properties;
 
 import org.voyanttools.trombone.input.source.Source;
-import org.voyanttools.trombone.model.IndexedDocument.Sort;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
@@ -40,22 +38,24 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  * @author Stéfan Sinclair
  */
 //@XStreamConverter(MetadataConverter.class)
-public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentMetadata> {
+public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	
 	private transient int index = 0;
 	
-	private Properties properties;
+	private FlexibleParameters parameters;
 	
-	public DocumentMetadata(Properties properties) {
-		this.properties = properties;
+//	private Properties properties;
+	
+	public DocumentMetadata(FlexibleParameters parameters) {
+		this.parameters = parameters;
 	}
-
+	
 	public DocumentMetadata() {
-		properties = new Properties();
+		parameters = new FlexibleParameters();
 	}
 	
 	public boolean equals(DocumentMetadata metadata) {
-		return properties.equals(metadata.properties);
+		return parameters.equals(metadata.parameters);
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 	}
 
 	private void setProperty(String key, String value) {
-		properties.setProperty(key, value);
+		parameters.setParameter(key, value);
 	}
 
 	/**
@@ -88,7 +88,8 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 	
 
 	private String getProperty(String key) {
-		return properties.getProperty(key);
+		return parameters.getParameterValue(key);
+//		return properties.getProperty(key);
 	}
 
 	/**
@@ -144,7 +145,7 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 //	}
 
 	private String getProperty(String key, String defaultValue) {
-		return properties.getProperty(key, defaultValue);
+		return parameters.getParameterValue(key, defaultValue);
 	}
 
 	/**
@@ -249,12 +250,12 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 	 * @return a new child Metadata object
 	 */
 	public DocumentMetadata asParent(String id) {
-		properties.setProperty("id", id);
-		Properties newProperties = new Properties();
-		for (String key : properties.stringPropertyNames()) {
-			newProperties.setProperty("parent_"+key, getProperty(key));
+		setProperty("id", id);
+		FlexibleParameters newParameters = new FlexibleParameters();
+		for (String key : parameters.getKeys()) {
+			newParameters.setParameter("parent_"+key, parameters.getParameterValues(key));
 		}
-		return new DocumentMetadata(newProperties);
+		return new DocumentMetadata(newParameters);
 	}
 	
 	public void setTitle(String value) {
@@ -348,10 +349,6 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 		return Integer.parseInt(getProperty("tokensCount-"+tokenType, "0"));
 	}
 
-	public Properties getProperties() {
-		return properties;
-	}
-
 	public int getTypesCount(TokenType tokenType) {
 		return Integer.parseInt(getProperty("typesCount-"+tokenType, "0"));
 	}
@@ -426,4 +423,12 @@ public class DocumentMetadata implements PropertiesWrapper, Comparable<DocumentM
 		if (getPubDate().equals(o.getPubDate())==false) {return getPubDate().compareTo(o.getPubDate());}
 		return Integer.compare(hashCode(), o.hashCode()); // give up
 		
+	}
+
+	public FlexibleParameters getFlexibleParameters() {
+		return parameters;
+	}
+
+	public boolean containsKey(String string) {
+		return parameters.containsKey(string);
 	}}

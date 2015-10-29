@@ -39,6 +39,7 @@ import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
  * This is a file-system based adapter for working with stored document sources.
@@ -127,16 +128,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	}
 	
 	private void storeStoredDocumentSourceMetadata(String id, DocumentMetadata metadata) throws IOException {
-		OutputStream os = null;
-		try {
-			os = new FileOutputStream(getMetadataFile(id));
-			metadata.getProperties().storeToXML(
-							os,
-							"This file was created by Trombone to store properties associated with the bytes stream in the same directory.");
-		} finally {
-			if (os != null)
-				os.close();
-		}
+		metadata.getFlexibleParameters().saveFlexibleParameters(getMetadataFile(id));
 	}
 	
 	private void storeStoredDocumentSourceInputStream(String id, InputStream inputStream) throws IOException {
@@ -196,18 +188,8 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 
 	public DocumentMetadata getStoredDocumentSourceMetadata(String id)
 			throws IOException {
-
-		Properties properties = new Properties();
-		InputStream is = null;
-		try {
-			is = new FileInputStream(getMetadataFile(id));
-			properties.loadFromXML(is);
-		} finally {
-			if (is != null)
-				is.close();
-		}
-		return new DocumentMetadata(properties);
-
+		FlexibleParameters parameters = FlexibleParameters.loadFlexibleParameters(getMetadataFile(id));
+		return new DocumentMetadata(parameters);
 	}
 
 	public InputStream getStoredDocumentSourceInputStream(String id)

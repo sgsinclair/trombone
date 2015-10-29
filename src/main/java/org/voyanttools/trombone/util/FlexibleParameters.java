@@ -21,9 +21,19 @@
  ******************************************************************************/
 package org.voyanttools.trombone.util;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -35,6 +45,9 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.Map.Entry;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import edu.stanford.nlp.util.StringUtils;
 
 /**
@@ -44,6 +57,7 @@ import edu.stanford.nlp.util.StringUtils;
  * 
  * @author Stéfan Sinclair
  */
+@XStreamAlias("parameters")
 public class FlexibleParameters implements Cloneable, Serializable {
 
 	/**
@@ -121,6 +135,35 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	public FlexibleParameters(Properties properties) {
 		addProperties(properties);
 	}
+
+	public static FlexibleParameters loadFlexibleParameters(File parametersFile) throws IOException {
+		XStream xstream = new XStream();		
+		InputStream in = null;
+		FlexibleParameters parameters = new FlexibleParameters();
+		try {
+			in = new FileInputStream(parametersFile);
+			parameters = (FlexibleParameters) xstream.fromXML(in);
+		} catch (FileNotFoundException e) {
+		}
+		finally {
+			if (in!=null) {
+				in.close();
+			}
+		}
+		return parameters;
+	}
+	
+	public void saveFlexibleParameters(File file) throws IOException {
+		OutputStream outputStream = null;
+		outputStream = new FileOutputStream(file);
+		Writer writer = new OutputStreamWriter(outputStream, Charset.forName("UTF-8"));
+		XStream xStream = new XStream();
+		xStream.toXML(this, writer);
+		if (outputStream!=null) {
+			outputStream.close();
+		}
+	}
+	
 
 	/**
 	 * Adds a parameter with a double value. Previously added values are not
@@ -556,7 +599,7 @@ public class FlexibleParameters implements Cloneable, Serializable {
 		return value == null ? defaultValue : value;
 	
 	}
-
+	
 	/**
 	 * Gets an array of {@link String}s for the specified key. If the key is not
 	 * defined, then an empty array of Strings is returned.
@@ -731,6 +774,29 @@ public class FlexibleParameters implements Cloneable, Serializable {
 
     	return this.entries.size();
 
+    }
+    
+    public boolean equals(FlexibleParameters parameters) {
+    	for (String key : getKeys()) {
+    		String[] values = getParameterValues(key);
+    		if (parameters.containsKey(key)) {
+    			String[] vals = parameters.getParameterValues(key);
+    			if (values.length == vals.length) {
+    				for (int i=0; i<values.length; i++) {
+    					if (values[i].equals(vals[i])==false) {
+    						return false;
+    					}
+    				}
+    			}
+    			else {
+    				return false;
+    			}
+    		}
+    		else {
+    			return false;
+    		}
+    	}
+    	return true;
     }
     
 //    public synchronized int size() {

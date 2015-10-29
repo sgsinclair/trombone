@@ -19,6 +19,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
@@ -111,12 +112,12 @@ public class CorpusExporter extends AbstractCorpusTool {
 		
 		String filename = "";
 		if (documentFilename.length>0) {
-			Properties properties = metadata.getProperties();
+			FlexibleParameters params = metadata.getFlexibleParameters();
 			for (String fn : documentFilename) {
 				for (String part : fn.split(",")) {
 					part = part.trim();
 					if (filename.isEmpty()==false) {filename+=" - ";}
-					String p = (String) properties.get(part);
+					String p = StringUtils.join(params.getParameterValues(part), " ");
 					if (p!=null && p.trim().isEmpty()==false) {
 						p = FILENAME_UNWANTED_CHARACTERS.matcher(p).replaceAll("");
 						if (p.length()>25) {
@@ -156,9 +157,9 @@ public class CorpusExporter extends AbstractCorpusTool {
 			}
 			
 			// add an extension
-			Properties properties = metadata.getProperties();
-			if (properties.containsKey("parent_location")) {
-				filename+="."+DocumentFormat.fromFilename(properties.getProperty("parent_location")).getDefaultExtension();
+			if (metadata.containsKey("parent_location")) {
+				String parent_location = metadata.getFlexibleParameters().getParameterValue("parent_location");
+				filename+="."+DocumentFormat.fromFilename(parent_location).getDefaultExtension();
 			}
 			else {
 				filename+="."+metadata.getDocumentFormat().getDefaultExtension(); // add an extension

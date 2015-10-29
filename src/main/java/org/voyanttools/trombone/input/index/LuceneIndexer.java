@@ -340,13 +340,15 @@ public class LuceneIndexer implements Indexer {
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				
-				for (Map.Entry<Object, Object> entries : storedDocumentSource.getMetadata().getProperties().entrySet()) {
-					String key = (String) entries.getKey();
-					String value = (String) entries.getValue();
-					if (key!=null && value!=null && value.isEmpty()==false) {
-						// store term vector so that we can build term DB
-						document.add(new SortedSetDocValuesField(key, new BytesRef(value)));
-						document.add(new Field(key, value, ft)); // store for easier updating later if needed
+				FlexibleParameters params = storedDocumentSource.getMetadata().getFlexibleParameters();
+				for (String key : params.getKeys()) {
+					for (String value : params.getParameterValues(key)) {
+						if (value.trim().isEmpty()==false) {
+							// store term vector so that we can build term DB
+							document.add(new Field(key, value, ft));
+							// store as facet field
+							document.add(new SortedSetDocValuesField(key, new BytesRef(value)));
+						}
 					}
 				}
 				

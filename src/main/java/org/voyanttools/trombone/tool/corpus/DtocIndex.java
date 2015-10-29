@@ -88,9 +88,8 @@ public class DtocIndex extends AbstractTool {
 	}
 	
 	private String getOriginalDocId(Corpus corpus) throws IOException {
-		Properties properties = corpus.getDocument(0).getMetadata().getProperties();
 		// this is the simplest possible scenario where a DTOC XML file was loaded and parsed, we need to handle other scenarios
-		String id = (String) properties.get("parent_parent_id");
+		String id = corpus.getDocument(0).getMetadata().getFlexibleParameters().getParameterValue("parent_parent_id");
 		return id;
 	}
 
