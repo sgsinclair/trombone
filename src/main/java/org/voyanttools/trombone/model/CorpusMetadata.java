@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.io.File;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -28,6 +29,8 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
+
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
@@ -44,17 +47,21 @@ import edu.stanford.nlp.util.StringUtils;
  * @author sgs
  *
  */
-public class CorpusMetadata implements PropertiesWrapper, Serializable {
+public class CorpusMetadata implements Serializable {
 	
-	private Properties properties;
+	private FlexibleParameters parameters;
 	
 	public CorpusMetadata(String id) {
-		properties = new Properties();
+		parameters = new FlexibleParameters();
 		setProperty("id", id);
 	}
 	
+	public CorpusMetadata(FlexibleParameters parameters) {
+		this.parameters = parameters;
+	}
+	
 	public List<String> getDocumentIds() {
-		return Arrays.asList(getProperty("documentIds", "").split(","));
+		return Arrays.asList(parameters.getParameterValues("documentIds"));
 	}
 
 	public String getId() {
@@ -62,39 +69,35 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 	}
 
 	public void setDocumentIds(Collection<String> ids) {
-		setProperty("documentIds", StringUtils.join(ids, ","));
+		parameters.setParameter("documentIds", ids.toArray(new String[0]));
 	}
 	
 	private String getProperty(String key) {
-		return properties.getProperty(key);
+		return parameters.getParameterValue(key);
 	}
 	
 	private String getProperty(String key, String defaultValue) {
-		return properties.getProperty(key, defaultValue);
+		return parameters.getParameterValue(key, defaultValue);
 	}
 	
 	private void setProperty(String key, String value) {
-		properties.setProperty(key, value);
-	}
-
-	public Properties getProperties() {
-		return properties;
+		parameters.setParameter(key, value);
 	}
 
 	public void setCreatedTime(long time) {
-		properties.setProperty("createdTime", String.valueOf(time));
+		setProperty("createdTime", String.valueOf(time));
 	}
 
 	public long getCreatedTime() {
-		return Long.valueOf(properties.getProperty("createdTime", "0"));
+		return Long.valueOf(getProperty("createdTime", "0"));
 	}
 
 	public void setTokensCount(TokenType tokenType, int totalWordTokens) {
-		properties.setProperty("tokensCount-"+tokenType.name(), String.valueOf(totalWordTokens));
+		setProperty("tokensCount-"+tokenType.name(), String.valueOf(totalWordTokens));
 	}
 
 	public void setTypesCount(TokenType tokenType, int totalWordTokens) {
-		properties.setProperty("typesCount-"+tokenType.name(), String.valueOf(totalWordTokens));
+		setProperty("typesCount-"+tokenType.name(), String.valueOf(totalWordTokens));
 	}
 	
 	public void setTypesCountMean(TokenType tokenType, float f) {
@@ -102,7 +105,7 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 	}
 
 	public void setTypesCountMean(String field, float f) {
-		properties.setProperty("typesCountMean"+field, String.valueOf(f));
+		setProperty("typesCountMean"+field, String.valueOf(f));
 	}
 	
 	public void setTypesCountStdDev(TokenType tokenType, float f) {
@@ -110,24 +113,24 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 	}
 	
 	public void setTypesCountStdDev(String field, float f) {
-		properties.setProperty("typesCountMean"+field, String.valueOf(f));
+		setProperty("typesCountMean"+field, String.valueOf(f));
 	}
 	
 	public int getTokensCount(TokenType tokenType) {
-		return Integer.valueOf(properties.getProperty("tokensCount-"+tokenType.name(), "0"));
+		return Integer.valueOf(getProperty("tokensCount-"+tokenType.name(), "0"));
 	}
 	
 	public int getTypesCount(TokenType tokenType) {
-		return Integer.valueOf(properties.getProperty("typesCount-"+tokenType.name(), "0"));
+		return Integer.valueOf(getProperty("typesCount-"+tokenType.name(), "0"));
 	}
 	
 	public float getTypesCountMean(TokenType tokenType) {
-		return Float.valueOf(properties.getProperty("typesCountMean-"+tokenType.name(), "0"));
+		return Float.valueOf(getProperty("typesCountMean-"+tokenType.name(), "0"));
 	}
 	public float getTypesCountStdDev(TokenType tokenType) {
-		return Float.valueOf(properties.getProperty("typesCountStdDev-"+tokenType.name(), "0"));
+		return Float.valueOf(getProperty("typesCountStdDev-"+tokenType.name(), "0"));
 	}
-
+	
 	public static class CorpusMetadataConverter implements Converter {
 
 		@Override
@@ -177,6 +180,10 @@ public class CorpusMetadata implements PropertiesWrapper, Serializable {
 			return null;
 		}
 
+	}
+
+	public FlexibleParameters getFlexibleParameters() {
+		return parameters;
 	}
 
 }

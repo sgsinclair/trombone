@@ -31,6 +31,7 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
  * @author sgs
@@ -61,15 +62,8 @@ public class FileCorpusStorage implements CorpusStorage {
 			CorpusMetadata metadata = new CorpusMetadata(id);
 			File metadataFile = new File(corpusDirectory, METADATA_FILE_NAME);
 			if (metadataFile.exists()) {
-				FileInputStream fis = null;
-				try {
-					fis = new FileInputStream(metadataFile);
-					metadata.getProperties().loadFromXML(fis);
-					fis.close();
-				}
-				finally {
-					if (fis!=null) fis.close();
-				}
+				FlexibleParameters params = FlexibleParameters.loadFlexibleParameters(metadataFile);
+				metadata = new CorpusMetadata(params);
 				return new Corpus(storage, metadata);
 			}
 			else {
@@ -91,15 +85,7 @@ public class FileCorpusStorage implements CorpusStorage {
 			File corpusDirectory = new File(corpusStorageLocation, id);
 			corpusDirectory.mkdir();
 			File metadataFile = new File(corpusDirectory, METADATA_FILE_NAME);
-			OutputStream os = null;
-			try {
-				os = new FileOutputStream(metadataFile);
-				corpus.getCorpusMetadata().getProperties().storeToXML(os, "This is a Trombone Corpus Metadata file");
-				os.close();
-			}
-			finally {
-				if (os!=null) os.close();
-			}
+			corpus.getCorpusMetadata().getFlexibleParameters().saveFlexibleParameters(metadataFile);
 		}
 	}
 
