@@ -27,8 +27,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
-import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
@@ -38,8 +36,6 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs

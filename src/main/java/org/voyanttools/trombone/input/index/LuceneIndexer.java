@@ -25,16 +25,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
+import org.apache.lucene.LucenePackage;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
@@ -43,10 +42,10 @@ import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.FieldInfo.IndexOptions;
-import org.apache.lucene.index.AtomicReader;
+import org.apache.lucene.index.IndexOptions;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
@@ -89,13 +88,13 @@ public class LuceneIndexer implements Indexer {
 		// determine if we need to modify the Lucene index
 		Collection<StoredDocumentSource> storedDocumentSourceForLucene = new ArrayList<StoredDocumentSource>();
 		if (storage.getLuceneManager().directoryExists()) {
-			AtomicReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 			Terms terms = reader.terms("id");
 			if (terms==null) {
 				storedDocumentSourceForLucene.addAll(storedDocumentSources);
 			}
 			else {
-				TermsEnum termsEnum = terms.iterator(null);		
+				TermsEnum termsEnum = terms.iterator();		
 				for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 					String id = storedDocumentSource.getId();
 					if (!termsEnum.seekExact(new BytesRef(id))) {
@@ -227,7 +226,7 @@ public class LuceneIndexer implements Indexer {
 				int lastPosition = 0;
 				DescriptiveStatistics stats = new DescriptiveStatistics();
 				if (terms!=null) {
-					TermsEnum termsEnum = terms.iterator(null);
+					TermsEnum termsEnum = terms.iterator();
 					DocsAndPositionsEnum docsAndPositionsEnum = null;
 					while (true) {
 						BytesRef term = termsEnum.next();
@@ -336,7 +335,7 @@ public class LuceneIndexer implements Indexer {
 				document = new Document();
 				document.add(new StringField("id", id, Field.Store.NO));
 //				document.add(new StringField("corpus", corpusId, Field.Store.NO));
-				document.add(new StringField("version", LuceneManager.VERSION.toString(), Field.Store.NO));
+				document.add(new StringField("version",  LucenePackage.get().getImplementationVersion(), Field.Store.YES));
 				document.add(new Field("lexical", getString(), ft));
 //				System.err.println(id+": "+getString());
 				

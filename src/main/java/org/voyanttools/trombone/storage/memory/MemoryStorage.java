@@ -21,7 +21,6 @@
  ******************************************************************************/
 package org.voyanttools.trombone.storage.memory;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
@@ -35,12 +34,10 @@ import java.util.UUID;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.lucene.index.CorruptIndexException;
-import org.apache.lucene.store.NIOFSDirectory;
 import org.apache.lucene.store.RAMDirectory;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.nlp.NlpAnnotatorFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;

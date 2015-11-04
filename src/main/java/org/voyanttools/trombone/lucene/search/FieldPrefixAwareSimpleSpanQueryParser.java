@@ -5,9 +5,7 @@ package org.voyanttools.trombone.lucene.search;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -26,8 +24,6 @@ import org.apache.lucene.search.spans.SpanNearQuery;
 import org.apache.lucene.search.spans.SpanOrQuery;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanTermQuery;
-import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.TokenType;
 
 /**
  * @author sgs

@@ -26,31 +26,12 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.util.Iterator;
-import java.util.List;
 
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.Terms;
-import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.util.AttributeImpl;
-import org.apache.lucene.util.AttributeSource;
-import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
-import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
-import org.voyanttools.trombone.input.index.LuceneIndexer;
-import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.InputSourcesBuilder;
-import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.corpus.CorpusCreator;
-import org.voyanttools.trombone.tool.utils.RunnableTool;
 import org.voyanttools.trombone.tool.utils.ToolRunner;
-import org.voyanttools.trombone.tool.utils.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
-import org.voyanttools.trombone.util.TestHelper;
 
 /**
  * @author sgs

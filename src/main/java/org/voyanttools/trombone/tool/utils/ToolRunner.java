@@ -22,25 +22,16 @@
 package org.voyanttools.trombone.tool.utils;
 
 import java.io.IOException;
-import java.io.ObjectStreamClass;
 import java.io.OutputStream;
 import java.io.Reader;
-import java.io.Serializable;
 import java.io.Writer;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.List;
-
-import javax.xml.bind.annotation.XmlRootElement;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
-import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.IndexedDocument;
-import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.tool.corpus.CorpusExporter;

@@ -20,8 +20,9 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.WildcardQuery;
+import org.apache.lucene.search.Weight;
 import org.voyanttools.trombone.model.TokenType;
 
 /**
@@ -39,6 +40,7 @@ public abstract class AbstractQueryParser {
 	protected final static Pattern SLOP_PATTERN = Pattern.compile("~(\\d+)$");
 	protected final static String FIELD_SEPARATOR = ":";
 	protected final static String OPERATOR_AND = "+";
+	protected IndexSearcher indexSearcher;
 	protected IndexReader indexReader;
 	protected Analyzer analyzer;
 
@@ -47,6 +49,7 @@ public abstract class AbstractQueryParser {
 	 */
 	public AbstractQueryParser(IndexReader indexReader, Analyzer analyzer) {
 		this.indexReader = indexReader;
+		this.indexSearcher = new IndexSearcher(indexReader); // TODO: this is probably inefficient
 		this.analyzer = analyzer;
 	}
 
@@ -135,7 +138,8 @@ public abstract class AbstractQueryParser {
 			}
 			else { // separate each wildcard term into its own query
 				Set<Term> terms = new HashSet<Term>();
-				query.extractTerms(terms);
+				Weight weight = query.createWeight(indexSearcher, false);
+				weight.extractTerms(terms);
 				for (Term t : terms) {
 					// we don't need to analyze term here since it's already from the index
 					queriesMap.put(t.text(), getTermQuery(t));

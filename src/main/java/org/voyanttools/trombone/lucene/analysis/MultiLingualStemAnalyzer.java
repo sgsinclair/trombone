@@ -46,8 +46,8 @@ public class MultiLingualStemAnalyzer extends LexicalAnalyzer {
 	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
 	 */
 	@Override
-	protected TokenStreamComponents createComponents(String fieldName, Reader reader) {
-		TokenStreamComponents tsc = super.createComponents(fieldName, reader);
+	protected TokenStreamComponents createComponents(String fieldName) {
+		TokenStreamComponents tsc = super.createComponents(fieldName);
 		return new TokenStreamComponents(tsc.getTokenizer(), new SnowballFilter(tsc.getTokenStream(), StringUtils.capitalize(sl.name().toLowerCase())));
 	}
 

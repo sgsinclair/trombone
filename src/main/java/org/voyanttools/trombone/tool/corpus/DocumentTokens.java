@@ -100,9 +100,9 @@ public class DocumentTokens extends AbstractCorpusTool {
 			int maxPos = documentStart+limit;
 
 			int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(id);
-			Terms terms = corpusMapper.getAtomicReader().getTermVector(luceneDoc, tokenType.name());
+			Terms terms = corpusMapper.getLeafReader().getTermVector(luceneDoc, tokenType.name());
 			if (terms==null) {continue;}
-			TermsEnum termsEnum = terms.iterator(null);
+			TermsEnum termsEnum = terms.iterator();
 			Map<String, Integer> docFreqs = new HashMap<String, Integer>();
 			while(true) {
 				BytesRef term = termsEnum.next();

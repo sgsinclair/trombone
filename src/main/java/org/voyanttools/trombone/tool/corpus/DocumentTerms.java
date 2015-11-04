@@ -29,13 +29,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
+import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.Bits;
@@ -114,7 +113,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 	
-		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
+		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
 		Corpus corpus = corpusMapper.getCorpus();
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
@@ -122,27 +121,24 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int size = start+limit;
 		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
 		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
-		int lastDoc = -1;
-		int docIndexInCorpus = -1; // this should always be changed on the first span
-		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
+//		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
-			Spans spans = spanQueryEntry.getValue().getSpans(corpusMapper.getAtomicReader().getContext(), docIdSet, termContexts);			
-			while(spans.next()) {
-				int doc = spans.doc();
-				if (doc != lastDoc) {
-					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
-					lastDoc = doc;
+			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue());
+			int doc = spans.nextDoc();
+			while(doc!=spans.NO_MORE_DOCS) {
+				int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
+				positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
+				int pos = spans.nextStartPosition();
+				while (pos!=spans.NO_MORE_POSITIONS) {
+					positionsMap.get(docIndexInCorpus).add(pos);
+					pos = spans.nextStartPosition();
 				}
-				int start = spans.start();
-				if (positionsMap.containsKey(docIndexInCorpus)==false) {
-					positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
-				}
-				positionsMap.get(docIndexInCorpus).add(start);
+				doc = spans.nextDoc();
 			}
 			for (Map.Entry<Integer, List<Integer>> entry : positionsMap.entrySet()) {
 				List<Integer> positionsList = entry.getValue();
@@ -171,18 +167,15 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		terms.addAll(queue.getOrderedList(start));
 	}
 
-//	public DocumentTerms getAllTerms(Corpus corpus, StoredToLuceneDocumentsMapper corpusMapper) {
-//		
-//	}
 	
 	private void runAllTermsFromDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, start+limit);
-		AtomicReader reader = corpusMapper.getAtomicReader();
+		LeafReader reader = corpusMapper.getLeafReader();
 		Corpus corpus = corpusMapper.getCorpus();
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		TermsEnum termsEnum = null;
 		DocsAndPositionsEnum docsAndPositionsEnum = null;
-		Bits docIdBitSet =  corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
+		Bits docIdBitSet =  corpusMapper.getBitSetFromDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		Bits allBits = new Bits.MatchAllBits(reader.numDocs());
 		for (int doc : corpusMapper.getLuceneIds()) {
 			if (!docIdBitSet.get(doc)) {continue;}
@@ -194,7 +187,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			int totalTokensCount = metadata.getTokensCount(tokenType);
 			Terms terms = reader.getTermVector(doc, "lexical");
 			if (terms!=null) {
-				termsEnum = terms.iterator(termsEnum);
+				termsEnum = terms.iterator();
 				if (termsEnum!=null) {
 					BytesRef bytesRef = termsEnum.next();
 					
@@ -238,68 +231,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		runAllTermsFromDocumentTermVectors(corpusMapper, stopwords);
 	}
-	private void runAllTermsFromReader(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
-		
-		int size = start+limit;
-		
-		Corpus corpus = corpusMapper.getCorpus();
-		int[] totalTokensCounts = corpus.getTokensCounts(tokenType);
-
-		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
-		
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
-
-		// now we look for our term frequencies
-		Terms terms = corpusMapper.getAtomicReader().terms(tokenType.name());
-		TermsEnum termsEnum = terms.iterator(null);
-		DocsAndPositionsEnum docsAndPositionsEnum = null;
-		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
-		String termString;
-		while(true) {
-			
-			BytesRef term = termsEnum.next();
-			
-			if (term != null) {
-				termString = term.utf8ToString();
-				if (stopwords.isKeyword(termString)) {continue;}
-				CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(termString);
-				docsAndPositionsEnum = termsEnum.docsAndPositions(docIdSet, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
-				int doc = docsAndPositionsEnum.nextDoc();
-				while (doc != DocIdSetIterator.NO_MORE_DOCS) {
-					int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
-					String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
-					DocumentMetadata documentMetadata = corpus.getDocument(docId).getMetadata();
-					float mean = documentMetadata.getTypesCountMean(tokenType);
-					float stdDev = documentMetadata.getTypesCountStdDev(tokenType);
-					int totalTokensCount = totalTokensCounts[documentPosition];
-					int freq = docsAndPositionsEnum.freq();
-//					if (freq>0) {total++;} // make sure we track that this could be a hit
-					int[] positions = new int[freq];
-					int[] offsets = new int[freq];
-					if (isNeedsPositions || isNeedsOffsets) {
-//						positions = new int[freq];
-//						offsets = new int[freq];
-						for (int i=0; i<freq; i++) {
-							positions[i] = docsAndPositionsEnum.nextPosition();
-							offsets[i] = docsAndPositionsEnum.startOffset();
-						}
-					}
-					if (freq>0) {
-						total++;
-						float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
-						DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
-						queue.offer(documentTerm);
-						doc = docsAndPositionsEnum.nextDoc();
-					}
-				}
-			}
-			else {
-				break; // no more terms
-			}
-		}
-		corpusTermMinimalsDB.close();
-		this.terms.addAll(queue.getOrderedList(start));
-	}
+	
 
 	public List<DocumentTerm> getDocumentTerms() {
 		return terms;

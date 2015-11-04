@@ -4,12 +4,8 @@
 package org.voyanttools.trombone.model.table;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import org.apache.commons.math3.linear.RealMatrix;
 
 import edu.stanford.nlp.util.ArrayUtils;
 import edu.stanford.nlp.util.StringUtils;

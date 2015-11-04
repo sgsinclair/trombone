@@ -21,15 +21,9 @@
  ******************************************************************************/
 package org.voyanttools.trombone.lucene;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
 
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
-import org.apache.lucene.search.IndexSearcher;
 import org.junit.Test;
-import org.voyanttools.trombone.Controller;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.corpus.CorpusCreator;

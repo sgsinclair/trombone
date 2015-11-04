@@ -21,34 +21,26 @@
  ******************************************************************************/
 package org.voyanttools.trombone.tool.build;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
-import java.io.StringReader;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.build.DocumentStorer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import com.google.gson.Gson;
 import com.google.gson.internal.StringMap;
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver;
 
 /**

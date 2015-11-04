@@ -24,25 +24,18 @@ package org.voyanttools.trombone.storage.file;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URI;
 
-import junit.framework.Assert;
-
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
-import org.voyanttools.trombone.input.source.UriInputSource;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
-import org.voyanttools.trombone.util.EmbeddedWebServer;
 import org.voyanttools.trombone.util.TestHelper;
+
+import junit.framework.Assert;
 
 /**
  * @author sgs

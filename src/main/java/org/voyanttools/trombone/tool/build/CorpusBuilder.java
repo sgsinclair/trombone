@@ -22,19 +22,14 @@
 package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
-import org.voyanttools.trombone.model.DocumentMetadata;
-import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;

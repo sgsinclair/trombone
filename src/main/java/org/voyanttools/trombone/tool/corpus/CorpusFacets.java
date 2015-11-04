@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.index.Term;
-import org.apache.lucene.index.Terms;
 import org.apache.lucene.search.Query;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
@@ -38,7 +37,7 @@ public class CorpusFacets extends AbstractTerms {
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords,
 			String[] queries) throws IOException {
 		
-		FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
+		FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
 		Map<String, Query> queriesMap = parser.getQueriesMap(queries, false);
 		Set<Term> terms = null;
 		for (Map.Entry<String, Query> queryEntry : queriesMap.entrySet()) {

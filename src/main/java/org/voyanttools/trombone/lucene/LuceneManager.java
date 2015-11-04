@@ -29,22 +29,12 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermQuery;
-import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
-import org.apache.lucene.util.Version;
 import org.voyanttools.trombone.lucene.analysis.KitchenSinkPerFieldAnalyzerWrapper;
-import org.voyanttools.trombone.model.Corpus;
 
 /**
  * @author sgs
@@ -60,7 +50,7 @@ public class LuceneManager {
 	
 	private IndexSearcher indexSearcher = null;
 	
-	public static Version VERSION = Version.LUCENE_4_9;
+//	public static Version VERSION = Version.LUCENE_4_9;
 	
 	private float luceneDocumentVersion = 4.1f;
 
@@ -163,7 +153,7 @@ public class LuceneManager {
 	// TODO: make this block across threads so that only one writer can exist at a time
 	public synchronized IndexWriter getIndexWriter() throws CorruptIndexException, LockObtainFailedException, IOException {
 		if (indexWriter==null) {
-			indexWriter = new IndexWriter(directory, new IndexWriterConfig(VERSION, analyzer));
+			indexWriter = new IndexWriter(directory, new IndexWriterConfig(analyzer));
 		}
 		return indexWriter;
 	}

@@ -5,18 +5,15 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentEntity;
-import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.EntityType;
+import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;

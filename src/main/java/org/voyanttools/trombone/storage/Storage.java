@@ -21,18 +21,14 @@
  ******************************************************************************/
 package org.voyanttools.trombone.storage;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
-import java.io.Serializable;
 import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
 
 import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
 
 /**

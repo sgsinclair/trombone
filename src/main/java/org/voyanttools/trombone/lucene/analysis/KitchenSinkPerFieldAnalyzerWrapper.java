@@ -79,6 +79,7 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 	  
 	  
 	  public KitchenSinkPerFieldAnalyzerWrapper() {
+		  super(Analyzer.PER_FIELD_REUSE_STRATEGY);
 		  this.defaultAnalyzer = new LexicalAnalyzer();
 		  this.fieldAnalyzers = new HashMap<AnalyzerName, Analyzer>();
 		  for (AnalyzerName name : AnalyzerName.values()) {

@@ -2,7 +2,6 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -69,14 +68,14 @@ public class DocumentContexts extends AbstractContextTerms {
 	private FlexibleQueue<Kwic> getKwics(CorpusMapper corpusMapper, int luceneDoc, int corpusDocumentIndex,
 			int lastToken, List<DocumentSpansData> documentSpansData) throws IOException {
 
-		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getAtomicReader(), luceneDoc, lastToken, documentSpansData, overlapStrategy==Kwic.OverlapStrategy.merge);
+		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, documentSpansData, overlapStrategy==Kwic.OverlapStrategy.merge);
 		
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 
 		// build kwics
 		FlexibleQueue<Kwic> queue = new FlexibleQueue<Kwic>(comparator, limit);
 		String document = corpusMapper.getCorpus().getDocument(corpusDocumentIndex).getDocumentString();
-		//String document = atomicReader.document(luceneDoc).get(tokenType.name());
+		//String document = LeafReader.document(luceneDoc).get(tokenType.name());
 		
 		// we start by creating a list of all positions in the document, as well as map to help us retrieve the span for each one
 		List<int[]> datas = new ArrayList<int[]>();

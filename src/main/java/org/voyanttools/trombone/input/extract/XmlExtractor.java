@@ -31,7 +31,6 @@ import java.io.Serializable;
 import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -58,18 +57,13 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import net.sf.saxon.lib.NamespaceConstant;
-import net.sf.saxon.xpath.XPathFactoryImpl;
-
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tika.Tika;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.exception.TikaException;
-import org.apache.tika.parser.xml.XMLParser;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
@@ -78,12 +72,13 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.ls.DOMImplementationLS;
-import org.w3c.dom.ls.LSSerializer;
 import org.xml.sax.SAXException;
 
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.LangDetectException;
+
+import net.sf.saxon.lib.NamespaceConstant;
+import net.sf.saxon.xpath.XPathFactoryImpl;
 
 /**
  * @author sgs

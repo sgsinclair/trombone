@@ -13,13 +13,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
-import org.apache.lucene.search.BooleanClause.Occur;
-import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermQuery;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
@@ -75,12 +71,12 @@ public class DocumentsFinder extends AbstractTerms {
 		total = corpus.size();
 		
 		IndexSearcher indexSearcher = corpusMapper.getSearcher();
-		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
+		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
 		boolean createNewCorpus = parameters.getParameterBooleanValue("createNewCorpus");
 		for (String queryString : getQueries(queries)) {
 			Query query = queryParser.parse(queryString);
 			LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-			indexSearcher.search(query, corpusMapper, collector);
+			indexSearcher.search(corpusMapper.getFilteredQuery(query), collector);
 			if (createNewCorpus || includeDocIds || withDistributions) {
 				Set<Integer> docs = collector.getLuceneDocIds();
 				String[] ids = new String[docs.size()];

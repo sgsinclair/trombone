@@ -31,6 +31,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Reader;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -121,9 +124,11 @@ public class FileStorage implements Storage {
 	@Override
 	public LuceneManager getLuceneManager() throws IOException {
 		if (luceneManager==null) {
-			File dir = new File(storageLocation, "lucene");
-			if (dir.exists()==false) {dir.mkdirs();}
-			luceneManager = new LuceneManager(new NIOFSDirectory(dir));
+			Path path = Paths.get(storageLocation.getPath(), "lucene");
+			if (Files.exists(path)==false) {
+				Files.createDirectories(path);
+			}
+			luceneManager = new LuceneManager(new NIOFSDirectory(path));
 		}
 		return luceneManager;
 	}

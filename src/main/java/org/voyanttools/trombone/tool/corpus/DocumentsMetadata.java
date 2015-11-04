@@ -12,13 +12,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
-import org.apache.lucene.search.BooleanClause.Occur;
-import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermQuery;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
@@ -69,7 +65,7 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 			for (String queryString : queries) {
 				Query query = queryParser.parse(queryString);
 				LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-				indexSearcher.search(query, corpusMapper, collector);
+				indexSearcher.search(corpusMapper.getFilteredQuery(query), collector);
 				for (int doc : collector.getLuceneDocIds()) {
 					idsSet.add(corpusMapper.getDocumentIdFromLuceneId(doc));
 				}

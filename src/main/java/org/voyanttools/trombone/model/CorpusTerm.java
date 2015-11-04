@@ -2,9 +2,7 @@ package org.voyanttools.trombone.model;
 
 import java.io.Serializable;
 import java.text.Normalizer;
-import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.commons.math3.stat.descriptive.SummaryStatistics;

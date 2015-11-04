@@ -1,23 +1,16 @@
 package org.voyanttools.trombone.model;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.DocsEnum;
-import org.apache.lucene.index.IndexableField;
+import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.util.BytesRef;
-import org.apache.lucene.util.DocIdBitSet;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 
 public class CorpusTermMinimalsDB extends AbstractDB {
@@ -52,7 +45,7 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 
 	public static synchronized CorpusTermMinimalsDB getInstance(CorpusMapper corpusMapper, String field) throws IOException {
 		if (!exists(corpusMapper, field)) {
-//			if (corpusMapper.getCorpus().size()==corpusMapper.getAtomicReader().numDocs()) {
+//			if (corpusMapper.getCorpus().size()==corpusMapper.getLeafReader().numDocs()) {
 //				buildFromReaderTerms(corpusMapper, field); // TODO: is this any faster than going through documents?
 //			}
 //			else {
@@ -62,14 +55,14 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 		return new CorpusTermMinimalsDB(corpusMapper, field, true);
 	}
 	private static void buildFromDocumentTermVectors(CorpusMapper corpusMapper, String field) throws IOException {
-		AtomicReader reader = corpusMapper.getAtomicReader();
+		LeafReader reader = corpusMapper.getLeafReader();
 		Map<String, AtomicInteger> inDocumentsCountMap = new HashMap<String, AtomicInteger>();
 		Map<String, AtomicInteger> rawFreqsMap = new HashMap<String, AtomicInteger>();
 		TermsEnum termsEnum = null;
 		for (int doc : corpusMapper.getLuceneIds()) {
 			Terms terms = reader.getTermVector(doc, field);
 			if (terms!=null) {
-				termsEnum = terms.iterator(termsEnum);
+				termsEnum = terms.iterator();
 				if (termsEnum!=null) {
 					BytesRef bytesRef = termsEnum.next();
 					while (bytesRef!=null) {
@@ -101,53 +94,6 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 			rawFreq = entry.getValue().get();
 			corpusTermMinimal = new CorpusTermMinimal(term, rawFreqsMap.get(term).get(), inDocumentsCountMap.get(term).get(), documentsCount, ((float) rawFreq-mean) / stdDev);
 			corpusTermMinimalsDB.put(term, corpusTermMinimal);
-		}
-		corpusTermMinimalsDB.commit();
-		corpusTermMinimalsDB.close();		
-	}
-	
-	private static void buildFromReaderTerms(CorpusMapper corpusMapper, String field) throws IOException {
-		Corpus corpus = corpusMapper.getCorpus();
-		Terms terms = corpusMapper.getAtomicReader().terms(field);
-		TermsEnum termsEnum = terms.iterator(null);
-		DocsEnum docsEnum = null;
-		String termString;
-		int documentsCount = corpus.size();
-		DescriptiveStatistics stats = new DescriptiveStatistics();
-		List<CorpusTermMinimal> corpusTermMinimalsList = new ArrayList<CorpusTermMinimal>();
-		DocIdBitSet docIdSet = corpusMapper.getDocIdBitSet();
-		int doc;
-		int termFreq;
-		int inDocumentsCount;
-		BytesRef term = termsEnum.next();
-		while(term!=null) {
-			if (term != null) {
-				termFreq = 0;
-				inDocumentsCount = 0;
-				docsEnum = termsEnum.docs(docIdSet, docsEnum, DocsEnum.FLAG_FREQS);
-				doc = docsEnum.nextDoc();
-				while (doc!=DocsEnum.NO_MORE_DOCS) {
-					termFreq += docsEnum.freq();
-					inDocumentsCount++;
-					doc = docsEnum.nextDoc();
-				}
-				if (termFreq>0) {
-					termString = term.utf8ToString();
-					stats.addValue(termFreq);
-					CorpusTermMinimal corpusTermMinimal = new CorpusTermMinimal(termString, termFreq, inDocumentsCount, documentsCount, 0);
-					corpusTermMinimalsList.add(corpusTermMinimal);
-				}
-			}
-			term = termsEnum.next();
-		}
-		float mean = (float) stats.getMean();
-		float stdDev = (float) stats.getStandardDeviation();
-		corpus.getCorpusMetadata().setTypesCountMean(field, mean);
-		corpus.getCorpusMetadata().setTypesCountStdDev(field, stdDev);
-		CorpusTermMinimalsDB corpusTermMinimalsDB = new CorpusTermMinimalsDB(corpusMapper, field, false);
-		for (CorpusTermMinimal c : corpusTermMinimalsList) {
-			c.setZscore(((float) c.getRawFreq()-mean)/stdDev);
-			corpusTermMinimalsDB.put(c.getTerm(), c);
 		}
 		corpusTermMinimalsDB.commit();
 		corpusTermMinimalsDB.close();		

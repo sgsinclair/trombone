@@ -104,8 +104,8 @@ class StanfordNlpAnnotator implements NlpAnnotator {
 		Map<Integer, Integer> offsetToTokenPositionMap = new HashMap<Integer, Integer>();
 		int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(indexedDocument.getId());
 		// TODO: check that we can assume that offsets align regardless of TokenType
-		Terms terms = corpusMapper.getAtomicReader().getTermVector(luceneDoc, TokenType.lexical.name()); 
-		TermsEnum termsEnum = terms.iterator(null);
+		Terms terms = corpusMapper.getLeafReader().getTermVector(luceneDoc, TokenType.lexical.name()); 
+		TermsEnum termsEnum = terms.iterator();
 		while(true) {
 			BytesRef term = termsEnum.next();
 			if (term!=null) {

@@ -24,7 +24,6 @@ package org.voyanttools.trombone.input.index;
 import java.io.IOException;
 import java.util.List;
 
-import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 
 /**

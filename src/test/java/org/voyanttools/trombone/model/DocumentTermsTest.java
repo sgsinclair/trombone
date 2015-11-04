@@ -21,12 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
-import static org.junit.Assert.*;
-import junit.framework.Assert;
-
-import org.apache.lucene.util.BytesRef;
 import org.junit.Test;
-import org.voyanttools.trombone.model.DocumentTerm;
 
 /**
  * @author sgs

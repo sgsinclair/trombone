@@ -37,13 +37,12 @@ import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
-import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.DocumentNgram;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -100,7 +99,7 @@ public class DocumentNgrams extends AbstractTerms {
 	
 
 	List<DocumentNgram> getNgrams(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getAtomicReader(), storage.getLuceneManager().getAnalyzer());
+		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
 		Corpus corpus = corpusMapper.getCorpus();
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
@@ -108,27 +107,27 @@ public class DocumentNgrams extends AbstractTerms {
 //		int size = start+limit;
 ////		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
 //		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
-		int docIndexInCorpus = -1; // this should always be changed on the first span
-		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
+		int docIndexInCorpus; // this should always be changed on the first span
 		Map<Integer, Map<String, List<int[]>>> docTermPositionsMap = new HashMap<Integer, Map<String, List<int[]>>>();
 		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 //			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
-			Spans spans = spanQueryEntry.getValue().getSpans(corpusMapper.getAtomicReader().getContext(), docIdSet, termContexts);	
+			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue());
 			Map<Integer, List<int[]>> documentAndPositionsMap = new HashMap<Integer, List<int[]>>();
-			int lastDoc = -1;
-			while(spans.next()) {
-				int doc = spans.doc();
-				if (doc != lastDoc) {
-					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
-					documentAndPositionsMap.put(docIndexInCorpus, new ArrayList<int[]>());
-					lastDoc = doc;
+			int doc = spans.nextDoc();
+			while(doc!=spans.NO_MORE_DOCS) {
+				int pos = spans.nextStartPosition();
+				docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
+				documentAndPositionsMap.put(docIndexInCorpus, new ArrayList<int[]>());
+				while(pos!=spans.NO_MORE_POSITIONS) {
+					documentAndPositionsMap.get(docIndexInCorpus).add(new int[]{spans.startPosition(), spans.endPosition()});
+					pos = spans.nextStartPosition();
 				}
-				documentAndPositionsMap.get(docIndexInCorpus).add(new int[]{spans.start(), spans.end()});
+				doc = spans.nextDoc();
 			}
 			String queryString = spanQueryEntry.getKey();
 			for (Map.Entry<Integer, List<int[]>> entry : documentAndPositionsMap.entrySet()) {
-				int doc = entry.getKey();
+				doc = entry.getKey();
 				if (docTermPositionsMap.containsKey(doc)==false) {
 					docTermPositionsMap.put(doc, new HashMap<String, List<int[]>>());
 				}
@@ -183,7 +182,7 @@ public class DocumentNgrams extends AbstractTerms {
 		FlexibleQueue<DocumentNgram> queue = new FlexibleQueue<DocumentNgram>(comparator, start+limit);
 		
 		OverlapFilter filter = getDocumentNgramsOverlapFilter(parameters);
-		DocIdSetIterator it = corpusMapper.getDocIdBitSet().iterator();
+		DocIdSetIterator it = corpusMapper.getDocIdSet().iterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
 			int luceneDoc = it.docID();
 			int corpusDocumentIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
@@ -351,8 +350,8 @@ public class DocumentNgrams extends AbstractTerms {
 	private SimplifiedTermInfo[] getSparseSimplifiedTermInfoArray(CorpusMapper corpusMapper, int luceneDoc, int lastTokenOffset) throws IOException {
 		
 		Keywords stopwords = this.getStopwords(corpusMapper.getCorpus());
-		Terms terms = corpusMapper.getAtomicReader().getTermVector(luceneDoc, tokenType.name());
-		TermsEnum termsEnum = terms.iterator(null);
+		Terms terms = corpusMapper.getLeafReader().getTermVector(luceneDoc, tokenType.name());
+		TermsEnum termsEnum = terms.iterator();
 		SimplifiedTermInfo[] simplifiedTermInfoArray = new SimplifiedTermInfo[lastTokenOffset+1];
 		while(true) {
 			BytesRef term = termsEnum.next();

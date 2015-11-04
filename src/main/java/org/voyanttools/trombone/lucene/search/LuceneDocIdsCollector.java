@@ -8,16 +8,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.AtomicReaderContext;
-import org.apache.lucene.search.Collector;
+import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.Scorer.ChildScorer;
+import org.apache.lucene.search.SimpleCollector;
 
 /**
  * @author sgs
  *
  */
-public class LuceneDocIdsCollector extends Collector {
+public class LuceneDocIdsCollector extends SimpleCollector {
 
 	private Map<Integer, Integer> luceneDocIds = new HashMap<Integer,Integer>();
 	private int base = 0;
@@ -28,7 +28,12 @@ public class LuceneDocIdsCollector extends Collector {
 		int absoluteDoc = base+doc;
 		if (isSeen(absoluteDoc)==false) {
 			scorer.score();
-			int freq = scorer.freq();
+			int freq = 0;
+			// Scorer.freq() doesn't always return term frequency, contrary to expectations
+			// this makes me a bit nervous, is there always just one level of children?
+			for (ChildScorer childSorer : scorer.getChildren()) {
+				freq += childSorer.child.freq();
+			}
 			rawFreq+=freq;
 			luceneDocIds.put(absoluteDoc, freq);
 		}
@@ -47,7 +52,7 @@ public class LuceneDocIdsCollector extends Collector {
 	}
 	
 	@Override
-	public void setNextReader(AtomicReaderContext context) {
+	public void doSetNextReader(LeafReaderContext context) {
 		base = context.docBase;
 	}
 	
@@ -56,12 +61,12 @@ public class LuceneDocIdsCollector extends Collector {
 		this.scorer = scorer;
 	}
 
-	@Override
-	public boolean acceptsDocsOutOfOrder() {
-		return true;
-	}
-	
 	public Set<Integer> getLuceneDocIds() {
 		return luceneDocIds.keySet();
+	}
+
+	@Override
+	public boolean needsScores() {
+		return true; // can this be set to false while ensuring that setScorer is called?
 	}
 }

@@ -28,7 +28,6 @@ import java.util.List;
 
 import org.voyanttools.trombone.input.index.Indexer;
 import org.voyanttools.trombone.input.index.LuceneIndexer;
-import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;

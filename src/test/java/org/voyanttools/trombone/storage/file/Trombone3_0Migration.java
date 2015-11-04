@@ -3,14 +3,11 @@
  */
 package org.voyanttools.trombone.storage.file;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
-
-import net.lingala.zip4j.core.ZipFile;
-import net.lingala.zip4j.exception.ZipException;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
@@ -18,8 +15,10 @@ import org.junit.Test;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Migrator;
-import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.TestHelper;
+
+import net.lingala.zip4j.core.ZipFile;
+import net.lingala.zip4j.exception.ZipException;
 
 /**
  * @author sgs

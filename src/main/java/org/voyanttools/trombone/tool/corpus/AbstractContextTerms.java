@@ -30,8 +30,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.AtomicReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
+import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
@@ -40,7 +40,6 @@ import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
-import org.apache.lucene.util.DocIdBitSet;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.storage.Storage;
@@ -79,8 +78,8 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 	
 	protected Map<Integer, List<DocumentSpansData>> getDocumentSpansData(CorpusMapper corpusMapper, String[] queries) throws IOException {
 		
-		AtomicReader atomicReader = corpusMapper.getAtomicReader();
-		SpanQueryParser spanQueryParser = new SpanQueryParser(atomicReader, storage.getLuceneManager().getAnalyzer());
+		LeafReader LeafReader = corpusMapper.getLeafReader();
+		SpanQueryParser spanQueryParser = new SpanQueryParser(LeafReader, storage.getLuceneManager().getAnalyzer());
 		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		
@@ -88,41 +87,34 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());
 		
-		DocIdBitSet docIdBitSet = ids.size()==corpusMapper.getCorpus().size() ? corpusMapper.getDocIdBitSet() : corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(ids);
-		
 //		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			SpanQuery spanQuery = spanQueryEntry.getValue();
-			Spans spans = spanQuery.getSpans(atomicReader.getContext(), docIdBitSet, termContexts);
-
-			// we're going to go through all the span for all documents so that we can then
-			// parallelize the searching of kwics
+			Spans spans = corpusMapper.getFilteredSpans(spanQuery);
 			
 			// map lucene document id to span offset information
 			List<int[]> spansDocDataList = new ArrayList<int[]>();
-			int doc = -1;
-			int lastDoc = -1;
-			while(true) {
-				boolean hasNext = spans.next();
-				if (hasNext) {doc=spans.doc();}
-				
-				// add our values if we're done with spans or if we're on a new document
-				if (!hasNext || doc!=lastDoc) {
-					if (!spansDocDataList.isEmpty()) {
-						int[][] data = new int[spansDocDataList.size()][2];
-						for (int i=0, len=data.length; i<len; i++) {
-							data[i] = spansDocDataList.get(i);
-						}
-						documentSpansDataList.add(new DocumentSpansData(lastDoc==-1 ? doc : lastDoc, data, queryString));
-						spansDocDataList.clear();
-					}
-					if (!hasNext) {break;}
-					lastDoc = doc;
+			
+			// we're going to go through all the span for all documents so that we can then
+			// parallelize the searching of kwics
+			int doc = spans.nextDoc();
+			while (doc!=spans.NO_MORE_DOCS) {
+				int pos = spans.nextStartPosition();
+				while (pos != spans.NO_MORE_POSITIONS) {
+					spansDocDataList.add(new int[]{spans.startPosition(), spans.endPosition()});
+					pos = spans.nextStartPosition();
 				}
-				if (this.positions.isEmpty()==false && this.positions.contains(spans.start())==false) {continue;} // skip 
-				spansDocDataList.add(new int[]{spans.start(), spans.end()});
-				total++;
+				if (!spansDocDataList.isEmpty()) {
+					int[][] data = new int[spansDocDataList.size()][2];
+					for (int i=0, len=data.length; i<len; i++) {
+						data[i] = spansDocDataList.get(i);
+					}
+					documentSpansDataList.add(new DocumentSpansData(doc, data, queryString));
+					spansDocDataList.clear();
+					total++;
+				}
+				doc = spans.nextDoc();
 			}
 		}
 		
@@ -139,9 +131,9 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		return documentSpansDataMap;
 	}
 
-	protected Map<Integer, TermInfo> getTermsOfInterest(AtomicReader atomicReader, int luceneDoc, int lastToken, List<DocumentSpansData> documentSpansData, boolean fill) throws IOException	{
+	protected Map<Integer, TermInfo> getTermsOfInterest(LeafReader LeafReader, int luceneDoc, int lastToken, List<DocumentSpansData> documentSpansData, boolean fill) throws IOException	{
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(documentSpansData, lastToken, fill);
-		fillTermsOfInterest(atomicReader, luceneDoc, termsOfInterest);
+		fillTermsOfInterest(LeafReader, luceneDoc, termsOfInterest);
 		return termsOfInterest;
 	}
 	
@@ -175,10 +167,10 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		return termsOfInterest;
 	}
 		
-	private void fillTermsOfInterest(AtomicReader atomicReader, int luceneDoc, Map<Integer, TermInfo> termsOfInterest) throws IOException {
+	private void fillTermsOfInterest(LeafReader LeafReader, int luceneDoc, Map<Integer, TermInfo> termsOfInterest) throws IOException {
 		// fill in terms of interest
-		Terms terms = atomicReader.getTermVector(luceneDoc, tokenType.name());
-		TermsEnum termsEnum = terms.iterator(null);
+		Terms terms = LeafReader.getTermVector(luceneDoc, tokenType.name());
+		TermsEnum termsEnum = terms.iterator();
 		while(true) {
 			BytesRef term = termsEnum.next();
 			if (term!=null) {

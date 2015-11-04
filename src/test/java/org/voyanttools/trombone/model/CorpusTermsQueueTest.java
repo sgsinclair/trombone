@@ -1,11 +1,8 @@
 package org.voyanttools.trombone.model;
 
-import static org.junit.Assert.*;
-
 import java.util.List;
 
 import org.junit.Test;
-import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
 public class CorpusTermsQueueTest {

@@ -96,7 +96,6 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		return freqMatrix;
 	}
 	
-	@SuppressWarnings("unchecked")
 	private List<CorpusTerm> getCorpusTypes(CorpusMapper corpusMapper) throws IOException {
 		FlexibleParameters params = parameters.clone();
 		// remove bins so that CorpusTerm.getRawDistributions is divided into documents
@@ -129,7 +128,6 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 //		return corpusTypes;
 	}
 	
-	@SuppressWarnings("unchecked")
 	private List<DocumentTerm> getDocumentTypes(CorpusMapper corpusMapper) throws IOException {
 		DocumentTerms dt = new DocumentTerms(storage, parameters);
 		dt.run(corpusMapper);

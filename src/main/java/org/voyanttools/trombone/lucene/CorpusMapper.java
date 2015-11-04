@@ -23,25 +23,33 @@ package org.voyanttools.trombone.lucene;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.BitSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.AtomicReaderContext;
 import org.apache.lucene.index.DocsEnum;
+import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.spans.SpanQuery;
+import org.apache.lucene.search.spans.SpanWeight;
+import org.apache.lucene.search.spans.Spans;
+import org.apache.lucene.util.BitDocIdSet;
+import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
-import org.apache.lucene.util.DocIdBitSet;
+import org.apache.lucene.util.SparseFixedBitSet;
+import org.voyanttools.trombone.lucene.search.DocumentFilter;
+import org.voyanttools.trombone.lucene.search.DocumentFilterSpans;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -49,14 +57,14 @@ import org.voyanttools.trombone.storage.Storage;
  * @author sgs
  *
  */
-public class CorpusMapper extends Filter {
+public class CorpusMapper {
 	
 	Storage storage;
-	AtomicReader reader;
+	LeafReader reader;
 	IndexSearcher searcher;
 	Corpus corpus;
 	private List<Integer> luceneIds = null;
-	private DocIdBitSet docIdBitSet = null;
+	private BitSet bitSet = null;
 	private Map<String, Integer> documentIdToLuceneIdMap = null;
 	private Map<Integer, String> luceneIdToDocumentIdMap = null;
 
@@ -85,14 +93,12 @@ public class CorpusMapper extends Filter {
 		return luceneIds;
 	}
 	
-	public synchronized DocIdBitSet getDocIdBitSet() throws IOException {
-		if (docIdBitSet==null) {
-			build();
-		}
-		return docIdBitSet;
+	public BitSet getBitSet() throws IOException {
+		if (bitSet==null) {build();}
+		return bitSet;
 	}
 	
-	public AtomicReader getAtomicReader() throws IOException {
+	public LeafReader getLeafReader() throws IOException {
 		if (reader==null) {
 			reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		}
@@ -101,7 +107,7 @@ public class CorpusMapper extends Filter {
 	
 	public IndexSearcher getSearcher() throws IOException {
 		if (searcher==null) {
-			searcher = new IndexSearcher(getAtomicReader());
+			searcher = new IndexSearcher(getLeafReader());
 		}
 		return searcher;
 	}
@@ -142,15 +148,15 @@ public class CorpusMapper extends Filter {
 	 * @throws IOException
 	 */
 	private void buildFromTermsEnum() throws IOException {
-		Terms terms = getAtomicReader().terms("id");
-		TermsEnum termsEnum = terms.iterator(null);
+		Terms terms = getLeafReader().terms("id");
+		TermsEnum termsEnum = terms.iterator();
 		BytesRef bytesRef = termsEnum.next();
 		DocsEnum docsEnum = null;
 		int doc;
 		String id;
 		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
-		BitSet bitSet = new BitSet(getAtomicReader().numDocs());
-		Bits liveBits = getAtomicReader().getLiveDocs();
+		bitSet = new SparseFixedBitSet(getLeafReader().numDocs());
+		Bits liveBits = getLeafReader().getLiveDocs();
 		while (bytesRef!=null) {
 			docsEnum = termsEnum.docs(liveBits, docsEnum, DocsEnum.FLAG_NONE);
 			doc = docsEnum.nextDoc();
@@ -165,26 +171,45 @@ public class CorpusMapper extends Filter {
 			}
 			bytesRef = termsEnum.next();
 		}
-		docIdBitSet = new DocIdBitSet(bitSet);
 	}
 	
 	public String getDocumentIdFromDocumentPosition(int documentPosition) {
 		return getCorpusDocumentIds().get(documentPosition);
 	}
 
-	public DocIdBitSet getDocIdOpenBitSetFromStoredDocumentIds(
-			List<String> documentIds) throws IOException {
-		BitSet bitSet = new BitSet(getAtomicReader().numDocs());
-		for (String id : documentIds) {
-			bitSet.set(getLuceneIdFromDocumentId(id));
+	public boolean hasLuceneId(int doc) throws IOException {
+		if (bitSet==null) {
+			build();
 		}
-		return new DocIdBitSet(bitSet);
+		return bitSet.get(doc);
 	}
 
-	@Override
-	public DocIdSet getDocIdSet(AtomicReaderContext context, Bits acceptDocs) throws IOException {
-		return getDocIdBitSet(); // this ignores the context and acceptDocs arguments, let's hope that's not a problem :)
+	public Spans getFilteredSpans(SpanQuery spanQuery) throws IOException {
+		SpanWeight weight = spanQuery.createWeight(getSearcher(), false);
+		Spans spans = weight.getSpans(getLeafReader().getContext(), SpanWeight.Postings.POSITIONS);
+		return new DocumentFilterSpans(spans, getBitSet());
+	}
+	
+	public Filter getFilter() throws IOException {
+		return new DocumentFilter(this);
+	}
+	
+	public Query getFilteredQuery(Query query) throws IOException {
+		BooleanQuery.Builder builder = new BooleanQuery.Builder();
+		builder.add(query, BooleanClause.Occur.MUST);
+		builder.add(getFilter(), BooleanClause.Occur.FILTER);
+		return builder.build();
 	}
 
-
+	public BitSet getBitSetFromDocumentIds(List<String> documentIds) throws IOException {
+		BitSet subBitSet = new SparseFixedBitSet(getLeafReader().numDocs());
+		for (String id : documentIds) {
+			subBitSet.set(getLuceneIdFromDocumentId(id));
+		}
+		return subBitSet;
+	}
+	
+	public DocIdSet getDocIdSet() throws IOException {
+		return new BitDocIdSet(getBitSet());
+	}
 }
