@@ -91,7 +91,7 @@ public class CorpusManager extends AbstractTool {
 	
 	private void checkActions() throws IOException {
 		
-		if (parameters.getParameterBooleanValue("removeDocuments") || parameters.getParameterBooleanValue("keepDocuments") || parameters.getParameterBooleanValue("reorderDocuments")) {
+		if (parameters.getParameterBooleanValue("removeDocuments") || parameters.getParameterBooleanValue("keepDocuments") || parameters.getParameterBooleanValue("reorderDocuments") || parameters.getParameterBooleanValue("addDocuments")) {
 			
 			List<String> ids = new ArrayList<String>();
 			
@@ -141,6 +141,18 @@ public class CorpusManager extends AbstractTool {
 						keepers.add(id);
 					}
 				}
+			}
+			
+			if (parameters.getParameterBooleanValue("addDocuments")) {
+				keepers.addAll(corpus.getDocumentIds()); // add existing
+				
+				// prepare other documents
+				RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);
+				realCorpusCreator.run(4); // make sure to create corpus
+				realCorpusCreator.getStoredId();
+				String id = realCorpusCreator.getStoredId();
+				List<String> documentIds = storage.retrieveStrings(id);
+				keepers.addAll(documentIds);
 			}
 			
 			String corpusId = storage.storeStrings(keepers);
