@@ -4,6 +4,10 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAliasDB;
@@ -81,15 +85,81 @@ public class CorpusManager extends AbstractTool {
 		return corpusManager.getCorpus();
 	}
 	
-	private void checkActions() {
+	String getId() {
+		return id;
+	}
+	
+	private void checkActions() throws IOException {
+		
+		if (parameters.getParameterBooleanValue("removeDocuments") || parameters.getParameterBooleanValue("keepDocuments") || parameters.getParameterBooleanValue("reorderDocuments")) {
+			
+			List<String> ids = new ArrayList<String>();
+			
+			// add IDs
+			for (String docId : parameters.getParameterValues("docId")) {
+				if (docId.isEmpty()==false) {
+					ids.add(docId);
+				}
+			}
+			
+			// add indices
+			// check first if we have real values
+			corpus = getCorpus();
+			String[] docIndices = parameters.getParameterValues("docIndex");
+			if (docIndices.length>0 && docIndices[0].isEmpty()==false) {
+				for (int docIndex : parameters.getParameterIntValues("docIndex")) {
+					if (docIndex<corpus.size()) {
+						ids.add(corpus.getDocument(docIndex).getId());
+					}
+				}
+			}
+			
+			List<String> keepers = new ArrayList<String>();
+			
+			if (parameters.getParameterBooleanValue("removeDocuments")) {
+				Set<String> set = new HashSet<String>(ids);
+				for (String id : corpus.getDocumentIds()) {
+					if (set.contains(id)==false) {
+						keepers.add(id);
+					}
+				}
+			}
+			
+			if (parameters.getParameterBooleanValue("keepDocuments")) {
+				Set<String> set = new HashSet<String>(ids);
+				for (String id : ids) {
+					if (set.contains(id)) {
+						keepers.add(id);
+					}
+				}
+			}
+			
+			if (parameters.getParameterBooleanValue("reorderDocuments")) {
+				Set<String> set = new HashSet<String>(corpus.getDocumentIds());
+				for (String id : ids) {
+					if (set.contains(id)) {
+						keepers.add(id);
+					}
+				}
+			}
+			
+			String corpusId = storage.storeStrings(keepers);
+			FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=corpus"});
+			RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
+			realCorpusCreator.run(); // make sure to create corpus
+			this.id = realCorpusCreator.getStoredId();
+			this.corpus = null; // reset the corpus
+		}
+
 		if (parameters.containsKey("addAlias")) {
 			CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, false);
 			corpusAliasDB.put(parameters.getParameterValue("addAlias"), this.id);
 			corpusAliasDB.close();
 		}
+
 	}
 
-	private Corpus getCorpus() throws IOException {
+	Corpus getCorpus() throws IOException {
 		if (this.corpus==null && this.id!=null) {
 			this.corpus = this.storage.getCorpusStorage().getCorpus(this.id);
 		}

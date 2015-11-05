@@ -100,16 +100,16 @@ public class LuceneManager {
 //		return getLuceneDocumentId(query);
 //	}
 	
-	public IndexSearcher getIndexSearcher() throws CorruptIndexException, IOException {
-		return getIndexSearcher(false);
-	}
-	
-	private IndexSearcher getIndexSearcher(boolean replace) throws CorruptIndexException, IOException {
-		if (indexSearcher == null || replace) {
-			indexSearcher = new IndexSearcher(getDirectoryReader());
-		}
-		return indexSearcher;
-	}
+//	public IndexSearcher getIndexSearcher() throws CorruptIndexException, IOException {
+//		return getIndexSearcher(false);
+//	}
+//	
+//	private IndexSearcher getIndexSearcher(boolean replace) throws CorruptIndexException, IOException {
+//		if (indexSearcher == null || replace) {
+//			indexSearcher = new IndexSearcher(getDirectoryReader());
+//		}
+//		return indexSearcher;
+//	}
 	
 	public DirectoryReader getDirectoryReader() throws CorruptIndexException, IOException {
 		return getDirectoryReader(false);

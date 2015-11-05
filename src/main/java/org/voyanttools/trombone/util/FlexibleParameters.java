@@ -798,6 +798,10 @@ public class FlexibleParameters implements Cloneable, Serializable {
     	}
     	return true;
     }
+
+	public void clear() {
+		entries.clear();
+	}
     
 //    public synchronized int size() {
 //
