@@ -22,6 +22,8 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Keywords;
@@ -73,7 +75,16 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 			if (queries.length==0 || (queries.length==1 && queries[0].isEmpty())) {
 				runAllTerms(corpusMapper, stopwords);
 			}
-			runQueries(corpusMapper, stopwords, queries);
+			else {
+				// filter out queries that are in our stopwords list
+				Set<String> queriesSet = new HashSet<String>();
+				for (String query : queries) {
+					if (stopwords.isKeyword(query)==false) {
+						queriesSet.add(query);
+					}
+				}
+				runQueries(corpusMapper, stopwords, queriesSet.toArray(new String[0]));
+			}
 		}
 		else {
 			runAllTerms(corpusMapper, stopwords);

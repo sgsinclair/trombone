@@ -42,7 +42,7 @@ public class DocumentContexts extends AbstractContextTerms {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+1;
+		return super.getVersion()+2;
 	}
 
 	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
@@ -160,6 +160,8 @@ public class DocumentContexts extends AbstractContextTerms {
 			
 			String right = rightend > keywordend-1 ? StringUtils.substring(document, termsOfInterest.get(keywordend-1).getEndOffset(), termsOfInterest.get(rightend).getEndOffset()) : "";
 			
+			total++;
+			
 			queue.offer(new Kwic(corpusDocumentIndex, stripper.strip(queriesMap.get(keywordstart)), stripper.strip(analyzedMiddle), keywordstart, stripper.strip(left), stripper.strip(middle), stripper.strip(right)));
 		
 			previousrightend = rightend;			
@@ -184,18 +186,5 @@ public class DocumentContexts extends AbstractContextTerms {
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		runQueries(corpusMapper, stopwords, new String[0]); // doesn't make much sense without queries
 	}
-
-	private class DocumentStringSpansDataOccurrence {
-		private String string;
-		private int start;
-		private int end;
-		private DocumentStringSpansDataOccurrence(String string, int start, int end) {
-			this.string = string;
-			this.start = start;
-			this.end = end;
-		}
-	}
-
-
 
 }
