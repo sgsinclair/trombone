@@ -19,16 +19,25 @@ public class XslExpanderTest {
 
 	@Test
 	public void test() throws IOException {
+		
+		InputSource inputSource;
+		
+		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.xlsx"));
+		test(inputSource);
+
+		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.xls"));
+		test(inputSource);
+		
+
+	}
+
+	private void test(InputSource inputSource) throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 		
-		InputSource inputSource;
 		StoredDocumentSource storedDocumentSource;
 		List<StoredDocumentSource> expandedSourceDocumentSources;
 
-		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.xlsx"));
-		
-		
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		StoredDocumentSourceExpander storedDocumentSourceExpander;
 		FlexibleParameters parameters;
@@ -97,6 +106,7 @@ public class XslExpanderTest {
 		}
 		catch (IllegalArgumentException e) {
 		}
+		
+		storage.destroy();
 	}
-
 }
