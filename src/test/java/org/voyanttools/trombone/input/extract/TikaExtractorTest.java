@@ -46,7 +46,7 @@ import org.voyanttools.trombone.util.TestHelper;
  */
 public class TikaExtractorTest {
 	
-	@Test
+	//@Test
 	public void testStrings() throws IOException, URISyntaxException {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		StoredDocumentSourceStorage storeDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
@@ -113,9 +113,12 @@ public class TikaExtractorTest {
 		DocumentMetadata metadata;
 		String contents;
 		
-		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
+		String line;
+		
+		line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		
+		/*
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.txt"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
@@ -183,6 +186,18 @@ public class TikaExtractorTest {
 		assertEquals("title for HTML document", "Titre du document test de HTML", metadata.getTitle());
 		assertEquals("author for HTML document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for HTML document", "test, HTML", metadata.getKeywords());
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue("strip out script tag from html", contents.contains("script")==false);
+		assertTrue("strip out style tag from html", contents.contains("style")==false);
+		assertTrue("ensure we have some content in html", contents.contains(line)==true);
+
+		*/
+		
+		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.xlsx"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("title for XLSX document", "chars.xlsx", metadata.getTitle());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("strip out script tag from html", contents.contains("script")==false);
 		assertTrue("strip out style tag from html", contents.contains("style")==false);

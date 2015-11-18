@@ -23,6 +23,7 @@ package org.voyanttools.trombone.input.expand;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Callable;
 
@@ -67,6 +68,11 @@ public class StoredDocumentSourceExpander implements Expander {
 	 * the expander for XML documents
 	 */
 	private Expander xmlExpander;
+
+	/**
+	 * the expander for XSL documents
+	 */
+	private Expander xslExpander;
 
 	/**
 	 * Create a new instance of this expander with the specified storage
@@ -147,10 +153,15 @@ public class StoredDocumentSourceExpander implements Expander {
 
 		if (format == DocumentFormat.ARCHIVE) {
 			storedDocumentSources.addAll(expandArchive(storedDocumentSource));
-		} else if (format == DocumentFormat.COMPRESSED) {
+		}
+		else if (format == DocumentFormat.COMPRESSED) {
 			storedDocumentSources
 					.addAll(expandCompressed(storedDocumentSource));
-		} else if (format.isXml()) {
+		}
+		else if (format == DocumentFormat.XLSX) {
+			storedDocumentSources.addAll(expandXsl(storedDocumentSource));
+		}
+		else if (format.isXml()) {
 			storedDocumentSources.addAll(expandXml(storedDocumentSource));
 		}
 
@@ -160,6 +171,13 @@ public class StoredDocumentSourceExpander implements Expander {
 		}
 
 		return storedDocumentSources;
+	}
+
+	List<StoredDocumentSource> expandXsl(StoredDocumentSource storedDocumentSource) throws IOException {
+		if (this.xslExpander==null) {
+			this.xslExpander = new XslExpander(storedDocumentSourceStorage, parameters);
+		}
+		return this.xslExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
 
 	/**

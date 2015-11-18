@@ -95,6 +95,11 @@ public enum DocumentFormat {
 	MSWORDX("docx"),
 	
 	/**
+	 * An MS Excel file (.xslx).
+	 */
+	XLSX("xlsx"),
+	
+	/**
 	 * An RTF file (.rtf).
 	 */
 	RTF("rtf"),
