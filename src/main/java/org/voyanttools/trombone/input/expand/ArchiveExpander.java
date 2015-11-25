@@ -147,7 +147,7 @@ class ArchiveExpander implements Expander {
 					childMetadata.setLocation(file.toString());
 					childMetadata.setModified(archiveEntry.getLastModifiedDate().getTime());
 					childMetadata.setSource(Source.STREAM);
-					childMetadata.setTitle(file.getName());
+					childMetadata.setTitle(file.getName().replaceFirst("\\.\\w+$", ""));
 					String id = DigestUtils.md5Hex(parentId+filename);
 					InputSource inputSource = new InputStreamInputSource(id, childMetadata, new CloseShieldInputStream(archiveInputStream));
 					StoredDocumentSource storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);

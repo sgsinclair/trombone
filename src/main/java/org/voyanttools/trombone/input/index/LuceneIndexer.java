@@ -341,12 +341,15 @@ public class LuceneIndexer implements Indexer {
 				
 				FlexibleParameters params = storedDocumentSource.getMetadata().getFlexibleParameters();
 				for (String key : params.getKeys()) {
+					// store term vector so that we can build term DB
+					String v = params.getParameterValue(key);
+					if (v!=null && v.trim().isEmpty()==false) {
+						document.add(new Field(key, v, ft));
+					}
 					for (String value : params.getParameterValues(key)) {
 						if (value.trim().isEmpty()==false) {
-							// store term vector so that we can build term DB
-							document.add(new Field(key, value, ft));
 							// store as facet field
-							document.add(new SortedSetDocValuesField(key, new BytesRef(value)));
+							document.add(new SortedSetDocValuesField("facet."+key, new BytesRef(value)));
 						}
 					}
 				}

@@ -65,7 +65,8 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 			for (String queryString : queries) {
 				Query query = queryParser.parse(queryString);
 				LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-				indexSearcher.search(corpusMapper.getFilteredQuery(query), collector);
+				Query filteredQuery = corpusMapper.getFilteredQuery(query);
+				indexSearcher.search(filteredQuery, collector);
 				for (int doc : collector.getLuceneDocIds()) {
 					idsSet.add(corpusMapper.getDocumentIdFromLuceneId(doc));
 				}

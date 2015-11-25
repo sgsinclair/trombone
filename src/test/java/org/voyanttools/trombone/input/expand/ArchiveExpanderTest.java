@@ -55,21 +55,25 @@ public class ArchiveExpanderTest {
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Zip archive file should contain two content files", 2, expandedSourceDocumentSources.size());
+		assertEquals("chars_latin1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.tar"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Tar archive file should contain two content files", 2, expandedSourceDocumentSources.size());
+		assertEquals("chars_latin1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.tar.gz"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 2, expandedSourceDocumentSources.size());
+		assertEquals("chars_latin1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.tar.bz2"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
 		assertEquals("Compressed tar archive file should contain two content files", 2, expandedSourceDocumentSources.size());
+		assertEquals("chars_latin1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 
 		storage.destroy();
 	}

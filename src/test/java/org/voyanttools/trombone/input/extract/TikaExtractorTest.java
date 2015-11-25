@@ -118,12 +118,11 @@ public class TikaExtractorTest {
 		line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		
-		/*
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.txt"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
-		assertEquals("chars_utf8.txt", metadata.getTitle());
+		assertEquals("chars_utf8", metadata.getTitle());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have two paragraphs in text", StringUtils.countMatches(contents, "<p>")==2);
 		assertTrue("ensure we've escaped & in text", contents.contains("&amp;")==true);
@@ -190,14 +189,12 @@ public class TikaExtractorTest {
 		assertTrue("strip out script tag from html", contents.contains("script")==false);
 		assertTrue("strip out style tag from html", contents.contains("style")==false);
 		assertTrue("ensure we have some content in html", contents.contains(line)==true);
-
-		*/
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.xlsx"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
-		assertEquals("title for XLSX document", "chars.xlsx", metadata.getTitle());
+		assertEquals("title for XLSX document", "chars", metadata.getTitle());
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("strip out script tag from html", contents.contains("script")==false);
 		assertTrue("strip out style tag from html", contents.contains("style")==false);

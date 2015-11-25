@@ -75,7 +75,7 @@ public class FileInputSource implements InputSource {
 		this.metadata.setLocation(file.toString());
 		this.metadata.setSource(Source.FILE);
 		this.metadata.setModified(file.lastModified());
-		this.metadata.setTitle(file.getName()); // default to filename
+		this.metadata.setTitle(file.getName().replaceFirst("\\.\\w+$", "")); // default to filename
 		String id = metadata.getLocation()
 				+ String.valueOf(metadata.getModified())
 				+ String.valueOf(file.length());
