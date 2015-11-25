@@ -45,15 +45,14 @@ import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.html.DefaultHtmlMapper;
 import org.apache.tika.parser.html.HtmlMapper;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.lucene.analysis.KitchenSinkPerFieldAnalyzerWrapper;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.LangDetector;
 import org.xml.sax.SAXException;
-
-import com.cybozu.labs.langdetect.DetectorFactory;
-import com.cybozu.labs.langdetect.LangDetectException;
 
 /**
  * @author sgs
@@ -190,22 +189,8 @@ public class TikaExtractor implements Extractor {
 	        	extractedContent = extractedContent.replaceAll("&#xD;", "<br />\n      ");
 	        }
 	        
-	        try {
-				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
-				String text = new Tika().parseToString(new ByteArrayInputStream(extractedContent.getBytes("UTF-8")));
-				if (text.trim().isEmpty()==false) {
-					detector.append(text);
-					String lang = detector.detect();
-					metadata.setLanguageCode(lang);
-				}
-			} catch (LangDetectException e) {
-				// fail silently
-				if (parameters.getParameterBooleanValue("verbose")) {
-					System.out.println("Unable to detect language for "+storedDocumentSource.getMetadata());
-				}
-			} catch (TikaException e) {
-				throw new IOException("Unable to extract text for language detection", e);
-			}
+			String lang = LangDetector.langDetector.detect(extractedContent);
+			metadata.setLanguageCode(lang);
 	        
 	        if (parameters.containsKey("inputRemoveUntil")) {
 	        	Pattern pattern = Pattern.compile(parameters.getParameterValue("inputRemoveUntil"));

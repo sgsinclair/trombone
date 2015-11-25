@@ -116,20 +116,32 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-analyzers-smartcn</artifactId>
+			<version>5.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-test-framework</artifactId>
 			<version>5.3.1</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>com.optimaize.languagedetector</groupId>
+		    <artifactId>language-detector</artifactId>
+		    <version>0.5</version>
 		</dependency>
         <dependency>
             <groupId>net.htmlparser.jericho</groupId>
             <artifactId>jericho-html</artifactId>
             <version>3.3</version>
         </dependency>
+        <!--
         <dependency>
 			<groupId>com.cybozu.labs</groupId>
 			<artifactId>langdetect</artifactId>
 			<version>1.2.2</version>
 		</dependency>
+		 -->
 		<!--
 		<dependency>
 			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>

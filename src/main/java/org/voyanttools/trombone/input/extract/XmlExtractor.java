@@ -69,13 +69,11 @@ import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.LangDetector;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
-import com.cybozu.labs.langdetect.DetectorFactory;
-import com.cybozu.labs.langdetect.LangDetectException;
 
 import net.sf.saxon.lib.NamespaceConstant;
 import net.sf.saxon.xpath.XPathFactoryImpl;
@@ -380,25 +378,10 @@ public class XmlExtractor implements Extractor, Serializable {
 //			String string = StringEscapeUtils.unescapeXml(sw.toString());
 //			byte[] bytes = string.getBytes("UTF-8");
 //			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
-	        try {
-	        	Properties p = System.getProperties();
-				com.cybozu.labs.langdetect.Detector detector = DetectorFactory.create();
-				// use default detector and parser
-				String text = new Tika(new DefaultDetector(), new XmlOrHtmlTikaParser()).parseToString(new ByteArrayInputStream(string.getBytes("UTF-8")));
-				if (text.trim().isEmpty()==false) {
-					detector.append(text);
-					String lang = detector.detect();
-					metadata.setLanguageCode(lang);
-				}
-			} catch (LangDetectException e) {
-				// fail silently
-				if (parameters.getParameterBooleanValue("verbose")) {
-					System.out.println("Unable to detect language for "+storedDocumentSource.getMetadata());
-				}
-			} catch (TikaException e) {
-				throw new IOException("Unable to extract text for language detection", e);
-			}
-	        
+			
+			String lang = LangDetector.langDetector.detect(string);
+			metadata.setLanguageCode(lang);
+
 	        isProcessed = true;
 
 	        return new ByteArrayInputStream(StringEscapeUtils.unescapeXml(string).getBytes("UTF-8"));

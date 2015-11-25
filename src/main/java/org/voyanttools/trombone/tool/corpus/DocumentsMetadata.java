@@ -20,6 +20,7 @@ import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.model.IndexedDocument.IndexedDocumentPriorityQueue;
 import org.voyanttools.trombone.model.IndexedDocument.Sort;
 import org.voyanttools.trombone.storage.Storage;
@@ -58,6 +59,7 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 			Map<String, Float> weights = new HashMap<String, Float>();
 			weights.put("title", 1f);
 			weights.put("author", 1f);
+			weights.put(TokenType.lexical.name(), 1f);
 			IndexSearcher indexSearcher = corpusMapper.getSearcher();
 			SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(indexSearcher.getIndexReader(), storage.getLuceneManager().getAnalyzer(), weights);
 			

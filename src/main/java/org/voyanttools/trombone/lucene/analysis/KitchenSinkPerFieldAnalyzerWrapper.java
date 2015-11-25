@@ -26,7 +26,6 @@ import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.AnalyzerWrapper;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
 import org.apache.lucene.analysis.core.KeywordAnalyzer;
 
 /**
@@ -36,7 +35,7 @@ import org.apache.lucene.analysis.core.KeywordAnalyzer;
 public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 
 	private static Analyzer keywordAnalyzer = new KeywordAnalyzer();
-	public enum AnalyzerName {
+	private enum AnalyzerName {
 		ID("id") {
 			@Override
 			Analyzer getAnalyzer() {return keywordAnalyzer;}

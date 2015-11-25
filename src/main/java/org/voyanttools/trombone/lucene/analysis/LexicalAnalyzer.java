@@ -23,12 +23,18 @@ package org.voyanttools.trombone.lucene.analysis;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.io.StringReader;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
+import org.apache.lucene.analysis.cn.smart.HMMChineseTokenizer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
+import org.apache.tika.io.IOUtils;
+import org.voyanttools.trombone.model.TokenType;
+import org.voyanttools.trombone.util.LangDetector;
+
 
 /**
  * @author sgs
@@ -36,10 +42,27 @@ import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
  */
 public class LexicalAnalyzer extends Analyzer {
 	
+	private String lang = "";
+	
 	@Override
 	protected Reader initReader(String fieldName, Reader reader) {
+		
+		/* we're going to try to determine the language of the text so that we can adapt the components */
+		
+		// quick and dirty strip tags
+		String text;
 		try {
-			return new HTMLCharFilter(reader);
+			text = IOUtils.toString(reader);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		
+		String strippedText = text.replaceAll("<.+?>", "").trim();
+		
+		lang = LangDetector.langDetector.detect(strippedText);
+		
+		try {
+			return new HTMLCharFilter(new StringReader(text));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -47,9 +70,15 @@ public class LexicalAnalyzer extends Analyzer {
 	
 	@Override
 	protected TokenStreamComponents createComponents(String fieldName) {
-		Tokenizer tokenizer = new ICUTokenizer();
-		TokenStream stream = new LowerCaseFilter(tokenizer);
-		return new TokenStreamComponents(tokenizer, stream);
+		if (lang.startsWith("zzh") && fieldName.equals(TokenType.lexical.name())) {
+			Tokenizer tokenizer = new HMMChineseTokenizer();
+			return new TokenStreamComponents(tokenizer, tokenizer);
+		}
+		else {
+			Tokenizer tokenizer = new ICUTokenizer();
+			TokenStream stream = new LowerCaseFilter(tokenizer);
+			return new TokenStreamComponents(tokenizer, stream);
+		}
 	}
 
 }

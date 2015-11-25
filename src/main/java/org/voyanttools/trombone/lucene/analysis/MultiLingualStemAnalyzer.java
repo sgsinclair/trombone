@@ -21,13 +21,7 @@
  ******************************************************************************/
 package org.voyanttools.trombone.lucene.analysis;
 
-import java.io.Reader;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.commons.lang3.StringUtils;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.Analyzer.TokenStreamComponents;
 import org.apache.lucene.analysis.snowball.SnowballFilter;
 
 /**
