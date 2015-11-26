@@ -24,16 +24,21 @@ package org.voyanttools.trombone.lucene.analysis;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
+import java.util.List;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.cn.smart.HMMChineseTokenizer;
+import org.apache.lucene.analysis.core.LetterTokenizer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
 import org.apache.tika.io.IOUtils;
 import org.voyanttools.trombone.model.TokenType;
-import org.voyanttools.trombone.util.LangDetector;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 
 /**
@@ -42,27 +47,47 @@ import org.voyanttools.trombone.util.LangDetector;
  */
 public class LexicalAnalyzer extends Analyzer {
 	
+	FlexibleParameters parameters = new FlexibleParameters();
 	private String lang = "";
 	
 	@Override
 	protected Reader initReader(String fieldName, Reader reader) {
-		
-		/* we're going to try to determine the language of the text so that we can adapt the components */
-		
-		// quick and dirty strip tags
-		String text;
-		try {
-			text = IOUtils.toString(reader);
-		} catch (IOException e) {
-			throw new RuntimeException(e);
+
+		if (fieldName.equals(TokenType.lexical.name())) {
+			
+			/* since there doesn't seem to be a way of passing parameters to the
+			 * analyzer that's content-aware and per-field, we can add some 
+			 * instructions to the end of the reader (this is done by
+			 * {@link LuceneIndexer}). At this end we're especially interesed
+			 * in determining the language and if a parameter was set to use
+			 * a simple word-boundary tokenizer (for some Asian languages
+			 * the tokenizer is too aggressive and we want to allow the user
+			 * to do segmentation. */
+
+			String text;
+			try {
+				text = IOUtils.toString(reader);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+			
+			if (text.endsWith("-->") && text.contains("<!--")) {
+				int start = text.lastIndexOf("<!--");
+				parameters = getParameters(text.substring(start+4, text.length()-3));
+				text  = text.substring(0, start);
+			}
+			else {
+				parameters.clear();
+			}
+			reader = new StringReader(text);
+		}
+		else {
+			parameters.clear();
 		}
 		
-		String strippedText = text.replaceAll("<.+?>", "").trim();
-		
-		lang = LangDetector.langDetector.detect(strippedText);
 		
 		try {
-			return new HTMLCharFilter(new StringReader(text));
+			return new HTMLCharFilter(reader);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -70,7 +95,12 @@ public class LexicalAnalyzer extends Analyzer {
 	
 	@Override
 	protected TokenStreamComponents createComponents(String fieldName) {
-		if (lang.startsWith("zzh") && fieldName.equals(TokenType.lexical.name())) {
+		if (fieldName.equals(TokenType.lexical.name()) && parameters.getParameterValue("tokenization", "").equals("wordBoundaries")) {
+			Tokenizer tokenizer = new LetterTokenizer();
+			TokenStream stream = new LowerCaseFilter(tokenizer);
+			return new TokenStreamComponents(tokenizer, stream);
+		}
+		else if (lang.startsWith("zh") && fieldName.equals(TokenType.lexical.name())) {
 			Tokenizer tokenizer = new HMMChineseTokenizer();
 			return new TokenStreamComponents(tokenizer, tokenizer);
 		}
@@ -79,6 +109,21 @@ public class LexicalAnalyzer extends Analyzer {
 			TokenStream stream = new LowerCaseFilter(tokenizer);
 			return new TokenStreamComponents(tokenizer, stream);
 		}
+	}
+	
+	private FlexibleParameters getParameters(String query) {
+		FlexibleParameters parameters = new FlexibleParameters();
+		String[] pairs = query.trim().split("&");
+		try {
+		    for (String pair : pairs) {
+		        int idx = pair.indexOf("=");
+		        parameters.addParameter(URLDecoder.decode(pair.substring(0, idx), "UTF-8"), URLDecoder.decode(pair.substring(idx + 1), "UTF-8"));
+		    }
+		}
+		catch (UnsupportedEncodingException e) { // should never happen
+			throw new RuntimeException(e);
+		}
+	    return parameters;
 	}
 
 }

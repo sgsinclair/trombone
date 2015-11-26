@@ -336,7 +336,13 @@ public class LuceneIndexer implements Indexer {
 				document.add(new StringField("id", id, Field.Store.NO));
 //				document.add(new StringField("corpus", corpusId, Field.Store.NO));
 				document.add(new StringField("version",  LucenePackage.get().getImplementationVersion(), Field.Store.YES));
-				document.add(new Field("lexical", getString(), ft));
+				
+				FlexibleParameters p = new FlexibleParameters();
+				p.setParameter("language", storedDocumentSource.getMetadata().getLanguageCode());
+				if (parameters.containsKey("tokenization")) {
+					p.setParameter("tokenization", parameters.getParameterValue("tokenization"));
+				}
+				document.add(new Field("lexical", getString() + "<!-- "+ p.getAsQueryString()+" -->", ft));
 //				System.err.println(id+": "+getString());
 				
 				FlexibleParameters params = storedDocumentSource.getMetadata().getFlexibleParameters();
