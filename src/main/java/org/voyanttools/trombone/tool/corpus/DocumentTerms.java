@@ -37,6 +37,7 @@ import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
+import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -125,18 +126,22 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		
+		BitSet bitset = corpusMapper.getBitSetFromDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
+		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue());
 			int doc = spans.nextDoc();
 			while(doc!=spans.NO_MORE_DOCS) {
-				int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
-				positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
-				int pos = spans.nextStartPosition();
-				while (pos!=spans.NO_MORE_POSITIONS) {
-					positionsMap.get(docIndexInCorpus).add(pos);
-					pos = spans.nextStartPosition();
+				if (bitset.get(doc)) {
+					int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
+					positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
+					int pos = spans.nextStartPosition();
+					while (pos!=spans.NO_MORE_POSITIONS) {
+						positionsMap.get(docIndexInCorpus).add(pos);
+						pos = spans.nextStartPosition();
+					}
 				}
 				doc = spans.nextDoc();
 			}
