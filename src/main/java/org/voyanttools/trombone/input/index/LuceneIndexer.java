@@ -31,6 +31,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.lucene.LucenePackage;
@@ -56,11 +57,14 @@ import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
+import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
@@ -78,6 +82,21 @@ public class LuceneIndexer implements Indexer {
 	}
 
 	public String index(List<StoredDocumentSource> storedDocumentSources) throws IOException {
+		
+		// let's check if we need to create new sources because of tokenization parameters
+		if (parameters.getParameterValue("tokenization", "").isEmpty()==false) {
+			StoredDocumentSourceStorage sourceDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
+			String params = parameters.getParameterValue("tokenization");
+			for (int i=0, len=storedDocumentSources.size(); i<len; i++) {
+				StoredDocumentSource storedDocumentSource = storedDocumentSources.get(i);
+				String id = storedDocumentSource.getId();
+				String newId = DigestUtils.md5Hex(id+params);
+				InputStream inputStream = sourceDocumentSourceStorage.getStoredDocumentSourceInputStream(id);
+				InputSource inputSource = new InputStreamInputSource(newId, storedDocumentSource.getMetadata(), inputStream);
+				storedDocumentSources.set(i, sourceDocumentSourceStorage.getStoredDocumentSource(inputSource));
+				inputStream.close();
+			}
+		}
 		
 		List<String> ids = new ArrayList<String>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
@@ -339,7 +358,7 @@ public class LuceneIndexer implements Indexer {
 				
 				FlexibleParameters p = new FlexibleParameters();
 				p.setParameter("language", storedDocumentSource.getMetadata().getLanguageCode());
-				if (parameters.containsKey("tokenization")) {
+				if (parameters.getParameterValue("tokenization", "").isEmpty()==false) {
 					p.setParameter("tokenization", parameters.getParameterValue("tokenization"));
 				}
 				document.add(new Field("lexical", getString() + "<!-- "+ p.getAsQueryString()+" -->", ft));

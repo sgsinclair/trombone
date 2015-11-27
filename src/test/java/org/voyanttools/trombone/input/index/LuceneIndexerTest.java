@@ -3,42 +3,27 @@
  */
 package org.voyanttools.trombone.input.index;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.DocsEnum;
-import org.apache.lucene.index.Fields;
 import org.apache.lucene.index.LeafReader;
-import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.util.AttributeSource;
-import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
-import org.apache.lucene.util.SparseFixedBitSet;
-import org.apache.tika.io.IOUtils;
 import org.junit.Test;
-import org.voyanttools.trombone.input.extract.Extractor;
 import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
-import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
@@ -84,10 +69,10 @@ public class LuceneIndexerTest {
 	 * 
 	 * * i18n/zh_utf8.txt: 我们第一届全国人民代表大会第一次会议
 	 * 		* built-in tokenizer: 10 tokens
-	 * 		* word woundaries tokenizer: 1 token
+	 * 		* word boundaries tokenizer: 1 token
 	 * * i18n/zh_segmented_utf8.txt: 我们 第一 届 全国人民代表大会 第 一次 会议
 	 * 		* built-in tokenizer: 9 tokens
-	 * 		* word woundaries tokenizer: 7 tokens
+	 * 		* word boundaries tokenizer: 7 tokens
 	 * 
 	 * With thanks to David Lawrence for nudging improvements and providing an example text.
 	 * @throws IOException
@@ -109,26 +94,25 @@ public class LuceneIndexerTest {
 		storedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(segmentedInputSource));
 		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, parameters);
 		List<StoredDocumentSource> extractedDocumentSources = extractor.getExtractedStoredDocumentSources(storedDocumentSources);
-		docsToTokensMap.put(extractedDocumentSources.get(0).getId(), 10);
-		docsToTokensMap.put(extractedDocumentSources.get(1).getId(), 9);
 		LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
-		luceneIndexer.index(extractedDocumentSources);
+		String id = luceneIndexer.index(extractedDocumentSources);
+		List<String> ids = storage.retrieveStrings(id);
+		docsToTokensMap.put(ids.get(0), 10);
+		docsToTokensMap.put(ids.get(1), 9);
 		
 		// now re-extract and index with tokenization parameter
 		parameters.addParameter("tokenization", "wordBoundaries");
-		extractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, parameters);
-		extractedDocumentSources.clear();
-		for (StoredDocumentSource source : storedDocumentSources) {
-			InputSource inputSource = new StringInputSource("a", source.getMetadata(), IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(source.getId())));
-			extractedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(inputSource));
-		}
-		docsToTokensMap.put(extractedDocumentSources.get(0).getId(), 7);
-		docsToTokensMap.put(extractedDocumentSources.get(1).getId(), 1);
 		luceneIndexer = new LuceneIndexer(storage, parameters);
-		luceneIndexer.index(extractedDocumentSources);
+		// indexer should create new documents in index because of parameters
+		id = luceneIndexer.index(extractedDocumentSources);
+		ids = storage.retrieveStrings(id);
+		docsToTokensMap.put(ids.get(0), 7);
+		docsToTokensMap.put(ids.get(1), 1);
 
+		
 		// finally, go through and check our token counts
 		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		assertEquals(4, reader.maxDoc());
 		IndexSearcher searcher = new IndexSearcher(reader);
 		for (Map.Entry<String, Integer> entry : docsToTokensMap.entrySet()) {
 			TopDocs topDocs = searcher.search(new TermQuery(new Term("id", entry.getKey())), 1);
