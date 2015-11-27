@@ -34,6 +34,7 @@ import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -52,7 +53,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 public class Keywords {
 	
 	private static String COMMA_SEPARATOR = ",";
-	private static String HTTP_PREFIX = "http://";
+	private static String HTTP_PREFIX = "http";
 	private static String STOPWORDS_FILE_PREFIX = "stop.";
 	private static String KEYWORDS_PREFIX = "keywords-";
 	private static String COMMENT = "#";
@@ -142,7 +143,7 @@ public class Keywords {
 	
 	private void add(Collection<String> keywords) {
 		for (String keyword : keywords) {
-			if (keyword.startsWith(COMMENT)==false) {
+			if (keyword.trim().startsWith(COMMENT)==false) {
 				this.keywords.add(keyword);
 			}
 		}
