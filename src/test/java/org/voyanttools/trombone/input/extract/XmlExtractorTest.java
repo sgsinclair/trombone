@@ -123,7 +123,7 @@ public class XmlExtractorTest {
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("Website Feed--A Special Event--Announcing new Products", metadata.getTitle());
-
+		
 		storage.destroy();
 
 	}

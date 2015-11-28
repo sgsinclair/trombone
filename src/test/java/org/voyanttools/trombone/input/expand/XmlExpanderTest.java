@@ -123,6 +123,22 @@ public class XmlExpanderTest {
 			if (fileInputStream!=null) {fileInputStream.close();}
 		}
 
+		// with xmlDocumentXpath we should have one for local-name()='creator'
+		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//*[local-name()='creator']"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
+		assertEquals("XML file with local name creator should contain 1 document", 1, expandedSourceDocumentSources.size());
+		
+		// with xmlDocumentXpath we should have none for creator (without namespace
+		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//creator"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
+		assertEquals("XML file with creator (no namespace) should contain no documents", 0, expandedSourceDocumentSources.size());
+		
 		// with xmlDocumentXpath we should have one for dc:creator
 		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//item/title", "xmlDocumentsXpath=//item/description"});
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);

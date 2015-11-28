@@ -1,0 +1,25 @@
+<root 
+    xmlns:h="http://www.w3.org/TR/html4/"
+    xmlns:f="http://www.w3schools.com/furniture"
+    xmlns="http://www.w3.org/TR/html4/">
+    
+    <h:table>
+        <h:tr>
+            <h:td>Apples</h:td>
+            <h:td>Bananas</h:td>
+        </h:tr>
+    </h:table>
+    
+    <f:table>
+        <f:name>African Coffee Table</f:name>
+        <f:width>80</f:width>
+        <f:length>120</f:length>
+    </f:table>
+    
+    <tables>
+        <name>African Coffee Table</name>
+        <width>80</width>
+        <length>120</length>
+    </tables>
+    
+</root>
