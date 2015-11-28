@@ -113,8 +113,16 @@ public class XmlExtractorTest {
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
-		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for RSS feed", "Website Feed", metadata.getTitle());
+		
+		// make sure we can join string values
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlTitleXpath=string-join(//title,'--')"}));
+		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		// this should be blank rather than the title tag (for generic XML)
+		assertEquals("Website Feed--A Special Event--Announcing new Products", metadata.getTitle());
 
 		storage.destroy();
 

@@ -400,14 +400,20 @@ public class XmlExtractor implements Extractor, Serializable {
 				XPath xpath = xpathFactory.newXPath();
 				NodeList nodeList;
 				try {
-					nodeList = (NodeList) xpath.evaluate(xpathString, doc.getDocumentElement(), XPathConstants.NODESET);
+					if (xpathString.startsWith("string-join(") || xpathString.startsWith("concat(") || xpathString.startsWith("replace(")) {
+						 String s = (String) xpath.evaluate(xpathString, doc.getDocumentElement(), XPathConstants.STRING);
+						 values.add(s);
+					}
+					else {
+						nodeList = (NodeList) xpath.evaluate(xpathString, doc.getDocumentElement(), XPathConstants.NODESET);
+						for (int i=0, len=nodeList.getLength(); i<len; i++) {
+							values.add(nodeList.item(i).getTextContent());
+						}
+					}
 				}
 				catch (XPathExpressionException e) {
 					throw new IllegalArgumentException(
 							"A problem was encountered proccesing this XPath query: " + xpathString, e);
-				}
-				for (int i=0, len=nodeList.getLength(); i<len; i++) {
-					values.add(nodeList.item(i).getTextContent());
 				}
 				return values.toArray(strings);
 			}
