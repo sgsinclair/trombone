@@ -32,6 +32,8 @@ import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.input.source.StringInputSource;
+import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
@@ -176,6 +178,26 @@ public class XmlExpanderTest {
 			if (inputStream!=null) {inputStream.close();}
 			if (fileInputStream!=null) {fileInputStream.close();}
 		}
+		
+		// make sure a string is recognized as XML
+//		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//b"});
+		parameters = new FlexibleParameters();
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new StringInputSource("<a><b>c</b><b>d</b></a>");
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		assertEquals("XML string with no Xpath should contain one document", 1, expandedSourceDocumentSources.size());
+		assertEquals("input string should be recognized as XML", DocumentFormat.XML, expandedSourceDocumentSources.get(0).getMetadata().getDocumentFormat());
+		
+		// make sure an XML string is expanded
+		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//b"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new StringInputSource("<a><b>c</b><b>d</b></a>");
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		assertEquals("XML string with no documents xpath should contain two documents", 2, expandedSourceDocumentSources.size());
+		assertEquals("input string should be recognized as XML", DocumentFormat.XML, expandedSourceDocumentSources.get(0).getMetadata().getDocumentFormat());
+		
 		storage.destroy();
 
 	}

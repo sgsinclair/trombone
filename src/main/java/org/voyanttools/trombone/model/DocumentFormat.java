@@ -21,7 +21,15 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.regex.Pattern;
+
+import org.apache.tika.detect.DefaultDetector;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.mime.MediaType;
 
 /**
  * An enumeration of the known document formats. The names are generic (like TEXT)
@@ -234,6 +242,22 @@ public enum DocumentFormat {
 			}
 		}
 		return UNKNOWN;
+	}
+	
+	public static DocumentFormat fromString(String string) throws UnsupportedEncodingException, IOException {
+		DefaultDetector detector = new DefaultDetector();
+		MediaType mediaType = detector.detect(new ByteArrayInputStream(string.getBytes("UTF-8")), new Metadata());
+		DocumentFormat format = DocumentFormat.fromContentType(mediaType.toString());
+		
+		if (format==DocumentFormat.TEXT) {
+			String trimmed = string.trim();
+			// quick and dirty check, particularly the end tag syntax
+			if (trimmed.startsWith("<") && trimmed.endsWith(">") && Pattern.compile("</\\w+").matcher(trimmed).find()) {
+				format = DocumentFormat.XML;
+			}
+		}
+		return format;
+		
 	}
 
 	/**

@@ -21,12 +21,17 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Comparator;
 
+import org.apache.tika.detect.DefaultDetector;
+import org.apache.tika.io.IOUtils;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.mime.MediaType;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -209,7 +214,7 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 				
 			}
 		}
-
+		
 		return getDefaultFormat();
 
 	}

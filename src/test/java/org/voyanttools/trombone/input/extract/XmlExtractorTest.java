@@ -31,6 +31,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.input.source.StringInputSource;
+import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
@@ -123,6 +125,37 @@ public class XmlExtractorTest {
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("Website Feed--A Special Event--Announcing new Products", metadata.getTitle());
+		
+		// make sure we recognize XML in a string
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters());
+		inputSource = new StringInputSource("<a><b>c</b><b>d</b></a>");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		// this should be blank rather than the title tag (for generic XML)
+		assertEquals(DocumentFormat.XML, metadata.getDocumentFormat());
+
+		// make sure we recognize HTML in a string
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters());
+		inputSource = new StringInputSource("<html><body><div>c</div><div>d</div></body></html>");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		// this should be blank rather than the title tag (for generic XML)
+		assertEquals(DocumentFormat.HTML, metadata.getDocumentFormat());
+		
+		// make sure we find XPath in string XML
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlContentXpath=//b", "xmlTitleXpath=//b[1]"}));
+		inputSource = new StringInputSource("<a><b>c</b><b>d</b><z>x</z></a>");
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		// this should be blank rather than the title tag (for generic XML)
+		assertEquals(DocumentFormat.XML, metadata.getDocumentFormat());
+		assertEquals("c", metadata.getTitle());
+		String string = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertTrue(string.contains("<a>") && string.contains("<b>") && !string.contains("<z>"));
+		
 		
 		storage.destroy();
 

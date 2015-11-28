@@ -21,14 +21,21 @@
  ******************************************************************************/
 package org.voyanttools.trombone.input.expand;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Callable;
 
+import org.apache.tika.detect.DefaultDetector;
+import org.apache.tika.io.IOUtils;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.mime.MediaType;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -148,6 +155,17 @@ public class StoredDocumentSourceExpander implements Expander {
 		if (inputFormatString.isEmpty()==false) {
 			if (format!=DocumentFormat.ARCHIVE && format!=DocumentFormat.COMPRESSED) { // make sure it's not container format (where the inputFormat parameters probably applies to the contents, not the container)
 				format = DocumentFormat.valueOf(inputFormatString);
+			}
+		}
+
+		// if we have a string and an unknown format, we have to have a peek
+		if (format == DocumentFormat.UNKNOWN && storedDocumentSource.getMetadata().getSource()==Source.STRING) {
+			String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
+			format = DocumentFormat.fromString(string);
+			if (format != DocumentFormat.UNKNOWN) {
+				DocumentMetadata metadata = storedDocumentSource.getMetadata();
+				metadata.setDefaultFormat(format);
+				storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(storedDocumentSource.getId(), metadata);
 			}
 		}
 

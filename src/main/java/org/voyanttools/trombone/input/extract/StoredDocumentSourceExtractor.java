@@ -30,8 +30,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -110,6 +113,15 @@ public class StoredDocumentSourceExtractor {
 		}
 		else {
 			format = storedDocumentSource.getMetadata().getDocumentFormat();
+			if (format==DocumentFormat.UNKNOWN && storedDocumentSource.getMetadata().getSource()==Source.STRING) {
+				String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
+				format = DocumentFormat.fromString(string);
+				if (format != DocumentFormat.UNKNOWN) {
+					DocumentMetadata metadata = storedDocumentSource.getMetadata();
+					metadata.setDefaultFormat(format);
+					storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(storedDocumentSource.getId(), metadata);
+				}
+			}
 		}
 
 		InputSource extractedInputSource;
