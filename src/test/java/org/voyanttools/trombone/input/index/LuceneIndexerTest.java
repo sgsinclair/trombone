@@ -24,6 +24,7 @@ import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
@@ -38,7 +39,7 @@ import org.voyanttools.trombone.util.TestHelper;
  */
 public class LuceneIndexerTest {
 
-	@Test
+	//@Test
 	public void testDuplicateAdd() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		InputSource one = new StringInputSource("one");
@@ -87,7 +88,7 @@ public class LuceneIndexerTest {
 		// extract and index with no parameters
 		FlexibleParameters parameters = new FlexibleParameters();
 		InputSource originalInputSource = new FileInputSource(TestHelper.getResource("i18n/zh_utf8.txt")); // 10 tokens
-		InputSource segmentedInputSource = new FileInputSource(TestHelper.getResource("i18n/zh_utf8.txt")); // 9 tokens
+		InputSource segmentedInputSource = new FileInputSource(TestHelper.getResource("i18n/zh_segmented_utf8.txt")); // 9 tokens
 		List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
 		StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 		storedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(originalInputSource));
@@ -97,8 +98,8 @@ public class LuceneIndexerTest {
 		LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
 		String id = luceneIndexer.index(extractedDocumentSources);
 		List<String> ids = storage.retrieveStrings(id);
-		docsToTokensMap.put(ids.get(0), 10);
-		docsToTokensMap.put(ids.get(1), 9);
+		docsToTokensMap.put(ids.get(0), 9);
+		docsToTokensMap.put(ids.get(1), 10);
 		
 		// now re-extract and index with tokenization parameter
 		parameters.addParameter("tokenization", "wordBoundaries");
@@ -106,8 +107,10 @@ public class LuceneIndexerTest {
 		// indexer should create new documents in index because of parameters
 		id = luceneIndexer.index(extractedDocumentSources);
 		ids = storage.retrieveStrings(id);
-		docsToTokensMap.put(ids.get(0), 7);
-		docsToTokensMap.put(ids.get(1), 1);
+		docsToTokensMap.put(ids.get(0), 1);
+		docsToTokensMap.put(ids.get(1), 7);
+		// make sure we have new metadata
+		assertEquals(0, storedDocumentSourceStorage.getStoredDocumentSourceMetadata(ids.get(0)).getLastTokenPositionIndex(TokenType.lexical));
 
 		
 		// finally, go through and check our token counts

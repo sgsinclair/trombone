@@ -92,7 +92,9 @@ public class LuceneIndexer implements Indexer {
 				String id = storedDocumentSource.getId();
 				String newId = DigestUtils.md5Hex(id+params);
 				InputStream inputStream = sourceDocumentSourceStorage.getStoredDocumentSourceInputStream(id);
-				InputSource inputSource = new InputStreamInputSource(newId, storedDocumentSource.getMetadata(), inputStream);
+				DocumentMetadata metadata = storedDocumentSource.getMetadata();
+				metadata.setLastTokenPositionIndex(TokenType.lexical, 0); // this is crucial to ensure that document is re-analyzed and metadata re-rewritten
+				InputSource inputSource = new InputStreamInputSource(newId, metadata, inputStream);
 				storedDocumentSources.set(i, sourceDocumentSourceStorage.getStoredDocumentSource(inputSource));
 				inputStream.close();
 			}
