@@ -81,7 +81,6 @@ public class LuceneIndexerTest {
 	@Test
 	public void testI18n() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
-		storage = new FileStorage(TestHelper.getTemporaryTestStorageDirectory());
 		
 		Map<String, Integer> docsToTokensMap = new HashMap<String, Integer>();
 		
