@@ -27,7 +27,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -126,43 +128,38 @@ class XmlExpander implements Expander {
 
 		List<StoredDocumentSource> childStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 
-		String[] xmlDocumentsXpaths = parameters
-				.getParameterValues("xmlDocumentsXpath");
+		String xmlDocumentsXpath = parameters.getParameterValue("xmlDocumentsXpath", "");
 
 		// check to see if we need to set xmlDocumentsXpath using defaults for format
-		if (xmlDocumentsXpaths.length == 0 && parameters.getParameterValue("inputFormat","").isEmpty()==false) {
+		if (xmlDocumentsXpath.isEmpty() && parameters.getParameterValue("inputFormat","").isEmpty()==false) {
 			DocumentFormat specifiedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
 			switch (specifiedFormat) {
 			case RSS:
 			case RSS2:
-				xmlDocumentsXpaths = new String[]{"//item"}; break;
+				xmlDocumentsXpath = "//item"; break;
 			case ATOM:
-				xmlDocumentsXpaths = new String[]{"//entry"}; break;
+				xmlDocumentsXpath = "//entry"; break;
 			case TEICORPUS:
-				xmlDocumentsXpaths = new String[]{"//TEI"}; break;
+				xmlDocumentsXpath = "//TEI"; break;
 			case DTOC:
-				xmlDocumentsXpaths = new String[]{"//*[local-name()='div' and 'chapter'=@*[local-name()='type']]"}; break;
+				xmlDocumentsXpath = "//*[local-name()='div' and 'chapter'=@*[local-name()='type']]"; break;
 			}
 
 		}
 
-		String joinedXmlDocumentsXpaths = StringUtils.join(xmlDocumentsXpaths);
+		String xmlGroupByXpath = parameters.getParameterValue("xmlGroupByXpath", "");
 		
 		
-		if (xmlDocumentsXpaths.length == 0) {			
+		if (xmlDocumentsXpath.isEmpty()) {			
 			childStoredDocumentSources.add(storedDocumentSource);
 			return childStoredDocumentSources;
 		}
 
 		DocumentMetadata parentMetadata = storedDocumentSource.getMetadata();
 		String parentId = storedDocumentSource.getId();
-		String multipleExpandedStoredDocumentSourcesPrefix = DigestUtils
-				.md5Hex(joinedXmlDocumentsXpaths);
-		childStoredDocumentSources = storedDocumentSourceStorage
-				.getMultipleExpandedStoredDocumentSources(parentId,
-						multipleExpandedStoredDocumentSourcesPrefix);
-		if (childStoredDocumentSources != null
-				&& childStoredDocumentSources.isEmpty() == false) {
+		String multipleExpandedStoredDocumentSourcesPrefix = DigestUtils.md5Hex(xmlDocumentsXpath+xmlGroupByXpath);
+		childStoredDocumentSources = storedDocumentSourceStorage.getMultipleExpandedStoredDocumentSources(parentId, multipleExpandedStoredDocumentSourcesPrefix);
+		if (childStoredDocumentSources != null && childStoredDocumentSources.isEmpty() == false) {
 			return childStoredDocumentSources;
 		}
 
@@ -200,17 +197,63 @@ class XmlExpander implements Expander {
 				inputStream.close();
 		}
 
+		List<NodeInputSource> nodeInputSources = getChildStoredDocumentSources(doc, xmlDocumentsXpath, parentId, parentMetadata);
+		
+		if (nodeInputSources.isEmpty()==false) {
+			if (xmlGroupByXpath.isEmpty()==false) {
+				Map<String, List<NodeInputSource>> groupedNodeInputSources = new HashMap<String, List<NodeInputSource>>();
+				for (NodeInputSource nodeInputSource : nodeInputSources) {
+					List<String> keys;
+					try {
+						Node fragment = doc.createDocumentFragment();
+						fragment.appendChild(nodeInputSource.node);
+						keys = XPathAPI.selectNodeListAsStrings(fragment, xmlGroupByXpath);
+					} catch (XPathException e) {
+						throw new IllegalArgumentException("Unable to use this XPath: "+xmlGroupByXpath, e);
+					}
+					if (keys.isEmpty()==false) {
+						String key = StringUtils.join(keys, " ");
+						if (groupedNodeInputSources.containsKey(key)==false) {
+							groupedNodeInputSources.put(key, new ArrayList<NodeInputSource>());
+						}
+						groupedNodeInputSources.get(key).add(nodeInputSource);
+					}
+				}
+				for (Map.Entry<String, List<NodeInputSource>> mappedNodeInputSources : groupedNodeInputSources.entrySet()) {
+					List<NodeInputSource> mappedNodeInputSourcesList = mappedNodeInputSources.getValue();
+//					if (mappedNodeInputSourcesList.size()==1) { // just one, so use it
+//						childStoredDocumentSources.add(getStoredDocumentSource(mappedNodeInputSourcesList.get(0)));
+//					}
+//					else { // multiple, we need to wrap with root node
+						String key = mappedNodeInputSources.getKey();
+						Node newParentNode = doc.getDocumentElement().cloneNode(false);
+						for (NodeInputSource nodeInputSource : mappedNodeInputSourcesList) {
+							newParentNode.appendChild(nodeInputSource.node);
+						}
+						NodeInputSource newNodeInputSource = getChildStoredDocumentSource(newParentNode, parentId, parentMetadata, parentId+";group:"+key);
+						newNodeInputSource.documentMetadata.setTitle(key);
+						childStoredDocumentSources.add(getStoredDocumentSource(newNodeInputSource));
+//					}
+				}
+			}
+			else {
+				for (NodeInputSource nodeInputSource : nodeInputSources) {
+					childStoredDocumentSources.add(getStoredDocumentSource(nodeInputSource));
+				}
+			}
+			
+		}
 		// each node is a separate document
-		if (xmlDocumentsXpaths.length == 1) {
-			childStoredDocumentSources.addAll(getChildStoredDocumentSources(
-					doc, xmlDocumentsXpaths[0], parentId, parentMetadata));
-		}
-
-		// each xpath is a separate document
-		else {
-			childStoredDocumentSources.addAll(getChildStoredDocumentSources(
-					doc, xmlDocumentsXpaths, parentId, parentMetadata));
-		}
+//		if (xmlDocumentsXpaths.length == 1) {
+//			childStoredDocumentSources.addAll(getChildStoredDocumentSources(
+//					doc, xmlDocumentsXpaths[0], parentId, parentMetadata));
+//		}
+//
+//		// each xpath is a separate document
+//		else {
+//			childStoredDocumentSources.addAll(getChildStoredDocumentSources(
+//					doc, xmlDocumentsXpaths, parentId, parentMetadata));
+//		}
 
 		storedDocumentSourceStorage.setMultipleExpandedStoredDocumentSources(
 				parentId, childStoredDocumentSources,
@@ -236,6 +279,7 @@ class XmlExpander implements Expander {
 	 * @throws IOException
 	 *             an exception that occurs during processing
 	 */
+	/*
 	private List<StoredDocumentSource> getChildStoredDocumentSources(
 			Document doc, String[] xmlDocumentsXpaths, String parentId,
 			DocumentMetadata parentMetadata) throws IOException {
@@ -265,7 +309,8 @@ class XmlExpander implements Expander {
 		}
 		return childStoredDocumentSources;
 	}
-
+	*/
+	
 	/**
 	 * Get a list of stored document sources. Each node matching the specified
 	 * XPath expression becomes a separate document.
@@ -282,10 +327,10 @@ class XmlExpander implements Expander {
 	 * @throws IOException
 	 *             an exception that occurs during processing
 	 */
-	private List<StoredDocumentSource> getChildStoredDocumentSources(
+	private List<NodeInputSource> getChildStoredDocumentSources(
 			Document doc, String xmlDocumentsXpath, String parentId,
 			DocumentMetadata parentMetadata) throws IOException {
-		List<StoredDocumentSource> childStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		List<NodeInputSource> childNodeInputSources = new ArrayList<NodeInputSource>();
 		List<Node> docs;
 		try {
 			docs = XPathAPI.selectListOfNodes(doc.getDocumentElement(),
@@ -296,13 +341,13 @@ class XmlExpander implements Expander {
 							+ xmlDocumentsXpath, e);
 		}
 		for (int i = 0, len = docs.size(); i < len; i++) {
-			StoredDocumentSource childStoredDocumentSource = getChildStoredDocumentSource(
+			NodeInputSource childStoredDocumentSource = getChildStoredDocumentSource(
 					docs.get(i), parentId, parentMetadata, xmlDocumentsXpath
 							+ "[" + (i) + "]");
-			childStoredDocumentSources.add(childStoredDocumentSource);
+			childNodeInputSources.add(childStoredDocumentSource);
 
 		}
-		return childStoredDocumentSources;
+		return childNodeInputSources;
 	}
 
 	/**
@@ -322,27 +367,38 @@ class XmlExpander implements Expander {
 	 * @throws IOException
 	 *             an exception that occurs during IO processing
 	 */
-	private StoredDocumentSource getChildStoredDocumentSource(Node node,
+	private NodeInputSource getChildStoredDocumentSource(Node node,
 			String parentId, DocumentMetadata parentMetadata, String location)
 			throws IOException {
-		StringWriter sw = new StringWriter(); // no need to close
-		Result streamResult = new StreamResult(sw);
-		try {
-			transformer.transform(new DOMSource(node), streamResult);
-		} catch (TransformerException e) {
-			throw new IOException(
-					"Unable to transform node from stored document: "
-							+ parentId + " (" + parentMetadata + ")");
-		}
 		DocumentMetadata metadata = parentMetadata.asParent(parentId);
 		metadata.setModified(parentMetadata.getModified());
 		metadata.setSource(Source.STRING);
 		metadata.setLocation(location);
 		metadata.setDocumentFormat(DocumentFormat.XML);
 		String id = DigestUtils.md5Hex(parentId + location);
-		InputSource inputSource = new StringInputSource(id, metadata,
-				sw.toString());
-		return storedDocumentSourceStorage
-				.getStoredDocumentSource(inputSource);
+		return new NodeInputSource(id, node, metadata);
+	}
+	
+	private StoredDocumentSource getStoredDocumentSource(NodeInputSource nodeInputSource) throws IOException {
+		StringWriter sw = new StringWriter(); // no need to close
+		Result streamResult = new StreamResult(sw);
+		try {
+			transformer.transform(new DOMSource(nodeInputSource.node), streamResult);
+		} catch (TransformerException e) {
+			throw new IOException("Unable to transform node from stored document: "+nodeInputSource.documentMetadata);
+		}
+		InputSource inputSource = new StringInputSource(nodeInputSource.id, nodeInputSource.documentMetadata, sw.toString());
+		return storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+	}
+
+	private class NodeInputSource {
+		private Node node;
+		private String id;
+		private DocumentMetadata documentMetadata;
+		private NodeInputSource(String id, Node node, DocumentMetadata documentMetadata) {
+			this.node = node;
+			this.id = id;
+			this.documentMetadata = documentMetadata;
+		}
 	}
 }

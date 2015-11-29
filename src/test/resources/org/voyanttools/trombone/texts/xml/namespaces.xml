@@ -16,10 +16,10 @@
         <f:length>120</f:length>
     </f:table>
     
-    <tables>
-        <name>African Coffee Table</name>
+    <table>
+        <name>Canadian Coffee Table</name>
         <width>80</width>
-        <length>120</length>
-    </tables>
+        <length>100</length>
+    </table>
     
 </root>

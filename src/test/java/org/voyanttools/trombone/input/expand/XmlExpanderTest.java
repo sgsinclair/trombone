@@ -141,25 +141,6 @@ public class XmlExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
 		assertEquals("XML file with creator (no namespace) should contain no documents", 0, expandedSourceDocumentSources.size());
 		
-		// with xmlDocumentXpath we should have one for dc:creator
-		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//item/title", "xmlDocumentsXpath=//item/description"});
-		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
-		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
-		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
-		assertEquals("XML file with no Xpath should contain one document", 2, expandedSourceDocumentSources.size());
-		inputStream = null;
-		fileInputStream = null;
-		try {
-			inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
-			fileInputStream = new FileInputStream(TestHelper.getResource("xml/rss.xml.title_multixpath.xml"));
-			assertTrue(IOUtils.contentEquals(fileInputStream, inputStream));
-		}
-		finally {
-			if (inputStream!=null) {inputStream.close();}
-			if (fileInputStream!=null) {fileInputStream.close();}
-		}
-		
 		// RSS documents within a zip archive (nested expansion)
 		parameters = new FlexibleParameters(new String[]{"inputFormat=RSS","splitDocuments=true"});
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
@@ -180,7 +161,6 @@ public class XmlExpanderTest {
 		}
 		
 		// make sure a string is recognized as XML
-//		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//b"});
 		parameters = new FlexibleParameters();
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		inputSource = new StringInputSource("<a><b>c</b><b>d</b></a>");
@@ -197,6 +177,29 @@ public class XmlExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 		assertEquals("XML string with no documents xpath should contain two documents", 2, expandedSourceDocumentSources.size());
 		assertEquals("input string should be recognized as XML", DocumentFormat.XML, expandedSourceDocumentSources.get(0).getMetadata().getDocumentFormat());
+		
+		// make sure namespaces works properly
+		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//*[local-name()='table']"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new FileInputSource(TestHelper.getResource("xml/namespaces.xml"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		assertEquals("XML namespaces example should have three documents", 3, expandedSourceDocumentSources.size());
+		
+		// test groupby xpath
+		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//*[local-name()='table']","xmlGroupByXpath=//*[local-name()='length']"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new FileInputSource(TestHelper.getResource("xml/namespaces.xml"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		assertEquals("XML namespaces example should have three documents", 2, expandedSourceDocumentSources.size());
+		
+		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//*[local-name()='table']","xmlGroupByXpath=//*[local-name()='width']"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		inputSource = new FileInputSource(TestHelper.getResource("xml/namespaces.xml"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		assertEquals("XML namespaces example should have three documents", 1, expandedSourceDocumentSources.size());
 		
 		storage.destroy();
 
