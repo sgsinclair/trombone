@@ -63,7 +63,7 @@ public class FileStorage implements Storage {
 	/**
 	 * the default file-system location for storage
 	 */
-	public static final String DEFAULT_TROMBOME_DIRECTORY_NAME = "trombone4_0";
+	public static final String DEFAULT_TROMBOME_DIRECTORY_NAME = "trombone4_1";
 
 	/**
 	 * the default file-system location for storage
