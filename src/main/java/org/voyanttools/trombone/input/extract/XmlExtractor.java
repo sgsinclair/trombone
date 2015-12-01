@@ -25,16 +25,20 @@ package org.voyanttools.trombone.input.extract;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Arrays;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
 
@@ -129,57 +133,40 @@ public class XmlExtractor implements Extractor, Serializable {
 		
 		if (parameters.getParameterValue("inputFormat","").isEmpty()==false) {
 			DocumentFormat format = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat").toUpperCase());
-			Map<String, String[]> defaultsMap = new HashMap<String, String[]>();
-			switch(format) {
-			case RSS:
-			case RSS2:
-				defaultsMap.put("xmlContentXpath", new String[]{"//item/description"});
-				defaultsMap.put("xmlTitleXpath", new String[]{parameters.getParameterBooleanValue("splitDocuments") ? "//item/title" : "//channel/title"});
-				defaultsMap.put("xmlAuthorXpath", new String[]{parameters.getParameterBooleanValue("splitDocuments") ? "//item/author|//item/*[local-name()='creator']" : "//channel/author|//channel/*[local-name()='creator']"});
-				break;
-			case ATOM:
-				defaultsMap.put("xmlContentXpath", new String[]{"//summary or //content"});
-				defaultsMap.put("xmlTitleXpath", new String[]{"//title"});
-				defaultsMap.put("xmlAuthorXpath", new String[]{"//author"});
-				break;
-			case TEI:
-			case TEICORPUS:
-				defaultsMap.put("xmlContentXpath", new String[]{"//*[local-name()='text']"});
-				defaultsMap.put("xmlTitleXpath", new String[]{"//*[local-name()='teiHeader']//*[local-name()='title']"});
-				defaultsMap.put("xmlAuthorXpath", new String[]{"//*[local-name()='teiHeader']//*[local-name()='author']"});
-				break;
-			case EEBODREAM:
-				defaultsMap.put("xmlContentXpath", new String[]{"/EEBO/TEXTS/TEXT"});
-//				defaultsMap.put("xmlTitleXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/TITLE[1]");
-//				defaultsMap.put("xmlAuthorXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/AUTHOR");
-//				defaultsMap.put("xmlPubPlaceXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBPLACE");
-//				defaultsMap.put("xmlPublisherXpath", "/EEBO/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/PUBLISHER");
-				defaultsMap.put("xmlTitleXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/title|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/title"});
-				defaultsMap.put("xmlAuthorXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/persName|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/author"});
-				defaultsMap.put("xmlPubDateXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/publicationStmt/date|/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/date"});
-				defaultsMap.put("xmlPubPlaceXpath", new String[]{"/EEBO/dreamheader/opendata/teiHeader/fileDesc/publicationStmt/pubPlace|/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/pubPlace"});
-				defaultsMap.put("xmlPublisherXpath", new String[]{"/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/publisher"}); // don't look at opendata part for now because publisher may be there but with child nodes
-				defaultsMap.put("xmlExtraMetadataXpath", new String[]{
-					"authorSex=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/sex",
-					"authorLink=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/idno[@type eq 'viaf']/@ref",
-					"titleLink=(/EEBO/dreamheader/opendata/teiHeader/fileDesc/sourceDesc/ref[@type eq 'oclc']/@target)[1]",
-					"tcpId=/EEBO/dreamheader/opendata/teiHeader/fileDesc/idno[@type eq 'tcp']"
-				});
-				defaultsMap.put("xmlExtractorTemplate", new String[]{"dream-extraction.xsl"});
-				break;
-			case DTOC:
-				defaultsMap.put("xmlTitleXpath", new String[]{"(//head//title)[1]"});
-				defaultsMap.put("xmlAuthorXpath", new String[]{"(//head//author)[1]"});
-				break;
-			}
 			
-			// update parameters
-			for (Map.Entry<String, String[]> entry : defaultsMap.entrySet()) {
-				String key = entry.getKey();
-				if (parameters.getParameterValue(key,"").isEmpty()==true) {
-					parameters.setParameter(key, entry.getValue());
+			Properties properties = new Properties();
+			DocumentFormat specifiedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
+			String resourcePath = "/org/voyanttools/trombone/input-formats/"+specifiedFormat.name().toLowerCase()+".xml";
+			URL url = this.getClass().getResource(resourcePath);
+			if (url!=null) {
+				File file = new File(url.getPath());
+				if (file.exists()) {
+					FileInputStream in = null;
+					try {
+						in = new FileInputStream(file);
+						properties.loadFromXML(in);
+						
+					}
+					finally {
+						if (in!=null) {
+							in.close();
+						}
+					}
+				}
+				if (parameters.getParameterBooleanValue("splitDocuments")) {
+					for (String key : properties.stringPropertyNames()) {
+						if (key.contains(".splitDocuments")) {
+							parameters.setParameter(key.split("\\.")[0], properties.getProperty(key)); // overwrite prefix key
+						}
+					}
+				}
+				for (String key : properties.stringPropertyNames()) {
+					if (parameters.getParameterValue(key,"").isEmpty()==true) {
+						parameters.setParameter(key, properties.getProperty(key));
+					}
 				}
 			}
+			
 		}
 		
 		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath","xmlPubPlaceXpath","xmlPublisherXpath","xmlPubDateXpath","xmlExtraMetadataXpath"};

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlDocumentsXpath">//*[(local-name()='div' and('chapter'=@*[local-name()='type'] or 'afterword'=@*[local-name()='type'] or 'contributors'=@*[local-name()='type'])) or local-name()='front']</entry>
+    <entry key="xmlTitleXpath">(//*[local-name()='titlePage']/*[local-name()='docTitle']|//*[local-name()='head'])[1]</entry>
+    <entry key="xmlAuthorXpath">(//*[local-name()='docAuthor'])</entry>
+</properties>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="teiContentXpath">/EEBO/TEXTS/TEXT</entry>
+    <entry key="xmlTitleXpath">/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/title|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/title</entry>
+    <entry key="xmlAuthorXpath">/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/persName|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/author</entry>
+    <entry key="xmlPubDateXpath">/EEBO/dreamheader/opendata/teiHeader/fileDesc/publicationStmt/date|/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/date</entry>
+    <entry key="xmlPubPlaceXpath">/EEBO/dreamheader/opendata/teiHeader/fileDesc/publicationStmt/pubPlace|/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/pubPlace</entry>
+    <entry key="xmlPublisherXpath">/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/publisher</entry> <!-- // don't look at opendata part for now because publisher may be there but with child nodes -->
+    <entry key="xmlExtraMetadataXpath">authorSex=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/sex
+        authorLink=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/idno[@type eq 'viaf']/@ref
+        titleLink=(/EEBO/dreamheader/opendata/teiHeader/fileDesc/sourceDesc/ref[@type eq 'oclc']/@target)[1]
+        tcpId=/EEBO/dreamheader/opendata/teiHeader/fileDesc/idno[@type eq 'tcp']</entry> <!-- check if newlines are kept -->
+    <entry key="xmlExtractorTemplate">dream-extraction.xsl</entry>
+</properties>

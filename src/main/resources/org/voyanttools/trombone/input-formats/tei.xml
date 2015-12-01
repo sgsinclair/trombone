@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlContentXpath">//*[local-name()='text']</entry>
+    <entry key="xmlTitleXpath">//*[local-name()='teiHeader']//*[local-name()='title']</entry>
+    <entry key="xmlAuthorXpath">//*[local-name()='teiHeader']//*[local-name()='author']</entry>
+</properties>

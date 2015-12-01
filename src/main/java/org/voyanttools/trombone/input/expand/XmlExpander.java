@@ -23,13 +23,17 @@ package org.voyanttools.trombone.input.expand;
 
 import it.svario.xpathapi.jaxp.XPathAPI;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -132,17 +136,29 @@ class XmlExpander implements Expander {
 
 		// check to see if we need to set xmlDocumentsXpath using defaults for format
 		if (xmlDocumentsXpath.isEmpty() && parameters.getParameterValue("inputFormat","").isEmpty()==false) {
+			
+			Properties properties = new Properties();
 			DocumentFormat specifiedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
-			switch (specifiedFormat) {
-			case RSS:
-			case RSS2:
-				xmlDocumentsXpath = "//item"; break;
-			case ATOM:
-				xmlDocumentsXpath = "//entry"; break;
-			case TEICORPUS:
-				xmlDocumentsXpath = "//TEI"; break;
-			case DTOC:
-				xmlDocumentsXpath = "//*[local-name()='div' and 'chapter'=@*[local-name()='type']]"; break;
+			String resourcePath = "/org/voyanttools/trombone/input-formats/"+specifiedFormat.name().toLowerCase()+".xml";
+			URL url = this.getClass().getResource(resourcePath);
+			if (url!=null) {
+				File file = new File(url.getPath());
+				if (file.exists()) {
+					FileInputStream in = null;
+					try {
+						in = new FileInputStream(file);
+						properties.loadFromXML(in);
+						
+					}
+					finally {
+						if (in!=null) {
+							in.close();
+						}
+					}
+				}
+				if (properties.containsKey("xmlDocumentsXpath")) {
+					xmlDocumentsXpath = properties.getProperty("xmlDocumentsXpath");
+				}
 			}
 
 		}
