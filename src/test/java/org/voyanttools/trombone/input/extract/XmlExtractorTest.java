@@ -59,6 +59,7 @@ public class XmlExtractorTest {
 		DocumentMetadata metadata;
 		String contents;
 		
+		/*
 		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		
@@ -144,9 +145,10 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals(DocumentFormat.HTML, metadata.getDocumentFormat());
 		
+		*/
 		// make sure we find XPath in string XML
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlContentXpath=//b", "xmlTitleXpath=//b[1]"}));
-		inputSource = new StringInputSource("<a><b>c</b><b>d</b><z>x</z></a>");
+		inputSource = new StringInputSource("<a><b>c</b><b>d &amp; e</b><z>x</z></a>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();

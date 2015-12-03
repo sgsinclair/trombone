@@ -372,7 +372,8 @@ public class XmlExtractor implements Extractor, Serializable {
 
 	        isProcessed = true;
 
-	        return new ByteArrayInputStream(StringEscapeUtils.unescapeXml(string).getBytes("UTF-8"));
+	        return new ByteArrayInputStream(string.getBytes("UTF-8"));
+//	        return new ByteArrayInputStream(StringEscapeUtils.unescapeXml(string).getBytes("UTF-8"));
 			
 		}
 

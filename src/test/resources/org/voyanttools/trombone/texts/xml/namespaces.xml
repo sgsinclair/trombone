@@ -5,7 +5,7 @@
     
     <h:table>
         <h:tr>
-            <h:td>Apples</h:td>
+            <h:td>Apples &amp; Oranges</h:td>
             <h:td>Bananas</h:td>
         </h:tr>
     </h:table>
