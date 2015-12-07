@@ -24,6 +24,7 @@ package org.voyanttools.trombone.model;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Comparator;
@@ -464,4 +465,10 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 
 	public String toString() {
 		return getSource().name()+": "+getLocation();
+	}
+
+
+
+	public void setQueryParameters(FlexibleParameters storedparams) throws UnsupportedEncodingException {
+		setProperty("queryParameters", storedparams.getAsQueryString());
 	}}
