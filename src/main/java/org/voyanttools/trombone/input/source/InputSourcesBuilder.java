@@ -77,6 +77,12 @@ public class InputSourcesBuilder {
 			}
 			inputSources.add(new UriInputSource(uri));
 		}
+		FlexibleParameters storedparams = parameters.deepClone();
+		for (String key : new String[]{"upload", "string", "uri", "tool"}) storedparams.removeParameter(key);
+		for (InputSource inputSource : inputSources) {
+			inputSource.getMetadata().setQueryParameters(storedparams);
+		}
+		
 		return inputSources;
 	}
 	

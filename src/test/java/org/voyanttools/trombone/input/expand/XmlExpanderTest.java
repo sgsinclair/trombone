@@ -60,8 +60,9 @@ public class XmlExpanderTest {
 		InputStream inputStream;
 		FileInputStream fileInputStream;
 		
-		// make sure we have one document when no xmlDocumentXpath is specified
-		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage);
+		// make sure we have one document when no xmlDocumentXpath is specified (and input format is XML, not RSS)
+		parameters = new FlexibleParameters(new String[]{"inputFormat=XML"});
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
@@ -93,7 +94,7 @@ public class XmlExpanderTest {
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
-		assertEquals("XML file with no Xpath should contain one document", 2, expandedSourceDocumentSources.size());
+		assertEquals(2, expandedSourceDocumentSources.size());
 		inputStream = null;
 		fileInputStream = null;
 		try {
@@ -185,6 +186,7 @@ public class XmlExpanderTest {
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 		assertEquals("XML namespaces example should have three documents", 3, expandedSourceDocumentSources.size());
+		assertTrue("Make sure our first table still has &amp; entity", IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId())).contains("&amp;"));
 		
 		// test groupby xpath
 		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//*[local-name()='table']","xmlGroupByXpath=//*[local-name()='length']"});

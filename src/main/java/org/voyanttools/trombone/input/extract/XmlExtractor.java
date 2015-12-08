@@ -42,6 +42,7 @@ import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
 
+import javax.xml.namespace.QName;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -62,10 +63,12 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tika.Tika;
 import org.apache.tika.detect.DefaultDetector;
+import org.apache.tika.detect.XmlRootExtractor;
 import org.apache.tika.exception.TikaException;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.model.DocumentFormat;
@@ -130,13 +133,36 @@ public class XmlExtractor implements Extractor, Serializable {
 	public InputSource getExtractableInputSource(StoredDocumentSource storedDocumentSource)
 			throws IOException {
 		
+		// no format specified, so let's have a peek at the contents to see if we can determine a sub-format
+		DocumentFormat guessedFormat = DocumentFormat.UNKNOWN;
+		if (parameters.getParameterValue("inputFormat","").isEmpty()) {
+			InputStream is = null;
+			try {
+				is = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId());
+				XmlRootExtractor xmlRootExtractor = new XmlRootExtractor();
+				QName qname = xmlRootExtractor.extractRootElement(is);
+				String name = qname.getLocalPart();
+				if (name.equals("feed") && qname.getNamespaceURI().toLowerCase().contains("atom")) guessedFormat = DocumentFormat.ATOM;
+				else if (name.equals("TEI")) guessedFormat = DocumentFormat.TEI;
+				else if (name.equals("teiCorpus")) guessedFormat = DocumentFormat.TEICORPUS;
+				else if (name.equals("rss")) guessedFormat = DocumentFormat.RSS;
+				else if (name.equals("EEBO")) guessedFormat = DocumentFormat.EEBODREAM;
+			}
+			finally {
+				if (is!=null) is.close();
+			}
+		}
 		
-		if (parameters.getParameterValue("inputFormat","").isEmpty()==false) {
-			DocumentFormat format = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat").toUpperCase());
+		
+		if (parameters.getParameterValue("inputFormat","").isEmpty()==false || guessedFormat!=DocumentFormat.UNKNOWN) {
+			
+			if (guessedFormat==DocumentFormat.UNKNOWN) {
+				guessedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
+			}
 			
 			Properties properties = new Properties();
-			DocumentFormat specifiedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
-			String resourcePath = "/org/voyanttools/trombone/input-formats/"+specifiedFormat.name().toLowerCase()+".xml";
+			
+			String resourcePath = "/org/voyanttools/trombone/input-formats/"+guessedFormat.name().toLowerCase()+".xml";
 			URL url = this.getClass().getResource(resourcePath);
 			if (url!=null) {
 				File file = new File(url.getPath());
@@ -372,7 +398,8 @@ public class XmlExtractor implements Extractor, Serializable {
 
 	        isProcessed = true;
 
-	        return new ByteArrayInputStream(StringEscapeUtils.unescapeXml(string).getBytes("UTF-8"));
+	        return new ByteArrayInputStream(string.getBytes("UTF-8"));
+//	        return new ByteArrayInputStream(StringEscapeUtils.unescapeXml(string).getBytes("UTF-8"));
 			
 		}
 

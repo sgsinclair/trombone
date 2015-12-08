@@ -803,15 +803,4 @@ public class FlexibleParameters implements Cloneable, Serializable {
 		entries.clear();
 	}
     
-//    public synchronized int size() {
-//
-//    	int count = 0;
-//    	for (List<String> values : this.entries.values()) { // yes, this could be optimized by maintining count in every instance method here above
-//    		count += values.size();
-//    	}
-//    	
-//    	return count;
-//
-//    }
-//    
 }

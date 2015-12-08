@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import javax.xml.namespace.QName;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -53,6 +54,7 @@ import net.sf.saxon.lib.NamespaceConstant;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.tika.detect.XmlRootExtractor;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.input.source.StringInputSource;
@@ -134,12 +136,34 @@ class XmlExpander implements Expander {
 
 		String xmlDocumentsXpath = parameters.getParameterValue("xmlDocumentsXpath", "");
 
+		// no format specified, so let's have a peek at the contents to see if we can determine a sub-format
+		DocumentFormat guessedFormat = DocumentFormat.UNKNOWN;
+		if (parameters.getParameterValue("inputFormat","").isEmpty()) {
+			InputStream is = null;
+			try {
+				is = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId());
+				XmlRootExtractor xmlRootExtractor = new XmlRootExtractor();
+				QName qname = xmlRootExtractor.extractRootElement(is);
+				String name = qname.getLocalPart();
+				if (name.equals("feed") && qname.getNamespaceURI().toLowerCase().contains("atom")) guessedFormat = DocumentFormat.ATOM;
+				else if (name.equals("TEI")) guessedFormat = DocumentFormat.TEI;
+				else if (name.equals("teiCorpus")) guessedFormat = DocumentFormat.TEICORPUS;
+				else if (name.equals("rss")) guessedFormat = DocumentFormat.RSS;
+				else if (name.equals("EEBO")) guessedFormat = DocumentFormat.EEBODREAM;
+			}
+			finally {
+				if (is!=null) is.close();
+			}
+		}
+
 		// check to see if we need to set xmlDocumentsXpath using defaults for format
-		if (xmlDocumentsXpath.isEmpty() && parameters.getParameterValue("inputFormat","").isEmpty()==false) {
+		if (xmlDocumentsXpath.isEmpty() && (parameters.getParameterValue("inputFormat","").isEmpty()==false || guessedFormat!=DocumentFormat.UNKNOWN)) {
 			
+			if (guessedFormat==DocumentFormat.UNKNOWN) {
+				guessedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
+			}
 			Properties properties = new Properties();
-			DocumentFormat specifiedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
-			String resourcePath = "/org/voyanttools/trombone/input-formats/"+specifiedFormat.name().toLowerCase()+".xml";
+			String resourcePath = "/org/voyanttools/trombone/input-formats/"+guessedFormat.name().toLowerCase()+".xml";
 			URL url = this.getClass().getResource(resourcePath);
 			if (url!=null) {
 				File file = new File(url.getPath());

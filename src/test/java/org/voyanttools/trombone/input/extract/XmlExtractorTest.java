@@ -95,7 +95,21 @@ public class XmlExtractorTest {
 		assertTrue("ensure we have stripped out other content", contents.contains("<head>")==false);
 		assertTrue("ensure we have some content in XML with a single node xmlContentXpath parameter", contents.contains(line)==true);
 
-		// try with RSS input format
+		// try with RSS input format implicit (no inputFormat)
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters());
+		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		// this should be blank rather than the title tag (for generic XML)
+		assertEquals("title for RSS feed", "Website Feed", metadata.getTitle());
+//		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
+		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
+		assertTrue("ensure we have three lines of description in RSS feed", StringUtils.countMatches(contents, "<description>")==2);
+		
+		// try with RSS input format (explicit)
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"inputFormat=RSS"}));
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -108,6 +122,18 @@ public class XmlExtractorTest {
 		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
 		assertTrue("ensure we have three lines of description in RSS feed", StringUtils.countMatches(contents, "<description>")==2);
+		
+		// try with XML
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"inputFormat=XML"}));
+		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		// this should be blank rather than the title tag (for generic XML)
+		assertEquals(0, metadata.getTitle().length());
+//		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
+		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		
 		// make sure that we can keep multiple values for metadata
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlTitleXpath=//title"}));
@@ -146,7 +172,7 @@ public class XmlExtractorTest {
 		
 		// make sure we find XPath in string XML
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlContentXpath=//b", "xmlTitleXpath=//b[1]"}));
-		inputSource = new StringInputSource("<a><b>c</b><b>d</b><z>x</z></a>");
+		inputSource = new StringInputSource("<a><b>c</b><b>d &amp; e</b><z>x</z></a>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
