@@ -48,7 +48,6 @@ public class DocumentContexts extends AbstractContextTerms {
 	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpusMapper.getCorpus().getLastTokenPositions(tokenType);
-		System.out.println(start+" "+limit);
 		FlexibleQueue<Kwic> queue = new FlexibleQueue(comparator, limit == Integer.MAX_VALUE ? limit : start+limit);
 		int position = parameters.getParameterIntValue("position", -1);
 		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
@@ -58,7 +57,6 @@ public class DocumentContexts extends AbstractContextTerms {
 			FlexibleQueue<Kwic> q = getKwics(corpusMapper, dsd.getKey(), corpusDocIndex, lastToken, dsd.getValue());
 			for (Kwic k : q.getUnorderedList()) {
 				if (k!=null){
-//					System.out.println(x);
 					if (position>-1 && k.getPosition()!=position) {continue;}
 					queue.offer(k);
 				}
