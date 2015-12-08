@@ -36,17 +36,18 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class Kwic implements Serializable {
 	
 	public enum Sort {
-		TERMASC, TERMDESC, POSITIONASC, POSITIONDESC, LEFTASC, LEFTDESC, RIGHTASC, RIGHTDESC;
+		TERMASC, TERMDESC, DOCINDEXASC, DOCINDEXDESC, POSITIONASC, POSITIONDESC, LEFTASC, LEFTDESC, RIGHTASC, RIGHTDESC;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "TERM"; // default
 			if (sort.startsWith("POSITION")) {sortPrefix = "POSITION";}
+			else if (sort.startsWith("DOCINDEX")) {sortPrefix = "DOCINDEX";}
 			else if (sort.startsWith("LEFT")) {sortPrefix = "LEFT";}
 			else if (sort.startsWith("RIGHT")) {sortPrefix = "RIGHT";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
-			String dirSuffix = "DESC";
-			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
+			String dirSuffix = "ASC";
+			if (dir.endsWith("DESC")) {dirSuffix="DESC";}
 			return valueOf(sortPrefix+dirSuffix);
 		}
 	}
@@ -107,6 +108,10 @@ public class Kwic implements Serializable {
 			return PositionAscendingComparator;
 		case POSITIONDESC:
 			return PositionDescendingComparator;
+		case DOCINDEXASC:
+			return DocIndexAscendingComparator;
+		case DOCINDEXDESC:
+			return DocIndexDescendingComparator;
 		case LEFTASC:
 			return LeftAscendingComparator;
 		case LEFTDESC:
@@ -115,7 +120,7 @@ public class Kwic implements Serializable {
 			return RightAscendingComparator;
 		case RIGHTDESC:
 			return RightDescendingComparator;
-		default: // termAsc
+		default:
 			return TermAscendingComparator;
 		}
 	}
@@ -125,7 +130,10 @@ public class Kwic implements Serializable {
 		public int compare(Kwic kwic1, Kwic kwic2) {
 			int i = kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
 			if (i==0) {
-				return kwic1.position - kwic2.position;
+				i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
+				if (i==0) {
+					i = Integer.compare(kwic1.position, kwic2.position);
+				}
 			}
 			return i;
 		}
@@ -134,45 +142,68 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> TermDescendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			if (kwic1.position==kwic2.position) {
-				if (kwic1.docIndex==kwic2.docIndex) {
-					return kwic1.docIndex - kwic2.docIndex;
+			int i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
+			if (i==0) {
+				i = Integer.compare(kwic2.docIndex, kwic1.docIndex);
+				if (i==0) {
+					i = Integer.compare(kwic2.position, kwic1.position);
 				}
-				else {
-					return kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
-				}
-				
 			}
-			else {
-				return kwic2.position - kwic1.position;
-			}
+			return i;
 		}
 	};
 	
 	private static Comparator<Kwic> PositionAscendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			if (kwic1.position==kwic2.position) {
-				if (kwic1.docIndex==kwic2.docIndex) {
-					return kwic1.docIndex - kwic2.docIndex;
+			int i = Integer.compare(kwic1.position, kwic2.position);
+			if (i==0) {
+				i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
+				if (i==0) {
+					i = kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
 				}
-				else {
-					return kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
-				}
-				
 			}
-			else {
-				return kwic1.position - kwic2.position;
-			}
+			return i;
 		}
 	};
 
 	private static Comparator<Kwic> PositionDescendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
+			int i = Integer.compare(kwic2.position, kwic1.position);
 			if (i==0) {
-				return kwic2.position - kwic1.position;
+				i = Integer.compare(kwic2.docIndex, kwic1.docIndex);
+				if (i==0) {
+					i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
+				}
+			}
+			return i;
+		}
+	};
+	
+	private static Comparator<Kwic> DocIndexAscendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			int i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
+			if (i==0) {
+				i = Integer.compare(kwic1.position, kwic2.position);
+				if (i==0) {
+					i = kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
+				}
+			}
+			return i;
+		}
+	};
+
+	private static Comparator<Kwic> DocIndexDescendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			int i = Integer.compare(kwic2.docIndex, kwic1.docIndex);
+			if (i==0) {
+				i = Integer.compare(kwic2.position, kwic1.position);
+				if (i==0) {
+					i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
+				}
 			}
 			return i;
 		}
@@ -181,9 +212,12 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> LeftAscendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic2.getLeft().compareTo(kwic1.getLeft());
+			int i = kwic1.getLeft().compareTo(kwic2.getLeft());
 			if (i==0) {
-				return kwic1.position - kwic2.position;
+				i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
+				if (i==0) {
+					i = Integer.compare(kwic1.position, kwic2.position);
+				}
 			}
 			return i;
 		}
@@ -192,9 +226,12 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> LeftDescendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic1.getLeft().compareTo(kwic2.getLeft());
+			int i = kwic2.getLeft().compareTo(kwic1.getLeft());
 			if (i==0) {
-				return kwic1.position - kwic2.position;
+				i = Integer.compare(kwic2.docIndex, kwic1.docIndex);
+				if (i==0) {
+					i = Integer.compare(kwic2.position, kwic1.position);
+				}
 			}
 			return i;
 		}
@@ -203,9 +240,12 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> RightAscendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic2.getRight().compareTo(kwic1.getRight());
+			int i = kwic1.getRight().compareTo(kwic2.getRight());
 			if (i==0) {
-				return kwic1.position - kwic2.position;
+				i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
+				if (i==0) {
+					i = Integer.compare(kwic1.position, kwic2.position);
+				}
 			}
 			return i;
 		}
@@ -214,9 +254,12 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> RightDescendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic1.getRight().compareTo(kwic2.getRight());
+			int i = kwic2.getRight().compareTo(kwic1.getRight());
 			if (i==0) {
-				return kwic1.position - kwic2.position;
+				i = Integer.compare(kwic2.docIndex, kwic1.docIndex);
+				if (i==0) {
+					i = Integer.compare(kwic2.position, kwic1.position);
+				}
 			}
 			return i;
 		}
