@@ -68,6 +68,8 @@ public class DocumentContexts extends AbstractContextTerms {
 	private FlexibleQueue<Kwic> getKwics(CorpusMapper corpusMapper, int luceneDoc, int corpusDocumentIndex,
 			int lastToken, List<DocumentSpansData> documentSpansData) throws IOException {
 
+		int position = parameters.getParameterIntValue("position", -1);
+
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, documentSpansData, overlapStrategy==Kwic.OverlapStrategy.merge);
 		
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
@@ -83,6 +85,7 @@ public class DocumentContexts extends AbstractContextTerms {
 		
 		for (DocumentSpansData dsd : documentSpansData) {
 			for (int[] dsddata : dsd.spansData) {
+				if (position>-1 && dsddata[0]!=position) continue;
 				datas.add(dsddata);
 				queriesMap.put(dsddata[0], dsd.queryString);
 			}
