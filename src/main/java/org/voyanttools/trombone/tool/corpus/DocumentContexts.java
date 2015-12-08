@@ -36,7 +36,7 @@ public class DocumentContexts extends AbstractContextTerms {
 
 	public DocumentContexts(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		contextsSort = Kwic.Sort.valueOfForgivingly(parameters.getParameterValue("sortBy", ""));
+		contextsSort = Kwic.Sort.getForgivingly(parameters);
 		comparator = Kwic.getComparator(contextsSort);
 		overlapStrategy = Kwic.OverlapStrategy.valueOfForgivingly(parameters.getParameterValue("overlapStrategy", ""));
 	}
