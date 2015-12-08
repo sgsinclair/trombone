@@ -25,6 +25,8 @@ import java.io.Serializable;
 import java.text.Normalizer;
 import java.util.Comparator;
 
+import org.voyanttools.trombone.util.FlexibleParameters;
+
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
@@ -34,14 +36,18 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class Kwic implements Serializable {
 	
 	public enum Sort {
-		termAsc, termDesc, positionAsc, positionDesc;
+		TERMASC, TERMDESC, POSITIONASC, POSITIONDESC, LEFTASC, LEFTDESC, RIGHTASC, RIGHTDESC;
 
-		public static Sort valueOfForgivingly(String string) {
-			string = string.toLowerCase();
-			for (Sort t : values()) {
-				if (t.name().equalsIgnoreCase(string)) return t;
-			}
-			return termAsc;
+		public static Sort getForgivingly(FlexibleParameters parameters) {
+			String sort = parameters.getParameterValue("sort", "").toUpperCase();
+			String sortPrefix = "TERM"; // default
+			if (sort.startsWith("POSITION")) {sortPrefix = "POSITION";}
+			else if (sort.startsWith("LEFT")) {sortPrefix = "LEFT";}
+			else if (sort.startsWith("RIGHT")) {sortPrefix = "RIGHT";}
+			String dir = parameters.getParameterValue("dir", "").toUpperCase();
+			String dirSuffix = "DESC";
+			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
+			return valueOf(sortPrefix+dirSuffix);
 		}
 	}
 
@@ -95,12 +101,20 @@ public class Kwic implements Serializable {
 
 	public static Comparator<Kwic> getComparator(Sort sort) {
 		switch(sort) {
-		case termDesc:
+		case TERMDESC:
 			return TermDescendingComparator;
-		case positionAsc:
+		case POSITIONASC:
 			return PositionAscendingComparator;
-		case positionDesc:
+		case POSITIONDESC:
 			return PositionDescendingComparator;
+		case LEFTASC:
+			return LeftAscendingComparator;
+		case LEFTDESC:
+			return LeftDescendingComparator;
+		case RIGHTASC:
+			return RightAscendingComparator;
+		case RIGHTDESC:
+			return RightDescendingComparator;
 		default: // termAsc
 			return TermAscendingComparator;
 		}
@@ -159,6 +173,50 @@ public class Kwic implements Serializable {
 			int i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
 			if (i==0) {
 				return kwic2.position - kwic1.position;
+			}
+			return i;
+		}
+	};
+	
+	private static Comparator<Kwic> LeftAscendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			int i = kwic2.getLeft().compareTo(kwic1.getLeft());
+			if (i==0) {
+				return kwic1.position - kwic2.position;
+			}
+			return i;
+		}
+	};
+
+	private static Comparator<Kwic> LeftDescendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			int i = kwic1.getLeft().compareTo(kwic2.getLeft());
+			if (i==0) {
+				return kwic1.position - kwic2.position;
+			}
+			return i;
+		}
+	};
+	
+	private static Comparator<Kwic> RightAscendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			int i = kwic2.getRight().compareTo(kwic1.getRight());
+			if (i==0) {
+				return kwic1.position - kwic2.position;
+			}
+			return i;
+		}
+	};
+
+	private static Comparator<Kwic> RightDescendingComparator = new Comparator<Kwic>() {
+		@Override
+		public int compare(Kwic kwic1, Kwic kwic2) {
+			int i = kwic1.getRight().compareTo(kwic2.getRight());
+			if (i==0) {
+				return kwic1.position - kwic2.position;
 			}
 			return i;
 		}
