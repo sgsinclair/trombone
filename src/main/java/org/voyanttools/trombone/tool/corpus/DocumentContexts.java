@@ -48,7 +48,9 @@ public class DocumentContexts extends AbstractContextTerms {
 	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpusMapper.getCorpus().getLastTokenPositions(tokenType);
-		FlexibleQueue<Kwic> queue = new FlexibleQueue(comparator, limit);
+		System.out.println(start+" "+limit);
+		FlexibleQueue<Kwic> queue = new FlexibleQueue(comparator, limit == Integer.MAX_VALUE ? limit : start+limit);
+		int position = parameters.getParameterIntValue("position", -1);
 		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
@@ -56,12 +58,14 @@ public class DocumentContexts extends AbstractContextTerms {
 			FlexibleQueue<Kwic> q = getKwics(corpusMapper, dsd.getKey(), corpusDocIndex, lastToken, dsd.getValue());
 			for (Kwic k : q.getUnorderedList()) {
 				if (k!=null){
+//					System.out.println(x);
+					if (position>-1 && k.getPosition()!=position) {continue;}
 					queue.offer(k);
 				}
 			}
 		}
 		
-		return queue.getOrderedList();
+		return queue.getOrderedList(start);
 	}
 	
 	
@@ -69,13 +73,13 @@ public class DocumentContexts extends AbstractContextTerms {
 			int lastToken, List<DocumentSpansData> documentSpansData) throws IOException {
 
 		int position = parameters.getParameterIntValue("position", -1);
-
+		
 		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, documentSpansData, overlapStrategy==Kwic.OverlapStrategy.merge);
 		
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 
 		// build kwics
-		FlexibleQueue<Kwic> queue = new FlexibleQueue<Kwic>(comparator, limit);
+		FlexibleQueue<Kwic> queue = new FlexibleQueue<Kwic>(comparator, start+limit);
 		String document = corpusMapper.getCorpus().getDocument(corpusDocumentIndex).getDocumentString();
 		//String document = LeafReader.document(luceneDoc).get(tokenType.name());
 		
@@ -85,7 +89,7 @@ public class DocumentContexts extends AbstractContextTerms {
 		
 		for (DocumentSpansData dsd : documentSpansData) {
 			for (int[] dsddata : dsd.spansData) {
-				if (position>-1 && dsddata[0]!=position) continue;
+				if (position>-1 && dsddata[0]!=position) {continue;}
 				datas.add(dsddata);
 				queriesMap.put(dsddata[0], dsd.queryString);
 			}

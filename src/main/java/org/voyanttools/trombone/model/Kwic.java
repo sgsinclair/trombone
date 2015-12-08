@@ -235,4 +235,7 @@ public class Kwic implements Serializable {
 	public String getRight() {
 		return right;
 	}
+	public int getPosition() {
+		return position;
+	}
 }

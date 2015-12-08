@@ -35,7 +35,7 @@ public class FlexibleQueue<T> {
 	 */
 	public FlexibleQueue(Comparator<T> comparator, int size) {
 		this.comparator = comparator;
-		if (size < ArrayUtil.MAX_ARRAY_LENGTH) {luceneQueue = new LuceneQueue(comparator, size);}
+		if (size < ArrayUtil.MAX_ARRAY_LENGTH && size>0) {luceneQueue = new LuceneQueue(comparator, size);}
 		else {list = new ArrayList<T>();}
 	}
 
