@@ -24,6 +24,7 @@ package org.voyanttools.trombone.storage;
 import java.io.IOException;
 
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
  * @author sgs
@@ -35,6 +36,6 @@ public interface CorpusStorage {
 	
 	public boolean corpusExists(String id);
 	
-	public void storeCorpus(Corpus corpus) throws IOException;
+	public void storeCorpus(Corpus corpus, FlexibleParameters parameters) throws IOException;
 
 }

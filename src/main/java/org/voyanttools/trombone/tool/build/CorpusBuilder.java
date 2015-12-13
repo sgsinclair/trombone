@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
+import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
@@ -96,8 +97,8 @@ public class CorpusBuilder extends AbstractTool {
 			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
 			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
 			if (verbose) {log("Finished corpus terms index.", start);}
-
-			storage.getCorpusStorage().storeCorpus(corpus);
+			
+			storage.getCorpusStorage().storeCorpus(corpus, parameters);
 		}
 		this.storedId = corpusId;
 	}

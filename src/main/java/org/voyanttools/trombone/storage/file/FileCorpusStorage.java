@@ -46,6 +46,7 @@ public class FileCorpusStorage implements CorpusStorage {
 	private static String CORPUS_DIRECTORY_NAME = "corpora";
 	
 	private static String METADATA_FILE_NAME = "metadata.xml"; 
+	private static String PARAMETERS_FILE_NAME = "parameters.xml"; 
 
 	FileCorpusStorage(Storage storage, File storageLocation) {
 		this.storage = storage;
@@ -76,7 +77,7 @@ public class FileCorpusStorage implements CorpusStorage {
 	}
 
 	@Override
-	public void storeCorpus(Corpus corpus) throws IOException {
+	public void storeCorpus(Corpus corpus, FlexibleParameters parameters) throws IOException {
 		String id = corpus.getId();
 		if (corpusExists(id)) {
 			throw new IOException("This corpus already exists: "+id);
@@ -86,6 +87,7 @@ public class FileCorpusStorage implements CorpusStorage {
 			corpusDirectory.mkdir();
 			File metadataFile = new File(corpusDirectory, METADATA_FILE_NAME);
 			corpus.getCorpusMetadata().getFlexibleParameters().saveFlexibleParameters(metadataFile);
+			parameters.saveFlexibleParameters(new File(corpusDirectory, PARAMETERS_FILE_NAME));
 		}
 	}
 

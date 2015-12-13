@@ -121,7 +121,7 @@ public class DocumentsFinder extends AbstractTerms {
 					org.voyanttools.trombone.model.CorpusMetadata corpusMetadata = new org.voyanttools.trombone.model.CorpusMetadata(corpusId);
 					corpusMetadata.setDocumentIds(ids);
 					Corpus tempCorpus = new Corpus(storage, corpusMetadata);
-					storage.getCorpusStorage().storeCorpus(tempCorpus);
+					storage.getCorpusStorage().storeCorpus(tempCorpus, parameters);
 				}
 				else {
 					FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=corpus"});

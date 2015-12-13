@@ -27,6 +27,7 @@ import java.util.Map;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.CorpusStorage;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
  * @author sgs
@@ -35,6 +36,7 @@ import org.voyanttools.trombone.storage.CorpusStorage;
 class MemoryCorpusStorage implements CorpusStorage {
 	
 	private Map<String, Corpus> corpusMap = new HashMap<String, Corpus>();
+	private Map<String, FlexibleParameters> parametersMap = new HashMap<String, FlexibleParameters>();
 
 	@Override
 	public Corpus getCorpus(String id) throws IOException {
@@ -47,13 +49,14 @@ class MemoryCorpusStorage implements CorpusStorage {
 	}
 
 	@Override
-	public void storeCorpus(Corpus corpus) throws IOException {
+	public void storeCorpus(Corpus corpus, FlexibleParameters parameters) throws IOException {
 		String id = corpus.getId();
 		if (corpusMap.containsKey(id)) {
 			throw new IOException("This corpus already exists: "+id);
 		}
 		else {
 			corpusMap.put(id, corpus);
+			parametersMap.put(id, parameters);
 		}
 	}
 
