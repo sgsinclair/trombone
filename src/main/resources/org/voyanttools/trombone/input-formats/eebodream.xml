@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-    <entry key="teiContentXpath">/EEBO/TEXTS/TEXT</entry>
+    <entry key="xmlContentXpath">/EEBO/TEXTS/TEXT</entry>
     <entry key="xmlTitleXpath">/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/title|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/title</entry>
     <entry key="xmlAuthorXpath">/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/persName|/EEBO/dreamheader/tcpdata/fileDesc/titleStmt/author</entry>
     <entry key="xmlPubDateXpath">/EEBO/dreamheader/opendata/teiHeader/fileDesc/publicationStmt/date|/EEBO/dreamheader/tcpdata/fileDesc/publicationStmt/date</entry>

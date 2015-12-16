@@ -26,6 +26,7 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.Stripper;
@@ -71,12 +72,25 @@ public class CorpusExporter extends AbstractCorpusTool {
 		String[] documentFilename = parameters.getParameterValues("documentFilename");
 		if (format.equals("ORIGINAL")) {
 			for (IndexedDocument document : corpus) {
-				String fileEntryName = getFileEntryName(document.getMetadata(), documentFilename, nameMapper);
+				// we're going to try to go up the parent tree (though we may not want to go as far as the unexpanded version, not sure what to do about that
+				String id = document.getId();
+				DocumentMetadata documentMetadata = document.getMetadata();
+				while(true) {
+					FlexibleParameters fp = documentMetadata.getFlexibleParameters();
+					if (fp.containsKey("parent_id") && documentMetadata.getParentType()!=DocumentMetadata.ParentType.EXPANSION) {
+						id = fp.getParameterValue("parent_id");
+						documentMetadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
+					}
+					else {
+						break;
+					}
+				}
+				String fileEntryName = getFileEntryName(documentMetadata, documentFilename, nameMapper);
 				ZipEntry e = new ZipEntry(fileEntryName);
 				zipOutputStream.putNextEntry(e);
 				InputStream inputStream = null;
 				try {
-					inputStream = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(document.getId());
+					inputStream = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
 					IOUtils.copy(inputStream, zipOutputStream);
 				}
 				finally {

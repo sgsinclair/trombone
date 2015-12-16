@@ -234,7 +234,7 @@ public class XmlExtractor implements Extractor, Serializable {
 			this.id = id;
 			this.storedDocumentSourceId = storedDocumentSource.getId();
 			this.storedDocumentSource = storedDocumentSource;
-			this.metadata = storedDocumentSource.getMetadata().asParent(storedDocumentSourceId);
+			this.metadata = storedDocumentSource.getMetadata().asParent(storedDocumentSourceId, DocumentMetadata.ParentType.EXTRACTION);
 			this.metadata.setLocation(storedDocumentSource.getMetadata().getLocation());
 			this.metadata.setDocumentFormat(DocumentFormat.XML);
 		}
@@ -340,13 +340,16 @@ public class XmlExtractor implements Extractor, Serializable {
 			}
 			
 			for (String extra : parameters.getParameterValues("xmlExtraMetadataXpath")) {
-				String[] parts = extra.split("=");
-				if (parts.length>1) {
-					String key = parts[0].trim();
-					String xpath = StringUtils.join(Arrays.copyOfRange(parts, 1, parts.length)).trim();
-					String[] values = getNodesAsStringsFromXpath(doc, xpath);
-					if (values.length>0) {
-						metadata.setExtras(key, values);
+				for (String x :extra.split("(\r\n|\r|\n)+")) {
+					x = x.trim();
+					String[] parts = x.split("=");
+					if (parts.length>1) {
+						String key = parts[0].trim();
+						String xpath = StringUtils.join(Arrays.copyOfRange(parts, 1, parts.length)).trim();
+						String[] values = getNodesAsStringsFromXpath(doc, xpath);
+						if (values.length>0) {
+							metadata.setExtras(key, values);
+						}
 					}
 				}
 			}

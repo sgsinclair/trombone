@@ -21,7 +21,6 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -29,10 +28,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Comparator;
 
-import org.apache.tika.detect.DefaultDetector;
-import org.apache.tika.io.IOUtils;
-import org.apache.tika.metadata.Metadata;
-import org.apache.tika.mime.MediaType;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -45,6 +40,10 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  */
 //@XStreamConverter(MetadataConverter.class)
 public class DocumentMetadata implements Comparable<DocumentMetadata> {
+	
+	public enum ParentType {
+		EXTRACTION, EXPANSION, UNKNOWN
+	};
 	
 	private transient int index = 0;
 	
@@ -114,13 +113,18 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	 * Creates a new child Metadata object with this object as its parent, including provided parent ID.
 	 * @return a new child Metadata object
 	 */
-	public DocumentMetadata asParent(String id) {
+	public DocumentMetadata asParent(String id, ParentType parentType) {
 		setProperty("id", id);
 		FlexibleParameters newParameters = new FlexibleParameters();
 		for (String key : parameters.getKeys()) {
 			newParameters.setParameter("parent_"+key, parameters.getParameterValues(key));
 		}
+		newParameters.setParameter("parentType", parentType.name().toLowerCase());
 		return new DocumentMetadata(newParameters);
+	}
+	
+	public ParentType getParentType() {
+		return ParentType.valueOf(getProperty("parentType", "unknown").toUpperCase());
 	}
 
 	@Override

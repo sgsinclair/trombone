@@ -167,7 +167,7 @@ public class XslExpander implements Expander {
 	
 	
 	private StoredDocumentSource getChild(DocumentMetadata parentMetadata, String parentId, String string, String location) throws IOException {
-		DocumentMetadata metadata = parentMetadata.asParent(parentId);
+		DocumentMetadata metadata = parentMetadata.asParent(parentId, DocumentMetadata.ParentType.EXPANSION);
 		metadata.setModified(parentMetadata.getModified());
 		metadata.setSource(Source.STRING);
 		metadata.setLocation(location);

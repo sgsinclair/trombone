@@ -97,7 +97,7 @@ class CompressedExpander implements Expander {
 			BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
 			InputStream newInputStream = new CompressorStreamFactory().createCompressorInputStream(bufferedInputStream);
 			
-			DocumentMetadata childMetadata = metadata.asParent(parentId);
+			DocumentMetadata childMetadata = metadata.asParent(parentId, DocumentMetadata.ParentType.EXPANSION);
 			String modifiedFilename = Pattern.compile("\\.(bzip2|bz2|gz|gzip|xz)$", Pattern.CASE_INSENSITIVE).matcher(filename).replaceFirst("");
 			childMetadata.setLocation(modifiedFilename);
 			childMetadata.setModified(metadata.getModified());

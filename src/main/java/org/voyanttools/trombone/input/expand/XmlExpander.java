@@ -410,7 +410,7 @@ class XmlExpander implements Expander {
 	private NodeInputSource getChildStoredDocumentSource(Node node,
 			String parentId, DocumentMetadata parentMetadata, String location)
 			throws IOException {
-		DocumentMetadata metadata = parentMetadata.asParent(parentId);
+		DocumentMetadata metadata = parentMetadata.asParent(parentId, DocumentMetadata.ParentType.EXPANSION);
 		metadata.setModified(parentMetadata.getModified());
 		metadata.setSource(Source.STRING);
 		metadata.setLocation(location);

@@ -143,7 +143,7 @@ class ArchiveExpander implements Expander {
 
 				// skip directories and skippable files
 				if (DocumentFormat.isSkippable(file)==false) {
-					DocumentMetadata childMetadata = parentMetadata.asParent(parentStoredDocumentSource.getId());
+					DocumentMetadata childMetadata = parentMetadata.asParent(parentStoredDocumentSource.getId(), DocumentMetadata.ParentType.EXPANSION);
 					childMetadata.setLocation(file.toString());
 					childMetadata.setModified(archiveEntry.getLastModifiedDate().getTime());
 					childMetadata.setSource(Source.STREAM);
