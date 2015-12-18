@@ -70,21 +70,25 @@ public class CorpusExporter extends AbstractCorpusTool {
 		ZipOutputStream zipOutputStream = new ZipOutputStream(outputStream);
 		String format = parameters.getParameterValue("documentFormat", "ORIGINAL").toUpperCase();
 		String[] documentFilename = parameters.getParameterValues("documentFilename");
-		if (format.equals("ORIGINAL")) {
+		if (format.equals("ORIGINAL") || format.equals("SOURCE")) {
 			for (IndexedDocument document : corpus) {
-				// we're going to try to go up the parent tree (though we may not want to go as far as the unexpanded version, not sure what to do about that
 				String id = document.getId();
 				DocumentMetadata documentMetadata = document.getMetadata();
-				while(true) {
-					FlexibleParameters fp = documentMetadata.getFlexibleParameters();
-					if (fp.containsKey("parent_id") && documentMetadata.getParentType()!=DocumentMetadata.ParentType.EXPANSION) {
-						id = fp.getParameterValue("parent_id");
-						documentMetadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
-					}
-					else {
-						break;
+				
+				if (format.equals("SOURCE")) {
+					// we're going to try to go up the parent tree (though we may not want to go as far as the unexpanded version, not sure what to do about that
+					while(true) {
+						FlexibleParameters fp = documentMetadata.getFlexibleParameters();
+						if (fp.containsKey("parent_id") && documentMetadata.getParentType()!=DocumentMetadata.ParentType.EXPANSION) {
+							id = fp.getParameterValue("parent_id");
+							documentMetadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
+						}
+						else {
+							break;
+						}
 					}
 				}
+
 				String fileEntryName = getFileEntryName(documentMetadata, documentFilename, nameMapper);
 				ZipEntry e = new ZipEntry(fileEntryName);
 				zipOutputStream.putNextEntry(e);
@@ -106,7 +110,7 @@ public class CorpusExporter extends AbstractCorpusTool {
 				String fileEntryName = getFileEntryName(document.getMetadata(), documentFilename, nameMapper);
 				String string = document.getDocumentString();
 				if (format.equals("TXT") || format.equals("TEXT")) {
-					string = stripper.strip(string);
+					string = stripper.strip(string).trim().replace("&amp;", "&");
 					if (fileEntryName.endsWith("txt")==false) {fileEntryName+=".txt";}
 				}
 				else {

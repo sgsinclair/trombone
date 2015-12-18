@@ -30,7 +30,7 @@ public class Stripper {
 	
 	private TYPE type;
 	
-	private Pattern allTags = Pattern.compile("<\\/?\\w+.*?>", Pattern.DOTALL);
+	private Pattern allTags = Pattern.compile("(<\\/?\\w+.*?>|<\\?.*?\\?>)", Pattern.DOTALL);
 	
 	private String[] blockTags = new String[]{"p","div"};
 	
