@@ -69,12 +69,9 @@ public class DocumentFilterSpans extends Spans {
 	
     @Override
     public int nextDoc() throws IOException {
-    	int i = in.docID();
-    	int j = i+1;
-    	int k = bitSet.nextSetBit(j);
+    	int k = bitSet.nextSetBit(in.docID()+1);
     	int l = advance(k);
-    	return l;
-//    	return advance(bitSet.nextSetBit(in.docID()+1));
+    	return l < bitSet.length() && bitSet.get(l) ? l : NO_MORE_DOCS;
     }
 	
 

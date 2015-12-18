@@ -39,6 +39,12 @@ public class CorpusTermsTest {
 		creator.run();
 		parameters.setParameter("corpus", creator.getStoredId());
 		
+		// add another additional document to the corpus
+		document = new Document();
+		document.add(new TextField("lexical", "dark and stormy night in document three", Field.Store.YES));
+		storage.getLuceneManager().addDocument(document);
+
+		
 		parameters.setParameter("tool", "CorpusTermFrequencies");
 		
 		CorpusTerm corpusTerm;
