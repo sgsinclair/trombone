@@ -45,6 +45,12 @@ public class CorpusNgrams extends AbstractTerms {
 	}
 	
 	@Override
+	public int getVersion() {
+		return super.getVersion()+1;
+	}
+
+	
+	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		FlexibleParameters localParameters = parameters.clone();
 		localParameters.setParameter("limit", Integer.MAX_VALUE); // we need all ngrams for documents in order to determine corpus collocates
