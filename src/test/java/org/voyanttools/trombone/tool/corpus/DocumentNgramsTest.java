@@ -1,5 +1,8 @@
 package org.voyanttools.trombone.tool.corpus;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -25,17 +28,35 @@ public class DocumentNgramsTest {
 		DocumentNgrams documentNgrams;
 		List<DocumentNgram> ngrams;
 		
+		/*
 		documentNgrams = new DocumentNgrams(storage, parameters);
 		documentNgrams.run();
 		ngrams = documentNgrams.getNgrams();
-//		for (Ngram ngram : ngrams) {System.out.println(ngram);}
+		for (DocumentNgram ngram : ngrams) {System.out.println(ngram);}
+		*/
 		
 		parameters.setParameter("query", "toute");
+		parameters.setParameter("minLength", 4);
+		parameters.setParameter("maxLength", 4);
 		documentNgrams = new DocumentNgrams(storage, parameters);
 		documentNgrams.run();
 		ngrams = documentNgrams.getNgrams();
-//		for (Ngram ngram : ngrams) {System.out.println(ngram);}
+		assertEquals(2, ngrams.size());
+		for (DocumentNgram ngram : ngrams) {
+			assertTrue(ngram.getLength()==4);
+		}
 
+		// try phrases
+		parameters.setParameter("query", "\"toute personne\"");
+		parameters.removeParameter("minLength");
+		parameters.removeParameter("maxLength");
+		documentNgrams = new DocumentNgrams(storage, parameters);
+		documentNgrams.run();
+		ngrams = documentNgrams.getNgrams();
+		for (DocumentNgram ngram : ngrams) {
+			assertEquals(ngram.toString(), ngram.getTerm().split("\\s+").length, ngram.getLength());
+//			System.out.println(ngram);
+		}
 	}
 
 }
