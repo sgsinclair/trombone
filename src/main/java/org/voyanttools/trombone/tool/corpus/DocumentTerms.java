@@ -131,10 +131,9 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
-			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue());
+			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue(), bitset);
 			int doc = spans.nextDoc();
 			while(doc!=spans.NO_MORE_DOCS) {
-				if (bitset.get(doc)) {
 					int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
 					positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
 					int pos = spans.nextStartPosition();
@@ -142,7 +141,6 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 						positionsMap.get(docIndexInCorpus).add(pos);
 						pos = spans.nextStartPosition();
 					}
-				}
 				doc = spans.nextDoc();
 			}
 			for (Map.Entry<Integer, List<Integer>> entry : positionsMap.entrySet()) {

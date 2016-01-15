@@ -23,6 +23,7 @@ package org.voyanttools.trombone.lucene;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -184,10 +185,38 @@ public class CorpusMapper {
 		return bitSet.get(doc);
 	}
 
+	/**
+	 * Get a Spans that filters for this corpus.
+	 * @param spanQuery
+	 * @return
+	 * @throws IOException
+	 */
 	public Spans getFilteredSpans(SpanQuery spanQuery) throws IOException {
+		return getFilteredSpans(spanQuery, getBitSet());
+	}
+	
+	/**
+	 * Get a Spans that filters for the specified document IDs.
+	 * @param spanQuery
+	 * @param ids
+	 * @return
+	 * @throws IOException
+	 */
+	public Spans getFilteredSpans(SpanQuery spanQuery, Collection<String> ids) throws IOException {
+		return getFilteredSpans(spanQuery, this.getBitSetFromDocumentIds(ids));
+	}
+	
+	/**
+	 * Get a Spans that filters for the specified BitSet.
+	 * @param spanQuery
+	 * @param bitSet
+	 * @return
+	 * @throws IOException
+	 */
+	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
 		SpanWeight weight = spanQuery.createWeight(getSearcher(), false);
 		Spans spans = weight.getSpans(getLeafReader().getContext(), SpanWeight.Postings.POSITIONS);
-		return new DocumentFilterSpans(spans, getBitSet());
+		return new DocumentFilterSpans(spans, bitSet);
 	}
 	
 	public Filter getFilter() throws IOException {
@@ -201,7 +230,7 @@ public class CorpusMapper {
 		return builder.build();
 	}
 
-	public BitSet getBitSetFromDocumentIds(List<String> documentIds) throws IOException {
+	public BitSet getBitSetFromDocumentIds(Collection<String> documentIds) throws IOException {
 		BitSet subBitSet = new SparseFixedBitSet(getLeafReader().numDocs());
 		for (String id : documentIds) {
 			subBitSet.set(getLuceneIdFromDocumentId(id));

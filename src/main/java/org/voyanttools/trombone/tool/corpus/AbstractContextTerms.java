@@ -39,6 +39,7 @@ import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
+import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
@@ -86,12 +87,13 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		Collection<DocumentSpansData> documentSpansDataList = new ArrayList<DocumentSpansData>();
 		
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());
+		BitSet bitSet = corpusMapper.getBitSetFromDocumentIds(ids);
 		
 //		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			SpanQuery spanQuery = spanQueryEntry.getValue();
-			Spans spans = corpusMapper.getFilteredSpans(spanQuery);
+			Spans spans = corpusMapper.getFilteredSpans(spanQuery, bitSet);
 			
 			// map lucene document id to span offset information
 			List<int[]> spansDocDataList = new ArrayList<int[]>();

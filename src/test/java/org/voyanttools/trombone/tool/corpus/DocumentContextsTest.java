@@ -100,6 +100,7 @@ public class DocumentContextsTest {
 		
 		FlexibleParameters parameters;
 		parameters = new FlexibleParameters();
+		parameters.addParameter("string", "eight keywordOne nine");
 		parameters.addParameter("string", "one two three four five six seven eight keywordOne nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty twentyone twentytwo twentythree twentyfour twentyfive twentysix twentyseven keywordTwo twentyeight twentynine thirty thirtyone thirtytwo thirtythree thirtyfour keywordThree thirtyfive thirtysix thirtyseven thirtyeight thirtynine forty fortyone fortytwo fortythree fortyfour fortyfive fortysix fortyseven fortyeight fortynine fifty fiftyone keywordFour fiftytwo keywordFive fiftythree fiftyfour fiftyfive keywordSix fiftysix fiftyseven fiftyeight keywordSeven keywordEight fiftynine sixty sixtyone sixtytwo sixtythree sixtyfour sixtyfive sixtysix sixtyseven keywordNine");
 
 		RealCorpusCreator creator = new RealCorpusCreator(storage, parameters);
@@ -113,11 +114,14 @@ public class DocumentContextsTest {
 		DocumentContexts documentContexts;
 		List<Kwic> contexts;
 		
-		// all
+		// all, both documents
 		documentContexts = new DocumentContexts(storage, parameters);
 		documentContexts.run();
 		contexts = documentContexts.getContexts();
-		assertEquals(9, contexts.size());
+		assertEquals(10, contexts.size());
+
+		// now focus on the second document
+		parameters.setParameter("docIndex", 1);
 		
 		// start
 		parameters.setParameter("start", 5);
