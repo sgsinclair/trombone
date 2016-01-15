@@ -37,6 +37,7 @@ import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
+import org.apache.lucene.search.spans.SpanOrQuery;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanTermQuery;
 import org.apache.lucene.search.spans.Spans;
@@ -93,7 +94,6 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	 */
 	public CorpusTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		withDistributions = !parameters.getParameterValue("withDistributions","").isEmpty();
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		corpusTermSort = CorpusTerm.Sort.getForgivingly(parameters);
 		comparator = CorpusTerm.getComparator(corpusTermSort);
@@ -209,18 +209,62 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		for (Map.Entry<String, SpanQuery> entry : queriesMap.entrySet()) {
 			SpanQuery query = entry.getValue();
 			String queryString = entry.getKey();
+
+			boolean corpusTermOffered = false;
 			if (needDistributions) {
 				Spans spans = corpusMapper.getFilteredSpans((SpanQuery) query);
 				addToQueueFromSpansWithDistributions(corpusMapper, queue, queryString, spans);
+				corpusTermOffered = true;
 			}
 			else if (query instanceof SpanTermQuery) {
 				if (corpusTermMinimalsDB==null) {
 					corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, ((SpanTermQuery) query).getTerm().field());
 				}
-				addToQueueFromTermWithoutDistributions(queue, queryString, ((SpanTermQuery) query).getTerm(), corpusTermMinimalsDB, corpusMapper.getCorpus().size());
+				Term term = ((SpanTermQuery) query).getTerm();
+				CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(term.text());
+				if (corpusTermMinimal!=null) {
+					addToQueueFromTermWithoutDistributions(queue, queryString, term, corpusTermMinimalsDB, corpusMapper.getCorpus().size());
+					corpusTermOffered = true;
+				}
 			}
 			else {
+				
+				// if we have a long list of SpanTermQueries then let's try to filter them first
+				if (query instanceof SpanOrQuery) {
+					int count = 0;
+					SpanQuery[] queries = ((SpanOrQuery) query).getClauses();
+					
+					if (queries.length>10) { // 10 is a bit arbitrary, but anyway
+						for (SpanQuery spanQuery : queries) {
+							if (spanQuery instanceof SpanTermQuery) {count++;}
+							else {break;}
+						}
+						
+						// rewrite query to have only terms that occur in this corpus
+						if (count==queries.length) {
+							if (corpusTermMinimalsDB==null) {
+								corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, queries[0].getField());
+							}
+							query = new SpanOrQuery();
+							for (SpanQuery q : queries) {
+								Term term = ((SpanTermQuery) q).getTerm(); // we can cast this since we tested earlier
+								CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(term.text());
+								if (corpusTermMinimal!=null) {
+									// it would be nice to just count occurrences, but then we wouldn't get aggregate inDocumentsCount
+									((SpanOrQuery) query).addClause(q);
+								}
+							}
+							
+						}						
+					}
+
+				}
 				addToQueueFromQueryWithoutDistributions(corpusMapper, queue, queryString, query);
+				corpusTermOffered = true;
+			}
+			if (!corpusTermOffered) { // offer empty term for this query
+				CorpusTerm corpusTerm = new CorpusTerm(queryString, 0, totalTokens, 0, corpusMapper.getCorpus().size());
+				offer(queue, corpusTerm);
 			}
 		}
 		if (corpusTermMinimalsDB!=null) {corpusTermMinimalsDB.close();}
