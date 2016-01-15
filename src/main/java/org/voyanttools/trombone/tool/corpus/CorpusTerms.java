@@ -242,18 +242,31 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 						
 						// rewrite query to have only terms that occur in this corpus
 						if (count==queries.length) {
+							
+							boolean inDocumentCountNotNeeded = parameters.containsKey("inDocumentsCount") && !parameters.getParameterBooleanValue("inDocumentsCount");
 							if (corpusTermMinimalsDB==null) {
 								corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, queries[0].getField());
 							}
-							query = new SpanOrQuery();
+							query = new SpanOrQuery(); // create new query (even if we don't use it)
+							count = 0; // reset count for rawFreq
 							for (SpanQuery q : queries) {
 								Term term = ((SpanTermQuery) q).getTerm(); // we can cast this since we tested earlier
 								CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(term.text());
 								if (corpusTermMinimal!=null) {
-									// it would be nice to just count occurrences, but then we wouldn't get aggregate inDocumentsCount
-									((SpanOrQuery) query).addClause(q);
+									if (inDocumentCountNotNeeded) {
+										count+=corpusTermMinimal.getRawFreq();
+									}
+									else {
+										((SpanOrQuery) query).addClause(q);
+									}
 								}
 							}
+							if (inDocumentCountNotNeeded) {
+								CorpusTerm corpusTerm = new CorpusTerm(queryString, count, totalTokens, 0, corpusMapper.getCorpus().size());
+								offer(queue, corpusTerm);
+								continue; // we have to skip to next one
+							}
+							// otherwise use our new query below
 							
 						}						
 					}
