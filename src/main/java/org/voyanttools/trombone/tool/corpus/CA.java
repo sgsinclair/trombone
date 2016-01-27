@@ -30,17 +30,17 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(CA.CAConverter.class)
 public class CA extends AnalysisTool {
 
-	private List<RawCAType> caTypes;
+	protected List<RawCAType> caTypes;
 	
-	private double[][] rowProjections;
-	private double[][] columnProjections;
-	private double[] dimensionPercentages;
+	protected double[][] rowProjections;
+	protected double[][] columnProjections;
+	protected double[] dimensionPercentages;
 	
-	private String target;
-	private int clusters;
-	private String docId;
-	private int bins;
-	private int dimensions;
+	protected String target;
+	protected int clusters;
+	protected String docId;
+	protected int bins;
+	protected int dimensions;
 	
 	
 	public CA(Storage storage, FlexibleParameters parameters) {
@@ -55,7 +55,7 @@ public class CA extends AnalysisTool {
 		this.caTypes = new ArrayList<RawCAType>();
 	}
 	
-	private void doCA(double[][] freqMatrix) {
+	protected void doCA(double[][] freqMatrix) {
 		CorrespondenceAnalysis ca = new CorrespondenceAnalysis(freqMatrix);
 		ca.doAnalysis();
 		this.rowProjections = ca.getRowProjections();

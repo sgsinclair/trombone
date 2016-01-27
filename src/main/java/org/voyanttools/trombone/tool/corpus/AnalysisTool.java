@@ -26,7 +26,7 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 	final static int CORPUS = 0;
 	final static int DOCUMENT = 1;
 	
-	private List<?> typesList;
+	protected List<?> typesList;
 	
 	protected int bins;
 	protected int maxOutputDataItemCount;
@@ -96,7 +96,7 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		return freqMatrix;
 	}
 	
-	private List<CorpusTerm> getCorpusTypes(CorpusMapper corpusMapper) throws IOException {
+	protected List<CorpusTerm> getCorpusTypes(CorpusMapper corpusMapper) throws IOException {
 		FlexibleParameters params = parameters.clone();
 		// remove bins so that CorpusTerm.getRawDistributions is divided into documents
 		params.removeParameter("bins");
@@ -128,7 +128,7 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 //		return corpusTypes;
 	}
 	
-	private List<DocumentTerm> getDocumentTypes(CorpusMapper corpusMapper) throws IOException {
+	protected List<DocumentTerm> getDocumentTypes(CorpusMapper corpusMapper) throws IOException {
 		DocumentTerms dt = new DocumentTerms(storage, parameters);
 		dt.run(corpusMapper);
 		
