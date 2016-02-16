@@ -152,7 +152,11 @@ public class TikaExtractor implements Extractor {
 	        	String value = extractedMetadata.get(name);
 	        	if (value.trim().isEmpty()) {continue;}
 	        	if (name.equals("title") || name.equals("dc:title")) {
-	            	metadata.setTitle(value);
+	        		DocumentFormat f = metadata.getDocumentFormat();
+	        		// don't set title if it's already there for text or unknown format
+	        		if (!metadata.getTitle().isEmpty() && f!=DocumentFormat.UNKNOWN && f!=DocumentFormat.TEXT) {
+		            	metadata.setTitle(value);
+	        		}
 	        	}
 	        	else if (name.toLowerCase().equals("meta:author") || name.toLowerCase().equals("author")) {
 	        		metadata.setAuthor(value);
