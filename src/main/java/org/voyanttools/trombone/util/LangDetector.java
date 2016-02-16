@@ -48,7 +48,7 @@ public class LangDetector {
 		        .build();
 
 		//create a text object factory
-		textObjectFactory = CommonTextObjectFactories.forDetectingShortCleanText();
+		textObjectFactory = CommonTextObjectFactories.forDetectingOnLargeText();
 	}
 	
 	public String detect(String text) {
