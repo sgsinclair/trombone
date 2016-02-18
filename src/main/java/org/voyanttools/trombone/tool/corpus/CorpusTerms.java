@@ -327,11 +327,15 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int doc = spans.nextDoc();
 		while(doc!=spans.NO_MORE_DOCS) {
 			docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
-			if (positionsMap.containsKey(docIndexInCorpus)==false) {
-				positionsMap.put(docIndexInCorpus, new AtomicInteger(1));
-			}
-			else {
-				positionsMap.get(docIndexInCorpus).incrementAndGet();
+			int pos = spans.nextStartPosition();
+			while (pos!=spans.NO_MORE_POSITIONS) {
+				if (positionsMap.containsKey(docIndexInCorpus)==false) {
+					positionsMap.put(docIndexInCorpus, new AtomicInteger(1));
+				}
+				else {
+					positionsMap.get(docIndexInCorpus).incrementAndGet();
+				}
+				pos = spans.nextStartPosition();
 			}
 			doc = spans.nextDoc();
 		}

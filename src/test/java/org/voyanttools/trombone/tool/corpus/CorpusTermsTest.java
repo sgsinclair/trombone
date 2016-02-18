@@ -101,8 +101,15 @@ public class CorpusTermsTest {
 		assertEquals(1, corpusTerms.size());
 		corpusTerm = corpusTerms.get(0);
 		assertEquals(0, corpusTerm.getRawFreq());
-		parameters.removeParameter("withDistributions");
 		
+		parameters.setParameter("query", "it");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals(3, corpusTerm.getRawFreq());
+		parameters.removeParameter("withDistributions");
 		
 		parameters.setParameter("query", "dar*");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
