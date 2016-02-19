@@ -29,6 +29,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.corpus.AbstractCorpusTool;
+import org.voyanttools.trombone.tool.corpus.ConsumptiveTool;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
@@ -134,6 +137,53 @@ public class Corpus implements Iterable<IndexedDocument> {
 		}
 		return totalTokensCount;
 		*/
+	}
+
+	public CorpusAccess validateAccess(FlexibleParameters parameters, AbstractCorpusTool tool) throws CorpusAccessException {
+		
+		// pass through for metadata
+		if (tool instanceof org.voyanttools.trombone.tool.corpus.CorpusMetadata) {return CorpusAccess.NONCONSUMPTIVE;}
+		
+		String password = parameters.getParameterValue("accessPassword", "");
+		
+		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.FULL, CorpusAccess.CONSUMPTIVE}) {
+			String[] passwords = corpusMetadata.getAccessPasswords(mode);
+			if (passwords.length>0) {
+				for (String pass : passwords) {
+					// if we have a valid consumptive password, it's the same as full
+					if (pass.isEmpty()==false && pass.equals(password)) {return mode==CorpusAccess.CONSUMPTIVE ? CorpusAccess.FULL : mode;}
+				}
+				
+				// if we have defined passwords for full and no matches, we raise error
+				if (mode==CorpusAccess.FULL) {
+					throw new CorpusAccessException("Access to this tool requires a valid password.");
+				}
+				
+				// if we have defined passwords for consumptive and not matches, we shift to nonconsumptive
+				if (mode==CorpusAccess.CONSUMPTIVE) {
+					return CorpusAccess.NONCONSUMPTIVE;
+				}
+			}
+		}
+
+		return CorpusAccess.FULL;
+	}
+
+	public class CorpusAccessException extends IOException {
+
+		public CorpusAccessException(String string) {
+			super(string);
+		}
+		
+	}
+
+	public boolean isValidPassword(String password) {
+		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.FULL, CorpusAccess.CONSUMPTIVE}) {
+			for (String pass : corpusMetadata.getAccessPasswords(mode)) {
+				if (pass.isEmpty()==false && pass.equals(password)) {return true;}
+			}
+		}
+		return false;
 	}
 
 }

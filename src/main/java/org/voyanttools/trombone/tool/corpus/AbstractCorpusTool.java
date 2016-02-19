@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -29,6 +30,7 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
+		corpus.validateAccess(parameters, this);
 		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
 		run(corpusMapper);
 	}

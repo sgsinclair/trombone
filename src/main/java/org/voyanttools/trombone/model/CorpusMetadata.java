@@ -132,6 +132,10 @@ public class CorpusMetadata implements Serializable {
 		return Float.valueOf(getProperty("typesCountStdDev-"+tokenType.name(), "0"));
 	}
 	
+	public String[] getAccessPasswords(CorpusAccess mode) {
+		return parameters.getParameterValues(mode.name().toLowerCase()+"AccessPasswords");
+	}
+
 	public static class CorpusMetadataConverter implements Converter {
 
 		@Override
