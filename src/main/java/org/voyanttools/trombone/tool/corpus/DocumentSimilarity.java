@@ -1,6 +1,7 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -15,6 +16,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
@@ -26,6 +28,12 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(DocumentSimilarity.DocSimConverter.class)
 public class DocumentSimilarity extends CA {
 
+	@XStreamOmitField
+	private List<String> ids = new ArrayList<String>();
+	
+	@XStreamOmitField
+	private List<Integer> indexes = new ArrayList<Integer>();
+	
 	public DocumentSimilarity(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
@@ -34,56 +42,53 @@ public class DocumentSimilarity extends CA {
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
-		int numDocs = corpus.size();
 		
-		System.out.println("docsim");
+		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
+		for (String id : ids) {
+			int index = corpus.getDocumentPosition(id);
+			indexes.add(index);
+		}
 		
-		System.out.println("corpus "+numDocs);
+		this.maxOutputDataItemCount = ids.size();
 		
 		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, 0);
 		doCA(freqMatrix);
 		
-		int dimensions = Math.min(numDocs, this.dimensions);
-        if (numDocs == 3) dimensions = 2;
+		int dimensions = Math.min(ids.size(), this.dimensions);
+        if (ids.size() == 3) dimensions = 2;
 		
-		int i, j;
+		int i = 0, j;
 		double[] v;
-		
-		
-		for (i = 0; i < this.maxOutputDataItemCount; i++) {
-			IndexedDocument doc = corpus.getDocument(i);
+		for (Integer docIndex : indexes) {
+			IndexedDocument doc = corpus.getDocument(docIndex);
 	    	
 	    	v = new double[dimensions];
 	    	for (j = 0; j < dimensions; j++) {
 		    	v[j] = this.rowProjections[i][j+1];
 	    	}
-
 	    	
 	    	this.caTypes.add(new RawCAType(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCAType.PART, corpus.getDocumentPosition(doc.getId()) ));
+	    	i++;
 	    }
 	}
 
 	@Override
 	protected double[][] buildFrequencyMatrix(CorpusMapper corpusMapper, int type) throws IOException {
-		System.out.println("bfm new");
-		Corpus corpus = corpusMapper.getCorpus();
-		int numDocs = corpus.size();
-		
 		this.typesList = this.getCorpusTypes(corpusMapper);
 		
-		this.maxOutputDataItemCount = numDocs;
+		double[][] freqMatrix = new double[this.maxOutputDataItemCount][this.typesList.size()];
 		
-		double[][] freqMatrix = new double[numDocs][typesList.size()];
-		
-		System.out.println("===");
+//		System.out.println("===");
 		int i = 0;
 		int j = 0;
-    	for (i = 0; i < typesList.size(); i++) {
-    		CorpusTerm term = (CorpusTerm) typesList.get(i);
+    	for (i = 0; i < this.typesList.size(); i++) {
+    		CorpusTerm term = (CorpusTerm) this.typesList.get(i);
     		float[] relFreqs = term.getRelativeDistributions();
-    		for (j = 0; j < relFreqs.length; j++) {
-    			freqMatrix[j][i] = relFreqs[j];
-    			System.out.println(j+","+i+": "+term.getTerm()+": "+relFreqs[j]);
+    		j = 0;
+    		for (Integer docIndex : indexes) {
+    			freqMatrix[j][i] = relFreqs[docIndex];
+//    			System.out.println(j+","+i+": "+term.getTerm()+": "+relFreqs[docIndex]);
+    			j++;
     		}
     	}
 		
@@ -125,7 +130,7 @@ public class DocumentSimilarity extends CA {
 	        
 			final List<RawCAType> caTypes = docSim.caTypes;
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalDocs", Integer.class);
 			writer.setValue(String.valueOf(docSim.maxOutputDataItemCount));
 			writer.endNode();
 			

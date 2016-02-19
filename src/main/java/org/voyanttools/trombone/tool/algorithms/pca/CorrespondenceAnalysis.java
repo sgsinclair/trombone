@@ -113,9 +113,14 @@ public class CorrespondenceAnalysis {
 		// Reverse order of Matrix evecs into Matrix Evecs.
 		double[][] tempold = evecs.getArray();
 		for (int j1 = 0; j1 < this.numColumns; j1++) {
-			for (int j2 = 0; j2 < this.numColumns; j2++)
-				Evex[j1][j2] = tempold[j1][this.numColumns - j2 - 1]/
-				Math.sqrt(this.columnSums[j1]);
+			for (int j2 = 0; j2 < this.numColumns; j2++) {
+				if (this.columnSums[j1] == 0) { // don't divide by zero
+					Evex[j1][j2] = 0.0;
+				} else {
+					Evex[j1][j2] = tempold[j1][this.numColumns - j2 - 1]/Math.sqrt(this.columnSums[j1]);
+				}
+					
+			}
 		}
 
 //		double runningtotal = 0.0;
