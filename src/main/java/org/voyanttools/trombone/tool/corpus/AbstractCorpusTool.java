@@ -30,7 +30,11 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
-		corpus.validateAccess(parameters, this);
+		if (this instanceof CorpusMetadata == false && this instanceof DocumentsMetadata == false) {
+			CorpusAccess corpusAccess = corpus.validateAccess(parameters.getParameterValue("password", ""));
+			System.err.println(corpusAccess);
+			// TODO: check if we implement non-consumptive
+		}
 		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
 		run(corpusMapper);
 	}

@@ -85,6 +85,10 @@ public class CorpusMetadata implements Serializable {
 		parameters.setParameter(key, value);
 	}
 
+	private void setProperty(String key, String[] values) {
+		parameters.setParameter(key, values);
+	}
+
 	public void setCreatedTime(long time) {
 		setProperty("createdTime", String.valueOf(time));
 	}
@@ -132,10 +136,22 @@ public class CorpusMetadata implements Serializable {
 		return Float.valueOf(getProperty("typesCountStdDev-"+tokenType.name(), "0"));
 	}
 	
-	public String[] getAccessPasswords(CorpusAccess mode) {
-		return parameters.getParameterValues(mode.name().toLowerCase()+"AccessPasswords");
+	public void setPasswords(CorpusAccess mode, String[] passwords) {
+		setProperty(mode.name().toLowerCase()+"Passwords", passwords);
 	}
 
+	public String[] getAccessPasswords(CorpusAccess mode) {
+		return parameters.getParameterValues(mode.name().toLowerCase()+"Passwords");
+	}
+
+	public void setNoPasswordAccess(CorpusAccess corpusAccess) {
+		setProperty("noPasswordAccess", corpusAccess.name());
+	}
+	
+	public CorpusAccess getNoPasswordAccess() {
+		return CorpusAccess.getForgivingly(this.getProperty("noPasswordAccess"));
+	}
+	
 	public static class CorpusMetadataConverter implements Converter {
 
 		@Override
@@ -176,6 +192,9 @@ public class CorpusMetadata implements Serializable {
 			writer.setValue(String.valueOf(corpusMetadata.getTypesCount(TokenType.lexical)));
 			writer.endNode();
 
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "noPasswordAccess", String.class);
+			writer.setValue(corpusMetadata.getNoPasswordAccess().name());
+			writer.endNode();
 		}
 
 		@Override

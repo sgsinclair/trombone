@@ -139,34 +139,29 @@ public class Corpus implements Iterable<IndexedDocument> {
 		*/
 	}
 
-	public CorpusAccess validateAccess(FlexibleParameters parameters, AbstractCorpusTool tool) throws CorpusAccessException {
+	public CorpusAccess validateAccess(String password) throws CorpusAccessException {
 		
-		// pass through for metadata
-		if (tool instanceof org.voyanttools.trombone.tool.corpus.CorpusMetadata) {return CorpusAccess.NONCONSUMPTIVE;}
-		
-		String password = parameters.getParameterValue("accessPassword", "");
-		
-		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.FULL, CorpusAccess.CONSUMPTIVE}) {
+		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.ACCESS}) {
 			String[] passwords = corpusMetadata.getAccessPasswords(mode);
 			if (passwords.length>0) {
 				for (String pass : passwords) {
-					// if we have a valid consumptive password, it's the same as full
-					if (pass.isEmpty()==false && pass.equals(password)) {return mode==CorpusAccess.CONSUMPTIVE ? CorpusAccess.FULL : mode;}
+					if (pass.isEmpty()==false && pass.equals(password)) {return mode;}
 				}
 				
 				// if we have defined passwords for full and no matches, we raise error
-				if (mode==CorpusAccess.FULL) {
-					throw new CorpusAccessException("Access to this tool requires a valid password.");
-				}
-				
-				// if we have defined passwords for consumptive and not matches, we shift to nonconsumptive
-				if (mode==CorpusAccess.CONSUMPTIVE) {
-					return CorpusAccess.NONCONSUMPTIVE;
+				if (mode==CorpusAccess.ACCESS) {
+					CorpusAccess noPasswordAccess = corpusMetadata.getNoPasswordAccess();
+					if (noPasswordAccess==CorpusAccess.ACCESS) {
+						throw new CorpusAccessException("Access to this tool requires a valid password.");
+					}
+					else if (noPasswordAccess==CorpusAccess.NONCONSUMPTIVE) {
+						return CorpusAccess.NONCONSUMPTIVE;
+					}
 				}
 			}
 		}
 
-		return CorpusAccess.FULL;
+		return CorpusAccess.NORMAL;
 	}
 
 	public class CorpusAccessException extends IOException {
@@ -177,13 +172,13 @@ public class Corpus implements Iterable<IndexedDocument> {
 		
 	}
 
-	public boolean isValidPassword(String password) {
-		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.FULL, CorpusAccess.CONSUMPTIVE}) {
-			for (String pass : corpusMetadata.getAccessPasswords(mode)) {
-				if (pass.isEmpty()==false && pass.equals(password)) {return true;}
-			}
-		}
-		return false;
-	}
-
+//	public boolean isValidPassword(String password) {
+//		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.ACCESS}) {
+//			for (String pass : corpusMetadata.getAccessPasswords(mode)) {
+//				if (pass.isEmpty()==false && pass.equals(password)) {return true;}
+//			}
+//		}
+//		return false;
+//	}
+//
 }

@@ -39,5 +39,9 @@ public class CorpusMetadata extends AbstractCorpusTool  {
 	public void run(CorpusMapper corpusMapper) throws IOException {
 		metadata = corpusMapper.getCorpus().getCorpusMetadata();
 	}
+	
+	public int getVersion() {
+		return super.getVersion()+1;
+	}
 
 }

@@ -2,7 +2,7 @@ package org.voyanttools.trombone.model;
 
 public enum CorpusAccess {
 	
-	NONE, ADMIN, FULL, CONSUMPTIVE, NONCONSUMPTIVE;
+	NONE, ADMIN, ACCESS, CONSUMPTIVE, NONCONSUMPTIVE, NORMAL;
 
 	public static CorpusAccess getForgivingly(String value) {
 		if (value!=null) {
@@ -13,7 +13,7 @@ public enum CorpusAccess {
 				}
 			}
 		}
-		return FULL;
+		return NORMAL;
 	}
 
 }

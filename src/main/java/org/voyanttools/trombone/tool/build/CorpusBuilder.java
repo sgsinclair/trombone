@@ -23,11 +23,16 @@ package org.voyanttools.trombone.tool.build;
 
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
@@ -70,37 +75,93 @@ public class CorpusBuilder extends AbstractTool {
 	}
 	
 	void run(String corpusId) throws IOException {
+		
 		// store and compute the corpus if it hasn't been stored
 		if (storage.getCorpusStorage().corpusExists(corpusId)==false) {
 			
-			boolean verbose = parameters.getParameterBooleanValue("verbose");
-						
 			List<String> documentIds = storage.retrieveStrings(corpusId);
+			
+			// check if we have an admin password and update the corpusId if so
+			if (parameters.getParameterValue("adminPassword", "").isEmpty()==false) {
+				// we'll generate a new random corpus ID to make sure this administered corpus is unique
+				corpusId = DigestUtils.md5Hex(corpusId+UUID.randomUUID().toString());
+			}
+
 			CorpusMetadata metadata = new CorpusMetadata(corpusId);
 			metadata.setDocumentIds(documentIds);
 			Corpus corpus = new Corpus(storage, metadata);
 			
-			Calendar start = Calendar.getInstance();
-			if (verbose) {log("Starting corpus terms index.");}
-			CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
-			// create and close to avoid concurrent requests later 
-			CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical);
-			
-			int totalWordTokens = 0;
-			int totalWordTypes = 0;
-			for (CorpusTermMinimal corpusTermMinimal : corpusTermMinimalsDB.values()) {
-				totalWordTokens += corpusTermMinimal.getRawFreq();
-				totalWordTypes++;
-			}
-			corpusTermMinimalsDB.close();
-			metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
-			metadata.setTokensCount(TokenType.lexical, totalWordTokens);
-			metadata.setTypesCount(TokenType.lexical, totalWordTypes);
-			if (verbose) {log("Finished corpus terms index.", start);}
+			setAccessManagement(metadata);
+			indexCorpusTerms(corpus);
 			
 			storage.getCorpusStorage().storeCorpus(corpus, parameters);
 		}
+		
+		// TODO: handle existing corpus with new admin, simple duplication of the corpus should work
+		else if (parameters.getParameterValue("adminPassword", "").isEmpty()==false) {
+			Corpus corpus = storage.getCorpusStorage().getCorpus(corpusId);
+			FlexibleParameters params = corpus.getCorpusMetadata().getFlexibleParameters();
+			corpusId = DigestUtils.md5Hex(corpusId+UUID.randomUUID().toString());
+			params.setParameter("id", corpusId);
+			CorpusMetadata newCorpusMetadata = new CorpusMetadata(params);
+			Corpus newCorpus = new Corpus(storage, newCorpusMetadata);
+			
+			setAccessManagement(newCorpusMetadata);
+			indexCorpusTerms(corpus);
+
+			storage.getCorpusStorage().storeCorpus(newCorpus, parameters);
+		}
 		this.storedId = corpusId;
+	}
+	
+	private void setAccessManagement(CorpusMetadata corpusMetadata) {
+		Set<String> passwordsSet = new HashSet<String>();
+		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.ACCESS}) {
+			for (String password: parameters.getParameterValue(mode.name().toLowerCase()+"Password", "").split(",")) {
+				password = password.trim();
+				if (password.isEmpty()==false) {
+					passwordsSet.add(password);
+				}
+			}
+			if (passwordsSet.isEmpty()==false) {
+				corpusMetadata.setPasswords(mode, passwordsSet.toArray(new String[0]));
+				passwordsSet.clear();
+			}
+		}
+		
+		// set no password mode if there's an access password
+		if (corpusMetadata.getAccessPasswords(CorpusAccess.ACCESS).length>0) {
+			CorpusAccess corpusAccess = CorpusAccess.getForgivingly(parameters.getParameterValue("noPasswordAccess", ""));
+			if (corpusAccess==CorpusAccess.NORMAL) {corpusAccess=CorpusAccess.NONCONSUMPTIVE;} // nothing set, so use non-consumptive
+			if (corpusAccess==CorpusAccess.NONE || corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
+				corpusMetadata.setNoPasswordAccess(corpusAccess);
+			}
+		}
+	}
+	
+	private void indexCorpusTerms(Corpus corpus) throws IOException {
+		
+		boolean verbose = parameters.getParameterBooleanValue("verbose");
+
+		Calendar start = Calendar.getInstance();
+		if (verbose) {log("Starting corpus terms index.");}
+		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
+		// create and close to avoid concurrent requests later 
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical);
+		
+		int totalWordTokens = 0;
+		int totalWordTypes = 0;
+		for (CorpusTermMinimal corpusTermMinimal : corpusTermMinimalsDB.values()) {
+			totalWordTokens += corpusTermMinimal.getRawFreq();
+			totalWordTypes++;
+		}
+		corpusTermMinimalsDB.close();
+		
+		CorpusMetadata metadata = corpus.getCorpusMetadata();
+		metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
+		metadata.setTokensCount(TokenType.lexical, totalWordTokens);
+		metadata.setTypesCount(TokenType.lexical, totalWordTypes);
+		if (verbose) {log("Finished corpus terms index.", start);}		
 	}
 
 	String getStoredId() {
