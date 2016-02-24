@@ -42,7 +42,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
  */
 @XStreamAlias("documentTokens")
 @XStreamConverter(DocumentTokens.DocumentTokensConverter.class)
-public class DocumentTokens extends AbstractCorpusTool {
+public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveTool {
 
 	private List<DocumentToken> documentTokens = new ArrayList<DocumentToken>();
 	

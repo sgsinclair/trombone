@@ -43,6 +43,8 @@ import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusAccess;
+import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -232,6 +234,10 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	}
 
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		// don't allow non-consumptive access to all terms if we need positions or offsets
+		if (isNeedsPositions || isNeedsOffsets && corpusMapper.getCorpus().getValidatedCorpusAccess(parameters)==CorpusAccess.NONCONSUMPTIVE) {
+			throw new CorpusAccessException("This is requesting data that's incompatible with the limited access of this corpus.");
+		}
 		runAllTermsFromDocumentTermVectors(corpusMapper, stopwords);
 	}
 	

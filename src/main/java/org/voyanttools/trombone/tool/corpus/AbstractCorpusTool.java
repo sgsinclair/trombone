@@ -10,6 +10,7 @@ import java.util.List;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
+import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -31,9 +32,10 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	public void run() throws IOException {
 		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
 		if (this instanceof CorpusMetadata == false && this instanceof DocumentsMetadata == false) {
-			CorpusAccess corpusAccess = corpus.validateAccess(parameters.getParameterValue("password", ""));
-			System.err.println(corpusAccess);
-			// TODO: check if we implement non-consumptive
+			CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
+			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE && this instanceof ConsumptiveTool) {
+				throw new CorpusAccessException("This tool isn't compatible with the limited access of this corpus.");
+			}
 		}
 		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
 		run(corpusMapper);

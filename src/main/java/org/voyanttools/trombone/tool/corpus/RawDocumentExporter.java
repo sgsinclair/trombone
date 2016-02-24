@@ -30,6 +30,9 @@ import java.io.Writer;
 
 import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
+import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusAccess;
+import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.tool.utils.RawSerializable;
@@ -39,7 +42,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  * @author sgs
  *
  */
-public class RawDocumentExporter extends AbstractTool implements RawSerializable {
+public class RawDocumentExporter extends AbstractTool implements RawSerializable, ConsumptiveTool {
 
 	String id = null;
 	
@@ -78,6 +81,13 @@ public class RawDocumentExporter extends AbstractTool implements RawSerializable
 			if (InputSourcesBuilder.hasParameterSources(parameters)) {
 				
 			}
+			
+			Corpus corpus = CorpusManager.getCorpus(storage, parameters);
+			CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
+			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
+				throw new CorpusAccessException("This tool isn't compatible with the limited access of this corpus.");
+			}
+
 
 			id = parameters.getParameterValue("docId");
 			inputStream = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);

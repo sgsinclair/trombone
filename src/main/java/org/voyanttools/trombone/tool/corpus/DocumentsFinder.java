@@ -20,6 +20,8 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusAccess;
+import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
@@ -109,6 +111,13 @@ public class DocumentsFinder extends AbstractTerms {
 				ids.addAll(Arrays.asList(strings));
 			}
 			if (ids.size()<corpus.size()) { // no need if we have all the documents
+				
+				// make sure we have permissions to do this
+				CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
+				if (corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
+					throw new CorpusAccessException("This tool isn't compatible with the limited access of this corpus.");
+				}
+
 				List<String> keepers = new ArrayList<String>();
 				for (String id : corpus.getDocumentIds()) {
 					if (ids.contains(id)) {

@@ -138,9 +138,10 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return totalTokensCount;
 		*/
 	}
+	
+	public CorpusAccess getValidatedCorpusAccess(FlexibleParameters parameters) throws CorpusAccessException {
 
-	public CorpusAccess validateAccess(String password) throws CorpusAccessException {
-		
+		String password = parameters.getParameterValue("password", "");
 		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.ACCESS}) {
 			String[] passwords = corpusMetadata.getAccessPasswords(mode);
 			if (passwords.length>0) {
@@ -163,22 +164,4 @@ public class Corpus implements Iterable<IndexedDocument> {
 
 		return CorpusAccess.NORMAL;
 	}
-
-	public class CorpusAccessException extends IOException {
-
-		public CorpusAccessException(String string) {
-			super(string);
-		}
-		
-	}
-
-//	public boolean isValidPassword(String password) {
-//		for (CorpusAccess mode : new CorpusAccess[]{CorpusAccess.ADMIN, CorpusAccess.ACCESS}) {
-//			for (String pass : corpusMetadata.getAccessPasswords(mode)) {
-//				if (pass.isEmpty()==false && pass.equals(password)) {return true;}
-//			}
-//		}
-//		return false;
-//	}
-//
 }

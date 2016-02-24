@@ -35,7 +35,7 @@ import org.voyanttools.trombone.util.Stripper;
  * @author sgs
  *
  */
-public class CorpusExporter extends AbstractCorpusTool {
+public class CorpusExporter extends AbstractCorpusTool implements ConsumptiveTool {
 
 	private Corpus corpus = null;
 	
