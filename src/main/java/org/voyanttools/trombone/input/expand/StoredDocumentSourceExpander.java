@@ -193,7 +193,7 @@ public class StoredDocumentSourceExpander implements Expander {
 
 	List<StoredDocumentSource> expandXsl(StoredDocumentSource storedDocumentSource) throws IOException {
 		if (this.xslExpander==null) {
-			this.xslExpander = new XslExpander(storedDocumentSourceStorage, parameters);
+			this.xslExpander = new XlsExpander(storedDocumentSourceStorage, parameters);
 		}
 		return this.xslExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}

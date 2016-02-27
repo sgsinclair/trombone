@@ -43,61 +43,65 @@ public class XslExpanderTest {
 		FlexibleParameters parameters;
 		String contents;
 		
-		// no parameters
+		// no parameters, this would get handled by an extractor, not the expander
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals(1, expandedSourceDocumentSources.size());
 		
-		// zero column tableDocumentsColumns
+		/* COLUMNS */
+		
+		// documents as columns, no columns defined so use all
 		parameters = new FlexibleParameters();
-		parameters.setParameter("tableDocumentsColumns", 0);
+		parameters.setParameter("tableDocuments", "columns");
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
-		assertEquals(0, expandedSourceDocumentSources.size());
+		assertEquals("phrase1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		assertEquals(2, expandedSourceDocumentSources.size());
 		
 		// first column tableDocumentsColumns, default header column
 		parameters = new FlexibleParameters();
-		parameters.setParameter("tableDocumentsColumns", 1);
+		parameters.setParameter("tableDocuments", "columns");
+		parameters.setParameter("tableContent", 1);
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals(1, expandedSourceDocumentSources.size());
+		assertEquals("phrase1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(1, contents.split("\n").length);
 		
 		// first column tableDocumentsColumns, no header column
 		parameters = new FlexibleParameters();
-		parameters.setParameter("tableDocumentsColumns", 1);
+		parameters.setParameter("tableDocuments", "columns");
+		parameters.setParameter("tableContent", 1);
 		parameters.setParameter("tableNoHeadersRow", "true");
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
+		assertEquals("1.0.1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals(1, expandedSourceDocumentSources.size());
 		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
-		assertEquals(2, contents.split("\n").length);
+		assertEquals(2, contents.split("\n+").length);
 		
 		// first and second columns tableDocumentsColumns
 		parameters = new FlexibleParameters();
-		parameters.setParameter("tableDocumentsColumns", "1, 2");
+		parameters.setParameter("tableDocuments", "columns");
+		parameters.setParameter("tableContent", "1,2");
+		parameters.setParameter("tableNoHeadersRow", "true");
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals(2, expandedSourceDocumentSources.size());
 
-		// first and second columns tableDocumentsColumns
+		// first and second columns merged (third doesn't is empty or doesn't exist) tableDocumentsColumns
 		parameters = new FlexibleParameters();
-		parameters.setParameter("tableDocumentsColumns", "1; 2");
+		parameters.setParameter("tableDocuments", "columns");
+		parameters.setParameter("tableContent", "1+2,3000");
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
-		assertEquals(2, expandedSourceDocumentSources.size());
-
-		// first and second columns (third doesn't is empty or doesn't exist) tableDocumentsColumns
-		parameters = new FlexibleParameters();
-		parameters.setParameter("tableDocumentsColumns", "1; 2, 3");
-		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
-		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
-		assertEquals(2, expandedSourceDocumentSources.size());
+		assertEquals(1, expandedSourceDocumentSources.size());
 		
-		// first and second columns (third doesn't is empty or doesn't exist) tableDocumentsColumns
+		// syntax error with column definitions
 		parameters = new FlexibleParameters();
-		parameters.setParameter("tableDocumentsColumns", "a; 2, 3");
+		parameters.setParameter("tableDocuments", "columns");
+		parameters.setParameter("tableContent", "a; 2, 3");
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		boolean caught = false;
 		try {
@@ -106,6 +110,55 @@ public class XslExpanderTest {
 		}
 		catch (IllegalArgumentException e) {
 		}
+		
+		/* ROWS */
+		
+		// documents as rows, nothing defined
+		parameters = new FlexibleParameters();
+		parameters.setParameter("tableDocuments", "rows");
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
+		assertEquals("1.0+1.2", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		assertEquals(1, expandedSourceDocumentSources.size());
+		
+		// documents as rows, first column only
+		parameters = new FlexibleParameters();
+		parameters.setParameter("tableDocuments", "rows");
+		parameters.setParameter("tableContent", 1);
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
+		assertEquals(1, expandedSourceDocumentSources.size());
+		assertEquals("1.0.2", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
+		assertEquals(1, contents.split("\n").length);
+		
+		// documents as rows, first column only, use header
+		parameters = new FlexibleParameters();
+		parameters.setParameter("tableDocuments", "rows");
+		parameters.setParameter("tableContent", 1);
+		parameters.setParameter("tableNoHeadersRow", "true");
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
+		assertEquals("1.0.1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		assertEquals(2, expandedSourceDocumentSources.size());
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
+		assertEquals(1, contents.split("\n+").length);
+		
+		// first and second columns
+		parameters = new FlexibleParameters();
+		parameters.setParameter("tableDocuments", "columns");
+		parameters.setParameter("tableContent", "1,2");
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
+		assertEquals(2, expandedSourceDocumentSources.size());
+
+		// first and second columns merged (third doesn't is empty or doesn't exist) tableDocumentsColumns
+		parameters = new FlexibleParameters();
+		parameters.setParameter("tableDocuments", "columns");
+		parameters.setParameter("tableContent", "1+2,3000");
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
+		assertEquals(1, expandedSourceDocumentSources.size());
 		
 		storage.destroy();
 	}
