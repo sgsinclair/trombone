@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Set;
 
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusAccess;
+import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.model.CorpusAliasDB;
 import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
@@ -93,6 +95,13 @@ public class CorpusManager extends AbstractTool {
 		
 		if (parameters.getParameterBooleanValue("removeDocuments") || parameters.getParameterBooleanValue("keepDocuments") || parameters.getParameterBooleanValue("reorderDocuments") || parameters.getParameterBooleanValue("addDocuments")) {
 			
+			// make sure we have permissions to do this
+			corpus = getCorpus();
+			CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
+			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
+				throw new CorpusAccessException("This tool isn't compatible with the limited access of this corpus.");
+			}
+
 			List<String> ids = new ArrayList<String>();
 			
 			// add IDs
@@ -104,7 +113,6 @@ public class CorpusManager extends AbstractTool {
 			
 			// add indices
 			// check first if we have real values
-			corpus = getCorpus();
 			String[] docIndices = parameters.getParameterValues("docIndex");
 			if (docIndices.length>0 && docIndices[0].isEmpty()==false) {
 				for (int docIndex : parameters.getParameterIntValues("docIndex")) {

@@ -53,7 +53,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author sgs
  *
  */
-public class DocumentNgrams extends AbstractTerms {
+public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 	@XStreamOmitField
 	private int minLength;

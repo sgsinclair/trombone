@@ -22,7 +22,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 @XStreamAlias("documentContexts")
-public class DocumentContexts extends AbstractContextTerms {
+public class DocumentContexts extends AbstractContextTerms implements ConsumptiveTool {
 
 	private List<Kwic> contexts = new ArrayList<Kwic>();
 	

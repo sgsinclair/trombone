@@ -16,7 +16,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  * @author sgs
  *
  */
-public class DocumentNgramsTree extends DocumentNgrams {
+public class DocumentNgramsTree extends DocumentNgrams implements ConsumptiveTool {
 
 	/**
 	 * @param storage

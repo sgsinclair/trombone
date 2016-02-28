@@ -27,7 +27,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  *
  */
 @XStreamAlias("corpusNgrams")
-public class CorpusNgrams extends AbstractTerms {
+public class CorpusNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 	private List<CorpusNgram> ngrams = new ArrayList<CorpusNgram>();
 	
