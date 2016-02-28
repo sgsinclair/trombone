@@ -61,13 +61,13 @@ public class XlsExpander implements Expander {
 		
 		// first try to see if we've been here already
 		String id = storedDocumentSource.getId();
-		List<StoredDocumentSource> xslStoredDocumentSources = storedDocumentSourceStorage.getMultipleExpandedStoredDocumentSources(id);
+		List<StoredDocumentSource> xlsStoredDocumentSources = storedDocumentSourceStorage.getMultipleExpandedStoredDocumentSources(id);
 
-		if (xslStoredDocumentSources!=null && xslStoredDocumentSources.isEmpty()==false) {
-			return xslStoredDocumentSources;
+		if (xlsStoredDocumentSources!=null && xlsStoredDocumentSources.isEmpty()==false) {
+			return xlsStoredDocumentSources;
 		}
 		
-		xslStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		xlsStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		
 		// check to see if anything needs to be expanded
 		String tableDocuments = parameters.getParameterValue("tableDocuments", "").toLowerCase();
@@ -81,9 +81,9 @@ public class XlsExpander implements Expander {
 		}
 		
 		// otherwise, use the entire table
-		xslStoredDocumentSources = new ArrayList<StoredDocumentSource>();
-		xslStoredDocumentSources.add(storedDocumentSource);
-		return xslStoredDocumentSources;
+		xlsStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		xlsStoredDocumentSources.add(storedDocumentSource);
+		return xlsStoredDocumentSources;
 	}
 	
 	private Workbook getWorkBook(StoredDocumentSource storedDocumentSource) throws IOException {
@@ -105,7 +105,7 @@ public class XlsExpander implements Expander {
 		DocumentMetadata metadata = storedDocumentSource.getMetadata();
 		String id = storedDocumentSource.getId();
 		Workbook wb = getWorkBook(storedDocumentSource);
-		List<StoredDocumentSource> xslStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		List<StoredDocumentSource> xlsStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		List<List<Integer>> columns = getInts("tableContent", true);
 		StringBuffer docBuffer = new StringBuffer();
 		int firstRow = parameters.getParameterBooleanValue("tableNoHeadersRow") ? 0 : 1;
@@ -139,21 +139,21 @@ public class XlsExpander implements Expander {
 				if (docBuffer.length()>0) {
 					String location = (k+1)+"."+StringUtils.join(set, "+")+"."+(firstRow+1);
 					title = firstRow == 0 ? location : getValue(sheet.getRow(0), set, " ");
-					xslStoredDocumentSources.add(getChild(metadata, id, docBuffer.toString(), location, title, null));
+					xlsStoredDocumentSources.add(getChild(metadata, id, docBuffer.toString(), location, title, null));
 					docBuffer.setLength(0); // reset buffer
 				}
 			}
 			
 		}
 		wb.close();
-		return xslStoredDocumentSources;
+		return xlsStoredDocumentSources;
 	}
 	
 	private List<StoredDocumentSource> getDocumentsRowCells(StoredDocumentSource storedDocumentSource) throws IOException {
 		DocumentMetadata metadata = storedDocumentSource.getMetadata();
 		String id = storedDocumentSource.getId();
 		Workbook wb = getWorkBook(storedDocumentSource);
-		List<StoredDocumentSource> xslStoredDocumentSources = new ArrayList<StoredDocumentSource>();
+		List<StoredDocumentSource> xlsStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		List<List<Integer>> columns = getInts("tableContent", true);
 		List<List<Integer>> titles = getInts("tableTitle", true);
 		List<List<Integer>> authors = getInts("tableAuthor", true);
@@ -185,7 +185,7 @@ public class XlsExpander implements Expander {
 					if (contents.isEmpty()==false) {
 						location = (k+1)+"."+StringUtils.join(columnsSet, "+")+"."+(r+1);
 						String title = location;
-						if (titles.isEmpty()==false) {
+						if (titles.isEmpty()==false && columns.size()==1) {
 							List<String> currentTitles = new ArrayList<String>();
 							for (List<Integer> titleSet : titles) {
 								String t = getValue(row, titleSet, " ");
@@ -198,7 +198,7 @@ public class XlsExpander implements Expander {
 							}
 						}
 						List<String> currentAuthors = new ArrayList<String>();
-						if (authors.isEmpty()==false) {
+						if (authors.isEmpty()==false && columns.size()==1) {
 							for (List<Integer> set : authors) {
 								String author = getValue(row, set, " ").trim();
 								if (author.isEmpty()==false) {
@@ -206,14 +206,14 @@ public class XlsExpander implements Expander {
 								}
 							}
 						}
-						xslStoredDocumentSources.add(getChild(metadata, id, contents, location, title, currentAuthors));
+						xlsStoredDocumentSources.add(getChild(metadata, id, contents, location, title, currentAuthors));
 						
 					}
 				}
 			}
 		}
 		wb.close();
-		return xslStoredDocumentSources;
+		return xlsStoredDocumentSources;
 	}
 	
 	private String getValue(Row row, String separator) {
