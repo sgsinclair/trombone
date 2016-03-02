@@ -235,8 +235,11 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		// don't allow non-consumptive access to all terms if we need positions or offsets
-		if (isNeedsPositions || isNeedsOffsets && corpusMapper.getCorpus().getValidatedCorpusAccess(parameters)==CorpusAccess.NONCONSUMPTIVE) {
-			throw new CorpusAccessException("This is requesting data that's incompatible with the limited access of this corpus.");
+		if (parameters.getParameterBooleanValue("withPositions") || parameters.getParameterBooleanValue("withOffsets")) {
+			CorpusAccess corpusAccess = corpusMapper.getCorpus().getValidatedCorpusAccess(parameters);
+			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
+				throw new CorpusAccessException("This is requesting data that's incompatible with the limited access of this corpus.");
+			}
 		}
 		runAllTermsFromDocumentTermVectors(corpusMapper, stopwords);
 	}

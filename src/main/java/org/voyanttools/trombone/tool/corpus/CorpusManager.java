@@ -31,6 +31,8 @@ public class CorpusManager extends AbstractTool {
 	
 	private String id = "";
 	
+	private String access = null;
+	
 	@XStreamOmitField
 	private Corpus corpus = null;
 
@@ -93,13 +95,16 @@ public class CorpusManager extends AbstractTool {
 	
 	private void checkActions() throws IOException {
 		
-		if (parameters.getParameterBooleanValue("removeDocuments") || parameters.getParameterBooleanValue("keepDocuments") || parameters.getParameterBooleanValue("reorderDocuments") || parameters.getParameterBooleanValue("addDocuments")) {
+		corpus = getCorpus();
+		if (parameters.getParameterBooleanValue("getAccess")) {
+			access = corpus.getValidatedCorpusAccess(parameters).name();
+		}
+		else if (parameters.getParameterBooleanValue("removeDocuments") || parameters.getParameterBooleanValue("keepDocuments") || parameters.getParameterBooleanValue("reorderDocuments") || parameters.getParameterBooleanValue("addDocuments")) {
 			
 			// make sure we have permissions to do this
-			corpus = getCorpus();
 			CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
 			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
-				throw new CorpusAccessException("This tool isn't compatible with the limited access of this corpus.");
+				throw new CorpusAccessException("You aren't permitted to edit this corpus.");
 			}
 
 			List<String> ids = new ArrayList<String>();
@@ -172,6 +177,13 @@ public class CorpusManager extends AbstractTool {
 		}
 
 		if (parameters.containsKey("addAlias")) {
+			
+			// make sure we have permissions to do this
+			CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
+			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
+				throw new CorpusAccessException("You aren't permitted to set an alias to this corpus.");
+			}
+
 			CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, false);
 			corpusAliasDB.put(parameters.getParameterValue("addAlias"), this.id);
 			corpusAliasDB.close();
