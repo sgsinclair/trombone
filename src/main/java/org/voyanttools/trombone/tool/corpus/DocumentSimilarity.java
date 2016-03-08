@@ -2,12 +2,16 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
+import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.RawCAType;
 import org.voyanttools.trombone.model.TokenType;
@@ -34,11 +38,23 @@ public class DocumentSimilarity extends CA {
 	@XStreamOmitField
 	private List<Integer> indexes = new ArrayList<Integer>();
 	
+	enum ComparisonType {
+		RELATIVEFREQ, TFIDF
+	}
+	
+	private ComparisonType comparisonType = ComparisonType.RELATIVEFREQ;
+	
 	public DocumentSimilarity(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+		
+		String compType = parameters.getParameterValue("comparisonType", "");
+		if (compType.toUpperCase().equals("TFIDF")) {
+			comparisonType = ComparisonType.TFIDF;
+		} else {
+			comparisonType = ComparisonType.RELATIVEFREQ;
+		}
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
@@ -74,23 +90,51 @@ public class DocumentSimilarity extends CA {
 
 	@Override
 	protected double[][] buildFrequencyMatrix(CorpusMapper corpusMapper, int type) throws IOException {
-		this.typesList = this.getCorpusTypes(corpusMapper);
+		List<CorpusTerm> corpusTerms = this.getCorpusTypes(corpusMapper);
+		FlexibleParameters params = new FlexibleParameters();
+		for (CorpusTerm ct : corpusTerms) {
+			params.addParameter("query", ct.getTerm());
+		}
 		
-		double[][] freqMatrix = new double[this.maxOutputDataItemCount][this.typesList.size()];
+		params.addParameter("docId", ids.toArray(new String[0]));
+		params.addParameter("stopList", this.parameters.getParameterValue("stopList"));
 		
-//		System.out.println("===");
-		int i = 0;
-		int j = 0;
-    	for (i = 0; i < this.typesList.size(); i++) {
-    		CorpusTerm term = (CorpusTerm) this.typesList.get(i);
-    		float[] relFreqs = term.getRelativeDistributions();
-    		j = 0;
-    		for (Integer docIndex : indexes) {
-    			freqMatrix[j][i] = relFreqs[docIndex];
-//    			System.out.println(j+","+i+": "+term.getTerm()+": "+relFreqs[docIndex]);
-    			j++;
-    		}
-    	}
+		DocumentTerms docTerms = new DocumentTerms(storage, params);
+		docTerms.run(corpusMapper);
+				
+		List<DocumentTerm> docTermsList = docTerms.getDocumentTerms();
+		docTermsList.sort(DocumentTerm.getComparator(DocumentTerm.Sort.TERMASC));
+		
+		Map<String, List<Float>> tempMap = new HashMap<String, List<Float>>();
+		
+		for (DocumentTerm dt : docTermsList) {
+			String term = dt.getTerm();
+			tempMap.putIfAbsent(term, new ArrayList<Float>(Collections.nCopies(this.maxOutputDataItemCount, 0f)));
+			int docIndexIndex = indexes.indexOf(dt.getDocIndex());
+			if (docIndexIndex > -1) {
+				if (comparisonType == ComparisonType.RELATIVEFREQ) {
+					tempMap.get(term).set(docIndexIndex, dt.getRelativeFrequency());
+				} else if (comparisonType == ComparisonType.TFIDF) {
+					tempMap.get(term).set(docIndexIndex, dt.getTfIdf());
+				}
+			}
+		}
+		
+		Set<Map.Entry<String, List<Float>>> entrySet = tempMap.entrySet();
+		int numTerms = entrySet.size();
+		double[][] freqMatrix = new double[this.maxOutputDataItemCount][numTerms];
+		
+		int termIndex = 0;
+		for (Map.Entry<String, List<Float>> entry : entrySet) {
+			List<Float> docValues = entry.getValue();
+			
+//			System.out.println(entry.getKey()+": "+StringUtils.join(docValues, ","));
+			
+			for (int docIndex = 0; docIndex < docValues.size(); docIndex++) {
+				freqMatrix[docIndex][termIndex] = docValues.get(docIndex);
+			}
+			termIndex++;
+		}
 		
 		return freqMatrix;
 	}
