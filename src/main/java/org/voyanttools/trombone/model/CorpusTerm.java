@@ -75,7 +75,7 @@ public class CorpusTerm implements Serializable {
 		if (relativeFreqs==null || relativeFreqs.length==0 || bins==0) {
 			// do nothing, keep stats as null
 		}
-		else if (bins==0 | bins==relativeFreqs.length) {
+		else if (bins==0 || bins==relativeFreqs.length) {
 			this.relativeStats = new DescriptiveStatistics(relativeFreqs.length);
 			for (float f : relativeFreqs) {relativeStats.addValue(f);}
 		}
