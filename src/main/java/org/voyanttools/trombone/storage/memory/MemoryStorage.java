@@ -118,11 +118,17 @@ public class MemoryStorage implements Storage {
 	}
 
 	@Override
+	public void storeStrings(Collection<String> strings, String id) throws IOException {
+		String string = StringUtils.join(strings, "\n");
+		storeString(string, id);
+	}
+
+	@Override
 	public String storeStrings(Collection<String> strings) throws IOException {
 		String string = StringUtils.join(strings, "\n");
 		return storeString(string);
 	}
-
+	
 	@Override
 	public List<String> retrieveStrings(String id) throws IOException {
 		String string = retrieveString(id);

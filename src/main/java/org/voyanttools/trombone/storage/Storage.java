@@ -60,6 +60,8 @@ public interface Storage {
 	
 	public String storeStrings(Collection<String> strings) throws IOException;
 	
+	public void storeStrings(Collection<String> strings, String id) throws IOException;
+	
 	public String storeString(String string) throws IOException;
 	
 	public void storeString(String string, String id) throws IOException;

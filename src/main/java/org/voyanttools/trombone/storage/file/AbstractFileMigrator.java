@@ -9,8 +9,6 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 
 public abstract class AbstractFileMigrator implements Migrator {
 	
-	protected static String DEFAULT_TROMBOME_DIRECTORY_NAME = null;
-	
 	protected FileStorage storage;
 	
 	protected String id;
@@ -20,24 +18,44 @@ public abstract class AbstractFileMigrator implements Migrator {
 		this.id = id;
 	}
 
-	protected String getFromStoredId(String storedId, FlexibleParameters parameters) throws IOException {
+	public String getMigratedCorpusId() throws IOException {
+		
+		String storedId = transferDocuments();
+		
+		FlexibleParameters parameters = getParameters();
+		
+		return getNewCorpusId(storedId, parameters);
+		
+	}
+		
+	protected String transferDocuments() throws IOException {
+		
+		String[] ids = getDocumentIds();
+		
+		return getStoredDocumentsId(ids);
+		
+	}
+	
+	protected String getNewCorpusId(String storedId, FlexibleParameters parameters) throws IOException {
 		parameters.setParameter("nextCorpusCreatorStep", "extract"); // I *think* we can skip expand at the document level
 		parameters.setParameter("storedId", storedId);
 		RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);
 		realCorpusCreator.run();
 		return realCorpusCreator.getStoredId();
 	}
-
-	protected static boolean isMigratable(FileStorage storage, String id) {
-		return getMigrationSourceCorpusDirectory(storage, id).exists();
+	
+	protected File getMigrationSourceDirectory() {
+		return new File(storage.storageLocation.getParentFile(), getSourceTromboneDirectoryName());
 	}
 	
-	protected static File getMigrationSourceCorpusDirectory(FileStorage storage, String id) {
-		return new File(getMigrationSourceDirectory(storage), id);
-	}
-	
-	protected static File getMigrationSourceDirectory(FileStorage storage) {
-		return new File(storage.storageLocation.getParentFile(), DEFAULT_TROMBOME_DIRECTORY_NAME);
-	}
+	protected abstract String[] getDocumentIds() throws IOException;
 
+	protected abstract File getSourceTromboneCorpusDirectory();
+	
+	protected abstract String getStoredDocumentsId(String[] ids) throws IOException;
+	
+	protected abstract String getSourceTromboneDirectoryName();
+	
+	protected abstract FlexibleParameters getParameters();
+	
 }

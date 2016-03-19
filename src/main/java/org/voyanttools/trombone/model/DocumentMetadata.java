@@ -42,7 +42,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	
 	public enum ParentType {
-		EXTRACTION, EXPANSION, UNKNOWN
+		EXTRACTION, EXPANSION, MIGRATION, UNKNOWN
 	};
 	
 	private transient int index = 0;
