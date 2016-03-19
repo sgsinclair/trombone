@@ -142,7 +142,7 @@ public class XslExpanderTest {
 		assertEquals("1.0.1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals(2, expandedSourceDocumentSources.size());
 		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
-		assertEquals(1, contents.split("\n+").length);
+		assertEquals(2, contents.split("\n+").length);
 		
 		// first and second columns
 		parameters = new FlexibleParameters();

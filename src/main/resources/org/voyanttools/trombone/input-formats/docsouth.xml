@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlContentXpath">/TEI.2/text</entry>
+    <entry key="xmlTitleXpath">/TEI.2/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/title|/TEI.2/teiHeader/fileDesc/sourceDesc/bibl/title</entry>
+    <entry key="xmlAuthorXpath">/TEI.2/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/author|/TEI.2/teiHeader/fileDesc/sourceDesc/bibl/author</entry>
+    <entry key="xmlPubDateXpath">/TEI.2/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date|/TEI.2/teiHeader/fileDesc/sourceDesc/bibl/imprint/date</entry>
+    <entry key="xmlPubPlaceXpath">/TEI.2/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/pubPlace|/TEI.2/teiHeader/fileDesc/sourceDesc/bibl/imprint/pubPlace</entry>
+    <entry key="xmlPublisherXpath">/TEI.2/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/publisher|/TEI.2/teiHeader/fileDesc/sourceDesc/bibl/imprint/publisher</entry>
+    <entry key="xmlKeywordXpath">/TEI.2/teiHeader/profileDesc/textClass/keywords/list/item</entry>
+    <entry key="xmlExtraMetadataXpath">LanguageUsage=/TEI.2/teiHeader/profileDesc/langUsage/language
+        Funder=/TEI.2/teiHeader/fileDesc/titleStmt/funder
+        Responsibility=/TEI.2/teiHeader/fileDesc/titleStmt/respStmt/name|/TEI.2/teiHeader/revisionDesc/change/respStmt/name
+        Edition=/TEI.2/teiHeader/fileDesc/editionStmt/edition
+        Extent=/TEI.2/teiHeader/fileDesc/extent</entry>
+</properties>

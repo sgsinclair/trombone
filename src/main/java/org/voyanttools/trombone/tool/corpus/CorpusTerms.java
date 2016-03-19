@@ -110,7 +110,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		Map<String, Map<Integer, Integer>> rawFreqsMap = new HashMap<String, Map<Integer, Integer>>();
 		TermsEnum termsEnum = null;
 		for (int doc : corpusMapper.getLuceneIds()) {
-			Terms terms = reader.getTermVector(doc, "lexical");
+			Terms terms = reader.getTermVector(doc, tokenType.name());
 			if (terms!=null) {
 				termsEnum = terms.iterator();
 				if (termsEnum!=null) {
@@ -190,12 +190,12 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
 		if (parameters.getParameterBooleanValue("inDocumentsCountOnly")) { // no spans required to count per-document frequencies
-			FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
+			FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
 			Map<String, Query> queriesMap = parser.getQueriesMap(queries, false);
 			runQueriesInDocumentsCountOnly(corpusMapper, queue, queriesMap);
 		}
 		else {
-			FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
+			FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
 			Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
 			runSpanQueries(corpusMapper, queue, queriesMap);
 		}
@@ -320,7 +320,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	private void addToQueueFromSpansWithDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Spans spans) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
 		int docIndexInCorpus = -1; // this should always be changed on the first span
-		int tokensCounts[] = corpus.getTokensCounts(TokenType.lexical);
+		int tokensCounts[] = corpus.getTokensCounts(tokenType);
 		Map<Integer, AtomicInteger> positionsMap = new HashMap<Integer, AtomicInteger>();
 		int lastDoc = -1;
 		int totalTokens = corpus.getTokensCount(tokenType);

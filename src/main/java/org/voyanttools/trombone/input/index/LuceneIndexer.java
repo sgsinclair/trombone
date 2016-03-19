@@ -41,6 +41,8 @@ import org.apache.lucene.document.FieldType;
 import org.apache.lucene.document.SortedSetDocValuesField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
+import org.apache.lucene.facet.FacetsConfig;
+import org.apache.lucene.facet.sortedset.SortedSetDocValuesFacetField;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.IndexOptions;
@@ -66,6 +68,8 @@ import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -367,19 +371,24 @@ public class LuceneIndexer implements Indexer {
 //				System.err.println(id+": "+getString());
 				
 				FlexibleParameters params = storedDocumentSource.getMetadata().getFlexibleParameters();
+				FacetsConfig config = new FacetsConfig();
 				for (String key : params.getKeys()) {
-					// store term vector so that we can build term DB
-					String v = params.getParameterValue(key);
+					// store term vector so that we can build term DB, combine multiple values into one
+					String v = StringUtils.join(params.getParameterValues(key), " ");
 					if (v!=null && v.trim().isEmpty()==false) {
 						document.add(new Field(key, v, ft));
 					}
 					for (String value : params.getParameterValues(key)) {
+						String facet = "facet."+key;
+						config.setMultiValued(facet, true);
+						config.setIndexFieldName(key, facet);
 						if (value.trim().isEmpty()==false) {
 							// store as facet field
-							document.add(new SortedSetDocValuesField("facet."+key, new BytesRef(value)));
+							document.add(new SortedSetDocValuesFacetField(facet, value));
 						}
 					}
 				}
+				
 				
 				
 				// TODO: add lemmatization
@@ -398,7 +407,7 @@ public class LuceneIndexer implements Indexer {
 				}
 				*/
 				
-				indexWriter.addDocument(document);
+				indexWriter.addDocument(config.build(document));
 				
 			}
 			catch (IOException e) {

@@ -80,6 +80,11 @@ public enum DocumentFormat {
 	/**
 	 * An XML document (.xml).
 	 */
+	DOCSOUTH("xml"),
+
+	/**
+	 * An XML document (.xml).
+	 */
 	TEICORPUS("xml"),
 	
 	/**

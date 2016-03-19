@@ -131,7 +131,9 @@ public abstract class AbstractTool implements RunnableTool {
 //				variantsDB = new VariantsDB(storage, parameters.getParameterValue("variants"), true);
 //			}
 		for (String query : queryStrings) {
-			for (String q : query.split("\\s*,\\s*")) {
+			// facets can be complex strings so they should be provided as individual queries and sent through
+			String[] qs = query.startsWith("facet.") ? new String[]{query} : query.split("\\s*,\\s*");
+			for (String q :qs) {
 				if (!q.trim().isEmpty()) {
 					if (variantsDB!=null) {
 						String[] variants = variantsDB.get(q);

@@ -6,6 +6,7 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -13,7 +14,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+import org.apache.lucene.facet.DrillDownQuery;
+import org.apache.lucene.facet.FacetsConfig;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
+import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -64,7 +68,7 @@ public class DocumentsFinder extends AbstractTerms {
 	
 	@Override
 	public int getVersion() {
-		return super.getVersion()+1;
+		return super.getVersion()+3;
 	}
 
 	@Override
@@ -73,12 +77,11 @@ public class DocumentsFinder extends AbstractTerms {
 		total = corpus.size();
 		
 		IndexSearcher indexSearcher = corpusMapper.getSearcher();
-		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
 		boolean createNewCorpus = parameters.getParameterBooleanValue("createNewCorpus");
-		for (String queryString : getQueries(queries)) {
-			Query query = queryParser.parse(queryString);
+		
+		for (Query query : getFacetAwareQueries(corpusMapper, getQueries(queries))) {
 			LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-			indexSearcher.search(corpusMapper.getFilteredQuery(query), collector);
+			indexSearcher.search(query, collector);
 			if (createNewCorpus || includeDocIds || withDistributions) {
 				Set<Integer> docs = collector.getLuceneDocIds();
 				String[] ids = new String[docs.size()];
@@ -141,6 +144,49 @@ public class DocumentsFinder extends AbstractTerms {
 				total = ids.size();
 			}
 		}
+	}
+	
+	private Collection<Query> getFacetAwareQueries(CorpusMapper corpusMapper, String[] queryStrings) throws IOException {
+		
+		FacetsConfig config = new FacetsConfig();
+		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
+		
+		Collection<String[]> facetQueryStrings = new HashSet<String[]>();
+		for (String query : queryStrings) {
+			if (query.startsWith("facet.")) {
+				int colon = query.indexOf(":");
+				
+				facetQueryStrings.add(new String[]{query.substring(0, colon), query.substring(colon+1)});
+			}
+		}
+		
+		Set<Query> queries = new HashSet<Query>();
+		for (String query : queryStrings) {
+			if (query.startsWith("facet.")==false) {
+				Query q = corpusMapper.getFilteredQuery(queryParser.parse(query));
+				if (facetQueryStrings.isEmpty()) {
+					queries.add(q);
+				}
+				else {
+					DrillDownQuery ddq = new DrillDownQuery(config, q);
+					for (String[] parts : facetQueryStrings) {
+						ddq.add(parts[0], parts[1]);
+					}
+					queries.add(ddq);
+				}
+				
+			}
+		}
+		
+		if (queries.isEmpty() && facetQueryStrings.isEmpty()==false) {
+			DrillDownQuery ddq = new DrillDownQuery(config, corpusMapper.getFilter());
+			for (String[] parts : facetQueryStrings) {
+				ddq.add(parts[0], parts[1]);
+			}
+			queries.add(ddq);
+		}
+		return queries;
+		
 	}
 	
 	@Override

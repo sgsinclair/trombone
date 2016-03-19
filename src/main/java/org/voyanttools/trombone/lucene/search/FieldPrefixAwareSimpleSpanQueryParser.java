@@ -40,6 +40,14 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 		super(indexReader, analyzer);
 	}
 	
+	/**
+	 * @param analyzer
+	 * @param weights
+	 */
+	public FieldPrefixAwareSimpleSpanQueryParser(IndexReader indexReader, Analyzer analyzer, String defaultPrefix) {
+		super(indexReader, analyzer, defaultPrefix);
+	}
+	
 	@Override
 	public Query parse(String queryText) {
 		Query query = super.parse(queryText);
@@ -72,7 +80,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 			if (isReallyQueryExpand && q instanceof SpanTermQuery == false) {
 				if (q instanceof SpanOrQuery) {
 					for (SpanQuery spanQuery : ((SpanOrQuery) q).getClauses()) {
-						map.put(spanQuery.toString(DEFAULT_TOKENTYPE.name()), spanQuery);
+						map.put(spanQuery.toString(defaultPrefix), spanQuery);
 					}
 				}
 			}

@@ -11,10 +11,10 @@ public enum TokenType implements Serializable {
 	 * @return
 	 */
 	public static TokenType getTokenTypeForgivingly(String string) {
-		string = string.toLowerCase();
+		string = string.toLowerCase().trim();
 		for (TokenType t : values()) {
 			if (t.name().equals(string)) return t;
 		}
-		return lexical;
+		return string.isEmpty() ? lexical : other;
 	}
 }

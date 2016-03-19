@@ -40,16 +40,18 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	private static Pattern RANGE_PATTERN = Pattern.compile("^\\[([\\p{L}0-9]+)-([\\p{L}0-9]+)\\]$");
 	protected static TokenType DEFAULT_TOKENTYPE = TokenType.lexical;
 	protected IndexReader reader;
+	protected String defaultPrefix;
 
 	
 //	private TokenType tokenType = null;
 
 	public FieldPrefixAwareSimpleQueryParser(IndexReader reader, Analyzer analyzer) {
-		this(reader, analyzer, DEFAULT_TOKENTYPE);
+		this(reader, analyzer, DEFAULT_TOKENTYPE.name());
 	}
 	
-	public FieldPrefixAwareSimpleQueryParser(IndexReader reader, Analyzer analyzer, TokenType tokenType) {
-		super(analyzer,  Collections.singletonMap(tokenType.name(), 1.0F));
+	public FieldPrefixAwareSimpleQueryParser(IndexReader reader, Analyzer analyzer, String defaultPrefix) {
+		super(analyzer,  Collections.singletonMap(defaultPrefix, 1.0F));
+		this.defaultPrefix = defaultPrefix;
 		this.reader = reader;
 	}
 	
@@ -78,7 +80,8 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 			}
 			Query query = parse(queryString);
 			if (isReallyQueryExpand && query instanceof TermQuery == false) {
-				boolean isPrefixNotQuery = query instanceof BooleanQuery && ((BooleanQuery) query).clauses().size()==2 && ((BooleanQuery) query).clauses().get(0).getQuery() instanceof PrefixQuery && ((BooleanQuery) query).clauses().get(1).getQuery() instanceof MatchAllDocsQuery;				if (isPrefixNotQuery) {
+				boolean isPrefixNotQuery = query instanceof BooleanQuery && ((BooleanQuery) query).clauses().size()==2 && ((BooleanQuery) query).clauses().get(0).getQuery() instanceof PrefixQuery && ((BooleanQuery) query).clauses().get(1).getQuery() instanceof MatchAllDocsQuery;
+				if (isPrefixNotQuery) {
 					query = ((BooleanQuery) query).clauses().get(0).getQuery();
 				}
 				if (query instanceof PrefixQuery) {
@@ -89,16 +92,16 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 							BooleanQuery bq = new BooleanQuery();
 							bq.add(new TermQuery(((SpanTermQuery) sq).getTerm()), Occur.MUST_NOT);
 							bq.add(new MatchAllDocsQuery(), Occur.MUST);
-							map.put("-"+sq.toString(DEFAULT_TOKENTYPE.name()), bq);
+							map.put("-"+sq.toString(defaultPrefix), bq);
 						}
 						else {
-							map.put(sq.toString(DEFAULT_TOKENTYPE.name()), new TermQuery(((SpanTermQuery) sq).getTerm()));
+							map.put(sq.toString(defaultPrefix), new TermQuery(((SpanTermQuery) sq).getTerm()));
 						}
 					}
 				}
 				else if (query instanceof BooleanQuery) {
 					for (BooleanClause bc : ((BooleanQuery) query).getClauses()) {
-						map.put(bc.getQuery().toString(DEFAULT_TOKENTYPE.name()), bc.getQuery());
+						map.put(bc.getQuery().toString(defaultPrefix), bc.getQuery());
 					}
 				}
 			}
@@ -114,6 +117,9 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	public Query parse(String queryText) {
 			// hack to support prefixes in phrases – put the prefix within the quotes
 			String modifiedQueryText = queryText.replaceAll("\\b(\\w+):\"","\"$1:");
+			if (defaultPrefix.equals(DEFAULT_TOKENTYPE.name())==false) {
+				
+			}
 			return super.parse(modifiedQueryText);
 	}
 	

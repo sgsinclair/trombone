@@ -38,8 +38,8 @@ import org.voyanttools.trombone.storage.memory.MemoryStorage;
 public class TestHelper {
 	
 	public static Storage getDefaultTestStorage() throws IOException {
-//		return new FileStorage(getTemporaryTestStorageDirectory());
-		return new MemoryStorage();
+		return new FileStorage(getTemporaryTestStorageDirectory());
+//		return new MemoryStorage();
 	}
 	public static File getTemporaryTestStorageDirectory() throws IOException {
 		File file = new File(FileStorage.DEFAULT_TROMBOME_DIRECTORY+"_test_"+UUID.randomUUID());

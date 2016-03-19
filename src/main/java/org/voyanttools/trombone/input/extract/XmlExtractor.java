@@ -195,7 +195,7 @@ public class XmlExtractor implements Extractor, Serializable {
 			
 		}
 		
-		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath","xmlPubPlaceXpath","xmlPublisherXpath","xmlPubDateXpath","xmlExtraMetadataXpath"};
+		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath","xmlPubPlaceXpath","xmlPublisherXpath","xmlPubDateXpath","xmlKeywordXpath","xmlCollectionXpath","xmlExtraMetadataXpath"};
 		StringBuilder parametersBuilder = new StringBuilder();
 		for (String p : relevantParameters) {
 			if (parameters.getParameterValue(p, "").isEmpty()==false) {
@@ -333,10 +333,22 @@ public class XmlExtractor implements Extractor, Serializable {
 				metadata.setPublishers(publishers);
 			}
 
-			// try to find title if needed
+			// try to find pubDates if needed
 			String[] pubDates = getNodesAsStringsFromParametersValue(doc, "xmlPubDateXpath");
 			if (pubDates.length>0) {
 				metadata.setPubDates(pubDates);
+			}
+			
+			// try to find pubDates if needed
+			String[] collections = getNodesAsStringsFromParametersValue(doc, "xmlCollectionXpath");
+			if (collections.length>0) {
+				metadata.setCollections(collections);
+			}
+			
+			// try to find pubDates if needed
+			String[] keywords = getNodesAsStringsFromParametersValue(doc, "xmlKeywordXpath");
+			if (keywords.length>0) {
+				metadata.setKeywords(keywords);
 			}
 			
 			for (String extra : parameters.getParameterValues("xmlExtraMetadataXpath")) {

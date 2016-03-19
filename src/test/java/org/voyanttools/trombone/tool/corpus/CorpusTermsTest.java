@@ -251,6 +251,20 @@ public class CorpusTermsTest {
 		assertEquals(0, corpusTerms.get(2).getRawFreq()); // was occurs in both
 		assertEquals(3, corpusTerms.size());
 		
+		
+		// testing with not – for now only concerned with inDocumentsCountOnly
+		parameters.setParameter("query", "string");
+		parameters.addParameter("tokenType", "source");
+		parameters.removeParameter("withDistributions");
+		parameters.setParameter("inDocumentsCountOnly", "true");
+		parameters.removeParameter("bins");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(2, corpusTerms.get(0).getRawFreq()); // neither document has light
+		assertEquals(1, corpusTerms.size());
+		
+		
 		storage.destroy();
 		
 	}

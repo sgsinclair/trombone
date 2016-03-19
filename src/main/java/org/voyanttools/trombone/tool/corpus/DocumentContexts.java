@@ -32,13 +32,21 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 	@XStreamOmitField
 	private Comparator<Kwic> comparator;
 	
+	@XStreamOmitField
 	private Kwic.OverlapStrategy overlapStrategy;
 
+	@XStreamOmitField
+	private int perDocLimit;
+	
+	private boolean accurateTotalNotNeeded;
+	
 	public DocumentContexts(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		contextsSort = Kwic.Sort.getForgivingly(parameters);
 		comparator = Kwic.getComparator(contextsSort);
 		overlapStrategy = Kwic.OverlapStrategy.valueOfForgivingly(parameters.getParameterValue("overlapStrategy", ""));
+		perDocLimit = parameters.getParameterIntValue("perDocLimit", limit);
+		accurateTotalNotNeeded = parameters.getParameterBooleanValue("accurateTotalNotNeeded");
 	}
 	
 	public int getVersion() {
@@ -48,17 +56,23 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		
 		int[] totalTokens = corpusMapper.getCorpus().getLastTokenPositions(tokenType);
-		FlexibleQueue<Kwic> queue = new FlexibleQueue(comparator, limit == Integer.MAX_VALUE ? limit : start+limit);
+		FlexibleQueue<Kwic> queue = new FlexibleQueue<Kwic>(comparator, limit == Integer.MAX_VALUE ? limit : start+limit);
 		int position = parameters.getParameterIntValue("position", -1);
 		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			int lastToken = totalTokens[corpusDocIndex];
 			FlexibleQueue<Kwic> q = getKwics(corpusMapper, dsd.getKey(), corpusDocIndex, lastToken, dsd.getValue());
+			int offeredForThisDocument = 0;
 			for (Kwic k : q.getUnorderedList()) {
 				if (k!=null){
 					if (position>-1 && k.getPosition()!=position) {continue;}
 					queue.offer(k);
+					offeredForThisDocument++;
+					// we have enough for this document (and we already have an accurate total count if needed)
+					if (perDocLimit<limit && offeredForThisDocument>=perDocLimit) {
+						break;
+					}
 				}
 			}
 		}
@@ -103,6 +117,8 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 		// now we can go through and consider each position, filtering as needed
 
 		int previousrightend = -1;
+		
+		int offeredForThisDocument = 0;
 		
 		for (int i=0, len=datas.size(); i<len; i++) {
 			int[] data = datas.get(i);
@@ -169,6 +185,13 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 			
 			queue.offer(new Kwic(corpusDocumentIndex, stripper.strip(queriesMap.get(keywordstart)), stripper.strip(analyzedMiddle), keywordstart, stripper.strip(left), stripper.strip(middle), stripper.strip(right)));
 		
+			offeredForThisDocument++;
+			
+			// we have enough for this document and we don't need an accurate total
+			if (perDocLimit<limit && offeredForThisDocument>=perDocLimit && accurateTotalNotNeeded) {
+				break;
+			}
+			
 			previousrightend = rightend;			
 		}
 		

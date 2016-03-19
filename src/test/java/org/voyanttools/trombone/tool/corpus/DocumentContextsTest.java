@@ -1,6 +1,7 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.List;
@@ -144,6 +145,28 @@ public class DocumentContextsTest {
 		documentContexts.run();
 		contexts = documentContexts.getContexts();
 		assertEquals(1, contexts.size());
+		
+		// test our per document limit
+		parameters.removeParameter("docIndex");
+		parameters.removeParameter("limit");
+		parameters.removeParameter("start");
+		parameters.removeParameter("position");
+		parameters.setParameter("perDocLimit", 1);
+		documentContexts = new DocumentContexts(storage, parameters);
+		documentContexts.run();
+		contexts = documentContexts.getContexts();
+		assertEquals(2, contexts.size());
+		assertTrue(contexts.get(0).getDocIndex()!=contexts.get(1).getDocIndex());
+		assertEquals(20, documentContexts.total);
+		
+		// same, but with no total needed
+		parameters.addParameter("accurateTotalNotNeeded", "true");
+		documentContexts = new DocumentContexts(storage, parameters);
+		documentContexts.run();
+		contexts = documentContexts.getContexts();
+		assertEquals(2, contexts.size());
+		assertTrue(contexts.get(0).getDocIndex()!=contexts.get(1).getDocIndex());
+		assertTrue(20!=documentContexts.total);
 		
 		storage.destroy();
 	}

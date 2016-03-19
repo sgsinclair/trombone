@@ -281,4 +281,7 @@ public class Kwic implements Serializable {
 	public int getPosition() {
 		return position;
 	}
+	public int getDocIndex() {
+		return position;
+	}
 }
