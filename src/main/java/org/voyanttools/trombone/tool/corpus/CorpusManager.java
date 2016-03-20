@@ -4,8 +4,6 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -14,7 +12,6 @@ import java.util.Set;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
-import org.voyanttools.trombone.model.CorpusAliasDB;
 import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
@@ -53,6 +50,8 @@ public class CorpusManager extends AbstractTool {
 			String corpusId = parameters.getParameterValue("corpus");
 			
 			// lookup for an alias
+			/*
+			// we don't use aliases like this anymore, they're just symbolic links now
 			if (corpusId.length()<32 && CorpusAliasDB.exists(storage)) { // MD5 should be 32 characters
 				CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, true);
 				String id = corpusAliasDB.get(corpusId);
@@ -61,6 +60,7 @@ public class CorpusManager extends AbstractTool {
 				}
 				corpusAliasDB.close();
 			}
+			*/
 			
 			// check if corpus exists and return it if so
 			if (storage.getCorpusStorage().corpusExists(corpusId)) {
