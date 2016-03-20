@@ -23,7 +23,7 @@ public abstract class AbstractFileMigrator implements Migrator {
 		
 		String storedId = transferDocuments();
 		
-		FlexibleParameters parameters = getCorpusParameters();
+		FlexibleParameters parameters = getCorpusCreationParameters();
 		
 		return getNewCorpusId(storedId, parameters);
 		
@@ -68,6 +68,6 @@ public abstract class AbstractFileMigrator implements Migrator {
 	
 	protected abstract String getStoredDocumentsId(String[] ids) throws IOException;
 	
-	protected abstract FlexibleParameters getCorpusParameters() throws IOException;
+	protected abstract FlexibleParameters getCorpusCreationParameters() throws IOException;
 	
 }

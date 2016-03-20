@@ -75,8 +75,7 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 	@Override
 	protected String[] getDocumentIds() throws IOException {
 		// read in the list of documents for the older corpus metadata file
-		File oldCorpusDirectory = getSourceTromboneCorpusDirectory();
-		FlexibleParameters corpusMetadata = getOldFlexibleParameters(new File(oldCorpusDirectory, "corpus-metadata.xml"));
+		FlexibleParameters corpusMetadata = getOldFlexibleParameters(new File(getSourceTromboneCorpusDirectory(), "corpus-metadata.xml"));
 		return corpusMetadata.getParameterValues("documentIds");
 	}
 
@@ -146,7 +145,7 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 	}
 	
 	@Override
-	protected FlexibleParameters getCorpusParameters() throws IOException {
+	protected FlexibleParameters getCorpusCreationParameters() throws IOException {
 		return new FlexibleParameters();
 	}
 
@@ -155,32 +154,5 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 		assert(FileTrombone3_0Migrator.class.isInstance(this));
 		return "trombone3_0";
 	}
-	
-//	@Override
-//	protected File getSourceTromboneCorpusDirectory() {
-//		return new File(getMigrationSourceDirectory(), id);
-//	}
-//	
-//	protected File getMigrationSourceDirectory() {
-//		return new File(getParentTromboneDirectory(), getSourceTromboneDirectoryName());
-//	}
-//	
-//	protected File getParentTromboneDirectory() {
-//		return getParentTromboneDirectory(storage);
-//	}
-//	
-//	protected File getSourceTromboneDocumentsDirectory() {
-//		return getSourceTromboneCorpusDirectory();
-//	}
-//	
-//
-//	@Override
-//	protected FlexibleParameters getParameters() {
-//		return new FlexibleParameters();
-//	}
-//
-//	static String getSourceTromboneDirectoryName() {
-//		return "trombone3_0";
-//	}
 	
 }

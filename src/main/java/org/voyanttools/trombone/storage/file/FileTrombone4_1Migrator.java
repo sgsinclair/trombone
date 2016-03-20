@@ -103,12 +103,10 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 
 	protected String getMigratedCorpusIdFromParameters() throws IOException {
 		
-		// load parameters file
-		File paramsFile = new File(getSourceTromboneCorpusDirectory(), "parameters.xml");
-		FlexibleParameters params = FlexibleParameters.loadFlexibleParameters(paramsFile);
+		FlexibleParameters corpusCreationParams = getCorpusCreationParameters();
 		
 		// create input sources (nothing should be stored at this point)
-		InputSourcesBuilder inputSourcesBulider = new InputSourcesBuilder(params);
+		InputSourcesBuilder inputSourcesBulider = new InputSourcesBuilder(corpusCreationParams);
 		List<InputSource> inputSources = inputSourcesBulider.getInputSources();
 		
 		// go through and double check that everything is still available
@@ -132,8 +130,8 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		
 		// load from params if we everything seems available
 		if (count==inputSources.size()) {
-			params.setParameter("addAlias", id);
-			CorpusCreator corpusCreator = new CorpusCreator(storage, params);
+			corpusCreationParams.setParameter("addAlias", id);
+			CorpusCreator corpusCreator = new CorpusCreator(storage, corpusCreationParams);
 			corpusCreator.run();
 			String newid = corpusCreator.getStoredId();
 			storage.getCorpusStorage().addAlias(this.id, newid);
@@ -148,7 +146,8 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 	
 	@Override
 	protected String[] getDocumentIds() throws IOException {
-		FlexibleParameters params = getCorpusParameters();
+		File file = new File(getSourceTromboneCorpusDirectory(), "metadata.xml");
+		FlexibleParameters params = FlexibleParameters.loadFlexibleParameters(file);
 		return params.getParameterValues("documentIds");
 	}
 
@@ -166,8 +165,8 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 	}
 
 	@Override
-	protected FlexibleParameters getCorpusParameters() throws IOException {
-		File file = new File(getSourceTromboneCorpusDirectory(), "metadata.xml");
+	protected FlexibleParameters getCorpusCreationParameters() throws IOException {
+		File file = new File(getSourceTromboneCorpusDirectory(), "parameters.xml");
 		return FlexibleParameters.loadFlexibleParameters(file);
 	}
 
