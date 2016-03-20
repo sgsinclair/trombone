@@ -127,6 +127,10 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 		return ParentType.valueOf(getProperty("parentType", "unknown").toUpperCase());
 	}
 
+	public String getParentId() {
+		return getProperty("parent_id", "");
+	}
+	
 	@Override
 	public int compareTo(DocumentMetadata o) {
 		// don't use static comparators since we may get bounced back here

@@ -17,7 +17,6 @@ import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentMetadata.ParentType;
 import org.voyanttools.trombone.model.StoredDocumentSource;
-import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.XStream;
@@ -28,47 +27,49 @@ import ca.hermeneuti.trombone.results.filtering.stoplist.StopList;
  * This is the migration utility for Trombone 3.0.
  * @author Stéfan Sinclair
  */
-public class FileTrombone3_0Migrator extends AbstractFileMigrator {
+@SuppressWarnings("deprecation")
+class FileTrombone3_0Migrator extends AbstractFileMigrator {
 
-	// this is package level for unit testing
-	static String DEFAULT_TROMBOME_DIRECTORY_NAME = "trombone3_0";
-	
 	/**
 	 * 
 	 */
-	public FileTrombone3_0Migrator(FileStorage storage, String id) {
+	FileTrombone3_0Migrator(FileStorage storage, String id) {
 		super(storage, id);
 	}
 
 	@Override
 	protected String transferDocuments() throws IOException {
-		super.transferDocuments();
+		
+		// we can do this even for subsequent migrators since stoplist directory won't exist
 		File oldCorpusDirectory = getSourceTromboneCorpusDirectory();
 		File stoplistDirectory = new File(oldCorpusDirectory, "stoplist");
 		if (stoplistDirectory.exists() && stoplistDirectory.isDirectory()) {
 			for (File stoplistFile : stoplistDirectory.listFiles()) {
 				if (stoplistFile.isFile()) {
 					if (!storage.isStored(stoplistFile.getName())) { // ensure we don't overwrite
-						InputStream fis = new FileInputStream(stoplistFile);
-						ObjectInputStream ois = new ObjectInputStream(fis);
-						StopList stoplist;
+						InputStream fis = null;
 						try {
-							stoplist = (StopList) ois.readObject();
-						} catch (ClassNotFoundException e) {
-							throw new IOException("Unable to read stoplist file: "+stoplistFile.getAbsolutePath(), e);
+							fis = new FileInputStream(stoplistFile);
+							ObjectInputStream ois = new ObjectInputStream(fis);
+							StopList stoplist;
+							try {
+								stoplist = (StopList) ois.readObject();
+							} catch (ClassNotFoundException e) {
+								throw new IOException("Unable to read stoplist file: "+stoplistFile.getAbsolutePath(), e);
+							}
+							storage.storeStrings(stoplist.getKeywords(), stoplistFile.getName());
 						}
-						storage.storeStrings(stoplist.getKeywords(), stoplistFile.getName());
+						finally {
+							if (fis!=null) {
+								fis.close();
+							}
+						}
 					}
 				}
 			}
 		}
 
-		// look for and transfer stopwords
-		
-		String[] ids = getDocumentIds();
-		
-		return getStoredDocumentsId(ids);
-		
+		return super.transferDocuments();
 	}
 	
 	@Override
@@ -81,55 +82,48 @@ public class FileTrombone3_0Migrator extends AbstractFileMigrator {
 
 	@Override
 	protected String getStoredDocumentsId(String[] ids) throws IOException {
-		File oldCorpusDirectory = getSourceTromboneCorpusDirectory();
-		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
+		File oldCorpusDirectory = getSourceTromboneDocumentsDirectory();
 		List<String> storedIds = new ArrayList<String>();
 		for (String id : ids) {
 			File documentDirectory = new File(oldCorpusDirectory, id);
-			InputSource inputSource = new FileInputSource(new File(documentDirectory, "rawbytes"));
-			
-			// we want to copy old metadata information as "parent"
-			FlexibleParameters oldDocParams = getOldFlexibleParameters(new File(documentDirectory, "document-metadata.xml"));
-			DocumentMetadata oldDocMetadata = new DocumentMetadata(oldDocParams);
-			DocumentMetadata oldDocParentMetadata = oldDocMetadata.asParent(inputSource.getUniqueId(), ParentType.MIGRATION);
-			oldDocParams = oldDocParentMetadata.getFlexibleParameters();
-			FlexibleParameters newDocumentParams = inputSource.getMetadata().getFlexibleParameters();
-			
-			// now copy in the new values
-			for (String key : oldDocParams.getKeys()) {
-				if (key.equals("id")==false) {
-					newDocumentParams.setParameter(key.replace("parent_", "parent_extra."), oldDocParams.getParameterValues(key));
-				}
-			}
-			
-			// create a new metadata and set certain additional fields
-			DocumentMetadata documentMetadata = new DocumentMetadata(newDocumentParams);
-			documentMetadata.setSource(Source.STREAM); // claim that this is a stream since it shouldn't be recoverable
-			documentMetadata.setLocation(inputSource.getMetadata().getLocation());
-			// try to recover author and title, especially if they were extracted with XPath queries that we no longer have access to
-			documentMetadata.setTitle(oldDocMetadata.getTitle().trim().isEmpty() ? "" : oldDocMetadata.getTitle());
-			documentMetadata.setAuthor(oldDocMetadata.getAuthor().trim().isEmpty() ? "" : oldDocMetadata.getAuthor()); // don't use default of "rawbytes"
-			documentMetadata.setExtra("migration", getSourceTromboneDirectoryName());
-			
-			StoredDocumentSource storedDocumentSource = storedDocumentStorage.getStoredDocumentSource(inputSource);
+			StoredDocumentSource storedDocumentSource = getStoredDocumentSource(documentDirectory);
 			storedIds.add(storedDocumentSource.getId());
 		}
 		return storage.storeStrings(storedIds);
 	}
-
-	@Override
-	protected File getSourceTromboneCorpusDirectory() {
-		return new File(this.getMigrationSourceDirectory(), id);
+	
+	protected StoredDocumentSource getStoredDocumentSource(File documentDirectory) throws IOException {
+		InputSource inputSource = getInputSource(documentDirectory);
+		return storage.getStoredDocumentSourceStorage().getStoredDocumentSource(inputSource);
+		
 	}
 	
-	@Override
-	protected String getSourceTromboneDirectoryName() {
-		return DEFAULT_TROMBOME_DIRECTORY_NAME;
+	protected InputSource getInputSource(File documentDirectory) throws IOException {
+		InputSource inputSource =  new FileInputSource(new File(documentDirectory, "rawbytes"));
+		updateInputSource(documentDirectory, inputSource);
+		return inputSource;
 	}
-
-	@Override
-	protected FlexibleParameters getParameters() {
-		return new FlexibleParameters();
+	
+	protected void updateInputSource(File documentDirectory, InputSource inputSource) throws IOException {
+		DocumentMetadata newMetadata = inputSource.getMetadata();
+		DocumentMetadata sourceMetadata = getSourceDocumentMetadata(documentDirectory);
+		DocumentMetadata parentSourceMetadata = sourceMetadata.asParent("", ParentType.MIGRATION);
+		parentSourceMetadata.setExtra("migratedFrom", getSourceTromboneDirectoryName());
+		FlexibleParameters parentSourceParams = parentSourceMetadata.getFlexibleParameters();
+		for (String key : parentSourceParams.getKeys()) {
+			newMetadata.setExtras(key, parentSourceParams.getParameterValues(key));
+		}
+		newMetadata.setSource(Source.STREAM); // claim that this is a stream since it shouldn't be recoverable
+		newMetadata.setLocation(inputSource.getMetadata().getLocation());
+		// try to recover author and title, especially if they were extracted with XPath queries that we no longer have access to
+		newMetadata.setTitle(sourceMetadata.getTitle().trim().isEmpty() ? "" : sourceMetadata.getTitle());
+		newMetadata.setAuthor(sourceMetadata.getAuthor().trim().isEmpty() ? "" : sourceMetadata.getAuthor()); // don't use default of "rawbytes"
+	}
+	
+	protected DocumentMetadata getSourceDocumentMetadata(File documentDirectory) throws IOException {
+		File file = new File(documentDirectory, "document-metadata.xml");
+		FlexibleParameters params = getOldFlexibleParameters(file);
+		return new DocumentMetadata(params);
 	}
 
 	private FlexibleParameters getOldFlexibleParameters(File file) {
@@ -142,4 +136,51 @@ public class FileTrombone3_0Migrator extends AbstractFileMigrator {
 		return params;
 	}
 
+	@Override
+	protected File getSourceTromboneCorpusDirectory() {
+		return new File(getSourceTromboneDirectory(), id);
+	}
+
+	protected File getSourceTromboneDocumentsDirectory() {
+		return getSourceTromboneCorpusDirectory();
+	}
+	
+	@Override
+	protected FlexibleParameters getCorpusParameters() throws IOException {
+		return new FlexibleParameters();
+	}
+
+	@Override
+	protected String getSourceTromboneDirectoryName() {
+		assert(FileTrombone3_0Migrator.class.isInstance(this));
+		return "trombone3_0";
+	}
+	
+//	@Override
+//	protected File getSourceTromboneCorpusDirectory() {
+//		return new File(getMigrationSourceDirectory(), id);
+//	}
+//	
+//	protected File getMigrationSourceDirectory() {
+//		return new File(getParentTromboneDirectory(), getSourceTromboneDirectoryName());
+//	}
+//	
+//	protected File getParentTromboneDirectory() {
+//		return getParentTromboneDirectory(storage);
+//	}
+//	
+//	protected File getSourceTromboneDocumentsDirectory() {
+//		return getSourceTromboneCorpusDirectory();
+//	}
+//	
+//
+//	@Override
+//	protected FlexibleParameters getParameters() {
+//		return new FlexibleParameters();
+//	}
+//
+//	static String getSourceTromboneDirectoryName() {
+//		return "trombone3_0";
+//	}
+	
 }

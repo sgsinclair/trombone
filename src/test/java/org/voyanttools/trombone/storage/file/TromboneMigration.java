@@ -4,6 +4,8 @@
 package org.voyanttools.trombone.storage.file;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,11 +32,13 @@ public class TromboneMigration {
 	@Test
 	public void testTrombone3_0() throws IOException, ZipException {
 		
-		
 		File base = new File(System.getProperty("java.io.tmpdir"), "_test_"+UUID.randomUUID());
 		FileStorage storage = new FileStorage(new File(base, FileStorage.DEFAULT_TROMBOME_DIRECTORY_NAME));
 		
-		File oldStorageDirectory = new File(base, FileTrombone3_0Migrator.DEFAULT_TROMBOME_DIRECTORY_NAME);
+		// create a dummy migrator to get the proper destination directory for unzipping
+		AbstractFileMigrator dummyMigrator = new FileTrombone3_0Migrator(storage, "");
+
+		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
 		oldStorageDirectory.mkdir();
 		File file = TestHelper.getResource("migration/trombone3_0.zip");
 		new ZipFile(file).extractAll(oldStorageDirectory.getPath());
@@ -63,6 +67,112 @@ public class TromboneMigration {
 		List<String> stopwords = storage.retrieveStrings("1458405208292sw");
 		assertEquals(1, stopwords.size());
 		assertEquals("test", stopwords.get(0));
+		
+		storage.destroy();
+		FileUtils.deleteDirectory(base);
+		
+	}
+	
+	@Test
+	public void testTrombone4_0() throws IOException, ZipException {
+		
+		File base = new File(System.getProperty("java.io.tmpdir"), "_test_"+UUID.randomUUID());
+		FileStorage storage = new FileStorage(new File(base, FileStorage.DEFAULT_TROMBOME_DIRECTORY_NAME));
+		
+		// create a dummy migrator to get the proper destination directory for unzipping
+		AbstractFileMigrator dummyMigrator = new FileTrombone4_0Migrator(storage, "");
+		
+		// unzip trombone 4.0 contents
+		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
+		oldStorageDirectory.mkdir();
+		File file = TestHelper.getResource("migration/trombone4_0.zip");
+		new ZipFile(file).extractAll(oldStorageDirectory.getPath());
+
+		Migrator migrator;
+		String id;
+		Corpus corpus;
+		
+		// test the bundle of formats
+		migrator = FileMigrationFactory.getMigrator(storage, "1cb657d4f807a824536059c9ade0d907");
+		id = migrator.getMigratedCorpusId();
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(15, corpus.size());
+		for (IndexedDocument doc : corpus) {
+			Assert.assertFalse(doc.getMetadata().getTitle().equals("rawbytes"));
+		}
+		
+		// test handling of title and author metadata
+		migrator = FileMigrationFactory.getMigrator(storage, "824b82f75e5053a0f52a0a3db2654d15");
+		id = migrator.getMigratedCorpusId();
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(1, corpus.size());
+		assertEquals("Il était une fois.", corpus.getDocument(0).getMetadata().getAuthor());
+		assertEquals("un texte intéressant et un test. ⚠️", corpus.getDocument(0).getMetadata().getTitle());
+		
+		storage.destroy();
+		FileUtils.deleteDirectory(base);
+		
+	}
+
+	@Test
+	public void testTrombone4_1() throws IOException, ZipException {
+		
+		File base = new File(System.getProperty("java.io.tmpdir"), "_test_"+UUID.randomUUID());
+		FileStorage storage = new FileStorage(new File(base, FileStorage.DEFAULT_TROMBOME_DIRECTORY_NAME));
+		
+		// create a dummy migrator to get the proper destination directory for unzipping
+		FileTrombone4_1Migrator dummyMigrator = new FileTrombone4_1Migrator(storage, "");
+		
+		// unzip trombone 4.0 contents
+		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
+		oldStorageDirectory.mkdir();
+		File file = TestHelper.getResource("migration/trombone4_1.zip");
+		new ZipFile(file).extractAll(oldStorageDirectory.getPath());
+
+		Migrator migrator;
+		String id;
+		Corpus corpus;
+		String corpusIdToMigrate;
+		
+		// test the bundle of formats
+		corpusIdToMigrate = "d0be1ce35c9941b21af22260a47938e2";
+		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		id = migrator.getMigratedCorpusId();
+		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
+		assertTrue(storage.getCorpusStorage().corpusExists(id));
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(15, corpus.size());
+		for (IndexedDocument doc : corpus) {
+			Assert.assertFalse(doc.getMetadata().getTitle().equals("rawbytes"));
+		}
+		
+		// test handling of title and author metadata
+		corpusIdToMigrate = "e0a54420a5555aa00dacd1ccf0a2ba0e";
+		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		id = migrator.getMigratedCorpusId();
+		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
+		assertTrue(storage.getCorpusStorage().corpusExists(id));
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(1, corpus.size());
+		assertEquals("Il était une fois.", corpus.getDocument(0).getMetadata().getTitle());
+		assertEquals("un texte intéressant et un test. ⚠️", corpus.getDocument(0).getMetadata().getAuthor());
+
+		// those should be using stored original sources, now try if one of them has disappeared
+		corpusIdToMigrate = "d0be1ce35c9941b21af22260a47938e2";
+		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		// remove the top-level source zip directory
+		File deleteDir = new File(dummyMigrator.getSourceTromboneDocumentsDirectory(), "d807e3732cc09d24783201aed49d5742");
+		assertTrue(deleteDir.exists());
+		FileUtils.deleteDirectory(deleteDir);
+		assertFalse(deleteDir.exists());
+		id = migrator.getMigratedCorpusId();
+		assertTrue(storage.getCorpusStorage().corpusExists(id));
+		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(15, corpus.size());
+		for (IndexedDocument doc : corpus) {
+			Assert.assertFalse(doc.getMetadata().getTitle().equals("rawbytes"));
+		}
 		
 		storage.destroy();
 		FileUtils.deleteDirectory(base);

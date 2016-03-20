@@ -18,16 +18,22 @@ public abstract class AbstractFileMigrator implements Migrator {
 		this.id = id;
 	}
 
+	@Override
 	public String getMigratedCorpusId() throws IOException {
 		
 		String storedId = transferDocuments();
 		
-		FlexibleParameters parameters = getParameters();
+		FlexibleParameters parameters = getCorpusParameters();
 		
 		return getNewCorpusId(storedId, parameters);
 		
 	}
-		
+
+	@Override
+	public boolean exists() {
+		return getSourceTromboneCorpusDirectory().exists();
+	}
+
 	protected String transferDocuments() throws IOException {
 		
 		String[] ids = getDocumentIds();
@@ -43,19 +49,25 @@ public abstract class AbstractFileMigrator implements Migrator {
 		realCorpusCreator.run();
 		return realCorpusCreator.getStoredId();
 	}
+
 	
-	protected File getMigrationSourceDirectory() {
-		return new File(storage.storageLocation.getParentFile(), getSourceTromboneDirectoryName());
+	protected File getRootDataDirectory() {
+		return storage.storageLocation.getParentFile();
 	}
-	
-	protected abstract String[] getDocumentIds() throws IOException;
+
+	// this is package level for testing
+	File getSourceTromboneDirectory() {
+		return new File(getRootDataDirectory(), getSourceTromboneDirectoryName());
+	}
 
 	protected abstract File getSourceTromboneCorpusDirectory();
 	
-	protected abstract String getStoredDocumentsId(String[] ids) throws IOException;
-	
 	protected abstract String getSourceTromboneDirectoryName();
 	
-	protected abstract FlexibleParameters getParameters();
+	protected abstract String[] getDocumentIds() throws IOException;
+	
+	protected abstract String getStoredDocumentsId(String[] ids) throws IOException;
+	
+	protected abstract FlexibleParameters getCorpusParameters() throws IOException;
 	
 }

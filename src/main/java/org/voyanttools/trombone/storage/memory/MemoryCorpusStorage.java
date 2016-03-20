@@ -22,6 +22,7 @@
 package org.voyanttools.trombone.storage.memory;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,6 +64,14 @@ class MemoryCorpusStorage implements CorpusStorage {
 	@Override
 	public boolean corpusExists(String id) {
 		return corpusMap.containsKey(id);
+	}
+
+	@Override
+	public boolean addAlias(String alias, String id) throws IOException {
+		if (corpusExists(alias) || corpusExists(id)==false) {return false;}
+		corpusMap.put(alias, getCorpus(id));
+		parametersMap.put(alias, parametersMap.get(id));
+		return true; // no exception thrown
 	}
 
 }

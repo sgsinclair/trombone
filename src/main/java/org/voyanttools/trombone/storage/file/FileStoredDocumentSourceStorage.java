@@ -243,7 +243,7 @@ class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 	 *            the ID of the StoredDocumentSource
 	 * @return the File (directory) of the StoredDocumentSource
 	 */
-	File getDocumentSourceDirectory(String id) {
+	public File getDocumentSourceDirectory(String id) {
 		return new File(documentSourcesDirectory, id);
 	}
 

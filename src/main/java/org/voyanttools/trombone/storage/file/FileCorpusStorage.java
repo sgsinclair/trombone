@@ -26,6 +26,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
@@ -95,6 +98,15 @@ public class FileCorpusStorage implements CorpusStorage {
 	public boolean corpusExists(String id) {
 		File corpusDirectory = new File(corpusStorageLocation, id);
 		return corpusDirectory.exists();
+	}
+
+	@Override
+	public boolean addAlias(String alias, String id) throws IOException {
+		Path source = Paths.get(corpusStorageLocation.getAbsolutePath(), alias);
+		Path target = Paths.get(corpusStorageLocation.getAbsolutePath(), id);
+		if (Files.exists(source) || Files.notExists(target)) {return false;}
+		Files.createSymbolicLink(source, target);
+		return true; // no exception thrown
 	}
 
 }

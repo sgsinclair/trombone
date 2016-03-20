@@ -164,4 +164,17 @@ public class Corpus implements Iterable<IndexedDocument> {
 
 		return CorpusAccess.NORMAL;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Corpus)) {return false;}
+		Corpus corpusObj = (Corpus) obj;
+		List<String> corpusObjIds = corpusObj.getDocumentIds();
+		List<String> ids = getDocumentIds();
+		if (corpusObjIds.size()!=ids.size()) {return false;}
+		for (int i=0; i<ids.size(); i++) {
+			if (ids.get(i).equals(corpusObjIds.get(i))==false) {return false;}
+		}
+		return true;
+	}
 }

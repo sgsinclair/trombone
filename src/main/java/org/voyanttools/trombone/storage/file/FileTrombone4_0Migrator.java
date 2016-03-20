@@ -4,62 +4,88 @@
 package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.InputStream;
+import java.util.Properties;
 
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
-import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentMetadata;
-import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
- * @author sgs
- *
+ * Trombone 4.0 is completely different from Trombone 3.0, especially in that it
+ * uses Lucene for storage (though the Lucene index isn't actually used during migration).
+ * 
+ * @author Stéfan Sinclair
  */
-public class FileTrombone4_0Migrator extends FileTrombone3_0Migrator {
+class FileTrombone4_0Migrator extends FileTrombone3_0Migrator {
 	
-	protected static String DEFAULT_TROMBOME_DIRECTORY_NAME = "trombone4_0";
 	
-	public FileTrombone4_0Migrator(FileStorage storage, String id) {
+	FileTrombone4_0Migrator(FileStorage storage, String id) {
 		super(storage, id);
 	}
+	
+	@Override
+	protected String transferDocuments() throws IOException {
+		
+		String[] ids = getDocumentIds();
+		
+		return getStoredDocumentsId(ids);
+		
+	}
+
 
 	@Override
 	protected String[] getDocumentIds() throws IOException {
-		File corpusMetadataFile = new File(getSourceTromboneCorpusDirectory(), "metadata.xml");
-		FlexibleParameters params = FlexibleParameters.loadFlexibleParameters(corpusMetadataFile);
-		return params.getParameterValues("documentIds");
+		File file = new File(getSourceTromboneCorpusDirectory(), "metadata.xml");
+		FlexibleParameters params = getFromPropertiesFile(file);
+		return params.getParameterValue("documentIds").split(",");
+	}
+	
+	@Override
+	protected File getSourceTromboneCorpusDirectory() {
+		return new File(new File(getSourceTromboneDirectory(), "corpora"), id);
+	}
+	
+	@Override
+	protected File getSourceTromboneDocumentsDirectory() {
+		return new File(getSourceTromboneDirectory(), "stored_document_sources");
+	}
+	
+	@Override
+	protected InputSource getInputSource(File documentDirectory) throws IOException {
+		InputSource inputSource =  new FileInputSource(new File(documentDirectory, "raw_bytes.gz"));
+		updateInputSource(documentDirectory, inputSource);
+		return inputSource;
+	}
+
+	@Override
+	protected DocumentMetadata getSourceDocumentMetadata(File documentDirectory) throws IOException {
+		File file = new File(documentDirectory, "metadata.xml");
+		FlexibleParameters parameters = getFromPropertiesFile(file);
+		return new DocumentMetadata(parameters);
+	}
+	
+	@Override
+	protected String getSourceTromboneDirectoryName() {
+		assert(FileTrombone4_0Migrator.class.isInstance(this));
+		return "trombone4_0";
 	}
 		
-	protected String getStoredId(String[] ids) throws IOException {
-		File oldStoredDocumentSourcesDirectory = new File(this.getMigrationSourceDirectory(), "stored_document_sources");
-		// this part somewhat reproduces {@link DocumentStorer}, but custom setting metadata along the way
-		// we use the rawbytes instead of the tokens to simplify and to allow the new code to do better extraction
-		List<String> storedIds = new ArrayList<String>();
-		for (String id : ids) {
-			File documentDirectory = new File(oldStoredDocumentSourcesDirectory, id);
-			StoredDocumentSource storedDocumentSource = getStoredDocumentSource(documentDirectory);
-			storedIds.add(storedDocumentSource.getId());
+	private FlexibleParameters getFromPropertiesFile(File file) throws IOException {
+		Properties properties = new Properties();
+		InputStream is = null;
+		try {
+			is = new FileInputStream(file);
+			properties.loadFromXML(is);
 		}
-		return storage.storeStrings(storedIds);
-		
+		finally {
+			if (is!=null) {
+				is.close();
+			}
+		}
+		return new FlexibleParameters(properties);
 	}
-	
-	protected StoredDocumentSource getStoredDocumentSource(File directory) throws IOException {
-		File documentDirectory = new File(directory, id);
-		InputSource inputSource = new FileInputSource(new File(documentDirectory, "raw_bytes.gz"));
-		DocumentMetadata documentMetadata = inputSource.getMetadata();
-		documentMetadata.setSource(Source.STREAM); // claim that this is a stream since it shouldn't be recoverable
-		documentMetadata.setLocation("Trombone 4.0 Migration");
-		documentMetadata.setTitle(""); // we don't want the default "rawbytes" title for a file
-		return storage.getStoredDocumentSourceStorage().getStoredDocumentSource(inputSource);
-	}
-	
-	protected FlexibleParameters getParameters() {
-		return new FlexibleParameters();
-	}
-	
 }

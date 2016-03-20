@@ -38,4 +38,6 @@ public interface CorpusStorage {
 	
 	public void storeCorpus(Corpus corpus, FlexibleParameters parameters) throws IOException;
 
+	public boolean addAlias(String alias, String id) throws IOException;
+
 }

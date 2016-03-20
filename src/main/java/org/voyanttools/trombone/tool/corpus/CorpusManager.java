@@ -4,6 +4,8 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -176,17 +178,23 @@ public class CorpusManager extends AbstractTool {
 			this.corpus = null; // reset the corpus
 		}
 
-		if (parameters.containsKey("addAlias")) {
+		if (parameters.containsKey("addAlias") && parameters.getParameterValue("addAlias").isEmpty()==false) {
 			
 			// make sure we have permissions to do this
 			CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
 			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE) {
 				throw new CorpusAccessException("You aren't permitted to set an alias to this corpus.");
 			}
-
-			CorpusAliasDB corpusAliasDB = new CorpusAliasDB(storage, false);
-			corpusAliasDB.put(parameters.getParameterValue("addAlias"), this.id);
-			corpusAliasDB.close();
+			
+			String alias = parameters.getParameterValue("addAlias").trim();
+			if (storage.getCorpusStorage().corpusExists(alias)) {
+				if (storage.getCorpusStorage().getCorpus(alias).equals(storage.getCorpusStorage().getCorpus(this.id))==false) {
+					throw new IllegalArgumentException("Attempt to create an alias for an alias that's already used: "+alias);
+				}
+				
+			} else {
+				storage.getCorpusStorage().addAlias(alias, this.id);
+			}
 		}
 
 	}
