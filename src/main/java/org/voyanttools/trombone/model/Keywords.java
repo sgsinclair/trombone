@@ -126,9 +126,15 @@ public class Keywords {
 							String contents = FileUtils.readFileToString(file);
 							List<String> keywordsList = StringUtils.split(contents, "\n");
 							storage.storeStrings(keywordsList, refId);
+							add(keywordsList);
+						}
+						else {
+							throw new IOException("Unable to load keyword file: "+ref);
 						}
 					}
-					throw new IOException("Unable to load keyword file: "+ref);
+					else {
+						throw new IOException("Unable to load keyword file: "+ref);
+					}
 				}
 			}
 			else { // individual term, so let's add it
