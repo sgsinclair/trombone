@@ -30,7 +30,7 @@ public abstract class AbstractFileMigrator implements Migrator {
 	}
 
 	@Override
-	public boolean exists() {
+	public boolean corpusExists() {
 		return getSourceTromboneCorpusDirectory().exists();
 	}
 

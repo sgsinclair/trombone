@@ -3,6 +3,7 @@
  */
 package org.voyanttools.trombone.storage;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -13,5 +14,7 @@ public interface Migrator {
 
 	public String getMigratedCorpusId() throws IOException;
 	
-	public boolean exists();
+	public boolean corpusExists();
+
+	public File getStoredObjectFile();
 }

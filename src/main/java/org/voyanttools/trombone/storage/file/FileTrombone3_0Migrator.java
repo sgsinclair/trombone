@@ -154,5 +154,11 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 		assert(FileTrombone3_0Migrator.class.isInstance(this));
 		return "trombone3_0";
 	}
+
+	@Override
+	public File getStoredObjectFile() {
+		// this doesn't happen in Trombone 3, so this is always null
+		return null;
+	}
 	
 }

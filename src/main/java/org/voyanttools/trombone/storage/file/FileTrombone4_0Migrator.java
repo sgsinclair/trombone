@@ -7,6 +7,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 import org.voyanttools.trombone.input.source.FileInputSource;
@@ -74,6 +77,12 @@ class FileTrombone4_0Migrator extends FileTrombone3_0Migrator {
 		return "trombone4_0";
 	}
 		
+	@Override
+	public File getStoredObjectFile() {
+		Path path = Paths.get(this.getSourceTromboneDirectory().getAbsolutePath(), "object-storage", id);
+		return Files.exists(path) ? path.toFile() : null;
+	}
+	
 	private FlexibleParameters getFromPropertiesFile(File file) throws IOException {
 		Properties properties = new Properties();
 		InputStream is = null;

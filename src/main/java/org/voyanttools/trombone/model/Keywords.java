@@ -41,8 +41,12 @@ import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.UriInputSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.storage.file.FileMigrationFactory;
+import org.voyanttools.trombone.storage.file.FileStorage;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -111,10 +115,19 @@ public class Keywords {
 				add(refs);
 			}
 			else if (ref.startsWith(KEYWORDS_PREFIX)) {
+				String refId = ref.substring(KEYWORDS_PREFIX.length());
 				try {
-					List<String> refs = storage.retrieveStrings(ref.substring(KEYWORDS_PREFIX.length()));
+					List<String> refs = storage.retrieveStrings(refId);
 					add(refs);
 				} catch (IOException e) {
+					if (storage instanceof FileStorage) {
+						File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, refId);
+						if (file!=null) {
+							String contents = FileUtils.readFileToString(file);
+							List<String> keywordsList = StringUtils.split(contents, "\n");
+							storage.storeStrings(keywordsList, refId);
+						}
+					}
 					throw new IOException("Unable to load keyword file: "+ref);
 				}
 			}
