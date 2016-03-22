@@ -9,7 +9,6 @@ import java.util.Map;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
-import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.RawCAType;
 import org.voyanttools.trombone.model.TokenType;
@@ -36,22 +35,9 @@ public class CA extends AnalysisTool {
 	protected double[][] columnProjections;
 	protected double[] dimensionPercentages;
 	
-	protected String target;
-	protected int clusters;
-	protected String docId;
-	protected int bins;
-	protected int dimensions;
-	
-	
 	public CA(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 
-		target = parameters.getParameterValue("target");
-		clusters = parameters.getParameterIntValue("clusters");
-		docId = parameters.getParameterValue("docId");
-		bins = parameters.getParameterIntValue("bins", 10);
-		dimensions = parameters.getParameterIntValue("dimensions", 2);
-		
 		this.caTypes = new ArrayList<RawCAType>();
 	}
 	
@@ -63,49 +49,40 @@ public class CA extends AnalysisTool {
 		this.dimensionPercentages = ca.getDimensionPercentages();
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
-		int i, j;
-		double[] v;
-		
 		Corpus corpus = corpusMapper.getCorpus();
-		int numDocs = corpus.size();
+		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
+		int numDocs = ids.size();
 		
 		double[] targetVector = null;
 		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
-//		if (target != null) this.properties.setParameter("type", "");
+			
+		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 3);
+		doCA(freqMatrix);
+        
+		int dimensions;
+		if (divisionType == DivisionType.DOCS) dimensions = Math.min(numDocs, this.dimensions);
+		else dimensions = Math.min(bins, this.dimensions);
+		if (numDocs == 3) dimensions = 2; // make sure there's no ArrayOutOfBoundsException
 		
-		if (numDocs > 2 && docId == null) { // FIXME CA needs at least 3 columns to function properly
-			// CORPUS
-			double[][] freqMatrix = this.buildFrequencyMatrix(corpusMapper, CORPUS);
-			final List<CorpusTerm> corpusTerms = (List<CorpusTerm>) this.getTypesList();
-			
-			doCA(freqMatrix);
-			
-			int dimensions = Math.min(numDocs, this.dimensions);
-            if (numDocs == 3) dimensions = 2; // make sure there's no ArrayOutOfBoundsException 
-            
-			for (i = 0; i < this.maxOutputDataItemCount; i++) {
-		    	final CorpusTerm term = corpusTerms.get(i);
-		    	
-		    	v = new double[dimensions];
-		    	for (j = 0; j < dimensions; j++) {
-			    	v[j] = this.rowProjections[i][j+1];
-		    	}
-		    	
-		    	if (term.getTerm().equals(target)) targetVector = v;
-			    
-		    	int rawFreq = term.getRawFreq();
-		    	double relFreq = (double) rawFreq / corpus.getTokensCount(TokenType.lexical);
-		    	
-		    	this.caTypes.add(new RawCAType(term.getTerm(), rawFreq, relFreq, v, RawCAType.WORD, -1));
-		    }
-			
-			if (target != null) {
-				this.doFilter(targetVector, initialTerms);
-			}
-			
+		int i, j;
+		double[] v;
+        List<CorpusTerm> terms = this.getTermsList();
+        for (i = 0; i < terms.size(); i++) {
+        	CorpusTerm term = terms.get(i);
+	    	
+	    	v = new double[dimensions];
+	    	for (j = 0; j < dimensions; j++) {
+		    	v[j] = this.rowProjections[i][j+1];
+	    	}
+	    	
+	    	if (term.getTerm().equals(target)) targetVector = v;
+	    	
+	    	this.caTypes.add(new RawCAType(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), v, RawCAType.TERM, -1));
+	    }
+
+		if (divisionType == DivisionType.DOCS) {
 			for (i = 0; i < numDocs; i++) {
 		    	IndexedDocument doc = corpus.getDocument(i);
 		    	
@@ -116,61 +93,31 @@ public class CA extends AnalysisTool {
 		    	
 		    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
 			    
-		    	this.caTypes.add(new RawCAType(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCAType.PART, corpus.getDocumentPosition(doc.getId())));
+		    	this.caTypes.add(new RawCAType(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCAType.DOC, corpus.getDocumentPosition(doc.getId())));
 		    }
-			
-			if (clusters > 0) {
-				AnalysisTool.clusterPoints(this.caTypes, clusters);
-			}
 			
 		} else {
-			// DOCUMENT
-			double[][] freqMatrix = this.buildFrequencyMatrix(corpusMapper, DOCUMENT);
-			final List<DocumentTerm> docTypes = (List<DocumentTerm>) this.getTypesList();
-			
-			doCA(freqMatrix);
-			
-			for (i = 0; i < this.maxOutputDataItemCount; i++) {
-				DocumentTerm docTerm = docTypes.get(i);
-		    	
-		    	v = new double[dimensions];
-		    	for (j = 0; j < dimensions; j++) {
-			    	v[j] = this.rowProjections[i][j+1];
-		    	}
-		    	
-		    	if (docTerm.getTerm().equals(target)) targetVector = v;
-		    	
-		    	this.caTypes.add(new RawCAType(docTerm.getTerm(), docTerm.getRawFrequency(), docTerm.getRelativeFrequency(), v, RawCAType.WORD, -1));
-		    }
-			
-			if (target != null) {
-				this.doFilter(targetVector, initialTerms);
-			}
-			
-			IndexedDocument doc;
-			if (docId != null) {
-				doc = corpus.getDocument(docId);
-			} else {
-				doc = corpus.getDocument(0);
-			}
-			
+			int tokensPerBin = corpus.getTokensCount(TokenType.lexical) / bins;
 			for (i = 0; i < bins; i++) {
-				String docTitle = doc.getMetadata().getTitle() + " " + i;
-				int tokensPerBin = doc.getMetadata().getTokensCount(TokenType.lexical) / bins;
+				String binTitle = "Corpus " + i;
 				
 		    	v = new double[dimensions];
 		    	for (j = 0; j < dimensions; j++) {
 			    	v[j] = this.columnProjections[i][j+1];
 		    	}
 		    	
-		    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
+		    	if (binTitle.equals(target)) targetVector = v;
 			    
-		    	this.caTypes.add(new RawCAType(docTitle, tokensPerBin, 0.0, v, RawCAType.PART, corpus.getDocumentPosition(doc.getId())));
+		    	this.caTypes.add(new RawCAType(binTitle, tokensPerBin, 0.0, v, RawCAType.BIN, i));
 		    }
-			
-			if (clusters > 0) {
-				AnalysisTool.clusterPoints(this.caTypes, clusters);
-			}
+		}
+		
+		if (target != null) {
+			this.doFilter(targetVector, initialTerms);
+		}
+		
+		if (clusters > 0) {
+			AnalysisTool.clusterPoints(this.caTypes, clusters);
 		}
 	}
 	
@@ -178,7 +125,7 @@ public class CA extends AnalysisTool {
 		double[][] minMax = AnalysisTool.getMinMax(this.rowProjections);
 		double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
 		AnalysisTool.filterTypesByTarget(this.caTypes, targetVector, distance, initialTypes);
-		this.maxOutputDataItemCount = this.caTypes.size();
+//		this.maxOutputDataItemCount = this.caTypes.size();
 	}
 	
 	public static class CAConverter implements Converter {
@@ -198,26 +145,12 @@ public class CA extends AnalysisTool {
 		public void marshal(Object source, HierarchicalStreamWriter writer,
 				MarshallingContext context) {
 			
-			
 			CA ca = (CA) source;
-			
-//			writer.startNode("total");
-//			writer.setValue(String.valueOf(correspondenceAnalysis.total));
-//			writer.endNode();
-//	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", List.class);
-//	        for (DocumentToken documentToken :  correspondenceAnalysis.getDocumentTokens()) {
-//		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "token", String.class);
-//		        
-//		        context.convertAnother(documentToken);
-//		        
-//		        writer.endNode();
-//	        }
-//	        writer.endNode();
 	        
 			final List<RawCAType> caTypes = ca.caTypes;
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
-			writer.setValue(String.valueOf(ca.maxOutputDataItemCount));
+			writer.setValue(String.valueOf(caTypes.size()));
 			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", List.class);

@@ -11,9 +11,7 @@ import java.util.SortedSet;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
-import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.RawPCAType;
-import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.algorithms.pca.PrincipalComponentsAnalysis;
 import org.voyanttools.trombone.tool.algorithms.pca.PrincipalComponentsAnalysis.PrincipleComponent;
@@ -37,20 +35,8 @@ public class PCA extends AnalysisTool {
 	private List<RawPCAType> pcaTypes;
 	private List<PrincipleComponent> principalComponents;
 	
-	private String target;
-	private int clusters;
-	private String docId;
-	private int bins;
-	private int dimensions;
-	
 	public PCA(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		
-		target = parameters.getParameterValue("target");
-		clusters = parameters.getParameterIntValue("clusters");
-		docId = parameters.getParameterValue("docId");
-		bins = parameters.getParameterIntValue("bins", 10);
-		dimensions = parameters.getParameterIntValue("dimensions", 2);
 		
 		this.pcaTypes = new ArrayList<RawPCAType>();
 		this.principalComponents = new ArrayList<PrincipleComponent>();
@@ -82,7 +68,6 @@ public class PCA extends AnalysisTool {
 	    return result;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
@@ -94,37 +79,16 @@ public class PCA extends AnalysisTool {
 		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
 //		if (target != null) this.properties.setParameter("type", "");
 		
-		double[][] result = null;
+		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
+		double[][] result = this.doPCA(freqMatrix);
 		
-		if (numDocs > 1 && docId == null) {
-			double[][] freqMatrix = this.buildFrequencyMatrix(corpusMapper, CORPUS);
-			List<CorpusTerm> corpusTerms = (List<CorpusTerm>) this.getTypesList();
+		List<CorpusTerm> terms = this.getTermsList();
+		for (i = 0; i < terms.size(); i++) {
+			CorpusTerm term = terms.get(i);
 			
-			result = this.doPCA(freqMatrix);
+			if (term.getTerm().equals(target)) targetVector = result[i];
 			
-		    for (i = 0; i < result.length; i++) {
-		    	final CorpusTerm corpusTerm = corpusTerms.get(i);
-		    	
-		    	if (corpusTerm.getTerm().equals(target)) targetVector = result[i];
-			    
-		    	int rawFreq = corpusTerm.getRawFreq();
-		    	double relFreq = (double) rawFreq / corpus.getTokensCount(TokenType.lexical);
-		    	
-		    	this.pcaTypes.add(new RawPCAType(corpusTerm.getTerm(), rawFreq, relFreq, result[i]));
-		    }
-		} else {
-			double[][] freqMatrix = this.buildFrequencyMatrix(corpusMapper, DOCUMENT);
-			final List<DocumentTerm> docTerms = (List<DocumentTerm>) this.getTypesList();
-			
-			result = this.doPCA(freqMatrix);
-			
-		    for (i = 0; i < result.length; i++) {
-		    	DocumentTerm docTerm = docTerms.get(i);
-		    	
-		    	if (docTerm.getTerm().equals(target)) targetVector = result[i];
-		    	
-		    	this.pcaTypes.add(new RawPCAType(docTerm.getTerm(), docTerm.getRawFrequency(), docTerm.getRelativeFrequency(), result[i]));
-		    }
+			this.pcaTypes.add(new RawPCAType(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), result[i]));
 		}
 		
 		if (clusters > 0) {
@@ -135,7 +99,7 @@ public class PCA extends AnalysisTool {
 			double[][] minMax = AnalysisTool.getMinMax(result);
 			double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
 			AnalysisTool.filterTypesByTarget(this.pcaTypes, targetVector, distance, initialTerms);
-			this.maxOutputDataItemCount = this.pcaTypes.size();
+//			this.maxOutputDataItemCount = this.pcaTypes.size();
 		}
 	}
 	
@@ -157,14 +121,13 @@ public class PCA extends AnalysisTool {
 				MarshallingContext context) {
 			
 			PCA pca = (PCA) source;
-
 	        
 			final List<RawPCAType> pcaTypes = pca.pcaTypes;
 			
 			final List<PrincipleComponent> principalComponents = pca.principalComponents;
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
-			writer.setValue(String.valueOf(pca.maxOutputDataItemCount));
+			writer.setValue(String.valueOf(pcaTypes.size()));
 			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "principalComponents", Map.Entry.class);
