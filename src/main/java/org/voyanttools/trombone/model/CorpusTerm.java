@@ -86,7 +86,7 @@ public class CorpusTerm implements Serializable {
 				if (stats[pos]==null) {stats[pos]=new SummaryStatistics();}
 				stats[pos].addValue(relativeFreqs[position]);
 			}
-			this.relativeStats = new DescriptiveStatistics(relativeFreqs.length);
+			this.relativeStats = new DescriptiveStatistics(bins);
 			for (SummaryStatistics stat : stats) {relativeStats.addValue(stat==null ? 0 : stat.getMean());}
 		}
 	}
