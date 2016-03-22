@@ -104,7 +104,7 @@ public class FileCorpusStorage implements CorpusStorage {
 	public boolean addAlias(String alias, String id) throws IOException {
 		Path source = Paths.get(corpusStorageLocation.getAbsolutePath(), alias);
 		Path target = Paths.get(corpusStorageLocation.getAbsolutePath(), id);
-		if (Files.exists(source) || Files.notExists(target)) {return false;}
+		if (alias.equals(id) || Files.exists(source) || Files.notExists(target)) {return false;}
 		Files.createSymbolicLink(source, target);
 		return true; // no exception thrown
 	}

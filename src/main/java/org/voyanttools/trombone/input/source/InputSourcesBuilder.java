@@ -44,7 +44,7 @@ public class InputSourcesBuilder {
 	}
 	
 	public static boolean hasParameterSources(FlexibleParameters parameters) {
-		for (String p : new String[]{"file","string","uri"}) {
+		for (String p : new String[]{"file","string","uri","upload"}) {
 			if (parameters.getParameterValue(p,"").isEmpty()==false) {return true;}
 		}
 		return false;

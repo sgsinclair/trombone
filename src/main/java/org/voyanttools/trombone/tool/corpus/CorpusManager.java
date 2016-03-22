@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
@@ -77,12 +78,19 @@ public class CorpusManager extends AbstractTool {
 				return;
 			}
 			
+			// unless we can recreate the corpus, we have a problem Houston
+			if (InputSourcesBuilder.hasParameterSources(parameters)==false) {
+				throw new IllegalArgumentException("A corpus was specified but does not exist, could not be migrated and could not be recreated: "+corpusId);
+				
+			}
+			
 		}
 		
 		RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);
 		realCorpusCreator.run();
 		this.id = realCorpusCreator.getStoredId();
 		checkActions();
+
 	}
 	
 	public static Corpus getCorpus(Storage storage, FlexibleParameters parameters) throws IOException {
