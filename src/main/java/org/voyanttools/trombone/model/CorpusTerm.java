@@ -95,12 +95,20 @@ public class CorpusTerm implements Serializable {
 		this(corpusTermMinimal.getTerm(), corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal.getInDocumentsCount(), corpusTermMinimal.getDocumentsCount(), null, null, 0);
 	}
 
-	public int getRawFreq() {
+	public int getRawFrequency() {
 		return this.rawFreq;
 	}
+	@Deprecated
+	public int getRawFreq() {
+		return this.getRawFrequency();
+	}
 	
-	public float getRelativeFreq() {
+	public float getRelativeFrequency() {
 		return (float) rawFreq / (float) totalTokens;
+	}
+	@Deprecated
+	public float getRelativeFreq() {
+		return this.getRelativeFrequency();
 	}
 	
 	private String getNormalizedTerm() {
