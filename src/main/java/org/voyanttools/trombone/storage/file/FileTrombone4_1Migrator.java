@@ -13,6 +13,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -40,6 +41,8 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 
 	@Override
 	public String getMigratedCorpusId() throws IOException {
+		
+		if (!corpusExists()) {return null;}
 		
 		String newid;
 		
@@ -112,6 +115,8 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		// go through and double check that everything is still available
 		int count = 0;
 		for (InputSource inputSource : inputSources) {
+			// we can check if this is a file input source and bail if it's not there
+			if (inputSource instanceof FileInputSource && ((FileInputSource) inputSource).getFile().exists()==false) {break;}
 			InputStream is = null;
 			try {
 				is = inputSource.getInputStream();
@@ -130,7 +135,6 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		
 		// load from params if we everything seems available
 		if (count==inputSources.size()) {
-			corpusCreationParams.setParameter("addAlias", id);
 			CorpusCreator corpusCreator = new CorpusCreator(storage, corpusCreationParams);
 			corpusCreator.run();
 			String newid = corpusCreator.getStoredId();

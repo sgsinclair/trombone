@@ -93,5 +93,9 @@ public class FileInputSource implements InputSource {
 	public String getUniqueId() {
 		return this.id;
 	}
+	
+	public File getFile() {
+		return file;
+	}
 
 }

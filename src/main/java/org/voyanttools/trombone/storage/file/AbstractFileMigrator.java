@@ -15,11 +15,13 @@ public abstract class AbstractFileMigrator implements Migrator {
 	
 	protected AbstractFileMigrator(FileStorage storage, String id) {
 		this.storage = storage;
-		this.id = id;
+		this.id = id.trim();
 	}
 
 	@Override
 	public String getMigratedCorpusId() throws IOException {
+		
+		if (!corpusExists()) {return null;}
 		
 		String storedId = transferDocuments();
 		
@@ -31,7 +33,7 @@ public abstract class AbstractFileMigrator implements Migrator {
 
 	@Override
 	public boolean corpusExists() {
-		return getSourceTromboneCorpusDirectory().exists();
+		return id!=null && id.isEmpty()==false && getSourceTromboneCorpusDirectory().exists();
 	}
 
 	protected String transferDocuments() throws IOException {

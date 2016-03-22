@@ -18,6 +18,7 @@ import org.junit.Test;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Migrator;
+import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
 import net.lingala.zip4j.core.ZipFile;
@@ -37,6 +38,7 @@ public class TromboneMigration {
 		
 		// create a dummy migrator to get the proper destination directory for unzipping
 		AbstractFileMigrator dummyMigrator = new FileTrombone3_0Migrator(storage, "");
+		Assert.assertNull(null, dummyMigrator.getMigratedCorpusId());
 
 		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
 		oldStorageDirectory.mkdir();
@@ -49,6 +51,7 @@ public class TromboneMigration {
 		
 		// test the bundle of formats
 		migrator = FileMigrationFactory.getMigrator(storage, "one");
+		assertTrue(migrator instanceof FileTrombone3_0Migrator);
 		id = migrator.getMigratedCorpusId();
 		corpus = storage.getCorpusStorage().getCorpus(id);
 		assertEquals(13, corpus.size());
@@ -58,6 +61,7 @@ public class TromboneMigration {
 		
 		// test handling of title and author metadata
 		migrator = FileMigrationFactory.getMigrator(storage, "two");
+		assertTrue(migrator instanceof FileTrombone3_0Migrator);
 		id = migrator.getMigratedCorpusId();
 		corpus = storage.getCorpusStorage().getCorpus(id);
 		assertEquals(2, corpus.size());
@@ -81,6 +85,7 @@ public class TromboneMigration {
 		
 		// create a dummy migrator to get the proper destination directory for unzipping
 		AbstractFileMigrator dummyMigrator = new FileTrombone4_0Migrator(storage, "");
+		Assert.assertNull(null, dummyMigrator.getMigratedCorpusId());
 		
 		// unzip trombone 4.0 contents
 		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
@@ -94,6 +99,7 @@ public class TromboneMigration {
 		
 		// test the bundle of formats
 		migrator = FileMigrationFactory.getMigrator(storage, "1cb657d4f807a824536059c9ade0d907");
+		assertTrue(migrator instanceof FileTrombone4_0Migrator);
 		id = migrator.getMigratedCorpusId();
 		corpus = storage.getCorpusStorage().getCorpus(id);
 		assertEquals(15, corpus.size());
@@ -103,6 +109,7 @@ public class TromboneMigration {
 		
 		// test handling of title and author metadata
 		migrator = FileMigrationFactory.getMigrator(storage, "824b82f75e5053a0f52a0a3db2654d15");
+		assertTrue(migrator instanceof FileTrombone4_0Migrator);
 		id = migrator.getMigratedCorpusId();
 		corpus = storage.getCorpusStorage().getCorpus(id);
 		assertEquals(1, corpus.size());
@@ -122,6 +129,7 @@ public class TromboneMigration {
 		
 		// create a dummy migrator to get the proper destination directory for unzipping
 		FileTrombone4_1Migrator dummyMigrator = new FileTrombone4_1Migrator(storage, "");
+		Assert.assertNull(null, dummyMigrator.getMigratedCorpusId());
 		
 		// unzip trombone 4.0 contents
 		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
@@ -137,6 +145,7 @@ public class TromboneMigration {
 		// test the bundle of formats
 		corpusIdToMigrate = "d0be1ce35c9941b21af22260a47938e2";
 		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		assertTrue(migrator instanceof FileTrombone4_1Migrator);
 		id = migrator.getMigratedCorpusId();
 		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
 		assertTrue(storage.getCorpusStorage().corpusExists(id));
@@ -149,6 +158,7 @@ public class TromboneMigration {
 		// test handling of title and author metadata
 		corpusIdToMigrate = "e0a54420a5555aa00dacd1ccf0a2ba0e";
 		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		assertTrue(migrator instanceof FileTrombone4_1Migrator);
 		id = migrator.getMigratedCorpusId();
 		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
 		assertTrue(storage.getCorpusStorage().corpusExists(id));
@@ -157,14 +167,40 @@ public class TromboneMigration {
 		assertEquals("Il était une fois.", corpus.getDocument(0).getMetadata().getTitle());
 		assertEquals("un texte intéressant et un test. ⚠️", corpus.getDocument(0).getMetadata().getAuthor());
 
-		// those should be using stored original sources, now try if one of them has disappeared
+		// those should be using stored top-level original sources, now try if one of them has disappeared (only use corpus creation parameters)
 		corpusIdToMigrate = "d0be1ce35c9941b21af22260a47938e2";
 		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		assertTrue(migrator instanceof FileTrombone4_1Migrator);
 		// remove the top-level source zip directory
 		File deleteDir = new File(dummyMigrator.getSourceTromboneDocumentsDirectory(), "d807e3732cc09d24783201aed49d5742");
 		assertTrue(deleteDir.exists());
 		FileUtils.deleteDirectory(deleteDir);
 		assertFalse(deleteDir.exists());
+		// we have to modify the parameters to point to an existing file, not the one that was used when the zip was created
+		FlexibleParameters corpusCreationParameters = ((FileTrombone4_1Migrator) migrator).getCorpusCreationParameters();
+		File newUploadFile = TestHelper.getResource("archive/chars.zip");
+		assertTrue(newUploadFile.exists());
+		corpusCreationParameters.setParameter("upload", newUploadFile.getAbsolutePath());
+		File newCorpusParametersFile =  new File(((FileTrombone4_1Migrator) migrator).getSourceTromboneCorpusDirectory(), "parameters.xml");
+		assertTrue(newCorpusParametersFile.exists());
+		corpusCreationParameters.saveFlexibleParameters(newCorpusParametersFile);
+		// now proceed
+		id = migrator.getMigratedCorpusId();
+		assertTrue(storage.getCorpusStorage().corpusExists(id));
+		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(15, corpus.size());
+		for (IndexedDocument doc : corpus) {
+			Assert.assertFalse(doc.getMetadata().getTitle().equals("rawbytes"));
+		}
+		
+		// now try if the corpus creation parameters don't work out (so simple migration with very limited metadata
+		newUploadFile = new File(UUID.randomUUID().toString());
+		assertFalse(newUploadFile.exists());
+		corpusCreationParameters.setParameter("upload", UUID.randomUUID().toString());
+		newCorpusParametersFile =  new File(((FileTrombone4_1Migrator) migrator).getSourceTromboneCorpusDirectory(), "parameters.xml");
+		corpusCreationParameters.saveFlexibleParameters(newCorpusParametersFile);
+		// now proceed
 		id = migrator.getMigratedCorpusId();
 		assertTrue(storage.getCorpusStorage().corpusExists(id));
 		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
