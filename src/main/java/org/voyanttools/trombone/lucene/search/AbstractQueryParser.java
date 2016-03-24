@@ -36,6 +36,7 @@ public abstract class AbstractQueryParser {
 	protected final static String EMPTY = "";
 	protected final static String WILDCARD_ASTERISK = "*";
 	protected final static String WILDCARD_QUESTION = "?";
+	protected final static Pattern REGEX_PATTERN = Pattern.compile("(\\[.+?\\])");
 	protected final static Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
 	protected final static Pattern SLOP_PATTERN = Pattern.compile("~(\\d+)$");
 	protected final static String FIELD_SEPARATOR = ":";
@@ -130,9 +131,10 @@ public abstract class AbstractQueryParser {
 
 	private Map<String, Query> getSingleTermQueries(String termQuery, TokenType tokenType, boolean collapse) throws IOException {
 		Map<String, Query> queriesMap = new HashMap<String, Query>();
-		if (termQuery.contains(WILDCARD_ASTERISK) || termQuery.contains(WILDCARD_QUESTION)) { // contains a wildcard
+		boolean isRegex = REGEX_PATTERN.matcher(termQuery).find();
+		if (termQuery.contains(WILDCARD_ASTERISK) || termQuery.contains(WILDCARD_QUESTION) || isRegex) {
 			Term term = getTerm(termQuery, tokenType);
-			Query query = getWildCardQuery(term);
+			Query query = isRegex ? getRegexQuery(term) : getWildCardQuery(term);
 			if (collapse) { // treat all wildcard variants as a single term
 				queriesMap.put(termQuery, query);
 			}
@@ -176,6 +178,8 @@ public abstract class AbstractQueryParser {
 	protected abstract Query getNearQuery(Query[] queries, int slop, boolean inOrder);
 
 	protected abstract Query getWildCardQuery(Term term) throws IOException;
+	
+	protected abstract Query getRegexQuery(Term term) throws IOException;
 	
 	protected abstract Query getTermQuery(Term term);
 }

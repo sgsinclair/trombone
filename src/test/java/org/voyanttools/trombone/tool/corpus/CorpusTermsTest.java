@@ -120,6 +120,14 @@ public class CorpusTermsTest {
 		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
 		
+		parameters.setParameter("query", "d[a-z]rk");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("d[a-z]rk", corpusTerm.getTerm());
+		assertEquals(1, corpusTerm.getRawFreq());
 
 		
 		// all terms 
@@ -264,6 +272,17 @@ public class CorpusTermsTest {
 		assertEquals(2, corpusTerms.get(0).getRawFreq()); // neither document has light
 		assertEquals(1, corpusTerms.size());
 		
+		
+		// testing with not – for now only concerned with inDocumentsCountOnly
+		parameters.setParameter("query", "d[a-z]rk");
+		parameters.removeParameter("tokenType");
+		parameters.removeParameter("withDistributions");
+		parameters.setParameter("inDocumentsCountOnly", "true");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.get(0).getRawFreq()); // neither document has light
+		assertEquals(1, corpusTerms.size());
 		
 		storage.destroy();
 		

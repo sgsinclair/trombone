@@ -21,10 +21,9 @@
  ******************************************************************************/
 package org.voyanttools.trombone.lucene.search;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.lucene.document.Document;
@@ -32,16 +31,12 @@ import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.index.TermContext;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanWeight;
 import org.apache.lucene.search.spans.Spans;
-import org.apache.lucene.util.Bits;
 import org.junit.Test;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.lucene.search.SpanQueryParser;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
@@ -60,8 +55,6 @@ public class SpanQueryParserTest {
 		Storage storage = new MemoryStorage();
 		Document document;
 		LuceneManager luceneManager = storage.getLuceneManager();
-		Bits bits = new Bits.MatchAllBits(2);
-		Map<Term,TermContext> termsMap = new HashMap<Term,TermContext>();
 
 		document = new Document();
 		document.add(new TextField("lexical", "It was a dark and stormy night.", Field.Store.YES));
@@ -114,8 +107,8 @@ public class SpanQueryParserTest {
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 		// two separate terms (not collapsed)
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"dark","best"}, TokenType.lexical, true);
@@ -126,16 +119,16 @@ public class SpanQueryParserTest {
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 		query = queriesMap.get("best");
 		weight = query.createWeight(indexSearcher, false);
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(1,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 		// two separate terms (not collapsed)
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"dark;best"}, TokenType.lexical, true);
@@ -146,16 +139,16 @@ public class SpanQueryParserTest {
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 
 		query = queriesMap.get("best");
 		weight = query.createWeight(indexSearcher, false);
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(1,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 		// two separate terms (not collapsed), with spaces
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{" dark ; best "}, TokenType.lexical, true);
@@ -166,16 +159,16 @@ public class SpanQueryParserTest {
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 
 		query = queriesMap.get("best");
 		weight = query.createWeight(indexSearcher, false);
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(1,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 
 		
 		// comma-separated terms (collapased)
@@ -187,11 +180,11 @@ public class SpanQueryParserTest {
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
 		assertEquals(1,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 		// wildcards
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"dar*,b*t"}, TokenType.lexical, true); // dark and best
@@ -201,11 +194,11 @@ public class SpanQueryParserTest {
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
 		assertEquals(1,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 		// two separate wildcards (not collapsed)
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"dar*;bes*"}, TokenType.lexical, true);
@@ -216,16 +209,16 @@ public class SpanQueryParserTest {
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 
 		query = queriesMap.get("bes*");
 		weight = query.createWeight(indexSearcher, false);
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(1,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 
 		// phrase
@@ -237,8 +230,8 @@ public class SpanQueryParserTest {
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
 		assertEquals(5,spans.endPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"it was"}, TokenType.lexical, true);
 		assertEquals(1, queriesMap.size());
@@ -260,8 +253,8 @@ public class SpanQueryParserTest {
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
 		assertEquals(5,spans.endPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 
 		// phrase with wildcards
 		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"dark stormy~2"}, TokenType.lexical, true);
@@ -272,20 +265,20 @@ public class SpanQueryParserTest {
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
 		assertEquals(6,spans.endPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 
-		// phrase with wildcards (ignored quotes)
-		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"\"dark stormy\"~2"}, TokenType.lexical, true);
+		// simple regex
+		queriesMap = spanQueryParser.getSpanQueriesMap(new String[]{"d[a-z]rk"}, TokenType.lexical, true);
 		assertEquals(1, queriesMap.size());
-		query = queriesMap.get("dark stormy~2");
+		query = queriesMap.get("d[a-z]rk");
 		weight = query.createWeight(indexSearcher, false);
 		spans = weight.getSpans(atomicReader.getContext(), SpanWeight.Postings.POSITIONS);
 		assertEquals(0,spans.nextDoc());
 		assertEquals(3,spans.nextStartPosition());
-		assertEquals(6,spans.endPosition());
-		assertEquals(spans.NO_MORE_POSITIONS, spans.nextStartPosition());
-		assertEquals(spans.NO_MORE_DOCS, spans.nextDoc());
+		assertEquals(4,spans.endPosition());
+		assertEquals(Spans.NO_MORE_POSITIONS, spans.nextStartPosition());
+		assertEquals(Spans.NO_MORE_DOCS, spans.nextDoc());
 		
 		storage.destroy();
 	}

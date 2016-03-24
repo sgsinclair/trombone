@@ -7,6 +7,7 @@ import java.util.Map;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.sandbox.queries.regex.RegexQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
@@ -58,6 +59,13 @@ public class SpanQueryParser extends AbstractQueryParser {
 	protected Query getWildCardQuery(Term term) throws IOException {
 		WildcardQuery wildCardQuery = new WildcardQuery(term);
 		Query query = new SpanMultiTermQueryWrapper<WildcardQuery>(wildCardQuery);
+		return query.rewrite(indexReader);
+	}
+
+	@Override
+	protected Query getRegexQuery(Term term) throws IOException {
+		RegexQuery regexQuery = new RegexQuery(term);
+		Query query = new SpanMultiTermQueryWrapper<RegexQuery>(regexQuery);
 		return query.rewrite(indexReader);
 	}
 

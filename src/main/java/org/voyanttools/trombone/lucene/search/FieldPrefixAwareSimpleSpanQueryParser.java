@@ -6,7 +6,6 @@ package org.voyanttools.trombone.lucene.search;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Matcher;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.index.IndexReader;
@@ -17,6 +16,7 @@ import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.RegexpQuery;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TermRangeQuery;
 import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
@@ -185,8 +185,23 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 		}
 	}
 
-	protected Query newRangeQuery(Matcher matcher) {
-		Query query = super.newRangeQuery(matcher);
+	protected Query newRegexQuery(String text) {
+		Query query = super.newRegexQuery(text);
+		if (query instanceof BooleanQuery) {
+			SpanOrQuery spanOrQuery = new SpanOrQuery();
+			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
+				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) clause.getQuery());
+				spanOrQuery.addClause(spanQuery);
+			}
+			return spanOrQuery;
+		}
+		else {
+			return new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) query);
+		}
+	}
+	
+	protected Query newRangeQuery(String text) {
+		Query query = super.newRangeQuery(text);
 		if (query instanceof BooleanQuery) {
 			SpanOrQuery spanOrQuery = new SpanOrQuery();
 			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {

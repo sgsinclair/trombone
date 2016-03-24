@@ -33,6 +33,9 @@ public class FieldPrefixAwareSimpleQueryParserTest {
 		query = parser.parse("lexical:[a-c]");
 		assertEquals("lexical:[a TO c]",query.toString());
 
+		// regex
+		query = parser.parse("lexical:a[a-c]");
+		assertEquals("lexical:/a[a-c]/",query.toString());
 		
 		
 	}
