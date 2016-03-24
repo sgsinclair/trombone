@@ -78,14 +78,24 @@ public class CorpusManager extends AbstractTool {
 				return;
 			}
 			
-			// unless we can recreate the corpus, we have a problem Houston
-			if (InputSourcesBuilder.hasParameterSources(parameters)==false) {
+			// if we've gotten here and we still can't find a corpus, then we hope there are parameters to recreate it
+			if (InputSourcesBuilder.hasParameterSources(parameters)) {
+				RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);
+				realCorpusCreator.run();
+				this.id = realCorpusCreator.getStoredId();
+				// alias for next time
+				storage.getCorpusStorage().addAlias(corpusId, this.id);
+				checkActions();
+				return;
+			}
+			
+			// otherwise we have a problem Houston
+			else {
 				throw new IllegalArgumentException("A corpus was specified but does not exist, could not be migrated and could not be recreated: "+corpusId);
-				
 			}
 			
 		}
-		
+
 		RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, parameters);
 		realCorpusCreator.run();
 		this.id = realCorpusCreator.getStoredId();
