@@ -86,7 +86,7 @@ public class CorpusTerm implements Serializable {
 				if (stats[pos]==null) {stats[pos]=new SummaryStatistics();}
 				stats[pos].addValue(relativeFreqs[position]);
 			}
-			this.relativeStats = new DescriptiveStatistics(relativeFreqs.length);
+			this.relativeStats = new DescriptiveStatistics(bins);
 			for (SummaryStatistics stat : stats) {relativeStats.addValue(stat==null ? 0 : stat.getMean());}
 		}
 	}
@@ -95,12 +95,20 @@ public class CorpusTerm implements Serializable {
 		this(corpusTermMinimal.getTerm(), corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal.getInDocumentsCount(), corpusTermMinimal.getDocumentsCount(), null, null, 0);
 	}
 
-	public int getRawFreq() {
+	public int getRawFrequency() {
 		return this.rawFreq;
 	}
+	@Deprecated
+	public int getRawFreq() {
+		return this.getRawFrequency();
+	}
 	
-	public float getRelativeFreq() {
+	public float getRelativeFrequency() {
 		return (float) rawFreq / (float) totalTokens;
+	}
+	@Deprecated
+	public float getRelativeFreq() {
+		return this.getRelativeFrequency();
 	}
 	
 	private String getNormalizedTerm() {
