@@ -197,6 +197,13 @@ public class FileStorage implements Storage {
 		}
 		return new File(getObjectStoreDirectory(),  id);
 	}
+	
+	public boolean copyResource(File source, String id) throws IOException {
+		File destination = getFile(id);
+		if (destination.exists()) {return false;}
+		FileUtils.copyFile(source, destination);
+		return true;
+	}
 
 
 	@Override

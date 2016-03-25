@@ -5,6 +5,7 @@ package org.voyanttools.trombone.storage.file;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -208,6 +209,20 @@ public class TromboneMigration {
 		for (IndexedDocument doc : corpus) {
 			Assert.assertFalse(doc.getMetadata().getTitle().equals("rawbytes"));
 		}
+		
+		// test migration of resources
+		id = "7f96fa278a1cc64fc298ab808bcc2682";
+		assertFalse(storage.isStored(id));
+		file = FileMigrationFactory.getStoredObjectFile(storage, id);
+		assertTrue(file.exists());
+		assertTrue(storage.copyResource(file, id));
+		assertTrue(storage.isStored(id));
+		
+		// test migration of non-existent resource
+		id = "z";
+		assertFalse(storage.isStored(id));
+		file = FileMigrationFactory.getStoredObjectFile(storage, id);
+		assertNull(file);
 		
 		storage.destroy();
 		FileUtils.deleteDirectory(base);

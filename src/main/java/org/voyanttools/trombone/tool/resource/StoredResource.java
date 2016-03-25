@@ -1,8 +1,11 @@
 package org.voyanttools.trombone.tool.resource;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.file.FileMigrationFactory;
+import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -39,6 +42,13 @@ public class StoredResource extends AbstractTool {
 		}
 		else if (this.parameters.containsKey("retrieveResourceId")) {
 			String id = this.parameters.getParameterValue("retrieveResourceId");
+			// if it doesn't exist, try to retrieve from previous storage
+			if (!storage.isStored(id) && storage instanceof FileStorage) {
+				File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id);
+				if (file!=null && file.exists()) {
+					((FileStorage) storage).copyResource(file, id);
+				}
+			}
 			this.resource = this.storage.retrieveString(id);
 			this.id = id;
 		}
