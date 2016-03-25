@@ -47,7 +47,6 @@ import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.nlp.NlpAnnotatorFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
-import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 
@@ -270,7 +269,7 @@ public class FileStorage implements Storage {
 	}
 
 	@Override
-	public Migrator getMigrator(String id) throws IOException {
+	public FileMigrator getMigrator(String id) throws IOException {
 		return FileMigrationFactory.getMigrator(this, id);
 	}
 

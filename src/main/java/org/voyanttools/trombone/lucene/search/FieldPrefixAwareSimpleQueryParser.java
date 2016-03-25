@@ -119,9 +119,9 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	public Query parse(String queryText) {
 			// hack to support prefixes in phrases – put the prefix within the quotes
 			String modifiedQueryText = queryText.replaceAll("\\b(\\w+):\"","\"$1:");
-			if (defaultPrefix.equals(DEFAULT_TOKENTYPE.name())==false) {
-				
-			}
+//			if (defaultPrefix.equals(DEFAULT_TOKENTYPE.name())==false) {
+//				
+//			}
 			return super.parse(modifiedQueryText);
 	}
 	

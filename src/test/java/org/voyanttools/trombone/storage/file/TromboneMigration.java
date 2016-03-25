@@ -17,7 +17,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
-import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -45,7 +44,7 @@ public class TromboneMigration {
 		File file = TestHelper.getResource("migration/trombone3_0.zip");
 		new ZipFile(file).extractAll(oldStorageDirectory.getPath());
 
-		Migrator migrator;
+		FileMigrator migrator;
 		String id;
 		Corpus corpus;
 		
@@ -93,7 +92,7 @@ public class TromboneMigration {
 		File file = TestHelper.getResource("migration/trombone4_0.zip");
 		new ZipFile(file).extractAll(oldStorageDirectory.getPath());
 
-		Migrator migrator;
+		FileMigrator migrator;
 		String id;
 		Corpus corpus;
 		
@@ -137,7 +136,7 @@ public class TromboneMigration {
 		File file = TestHelper.getResource("migration/trombone4_1.zip");
 		new ZipFile(file).extractAll(oldStorageDirectory.getPath());
 
-		Migrator migrator;
+		FileMigrator migrator;
 		String id;
 		Corpus corpus;
 		String corpusIdToMigrate;

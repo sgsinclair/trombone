@@ -30,6 +30,7 @@ import java.util.List;
 import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
+import org.voyanttools.trombone.storage.file.FileMigrator;
 
 /**
  * This interface defines methods for interacting with stored objects using a storage strategy defined by the
@@ -88,7 +89,7 @@ public interface Storage {
 	 * @return a Migrator to perform the conversion
 	 * @throws IOException
 	 */
-	public Migrator getMigrator(String id) throws IOException;
+	public FileMigrator getMigrator(String id) throws IOException;
 	
 
 	public Writer getStoreStringWriter(String id) throws IOException;

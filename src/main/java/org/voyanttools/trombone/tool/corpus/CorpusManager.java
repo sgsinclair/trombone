@@ -13,8 +13,8 @@ import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
-import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.file.FileMigrator;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -71,7 +71,7 @@ public class CorpusManager extends AbstractTool {
 			}
 			
 			// check of a previous format exists and return it if so
-			Migrator migrator = storage.getMigrator(corpusId);
+			FileMigrator migrator = storage.getMigrator(corpusId);
 			if (migrator!=null) {
 				this.id = migrator.getMigratedCorpusId();
 				checkActions();

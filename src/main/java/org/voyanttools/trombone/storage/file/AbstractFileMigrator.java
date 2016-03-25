@@ -3,11 +3,10 @@ package org.voyanttools.trombone.storage.file;
 import java.io.File;
 import java.io.IOException;
 
-import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-public abstract class AbstractFileMigrator implements Migrator {
+public abstract class AbstractFileMigrator implements FileMigrator {
 	
 	protected FileStorage storage;
 	
@@ -33,7 +32,14 @@ public abstract class AbstractFileMigrator implements Migrator {
 
 	@Override
 	public boolean corpusExists() {
-		return id!=null && id.isEmpty()==false && getSourceTromboneCorpusDirectory().exists();
+		if (id==null || id.isEmpty() || !getSourceTromboneCorpusDirectory().exists()) {return false;}
+		try {
+			String[] ids = getDocumentIds();
+			return ids.length>0;
+		}
+		catch (Exception IOException) {
+			return false;
+		}
 	}
 
 	protected String transferDocuments() throws IOException {

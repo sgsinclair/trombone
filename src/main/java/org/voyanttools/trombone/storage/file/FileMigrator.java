@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.voyanttools.trombone.storage;
+package org.voyanttools.trombone.storage.file;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author sgs
  *
  */
-public interface Migrator {
+public interface FileMigrator {
 
 	public String getMigratedCorpusId() throws IOException;
 	

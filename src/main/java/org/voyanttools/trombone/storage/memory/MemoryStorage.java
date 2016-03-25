@@ -41,9 +41,9 @@ import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.nlp.NlpAnnotatorFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
-import org.voyanttools.trombone.storage.Migrator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.storage.file.FileMigrator;
 
 import edu.stanford.nlp.util.StringUtils;
 
@@ -204,7 +204,7 @@ public class MemoryStorage implements Storage {
 	}
 
 	@Override
-	public Migrator getMigrator(String id) throws IOException {
+	public FileMigrator getMigrator(String id) throws IOException {
 		return null; // not possible to migrate from memory
 	}
 
