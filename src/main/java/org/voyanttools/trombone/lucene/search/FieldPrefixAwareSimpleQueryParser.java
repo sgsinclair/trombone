@@ -130,8 +130,13 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 		int pos = text.indexOf(PREFIX_SEPARATOR);
 		String prefix = pos==-1 ? "" : text.substring(0, pos);
 		String term = pos==-1 ? text : text.substring(pos + 1);
-		if (RANGE_PATTERN.matcher(term).find()) {return newRangeQuery(text);}
-		if (REGEX_PATTERN.matcher(term).find()) {return newRegexQuery(text);}
+		try {
+			if (RANGE_PATTERN.matcher(term).find()) {return newRangeQuery(text);}
+			if (REGEX_PATTERN.matcher(term).find()) {return newRegexQuery(text);}
+		}
+		catch (IOException e) {
+			throw new IllegalArgumentException("Unable to create a query from "+text, e);
+		}
 		return pos==-1 ? super.newDefaultQuery(text) : createBooleanQuery(prefix, term, Occur.SHOULD);
 	}
 
@@ -156,7 +161,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 		else {return new PrefixQuery(new Term(text.substring(0, pos), text.substring(pos + 1)));}
 	}
 
-	protected Query newRegexQuery(String text) {
+	protected Query newRegexQuery(String text) throws IOException {
 		int pos = text.indexOf(PREFIX_SEPARATOR);
 		String prefix = pos==-1 ? "" : text.substring(0, pos);
 		String term = pos==-1 ? text : text.substring(pos + 1);
@@ -175,7 +180,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	}
 	
 
-	protected Query newRangeQuery(String text) {
+	protected Query newRangeQuery(String text) throws IOException {
 		int pos = text.indexOf(PREFIX_SEPARATOR);
 		String prefix = pos==-1 ? "" : text.substring(0, pos);
 		String term = pos==-1 ? text : text.substring(pos + 1);

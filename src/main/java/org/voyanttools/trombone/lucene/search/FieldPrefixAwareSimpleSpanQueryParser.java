@@ -185,33 +185,37 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 		}
 	}
 
-	protected Query newRegexQuery(String text) {
+	protected Query newRegexQuery(String text) throws IOException {
 		Query query = super.newRegexQuery(text);
 		if (query instanceof BooleanQuery) {
 			SpanOrQuery spanOrQuery = new SpanOrQuery();
 			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
 				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) clause.getQuery());
-				spanOrQuery.addClause(spanQuery);
+				Query q = spanQuery.rewrite(reader);
+				spanOrQuery.addClause((SpanQuery) q); // TODO: check that this is always span query
 			}
 			return spanOrQuery;
 		}
 		else {
-			return new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) query);
+			Query spanRegexQuery = new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) query);
+			return spanRegexQuery.rewrite(reader);
 		}
 	}
 	
-	protected Query newRangeQuery(String text) {
+	protected Query newRangeQuery(String text) throws IOException {
 		Query query = super.newRangeQuery(text);
 		if (query instanceof BooleanQuery) {
 			SpanOrQuery spanOrQuery = new SpanOrQuery();
 			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
 				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<TermRangeQuery>((TermRangeQuery) clause.getQuery());
-				spanOrQuery.addClause(spanQuery);
+				Query q = spanQuery.rewrite(reader);
+				spanOrQuery.addClause((SpanQuery) q); // TODO: check that this is always span query
 			}
 			return spanOrQuery;
 		}
 		else {
-			return new SpanMultiTermQueryWrapper<TermRangeQuery>((TermRangeQuery) query);
+			Query rangeQuery = new SpanMultiTermQueryWrapper<TermRangeQuery>((TermRangeQuery) query);
+			return rangeQuery.rewrite(reader);
 		}
 	}
 }
