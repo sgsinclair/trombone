@@ -92,6 +92,9 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	
 	@XStreamOmitField
 	int distributionBins;
+	
+	@XStreamOmitField
+	int perDocLimit;
 
 	
 	/**
@@ -106,11 +109,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		distributionBins = parameters.getParameterIntValue("bins", 10);
 		isNeedsPositions = withDistributions || parameters.getParameterBooleanValue("withPositions");
 		isNeedsOffsets = parameters.getParameterBooleanValue("withOffsets");
+		perDocLimit = parameters.getParameterIntValue("perDocLimit", limit);
 	}
 	
 	@Override
 	public int getVersion() {
-		return super.getVersion()+3;
+		return super.getVersion()+5;
 	}
 
 	@Override
@@ -145,6 +149,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 					}
 				doc = spans.nextDoc();
 			}
+			FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit);
 			for (Map.Entry<Integer, List<Integer>> entry : positionsMap.entrySet()) {
 				List<Integer> positionsList = entry.getValue();
 				int freq = positionsList.size();
@@ -162,9 +167,14 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 					total++;
 					float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
 					DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], zscore, positions, null, corpusTermMinimal);
-					queue.offer(documentTerm);
+					docQueue.offer(documentTerm);
 					
 				}
+			}
+			int i = 0;
+			for (DocumentTerm docTerm : docQueue.getOrderedList()) {
+				queue.offer(docTerm);
+				if (++i>=perDocLimit) {break;}
 			}
 			positionsMap.clear(); // prepare for new entries
 		}
@@ -184,6 +194,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		Bits allBits = new Bits.MatchAllBits(reader.numDocs());
 		for (int doc : corpusMapper.getLuceneIds()) {
 			if (!docIdBitSet.get(doc)) {continue;}
+			FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit);
 			int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
 			String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
 			DocumentMetadata metadata = corpus.getDocument(docId).getMetadata();
@@ -221,12 +232,17 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 								total+=freq;
 								float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
 								DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
-								queue.offer(documentTerm);
+								docQueue.offer(documentTerm);
 							}
 						}
 						bytesRef = termsEnum.next();
 					}
 				}
+			}
+			int i = 0;
+			for (DocumentTerm docTerm : docQueue.getOrderedList()) {
+				queue.offer(docTerm);
+				if (++i>=perDocLimit) {break;}
 			}
 		}
 		corpusTermMinimalsDB.close();

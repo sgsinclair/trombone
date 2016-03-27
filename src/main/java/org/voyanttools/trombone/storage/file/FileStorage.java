@@ -135,7 +135,7 @@ public class FileStorage implements Storage {
 
 	@Override
 	public boolean hasStoredString(String id) {
-		return getFile(id).exists();
+		return getResourceFile(id).exists();
 	}
 
 	@Override
@@ -148,7 +148,7 @@ public class FileStorage implements Storage {
 	@Override
 	public void storeString(String string, String id) throws IOException {
 		if (!isStored(id)) {
-			FileUtils.writeStringToFile(getFile(id), string, "UTF-8");		
+			FileUtils.writeStringToFile(getResourceFile(id), string, "UTF-8");		
 		}
 	}
 
@@ -167,7 +167,7 @@ public class FileStorage implements Storage {
 	
 	@Override
 	public String retrieveString(String id) throws IOException {
-		File file = getFile(id);
+		File file = getResourceFile(id);
 		if (file.exists()==false) throw new IOException("An attempt was made to read a store string that that does not exist: "+id);
 		return FileUtils.readFileToString(file);
 	}
@@ -190,7 +190,9 @@ public class FileStorage implements Storage {
 		return new File(storageLocation,"object-storage");
 	}
 
-	private File getFile(String id) {
+	
+	File getResourceFile(String id) {
+		// package level for migrators
 		if (id==null) {
 			System.err.println(getObjectStoreDirectory()+"\t"+id);
 			
@@ -199,7 +201,7 @@ public class FileStorage implements Storage {
 	}
 	
 	public boolean copyResource(File source, String id) throws IOException {
-		File destination = getFile(id);
+		File destination = getResourceFile(id);
 		if (destination.exists()) {return false;}
 		FileUtils.copyFile(source, destination);
 		return true;
@@ -208,7 +210,7 @@ public class FileStorage implements Storage {
 
 	@Override
 	public boolean isStored(String id) {
-		return getFile(id).exists();
+		return getResourceFile(id).exists();
 	}
 
 	@Override
@@ -222,7 +224,7 @@ public class FileStorage implements Storage {
 
 	@Override
 	public void store(Object obj, String id) throws IOException {
-		File file = getFile(id);
+		File file = getResourceFile(id);
 		FileOutputStream fileOutputStream = new FileOutputStream(file);
 		ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
 		out.writeObject(obj);
@@ -233,7 +235,7 @@ public class FileStorage implements Storage {
 
 	@Override
 	public Object retrieve(String id) throws IOException, ClassNotFoundException {
-		File file = getFile(id);
+		File file = getResourceFile(id);
 		FileInputStream fileInputStream = new FileInputStream(file);
 		ObjectInputStream in = new ObjectInputStream(fileInputStream);
 		Object obj = in.readObject();
@@ -243,7 +245,7 @@ public class FileStorage implements Storage {
 
 	@Override
 	public Reader retrieveStringReader(String id) throws IOException {
-		File file = getFile(id);
+		File file = getResourceFile(id);
 		return new FileReader(file);
 	}
 
@@ -251,7 +253,7 @@ public class FileStorage implements Storage {
 
 	@Override
 	public Writer getStoreStringWriter(String id) throws IOException {
-		File file = getFile(id);
+		File file = getResourceFile(id);
 		return new FileWriter(file);
 	}
 
@@ -259,7 +261,7 @@ public class FileStorage implements Storage {
 
 	@Override
 	public DB getDB(String id, boolean readOnly) {
-		DBMaker maker = DBMaker.newFileDB(getFile(id))
+		DBMaker maker = DBMaker.newFileDB(getResourceFile(id))
 			.transactionDisable()
 			.closeOnJvmShutdown()
 			.mmapFileEnableIfSupported();
@@ -272,7 +274,7 @@ public class FileStorage implements Storage {
 	}
 	
 	public boolean existsDB(String id) {
-		return getFile(id).exists();
+		return getResourceFile(id).exists();
 	}
 
 	@Override
@@ -286,5 +288,5 @@ public class FileStorage implements Storage {
 	public NlpAnnotator getNlpAnnotator(String languageCode) {
 		return nlpAnnotatorFactory.getNlpAnnotator(languageCode);
 	}
-	
+
 }

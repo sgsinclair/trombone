@@ -167,7 +167,7 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		assert(FileTrombone4_1Migrator.class.isInstance(this));
 		return "trombone4_1";
 	}
-
+	
 	@Override
 	protected FlexibleParameters getCorpusCreationParameters() throws IOException {
 		File file = new File(getSourceTromboneCorpusDirectory(), "parameters.xml");

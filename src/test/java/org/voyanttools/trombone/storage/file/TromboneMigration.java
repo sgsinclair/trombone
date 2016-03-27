@@ -131,7 +131,7 @@ public class TromboneMigration {
 		FileTrombone4_1Migrator dummyMigrator = new FileTrombone4_1Migrator(storage, "");
 		Assert.assertNull(null, dummyMigrator.getMigratedCorpusId());
 		
-		// unzip trombone 4.0 contents
+		// unzip trombone 4.1 contents
 		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
 		oldStorageDirectory.mkdir();
 		File file = TestHelper.getResource("migration/trombone4_1.zip");
@@ -224,8 +224,76 @@ public class TromboneMigration {
 		file = FileMigrationFactory.getStoredObjectFile(storage, id);
 		assertNull(file);
 		
+		// test migration of recovered directory
+		File recoveryFile = new File(base, oldStorageDirectory.getName()+".2");
+		FileUtils.copyDirectory(oldStorageDirectory, new File(base, oldStorageDirectory.getName()+".1"));
+		FileUtils.copyDirectory(oldStorageDirectory, recoveryFile);
+		recoveryFile.setLastModified(recoveryFile.lastModified()+1); // make sure it's the most recent
+		
+		
+		
 		storage.destroy();
 		FileUtils.deleteDirectory(base);
 		
+	}
+	
+	@Test
+	public void testTromboneCurrent() throws IOException, ZipException {
+		
+		File base = new File(System.getProperty("java.io.tmpdir"), "_test_"+UUID.randomUUID());
+		FileStorage storage = new FileStorage(new File(base, FileStorage.DEFAULT_TROMBOME_DIRECTORY_NAME));
+		
+		// create a dummy migrator to get the proper destination directory for unzipping
+		FileTrombone4_1Migrator dummyMigrator = new FileTrombone4_1Migrator(storage, "");
+		Assert.assertNull(null, dummyMigrator.getMigratedCorpusId());
+		
+		// unzip trombone 4.1 contents
+		File oldStorageDirectory = dummyMigrator.getSourceTromboneDirectory();
+		oldStorageDirectory.mkdir();
+		File file = TestHelper.getResource("migration/trombone4_1.zip");
+		new ZipFile(file).extractAll(oldStorageDirectory.getPath());
+		
+		// test migration of recovered directory
+		File recoveryFile = new File(base, storage.storageLocation.getName()+".1");
+		FileUtils.copyDirectory(oldStorageDirectory, recoveryFile);
+		
+		FileMigrator migrator;
+		String id;
+		Corpus corpus;
+		String corpusIdToMigrate;
+
+		// test the bundle of formats
+		corpusIdToMigrate = "d0be1ce35c9941b21af22260a47938e2";
+		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		assertTrue(migrator instanceof FileTromboneCurrentMigrator);
+		id = migrator.getMigratedCorpusId();
+		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
+		assertTrue(storage.getCorpusStorage().corpusExists(id));
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(15, corpus.size());
+		for (IndexedDocument doc : corpus) {
+			Assert.assertFalse(doc.getMetadata().getTitle().equals("rawbytes"));
+		}
+		
+		// test handling of title and author metadata
+		corpusIdToMigrate = "e0a54420a5555aa00dacd1ccf0a2ba0e";
+		migrator = FileMigrationFactory.getMigrator(storage, corpusIdToMigrate);
+		assertTrue(migrator instanceof FileTromboneCurrentMigrator);
+		id = migrator.getMigratedCorpusId();
+		assertTrue(storage.getCorpusStorage().corpusExists(corpusIdToMigrate));
+		assertTrue(storage.getCorpusStorage().corpusExists(id));
+		corpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(1, corpus.size());
+		assertEquals("Il était une fois.", corpus.getDocument(0).getMetadata().getTitle());
+		assertEquals("un texte intéressant et un test. ⚠️", corpus.getDocument(0).getMetadata().getAuthor());
+		
+		// test migration of resources
+		id = "7f96fa278a1cc64fc298ab808bcc2682";
+		assertFalse(storage.isStored(id));
+		file = FileMigrationFactory.getStoredObjectFile(storage, id);
+		assertTrue(file.exists());
+		assertTrue(storage.copyResource(file, id));
+		assertTrue(storage.isStored(id));
+		assertTrue(file.getAbsolutePath().contains(recoveryFile.getPath()));
 	}
 }
