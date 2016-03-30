@@ -173,6 +173,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				queue.offer(corpusTerm);
 			}
 		}
+		corpusTermMinimalsDB.close();
 		return queue;
 	}
 	
