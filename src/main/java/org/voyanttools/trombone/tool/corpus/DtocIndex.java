@@ -65,7 +65,13 @@ public class DtocIndex extends AbstractTool {
 		
 		XmlExtractor extractor = new XmlExtractor(storedDocumentSourceStorage, indexParams);
 		
-		InputSource inputSource = extractor.getExtractableInputSource(storedDocumentSource);
+		InputSource inputSource;
+		
+		try {
+			inputSource = extractor.getExtractableInputSource(storedDocumentSource);
+		} catch (Exception e) {
+			throw new IllegalArgumentException("Unable to find index content ("+indexParams.getParameterValue("xmlContentXpath")+") in this document: "+metadata, e);
+		}
 		
 		InputStream inputStream = null;
 		String string;
@@ -75,7 +81,7 @@ public class DtocIndex extends AbstractTool {
 			string = IOUtils.toString(inputStream);
 		}
 		catch (IOException e) {
-			throw new IOException("Unable to read index from DToC file.", e);
+			throw new IOException("Unable to read index ("+indexParams.getParameterValue("xmlContentXpath")+") from DToC file: "+metadata, e);
 		}
 		finally {
 			if (inputStream != null) {
