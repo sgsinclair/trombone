@@ -109,7 +109,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		distributionBins = parameters.getParameterIntValue("bins", 10);
 		isNeedsPositions = withDistributions || parameters.getParameterBooleanValue("withPositions");
 		isNeedsOffsets = parameters.getParameterBooleanValue("withOffsets");
-		perDocLimit = parameters.getParameterIntValue("perDocLimit", limit);
+		perDocLimit = parameters.getParameterIntValue("perDocLimit", Integer.MAX_VALUE);
 	}
 	
 	@Override
@@ -194,7 +194,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		Bits allBits = new Bits.MatchAllBits(reader.numDocs());
 		for (int doc : corpusMapper.getLuceneIds()) {
 			if (!docIdBitSet.get(doc)) {continue;}
-			FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit);
+			FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit*docIdBitSet.length());
 			int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
 			String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
 			DocumentMetadata metadata = corpus.getDocument(docId).getMetadata();
