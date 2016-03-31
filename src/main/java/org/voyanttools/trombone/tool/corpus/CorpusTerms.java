@@ -100,7 +100,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+11;
+		return super.getVersion()+12;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -163,7 +163,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	 */
 	private FlexibleQueue<CorpusTerm> runAllTermsWithoutDistributions(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType==TokenType.lexical ? tokenType.name() : parameters.getParameterValue("tokenType"));
 		int totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
 		for (CorpusTermMinimal corpusTermMinimal : corpusTermMinimalsDB.values()) {
 			if (!stopwords.isKeyword(corpusTermMinimal.getTerm())) {
