@@ -133,15 +133,8 @@ public class TikaExtractor implements Extractor {
 	            handler.getTransformer().setOutputProperty(OutputKeys.INDENT, "yes"); 
 	            handler.setResult(new StreamResult(sw));
 	            parser.parse(input, handler, extractedMetadata, context);
-	        } catch (SAXException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (TikaException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (TransformerConfigurationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+	        } catch (Exception e) {
+	        	throw new IOException("Unable to parse document: "+storedDocumentSource.getMetadata(), e);
 			} finally { 
 	            input.close(); 
 	        }
