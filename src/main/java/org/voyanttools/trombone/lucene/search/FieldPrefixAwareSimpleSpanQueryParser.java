@@ -52,6 +52,14 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	public Query parse(String queryText) {
 		Query query = super.parse(queryText);
 		if (query instanceof SpanQuery) {
+			if (query instanceof SpanNearQuery) {
+				SpanQuery[] spanQueries = ((SpanNearQuery) query).getClauses();
+				if (spanQueries.length==1) {return spanQueries[0];}
+			}
+			if (query instanceof SpanOrQuery) {
+				SpanQuery[] spanQueries = ((SpanOrQuery) query).getClauses();
+				if (spanQueries.length==1) {return spanQueries[0];}
+			}
 			return query;
 		}
 		else if (query instanceof BooleanQuery) {
@@ -85,6 +93,11 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 				}
 			}
 			else {
+				// check to see if we have a bare phrase (no quotes, no or operator but still SpanOr)
+				if (q instanceof SpanOrQuery && query.indexOf(" ")>-1 && query.indexOf("|")==-1 && query.indexOf("\"")==-1) {
+					q = new SpanNearQuery(((SpanOrQuery) q).getClauses(), 0, true);
+					query = "\""+query+"\"";
+				}
 				map.put(query, (SpanQuery) q);
 			}
 			

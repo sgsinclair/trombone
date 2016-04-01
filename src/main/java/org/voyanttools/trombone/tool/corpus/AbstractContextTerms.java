@@ -32,8 +32,6 @@ import java.util.Set;
 
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.LeafReader;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.spans.SpanQuery;
@@ -42,7 +40,8 @@ import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.SpanQueryParser;
+import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
+import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -79,10 +78,9 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 	
 	protected Map<Integer, List<DocumentSpansData>> getDocumentSpansData(CorpusMapper corpusMapper, String[] queries) throws IOException {
 		
-		LeafReader LeafReader = corpusMapper.getLeafReader();
-		SpanQueryParser spanQueryParser = new SpanQueryParser(LeafReader, storage.getLuceneManager().getAnalyzer());
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
-		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
+		
+		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
+		Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
 		
 		Collection<DocumentSpansData> documentSpansDataList = new ArrayList<DocumentSpansData>();
 		
@@ -90,7 +88,7 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		BitSet bitSet = corpusMapper.getBitSetFromDocumentIds(ids);
 		
 //		CorpusTermsQueue queue = new CorpusTermsQueue(size, corpusTermSort);
-		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
+		for (Map.Entry<String, SpanQuery> spanQueryEntry : queriesMap.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			SpanQuery spanQuery = spanQueryEntry.getValue();
 			Spans spans = corpusMapper.getFilteredSpans(spanQuery, bitSet);
@@ -114,7 +112,7 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 					}
 					documentSpansDataList.add(new DocumentSpansData(doc, data, queryString));
 					spansDocDataList.clear();
-					total++;
+//					total++;
 				}
 				doc = spans.nextDoc();
 			}

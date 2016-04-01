@@ -50,8 +50,8 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 	@XStreamOmitField
 	protected TokenType tokenType;
 	
-	@XStreamOmitField
-	protected boolean isQueryCollapse;
+//	@XStreamOmitField
+//	protected boolean isQueryCollapse;
 	
 	/**
 	 * @param storage
@@ -63,7 +63,7 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 		start = parameters.getParameterIntValue("start", 0);
 		limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
 		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
-		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
+//		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
 	}
 
 

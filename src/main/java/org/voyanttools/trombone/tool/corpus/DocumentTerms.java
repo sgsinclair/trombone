@@ -31,8 +31,6 @@ import java.util.Map;
 
 import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.LeafReader;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.spans.SpanQuery;
@@ -41,7 +39,7 @@ import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.SpanQueryParser;
+import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
@@ -50,6 +48,7 @@ import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
+import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -119,27 +118,27 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
+		
+		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
+		Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
+
 	
-		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
 		Corpus corpus = corpusMapper.getCorpus();
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
-		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();
 		int size = start+limit;
 		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
 		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
-//		Bits docIdSet = corpusMapper.getDocIdOpenBitSetFromStoredDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		
 		BitSet bitset = corpusMapper.getBitSetFromDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		
-		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
+		for (Map.Entry<String, SpanQuery> spanQueryEntry : queriesMap.entrySet()) {
 			String queryString = spanQueryEntry.getKey();
 			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue(), bitset);
 			int doc = spans.nextDoc();
-			while(doc!=spans.NO_MORE_DOCS) {
+			while(doc!=Spans.NO_MORE_DOCS) {
 					int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
 					positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
 					int pos = spans.nextStartPosition();

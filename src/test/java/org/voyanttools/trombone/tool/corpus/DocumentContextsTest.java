@@ -157,7 +157,7 @@ public class DocumentContextsTest {
 		contexts = documentContexts.getContexts();
 		assertEquals(2, contexts.size());
 		assertTrue(contexts.get(0).getDocIndex()!=contexts.get(1).getDocIndex());
-		assertEquals(20, documentContexts.total);
+		assertEquals(10, documentContexts.total);
 		
 		// same, but with no total needed
 		parameters.addParameter("accurateTotalNotNeeded", "true");

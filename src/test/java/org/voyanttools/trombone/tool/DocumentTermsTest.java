@@ -51,7 +51,7 @@ public class DocumentTermsTest {
 		documentTerms = documentTermFrequencies.getDocumentTerms();
 		assertEquals(1, documentTerms.size());
 		documentTerm = documentTerms.get(0);
-		assertEquals("dark", documentTerm.getTerm());
+		assertEquals("dar*", documentTerm.getTerm());
 		assertEquals(1, documentTerm.getRawFrequency());
 		assertEquals(0, documentTerm.getDocumentIndex());
 		
@@ -63,11 +63,11 @@ public class DocumentTermsTest {
 		assertEquals(2, documentTerms.size());
 		documentTerm = documentTerms.get(0);
 		assertEquals(1, documentTerm.getDocumentIndex());
-		assertEquals("it was", documentTerm.getTerm());
+		assertEquals("\"it was\"", documentTerm.getTerm());
 		assertEquals(2, documentTerm.getRawFrequency());
 		documentTerm = documentTerms.get(1);
 		assertEquals(0, documentTerm.getDocumentIndex());
-		assertEquals("it was", documentTerm.getTerm());
+		assertEquals("\"it was\"", documentTerm.getTerm());
 		assertEquals(1, documentTerm.getRawFrequency());
 		
 		parameters.removeParameter("query");

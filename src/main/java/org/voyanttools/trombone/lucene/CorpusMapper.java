@@ -196,17 +196,6 @@ public class CorpusMapper {
 	}
 	
 	/**
-	 * Get a Spans that filters for the specified document IDs.
-	 * @param spanQuery
-	 * @param ids
-	 * @return
-	 * @throws IOException
-	 */
-	public Spans getFilteredSpans(SpanQuery spanQuery, Collection<String> ids) throws IOException {
-		return getFilteredSpans(spanQuery, this.getBitSetFromDocumentIds(ids));
-	}
-	
-	/**
 	 * Get a Spans that filters for the specified BitSet.
 	 * @param spanQuery
 	 * @param bitSet

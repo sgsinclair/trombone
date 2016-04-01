@@ -307,7 +307,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	
 	private void addToQueueFromTermWithoutDistributions(FlexibleQueue<CorpusTerm> queue, String queryString, Term term, CorpusTermMinimalsDB corpusTermMinimalsDB, int corpusSize) throws IOException {
 		CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(term.text());
-		CorpusTerm corpusTerm = new CorpusTerm(term.text(), corpusTermMinimal==null ? 0 : corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal==null ? 0 :corpusTermMinimal.getInDocumentsCount(), corpusSize);
+		CorpusTerm corpusTerm = new CorpusTerm(queryString, corpusTermMinimal==null ? 0 : corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal==null ? 0 :corpusTermMinimal.getInDocumentsCount(), corpusSize);
 		offer(queue, corpusTerm);
 	}
 
@@ -323,13 +323,12 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int docIndexInCorpus = -1; // this should always be changed on the first span
 		int tokensCounts[] = corpus.getTokensCounts(tokenType);
 		Map<Integer, AtomicInteger> positionsMap = new HashMap<Integer, AtomicInteger>();
-		int lastDoc = -1;
 		int totalTokens = corpus.getTokensCount(tokenType);
 		int doc = spans.nextDoc();
-		while(doc!=spans.NO_MORE_DOCS) {
+		while(doc!=Spans.NO_MORE_DOCS) {
 			docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
 			int pos = spans.nextStartPosition();
-			while (pos!=spans.NO_MORE_POSITIONS) {
+			while (pos!=Spans.NO_MORE_POSITIONS) {
 				if (positionsMap.containsKey(docIndexInCorpus)==false) {
 					positionsMap.put(docIndexInCorpus, new AtomicInteger(1));
 				}

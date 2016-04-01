@@ -9,7 +9,6 @@ import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.Filter;
 import org.apache.lucene.util.BitDocIdSet;
-import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.Bits;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 

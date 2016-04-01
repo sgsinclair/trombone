@@ -51,16 +51,6 @@ public class CorpusTermsTest {
 		CorpusTerms corpusTermFrequencies;
 		List<CorpusTerm> corpusTerms;
 		
-		/*
-		parameters.setParameter("query", "dar*");
-		corpusTermFrequencies = new CorpusTerms(storage, parameters);
-		corpusTermFrequencies.run();		
-		corpusTerms = corpusTermFrequencies.getCorpusTerms();
-		assertEquals(1, corpusTerms.size());
-		corpusTerm = corpusTerms.get(0);
-		assertEquals("dar*", corpusTerm.getTerm());
-		assertEquals(1, corpusTerm.getRawFreq());
-		
 		// we're expanding the term here
 		parameters.setParameter("query", "dar*");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
@@ -70,7 +60,6 @@ public class CorpusTermsTest {
 		corpusTerm = corpusTerms.get(0);
 		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
-		*/
 		
 		parameters.setParameter("query", "\"it was\"");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
@@ -83,6 +72,17 @@ public class CorpusTermsTest {
 		assertEquals("\"it was\"", corpusTerm.getTerm());
 		assertEquals(3, corpusTerm.getRawFreq());
 
+		// phrase with no quotes (treated as a phrase)
+		parameters.setParameter("query", "it was");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		// we sort by reverse frequency by default
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+//		assertEquals(1, corpusTerm.getDocumentIndex());
+		assertEquals("\"it was\"", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
 
 		// we don't want "document" from the first document
 		parameters.setParameter("query", "document");
@@ -119,6 +119,29 @@ public class CorpusTermsTest {
 		corpusTerm = corpusTerms.get(0);
 		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
+
+		parameters.setParameter("query", "\"it was\"");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		// we sort by reverse frequency by default
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+//		assertEquals(1, corpusTerm.getDocumentIndex());
+		assertEquals("\"it was\"", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
+
+		// phrase with no quotes (treated as a phrase)
+		parameters.setParameter("query", "it was");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		// we sort by reverse frequency by default
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+//		assertEquals(1, corpusTerm.getDocumentIndex());
+		assertEquals("\"it was\"", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
 		
 		parameters.setParameter("query", "d[a-z]rk");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);

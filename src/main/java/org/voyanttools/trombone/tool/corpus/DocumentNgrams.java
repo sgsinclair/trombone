@@ -30,8 +30,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.lucene.index.DocsAndPositionsEnum;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
@@ -39,10 +37,11 @@ import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.SpanQueryParser;
+import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentNgram;
 import org.voyanttools.trombone.model.Keywords;
+import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -103,14 +102,14 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 
 	List<DocumentNgram> getNgrams(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		SpanQueryParser spanQueryParser = new SpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
+		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
+		Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
+
 		Corpus corpus = corpusMapper.getCorpus();
-		Map<String, SpanQuery> spanQueries = spanQueryParser.getSpanQueriesMap(queries, tokenType, isQueryCollapse);
-		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		int docIndexInCorpus; // this should always be changed on the first span
 		Map<Integer, Map<String, List<int[]>>> docTermPositionsMap = new HashMap<Integer, Map<String, List<int[]>>>();
 		
-		for (Map.Entry<String, SpanQuery> spanQueryEntry : spanQueries.entrySet()) {
+		for (Map.Entry<String, SpanQuery> spanQueryEntry : queriesMap.entrySet()) {
 //			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue());
 			Map<Integer, List<int[]>> documentAndPositionsMap = new HashMap<Integer, List<int[]>>();
