@@ -5,6 +5,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -19,7 +20,6 @@ import org.apache.lucene.facet.sortedset.SortedSetDocValuesReaderState;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanClause.Occur;
-import org.apache.lucene.util.ArrayUtil;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.PrefixQuery;
@@ -49,7 +49,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(CorpusFacets.CorpusFacetsConverter.class)
 public class CorpusFacets extends AbstractTerms {
 	
-	private List<FacetResult> facetResults = new ArrayList<FacetResult>();
+	private List<LabelAndValueAndDim> facetResults = new ArrayList<LabelAndValueAndDim>();
 
 	/**
 	 * @param storage
@@ -113,13 +113,22 @@ public class CorpusFacets extends AbstractTerms {
 		    			result = checkQuery(baseQuery, result);
 		    		}
 		    		if (result.labelValues.length>1 || queryStrings.length>1) {
-		    			facetResults.add(new FacetResult(result.dim.replace("facet.", ""), result.path, result.value, new LabelAndValue[]{new LabelAndValue(queryString, result.labelValues.length)}, result.childCount));
+		    			addResult(new FacetResult(result.dim.replace("facet.", ""), result.path, result.value, new LabelAndValue[]{new LabelAndValue(queryString, result.labelValues.length)}, result.childCount));
 		    		}
-		    	}
-				facetResults.add(result);
+		    	} 
+//		    	else {
+		    		addResult(result);
+//		    	}
+//				facetResults.add(result);
 		    }
 		}
-		
+		Collections.sort(facetResults);
+	}
+	
+	private void addResult(FacetResult result) {
+		for (LabelAndValue labelAndValue : result.labelValues) {
+			facetResults.add(new LabelAndValueAndDim(labelAndValue, result.dim));
+		}
 	}
 
 	private FacetResult checkQuery(Query query, FacetResult result) {
@@ -181,6 +190,20 @@ public class CorpusFacets extends AbstractTerms {
 		}
 	}
 	
+	private class LabelAndValueAndDim implements Comparable<LabelAndValueAndDim> {
+		private LabelAndValue labelAndValue;
+		private String dim;
+		private LabelAndValueAndDim(LabelAndValue labelAndValue, String dim) {
+			this.labelAndValue = labelAndValue;
+			this.dim = dim;
+		}
+
+		@Override
+		public int compareTo(LabelAndValueAndDim o) {
+			return labelAndValue.value==o.labelAndValue.value ? labelAndValue.label.compareTo(o.labelAndValue.label) : Integer.compare(o.labelAndValue.value.intValue(), labelAndValue.value.intValue());
+		}
+	}
+	
 	public static class CorpusFacetsConverter implements Converter {
 
 		/* (non-Javadoc)
@@ -201,21 +224,19 @@ public class CorpusFacets extends AbstractTerms {
 			
 			int total = 0;
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "facets", Map.class);
-			for (FacetResult facetResult : corpusFacets.facetResults) {
-				for (LabelAndValue labelValue : facetResult.labelValues) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "labels", String.class); // not written in JSON
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "facet", String.class);
-					writer.setValue(facetResult.dim);
-					writer.endNode();
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "label", String.class);
-					writer.setValue(labelValue.label);
-					writer.endNode();
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "inDocumentsCount", Integer.class);
-					writer.setValue(String.valueOf(labelValue.value));
-					writer.endNode();
-					writer.endNode();
-					total++;
-				}
+			for (LabelAndValueAndDim facetResult : corpusFacets.facetResults) {
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "labels", String.class); // not written in JSON
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "facet", String.class);
+				writer.setValue(facetResult.dim);
+				writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "label", String.class);
+				writer.setValue(facetResult.labelAndValue.label);
+				writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "inDocumentsCount", Integer.class);
+				writer.setValue(String.valueOf(facetResult.labelAndValue.value));
+				writer.endNode();
+				writer.endNode();
+				total++;
 			}
 			writer.endNode();
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
