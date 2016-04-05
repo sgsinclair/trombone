@@ -6,7 +6,6 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -17,9 +16,13 @@ import java.util.UUID;
 import org.apache.lucene.facet.DrillDownQuery;
 import org.apache.lucene.facet.FacetsConfig;
 import org.apache.lucene.queryparser.simple.SimpleQueryParser;
-import org.apache.lucene.search.Filter;
+import org.apache.lucene.search.BooleanClause.Occur;
+import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.PhraseQuery;
+import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.TermQuery;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
@@ -68,34 +71,35 @@ public class DocumentsFinder extends AbstractTerms {
 	
 	@Override
 	public int getVersion() {
-		return super.getVersion()+3;
+		return super.getVersion()+5;
 	}
 
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
+		corpusId = corpus.getId();
 		total = corpus.size();
 		
 		IndexSearcher indexSearcher = corpusMapper.getSearcher();
 		boolean createNewCorpus = parameters.getParameterBooleanValue("createNewCorpus");
 		
-		for (Query query : getFacetAwareQueries(corpusMapper, getQueries(queries))) {
-			LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-			indexSearcher.search(query, collector);
-			if (createNewCorpus || includeDocIds || withDistributions) {
-				Set<Integer> docs = collector.getLuceneDocIds();
-				String[] ids = new String[docs.size()];
-				int i =0;
-				for (int doc : docs) {
-					ids[i] = corpusMapper.getDocumentIdFromLuceneId(doc);
-					i++;
-				}
-				queryDocumentidsMap.put(query.toString(), ids);
+		Query query = getFacetAwareQuery(corpusMapper, queries);
+		LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
+		indexSearcher.search(query, collector);
+		if (createNewCorpus || includeDocIds || withDistributions) {
+			Set<Integer> docs = collector.getLuceneDocIds();
+			String[] ids = new String[docs.size()];
+			int i =0;
+			for (int doc : docs) {
+				ids[i] = corpusMapper.getDocumentIdFromLuceneId(doc);
+				i++;
 			}
-			else {
-				queryDocumentidsMap.put(query.toString(), new String[collector.getInDocumentsCount()]);
-			}
+			queryDocumentidsMap.put(query.toString(), ids);
 		}
+		else {
+			queryDocumentidsMap.put(query.toString(), new String[collector.getInDocumentsCount()]);
+		}
+		
 		if (withDistributions && distributions.length>0) {
 			Set<String> matches = new HashSet<String>();
 			for (Map.Entry<String, String[]> entry : queryDocumentidsMap.entrySet()) {
@@ -146,10 +150,72 @@ public class DocumentsFinder extends AbstractTerms {
 		}
 	}
 	
-	private Collection<Query> getFacetAwareQueries(CorpusMapper corpusMapper, String[] queryStrings) throws IOException {
+	private Query getFacetAwareQuery(CorpusMapper corpusMapper, String[] queryStrings) throws IOException {
 		
 		FacetsConfig config = new FacetsConfig();
 		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
+		
+
+		Map<String, List<Query>> fieldedQueries = new HashMap<String, List<Query>>();
+		for (String queryString : queryStrings) {
+			if (queryString.startsWith("facet.") && queryString.contains(":")) {
+				String field = queryString.substring(0, queryString.indexOf(":"));
+				DrillDownQuery ddq = new DrillDownQuery(config);
+				ddq.add(queryString.substring(0, queryString.indexOf(":")), queryString.substring(queryString.indexOf(":")+1));
+				if (!fieldedQueries.containsKey(field)) {fieldedQueries.put(field, new ArrayList<Query>());}
+				fieldedQueries.get(field).add(ddq);
+			}
+			else {
+				Query query = queryParser.parse(queryString);
+				String field = query.toString();
+				if (query instanceof TermQuery) {field = ((TermQuery) query).getTerm().field();}
+				else if (query instanceof PrefixQuery) {field = ((PrefixQuery) query).getField();}
+				else if (query instanceof PhraseQuery) {field = ((PhraseQuery) query).getTerms()[0].field();}
+				else {
+					System.out.println(query);
+				}
+				if (!fieldedQueries.containsKey(field)) {fieldedQueries.put(field, new ArrayList<Query>());}
+				fieldedQueries.get(field).add(query);
+			}
+		}
+
+		
+		List<Query> queries = new ArrayList<Query>();
+		for (List<Query> queriesSet : fieldedQueries.values()) {
+			if (queriesSet.size()==1) {queries.add(queriesSet.get(0));}
+			else {
+				BooleanQuery.Builder builder = new BooleanQuery.Builder();
+				for (Query query : queriesSet) {
+					builder.add(query, Occur.SHOULD);
+				}
+				queries.add(builder.build());
+			}
+		}
+		
+		if (queries.size()==1) {return corpusMapper.getFilteredQuery(queries.get(0));}
+		BooleanQuery.Builder builder = new BooleanQuery.Builder();
+		for (Query query : queries) {
+			builder.add(query, Occur.MUST);
+		}
+		return corpusMapper.getFilteredQuery(builder.build());
+		
+		/*
+			if (query.startsWith("facet.")==false) {
+				Query q = corpusMapper.getFilteredQuery(queryParser.parse(query));
+				if (facetQueryStrings.isEmpty()) {
+					queries.add(q);
+				}
+				else {
+					DrillDownQuery ddq = new DrillDownQuery(config, q);
+					for (String[] parts : facetQueryStrings) {
+						ddq.add(parts[0], parts[1]);
+					}
+					queries.add(ddq);
+				}
+				
+			}
+		}
+		
 		
 		Collection<String[]> facetQueryStrings = new HashSet<String[]>();
 		for (String query : queryStrings) {
@@ -184,8 +250,16 @@ public class DocumentsFinder extends AbstractTerms {
 				ddq.add(parts[0], parts[1]);
 			}
 			queries.add(ddq);
+		} else if (queries.size()>1  && facetQueryStrings.isEmpty()) {
+			BooleanQuery.Builder builder = new BooleanQuery.Builder();
+			for (Query query : queries) {
+				builder.add(query, Occur.MUST);
+			}
+			queries.clear();
+			queries.add(builder.build());
 		}
 		return queries;
+		*/
 		
 	}
 	
@@ -206,9 +280,9 @@ public class DocumentsFinder extends AbstractTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer,
 				MarshallingContext context) {
 			DocumentsFinder finder = (DocumentsFinder) source;
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "corpus", String.class);
-			writer.setValue(finder.corpusId);
-			writer.endNode();
+//	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "corpus", String.class);
+//			writer.setValue(finder.corpusId);
+//			writer.endNode();
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documentsCount", Integer.class);
 			writer.setValue(String.valueOf(finder.total));
 			writer.endNode();
