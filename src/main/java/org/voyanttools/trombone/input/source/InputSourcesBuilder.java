@@ -44,30 +44,40 @@ public class InputSourcesBuilder {
 	}
 	
 	public static boolean hasParameterSources(FlexibleParameters parameters) {
-		for (String p : new String[]{"file","string","uri","upload"}) {
+		for (String p : new String[]{"file","string","uri","upload","archive"}) {
 			if (parameters.getParameterValue(p,"").isEmpty()==false) {return true;}
 		}
 		return false;
 	}
 
 	public List<InputSource> getInputSources() throws IOException {
+		List<InputSource> inputSources = getInputSources(parameters);
+		FlexibleParameters storedparams = parameters.deepClone();
+		for (String key : new String[]{"upload", "string", "uri", "archive", "tool"}) storedparams.removeParameter(key);
+		for (InputSource inputSource : inputSources) {
+			inputSource.getMetadata().setQueryParameters(storedparams);
+		}
+		return inputSources;
+	}
+	
+	private List<InputSource> getInputSources(FlexibleParameters params) throws IOException {
 		List<InputSource> inputSources = new ArrayList<InputSource>();
-		for (String file : parameters.getParameterValues("file")) {
+		for (String file : params.getParameterValues("file")) {
 			inputSources.addAll(getInputSources(new File(file)));
 		}
 
-		for (String file : parameters.getParameterValues("upload")) {
+		for (String file : params.getParameterValues("upload")) {
 			File f = new File(file);
 			InputSource inputSource = new FileInputSource(f);
 			inputSource.getMetadata().setLocation(f.getName());
 			inputSources.add(inputSource);
 		}
 		
-		for (String string : parameters.getParameterValues("string")) {
+		for (String string : params.getParameterValues("string")) {
 			inputSources.add(new StringInputSource(string));
 		}
 
-		for (String uriString : parameters.getParameterValues("uri")) {
+		for (String uriString : params.getParameterValues("uri")) {
 			URI uri;
 			try {
 				uri = new URI(uriString);
@@ -77,12 +87,24 @@ public class InputSourcesBuilder {
 			}
 			inputSources.add(new UriInputSource(uri));
 		}
-		FlexibleParameters storedparams = parameters.deepClone();
-		for (String key : new String[]{"upload", "string", "uri", "tool"}) storedparams.removeParameter(key);
-		for (InputSource inputSource : inputSources) {
-			inputSource.getMetadata().setQueryParameters(storedparams);
-		}
 		
+		for (String archive : params.getParameterValues("archive")) {
+			FlexibleParameters pms = params.deepClone();
+			for (String key : new String[]{"upload", "string", "uri", "archive", "tool"}) pms.removeParameter(key);
+			if (archive.startsWith("http")) {
+				for (String uri : archive.split("(\r\n|\r|\n)+")) {
+					if (uri.startsWith("http")) {
+						pms.addParameter("uri", uri);
+					}
+				}
+				if (pms.getParameterValues("uri").length>0) {
+					inputSources.addAll(getInputSources(pms));
+				}
+			}  else {
+				pms.addParameter("string", archive);
+				inputSources.addAll(getInputSources(pms));
+			}
+		}
 		return inputSources;
 	}
 	
