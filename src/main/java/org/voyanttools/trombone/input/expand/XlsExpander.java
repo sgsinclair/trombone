@@ -233,12 +233,10 @@ public class XlsExpander implements Expander {
 	private List<String> getValues(Row row, List<Integer> cells) {
 		List<String> strings = new ArrayList<String>();
 		for (int i : cells) {
-			System.err.println(i);
-			System.err.println(row);
 			Cell cell = row.getCell(i);
 			if (cell!=null) {
-				String s = cell.getStringCellValue().trim();
-				if (s.isEmpty()==false) {
+				String s = getValue(cell);
+				if (s!=null && s.isEmpty()==false) {
 					strings.add(s);
 				}
 			}
@@ -261,11 +259,25 @@ public class XlsExpander implements Expander {
 		if (cell==null) return "";
 		
 		if (cell.getCellType()==Cell.CELL_TYPE_STRING) {
-			String value = cell.getStringCellValue();
+			String value = getValue(cell);
 			return value == null ? "" : value.trim();
 		}
 		else  return "";
 		
+	}
+	
+	private String getValue(Cell cell) {
+		if (cell!=null) {
+			switch (cell.getCellType()) {
+				case Cell.CELL_TYPE_STRING:
+					return cell.getStringCellValue().trim();
+				case Cell.CELL_TYPE_FORMULA:
+					return cell.getCellFormula().trim();
+				case Cell.CELL_TYPE_NUMERIC:
+					return String.valueOf(cell.getNumericCellValue()).trim();
+			}
+		}
+		return null;
 	}
 	
 	private List<List<Integer>> getInts(String key, boolean decrement) {
