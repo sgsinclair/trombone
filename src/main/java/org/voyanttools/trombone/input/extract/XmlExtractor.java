@@ -359,7 +359,7 @@ public class XmlExtractor implements Extractor, Serializable {
 					String[] parts = x.split("=");
 					if (parts.length>1) {
 						String key = parts[0].trim();
-						String xpath = StringUtils.join(Arrays.copyOfRange(parts, 1, parts.length)).trim();
+						String xpath = StringUtils.join(Arrays.copyOfRange(parts, 1, parts.length), "=").trim();
 						String[] values = getNodesAsStringsFromXpath(doc, xpath);
 						if (values.length>0) {
 							metadata.setExtras(key, values);

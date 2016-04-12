@@ -45,7 +45,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  * 
  * @author Stéfan Sinclair
  */
-class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
+public class FileStoredDocumentSourceStorage implements StoredDocumentSourceStorage {
 
 	/**
 	 * the raw bytes file name

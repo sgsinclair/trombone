@@ -81,6 +81,8 @@ public class StoredDocumentSourceExpander implements Expander {
 	 */
 	private Expander xslExpander;
 
+	private Expander obApiSearchJsonExpander;
+
 	/**
 	 * Create a new instance of this expander with the specified storage
 	 * strategy.
@@ -179,9 +181,15 @@ public class StoredDocumentSourceExpander implements Expander {
 		else if (format == DocumentFormat.XLSX) {
 			storedDocumentSources.addAll(expandXsl(storedDocumentSource));
 		}
+		
+		else if (format == DocumentFormat.OBAPISEARCHJSON) {
+			storedDocumentSources.addAll(expandObApiSearchJson(storedDocumentSource));
+		}
+
 		else if (format.isXml()) {
 			storedDocumentSources.addAll(expandXml(storedDocumentSource));
 		}
+		
 
 		// no expansion needed or known
 		else {
@@ -189,6 +197,13 @@ public class StoredDocumentSourceExpander implements Expander {
 		}
 
 		return storedDocumentSources;
+	}
+
+	private List<StoredDocumentSource> expandObApiSearchJson(StoredDocumentSource storedDocumentSource) throws IOException {
+		if (this.obApiSearchJsonExpander==null) {
+			this.obApiSearchJsonExpander = new ObApiSearchExpander(storedDocumentSourceStorage, parameters);
+		}
+		return obApiSearchJsonExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
 
 	List<StoredDocumentSource> expandXsl(StoredDocumentSource storedDocumentSource) throws IOException {

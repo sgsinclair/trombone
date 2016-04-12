@@ -73,7 +73,7 @@ public class FileStorage implements Storage {
 	/**
 	 * the actual base directory used for storage
 	 */
-	File storageLocation;
+	public File storageLocation;
 	
 	/**
 	 * the handler for InputSource operations

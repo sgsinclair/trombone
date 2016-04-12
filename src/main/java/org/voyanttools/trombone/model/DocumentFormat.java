@@ -128,6 +128,16 @@ public enum DocumentFormat {
 	ODT("odt"),
 	
 	/**
+	 * For Old Bailey adapter http://www.oldbaileyonline.org/obapi/
+	 */
+	OBAPISEARCHJSON("json"),
+	
+	/**
+	 * Old Bailey XML
+	 */
+	OLDBAILEYXML("xml"),
+	
+	/**
 	 * An archive file ("ar", "cpio", "dump", "jar", "tar", "tgz", "tbz2", "zip")
 	 */
 	ARCHIVE("zip", "cpio", "dump", "jar", "tar.gz", "tar", "tgz", "ar"),
@@ -146,7 +156,7 @@ public enum DocumentFormat {
 			return true;
 		}
 	},
-
+	
 	/**
 	 * Test files. We'll put this last because of content types that declare things like text/html (we want HTML)
 	 */
