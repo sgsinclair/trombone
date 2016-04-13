@@ -172,7 +172,6 @@ public class CorpusMetadata implements Serializable {
 				MarshallingContext context) {
 			final CorpusMetadata corpusMetadata = ((CorpusMetadata) source);
 			
-			
 //			writer.startNode("id");
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
 			writer.setValue(corpusMetadata.getId());

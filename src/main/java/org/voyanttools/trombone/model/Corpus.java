@@ -167,7 +167,7 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return CorpusAccess.NORMAL;
 	}
 	
-	public String[] getLanguageCodes() throws IOException {
+	public String[] getLanguageCodes(boolean upateStorage) throws IOException {
 		String[] languages = getCorpusMetadata().getLanguageCodes();
 		if (languages!=null && languages.length>0) {
 			return languages;
@@ -182,7 +182,9 @@ public class Corpus implements Iterable<IndexedDocument> {
 			if (languagesSet.isEmpty()) {languagesSet.add("??");}
 			languages = languagesSet.toArray(new String[0]);
 			getCorpusMetadata().setLanguageCodes(languages);
-			storage.getCorpusStorage().updateStoredMetadata(this);
+			if (upateStorage) {
+				storage.getCorpusStorage().updateStoredMetadata(this);
+			}
 			return languages;
 		}
 	}

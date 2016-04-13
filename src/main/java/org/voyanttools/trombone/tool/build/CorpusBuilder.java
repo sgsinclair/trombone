@@ -91,6 +91,7 @@ public class CorpusBuilder extends AbstractTool {
 			metadata.setDocumentIds(documentIds);
 			Corpus corpus = new Corpus(storage, metadata);
 			
+			corpus.getLanguageCodes(false); // make sure this is called
 			setAccessManagement(metadata);
 			indexCorpusTerms(corpus);
 			
@@ -106,6 +107,7 @@ public class CorpusBuilder extends AbstractTool {
 			CorpusMetadata newCorpusMetadata = new CorpusMetadata(params);
 			Corpus newCorpus = new Corpus(storage, newCorpusMetadata);
 			
+			corpus.getLanguageCodes(false); // make sure this is called
 			setAccessManagement(newCorpusMetadata);
 			indexCorpusTerms(corpus);
 

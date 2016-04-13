@@ -34,14 +34,15 @@ public class CorpusMetadata extends AbstractCorpusTool  {
 	public CorpusMetadata(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
-
+	
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
+		corpusMapper.getCorpus().getLanguageCodes(true); // make sure we have language codes before serialization
 		metadata = corpusMapper.getCorpus().getCorpusMetadata();
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+1;
+		return super.getVersion()+2;
 	}
 
 }
