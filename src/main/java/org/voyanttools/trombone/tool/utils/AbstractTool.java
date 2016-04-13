@@ -21,14 +21,19 @@
  ******************************************************************************/
 package org.voyanttools.trombone.tool.utils;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Files;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
@@ -97,21 +102,29 @@ public abstract class AbstractTool implements RunnableTool {
 		Keywords keywords = new Keywords();
 		if (parameters.containsKey("stopList")) {
 			if (parameters.getParameterValue("stopList", "").equals("auto")) {
-				Map<String,String> langs = new HashMap<String,String>();
-				for (IndexedDocument document : corpus) {
-					String lang = document.getMetadata().getLanguageCode();
-					if (langs.containsKey(lang)==false) {
-						if (lang.isEmpty() || lang.equals("en")) {langs.put(lang, "stop.en.taporware.txt");}
-						else if (lang.equals("de")) {langs.put(lang, "stop.de.german.txt");}
-						else if (lang.equals("fr")) {langs.put(lang, "stop.fr.veronis.txt");}
-						else if (lang.equals("hu")) {langs.put(lang, "stop.hu.hungarian.txt");}
-						else if (lang.equals("it")) {langs.put(lang, "stop.it.italian.txt");}
-						else if (lang.equals("no")) {langs.put(lang, "stop.no.norwegian.txt");}
-						else if (lang.equals("se")) {langs.put(lang, "stop.se.swedish.txt");}
+				Set<String> langs = new HashSet<String>();
+				URL url = this.getClass().getResource("/org/voyanttools/trombone/keywords");
+				File dir = new File(url.getFile());
+				Map<String, String> stopLists = new HashMap<String, String>();
+				if (dir.exists() && dir.isDirectory()) {
+					for (File file : dir.listFiles()) {
+						String filename = file.getName();
+						if (file.isFile() && filename.startsWith("stop.")) {
+							String langCode = filename.substring(5, filename.indexOf('.', 5));
+							stopLists.put(langCode, filename);
+						}
+					}
+				}
+				for (String lang : corpus.getLanguageCodes()) {
+					if (lang.isEmpty() || lang.equals("en")) {langs.add("stop.en.taporware.txt");}
+					else if (lang.equals("fr")) {langs.add("stop.fr.veronis.txt");}
+					else if (lang.equals("se")) {langs.add("stop.se.long.txt");}
+					else if (stopLists.containsKey(lang)) {
+						langs.add(stopLists.get(lang));
 					}
 				}
 				if (langs.isEmpty()==false) {
-					keywords.load(storage, langs.values().toArray(new String[0]));
+					keywords.load(storage, langs.toArray(new String[0]));
 				}
 			}
 			else {

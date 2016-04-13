@@ -24,9 +24,11 @@ package org.voyanttools.trombone.model;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.corpus.AbstractCorpusTool;
@@ -165,6 +167,27 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return CorpusAccess.NORMAL;
 	}
 	
+	public String[] getLanguageCodes() throws IOException {
+		String[] languages = getCorpusMetadata().getLanguageCodes();
+		if (languages!=null && languages.length>0) {
+			return languages;
+		} else {
+			Set<String> languagesSet = new HashSet<String>();
+			for (IndexedDocument indexedDocument : this) {
+				String lang = indexedDocument.getMetadata().getLanguageCode();
+				if (lang!=null && lang.isEmpty()==false) {
+					languagesSet.add(lang);
+				}
+			}
+			if (languagesSet.isEmpty()) {languagesSet.add("??");}
+			languages = languagesSet.toArray(new String[0]);
+			getCorpusMetadata().setLanguageCodes(languages);
+			storage.getCorpusStorage().updateStoredMetadata(this);
+			return languages;
+		}
+	}
+
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Corpus)) {return false;}
@@ -177,4 +200,5 @@ public class Corpus implements Iterable<IndexedDocument> {
 		}
 		return true;
 	}
+
 }

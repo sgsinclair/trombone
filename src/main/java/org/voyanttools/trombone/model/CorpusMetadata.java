@@ -152,6 +152,14 @@ public class CorpusMetadata implements Serializable {
 		return CorpusAccess.getForgivingly(this.getProperty("noPasswordAccess"));
 	}
 	
+	public String[] getLanguageCodes() {
+		return parameters.getParameterValues("languageCodes");
+	}
+
+	public void setLanguageCodes(String[] languageCodes) {
+		parameters.setParameter("languageCodes", languageCodes);
+	}
+	
 	public static class CorpusMetadataConverter implements Converter {
 
 		@Override
@@ -195,6 +203,10 @@ public class CorpusMetadata implements Serializable {
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "noPasswordAccess", String.class);
 			writer.setValue(corpusMetadata.getNoPasswordAccess().name());
 			writer.endNode();
+			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "languageCodes", List.class);
+	        context.convertAnother(corpusMetadata.getLanguageCodes());
+	        writer.endNode();
 		}
 
 		@Override

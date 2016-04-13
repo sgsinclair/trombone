@@ -74,4 +74,9 @@ class MemoryCorpusStorage implements CorpusStorage {
 		return true; // no exception thrown
 	}
 
+	@Override
+	public void updateStoredMetadata(Corpus corpus) throws IOException {
+		// nothing to do, it's already stored in memory
+	}
+
 }
