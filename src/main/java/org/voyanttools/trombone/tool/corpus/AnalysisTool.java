@@ -96,6 +96,8 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		
 		Map<String, float[]> termDistributionsMap = new HashMap<String, float[]>();
 		// if there are enough docs, get document terms
+		
+		int[] tokenCounts = corpusMapper.getCorpus().getTokensCounts(TokenType.lexical); 
 		if (numDocs >= minDims) {
 			divisionType = DivisionType.DOCS;
 			
@@ -114,9 +116,8 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 					float[] tfidfDist = new float[rawDist.length];
 					for (int i = 0; i < rawDist.length; i++) {
 						int rawFreq = rawDist[i];
-						int totalTermsCount = corpus.getDocument(i).getMetadata().getTokensCount(TokenType.lexical);
 						int inDocuments = ct.getInDocumentsCount();
-						float tfidf = ((float) rawFreq / (float) totalTermsCount) * (float) Math.log10((float) corpus.size() / (float) inDocuments);
+						float tfidf = ((float) rawFreq / (float) tokenCounts[i]) * (float) Math.log10((float) corpus.size() / (float) inDocuments);
 						tfidfDist[i] = tfidf;
 					}
 					termDistributionsMap.put(term, tfidfDist);

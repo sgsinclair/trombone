@@ -191,15 +191,18 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		DocsAndPositionsEnum docsAndPositionsEnum = null;
 		Bits docIdBitSet =  corpusMapper.getBitSetFromDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		Bits allBits = new Bits.MatchAllBits(reader.numDocs());
+		int[] tokenCounts = corpus.getTokensCounts(tokenType);
+		float[] typesCountMeans = corpus.getTypesCountMeans(tokenType);
+		float[] typesCountStdDev = corpus.getTypesCountStdDevs(tokenType);
 		for (int doc : corpusMapper.getLuceneIds()) {
 			if (!docIdBitSet.get(doc)) {continue;}
 			FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit*docIdBitSet.length());
 			int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
 			String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
 			DocumentMetadata metadata = corpus.getDocument(docId).getMetadata();
-			float mean = metadata.getTypesCountMean(tokenType);
-			float stdDev = metadata.getTypesCountStdDev(tokenType);
-			int totalTokensCount = metadata.getTokensCount(tokenType);
+			float mean = typesCountMeans[documentPosition];
+			float stdDev = typesCountStdDev[documentPosition];
+			int totalTokensCount = tokenCounts[documentPosition];
 			Terms terms = reader.getTermVector(doc, "lexical");
 			if (terms!=null) {
 				termsEnum = terms.iterator();

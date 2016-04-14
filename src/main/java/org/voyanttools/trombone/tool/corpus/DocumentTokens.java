@@ -88,6 +88,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 		String skipToDocId = parameters.getParameterValue("skipToDocId", "");
 		boolean isSkipping = true;
 		int tokensCounter = 0;
+		int[] lastTokenPositions = corpus.getLastTokenPositions(tokenType);
 		for (String id : ids) {
 			if (skipToDocId.isEmpty()==false && isSkipping==true) {
 				if (isSkipping && skipToDocId.equals(id)) {
@@ -129,7 +130,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 			String string;
 			int lastEndOffset = 0;
 			int corpusDocumentIndexPosition = corpus.getDocumentPosition(id);
-			int lastDocumentTokenPositionIndex = corpus.getDocument(id).getMetadata().getLastTokenPositionIndex(tokenType);
+			int lastDocumentTokenPositionIndex = lastTokenPositions[corpusDocumentIndexPosition];
 			for (int i=0, len=termInfos.size(); i<len; i++) {
 				termInfo = termInfos.get(i);
 				if ((i==0 && start==0 )|| i > 0) { // get content before first token or filler between tokens

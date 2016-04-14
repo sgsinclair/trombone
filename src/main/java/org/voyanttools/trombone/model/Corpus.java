@@ -138,7 +138,7 @@ public class Corpus implements Iterable<IndexedDocument> {
 	}	
 	
 	public int[] getLastTokenPositions(TokenType tokenType) throws IOException {
-		String id = getId()+"-"+tokenType.name().toLowerCase()+"LastTokenPosition";
+		String id = getId()+"-"+tokenType.name().toLowerCase()+"LastTokenPositions";
 		List<String> positionsList = new ArrayList<String>();
 		if (tokenType==TokenType.lexical && storage.isStored(id)==false) {
 			cacheCommonDocumentValues();
@@ -158,7 +158,51 @@ public class Corpus implements Iterable<IndexedDocument> {
 		}
 		return positions;
 	}
-	
+
+	public float[] getTypesCountMeans(TokenType tokenType) throws IOException {
+		String id = getId()+"-"+tokenType.name().toLowerCase()+"TypesCountMeans";
+		List<String> meansList = new ArrayList<String>();
+		if (tokenType==TokenType.lexical && storage.isStored(id)==false) {
+			cacheCommonDocumentValues();
+		} else if (storage.isStored(id)==false) {
+			for (IndexedDocument doc : this) {
+				meansList.add(String.valueOf(doc.getMetadata().getTypesCountMean(tokenType)));
+			}
+			storage.storeStrings(meansList, id);
+		}
+		if (meansList.isEmpty()) {
+			meansList = storage.retrieveStrings(id);
+		}
+		float[] means = new float[size()];
+		int i=0;
+		for (String pos : meansList) {
+			means[i++] = Float.parseFloat(pos);
+		}
+		return means;
+	}
+
+	public float[] getTypesCountStdDevs(TokenType tokenType) throws IOException {
+		String id = getId()+"-"+tokenType.name().toLowerCase()+"TypesCountStdDevs";
+		List<String> stdDevsList = new ArrayList<String>();
+		if (tokenType==TokenType.lexical && storage.isStored(id)==false) {
+			cacheCommonDocumentValues();
+		} else if (storage.isStored(id)==false) {
+			for (IndexedDocument doc : this) {
+				stdDevsList.add(String.valueOf(doc.getMetadata().getTypesCountStdDev(tokenType)));
+			}
+			storage.storeStrings(stdDevsList, id);
+		}
+		if (stdDevsList.isEmpty()) {
+			stdDevsList = storage.retrieveStrings(id);
+		}
+		float[] stdDevs = new float[size()];
+		int i=0;
+		for (String pos : stdDevsList) {
+			stdDevs[i++] = Float.parseFloat(pos);
+		}
+		return stdDevs;
+	}
+
 	public Collection<String> getLanguageCodes() throws IOException {
 		if (storage.isStored(getId()+"-langs")==false) {
 			cacheCommonDocumentValues();
@@ -166,10 +210,16 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return storage.retrieveStrings(getId()+"-langs");
 	}
 	
+	/**
+	 * This is to help ensure that we don't load each document metadata individually, which takes time.
+	 * @throws IOException
+	 */
 	private void cacheCommonDocumentValues() throws IOException {
 		Set<String> langs = new HashSet<String>();
 		List<String> tokenCounts = new ArrayList<String>();
 		List<String> lastTokens = new ArrayList<String>();
+		List<String> typesCountMeans = new ArrayList<String>();
+		List<String> typesCountStdDev = new ArrayList<String>();
 		DocumentMetadata metadata;
 		for (IndexedDocument doc : this) {
 			metadata = doc.getMetadata();
@@ -177,6 +227,8 @@ public class Corpus implements Iterable<IndexedDocument> {
 			if (lang!=null && lang.isEmpty()==false) langs.add(lang);
 			tokenCounts.add(String.valueOf(metadata.getTokensCount(TokenType.lexical)));
 			lastTokens.add(String.valueOf(metadata.getLastTokenPositionIndex(TokenType.lexical)));
+			typesCountMeans.add(String.valueOf(metadata.getTypesCountMean(TokenType.lexical)));
+			typesCountStdDev.add(String.valueOf(metadata.getTypesCountStdDev(TokenType.lexical)));
 		}
 		if (langs.isEmpty()) {langs.add("??");}
 		if (storage.isStored(this.getId()+"-langs")==false) {
@@ -185,8 +237,14 @@ public class Corpus implements Iterable<IndexedDocument> {
 		if (storage.isStored(this.getId()+"-lexicalTokenCounts")==false) {
 			storage.storeStrings(tokenCounts, this.getId()+"-lexicalTokenCounts");
 		}
-		if (storage.isStored(this.getId()+"-lexicalLastTokenPosition")==false) {
-			storage.storeStrings(lastTokens, this.getId()+"-lexicalLastTokenPosition");
+		if (storage.isStored(this.getId()+"-lexicalLastTokenPositions")==false) {
+			storage.storeStrings(lastTokens, this.getId()+"-lexicalLastTokenPositions");
+		}
+		if (storage.isStored(this.getId()+"-lexicalTypesCountMeans")==false) {
+			storage.storeStrings(tokenCounts, this.getId()+"-lexicalTypesCountMeans");
+		}
+		if (storage.isStored(this.getId()+"-lexicalTypesCountStdDevs")==false) {
+			storage.storeStrings(tokenCounts, this.getId()+"-lexicalTypesCountStdDevs");
 		}
 	}
 
