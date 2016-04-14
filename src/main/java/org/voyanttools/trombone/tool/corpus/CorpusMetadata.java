@@ -6,6 +6,7 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -37,8 +38,9 @@ public class CorpusMetadata extends AbstractCorpusTool  {
 	
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
-		corpusMapper.getCorpus().getLanguageCodes(true); // make sure we have language codes before serialization
-		metadata = corpusMapper.getCorpus().getCorpusMetadata();
+		Corpus corpus = corpusMapper.getCorpus();
+		metadata = corpus.getCorpusMetadata();
+		metadata.setLanguageCodes(corpus.getLanguageCodes().toArray(new String[0]));
 	}
 	
 	public int getVersion() {

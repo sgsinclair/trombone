@@ -23,6 +23,7 @@ package org.voyanttools.trombone.model;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -31,8 +32,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.corpus.AbstractCorpusTool;
-import org.voyanttools.trombone.tool.corpus.ConsumptiveTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -93,23 +92,6 @@ public class Corpus implements Iterable<IndexedDocument> {
 		return getDocumentsList().get(docIndex);
 	}
 
-	public int[] getTokensCounts(TokenType tokenType) throws IOException {
-		int[] counts = new int[size()];
-		int index = 0;
-		for (IndexedDocument document : this) {
-			counts[index++] = document.getMetadata().getTokensCount(tokenType);
-		}
-		return counts;
-	}
-
-	public int[] getLastTokenPositions(TokenType tokenType) throws IOException {
-		int[] counts = new int[size()];
-		int index = 0;
-		for (IndexedDocument document : this) {
-			counts[index++] = document.getMetadata().getLastTokenPositionIndex(tokenType);
-		}
-		return counts;
-	}
 
 	public String getId() {
 		return corpusMetadata.getId();
@@ -127,20 +109,87 @@ public class Corpus implements Iterable<IndexedDocument> {
 	public List<String> getDocumentIds() {
 		return corpusMetadata.getDocumentIds();
 	}
-
+	
 	public int getTokensCount(TokenType tokenType) throws IOException {
 		// TODO: this should probably be drawn from the corpus metadata instead
 		return corpusMetadata.getTokensCount(tokenType);
-		/*
-		int totalTokensCount = 0;
-		for (int i : getTokensCounts(tokenType)) {
-			totalTokensCount += i;
-		
-		}
-		return totalTokensCount;
-		*/
 	}
 	
+	public int[] getTokensCounts(TokenType tokenType) throws IOException {
+		String id = getId()+"-"+tokenType.name().toLowerCase()+"TokenCounts";
+		List<String> countList = new ArrayList<String>();
+		if (tokenType==TokenType.lexical && storage.isStored(id)==false) {
+			cacheCommonDocumentValues();
+		} else if (storage.isStored(id)==false) {
+			for (IndexedDocument doc : this) {
+				countList.add(String.valueOf(doc.getMetadata().getTokensCount((tokenType))));
+			}
+			storage.storeStrings(countList, id);
+		}
+		if (countList.isEmpty()) {
+			countList = storage.retrieveStrings(id);
+		}
+		int[] counts = new int[size()];
+		int i=0;
+		for (String pos : countList) {
+			counts[i++] = Integer.parseInt(pos);
+		}
+		return counts;
+	}	
+	
+	public int[] getLastTokenPositions(TokenType tokenType) throws IOException {
+		String id = getId()+"-"+tokenType.name().toLowerCase()+"LastTokenPosition";
+		List<String> positionsList = new ArrayList<String>();
+		if (tokenType==TokenType.lexical && storage.isStored(id)==false) {
+			cacheCommonDocumentValues();
+		} else if (storage.isStored(id)==false) {
+			for (IndexedDocument doc : this) {
+				positionsList.add(String.valueOf(doc.getMetadata().getLastTokenPositionIndex(tokenType)));
+			}
+			storage.storeStrings(positionsList, id);
+		}
+		if (positionsList.isEmpty()) {
+			positionsList = storage.retrieveStrings(id);
+		}
+		int[] positions = new int[size()];
+		int i=0;
+		for (String pos : positionsList) {
+			positions[i++] = Integer.parseInt(pos);
+		}
+		return positions;
+	}
+	
+	public Collection<String> getLanguageCodes() throws IOException {
+		if (storage.isStored(getId()+"-langs")==false) {
+			cacheCommonDocumentValues();
+		}
+		return storage.retrieveStrings(getId()+"-langs");
+	}
+	
+	private void cacheCommonDocumentValues() throws IOException {
+		Set<String> langs = new HashSet<String>();
+		List<String> tokenCounts = new ArrayList<String>();
+		List<String> lastTokens = new ArrayList<String>();
+		DocumentMetadata metadata;
+		for (IndexedDocument doc : this) {
+			metadata = doc.getMetadata();
+			String lang = metadata.getLanguageCode();
+			if (lang!=null && lang.isEmpty()==false) langs.add(lang);
+			tokenCounts.add(String.valueOf(metadata.getTokensCount(TokenType.lexical)));
+			lastTokens.add(String.valueOf(metadata.getLastTokenPositionIndex(TokenType.lexical)));
+		}
+		if (langs.isEmpty()) {langs.add("??");}
+		if (storage.isStored(this.getId()+"-langs")==false) {
+			storage.storeStrings(langs, this.getId()+"-langs");
+		}
+		if (storage.isStored(this.getId()+"-lexicalTokenCounts")==false) {
+			storage.storeStrings(tokenCounts, this.getId()+"-lexicalTokenCounts");
+		}
+		if (storage.isStored(this.getId()+"-lexicalLastTokenPosition")==false) {
+			storage.storeStrings(lastTokens, this.getId()+"-lexicalLastTokenPosition");
+		}
+	}
+
 	public CorpusAccess getValidatedCorpusAccess(FlexibleParameters parameters) throws CorpusAccessException {
 
 		String password = parameters.getParameterValue("password", "");
@@ -166,29 +215,6 @@ public class Corpus implements Iterable<IndexedDocument> {
 
 		return CorpusAccess.NORMAL;
 	}
-	
-	public String[] getLanguageCodes(boolean upateStorage) throws IOException {
-		String[] languages = getCorpusMetadata().getLanguageCodes();
-		if (languages!=null && languages.length>0) {
-			return languages;
-		} else {
-			Set<String> languagesSet = new HashSet<String>();
-			for (IndexedDocument indexedDocument : this) {
-				String lang = indexedDocument.getMetadata().getLanguageCode();
-				if (lang!=null && lang.isEmpty()==false) {
-					languagesSet.add(lang);
-				}
-			}
-			if (languagesSet.isEmpty()) {languagesSet.add("??");}
-			languages = languagesSet.toArray(new String[0]);
-			getCorpusMetadata().setLanguageCodes(languages);
-			if (upateStorage) {
-				storage.getCorpusStorage().updateStoredMetadata(this);
-			}
-			return languages;
-		}
-	}
-
 	
 	@Override
 	public boolean equals(Object obj) {

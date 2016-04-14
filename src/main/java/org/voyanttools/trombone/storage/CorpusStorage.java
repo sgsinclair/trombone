@@ -40,6 +40,4 @@ public interface CorpusStorage {
 
 	public boolean addAlias(String alias, String id) throws IOException;
 
-	void updateStoredMetadata(Corpus corpus) throws IOException;
-
 }

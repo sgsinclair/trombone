@@ -115,7 +115,7 @@ public abstract class AbstractTool implements RunnableTool {
 						}
 					}
 				}
-				for (String lang : corpus.getLanguageCodes(true)) {
+				for (String lang : corpus.getLanguageCodes()) {
 					if (lang.isEmpty() || lang.equals("en")) {langs.add("stop.en.taporware.txt");}
 					else if (lang.equals("fr")) {langs.add("stop.fr.veronis.txt");}
 					else if (lang.equals("se")) {langs.add("stop.se.long.txt");}

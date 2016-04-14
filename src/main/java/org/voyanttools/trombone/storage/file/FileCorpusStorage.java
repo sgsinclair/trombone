@@ -85,22 +85,13 @@ public class FileCorpusStorage implements CorpusStorage {
 		if (corpusExists(id)) {
 			throw new IOException("This corpus already exists: "+id);
 		}
-		updateStoredMetadata(corpus);
 		File corpusDirectory = new File(corpusStorageLocation, id);
+		corpusDirectory.mkdir();
+		File metadataFile = new File(corpusDirectory, METADATA_FILE_NAME);
+		corpus.getCorpusMetadata().getFlexibleParameters().saveFlexibleParameters(metadataFile);
 		parameters.saveFlexibleParameters(new File(corpusDirectory, PARAMETERS_FILE_NAME));
 	}
 	
-	@Override
-	public void updateStoredMetadata(Corpus corpus) throws IOException {
-		String id = corpus.getId();
-		if (!corpusExists(id)) {
-			throw new IOException("This corpus doesn't yet exist: "+id);
-		}
-		File corpusDirectory = new File(corpusStorageLocation, id);
-		File metadataFile = new File(corpusDirectory, METADATA_FILE_NAME);
-		corpus.getCorpusMetadata().getFlexibleParameters().saveFlexibleParameters(metadataFile);
-	}
-
 	@Override
 	public boolean corpusExists(String id) {
 		File corpusDirectory = new File(corpusStorageLocation, id);
