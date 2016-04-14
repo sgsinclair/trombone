@@ -27,6 +27,7 @@ import java.io.Reader;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -41,6 +42,8 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -95,8 +98,16 @@ public class ToolRunner extends AbstractTool {
 		for (RunnableTool tool : tools) {
 			sb.append("-").append(tool.getClass().getSimpleName()).append(tool.getVersion());
 		}
-		sb.append("-").append(DigestUtils.md5Hex(parameters.toString()));
-		
+		sb.append("-");
+		List<String> names = new ArrayList(parameters.getKeys());
+		Collections.sort(names);
+		StringBuilder paramsBuilder = new StringBuilder();
+		for (String name : names) {
+			if (name.startsWith("_dc")==false) {
+				paramsBuilder.append(name).append(StringUtils.join(parameters.getParameterValues(name)));
+			}
+		}
+		sb.append(DigestUtils.md5Hex(paramsBuilder.toString()));
 		String id = sb.toString();
 		
 		boolean hasParameterSources = InputSourcesBuilder.hasParameterSources(parameters);
