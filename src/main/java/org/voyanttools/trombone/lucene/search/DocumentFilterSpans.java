@@ -26,12 +26,14 @@ public class DocumentFilterSpans extends Spans {
   
   /** Wrap the given {@link Spans}. */
   public DocumentFilterSpans(Spans in, BitSet bitSet) {
-    this.in = Objects.requireNonNull(in);
+    this.in = in;
     this.bitSet = bitSet;
   }
     
   @Override
   public final int nextDoc() throws IOException {
+	  
+	  if (in==null) return DocumentFilterSpans.NO_MORE_DOCS;
 	  
 	  // use the BitSet to jump to the first valid document
 	  int nextDoc = bitSet.nextSetBit(in.docID()==-1 ? 0 : in.docID());

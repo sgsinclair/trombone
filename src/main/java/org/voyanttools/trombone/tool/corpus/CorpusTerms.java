@@ -100,7 +100,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+12;
+		return super.getVersion()+13;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -214,8 +214,11 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			boolean corpusTermOffered = false;
 			if (needDistributions) {
 				Spans spans = corpusMapper.getFilteredSpans((SpanQuery) query);
-				addToQueueFromSpansWithDistributions(corpusMapper, queue, queryString, spans);
-				corpusTermOffered = true;
+				if (spans!=null) {
+					System.out.println("a");
+					addToQueueFromSpansWithDistributions(corpusMapper, queue, queryString, spans);
+					corpusTermOffered = true;
+				}
 			}
 			else if (query instanceof SpanTermQuery) {
 				if (corpusTermMinimalsDB==null) {

@@ -205,7 +205,7 @@ public class CorpusMapper {
 	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
 		SpanWeight weight = spanQuery.createWeight(getSearcher(), false);
 		Spans spans = weight.getSpans(getLeafReader().getContext(), SpanWeight.Postings.POSITIONS);
-		return new DocumentFilterSpans(spans, bitSet);
+		return spans != null ? new DocumentFilterSpans(spans, bitSet) : null;
 	}
 	
 	public Filter getFilter() throws IOException {
