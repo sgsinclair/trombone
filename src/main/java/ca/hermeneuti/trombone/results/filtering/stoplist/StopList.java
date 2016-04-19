@@ -6,6 +6,7 @@ import java.util.Set;
 import ca.hermeneuti.trombone.util.keyword.KeywordList;
 
 /**
+ * This class is only here for migration of older corpora and should not be used.
  * @author Stéfan Sinclair, Cyril Briquet
  */
 @Deprecated

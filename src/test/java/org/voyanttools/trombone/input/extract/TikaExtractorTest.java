@@ -46,7 +46,7 @@ import org.voyanttools.trombone.util.TestHelper;
  */
 public class TikaExtractorTest {
 	
-	//@Test
+	@Test
 	public void testStrings() throws IOException, URISyntaxException {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		StoredDocumentSourceStorage storeDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
@@ -59,14 +59,7 @@ public class TikaExtractorTest {
 		DocumentMetadata metadata;
 		String contents;
 
-		// duplicate
-		inputSource = new StringInputSource("<html><body><section><div>This is <b>a</b> test.</div></section></body></html>");
-		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
-
-		inputSource = new StringInputSource("This is <b>a</b> test.");
+		inputSource = new StringInputSource("This — is <b>a</b> test.");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
@@ -83,13 +76,13 @@ public class TikaExtractorTest {
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
-//		assertTrue("HTML string should contain HTML5 tags", contents.contains("<section>"));
+// TODO: find a way to keep html5 tags with xhtml transformer		assertTrue("HTML string should contain HTML5 tags", contents.contains("<section>"));
 		
 		inputSource = new StringInputSource("<test>This is <b>a</b> test.</test>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue("XML-looking string shouldn't contain tags", contents.contains("&lt;b&gt;a&lt;/b&gt;"));
+		assertTrue("XML-looking string should contain tags", contents.contains("<b>a</b>"));
 		
 		parameters.setParameter("inputFormat", "XML");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -118,6 +111,16 @@ public class TikaExtractorTest {
 		line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		
+		inputSource = new FileInputSource(TestHelper.getResource("formats/snippet.txt"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+//		assertEquals("chars_utf8", metadata.getTitle());
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		assertTrue("ensure we have two paragraphs in text", StringUtils.countMatches(contents, "<p>")==2);
+//		assertTrue("ensure we've escaped & in text", contents.contains("&amp;")==true);
+//		assertTrue("ensure we have some content in text", contents.contains(line)==true);
+
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.txt"));
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);

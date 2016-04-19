@@ -140,6 +140,16 @@ public class TikaExtractor implements Extractor {
 	            input.close(); 
 	        }
 	        String extractedContent = sw.toString();
+	        
+	        // special handling for PDFs from the xhtml output
+	        if (metadata.getDocumentFormat()==DocumentFormat.PDF) {
+	        	// we get empty paragraphs for some reason
+	        	extractedContent = extractedContent.replaceAll("<p></p>", "")
+	        		// newlines seem to be added superfluously, especially since paragraphs are formed properly
+	        		.replaceAll("(&#xD;&#xA;|&#xD;|&#xA;)+", "")
+	        		// hardspaces seem to be added superflously as well
+	        		.replaceAll("\\t[\\s \u00A0]+", " ");
+	        }
 
 	        
 	        for (String name : extractedMetadata.names()) {
