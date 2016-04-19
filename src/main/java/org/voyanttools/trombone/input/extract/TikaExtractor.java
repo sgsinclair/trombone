@@ -129,7 +129,8 @@ public class TikaExtractor implements Extractor {
 	        // do a first pass to convert various formats to simple HTML
 	        try { 
 	            TransformerHandler handler = factory.newTransformerHandler(); 
-	            handler.getTransformer().setOutputProperty(OutputKeys.METHOD, "html"); 
+	            // set the output to xhtml instead of html to avoid "Illegal HTML character" exceptions form the transformer
+	            handler.getTransformer().setOutputProperty(OutputKeys.METHOD, "xhtml"); 
 	            handler.getTransformer().setOutputProperty(OutputKeys.INDENT, "yes"); 
 	            handler.setResult(new StreamResult(sw));
 	            parser.parse(input, handler, extractedMetadata, context);
