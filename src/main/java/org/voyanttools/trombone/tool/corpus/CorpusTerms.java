@@ -215,7 +215,6 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			if (needDistributions) {
 				Spans spans = corpusMapper.getFilteredSpans((SpanQuery) query);
 				if (spans!=null) {
-					System.out.println("a");
 					addToQueueFromSpansWithDistributions(corpusMapper, queue, queryString, spans);
 					corpusTermOffered = true;
 				}

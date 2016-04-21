@@ -125,7 +125,7 @@ public class EnglishMorphologicalTokenizer extends Tokenizer {
 	}
 	
 	public void end() {
-		System.err.println(offsetAttribute.endOffset());
+//		System.err.println(offsetAttribute.endOffset());
 	}
 
 }

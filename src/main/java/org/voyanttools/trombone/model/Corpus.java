@@ -160,7 +160,7 @@ public class Corpus implements Iterable<IndexedDocument> {
 	}
 
 	public float[] getTypesCountMeans(TokenType tokenType) throws IOException {
-		String id = getId()+"-"+tokenType.name().toLowerCase()+"TypesCountMeans";
+		String id = getId()+"-"+tokenType.name().toLowerCase()+"TypesCountMeans-1";
 		List<String> meansList = new ArrayList<String>();
 		if (tokenType==TokenType.lexical && storage.isStored(id)==false) {
 			cacheCommonDocumentValues();
@@ -182,7 +182,7 @@ public class Corpus implements Iterable<IndexedDocument> {
 	}
 
 	public float[] getTypesCountStdDevs(TokenType tokenType) throws IOException {
-		String id = getId()+"-"+tokenType.name().toLowerCase()+"TypesCountStdDevs";
+		String id = getId()+"-"+tokenType.name().toLowerCase()+"TypesCountStdDevs-1";
 		List<String> stdDevsList = new ArrayList<String>();
 		if (tokenType==TokenType.lexical && storage.isStored(id)==false) {
 			cacheCommonDocumentValues();
@@ -227,8 +227,8 @@ public class Corpus implements Iterable<IndexedDocument> {
 			if (lang!=null && lang.isEmpty()==false) langs.add(lang);
 			tokenCounts.add(String.valueOf(metadata.getTokensCount(TokenType.lexical)));
 			lastTokens.add(String.valueOf(metadata.getLastTokenPositionIndex(TokenType.lexical)));
-			typesCountMeans.add(String.valueOf(metadata.getTypesCountMean(TokenType.lexical)));
-			typesCountStdDev.add(String.valueOf(metadata.getTypesCountStdDev(TokenType.lexical)));
+			typesCountMeans.add(Float.toString(metadata.getTypesCountMean(TokenType.lexical)));
+			typesCountStdDev.add(Float.toString(metadata.getTypesCountStdDev(TokenType.lexical)));
 		}
 		if (langs.isEmpty()) {langs.add("??");}
 		if (storage.isStored(this.getId()+"-langs")==false) {
@@ -240,11 +240,11 @@ public class Corpus implements Iterable<IndexedDocument> {
 		if (storage.isStored(this.getId()+"-lexicalLastTokenPositions")==false) {
 			storage.storeStrings(lastTokens, this.getId()+"-lexicalLastTokenPositions");
 		}
-		if (storage.isStored(this.getId()+"-lexicalTypesCountMeans")==false) {
-			storage.storeStrings(tokenCounts, this.getId()+"-lexicalTypesCountMeans");
+		if (storage.isStored(this.getId()+"-lexicalTypesCountMeans-1")==false) {
+			storage.storeStrings(typesCountMeans, this.getId()+"-lexicalTypesCountMeans-1");
 		}
-		if (storage.isStored(this.getId()+"-lexicalTypesCountStdDevs")==false) {
-			storage.storeStrings(tokenCounts, this.getId()+"-lexicalTypesCountStdDevs");
+		if (storage.isStored(this.getId()+"-lexicalTypesCountStdDevs-1")==false) {
+			storage.storeStrings(typesCountStdDev, this.getId()+"-lexicalTypesCountStdDevs-1");
 		}
 	}
 

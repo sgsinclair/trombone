@@ -113,7 +113,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	
 	@Override
 	public int getVersion() {
-		return super.getVersion()+5;
+		return super.getVersion()+6;
 	}
 
 	@Override
@@ -128,6 +128,8 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		int size = start+limit;
 		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, size);
 		int[] totalTokenCounts = corpus.getTokensCounts(tokenType);
+		float[] typesCountMeans = corpus.getTypesCountMeans(tokenType);
+		float[] typesCountStdDev = corpus.getTypesCountStdDevs(tokenType);
 
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		
@@ -158,9 +160,8 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				}
 				int documentPosition = entry.getKey();
 				String docId = corpusMapper.getDocumentIdFromDocumentPosition(documentPosition);
-				DocumentMetadata documentMetadata = corpus.getDocument(docId).getMetadata();
-				float mean = documentMetadata.getTypesCountMean(tokenType);
-				float stdDev = documentMetadata.getTypesCountStdDev(tokenType);
+				float mean = typesCountMeans[documentPosition];
+				float stdDev = typesCountStdDev[documentPosition];
 
 				if (freq>0) {
 					total++;
@@ -232,7 +233,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 									freq = (int) termsEnum.totalTermFreq();
 								}
 								total+=freq;
-								float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
+								float zscore = stdDev != 0 ? ((freq-mean) / stdDev) : Float.NaN;
 								DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
 								docQueue.offer(documentTerm);
 							}

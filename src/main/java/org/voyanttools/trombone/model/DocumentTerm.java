@@ -35,13 +35,14 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class DocumentTerm {
 
 	public enum Sort {
-		RAWFREQASC, RAWFREQDESC, RELATIVEFREQASC, RELATIVEFREQDESC, TERMASC, TERMDESC, TFIDFASC, TFIDFDESC;
+		RAWFREQASC, RAWFREQDESC, RELATIVEFREQASC, RELATIVEFREQDESC, TERMASC, TERMDESC, TFIDFASC, TFIDFDESC, ZSCOREASC, ZSCOREDESC;
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "RELATIVEFREQ"; // default
 			if (sort.startsWith("RAWFREQ")) {sortPrefix = "RAWFREQ";}
 			if (sort.startsWith("TERM")) {sortPrefix = "TERM";}
 			if (sort.startsWith("TFIDF")) {sortPrefix = "TFIDF";}
+			if (sort.startsWith("ZSCORE")) {sortPrefix = "ZSCORE";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
@@ -150,6 +151,10 @@ public class DocumentTerm {
 			return TfIdfAscendingComparator;
 		case TFIDFDESC:
 			return TfIdfDescendingComparator;
+		case ZSCOREASC:
+			return ZscoreAscendingComparator;
+		case ZSCOREDESC:
+			return ZscoreDescendingComparator;
 		default: // relativeDesc
 			return RelativeFrequencyDescendingComparator;
 		}
@@ -316,6 +321,38 @@ public class DocumentTerm {
 		public int compare(DocumentTerm term1, DocumentTerm term2) {
 			float f1 = term1.getTfIdf();
 			float f2 = term2.getTfIdf();
+			if (f1==f2) {
+				return TermAscendingComparator.compare(term1, term2);
+			}
+			else {
+				return Float.compare(f1, f2);
+			}
+		}
+		
+	};
+	
+	private static Comparator<DocumentTerm> ZscoreDescendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			float f1 = term1.getZscore();
+			float f2 = term2.getZscore();
+			if (f1==f2) {
+				return TermAscendingComparator.compare(term1, term2);
+			}
+			else {
+				return Float.compare(f2, f1);
+			}
+		}
+		
+	};
+	
+	private static Comparator<DocumentTerm> ZscoreAscendingComparator = new Comparator<DocumentTerm>() {
+
+		@Override
+		public int compare(DocumentTerm term1, DocumentTerm term2) {
+			float f1 = term1.getZscore();
+			float f2 = term2.getZscore();
 			if (f1==f2) {
 				return TermAscendingComparator.compare(term1, term2);
 			}
