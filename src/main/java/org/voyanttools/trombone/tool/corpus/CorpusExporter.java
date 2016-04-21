@@ -68,9 +68,9 @@ public class CorpusExporter extends AbstractCorpusTool implements ConsumptiveToo
 		Stripper stripper = new Stripper(Stripper.TYPE.ALL); // only used for text output
 		
 		ZipOutputStream zipOutputStream = new ZipOutputStream(outputStream);
-		String format = parameters.getParameterValue("documentFormat", "ORIGINAL").toUpperCase();
+		String format = parameters.getParameterValue("documentFormat", "VOYANT").toUpperCase();
 		String[] documentFilename = parameters.getParameterValues("documentFilename");
-		if (format.equals("ORIGINAL") || format.equals("SOURCE")) {
+		if (format.equals("VOYANT") || format.equals("SOURCE")) {
 			for (IndexedDocument document : corpus) {
 				String id = document.getId();
 				DocumentMetadata documentMetadata = document.getMetadata();
