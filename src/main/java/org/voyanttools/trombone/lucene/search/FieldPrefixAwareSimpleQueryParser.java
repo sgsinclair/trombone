@@ -156,6 +156,14 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 
 	@Override
 	protected Query newPrefixQuery(String text) {
+		// we got here but actually need a regex
+		if (this.REGEX_PATTERN.matcher(text).find()) {
+			try {
+				return newRegexQuery(text+".*");
+			} catch (IOException e) {
+				throw new IllegalArgumentException("Unable to expand query: "+text+".*");
+			}
+		}
 		int pos = text.indexOf(PREFIX_SEPARATOR);
 		if (pos==-1) {return super.newPrefixQuery(text);}
 		else {return new PrefixQuery(new Term(text.substring(0, pos), text.substring(pos + 1)));}

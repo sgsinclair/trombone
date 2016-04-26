@@ -152,6 +152,16 @@ public class CorpusTermsTest {
 		assertEquals("d[a-z]rk", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
 
+		// regex with wildcard
+		parameters.setParameter("query", "d[a-z]rk*");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("d[a-z]rk*", corpusTerm.getTerm());
+		assertEquals(1, corpusTerm.getRawFreq());
+
 		
 		// all terms 
 		parameters.removeParameter("query");

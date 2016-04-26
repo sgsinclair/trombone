@@ -184,6 +184,8 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 				spanOrQuery.addClause(spanQuery);
 			}
 			return spanOrQuery;
+		} else if (query instanceof SpanOrQuery) {
+			return query;
 		}
 		else {
 			return getQuery((PrefixQuery) query);
