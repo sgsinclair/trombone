@@ -24,9 +24,10 @@ package org.voyanttools.trombone.util;
 import java.io.File;
 import java.io.IOException;
 
+import org.eclipse.jetty.server.AbstractNetworkConnector;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.nio.SelectChannelConnector;
+import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 /**
@@ -54,9 +55,11 @@ public class EmbeddedWebServer {
     	this.port = port;
     	this.server = new Server();
 
-        final Connector connector = new SelectChannelConnector();
-        connector.setPort(port);
-        this.server.setConnectors(new Connector[] { connector });
+    	ServerConnector httpConnector = new ServerConnector(server);
+    	((AbstractNetworkConnector) httpConnector).setPort(port);	
+//        final Connector connector = new SelectChannelConnector();
+//        connector.setPort(port);
+    	this.server.addConnector(httpConnector);
 
         final WebAppContext webapp = new WebAppContext();
         webapp.setContextPath("/");
