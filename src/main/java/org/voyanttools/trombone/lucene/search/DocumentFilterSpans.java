@@ -1,9 +1,9 @@
 package org.voyanttools.trombone.lucene.search;
 
 import java.io.IOException;
-import java.util.Objects;
 
 import org.apache.lucene.search.DocIdSetIterator;
+import org.apache.lucene.search.spans.FilterSpans;
 import org.apache.lucene.search.spans.SpanCollector;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.BitSet;
@@ -35,14 +35,34 @@ public class DocumentFilterSpans extends Spans {
 	  
 	  if (in==null) return DocumentFilterSpans.NO_MORE_DOCS;
 	  
-	  // use the BitSet to jump to the first valid document
-	  int nextDoc = bitSet.nextSetBit(in.docID()==-1 ? 0 : in.docID());
-	  if (nextDoc==DocIdSetIterator.NO_MORE_DOCS) {return Spans.NO_MORE_DOCS;}
-	  nextDoc = in.advance(nextDoc);
+	  // this next section is probably like a two-phase iterator, but I find this easier to wrap head around
 	  
-	  // double-check that we have a valid document
-	  if (nextDoc==Spans.NO_MORE_DOCS) {return Spans.NO_MORE_DOCS;}
-	  if (!bitSet.get(nextDoc)) {return nextDoc();}
+	  // find the next doc in the spans
+	  int nextDoc = in.nextDoc();
+	  
+	  // bail if no more docs
+	  if (nextDoc==DocIdSetIterator.NO_MORE_DOCS) {return nextDoc;}
+	  
+	  // jump to the next valid doc
+	  nextDoc = bitSet.nextSetBit(nextDoc);
+	  
+	  // bail if no more docs
+	  if (nextDoc==DocIdSetIterator.NO_MORE_DOCS) {return nextDoc;}
+	  
+	  // recurse if the current doc is beyond the spans
+	  if (nextDoc!=in.docID()) {
+		  
+		  // skip the inner span to next valid beyond this doc (so we don't read all spans)
+		  nextDoc = in.advance(nextDoc);
+		  
+		  // bail if we have no more hits
+		  if (nextDoc==DocIdSetIterator.NO_MORE_DOCS) {return nextDoc;}
+		  
+		  // start over if this document isn't valid
+		  else if (!bitSet.get(nextDoc)) {return nextDoc();}
+
+		  // we've advanced to a valid doc
+	  }
 	  
 	  // check for first position (which means matching inner Spans) and cache first position
 	  nextStartPosition = in.nextStartPosition();

@@ -93,6 +93,11 @@ public enum DocumentFormat {
 	EEBODREAM("xml"),
 	
 	/**
+	 * Specialized format for treating EEBO XML files
+	 */
+	HYPERLISTES("xml"),
+	
+	/**
 	 * Specialized format for treating Dynamic Table of Context files
 	 */
 	DTOC("xml"),
