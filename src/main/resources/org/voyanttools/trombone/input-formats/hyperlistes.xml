@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlContentXpath">/TEI.2/text/body/div[@type="traduction" and @lang="fr"]</entry>
+    <entry key="xmlTitleXpath">/TEI.2/teiHeader/fileDesc/titleStmt/title</entry>
+    <entry key="xmlAuthorXpath">/TEI.2/teiHeader/fileDesc/titleStmt/author</entry>
+    <entry key="xmlExtraMetadataXpath">authorSex=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/sex
+        originalRef=/TEI.2/teiHeader/fileDesc/sourceDesc/listBibl/bibl/ref
+        respStmt=/TEI.2/teiHeader/fileDesc/titleStmt/respStmt
+        collection="hyperliste"</entry>
+</properties>
