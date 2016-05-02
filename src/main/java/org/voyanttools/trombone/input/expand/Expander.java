@@ -24,6 +24,7 @@ package org.voyanttools.trombone.input.expand;
 import java.io.IOException;
 import java.util.List;
 
+import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 
 /**

@@ -37,6 +37,7 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.tool.corpus.CorpusExporter;
 import org.voyanttools.trombone.tool.corpus.CorpusManager;
+import org.voyanttools.trombone.tool.corpus.CorpusMetadata;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -111,7 +112,8 @@ public class ToolRunner extends AbstractTool {
 		String id = sb.toString();
 		
 		boolean hasParameterSources = InputSourcesBuilder.hasParameterSources(parameters);
-		if (parameters.getParameterBooleanValue("noCache")==false && parameters.getParameterBooleanValue("reCache")==false && hasParameterSources==false && storage.isStored(id)) {
+		boolean noCache = tools.size()==1 && tools.get(0) instanceof CorpusMetadata;
+		if (noCache==false && parameters.getParameterBooleanValue("noCache")==false && parameters.getParameterBooleanValue("reCache")==false && hasParameterSources==false && storage.isStored(id)) {
 			Reader reader = storage.retrieveStringReader(id);
 			IOUtils.copy(reader, writer);
 			reader.close();

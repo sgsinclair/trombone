@@ -334,15 +334,11 @@ public class FlexibleParameters implements Cloneable, Serializable {
 
 	@Override
 	public synchronized FlexibleParameters clone() {
-		
-		try {
-			return (FlexibleParameters) super.clone();
+		FlexibleParameters params = new FlexibleParameters();
+		for (Map.Entry<String, List<String>> entry : entries.entrySet()) {
+			params.setParameter(entry.getKey(), entry.getValue().toArray(new String[0]));
 		}
-		catch (CloneNotSupportedException e) {
-			e.printStackTrace();
-			return null;
-		}
-		
+		return params;
 	}
 	
 	/**

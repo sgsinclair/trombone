@@ -34,11 +34,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
 
@@ -63,13 +59,8 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.tika.Tika;
-import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.detect.XmlRootExtractor;
-import org.apache.tika.exception.TikaException;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -133,33 +124,39 @@ public class XmlExtractor implements Extractor, Serializable {
 	public InputSource getExtractableInputSource(StoredDocumentSource storedDocumentSource)
 			throws IOException {
 		
+		FlexibleParameters localParameters = parameters.clone();
+		
 		// no format specified, so let's have a peek at the contents to see if we can determine a sub-format
 		DocumentFormat guessedFormat = DocumentFormat.UNKNOWN;
-		if (parameters.getParameterValue("inputFormat","").isEmpty()) {
-			InputStream is = null;
-			try {
-				is = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId());
-				XmlRootExtractor xmlRootExtractor = new XmlRootExtractor();
-				QName qname = xmlRootExtractor.extractRootElement(is);
-				if (qname!=null) {
-					String name = qname.getLocalPart();
-					if (name.equals("feed") && qname.getNamespaceURI().toLowerCase().contains("atom")) guessedFormat = DocumentFormat.ATOM;
-					else if (name.equals("TEI")) guessedFormat = DocumentFormat.TEI;
-					else if (name.equals("teiCorpus")) guessedFormat = DocumentFormat.TEICORPUS;
-					else if (name.equals("rss")) guessedFormat = DocumentFormat.RSS;
-					else if (name.equals("EEBO")) guessedFormat = DocumentFormat.EEBODREAM;
+		if (localParameters.getParameterValue("inputFormat","").isEmpty()) {
+			DocumentFormat df = storedDocumentSource.getMetadata().getDocumentFormat();
+			if (df.isXml() && df!=DocumentFormat.XML) {guessedFormat=df;}
+			else {
+				InputStream is = null;
+				try {
+					is = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId());
+					XmlRootExtractor xmlRootExtractor = new XmlRootExtractor();
+					QName qname = xmlRootExtractor.extractRootElement(is);
+					if (qname!=null) {
+						String name = qname.getLocalPart();
+						if (name.equals("feed") && qname.getNamespaceURI().toLowerCase().contains("atom")) guessedFormat = DocumentFormat.ATOM;
+						else if (name.equals("TEI")) guessedFormat = DocumentFormat.TEI;
+						else if (name.equals("teiCorpus")) guessedFormat = DocumentFormat.TEICORPUS;
+						else if (name.equals("rss")) guessedFormat = DocumentFormat.RSS;
+						else if (name.equals("EEBO")) guessedFormat = DocumentFormat.EEBODREAM;
+					}
 				}
-			}
-			finally {
-				if (is!=null) is.close();
+				finally {
+					if (is!=null) is.close();
+				}
 			}
 		}
 		
 		
-		if (parameters.getParameterValue("inputFormat","").isEmpty()==false || guessedFormat!=DocumentFormat.UNKNOWN) {
+		if (localParameters.getParameterValue("inputFormat","").isEmpty()==false || guessedFormat!=DocumentFormat.UNKNOWN) {
 			
 			if (guessedFormat==DocumentFormat.UNKNOWN) {
-				guessedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
+				guessedFormat = DocumentFormat.valueOf(localParameters.getParameterValue("inputFormat","").toUpperCase());
 			}
 			
 			Properties properties = new Properties();
@@ -181,16 +178,16 @@ public class XmlExtractor implements Extractor, Serializable {
 						}
 					}
 				}
-				if (parameters.getParameterBooleanValue("splitDocuments")) {
+				if (localParameters.getParameterBooleanValue("splitDocuments")) {
 					for (String key : properties.stringPropertyNames()) {
 						if (key.contains(".splitDocuments")) {
-							parameters.setParameter(key.split("\\.")[0], properties.getProperty(key)); // overwrite prefix key
+							localParameters.setParameter(key.split("\\.")[0], properties.getProperty(key)); // overwrite prefix key
 						}
 					}
 				}
 				for (String key : properties.stringPropertyNames()) {
-					if (parameters.getParameterValue(key,"").isEmpty()==true) {
-						parameters.setParameter(key, properties.getProperty(key));
+					if (localParameters.getParameterValue(key,"").isEmpty()==true) {
+						localParameters.setParameter(key, properties.getProperty(key));
 					}
 				}
 			}
@@ -200,9 +197,9 @@ public class XmlExtractor implements Extractor, Serializable {
 		String[] relevantParameters = new String[]{"xmlContentXpath","xmlTitleXpath","xmlAuthorXpath","xmlPubPlaceXpath","xmlPublisherXpath","xmlPubDateXpath","xmlKeywordXpath","xmlCollectionXpath","xmlExtraMetadataXpath"};
 		StringBuilder parametersBuilder = new StringBuilder();
 		for (String p : relevantParameters) {
-			if (parameters.getParameterValue(p, "").isEmpty()==false) {
+			if (localParameters.getParameterValue(p, "").isEmpty()==false) {
 				parametersBuilder.append(p);
-				for (String s : parameters.getParameterValues(p)) {
+				for (String s : localParameters.getParameterValues(p)) {
 					parametersBuilder.append(s);
 				}
 			}
@@ -216,7 +213,7 @@ public class XmlExtractor implements Extractor, Serializable {
 		}
 		*/
 		
-		return new ExtractableXmlInputSource(DigestUtils.md5Hex(storedDocumentSource.getId()+relevantParameters+String.valueOf(serialVersionUID)), storedDocumentSource);
+		return new ExtractableXmlInputSource(DigestUtils.md5Hex(storedDocumentSource.getId()+relevantParameters+String.valueOf(serialVersionUID)), storedDocumentSource, localParameters);
 	}
 
 	private class ExtractableXmlInputSource implements InputSource {
@@ -232,13 +229,16 @@ public class XmlExtractor implements Extractor, Serializable {
 		
 		private boolean isProcessed = false;
 		
-		private ExtractableXmlInputSource(String id, StoredDocumentSource storedDocumentSource) {
+		private FlexibleParameters localParameters;
+		
+		private ExtractableXmlInputSource(String id, StoredDocumentSource storedDocumentSource, FlexibleParameters localParameters) {
 			this.id = id;
 			this.storedDocumentSourceId = storedDocumentSource.getId();
 			this.storedDocumentSource = storedDocumentSource;
 			this.metadata = storedDocumentSource.getMetadata().asParent(storedDocumentSourceId, DocumentMetadata.ParentType.EXTRACTION);
 			this.metadata.setLocation(storedDocumentSource.getMetadata().getLocation());
 			this.metadata.setDocumentFormat(DocumentFormat.XML);
+			this.localParameters = localParameters;
 		}
 
 		@Override
@@ -271,10 +271,10 @@ public class XmlExtractor implements Extractor, Serializable {
 					inputStream.close();
 			}
 			
-			if (parameters.containsKey("xmlExtractorTemplate")) {
+			if (localParameters.containsKey("xmlExtractorTemplate")) {
 
 				Source source = null;
-				String xmlExtractorTemplate = parameters.getParameterValue("xmlExtractorTemplate");
+				String xmlExtractorTemplate = localParameters.getParameterValue("xmlExtractorTemplate");
 			
 				URI templateUrl;
 				try {
@@ -353,7 +353,7 @@ public class XmlExtractor implements Extractor, Serializable {
 				metadata.setKeywords(keywords);
 			}
 			
-			for (String extra : parameters.getParameterValues("xmlExtraMetadataXpath")) {
+			for (String extra : localParameters.getParameterValues("xmlExtraMetadataXpath")) {
 				for (String x :extra.split("(\r\n|\r|\n)+")) {
 					x = x.trim();
 					String[] parts = x.split("=");
@@ -369,7 +369,7 @@ public class XmlExtractor implements Extractor, Serializable {
 			}
 			
 			// if no XPath is defined, consider the whole source XML (but allow for additional metadata ot be identified
-			String xmlContentXpath = parameters.getParameterValue("xmlContentXpath","/");
+			String xmlContentXpath = localParameters.getParameterValue("xmlContentXpath","/");
 			
 			NodeList nodeList;
 			XPath xpath = xpathFactory.newXPath();
@@ -421,7 +421,7 @@ public class XmlExtractor implements Extractor, Serializable {
 		}
 
 		private String[] getNodesAsStringsFromParametersValue(Document doc, String parameterKey) {
-			String xpathString = parameters.getParameterValue(parameterKey,"");
+			String xpathString = localParameters.getParameterValue(parameterKey,"");
 			return getNodesAsStringsFromXpath(doc, xpathString);
 		}
 
@@ -432,7 +432,8 @@ public class XmlExtractor implements Extractor, Serializable {
 				XPath xpath = xpathFactory.newXPath();
 				NodeList nodeList;
 				try {
-					if (xpathString.startsWith("string-join(") || xpathString.startsWith("concat(") || xpathString.startsWith("replace(")) {
+					// this is awful to have to specify the return type, this should probably use a different library
+					if (xpathString.startsWith("string") || xpathString.startsWith("concat(") || xpathString.startsWith("replace(")) {
 						 String s = (String) xpath.evaluate(xpathString, doc.getDocumentElement(), XPathConstants.STRING);
 						 values.add(s);
 					}

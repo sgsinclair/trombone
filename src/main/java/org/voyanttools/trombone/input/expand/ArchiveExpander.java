@@ -26,7 +26,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -43,6 +45,7 @@ import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
  * An expander for compressed archives. This is supported through the Apache 
@@ -65,6 +68,8 @@ class ArchiveExpander implements Expander {
 	 */
 	private StoredDocumentSourceStorage storedDocumentSourceStorage;
 	
+	private FlexibleParameters parameters;
+	
 	/**
 	 * Create a new instance of this expander (this should only be done by
 	 * {@link StoredDocumentSourceExpander}.
@@ -72,9 +77,10 @@ class ArchiveExpander implements Expander {
 	 * @param storedDocumentSourceStorage a stored storage strategy
 	 * @param storedDocumentSoruceExpander a reference to the primary expander
 	 */
-	ArchiveExpander(StoredDocumentSourceStorage storedDocumentSourceStorage, StoredDocumentSourceExpander storedDocumentSoruceExpander) {
+	ArchiveExpander(StoredDocumentSourceStorage storedDocumentSourceStorage, StoredDocumentSourceExpander storedDocumentSoruceExpander, FlexibleParameters parameters) {
 		this.storedDocumentSourceStorage = storedDocumentSourceStorage;
 		this.expander = storedDocumentSoruceExpander;
+		this.parameters = parameters;
 	}
 	
 	public List<StoredDocumentSource> getExpandedStoredDocumentSources(StoredDocumentSource storedDocumentSource)
@@ -135,6 +141,9 @@ class ArchiveExpander implements Expander {
 		ArchiveEntry archiveEntry = archiveInputStream.getNextEntry();
 		String parentId = parentStoredDocumentSource.getId();
 		DocumentMetadata parentMetadata = parentStoredDocumentSource.getMetadata();
+		DocumentFormat parentDocumentFormat = parentMetadata.getDocumentFormat();
+
+		Map<String, Expander> clonedExpanders = new HashMap<String, Expander>();
 		while (archiveEntry != null) {
 			
 			if (archiveEntry.isDirectory()==false) {
@@ -148,10 +157,32 @@ class ArchiveExpander implements Expander {
 					childMetadata.setModified(archiveEntry.getLastModifiedDate().getTime());
 					childMetadata.setSource(Source.STREAM);
 					childMetadata.setTitle(file.getName().replaceFirst("\\.\\w+$", ""));
+					DocumentFormat childDocumentFormat = null;
+					if (parentDocumentFormat==DocumentFormat.PBLIT) { // use cloned expander without parameters
+						if (file.getName().equals("satorbase.xml")) {
+							childDocumentFormat=DocumentFormat.SATORBASE;
+						} else if (file.getParent().equals("hyperlistes")) {
+							childDocumentFormat=DocumentFormat.HYPERLISTES;
+						} else {
+							throw new IllegalStateException("Unrecognized file for PBLIT bundle");
+						}
+						childMetadata.setDocumentFormat(childDocumentFormat);
+					}
 					String id = DigestUtils.md5Hex(parentId+filename);
 					InputSource inputSource = new InputStreamInputSource(id, childMetadata, new CloseShieldInputStream(archiveInputStream));
 					StoredDocumentSource storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
-					expandedDocumentSources.addAll(this.expander.getExpandedStoredDocumentSources(storedDocumentSource)); // expand this recursively
+					if (parentDocumentFormat==DocumentFormat.PBLIT) { // use cloned expander without parameters
+						if (!clonedExpanders.containsKey(childDocumentFormat.name())) {
+							FlexibleParameters clonedParams = new FlexibleParameters();
+							clonedParams.setParameter("inputFormat", childDocumentFormat.name());
+							clonedExpanders.put(childDocumentFormat.name(), new StoredDocumentSourceExpander(storedDocumentSourceStorage, clonedParams));
+						}
+//						if (childDocumentFormat==DocumentFormat.HYPERLISTES) {
+							expandedDocumentSources.addAll(clonedExpanders.get(childDocumentFormat.name()).getExpandedStoredDocumentSources(storedDocumentSource)); // expand this recursively						
+//						}
+					} else {
+						expandedDocumentSources.addAll(this.expander.getExpandedStoredDocumentSources(storedDocumentSource)); // expand this recursively
+					}
 				}
 			}
 			archiveEntry = archiveInputStream.getNextEntry();

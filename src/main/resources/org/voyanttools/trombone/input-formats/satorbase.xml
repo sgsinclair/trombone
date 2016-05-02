@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlDocumentsXpath">/satorbase/occurrence</entry>
+    
+    <!-- take cotexte_citation if available before context-->
+    <entry key="xmlContentXpath">/occurrence/texte|/occurrence/commentaires</entry>
+
+    <entry key="xmlTitleXpath">/occurrence/oeuvre_titre|/occurrence/ouvrage</entry>
+    <entry key="xmlAuthorXpath">/occurrence/oeuvre_auteur</entry>
+    <entry key="xmlPubDateXpath">/occurrence/edition_date</entry>
+    
+    <!-- these two are inverted in data (all data?) -->
+    <entry key="xmlPubPlaceXpath">/occurrence/edition_maison</entry>
+    <entry key="xmlPublisherXpath">/occurrence/edition_lieu</entry>
+    
+    <entry key="xmlExtraMetadataXpath">id=/occurrence/@id
+        topos=/occurrence/topoi_nom|/occurrence/topos
+        editeur=/occurrence/editeur
+        collection=/occurrence/@collection</entry>
+</properties>

@@ -171,7 +171,7 @@ public class StoredDocumentSourceExpander implements Expander {
 			}
 		}
 
-		if (format == DocumentFormat.ARCHIVE) {
+		if (format.isArchive()) {
 			storedDocumentSources.addAll(expandArchive(storedDocumentSource));
 		}
 		else if (format == DocumentFormat.COMPRESSED) {
@@ -227,7 +227,7 @@ public class StoredDocumentSourceExpander implements Expander {
 			StoredDocumentSource storedDocumentSource) throws IOException {
 		if (this.archiveExpander == null) {
 			this.archiveExpander = new ArchiveExpander(
-					storedDocumentSourceStorage, this);
+					storedDocumentSourceStorage, this, parameters);
 		}
 		return this.archiveExpander
 				.getExpandedStoredDocumentSources(storedDocumentSource);

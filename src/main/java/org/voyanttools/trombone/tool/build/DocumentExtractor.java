@@ -80,7 +80,12 @@ class DocumentExtractor extends AbstractTool {
 		log("Starting document extraction.");
 
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
-		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentStorage, parameters);
+		StoredDocumentSourceExtractor extractor;
+		if (parameters.containsKey("inputFormat") && parameters.getParameterValue("inputFormat").toUpperCase().equals("PBLIT")) {
+			extractor = new StoredDocumentSourceExtractor(storedDocumentStorage, new FlexibleParameters());
+		} else {
+			extractor = new StoredDocumentSourceExtractor(storedDocumentStorage, parameters);
+		}
 		storedDocumentSources = extractor.getExtractedStoredDocumentSources(extractableStoredDocumentSources);
 		
 		// sort documents if needed

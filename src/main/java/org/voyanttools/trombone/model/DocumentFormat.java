@@ -98,6 +98,11 @@ public enum DocumentFormat {
 	HYPERLISTES("xml"),
 	
 	/**
+	 * Specialized format for treating EEBO XML files
+	 */
+	SATORBASE("xml"),
+	
+	/**
 	 * Specialized format for treating Dynamic Table of Context files
 	 */
 	DTOC("xml"),
@@ -141,6 +146,11 @@ public enum DocumentFormat {
 	 * Old Bailey XML
 	 */
 	OLDBAILEYXML("xml"),
+	
+	/**
+	 * Specialized bundle for PBLit
+	 */
+	PBLIT("zip"),
 	
 	/**
 	 * An archive file ("ar", "cpio", "dump", "jar", "tar", "tgz", "tbz2", "zip")
@@ -191,6 +201,20 @@ public enum DocumentFormat {
 	public boolean isXml() {
 		for (String extension : extensions) {
 			if (extension.equals("xml")) return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * Determine if this is an XML-based format.
+	 * 
+	 * @return whether or not this is an XML-based format
+	 */
+	public boolean isArchive() {
+		for (String extension : extensions) {
+			for (String ext : ARCHIVE.extensions) {
+				if (extension.equals(ext)) return true;
+			}
 		}
 		return false;
 	}

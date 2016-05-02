@@ -108,7 +108,7 @@ public class StoredDocumentSourceExtractor {
 		DocumentFormat format;
 		
 		String inputFormatString = parameters.getParameterValue("inputFormat", "").toUpperCase();
-		if (inputFormatString.isEmpty()==false) {
+		if (inputFormatString.isEmpty()==false && inputFormatString.toUpperCase().equals("PBLIT")==false) {
 			format = DocumentFormat.valueOf(inputFormatString);
 		}
 		else {

@@ -414,7 +414,7 @@ class XmlExpander implements Expander {
 		metadata.setModified(parentMetadata.getModified());
 		metadata.setSource(Source.STRING);
 		metadata.setLocation(location);
-		metadata.setDocumentFormat(DocumentFormat.XML);
+		metadata.setDocumentFormat(parentMetadata.getDocumentFormat()==DocumentFormat.SATORBASE ? parentMetadata.getDocumentFormat() : DocumentFormat.XML);
 		String id = DigestUtils.md5Hex(parentId + location);
 		return new NodeInputSource(id, node, metadata);
 	}
