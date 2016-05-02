@@ -163,6 +163,8 @@ class ArchiveExpander implements Expander {
 							childDocumentFormat=DocumentFormat.SATORBASE;
 						} else if (file.getParent().equals("hyperlistes")) {
 							childDocumentFormat=DocumentFormat.HYPERLISTES;
+						} else if (file.getParent().equals("toucher")) {
+							childDocumentFormat=DocumentFormat.TOUCHER;
 						} else {
 							throw new IllegalStateException("Unrecognized file for PBLIT bundle");
 						}

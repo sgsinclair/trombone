@@ -117,6 +117,8 @@ public enum DocumentFormat {
 	 */
 	MSWORDX("docx"),
 	
+	TOUCHER("docx", "doc"),
+	
 	/**
 	 * An MS Excel file (.xslx).
 	 */
@@ -148,14 +150,14 @@ public enum DocumentFormat {
 	OLDBAILEYXML("xml"),
 	
 	/**
-	 * Specialized bundle for PBLit
-	 */
-	PBLIT("zip"),
-	
-	/**
 	 * An archive file ("ar", "cpio", "dump", "jar", "tar", "tgz", "tbz2", "zip")
 	 */
 	ARCHIVE("zip", "cpio", "dump", "jar", "tar.gz", "tar", "tgz", "ar"),
+	
+	/**
+	 * Specialized bundle for PBLit
+	 */
+	PBLIT("zip"),
 	
 	/**
 	 * A compressed file ("bzip2", "bz2", "gzip", "gz", "pack200", "xz")

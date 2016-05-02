@@ -150,6 +150,10 @@ public class TikaExtractor implements Extractor {
 	        		// hardspaces seem to be added superflously as well
 	        		.replaceAll("\\t[\\s \u00A0]+", " ");
 	        }
+	        
+	        if (metadata.getDocumentFormat()==DocumentFormat.TOUCHER) {
+	        	metadata.setExtra("collection", "Toucher");
+	        }
 
 	        
 	        for (String name : extractedMetadata.names()) {
