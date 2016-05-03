@@ -88,6 +88,12 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	@XStreamOmitField
 	private int totalTokens = 0; // used to calculate relative frequencies
 	
+	@XStreamOmitField
+	private CorpusTermMinimalsDB comparisonCorpusTermMinimals = null;
+	
+	@XStreamOmitField
+	private int comparisonCorpusTotalTokens = 0;
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -131,6 +137,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		
 		int corpusSize = corpusMapper.getCorpus().size();
 		int[] tokensCounts = corpusMapper.getCorpus().getTokensCounts(tokenType);
+		int totalCorpusTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
 		int bins = parameters.getParameterIntValue("bins", corpusSize);
 		int[] documentRawFreqs;
 		float[] documentRelativeFreqs;
@@ -151,7 +158,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				documentRelativeFreqs[documentPosition] = (float) freq/tokensCounts[documentPosition];
 			}
 			total++;
-			queue.offer(new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins));
+			CorpusTerm corpusTerm = new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins);
+			offer(queue, corpusTerm);
+//			queue.offer(new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins));
 		}
 		return queue;
 	}
@@ -170,43 +179,73 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				total++;
 				this.totalTokens+=corpusTermMinimal.getRawFreq();
 				CorpusTerm corpusTerm = new CorpusTerm(corpusTermMinimal, totalTokens);
-				queue.offer(corpusTerm);
+				offer(queue, corpusTerm);
+//				queue.offer(corpusTerm);
 			}
 		}
 		corpusTermMinimalsDB.close();
 		return queue;
 	}
 	
+	private void createComparisonCorpusTermMinimals() throws IOException {
+		String comparisonCorpusId = parameters.getParameterValue("comparisonCorpus", "");
+		if (!comparisonCorpusId.isEmpty()) {
+			Corpus comparisonCorpus = CorpusManager.getCorpus(storage, new FlexibleParameters(new String[]{"corpus="+comparisonCorpusId}));
+			comparisonCorpusTotalTokens = comparisonCorpus.getTokensCount(TokenType.lexical);
+			CorpusMapper comparisonCorpusMapper = new CorpusMapper(storage, comparisonCorpus);
+			comparisonCorpusTermMinimals = CorpusTermMinimalsDB.getInstance(comparisonCorpusMapper, tokenType==TokenType.lexical ? tokenType.name() : parameters.getParameterValue("tokenType"));
+		}
+	}
+
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		
-		FlexibleQueue<CorpusTerm> queue = withDistributions || corpusTermSort.needDistributions() ?
-//				runAllTermsWithDistributionsFromReaderTerms(corpusMapper, stopwords) :
-			runAllTermsWithDistributionsDocumentTermVectors(corpusMapper, stopwords) :
-			runAllTermsWithoutDistributions(corpusMapper, stopwords);
-		this.terms.addAll(queue.getOrderedList(start));
+		if (parameters.containsKey("comparisonCorpus")) {
+			createComparisonCorpusTermMinimals();
+		}
+		try {
+			FlexibleQueue<CorpusTerm> queue = withDistributions || corpusTermSort.needDistributions() ?
+//					runAllTermsWithDistributionsFromReaderTerms(corpusMapper, stopwords) :
+				runAllTermsWithDistributionsDocumentTermVectors(corpusMapper, stopwords) :
+				runAllTermsWithoutDistributions(corpusMapper, stopwords);
+			this.terms.addAll(queue.getOrderedList(start));
+		} finally {
+			if (comparisonCorpusTermMinimals!=null) {
+				comparisonCorpusTermMinimals.close();
+			}
+		}
 
 	}
 	
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
-		if (parameters.getParameterBooleanValue("inDocumentsCountOnly")) { // no spans required to count per-document frequencies
-			FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-			Map<String, Query> queriesMap = parser.getQueriesMap(queries, false);
-			runQueriesInDocumentsCountOnly(corpusMapper, queue, queriesMap);
+		if (parameters.containsKey("comparisonCorpus")) {
+			createComparisonCorpusTermMinimals();
 		}
-		else {
-			FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-			Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
-			runSpanQueries(corpusMapper, queue, queriesMap);
+		try {
+			FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
+			if (parameters.getParameterBooleanValue("inDocumentsCountOnly")) { // no spans required to count per-document frequencies
+				FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
+				Map<String, Query> queriesMap = parser.getQueriesMap(queries, false);
+				runQueriesInDocumentsCountOnly(corpusMapper, queue, queriesMap);
+			}
+			else {
+				FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
+				Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
+				runSpanQueries(corpusMapper, queue, queriesMap);
+			}
+			terms.addAll(queue.getOrderedList());
+		} finally {
+			if (comparisonCorpusTermMinimals!=null) {
+				comparisonCorpusTermMinimals.close();
+			}
 		}
-		terms.addAll(queue.getOrderedList());
 	}
 
 	private void runSpanQueries(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, Map<String, SpanQuery> queriesMap) throws IOException {
 		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
 		boolean needDistributions = withDistributions || corpusTermSort.needDistributions();
 		CorpusTermMinimalsDB corpusTermMinimalsDB = null; // only create it if we need it
+		int totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
 		for (Map.Entry<String, SpanQuery> entry : queriesMap.entrySet()) {
 			SpanQuery query = entry.getValue();
 			String queryString = entry.getKey();
@@ -226,7 +265,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				Term term = ((SpanTermQuery) query).getTerm();
 				CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(term.text());
 				if (corpusTermMinimal!=null) {
-					addToQueueFromTermWithoutDistributions(queue, queryString, term, corpusTermMinimalsDB, corpusMapper.getCorpus().size());
+					addToQueueFromTermWithoutDistributions(queue, queryString, term, corpusTermMinimalsDB, corpusMapper.getCorpus().size(), totalTokens);
 					corpusTermOffered = true;
 				}
 			}
@@ -288,6 +327,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	private void runQueriesInDocumentsCountOnly(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, Map<String, Query> queriesMap) throws IOException {
 		Map<String, CorpusTermMinimalsDB> corpusTermMinimalsDBMap = new HashMap<String, CorpusTermMinimalsDB>();
 //		CorpusTermMinimalsDB corpusTermMinimalsDB = null; // only create it if we need it
+		int totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
 		for (Map.Entry<String, Query> entry : queriesMap.entrySet()) {
 			Query query = entry.getValue();
 			String queryString = entry.getKey();
@@ -296,7 +336,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				if (corpusTermMinimalsDBMap.containsKey(field)==false) {
 					corpusTermMinimalsDBMap.put(field, CorpusTermMinimalsDB.getInstance(corpusMapper, field));
 				}
-				addToQueueFromTermWithoutDistributions(queue, queryString, ((TermQuery) query).getTerm(), corpusTermMinimalsDBMap.get(field), corpusMapper.getCorpus().size());
+				addToQueueFromTermWithoutDistributions(queue, queryString, ((TermQuery) query).getTerm(), corpusTermMinimalsDBMap.get(field), corpusMapper.getCorpus().size(), totalTokens);
 			}
 			else {
 				addToQueueFromQueryWithoutDistributions(corpusMapper, queue, queryString, query);
@@ -307,13 +347,15 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		}
 	}
 	
-	private void addToQueueFromTermWithoutDistributions(FlexibleQueue<CorpusTerm> queue, String queryString, Term term, CorpusTermMinimalsDB corpusTermMinimalsDB, int corpusSize) throws IOException {
+	private void addToQueueFromTermWithoutDistributions(FlexibleQueue<CorpusTerm> queue, String queryString, Term term, CorpusTermMinimalsDB corpusTermMinimalsDB, int corpusSize, int totalTokens) throws IOException {
 		CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(term.text());
 		CorpusTerm corpusTerm = new CorpusTerm(queryString, corpusTermMinimal==null ? 0 : corpusTermMinimal.getRawFreq(), totalTokens, corpusTermMinimal==null ? 0 :corpusTermMinimal.getInDocumentsCount(), corpusSize);
 		offer(queue, corpusTerm);
 	}
 
 	private void addToQueueFromQueryWithoutDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Query query) throws IOException {
+		totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
+
 		LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
 		corpusMapper.getSearcher().search(corpusMapper.getFilteredQuery(query), collector);
 		CorpusTerm corpusTerm = new CorpusTerm(queryString, collector.getRawFreq(), totalTokens, collector.getInDocumentsCount(), corpusMapper.getCorpus().size());
@@ -361,6 +403,14 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	
 	private void offer(FlexibleQueue<CorpusTerm> queue, CorpusTerm corpusTerm) {
 		// we need to offer this even if rawfreq is 0 since we want to show query results for non matches
+		if (comparisonCorpusTermMinimals!=null) {
+			CorpusTermMinimal corpusTermMinimal = comparisonCorpusTermMinimals.get(corpusTerm.getTerm());
+			if (corpusTermMinimal!=null && comparisonCorpusTotalTokens>0) {
+				corpusTerm.setComparisonRelativeFrequency((float) corpusTermMinimal.getRawFreq() / (float) comparisonCorpusTotalTokens);
+			} else {
+				corpusTerm.setComparisonRelativeFrequency(0);
+			}
+		}
 		queue.offer(corpusTerm);
 		total++;
 		totalTokens+=corpusTerm.getRawFreq();

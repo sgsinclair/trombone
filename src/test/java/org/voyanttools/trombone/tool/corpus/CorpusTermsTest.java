@@ -23,28 +23,40 @@ public class CorpusTermsTest {
 		Storage storage = new MemoryStorage();
 		
 		// add an additional document to the corpus
-		Document document = new Document();
-		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
-		storage.getLuceneManager().addDocument(document);
+//		Document document = new Document();
+//		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
+//		storage.getLuceneManager().addDocument(document);
 		
+		RealCorpusCreator creator;
 		FlexibleParameters parameters;
 		
+		parameters = new FlexibleParameters();
+		parameters.addParameter("string",  "dark and stormy night in document one");
+		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
+		parameters.addParameter("noCache", 1);
+
+		creator = new RealCorpusCreator(storage, parameters);
+		creator.run();
+		String comparisonCorpusId = creator.getStoredId();
+
 		parameters = new FlexibleParameters();
 		parameters.addParameter("string",  "It was a dark and stormy night.");
 		parameters.addParameter("string", "It was the best of times it was the worst of times.");
 		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
 		parameters.addParameter("noCache", 1);
-
-		RealCorpusCreator creator = new RealCorpusCreator(storage, parameters);
+		creator = new RealCorpusCreator(storage, parameters);
 		creator.run();
-		parameters.setParameter("corpus", creator.getStoredId());
+		String keepCorpusId = creator.getStoredId();
 		
-		// add another additional document to the corpus
-		document = new Document();
-		document.add(new TextField("lexical", "dark and stormy night in document three", Field.Store.YES));
-		storage.getLuceneManager().addDocument(document);
-
+		parameters = new FlexibleParameters();
+		parameters.addParameter("string",  "dark and stormy night in document three");
+		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
+		parameters.addParameter("noCache", 1);
+		creator = new RealCorpusCreator(storage, parameters);
+		creator.run();
 		
+		parameters = new FlexibleParameters();
+		parameters.setParameter("corpus", keepCorpusId);
 		parameters.setParameter("tool", "CorpusTermFrequencies");
 		
 		CorpusTerm corpusTerm;
@@ -317,6 +329,19 @@ public class CorpusTermsTest {
 		assertEquals(1, corpusTerms.get(0).getRawFreq()); // neither document has light
 		assertEquals(1, corpusTerms.size());
 		
+		// test comparison corpus
+		parameters.setParameter("query", "it, document, and");
+		parameters.setParameter("comparisonCorpus", comparisonCorpusId);
+		parameters.setParameter("sort", "COMPARISONCORPUSRELATIVEFREQ");
+		parameters.setParameter("dir", "DESC");
+		parameters.removeParameter("inDocumentsCountOnly");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(3, corpusTerms.size());
+		assertEquals(0.157, corpusTerms.get(0).getComparisonCorpusRelativeFrequencyDifference(), .01); // it
+		assertEquals(-0.090, corpusTerms.get(1).getComparisonCorpusRelativeFrequencyDifference(), .01); // and
+		assertEquals(-0.142, corpusTerms.get(2).getComparisonCorpusRelativeFrequencyDifference(), .01); // document
 		storage.destroy();
 		
 	}

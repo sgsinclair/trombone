@@ -13,7 +13,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class CorpusTerm implements Serializable {
 
 	public enum Sort {
-		INDOCUMENTSCOUNTASC, INDOCUMENTSCOUNTDESC, RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC, RELATIVEPEAKEDNESSASC, RELATIVEPEAKEDNESSDESC, RELATIVESKEWNESSASC, RELATIVESKEWNESSDESC;
+		INDOCUMENTSCOUNTASC, INDOCUMENTSCOUNTDESC, RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC, RELATIVEPEAKEDNESSASC, RELATIVEPEAKEDNESSDESC, RELATIVESKEWNESSASC, RELATIVESKEWNESSDESC, COMPARISONCORPUSRELATIVEFREQASC, COMPARISONCORPUSRELATIVEFREQDESC,;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
@@ -22,6 +22,7 @@ public class CorpusTerm implements Serializable {
 			else if (sort.startsWith("INDOCUMENTSCOUNT")) {sortPrefix = "INDOCUMENTSCOUNT";}
 			else if (sort.startsWith("RELATIVEPEAK")) {sortPrefix = "RELATIVEPEAKEDNESS";}
 			else if (sort.startsWith("RELATIVESKEW")) {sortPrefix = "RELATIVESKEWNESS";}
+			else if (sort.startsWith("COMPARISONCORPUSRELATIVEFREQ")) {sortPrefix = "COMPARISONCORPUSRELATIVEFREQ";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
@@ -45,6 +46,8 @@ public class CorpusTerm implements Serializable {
 	
 	private float relativeSkewness = Float.NaN;
 	
+	private float comparisonCorpusRelativeFrequencyDifference = Float.NaN;
+	
 //	private float[] relativeFreqs;
 	
 	@XStreamOmitField
@@ -55,6 +58,14 @@ public class CorpusTerm implements Serializable {
 	
 	public CorpusTerm(String termString, int rawFreq, int totalTokens, int inDocumentsCount, int totalDocuments) {
 		this(termString, rawFreq, totalTokens, inDocumentsCount, totalDocuments, null, null, 0);
+	}
+	
+	public void setComparisonRelativeFrequency(float comparisonCorpusRelativeFrequency) {
+		this.comparisonCorpusRelativeFrequencyDifference = this.getRelativeFrequency() - comparisonCorpusRelativeFrequency;
+	}
+	
+	public float getComparisonCorpusRelativeFrequencyDifference() {
+		return comparisonCorpusRelativeFrequencyDifference;
 	}
 	
 	public CorpusTerm(String termString, int rawFreq, int totalTokens, int inDocumentsCount, int totalDocuments, int[] rawFreqs, float[] relativeFreqs, int bins) {
@@ -173,6 +184,10 @@ public class CorpusTerm implements Serializable {
 			return InDocumentsCountAscendingComparator;
 		case INDOCUMENTSCOUNTDESC:
 			return InDocumentsCountDescendingComparator;
+		case COMPARISONCORPUSRELATIVEFREQASC:
+			return ComparisonCorpusRelativeFrequencyAscendingComparator;
+		case COMPARISONCORPUSRELATIVEFREQDESC:
+			return ComparisonCorpusRelativeFrequencyDescendingComparator;
 		default: // rawFrequencyDesc
 			return RawFrequencyDescendingComparator;
 		}
@@ -313,6 +328,38 @@ public class CorpusTerm implements Serializable {
 			}
 		}	
 	};
+	
+	private static Comparator<CorpusTerm> ComparisonCorpusRelativeFrequencyDescendingComparator = new Comparator<CorpusTerm>() {
+
+		@Override
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			float f1 = term1.getComparisonCorpusRelativeFrequencyDifference();
+			float f2 = term2.getComparisonCorpusRelativeFrequencyDifference();
+			if (f1==f2) {
+				return RawFrequencyDescendingComparator.compare(term1, term2);
+			}
+			else {
+				return Float.compare(f2, f1);
+			}
+		}	
+	};
+
+	private static Comparator<CorpusTerm> ComparisonCorpusRelativeFrequencyAscendingComparator = new Comparator<CorpusTerm>() {
+
+		@Override
+		public int compare(CorpusTerm term1, CorpusTerm term2) {
+			float f1 = term1.getComparisonCorpusRelativeFrequencyDifference();
+			float f2 = term2.getComparisonCorpusRelativeFrequencyDifference();
+			if (f1==f2) {
+				return RawFrequencyDescendingComparator.compare(term1, term2);
+			}
+			else {
+				return Float.compare(f1, f2);
+			}
+		}	
+	};
+
+	
 	@Override
 	public String toString() {
 		return "{"+term+": "+rawFreq+" ("+getRelativeFreq()+")";
