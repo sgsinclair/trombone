@@ -51,42 +51,45 @@ public class DtocIndex extends AbstractTool {
 	}
 	
 	private String getIndex(Corpus corpus) throws IOException {
-		
+		String string;
 		String id = getOriginalDocId(corpus);
 		
-		StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
-		
-		DocumentMetadata metadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
-		
-		StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
-
-		FlexibleParameters indexParams = new FlexibleParameters();
-		indexParams.setParameter("xmlContentXpath", "//*[local-name()='div' and @type='index']");
-		
-		XmlExtractor extractor = new XmlExtractor(storedDocumentSourceStorage, indexParams);
-		
-		InputSource inputSource;
-		
-		try {
-			inputSource = extractor.getExtractableInputSource(storedDocumentSource);
-		} catch (Exception e) {
-			throw new IllegalArgumentException("Unable to find index content ("+indexParams.getParameterValue("xmlContentXpath")+") in this document: "+metadata, e);
-		}
-		
-		InputStream inputStream = null;
-		String string;
-		
-		try {
-			inputStream = inputSource.getInputStream();
-			string = IOUtils.toString(inputStream);
-		}
-		catch (IOException e) {
-			throw new IOException("Unable to read index ("+indexParams.getParameterValue("xmlContentXpath")+") from DToC file: "+metadata, e);
-		}
-		finally {
-			if (inputStream != null) {
-				inputStream.close();
+		if (id != null) {
+			StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
+			
+			DocumentMetadata metadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
+			
+			StoredDocumentSource storedDocumentSource = new StoredDocumentSource(id, metadata);
+	
+			FlexibleParameters indexParams = new FlexibleParameters();
+			indexParams.setParameter("xmlContentXpath", "//*[local-name()='div' and @type='index']");
+			
+			XmlExtractor extractor = new XmlExtractor(storedDocumentSourceStorage, indexParams);
+			
+			InputSource inputSource;
+			
+			try {
+				inputSource = extractor.getExtractableInputSource(storedDocumentSource);
+			} catch (Exception e) {
+				throw new IllegalArgumentException("Unable to find index content ("+indexParams.getParameterValue("xmlContentXpath")+") in this document: "+metadata, e);
 			}
+			
+			InputStream inputStream = null;
+			
+			try {
+				inputStream = inputSource.getInputStream();
+				string = IOUtils.toString(inputStream);
+			}
+			catch (IOException e) {
+				throw new IOException("Unable to read index ("+indexParams.getParameterValue("xmlContentXpath")+") from DToC file: "+metadata, e);
+			}
+			finally {
+				if (inputStream != null) {
+					inputStream.close();
+				}
+			}
+		} else {
+			string = "";
 		}
 		
 		return string;
