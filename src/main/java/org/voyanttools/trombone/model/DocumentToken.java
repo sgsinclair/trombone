@@ -24,6 +24,8 @@ public class DocumentToken implements Comparable<DocumentToken> {
 	private int startOffset;
 	
 	private int endOffset;
+	
+	private String stopword = null;
 
 	/**
 	 * 
@@ -44,6 +46,10 @@ public class DocumentToken implements Comparable<DocumentToken> {
 		return Integer.valueOf(position).compareTo(Integer.valueOf(dt.position));
 	}
 
+	public void isStopword() {
+		stopword = "true";
+	}
+	
 	public String getTerm() {
 		return term;
 	}

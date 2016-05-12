@@ -21,6 +21,7 @@ import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentToken;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -62,6 +63,12 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 	@XStreamOmitField
 	private TokenType tokenType;
 	
+	@XStreamOmitField
+	private Keywords stopwords = null;
+	
+	@XStreamOmitField
+	private Keywords whitelist = null;
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -77,7 +84,12 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
-		
+		stopwords = getStopwords(corpusMapper.getCorpus());
+		if (parameters.containsKey("whitelist")) {
+			whitelist = new Keywords();
+			whitelist.load(storage, parameters.getParameterValues("whitelist"));
+		}
+		boolean noOthers = parameters.getParameterBooleanValue("noOthers");
 		total = Integer.MAX_VALUE;
 		Corpus corpus = corpusMapper.getCorpus();
 		ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
@@ -133,7 +145,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 			int lastDocumentTokenPositionIndex = lastTokenPositions[corpusDocumentIndexPosition];
 			for (int i=0, len=termInfos.size(); i<len; i++) {
 				termInfo = termInfos.get(i);
-				if ((i==0 && start==0 )|| i > 0) { // get content before first token or filler between tokens
+				if (!noOthers && ((i==0 && start==0 )|| i > 0)) { // get content before first token or filler between tokens
 					string = StringUtils.substring(document, lastEndOffset, termInfo.getStartOffset());
 					List<DocumentToken> documentOtherTokens = getDocumentOtherTokens(stripper.strip(string), id, corpusDocumentIndexPosition, lastEndOffset);
 					documentTokens.addAll(documentOtherTokens);
@@ -141,10 +153,17 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 					// if (len+1<termInfos.size()) {len++;} // extend loop by one
 				}
 				string = StringUtils.substring(document, termInfo.getStartOffset(), termInfo.getEndOffset());
-				documentTokens.add(new DocumentToken(id, corpusDocumentIndexPosition, string, tokenType, termInfo.getPosition(), termInfo.getStartOffset(), termInfo.getEndOffset(), docFreqs.get(termInfo.getText())));
+				DocumentToken dt = new DocumentToken(id, corpusDocumentIndexPosition, string, tokenType, termInfo.getPosition(), termInfo.getStartOffset(), termInfo.getEndOffset(), docFreqs.get(termInfo.getText()));
+				if (whitelist!=null) {
+					if (whitelist.isKeyword(string.toLowerCase())) {
+						documentTokens.add(dt);
+					}
+				} else {
+					documentTokens.add(dt);
+				}
 				lastEndOffset = termInfo.getEndOffset();
 				tokensCounter++;
-				if (i+1==len && termInfo.getPosition()==lastDocumentTokenPositionIndex) {
+				if (!noOthers && (i+1==len && termInfo.getPosition()==lastDocumentTokenPositionIndex)) {
 					string = StringUtils.substring(document, lastEndOffset);
 					List<DocumentToken> documentOtherTokens = getDocumentOtherTokens(stripper.strip(string), id, corpusDocumentIndexPosition, lastEndOffset);
 					documentTokens.addAll(documentOtherTokens);
@@ -158,7 +177,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 
 	@Override
 	public int getVersion() {
-		return super.getVersion()+5;
+		return super.getVersion()+7;
 	}
 	
 	private List<DocumentToken> getDocumentOtherTokens(String string, String documentId, int documentIndex, int startoffset) {
