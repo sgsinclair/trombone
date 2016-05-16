@@ -116,7 +116,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	
 	@Override
 	public int getVersion() {
-		return super.getVersion()+8;
+		return super.getVersion()+9;
 	}
 
 	@Override
@@ -166,7 +166,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				float mean = typesCountMeans[documentPosition];
 				float stdDev = typesCountStdDev[documentPosition];
 
-				if (freq>minRawFreq) {
+				if (freq>=minRawFreq) {
 					total++;
 					float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
 					DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], zscore, positions, null, corpusTermMinimal);
@@ -235,7 +235,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 								else {
 									freq = (int) termsEnum.totalTermFreq();
 								}
-								if (freq>minRawFreq) {
+								if (freq>=minRawFreq) {
 									total++;
 									float zscore = stdDev != 0 ? ((freq-mean) / stdDev) : Float.NaN;
 									DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
