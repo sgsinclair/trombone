@@ -95,6 +95,8 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	@XStreamOmitField
 	int perDocLimit;
 
+	@XStreamOmitField
+	int minRawFreq;
 	
 	/**
 	 * @param storage
@@ -109,11 +111,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		isNeedsPositions = withDistributions || parameters.getParameterBooleanValue("withPositions");
 		isNeedsOffsets = parameters.getParameterBooleanValue("withOffsets");
 		perDocLimit = parameters.getParameterIntValue("perDocLimit", Integer.MAX_VALUE);
+		minRawFreq = parameters.getParameterIntValue("minRawFreq", 0);
 	}
 	
 	@Override
 	public int getVersion() {
-		return super.getVersion()+7;
+		return super.getVersion()+8;
 	}
 
 	@Override
@@ -163,7 +166,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 				float mean = typesCountMeans[documentPosition];
 				float stdDev = typesCountStdDev[documentPosition];
 
-				if (freq>0) {
+				if (freq>minRawFreq) {
 					total++;
 					float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
 					DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], zscore, positions, null, corpusTermMinimal);
@@ -232,10 +235,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 								else {
 									freq = (int) termsEnum.totalTermFreq();
 								}
-								total++;
-								float zscore = stdDev != 0 ? ((freq-mean) / stdDev) : Float.NaN;
-								DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
-								docQueue.offer(documentTerm);
+								if (freq>minRawFreq) {
+									total++;
+									float zscore = stdDev != 0 ? ((freq-mean) / stdDev) : Float.NaN;
+									DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
+									docQueue.offer(documentTerm);
+								}
 							}
 						}
 						bytesRef = termsEnum.next();
