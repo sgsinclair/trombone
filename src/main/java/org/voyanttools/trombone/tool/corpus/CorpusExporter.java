@@ -77,11 +77,13 @@ public class CorpusExporter extends AbstractCorpusTool implements ConsumptiveToo
 				
 				if (format.equals("SOURCE")) {
 					// we're going to try to go up the parent tree (though we may not want to go as far as the unexpanded version, not sure what to do about that
+					FlexibleParameters fp = documentMetadata.getFlexibleParameters();
+					DocumentMetadata tempDocumentMetadata = new DocumentMetadata(fp);
 					while(true) {
-						FlexibleParameters fp = documentMetadata.getFlexibleParameters();
-						if (fp.containsKey("parent_id") && documentMetadata.getParentType()!=DocumentMetadata.ParentType.EXPANSION) {
+						if (fp.containsKey("parent_id") && tempDocumentMetadata.getParentType()!=DocumentMetadata.ParentType.EXPANSION) {
 							id = fp.getParameterValue("parent_id");
-							documentMetadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
+							tempDocumentMetadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
+							fp = tempDocumentMetadata.getFlexibleParameters();
 						}
 						else {
 							break;
