@@ -10,6 +10,7 @@
     <entry key="xmlExtraMetadataXpath">authorSex=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/sex
         authorLink=/EEBO/dreamheader/opendata/teiHeader/fileDesc/titleStmt/author/idno[@type eq 'viaf']/@ref
         titleLink=(/EEBO/dreamheader/opendata/teiHeader/fileDesc/sourceDesc/ref[@type eq 'oclc']/@target)[1]
-        tcpId=/EEBO/dreamheader/opendata/teiHeader/fileDesc/idno[@type eq 'tcp']</entry> <!-- check if newlines are kept -->
+        tcpId=/EEBO/dreamheader/opendata/teiHeader/fileDesc/idno[@type eq 'tcp']
+        phase=/EEBO/dreamheader/tcpdata/tcpid/@phase</entry> <!-- check if newlines are kept -->
     <entry key="xmlExtractorTemplate">dream-extraction.xsl</entry>
 </properties>
