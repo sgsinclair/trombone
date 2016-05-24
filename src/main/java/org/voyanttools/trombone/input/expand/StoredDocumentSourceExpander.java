@@ -156,7 +156,8 @@ public class StoredDocumentSourceExpander implements Expander {
 		String inputFormatString = parameters.getParameterValue("inputFormat", "").toUpperCase();
 		if (inputFormatString.isEmpty()==false) {
 			if (format!=DocumentFormat.ARCHIVE && format!=DocumentFormat.COMPRESSED) { // make sure it's not container format (where the inputFormat parameters probably applies to the contents, not the container)
-				format = DocumentFormat.valueOf(inputFormatString);
+				// is it ok to have unrecognized here?
+				format = DocumentFormat.getForgivingly(inputFormatString);
 			}
 		}
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlContentXpath">/*[local-name()='TEI']/*[local-name()='text']</entry>
+    <entry key="xmlTitleXpath">/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='titleStmt']/*[local-name()='title']</entry>
+    <entry key="xmlAuthorXpath">/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='titleStmt']/*[local-name()='author']</entry>
+    <entry key="xmlPubDateXpath">/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='sourceDesc']/*[local-name()='biblFull']/*[local-name()='publicationStmt']/*[local-name()='date']</entry>
+    <entry key="xmlPubPlaceXpath">/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='sourceDesc']/*[local-name()='biblFull']/*[local-name()='publicationStmt']/*[local-name()='date']/*[local-name()='pubPlace']</entry>
+    <entry key="xmlPublisherXpath">/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='sourceDesc']/*[local-name()='biblFull']/*[local-name()='publicationStmt']/*[local-name()='publisher']</entry> 
+    <entry key="xmlExtraMetadataXpath">authorMetadata=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='sourceDesc']/*[local-name()='listPerson' and attribute::type="author_metadata"]
+        respStmt=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='titleStmt']/*[local-name()='respStmt']
+        classLCSH=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='profileDesc']/*[local-name()='textClass']/*[local-name()='keywords' and attribute::scheme='#lcsh']/*[local-name()='term']
+        classLC=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='profileDesc']/*[local-name()='textClass']/*[local-name()='classCode' and attribute::scheme='#lc']</entry>
+</properties>

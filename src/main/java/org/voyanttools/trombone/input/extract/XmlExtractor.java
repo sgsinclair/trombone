@@ -155,13 +155,10 @@ public class XmlExtractor implements Extractor, Serializable {
 		
 		if (localParameters.getParameterValue("inputFormat","").isEmpty()==false || guessedFormat!=DocumentFormat.UNKNOWN) {
 			
-			if (guessedFormat==DocumentFormat.UNKNOWN) {
-				guessedFormat = DocumentFormat.valueOf(localParameters.getParameterValue("inputFormat","").toUpperCase());
-			}
-			
+			String guessedFormatString = guessedFormat==DocumentFormat.UNKNOWN ? localParameters.getParameterValue("inputFormat","") : guessedFormat.name();			
 			Properties properties = new Properties();
 			
-			String resourcePath = "/org/voyanttools/trombone/input-formats/"+guessedFormat.name().toLowerCase()+".xml";
+			String resourcePath = "/org/voyanttools/trombone/input-formats/"+guessedFormatString.toLowerCase()+".xml";
 			URL url = this.getClass().getResource(resourcePath);
 			if (url!=null) {
 				File file = new File(url.getPath());

@@ -109,7 +109,11 @@ public class StoredDocumentSourceExtractor {
 		
 		String inputFormatString = parameters.getParameterValue("inputFormat", "").toUpperCase();
 		if (inputFormatString.isEmpty()==false && inputFormatString.toUpperCase().equals("PBLIT")==false) {
-			format = DocumentFormat.valueOf(inputFormatString);
+			format = DocumentFormat.getForgivingly(inputFormatString);
+			if (format==DocumentFormat.UNKNOWN) {
+				// allow this to be set, especially for XML with an input format definition
+				format = storedDocumentSource.getMetadata().getDocumentFormat();
+			}
 		}
 		else {
 			format = storedDocumentSource.getMetadata().getDocumentFormat();

@@ -318,4 +318,12 @@ public enum DocumentFormat {
 		return fromFile(file).isSkippable();
 	}
 
+	public static DocumentFormat getForgivingly(String string) {
+		for (DocumentFormat documentFormat : values()) {
+			if (documentFormat.name().equalsIgnoreCase(string)) {
+				return documentFormat;
+			}
+		}
+		return DocumentFormat.UNKNOWN;
+	}
 }
