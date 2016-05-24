@@ -10,8 +10,10 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -68,63 +70,69 @@ public class CorpusExporter extends AbstractCorpusTool implements ConsumptiveToo
 		Stripper stripper = new Stripper(Stripper.TYPE.ALL); // only used for text output
 		
 		ZipOutputStream zipOutputStream = new ZipOutputStream(outputStream);
-		String format = parameters.getParameterValue("documentFormat", "VOYANT").toUpperCase();
+		
+		Set<String> documentFormats = new HashSet<String>();
+		for (String df : parameters.getParameterValues("documentFormat", new String[]{"VOYANT"})) {
+			for (String f : df.split(",")) {
+				documentFormats.add(f.trim());
+			}
+		}
+		
 		String[] documentFilename = parameters.getParameterValues("documentFilename");
-		if (format.equals("VOYANT") || format.equals("SOURCE")) {
-			for (IndexedDocument document : corpus) {
-				String id = document.getId();
-				DocumentMetadata documentMetadata = document.getMetadata();
-				
-				if (format.equals("SOURCE")) {
-					// we're going to try to go up the parent tree (though we may not want to go as far as the unexpanded version, not sure what to do about that
-					FlexibleParameters fp = documentMetadata.getFlexibleParameters();
-					DocumentMetadata tempDocumentMetadata = new DocumentMetadata(fp);
-					while(true) {
-						if (fp.containsKey("parent_id") && tempDocumentMetadata.getParentType()!=DocumentMetadata.ParentType.EXPANSION) {
-							id = fp.getParameterValue("parent_id");
-							tempDocumentMetadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
-							fp = tempDocumentMetadata.getFlexibleParameters();
-						}
-						else {
-							break;
+		
+		for (IndexedDocument document : corpus) {
+			String id = document.getId();
+			DocumentMetadata documentMetadata = document.getMetadata();
+			for (String format : documentFormats) {
+				if (format.equals("VOYANT") || format.equals("SOURCE")) {
+					if (format.equals("SOURCE")) {
+						// we're going to try to go up the parent tree (though we may not want to go as far as the unexpanded version, not sure what to do about that
+						FlexibleParameters fp = documentMetadata.getFlexibleParameters();
+						DocumentMetadata tempDocumentMetadata = new DocumentMetadata(fp);
+						while(true) {
+							if (fp.containsKey("parent_id") && tempDocumentMetadata.getParentType()!=DocumentMetadata.ParentType.EXPANSION) {
+								id = fp.getParameterValue("parent_id");
+								tempDocumentMetadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(id);
+								fp = tempDocumentMetadata.getFlexibleParameters();
+							}
+							else {
+								break;
+							}
 						}
 					}
-				}
-
-				String fileEntryName = getFileEntryName(documentMetadata, documentFilename, nameMapper);
-				ZipEntry e = new ZipEntry(fileEntryName);
-				zipOutputStream.putNextEntry(e);
-				InputStream inputStream = null;
-				try {
-					inputStream = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
-					IOUtils.copy(inputStream, zipOutputStream);
-				}
-				finally {
-					if (inputStream!=null) {
-						inputStream.close();
+					String fileEntryName = getFileEntryName(documentMetadata, documentFilename, nameMapper);
+					ZipEntry e = new ZipEntry((documentFormats.size()>1 ? format.toLowerCase()+"/" : "")+fileEntryName);
+					zipOutputStream.putNextEntry(e);
+					InputStream inputStream = null;
+					try {
+						inputStream = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
+						IOUtils.copy(inputStream, zipOutputStream);
 					}
+					finally {
+						if (inputStream!=null) {
+							inputStream.close();
+						}
+					}
+					zipOutputStream.closeEntry();
+				} else {
+					String fileEntryName = getFileEntryName(documentMetadata, documentFilename, nameMapper);
+					String string = document.getDocumentString();
+					if (format.equals("TXT") || format.equals("TEXT")) {
+						string = stripper.strip(string).trim().replace("&amp;", "&");
+						if (fileEntryName.endsWith("txt")==false) {fileEntryName+=".txt";}
+					} else {
+						if (fileEntryName.endsWith("html")==false) {fileEntryName+=".html";}
+					}
+					ZipEntry e = new ZipEntry((documentFormats.size()>1 ? format.toLowerCase()+"/" : "")+fileEntryName);
+					zipOutputStream.putNextEntry(e);
+					byte[] bytes = string.getBytes("UTF-8");
+					zipOutputStream.write(bytes);
+					zipOutputStream.closeEntry();
+					
 				}
-				zipOutputStream.closeEntry();
 			}
 		}
-		else {
-			for (IndexedDocument document : corpus) {
-				String fileEntryName = getFileEntryName(document.getMetadata(), documentFilename, nameMapper);
-				String string = document.getDocumentString();
-				if (format.equals("TXT") || format.equals("TEXT")) {
-					string = stripper.strip(string).trim().replace("&amp;", "&");
-					if (fileEntryName.endsWith("txt")==false) {fileEntryName+=".txt";}
-				}
-				else {
-					if (fileEntryName.endsWith("html")==false) {fileEntryName+=".html";}
-				}
-				ZipEntry e = new ZipEntry(fileEntryName);
-				zipOutputStream.putNextEntry(e);
-				byte[] bytes = string.getBytes("UTF-8");
-				zipOutputStream.write(bytes);
-				zipOutputStream.closeEntry();
-			}
-		}
+		
 		zipOutputStream.close();
 	}
 
