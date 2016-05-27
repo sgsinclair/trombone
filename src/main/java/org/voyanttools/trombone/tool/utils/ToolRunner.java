@@ -38,6 +38,7 @@ import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.tool.corpus.CorpusExporter;
 import org.voyanttools.trombone.tool.corpus.CorpusManager;
 import org.voyanttools.trombone.tool.corpus.CorpusMetadata;
+import org.voyanttools.trombone.tool.resource.StoredResource;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -100,6 +101,9 @@ public class ToolRunner extends AbstractTool {
 			sb.append("-").append(tool.getClass().getSimpleName()).append(tool.getVersion());
 		}
 		sb.append("-");
+		if (parameters.containsKey("corpus")) { // add corpus to make it easier to find
+			sb.append(parameters.getParameterValue("corpus")).append("-");
+		}
 		List<String> names = new ArrayList(parameters.getKeys());
 		Collections.sort(names);
 		StringBuilder paramsBuilder = new StringBuilder();
@@ -112,7 +116,8 @@ public class ToolRunner extends AbstractTool {
 		String id = sb.toString();
 		
 		boolean hasParameterSources = InputSourcesBuilder.hasParameterSources(parameters);
-		boolean noCache = tools.size()==1 && tools.get(0) instanceof CorpusMetadata;
+		// skip for corpus (makes it easier to change or remove) and stored resource (cacheing not relevant, easier to change)
+		boolean noCache = tools.size()==1 && (tools.get(0) instanceof CorpusMetadata || tools.get(0) instanceof StoredResource);
 		if (noCache==false && parameters.getParameterBooleanValue("noCache")==false && parameters.getParameterBooleanValue("reCache")==false && hasParameterSources==false && storage.isStored(id)) {
 			Reader reader = storage.retrieveStringReader(id);
 			IOUtils.copy(reader, writer);

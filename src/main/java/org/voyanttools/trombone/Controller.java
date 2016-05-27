@@ -109,52 +109,6 @@ public class Controller {
 		ToolRunner toolRunner = new ToolRunner(storage, parameters, writer);
 		toolRunner.run();
 		
-//		ToolSerializer toolSerializer = new ToolSerializer(parameters, toolRunner);
-//		toolSerializer.run(writer);
-		
-		
-//		RunnableTool tool = new StepEnabledCorpusCreator(storage, parameters);
-//		tool.run();
-
-		/*
-		
-		
-		if (InputSourcesBuilder.hasParameterSources(parameters)) {
-			InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
-			List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
-			StoredDocumentSourceExpander sourcesExpander = new StoredDocumentSourceExpander(storage.getStoredDocumentSourceStorage(), parameters);
-			List<StoredDocumentSource> expandedDocs = sourcesExpander.getExpandedStoredDocumentSources(inputSources);
-			StoredDocumentSourceExtractor extractedBuilder = new StoredDocumentSourceExtractor(storage.getStoredDocumentSourceStorage(), parameters);
-			List<StoredDocumentSource> extractedDocs = extractedBuilder.getExtractedStoredDocumentSources(expandedDocs);
-			LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
-			luceneIndexer.index(extractedDocs);
-			
-			IndexReader reader = storage.getLuceneManager().getIndexReader();
-			Terms terms = reader.getTermVector(0, "lemmatized-en");
-			TermsEnum termsEnum = null;
-			DocsAndPositionsEnum docsAndPositionsEnum = null;
-			
-			termsEnum = terms.iterator(termsEnum);
-			while(termsEnum.next()!=null) {
-//				AttributeSource attributes = termsEnum.attributes();
-//				Iterator<AttributeImpl> attributesIterator = attributes.getAttributeImplsIterator();
-//				AttributeImpl attributeImpl;
-//				while (attributesIterator.hasNext()) {
-//					attributeImpl = attributesIterator.next();
-//					System.err.println(attributeImpl);
-//				}
-				docsAndPositionsEnum = termsEnum.docsAndPositions(null, docsAndPositionsEnum, true);
-				for (int i=0, len=docsAndPositionsEnum.freq(); i<len; i++) {
-					System.err.println(termsEnum.term().utf8ToString()+": "+docsAndPositionsEnum.startOffset());
-					docsAndPositionsEnum.nextPosition();
-					
-				}
-//				System.err.println(termsEnum.term().utf8ToString()+": "+docsAndPositionsEnum..freq());
-//				System.err.println(docsAndPositionsEnum);
-			}
-		}
-		*/
-		
 	}
 
 }
