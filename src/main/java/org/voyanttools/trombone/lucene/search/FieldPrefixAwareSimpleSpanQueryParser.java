@@ -13,6 +13,7 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FuzzyQuery;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
@@ -75,7 +76,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	}
 
 	
-	public Map<String, SpanQuery> getSpanQueriesMap(String[] queries, boolean isQueryExpand) {
+	public Map<String, SpanQuery> getSpanQueriesMap(String[] queries, boolean isQueryExpand) throws IOException {
 		Map<String, SpanQuery> map = new HashMap<String, SpanQuery>();
 		for (String query : queries) {
 			if (query.trim().isEmpty()) {continue;}
@@ -87,8 +88,17 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 			Query q = parse(query);
 			if (isReallyQueryExpand && q instanceof SpanTermQuery == false) {
 				if (q instanceof SpanOrQuery) {
+					IndexSearcher searcher = new IndexSearcher(reader);
+					int count = 0;
 					for (SpanQuery spanQuery : ((SpanOrQuery) q).getClauses()) {
-						map.put(spanQuery.toString(defaultPrefix), spanQuery);
+						// we need to double-check that this term is in the corpus (the query rewrite method includes all terms)
+						if (searcher.search(spanQuery, 1).totalHits==1) {
+							map.put(spanQuery.toString(defaultPrefix), spanQuery);
+							count++;
+						}
+					}
+					if (count==0) {
+						map.put(query, (SpanOrQuery) q);
 					}
 				}
 			}

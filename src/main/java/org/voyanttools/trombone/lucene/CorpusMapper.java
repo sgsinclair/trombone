@@ -52,6 +52,7 @@ import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.SparseFixedBitSet;
 import org.voyanttools.trombone.lucene.search.DocumentFilter;
 import org.voyanttools.trombone.lucene.search.DocumentFilterSpans;
+import org.voyanttools.trombone.lucene.search.FilteredCorpusReader;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 
@@ -102,7 +103,7 @@ public class CorpusMapper {
 	
 	public LeafReader getLeafReader() throws IOException {
 		if (reader==null) {
-			reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+			build();
 		}
 		return reader;
 	}
@@ -150,15 +151,17 @@ public class CorpusMapper {
 	 * @throws IOException
 	 */
 	private void buildFromTermsEnum() throws IOException {
-		Terms terms = getLeafReader().terms("id");
+		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		
+		Terms terms = reader.terms("id");
 		TermsEnum termsEnum = terms.iterator();
 		BytesRef bytesRef = termsEnum.next();
 		DocsEnum docsEnum = null;
 		int doc;
 		String id;
 		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
-		bitSet = new SparseFixedBitSet(getLeafReader().numDocs());
-		Bits liveBits = getLeafReader().getLiveDocs();
+		bitSet = new SparseFixedBitSet(reader.numDocs());
+		Bits liveBits = reader.getLiveDocs();
 		while (bytesRef!=null) {
 			docsEnum = termsEnum.docs(liveBits, docsEnum, DocsEnum.FLAG_NONE);
 			doc = docsEnum.nextDoc();
@@ -173,6 +176,7 @@ public class CorpusMapper {
 			}
 			bytesRef = termsEnum.next();
 		}
+		this.reader = new FilteredCorpusReader(reader, bitSet);
 	}
 	
 	public String getDocumentIdFromDocumentPosition(int documentPosition) {
