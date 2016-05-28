@@ -67,6 +67,11 @@ public class FileCorpusStorage implements CorpusStorage {
 			File metadataFile = new File(corpusDirectory, METADATA_FILE_NAME);
 			if (metadataFile.exists()) {
 				FlexibleParameters params = FlexibleParameters.loadFlexibleParameters(metadataFile);
+				// if we have an alias, switch the ID
+				if (id.equals(params.getParameterValue("id"))==false) {
+					params.setParameter("aliasOf", params.getParameterValue("id"));
+					params.setParameter("id", id);
+				}
 				metadata = new CorpusMetadata(params);
 				return new Corpus(storage, metadata);
 			}

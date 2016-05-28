@@ -21,28 +21,21 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
-import java.io.File;
 import java.io.Serializable;
-import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
-import java.util.Properties;
 
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.converters.collections.MapConverter;
 import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -69,6 +62,10 @@ public class CorpusMetadata implements Serializable {
 		return getProperty("id");
 	}
 
+	public String getAliasOf() {
+		return parameters.getParameterValue("aliasOf");
+	}
+	
 	public void setDocumentIds(Collection<String> ids) {
 		parameters.setParameter("documentIds", ids.toArray(new String[0]));
 	}
@@ -176,6 +173,13 @@ public class CorpusMetadata implements Serializable {
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
 			writer.setValue(corpusMetadata.getId());
 			writer.endNode();
+			
+			String aliasOf = corpusMetadata.getAliasOf();
+			if (aliasOf!=null && aliasOf.isEmpty()==false) {
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "aliasOf", String.class);
+				writer.setValue(aliasOf);
+				writer.endNode();
+			}
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documentsCount", Integer.class);
 			writer.setValue(String.valueOf(corpusMetadata.getDocumentIds().size()));
