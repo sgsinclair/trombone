@@ -62,8 +62,8 @@ public class CorpusMetadata implements Serializable {
 		return getProperty("id");
 	}
 
-	public String getAliasOf() {
-		return parameters.getParameterValue("aliasOf");
+	public String getAlias() {
+		return parameters.getParameterValue("alias");
 	}
 	
 	public void setDocumentIds(Collection<String> ids) {
@@ -174,10 +174,10 @@ public class CorpusMetadata implements Serializable {
 			writer.setValue(corpusMetadata.getId());
 			writer.endNode();
 			
-			String aliasOf = corpusMetadata.getAliasOf();
-			if (aliasOf!=null && aliasOf.isEmpty()==false) {
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "aliasOf", String.class);
-				writer.setValue(aliasOf);
+			String alias = corpusMetadata.getAlias();
+			if (alias!=null && alias.isEmpty()==false) {
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "alias", String.class);
+				writer.setValue(alias);
 				writer.endNode();
 			}
 			
