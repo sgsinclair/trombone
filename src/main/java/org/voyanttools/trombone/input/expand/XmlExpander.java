@@ -159,11 +159,10 @@ class XmlExpander implements Expander {
 		// check to see if we need to set xmlDocumentsXpath using defaults for format
 		if (xmlDocumentsXpath.isEmpty() && (parameters.getParameterValue("inputFormat","").isEmpty()==false || guessedFormat!=DocumentFormat.UNKNOWN)) {
 			
-			if (guessedFormat==DocumentFormat.UNKNOWN) {
-				guessedFormat = DocumentFormat.valueOf(parameters.getParameterValue("inputFormat","").toUpperCase());
-			}
+			String guessedFormatString = guessedFormat==DocumentFormat.UNKNOWN ? parameters.getParameterValue("inputFormat","") : guessedFormat.name();			
+			
+			String resourcePath = "/org/voyanttools/trombone/input-formats/"+guessedFormatString.toLowerCase()+".xml";
 			Properties properties = new Properties();
-			String resourcePath = "/org/voyanttools/trombone/input-formats/"+guessedFormat.name().toLowerCase()+".xml";
 			URL url = this.getClass().getResource(resourcePath);
 			if (url!=null) {
 				File file = new File(url.getPath());

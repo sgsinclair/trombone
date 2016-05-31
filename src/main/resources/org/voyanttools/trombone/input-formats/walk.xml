@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlDocumentsXpath">//doc</entry>
+    <!-- take cotexte_citation if available before context-->
+    <entry key="xmlContentXpath">//arr[@name='content']</entry>
+    <entry key="xmlTitleXpath">//str[@name="title"]</entry>
+    <entry key="xmlAuthorXpath">//str[@name="domain"]</entry>
+    <entry key="xmlPubDateXpath">//str[@name='crawl_year']</entry>
+    <entry key="xmlExtraMetadataXpath">crawlYears=//arr[@name="crawl_years"]
+        domain=//str[@name='domain']
+        url=//str[@name="url"]</entry>
+</properties>

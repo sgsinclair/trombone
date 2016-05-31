@@ -157,7 +157,10 @@ public class StoredDocumentSourceExpander implements Expander {
 		if (inputFormatString.isEmpty()==false) {
 			if (format!=DocumentFormat.ARCHIVE && format!=DocumentFormat.COMPRESSED) { // make sure it's not container format (where the inputFormat parameters probably applies to the contents, not the container)
 				// is it ok to have unrecognized here?
-				format = DocumentFormat.getForgivingly(inputFormatString);
+				DocumentFormat f = DocumentFormat.getForgivingly(inputFormatString);
+				if (f!=DocumentFormat.UNKNOWN) { // only set if we have a real format (could be an XML profile)
+					format = f;
+				}
 			}
 		}
 
