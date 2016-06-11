@@ -23,9 +23,9 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 @XStreamAlias("notebook")
 public class NotebookManager extends AbstractTool {
 	
-	String notebook; // notebook source (ID, URL, etc.)
+	String notebook = null; // notebook source (ID, URL, etc.)
 	
-	String jsonData; // notebook data as JSON
+	String jsonData = null; // notebook data as JSON
 
 	public NotebookManager(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
@@ -33,9 +33,12 @@ public class NotebookManager extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
+		if (parameters.containsKey("jsonData")) { // this might be provided by Trombone
+			jsonData = parameters.getParameterValue("jsonData");
+		} 
 		if (parameters.containsKey("notebook")) {
 			notebook = parameters.getParameterValue("notebook");
-			if (notebook.startsWith("http")) {
+			if (jsonData==null && notebook.startsWith("http")) {
 				URI uri;
 				try {
 					uri = new URI(notebook);
@@ -50,9 +53,10 @@ public class NotebookManager extends AbstractTool {
 				} finally {
 					if (is!=null) is.close();
 				}
-				return;
 			}
 		}
-		throw new RuntimeException("Unable to locate requested notebook.");
+		if (jsonData==null) {
+			throw new RuntimeException("Unable to locate requested notebook.");
+		}
 	}
 }
