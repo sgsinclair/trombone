@@ -313,7 +313,7 @@ public enum DocumentFormat {
 	 * @return whether or not this format can be skipped
 	 */
 	public static boolean isSkippable(File file) {
-		if (file.isHidden()) return true;
+		if (file.isHidden() || file.getName().startsWith(".")) return true;
 		if (file.getName().startsWith("__")) return true;
 		return fromFile(file).isSkippable();
 	}
