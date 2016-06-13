@@ -5,6 +5,7 @@ package org.voyanttools.trombone.util;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import com.optimaize.langdetect.DetectedLanguage;
 import com.optimaize.langdetect.LanguageDetector;
@@ -59,7 +60,7 @@ public class LangDetector {
 		
 		// quick and dirty tags stripper
 		if (text.startsWith("<")) {
-			text = text.replaceAll("<.+?>", "");
+			text = Pattern.compile("<.+?>", Pattern.DOTALL).matcher(text).replaceAll("").trim();
 		}
 				
 		TextObject textObject = textObjectFactory.forText(text);

@@ -142,13 +142,22 @@ class ArchiveExpander implements Expander {
 		String parentId = parentStoredDocumentSource.getId();
 		DocumentMetadata parentMetadata = parentStoredDocumentSource.getMetadata();
 		DocumentFormat parentDocumentFormat = parentMetadata.getDocumentFormat();
-
-		Map<String, Expander> clonedExpanders = new HashMap<String, Expander>();
+				Map<String, Expander> clonedExpanders = new HashMap<String, Expander>();
 		while (archiveEntry != null) {
 			
 			if (archiveEntry.isDirectory()==false) {
 				final String filename = archiveEntry.getName();
 				final File file = new File(filename);
+				
+				// auto-detect a BagIt (this may result in expanding other files unnecessarily, but that's ok). 
+				if (file.getName().equals("bagit.txt")) {
+					expandedDocumentSources.clear();
+					expandedDocumentSources.add(parentStoredDocumentSource);
+					parentMetadata.setDocumentFormat(DocumentFormat.BAGIT);
+					// ensure the parent metadata is right
+					storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(parentStoredDocumentSource.getId(), parentMetadata);
+					return expandedDocumentSources;
+				}
 
 				// skip directories and skippable files
 				if (DocumentFormat.isSkippable(file)==false) {
@@ -189,7 +198,7 @@ class ArchiveExpander implements Expander {
 			}
 			archiveEntry = archiveInputStream.getNextEntry();
 		}
-
+		
 		return expandedDocumentSources;
 	}
 

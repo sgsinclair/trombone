@@ -159,6 +159,8 @@ public enum DocumentFormat {
 	 */
 	PBLIT("zip"),
 	
+	BAGIT("zip"),
+	
 	/**
 	 * A compressed file ("bzip2", "bz2", "gzip", "gz", "pack200", "xz")
 	 */

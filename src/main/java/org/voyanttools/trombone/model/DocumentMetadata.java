@@ -358,6 +358,10 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 		setProperty("extra."+key, value);
 	}
 	
+	public String getExtra(String key) {
+		return getProperty("extra."+key);
+	}
+	
 	public void setExtras(String key, String[] values) {
 		setProperty("extra."+key, values);
 	}
@@ -406,7 +410,9 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	}
 
 	private void setProperty(String key, String value) {
-		parameters.setParameter(key, value.trim());
+		if (value!=null) {
+			parameters.setParameter(key, value.trim());
+		}
 	}
 	
 	private void setProperty(String key, String[] values) {

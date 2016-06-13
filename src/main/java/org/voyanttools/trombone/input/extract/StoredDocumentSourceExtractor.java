@@ -59,6 +59,8 @@ public class StoredDocumentSourceExtractor {
 	
 	private XmlExtractor xmlExtractor = null;
 	
+	private BagItExtractor bagItExtractor = null;
+	
 //	static {
 //		try {
 ////			DetectorFactory.loadProfiles("af","am","ar","az","be","bg","bn","bo","ca","cs","cy","da","de","dv","el","en","es","et","eu","fa","fi","fo","fr","ga","gn","gu","he","hi","hr","hu","hy","id","is","it","ja","jv","ka","kk","km","kn","ko","ky","lb","lij","ln","lt","lv","mi","mk","ml","mn","mr","mt","my","ne","nl","no","os","pa","pl","pnb","pt","qu","ro","ru","si","sk","so","sq","sr","sv","sw","ta","te","th","tk","tl","tr","tt","ug","uk","ur","uz","vi","yi","yo","zh-cn","zh-tw");
@@ -132,6 +134,9 @@ public class StoredDocumentSourceExtractor {
 		if (format.isXml()) {
 			if (xmlExtractor==null) {xmlExtractor = new XmlExtractor(storedDocumentSourceStorage, parameters);}
 			extractedInputSource =  xmlExtractor.getExtractableInputSource(storedDocumentSource);
+		} else if (format==DocumentFormat.BAGIT) {
+			if (bagItExtractor==null) {bagItExtractor = new BagItExtractor(storedDocumentSourceStorage, parameters);}
+			extractedInputSource = bagItExtractor.getExtractableInputSource(storedDocumentSource);
 		}
 		else {
 			if (tikaExtractor==null) {tikaExtractor = new TikaExtractor(storedDocumentSourceStorage, parameters);}

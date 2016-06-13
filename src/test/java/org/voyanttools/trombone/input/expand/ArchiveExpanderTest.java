@@ -29,6 +29,7 @@ import java.util.List;
 import org.junit.Test;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
+import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
@@ -51,6 +52,13 @@ public class ArchiveExpanderTest {
 		StoredDocumentSource storedDocumentSource;
 		List<StoredDocumentSource> expandedSourceDocumentSources;
 		
+		inputSource = new FileInputSource(TestHelper.getResource("formats/Bag-cwrc_b901f23a_e7a2_4d7e_8db7_8c9b6dbf283a.zip"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
+		assertEquals("BagIt zip file should be the same as original.", 1, expandedSourceDocumentSources.size());
+		assertEquals("Bag-cwrc_b901f23a_e7a2_4d7e_8db7_8c9b6dbf283a", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		assertEquals(DocumentFormat.BAGIT, expandedSourceDocumentSources.get(0).getMetadata().getDocumentFormat());
+
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.zip"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);

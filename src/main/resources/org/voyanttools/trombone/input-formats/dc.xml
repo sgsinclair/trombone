@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlContentXpath">/text()</entry>
+    <entry key="xmlExtraMetadataXpath">cwrcIdentifier=//*[local-name()='identifier']</entry>
+</properties>
