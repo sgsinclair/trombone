@@ -3,6 +3,7 @@ package org.voyanttools.trombone.input.expand;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
@@ -41,6 +42,7 @@ public class XslExpanderTest {
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		StoredDocumentSourceExpander storedDocumentSourceExpander;
 		FlexibleParameters parameters;
+		InputStream inputStream;
 		String contents;
 		
 		// no parameters, this would get handled by an extractor, not the expander
@@ -66,7 +68,10 @@ public class XslExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals(1, expandedSourceDocumentSources.size());
 		assertEquals("phrase1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
+		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(1, contents.split("\n").length);
 		
 		// first column tableDocumentsColumns, no header column
@@ -78,7 +83,10 @@ public class XslExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals("1.0.1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals(1, expandedSourceDocumentSources.size());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
+		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(2, contents.split("\n+").length);
 		
 		// first and second columns tableDocumentsColumns
@@ -129,7 +137,10 @@ public class XslExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals(1, expandedSourceDocumentSources.size());
 		assertEquals("1.0.2", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
+		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(1, contents.split("\n").length);
 		
 		// documents as rows, first column only, use header
@@ -141,7 +152,10 @@ public class XslExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals("1.0.1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals(2, expandedSourceDocumentSources.size());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
+		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(2, contents.split("\n+").length);
 		
 		// first and second columns

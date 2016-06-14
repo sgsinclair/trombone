@@ -24,6 +24,7 @@ package org.voyanttools.trombone.input.extract;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 
 import org.apache.commons.io.FileUtils;
@@ -57,38 +58,55 @@ public class TikaExtractorTest {
 		StoredDocumentSource storedDocumentSource;
 		StoredDocumentSource extractedStoredDocumentSource;
 		DocumentMetadata metadata;
+		InputStream inputStream;
 		String contents;
+		
 
 		inputSource = new StringInputSource("This — is <b>a</b> test.");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("Text string shouldn't contain tags", contents.contains("&lt;b&gt;a&lt;/b&gt;"));
 
 		inputSource = new StringInputSource("<html><body><div>This is <b>a</b> test.</div></body></html>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
 		
 		inputSource = new StringInputSource("<html><body><section><div>This is <b>a</b> test.</div></section></body></html>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
 // TODO: find a way to keep html5 tags with xhtml transformer		assertTrue("HTML string should contain HTML5 tags", contents.contains("<section>"));
 		
 		inputSource = new StringInputSource("<test>This is <b>a</b> test.</test>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("XML-looking string should contain tags", contents.contains("<b>a</b>"));
 		
 		parameters.setParameter("inputFormat", "XML");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, parameters);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("XML-declared string should contain tags", contents.contains("<b>a</b>"));
 		
 	}
@@ -104,6 +122,7 @@ public class TikaExtractorTest {
 		StoredDocumentSource storedDocumentSource;
 		StoredDocumentSource extractedStoredDocumentSource;
 		DocumentMetadata metadata;
+		InputStream inputStream;
 		String contents;
 		
 		String line;
@@ -126,7 +145,10 @@ public class TikaExtractorTest {
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("chars_utf8", metadata.getTitle());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have two paragraphs in text", StringUtils.countMatches(contents, "<p>")==2);
 		assertTrue("ensure we've escaped & in text", contents.contains("&amp;")==true);
 		assertTrue("ensure we have some content in text", contents.contains(line)==true);
@@ -138,7 +160,10 @@ public class TikaExtractorTest {
 		assertEquals("title for Pages document", "Titre du document test de Pages", metadata.getTitle());
 		assertEquals("author for Pages document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for Pages document", "test, Pages", metadata.getKeywords());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have some content in Pages", contents.contains(line)==true);
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.doc"));
@@ -148,7 +173,10 @@ public class TikaExtractorTest {
 		assertEquals("title for MSWord (.doc) document", "Titre du document test de MSWord", metadata.getTitle());
 		assertEquals("author for MSWord (.doc) document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for MSWord (.doc) document", "test, MSWord", metadata.getKeywords());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertTrue("ensure we have some content in MSWord (.doc)", contents.contains(line)==true);
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.docx"));
@@ -158,7 +186,10 @@ public class TikaExtractorTest {
 		assertEquals("title for MSWord (.docx) document", "Titre du document test de MSWord", metadata.getTitle());
 		assertEquals("author for MSWord (.docx) document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for MSWord (.docx) document", "test, MSWord", metadata.getKeywords());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertTrue("ensure we have some content in MSWord (.docx)", contents.contains(line)==true);
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.rtf"));
@@ -168,7 +199,10 @@ public class TikaExtractorTest {
 		assertEquals("title for RTF document", "Titre du document test de RTF", metadata.getTitle());
 		assertEquals("author for RTF document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for RTF document", "test, RTF", metadata.getKeywords());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertTrue("ensure we have some content in RTF", contents.contains(line)==true);
 
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars.pdf"));
@@ -178,7 +212,10 @@ public class TikaExtractorTest {
 		assertEquals("title for PDF document", "Titre du document test de PDF", metadata.getTitle());
 		assertEquals("author for PDF document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for PDF document", "test, PDF", metadata.getKeywords());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertTrue("ensure we have some content in PDF", contents.contains(line)==true);
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.htm"));
@@ -188,7 +225,10 @@ public class TikaExtractorTest {
 		assertEquals("title for HTML document", "Titre du document test de HTML", metadata.getTitle());
 		assertEquals("author for HTML document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for HTML document", "test, HTML", metadata.getKeywords());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertTrue("strip out script tag from html", contents.contains("script")==false);
 		assertTrue("strip out style tag from html", contents.contains("style")==false);
 		assertTrue("ensure we have some content in html", contents.contains(line)==true);
@@ -198,7 +238,10 @@ public class TikaExtractorTest {
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("title for XLSX document", "chars", metadata.getTitle());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertTrue("strip out script tag from html", contents.contains("script")==false);
 		assertTrue("strip out style tag from html", contents.contains("style")==false);
 		assertTrue("ensure we have some content in html", contents.contains(line)==true);

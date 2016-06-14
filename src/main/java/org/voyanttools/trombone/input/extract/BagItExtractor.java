@@ -81,7 +81,19 @@ public class BagItExtractor implements Extractor {
 					} else if (file.getName().equals("CWRC.bin")) {
 						InputSource is = new InputStreamInputSource(DigestUtils.md5Hex(UUID.randomUUID().toString()), metadata, new CloseShieldInputStream(archiveInputStream));
 						StoredDocumentSource storedDocSource = storedDocumentSourceStorage.getStoredDocumentSource(is);
-						StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, new FlexibleParameters());
+						
+						FlexibleParameters params = new FlexibleParameters();
+						
+						// we'll have a peak at the file to see if we can determine its format, we do this here because otherwise it's treated much more generically
+						InputStream storedInputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocSource.getId());
+						String contents = IOUtils.readStringFromStream(storedInputStream);
+						storedInputStream.close();
+						if (contents.contains("<?xml") && contents.contains("<TEI") && contents.contains("GutenTag")) {
+							params.setParameter("inputFormat", "GUTENTAG");
+							metadata.setDefaultFormat(DocumentFormat.XML);
+						}
+						
+						StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, params);
 						extractedDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocSource);
 					}
 				}

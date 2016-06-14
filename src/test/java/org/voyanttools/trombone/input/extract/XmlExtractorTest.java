@@ -24,6 +24,7 @@ package org.voyanttools.trombone.input.extract;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -57,6 +58,7 @@ public class XmlExtractorTest {
 		StoredDocumentSource storedDocumentSource;
 		StoredDocumentSource extractedStoredDocumentSource;
 		DocumentMetadata metadata;
+		InputStream inputStream;
 		String contents;
 		
 		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
@@ -68,7 +70,9 @@ public class XmlExtractorTest {
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("", metadata.getTitle());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertTrue("ensure we have some content in XML", contents.contains(line)==true);
 
 		// try with xmlContentXpath parameter and multiple nodes
@@ -79,7 +83,10 @@ public class XmlExtractorTest {
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for XML document", "", metadata.getTitle());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have stripped out other content", contents.contains("<body>")==false);
 		assertTrue("ensure we have some content in XML with multiple nodes for the xmlContentXPath parameter", contents.contains(line)==true);
 		
@@ -91,7 +98,10 @@ public class XmlExtractorTest {
 		metadata = extractedStoredDocumentSource.getMetadata();
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for XML document", "", metadata.getTitle());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+		//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have stripped out other content", contents.contains("<head>")==false);
 		assertTrue("ensure we have some content in XML with a single node xmlContentXpath parameter", contents.contains(line)==true);
 
@@ -104,7 +114,10 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for RSS feed", "Website Feed", metadata.getTitle());
 //		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
 		assertTrue("ensure we have three lines of description in RSS feed", StringUtils.countMatches(contents, "<description>")==2);
@@ -118,7 +131,10 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for RSS feed", "Website Feed", metadata.getTitle());
 //		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
 		assertTrue("ensure we have three lines of description in RSS feed", StringUtils.countMatches(contents, "<description>")==2);
@@ -132,7 +148,10 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals(0, metadata.getTitle().length());
 //		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
 		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		
 		// make sure that we can keep multiple values for metadata
@@ -179,8 +198,11 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals(DocumentFormat.XML, metadata.getDocumentFormat());
 		assertEquals("c", metadata.getTitle());
-		String string = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
-		assertTrue(string.contains("<a>") && string.contains("<b>") && !string.contains("<z>"));
+//		String string = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+		assertTrue(contents.contains("<a>") && contents.contains("<b>") && !contents.contains("<z>"));
 		
 		
 		storage.destroy();
