@@ -25,6 +25,7 @@ import org.voyanttools.trombone.input.expand.StoredDocumentSourceExpander;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputStreamInputSource;
 import org.voyanttools.trombone.input.source.Source;
+import org.voyanttools.trombone.input.source.StoredDocumentSourceInputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -42,7 +43,7 @@ public class BagItExtractor implements Extractor {
 	private StoredDocumentSourceStorage storedDocumentSourceStorage;
 	
 	FlexibleParameters parameters;
-
+	
 	public BagItExtractor(StoredDocumentSourceStorage storedDocumentSourceStorage, FlexibleParameters parameters) {
 		this.storedDocumentSourceStorage = storedDocumentSourceStorage;
 		this.parameters = parameters;
@@ -58,9 +59,9 @@ public class BagItExtractor implements Extractor {
 		BufferedInputStream bis = new BufferedInputStream(inputStream);
 		ArchiveInputStream archiveInputStream = null;
 		
-		String contents = null;
-		String id = DigestUtils.md5Hex(storedDocumentSource.getId()+"bagit");
+		String id = DigestUtils.md5Hex(storedDocumentSource.getId()+"-bagit");
 		DocumentMetadata metadata = storedDocumentSource.getMetadata().asParent(id, ParentType.EXTRACTION);
+		StoredDocumentSource extractedDocumentSource = null;
 		try {
 			archiveInputStream = archiveStreamFactory.createArchiveInputStream(bis);
 			ArchiveEntry archiveEntry = archiveInputStream.getNextEntry();
@@ -72,12 +73,16 @@ public class BagItExtractor implements Extractor {
 					// these filenames are all hard-coded for CWRC for now, not sure how to generalize this
 					if (file.getName().equals("MODS.bin")) { // get metadata if CWRC.bin doesn't have header
 						DocumentMetadata docMetadata = getMetadata(archiveInputStream, "MODS");
-						docMetadata.getFlexibleParameters();
+						metadata.setTitle(docMetadata.getTitle());
+						metadata.setAuthor(docMetadata.getAuthor());
 					} else if (file.getName().equals("DC.xml")) { // get CWRC ID
 						DocumentMetadata docMetadata = getMetadata(archiveInputStream, "DC");
 						metadata.setExtra("cwrcIdentifier", docMetadata.getExtra("cwrcIdentifier"));
 					} else if (file.getName().equals("CWRC.bin")) {
-						contents = IOUtils.readStringFromStream(new CloseShieldInputStream(archiveInputStream));
+						InputSource is = new InputStreamInputSource(DigestUtils.md5Hex(UUID.randomUUID().toString()), metadata, new CloseShieldInputStream(archiveInputStream));
+						StoredDocumentSource storedDocSource = storedDocumentSourceStorage.getStoredDocumentSource(is);
+						StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, new FlexibleParameters());
+						extractedDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocSource);
 					}
 				}
 				archiveEntry = archiveInputStream.getNextEntry();
@@ -88,23 +93,25 @@ public class BagItExtractor implements Extractor {
 			if (archiveInputStream!=null) {archiveInputStream.close();}
 		}
 		
-		if (contents==null || contents.isEmpty()) {
+		if (extractedDocumentSource==null) {
 			throw new IOException("Unable to find BagIt contents.");
 		}
 		
-		InputSource inputSource = new StringInputSource(id, metadata, contents);
-		return inputSource;
+		return new StoredDocumentSourceInputSource(storedDocumentSourceStorage, extractedDocumentSource);
 
 	}
 
-	private DocumentMetadata getMetadata(ArchiveInputStream archiveInputStream, String inputFormat) throws IOException {
+	private InputSource getExtractableInputSource(ArchiveInputStream archiveInputStream, String inputFormat) throws IOException {
 		FlexibleParameters params = new FlexibleParameters(new String[]{"inputFormat="+inputFormat});
 		InputSource is = new InputStreamInputSource(DigestUtils.md5Hex(UUID.randomUUID().toString()), new DocumentMetadata(), new CloseShieldInputStream(archiveInputStream));
 		StoredDocumentSource storedDocSource = storedDocumentSourceStorage.getStoredDocumentSource(is);
-		XmlExtractor xmlExtractor = new XmlExtractor(storedDocumentSourceStorage, params);
-		InputSource inputSource = xmlExtractor.getExtractableInputSource(storedDocSource);
-		inputSource.getInputStream().close(); // we only want metadata
-		return inputSource.getMetadata();
+		XmlExtractor extractor = new XmlExtractor(storedDocumentSourceStorage, params);
+		return extractor.getExtractableInputSource(storedDocSource);
 	}
 
+	private DocumentMetadata getMetadata(ArchiveInputStream archiveInputStream, String inputFormat) throws IOException {
+		InputSource inputSource = getExtractableInputSource(archiveInputStream, inputFormat);
+		inputSource.getInputStream().close(); // make sure it's read
+		return inputSource.getMetadata();
+	}
 }

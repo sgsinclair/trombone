@@ -3,4 +3,5 @@
 <properties>
     <entry key="xmlContentXpath">/text()</entry>
     <entry key="xmlTitleXpath">//*[local-name()='titleInfo']/*[local-name()='title']</entry>
+    <entry key="xmlAuthorXpath">//*[local-name()='name' and descendant::*/text()="Author"]/*[local-name()='namePart']</entry>
 </properties>

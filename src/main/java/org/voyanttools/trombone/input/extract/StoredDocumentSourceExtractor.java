@@ -116,17 +116,17 @@ public class StoredDocumentSourceExtractor {
 				// allow this to be set, especially for XML with an input format definition
 				format = storedDocumentSource.getMetadata().getDocumentFormat();
 			}
-		}
-		else {
+		} else {
 			format = storedDocumentSource.getMetadata().getDocumentFormat();
-			if (format==DocumentFormat.UNKNOWN && storedDocumentSource.getMetadata().getSource()==Source.STRING) {
-				String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
-				format = DocumentFormat.fromString(string);
-				if (format != DocumentFormat.UNKNOWN) {
-					DocumentMetadata metadata = storedDocumentSource.getMetadata();
-					metadata.setDefaultFormat(format);
-					storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(storedDocumentSource.getId(), metadata);
-				}
+		}
+		
+		if (format==DocumentFormat.UNKNOWN && storedDocumentSource.getMetadata().getSource()==Source.STRING) {
+			String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
+			format = DocumentFormat.fromString(string);
+			if (format != DocumentFormat.UNKNOWN) {
+				DocumentMetadata metadata = storedDocumentSource.getMetadata();
+				metadata.setDefaultFormat(format);
+				storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(storedDocumentSource.getId(), metadata);
 			}
 		}
 

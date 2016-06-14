@@ -3,6 +3,7 @@ package org.voyanttools.trombone.input.extract;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
@@ -29,16 +30,21 @@ public class BagItExtractorTest {
 		StoredDocumentSource storedDocumentSource;
 		StoredDocumentSource extractedStoredDocumentSource;
 		DocumentMetadata metadata;
-		String contents;
+		
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/Bag-cwrc_b901f23a_e7a2_4d7e_8db7_8c9b6dbf283a.zip"));
-		inputSource.getMetadata().setDocumentFormat(DocumentFormat.BAGIT); // will be set by expander
+		inputSource.getMetadata().setDocumentFormat(DocumentFormat.BAGIT); // will normally be set by expander
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
-		// this should be blank rather than the title tag (for generic XML)
-		assertEquals("", metadata.getTitle());
-		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		assertEquals("A Beautiful Possibility", metadata.getTitle());
+		assertEquals("Edith Ferguson Black", metadata.getAuthor());
+		InputStream is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		String contents = IOUtils.toString(is);
+		assertTrue(contents.contains("In one of the fairest"));
+		is.close();
+		
+		storage.destroy();
 	}
 
 }
