@@ -56,7 +56,8 @@ import edu.stanford.nlp.util.StringUtils;
 public class Keywords {
 	
 	private static String COMMA_SEPARATOR = ",";
-	private static String HTTP_PREFIX = "http";
+	private static String HTTP_PREFIX = "http:";
+	private static String HTTPS_PREFIX = "https:";
 	private static String STOPWORDS_FILE_PREFIX = "stop.";
 	private static String KEYWORDS_PREFIX = "keywords-";
 	private static String COMMENT = "#";
@@ -80,7 +81,7 @@ public class Keywords {
 			if (ref.contains(",")) { // comma-separated references
 				load(storage, ref.split(COMMA_SEPARATOR));
 			}
-			else if (ref.startsWith(HTTP_PREFIX)) {
+			else if (ref.startsWith(HTTP_PREFIX) || ref.startsWith(HTTPS_PREFIX)) {
 				StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 				URI uri;
 				try {
