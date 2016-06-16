@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
@@ -103,10 +104,20 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 				}
 			}
 			else {
-				// check to see if we have a bare phrase (no quotes, no or operator but still SpanOr)
-				if (q instanceof SpanOrQuery && query.indexOf(" ")>-1 && query.indexOf("|")==-1 && query.indexOf("\"")==-1) {
-					q = new SpanNearQuery(((SpanOrQuery) q).getClauses(), 0, true);
-					query = "\""+query+"\"";
+				if (q instanceof SpanOrQuery) {
+					SpanOrQuery orq = (SpanOrQuery) q;
+					
+					// check if it looks like an and query: +this +that
+					if (StringUtils.countMatches(query,"+") == orq.getClauses().length) {
+						// create an AND query by having a huge slop TODO: is this an important performance hit?
+						q = new SpanNearQuery(orq.getClauses(), Integer.MAX_VALUE, false);
+					}
+					
+					// check to see if we have a bare phrase (no quotes, no or operator but still SpanOr)
+					else if (query.indexOf(" ")>-1 && query.indexOf("|")==-1 && query.indexOf("\"")==-1) {
+						q = new SpanNearQuery(orq.getClauses(), 0, true);
+						query = "\""+query+"\"";
+					}
 				}
 				map.put(query, (SpanQuery) q);
 			}
