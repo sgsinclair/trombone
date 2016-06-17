@@ -106,7 +106,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+13;
+		return super.getVersion()+14;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
