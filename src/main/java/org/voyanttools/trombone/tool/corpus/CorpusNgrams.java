@@ -5,6 +5,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -74,6 +75,10 @@ public class CorpusNgrams extends AbstractTerms implements ConsumptiveTool {
 		String currentTerm = "";
 		List<DocumentNgram> currentList = new ArrayList<DocumentNgram>();
 		FlexibleQueue<CorpusNgram> queue = new FlexibleQueue<CorpusNgram>(comparator, start+limit);
+		
+		// resort the docNgrams in term order so that we can merge same terms easier
+		Collections.sort(docNgrams, DocumentNgram.getComparator(DocumentNgram.Sort.TERMASC));
+		
 		for (DocumentNgram docNgram : docNgrams) {
 			if (docNgram.getTerm().equals(currentTerm)==false) {
 				if (currentList.isEmpty()==false) {
