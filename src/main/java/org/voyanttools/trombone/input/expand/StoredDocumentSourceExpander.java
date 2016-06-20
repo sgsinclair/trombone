@@ -21,17 +21,12 @@
  ******************************************************************************/
 package org.voyanttools.trombone.input.expand;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.io.IOUtils;
-import org.apache.tika.metadata.Metadata;
-import org.apache.tika.mime.MediaType;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentFormat;
@@ -82,6 +77,8 @@ public class StoredDocumentSourceExpander implements Expander {
 	private Expander xslExpander;
 
 	private Expander obApiSearchJsonExpander;
+	
+	private Expander bagItExpander;
 
 	/**
 	 * Create a new instance of this expander with the specified storage
@@ -111,6 +108,7 @@ public class StoredDocumentSourceExpander implements Expander {
 		this.archiveExpander = null;
 		this.compressedExpander = null;
 		this.xmlExpander = null;
+		this.bagItExpander = null;
 		this.parameters = parameters;
 	}
 	
@@ -175,6 +173,9 @@ public class StoredDocumentSourceExpander implements Expander {
 			}
 		}
 
+		if (format==DocumentFormat.BAGIT) {
+			storedDocumentSources.addAll(expandBagIt(storedDocumentSource));
+		}
 		if (format.isArchive()) {
 			storedDocumentSources.addAll(expandArchive(storedDocumentSource));
 		}
@@ -275,6 +276,24 @@ public class StoredDocumentSourceExpander implements Expander {
 		}
 		// this will deal fine when no expansion is needed
 		return this.xmlExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+	}
+
+	/**
+	 * Expand the specified StoredDocumentSource archive and add it to the
+	 * specified list of StoredDocumentSources.
+	 * 
+	 * @param storedDocumentSource
+	 *            the stored document source to expand (or add as is)
+	 * @return a list of expanded document sources
+	 * @throws IOException
+	 *             an IO Exception
+	 */
+	List<StoredDocumentSource> expandBagIt(
+			StoredDocumentSource storedDocumentSource) throws IOException {
+		if (this.bagItExpander == null) {
+			this.bagItExpander = new BagItExpander(storedDocumentSourceStorage, parameters);
+		}
+		return this.bagItExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
 
 	private class CallableExpander implements Callable<StoredDocumentSource> {

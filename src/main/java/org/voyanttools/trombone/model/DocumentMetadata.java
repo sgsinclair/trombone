@@ -123,6 +123,14 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 		return new DocumentMetadata(newParameters);
 	}
 	
+	public void setParent(DocumentMetadata parentMetadata, ParentType parentType) {
+		FlexibleParameters parentParameters = parentMetadata.getFlexibleParameters();
+		for (String key : parentParameters.getKeys()) {
+			parameters.setParameter("parent_"+key, parentParameters.getParameterValues(key));
+		}
+		parameters.setParameter("parentType", parentType.name().toLowerCase());
+	}
+	
 	public ParentType getParentType() {
 		return ParentType.valueOf(getProperty("parentType", "unknown").toUpperCase());
 	}

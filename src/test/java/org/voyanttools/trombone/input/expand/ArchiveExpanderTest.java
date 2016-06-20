@@ -52,13 +52,18 @@ public class ArchiveExpanderTest {
 		StoredDocumentSource storedDocumentSource;
 		List<StoredDocumentSource> expandedSourceDocumentSources;
 		
-		inputSource = new FileInputSource(TestHelper.getResource("formats/Bag-cwrc_b901f23a_e7a2_4d7e_8db7_8c9b6dbf283a.zip"));
+		inputSource = new FileInputSource(TestHelper.getResource("formats/BagIt-One-Document.zip"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
-		assertEquals("BagIt zip file should be the same as original.", 1, expandedSourceDocumentSources.size());
-		assertEquals("Bag-cwrc_b901f23a_e7a2_4d7e_8db7_8c9b6dbf283a", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		assertEquals(1, expandedSourceDocumentSources.size());
 		assertEquals(DocumentFormat.BAGIT, expandedSourceDocumentSources.get(0).getMetadata().getDocumentFormat());
 
+		inputSource = new FileInputSource(TestHelper.getResource("formats/BagIt-Multiple-Documents.zip"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);
+		assertEquals(2, expandedSourceDocumentSources.size());
+		assertEquals(DocumentFormat.BAGIT, expandedSourceDocumentSources.get(0).getMetadata().getDocumentFormat());
+		
 		inputSource = new FileInputSource(TestHelper.getResource("archive/archive.zip"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandArchive(storedDocumentSource);

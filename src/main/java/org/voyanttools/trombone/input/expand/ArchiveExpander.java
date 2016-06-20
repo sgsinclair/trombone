@@ -150,13 +150,15 @@ class ArchiveExpander implements Expander {
 				final File file = new File(filename);
 				
 				// auto-detect a BagIt (this may result in expanding other files unnecessarily, but that's ok). 
-				if (file.getName().equals("bagit.txt")) {
-					expandedDocumentSources.clear();
-					expandedDocumentSources.add(parentStoredDocumentSource);
-					parentMetadata.setDocumentFormat(DocumentFormat.BAGIT);
-					// ensure the parent metadata is right
-					storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(parentStoredDocumentSource.getId(), parentMetadata);
-					return expandedDocumentSources;
+				if (file.getName().equals("bagit.txt") || file.getName().equals("bag-info.txt")) {
+					BagItExpander bagitExpander = new BagItExpander(storedDocumentSourceStorage, parameters);
+					return bagitExpander.getExpandedStoredDocumentSources(parentStoredDocumentSource);
+//					expandedDocumentSources.clear();
+//					expandedDocumentSources.add(parentStoredDocumentSource);
+//					parentMetadata.setDocumentFormat(DocumentFormat.BAGIT);
+//					// ensure the parent metadata is right
+//					storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(parentStoredDocumentSource.getId(), parentMetadata);
+//					return expandedDocumentSources;
 				}
 
 				// skip directories and skippable files
