@@ -66,6 +66,8 @@ import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
+import edu.stanford.nlp.util.StringUtils;
+
 /**
  * @author sgs
  *
@@ -94,6 +96,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	@XStreamOmitField
 	private int comparisonCorpusTotalTokens = 0;
 	
+	@XStreamOmitField
+	private Keywords whiteList;;
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -103,10 +108,18 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
 		corpusTermSort = CorpusTerm.Sort.getForgivingly(parameters);
 		comparator = CorpusTerm.getComparator(corpusTermSort);
+		whiteList = new Keywords();
+		if (parameters.getParameterValue("whiteList", "").isEmpty()==false) {
+			try {
+				whiteList.load(storage, parameters.getParameterValues("whiteList"));
+			} catch (IOException e) {
+				throw new IllegalArgumentException("Unable to load whitelist: "+StringUtils.join(parameters.getParameterValues("whiteList"), ","));
+			}
+		}
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+14;
+		return super.getVersion()+15;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -403,6 +416,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	
 	private void offer(FlexibleQueue<CorpusTerm> queue, CorpusTerm corpusTerm) {
 		// we need to offer this even if rawfreq is 0 since we want to show query results for non matches
+		if (whiteList.isEmpty()==false && whiteList.isKeyword(corpusTerm.getTerm())==false) {return;}
 		if (comparisonCorpusTermMinimals!=null) {
 			CorpusTermMinimal corpusTermMinimal = comparisonCorpusTermMinimals.get(corpusTerm.getTerm());
 			if (corpusTermMinimal!=null && comparisonCorpusTotalTokens>0) {

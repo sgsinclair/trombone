@@ -37,7 +37,7 @@ public class KeywordsManager extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
-		if (parameters.containsKey("stopList")) {
+		if (parameters.containsKey("stopList")) { // handle differently because of corpus interaction
 			if (parameters.containsKey("corpus") && !parameters.getParameterValue("corpus").trim().isEmpty()) {
 				Corpus corpus = CorpusManager.getCorpus(storage, parameters);
 				keywords = this.getStopwords(corpus);
@@ -45,6 +45,8 @@ public class KeywordsManager extends AbstractTool {
 			else {
 				keywords.load(storage, parameters.getParameterValues("stopList"));
 			}
+		} else if (parameters.containsKey("list")) {
+			keywords.load(storage, parameters.getParameterValues("list"));
 		}
 	}
 	

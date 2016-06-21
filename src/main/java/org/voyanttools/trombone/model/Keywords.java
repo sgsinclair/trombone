@@ -74,6 +74,10 @@ public class Keywords {
 	public boolean isKeyword(String keyword) {
 		return keywords.contains(keyword);
 	}
+	
+	public boolean isEmpty() {
+		return keywords.isEmpty();
+	}
 
 	public void load(Storage storage, String[] references) throws IOException {
 		for (String ref : references) {
