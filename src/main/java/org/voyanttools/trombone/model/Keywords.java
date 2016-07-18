@@ -124,7 +124,8 @@ public class Keywords {
 					if (storage instanceof FileStorage) {
 						File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, refId);
 						if (file!=null) {
-							String contents = FileUtils.readFileToString(file);
+							// add to lower case here, though not sure we want it this universal
+							String contents = FileUtils.readFileToString(file).toLowerCase();
 							List<String> keywordsList = StringUtils.split(contents, "\n");
 							storage.storeStrings(keywordsList, refId);
 							add(keywordsList);

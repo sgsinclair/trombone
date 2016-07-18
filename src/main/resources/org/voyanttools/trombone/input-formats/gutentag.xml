@@ -12,5 +12,6 @@
         authorDeath=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='sourceDesc']/*[local-name()='listPerson' and attribute::type="author_metadata"]/*[local-name()='person']/*[local-name()='death']/*[local-name()='date']
         respStmt=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='fileDesc']/*[local-name()='titleStmt']/*[local-name()='respStmt']
         classLCSH=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='profileDesc']/*[local-name()='textClass']/*[local-name()='keywords' and attribute::scheme='#lcsh']/*[local-name()='term']
-        classLC=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='profileDesc']/*[local-name()='textClass']/*[local-name()='classCode' and attribute::scheme='#lc']</entry>
+        classLC=/*[local-name()='TEI']/*[local-name()='teiHeader']/*[local-name()='profileDesc']/*[local-name()='textClass']/*[local-name()='classCode' and attribute::scheme='#lc']
+        collection=//*[local-name()='TEI']/@collection</entry>
 </properties>
