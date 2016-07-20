@@ -1,6 +1,6 @@
 package org.voyanttools.trombone.storage.file;
 
-public class FileTromboneCurrentMigrator extends FileTrombone4_1Migrator {
+public class FileTromboneCurrentMigrator extends FileTrombone4_2Migrator {
 
 	private String tromboneDirectoryName;
 	public FileTromboneCurrentMigrator(String tromboneDirectoryName, FileStorage storage, String id) {

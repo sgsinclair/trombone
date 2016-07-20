@@ -23,9 +23,9 @@ public class CorpusTermsTest {
 		Storage storage = new MemoryStorage();
 		
 		// add an additional document to the corpus
-//		Document document = new Document();
-//		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
-//		storage.getLuceneManager().addDocument(document);
+		Document document = new Document();
+		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
+		storage.getLuceneManager().addDocument(document);
 		
 		RealCorpusCreator creator;
 		FlexibleParameters parameters;
@@ -95,6 +95,7 @@ public class CorpusTermsTest {
 //		assertEquals(1, corpusTerm.getDocumentIndex());
 		assertEquals("\"it was\"", corpusTerm.getTerm());
 		assertEquals(3, corpusTerm.getRawFreq());
+
 
 		// we don't want "document" from the first document
 		parameters.setParameter("query", "document");
@@ -351,6 +352,7 @@ public class CorpusTermsTest {
 		assertEquals(0.157, corpusTerms.get(0).getComparisonCorpusRelativeFrequencyDifference(), .01); // it
 		assertEquals(-0.090, corpusTerms.get(1).getComparisonCorpusRelativeFrequencyDifference(), .01); // and
 		assertEquals(-0.142, corpusTerms.get(2).getComparisonCorpusRelativeFrequencyDifference(), .01); // document
+		
 		storage.destroy();
 		
 	}

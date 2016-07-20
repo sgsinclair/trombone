@@ -13,7 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.lucene.index.DocsAndPositionsEnum;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
@@ -121,15 +121,15 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 				BytesRef term = termsEnum.next();
 				if (term!=null) {
 					String termString = term.utf8ToString();
-					DocsAndPositionsEnum docsAndPositionsEnum = termsEnum.docsAndPositions(null, null, DocsAndPositionsEnum.FLAG_OFFSETS);
-					docsAndPositionsEnum.nextDoc();
-					for (int i=0, len = docsAndPositionsEnum.freq(); i<len; i++) {
-						int pos = docsAndPositionsEnum.nextPosition();
+					PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
+					postingsEnum.nextDoc();
+					for (int i=0, len = postingsEnum.freq(); i<len; i++) {
+						int pos = postingsEnum.nextPosition();
 						if (pos >= documentStart && pos<maxPos) { // out of range
 							if (!docFreqs.containsKey(termString)) {
 								docFreqs.put(termString, len);
 							}
-							termInfos.add(new TermInfo(termString, docsAndPositionsEnum.startOffset(), docsAndPositionsEnum.endOffset(), pos, 1));
+							termInfos.add(new TermInfo(termString, postingsEnum.startOffset(), postingsEnum.endOffset(), pos, 1));
 						}
 					}
 				}

@@ -21,6 +21,7 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.MatchAllDocsQuery;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
@@ -86,17 +87,16 @@ public class CorpusFacets extends AbstractTerms {
 		    Query baseQuery;
 			if (query instanceof PrefixQuery && ((PrefixQuery) query).getPrefix().text().isEmpty()) {
 				dim = ((PrefixQuery) query).getField();
-				baseQuery = corpusMapper.getFilter();
+				baseQuery = new MatchAllDocsQuery();
 			}
 			else {
 				// reparse to use unfaceted data
-				Query q = nonFacetedParser.parse(queryString);
-				baseQuery = corpusMapper.getFilteredQuery(q);
-				if (q instanceof PrefixQuery) {
-					dim = "facet."+((PrefixQuery) q).getField();
+				baseQuery = nonFacetedParser.parse(queryString);
+				if (baseQuery instanceof PrefixQuery) {
+					dim = "facet."+((PrefixQuery) baseQuery).getField();
 				}
-				if (q instanceof TermQuery) {
-					dim = "facet."+((TermQuery) q).getTerm().field();
+				if (baseQuery instanceof TermQuery) {
+					dim = "facet."+((TermQuery) baseQuery).getTerm().field();
 				}
 				else {
 					dim = defaultPrefix;
@@ -108,7 +108,7 @@ public class CorpusFacets extends AbstractTerms {
 		    FacetResult result = facets.getTopChildren(1000000, dim);
 		    if (result!=null){
 		    	// if we have an additional query, we need to check if multiple values are present in case some don't match
-		    	if (!(baseQuery instanceof DocumentFilter) && result.labelValues.length>1) {
+		    	if (!(baseQuery instanceof MatchAllDocsQuery) && result.labelValues.length>1) {
 		    		if (baseQuery instanceof BooleanQuery) {
 		    			result = checkQuery(baseQuery, result);
 		    		}

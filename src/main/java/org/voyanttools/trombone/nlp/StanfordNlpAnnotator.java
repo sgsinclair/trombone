@@ -14,7 +14,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.apache.lucene.index.DocsAndPositionsEnum;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.util.BytesRef;
@@ -109,12 +109,12 @@ class StanfordNlpAnnotator implements NlpAnnotator {
 		while(true) {
 			BytesRef term = termsEnum.next();
 			if (term!=null) {
-				DocsAndPositionsEnum docsAndPositionsEnum = termsEnum.docsAndPositions(null, null, DocsAndPositionsEnum.FLAG_OFFSETS);
-				if (docsAndPositionsEnum!=null) {
-					docsAndPositionsEnum.nextDoc();
-					for (int i=0, len = docsAndPositionsEnum.freq(); i<len; i++) {
-						int pos = docsAndPositionsEnum.nextPosition();
-						int offset = docsAndPositionsEnum.startOffset();
+				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
+				if (postingsEnum!=null) {
+					postingsEnum.nextDoc();
+					for (int i=0, len = postingsEnum.freq(); i<len; i++) {
+						int pos = postingsEnum.nextPosition();
+						int offset = postingsEnum.startOffset();
 						if (offsets.contains(offset)) {
 							offsetToTokenPositionMap.put(offset, pos);
 						}

@@ -29,8 +29,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.spans.SpanQuery;
@@ -192,7 +192,6 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		Corpus corpus = corpusMapper.getCorpus();
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		TermsEnum termsEnum = null;
-		DocsAndPositionsEnum docsAndPositionsEnum = null;
 		Bits docIdBitSet =  corpusMapper.getBitSetFromDocumentIds(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		Bits allBits = new Bits.MatchAllBits(reader.numDocs());
 		int[] tokenCounts = corpus.getTokensCounts(tokenType);
@@ -222,14 +221,14 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 								int[] offsets = null;
 								int freq;
 								if (isNeedsPositions || isNeedsOffsets) {
-									docsAndPositionsEnum = termsEnum.docsAndPositions(allBits, docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
-									docsAndPositionsEnum.nextDoc();
-									freq = docsAndPositionsEnum.freq();
+									PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
+									postingsEnum.nextDoc();
+									freq = postingsEnum.freq();
 									positions = new int[freq];
 									offsets = new int[freq];
 									for (int i=0; i<freq; i++) {
-										positions[i] = docsAndPositionsEnum.nextPosition();
-										offsets[i] = docsAndPositionsEnum.startOffset();
+										positions[i] = postingsEnum.nextPosition();
+										offsets[i] = postingsEnum.startOffset();
 									}
 								}
 								else {

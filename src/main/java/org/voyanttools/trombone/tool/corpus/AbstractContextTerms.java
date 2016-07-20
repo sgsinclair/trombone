@@ -30,8 +30,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.spans.SpanQuery;
@@ -175,13 +175,13 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 			BytesRef term = termsEnum.next();
 			if (term!=null) {
 				String termString = term.utf8ToString();
-				DocsAndPositionsEnum docsAndPositionsEnum = termsEnum.docsAndPositions(null, null, DocsAndPositionsEnum.FLAG_OFFSETS);
-				if (docsAndPositionsEnum!=null) {
-					docsAndPositionsEnum.nextDoc();
-					for (int i=0, len = docsAndPositionsEnum.freq(); i<len; i++) {
-						int pos = docsAndPositionsEnum.nextPosition();
+				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
+				if (postingsEnum!=null) {
+					postingsEnum.nextDoc();
+					for (int i=0, len = postingsEnum.freq(); i<len; i++) {
+						int pos = postingsEnum.nextPosition();
 						if (termsOfInterest.containsKey(pos)) {
-							termsOfInterest.put(pos, new TermInfo(termString, docsAndPositionsEnum.startOffset(), docsAndPositionsEnum.endOffset(), pos, 1));
+							termsOfInterest.put(pos, new TermInfo(termString, postingsEnum.startOffset(), postingsEnum.endOffset(), pos, 1));
 						}
 					}
 				}

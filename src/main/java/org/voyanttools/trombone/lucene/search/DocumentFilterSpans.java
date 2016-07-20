@@ -125,5 +125,10 @@ public class DocumentFilterSpans extends Spans {
   public String toString() {
     return "CorpusFiltered(" + in.toString() + ")";
   }
+
+	@Override
+	public float positionsCost() {
+		return in.positionsCost();
+	}
   
 }

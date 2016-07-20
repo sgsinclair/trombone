@@ -10,8 +10,9 @@ import java.util.Set;
 
 import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.search.Scorer;
-import org.apache.lucene.search.Scorer.ChildScorer;
 import org.apache.lucene.search.SimpleCollector;
+import org.apache.lucene.util.BitSet;
+import org.voyanttools.trombone.lucene.CorpusMapper;
 
 /**
  * @author sgs
@@ -23,18 +24,19 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 	private int base = 0;
 	private Scorer scorer = null;
 	private int rawFreq = 0;
+	private BitSet bitSet;
 
+	public LuceneDocIdsCollector(CorpusMapper corpusMapper) throws IOException  {
+		bitSet = corpusMapper.getBitSet();
+	}
+	
 	public void collect(int doc) throws IOException {
 		int absoluteDoc = base+doc;
-		if (isSeen(absoluteDoc)==false) {
+		// FIXME: determine if we're slowly iterating over all documents in the index and if we can use another doc id iterator
+		if (bitSet.get(doc) && isSeen(absoluteDoc)==false) {
 			scorer.score();
-			int freq = 0;
-			// Scorer.freq() doesn't always return term frequency, contrary to expectations
-			// this makes me a bit nervous, is there always just one level of children?
-			for (ChildScorer childSorer : scorer.getChildren()) {
-				freq += childSorer.child.freq();
-			}
-			rawFreq+=freq;
+			int freq = scorer.freq();
+			rawFreq += freq;
 			luceneDocIds.put(absoluteDoc, freq);
 		}
 	}
@@ -69,4 +71,5 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 	public boolean needsScores() {
 		return true; // can this be set to false while ensuring that setScorer is called?
 	}
+	
 }

@@ -7,7 +7,6 @@ import java.io.IOException;
 
 import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.search.DocIdSet;
-import org.apache.lucene.search.Filter;
 import org.apache.lucene.util.BitDocIdSet;
 import org.apache.lucene.util.Bits;
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -16,7 +15,8 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
  * @author sgs
  *
  */
-public class DocumentFilter extends Filter {
+@Deprecated
+public class DocumentFilter  {
 	
 	private DocIdSet docIdSet;
 	private String id;
@@ -36,17 +36,17 @@ public class DocumentFilter extends Filter {
 	/* (non-Javadoc)
 	 * @see org.apache.lucene.search.Filter#getDocIdSet(org.apache.lucene.index.LeafReaderContext, org.apache.lucene.util.Bits)
 	 */
-	@Override
-	public DocIdSet getDocIdSet(LeafReaderContext context, Bits acceptDocs) throws IOException {
-		return docIdSet;
-	}
+//	@Override
+//	public DocIdSet getDocIdSet(LeafReaderContext context, Bits acceptDocs) throws IOException {
+//		return docIdSet;
+//	}
 
 	/* (non-Javadoc)
 	 * @see org.apache.lucene.search.Query#toString(java.lang.String)
 	 */
-	@Override
-	public String toString(String field) {
-		return "filter for corpus "+id+" ("+ String.valueOf(length)+" documents)";
-	}
+//	@Override
+//	public String toString(String field) {
+//		return "filter for corpus "+id+" ("+ String.valueOf(length)+" documents)";
+//	}
 
 }

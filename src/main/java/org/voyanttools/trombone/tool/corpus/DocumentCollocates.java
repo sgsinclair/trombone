@@ -31,7 +31,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.lucene.index.LeafReader;
-import org.apache.lucene.index.DocsEnum;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
@@ -180,9 +180,9 @@ public class DocumentCollocates extends AbstractContextTerms {
 			BytesRef term = termsEnum.next();
 			if (term!=null) {
 				String termString = term.utf8ToString();
-				DocsEnum docsEnum = termsEnum.docs(null, null, DocsEnum.FLAG_FREQS);
-				docsEnum.nextDoc();
-				int freq = docsEnum.freq();
+				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.FREQS);
+				postingsEnum.nextDoc();
+				int freq = postingsEnum.freq();
 				documentTotalTokens += freq;
 				if (stringsOfInterestMap.containsKey(termString)) {
 					stringsOfInterestMap.put(termString, freq);

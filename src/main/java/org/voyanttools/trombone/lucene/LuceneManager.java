@@ -50,11 +50,6 @@ public class LuceneManager {
 	
 	private IndexSearcher indexSearcher = null;
 	
-//	public static Version VERSION = Version.LUCENE_4_9;
-	
-	private float luceneDocumentVersion = 4.1f;
-
-	
 	private Analyzer analyzer = new KitchenSinkPerFieldAnalyzerWrapper();
 	
 	public LuceneManager(Directory directory) throws CorruptIndexException, IOException {
@@ -137,7 +132,7 @@ public class LuceneManager {
 			writer.addDocument(document);
 		}
 		writer.commit();
-		setDirectoryReader(DirectoryReader.open(writer, true));
+		setDirectoryReader(DirectoryReader.open(writer));
 	}
 
 //

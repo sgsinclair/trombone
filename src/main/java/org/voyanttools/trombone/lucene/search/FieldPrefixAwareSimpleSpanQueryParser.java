@@ -4,7 +4,9 @@
 package org.voyanttools.trombone.lucene.search;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
@@ -65,11 +67,11 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 			return query;
 		}
 		else if (query instanceof BooleanQuery) {
-			SpanOrQuery spanOrQuery = new SpanOrQuery();
+			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
 			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
-				spanOrQuery.addClause((SpanQuery) bq.getQuery()); 
+				spanQueries.add((SpanQuery) bq.getQuery());
 			}
-			return spanOrQuery;
+			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		}
 		else {
 			throw new IllegalStateException("Cannot convert to SpanQuery: "+query);
@@ -130,12 +132,11 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	protected Query newDefaultQuery(String text) {
 		Query query = super.newDefaultQuery(text);
 		if (query instanceof BooleanQuery) {
-			SpanOrQuery spanOrQuery = new SpanOrQuery();
-			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
-				SpanQuery spanQuery = getSpanTermQuery(clause.getQuery());
-				spanOrQuery.addClause(spanQuery);
+			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
+				spanQueries.add(getSpanTermQuery(bq.getQuery()));
 			}
-			return spanOrQuery;
+			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		}
 		else {
 			return getSpanTermQuery(query);
@@ -158,12 +159,12 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	protected Query newFuzzyQuery(String text, int fuzziness) {
 		Query query = super.newFuzzyQuery(text, fuzziness);
 		if (query instanceof BooleanQuery) {
-			SpanOrQuery spanOrQuery = new SpanOrQuery();
-			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
-				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<FuzzyQuery>((FuzzyQuery) clause.getQuery());
-				spanOrQuery.addClause(spanQuery);
+			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
+				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<FuzzyQuery>((FuzzyQuery) bq.getQuery());
+				spanQueries.add(spanQuery);
 			}
-			return spanOrQuery;
+			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		}
 		else {
 			return new SpanMultiTermQueryWrapper<FuzzyQuery>((FuzzyQuery) query);
@@ -174,12 +175,12 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	protected Query newPhraseQuery(String text, int slop) {
 		Query query = super.newPhraseQuery(text, slop);
 		if (query instanceof BooleanQuery) {
-			SpanOrQuery spanOrQuery = new SpanOrQuery();
-			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
-				SpanQuery spanQuery = getSpanNearQuery((PhraseQuery) clause.getQuery());
-				spanOrQuery.addClause(spanQuery);
+			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
+				SpanQuery spanQuery = getSpanNearQuery((PhraseQuery) bq.getQuery());
+				spanQueries.add(spanQuery);
 			}
-			return spanOrQuery;
+			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		}
 		else {
 			return getSpanNearQuery((PhraseQuery) query);
@@ -199,12 +200,12 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	protected Query newPrefixQuery(String text) {
 		Query query = super.newPrefixQuery(text);
 		if (query instanceof BooleanQuery) {
-			SpanOrQuery spanOrQuery = new SpanOrQuery();
-			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
-				SpanQuery spanQuery =getQuery((PrefixQuery) clause.getQuery());
-				spanOrQuery.addClause(spanQuery);
+			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
+				SpanQuery spanQuery = getQuery((PrefixQuery) bq.getQuery());
+				spanQueries.add(spanQuery);
 			}
-			return spanOrQuery;
+			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		} else if (query instanceof SpanOrQuery) {
 			return query;
 		}
@@ -224,13 +225,12 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	protected Query newRegexQuery(String text) throws IOException {
 		Query query = super.newRegexQuery(text);
 		if (query instanceof BooleanQuery) {
-			SpanOrQuery spanOrQuery = new SpanOrQuery();
-			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
-				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) clause.getQuery());
-				Query q = spanQuery.rewrite(reader);
-				spanOrQuery.addClause((SpanQuery) q); // TODO: check that this is always span query
+			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
+				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) bq.getQuery());
+				spanQueries.add(spanQuery);
 			}
-			return spanOrQuery;
+			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		}
 		else {
 			Query spanRegexQuery = new SpanMultiTermQueryWrapper<RegexpQuery>((RegexpQuery) query);
@@ -241,13 +241,13 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 	protected Query newRangeQuery(String text) throws IOException {
 		Query query = super.newRangeQuery(text);
 		if (query instanceof BooleanQuery) {
-			SpanOrQuery spanOrQuery = new SpanOrQuery();
-			for (BooleanClause clause : ((BooleanQuery) query).clauses()) {
-				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<TermRangeQuery>((TermRangeQuery) clause.getQuery());
+			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
+				SpanQuery spanQuery = new SpanMultiTermQueryWrapper<TermRangeQuery>((TermRangeQuery) bq.getQuery());
 				Query q = spanQuery.rewrite(reader);
-				spanOrQuery.addClause((SpanQuery) q); // TODO: check that this is always span query
+				spanQueries.add((SpanQuery) q);
 			}
-			return spanOrQuery;
+			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		}
 		else {
 			Query rangeQuery = new SpanMultiTermQueryWrapper<TermRangeQuery>((TermRangeQuery) query);

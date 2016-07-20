@@ -302,7 +302,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 							if (corpusTermMinimalsDB==null) {
 								corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, queries[0].getField());
 							}
-							query = new SpanOrQuery(); // create new query (even if we don't use it)
+							List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
 							count = 0; // reset count for rawFreq
 							for (SpanQuery q : queries) {
 								Term term = ((SpanTermQuery) q).getTerm(); // we can cast this since we tested earlier
@@ -312,9 +312,12 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 										count+=corpusTermMinimal.getRawFreq();
 									}
 									else {
-										((SpanOrQuery) query).addClause(q);
+										spanQueries.add(q);
 									}
 								}
+							}
+							if (spanQueries.isEmpty()==false) {
+								query = new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 							}
 							if (inDocumentCountNotNeeded) {
 								CorpusTerm corpusTerm = new CorpusTerm(queryString, count, totalTokens, 0, corpusMapper.getCorpus().size());
@@ -369,8 +372,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	private void addToQueueFromQueryWithoutDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Query query) throws IOException {
 		totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
 
-		LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
-		corpusMapper.getSearcher().search(corpusMapper.getFilteredQuery(query), collector);
+		LuceneDocIdsCollector collector = new LuceneDocIdsCollector(corpusMapper);
+		corpusMapper.getSearcher().search(query, collector);
 		CorpusTerm corpusTerm = new CorpusTerm(queryString, collector.getRawFreq(), totalTokens, collector.getInDocumentsCount(), corpusMapper.getCorpus().size());
 		offer(queue, corpusTerm);
 	}

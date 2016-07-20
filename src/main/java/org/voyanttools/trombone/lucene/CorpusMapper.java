@@ -30,15 +30,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.DocIdSet;
-import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.spans.SpanQuery;
@@ -156,16 +155,15 @@ public class CorpusMapper {
 		Terms terms = reader.terms("id");
 		TermsEnum termsEnum = terms.iterator();
 		BytesRef bytesRef = termsEnum.next();
-		DocsEnum docsEnum = null;
 		int doc;
 		String id;
 		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
 		bitSet = new SparseFixedBitSet(reader.numDocs());
 		Bits liveBits = reader.getLiveDocs();
 		while (bytesRef!=null) {
-			docsEnum = termsEnum.docs(liveBits, docsEnum, DocsEnum.FLAG_NONE);
-			doc = docsEnum.nextDoc();
-			if (doc!=DocsEnum.NO_MORE_DOCS) {
+			PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.NONE);
+			doc = postingsEnum.nextDoc();
+			if (doc!=PostingsEnum.NO_MORE_DOCS) {
 				id = bytesRef.utf8ToString();
 				if (ids.contains(id)) {
 					bitSet.set(doc);
@@ -213,16 +211,16 @@ public class CorpusMapper {
 		return spans != null ? new DocumentFilterSpans(spans, bitSet) : null;
 	}
 	
-	public Filter getFilter() throws IOException {
-		return new DocumentFilter(this);
-	}
-	
-	public Query getFilteredQuery(Query query) throws IOException {
-		BooleanQuery.Builder builder = new BooleanQuery.Builder();
-		builder.add(query, BooleanClause.Occur.MUST);
-		builder.add(getFilter(), BooleanClause.Occur.FILTER);
-		return builder.build();
-	}
+//	public Filter getFilter() throws IOException {
+//		return new DocumentFilter(this);
+//	}
+//	
+//	public Query getFilteredQuery(Query query) throws IOException {
+//		BooleanQuery.Builder builder = new BooleanQuery.Builder();
+//		builder.add(query, BooleanClause.Occur.MUST);
+//		builder.add(getFilter(), BooleanClause.Occur.FILTER);
+//		return builder.build();
+//	}
 
 	public BitSet getBitSetFromDocumentIds(Collection<String> documentIds) throws IOException {
 		BitSet subBitSet = new SparseFixedBitSet(getLeafReader().numDocs());

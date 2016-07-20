@@ -91,10 +91,10 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 					SpanOrQuery spanOrQuery = (SpanOrQuery) new SpanMultiTermQueryWrapper<PrefixQuery>((PrefixQuery) query).rewrite(reader);
 					for (SpanQuery sq : spanOrQuery.getClauses()) {
 						if (isPrefixNotQuery) {
-							BooleanQuery bq = new BooleanQuery();
-							bq.add(new TermQuery(((SpanTermQuery) sq).getTerm()), Occur.MUST_NOT);
-							bq.add(new MatchAllDocsQuery(), Occur.MUST);
-							map.put("-"+sq.toString(defaultPrefix), bq);
+							BooleanQuery.Builder builder = new BooleanQuery.Builder();
+							builder.add(new TermQuery(((SpanTermQuery) sq).getTerm()), Occur.MUST_NOT);
+							builder.add(new MatchAllDocsQuery(), Occur.MUST);
+							map.put("-"+sq.toString(defaultPrefix), builder.build());
 						}
 						else {
 							map.put(sq.toString(defaultPrefix), new TermQuery(((SpanTermQuery) sq).getTerm()));
@@ -102,7 +102,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 					}
 				}
 				else if (query instanceof BooleanQuery) {
-					for (BooleanClause bc : ((BooleanQuery) query).getClauses()) {
+					for (BooleanClause bc : ((BooleanQuery) query).clauses()) {
 						map.put(bc.getQuery().toString(defaultPrefix), bc.getQuery());
 					}
 				}
@@ -177,7 +177,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 		if (pos==-1) {
 		    for (Map.Entry<String,Float> entry : weights.entrySet()) {
 		    	Query trq = new RegexpQuery(new Term(entry.getKey(), term));
-		    	trq.setBoost(entry.getValue());
+	//	    	trq.setBoost(entry.getValue());
 		    	builder.add(trq, BooleanClause.Occur.SHOULD);
 		    }
 		}
@@ -198,7 +198,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 			if (pos==-1) {
 			    for (Map.Entry<String,Float> entry : weights.entrySet()) {
 			    	Query trq = newRangeQuery(entry.getKey(), matcher);
-			    	trq.setBoost(entry.getValue());
+//			    	trq.setBoost(entry.getValue());
 			    	builder.add(trq, BooleanClause.Occur.SHOULD);
 			    }
 			}

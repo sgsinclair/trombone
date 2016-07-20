@@ -44,11 +44,11 @@ import org.apache.lucene.document.TextField;
 import org.apache.lucene.facet.FacetsConfig;
 import org.apache.lucene.facet.sortedset.SortedSetDocValuesFacetField;
 import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.DocsAndPositionsEnum;
 import org.apache.lucene.index.IndexOptions;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
@@ -136,7 +136,7 @@ public class LuceneIndexer implements Indexer {
 			
 			// index documents (or at least add corpus to document if not already there), we need to get a new writer
 			IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
-			DirectoryReader indexReader = DirectoryReader.open(indexWriter, true);
+			DirectoryReader indexReader = DirectoryReader.open(indexWriter);
 			IndexSearcher indexSearcher = new IndexSearcher(indexReader);		
 			boolean verbose = parameters.getParameterBooleanValue("verbose");
 			int processors = Runtime.getRuntime().availableProcessors();
@@ -172,7 +172,7 @@ public class LuceneIndexer implements Indexer {
 				indexWriter.forceMerge(parameters.getParameterIntValue("forceMerge"));
 			}
 			
-			indexReader = DirectoryReader.open(indexWriter, true);
+			indexReader = DirectoryReader.open(indexWriter);
 			storage.getLuceneManager().setDirectoryReader(indexReader); // make sure it's available afterwards				
 
 			
@@ -252,22 +252,21 @@ public class LuceneIndexer implements Indexer {
 				DescriptiveStatistics stats = new DescriptiveStatistics();
 				if (terms!=null) {
 					TermsEnum termsEnum = terms.iterator();
-					DocsAndPositionsEnum docsAndPositionsEnum = null;
 					while (true) {
 						BytesRef term = termsEnum.next();
 						if (term!=null) {
 							totalTypes++;
-							docsAndPositionsEnum = termsEnum.docsAndPositions(new Bits.MatchAllBits(indexReader.maxDoc()), docsAndPositionsEnum, DocsAndPositionsEnum.FLAG_OFFSETS);
+							PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
 							while (true) {
-								int doc = docsAndPositionsEnum.nextDoc();
-								if (doc!=DocsAndPositionsEnum.NO_MORE_DOCS) {
-									int freq = docsAndPositionsEnum.freq();
+								int doc = postingsEnum.nextDoc();
+								if (doc!=PostingsEnum.NO_MORE_DOCS) {
+									int freq = postingsEnum.freq();
 									stats.addValue(freq);
 									totalTokens+=freq;
 									for (int i=0; i<freq; i++) {
-										int pos = docsAndPositionsEnum.nextPosition();
+										int pos = postingsEnum.nextPosition();
 										if (pos>lastPosition) {lastPosition=pos;}
-										int offset = docsAndPositionsEnum.startOffset();
+										int offset = postingsEnum.startOffset();
 										if (offset>lastOffset) {lastOffset=offset;}
 									}
 								}

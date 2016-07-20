@@ -17,7 +17,7 @@ import org.apache.commons.io.comparator.LastModifiedFileComparator;
 public class FileMigrationFactory {
 	
 	@SuppressWarnings("unchecked")
-	private static Class<? extends AbstractFileMigrator>[] migrators = new Class[]{FileTrombone4_1Migrator.class, FileTrombone4_0Migrator.class, FileTrombone3_0Migrator.class};
+	private static Class<? extends AbstractFileMigrator>[] migrators = new Class[]{FileTrombone4_2Migrator.class, FileTrombone4_1Migrator.class, FileTrombone4_0Migrator.class, FileTrombone3_0Migrator.class};
 
 	public static FileMigrator getMigrator(FileStorage storage, String id) {
 		

@@ -84,7 +84,7 @@ public class DocumentsFinder extends AbstractTerms {
 		boolean createNewCorpus = parameters.getParameterBooleanValue("createNewCorpus");
 		
 		Query query = getFacetAwareQuery(corpusMapper, queries);
-		LuceneDocIdsCollector collector = new LuceneDocIdsCollector();
+		LuceneDocIdsCollector collector = new LuceneDocIdsCollector(corpusMapper);
 		indexSearcher.search(query, collector);
 		if (createNewCorpus || includeDocIds || withDistributions) {
 			Set<Integer> docs = collector.getLuceneDocIds();
@@ -192,74 +192,12 @@ public class DocumentsFinder extends AbstractTerms {
 			}
 		}
 		
-		if (queries.size()==1) {return corpusMapper.getFilteredQuery(queries.get(0));}
+		if (queries.size()==1) {return queries.get(0);}
 		BooleanQuery.Builder builder = new BooleanQuery.Builder();
 		for (Query query : queries) {
 			builder.add(query, Occur.MUST);
 		}
-		return corpusMapper.getFilteredQuery(builder.build());
-		
-		/*
-			if (query.startsWith("facet.")==false) {
-				Query q = corpusMapper.getFilteredQuery(queryParser.parse(query));
-				if (facetQueryStrings.isEmpty()) {
-					queries.add(q);
-				}
-				else {
-					DrillDownQuery ddq = new DrillDownQuery(config, q);
-					for (String[] parts : facetQueryStrings) {
-						ddq.add(parts[0], parts[1]);
-					}
-					queries.add(ddq);
-				}
-				
-			}
-		}
-		
-		
-		Collection<String[]> facetQueryStrings = new HashSet<String[]>();
-		for (String query : queryStrings) {
-			if (query.startsWith("facet.")) {
-				int colon = query.indexOf(":");
-				
-				facetQueryStrings.add(new String[]{query.substring(0, colon), query.substring(colon+1)});
-			}
-		}
-		
-		Set<Query> queries = new HashSet<Query>();
-		for (String query : queryStrings) {
-			if (query.startsWith("facet.")==false) {
-				Query q = corpusMapper.getFilteredQuery(queryParser.parse(query));
-				if (facetQueryStrings.isEmpty()) {
-					queries.add(q);
-				}
-				else {
-					DrillDownQuery ddq = new DrillDownQuery(config, q);
-					for (String[] parts : facetQueryStrings) {
-						ddq.add(parts[0], parts[1]);
-					}
-					queries.add(ddq);
-				}
-				
-			}
-		}
-		
-		if (queries.isEmpty() && facetQueryStrings.isEmpty()==false) {
-			DrillDownQuery ddq = new DrillDownQuery(config, corpusMapper.getFilter());
-			for (String[] parts : facetQueryStrings) {
-				ddq.add(parts[0], parts[1]);
-			}
-			queries.add(ddq);
-		} else if (queries.size()>1  && facetQueryStrings.isEmpty()) {
-			BooleanQuery.Builder builder = new BooleanQuery.Builder();
-			for (Query query : queries) {
-				builder.add(query, Occur.MUST);
-			}
-			queries.clear();
-			queries.add(builder.build());
-		}
-		return queries;
-		*/
+		return builder.build();
 		
 	}
 	

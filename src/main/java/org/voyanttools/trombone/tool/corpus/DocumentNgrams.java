@@ -29,7 +29,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.lucene.index.DocsAndPositionsEnum;
+import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.DocIdSetIterator;
@@ -344,13 +344,13 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 			if (term!=null) {
 				String termString = term.utf8ToString();
 				//if (stopwords.isKeyword(termString)) {continue;} // treat as whitespace or punctuation
-				DocsAndPositionsEnum docsAndPositionsEnum = termsEnum.docsAndPositions(null, null, DocsAndPositionsEnum.FLAG_OFFSETS);
-				while(docsAndPositionsEnum.nextDoc() != DocsAndPositionsEnum.NO_MORE_DOCS) {
-					int freq = docsAndPositionsEnum.freq();
+				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
+				while(postingsEnum.nextDoc() != PostingsEnum.NO_MORE_DOCS) {
+					int freq = postingsEnum.freq();
 					for (int i=0, len = freq; i<len; i++) {
-						int pos = docsAndPositionsEnum.nextPosition();
-						new SimplifiedTermInfo(termString, pos, 1, freq, docsAndPositionsEnum.startOffset(), docsAndPositionsEnum.endOffset());
-						simplifiedTermInfoArray[pos] = freq>1 ? new SimplifiedTermInfo(termString, pos, 1, freq, docsAndPositionsEnum.startOffset(), docsAndPositionsEnum.endOffset())  : new SimplifiedTermInfo(""); // empty string if not repeating
+						int pos = postingsEnum.nextPosition();
+						new SimplifiedTermInfo(termString, pos, 1, freq, postingsEnum.startOffset(), postingsEnum.endOffset());
+						simplifiedTermInfoArray[pos] = freq>1 ? new SimplifiedTermInfo(termString, pos, 1, freq, postingsEnum.startOffset(), postingsEnum.endOffset())  : new SimplifiedTermInfo(""); // empty string if not repeating
 					}
 				}
 			}
