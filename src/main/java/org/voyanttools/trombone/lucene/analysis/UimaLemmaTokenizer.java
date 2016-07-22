@@ -4,11 +4,10 @@
 package org.voyanttools.trombone.lucene.analysis;
 
 import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
@@ -21,6 +20,7 @@ import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.voyanttools.trombone.nlp.NlpFactory;
+import org.voyanttools.trombone.nlp.uima.ICUSegmenter;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -32,7 +32,9 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
  * document and processing pipeline with
  * <a href="https://dkpro.github.io/">DKPro</a> as an intermediary. The tokenizer
  * only works with some languages ({@link NlpFactory#getLemmatizationAnalysisEngine(String)})
- * and uses very simple segmentation ({@link UimaLemmaTokenizer}).
+ * and uses very simple segmentation ({@link ICUSegmenter}).
+ * 
+ * Thanks to Richard Eckart for help with this. 
  * 
  * @author Stéfan Sinclair
  */
