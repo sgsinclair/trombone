@@ -26,8 +26,6 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.nio.charset.Charset;
-import java.util.List;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
@@ -47,50 +45,54 @@ import org.voyanttools.trombone.util.FlexibleParameters;
  */
 public class LexicalAnalyzer extends Analyzer {
 	
-	FlexibleParameters parameters = new FlexibleParameters();
-	private String lang = "";
+	protected FlexibleParameters parameters = new FlexibleParameters();
+	protected String lang = "";
 	
 	@Override
 	protected Reader initReader(String fieldName, Reader reader) {
 
 		if (fieldName.equals(TokenType.lexical.name())) {
-			
-			/* since there doesn't seem to be a way of passing parameters to the
-			 * analyzer that's content-aware and per-field, we can add some 
-			 * instructions to the end of the reader (this is done by
-			 * {@link LuceneIndexer}). At this end we're especially interesed
-			 * in determining the language and if a parameter was set to use
-			 * a simple word-boundary tokenizer (for some Asian languages
-			 * the tokenizer is too aggressive and we want to allow the user
-			 * to do segmentation. */
-
-			String text;
-			try {
-				text = IOUtils.toString(reader);
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-			
-			if (text.endsWith("-->") && text.contains("<!--")) {
-				int start = text.lastIndexOf("<!--");
-				parameters = getParameters(text.substring(start+4, text.length()-3));
-				text  = text.substring(0, start);
-			}
-			else {
-				parameters.clear();
-			}
-			reader = new StringReader(text);
+			reader = initReader(reader);
 		}
 		else {
 			parameters.clear();
 		}
-		
-		
+
 		try {
 			return new HTMLCharFilter(reader);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	protected Reader initReader(Reader reader) {
+		
+		/* since there doesn't seem to be a way of passing parameters to the
+		 * analyzer that's content-aware and per-field, we can add some 
+		 * instructions to the end of the reader (this is done by
+		 * {@link LuceneIndexer}). At this end we're especially interesed
+		 * in determining the language and if a parameter was set to use
+		 * a simple word-boundary tokenizer (for some Asian languages
+		 * the tokenizer is too aggressive and we want to allow the user
+		 * to do segmentation. */
+
+		String text;
+		try {
+			text = IOUtils.toString(reader);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		
+		if (text.endsWith("-->") && text.contains("<!--")) {
+			int start = text.lastIndexOf("<!--");
+			parameters = getParameters(text.substring(start+4, text.length()-3));
+			text  = text.substring(0, start);
+		}
+		else {
+			parameters.clear();
+		}
+		return new StringReader(text);
+		
 	}
 	
 	@Override

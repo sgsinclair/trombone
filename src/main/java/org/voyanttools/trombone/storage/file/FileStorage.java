@@ -45,7 +45,7 @@ import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
-import org.voyanttools.trombone.nlp.NlpAnnotatorFactory;
+import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
@@ -85,7 +85,7 @@ public class FileStorage implements Storage {
 	
 	private LuceneManager luceneManager = null;
 	
-	private NlpAnnotatorFactory nlpAnnotatorFactory = new NlpAnnotatorFactory();
+	private NlpFactory nlpAnnotatorFactory = new NlpFactory();
 
 	/**
 	 * Create a new instance in the default location.
@@ -128,7 +128,7 @@ public class FileStorage implements Storage {
 			if (Files.exists(path)==false) {
 				Files.createDirectories(path);
 			}
-			luceneManager = new LuceneManager(new NIOFSDirectory(path));
+			luceneManager = new LuceneManager(this, new NIOFSDirectory(path));
 		}
 		return luceneManager;
 	}
@@ -282,11 +282,9 @@ public class FileStorage implements Storage {
 		return FileMigrationFactory.getMigrator(this, id);
 	}
 
-
-
 	@Override
-	public NlpAnnotator getNlpAnnotator(String languageCode) {
-		return nlpAnnotatorFactory.getNlpAnnotator(languageCode);
+	public NlpFactory getNlpAnnotatorFactory() {
+		return nlpAnnotatorFactory;
 	}
 
 }

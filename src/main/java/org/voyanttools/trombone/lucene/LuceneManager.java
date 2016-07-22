@@ -35,6 +35,7 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.voyanttools.trombone.lucene.analysis.KitchenSinkPerFieldAnalyzerWrapper;
+import org.voyanttools.trombone.storage.Storage;
 
 /**
  * @author sgs
@@ -50,10 +51,14 @@ public class LuceneManager {
 	
 	private IndexSearcher indexSearcher = null;
 	
-	private Analyzer analyzer = new KitchenSinkPerFieldAnalyzerWrapper();
+	private Analyzer analyzer;
 	
-	public LuceneManager(Directory directory) throws CorruptIndexException, IOException {
+	private Storage storage;
+	
+	public LuceneManager(Storage storage, Directory directory) throws CorruptIndexException, IOException {
+		this.storage = storage;
 		this.directory = directory;
+		analyzer = new KitchenSinkPerFieldAnalyzerWrapper(storage);
 	}
 	
 //	public static Query getCorpusDocumentQuery(String corpusId, String documentId) {

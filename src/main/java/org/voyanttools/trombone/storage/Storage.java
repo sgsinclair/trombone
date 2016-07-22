@@ -30,6 +30,7 @@ import java.util.List;
 import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
+import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.file.FileMigrator;
 
 /**
@@ -110,6 +111,8 @@ public interface Storage {
 	 * @param languageCode
 	 * @return
 	 */
-	public NlpAnnotator getNlpAnnotator(String languageCode);
+//	public NlpAnnotator getNlpAnnotator(String languageCode);
+	
+	public NlpFactory getNlpAnnotatorFactory();
 
 }

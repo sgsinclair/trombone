@@ -27,6 +27,8 @@ import java.util.Map;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.AnalyzerWrapper;
 import org.apache.lucene.analysis.core.KeywordAnalyzer;
+import org.voyanttools.trombone.nlp.NlpFactory;
+import org.voyanttools.trombone.storage.Storage;
 
 /**
  * @author sgs
@@ -35,25 +37,33 @@ import org.apache.lucene.analysis.core.KeywordAnalyzer;
 public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 
 	private static Analyzer keywordAnalyzer = new KeywordAnalyzer();
+	private Storage storage;
 	private enum AnalyzerName {
 		ID("id") {
 			@Override
-			Analyzer getAnalyzer() {return keywordAnalyzer;}
+			Analyzer getAnalyzer(Storage storage) {return keywordAnalyzer;}
 		},
 		VERSION("version") {
 			@Override
-			Analyzer getAnalyzer() {return keywordAnalyzer;}
+			Analyzer getAnalyzer(Storage storage) {return keywordAnalyzer;}
 		},
 		STEMMED_EN("stemmed-en") {
 			@Override
-			Analyzer getAnalyzer() {return new MultiLingualStemAnalyzer("en");}
+			Analyzer getAnalyzer(Storage storage) {return new MultiLingualStemAnalyzer("en");}
 		},
 		// TODO: re-enable lemmatization
 //		LEMMATIZED_EN("lemmatized-en") {
 //			@Override
 //			Analyzer getAnalyzer() {return new EnglishMorphologicalAnalyzer();}
 //		},
-		LEXICAL("lexical");
+		LEXICAL("lexical"),
+		LEMMA("lemma") {
+			@Override
+			Analyzer getAnalyzer(Storage storage) {
+				NlpFactory factory = storage.getNlpAnnotatorFactory();
+				return new LemmaAnalyzer(factory);
+			}
+		};
 //		MORPH_EN("morph-en");
 		
 		private String name;
@@ -61,7 +71,7 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 			this.name = name;
 		}
 		
-		Analyzer getAnalyzer() {
+		Analyzer getAnalyzer(Storage storage) {
 			return new LexicalAnalyzer();
 		}
 		
@@ -77,8 +87,9 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 	  private final Map<AnalyzerName, Analyzer> fieldAnalyzers;
 	  
 	  
-	  public KitchenSinkPerFieldAnalyzerWrapper() {
+	  public KitchenSinkPerFieldAnalyzerWrapper(Storage storage) {
 		  super(Analyzer.PER_FIELD_REUSE_STRATEGY);
+		  this.storage = storage;
 		  this.defaultAnalyzer = new LexicalAnalyzer();
 		  this.fieldAnalyzers = new HashMap<AnalyzerName, Analyzer>();
 		  for (AnalyzerName name : AnalyzerName.values()) {
@@ -93,7 +104,7 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 		  
 		  Analyzer analyzer = this.fieldAnalyzers.get(name);
 		  if (analyzer==null) {
-			  analyzer = name.getAnalyzer();
+			  analyzer = name.getAnalyzer(storage);
 			  this.fieldAnalyzers.put(name, analyzer);
 		  }
 		  

@@ -62,7 +62,7 @@ public class DocumentEntities extends AbstractCorpusTool {
 			else {
 				String lang = indexedDocument.getMetadata().getLanguageCode();
 				if (lang.equals("en")) {
-					NlpAnnotator nlpAnnotator = storage.getNlpAnnotator(lang);
+					NlpAnnotator nlpAnnotator = storage.getNlpAnnotatorFactory().getNlpAnnotator(lang);
 					// get all types that are recognized (though not ordinals and numbers)
 					entitiesList = nlpAnnotator.getEntities(corpusMapper, indexedDocument, new HashSet<EntityType>(), parameters);
 					storage.store(entitiesList, id);

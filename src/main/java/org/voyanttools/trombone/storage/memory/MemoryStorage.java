@@ -39,7 +39,7 @@ import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
-import org.voyanttools.trombone.nlp.NlpAnnotatorFactory;
+import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
@@ -67,7 +67,7 @@ public class MemoryStorage implements Storage {
 	
 	private LuceneManager luceneManager = null;
 
-	private NlpAnnotatorFactory nlpAnnotatorFactory = new NlpAnnotatorFactory();
+	private NlpFactory nlpAnnotatorFactory = new NlpFactory();
 
 	/**
 	 * Create a new instance of this class.
@@ -92,7 +92,7 @@ public class MemoryStorage implements Storage {
 	@Override
 	public LuceneManager getLuceneManager() throws CorruptIndexException, IOException {
 		if (luceneManager==null) {
-			luceneManager = new LuceneManager(new RAMDirectory());
+			luceneManager = new LuceneManager(this, new RAMDirectory());
 		}
 		return luceneManager;
 	}
@@ -209,7 +209,7 @@ public class MemoryStorage implements Storage {
 	}
 
 	@Override
-	public NlpAnnotator getNlpAnnotator(String languageCode) {
-		return nlpAnnotatorFactory.getNlpAnnotator(languageCode);
+	public NlpFactory getNlpAnnotatorFactory() {
+		return nlpAnnotatorFactory;
 	}
 }
