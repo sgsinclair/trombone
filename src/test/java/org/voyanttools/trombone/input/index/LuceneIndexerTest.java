@@ -97,8 +97,8 @@ public class LuceneIndexerTest {
 		LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
 		String id = luceneIndexer.index(extractedDocumentSources);
 		List<String> ids = storage.retrieveStrings(id);
-		docsToTokensMap.put(ids.get(0), 9);
-		docsToTokensMap.put(ids.get(1), 10);
+		docsToTokensMap.put(ids.get(0), 8);
+		docsToTokensMap.put(ids.get(1), 8);
 		
 		// now re-extract and index with tokenization parameter
 		parameters.addParameter("tokenization", "wordBoundaries");

@@ -12,7 +12,7 @@ import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.voyanttools.trombone.nlp.uima.ICUSegmenter;
 
-import de.tudarmstadt.ukp.dkpro.core.matetools.MateLemmatizer;
+//import de.tudarmstadt.ukp.dkpro.core.matetools.MateLemmatizer;
 //import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordLemmatizer;
 //import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
 //import de.tudarmstadt.ukp.dkpro.core.treetagger.TreeTaggerPosTagger;
@@ -58,8 +58,8 @@ public class NlpFactory {
 				AnalysisEngine engine;
 				try {
 					AnalysisEngineDescription segmenter = AnalysisEngineFactory.createEngineDescription(ICUSegmenter.class, new Object[0]);
-					AnalysisEngineDescription lemmatizer = AnalysisEngineFactory.createEngineDescription(MateLemmatizer.class, new Object[0]);
-					AnalysisEngineDescription engineDescription = AnalysisEngineFactory. createEngineDescription(segmenter, lemmatizer);
+//					AnalysisEngineDescription lemmatizer = AnalysisEngineFactory.createEngineDescription(MateLemmatizer.class, new Object[0]);
+					AnalysisEngineDescription engineDescription = AnalysisEngineFactory. createEngineDescription(segmenter/*, lemmatizer*/);
 					engine = AnalysisEngineFactory.createEngine(engineDescription);
 					lemmatizationAnalysisEngines.put(languageCode, engine);
 				} catch (ResourceInitializationException e) {
