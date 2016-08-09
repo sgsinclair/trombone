@@ -164,7 +164,7 @@ public class Keywords {
 	private void add(Collection<String> keywords) {
 		for (String keyword : keywords) {
 			if (keyword.trim().startsWith(COMMENT)==false) {
-				this.keywords.add(keyword);
+				this.keywords.add(keyword.trim());
 			}
 		}
 	}
