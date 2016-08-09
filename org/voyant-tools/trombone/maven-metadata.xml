@@ -4,8 +4,8 @@
   <artifactId>trombone</artifactId>
   <versioning>
     <versions>
-      <version>5.1.0-SNAPSHOT</version>
+      <version>5.2.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160615144508</lastUpdated>
+    <lastUpdated>20160809184946</lastUpdated>
   </versioning>
 </metadata>
