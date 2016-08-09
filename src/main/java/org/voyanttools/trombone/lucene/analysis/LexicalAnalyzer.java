@@ -33,6 +33,7 @@ import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.cn.smart.HMMChineseTokenizer;
 import org.apache.lucene.analysis.core.LetterTokenizer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
+import org.apache.lucene.analysis.core.LowerCaseTokenizer;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
 import org.apache.tika.io.IOUtils;
 import org.voyanttools.trombone.model.TokenType;
@@ -86,6 +87,9 @@ public class LexicalAnalyzer extends Analyzer {
 		if (text.endsWith("-->") && text.contains("<!--")) {
 			int start = text.lastIndexOf("<!--");
 			parameters = getParameters(text.substring(start+4, text.length()-3));
+			if (parameters.containsKey("language")) {
+				lang = parameters.getParameterValue("language");
+			}
 			text  = text.substring(0, start);
 		}
 		else {
@@ -98,9 +102,8 @@ public class LexicalAnalyzer extends Analyzer {
 	@Override
 	protected TokenStreamComponents createComponents(String fieldName) {
 		if (fieldName.equals(TokenType.lexical.name()) && parameters.getParameterValue("tokenization", "").equals("wordBoundaries")) {
-			Tokenizer tokenizer = new LetterTokenizer();
-			TokenStream stream = new LowerCaseFilter(tokenizer);
-			return new TokenStreamComponents(tokenizer, stream);
+			Tokenizer tokenizer = new LowerCaseTokenizer();
+			return new TokenStreamComponents(tokenizer);
 		}
 		else if (lang.startsWith("zh") && fieldName.equals(TokenType.lexical.name())) {
 			Tokenizer tokenizer = new HMMChineseTokenizer();

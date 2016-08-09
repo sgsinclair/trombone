@@ -58,7 +58,7 @@ public class UimaLemmaTokenizer extends Tokenizer {
 	}
 
 	@Override
-	public boolean incrementToken() throws IOException {
+	public final boolean incrementToken() throws IOException {
 		clearAttributes();
 		token = tokensIterator.next();
 		termAtt.setEmpty();

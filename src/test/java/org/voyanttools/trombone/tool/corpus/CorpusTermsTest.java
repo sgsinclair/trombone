@@ -19,7 +19,7 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 public class CorpusTermsTest {
 
 	@Test
-	public void test() throws IOException {
+	public void testLexical() throws IOException {
 		Storage storage = new MemoryStorage();
 		
 		// add an additional document to the corpus
@@ -355,6 +355,71 @@ public class CorpusTermsTest {
 		
 		storage.destroy();
 		
+	}
+	
+	@Test
+	public void testLemma() throws IOException {
+		Storage storage = new MemoryStorage();
+		
+		RealCorpusCreator creator;
+		FlexibleParameters parameters;
+		
+		// add document outside of corpus
+		parameters = new FlexibleParameters();
+		parameters.addParameter("string",  "dark and stormy night in document one");
+		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
+		parameters.addParameter("noCache", 1);
+		creator = new RealCorpusCreator(storage, parameters);
+		creator.run();
+
+		// add documents in corpus
+		parameters = new FlexibleParameters();
+		parameters.addParameter("string",  "It was a dark and stormy night.");
+		parameters.addParameter("string", "It was the best of times it was the worst of times.");
+		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
+		parameters.setParameter("lemmatize", "true");
+		parameters.addParameter("noCache", 1);
+		creator = new RealCorpusCreator(storage, parameters);
+		creator.run();
+		String keepCorpusId = creator.getStoredId();
+		
+		// add document outside of corpus
+		parameters = new FlexibleParameters();
+		parameters.addParameter("string",  "dark and stormy night in document three");
+		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
+		parameters.addParameter("noCache", 1);
+		creator = new RealCorpusCreator(storage, parameters);
+		creator.run();
+		
+		parameters = new FlexibleParameters();
+		parameters.setParameter("corpus", keepCorpusId);
+		parameters.setParameter("tool", "CorpusTermFrequencies");
+		
+		CorpusTerm corpusTerm;
+		CorpusTerms corpusTermFrequencies;
+		List<CorpusTerm> corpusTerms;
+		
+		// try was with no explicit tokentype
+		parameters.setParameter("query", "was");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("was", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
+		
+		// try was with explicit token type
+		parameters.setParameter("query", "was");
+		parameters.setParameter("tokenType", "lexical");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("was", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
+
 	}
 
 }

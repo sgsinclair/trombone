@@ -300,7 +300,7 @@ public class LuceneIndexer implements Indexer {
 		private LuceneManager luceneManager;
 		private String corpusId;
 		private String id;
-//		private String string = null;
+		private String string = null;
 		private boolean verbose;
 		public StoredDocumentSourceIndexer(Storage storage, IndexWriter indexWriter, IndexSearcher indexSearcher,
 				StoredDocumentSource storedDocumentSource, String corpusId, boolean verbose) throws IOException {
@@ -315,8 +315,7 @@ public class LuceneIndexer implements Indexer {
 		}
 		
 		private String getString() throws IOException {
-			String string = "";
-//			if (this.string == null) {
+			if (this.string == null) {
 				InputStream is = null;
 				try {
 					is = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
@@ -327,7 +326,7 @@ public class LuceneIndexer implements Indexer {
 				finally {
 					if (is!=null) is.close();
 				}
-//			}
+			}
 			return string;
 		}
 		

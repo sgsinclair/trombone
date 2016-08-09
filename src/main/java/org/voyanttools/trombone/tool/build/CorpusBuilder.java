@@ -141,13 +141,21 @@ public class CorpusBuilder extends AbstractTool {
 	
 	private void indexCorpusTerms(Corpus corpus) throws IOException {
 		
-		boolean verbose = parameters.getParameterBooleanValue("verbose");
-
-		Calendar start = Calendar.getInstance();
-		if (verbose) {log("Starting corpus terms index.");}
 		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
+		indexCorpusTerms(corpusMapper, corpus, TokenType.lexical);
+		
+		// build lemmatized forms if requested (assumes lemmatization has been done upstream)
+		if (parameters.getParameterBooleanValue("lemmatize")) {
+			indexCorpusTerms(corpusMapper, corpus, TokenType.lemma);
+		}
+		
+	}
+	private void indexCorpusTerms(CorpusMapper corpusMapper, Corpus corpus, TokenType tokenType) throws IOException {
+		boolean verbose = parameters.getParameterBooleanValue("verbose");
+		Calendar start = Calendar.getInstance();
+		if (verbose) {log("Starting corpus terms index "+tokenType.name()+".");}
 		// create and close to avoid concurrent requests later 
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical);
+		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		
 		int totalWordTokens = 0;
 		int totalWordTypes = 0;
@@ -159,9 +167,9 @@ public class CorpusBuilder extends AbstractTool {
 		
 		CorpusMetadata metadata = corpus.getCorpusMetadata();
 		metadata.setCreatedTime(Calendar.getInstance().getTimeInMillis());
-		metadata.setTokensCount(TokenType.lexical, totalWordTokens);
-		metadata.setTypesCount(TokenType.lexical, totalWordTypes);
-		if (verbose) {log("Finished corpus terms index.", start);}		
+		metadata.setTokensCount(tokenType, totalWordTokens);
+		metadata.setTypesCount(tokenType, totalWordTypes);
+		if (verbose) {log("Finished corpus terms index for "+tokenType.name()+".", start);}		
 	}
 
 	String getStoredId() {

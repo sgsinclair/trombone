@@ -36,6 +36,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- see http://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github -->
 		<github.global.server>github</github.global.server>
+		<dkpro.core.version>1.8.0</dkpro.core.version>
 	</properties>
 	<build>
 		<plugins>
@@ -156,6 +157,11 @@
 			<version>6.1.0</version>
 		</dependency>
 		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-analyzers-common</artifactId>
+		    <version>6.1.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-analyzers-smartcn</artifactId>
 			<version>6.1.0</version>
@@ -242,8 +248,38 @@
  		<dependency>
 		    <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 		    <artifactId>de.tudarmstadt.ukp.dkpro.core.matetools-gpl</artifactId>
-		    <version>1.8.0</version>
+		            <exclusions>
+          <exclusion>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-core</artifactId>
+                  </exclusion>
+          <exclusion>
+                              <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-highlighter</artifactId>
+                  </exclusion>
+                  
+        </exclusions>
 		</dependency>
+		<dependency>
+		    <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+		    <artifactId>de.tudarmstadt.ukp.dkpro.core.matetools-model-lemmatizer-en-conll2009</artifactId>
+		</dependency> 
 </dependencies>
-	
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+      <artifactId>de.tudarmstadt.ukp.dkpro.core.matetools-gpl</artifactId>
+      <version>${dkpro.core.version}</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+<repositories>
+  <repository>
+    <id>ukp-oss-model-releases</id>
+    <url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-model-releases-local</url>
+   </repository>
+</repositories>	
 </project>
