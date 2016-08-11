@@ -119,7 +119,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+15;
+		return super.getVersion()+16;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -170,7 +170,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				documentRawFreqs[documentPosition] = freq;
 				documentRelativeFreqs[documentPosition] = (float) freq/tokensCounts[documentPosition];
 			}
-			total++;
+			//total++;
 			CorpusTerm corpusTerm = new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins);
 			offer(queue, corpusTerm);
 //			queue.offer(new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins));
@@ -189,7 +189,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
 		for (CorpusTermMinimal corpusTermMinimal : corpusTermMinimalsDB.values()) {
 			if (!stopwords.isKeyword(corpusTermMinimal.getTerm())) {
-				total++;
+				//total++;
 				this.totalTokens+=corpusTermMinimal.getRawFreq();
 				CorpusTerm corpusTerm = new CorpusTerm(corpusTermMinimal, totalTokens);
 				offer(queue, corpusTerm);
