@@ -46,14 +46,16 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		
 		String newid;
 		
-		// try first using original stored documents
-		newid = getMigratedCorpusIdFromDocumentParents();
-		if (newid!=null) {return newid;}
 		
-		// if that didn't work, try using parameters
+		// try from parameters
 		newid = getMigratedCorpusIdFromParameters();
 		if (newid!=null) {return newid;}
-		
+
+		// try from document parents
+		// this should be tried first but there was a bug in Trombone 4.2 and lower where extraction wasn't setting the parent properly
+		newid = getMigratedCorpusIdFromDocumentParents();
+		if (newid!=null) {return newid;}
+
 		// if that didn't work, try the old way
 		return super.getMigratedCorpusId();
 	}
@@ -82,8 +84,7 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		if (idsSet.size()>0) {	
 			// pick up corpus creation from expansion, with the original parameters
 			String newid = storage.storeStrings(idsSet);
-			File file = new File(getSourceTromboneCorpusDirectory(), "parameters.xml");
-			FlexibleParameters parameters = FlexibleParameters.loadFlexibleParameters(file);
+			FlexibleParameters parameters = this.getCorpusCreationParameters();
 			parameters.setParameter("nextCorpusCreatorStep", "expand");
 			parameters.setParameter("storedId", newid);
 			RealCorpusCreator creator = new RealCorpusCreator(storage, parameters);
@@ -171,7 +172,9 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 	@Override
 	protected FlexibleParameters getCorpusCreationParameters() throws IOException {
 		File file = new File(getSourceTromboneCorpusDirectory(), "parameters.xml");
-		return FlexibleParameters.loadFlexibleParameters(file);
+		FlexibleParameters parameters = FlexibleParameters.loadFlexibleParameters(file);
+		parameters.setParameter("migrated_source_version", getSourceTromboneDirectoryName());
+		return parameters;
 	}
 
 

@@ -146,7 +146,9 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 	
 	@Override
 	protected FlexibleParameters getCorpusCreationParameters() throws IOException {
-		return new FlexibleParameters();
+		FlexibleParameters parameters = new FlexibleParameters();
+		parameters.setParameter("migrated_source_version", getSourceTromboneDirectoryName());
+		return parameters;
 	}
 
 	@Override

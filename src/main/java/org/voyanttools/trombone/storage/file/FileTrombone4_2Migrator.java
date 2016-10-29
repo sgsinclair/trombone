@@ -21,7 +21,7 @@ public class FileTrombone4_2Migrator extends FileTrombone4_1Migrator {
 	@Override
 	protected String getSourceTromboneDirectoryName() {
 		assert(FileTrombone4_2Migrator.class.isInstance(this));
-		return "trombone4_2";
+		return "trombone4_2";		
 	}
 
 }
