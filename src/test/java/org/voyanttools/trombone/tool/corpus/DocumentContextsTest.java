@@ -168,6 +168,17 @@ public class DocumentContextsTest {
 		assertTrue(contexts.get(0).getDocIndex()!=contexts.get(1).getDocIndex());
 		assertTrue(20!=documentContexts.total);
 		
+		// try sorting left
+		parameters.removeParameter("accurateTotalNotNeeded");
+		parameters.removeParameter("perDocLimit");
+		parameters.setParameter("sort", "left");
+		parameters.setParameter("dir", "asc");
+		documentContexts = new DocumentContexts(storage, parameters);
+		documentContexts.run();
+		contexts = documentContexts.getContexts();
+		assertTrue(contexts.get(0).getLeft().endsWith("eight "));
+		assertTrue(contexts.get(9).getLeft().endsWith("twentyseven "));
+		
 		storage.destroy();
 	}
 

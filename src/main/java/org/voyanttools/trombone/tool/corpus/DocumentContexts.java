@@ -50,7 +50,7 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 	}
 	
 	public int getVersion() {
-		return super.getVersion()+2;
+		return super.getVersion()+4;
 	}
 
 	private List<Kwic> getKwics(CorpusMapper corpusMapper, Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {

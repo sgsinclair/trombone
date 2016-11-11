@@ -25,6 +25,9 @@ import java.io.Serializable;
 import java.text.Normalizer;
 import java.util.Comparator;
 
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.bouncycastle.util.Arrays;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
@@ -81,6 +84,9 @@ public class Kwic implements Serializable {
 	
 	String right;
 	
+	@XStreamOmitField
+	String leftNormalizedReverseSort = null;
+	
 	public Kwic(int corpusDocumentIndex, String queryString,
 			String term, int position, String left,
 			String middle, String right) {
@@ -95,9 +101,13 @@ public class Kwic implements Serializable {
 	
 	private String getNormalizedTerm() {
 		if (normalizedAnalyzedMiddle==null) {
-			normalizedAnalyzedMiddle = Normalizer.normalize(term, Normalizer.Form.NFD);
+			normalizedAnalyzedMiddle = getNormalizedString(term);
 		}
 		return normalizedAnalyzedMiddle;
+	}
+	
+	private String getNormalizedString(String string) {
+		return Normalizer.normalize(string, Normalizer.Form.NFD);
 	}
 
 	public static Comparator<Kwic> getComparator(Sort sort) {
@@ -202,7 +212,7 @@ public class Kwic implements Serializable {
 			if (i==0) {
 				i = Integer.compare(kwic2.position, kwic1.position);
 				if (i==0) {
-					i = kwic2.getNormalizedTerm().compareTo(kwic1.getNormalizedTerm());
+					i = kwic2.getNormalizedTerm().compareToIgnoreCase(kwic1.getNormalizedTerm());
 				}
 			}
 			return i;
@@ -212,7 +222,7 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> LeftAscendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic1.getLeft().compareTo(kwic2.getLeft());
+			int i = kwic1.getLeftNormalizedReverseSort().compareToIgnoreCase(kwic2.getLeftNormalizedReverseSort());
 			if (i==0) {
 				i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
 				if (i==0) {
@@ -226,7 +236,7 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> LeftDescendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic2.getLeft().compareTo(kwic1.getLeft());
+			int i = kwic2.getLeftNormalizedReverseSort().compareToIgnoreCase(kwic1.getLeftNormalizedReverseSort());
 			if (i==0) {
 				i = Integer.compare(kwic2.docIndex, kwic1.docIndex);
 				if (i==0) {
@@ -240,7 +250,7 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> RightAscendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic1.getRight().compareTo(kwic2.getRight());
+			int i = kwic1.getRight().compareToIgnoreCase(kwic2.getRight());
 			if (i==0) {
 				i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
 				if (i==0) {
@@ -254,7 +264,7 @@ public class Kwic implements Serializable {
 	private static Comparator<Kwic> RightDescendingComparator = new Comparator<Kwic>() {
 		@Override
 		public int compare(Kwic kwic1, Kwic kwic2) {
-			int i = kwic2.getRight().compareTo(kwic1.getRight());
+			int i = kwic2.getRight().compareToIgnoreCase(kwic1.getRight());
 			if (i==0) {
 				i = Integer.compare(kwic2.docIndex, kwic1.docIndex);
 				if (i==0) {
@@ -269,6 +279,16 @@ public class Kwic implements Serializable {
 		return new StringBuilder(String.valueOf(docIndex)).append(".").append(position).append(" (").append(term).append("): ").append(left).append(" ***").append(middle).append("*** ").append(right).toString().replaceAll("\\s+", " ").trim();
 	}
 
+	private String getLeftNormalizedReverseSort() {
+		if (this.leftNormalizedReverseSort==null) {
+			String left = getLeft();
+			String normalizedLeft = getNormalizedString(left.replaceAll("[^\\p{L}]+", " ").trim());
+			String[] lefts = normalizedLeft.split("\\s+");
+			ArrayUtils.reverse(lefts);
+			leftNormalizedReverseSort = StringUtils.join(lefts, " ");
+		}
+		return leftNormalizedReverseSort;
+	}
 	public String getLeft() {
 		return left;
 	}
