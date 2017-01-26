@@ -197,7 +197,18 @@ public class CorpusTermsTest {
 		assertEquals("+best +times", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
 		
+		parameters.setParameter("minRawFreq", 2); // should have no effect for query
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		assertEquals(1, corpusTermFrequencies.getTotal());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("+best +times", corpusTerm.getTerm());
+		assertEquals(1, corpusTerm.getRawFreq());
+		
 		// all terms 
+		parameters.removeParameter("minRawFreq"); // now set to minimum of 2, so two terms left
 		parameters.removeParameter("query");
 		parameters.removeParameter("limit");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
@@ -215,7 +226,19 @@ public class CorpusTermsTest {
 		assertEquals("it", corpusTerm.getTerm());
 		assertEquals(3, corpusTerm.getRawFreq());
 
+		
+		parameters.setParameter("minRawFreq", 0); // set to default of 0, same result
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		assertEquals(12, corpusTermFrequencies.getTotal());
+
+		parameters.setParameter("minRawFreq", 2); // now set to minimum of 2, so two terms left
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		assertEquals(2, corpusTermFrequencies.getTotal());
+		
 		// make sure same thing with distributions
+		parameters.removeParameter("minRawFreq"); // now set to minimum of 2, so two terms left
 		parameters.setParameter("withDistributions", "true");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();

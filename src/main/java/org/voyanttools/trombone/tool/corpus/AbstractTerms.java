@@ -48,6 +48,9 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 	protected int limit;
 	
 	@XStreamOmitField
+	protected int minRawFreq;
+	
+	@XStreamOmitField
 	protected TokenType tokenType;
 	
 //	@XStreamOmitField
@@ -63,6 +66,7 @@ public abstract class AbstractTerms extends AbstractCorpusTool {
 		start = parameters.getParameterIntValue("start", 0);
 		limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
 		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
+		minRawFreq = parameters.getParameterIntValue("minRawFreq", 0);
 //		isQueryCollapse = parameters.getParameterBooleanValue("queryCollapse");
 	}
 

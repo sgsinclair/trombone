@@ -31,14 +31,18 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
+		CorpusMapper corpusMapper = getCorpusMapper(corpus);
+		run(corpusMapper);
+	}
+	
+	protected CorpusMapper getCorpusMapper(Corpus corpus) throws IOException {
 		if (this instanceof CorpusMetadata == false && this instanceof DocumentsMetadata == false) {
 			CorpusAccess corpusAccess = corpus.getValidatedCorpusAccess(parameters);
 			if (corpusAccess==CorpusAccess.NONCONSUMPTIVE && this instanceof ConsumptiveTool) {
 				throw new CorpusAccessException("This tool isn't compatible with the limited access of this corpus.");
 			}
 		}
-		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
-		run(corpusMapper);
+		return new CorpusMapper(storage, corpus);
 	}
 	
 	protected List<String> getCorpusStoredDocumentIdsFromParameters(Corpus corpus) throws IOException {

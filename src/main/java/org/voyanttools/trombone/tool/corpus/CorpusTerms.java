@@ -140,7 +140,10 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 							if (!rawFreqsMap.containsKey(term)) {
 								rawFreqsMap.put(term, new HashMap<Integer, Integer>());
 							}
-							rawFreqsMap.get(term).put(corpusMapper.getDocumentPositionFromLuceneId(doc), (int) termsEnum.totalTermFreq());
+							int rawF = (int) termsEnum.totalTermFreq();
+							if (rawF>minRawFreq) {
+								rawFreqsMap.get(term).put(corpusMapper.getDocumentPositionFromLuceneId(doc), rawF);
+							}
 						}
 						bytesRef = termsEnum.next();
 					}
@@ -171,8 +174,10 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				documentRelativeFreqs[documentPosition] = (float) freq/tokensCounts[documentPosition];
 			}
 			//total++;
-			CorpusTerm corpusTerm = new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins);
-			offer(queue, corpusTerm);
+			if (termFreq>minRawFreq) {
+				CorpusTerm corpusTerm = new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins);
+				offer(queue, corpusTerm);
+			}
 //			queue.offer(new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins));
 		}
 		return queue;
@@ -189,11 +194,15 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		int totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
 		for (CorpusTermMinimal corpusTermMinimal : corpusTermMinimalsDB.values()) {
 			if (!stopwords.isKeyword(corpusTermMinimal.getTerm())) {
-				//total++;
-				this.totalTokens+=corpusTermMinimal.getRawFreq();
-				CorpusTerm corpusTerm = new CorpusTerm(corpusTermMinimal, totalTokens);
-				offer(queue, corpusTerm);
-//				queue.offer(corpusTerm);
+				int rawF = corpusTermMinimal.getRawFreq();
+				if (rawF>minRawFreq) {
+					//total++;
+					this.totalTokens+=rawF;
+					CorpusTerm corpusTerm = new CorpusTerm(corpusTermMinimal, totalTokens);
+					offer(queue, corpusTerm);
+//					queue.offer(corpusTerm);
+					
+				}
 			}
 		}
 		corpusTermMinimalsDB.close();
