@@ -202,11 +202,10 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit*docIdBitSet.length());
 			int documentPosition = corpusMapper.getDocumentPositionFromLuceneId(doc);
 			String docId = corpusMapper.getDocumentIdFromLuceneId(doc);
-			DocumentMetadata metadata = corpus.getDocument(docId).getMetadata();
 			float mean = typesCountMeans[documentPosition];
 			float stdDev = typesCountStdDev[documentPosition];
 			int totalTokensCount = tokenCounts[documentPosition];
-			Terms terms = reader.getTermVector(doc, "lexical");
+			Terms terms = reader.getTermVector(doc, tokenType.name());
 			if (terms!=null) {
 				termsEnum = terms.iterator();
 				if (termsEnum!=null) {
@@ -216,30 +215,28 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 						String termString = bytesRef.utf8ToString();
 						if (!stopwords.isKeyword(termString)) {
 							CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(termString);
-							if (!stopwords.isKeyword(termString)) {
-								int[] positions = null;
-								int[] offsets = null;
-								int freq;
-								if (isNeedsPositions || isNeedsOffsets) {
-									PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
-									postingsEnum.nextDoc();
-									freq = postingsEnum.freq();
-									positions = new int[freq];
-									offsets = new int[freq];
-									for (int i=0; i<freq; i++) {
-										positions[i] = postingsEnum.nextPosition();
-										offsets[i] = postingsEnum.startOffset();
-									}
+							int[] positions = null;
+							int[] offsets = null;
+							int freq;
+							if (isNeedsPositions || isNeedsOffsets) {
+								PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
+								postingsEnum.nextDoc();
+								freq = postingsEnum.freq();
+								positions = new int[freq];
+								offsets = new int[freq];
+								for (int i=0; i<freq; i++) {
+									positions[i] = postingsEnum.nextPosition();
+									offsets[i] = postingsEnum.startOffset();
 								}
-								else {
-									freq = (int) termsEnum.totalTermFreq();
-								}
-								if (freq>=minRawFreq) {
-									total++;
-									float zscore = stdDev != 0 ? ((freq-mean) / stdDev) : Float.NaN;
-									DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
-									docQueue.offer(documentTerm);
-								}
+							}
+							else {
+								freq = (int) termsEnum.totalTermFreq();
+							}
+							if (freq>=minRawFreq) {
+								total++;
+								float zscore = stdDev != 0 ? ((freq-mean) / stdDev) : Float.NaN;
+								DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, termString, freq, totalTokensCount, zscore, positions, offsets, corpusTermMinimal);
+								docQueue.offer(documentTerm);
 							}
 						}
 						bytesRef = termsEnum.next();
