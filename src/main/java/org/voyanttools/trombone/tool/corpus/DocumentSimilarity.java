@@ -7,7 +7,7 @@ import java.util.Map;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
-import org.voyanttools.trombone.model.RawCAType;
+import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -50,12 +50,12 @@ public class DocumentSimilarity extends CA {
 		    	v[j] = this.rowProjections[i][j+1];
 	    	}
 	    	
-	    	this.caTypes.add(new RawCAType(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCAType.DOC, corpus.getDocumentPosition(docId) ));
+	    	this.caTerms.add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCATerm.DOC, corpus.getDocumentPosition(docId) ));
 	    	i++;
 	    }
 		
 		if (clusters > 0) {
-			AnalysisTool.clusterPoints(this.caTypes, clusters);
+			AnalysisTool.clusterPoints(this.caTerms, clusters);
 		}
 	}
 	
@@ -78,10 +78,10 @@ public class DocumentSimilarity extends CA {
 			
 			DocumentSimilarity docSim = (DocumentSimilarity) source;
 	        
-			final List<RawCAType> caTypes = docSim.caTypes;
+			final List<RawCATerm> caTerms = docSim.caTerms;
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalDocs", Integer.class);
-			writer.setValue(String.valueOf(caTypes.size()));
+			writer.setValue(String.valueOf(caTerms.size()));
 			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", List.class);
@@ -89,38 +89,38 @@ public class DocumentSimilarity extends CA {
 	        writer.endNode();
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.class);
-			for (RawCAType caType : caTypes) {
+			for (RawCATerm caTerm : caTerms) {
 				writer.startNode("token");
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-				writer.setValue(caType.getType());
+				writer.setValue(caTerm.getTerm());
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "category", String.class);
-				writer.setValue(String.valueOf(caType.getCategory()));
+				writer.setValue(String.valueOf(caTerm.getCategory()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
-				writer.setValue(String.valueOf(caType.getDocIndex()));
+				writer.setValue(String.valueOf(caTerm.getDocIndex()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-				writer.setValue(String.valueOf(caType.getRawFreq()));
+				writer.setValue(String.valueOf(caTerm.getRawFrequency()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-				writer.setValue(String.valueOf(caType.getRelativeFreq()));
+				writer.setValue(String.valueOf(caTerm.getRelativeFrequency()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cluster", Integer.class);
-				writer.setValue(String.valueOf(caType.getCluster()));
+				writer.setValue(String.valueOf(caTerm.getCluster()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "clusterCenter", Boolean.class);
-				writer.setValue(String.valueOf(caType.isClusterCenter()));
+				writer.setValue(String.valueOf(caTerm.isClusterCenter()));
 				writer.endNode();
 				
-				double[] vectorDouble = caType.getVector();
+				double[] vectorDouble = caTerm.getVector();
 				float[] vectorFloat = new float[vectorDouble.length];
 				for (int i = 0, size = vectorDouble.length; i < size; i++) 
 					vectorFloat[i] = (float) vectorDouble[i];

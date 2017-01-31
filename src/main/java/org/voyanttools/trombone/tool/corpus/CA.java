@@ -10,7 +10,8 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.IndexedDocument;
-import org.voyanttools.trombone.model.RawCAType;
+import org.voyanttools.trombone.model.RawCATerm;
+import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.algorithms.pca.CorrespondenceAnalysis;
@@ -29,7 +30,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(CA.CAConverter.class)
 public class CA extends AnalysisTool {
 
-	protected List<RawCAType> caTypes;
+	protected List<RawCATerm> caTerms;
 	
 	protected double[][] rowProjections;
 	protected double[][] columnProjections;
@@ -38,7 +39,7 @@ public class CA extends AnalysisTool {
 	public CA(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 
-		this.caTypes = new ArrayList<RawCAType>();
+		this.caTerms = new ArrayList<RawCATerm>();
 	}
 	
 	protected void doCA(double[][] freqMatrix) {
@@ -68,9 +69,9 @@ public class CA extends AnalysisTool {
 		
 		int i, j;
 		double[] v;
-        List<CorpusTerm> terms = this.getTermsList();
+        List<RawPCATerm> terms = this.getAnalysisTerms();
         for (i = 0; i < terms.size(); i++) {
-        	CorpusTerm term = terms.get(i);
+        	RawPCATerm term = terms.get(i);
 	    	
 	    	v = new double[dimensions];
 	    	for (j = 0; j < dimensions; j++) {
@@ -79,7 +80,7 @@ public class CA extends AnalysisTool {
 	    	
 	    	if (term.getTerm().equals(target)) targetVector = v;
 	    	
-	    	this.caTypes.add(new RawCAType(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), v, RawCAType.TERM, -1));
+	    	this.caTerms.add(new RawCATerm(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), v, RawCATerm.TERM, -1));
 	    }
 
 		if (divisionType == DivisionType.DOCS) {
@@ -93,7 +94,7 @@ public class CA extends AnalysisTool {
 		    	
 		    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
 			    
-		    	this.caTypes.add(new RawCAType(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCAType.DOC, corpus.getDocumentPosition(doc.getId())));
+		    	this.caTerms.add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCATerm.DOC, corpus.getDocumentPosition(doc.getId())));
 		    }
 			
 		} else {
@@ -108,7 +109,7 @@ public class CA extends AnalysisTool {
 		    	
 		    	if (binTitle.equals(target)) targetVector = v;
 			    
-		    	this.caTypes.add(new RawCAType(binTitle, tokensPerBin, 0.0, v, RawCAType.BIN, i));
+		    	this.caTerms.add(new RawCATerm(binTitle, tokensPerBin, 0.0, v, RawCATerm.BIN, i));
 		    }
 		}
 		
@@ -117,14 +118,14 @@ public class CA extends AnalysisTool {
 		}
 		
 		if (clusters > 0) {
-			AnalysisTool.clusterPoints(this.caTypes, clusters);
+			AnalysisTool.clusterPoints(this.caTerms, clusters);
 		}
 	}
 	
-	private void doFilter(double[] targetVector, List<String> initialTypes) {
+	private void doFilter(double[] targetVector, List<String> initialTerms) {
 		double[][] minMax = AnalysisTool.getMinMax(this.rowProjections);
 		double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
-		AnalysisTool.filterTypesByTarget(this.caTypes, targetVector, distance, initialTypes);
+		AnalysisTool.filterTermsByTarget(this.caTerms, targetVector, distance, initialTerms);
 //		this.maxOutputDataItemCount = this.caTypes.size();
 	}
 	
@@ -147,10 +148,10 @@ public class CA extends AnalysisTool {
 			
 			CA ca = (CA) source;
 	        
-			final List<RawCAType> caTypes = ca.caTypes;
+			final List<RawCATerm> caTerms = ca.caTerms;
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
-			writer.setValue(String.valueOf(caTypes.size()));
+			writer.setValue(String.valueOf(caTerms.size()));
 			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", List.class);
@@ -158,38 +159,38 @@ public class CA extends AnalysisTool {
 	        writer.endNode();
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.class);
-			for (RawCAType caType : caTypes) {
+			for (RawCATerm caTerm : caTerms) {
 				writer.startNode("token");
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-				writer.setValue(caType.getType());
+				writer.setValue(caTerm.getTerm());
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "category", String.class);
-				writer.setValue(String.valueOf(caType.getCategory()));
+				writer.setValue(String.valueOf(caTerm.getCategory()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
-				writer.setValue(String.valueOf(caType.getDocIndex()));
+				writer.setValue(String.valueOf(caTerm.getDocIndex()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-				writer.setValue(String.valueOf(caType.getRawFreq()));
+				writer.setValue(String.valueOf(caTerm.getRawFrequency()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-				writer.setValue(String.valueOf(caType.getRelativeFreq()));
+				writer.setValue(String.valueOf(caTerm.getRelativeFrequency()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cluster", Integer.class);
-				writer.setValue(String.valueOf(caType.getCluster()));
+				writer.setValue(String.valueOf(caTerm.getCluster()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "clusterCenter", Boolean.class);
-				writer.setValue(String.valueOf(caType.isClusterCenter()));
+				writer.setValue(String.valueOf(caTerm.isClusterCenter()));
 				writer.endNode();
 				
-				double[] vectorDouble = caType.getVector();
+				double[] vectorDouble = caTerm.getVector();
 				float[] vectorFloat = new float[vectorDouble.length];
 				for (int i = 0, size = vectorDouble.length; i < size; i++) 
 					vectorFloat[i] = (float) vectorDouble[i];

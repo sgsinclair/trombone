@@ -11,7 +11,7 @@ import java.util.SortedSet;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
-import org.voyanttools.trombone.model.RawPCAType;
+import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.algorithms.pca.PrincipalComponentsAnalysis;
 import org.voyanttools.trombone.tool.algorithms.pca.PrincipalComponentsAnalysis.PrincipleComponent;
@@ -32,13 +32,13 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(PCA.PCAConverter.class)
 public class PCA extends AnalysisTool {
 
-	private List<RawPCAType> pcaTypes;
+	private List<RawPCATerm> pcaTerms;
 	private List<PrincipleComponent> principalComponents;
 	
 	public PCA(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		
-		this.pcaTypes = new ArrayList<RawPCAType>();
+		this.pcaTerms = new ArrayList<RawPCATerm>();
 		this.principalComponents = new ArrayList<PrincipleComponent>();
 	}
 	
@@ -82,23 +82,23 @@ public class PCA extends AnalysisTool {
 		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
 		double[][] result = this.doPCA(freqMatrix);
 		
-		List<CorpusTerm> terms = this.getTermsList();
+		List<RawPCATerm> terms = this.getAnalysisTerms();
 		for (i = 0; i < terms.size(); i++) {
-			CorpusTerm term = terms.get(i);
+			RawPCATerm term = terms.get(i);
 			
 			if (term.getTerm().equals(target)) targetVector = result[i];
 			
-			this.pcaTypes.add(new RawPCAType(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), result[i]));
+			this.pcaTerms.add(new RawPCATerm(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), result[i]));
 		}
 		
 		if (clusters > 0) {
-			AnalysisTool.clusterPoints(this.pcaTypes, clusters);
+			AnalysisTool.clusterPoints(this.pcaTerms, clusters);
 		}
 		
 		if (target != null) {
 			double[][] minMax = AnalysisTool.getMinMax(result);
 			double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
-			AnalysisTool.filterTypesByTarget(this.pcaTypes, targetVector, distance, initialTerms);
+			AnalysisTool.filterTermsByTarget(this.pcaTerms, targetVector, distance, initialTerms);
 //			this.maxOutputDataItemCount = this.pcaTypes.size();
 		}
 	}
@@ -122,12 +122,12 @@ public class PCA extends AnalysisTool {
 			
 			PCA pca = (PCA) source;
 	        
-			final List<RawPCAType> pcaTypes = pca.pcaTypes;
+			final List<RawPCATerm> pcaTerms = pca.pcaTerms;
 			
 			final List<PrincipleComponent> principalComponents = pca.principalComponents;
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
-			writer.setValue(String.valueOf(pcaTypes.size()));
+			writer.setValue(String.valueOf(pcaTerms.size()));
 			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "principalComponents", Map.Entry.class);
@@ -151,30 +151,30 @@ public class PCA extends AnalysisTool {
 			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.class);
-			for (RawPCAType pcaType : pcaTypes) {
+			for (RawPCATerm pcaTerm : pcaTerms) {
 				writer.startNode("token");
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-				writer.setValue(pcaType.getType());
+				writer.setValue(pcaTerm.getTerm());
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-				writer.setValue(String.valueOf(pcaType.getRawFreq()));
+				writer.setValue(String.valueOf(pcaTerm.getRawFrequency()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-				writer.setValue(String.valueOf(pcaType.getRelativeFreq()));
+				writer.setValue(String.valueOf(pcaTerm.getRelativeFrequency()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cluster", Integer.class);
-				writer.setValue(String.valueOf(pcaType.getCluster()));
+				writer.setValue(String.valueOf(pcaTerm.getCluster()));
 				writer.endNode();
 				
 				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "clusterCenter", Boolean.class);
-				writer.setValue(String.valueOf(pcaType.isClusterCenter()));
+				writer.setValue(String.valueOf(pcaTerm.isClusterCenter()));
 				writer.endNode();
 				
-				double[] vectorDouble = pcaType.getVector();
+				double[] vectorDouble = pcaTerm.getVector();
 				float[] vectorFloat = new float[vectorDouble.length];
 				for (int i = 0, size = vectorDouble.length; i < size; i++) {
 					vectorFloat[i] = (float) vectorDouble[i];

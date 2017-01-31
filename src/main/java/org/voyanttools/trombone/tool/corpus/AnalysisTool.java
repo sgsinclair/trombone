@@ -3,20 +3,25 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
-import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 import org.apache.commons.math3.stat.clustering.Cluster;
 import org.apache.commons.math3.stat.clustering.KMeansPlusPlusClusterer;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
-import org.voyanttools.trombone.model.RawAnalysisType;
+import org.voyanttools.trombone.model.DocumentTerm;
+import org.voyanttools.trombone.model.RawAnalysisTerm;
+import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.algorithms.pca.DoublePoint;
@@ -41,7 +46,7 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		TERM, DOCUMENT
 	}
 	
-	private List<CorpusTerm> termsList;
+	private List<RawPCATerm> analysisTerms;
 	
 	protected String target;
 	protected int clusters;
@@ -51,6 +56,8 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 	
 	public AnalysisTool(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+		
+		analysisTerms = new ArrayList<RawPCATerm>();
 		
 		target = parameters.getParameterValue("target");
 		clusters = parameters.getParameterIntValue("clusters");
@@ -94,16 +101,30 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		}
 		int numDocs = ids.size();
 		
+		double[][] freqMatrix;
+		
 		Map<String, float[]> termDistributionsMap = new HashMap<String, float[]>();
 		// if there are enough docs, get document terms
 		
 		int[] tokenCounts = corpusMapper.getCorpus().getTokensCounts(TokenType.lexical); 
+		
 		if (numDocs >= minDims) {
 			divisionType = DivisionType.DOCS;
 			
-			termsList = this.getCorpusTerms(corpusMapper, corpus.size());
+			FlexibleParameters params = parameters.clone();
+			params.setParameter("bins", corpus.size());
+			params.setParameter("withDistributions", "true");
+			params.setParameter("minRawFreq", 1);
+			params.setParameter("sort", "rawFreq");
+			params.setParameter("dir", "DESC");
+			CorpusTerms termsList = new CorpusTerms(storage, params);
+			termsList.run(corpusMapper);
+
 			for (CorpusTerm ct : termsList) {
 				String term = ct.getTerm();
+				
+				analysisTerms.add(new RawPCATerm(term, ct.getRawFrequency(), ct.getRelativeFrequency(), null));
+				
 				if (comparisonType == ComparisonType.RAW) {
 					int[] rawDist = ct.getRawDistributions();
 					float[] rawDistFloat = new float[rawDist.length];
@@ -124,52 +145,113 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 				} else {
 					termDistributionsMap.put(term, ct.getRelativeDistributions());
 				}
-			
-			}	
+			}
 		// if there aren't enough docs, get corpus terms split into bins
 		} else {
 			divisionType = DivisionType.BINS;
+			
+			List<String> docIds = this.getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());
+			int binsPerDoc = bins / docIds.size();
+			bins = binsPerDoc * docIds.size(); // re-set bins to account for potential rounding
 			numDocs = bins; // bins are the new docs
 			
-			termsList = this.getCorpusTerms(corpusMapper, bins);
-						
-			for (CorpusTerm ct : termsList) {
-				String term = ct.getTerm();
+			// get the top terms
+			FlexibleParameters params = parameters.clone();
+			params.setParameter("withDistributions", "false");
+			CorpusTerms cts = new CorpusTerms(storage, params);
+			cts.run(corpusMapper);
+			
+			// get the distributions for the top terms in each document
+			Map<String, SortedMap<Integer, int[]>> distributionsMap = new HashMap<String, SortedMap<Integer, int[]>>();
+			
+			FlexibleParameters docParams = parameters.clone();
+			docParams.setParameter("withDistributions", "true");
+			docParams.setParameter("minRawFreq", 1);//binsPerDoc); // need at least this many occurrences for proper bin distribution
+			docParams.setParameter("sort", "rawFreq");
+			docParams.setParameter("dir", "DESC");
+			StringBuilder qsb = new StringBuilder();
+			for (CorpusTerm ct : cts) {
+				qsb.append(ct.getTerm()).append(",");
+			}
+			String queryString = qsb.substring(0, qsb.length()-1);
+			docParams.setParameter("query", queryString);
+			
+			for (String docId : docIds) {
+				docParams.setParameter("docId", docId);
+				DocumentTerms dts = new DocumentTerms(storage, docParams);
+				dts.run(corpusMapper);
 				
-				if (comparisonType == ComparisonType.RAW) {
-					int[] rawDist = ct.getRawDistributions();
-					float[] rawDistFloat = new float[rawDist.length];
-					for (int i = 0; i < rawDist.length; i++) {
-						rawDistFloat[i] = (float) rawDist[i];
+				Iterator<DocumentTerm> it = dts.iterator();
+				while (it.hasNext()) {
+					DocumentTerm dt = it.next();
+					String term = dt.getTerm();
+					
+					if (!distributionsMap.containsKey(term)) {
+						distributionsMap.put(term, new TreeMap<Integer, int[]>());
 					}
-					termDistributionsMap.put(term, rawDistFloat);
-//				} else if (comparisonType == ComparisonType.TFIDF) {
-//					int[] rawDist = ct.getRawDistributions();
-//					float[] tfidfDist = new float[rawDist.length];
-//					for (int i = 0; i < rawDist.length; i++) {
-//						int rawFreq = rawDist[i];
-//						int totalTermsCount = corpus.getDocument(i).getMetadata().getTokensCount(TokenType.lexical);
-//						int inDocuments = ct.getInDocumentsCount();
-//						float tfidf = ((float) rawFreq / (float) totalTermsCount) * (float) Math.log10((float) corpus.size() / (float) inDocuments);
-//						tfidfDist[i] = tfidf;
-//					}
-//					termDistributionsMap.put(term, tfidfDist);
-				} else {
-					termDistributionsMap.put(term, ct.getRelativeDistributions());
+					
+					distributionsMap.get(term).put(dt.getDocIndex(), dt.getRawDistributions(binsPerDoc));
 				}
+			}
+			
+			// combine distributions
+			for (Entry<String, SortedMap<Integer, int[]>> docMap : distributionsMap.entrySet()) {
+				String term = docMap.getKey();
+				int[] combinedDist = new int[bins];
+				int combinedTokenCount = 0;
+				int currentIndex = 0;
+				for (Entry<Integer, int[]> docsMap : docMap.getValue().entrySet()) {
+					int docIndex = docsMap.getKey();
+					int[] dist = docsMap.getValue();
+					combinedTokenCount += tokenCounts[docIndex];
+					int pos = currentIndex * binsPerDoc;
+					System.arraycopy(dist, 0, combinedDist, pos, dist.length);
+					currentIndex++;
+				}
+				
+				int rawFreq = 0;
+				for (int i = 0; i < combinedDist.length; i++) {
+					rawFreq += combinedDist[i];
+				}
+				float relFreq = rawFreq / combinedTokenCount;
+				
+				float[] floatDist = new float[bins];
+				for (int i = 0; i < combinedDist.length; i++) {
+					if (comparisonType == ComparisonType.RELATIVE) {
+						floatDist[i] = (float)combinedDist[i] / combinedTokenCount;
+					} else if (comparisonType == ComparisonType.TFIDF) {
+						int inDocuments = docMap.getValue().size();
+						float tfidf = ((float) rawFreq / (float) combinedTokenCount) * (float) Math.log10((float) docIds.size() / (float) inDocuments);
+						floatDist[i] = tfidf;
+					} else {
+						floatDist[i] = combinedDist[i];
+					}
+				}
+				
+				analysisTerms.add(new RawPCATerm(term, rawFreq, relFreq, null));
+				
+				termDistributionsMap.put(term, floatDist);
 			}
 		}
 		
-		Set<Entry<String, float[]>> entrySet = termDistributionsMap.entrySet();
-		int numTerms = entrySet.size();
+		// sort by raw freq, descending
+		Collections.sort(analysisTerms, new Comparator<RawPCATerm>() {
+			@Override
+			public int compare(RawPCATerm arg0, RawPCATerm arg1) {
+				if (arg0.getRawFrequency() > arg1.getRawFrequency()) return -1;
+				else if (arg0.getRawFrequency() < arg1.getRawFrequency()) return 1;
+				else return 0;
+			}
+		});
 		
-		double[][] freqMatrix;
+		int numTerms = analysisTerms.size();
+		
 		if (type == MatrixType.DOCUMENT) {
 			freqMatrix = new double[numDocs][numTerms];
 			
 			int termIndex = 0;
-			for (Entry<String, float[]> entry : entrySet) {
-				float[] values = entry.getValue();
+			for (RawPCATerm aTerm : analysisTerms) {
+				float[] values = termDistributionsMap.get(aTerm.getTerm());
 				
 				for (int valIndex = 0; valIndex < values.length; valIndex++) {
 					int docIndex;
@@ -190,8 +272,9 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 			freqMatrix = new double[numTerms][numDocs];
 			
 			int termIndex = 0;
-			for (Entry<String, float[]> entry : entrySet) {
-				float[] values = entry.getValue();
+			for (RawPCATerm aTerm : analysisTerms) {
+				float[] values = termDistributionsMap.get(aTerm.getTerm());
+				
 				for (int valIndex = 0; valIndex < values.length; valIndex++) {
 					int docIndex;
 					if (divisionType == DivisionType.BINS) {
@@ -212,33 +295,13 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		return freqMatrix;
 	}
 	
-	protected List<CorpusTerm> getCorpusTerms(CorpusMapper corpusMapper, int bins) throws IOException {
-		FlexibleParameters params = parameters.clone();
-		params.setParameter("bins", bins);
-		params.setParameter("withDistributions", "true");
-		
-		CorpusTerms ct = new CorpusTerms(storage, params);
-		ct.run(corpusMapper);
-		
-		Iterator<CorpusTerm> it = ct.iterator();
-		List<CorpusTerm> list = new ArrayList<CorpusTerm>();
-		while (it.hasNext()) {
-			CorpusTerm term = it.next();
-			if (term.getRawFrequency() > 0) {
-				list.add(term);
-			}
-		}
-		
-		return list;
-	}
-	
 	@SuppressWarnings("unchecked")
-	protected static void filterTypesByTarget(List<? extends RawAnalysisType> types, double[] target, double maxDistance, List<String> whitelist) {
-		Iterator<RawAnalysisType> it = (Iterator<RawAnalysisType>) types.iterator();
+	protected static void filterTermsByTarget(List<? extends RawAnalysisTerm> terms, double[] target, double maxDistance, List<String> whitelist) {
+		Iterator<RawAnalysisTerm> it = (Iterator<RawAnalysisTerm>) terms.iterator();
 		while (it.hasNext()) {
-			RawAnalysisType type = it.next();
-			double distance = getDistance(type.getVector(), target);
-			if (!whitelist.contains(type.getType())) {
+			RawAnalysisTerm term = it.next();
+			double distance = getDistance(term.getVector(), target);
+			if (!whitelist.contains(term.getTerm())) {
 				if (distance > maxDistance) {
 					it.remove();
 				}
@@ -275,10 +338,10 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		return minMax;
 	}
 	
-	protected static void clusterPoints(List<? extends RawAnalysisType> types, int k) {
+	protected static void clusterPoints(List<? extends RawAnalysisTerm> terms, int k) {
 		Collection<DoublePoint> data = new ArrayList<DoublePoint>();
-		for (RawAnalysisType type : types) {
-			data.add(new DoublePoint(type));
+		for (RawAnalysisTerm term : terms) {
+			data.add(new DoublePoint(term));
 		}
 		
 		KMeansPlusPlusClusterer<DoublePoint> clusterer = new KMeansPlusPlusClusterer<DoublePoint>(new Random());
@@ -288,14 +351,14 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 			List<DoublePoint> points = cluster.getPoints();
 			DoublePoint center = cluster.getCenter();
 			for (DoublePoint p : points) {
-				p.getType().setCluster(clusterCounter);
-				if (p.equals(center)) p.getType().setClusterCenter(true);
+				p.getTerm().setCluster(clusterCounter);
+				if (p.equals(center)) p.getTerm().setClusterCenter(true);
 			}
 			clusterCounter++;
 		}
 	}
 	
-	public List<CorpusTerm> getTermsList() {
-		return this.termsList;
+	public List<RawPCATerm> getAnalysisTerms() {
+		return this.analysisTerms;
 	}
 }

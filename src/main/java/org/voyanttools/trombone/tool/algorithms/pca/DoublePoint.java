@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 import org.apache.commons.math3.stat.clustering.Clusterable;
-import org.voyanttools.trombone.model.RawAnalysisType;
+import org.voyanttools.trombone.model.RawAnalysisTerm;
 import org.voyanttools.trombone.tool.corpus.AnalysisTool;
 
 /**
@@ -13,12 +13,12 @@ import org.voyanttools.trombone.tool.corpus.AnalysisTool;
  */
 public class DoublePoint implements Clusterable<DoublePoint> {
 
-	private RawAnalysisType type;
+	private RawAnalysisTerm term;
 	private double[] point;
 	
-	public DoublePoint(RawAnalysisType type) {
-		this.type = type;
-		this.point = type.getVector();
+	public DoublePoint(RawAnalysisTerm term) {
+		this.term = term;
+		this.point = term.getVector();
 	}
 	
 	public double distanceFrom(DoublePoint p) {
@@ -51,8 +51,8 @@ public class DoublePoint implements Clusterable<DoublePoint> {
         return instances.get(index);
 	}
 	
-	public RawAnalysisType getType() {
-		return this.type;
+	public RawAnalysisTerm getTerm() {
+		return this.term;
 	}
 
 }

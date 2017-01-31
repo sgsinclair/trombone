@@ -3,7 +3,7 @@ package org.voyanttools.trombone.model;
 /**
  * @author Andrew MacDonald
  */
-public class RawCAType extends RawPCAType {
+public class RawCATerm extends RawPCATerm {
 
 	public static final String TERM = "term";
 	public static final String DOC = "doc";
@@ -12,8 +12,8 @@ public class RawCAType extends RawPCAType {
 	private final String category;
 	private final int docIndex;
 	
-	public RawCAType(String type, int rawFreq, double relativeFreq, double[] vector, String category, int docIndex) {
-		super(type, rawFreq, relativeFreq, vector);
+	public RawCATerm(String term, int rawFrequency, double relativeFrequency, double[] vector, String category, int docIndex) {
+		super(term, rawFrequency, relativeFrequency, vector);
 		if (category != TERM && category != DOC && category != BIN) {
 			category = TERM;
 		}

@@ -3,23 +3,23 @@ package org.voyanttools.trombone.model;
 /**
  * @author Andrew MacDonald
  */
-public abstract class RawAnalysisType {
+public abstract class RawAnalysisTerm {
 	
-	private final String type;
+	private final String term;
 	private final double[] vector;
 	private int cluster;
 	private boolean clusterCenter;
 	
 //	@edu.umd.cs.findbugs.annotations.SuppressWarnings({ "EI_EXPOSE_REP2" })
-	public RawAnalysisType(String type, double[] vector) {
-		this.type = type;
+	public RawAnalysisTerm(String term, double[] vector) {
+		this.term = term;
 		this.vector = vector;
 		this.cluster = -1;
 		this.clusterCenter = false;
 	}
 	
-	public String getType() {
-		return this.type;
+	public String getTerm() {
+		return this.term;
 	}
 	
 //	@edu.umd.cs.findbugs.annotations.SuppressWarnings({ "EI_EXPOSE_REP" })
