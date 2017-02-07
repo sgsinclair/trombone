@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.apache.commons.math3.stat.clustering.Clusterable;
+import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.voyanttools.trombone.model.RawAnalysisTerm;
 import org.voyanttools.trombone.tool.corpus.AnalysisTool;
 
 /**
  * @author Andrew MacDonald
  */
-public class DoublePoint implements Clusterable<DoublePoint> {
+public class DoublePoint implements Clusterable {
 
 	private RawAnalysisTerm term;
 	private double[] point;
@@ -53,6 +53,11 @@ public class DoublePoint implements Clusterable<DoublePoint> {
 	
 	public RawAnalysisTerm getTerm() {
 		return this.term;
+	}
+
+	@Override
+	public double[] getPoint() {
+		return this.point;
 	}
 
 }

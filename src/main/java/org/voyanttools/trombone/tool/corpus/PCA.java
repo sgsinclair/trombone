@@ -10,14 +10,11 @@ import java.util.SortedSet;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.algorithms.pca.PrincipalComponentsAnalysis;
 import org.voyanttools.trombone.tool.algorithms.pca.PrincipalComponentsAnalysis.PrincipleComponent;
 import org.voyanttools.trombone.util.FlexibleParameters;
-
-import Jama.Matrix;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -27,6 +24,8 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+
+import Jama.Matrix;
 
 @XStreamAlias("pcaAnalysis")
 @XStreamConverter(PCA.PCAConverter.class)
