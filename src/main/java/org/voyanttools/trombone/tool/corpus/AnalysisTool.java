@@ -14,6 +14,7 @@ import java.util.Random;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import org.apache.commons.math3.exception.ConvergenceException;
 import org.apache.commons.math3.ml.clustering.CentroidCluster;
 import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer;
@@ -123,7 +124,6 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 
 			for (CorpusTerm ct : termsList) {
 				String term = ct.getTerm();
-				
 				analysisTerms.add(new RawPCATerm(term, ct.getRawFrequency(), ct.getRelativeFrequency(), null));
 				
 				if (comparisonType == ComparisonType.RAW) {
@@ -345,20 +345,27 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 			data.add(new DoublePoint(term));
 		}
 		
-		KMeansPlusPlusClusterer<DoublePoint> clusterer = new KMeansPlusPlusClusterer<DoublePoint>(k);
-		List<CentroidCluster<DoublePoint>> clusters = clusterer.cluster(data);
-		int clusterCounter = 0;
-		for (CentroidCluster<DoublePoint> cluster : clusters) {
-			List<DoublePoint> points = cluster.getPoints();
-			Clusterable center = cluster.getCenter();
-			for (DoublePoint p : points) {
-				p.getTerm().setCluster(clusterCounter);
-				// TODO center seems to be calculated and not selected from initial data, therefore no points will ever be the center
-				if (p.getPoint().equals(center.getPoint())) {
-					p.getTerm().setClusterCenter(true);
+		List<CentroidCluster<DoublePoint>> clusters = null;
+		try {
+			KMeansPlusPlusClusterer<DoublePoint> clusterer = new KMeansPlusPlusClusterer<DoublePoint>(k, 5000);
+			clusters = clusterer.cluster(data);
+		} catch (ConvergenceException e) {
+			// couldn't cluster
+		}
+		if (clusters != null) {
+			int clusterCounter = 0;
+			for (CentroidCluster<DoublePoint> cluster : clusters) {
+				List<DoublePoint> points = cluster.getPoints();
+				Clusterable center = cluster.getCenter();
+				for (DoublePoint p : points) {
+					p.getTerm().setCluster(clusterCounter);
+					// TODO center seems to be calculated and not selected from initial data, therefore no points will ever be the center
+					if (p.getPoint().equals(center.getPoint())) {
+						p.getTerm().setClusterCenter(true);
+					}
 				}
+				clusterCounter++;
 			}
-			clusterCounter++;
 		}
 	}
 	
