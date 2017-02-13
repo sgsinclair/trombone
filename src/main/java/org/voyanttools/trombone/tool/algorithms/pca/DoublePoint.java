@@ -59,5 +59,10 @@ public class DoublePoint implements Clusterable {
 	public double[] getPoint() {
 		return this.point;
 	}
+	
+	@Override
+	public String toString() {
+		return this.term.getTerm()+": "+this.point[0]+","+this.point[1];
+	}
 
 }
