@@ -149,6 +149,10 @@ public class CorrespondenceAnalysis {
 				}
 				if (this.rowSums[i] >= EPS) rowproj[i][j1] /= this.rowSums[i];
 				if (this.rowSums[i] < EPS) rowproj[i][j1] = 0.0;
+				
+				if (Double.isNaN(rowproj[i][j1])) {
+					rowproj[i][j1] = 0.0;
+				}
 			}
 		}
 		for (int j1 = 0; j1 < this.numColumns; j1++) {
@@ -159,6 +163,10 @@ public class CorrespondenceAnalysis {
 				}
 				if (this.columnSums[j1] >= EPS && Evals[j2] >= EPS) colproj[j1][j2] /= Math.sqrt(Evals[j2]*this.columnSums[j1]);
 				if (this.columnSums[j1] < EPS && Evals[j2] < EPS) colproj[j1][j2] = 0.0; 
+				
+				if (Double.isNaN(colproj[j1][j2])) {
+					colproj[j1][j2] = 0.0;
+				}
 			}
 		}
 
