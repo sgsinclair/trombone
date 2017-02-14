@@ -33,6 +33,7 @@ public class PrincipalComponentsAnalysis {
 			for (int j = 0; j < numComponents; j++) {
 				eigenvector[j] = vecs[i][j];
 			}
+			
 			this.principleComponents.add(new PrincipleComponent(this.eigenvalues[i], eigenvector));
 		}
 	}
@@ -135,12 +136,28 @@ public class PrincipalComponentsAnalysis {
 			this.eigenVector = eigenVector;
 		}
 
+		@Override
 		public int compareTo(PrincipleComponent o) {
 			int ret = 0;
 			if (this.eigenValue > o.eigenValue) {
 				ret = -1;
 			} else if (this.eigenValue < o.eigenValue) {
 				ret = 1;
+			}
+			if (ret == 0) {
+				if (this.eigenVector.length > o.eigenVector.length) return -1;
+				else if (this.eigenVector.length < o.eigenVector.length) return 1;
+				else {
+					boolean exact = true;
+					for (int i = 0; i < this.eigenVector.length; i++) {
+						if (this.eigenVector[i] != o.eigenVector[i]) {
+							exact = false;
+							break;
+						}
+					}
+					if (exact) ret = 0;
+					else ret = -1; // TODO how else to compare differing vectors?
+				}
 			}
 			return ret;
 		}
