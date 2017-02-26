@@ -70,7 +70,7 @@ public class Veliza extends AbstractCorpusTool {
 			Corpus corpus = corpusMapper.getCorpus();
 			
 			// first randomly select a document in the corpus
-			int docIndex = (int) Math.floor(Math.random() * corpus.size());
+			docIndex = (int) Math.floor(Math.random() * corpus.size());
 
 			// try to load stored document and if not generate sentences
 			String id = corpusMapper.getCorpus().getId()+"-docIndex-"+String.valueOf(docIndex)+"-veliza-sentences-"+String.valueOf(this.getVersion());
