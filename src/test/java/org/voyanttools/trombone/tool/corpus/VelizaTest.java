@@ -3,6 +3,10 @@ package org.voyanttools.trombone.tool.corpus;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.text.BreakIterator;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -71,6 +75,13 @@ public class VelizaTest {
 		veliza = new Veliza(storage, parameters);
 		veliza.run();
 		assertTrue(veliza.response!=null && veliza.response.length()>0);
+		
+		
+		
+		// test sentences
+		String string = "This is a sentence.  It has fruits, vegetables,\n etc. but does not have meat.  Mr. Smith went to Washington.";
+		List<String> sentences = veliza.getSentences(string);
+		assertEquals(3, sentences.size());
 	}
 
 }

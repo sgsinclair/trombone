@@ -4,15 +4,15 @@
 package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
+import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
@@ -44,6 +44,11 @@ public class Veliza extends AbstractCorpusTool {
 	 */
 	public Veliza(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+	}
+	
+	@Override
+	public int getVersion() {
+		return super.getVersion()+1;
 	}
 
 	@Override
@@ -120,23 +125,38 @@ public class Veliza extends AbstractCorpusTool {
 	}
 	
 	private List<String> storeSentences(IndexedDocument document, String storedId) throws IOException {
-		List<String> sentences = new ArrayList<String>();
-		Pattern sentencePattern = Pattern.compile("\\p{Lu}.*?[.!?](\\s|$)");
-		Stripper stripper = new Stripper(Stripper.TYPE.ALL); // only used for text output
 		String string = document.getDocumentString();
-		string = stripper.strip(string).trim().replace("&amp;", "&");
-		string = string.replaceAll("\\s+", " "); // all whitepace becomes a single space
-		Matcher matcher = sentencePattern.matcher(string);
-		while (matcher.find()) {
-			String s = matcher.group(0).trim();
-			if (s.contains(" ")) { // this should mean at least two words (one space)
-				sentences.add(s);
-			}
-		}
+		List<String> sentences = getSentences(string);
 		if (sentences.isEmpty()==false) {
 			storage.storeStrings(sentences, storedId);
 		}
 		return sentences;
 	}
-
+	
+	List<String> getSentences(String string) {
+		Pattern abbreviations = Pattern.compile("\\b(Mrs?|Dr|Rev|Mr|Ms|st)\\.$", Pattern.CASE_INSENSITIVE);
+		List<String> sentences = new ArrayList<String>();
+		Stripper stripper = new Stripper(Stripper.TYPE.ALL); // only used for text output
+		string = stripper.strip(string).trim().replace("&amp;", "&");
+		string = string.replaceAll("\\s+", " "); // all whitepace becomes a single space
+		BreakIterator sentenceIterator = BreakIterator.getSentenceInstance(Locale.US);
+		sentenceIterator.setText(string);
+	     int start = sentenceIterator.first();
+	     StringBuffer sb = new StringBuffer();
+	     for (int end = sentenceIterator.next();
+	          end != sentenceIterator.DONE;
+	          start = end, end = sentenceIterator.next()) {
+	    	 sb.append(string.substring(start,end).trim());
+	    	 String sentence = sb.toString();
+	    	 if (abbreviations.matcher(sentence).find()==false) {
+	    		 if (sentence.contains(" ")) {
+		    		 sentences.add(sentence);
+	    		 }
+	    		 sb.setLength(0); // reset buffer
+	    	 } else {
+	    		 sb.append(" ");
+	    	 }
+	     }
+	     return sentences;
+	}
 }
