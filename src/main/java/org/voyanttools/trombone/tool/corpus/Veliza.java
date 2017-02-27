@@ -12,6 +12,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
@@ -87,7 +88,6 @@ public class Veliza extends AbstractCorpusTool {
 				int random = (int) Math.floor(Math.random() * sentences.size());
 				sentence = sentences.get(random);
 	        	response = eliza.processInput(sentence);
-	        	System.err.println(random+" "+response+" "+sentence);
 	        	if (nones.contains(response)==false || Calendar.getInstance().getTimeInMillis()>giveUp) {
 	        		break;
 	        	}
@@ -121,14 +121,17 @@ public class Veliza extends AbstractCorpusTool {
 	
 	private List<String> storeSentences(IndexedDocument document, String storedId) throws IOException {
 		List<String> sentences = new ArrayList<String>();
-		Pattern sentencePattern = Pattern.compile("\\p{L}.*?[.!?](\\s|$)");
+		Pattern sentencePattern = Pattern.compile("\\p{Lu}.*?[.!?](\\s|$)");
 		Stripper stripper = new Stripper(Stripper.TYPE.ALL); // only used for text output
 		String string = document.getDocumentString();
 		string = stripper.strip(string).trim().replace("&amp;", "&");
 		string = string.replaceAll("\\s+", " "); // all whitepace becomes a single space
 		Matcher matcher = sentencePattern.matcher(string);
 		while (matcher.find()) {
-			sentences.add(matcher.group(0).trim());
+			String s = matcher.group(0).trim();
+			if (s.contains(" ")) { // this should mean at least two words (one space)
+				sentences.add(s);
+			}
 		}
 		if (sentences.isEmpty()==false) {
 			storage.storeStrings(sentences, storedId);
