@@ -30,6 +30,8 @@ import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.file.FileStorage;
+import org.voyanttools.trombone.tool.build.RealCorpusCreator;
+import org.voyanttools.trombone.tool.corpus.CorpusTerms;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -39,7 +41,7 @@ import org.voyanttools.trombone.util.TestHelper;
  */
 public class LuceneIndexerTest {
 
-	//@Test
+	@Test
 	public void testDuplicateAdd() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		InputSource one = new StringInputSource("one");
@@ -62,7 +64,42 @@ public class LuceneIndexerTest {
 		
 		storage.destroy();
 	}
-	
+
+	@Test
+	public void testTokenizers() throws IOException {
+		Storage storage = TestHelper.getDefaultTestStorage();
+		FlexibleParameters corpusParameters = new FlexibleParameters();
+		corpusParameters.addParameter("string", "What's voyant-tools.org?");		
+		FlexibleParameters corpusTermsParameters = new FlexibleParameters();
+		
+		// no tokenization parameter
+		RealCorpusCreator creator = new RealCorpusCreator(storage, corpusParameters);
+		creator.run();
+		corpusTermsParameters.setParameter("corpus", creator.getStoredId());
+		CorpusTerms corpusTerms = new CorpusTerms(storage, corpusTermsParameters);
+		corpusTerms.run();
+		assertEquals(3, corpusTerms.getTotal()); // what's, voyant, tools.org
+
+		// using word boundaries
+		corpusParameters.setParameter("tokenization", "wordBoundaries");
+		creator = new RealCorpusCreator(storage, corpusParameters);
+		creator.run();
+		corpusTermsParameters.setParameter("corpus", creator.getStoredId());
+		corpusTerms = new CorpusTerms(storage, corpusTermsParameters);
+		corpusTerms.run();
+		assertEquals(5, corpusTerms.getTotal()); // what, s, voyant, tools, org
+
+		// using word boundaries
+		corpusParameters.setParameter("tokenization", "whitespace");
+		creator = new RealCorpusCreator(storage, corpusParameters);
+		creator.run();
+		corpusTermsParameters.setParameter("corpus", creator.getStoredId());
+		corpusTerms = new CorpusTerms(storage, corpusTermsParameters);
+		corpusTerms.run();
+		assertEquals(2, corpusTerms.getTotal()); // What's, voyant-tools.org?
+		
+		storage.destroy();
+	}
 	/**
 	 * The code below is a bit hard to follow, but essentially we're wanting to use the usual extraction
 	 * workflow (which produces a guessed language code), then Lucene analysis to double-check the
@@ -111,7 +148,6 @@ public class LuceneIndexerTest {
 		// make sure we have new metadata
 		assertEquals(0, storedDocumentSourceStorage.getStoredDocumentSourceMetadata(ids.get(0)).getLastTokenPositionIndex(TokenType.lexical));
 
-		
 		// finally, go through and check our token counts
 		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
 		assertEquals(4, reader.maxDoc());
