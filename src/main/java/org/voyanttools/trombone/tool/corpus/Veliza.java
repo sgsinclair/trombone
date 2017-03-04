@@ -20,6 +20,7 @@ import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.Stripper;
+import org.voyanttools.trombone.util.TextUtils;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -126,7 +127,7 @@ public class Veliza extends AbstractCorpusTool {
 	
 	private List<String> storeSentences(IndexedDocument document, String storedId) throws IOException {
 		String string = document.getDocumentString();
-		List<String> sentences = getSentences(string);
+		List<String> sentences = TextUtils.getSentences(string, Locale.ENGLISH);
 		if (sentences.isEmpty()==false) {
 			storage.storeStrings(sentences, storedId);
 		}

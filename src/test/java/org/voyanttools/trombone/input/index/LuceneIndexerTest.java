@@ -24,6 +24,8 @@ import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
+import org.voyanttools.trombone.lucene.CorpusMapper;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
@@ -31,7 +33,10 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
+import org.voyanttools.trombone.tool.corpus.CorpusCreator;
+import org.voyanttools.trombone.tool.corpus.CorpusManager;
 import org.voyanttools.trombone.tool.corpus.CorpusTerms;
+import org.voyanttools.trombone.tool.corpus.DocumentsMetadata;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -159,6 +164,22 @@ public class LuceneIndexerTest {
 		}
 		
 		storage.destroy();
+	}
+	
+	@Test
+	public void testMetadata() throws IOException {
+		Storage storage = TestHelper.getDefaultTestStorage();
+
+		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr")});
+		CorpusCreator creator = new CorpusCreator(storage, parameters);
+		creator.run();
+		parameters.removeParameter("file");
+		parameters.setParameter("corpus", creator.getStoredId());
+		
+		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
+		DocumentMetadata documentMetadata = corpus.getDocument(0).getMetadata();
+		assertEquals(28, documentMetadata.getSentencesCount());
+
 	}
 	
 	private void outputTerms(TermsEnum termsEnum) throws IOException {

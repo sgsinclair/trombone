@@ -487,6 +487,15 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	public void setTypesCountStdDev(TokenType tokenType, float mean) {
 		setProperty("typesCountStdDev-"+tokenType.name(), String.valueOf(mean));
 	}
+	
+	public void setSentencesCount(int count) {
+		setProperty("sentencesCount", String.valueOf(count));
+	}
+	
+	public int getSentencesCount() {
+		return Integer.parseInt(getProperty("sentencesCount", "0"));
+	}
+
 
 	public String toString() {
 		return getSource().name()+": "+getLocation();

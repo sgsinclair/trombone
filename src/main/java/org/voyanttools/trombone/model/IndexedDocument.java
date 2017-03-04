@@ -83,6 +83,7 @@ public class IndexedDocument implements DocumentContainer, Comparable<IndexedDoc
 	public DocumentMetadata getMetadata() throws IOException {
 		if (metadata==null) {
 			metadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(getId());
+			
 		}
 		return metadata;
 	}

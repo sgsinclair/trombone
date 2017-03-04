@@ -19,12 +19,14 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.model.IndexedDocument.IndexedDocumentPriorityQueue;
 import org.voyanttools.trombone.model.IndexedDocument.Sort;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.TextUtils;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -95,7 +97,20 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		int index = 0;
 		for (String id : ids) {
 			IndexedDocument document = corpus.getDocument(id);
-			document.getMetadata().setIndex(corpus.getDocumentPosition(id)); // make sure index is set
+			DocumentMetadata metadata = document.getMetadata();
+			metadata.setIndex(corpus.getDocumentPosition(id)); // make sure index is set
+			
+			// check to see if we have an older document without sentences count
+			if (metadata.getTokensCount(TokenType.lexical)>0 && metadata.getSentencesCount()==0) {
+				String text = document.getDocumentString();
+				String language = metadata.getLanguageCode();
+				int count = TextUtils.getSentences(text, language).size();
+				if (count>0) {
+					metadata.setSentencesCount(count);
+					// store for next time
+					storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(document.getId(), metadata);
+				}
+			}
 			queue.offer(document);
 			if (++index>=size && sort==Sort.INDEXASC) {break;} // we don't need to look any further since docs in order
 		}
@@ -105,6 +120,15 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		}
 		Collections.reverse(documents);
 
+	}
+	
+	/**
+	 * Get the documents after a run (should only be used by unit testing).
+	 * 
+	 * @return
+	 */
+	List<IndexedDocument> getDocuments() {
+		return documents;
 	}
 	
 	@Override

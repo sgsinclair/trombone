@@ -38,7 +38,6 @@ import org.apache.lucene.LucenePackage;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
-import org.apache.lucene.document.SortedSetDocValuesField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.facet.FacetsConfig;
@@ -57,7 +56,6 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputStreamInputSource;
@@ -68,6 +66,7 @@ import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.TextUtils;
 
 import edu.stanford.nlp.util.StringUtils;
 
@@ -76,6 +75,12 @@ import edu.stanford.nlp.util.StringUtils;
  *
  */
 public class LuceneIndexer implements Indexer {
+	
+	private static int VERSION = 1; // helpful for setting unique version of
+	// document based not only on Lucene version but also this code,
+	// the actual number doesn't matter but will usually just
+	// increment to uniqueness
+
 	
 	private Storage storage;
 	private FlexibleParameters parameters;
@@ -211,7 +216,7 @@ public class LuceneIndexer implements Indexer {
 	}
 	
 	private class IndexedDocumentAnalyzer implements Runnable {
-		
+
 		private Storage storage;
 		private StoredDocumentSource storedDocumentSource;
 		private IndexReader indexReader;
@@ -358,7 +363,7 @@ public class LuceneIndexer implements Indexer {
 				document = new Document();
 				document.add(new StringField("id", id, Field.Store.NO));
 //				document.add(new StringField("corpus", corpusId, Field.Store.NO));
-				document.add(new StringField("version",  LucenePackage.get().getImplementationVersion(), Field.Store.YES));
+				document.add(new StringField("version",  LucenePackage.get().getImplementationVersion()+"-"+String.valueOf(LuceneIndexer.VERSION), Field.Store.YES));
 				
 				FlexibleParameters p = new FlexibleParameters();
 				p.setParameter("language", storedDocumentSource.getMetadata().getLanguageCode());
@@ -408,6 +413,10 @@ public class LuceneIndexer implements Indexer {
 					}
 				}
 				*/
+				
+				// approximate the number of sentences
+				List<String> sentences = TextUtils.getSentences(getString(), storedDocumentSource.getMetadata().getLanguageCode());
+				storedDocumentSource.getMetadata().setSentencesCount(sentences.size());
 				
 				indexWriter.addDocument(config.build(document));
 				
