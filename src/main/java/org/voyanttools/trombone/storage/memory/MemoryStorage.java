@@ -146,6 +146,11 @@ public class MemoryStorage implements Storage {
 	}
 
 	@Override
+	public boolean isStoredCache(String id) {
+		return isStored(id); // for memory, use normal cache
+	}
+	
+	@Override
 	public String store(Object obj) throws IOException {
 		String id = UUID.randomUUID().toString();
 		store(obj, id);
@@ -164,12 +169,12 @@ public class MemoryStorage implements Storage {
 	}
 	
 	@Override
-	public Reader retrieveStringReader(String id) throws IOException {
+	public Reader retrieveCachedStringReader(String id) throws IOException {
 		return new StringReader(retrieveString(id));
 	}
 
 	@Override
-	public Writer getStoreStringWriter(String id) throws IOException {
+	public Writer getStoreCachedStringWriter(String id) throws IOException {
 		return new MemoryStorageStringWriter(id);
 	}
 	

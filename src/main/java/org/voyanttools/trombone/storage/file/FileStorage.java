@@ -189,7 +189,6 @@ public class FileStorage implements Storage {
 	private File getObjectStoreDirectory() {
 		return new File(storageLocation,"object-storage");
 	}
-
 	
 	File getResourceFile(String id) {
 		// package level for migrators
@@ -243,21 +242,33 @@ public class FileStorage implements Storage {
 		return obj;
 	}
 
+	private File getStoreCacheDirectory() {
+		return new File(storageLocation, "cache");
+	}
+
+	private File getCachedFile(String id) {
+		return new File(getStoreCacheDirectory(), id);
+	}
 	@Override
-	public Reader retrieveStringReader(String id) throws IOException {
-		File file = getResourceFile(id);
+	public Reader retrieveCachedStringReader(String id) throws IOException {
+		File file = getCachedFile(id);
 		return new FileReader(file);
 	}
 
-
-
 	@Override
-	public Writer getStoreStringWriter(String id) throws IOException {
-		File file = getResourceFile(id);
+	public Writer getStoreCachedStringWriter(String id) throws IOException {
+		File file = getCachedFile(id);
+		if (file.getParentFile().exists()==false) { // make sure directory exists
+			file.getParentFile().mkdirs();
+		}
 		return new FileWriter(file);
 	}
-
-
+	
+	@Override
+	public boolean isStoredCache(String id) {
+		File file = getCachedFile(id);
+		return file.exists();
+	}
 
 	@Override
 	public DB getDB(String id, boolean readOnly) {

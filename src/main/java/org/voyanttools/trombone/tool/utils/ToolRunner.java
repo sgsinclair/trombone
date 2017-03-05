@@ -118,8 +118,8 @@ public class ToolRunner extends AbstractTool {
 		boolean hasParameterSources = InputSourcesBuilder.hasParameterSources(parameters);
 		// skip for corpus (makes it easier to change or remove) and stored resource (cacheing not relevant, easier to change)
 		boolean noCache = tools.size()==1 && (tools.get(0) instanceof CorpusMetadata || tools.get(0) instanceof StoredResource);
-		if (noCache==false && parameters.getParameterBooleanValue("noCache")==false && parameters.getParameterBooleanValue("reCache")==false && hasParameterSources==false && storage.isStored(id)) {
-			Reader reader = storage.retrieveStringReader(id);
+		if (noCache==false && parameters.getParameterBooleanValue("noCache")==false && parameters.getParameterBooleanValue("reCache")==false && hasParameterSources==false && storage.isStoredCache(id)) {
+			Reader reader = storage.retrieveCachedStringReader(id);
 			IOUtils.copy(reader, writer);
 			reader.close();
 			writer.flush();
@@ -137,10 +137,10 @@ public class ToolRunner extends AbstractTool {
 				toolSerializer.run(writer); 
 			}
 			else { // try to cache
-				Writer cacheWriter = storage.getStoreStringWriter(id);
+				Writer cacheWriter = storage.getStoreCachedStringWriter(id);
 				toolSerializer.run(cacheWriter);
 				cacheWriter.close();
-				Reader reader = storage.retrieveStringReader(id);
+				Reader reader = storage.retrieveCachedStringReader(id);
 				IOUtils.copy(reader, writer); // now write from cache
 				reader.close();
 				writer.flush();

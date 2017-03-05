@@ -73,14 +73,16 @@ public interface Storage {
 	public List<String> retrieveStrings(String id) throws IOException;
 	
 	public boolean isStored(String id);
-	
+
+	public boolean isStoredCache(String id);
+
 	public String store(Object obj) throws IOException;
 	
 	public void store(Object obj, String id) throws IOException;
 	
 	public Object retrieve(String id) throws IOException, ClassNotFoundException;
 	
-	public Reader retrieveStringReader(String id) throws IOException;
+	public Reader retrieveCachedStringReader(String id) throws IOException;
 
 	public CorpusStorage getCorpusStorage();
 	
@@ -93,7 +95,7 @@ public interface Storage {
 	public FileMigrator getMigrator(String id) throws IOException;
 	
 
-	public Writer getStoreStringWriter(String id) throws IOException;
+	public Writer getStoreCachedStringWriter(String id) throws IOException;
 	
 	public DB getDB(String id, boolean readOnly);
 
