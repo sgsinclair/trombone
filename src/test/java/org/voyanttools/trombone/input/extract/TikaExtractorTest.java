@@ -79,6 +79,7 @@ public class TikaExtractorTest {
 		inputStream.close();
 //		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("HTML string should contain tags", contents.contains("<b>a</b>"));
+		assertEquals("en", extractedStoredDocumentSource.getMetadata().getLanguageCode());
 		
 		inputSource = new StringInputSource("<html><body><section><div>This is <b>a</b> test.</div></section></body></html>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
@@ -100,6 +101,7 @@ public class TikaExtractorTest {
 		assertTrue("XML-looking string should contain tags", contents.contains("<b>a</b>"));
 		
 		parameters.setParameter("inputFormat", "XML");
+		parameters.setParameter("language", "no"); // make sure we can override language
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, parameters);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
@@ -108,6 +110,8 @@ public class TikaExtractorTest {
 		inputStream.close();
 //		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("XML-declared string should contain tags", contents.contains("<b>a</b>"));
+		assertEquals("no", extractedStoredDocumentSource.getMetadata().getLanguageCode()); // check override language (from params above)
+
 		
 	}
 
@@ -222,6 +226,7 @@ public class TikaExtractorTest {
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("fr", metadata.getLanguageCode());
 		assertEquals("title for HTML document", "Titre du document test de HTML", metadata.getTitle());
 		assertEquals("author for HTML document", "Stéfan Sinclair", metadata.getAuthor());
 		assertEquals("keywords for HTML document", "test, HTML", metadata.getKeywords());

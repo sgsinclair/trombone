@@ -35,6 +35,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.Set;
 
@@ -407,7 +408,13 @@ public class XmlExtractor implements Extractor, Serializable {
 //			byte[] bytes = string.getBytes("UTF-8");
 //			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
 			
-			String lang = LangDetector.langDetector.detect(string);
+			// try to determine language
+			String lang;
+	        if (parameters.containsKey("language")) {
+	        	lang = new Locale(parameters.getParameterValue("language")).getLanguage();
+	        } else {
+				lang = LangDetector.langDetector.detect(string);
+	        }
 			metadata.setLanguageCode(lang);
 
 	        isProcessed = true;

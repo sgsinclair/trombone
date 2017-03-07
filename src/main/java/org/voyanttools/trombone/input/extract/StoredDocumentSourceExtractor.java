@@ -129,7 +129,7 @@ public class StoredDocumentSourceExtractor {
 				storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(storedDocumentSource.getId(), metadata);
 			}
 		}
-
+		
 		InputSource extractedInputSource;
 		if (format.isXml()) {
 			if (xmlExtractor==null) {xmlExtractor = new XmlExtractor(storedDocumentSourceStorage, parameters);}

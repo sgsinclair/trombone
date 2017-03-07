@@ -182,19 +182,21 @@ public class XmlExtractorTest {
 
 		// make sure we recognize HTML in a string
 		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters());
-		inputSource = new StringInputSource("<html><body><div>c</div><div>d</div></body></html>");
+		inputSource = new StringInputSource("<html><body><div>This is a current sentence.</div><div>d</div></body></html>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("en", metadata.getLanguageCode()); // make sure default is English
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals(DocumentFormat.HTML, metadata.getDocumentFormat());
 		
 		// make sure we find XPath in string XML
-		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlContentXpath=//b", "xmlTitleXpath=//b[1]"}));
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters(new String[]{"xmlContentXpath=//b", "xmlTitleXpath=//b[1]","language=fr"}));
 		inputSource = new StringInputSource("<a><b>c</b><b>d &amp; e</b><z>x</z></a>");
 		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
 		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("fr", metadata.getLanguageCode()); // make sure our set value is respected
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals(DocumentFormat.XML, metadata.getDocumentFormat());
 		assertEquals("c", metadata.getTitle());

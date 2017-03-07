@@ -25,6 +25,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -200,7 +201,13 @@ public class TikaExtractor implements Extractor {
 	        	extractedContent = extractedContent.replaceAll("&#xD;", "<br />\n      ");
 	        }
 	        
-			String lang = LangDetector.langDetector.detect(extractedContent);
+			// try to determine language
+			String lang;
+	        if (parameters.containsKey("language")) {
+	        	lang = new Locale(parameters.getParameterValue("language")).getLanguage();
+	        } else {
+				lang = LangDetector.langDetector.detect(extractedContent);
+	        }
 			metadata.setLanguageCode(lang);
 	        
 	        if (parameters.containsKey("inputRemoveUntil")) {
