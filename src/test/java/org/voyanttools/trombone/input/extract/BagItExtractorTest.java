@@ -69,7 +69,32 @@ public class BagItExtractorTest {
 		assertTrue(contents.contains("Harvest is ended and summer"));
 		assertFalse(contents.contains("GutenTag"));
 		is.close();
-
+		
+		
+		// test more recent BagIt
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storeDocumentSourceStorage);
+		inputSource = new FileInputSource(TestHelper.getResource("formats/bagit_cwrc_lmm_texts-04f2ac7.zip"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		assertEquals(16, expandedSourceDocumentSources.size()); // note that there are 17 directories, but one doesn't have docs
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(expandedSourceDocumentSources.get(0));
+		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("Further Chronicles of Avonlea", metadata.getTitle());
+		assertEquals("L. M. (Lucy Maud) Montgomery", metadata.getAuthor());
+		is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(is);
+		assertTrue(contents.contains("Max always blesses the animal"));
+		assertFalse(contents.contains("GutenTag"));
+		is.close();
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(expandedSourceDocumentSources.get(1));
+		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("Rainbow Valley", metadata.getTitle());
+		assertEquals("L. M. (Lucy Maud) Montgomery", metadata.getAuthor());
+		is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(is);
+		assertTrue(contents.contains("apple-green evening in May"));
+		assertFalse(contents.contains("GutenTag"));
+		is.close();
 		storage.destroy();
 	}
 

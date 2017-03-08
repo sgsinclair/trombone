@@ -41,7 +41,7 @@ class BagItExpander implements Expander {
 	
 	private FlexibleParameters parameters;
 	
-	private String[] keyFileNames = new String[]{"CWRC.bin"};
+	private String[] keyFileNames = new String[]{"CWRC.bin","DC.xml","MODS.bin"};
 
 
 	BagItExpander(StoredDocumentSourceStorage storedDocumentSourceStorage, FlexibleParameters parameters) {
@@ -83,37 +83,35 @@ class BagItExpander implements Expander {
 			List<StoredDocumentSource> expandedStoredDocumentSources) throws IOException {
 		
 		// go through current directory to find key file names
-		for (String keyFileName : keyFileNames) {
-			// if we find one, create a new zip file
-			if (new File(currentDirectory, keyFileName).exists()) {
+		boolean hasKeyFileNames = true;
+		for (String filename : keyFileNames) {
+			if (new File(currentDirectory, filename).exists()==false) {
+				hasKeyFileNames = false;
+				break;
+			}
+		}
+		if (hasKeyFileNames) {
 				File zipFile = new File(base, currentDirectory.getName() +".zip");
 				ArchiveOutputStream output = new ZipArchiveOutputStream(zipFile);
-				int count = 0;
-				for (File childFile : currentDirectory.listFiles()) {
-					if (childFile.isFile() && DocumentFormat.isSkippable(childFile)==false) {
-						ZipArchiveEntry entry = new ZipArchiveEntry(childFile, childFile.getName());
-						entry.setSize(childFile.length());
-						output.putArchiveEntry(entry);
-						FileInputStream fis = new FileInputStream(childFile);
-						IOUtils.copy(fis, output);
-						fis.close();
-						output.closeArchiveEntry();
-						count++;
-					}
-					
+				for (String filename : keyFileNames) {
+					File childFile = new File(currentDirectory, filename);
+					ZipArchiveEntry entry = new ZipArchiveEntry(childFile, childFile.getName());
+					entry.setSize(childFile.length());
+					output.putArchiveEntry(entry);
+					FileInputStream fis = new FileInputStream(childFile);
+					IOUtils.copy(fis, output);
+					fis.close();
+					output.closeArchiveEntry();
 				}
 				output.finish();
 				output.close();
-				if (count>0) {
-					InputSource inputSource = new FileInputSource(zipFile);
-					DocumentMetadata metadata = inputSource.getMetadata();
-					metadata.setParent(parentStoredDocumentSource.getMetadata(), ParentType.EXPANSION);
-					metadata.setDocumentFormat(DocumentFormat.BAGIT);
-					StoredDocumentSource storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
-					expandedStoredDocumentSources.add(storedDocumentSource);
-					break; // only find one key file name for this directory
-				}
-			}
+				InputSource inputSource = new FileInputSource(zipFile);
+				DocumentMetadata metadata = inputSource.getMetadata();
+				metadata.setParent(parentStoredDocumentSource.getMetadata(), ParentType.EXPANSION);
+				metadata.setDocumentFormat(DocumentFormat.BAGIT);
+				StoredDocumentSource storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+				expandedStoredDocumentSources.add(storedDocumentSource);
+
 		}
 		for (File childFile : currentDirectory.listFiles()) {
 			if (childFile.isDirectory()) { // recurse (even for "data" directory)
