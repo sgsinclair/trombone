@@ -51,6 +51,10 @@ public class TextUtils {
 	public static List<String> getSentences(String text) {
 		return getSentences(text, Locale.ENGLISH);
 	}
+	
+	public static String getLanguageCode(String text) {
+		return Locale.ENGLISH.getLanguage();
+	}
 
 	public static void main(String[] args) {
 		System.out.println(Locale.ENGLISH.equals(new Locale("en")));

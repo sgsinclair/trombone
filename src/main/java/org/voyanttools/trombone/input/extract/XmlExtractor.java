@@ -409,13 +409,7 @@ public class XmlExtractor implements Extractor, Serializable {
 //			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
 			
 			// try to determine language
-			String lang;
-	        if (parameters.containsKey("language")) {
-	        	lang = new Locale(parameters.getParameterValue("language")).getLanguage();
-	        } else {
-				lang = LangDetector.langDetector.detect(string);
-	        }
-			metadata.setLanguageCode(lang);
+			metadata.setLanguageCode(LangDetector.langDetector.detect(string, parameters));
 
 	        isProcessed = true;
 

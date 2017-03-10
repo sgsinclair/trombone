@@ -5,6 +5,7 @@ package org.voyanttools.trombone.util;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Pattern;
 
 import com.optimaize.langdetect.DetectedLanguage;
@@ -31,6 +32,8 @@ public class LangDetector {
 	
 	public static LangDetector langDetector = new LangDetector();
 	
+	private static Pattern tagStripper = Pattern.compile("<.+?>", Pattern.DOTALL);
+	
 
 	/**
 	 * 
@@ -52,6 +55,9 @@ public class LangDetector {
 		textObjectFactory = CommonTextObjectFactories.forDetectingOnLargeText();
 	}
 	
+	public String detect(String text, FlexibleParameters parameters) {
+		return parameters.containsKey("language") ? new Locale(parameters.getParameterValue("language")).getLanguage() : detect(text);
+	}
 	public String detect(String text) {
 
 		if (text==null) return "";
@@ -60,9 +66,12 @@ public class LangDetector {
 		
 		// quick and dirty tags stripper
 		if (text.startsWith("<")) {
-			text = Pattern.compile("<.+?>", Pattern.DOTALL).matcher(text).replaceAll("").trim();
+			text = tagStripper.matcher(text).replaceAll("").trim();
 		}
-				
+		
+		if (text.contains("\u0F0B")) { // TIBETAN MARK INTERSYLLABIC TSHEG
+			return new Locale("bo").getLanguage();
+		}
 		TextObject textObject = textObjectFactory.forText(text);
 		List<DetectedLanguage> langs = languageDetector.getProbabilities(textObject);
 		

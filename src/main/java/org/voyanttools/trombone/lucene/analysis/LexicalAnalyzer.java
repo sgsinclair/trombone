@@ -37,6 +37,7 @@ import org.apache.lucene.analysis.core.LowerCaseTokenizer;
 import org.apache.lucene.analysis.core.UnicodeWhitespaceTokenizer;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
 import org.apache.tika.io.IOUtils;
+import org.voyanttools.trombone.lucene.analysis.icu.TromboneICUTokenizerConfig;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -72,7 +73,7 @@ public class LexicalAnalyzer extends Analyzer {
 		/* since there doesn't seem to be a way of passing parameters to the
 		 * analyzer that's content-aware and per-field, we can add some 
 		 * instructions to the end of the reader (this is done by
-		 * {@link LuceneIndexer}). At this end we're especially interesed
+		 * {@link LuceneIndexer}). At this end we're especially interested
 		 * in determining the language and if a parameter was set to use
 		 * a simple word-boundary tokenizer (for some Asian languages
 		 * the tokenizer is too aggressive and we want to allow the user
@@ -110,11 +111,16 @@ public class LexicalAnalyzer extends Analyzer {
 			Tokenizer tokenizer = new UnicodeWhitespaceTokenizer();
 			return new TokenStreamComponents(tokenizer);
 		}
-		else if (lang.startsWith("zh") && fieldName.equals(TokenType.lexical.name())) {
+		else if (lang.startsWith("zh") && fieldName.equals(TokenType.lexical.name())) { // Chinese
 			Tokenizer tokenizer = new HMMChineseTokenizer();
 			return new TokenStreamComponents(tokenizer, tokenizer);
 		}
-		else {
+		else if (lang.equals("bo") && fieldName.equals(TokenType.lexical.name())) { // Tibetan
+			Tokenizer tokenizer = new ICUTokenizer(new TromboneICUTokenizerConfig(true, true, lang));
+			TokenStream stream = new LowerCaseFilter(tokenizer);
+			return new TokenStreamComponents(tokenizer, stream);
+		}
+		else { // default case
 			Tokenizer tokenizer = new ICUTokenizer();
 			TokenStream stream = new LowerCaseFilter(tokenizer);
 			return new TokenStreamComponents(tokenizer, stream);

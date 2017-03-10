@@ -202,13 +202,7 @@ public class TikaExtractor implements Extractor {
 	        }
 	        
 			// try to determine language
-			String lang;
-	        if (parameters.containsKey("language")) {
-	        	lang = new Locale(parameters.getParameterValue("language")).getLanguage();
-	        } else {
-				lang = LangDetector.langDetector.detect(extractedContent);
-	        }
-			metadata.setLanguageCode(lang);
+			metadata.setLanguageCode(LangDetector.langDetector.detect(extractedContent, parameters));
 	        
 	        if (parameters.containsKey("inputRemoveUntil")) {
 	        	Pattern pattern = Pattern.compile(parameters.getParameterValue("inputRemoveUntil"));

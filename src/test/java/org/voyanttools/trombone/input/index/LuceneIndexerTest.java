@@ -5,12 +5,14 @@ package org.voyanttools.trombone.input.index;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
@@ -24,19 +26,18 @@ import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
-import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
-import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.tool.corpus.CorpusManager;
 import org.voyanttools.trombone.tool.corpus.CorpusTerms;
-import org.voyanttools.trombone.tool.corpus.DocumentsMetadata;
+import org.voyanttools.trombone.tool.corpus.DocumentTokens;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -114,55 +115,20 @@ public class LuceneIndexerTest {
 		
 		// extract and index with no parameters
 		FlexibleParameters parameters = new FlexibleParameters();
-		parameters.setParameter("language", "bo");
-		InputSource originalInputSource = new FileInputSource(TestHelper.getResource("i18n/bo_tibetan_utf8.txt")); // 10 tokens
-		InputSource segmentedInputSource = new FileInputSource(TestHelper.getResource("i18n/bo_tibetan_segmented_utf8.txt")); // 9 tokens
-		List<StoredDocumentSource> storedDocumentSources = new ArrayList<StoredDocumentSource>();
-		StoredDocumentSourceStorage storedDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
-		storedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(originalInputSource));
-		storedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(segmentedInputSource));
-		StoredDocumentSourceExtractor extractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, parameters);
-		List<StoredDocumentSource> extractedDocumentSources = extractor.getExtractedStoredDocumentSources(storedDocumentSources);
-		LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
-		String id = luceneIndexer.index(extractedDocumentSources);
-		List<String> ids = storage.retrieveStrings(id);
-		docsToTokensMap.put(ids.get(0), 29); // these are wrong
-		docsToTokensMap.put(ids.get(1), 29); // these are wrong
-
-		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		assertEquals(2, reader.maxDoc());
-		IndexSearcher searcher = new IndexSearcher(reader);
-		for (Map.Entry<String, Integer> entry : docsToTokensMap.entrySet()) {
-			String docId = entry.getKey();
-			DocumentMetadata metadata = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceMetadata(docId);
-			assertEquals("bo", metadata.getLanguageCode());
-			TopDocs topDocs = searcher.search(new TermQuery(new Term("id", docId)), 1);
-			int doc = topDocs.scoreDocs[0].doc;
-			assertEquals((int) entry.getValue(), (int) reader.getTermVector(doc, TokenType.lexical.name()).size());
+		File file = TestHelper.getResource("i18n/bo_tibetan_utf8.txt");
+		String text = FileUtils.readFileToString(file);
+		parameters.setParameter("string", text);
+		parameters.setParameter("language", "en");
+		
+		DocumentTokens tokens = new DocumentTokens(storage, parameters);
+		tokens.run();
+		for (DocumentToken documentToken : tokens.getDocumentTokens()) {
+			if (documentToken.getTokenType()==TokenType.lexical) {
+				System.out.println(documentToken.getTerm());
+			}
 		}
 		
-		/*
-		// now re-extract and index with tokenization parameter
-		parameters.addParameter("tokenization", "wordBoundaries");
-		luceneIndexer = new LuceneIndexer(storage, parameters);
-		// indexer should create new documents in index because of parameters
-		id = luceneIndexer.index(extractedDocumentSources);
-		ids = storage.retrieveStrings(id);
-		docsToTokensMap.put(ids.get(0), 1);
-		docsToTokensMap.put(ids.get(1), 7);
-		// make sure we have new metadata
-		assertEquals(0, storedDocumentSourceStorage.getStoredDocumentSourceMetadata(ids.get(0)).getLastTokenPositionIndex(TokenType.lexical));
 
-		// finally, go through and check our token counts
-		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		assertEquals(4, reader.maxDoc());
-		IndexSearcher searcher = new IndexSearcher(reader);
-		for (Map.Entry<String, Integer> entry : docsToTokensMap.entrySet()) {
-			TopDocs topDocs = searcher.search(new TermQuery(new Term("id", entry.getKey())), 1);
-			int doc = topDocs.scoreDocs[0].doc;
-			assertEquals((int) entry.getValue(), (int) reader.getTermVector(doc, TokenType.lexical.name()).size());
-		}
-		*/
 		storage.destroy();		
 	}
 	
