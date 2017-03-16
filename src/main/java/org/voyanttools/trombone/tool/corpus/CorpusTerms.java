@@ -118,7 +118,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		}
 	}
 	
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+16;
 	}
 

@@ -48,7 +48,7 @@ public class Veliza extends AbstractCorpusTool {
 	}
 	
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+1;
 	}
 

@@ -38,7 +38,7 @@ public class CorpusEntities extends AbstractTerms {
 		super(storage, parameters);
 	}
 	
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+2;
 	}
 

@@ -70,7 +70,7 @@ public class DocumentsFinder extends AbstractTerms {
 	}
 	
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+5;
 	}
 

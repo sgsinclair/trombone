@@ -58,7 +58,7 @@ public abstract class AbstractTool implements RunnableTool {
 	@XStreamOmitField
 	protected transient Storage storage;
 	
-	private static int VERSION = 4;
+	private static float VERSION = 5.2f;
 	
 	@XStreamOmitField
 	private boolean isVerbose;
@@ -76,7 +76,7 @@ public abstract class AbstractTool implements RunnableTool {
 		this.isVerbose = parameters.getParameterBooleanValue("verbose");
 	}
 	
-	public int getVersion() {
+	public float getVersion() {
 		return VERSION;
 	}
 	

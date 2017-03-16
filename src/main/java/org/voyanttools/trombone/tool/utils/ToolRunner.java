@@ -54,6 +54,9 @@ import edu.stanford.nlp.util.StringUtils;
 @XStreamAlias("results")
 public class ToolRunner extends AbstractTool {
 	
+	private String version;
+	private String voyantVersion;
+	private String voyantBuild;
 	private long duration;
 	
 	@XStreamOmitField
@@ -70,6 +73,7 @@ public class ToolRunner extends AbstractTool {
 	 */
 	public ToolRunner(Storage storage, FlexibleParameters parameters, Writer writer) {
 		super(storage, parameters);
+		this.version = Float.toString(getVersion());
 		this.writer = writer;
 	}
 	
@@ -131,6 +135,8 @@ public class ToolRunner extends AbstractTool {
 				results.add(tool);
 			}
 			duration = Calendar.getInstance().getTimeInMillis() - start;
+			voyantVersion = parameters.getParameterValue("VOYANT_VERSION", "");
+			voyantBuild = parameters.getParameterValue("VOYANT_BUILD", "");
 
 			ToolSerializer toolSerializer = new ToolSerializer(parameters, this);
 			if (parameters.getParameterBooleanValue("noCache") || hasParameterSources==true) { // use the configured writer directly

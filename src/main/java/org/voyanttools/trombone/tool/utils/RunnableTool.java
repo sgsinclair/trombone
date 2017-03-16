@@ -31,6 +31,6 @@ public interface RunnableTool {
 
 	public void run() throws IOException;
 	
-	public int getVersion();
+	public float getVersion();
 
 }

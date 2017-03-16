@@ -176,7 +176,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 	}
 
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+7;
 	}
 	

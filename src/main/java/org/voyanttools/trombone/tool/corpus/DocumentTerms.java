@@ -115,7 +115,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	}
 	
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+9;
 	}
 

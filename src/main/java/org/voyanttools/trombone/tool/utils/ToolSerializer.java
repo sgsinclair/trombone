@@ -104,7 +104,7 @@ public class ToolSerializer implements RunnableTool {
 	}
 
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return VERSION;
 	}
 }

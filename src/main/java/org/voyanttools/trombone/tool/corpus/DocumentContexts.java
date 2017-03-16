@@ -49,7 +49,7 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 		accurateTotalNotNeeded = parameters.getParameterBooleanValue("accurateTotalNotNeeded");
 	}
 	
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+4;
 	}
 

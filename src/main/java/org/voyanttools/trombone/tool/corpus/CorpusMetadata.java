@@ -43,7 +43,7 @@ public class CorpusMetadata extends AbstractCorpusTool  {
 		metadata.setLanguageCodes(corpus.getLanguageCodes().toArray(new String[0]));
 	}
 	
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+2;
 	}
 

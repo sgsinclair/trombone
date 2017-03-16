@@ -51,7 +51,7 @@ public class KeywordsManager extends AbstractTool {
 	}
 	
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+2;
 	}
 

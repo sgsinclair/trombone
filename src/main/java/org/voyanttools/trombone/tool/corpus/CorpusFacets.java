@@ -61,7 +61,7 @@ public class CorpusFacets extends AbstractTerms {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+2;
 	}
 

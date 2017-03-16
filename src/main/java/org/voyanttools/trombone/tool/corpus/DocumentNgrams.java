@@ -90,7 +90,7 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	}
 	
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+1;
 	}
 	

@@ -52,7 +52,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 	private List<CorpusCollocate> collocates = new ArrayList<CorpusCollocate>();
 	
 	@Override
-	public int getVersion() {
+	public float getVersion() {
 		return super.getVersion()+2;
 	}
 
