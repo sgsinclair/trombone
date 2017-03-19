@@ -26,6 +26,7 @@ import org.voyanttools.trombone.model.EntityType;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import edu.stanford.nlp.ling.CoreAnnotations.CharacterOffsetBeginAnnotation;
+import edu.stanford.nlp.ling.CoreAnnotations.MentionsAnnotation;
 //import edu.stanford.nlp.ling.CoreAnnotations.MentionsAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.NormalizedNamedEntityTagAnnotation;
@@ -132,12 +133,12 @@ class StanfordNlpAnnotator implements NlpAnnotator {
 		List<CoreMap> sentences = getSentences(text);
 		List<CoreMap> entities = new ArrayList<CoreMap>();
 	    for(CoreMap sentence: sentences) {
-//	    	for (CoreMap entity : sentence.get(MentionsAnnotation.class)) {
-//	    		EntityType type = EntityType.getForgivingly(entity.get(NamedEntityTagAnnotation.class));
-//	    		if (type!=EntityType.unknnown && (types.isEmpty() || types.contains(type))) {
-//	    			entities.add(entity);
-//	    		}
-//	    	}
+	    	for (CoreMap entity : sentence.get(MentionsAnnotation.class)) {
+	    		EntityType type = EntityType.getForgivingly(entity.get(NamedEntityTagAnnotation.class));
+	    		if (type!=EntityType.unknnown && (types.isEmpty() || types.contains(type))) {
+	    			entities.add(entity);
+	    		}
+	    	}
 	    }
 	    return entities;
 	}

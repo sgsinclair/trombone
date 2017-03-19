@@ -38,7 +38,7 @@ public class DocumentEntities extends AbstractCorpusTool {
 	}
 	
 	public float getVersion() {
-		return super.getVersion();
+		return super.getVersion()+1;
 	}
 
 	/* (non-Javadoc)
