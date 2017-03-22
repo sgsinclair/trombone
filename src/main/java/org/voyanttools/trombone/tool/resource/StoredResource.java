@@ -29,6 +29,12 @@ public class StoredResource extends AbstractTool {
 			String id = this.parameters.getParameterValue("verifyResourceId");
 			if (this.storage.hasStoredString(id)) {
 				this.id = id;
+			} else if (storage instanceof FileStorage) {
+				File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id);
+				if (file!=null && file.exists()) {
+					((FileStorage) storage).copyResource(file, id);
+					this.id = id;
+				}
 			}
 		}
 		else if (this.parameters.containsKey("storeResource")) {
