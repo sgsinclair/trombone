@@ -61,6 +61,9 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 	private int limit;
 	
 	@XStreamOmitField
+	private int perDocLimit;
+	
+	@XStreamOmitField
 	private TokenType tokenType;
 	
 	@XStreamOmitField
@@ -79,6 +82,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 		limit = parameters.getParameterIntValue("limit", 50);
 		if (limit==0) {limit=Integer.MAX_VALUE;}
 		tokenType = TokenType.lexical;
+		perDocLimit = parameters.getParameterIntValue("perDocLimit", Integer.MAX_VALUE);
 	}
 
 
@@ -111,6 +115,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 				}
 			}
 			int maxPos = documentStart+limit;
+			int currentDocTokensCount = 0;
 
 			int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(id);
 			Terms terms = corpusMapper.getLeafReader().getTermVector(luceneDoc, tokenType.name());
@@ -157,9 +162,11 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 				if (whitelist!=null) {
 					if (whitelist.isKeyword(string.toLowerCase())) {
 						documentTokens.add(dt);
+						currentDocTokensCount++;
 					}
 				} else {
 					documentTokens.add(dt);
+					currentDocTokensCount++;
 				}
 				lastEndOffset = termInfo.getEndOffset();
 				tokensCounter++;
@@ -169,7 +176,8 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 					documentTokens.addAll(documentOtherTokens);
 				}
 			}
-			if (tokensCounter>=limit) {break;}
+			
+			if (tokensCounter>=limit || currentDocTokensCount>=this.perDocLimit) {break;}
 			termInfos.clear();
 			documentStart = 0; // reset to the start of next document
 		}
