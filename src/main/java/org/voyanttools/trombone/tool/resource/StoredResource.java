@@ -55,7 +55,16 @@ public class StoredResource extends AbstractTool {
 					((FileStorage) storage).copyResource(file, id);
 				}
 			}
-			this.resource = this.storage.retrieveString(id);
+			if (parameters.getParameterBooleanValue("failQuietly")) {
+				try {
+					this.resource = this.storage.retrieveString(id);
+				} catch (IOException e) {
+					this.resource = "";
+					this.id = "";
+				}
+			} else {
+				this.resource = this.storage.retrieveString(id);
+			}
 			this.id = id;
 		}
 		
