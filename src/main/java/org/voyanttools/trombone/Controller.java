@@ -48,7 +48,7 @@ public class Controller {
 	}
 
 	public Controller(FlexibleParameters parameters, Writer writer) throws IOException {
-		this(parameters.getParameterValue("storage","").equals("file") ? new FileStorage() : new MemoryStorage(), parameters, writer);
+		this(parameters.getParameterValue("storage","").equals("file") ? new FileStorage(parameters) : new MemoryStorage(), parameters, writer);
 	}
 	
 	public Controller(Storage storage, FlexibleParameters parameters, Writer writer) throws IOException {

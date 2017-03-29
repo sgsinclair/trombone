@@ -49,6 +49,7 @@ import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.util.FlexibleParameters;
 
 import edu.stanford.nlp.util.StringUtils;
 
@@ -89,23 +90,36 @@ public class FileStorage implements Storage {
 
 	/**
 	 * Create a new instance in the default location.
+	 * @throws IOException 
 	 */
-	public FileStorage() {
+	public FileStorage() throws IOException {
 		this(DEFAULT_TROMBOME_DIRECTORY);
 	}
 	
+	/**
+	 * Create a new instance at the File location specified by the dataDirectory parameter
+	 * 
+	 * @param storageLocation the file location to use for this storage
+	 * @throws IOException 
+	 */
+	public FileStorage(FlexibleParameters parameters) throws IOException {
+		this(parameters.containsKey("dataDirectory") ? new File(parameters.getParameterValue("dataDirectory")) : DEFAULT_TROMBOME_DIRECTORY);
+	}
 	
 
 	/**
 	 * Create a new instance at the specified File location
 	 * 
 	 * @param storageLocation the file location to use for this storage
+	 * @throws IOException 
 	 */
-	public FileStorage(File storageLocation) {
+	public FileStorage(File storageLocation) throws IOException {
 		System.out.println("Trombone FileStorage location: "+storageLocation);
 		this.storageLocation = storageLocation;
 		if (storageLocation.exists()==false) {
-			storageLocation.mkdirs();
+			if (!storageLocation.mkdirs()) {
+				throw new IOException("Unable to create data directory: "+storageLocation);
+			}
 		}
 	}
 

@@ -83,6 +83,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 		if (limit==0) {limit=Integer.MAX_VALUE;}
 		tokenType = TokenType.lexical;
 		perDocLimit = parameters.getParameterIntValue("perDocLimit", Integer.MAX_VALUE);
+		if (perDocLimit==0) {perDocLimit = Integer.MAX_VALUE;}
 	}
 
 
