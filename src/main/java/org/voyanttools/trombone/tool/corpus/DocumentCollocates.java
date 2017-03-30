@@ -23,6 +23,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -60,6 +61,8 @@ public class DocumentCollocates extends AbstractContextTerms {
 	@XStreamOmitField
 	private Comparator<DocumentCollocate> comparator;
 	
+	@XStreamOmitField
+	private Keywords collocatesWhitelist;
 		
 	/**
 	 * @param storage
@@ -70,6 +73,10 @@ public class DocumentCollocates extends AbstractContextTerms {
 		super(storage, parameters);
 		sort = DocumentCollocate.Sort.valueOfForgivingly(parameters);
 		comparator = DocumentCollocate.getComparator(sort);
+		collocatesWhitelist = new Keywords();
+		if (parameters.containsKey("collocatesWhitelist")) {
+			collocatesWhitelist.add(Arrays.asList(parameters.getParameterValues("collocatesWhitelist")));
+		}
 	}
 
 	/* (non-Javadoc)
@@ -145,6 +152,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 					contextTotalTokens++;
 					String term = termsOfInterest.get(i).getText();
 					if (stopwords.isKeyword(term)) {continue;}
+					if (collocatesWhitelist.isEmpty()==false && collocatesWhitelist.isKeyword(term)==false) {continue;}
 					stringsOfInterestMap.put(term, 0);
 					if (termsMap.containsKey(term)) {termsMap.get(term).getAndIncrement();}
 					else {termsMap.put(term, new AtomicInteger(1));}
@@ -153,6 +161,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 				for (int i=keywordstart; i<keywordend; i++) {
 					String term = termsOfInterest.get(i).getText();
 					if (stopwords.isKeyword(term)) {continue;}
+					if (collocatesWhitelist.isEmpty()==false && collocatesWhitelist.isKeyword(term)==false) {continue;}
 					stringsOfInterestMap.put(term, 0);
 				}
 				
@@ -162,6 +171,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 					contextTotalTokens++;
 					String term = termsOfInterest.get(i).getText();
 					if (stopwords.isKeyword(term)) {continue;}
+					if (collocatesWhitelist.isEmpty()==false && collocatesWhitelist.isKeyword(term)==false) {continue;}
 					stringsOfInterestMap.put(term, 0);
 					if (termsMap.containsKey(term)) {termsMap.get(term).getAndIncrement();}
 					else {termsMap.put(term, new AtomicInteger(1));}

@@ -161,10 +161,11 @@ public class Keywords {
 		return keywords;
 	}
 	
-	private void add(Collection<String> keywords) {
+	public void add(Collection<String> keywords) {
 		for (String keyword : keywords) {
 			if (keyword.trim().startsWith(COMMENT)==false) {
-				this.keywords.add(keyword.trim());
+				for (String word : keyword.split(COMMA_SEPARATOR))
+				this.keywords.add(word.trim());
 			}
 		}
 	}
