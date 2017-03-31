@@ -157,6 +157,22 @@ public class CorpusMetadata implements Serializable {
 		parameters.setParameter("languageCodes", languageCodes);
 	}
 	
+	public String getTitle() {
+		return parameters.getParameterValue("title", "");
+	}
+	
+	public void setTitle(String title) {
+		parameters.setParameter("title", title);
+	}
+	
+	public String getSubTitle() {
+		return parameters.getParameterValue("subTitle", "");
+	}
+	
+	public void setSubTitle(String subTitle) {
+		parameters.setParameter("subTitle", subTitle);
+	}
+	
 	public static class CorpusMetadataConverter implements Converter {
 
 		@Override
@@ -180,6 +196,14 @@ public class CorpusMetadata implements Serializable {
 				writer.setValue(alias);
 				writer.endNode();
 			}
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "title", String.class);
+			writer.setValue(corpusMetadata.getTitle());
+			writer.endNode();
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "subTitle", String.class);
+			writer.setValue(corpusMetadata.getSubTitle());
+			writer.endNode();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documentsCount", Integer.class);
 			writer.setValue(String.valueOf(corpusMetadata.getDocumentIds().size()));

@@ -93,6 +93,12 @@ public class CorpusBuilder extends AbstractTool {
 			
 			setAccessManagement(metadata);
 			indexCorpusTerms(corpus);
+			if (parameters.containsKey("title")) {
+				metadata.setTitle(parameters.getParameterValue("title"));
+			}
+			if (parameters.containsKey("subTitle")) {
+				metadata.setSubTitle(parameters.getParameterValue("subTitle"));
+			}
 			
 			storage.getCorpusStorage().storeCorpus(corpus, parameters);
 		}
