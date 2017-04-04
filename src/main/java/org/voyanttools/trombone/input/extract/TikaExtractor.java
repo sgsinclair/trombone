@@ -77,7 +77,14 @@ public class TikaExtractor implements Extractor {
 	}
 
 	public InputSource getExtractableInputSource(StoredDocumentSource storedDocumentSource) throws IOException {
-		return new ExtractableTikaInputSource(DigestUtils.md5Hex(storedDocumentSource.getId()+"tika-extracted"), storedDocumentSource);
+		StringBuilder id = new StringBuilder(storedDocumentSource.getId()).append("tika-extracted");
+		// not sure why we can't use all params, but just in case
+		for (String param : new String[]{"language","inputRemoveFrom","inputRemoveFromAfter","inputRemoveUntil","inputRemoveUntilAfter"}) {
+			if (parameters.containsKey(param)) {
+				id.append(param).append(parameters.getParameterValue(param));
+			}
+		}
+		return new ExtractableTikaInputSource(DigestUtils.md5Hex(id.toString()), storedDocumentSource);
 	}
 
 	private class CustomHtmlMapper extends DefaultHtmlMapper {
