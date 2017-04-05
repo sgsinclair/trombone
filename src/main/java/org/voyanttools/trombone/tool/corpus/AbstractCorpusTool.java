@@ -60,8 +60,11 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 		// check first if we have real values
 		String[] docIndices = parameters.getParameterValues("docIndex");
 		if (docIndices.length>0 && docIndices[0].isEmpty()==false) {
-			for (int docIndex : parameters.getParameterIntValues("docIndex")) {
-				ids.add(corpus.getDocument(docIndex).getId());
+			for (String docIndex : docIndices) {
+				for (String index : docIndex.split(",")) {
+					int i = Integer.parseInt(index.trim());
+					ids.add(corpus.getDocument(i).getId());
+				}
 			}
 		}
 		
