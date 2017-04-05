@@ -52,7 +52,9 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 		// add IDs
 		for (String docId : parameters.getParameterValues("docId")) {
 			if (docId.isEmpty()==false) {
-				ids.add(docId);
+				for (String id : docId.split(",")) {
+					ids.add(id.trim());
+				}
 			}
 		}
 		
