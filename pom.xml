@@ -220,7 +220,13 @@
 		<dependency>
 			<groupId>edu.stanford.nlp</groupId>
 			<artifactId>stanford-corenlp</artifactId>
-			<version>3.6.0</version>
+			<version>3.7.0</version>
+			<exclusions>
+				<exclusion> <!--  exclude here since newer version gets included under org.ejml -->
+					<groupId>com.googlecode.efficient-java-matrix-library</groupId>
+					<artifactId>ejml</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
@@ -232,6 +238,30 @@
 			<artifactId>de.tudarmstadt.ukp.dkpro.core.api.segmentation-asl</artifactId>
 			<version>1.8.0</version>
 		</dependency>
+
+        <!-- used by t-SNE -->
+        <dependency>
+            <groupId>org.ejml</groupId>
+            <artifactId>core</artifactId>
+            <version>0.30</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ejml</groupId>
+            <artifactId>equation</artifactId>
+            <version>0.30</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.fommil.netlib</groupId>
+            <artifactId>all</artifactId>
+            <version>1.1.2</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.jblas</groupId>
+            <artifactId>jblas</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!-- end used by t-SNE -->
 
 
 		<!-- <dependency> <groupId>de.tudarmstadt.ukp.dkpro.core</groupId> <artifactId>de.tudarmstadt.ukp.dkpro.core</artifactId> 
