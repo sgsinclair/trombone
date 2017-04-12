@@ -10,11 +10,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Random;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import org.apache.commons.math3.exception.ConvergenceException;
 import org.apache.commons.math3.ml.clustering.CentroidCluster;
 import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer;
@@ -349,7 +347,7 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		try {
 			KMeansPlusPlusClusterer<DoublePoint> clusterer = new KMeansPlusPlusClusterer<DoublePoint>(k, 5000);
 			clusters = clusterer.cluster(data);
-		} catch (ConvergenceException e) {
+		} catch (Exception e) {
 			// couldn't cluster
 		}
 		if (clusters != null) {
