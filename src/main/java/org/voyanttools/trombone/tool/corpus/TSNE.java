@@ -2,7 +2,6 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -62,21 +61,17 @@ public class TSNE extends AnalysisTool {
 
 	private double[][] doTSNE(double[][] freqMatrix) {
 		
-		int iterations = Math.min(5000, Math.max(parameters.getParameterIntValue("iterations", 1500), 10));
+		int iterations = Math.min(5000, Math.max(parameters.getParameterIntValue("iterations", 2000), 10));
 		int initial_dims = 2;
 		
 		int rows = freqMatrix.length;
 		
-		float minPerplexity = 5f;
-		float maxPerplexity = 50f;
+		float maxPerplexity = (rows-2)/3f; // more than this and tsne will fail
 		float perplexity = parameters.getParameterFloatValue("perplexity");
 		if (perplexity <= 0) {
-			// less rows = less perplexity
-			float minRows = 10f;
-			float maxRows = 1000f;
-			perplexity = minPerplexity + (maxPerplexity - minPerplexity) * ((rows-minRows) / (maxRows-minRows));
-		} else {
-			perplexity = Math.min(maxPerplexity, Math.max(perplexity, minPerplexity));
+			perplexity = maxPerplexity;
+		} else if (perplexity*3 > rows-1) {
+			perplexity = maxPerplexity;
 		}
 		
 		float theta = Math.min(1f, Math.max(parameters.getParameterFloatValue("theta", (float)this.defaultTheta), 0f));
@@ -93,17 +88,19 @@ public class TSNE extends AnalysisTool {
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
 		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
-		double[][] result = this.doTSNE(freqMatrix);
-		
-		double[] targetVector = null;
-		List<RawPCATerm> terms = this.getAnalysisTerms();
-		for (int i = 0; i < terms.size(); i++) {
-			RawPCATerm term = terms.get(i);
-			this.pcaTerms.add(new RawPCATerm(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), result[i]));
-		}
-		
-		if (clusters > 0) {
-			AnalysisTool.clusterPoints(this.pcaTerms, clusters);
+		if (freqMatrix.length >= 5) {
+			double[][] result = this.doTSNE(freqMatrix);
+			
+			double[] targetVector = null;
+			List<RawPCATerm> terms = this.getAnalysisTerms();
+			for (int i = 0; i < terms.size(); i++) {
+				RawPCATerm term = terms.get(i);
+				this.pcaTerms.add(new RawPCATerm(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), result[i]));
+			}
+			
+			if (clusters > 0) {
+				AnalysisTool.clusterPoints(this.pcaTerms, clusters);
+			}
 		}
 	}
 	
