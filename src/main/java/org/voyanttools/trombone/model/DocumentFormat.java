@@ -140,6 +140,11 @@ public enum DocumentFormat {
 	ODT("odt"),
 	
 	/**
+	 * An EPUB file (.epub).
+	 */
+	EPUB("epub"),
+	
+	/**
 	 * For Old Bailey adapter http://www.oldbaileyonline.org/obapi/
 	 */
 	OBAPISEARCHJSON("json"),
