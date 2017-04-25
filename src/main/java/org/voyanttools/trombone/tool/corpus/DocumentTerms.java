@@ -142,42 +142,44 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			String queryString = spanQueryEntry.getKey();
 			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue(), bitset);
-			int doc = spans.nextDoc();
-			while(doc!=Spans.NO_MORE_DOCS) {
-					int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
-					positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
-					int pos = spans.nextStartPosition();
-					while (pos!=spans.NO_MORE_POSITIONS) {
-						positionsMap.get(docIndexInCorpus).add(pos);
-						pos = spans.nextStartPosition();
+			if (spans != null) {
+				int doc = spans.nextDoc();
+				while(doc!=Spans.NO_MORE_DOCS) {
+						int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
+						positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
+						int pos = spans.nextStartPosition();
+						while (pos!=spans.NO_MORE_POSITIONS) {
+							positionsMap.get(docIndexInCorpus).add(pos);
+							pos = spans.nextStartPosition();
+						}
+					doc = spans.nextDoc();
+				}
+				FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit);
+				for (Map.Entry<Integer, List<Integer>> entry : positionsMap.entrySet()) {
+					List<Integer> positionsList = entry.getValue();
+					int freq = positionsList.size();
+					int[] positions = new int[positionsList.size()];
+					for (int i=0; i<positions.length; i++) {
+						positions[i] = positionsList.get(i);
 					}
-				doc = spans.nextDoc();
-			}
-			FlexibleQueue<DocumentTerm> docQueue = new FlexibleQueue<DocumentTerm>(comparator, limit);
-			for (Map.Entry<Integer, List<Integer>> entry : positionsMap.entrySet()) {
-				List<Integer> positionsList = entry.getValue();
-				int freq = positionsList.size();
-				int[] positions = new int[positionsList.size()];
-				for (int i=0; i<positions.length; i++) {
-					positions[i] = positionsList.get(i);
+					int documentPosition = entry.getKey();
+					String docId = corpusMapper.getDocumentIdFromDocumentPosition(documentPosition);
+					float mean = typesCountMeans[documentPosition];
+					float stdDev = typesCountStdDev[documentPosition];
+	
+					if (freq>=minRawFreq) {
+						total++;
+						float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
+						DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], zscore, positions, null, corpusTermMinimal);
+						docQueue.offer(documentTerm);
+						
+					}
 				}
-				int documentPosition = entry.getKey();
-				String docId = corpusMapper.getDocumentIdFromDocumentPosition(documentPosition);
-				float mean = typesCountMeans[documentPosition];
-				float stdDev = typesCountStdDev[documentPosition];
-
-				if (freq>=minRawFreq) {
-					total++;
-					float zscore = stdDev != 0 ? ((float) freq - mean / stdDev) : Float.NaN;
-					DocumentTerm documentTerm = new DocumentTerm(documentPosition, docId, queryString, freq, totalTokenCounts[documentPosition], zscore, positions, null, corpusTermMinimal);
-					docQueue.offer(documentTerm);
-					
+				int i = 0;
+				for (DocumentTerm docTerm : docQueue.getOrderedList()) {
+					queue.offer(docTerm);
+					if (++i>=perDocLimit) {break;}
 				}
-			}
-			int i = 0;
-			for (DocumentTerm docTerm : docQueue.getOrderedList()) {
-				queue.offer(docTerm);
-				if (++i>=perDocLimit) {break;}
 			}
 			positionsMap.clear(); // prepare for new entries
 		}

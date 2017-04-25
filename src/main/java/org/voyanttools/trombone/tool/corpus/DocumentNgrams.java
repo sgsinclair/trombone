@@ -112,27 +112,29 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : queriesMap.entrySet()) {
 //			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
 			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue());
-			Map<Integer, List<int[]>> documentAndPositionsMap = new HashMap<Integer, List<int[]>>();
-			int doc = spans.nextDoc();
-			while(doc!=spans.NO_MORE_DOCS) {
-				int pos = spans.nextStartPosition();
-				docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
-				documentAndPositionsMap.put(docIndexInCorpus, new ArrayList<int[]>());
-				while(pos!=spans.NO_MORE_POSITIONS) {
-					documentAndPositionsMap.get(docIndexInCorpus).add(new int[]{spans.startPosition(), spans.endPosition()});
-					pos = spans.nextStartPosition();
+			if (spans != null) {
+				Map<Integer, List<int[]>> documentAndPositionsMap = new HashMap<Integer, List<int[]>>();
+				int doc = spans.nextDoc();
+				while(doc!=spans.NO_MORE_DOCS) {
+					int pos = spans.nextStartPosition();
+					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
+					documentAndPositionsMap.put(docIndexInCorpus, new ArrayList<int[]>());
+					while(pos!=spans.NO_MORE_POSITIONS) {
+						documentAndPositionsMap.get(docIndexInCorpus).add(new int[]{spans.startPosition(), spans.endPosition()});
+						pos = spans.nextStartPosition();
+					}
+					doc = spans.nextDoc();
 				}
-				doc = spans.nextDoc();
-			}
-			String queryString = spanQueryEntry.getKey();
-			for (Map.Entry<Integer, List<int[]>> entry : documentAndPositionsMap.entrySet()) {
-				doc = entry.getKey();
-				if (docTermPositionsMap.containsKey(doc)==false) {
-					docTermPositionsMap.put(doc, new HashMap<String, List<int[]>>());
+				String queryString = spanQueryEntry.getKey();
+				for (Map.Entry<Integer, List<int[]>> entry : documentAndPositionsMap.entrySet()) {
+					doc = entry.getKey();
+					if (docTermPositionsMap.containsKey(doc)==false) {
+						docTermPositionsMap.put(doc, new HashMap<String, List<int[]>>());
+					}
+					docTermPositionsMap.get(doc).put(queryString, entry.getValue());
 				}
-				docTermPositionsMap.get(doc).put(queryString, entry.getValue());
+				documentAndPositionsMap.clear();
 			}
-			documentAndPositionsMap.clear();
 		}
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);

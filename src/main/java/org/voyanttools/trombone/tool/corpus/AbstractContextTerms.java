@@ -92,29 +92,30 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 			String queryString = spanQueryEntry.getKey();
 			SpanQuery spanQuery = spanQueryEntry.getValue();
 			Spans spans = corpusMapper.getFilteredSpans(spanQuery, bitSet);
-			
-			// map lucene document id to span offset information
-			List<int[]> spansDocDataList = new ArrayList<int[]>();
-			
-			// we're going to go through all the span for all documents so that we can then
-			// parallelize the searching of kwics
-			int doc = spans.nextDoc();
-			while (doc!=spans.NO_MORE_DOCS) {
-				int pos = spans.nextStartPosition();
-				while (pos != spans.NO_MORE_POSITIONS) {
-					spansDocDataList.add(new int[]{spans.startPosition(), spans.endPosition()});
-					pos = spans.nextStartPosition();
-				}
-				if (!spansDocDataList.isEmpty()) {
-					int[][] data = new int[spansDocDataList.size()][2];
-					for (int i=0, len=data.length; i<len; i++) {
-						data[i] = spansDocDataList.get(i);
+			if (spans != null) {
+				// map lucene document id to span offset information
+				List<int[]> spansDocDataList = new ArrayList<int[]>();
+				
+				// we're going to go through all the span for all documents so that we can then
+				// parallelize the searching of kwics
+				int doc = spans.nextDoc();
+				while (doc!=spans.NO_MORE_DOCS) {
+					int pos = spans.nextStartPosition();
+					while (pos != spans.NO_MORE_POSITIONS) {
+						spansDocDataList.add(new int[]{spans.startPosition(), spans.endPosition()});
+						pos = spans.nextStartPosition();
 					}
-					documentSpansDataList.add(new DocumentSpansData(doc, data, queryString));
-					spansDocDataList.clear();
-//					total++;
+					if (!spansDocDataList.isEmpty()) {
+						int[][] data = new int[spansDocDataList.size()][2];
+						for (int i=0, len=data.length; i<len; i++) {
+							data[i] = spansDocDataList.get(i);
+						}
+						documentSpansDataList.add(new DocumentSpansData(doc, data, queryString));
+						spansDocDataList.clear();
+//						total++;
+					}
+					doc = spans.nextDoc();
 				}
-				doc = spans.nextDoc();
 			}
 		}
 		
