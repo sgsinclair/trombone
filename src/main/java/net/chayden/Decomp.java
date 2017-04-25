@@ -64,7 +64,7 @@ public class Decomp {
      *  Step to the next reassembly rule.
      *  If mem is true, pick a random rule.
      */
-    public void stepRule() {
+    public void stepRule(boolean mem) {
         int size = reasemb.size();
         if (mem) {
             currReasmb = (int)(Math.random() * size);

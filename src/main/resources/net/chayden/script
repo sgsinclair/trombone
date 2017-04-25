@@ -40,6 +40,39 @@ synon: happy elated glad better
 synon: cannot can't
 synon: everyone everybody nobody noone
 synon: be am is are was
+synon: concordance kwic
+synon: word term
+synon: words terms
+synon: often frequently
+synon: appear show
+synon: voyanttool cirrus
+key: occurrences 0
+  decomp: *
+    reasmb: goto concordance
+key: kwic 0
+  decomp: *
+    reasmb: goto concordance
+key: concordance 0
+   decomp: * of the @word *
+	reasmb: You want to see a concordance of " (3) " ? <!-- {"tool": "Contexts", "width": "600px", "params": {"query": " (3) "}} -->
+   decomp: * of *
+	reasmb: You want to see a concordance of " (2) " ? <!-- {"tool": "Contexts", "width": "600px", "params": {"query": " (2) "}} -->
+key: how 0
+   decomp: * often does the @word * appear *
+	reasmb: You want to see the frequency of " (3) " ? <!-- {"tool": "CorpusTerms", "width": "600px", "params": {"query": " (3) "}} -->
+   decomp: * often does the @word * show *
+	reasmb: You want to see the frequency of " (3) " ? <!-- {"tool": "CorpusTerms", "width": "600px", "params": {"query": " (3) "}} -->
+   decomp: * often does * @appear *
+	reasmb: You want to see the frequency of " (2) " ? <!-- {"tool": "CorpusTerms", "width": "600px", "params": {"query": " (2) "}} -->
+key: cirrus 0
+   decomp: *
+	reasmb: You want to see a Cirrus ? <!-- {"tool": "cirrus"} -->
+key: wordcloud 0
+   decomp: *
+	reasmb: goto cirrus
+key: cloud 0
+   decomp: * word cloud *
+	reasmb: goto cirrus
 key: xnone 0
   decomp: *
     reasmb: I'm not sure I understand you fully.
@@ -340,7 +373,7 @@ key: can 0
     reasmb: Do you want to be able to (2) ?
     reasmb: Perhaps you don't want to (2).
     reasmb: goto what
-key: what 0
+key: what 1
   decomp: *
     reasmb: Why do you ask ?
     reasmb: Does that question interest you ?
@@ -351,16 +384,16 @@ key: what 0
     reasmb: What comes to mind when you ask that ?
     reasmb: Have you asked such questions before ?
     reasmb: Have you asked anyone else ?
-key: who 0
+key: who 1
    decomp:  who *
 	reasmb: goto what
-key: when 0
+key: when 1
    decomp:  when *
 	reasmb: goto what
-key: where 0
+key: where 1
    decomp:  where *
 	reasmb: goto what
-key: how 0
+key: how 1
    decomp:  how *
 	reasmb: goto what
 key: because 0

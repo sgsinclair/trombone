@@ -250,7 +250,7 @@ import java.net.URLConnection;
      */
     String assemble(Decomp d, String reply[], Key gotoKey) {
         String lines[] = new String[3];
-        d.stepRule();
+        d.stepRule(true);
         String rule = d.nextRule();
         if (EString.match(rule, "goto *", lines)) {
             //  goto rule -- set gotoKey and return false.
