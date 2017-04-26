@@ -1,10 +1,3 @@
-initial: How do you do.  Please tell me your problem.
-final: Goodbye.  It was nice talking to you.
-quit: bye
-quit: goodbye
-quit: done
-quit: exit
-quit: quit
 pre: dont don't
 pre: cant can't
 pre: wont won't
@@ -32,6 +25,8 @@ post: i'm you are
 pre: same alike
 pre: identical alike
 pre: equivalent alike
+pre: term word
+pre: frequently often
 synon: belief feel think believe wish
 synon: family mother mom father dad sister brother wife children child
 synon: desire want need
@@ -53,16 +48,14 @@ key: kwic 0
   decomp: *
     reasmb: goto concordance
 key: concordance 0
-   decomp: * of the @word *
-	reasmb: You want to see a concordance of " (3) " ? <!-- {"tool": "Contexts", "width": "600px", "params": {"query": " (3) "}} -->
-   decomp: * of *
+   decomp: * of the word * *
+	reasmb: You want to see a concordance of " (2) " ? <!-- {"tool": "Contexts", "width": "600px", "params": {"query": " (2) "}} -->
+   decomp: * of * *
 	reasmb: You want to see a concordance of " (2) " ? <!-- {"tool": "Contexts", "width": "600px", "params": {"query": " (2) "}} -->
 key: how 0
-   decomp: * often does the @word * appear *
-	reasmb: You want to see the frequency of " (3) " ? <!-- {"tool": "CorpusTerms", "width": "600px", "params": {"query": " (3) "}} -->
-   decomp: * often does the @word * show *
-	reasmb: You want to see the frequency of " (3) " ? <!-- {"tool": "CorpusTerms", "width": "600px", "params": {"query": " (3) "}} -->
-   decomp: * often does * @appear *
+   decomp: * often does the word * *
+	reasmb: You want to see the frequency of " (2) " ? <!-- {"tool": "CorpusTerms", "width": "600px", "params": {"query": " (2) "}} -->
+   decomp: * often does * *
 	reasmb: You want to see the frequency of " (2) " ? <!-- {"tool": "CorpusTerms", "width": "600px", "params": {"query": " (2) "}} -->
 key: cirrus 0
    decomp: *
