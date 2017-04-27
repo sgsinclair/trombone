@@ -125,7 +125,6 @@ public class Veliza extends AbstractCorpusTool {
 			// load Eliza
 	        ElizaMain eliza = new ElizaMain();
 	        for (String s : script.split("(\r\n|\r|\n)")) {
-	        	System.out.println(" - "+s);
 	        	eliza.collect(s);
 	        }
 	        script = null;

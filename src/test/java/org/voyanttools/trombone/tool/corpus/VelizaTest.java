@@ -50,8 +50,9 @@ public class VelizaTest {
 		parameters.setParameter("sentence", "asfkafjaa");
 		veliza = new Veliza(storage, parameters);
 		veliza.run();
-		assertEquals("I'm not sure I understand you fully.", veliza.response);
-		assertEquals(0, veliza.previous.length);
+// commented because it's now selected randomly
+//		assertEquals("I'm not sure I understand you fully.", veliza.response);
+//		assertEquals(0, veliza.previous.length);
 		
 		// test normal
 		parameters.setParameter("sentence", "What is the meaning of this text?");
@@ -59,16 +60,18 @@ public class VelizaTest {
 		veliza.run();
 		assertTrue(veliza.response!=null && veliza.response.length()>0);
 		assertEquals(1, veliza.previous.length);
-		assertEquals("Why do you ask ?", veliza.previous[0]);
+		// commented because it's now selected randomly
+//		assertEquals("Why do you ask ?", veliza.previous[0]);
 
 		// test memory
 		parameters.setParameter("previous", new String[]{"Why do you ask ?", "two"});
 		parameters.setParameter("sentence", "asfkafjaa");
 		veliza = new Veliza(storage, parameters);
 		veliza.run();
-		assertEquals("Why do you ask ?", veliza.response);
+		// commented because it's now selected randomly
+//		assertEquals("Why do you ask ?", veliza.response);
 		assertEquals(2, veliza.previous.length);
-		assertEquals("Why do you ask ?", veliza.previous[0]); // order of previous matters, take first
+//		assertEquals("Why do you ask ?", veliza.previous[0]); // order of previous matters, take first
 		
 		// test from text
 		parameters.setParameter("fromCorpus", "true");
