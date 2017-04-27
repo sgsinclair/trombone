@@ -47,6 +47,8 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
+import edu.stanford.nlp.util.StringUtils;
+
 /**
  * @author sgs
  *
@@ -80,8 +82,13 @@ public abstract class AbstractContextTerms extends AbstractTerms {
 		
 		
 		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-		Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
-		
+		Map<String, SpanQuery> queriesMap;
+		try {
+			queriesMap = parser.getSpanQueriesMap(queries, false);
+		} catch (Exception e) {
+			throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
+		}
+
 		Collection<DocumentSpansData> documentSpansDataList = new ArrayList<DocumentSpansData>();
 		
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());

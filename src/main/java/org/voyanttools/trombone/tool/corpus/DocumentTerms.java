@@ -63,6 +63,8 @@ import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
+import edu.stanford.nlp.util.StringUtils;
+
 /**
  * @author sgs
  *
@@ -123,8 +125,12 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		
 		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-		Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
-
+		Map<String, SpanQuery> queriesMap;
+		try {
+			queriesMap = parser.getSpanQueriesMap(queries, false);
+		} catch (Exception e) {
+			throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
+		}
 	
 		Corpus corpus = corpusMapper.getCorpus();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();

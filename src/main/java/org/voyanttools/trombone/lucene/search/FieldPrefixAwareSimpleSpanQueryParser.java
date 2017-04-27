@@ -17,12 +17,14 @@ import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.MatchAllDocsQuery;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.RegexpQuery;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TermRangeQuery;
+import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
 import org.apache.lucene.search.spans.SpanNearQuery;
 import org.apache.lucene.search.spans.SpanOrQuery;
@@ -69,7 +71,16 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 		else if (query instanceof BooleanQuery) {
 			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
 			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
-				spanQueries.add((SpanQuery) bq.getQuery());
+				Query q = bq.getQuery();
+				if (q instanceof SpanQuery) {
+					spanQueries.add((SpanQuery) bq.getQuery());
+				} else if (q instanceof MatchAllDocsQuery) {
+					WildcardQuery wq = new WildcardQuery(new Term("*", "*")); // this seems heavy, better solution?
+					SpanQuery swq = new SpanMultiTermQueryWrapper<>(wq);
+					spanQueries.add(swq);
+				} else {
+					throw new IllegalArgumentException("Unable to parse query: "+queryText+", unanticipated query type: "+q.getClass().getName());
+				}
 			}
 			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
 		}

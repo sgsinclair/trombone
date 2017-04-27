@@ -48,6 +48,8 @@ import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
+import edu.stanford.nlp.util.StringUtils;
+
 /**
  * @author sgs
  *
@@ -103,7 +105,12 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 
 	List<DocumentNgram> getNgrams(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-		Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
+		Map<String, SpanQuery> queriesMap;
+		try {
+			queriesMap = parser.getSpanQueriesMap(queries, false);
+		} catch (Exception e) {
+			throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
+		}
 
 		Corpus corpus = corpusMapper.getCorpus();
 		int docIndexInCorpus; // this should always be changed on the first span

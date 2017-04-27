@@ -247,12 +247,22 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
 			if (parameters.getParameterBooleanValue("inDocumentsCountOnly")) { // no spans required to count per-document frequencies
 				FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-				Map<String, Query> queriesMap = parser.getQueriesMap(queries, false);
+				Map<String, Query> queriesMap;
+				try {
+					queriesMap = queriesMap = parser.getQueriesMap(queries, false);
+				} catch (Exception e) {
+					throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
+				}
 				runQueriesInDocumentsCountOnly(corpusMapper, queue, queriesMap);
 			}
 			else {
 				FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-				Map<String, SpanQuery> queriesMap = parser.getSpanQueriesMap(queries, false);
+				Map<String, SpanQuery> queriesMap;
+				try {
+					queriesMap = parser.getSpanQueriesMap(queries, false);
+				} catch (Exception e) {
+					throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
+				}
 				runSpanQueries(corpusMapper, queue, queriesMap);
 			}
 			terms.addAll(queue.getOrderedList());
