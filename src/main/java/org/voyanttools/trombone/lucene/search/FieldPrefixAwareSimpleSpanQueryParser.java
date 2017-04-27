@@ -109,16 +109,18 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 				if (q instanceof SpanOrQuery) {
 					SpanOrQuery orq = (SpanOrQuery) q;
 					
-					// check if it looks like an and query: +this +that
-					if (StringUtils.countMatches(query,"+") == orq.getClauses().length) {
-						// create an AND query by having a huge slop TODO: is this an important performance hit?
-						q = new SpanNearQuery(orq.getClauses(), Integer.MAX_VALUE, false);
-					}
-					
-					// check to see if we have a bare phrase (no quotes, no or operator but still SpanOr)
-					else if (query.indexOf(" ")>-1 && query.indexOf("|")==-1 && query.indexOf("\"")==-1) {
-						q = new SpanNearQuery(orq.getClauses(), 0, true);
-						query = "\""+query+"\"";
+					if (((SpanOrQuery) q).getClauses().length>0) {
+						// check if it looks like an and query: +this +that
+						if (StringUtils.countMatches(query,"+") == orq.getClauses().length) {
+							// create an AND query by having a huge slop TODO: is this an important performance hit?
+							q = new SpanNearQuery(orq.getClauses(), Integer.MAX_VALUE, false);
+						}
+						
+						// check to see if we have a bare phrase (no quotes, no or operator but still SpanOr)
+						else if (query.indexOf(" ")>-1 && query.indexOf("|")==-1 && query.indexOf("\"")==-1) {
+							q = new SpanNearQuery(orq.getClauses(), 0, true);
+							query = "\""+query+"\"";
+						}
 					}
 				}
 				map.put(query, (SpanQuery) q);

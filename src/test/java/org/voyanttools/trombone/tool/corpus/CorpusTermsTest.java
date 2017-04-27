@@ -74,6 +74,17 @@ public class CorpusTermsTest {
 		assertEquals("dar*", corpusTerm.getTerm());
 		assertEquals(1, corpusTerm.getRawFreq());
 		
+		// we're expanding the term here, but term is empty
+		parameters.setParameter("query", "darrrrr*");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();		
+		assertEquals(1, corpusTermFrequencies.getTotal());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(1, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("darrrrr*", corpusTerm.getTerm());
+		assertEquals(0, corpusTerm.getRawFreq());
+		
 		parameters.setParameter("query", "\"it was\"");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);
 		corpusTermFrequencies.run();		
