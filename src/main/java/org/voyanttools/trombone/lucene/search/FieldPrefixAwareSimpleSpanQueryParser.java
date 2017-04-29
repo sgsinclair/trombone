@@ -27,6 +27,7 @@ import org.apache.lucene.search.TermRangeQuery;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
 import org.apache.lucene.search.spans.SpanNearQuery;
+import org.apache.lucene.search.spans.SpanNotQuery;
 import org.apache.lucene.search.spans.SpanOrQuery;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanTermQuery;
@@ -69,26 +70,58 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 			return query;
 		}
 		else if (query instanceof BooleanQuery) {
-			List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
-			for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
-				Query q = bq.getQuery();
-				if (q instanceof SpanQuery) {
-					spanQueries.add((SpanQuery) bq.getQuery());
-				} else if (q instanceof MatchAllDocsQuery) {
-					WildcardQuery wq = new WildcardQuery(new Term("*", "*")); // this seems heavy, better solution?
-					SpanQuery swq = new SpanMultiTermQueryWrapper<>(wq);
-					spanQueries.add(swq);
-				} else {
-					throw new IllegalArgumentException("Unable to parse query: "+queryText+", unanticipated query type: "+q.getClass().getName());
-				}
-			}
-			return new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
+			return convertBooleanQuerytoSpanQuery((BooleanQuery) query, queryText);
 		}
 		else {
 			throw new IllegalStateException("Cannot convert to SpanQuery: "+query);
 		}
 	}
 
+	private SpanQuery convertBooleanQuerytoSpanQuery(BooleanQuery query, String queryText) {
+		List<SpanQuery> spanQueries = new ArrayList<SpanQuery>();
+		List<SpanQuery> notQueries = new ArrayList<SpanQuery>();
+		boolean hasMatchAllDocs = false;
+		for (BooleanClause bq : ((BooleanQuery) query).clauses()) {
+			Query q = bq.getQuery();
+			if (q instanceof SpanQuery) {
+				if (((Object) q instanceof SpanOrQuery || (Object) q instanceof SpanTermQuery) && bq.getOccur()==BooleanClause.Occur.MUST_NOT) {
+					notQueries.add((SpanQuery) q);
+				} else {
+					spanQueries.add((SpanQuery) bq.getQuery());
+				}
+			} else if (q instanceof MatchAllDocsQuery) {
+				hasMatchAllDocs = true;
+			} else if (q instanceof BooleanQuery) {
+				SpanQuery sq = convertBooleanQuerytoSpanQuery((BooleanQuery) q, queryText);
+				
+				spanQueries.add(convertBooleanQuerytoSpanQuery((BooleanQuery) q, queryText)); 
+			} else {
+				throw new IllegalArgumentException("Unable to parse query: "+queryText+", unanticipated query type: "+q.getClass().getName());
+			}
+		}
+		
+		SpanQuery combined = new SpanOrQuery(spanQueries.toArray(new SpanQuery[spanQueries.size()]));
+		if (notQueries.isEmpty()) {
+			List<SpanQuery> ors = new ArrayList<SpanQuery>();
+			List<SpanNotQuery> nots = new ArrayList<SpanNotQuery>();
+			for (SpanQuery q : ((SpanOrQuery) combined).getClauses()) {
+				if (q instanceof SpanNotQuery) {nots.add((SpanNotQuery) q);}
+				else {ors.add(q);}
+			}
+			if (nots.isEmpty()) {return combined;}
+			else {
+				if (ors.size()==1) {
+					// FIXME: this only uses one not
+					return new SpanNotQuery(ors.get(0), nots.get(0).getExclude());
+				} else {
+					// FIXME: this only uses one not
+					return new SpanNotQuery(new SpanOrQuery(ors.toArray(new SpanQuery[ors.size()])), nots.get(0).getExclude());
+				}
+			}
+		} else {
+			return new SpanNotQuery(combined, notQueries.get(0));
+		}
+	}
 	
 	public Map<String, SpanQuery> getSpanQueriesMap(String[] queries, boolean isQueryExpand) throws IOException {
 		Map<String, SpanQuery> map = new HashMap<String, SpanQuery>();
