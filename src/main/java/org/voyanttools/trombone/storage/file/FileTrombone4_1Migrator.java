@@ -17,6 +17,7 @@ import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -83,7 +84,7 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		}
 		if (idsSet.size()>0) {	
 			// pick up corpus creation from expansion, with the original parameters
-			String newid = storage.storeStrings(idsSet);
+			String newid = storage.storeStrings(idsSet, Storage.Location.object);
 			FlexibleParameters parameters = this.getCorpusCreationParameters();
 			parameters.setParameter("nextCorpusCreatorStep", "expand");
 			parameters.setParameter("storedId", newid);

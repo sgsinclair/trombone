@@ -26,7 +26,7 @@ public class KeywordsTest {
 		assertFalse(keywords.isKeyword("word"));
 		
 		// try from stored data
-		String id = storage.storeStrings(keywords.getKeywords());
+		String id = storage.storeStrings(keywords.getKeywords(), Storage.Location.object);
 		keywords = new Keywords();
 		keywords.load(storage, new String[]{"keywords-"+id});
 		assertTrue(keywords.isKeyword("the"));

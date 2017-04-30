@@ -44,7 +44,6 @@ import org.apache.lucene.store.NIOFSDirectory;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
@@ -148,47 +147,51 @@ public class FileStorage implements Storage {
 	}
 
 	@Override
-	public boolean hasStoredString(String id) {
-		return getResourceFile(id).exists();
+	public boolean hasStoredString(String id, Location location) {
+		return getResourceFile(id, location).exists();
 	}
 
 	@Override
-	public String storeString(String string) throws IOException {
+	public String storeString(String string, Location location) throws IOException {
 		String id = DigestUtils.md5Hex(string);
-		storeString(string, id);
+		storeString(string, id, location);
 		return id;
 	}
 	
 	@Override
-	public void storeString(String string, String id) throws IOException {
-		if (!isStored(id)) {
-			FileUtils.writeStringToFile(getResourceFile(id), string, "UTF-8");		
+	public void storeString(String string, String id, Location location) throws IOException {
+		File file = getResourceFile(id, location);
+		if (file.getParentFile().exists()==false) { // make sure directory exists
+			file.getParentFile().mkdirs();
+		}
+		if (!isStored(id, location)) {
+			FileUtils.writeStringToFile(file, string, "UTF-8");		
 		}
 	}
 
 
 	@Override
-	public String storeStrings(Collection<String> strings) throws IOException {
+	public String storeStrings(Collection<String> strings, Location location) throws IOException {
 		String string = StringUtils.join(strings, "\n");
-		return storeString(string);
+		return storeString(string, location);
 	}
 	
 	@Override
-	public void storeStrings(Collection<String> strings, String id) throws IOException {
+	public void storeStrings(Collection<String> strings, String id, Location location) throws IOException {
 		String string = StringUtils.join(strings, "\n");
-		storeString(string, id);
+		storeString(string, id, location);
 	}
 	
 	@Override
-	public String retrieveString(String id) throws IOException {
-		File file = getResourceFile(id);
+	public String retrieveString(String id, Location location) throws IOException {
+		File file = getResourceFile(id, location);
 		if (file.exists()==false) throw new IOException("An attempt was made to read a store string that that does not exist: "+id);
 		return FileUtils.readFileToString(file);
 	}
 	
 	@Override
-	public List<String> retrieveStrings(String id) throws IOException {
-		String string = retrieveString(id);
+	public List<String> retrieveStrings(String id, Location location) throws IOException {
+		String string = retrieveString(id, location);
 		return StringUtils.split(string, "\n");
 	}
 
@@ -200,21 +203,27 @@ public class FileStorage implements Storage {
 		return corpusStorage;
 	}
 
-	private File getObjectStoreDirectory() {
-		return new File(storageLocation,"object-storage");
+	private File getObjectStoreDirectory(Location location) {
+		switch (location) {
+			case cache:
+			case notebook:
+				return new File(storageLocation, location.name());
+		default:
+			return new File(storageLocation,"object-storage");
+		}
 	}
 	
-	File getResourceFile(String id) {
+	File getResourceFile(String id, Location location) {
 		// package level for migrators
 		if (id==null) {
-			System.err.println(getObjectStoreDirectory()+"\t"+id);
+			System.err.println(getObjectStoreDirectory(location)+"\t"+id);
 			
 		}
-		return new File(getObjectStoreDirectory(),  id);
+		return new File(getObjectStoreDirectory(location),  id);
 	}
 	
-	public boolean copyResource(File source, String id) throws IOException {
-		File destination = getResourceFile(id);
+	public boolean copyResource(File source, String id, Location location) throws IOException {
+		File destination = getResourceFile(id, location);
 		if (destination.exists()) {return false;}
 		FileUtils.copyFile(source, destination);
 		return true;
@@ -222,22 +231,25 @@ public class FileStorage implements Storage {
 
 
 	@Override
-	public boolean isStored(String id) {
-		return getResourceFile(id).exists();
+	public boolean isStored(String id, Location location) {
+		return getResourceFile(id, location).exists();
 	}
 
 	@Override
-	public String store(Object obj) throws IOException {
+	public String store(Object obj, Location location) throws IOException {
 		String id = UUID.randomUUID().toString();
-		store(obj, id);
+		store(obj, id, location);
 		return id;
 	}
 
 
 
 	@Override
-	public void store(Object obj, String id) throws IOException {
-		File file = getResourceFile(id);
+	public void store(Object obj, String id, Location location) throws IOException {
+		File file = getResourceFile(id, location);
+		if (file.getParentFile().exists()==false) { // make sure directory exists
+			file.getParentFile().mkdirs();
+		}
 		FileOutputStream fileOutputStream = new FileOutputStream(file);
 		ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
 		out.writeObject(obj);
@@ -247,14 +259,29 @@ public class FileStorage implements Storage {
 
 
 	@Override
-	public Object retrieve(String id) throws IOException, ClassNotFoundException {
-		File file = getResourceFile(id);
+	public Object retrieve(String id, Location location) throws IOException, ClassNotFoundException {
+		File file = getResourceFile(id, location);
 		FileInputStream fileInputStream = new FileInputStream(file);
 		ObjectInputStream in = new ObjectInputStream(fileInputStream);
 		Object obj = in.readObject();
 		in.close();
 		return obj;
 	}
+	
+	public Writer getStoreWriter(String id, Location location) throws IOException {
+		File file = getResourceFile(id, location);
+		if (file.getParentFile().exists()==false) { // make sure directory exists
+			file.getParentFile().mkdirs();
+		}
+		return new FileWriter(file);
+	}
+	
+	public Reader getStoreReader(String id, Location location) throws IOException {
+		File file = getResourceFile(id, location);
+		return new FileReader(file);
+	}
+
+	/*
 
 	private File getStoreCacheDirectory() {
 		return new File(storageLocation, "cache");
@@ -263,6 +290,7 @@ public class FileStorage implements Storage {
 	private File getCachedFile(String id) {
 		return new File(getStoreCacheDirectory(), id);
 	}
+
 	@Override
 	public Reader retrieveCachedStringReader(String id) throws IOException {
 		File file = getCachedFile(id);
@@ -283,10 +311,11 @@ public class FileStorage implements Storage {
 		File file = getCachedFile(id);
 		return file.exists();
 	}
+	*/
 
 	@Override
 	public DB getDB(String id, boolean readOnly) {
-		DBMaker maker = DBMaker.newFileDB(getResourceFile(id))
+		DBMaker maker = DBMaker.newFileDB(getResourceFile(id, Location.object))
 			.transactionDisable()
 			.closeOnJvmShutdown()
 			.mmapFileEnableIfSupported();
@@ -299,7 +328,7 @@ public class FileStorage implements Storage {
 	}
 	
 	public boolean existsDB(String id) {
-		return getResourceFile(id).exists();
+		return getResourceFile(id, Location.object).exists();
 	}
 
 	@Override

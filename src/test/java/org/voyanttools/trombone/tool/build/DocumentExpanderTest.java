@@ -83,7 +83,7 @@ public class DocumentExpanderTest {
 	    Matcher matcher = Pattern.compile("<storedId>(.+?)</storedId>").matcher(xml);
 	    assertTrue(matcher.find()); // we should match
 	    String id = matcher.group(1);
-	    List<String> ids = storage.retrieveStrings(id);
+	    List<String> ids = storage.retrieveStrings(id, Storage.Location.object);
 	    for (int i=0, len=ids.size(); i<len; i++) {
 	    	assertEquals(ids.get(i),storedDocumentSources.get(i).getId());
 	    }

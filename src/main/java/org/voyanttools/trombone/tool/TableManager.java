@@ -37,14 +37,14 @@ public class TableManager extends AbstractTool {
 					this.parameters.getParameterBooleanValue("rowHeaders"));
 			// this doesn't work since table is defined in the if above
 			this.id = this.parameters.containsKey("table") ? this.parameters.getParameterValue("table") : UUID.randomUUID().toString();
-			this.storage.store(table, Table.getSerializedId(id));
+			this.storage.store(table, Table.getSerializedId(id), Storage.Location.object);
 		}
 		else if (this.parameters.containsKey("table")) {
 			String id = this.parameters.getParameterValue("table");
-			if (this.storage.isStored(Table.getSerializedId(id))) {
+			if (this.storage.isStored(Table.getSerializedId(id), Storage.Location.object)) {
 				this.id = id;
 				try {
-					this.table = (Table) this.storage.retrieve(Table.getSerializedId(this.id));
+					this.table = (Table) this.storage.retrieve(Table.getSerializedId(this.id), Storage.Location.object);
 				} catch (ClassNotFoundException e) {
 					throw new RuntimeException(e);
 				}

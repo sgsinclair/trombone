@@ -29,7 +29,6 @@ import java.util.List;
 
 import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.file.FileMigrator;
 
@@ -41,6 +40,10 @@ import org.voyanttools.trombone.storage.file.FileMigrator;
  */
 public interface Storage {
 	
+	public enum Location {
+		cache, notebook, object
+	}
+
 	/**
 	 * Get the {@link StoredDocumentSourceStorage} for this type of Storage.
 	 * 
@@ -58,31 +61,31 @@ public interface Storage {
 	public void destroy() throws IOException;
 
 
-	public boolean hasStoredString(String id);
+	public boolean hasStoredString(String id, Location location);
 	
-	public String storeStrings(Collection<String> strings) throws IOException;
+	public String storeStrings(Collection<String> strings, Location location) throws IOException;
 	
-	public void storeStrings(Collection<String> strings, String id) throws IOException;
+	public void storeStrings(Collection<String> strings, String id, Location location) throws IOException;
 	
-	public String storeString(String string) throws IOException;
+	public String storeString(String string, Location location) throws IOException;
 	
-	public void storeString(String string, String id) throws IOException;
+	public void storeString(String string, String id, Location location) throws IOException;
 
-	public String retrieveString(String id) throws IOException;
+	public String retrieveString(String id, Location location) throws IOException;
 	
-	public List<String> retrieveStrings(String id) throws IOException;
+	public List<String> retrieveStrings(String id, Location location) throws IOException;
 	
-	public boolean isStored(String id);
+	public boolean isStored(String id, Location location);
 
-	public boolean isStoredCache(String id);
+//	public boolean isStoredCache(String id);
 
-	public String store(Object obj) throws IOException;
+	public String store(Object obj, Location location) throws IOException;
 	
-	public void store(Object obj, String id) throws IOException;
+	public void store(Object obj, String id, Location location) throws IOException;
 	
-	public Object retrieve(String id) throws IOException, ClassNotFoundException;
+	public Object retrieve(String id, Location location) throws IOException, ClassNotFoundException;
 	
-	public Reader retrieveCachedStringReader(String id) throws IOException;
+//	public Reader retrieveCachedStringReader(String id) throws IOException;
 
 	public CorpusStorage getCorpusStorage();
 	
@@ -95,7 +98,10 @@ public interface Storage {
 	public FileMigrator getMigrator(String id) throws IOException;
 	
 
-	public Writer getStoreCachedStringWriter(String id) throws IOException;
+	public Writer getStoreWriter(String id, Location location) throws IOException;
+	public Reader getStoreReader(String id, Location location) throws IOException;
+	
+//	public Writer getStoreCachedStringWriter(String id) throws IOException;
 	
 	public DB getDB(String id, boolean readOnly);
 

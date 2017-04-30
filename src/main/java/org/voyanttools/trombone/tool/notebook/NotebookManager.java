@@ -54,6 +54,8 @@ public class NotebookManager extends AbstractTool {
 					if (is!=null) is.close();
 				}
 			}
+		} else if (jsonData!=null) { // we have sent data but no notebook, so we're saving
+//			id = storage.storeString(string))
 		}
 		if (jsonData==null) {
 			throw new RuntimeException("Unable to locate requested notebook.");

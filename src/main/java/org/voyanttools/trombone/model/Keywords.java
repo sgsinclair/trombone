@@ -118,7 +118,7 @@ public class Keywords {
 			else if (ref.startsWith(KEYWORDS_PREFIX)) {
 				String refId = ref.substring(KEYWORDS_PREFIX.length());
 				try {
-					List<String> refs = storage.retrieveStrings(refId);
+					List<String> refs = storage.retrieveStrings(refId, Storage.Location.object);
 					add(refs);
 				} catch (IOException e) {
 					if (storage instanceof FileStorage) {
@@ -127,7 +127,7 @@ public class Keywords {
 							// add to lower case here, though not sure we want it this universal
 							String contents = FileUtils.readFileToString(file).toLowerCase();
 							List<String> keywordsList = StringUtils.split(contents, "\n");
-							storage.storeStrings(keywordsList, refId);
+							storage.storeStrings(keywordsList, refId, Storage.Location.object);
 							add(keywordsList);
 						}
 						else {

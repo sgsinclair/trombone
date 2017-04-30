@@ -58,7 +58,7 @@ class DocumentIndexer extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		String sid = parameters.getParameterValue("storedId");
-		List<String> ids = storage.retrieveStrings(sid);
+		List<String> ids = storage.retrieveStrings(sid, Storage.Location.object);
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		List<StoredDocumentSource> indexableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		for (String id : ids) {

@@ -98,19 +98,19 @@ public class MemoryStorage implements Storage {
 	}
 
 	@Override
-	public String storeString(String string) {
+	public String storeString(String string, Location location) {
 		String id = DigestUtils.md5Hex(string);
-		storeString(string, id);
+		storeString(string, id, location);
 		return id;
 	}
 	
 	@Override
-	public void storeString(String string, String id) {
+	public void storeString(String string, String id, Location location) {
 		storedObjectsMap.put(id, string);
 	}
 
 	@Override
-	public String retrieveString(String id) throws IOException {
+	public String retrieveString(String id, Location location) throws IOException {
 		Object string = (String) storedObjectsMap.get(id);
 		if (string==null) throw new IOException("Unable to find stored string with the ID: "+id);
 		if (string instanceof String == false) throw new IOException("An object was stored with this ID but it's not a string: "+id);
@@ -118,81 +118,78 @@ public class MemoryStorage implements Storage {
 	}
 
 	@Override
-	public void storeStrings(Collection<String> strings, String id) throws IOException {
+	public void storeStrings(Collection<String> strings, String id, Location location) throws IOException {
 		String string = StringUtils.join(strings, "\n");
-		storeString(string, id);
+		storeString(string, id, location);
 	}
 
 	@Override
-	public String storeStrings(Collection<String> strings) throws IOException {
+	public String storeStrings(Collection<String> strings, Location location) throws IOException {
 		String string = StringUtils.join(strings, "\n");
-		return storeString(string);
+		return storeString(string, location);
 	}
 	
 	@Override
-	public List<String> retrieveStrings(String id) throws IOException {
-		String string = retrieveString(id);
+	public List<String> retrieveStrings(String id, Location location) throws IOException {
+		String string = retrieveString(id, location);
 		return StringUtils.split(string, "\n");
 	}
 
 	@Override
-	public boolean hasStoredString(String id) {
+	public boolean hasStoredString(String id, Location location) {
 		return storedObjectsMap.containsKey(id);
 	}
 
 	@Override
-	public boolean isStored(String id) {
+	public boolean isStored(String id, Location location) {
 		return storedObjectsMap.containsKey(id);
 	}
 
 	@Override
-	public boolean isStoredCache(String id) {
-		return isStored(id); // for memory, use normal cache
-	}
-	
-	@Override
-	public String store(Object obj) throws IOException {
+	public String store(Object obj, Location location) throws IOException {
 		String id = UUID.randomUUID().toString();
-		store(obj, id);
+		store(obj, id, location);
 		return id;
 	}
 
 	@Override
-	public void store(Object obj, String id) throws IOException {
+	public void store(Object obj, String id, Location location) throws IOException {
 		storedObjectsMap.put(id, obj);
 	}
 
 	@Override
-	public Object retrieve(String id) throws IOException,
+	public Object retrieve(String id, Location location) throws IOException,
 			ClassNotFoundException {
 		return storedObjectsMap.get(id);
 	}
 	
 	@Override
-	public Reader retrieveCachedStringReader(String id) throws IOException {
-		return new StringReader(retrieveString(id));
+	public Reader getStoreReader(String id, Location location) throws IOException {
+		return new StringReader(retrieveString(id, location));
 	}
 
 	@Override
-	public Writer getStoreCachedStringWriter(String id) throws IOException {
-		return new MemoryStorageStringWriter(id);
+	public Writer getStoreWriter(String id, Location location) throws IOException {
+		return new MemoryStorageStringWriter(id, Storage.Location.cache);
 	}
 	
 	private class MemoryStorageStringWriter extends StringWriter {
 		private String id;
-		private MemoryStorageStringWriter(String id) {
+		private Location location;
+		private MemoryStorageStringWriter(String id, Location location) {
 			this.id = id;
+			this.location = location;
 		}
 		@Override
 		public void close() throws IOException {
-			storeString(id, this.toString());
+			storeString(id, this.toString(), location);
 		}
 		
 	}
 
 	@Override
 	public DB getDB(String id, boolean readOnly) {
-		if (!isStored(id)) {
+		if (!isStored(id, Storage.Location.object)) {
 			DB db = DBMaker.newMemoryDB()
 					.transactionDisable()
 					.closeOnJvmShutdown().make();

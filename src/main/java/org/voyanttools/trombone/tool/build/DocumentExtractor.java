@@ -62,7 +62,7 @@ class DocumentExtractor extends AbstractTool {
 	@Override
 	public void run() throws IOException {
 		String sid = parameters.getParameterValue("storedId");
-		List<String> ids = storage.retrieveStrings(sid);
+		List<String> ids = storage.retrieveStrings(sid, Storage.Location.object);
 		StoredDocumentSourceStorage storedDocumentStorage = storage.getStoredDocumentSourceStorage();
 		List<StoredDocumentSource> extractableStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		for (String id : ids) {
@@ -97,7 +97,7 @@ class DocumentExtractor extends AbstractTool {
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 			extractedIds.add(storedDocumentSource.getId());
 		}		
-		storedId = storage.storeStrings(extractedIds);
+		storedId = storage.storeStrings(extractedIds, Storage.Location.object);
 		log("Finished extraction of "+extractedIds.size()+" documents.", start);
 
 	}

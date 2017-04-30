@@ -81,7 +81,7 @@ class DocumentStorer extends AbstractTool {
 		}
 
 		
-		storedId = storage.storeStrings(ids);
+		storedId = storage.storeStrings(ids, Storage.Location.object);
 		
 		log("Finished storage of "+ids.size()+" documents.", start);
 

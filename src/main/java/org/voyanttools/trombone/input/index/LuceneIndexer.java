@@ -113,7 +113,7 @@ public class LuceneIndexer implements Indexer {
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 			ids.add(storedDocumentSource.getId());
 		}
-		String corpusId = storage.storeStrings(ids);
+		String corpusId = storage.storeStrings(ids, Storage.Location.object);
 		
 		// determine if we need to modify the Lucene index
 		Collection<StoredDocumentSource> storedDocumentSourceForLucene = new ArrayList<StoredDocumentSource>();

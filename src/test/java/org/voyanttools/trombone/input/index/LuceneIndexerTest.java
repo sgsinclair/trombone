@@ -165,7 +165,7 @@ public class LuceneIndexerTest {
 		List<StoredDocumentSource> extractedDocumentSources = extractor.getExtractedStoredDocumentSources(storedDocumentSources);
 		LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
 		String id = luceneIndexer.index(extractedDocumentSources);
-		List<String> ids = storage.retrieveStrings(id);
+		List<String> ids = storage.retrieveStrings(id, Storage.Location.object);
 		docsToTokensMap.put(ids.get(0), 8);
 		docsToTokensMap.put(ids.get(1), 8);
 		
@@ -174,7 +174,7 @@ public class LuceneIndexerTest {
 		luceneIndexer = new LuceneIndexer(storage, parameters);
 		// indexer should create new documents in index because of parameters
 		id = luceneIndexer.index(extractedDocumentSources);
-		ids = storage.retrieveStrings(id);
+		ids = storage.retrieveStrings(id, Storage.Location.object);
 		docsToTokensMap.put(ids.get(0), 1);
 		docsToTokensMap.put(ids.get(1), 7);
 		// make sure we have new metadata

@@ -149,10 +149,10 @@ public class Veliza extends AbstractCorpusTool {
 				// try to load stored document and if not generate sentences
 				String id = corpusMapper.getCorpus().getId()+"-docIndex-"+String.valueOf(docIndex)+"-veliza-sentences-"+String.valueOf(this.getVersion());
 				List<String> sentences;
-				if (!storage.isStored(id)) {
+				if (!storage.isStored(id, Storage.Location.object)) {
 					sentences = this.storeSentences(corpus.getDocument(docIndex), id);
 				} else {
-					sentences = storage.retrieveStrings(id);
+					sentences = storage.retrieveStrings(id, Storage.Location.object);
 				}
 				
 				// now try to find a sentence that produces a reply for the specified time
@@ -198,7 +198,7 @@ public class Veliza extends AbstractCorpusTool {
 		String string = document.getDocumentString();
 		List<String> sentences = TextUtils.getSentences(string, Locale.ENGLISH);
 		if (sentences.isEmpty()==false) {
-			storage.storeStrings(sentences, storedId);
+			storage.storeStrings(sentences, storedId, Storage.Location.object);
 		}
 		return sentences;
 	}

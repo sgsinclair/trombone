@@ -79,7 +79,7 @@ public class CorpusBuilder extends AbstractTool {
 		// store and compute the corpus if it hasn't been stored
 		if (storage.getCorpusStorage().corpusExists(corpusId)==false) {
 			
-			List<String> documentIds = storage.retrieveStrings(corpusId);
+			List<String> documentIds = storage.retrieveStrings(corpusId, Storage.Location.object);
 			
 			// check if we have an admin password and update the corpusId if so
 			if (parameters.getParameterValue("adminPassword", "").isEmpty()==false) {

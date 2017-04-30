@@ -16,6 +16,8 @@ import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentMetadata.ParentType;
+import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -46,7 +48,7 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 		if (stoplistDirectory.exists() && stoplistDirectory.isDirectory()) {
 			for (File stoplistFile : stoplistDirectory.listFiles()) {
 				if (stoplistFile.isFile()) {
-					if (!storage.isStored(stoplistFile.getName())) { // ensure we don't overwrite
+					if (!storage.isStored(stoplistFile.getName(), Storage.Location.object)) { // ensure we don't overwrite
 						InputStream fis = null;
 						try {
 							fis = new FileInputStream(stoplistFile);
@@ -57,7 +59,7 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 							} catch (ClassNotFoundException e) {
 								throw new IOException("Unable to read stoplist file: "+stoplistFile.getAbsolutePath(), e);
 							}
-							storage.storeStrings(stoplist.getKeywords(), stoplistFile.getName());
+							storage.storeStrings(stoplist.getKeywords(), stoplistFile.getName(), Storage.Location.object);
 						}
 						finally {
 							if (fis!=null) {
@@ -88,7 +90,7 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 			StoredDocumentSource storedDocumentSource = getStoredDocumentSource(documentDirectory);
 			storedIds.add(storedDocumentSource.getId());
 		}
-		return storage.storeStrings(storedIds);
+		return storage.storeStrings(storedIds, Storage.Location.object);
 	}
 	
 	protected StoredDocumentSource getStoredDocumentSource(File documentDirectory) throws IOException {

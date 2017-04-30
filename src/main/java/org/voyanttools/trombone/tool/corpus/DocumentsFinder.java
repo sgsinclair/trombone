@@ -131,7 +131,7 @@ public class DocumentsFinder extends AbstractTerms {
 						keepers.add(id);
 					}
 				}
-				corpusId = storage.storeStrings(keepers);
+				corpusId = storage.storeStrings(keepers, Storage.Location.object);
 				if (parameters.getParameterBooleanValue("temporaryCorpus")) {
 					corpusId = "tmp."+UUID.randomUUID().toString()+corpusId;
 					org.voyanttools.trombone.model.CorpusMetadata corpusMetadata = new org.voyanttools.trombone.model.CorpusMetadata(corpusId);

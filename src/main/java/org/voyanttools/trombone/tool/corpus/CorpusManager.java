@@ -184,11 +184,11 @@ public class CorpusManager extends AbstractTool {
 				realCorpusCreator.run(4); // make sure to create corpus
 				realCorpusCreator.getStoredId();
 				String id = realCorpusCreator.getStoredId();
-				List<String> documentIds = storage.retrieveStrings(id);
+				List<String> documentIds = storage.retrieveStrings(id, Storage.Location.object);
 				keepers.addAll(documentIds);
 			}
 			
-			String corpusId = storage.storeStrings(keepers);
+			String corpusId = storage.storeStrings(keepers, Storage.Location.object);
 			FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=corpus"});
 			RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
 			realCorpusCreator.run(); // make sure to create corpus

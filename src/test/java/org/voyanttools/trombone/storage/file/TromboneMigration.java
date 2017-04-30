@@ -18,6 +18,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
@@ -69,7 +70,7 @@ public class TromboneMigration {
 		assertEquals("", corpus.getDocument(0).getMetadata().getAuthor());
 		assertEquals("Defined", corpus.getDocument(1).getMetadata().getAuthor());
 		// test transfer of stoplist
-		List<String> stopwords = storage.retrieveStrings("1458405208292sw");
+		List<String> stopwords = storage.retrieveStrings("1458405208292sw", Storage.Location.object);
 		assertEquals(1, stopwords.size());
 		assertEquals("test", stopwords.get(0));
 		
@@ -213,15 +214,15 @@ public class TromboneMigration {
 		
 		// test migration of resources
 		id = "7f96fa278a1cc64fc298ab808bcc2682";
-		assertFalse(storage.isStored(id));
+		assertFalse(storage.isStored(id, Storage.Location.object));
 		file = FileMigrationFactory.getStoredObjectFile(storage, id);
 		assertTrue(file.exists());
-		assertTrue(storage.copyResource(file, id));
-		assertTrue(storage.isStored(id));
+		assertTrue(storage.copyResource(file, id, Storage.Location.object));
+		assertTrue(storage.isStored(id, Storage.Location.object));
 		
 		// test migration of non-existent resource
 		id = "z";
-		assertFalse(storage.isStored(id));
+		assertFalse(storage.isStored(id, Storage.Location.object));
 		file = FileMigrationFactory.getStoredObjectFile(storage, id);
 		assertNull(file);
 		
@@ -329,15 +330,15 @@ public class TromboneMigration {
 		
 		// test migration of resources
 		id = "0366879fcdc310ae2511e58ebb4ae64b";
-		assertFalse(storage.isStored(id));
+		assertFalse(storage.isStored(id, Storage.Location.object));
 		file = FileMigrationFactory.getStoredObjectFile(storage, id);
 		assertTrue(file.exists());
-		assertTrue(storage.copyResource(file, id));
-		assertTrue(storage.isStored(id));
+		assertTrue(storage.copyResource(file, id, Storage.Location.object));
+		assertTrue(storage.isStored(id, Storage.Location.object));
 		
 		// test migration of non-existent resource
 		id = "z";
-		assertFalse(storage.isStored(id));
+		assertFalse(storage.isStored(id, Storage.Location.object));
 		file = FileMigrationFactory.getStoredObjectFile(storage, id);
 		assertNull(file);
 		
