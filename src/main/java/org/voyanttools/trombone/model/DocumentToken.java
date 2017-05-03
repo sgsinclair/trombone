@@ -25,6 +25,10 @@ public class DocumentToken implements Comparable<DocumentToken> {
 	
 	private int endOffset;
 	
+	private String lemma;
+	
+	private String pos;
+	
 	/**
 	 * 
 	 */
@@ -37,6 +41,8 @@ public class DocumentToken implements Comparable<DocumentToken> {
 		this.position = position;
 		this.startOffset = startOffset;
 		this.endOffset = endOffset;
+		lemma = null;
+		pos = null;
 	}
 
 	@Override
@@ -67,5 +73,31 @@ public class DocumentToken implements Comparable<DocumentToken> {
 	public int getEndOffset() {
 		return startOffset;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder(getTerm());
+		if (lemma!=null || pos!=null) {
+			sb.append(" (");
+			if (lemma!=null) {sb.append(lemma);}
+			if (pos!=null) {sb.append("/").append(pos);}
+		}
+		if (lemma!=null) {sb.append(" (").append(lemma).append(")");}
+		sb.append(" ").append(position).append(":").append(startOffset).append("-").append(endOffset);
+		return sb.toString();
+	}
 
+	public void setLemma(String lemma) {
+		this.lemma = lemma;
+	}
+
+	public void setPos(String pos) {
+		this.pos = pos;
+	}
+
+	public String getLemma() {
+		return lemma;
+	}
+	public String getPos() {
+		return pos;
+	}
 }

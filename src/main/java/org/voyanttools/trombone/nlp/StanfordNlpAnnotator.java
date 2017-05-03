@@ -40,7 +40,7 @@ import edu.stanford.nlp.util.CoreMap;
  * @author sgs
  *
  */
-class StanfordNlpAnnotator implements NlpAnnotator {
+public class StanfordNlpAnnotator implements NlpAnnotator {
 	StanfordCoreNLP pipeline;
 
 	/**
@@ -49,6 +49,9 @@ class StanfordNlpAnnotator implements NlpAnnotator {
 	StanfordNlpAnnotator(String languageCode) {
 	    Properties props = new Properties();
 	    props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, entitymentions");
+	    if (languageCode.equals("fr")) {
+	    	props.setProperty("props", "StanfordCoreNLP-french.properties");
+	    }
 	    pipeline = new StanfordCoreNLP(props);
 	}
 
@@ -143,10 +146,14 @@ class StanfordNlpAnnotator implements NlpAnnotator {
 	    return entities;
 	}
 	
-	private List<CoreMap> getSentences(String text) {
+	public Annotation getAnnotated(String text) {
 		Annotation document = new Annotation(text);
 		pipeline.annotate(document);
-		return document.get(SentencesAnnotation.class);
+		return document;
+	}
+	
+	private List<CoreMap> getSentences(String text) {
+		return getAnnotated(text).get(SentencesAnnotation.class);
 	}
 	
 //	public static void main(String[] args) {

@@ -9,9 +9,10 @@ import java.io.Reader;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
-import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.nlp.NlpFactory;
+import org.voyanttools.trombone.nlp.OpenNlpAnnotator;
+import org.voyanttools.trombone.nlp.PosLemmas;
 
 /**
  * @author sgs
@@ -21,7 +22,9 @@ public class LemmaAnalyzer extends LexicalAnalyzer {
 	
 	private NlpFactory factory;
 	
-	LemmaAnalyzer(NlpFactory factory) {
+	private OpenNlpLemmaTokenizer openNlpTokenizer;
+	
+	public LemmaAnalyzer(NlpFactory factory) {
 		this.factory = factory;
 	}
 
@@ -46,15 +49,28 @@ public class LemmaAnalyzer extends LexicalAnalyzer {
 	protected TokenStreamComponents createComponents(String fieldName) {
 
 		if (fieldName.equals(TokenType.lemma.name()) && lang!=null && lang.isEmpty()==false) {
-			AnalysisEngine engine = factory.getLemmatizationAnalysisEngine(lang);
-			if (engine!=null) { // confirm that this language engine is available
-				Tokenizer tokenizer = new UimaLemmaTokenizer(engine, lang);
+			/*
+			NlpAnnotator annotator = factory.getNlpAnnotator(lang);
+			if (annotator instanceof StanfordNlpAnnotator) {
+				Tokenizer tokenizer = new StanfordNlpLemmaTokenizer((StanfordNlpAnnotator) annotator);
 				TokenStream stream = new LowerCaseFilter(tokenizer);
 				return new TokenStreamComponents(tokenizer, stream);
+			} */
+			if (lang.equals("en") || lang.equals("fr") || lang.equals("de") || lang.equals("it") || lang.equals("nl")) {
+				OpenNlpAnnotator annotator = factory.getOpenNlpAnnotator(lang);
+				openNlpTokenizer = new OpenNlpLemmaTokenizer(annotator);
+				TokenStream stream = new LowerCaseFilter(openNlpTokenizer);
+				return new TokenStreamComponents(openNlpTokenizer, stream);
+			} else {
+				throw new RuntimeException("Unable to create Lemmatizer for "+lang);
 			}
 		}
 		
 		// not sure this is a good idea, but let's use lexical forms for now
 		return super.createComponents(TokenType.lexical.name());
+	}
+	
+	public PosLemmas getPostStreamPosLemmas() {
+		return openNlpTokenizer.getPosLemmas();
 	}
 }

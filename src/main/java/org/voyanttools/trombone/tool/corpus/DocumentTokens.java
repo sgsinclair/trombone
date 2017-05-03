@@ -13,17 +13,22 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
+import org.voyanttools.trombone.lucene.analysis.LemmaAnalyzer;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
+import org.voyanttools.trombone.nlp.PosLemmas;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.Stripper;
 
@@ -81,7 +86,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 		start = parameters.getParameterIntValue("start", 0);
 		limit = parameters.getParameterIntValue("limit", 50);
 		if (limit==0) {limit=Integer.MAX_VALUE;}
-		tokenType = TokenType.lexical;
+		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
 		perDocLimit = parameters.getParameterIntValue("perDocLimit", Integer.MAX_VALUE);
 		if (perDocLimit==0) {perDocLimit = Integer.MAX_VALUE;}
 	}
@@ -106,6 +111,8 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 		boolean isSkipping = true;
 		int tokensCounter = 0;
 		int[] lastTokenPositions = corpus.getLastTokenPositions(tokenType);
+		boolean needPosLemma = parameters.getParameterBooleanValue("withPosLemmas");
+		PosLemmas lemmas;
 		for (String id : ids) {
 			if (skipToDocId.isEmpty()==false && isSkipping==true) {
 				if (isSkipping && skipToDocId.equals(id)) {
@@ -145,6 +152,34 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 			List<DocumentToken> tokens = new ArrayList<DocumentToken>();
 			String document = corpus.getDocument(id).getDocumentString();
 //			String document = reader.document(luceneDoc).get(tokenType.name());
+			
+			
+			lemmas = null;
+			if (needPosLemma) {
+				String name = id+"-poslemmas-"+PosLemmas.serialVersionUID;
+				if (storage.isStored(name, Location.cache)) {
+					try {
+						lemmas = (PosLemmas) storage.retrieve(name, Location.cache);
+					} catch (ClassNotFoundException e) {
+						throw new RuntimeException("Unable to retrieve PosLemmas", e);
+					}
+				}
+				if (lemmas == null) {
+					LemmaAnalyzer analyzer = new LemmaAnalyzer(storage.getNlpAnnotatorFactory());
+					TokenStream tokenStream = analyzer.tokenStream(TokenType.lemma.name(), document+"<!-- language=en -->");
+					tokenStream.reset();
+					while (tokenStream.incrementToken()) {}
+					// no need to increment
+					tokenStream.end();
+					tokenStream.close();
+					analyzer.close();
+					lemmas = analyzer.getPostStreamPosLemmas();
+					storage.store(lemmas, name, Location.cache);
+				}
+			}
+
+			
+			
 			String string;
 			int lastEndOffset = 0;
 			int corpusDocumentIndexPosition = corpus.getDocumentPosition(id);
@@ -160,6 +195,16 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 				}
 				string = StringUtils.substring(document, termInfo.getStartOffset(), termInfo.getEndOffset());
 				DocumentToken dt = new DocumentToken(id, corpusDocumentIndexPosition, string, tokenType, termInfo.getPosition(), termInfo.getStartOffset(), termInfo.getEndOffset(), docFreqs.get(termInfo.getText()));
+
+				// try to inject lemmas and pos if needed and available
+				if (lemmas!=null) {
+					lemmas.setCurrentByStart(termInfo.getStartOffset());
+					String lemma = lemmas.getCurrentLemma();
+					if (lemma!=null) {dt.setLemma(lemma);}
+					String pos = lemmas.getCurrentPos();
+					if (pos!=null) {dt.setPos(pos);}
+				}
+				
 				if (whitelist!=null) {
 					if (whitelist.isKeyword(string.toLowerCase())) {
 						documentTokens.add(dt);

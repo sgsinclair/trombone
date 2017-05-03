@@ -6,12 +6,6 @@ package org.voyanttools.trombone.nlp;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.voyanttools.trombone.nlp.uima.ICUSegmenter;
-
 //import de.tudarmstadt.ukp.dkpro.core.matetools.MateLemmatizer;
 //import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordLemmatizer;
 //import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
@@ -29,7 +23,9 @@ public class NlpFactory {
 	private Map<String, NlpAnnotator> nlpAnnotators = new HashMap<String, NlpAnnotator>();
 	
 	// minimalist lemmatization
-	private Map<String, AnalysisEngine> lemmatizationAnalysisEngines = new HashMap<String, AnalysisEngine>();
+	//private Map<String, AnalysisEngine> lemmatizationAnalysisEngines = new HashMap<String, AnalysisEngine>();
+	
+	private Map<String, OpenNlpAnnotator> openNlpAnnotators = new HashMap<String, OpenNlpAnnotator>();
 
 	/**
 	 * Get an {@link NlpAnnotator} for the specified language
@@ -44,6 +40,14 @@ public class NlpFactory {
 		return nlpAnnotators.get(languageCode);
 	}
 	
+	public synchronized OpenNlpAnnotator getOpenNlpAnnotator(String languageCode) {
+		if (!openNlpAnnotators.containsKey(languageCode)) {
+			OpenNlpAnnotator openNlpAnnotator = new OpenNlpAnnotator(languageCode);
+			openNlpAnnotators.put(languageCode, openNlpAnnotator);
+		}
+		return openNlpAnnotators.get(languageCode);
+	}
+	
 	/**
 	 * Get a UIMA {@link AnalysisEngine} for the specified language (or null if the language isn't supported). This is
 	 * optimized for lemmatization only, as opposed to a full NLP annotation (including part-of-speech, etc.).
@@ -52,23 +56,23 @@ public class NlpFactory {
 	 * @param languageCode the language of the document (currently supported: en, fr, es, de)
 	 * @return a UIMA {@link AnalysisEngine} for the specified language
 	 */
-	public synchronized AnalysisEngine getLemmatizationAnalysisEngine(String languageCode) {
-		if (languageCode.equals("en") || languageCode.equals("fr") || languageCode.equals("es") || languageCode.equals("de")) {
-			if (lemmatizationAnalysisEngines.containsKey(languageCode)==false) {
-				AnalysisEngine engine;
-				try {
-					AnalysisEngineDescription segmenter = AnalysisEngineFactory.createEngineDescription(ICUSegmenter.class, new Object[0]);
-//					AnalysisEngineDescription lemmatizer = AnalysisEngineFactory.createEngineDescription(MateLemmatizer.class, new Object[0]);
-					AnalysisEngineDescription engineDescription = AnalysisEngineFactory. createEngineDescription(segmenter/*, lemmatizer*/);
-					engine = AnalysisEngineFactory.createEngine(engineDescription);
-					lemmatizationAnalysisEngines.put(languageCode, engine);
-				} catch (ResourceInitializationException e) {
-					throw new RuntimeException("Unable to initialize a needed analysis engine during lemmatization.", e);
-				}
-			}
-			return lemmatizationAnalysisEngines.get(languageCode);
-		} else {
-			return null;
-		}
-	}
+//	public synchronized AnalysisEngine getLemmatizationAnalysisEngine(String languageCode) {
+//		if (languageCode.equals("en") || languageCode.equals("fr") || languageCode.equals("es") || languageCode.equals("de")) {
+//			if (lemmatizationAnalysisEngines.containsKey(languageCode)==false) {
+//				AnalysisEngine engine;
+//				try {
+//					AnalysisEngineDescription segmenter = AnalysisEngineFactory.createEngineDescription(ICUSegmenter.class, new Object[0]);
+////					AnalysisEngineDescription lemmatizer = AnalysisEngineFactory.createEngineDescription(MateLemmatizer.class, new Object[0]);
+//					AnalysisEngineDescription engineDescription = AnalysisEngineFactory. createEngineDescription(segmenter/*, lemmatizer*/);
+//					engine = AnalysisEngineFactory.createEngine(engineDescription);
+//					lemmatizationAnalysisEngines.put(languageCode, engine);
+//				} catch (ResourceInitializationException e) {
+//					throw new RuntimeException("Unable to initialize a needed analysis engine during lemmatization.", e);
+//				}
+//			}
+//			return lemmatizationAnalysisEngines.get(languageCode);
+//		} else {
+//			return null;
+//		}
+//	}
 }

@@ -1,0 +1,10 @@
+yes===yes;
+to===to;
+né===né;
+'s==='s;
+no===no;
+s'===s';
+O===O;
+yup===yup;
+mehopes===mehopes;
+like===like;

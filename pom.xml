@@ -229,14 +229,33 @@
 			</exclusions>
 		</dependency>
 		<dependency>
+		    <groupId>edu.stanford.nlp</groupId>
+		    <artifactId>stanford-corenlp</artifactId>
+		    <version>3.7.0</version>
+			<exclusions>
+				<exclusion> <!--  exclude here since newer version gets included under org.ejml -->
+					<groupId>com.googlecode.efficient-java-matrix-library</groupId>
+					<artifactId>ejml</artifactId>
+				</exclusion>
+			</exclusions>
+		    <classifier>models</classifier>
+		</dependency>
+		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 			<artifactId>de.tudarmstadt.ukp.dkpro.core.api.segmentation-asl</artifactId>
 			<version>1.8.0</version>
+		</dependency>
+		 -->
+		<dependency>
+		    <groupId>fi.seco</groupId>
+		    <artifactId>hfst</artifactId>
+		    <version>1.1.5</version>
 		</dependency>
 
         <!-- used by t-SNE -->

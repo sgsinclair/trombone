@@ -1,0 +1,6 @@
+tu===tu;
+ne===ne;
+-ci===-ci;
+-là===-là;
+ô===ô;
+parce===parce;

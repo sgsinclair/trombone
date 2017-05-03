@@ -22,4 +22,5 @@ public interface NlpAnnotator {
 	List<DocumentEntity> getEntities(CorpusMapper corpusMapper,
 			IndexedDocument indexedDocument, Collection<EntityType> types, FlexibleParameters parameters)
 			throws IOException;
+	
 }

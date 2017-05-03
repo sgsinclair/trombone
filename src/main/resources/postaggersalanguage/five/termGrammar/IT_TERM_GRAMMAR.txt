@@ -1,0 +1,168 @@
+Ss
+Ss	Ss
+SP
+Ss	E	Ss
+Ss	EA	Ss
+Ss	EA	Sp
+Ss	SP
+Ss	E	Sp
+As	Ss
+SP	SP
+Sn
+Sn	Ss
+SP	Ss
+Ss	SWn
+Ss	As	Ss
+Ss	E	SP
+Ss	E	Sn
+Ss	As	SP
+Sp	E	Ss
+Sn	E	Ss
+Ss	EA	SP
+Sp	EA	SP
+SWn
+Ss	As	E	Ss
+Ss	Sn
+Sp	EA	Ss
+SP	EA	SP
+Sn	EA	Sp
+Ss	E	Ss	SP
+Ss	E	As	Ss
+Sn	EA	Ss
+Ss	As	EA	Ss
+Ss	Sp
+Ss	As	EA	Sp
+As	E	SP
+Sp	Sp	EA	SP
+Ss	EA	Sn
+As	E	Ss
+Ss	E	RI	Ss
+Ss	E	RD	Ss
+B	Ss
+Sp	Ss
+Sp	SP
+Sp
+Sp	Sp
+SP	As	E	Ss
+Ss	E	RD	Sp
+Sn	E	Sp
+SP	E	SP
+As	EA	Ss
+As	Ss	EA	Sp
+Ss	Vp	E	Ss
+SP	EA	Sp
+SP	As	Ss
+SP	As	EA	Ss
+Ss	E	SP	SP
+Ss	EA	Ss	SP
+Ss	As	E	Sp
+Ss	E	Ss	Ss
+Ss	As	E	SP
+SP	EA	SP	SP
+Ss	BN	Ss
+Sp	Ap	EA	Ss
+Ss	SP	SP
+Ss	EA	SP	Ss
+SWn	Ss
+SP	EA	Ss
+SP	SP	SP
+SP	As	EA	SP
+SP	As	SP
+Sp	EA	Sp
+Sn	SWn
+Ss	As	EA	SP
+SP	Ss	EA	Sp
+Ap	Sp
+Sp	Sp	SP
+Ss	As	E	Sn
+Sn	EA	SP
+Ss	E	BN	Ss
+Ss	E	N	Sp
+SP	Ss	SP
+B	As	Ss
+Ss	E	RD	Sn
+Sp	E	Sp
+Ss	Ss	E	Ss
+SWn	E	Ss
+Ap	CC	Ap	Sp
+Ss	EA	Sp	SP
+Ss	Ss	Ss
+Sp	Sn
+Ss	Sn	Ss
+Sn	E	SP
+As	EA	Sp
+SP	As	Ss	SP
+Ss	EA	SP	SP
+SP	SWn
+BN	Ss
+Ss	E	As	Sn
+Sp	EA	SP	SP
+Ss	Sp	E	Ss
+Ss	As	As	SP
+Ss	EA	Sp	SWn
+Ap	SP
+SP	As	EA	Sp
+SP	Ap	E	SP
+Sp	Ap	E	Ss
+SP	Vf	EA	Ss
+SP	E	RD	Ss
+Ap	Ss
+Ss	Ss	EA	Sp
+Sn	E	Ss	Ss
+BN	Ss	EA	Sp
+SP	EA	Sp	SP
+Ss	Sp	EA	Ss
+Sn	Sp
+Sp	Ap	E	SP
+SP	SWn	SP
+SP	Sp	SP	SP
+Ss	E	Ss	Sp
+Ss	B	EA	Ss
+Ss	B	EA	Sp
+SP	Sp
+SP	EA	SP	Ss
+Ss	SWn	Ss
+Sn	E	Ap	Sp
+Sn	As	Ss
+Sn	E	RI	Ss
+Ss	CC	Ss	SP
+As	As	Ss
+Ss	Vp	EA	Sn
+Ss	Vp	EA	Sp
+SP	Ss	Ss
+As	Ss	E	Sp
+As	Sn	E	Ss
+Ss	E	RI	SP
+Ss	RD	Ss
+B	CC	SP	SP
+Ss	Ss	SWn
+As	BN	Ss
+SP	EA	Ss	SWn
+B	EA	Sp
+Ss	PR	Vip3	Ss
+Ss	As	SWn
+Sp	EA	SP	SWn
+Sp	E	Sn
+Ss	Ss	E	Sp
+SP	Ss	E	Ss
+EA	Ss	SP
+Ss	Ss	SP
+Sn	E	RD	SP
+As	EA	As	SP
+Ap	E	Ss
+Ss	Sp	Ss
+Ss	EA	SWn
+B	E	Ss
+Sp	E	RD	Ss
+As	SWn
+Ss	E	SWn
+Ss	SP	E	Sn
+As	E	As	Ss
+Sp	Ap	SP
+Sn	As	EA	Sp
+B	E	As	Ss
+As	E	SP	SP
+As	As	E	Ss
+As	Sn
+As	EA	SP	SP
+SP	E	Ss

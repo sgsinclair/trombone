@@ -1,0 +1,11 @@
+lo===lo;
+cada===cada;
+el===el;
+los===los;
+la===la;
+mismos===mismos;
+mismas===mismas;
+uno===uno;
+un===un;
+cierto===cierto;
+las===las;

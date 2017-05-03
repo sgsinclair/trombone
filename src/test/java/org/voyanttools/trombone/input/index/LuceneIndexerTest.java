@@ -122,11 +122,11 @@ public class LuceneIndexerTest {
 		
 		DocumentTokens tokens = new DocumentTokens(storage, parameters);
 		tokens.run();
-		for (DocumentToken documentToken : tokens.getDocumentTokens()) {
-			if (documentToken.getTokenType()==TokenType.lexical) {
-				System.out.println(documentToken.getTerm());
-			}
-		}
+//		for (DocumentToken documentToken : tokens.getDocumentTokens()) {
+//			if (documentToken.getTokenType()==TokenType.lexical) {
+//				System.out.println(documentToken.getTerm());
+//			}
+//		}
 		
 
 		storage.destroy();		
@@ -207,6 +207,27 @@ public class LuceneIndexerTest {
 		DocumentMetadata documentMetadata = corpus.getDocument(0).getMetadata();
 		assertEquals(28, documentMetadata.getSentencesCount());
 
+	}
+	
+	@Test
+	public void testLemmas() throws IOException {
+		Storage storage = TestHelper.getDefaultTestStorage();
+
+		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr")+"/udhr-en.txt"});
+		CorpusCreator creator = new CorpusCreator(storage, parameters);
+		creator.run();
+		parameters.removeParameter("file");
+		parameters.setParameter("corpus", creator.getStoredId());
+		parameters.setParameter("withPosLemmas", "true");
+		
+		DocumentToken token;
+		DocumentTokens documentTokens = new DocumentTokens(storage, parameters);
+		documentTokens.run();
+		List<DocumentToken> tokens = documentTokens.getDocumentTokens();
+		assertEquals(101, tokens.size());
+		token = tokens.get(2);
+		assertEquals("Universal", token.getTerm());
+		assertEquals("universal", token.getLemma());
 	}
 	
 	private void outputTerms(TermsEnum termsEnum) throws IOException {

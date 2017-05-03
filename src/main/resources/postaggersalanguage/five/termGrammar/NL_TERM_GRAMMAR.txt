@@ -1,0 +1,61 @@
+N
+Adj	N
+N	Prep	Art	N
+N	Prep	N
+N	N
+Adj	Adj	N
+N	Prep	Adj	N
+Adj	N	Prep	N
+Adj	N	N
+Adv	N
+N	Prep	N	N
+Num	N
+N	N	N
+Pron	N
+Num
+Adj	Num	N
+Adj	V	N
+Adj	Conj	Adj	N
+N	V	N
+Prep	N
+N	Prep	Num	N
+N	Adj	N
+N	Prep	Num
+N	Prep	V	N
+Adj	Prep	N
+Adv	Prep	N
+N	Art	N
+Num	V	N
+N	Conj	N	N
+Art	N
+Adv	V	N
+N	Conj	Art	N
+Num	Prep	N
+Adj	V	Prep	N
+Pron	Prep	N
+Adj	Conj	N
+Adj	Adj	Conj	N
+Prep	N	Adj	N
+N	N	Prep	N
+Adj	Adj	N	N
+Int	N
+Num	Prep	N	N
+Art	N	N
+N	Adv	N
+Pron	V	N
+Adj	Conj	Num	N
+N	Adj	Prep	N
+Prep	N	Conj	N
+Pron	Prep	Art	N
+Art	Prep	N
+Adj	N	Prep	Num
+N	Num	N
+N	Prep	Pron	N
+N	Prep	Art	Num
+Conj	N
+Punc	Conj	N
+Adv	Adj	N
+Adv	Conj	N
+Adj	Prep	Adj	N
+N	V	Art	N
+Adj	N	N	N

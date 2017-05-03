@@ -1,0 +1,12 @@
+un'===un';
+lo===lo;
+coi===coi;
+una===una;
+l'===l';
+le===le;
+la===la;
+il===il;
+uno===uno;
+un===un;
+gli===gli;
+i===i;
