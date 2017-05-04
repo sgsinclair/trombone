@@ -252,6 +252,16 @@
 			<version>1.8.0</version>
 		</dependency>
 		 -->
+		 <dependency>
+		    <groupId>net.sf.extjwnl</groupId>
+		    <artifactId>extjwnl</artifactId>
+		    <version>1.9.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>net.sf.extjwnl</groupId>
+		    <artifactId>extjwnl-data-wn31</artifactId>
+		    <version>1.2</version>
+		</dependency>
 		<dependency>
 		    <groupId>fi.seco</groupId>
 		    <artifactId>hfst</artifactId>
