@@ -15,7 +15,7 @@ import org.voyanttools.trombone.nlp.PosLemmas;
 
 import opennlp.tools.util.Span;
 
-public class OpenNlpLemmaTokenizer extends Tokenizer {
+final public class OpenNlpLemmaTokenizer extends Tokenizer {
 
 	private OpenNlpAnnotator annotator;
 	private Iterator<PosLemmas> tokensIterator;

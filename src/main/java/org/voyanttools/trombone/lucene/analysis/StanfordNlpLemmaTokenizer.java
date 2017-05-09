@@ -19,7 +19,7 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 
-public class StanfordNlpLemmaTokenizer extends Tokenizer {
+final public class StanfordNlpLemmaTokenizer extends Tokenizer {
 	
 	private StanfordNlpAnnotator annotator;
 	private Iterator<CoreLabel> tokensIterator;
