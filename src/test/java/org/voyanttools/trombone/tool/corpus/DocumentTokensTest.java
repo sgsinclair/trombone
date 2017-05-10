@@ -48,5 +48,56 @@ public class DocumentTokensTest {
 		assertEquals("it", tokens.get(2).getLemma());
 		
 	}
+	
+	@Test
+	public void testLanguages() throws IOException {
+		Storage storage = TestHelper.getDefaultTestStorage();
+
+		FlexibleParameters parameters;
+		
+		parameters = new FlexibleParameters();
+		parameters.addParameter("file",  new String[]{TestHelper.getResource("udhr/udhr-en.txt").getPath(),TestHelper.getResource("udhr/udhr-es.txt").getPath(),TestHelper.getResource("udhr/udhr-fr.txt").getPath()});
+		parameters.addParameter("string", "我们第一届全国人民代表大会第一次会议");
+		
+		RealCorpusCreator creator = new RealCorpusCreator(storage, parameters);
+		creator.run();
+		parameters.setParameter("corpus", creator.getStoredId());
+		
+		DocumentTokens docTokens;
+		List<DocumentToken> tokens;
+		
+		parameters.setParameter("withPosLemmas", "true");
+		parameters.setParameter("noOthers", "true");
+		parameters.setParameter("docIndex", "0");
+		docTokens = new DocumentTokens(storage, parameters);
+		docTokens.run();
+		tokens = docTokens.getDocumentTokens();
+		assertEquals(50, tokens.size());
+		assertEquals("universal", tokens.get(0).getLemma());
+		
+//		parameters.setParameter("docIndex", "1");
+//		docTokens = new DocumentTokens(storage, parameters);
+//		docTokens.run();
+//		tokens = docTokens.getDocumentTokens();
+//		assertEquals(50, tokens.size());
+//		assertEquals("todo", tokens.get(2).getLemma());
+		
+		parameters.setParameter("docIndex", "2");
+		docTokens = new DocumentTokens(storage, parameters);
+		docTokens.run();
+		tokens = docTokens.getDocumentTokens();
+		assertEquals(50, tokens.size());
+		assertEquals("article", tokens.get(6).getLemma());
+		
+		parameters.setParameter("docIndex", "3");
+		docTokens = new DocumentTokens(storage, parameters);
+		boolean hasException = false;
+		try {
+			docTokens.run();
+		} catch (Exception e) {
+			hasException = true;
+		}
+		assertTrue(hasException);
+	}
 
 }

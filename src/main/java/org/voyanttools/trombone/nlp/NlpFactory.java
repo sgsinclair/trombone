@@ -3,6 +3,7 @@
  */
 package org.voyanttools.trombone.nlp;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,7 +41,7 @@ public class NlpFactory {
 		return nlpAnnotators.get(languageCode);
 	}
 	
-	public synchronized OpenNlpAnnotator getOpenNlpAnnotator(String languageCode) {
+	public synchronized OpenNlpAnnotator getOpenNlpAnnotator(String languageCode) throws IOException {
 		if (!openNlpAnnotators.containsKey(languageCode)) {
 			OpenNlpAnnotator openNlpAnnotator = new OpenNlpAnnotator(languageCode);
 			openNlpAnnotators.put(languageCode, openNlpAnnotator);

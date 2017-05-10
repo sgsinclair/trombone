@@ -3,6 +3,7 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -14,6 +15,7 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -30,9 +32,6 @@ import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.data.PointerType;
 import net.sf.extjwnl.data.PointerUtils;
-import net.sf.extjwnl.data.Synset;
-import net.sf.extjwnl.data.Word;
-import net.sf.extjwnl.data.list.PointerTargetNode;
 import net.sf.extjwnl.data.list.PointerTargetNodeList;
 import net.sf.extjwnl.data.list.PointerTargetTree;
 import net.sf.extjwnl.data.relationship.AsymmetricRelationship;
@@ -48,7 +47,7 @@ public class SemanticGraph extends AbstractCorpusTool {
 	@XStreamOmitField
     private Dictionary dictionary;
 	
-	private Map<String, List<Word[]>> wordsMap = new HashMap<String, List<Word[]>>();
+	private List<RelatedWords> wordsList = new ArrayList<RelatedWords>();
 	
 	public SemanticGraph(Storage storage, FlexibleParameters parameters) throws JWNLException {
 		super(storage, parameters);
@@ -67,7 +66,6 @@ public class SemanticGraph extends AbstractCorpusTool {
 							POS pos = POS.getPOSForLabel(parts[1]);
 							IndexWord indexWord = dictionary.getIndexWord(pos, parts[0]);
 							if (indexWord!=null) {
-								wordsMap.put(indexWord.getLemma(), new ArrayList<Word[]>());
 								forms.add(indexWord);
 							}
 						} catch (JWNLException e) {
@@ -94,7 +92,6 @@ public class SemanticGraph extends AbstractCorpusTool {
 							try {
 								IndexWord word = dictionary.getIndexWord(poss, lemma);
 								if (word!=null) {
-									wordsMap.put(lemma, new ArrayList<Word[]>());
 									forms.add(word);
 								}
 							}  catch (JWNLException e) {
@@ -109,12 +106,20 @@ public class SemanticGraph extends AbstractCorpusTool {
 		}
 		
 		if (forms.size()>1) {
+			int start = parameters.getParameterIntValue("start", 0);
+			int limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
+			FlexibleQueue<RelatedWords> queue = new FlexibleQueue<RelatedWords>(new Comparator<RelatedWords>() {
+				@Override
+				public int compare(RelatedWords o1, RelatedWords o2) {
+					return Integer.compare(o1.relationship.getDepth(), o2.relationship.getDepth());
+				}
+			}, start+limit);
+
 			int i = 0;
 			for (IndexWord outerWord : forms) {
 				int j = 0;
 				for (IndexWord innerWord : forms) {
 					if (j>i) {
-						
 						RelationshipList list;
 						try {
 							list = RelationshipFinder.findRelationships(outerWord.getSenses().get(0), innerWord.getSenses().get(0), PointerType.HYPERNYM);
@@ -125,39 +130,16 @@ public class SemanticGraph extends AbstractCorpusTool {
 						}
 						if (list.size()==0) {continue;}
 						AsymmetricRelationship relationship = (AsymmetricRelationship) list.get(0);
-						PointerTargetNodeList nodelist = relationship.getNodeList();
-						Word lastWord = null;
-						for (Object node : nodelist) {
-							Synset word = ((PointerTargetNode) node).getSynset();
-							boolean added = false;
-							for (Word w : word.getWords()) {
-								String lemma = w.getLemma();
-								if (wordsMap.containsKey(lemma)) {
-									if (lastWord!=null) {
-										wordsMap.get(lemma).add(new Word[]{lastWord, w});
-									}
-									lastWord = w;
-									added = true;
-									break;
-								}
-							}
-							if (!added) {
-								Word theWord = word.getWords().get(0);
-								String lemma = theWord.getLemma();
-								if (wordsMap.containsKey(lemma)==false) {
-									wordsMap.put(lemma, new ArrayList<Word[]>());
-								}
-								if (lastWord!=null) {
-									wordsMap.get(lemma).add(new Word[]{lastWord, theWord});
-									lastWord = theWord;
-								}
-							}
+						if (relationship==null) {
+							System.out.println(relationship);
 						}
+						queue.offer(new RelatedWords(innerWord, outerWord, relationship));
 					}
 					j++;
 				}
 				i++;
 			}
+			wordsList.addAll(queue.getOrderedList());
 		}
 		
 	}
@@ -239,10 +221,9 @@ public class SemanticGraph extends AbstractCorpusTool {
 			// first calculate frequencies
 	        Map<String, AtomicInteger> edgeFreqs = new HashMap<String, AtomicInteger>();
 	        Map<String, AtomicInteger> nodeFreqs = new HashMap<String, AtomicInteger>();
-			for (Map.Entry<String, List<Word[]>> entry : semanticGraph.wordsMap.entrySet()) {
-				for (Word[] words : entry.getValue()) {
-					String src = words[0].getLemma();
-					String target = words[1].getLemma();
+			for (RelatedWords relatedWords : semanticGraph.wordsList) {
+					String src = relatedWords.firstWord.getLemma();
+					String target = relatedWords.secondWord.getLemma();
 					for (String s : new String[]{src,target}) {
 						if (nodeFreqs.containsKey(s)==false) {
 							nodeFreqs.put(s, new AtomicInteger(1));
@@ -255,7 +236,6 @@ public class SemanticGraph extends AbstractCorpusTool {
 						edgeFreqs.put(key, new AtomicInteger(1));
 					}
 					edgeFreqs.get(key).incrementAndGet();
-				}
 			}
 			
 //	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "nodes", List.class);
@@ -296,6 +276,17 @@ public class SemanticGraph extends AbstractCorpusTool {
 			return null;
 		}
 		
+	}
+	
+	private class RelatedWords {
+		private IndexWord firstWord;
+		private IndexWord secondWord;
+		private Relationship relationship;
+		private RelatedWords(IndexWord firstWord, IndexWord secondWord, Relationship relationship) {
+			this.firstWord = firstWord;
+			this.secondWord = secondWord;
+			this.relationship = relationship;
+		}
 	}
 
 }

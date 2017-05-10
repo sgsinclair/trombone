@@ -165,8 +165,9 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 					}
 				}
 				if (lemmas == null) {
+					String lang = corpusMapper.getCorpus().getDocument(id).getMetadata().getLanguageCode();
 					LemmaAnalyzer analyzer = new LemmaAnalyzer(storage.getNlpAnnotatorFactory());
-					TokenStream tokenStream = analyzer.tokenStream(TokenType.lemma.name(), document+"<!-- language=en -->");
+					TokenStream tokenStream = analyzer.tokenStream(TokenType.lemma.name(), document+"<!-- language="+lang+" -->");
 					tokenStream.reset();
 					while (tokenStream.incrementToken()) {}
 					// no need to increment

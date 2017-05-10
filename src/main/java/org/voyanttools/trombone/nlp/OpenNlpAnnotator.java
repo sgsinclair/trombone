@@ -11,13 +11,13 @@ public class OpenNlpAnnotator {
 	private POSTaggersALanguage annotator;
 	private String lang;
 	
-	public OpenNlpAnnotator(String lang) {
-		annotator = new POSTaggersALanguage();
+	public OpenNlpAnnotator(String lang) throws IOException {
+		annotator = new POSTaggersALanguage(lang);
 		this.lang = lang;
 	}
 	
 	public PosLemmas getPosLemmas(String text, String lang) throws IOException {
-		return annotator.getLemmatized(text, lang);
+		return annotator.getLemmatized(text);
 		
 	}
 	

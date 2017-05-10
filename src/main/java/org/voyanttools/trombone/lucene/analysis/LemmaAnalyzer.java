@@ -56,8 +56,13 @@ public class LemmaAnalyzer extends LexicalAnalyzer {
 				TokenStream stream = new LowerCaseFilter(tokenizer);
 				return new TokenStreamComponents(tokenizer, stream);
 			} */
-			if (lang.equals("en") || lang.equals("fr") || lang.equals("de") || lang.equals("it") || lang.equals("nl")) {
-				OpenNlpAnnotator annotator = factory.getOpenNlpAnnotator(lang);
+			if (lang.equals("en") || lang.equals("fr") || lang.equals("de") || lang.equals("it") || lang.equals("nl") || lang.equals("es")) {
+				OpenNlpAnnotator annotator;
+				try {
+					annotator = factory.getOpenNlpAnnotator(lang);
+				} catch (IOException e) {
+					throw new RuntimeException("Unable to load lemmatizer for language: "+lang);
+				}
 				openNlpTokenizer = new OpenNlpLemmaTokenizer(annotator);
 				TokenStream stream = new LowerCaseFilter(openNlpTokenizer);
 				return new TokenStreamComponents(openNlpTokenizer, stream);
