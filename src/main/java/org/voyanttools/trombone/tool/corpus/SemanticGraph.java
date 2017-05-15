@@ -13,6 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentToken;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -27,6 +28,7 @@ import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
+import edu.stanford.nlp.util.StringUtils;
 import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
@@ -47,22 +49,37 @@ public class SemanticGraph extends AbstractCorpusTool {
 	@XStreamOmitField
     private Dictionary dictionary;
 	
+	@XStreamOmitField
+	private Keywords whiteList;
+	
 	private List<RelatedWords> wordsList = new ArrayList<RelatedWords>();
 	
 	public SemanticGraph(Storage storage, FlexibleParameters parameters) throws JWNLException {
 		super(storage, parameters);
         dictionary = Dictionary.getDefaultResourceInstance();
+		whiteList = new Keywords();
+		if (parameters.getParameterValue("whiteList", "").isEmpty()==false) {
+			try {
+				whiteList.load(storage, parameters.getParameterValues("whiteList"));
+			} catch (IOException e) {
+				throw new IllegalArgumentException("Unable to load whitelist: "+StringUtils.join(parameters.getParameterValues("whiteList"), ","));
+			}
+		}
     }
 	
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
 		Set<IndexWord> forms = new HashSet<IndexWord>();
+		Keywords stopwords = getStopwords(corpusMapper.getCorpus());
 		if (parameters.containsKey("posLemmas")) {
 			for (String posLemma : parameters.getParameterValues("posLemmas")) {
 				for (String pl : posLemma.split(",")) {
 					if (pl.contains("/")) {
 						String[] parts = pl.trim().split("/");
+						if (whiteList.isEmpty()==false && whiteList.isKeyword(parts[0])==false) {continue;}
+						if (stopwords.isKeyword(parts[0])) {continue;}
 						try {
+							
 							POS pos = POS.getPOSForLabel(parts[1]);
 							IndexWord indexWord = dictionary.getIndexWord(pos, parts[0]);
 							if (indexWord!=null) {
@@ -85,6 +102,9 @@ public class SemanticGraph extends AbstractCorpusTool {
 				documentTokens.run(corpusMapper);
 				for (DocumentToken documentToken : documentTokens.getDocumentTokens()) {
 					String lemma = documentToken.getLemma();
+					if (whiteList.isEmpty()==false && whiteList.isKeyword(lemma)==false) {continue;}
+					if (stopwords.isKeyword(lemma)) {continue;}
+
 					String pos = documentToken.getPos();
 					if (lemma!=null && pos!=null) {
 						POS poss = POS.getPOSForLabel(pos.toLowerCase());
@@ -117,8 +137,10 @@ public class SemanticGraph extends AbstractCorpusTool {
 
 			int i = 0;
 			for (IndexWord outerWord : forms) {
+				if (outerWord.getLemma()==null) {continue;}
 				int j = 0;
 				for (IndexWord innerWord : forms) {
+					if (innerWord.getLemma()==null) {continue;}
 					if (j>i) {
 						RelationshipList list;
 						try {

@@ -160,15 +160,19 @@ public class FileStorage implements Storage {
 	
 	@Override
 	public void storeString(String string, String id, Location location) throws IOException {
+		storeString(string, id, location, false);
+	}
+
+	@Override
+	public void storeString(String string, String id, Location location, boolean canOverwrite) throws IOException {
 		File file = getResourceFile(id, location);
 		if (file.getParentFile().exists()==false) { // make sure directory exists
 			file.getParentFile().mkdirs();
 		}
-		if (!isStored(id, location)) {
+		if (!isStored(id, location) || canOverwrite) {
 			FileUtils.writeStringToFile(file, string, "UTF-8");		
 		}
 	}
-
 
 	@Override
 	public String storeStrings(Collection<String> strings, Location location) throws IOException {
@@ -186,6 +190,7 @@ public class FileStorage implements Storage {
 	public String retrieveString(String id, Location location) throws IOException {
 		File file = getResourceFile(id, location);
 		if (file.exists()==false) throw new IOException("An attempt was made to read a store string that that does not exist: "+id);
+		
 		return FileUtils.readFileToString(file);
 	}
 	
@@ -216,10 +221,11 @@ public class FileStorage implements Storage {
 	File getResourceFile(String id, Location location) {
 		// package level for migrators
 		if (id==null) {
-			System.err.println(getObjectStoreDirectory(location)+"\t"+id);
-			
+			throw new IllegalArgumentException("No ID provided for stored resource");
 		}
-		return new File(getObjectStoreDirectory(location),  id);
+		File file = new File(getObjectStoreDirectory(location),  id+".gz");
+		if (file.exists()) {return file;}
+		else {return new File(getObjectStoreDirectory(location),  id);}
 	}
 	
 	public boolean copyResource(File source, String id, Location location) throws IOException {
@@ -250,6 +256,7 @@ public class FileStorage implements Storage {
 		if (file.getParentFile().exists()==false) { // make sure directory exists
 			file.getParentFile().mkdirs();
 		}
+		
 		FileOutputStream fileOutputStream = new FileOutputStream(file);
 		ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
 		out.writeObject(obj);

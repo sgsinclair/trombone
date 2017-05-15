@@ -30,6 +30,7 @@ import java.util.List;
 import org.mapdb.DB;
 import org.voyanttools.trombone.lucene.LuceneManager;
 import org.voyanttools.trombone.nlp.NlpFactory;
+import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.storage.file.FileMigrator;
 
 /**
@@ -70,6 +71,8 @@ public interface Storage {
 	public String storeString(String string, Location location) throws IOException;
 	
 	public void storeString(String string, String id, Location location) throws IOException;
+	
+	public void storeString(String string, String id, Location location, boolean canOverwrite) throws IOException;
 
 	public String retrieveString(String id, Location location) throws IOException;
 	
@@ -122,5 +125,6 @@ public interface Storage {
 //	public NlpAnnotator getNlpAnnotator(String languageCode);
 	
 	public NlpFactory getNlpAnnotatorFactory();
+
 
 }

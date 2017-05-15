@@ -97,7 +97,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	private int comparisonCorpusTotalTokens = 0;
 	
 	@XStreamOmitField
-	private Keywords whiteList;;
+	private Keywords whiteList;
 	
 	/**
 	 * @param storage

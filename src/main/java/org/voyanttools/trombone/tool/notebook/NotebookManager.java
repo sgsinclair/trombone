@@ -31,6 +31,9 @@ public class NotebookManager extends AbstractTool {
 	public NotebookManager(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
+	public float getVersion() {
+		return super.getVersion()+1f;
+	}
 
 	@Override
 	public void run() throws IOException {
@@ -39,6 +42,9 @@ public class NotebookManager extends AbstractTool {
 		} 
 		if (parameters.containsKey("notebook")) {
 			notebook = parameters.getParameterValue("notebook");
+			if (parameters.getParameterBooleanValue("autosave")) {
+				notebook+=".autosave";
+			}
 			if (jsonData==null && notebook.startsWith("http")) {
 				URI uri;
 				try {
@@ -54,6 +60,11 @@ public class NotebookManager extends AbstractTool {
 				} finally {
 					if (is!=null) is.close();
 				}
+			} else if (jsonData!=null && notebook!=null && notebook.isEmpty()==false && parameters.getParameterBooleanValue("autosave")) {
+				// notebook and jsonData defined, let's assume auto-save
+				storage.storeString(jsonData, notebook, Location.notebook, true);
+				jsonData = null;
+				return;
 			} else if (jsonData==null && storage.isStored(notebook, Location.notebook)) {
 				jsonData = storage.retrieveString(notebook, Storage.Location.notebook);
 			}

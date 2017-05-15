@@ -106,9 +106,16 @@ public class MemoryStorage implements Storage {
 	
 	@Override
 	public void storeString(String string, String id, Location location) {
-		storedObjectsMap.put(id, string);
+		storeString(string, id, location, false);
 	}
 
+	@Override
+	public void storeString(String string, String id, Location location, boolean canOverwrite) {
+		if (storedObjectsMap.containsKey("id")==false || canOverwrite) {
+			storedObjectsMap.put(id, string);
+		}
+	}
+	
 	@Override
 	public String retrieveString(String id, Location location) throws IOException {
 		Object string = (String) storedObjectsMap.get(id);
