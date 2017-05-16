@@ -23,6 +23,8 @@ package org.voyanttools.trombone.model;
 
 import java.text.Normalizer;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -64,6 +66,7 @@ public class DocumentTerm {
 	protected int[] positions;
 	protected int[] offsets;
 	protected CorpusTermMinimal corpusTermMinimal;
+	private transient Map<Integer, float[]> relativeDistributionsMap;
 	
 	public DocumentTerm(int docIndex, String docId, String term, int rawFreq, int totalTokens, float zscore, int[] positions, int[] offsets, CorpusTermMinimal corpusTermMinimal) {
 		this.docIndex = docIndex;
@@ -79,6 +82,7 @@ public class DocumentTerm {
 		this.tfidf = Float.NaN;
 		this.zscoreRatio = Float.NaN;
 		this.corpusTermMinimal = corpusTermMinimal;
+		relativeDistributionsMap = new HashMap<Integer, float[]>();
 	}
 	public int getRawFrequency() {
 		return rawFreq;
@@ -127,12 +131,18 @@ public class DocumentTerm {
 	
 	public float[] getRelativeDistributions(int bins) {
 		if (positions==null || bins ==0) return new float[0];
-		int[] rawDistributions = getRawDistributions(bins);
-		float[] distributions = new float[bins];
-		for (int i=0, len = rawDistributions.length; i<len; i++) {
-			distributions[i] = (float) rawDistributions[i] / totalTermsCount;
+		if (relativeDistributionsMap.containsKey(bins)) {
+			return relativeDistributionsMap.get(bins);
+		} else {
+			int[] rawDistributions = getRawDistributions(bins);
+			float[] distributions = new float[bins];
+			for (int i=0, len = rawDistributions.length; i<len; i++) {
+				distributions[i] = (float) rawDistributions[i] / totalTermsCount;
+			}
+			relativeDistributionsMap.put(bins, distributions);
+			return distributions;
+			
 		}
-		return distributions;
 	}
 	
 	public static Comparator<DocumentTerm> getComparator(Sort sort) {
