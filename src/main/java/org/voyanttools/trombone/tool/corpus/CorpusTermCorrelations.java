@@ -83,7 +83,7 @@ public class CorpusTermCorrelations extends AbstractTerms {
 				}
 			}
 		}
-		correlations.addAll(queue.getOrderedList());
+		correlations.addAll(queue.getOrderedList(start));
 	}
 	private CorpusTerms getCorpusTerms() {
 		FlexibleParameters params = new FlexibleParameters();

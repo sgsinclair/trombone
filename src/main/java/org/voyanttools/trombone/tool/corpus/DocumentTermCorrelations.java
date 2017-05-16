@@ -90,7 +90,7 @@ public class DocumentTermCorrelations extends AbstractTerms {
 				}
 			}
 		}
-		correlations.addAll(queue.getOrderedList());
+		correlations.addAll(queue.getOrderedList(start));
 	}
 
 	public static class DocumentTermCorrelationsConverter implements Converter {
