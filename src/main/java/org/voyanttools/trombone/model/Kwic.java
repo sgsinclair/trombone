@@ -30,12 +30,14 @@ import org.apache.commons.lang3.StringUtils;
 import org.bouncycastle.util.Arrays;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("kwic")
 public class Kwic implements Serializable {
 	
 	public enum Sort {

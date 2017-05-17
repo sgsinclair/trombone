@@ -30,12 +30,14 @@ import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("document")
 @XStreamConverter(DocumentConverter.class)
 public class IndexedDocument implements DocumentContainer, Comparable<IndexedDocument> {
 

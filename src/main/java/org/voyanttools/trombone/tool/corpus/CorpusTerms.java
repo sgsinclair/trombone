@@ -491,7 +491,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
 			for (CorpusTerm corpusTerm : corpusTerms) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", String.class); // not written in JSON
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
 		        
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
 				writer.setValue(corpusTerm.getTerm());

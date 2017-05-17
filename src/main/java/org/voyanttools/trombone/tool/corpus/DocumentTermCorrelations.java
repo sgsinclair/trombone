@@ -120,7 +120,7 @@ public class DocumentTermCorrelations extends AbstractTerms {
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlations", Map.class);
 			for (DocumentTermsCorrelation documentTermCorrelation : documentTermCorrelations.correlations) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlations", String.class); // not written in JSON
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", String.class); // not written in JSON
 		        
 		        int i = 0;
 		        for (DocumentTerm documentTerm : documentTermCorrelation.getDocumentTerms()) {

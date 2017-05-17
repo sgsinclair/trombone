@@ -9,12 +9,14 @@ import java.util.Comparator;
 
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("entity")
 public class CorpusEntity implements Serializable, Cloneable {
 
 	public enum Sort {

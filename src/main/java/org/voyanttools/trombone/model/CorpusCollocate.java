@@ -5,7 +5,10 @@ import java.util.Comparator;
 
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+
+@XStreamAlias("collocate")
 public class CorpusCollocate implements Comparable<CorpusCollocate> {
 	
 	private String term;

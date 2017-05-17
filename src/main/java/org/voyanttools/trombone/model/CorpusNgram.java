@@ -8,12 +8,14 @@ import java.util.Comparator;
 
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("ngram")
 public class CorpusNgram {
 
 	public enum Sort {

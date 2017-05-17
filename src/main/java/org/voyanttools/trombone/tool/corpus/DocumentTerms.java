@@ -315,7 +315,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
 			for (DocumentTerm documentTerm : documentTerms) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", String.class); // not written in JSON
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
 		        
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
 				writer.setValue(documentTerm.getTerm());

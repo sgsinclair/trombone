@@ -42,8 +42,10 @@ synon: often frequently
 synon: appear show
 synon: voyanttool cirrus
 key: occurrences 0
-  decomp: *
-    reasmb: goto concordance
+   decomp: * of the word * *
+	reasmb: You want to see a concordance of " (2) " ? <!-- {"tool": "Contexts", "width": "600px", "params": {"query": " (2) "}} -->
+   decomp: * of * *
+	reasmb: You want to see a concordance of " (2) " ? <!-- {"tool": "Contexts", "width": "600px", "params": {"query": " (2) "}} -->
 key: kwic 0
   decomp: *
     reasmb: goto concordance
