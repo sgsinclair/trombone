@@ -25,7 +25,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(DocumentSimilarity.DocSimConverter.class)
 public class DocumentSimilarity extends CA {
 	
-	public DocumentSimilarity(Storage storage, FlexibleParameters parameters) {
+	public DocumentSimilarity(Storage storage, FlexibleParameters parameters) throws IOException {
 		super(storage, parameters);
 	}
 

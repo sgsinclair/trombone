@@ -9,6 +9,7 @@ import java.util.Map;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.model.TokenType;
@@ -35,10 +36,14 @@ public class CA extends AnalysisTool {
 	protected double[][] columnProjections;
 	protected double[] dimensionPercentages;
 	
-	public CA(Storage storage, FlexibleParameters parameters) {
+	private Keywords whitelist;
+	
+	public CA(Storage storage, FlexibleParameters parameters) throws IOException {
 		super(storage, parameters);
 
 		this.caTerms = new ArrayList<RawCATerm>();
+		whitelist = new Keywords();
+		whitelist.load(storage, parameters.getParameterValues("whitelist", new String[0]));
 	}
 	
 	protected void doCA(double[][] freqMatrix) {
@@ -71,6 +76,7 @@ public class CA extends AnalysisTool {
         List<RawPCATerm> terms = this.getAnalysisTerms();
         for (i = 0; i < terms.size(); i++) {
         	RawPCATerm term = terms.get(i);
+        	if (whitelist.isEmpty()==false && whitelist.isKeyword(term.getTerm())==false) {continue;}
 	    	
 	    	v = new double[dimensions];
 	    	for (j = 0; j < dimensions; j++) {
