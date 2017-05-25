@@ -46,11 +46,11 @@ public class DocumentEntities extends AbstractCorpusTool {
 	 */
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
-				
-		for (IndexedDocument indexedDocument : corpusMapper.getCorpus()) {
+		List<String> ids = getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());
+		for (String docId : ids) {
 			// only check for "withDistributions" though this will actually shift to this class
 			// TODO: offset to token mapping should happen here instead of in the annotator
-			String id = "cached-document-entities-"+String.valueOf(this.getVersion())+DigestUtils.md5Hex(indexedDocument.getId()+parameters.getParameterValue("withDistributions",""));
+			String id = "cached-document-entities-"+String.valueOf(this.getVersion())+DigestUtils.md5Hex(docId+parameters.getParameterValue("withDistributions",""));
 			List<DocumentEntity> entitiesList = new ArrayList<DocumentEntity>();
 			if (storage.isStored(id, Storage.Location.object)) {
 				try {
@@ -60,6 +60,7 @@ public class DocumentEntities extends AbstractCorpusTool {
 				}
 			}
 			else {
+				IndexedDocument indexedDocument = corpusMapper.getCorpus().getDocument(docId);
 				String lang = indexedDocument.getMetadata().getLanguageCode();
 				if (lang.equals("en")) {
 					NlpAnnotator nlpAnnotator = storage.getNlpAnnotatorFactory().getNlpAnnotator(lang);
