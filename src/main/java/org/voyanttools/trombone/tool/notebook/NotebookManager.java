@@ -74,7 +74,7 @@ public class NotebookManager extends AbstractTool {
 			jsonData = null;
 			return;
 		}
-		if (jsonData==null) {
+		if (jsonData==null && !parameters.getParameterBooleanValue("failQuietly")) {
 			throw new RuntimeException("Unable to locate requested notebook.");
 		}
 	}
