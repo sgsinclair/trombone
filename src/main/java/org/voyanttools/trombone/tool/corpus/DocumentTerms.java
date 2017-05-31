@@ -100,6 +100,9 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	@XStreamOmitField
 	int minRawFreq;
 	
+	@XStreamOmitField
+	private Keywords whiteList;
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -114,6 +117,14 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		isNeedsOffsets = parameters.getParameterBooleanValue("withOffsets");
 		perDocLimit = parameters.getParameterIntValue("perDocLimit", Integer.MAX_VALUE);
 		minRawFreq = parameters.getParameterIntValue("minRawFreq", 0);
+		whiteList = new Keywords();
+		if (parameters.getParameterValue("whiteList", "").isEmpty()==false) {
+			try {
+				whiteList.load(storage, parameters.getParameterValues("whiteList"));
+			} catch (IOException e) {
+				throw new IllegalArgumentException("Unable to load whitelist: "+StringUtils.join(parameters.getParameterValues("whiteList"), ","));
+			}
+		}
 	}
 	
 	@Override
@@ -221,6 +232,10 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 					
 					while (bytesRef!=null) {
 						String termString = bytesRef.utf8ToString();
+						if (whiteList.isEmpty()==false && whiteList.isKeyword(termString)==false) {
+							bytesRef = termsEnum.next();
+							continue;
+						}
 						if (!stopwords.isKeyword(termString)) {
 							CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(termString);
 							int[] positions = null;
