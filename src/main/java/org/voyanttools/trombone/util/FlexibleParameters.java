@@ -177,6 +177,21 @@ public class FlexibleParameters implements Cloneable, Serializable {
 		addParameterWithObject(key, value);
 	
 	}
+	
+	/**
+	 * Adds an array of double values for a parameter. Previously added values are not
+	 * discarded.
+	 * 
+	 * @param key the key of the parameter
+	 * @param value the value of the parameter
+	 */
+	public synchronized void addParameter(String key, double[] values) {
+	
+		for (double v : values) {
+			addParameter(key, v);
+		}
+	
+	}
 
 	/**
 	 * Adds a parameter with an int value. Previously added values are not
@@ -648,6 +663,20 @@ public class FlexibleParameters implements Cloneable, Serializable {
 	public synchronized void setParameter(String key, double value) {
 	
 		setParameterWithObject(key, value);
+	
+	}
+	
+	/**
+	 * Sets the specified parameter while removing any existing values that
+	 * might exist.
+	 * 
+	 * @param key the key of the parameter
+	 * @param value the value of the parameter
+	 */
+	public synchronized void setParameter(String key, double[] values) {
+	
+		this.entries.remove(key);
+		addParameter(key, values);
 	
 	}
 
