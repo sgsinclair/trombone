@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.SortedSet;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.algorithms.pca.PrincipalComponentsAnalysis;
@@ -69,18 +68,20 @@ public class PCA extends AnalysisTool {
 
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
-		Corpus corpus = corpusMapper.getCorpus();
-		
-		int i;
-		int numDocs = corpus.size();
-		
 		double[] targetVector = null;
-		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
-//		if (target != null) this.properties.setParameter("type", "");
 		
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
+		double[][] freqMatrix = null;
+		if (this.parameters.containsKey("matrix")) {
+			String matrixStr = parameters.getParameterValue("matrix");
+			freqMatrix = this.getMatrixFromString(matrixStr);
+			this.addTermsFromMatrix(freqMatrix);
+		} else {
+			freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
+		}
+		
 		double[][] result = this.doPCA(freqMatrix);
 		
+		int i;
 		List<RawPCATerm> terms = this.getAnalysisTerms();
 		for (i = 0; i < terms.size(); i++) {
 			RawPCATerm term = terms.get(i);
@@ -97,6 +98,7 @@ public class PCA extends AnalysisTool {
 		if (target != null) {
 			double[][] minMax = AnalysisTool.getMinMax(result);
 			double distance = AnalysisTool.getDistance(minMax[0], minMax[1]) / 50;
+			List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
 			AnalysisTool.filterTermsByTarget(this.pcaTerms, targetVector, distance, initialTerms);
 //			this.maxOutputDataItemCount = this.pcaTypes.size();
 		}

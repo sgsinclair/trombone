@@ -294,6 +294,36 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 		return freqMatrix;
 	}
 	
+	// expected format: [[1,2,3],[4,5,6]]
+	protected double[][] getMatrixFromString(String matrixStr) {
+		double[][] freqMatrix = null;
+		matrixStr = matrixStr.replaceAll("^\\[", "").replaceAll("\\]$", "").replaceAll("\\s", "");
+		String[] rows = matrixStr.split("(?<=\\]),(?=\\[)");
+		for (int i = 0; i < rows.length; i++) {
+			String row = rows[i];
+			row = row.replaceAll("^\\[", "").replaceAll("\\]$", "");
+			String[] nums = row.split(",");
+			for (int j = 0; j < nums.length; j++) {
+				String num = nums[j];
+				if (freqMatrix == null) {
+					freqMatrix = new double[rows.length][nums.length];
+				}
+				double d = Double.valueOf(num);
+				freqMatrix[i][j] = d;
+			}
+		}
+		return freqMatrix;
+	}
+	
+	protected void addTermsFromMatrix(double[][] matrix) {
+		int dimensionSize = matrix.length;
+		if (dimensionSize > 0) {
+			for (int i = 0; i < dimensionSize; i++) {
+				analysisTerms.add(new RawPCATerm(String.valueOf(i), 1, 1, null));
+			}
+		}
+	}
+	
 	@SuppressWarnings("unchecked")
 	protected static void filterTermsByTarget(List<? extends RawAnalysisTerm> terms, double[] target, double maxDistance, List<String> whitelist) {
 		Iterator<RawAnalysisTerm> it = (Iterator<RawAnalysisTerm>) terms.iterator();

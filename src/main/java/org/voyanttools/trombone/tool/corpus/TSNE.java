@@ -87,7 +87,14 @@ public class TSNE extends AnalysisTool {
 	
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
+		double[][] freqMatrix = null;
+		if (this.parameters.containsKey("matrix")) {
+			String matrixStr = parameters.getParameterValue("matrix");
+			freqMatrix = this.getMatrixFromString(matrixStr);
+			this.addTermsFromMatrix(freqMatrix);
+		} else {
+			freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
+		}
 		if (freqMatrix.length >= 5) {
 			double[][] result = this.doTSNE(freqMatrix);
 			

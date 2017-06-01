@@ -56,20 +56,29 @@ public class CA extends AnalysisTool {
 
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
+		
+		double[][] freqMatrix = null;
+		boolean usingMatrixParam = this.parameters.containsKey("matrix");
+		if (usingMatrixParam) {
+			String matrixStr = parameters.getParameterValue("matrix");
+			freqMatrix = this.getMatrixFromString(matrixStr);
+			this.addTermsFromMatrix(freqMatrix);
+		} else {
+			freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 3);
+		}
+		
+		doCA(freqMatrix);
+        
 		Corpus corpus = corpusMapper.getCorpus();
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		int numDocs = ids.size();
 		
-		double[] targetVector = null;
-		List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
-			
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 3);
-		doCA(freqMatrix);
-        
 		int dimensions;
 		if (divisionType == DivisionType.DOCS) dimensions = Math.min(numDocs, this.dimensions);
 		else dimensions = Math.min(bins, this.dimensions);
 		if (numDocs == 3) dimensions = 2; // make sure there's no ArrayOutOfBoundsException
+		
+		double[] targetVector = null;
 		
 		int i, j;
 		double[] v;
@@ -88,37 +97,40 @@ public class CA extends AnalysisTool {
 	    	this.caTerms.add(new RawCATerm(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), v, RawCATerm.TERM, -1));
 	    }
 
-		if (divisionType == DivisionType.DOCS) {
-			for (i = 0; i < numDocs; i++) {
-		    	IndexedDocument doc = corpus.getDocument(i);
-		    	
-		    	v = new double[dimensions];
-		    	for (j = 0; j < dimensions; j++) {
-			    	v[j] = this.columnProjections[i][j+1];
-		    	}
-		    	
-		    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
-			    
-		    	this.caTerms.add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCATerm.DOC, corpus.getDocumentPosition(doc.getId())));
-		    }
-			
-		} else {
-			int tokensPerBin = corpus.getTokensCount(TokenType.lexical) / bins;
-			for (i = 0; i < bins; i++) {
-				String binTitle = "Corpus " + i;
+        if (!usingMatrixParam) {
+			if (divisionType == DivisionType.DOCS) {
+				for (i = 0; i < numDocs; i++) {
+			    	IndexedDocument doc = corpus.getDocument(i);
+			    	
+			    	v = new double[dimensions];
+			    	for (j = 0; j < dimensions; j++) {
+				    	v[j] = this.columnProjections[i][j+1];
+			    	}
+			    	
+			    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
+				    
+			    	this.caTerms.add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, RawCATerm.DOC, corpus.getDocumentPosition(doc.getId())));
+			    }
 				
-		    	v = new double[dimensions];
-		    	for (j = 0; j < dimensions; j++) {
-			    	v[j] = this.columnProjections[i][j+1];
-		    	}
-		    	
-		    	if (binTitle.equals(target)) targetVector = v;
-			    
-		    	this.caTerms.add(new RawCATerm(binTitle, tokensPerBin, 0.0, v, RawCATerm.BIN, i));
-		    }
-		}
+			} else {
+				int tokensPerBin = corpus.getTokensCount(TokenType.lexical) / bins;
+				for (i = 0; i < bins; i++) {
+					String binTitle = "Corpus " + i;
+					
+			    	v = new double[dimensions];
+			    	for (j = 0; j < dimensions; j++) {
+				    	v[j] = this.columnProjections[i][j+1];
+			    	}
+			    	
+			    	if (binTitle.equals(target)) targetVector = v;
+				    
+			    	this.caTerms.add(new RawCATerm(binTitle, tokensPerBin, 0.0, v, RawCATerm.BIN, i));
+			    }
+			}
+        }
 		
 		if (target != null) {
+			List<String> initialTerms = new ArrayList<String>(Arrays.asList(this.parameters.getParameterValues("term")));
 			this.doFilter(targetVector, initialTerms);
 		}
 		
