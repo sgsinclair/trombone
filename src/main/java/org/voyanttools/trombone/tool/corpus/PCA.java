@@ -71,11 +71,10 @@ public class PCA extends AnalysisTool {
 		double[] targetVector = null;
 		
 		double[][] freqMatrix = null;
-		if (this.parameters.containsKey("matrix")) {
-			String matrixStr = parameters.getParameterValue("matrix");
-			freqMatrix = this.getMatrixFromString(matrixStr);
-			this.addTermsFromMatrix(freqMatrix);
-		} else {
+		if (this.parameters.containsKey("analysisInput")) {
+			freqMatrix = getMatrixFromInput();
+		}
+		if (freqMatrix == null) {
 			freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
 		}
 		
