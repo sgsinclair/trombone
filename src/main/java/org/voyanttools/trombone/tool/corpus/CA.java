@@ -57,13 +57,12 @@ public class CA extends AnalysisTool {
 	@Override
 	protected void runAnalysis(CorpusMapper corpusMapper) throws IOException {
 		
+		boolean usingDirectInput = this.parameters.containsKey("analysisInput");
 		double[][] freqMatrix = null;
-		boolean usingMatrixParam = this.parameters.containsKey("matrix");
-		if (usingMatrixParam) {
-			String matrixStr = parameters.getParameterValue("matrix");
-			freqMatrix = this.getMatrixFromString(matrixStr);
-			this.addTermsFromMatrix(freqMatrix);
-		} else {
+		if (usingDirectInput) {
+			freqMatrix = getMatrixFromInput();
+		}
+		if (freqMatrix == null) {
 			freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 3);
 		}
 		
@@ -97,7 +96,7 @@ public class CA extends AnalysisTool {
 	    	this.caTerms.add(new RawCATerm(term.getTerm(), term.getRawFrequency(), term.getRelativeFrequency(), v, RawCATerm.TERM, -1));
 	    }
 
-        if (!usingMatrixParam) {
+        if (!usingDirectInput) {
 			if (divisionType == DivisionType.DOCS) {
 				for (i = 0; i < numDocs; i++) {
 			    	IndexedDocument doc = corpus.getDocument(i);

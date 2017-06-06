@@ -23,6 +23,7 @@ import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.RawAnalysisTerm;
 import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.model.TokenType;
+import org.voyanttools.trombone.model.table.Table;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.algorithms.pca.DoublePoint;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -289,6 +290,41 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 				termIndex++;
 			}
 			
+		}
+		
+		return freqMatrix;
+	}
+	
+	protected double[][] getMatrixFromInput() {
+		double[][] freqMatrix = null;
+		
+		if (this.parameters.containsKey("analysisInput")) {
+			String format = this.parameters.getParameterValue("inputFormat").toLowerCase();
+			if (format.equals("tsv")) {
+				boolean columnHeaders = this.parameters.getParameterBooleanValue("columnHeaders");
+				boolean rowHeaders = this.parameters.getParameterBooleanValue("rowHeaders");
+				Table table = new Table(this.parameters.getParameterValue("analysisInput"),
+						Table.Format.getForgivingly(this.parameters.getParameterValue("inputFormat", "tsv")),
+						columnHeaders, rowHeaders);
+				
+				String[] terms = table.getColumn(0);
+				int rows = terms.length;
+				for (String term : terms) {
+					analysisTerms.add(new RawPCATerm(term, 1, 1, null));
+				}
+				int cols = table.getColumnsCount();
+				freqMatrix = new double[rows][cols-1];
+				for (int i = 1; i < cols; i++) {
+					double[] col = table.getColumnAsDoubles(i);
+					for (int j = 0; j < col.length; j++) {
+						freqMatrix[j][i-1] = col[j];
+					}
+				}
+			} else if (format.equals("matrix")) {
+				String matrixStr = parameters.getParameterValue("analysisInput");
+				freqMatrix = this.getMatrixFromString(matrixStr);
+				this.addTermsFromMatrix(freqMatrix);
+			}
 		}
 		
 		return freqMatrix;
