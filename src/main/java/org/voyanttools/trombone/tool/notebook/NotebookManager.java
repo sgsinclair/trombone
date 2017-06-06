@@ -43,7 +43,7 @@ public class NotebookManager extends AbstractTool {
 		if (parameters.containsKey("notebook")) {
 			notebook = parameters.getParameterValue("notebook");
 			if (parameters.getParameterBooleanValue("autosave")) {
-				notebook+=".autosave";
+				notebook+="."+parameters.getParameterValue("VOYANT_REMOTE_ID","unknown").replaceAll("\\W+", "_")+".autosave";
 			}
 			if (jsonData==null && notebook.startsWith("http")) {
 				URI uri;
