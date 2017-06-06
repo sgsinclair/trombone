@@ -305,19 +305,29 @@ public abstract class AnalysisTool extends AbstractCorpusTool {
 				boolean rowHeaders = this.parameters.getParameterBooleanValue("rowHeaders");
 				Table table = new Table(this.parameters.getParameterValue("analysisInput"),
 						Table.Format.getForgivingly(this.parameters.getParameterValue("inputFormat", "tsv")),
-						columnHeaders, rowHeaders);
+						columnHeaders,
+						false // always send false for rowHeaders since we need to get them as a column later
+					);
 				
 				String[] terms = table.getColumn(0);
 				int rows = terms.length;
-				for (String term : terms) {
+				for (int i = 0; i < rows; i++) {
+					String term = terms[i];
+					if (!rowHeaders) {
+						term = String.valueOf(i);
+					}
 					analysisTerms.add(new RawPCATerm(term, 1, 1, null));
 				}
 				int cols = table.getColumnsCount();
-				freqMatrix = new double[rows][cols-1];
-				for (int i = 1; i < cols; i++) {
-					double[] col = table.getColumnAsDoubles(i);
+				if (rowHeaders) {
+					cols--;
+				}
+				freqMatrix = new double[rows][cols];
+				int offset = rowHeaders ? 1 : 0;
+				for (int i = 0; i < cols; i++) {
+					double[] col = table.getColumnAsDoubles(i+offset);
 					for (int j = 0; j < col.length; j++) {
-						freqMatrix[j][i-1] = col[j];
+						freqMatrix[j][i] = col[j];
 					}
 				}
 			} else if (format.equals("matrix")) {
