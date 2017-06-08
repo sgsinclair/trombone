@@ -19,6 +19,7 @@ import org.junit.Test;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
@@ -215,7 +216,7 @@ public class TromboneMigration {
 		// test migration of resources
 		id = "7f96fa278a1cc64fc298ab808bcc2682";
 		assertFalse(storage.isStored(id, Storage.Location.object));
-		file = FileMigrationFactory.getStoredObjectFile(storage, id);
+		file = FileMigrationFactory.getStoredObjectFile(storage, id, Location.object);
 		assertTrue(file.exists());
 		assertTrue(storage.copyResource(file, id, Storage.Location.object));
 		assertTrue(storage.isStored(id, Storage.Location.object));
@@ -223,7 +224,7 @@ public class TromboneMigration {
 		// test migration of non-existent resource
 		id = "z";
 		assertFalse(storage.isStored(id, Storage.Location.object));
-		file = FileMigrationFactory.getStoredObjectFile(storage, id);
+		file = FileMigrationFactory.getStoredObjectFile(storage, id, Location.object);
 		assertNull(file);
 		
 		// test migration of recovered directory
@@ -331,7 +332,7 @@ public class TromboneMigration {
 		// test migration of resources
 		id = "0366879fcdc310ae2511e58ebb4ae64b";
 		assertFalse(storage.isStored(id, Storage.Location.object));
-		file = FileMigrationFactory.getStoredObjectFile(storage, id);
+		file = FileMigrationFactory.getStoredObjectFile(storage, id, Location.object);
 		assertTrue(file.exists());
 		assertTrue(storage.copyResource(file, id, Storage.Location.object));
 		assertTrue(storage.isStored(id, Storage.Location.object));
@@ -339,7 +340,7 @@ public class TromboneMigration {
 		// test migration of non-existent resource
 		id = "z";
 		assertFalse(storage.isStored(id, Storage.Location.object));
-		file = FileMigrationFactory.getStoredObjectFile(storage, id);
+		file = FileMigrationFactory.getStoredObjectFile(storage, id, Location.object);
 		assertNull(file);
 		
 		storage.destroy();

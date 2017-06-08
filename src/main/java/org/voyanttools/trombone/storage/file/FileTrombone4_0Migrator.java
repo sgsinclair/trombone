@@ -15,6 +15,7 @@ import java.util.Properties;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**
@@ -78,8 +79,8 @@ class FileTrombone4_0Migrator extends FileTrombone3_0Migrator {
 	}
 		
 	@Override
-	public File getStoredObjectFile() {
-		Path path = Paths.get(this.getSourceTromboneDirectory().getAbsolutePath(), "object-storage", id);
+	public File getStoredObjectFile(Location location) {
+		Path path = Paths.get(this.getSourceTromboneDirectory().getAbsolutePath(), location==Location.object ? "object-storage" : location.name(), id);
 		return Files.exists(path) ? path.toFile() : null;
 	}
 	

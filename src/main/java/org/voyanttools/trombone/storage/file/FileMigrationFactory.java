@@ -9,6 +9,7 @@ import java.lang.reflect.Constructor;
 import java.util.Arrays;
 
 import org.apache.commons.io.comparator.LastModifiedFileComparator;
+import org.voyanttools.trombone.storage.Storage.Location;
 
 /**
  * @author sgs
@@ -44,12 +45,12 @@ public class FileMigrationFactory {
 		return null;
 	}
 
-	public static File getStoredObjectFile(FileStorage storage, String id) {
+	public static File getStoredObjectFile(FileStorage storage, String id, Location location) {
 		
 		// first try recovered storage
 		for (File file : getRecoveredStorageDirectories(storage)) {
 			FileMigrator migrator = new FileTromboneCurrentMigrator(file.getName(), storage, id);
-			File f = migrator.getStoredObjectFile();
+			File f = migrator.getStoredObjectFile(location);
 			if (f!=null && f.exists()) {return f;}
 		}
 		
@@ -63,7 +64,7 @@ public class FileMigrationFactory {
 			} catch (Exception e) {
 				throw new RuntimeException("Unable to instantiate migrator: "+migratorClass.getName(), e);
 			}
-			File file = migrator.getStoredObjectFile();
+			File file = migrator.getStoredObjectFile(location);
 			if (file!=null) {return file;}
 		}
 		return null;

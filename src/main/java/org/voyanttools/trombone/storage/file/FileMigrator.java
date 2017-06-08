@@ -6,6 +6,8 @@ package org.voyanttools.trombone.storage.file;
 import java.io.File;
 import java.io.IOException;
 
+import org.voyanttools.trombone.storage.Storage.Location;
+
 /**
  * @author sgs
  *
@@ -16,5 +18,5 @@ public interface FileMigrator {
 	
 	public boolean corpusExists();
 
-	public File getStoredObjectFile();
+	public File getStoredObjectFile(Location location);
 }

@@ -3,6 +3,7 @@
  */
 package org.voyanttools.trombone.tool.notebook;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
@@ -12,6 +13,8 @@ import org.apache.cxf.helpers.IOUtils;
 import org.voyanttools.trombone.input.source.UriInputSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
+import org.voyanttools.trombone.storage.file.FileMigrationFactory;
+import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -65,8 +68,19 @@ public class NotebookManager extends AbstractTool {
 				storage.storeString(jsonData, notebook, Location.notebook, true);
 				jsonData = null;
 				return;
-			} else if (jsonData==null && storage.isStored(notebook, Location.notebook)) {
-				jsonData = storage.retrieveString(notebook, Storage.Location.notebook);
+			} else if (jsonData==null) {
+				if (storage.isStored(notebook, Location.notebook)) {
+					jsonData = storage.retrieveString(notebook, Storage.Location.notebook);
+				} else if (storage instanceof FileStorage) {
+					File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, notebook, Location.notebook);
+					if (file!=null && file.exists()) {
+						((FileStorage) storage).copyResource(file, notebook, Storage.Location.notebook);
+						jsonData = storage.retrieveString(notebook, Storage.Location.notebook);
+					}
+					
+				}
+			} else {
+				
 			}
 		} else if (jsonData!=null) { // we have sent data but no notebook, so we're saving
 			// assign new notebook ID

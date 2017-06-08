@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.storage.file.FileMigrationFactory;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.utils.AbstractTool;
@@ -30,7 +31,7 @@ public class StoredResource extends AbstractTool {
 			if (this.storage.hasStoredString(id, Storage.Location.object)) {
 				this.id = id;
 			} else if (storage instanceof FileStorage) {
-				File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id);
+				File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id, Location.object);
 				if (file!=null && file.exists()) {
 					((FileStorage) storage).copyResource(file, id, Storage.Location.object);
 					this.id = id;
@@ -50,7 +51,7 @@ public class StoredResource extends AbstractTool {
 			String id = this.parameters.getParameterValue("retrieveResourceId");
 			// if it doesn't exist, try to retrieve from previous storage
 			if (!storage.isStored(id, Storage.Location.object) && storage instanceof FileStorage) {
-				File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id);
+				File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id, Location.object);
 				if (file!=null && file.exists()) {
 					((FileStorage) storage).copyResource(file, id, Storage.Location.object);
 				}

@@ -160,7 +160,7 @@ class FileTrombone3_0Migrator extends AbstractFileMigrator {
 	}
 
 	@Override
-	public File getStoredObjectFile() {
+	public File getStoredObjectFile(Location location) {
 		// this doesn't happen in Trombone 3, so this is always null
 		return null;
 	}

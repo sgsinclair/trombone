@@ -40,6 +40,7 @@ import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.UriInputSource;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.file.FileMigrationFactory;
 import org.voyanttools.trombone.storage.file.FileStorage;
@@ -122,7 +123,7 @@ public class Keywords {
 					add(refs);
 				} catch (IOException e) {
 					if (storage instanceof FileStorage) {
-						File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, refId);
+						File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, refId, Location.object);
 						if (file!=null) {
 							// add to lower case here, though not sure we want it this universal
 							String contents = FileUtils.readFileToString(file).toLowerCase();
