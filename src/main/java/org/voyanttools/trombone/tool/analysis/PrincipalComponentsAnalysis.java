@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool.algorithms.pca;
+package org.voyanttools.trombone.tool.analysis;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,8 @@ import Jama.Matrix;
 
 public class PrincipalComponentsAnalysis {
 
+	private double[][] input;
+	
 	private Matrix covMatrix;
 	private EigenvalueDecomposition eigenstuff;
 	private double[] eigenvalues;
@@ -17,8 +19,11 @@ public class PrincipalComponentsAnalysis {
 	private SortedSet<PrincipleComponent> principleComponents;
 	private double[] means;
 
-//	@edu.umd.cs.findbugs.annotations.SuppressWarnings({ "EI_EXPOSE_REP2" })
 	public PrincipalComponentsAnalysis(double[][] input) {
+		this.input = input;
+	}
+
+	public void runAnalysis() {
 		this.means = new double[input[0].length];
 		double[][] cov = getCovariance(input, this.means);
 		this.covMatrix = new Matrix(cov);
@@ -37,7 +42,22 @@ public class PrincipalComponentsAnalysis {
 			this.principleComponents.add(new PrincipleComponent(this.eigenvalues[i], eigenvector));
 		}
 	}
+	
+	public double[][] getResult(int dimensions) {
+		double[][] matrixAdjusted = PrincipalComponentsAnalysis.getMeanAdjusted(input, getMeans());
+	    Matrix adjustedInput = new Matrix(matrixAdjusted);
+	    
+	    Matrix features = PrincipalComponentsAnalysis.getDominantComponentsMatrix(getDominantComponents(dimensions));
 
+	    Matrix featuresXpose = features.transpose();
+
+	    Matrix xformedData = featuresXpose.times(adjustedInput.transpose());
+
+	    double[][] result = xformedData.transpose().getArray();
+	    
+	    return result;
+	}
+	
 //	@edu.umd.cs.findbugs.annotations.SuppressWarnings({ "EI_EXPOSE_REP" })
 	public double[] getMeans() {
 		return this.means;

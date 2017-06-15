@@ -1,9 +1,8 @@
-package org.voyanttools.trombone.tool.corpus;
+package org.voyanttools.trombone.tool.table;
 
 import java.io.IOException;
 import java.util.List;
 
-import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
@@ -21,10 +20,11 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 @XStreamAlias("tsneAnalysis")
 @XStreamConverter(TSNE.TSNEConverter.class)
-public class TSNE extends CorpusAnalysisTool {
-	
+public class TSNE extends TableAnalysisTool {
+
 	public TSNE(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
+		// TODO Auto-generated constructor stub
 	}
 
 	private double[][] doTSNE(double[][] freqMatrix) {
@@ -41,8 +41,8 @@ public class TSNE extends CorpusAnalysisTool {
 	}
 	
 	@Override
-	protected double[][] runAnalysis(CorpusMapper corpusMapper) throws IOException {
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
+	protected double[][] runAnalysis() throws IOException {
+		double[][] freqMatrix = AnalysisUtils.getMatrixFromParameters(parameters, analysisTerms);
 		
 		if (freqMatrix.length >= 5) {
 			double[][] result = doTSNE(freqMatrix);
@@ -58,7 +58,7 @@ public class TSNE extends CorpusAnalysisTool {
 			return new double[][]{{}};
 		}
 	}
-	
+
 	public static class TSNEConverter implements Converter {
 
 		/* (non-Javadoc)
@@ -96,5 +96,5 @@ public class TSNE extends CorpusAnalysisTool {
 		}
 
 	}
-
+	
 }

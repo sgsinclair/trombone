@@ -6,11 +6,14 @@ package org.voyanttools.trombone.model;
 public abstract class RawAnalysisTerm {
 	
 	private final String term;
-	private final double[] vector;
+	private double[] vector;
 	private int cluster;
 	private boolean clusterCenter;
 	
-//	@edu.umd.cs.findbugs.annotations.SuppressWarnings({ "EI_EXPOSE_REP2" })
+	public RawAnalysisTerm(String term) {
+		this.term = term;
+	}
+	
 	public RawAnalysisTerm(String term, double[] vector) {
 		this.term = term;
 		this.vector = vector;
@@ -22,9 +25,12 @@ public abstract class RawAnalysisTerm {
 		return this.term;
 	}
 	
-//	@edu.umd.cs.findbugs.annotations.SuppressWarnings({ "EI_EXPOSE_REP" })
 	public double[] getVector() {
 		return this.vector;
+	}
+	
+	public void setVector(double[] vector) {
+		this.vector = vector;
 	}
 
 	public int getCluster() {

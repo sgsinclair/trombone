@@ -5,8 +5,14 @@ package org.voyanttools.trombone.model;
  */
 public class RawPCATerm extends RawAnalysisTerm {
 
-	private final int rawFreq;
-	private final double relativeFreq;
+	private int rawFreq;
+	private double relativeFreq;
+	
+	public RawPCATerm(String term, int rawFrequency, double relativeFrequency) {
+		super(term);
+		this.rawFreq = rawFrequency;
+		this.relativeFreq = relativeFrequency;
+	}
 	
 	public RawPCATerm(String term, int rawFrequency, double relativeFrequency, double[] vector) {
 		super(term, vector);
@@ -17,9 +23,15 @@ public class RawPCATerm extends RawAnalysisTerm {
 	public int getRawFrequency() {
 		return this.rawFreq;
 	}
+	public void setRawFrequency(int rawFreq) {
+		this.rawFreq = rawFreq;
+	}
 
 	public double getRelativeFrequency() {
 		return this.relativeFreq;
+	}
+	public void setRelativeFrequency(double relativeFreq) {
+		this.relativeFreq = relativeFreq;
 	}
 
 }

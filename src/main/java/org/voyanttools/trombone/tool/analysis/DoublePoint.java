@@ -1,4 +1,4 @@
-package org.voyanttools.trombone.tool.algorithms.pca;
+package org.voyanttools.trombone.tool.analysis;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.voyanttools.trombone.model.RawAnalysisTerm;
-import org.voyanttools.trombone.tool.corpus.AnalysisTool;
+import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
 
 /**
  * @author Andrew MacDonald
@@ -22,7 +22,7 @@ public class DoublePoint implements Clusterable {
 	}
 	
 	public double distanceFrom(DoublePoint p) {
-		return AnalysisTool.getDistance(this.point, p.point);
+		return AnalysisUtils.getDistance(this.point, p.point);
 	}
 
 	public DoublePoint centroidOf(Collection<DoublePoint> cluster) {
@@ -34,7 +34,7 @@ public class DoublePoint implements Clusterable {
             for (int j = i + 1; j < instances.size(); j++) {
             	DoublePoint i2 = instances.get(j);
                 
-            	double d = AnalysisTool.getDistance(i1.point, i2.point);
+            	double d = AnalysisUtils.getDistance(i1.point, i2.point);
                 sumDistance[i] += d;
                 sumDistance[j] += d;
             }

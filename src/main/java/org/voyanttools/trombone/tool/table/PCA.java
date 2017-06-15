@@ -1,11 +1,10 @@
-package org.voyanttools.trombone.tool.corpus;
+package org.voyanttools.trombone.tool.table;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
 
-import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
@@ -24,23 +23,23 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 @XStreamAlias("pcaAnalysis")
 @XStreamConverter(PCA.PCAConverter.class)
-public class PCA extends CorpusAnalysisTool {
-	
+public class PCA extends TableAnalysisTool {
+
 	private PrincipalComponentsAnalysis pca;
 	
 	public PCA(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 	}
-	
+
 	private double[][] doPCA(double[][] freqMatrix) {
 	    pca = new PrincipalComponentsAnalysis(freqMatrix);
 	    pca.runAnalysis();
 	    return pca.getResult(dimensions);
 	}
-
+	
 	@Override
-	protected double[][] runAnalysis(CorpusMapper corpusMapper) throws IOException {
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
+	protected double[][] runAnalysis() throws IOException {
+		double[][] freqMatrix = AnalysisUtils.getMatrixFromParameters(parameters, analysisTerms);
 		double[][] result = this.doPCA(freqMatrix);
 		
 		int i;

@@ -5,28 +5,47 @@ package org.voyanttools.trombone.model;
  */
 public class RawCATerm extends RawPCATerm {
 
-	public static final String TERM = "term";
-	public static final String DOC = "doc";
-	public static final String BIN = "bin";
+	public enum CategoryType {
+		TERM, DOCUMENT, BIN
+	}
 	
-	private final String category;
-	private final int docIndex;
+	private CategoryType category;
+	private int docIndex;
 	
-	public RawCATerm(String term, int rawFrequency, double relativeFrequency, double[] vector, String category, int docIndex) {
-		super(term, rawFrequency, relativeFrequency, vector);
-		if (category != TERM && category != DOC && category != BIN) {
-			category = TERM;
-		}
+	public RawCATerm(String term, int rawFrequency, double relativeFrequency, CategoryType category) {
+		super(term, rawFrequency, relativeFrequency);
+		this.category = category;
+	}
+	
+	public RawCATerm(String term, int rawFrequency, double relativeFrequency, CategoryType category, int docIndex) {
+		super(term, rawFrequency, relativeFrequency);
 		this.category = category;
 		this.docIndex = docIndex;
 	}
 	
-	public String getCategory() {
-		return this.category;
+	public RawCATerm(String term, int rawFrequency, double relativeFrequency, double[] vector) {
+		super(term, rawFrequency, relativeFrequency, vector);
+		
+	}
+	
+	public RawCATerm(String term, int rawFrequency, double relativeFrequency, double[] vector, CategoryType category, int docIndex) {
+		super(term, rawFrequency, relativeFrequency, vector);
+		this.category = category;
+		this.docIndex = docIndex;
+	}
+	
+	public CategoryType getCategory() {
+		return category;
+	}
+	public void setCategory(CategoryType category) {
+		this.category = category;
 	}
 	
 	public int getDocIndex() {
-		return this.docIndex;
+		return docIndex;
+	}
+	public void setDocIndex(int docIndex) {
+		this.docIndex = docIndex;
 	}
 
 }
