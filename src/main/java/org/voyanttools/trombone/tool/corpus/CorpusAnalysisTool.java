@@ -23,10 +23,11 @@ import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.model.RawCATerm.CategoryType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.analysis.AnalysisTool;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
-public abstract class CorpusAnalysisTool extends AbstractCorpusTool {
+public abstract class CorpusAnalysisTool extends AbstractCorpusTool implements AnalysisTool {
 
 	// what frequency stat to use for comparison
 	enum ComparisonType {
@@ -39,21 +40,23 @@ public abstract class CorpusAnalysisTool extends AbstractCorpusTool {
 	}
 	
 	// what feature to use for rows in the frequency matrix
-	enum MatrixType {
+	public enum MatrixType {
 		TERM, DOCUMENT
 	}
 	
 	private ComparisonType comparisonType = ComparisonType.RELATIVE;
 	protected DivisionType divisionType = DivisionType.DOCS; 
 	
-	protected String target;
+	protected CorpusMapper corpusMapper;
+	
+	private String target;
 	private int clusters;
-	protected int dimensions;
-	protected int bins;
+	private int dimensions;
+	private int bins;
 	
-	protected double[] targetVector;
+	private double[] targetVector;
 	
-	protected List<RawCATerm> analysisTerms;
+	private List<RawCATerm> analysisTerms;
 	
 	public CorpusAnalysisTool(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
@@ -79,7 +82,8 @@ public abstract class CorpusAnalysisTool extends AbstractCorpusTool {
 	
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
-		double[][] result = runAnalysis(corpusMapper);
+		this.corpusMapper = corpusMapper;
+		double[][] result = runAnalysis(getInput());
 		
 		if (target != null && targetVector != null) {
 			double[][] minMax = AnalysisUtils.getMinMax(result);
@@ -92,18 +96,15 @@ public abstract class CorpusAnalysisTool extends AbstractCorpusTool {
 			AnalysisUtils.clusterPoints(analysisTerms, clusters);
 		}
 	}
-
-	protected abstract double[][] runAnalysis(CorpusMapper corpusMapper) throws IOException;
 	
 	/**
 	 * Returns a doc/terms frequency matrix for use in further analysis.
-	 * @param corpusMapper
 	 * @param type Determines row value in matrix: MatrixType.DOCUMENT or MatrixType.TERM
 	 * @param minDims The minimum number of dimensions required for analysis
 	 * @return
 	 * @throws IOException
 	 */
-	protected double[][] buildFrequencyMatrix(CorpusMapper corpusMapper, MatrixType type, int minDims) throws IOException {
+	protected double[][] buildFrequencyMatrix(MatrixType type, int minDims) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
 		
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
@@ -307,7 +308,37 @@ public abstract class CorpusAnalysisTool extends AbstractCorpusTool {
 		return freqMatrix;
 	}
 	
+	@Override
 	public List<RawCATerm> getAnalysisTerms() {
-		return this.analysisTerms;
+		return analysisTerms;
+	}
+
+	@Override
+	public String getTarget() {
+		return target;
+	}
+
+	@Override
+	public int getClusters() {
+		return clusters;
+	}
+
+	@Override
+	public int getDimensions() {
+		return dimensions;
+	}
+	
+	public int getBins() {
+		return bins;
+	}
+
+	@Override
+	public double[] getTargetVector() {
+		return targetVector;
+	}
+
+	@Override
+	public void setTargetVector(double[] tv) {
+		targetVector = tv;
 	}
 }

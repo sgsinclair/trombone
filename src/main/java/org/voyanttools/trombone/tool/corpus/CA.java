@@ -39,32 +39,31 @@ public class CA extends CorpusAnalysisTool {
 		whitelist = new Keywords();
 		whitelist.load(storage, parameters.getParameterValues("whitelist", new String[0]));
 	}
-	
-	protected void doCA(double[][] freqMatrix) {
-		ca = new CorrespondenceAnalysis(freqMatrix);
-		ca.runAnalysis();
-	}
 
 	@Override
-	protected double[][] runAnalysis(CorpusMapper corpusMapper) throws IOException {		
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 3);
-
-		doCA(freqMatrix);
+	public double[][] getInput() throws IOException {
+		return buildFrequencyMatrix(MatrixType.TERM, 3);
+	}
+	
+	@Override
+	public double[][] runAnalysis(double[][] freqMatrix) throws IOException {
+		ca = new CorrespondenceAnalysis(freqMatrix);
+		ca.runAnalysis();
         
 		Corpus corpus = corpusMapper.getCorpus();
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
 		int numDocs = ids.size();
 		
 		int dimensions;
-		if (divisionType == DivisionType.DOCS) dimensions = Math.min(numDocs, this.dimensions);
-		else dimensions = Math.min(bins, this.dimensions);
+		if (divisionType == DivisionType.DOCS) dimensions = Math.min(numDocs, getDimensions());
+		else dimensions = Math.min(getBins(), getDimensions());
 		if (numDocs == 3) dimensions = 2; // make sure there's no ArrayOutOfBoundsException
 		
 		double[][] rowProjections = ca.getRowProjections();
 		int i, j;
 		double[] v;
-        for (i = 0; i < analysisTerms.size(); i++) {
-        	RawCATerm term = analysisTerms.get(i);
+        for (i = 0; i < getAnalysisTerms().size(); i++) {
+        	RawCATerm term = getAnalysisTerms().get(i);
         	if (whitelist.isEmpty()==false && whitelist.isKeyword(term.getTerm())==false) {continue;}
 	    	
 	    	v = new double[dimensions];
@@ -72,7 +71,7 @@ public class CA extends CorpusAnalysisTool {
 		    	v[j] = rowProjections[i][j+1];
 	    	}
 	    	
-	    	if (term.getTerm().equals(target)) targetVector = v;
+	    	if (term.getTerm().equals(getTarget())) setTargetVector(v);
 	    	
 	    	term.setVector(v);
 	    }
@@ -87,14 +86,14 @@ public class CA extends CorpusAnalysisTool {
 			    	v[j] = columnProjections[i][j+1];
 		    	}
 		    	
-		    	if (doc.getMetadata().getTitle().equals(target)) targetVector = v;
+		    	if (doc.getMetadata().getTitle().equals(getTarget())) setTargetVector(v);
 			    
-		    	analysisTerms.add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, CategoryType.DOCUMENT, corpus.getDocumentPosition(doc.getId())));
+		    	getAnalysisTerms().add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, CategoryType.DOCUMENT, corpus.getDocumentPosition(doc.getId())));
 		    }
 			
 		} else {
-			int tokensPerBin = corpus.getTokensCount(TokenType.lexical) / bins;
-			for (i = 0; i < bins; i++) {
+			int tokensPerBin = corpus.getTokensCount(TokenType.lexical) / getBins();
+			for (i = 0; i < getBins(); i++) {
 				String binTitle = "Corpus " + i;
 				
 		    	v = new double[dimensions];
@@ -102,9 +101,9 @@ public class CA extends CorpusAnalysisTool {
 			    	v[j] = columnProjections[i][j+1];
 		    	}
 		    	
-		    	if (binTitle.equals(target)) targetVector = v;
+		    	if (binTitle.equals(getTarget())) setTargetVector(v);
 			    
-		    	analysisTerms.add(new RawCATerm(binTitle, tokensPerBin, 0.0, v, CategoryType.BIN, i));
+		    	getAnalysisTerms().add(new RawCATerm(binTitle, tokensPerBin, 0.0, v, CategoryType.BIN, i));
 		    }
         }
 		
@@ -130,7 +129,7 @@ public class CA extends CorpusAnalysisTool {
 			
 			CA ca = (CA) source;
 	        
-			final List<RawCATerm> caTerms = ca.analysisTerms;
+			final List<RawCATerm> caTerms = ca.getAnalysisTerms();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
 			writer.setValue(String.valueOf(caTerms.size()));
@@ -154,4 +153,5 @@ public class CA extends CorpusAnalysisTool {
 		}
 
 	}
+
 }

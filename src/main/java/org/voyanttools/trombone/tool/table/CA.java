@@ -33,31 +33,25 @@ public class CA extends TableAnalysisTool {
 		whitelist = new Keywords();
 		whitelist.load(storage, parameters.getParameterValues("whitelist", new String[0]));
 	}
-	
-	protected void doCA(double[][] freqMatrix) {
-		ca = new CorrespondenceAnalysis(freqMatrix);
-		ca.runAnalysis();
-	}
 
 	@Override
-	protected double[][] runAnalysis() throws IOException {
-		double[][] freqMatrix = AnalysisUtils.getMatrixFromParameters(parameters, analysisTerms);
-
-		doCA(freqMatrix);
+	public double[][] runAnalysis(double[][] freqMatrix) throws IOException {
+		ca = new CorrespondenceAnalysis(freqMatrix);
+		ca.runAnalysis();
 		
 		double[][] rowProjections = ca.getRowProjections();
 		int i, j;
 		double[] v;
-        for (i = 0; i < analysisTerms.size(); i++) {
-        	RawCATerm term = analysisTerms.get(i);
+        for (i = 0; i < getAnalysisTerms().size(); i++) {
+        	RawCATerm term = getAnalysisTerms().get(i);
         	if (whitelist.isEmpty()==false && whitelist.isKeyword(term.getTerm())==false) {continue;}
 	    	
-	    	v = new double[dimensions];
-	    	for (j = 0; j < dimensions; j++) {
+	    	v = new double[getDimensions()];
+	    	for (j = 0; j < getDimensions(); j++) {
 		    	v[j] = rowProjections[i][j+1];
 	    	}
 	    	
-	    	if (term.getTerm().equals(target)) targetVector = v;
+	    	if (term.getTerm().equals(getTarget())) setTargetVector(v);
 	    	
 	    	term.setVector(v);
 	    }
@@ -83,7 +77,7 @@ public class CA extends TableAnalysisTool {
 			
 			CA ca = (CA) source;
 	        
-			final List<RawCATerm> caTerms = ca.analysisTerms;
+			final List<RawCATerm> caTerms = ca.getAnalysisTerms();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
 			writer.setValue(String.valueOf(caTerms.size()));

@@ -11,6 +11,7 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
 import org.voyanttools.trombone.tool.analysis.PrincipalComponentsAnalysis;
 import org.voyanttools.trombone.tool.analysis.PrincipalComponentsAnalysis.PrincipleComponent;
+import org.voyanttools.trombone.tool.corpus.CorpusAnalysisTool.MatrixType;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -32,22 +33,22 @@ public class PCA extends CorpusAnalysisTool {
 		super(storage, parameters);
 	}
 	
-	private double[][] doPCA(double[][] freqMatrix) {
-	    pca = new PrincipalComponentsAnalysis(freqMatrix);
-	    pca.runAnalysis();
-	    return pca.getResult(dimensions);
+	@Override
+	public double[][] getInput() throws IOException {
+		return buildFrequencyMatrix(MatrixType.TERM, 2);
 	}
 
 	@Override
-	protected double[][] runAnalysis(CorpusMapper corpusMapper) throws IOException {
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
-		double[][] result = this.doPCA(freqMatrix);
+	public double[][] runAnalysis(double[][] freqMatrix) throws IOException {
+		pca = new PrincipalComponentsAnalysis(freqMatrix);
+	    pca.runAnalysis();
+		double[][] result =  pca.getResult(getDimensions());
 		
 		int i;
-		for (i = 0; i < analysisTerms.size(); i++) {
-			RawCATerm term = analysisTerms.get(i);
+		for (i = 0; i < getAnalysisTerms().size(); i++) {
+			RawCATerm term = getAnalysisTerms().get(i);
 			term.setVector(result[i]);
-			if (term.getTerm().equals(target)) targetVector = result[i];
+			if (term.getTerm().equals(getTarget())) setTargetVector(result[i]);
 		}
 		
 		return result;
@@ -71,7 +72,7 @@ public class PCA extends CorpusAnalysisTool {
 			
 			PCA pca = (PCA) source;
 	        
-			final List<RawCATerm> pcaTerms = pca.analysisTerms;
+			final List<RawCATerm> pcaTerms = pca.getAnalysisTerms();
 			
 			final SortedSet<PrincipleComponent> principalComponents = pca.pca.getPrincipleComponents();
 			

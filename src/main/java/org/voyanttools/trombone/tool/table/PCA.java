@@ -31,22 +31,17 @@ public class PCA extends TableAnalysisTool {
 		super(storage, parameters);
 	}
 
-	private double[][] doPCA(double[][] freqMatrix) {
-	    pca = new PrincipalComponentsAnalysis(freqMatrix);
-	    pca.runAnalysis();
-	    return pca.getResult(dimensions);
-	}
-	
 	@Override
-	protected double[][] runAnalysis() throws IOException {
-		double[][] freqMatrix = AnalysisUtils.getMatrixFromParameters(parameters, analysisTerms);
-		double[][] result = this.doPCA(freqMatrix);
+	public double[][] runAnalysis(double[][] freqMatrix) throws IOException {
+		pca = new PrincipalComponentsAnalysis(freqMatrix);
+	    pca.runAnalysis();
+		double[][] result =  pca.getResult(getDimensions());
 		
 		int i;
-		for (i = 0; i < analysisTerms.size(); i++) {
-			RawCATerm term = analysisTerms.get(i);
+		for (i = 0; i < getAnalysisTerms().size(); i++) {
+			RawCATerm term = getAnalysisTerms().get(i);
 			term.setVector(result[i]);
-			if (term.getTerm().equals(target)) targetVector = result[i];
+			if (term.getTerm().equals(getTarget())) setTargetVector(result[i]);
 		}
 		
 		return result;
@@ -70,7 +65,7 @@ public class PCA extends TableAnalysisTool {
 			
 			PCA pca = (PCA) source;
 	        
-			final List<RawCATerm> pcaTerms = pca.analysisTerms;
+			final List<RawCATerm> pcaTerms = pca.getAnalysisTerms();
 			
 			final SortedSet<PrincipleComponent> principalComponents = pca.pca.getPrincipleComponents();
 			

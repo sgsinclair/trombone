@@ -8,6 +8,7 @@ import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
 import org.voyanttools.trombone.tool.analysis.TSNEAnalysis;
+import org.voyanttools.trombone.tool.corpus.CorpusAnalysisTool.MatrixType;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -41,16 +42,19 @@ public class TSNE extends CorpusAnalysisTool {
 	}
 	
 	@Override
-	protected double[][] runAnalysis(CorpusMapper corpusMapper) throws IOException {
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.TERM, 2);
-		
+	public double[][] getInput() throws IOException {
+		return buildFrequencyMatrix(MatrixType.TERM, 2);
+	}
+	
+	@Override
+	public double[][] runAnalysis(double[][] freqMatrix) throws IOException {
 		if (freqMatrix.length >= 5) {
 			double[][] result = doTSNE(freqMatrix);
 			
-			for (int i = 0; i < analysisTerms.size(); i++) {
-				RawCATerm term = analysisTerms.get(i);
+			for (int i = 0; i < getAnalysisTerms().size(); i++) {
+				RawCATerm term = getAnalysisTerms().get(i);
 				term.setVector(result[i]);
-				if (term.getTerm().equals(target)) targetVector = result[i];
+				if (term.getTerm().equals(getTarget())) setTargetVector(result[i]);
 			}
 			
 			return result;
@@ -77,7 +81,7 @@ public class TSNE extends CorpusAnalysisTool {
 			
 			TSNE tsne = (TSNE) source;
 	        
-			final List<RawCATerm> caTerms = tsne.analysisTerms;
+			final List<RawCATerm> caTerms = tsne.getAnalysisTerms();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
 			writer.setValue(String.valueOf(caTerms.size()));

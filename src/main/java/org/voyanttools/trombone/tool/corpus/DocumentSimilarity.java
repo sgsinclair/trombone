@@ -13,6 +13,8 @@ import org.voyanttools.trombone.model.RawPCATerm;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
+import org.voyanttools.trombone.tool.analysis.CorrespondenceAnalysis;
+import org.voyanttools.trombone.tool.corpus.CorpusAnalysisTool.MatrixType;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -32,16 +34,20 @@ public class DocumentSimilarity extends CA {
 	}
 
 	@Override
-	protected double[][] runAnalysis(CorpusMapper corpusMapper) throws IOException {
+	public double[][] getInput() throws IOException {
+		return buildFrequencyMatrix(MatrixType.DOCUMENT, 3);
+	}
+	
+	@Override
+	public double[][] runAnalysis(double[][] freqMatrix) throws IOException {
+		ca = new CorrespondenceAnalysis(freqMatrix);
+		ca.runAnalysis();
+		
+		getAnalysisTerms().removeAll(getAnalysisTerms()); // don't need terms for docsim
+		
 		Corpus corpus = corpusMapper.getCorpus();
-		
-		double[][] freqMatrix = buildFrequencyMatrix(corpusMapper, MatrixType.DOCUMENT, 3);
-		doCA(freqMatrix);
-		
-		analysisTerms.removeAll(analysisTerms); // don't need terms for docsim
-		
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
-		int dimensions = Math.min(ids.size(), this.dimensions);
+		int dimensions = Math.min(ids.size(), getDimensions());
         if (ids.size() == 3) dimensions = 2;
 		
         double[][] rowProjections = ca.getRowProjections();
@@ -54,7 +60,7 @@ public class DocumentSimilarity extends CA {
 		    	v[j] = rowProjections[i][j+1];
 	    	}
 	    	
-	    	analysisTerms.add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, CategoryType.DOCUMENT, corpus.getDocumentPosition(docId) ));
+	    	getAnalysisTerms().add(new RawCATerm(doc.getMetadata().getTitle(), doc.getMetadata().getTokensCount(TokenType.lexical), 0.0, v, CategoryType.DOCUMENT, corpus.getDocumentPosition(docId) ));
 	    	i++;
 	    }
 		

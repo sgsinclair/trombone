@@ -24,7 +24,6 @@ public class TSNE extends TableAnalysisTool {
 
 	public TSNE(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		// TODO Auto-generated constructor stub
 	}
 
 	private double[][] doTSNE(double[][] freqMatrix) {
@@ -41,16 +40,14 @@ public class TSNE extends TableAnalysisTool {
 	}
 	
 	@Override
-	protected double[][] runAnalysis() throws IOException {
-		double[][] freqMatrix = AnalysisUtils.getMatrixFromParameters(parameters, analysisTerms);
-		
+	public double[][] runAnalysis(double[][] freqMatrix) throws IOException {
 		if (freqMatrix.length >= 5) {
 			double[][] result = doTSNE(freqMatrix);
 			
-			for (int i = 0; i < analysisTerms.size(); i++) {
-				RawCATerm term = analysisTerms.get(i);
+			for (int i = 0; i < getAnalysisTerms().size(); i++) {
+				RawCATerm term = getAnalysisTerms().get(i);
 				term.setVector(result[i]);
-				if (term.getTerm().equals(target)) targetVector = result[i];
+				if (term.getTerm().equals(getTarget())) setTargetVector(result[i]);
 			}
 			
 			return result;
@@ -77,7 +74,7 @@ public class TSNE extends TableAnalysisTool {
 			
 			TSNE tsne = (TSNE) source;
 	        
-			final List<RawCATerm> caTerms = tsne.analysisTerms;
+			final List<RawCATerm> caTerms = tsne.getAnalysisTerms();
 			
 			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
 			writer.setValue(String.valueOf(caTerms.size()));
