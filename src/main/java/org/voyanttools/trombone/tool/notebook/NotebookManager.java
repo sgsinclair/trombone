@@ -59,7 +59,7 @@ public class NotebookManager extends AbstractTool {
 				InputStream is = null;
 				try {
 					is = inputSource.getInputStream();
-					jsonData = IOUtils.readStringFromStream(is);
+					jsonData = IOUtils.toString(is, "UTF-8");
 				} finally {
 					if (is!=null) is.close();
 				}
