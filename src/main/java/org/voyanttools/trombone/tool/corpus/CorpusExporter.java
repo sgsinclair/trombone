@@ -62,7 +62,9 @@ public class CorpusExporter extends AbstractCorpusTool implements ConsumptiveToo
 		this.corpus = corpusMapper.getCorpus();
 	}
 
-	public void run(Corpus corpus, OutputStream outputStream) throws IOException {
+	public void run(OutputStream outputStream) throws IOException {
+		Corpus corpus = CorpusManager.getCorpus(storage, parameters);
+		this.getCorpusMapper(corpus); // this enforces ConsumptiveTool (it might be faster to just duplicate code instead of instantiating CorpusMapper)
 		
 		// strategy for unique zip entry names
 		Map<String, AtomicInteger> nameMapper = new HashMap<String, AtomicInteger>();

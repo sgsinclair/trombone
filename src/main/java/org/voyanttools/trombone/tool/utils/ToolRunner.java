@@ -33,6 +33,7 @@ import java.util.List;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.tool.corpus.CorpusExporter;
@@ -95,7 +96,7 @@ public class ToolRunner extends AbstractTool {
 				if (outputStream==null) {
 					throw new IllegalArgumentException("The CorpusExporter tool requires the outputFormat=zip parameter to be set (or otherwise an OutputStream to be used instead of a Writer).");
 				}
-				((CorpusExporter) tool).run(CorpusManager.getCorpus(storage, parameters), outputStream);
+				((CorpusExporter) tool).run(outputStream); // make sure we check for ConsumptiveTool
 				return;
 			}
 		}
