@@ -54,6 +54,10 @@ public class DocumentToken implements Comparable<DocumentToken> {
 		return term;
 	}
 	
+	public int getDocIndex() {
+		return docIndex;
+	}
+	
 	public TokenType getTokenType() {
 		return tokenType;
 	}
