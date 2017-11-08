@@ -158,7 +158,7 @@ public class Keywords {
 		keywords.addAll(strings);
 	}
 	
-	Collection<String> getKeywords() {
+	public Collection<String> getKeywords() {
 		return keywords;
 	}
 	

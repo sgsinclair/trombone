@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -411,6 +412,22 @@ public class CorpusTermsTest {
 		assertEquals(0.157, corpusTerms.get(0).getComparisonCorpusRelativeFrequencyDifference(), .01); // it
 		assertEquals(-0.090, corpusTerms.get(1).getComparisonCorpusRelativeFrequencyDifference(), .01); // and
 		assertEquals(-0.142, corpusTerms.get(2).getComparisonCorpusRelativeFrequencyDifference(), .01); // document
+		
+		// test whitelist
+		String[] keys = parameters.getKeys().toArray(new String[0]);
+		for (String key : keys) {
+			if (!key.equals("corpus") && !key.equals("tool")) {parameters.removeParameter(key);}
+		}
+		parameters.addParameter("whiteList", new String[]{"\"it was\"","stormy"});
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		assertEquals(2, corpusTermFrequencies.getTotal());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(2, corpusTerms.size());
+		assertEquals("\"it was\"", corpusTerms.get(0).getTerm()); // it
+		assertEquals(3, corpusTerms.get(0).getRawFrequency()); // and
+		assertEquals("stormy", corpusTerms.get(1).getTerm()); // it
+		assertEquals(1, corpusTerms.get(1).getRawFrequency()); // and
 		
 		storage.destroy();
 		

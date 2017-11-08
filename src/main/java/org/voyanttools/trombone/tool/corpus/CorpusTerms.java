@@ -119,7 +119,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public float getVersion() {
-		return super.getVersion()+16;
+		return super.getVersion()+17;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -223,6 +223,12 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		
 		if (parameters.containsKey("comparisonCorpus")) {
 			createComparisonCorpusTermMinimals();
+		}
+		if (whiteList.isEmpty()==false) {
+			String[] queries = whiteList.getKeywords().stream()
+				.toArray(String[]::new);
+			runQueries(corpusMapper, stopwords, queries);
+			return;
 		}
 		try {
 			FlexibleQueue<CorpusTerm> queue = withDistributions || corpusTermSort.needDistributions() ?
