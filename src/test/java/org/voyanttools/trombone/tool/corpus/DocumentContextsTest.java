@@ -102,7 +102,7 @@ public class DocumentContextsTest {
 		FlexibleParameters parameters;
 		parameters = new FlexibleParameters();
 		parameters.addParameter("string", "eight keywordOne nine");
-		parameters.addParameter("string", "one two three four five six seven eight keywordOne nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty twentyone twentytwo twentythree twentyfour twentyfive twentysix twentyseven keywordTwo twentyeight twentynine thirty thirtyone thirtytwo thirtythree thirtyfour keywordThree thirtyfive thirtysix thirtyseven thirtyeight thirtynine forty fortyone fortytwo fortythree fortyfour fortyfive fortysix fortyseven fortyeight fortynine fifty fiftyone keywordFour fiftytwo keywordFive fiftythree fiftyfour fiftyfive keywordSix fiftysix fiftyseven fiftyeight keywordSeven keywordEight fiftynine sixty sixtyone sixtytwo sixtythree sixtyfour sixtyfive sixtysix sixtyseven keywordNine");
+		parameters.addParameter("string", "one two three four five six seven eight keywordOne nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty twentyone twentytwo twentythree twentyfour twentyfive twentysix twentyseven keywordTwo twentyeight twentynine thirty thirtyone thirtytwo thirtythree thirtyfour keywordThree thirtyfive thirtysix thirtyseven thirtyeight thirtynine forty fortyone fortytwo fortythree fortyfour fortyfive fortysix fortyseven fortyeight fortynine fifty fiftyone keywordFour fiftytwo keywordFive fiftythree fiftyfour fiftyfive keywordSix fiftysix fiftyseven fiftyeight keywordSeven keywordEight fiftynine sixty sixtyone sixtytwo sixtythree sixtyfour sixtyfive sixtysix sixtyseven keywordNine nine keywordOne");
 
 		RealCorpusCreator creator = new RealCorpusCreator(storage, parameters);
 		creator.run();
@@ -119,17 +119,17 @@ public class DocumentContextsTest {
 		documentContexts = new DocumentContexts(storage, parameters);
 		documentContexts.run();
 		contexts = documentContexts.getContexts();
-		assertEquals(10, contexts.size());
+		assertEquals(11, contexts.size());
 
 		// now focus on the second document
-		parameters.setParameter("docIndex", 1);
+		parameters.setParameter("docIndex", 1);		
 		
 		// start
 		parameters.setParameter("start", 5);
 		documentContexts = new DocumentContexts(storage, parameters);
 		documentContexts.run();
 		contexts = documentContexts.getContexts();
-		assertEquals(4, contexts.size());
+		assertEquals(5, contexts.size());
 
 		// start & limit
 		parameters.setParameter("limit", 2);
@@ -140,7 +140,7 @@ public class DocumentContextsTest {
 		
 		parameters.removeParameter("start");
 		parameters.setParameter("limit", 1);
-		parameters.setParameter("position", 54);
+		parameters.setParameter("position", 56);
 		documentContexts = new DocumentContexts(storage, parameters);
 		documentContexts.run();
 		contexts = documentContexts.getContexts();
@@ -157,7 +157,7 @@ public class DocumentContextsTest {
 		contexts = documentContexts.getContexts();
 		assertEquals(2, contexts.size());
 		assertTrue(contexts.get(0).getDocIndex()!=contexts.get(1).getDocIndex());
-		assertEquals(10, documentContexts.total);
+		assertEquals(11, documentContexts.total);
 		
 		// same, but with no total needed
 		parameters.addParameter("accurateTotalNotNeeded", "true");
@@ -177,7 +177,25 @@ public class DocumentContextsTest {
 		documentContexts.run();
 		contexts = documentContexts.getContexts();
 		assertTrue(contexts.get(0).getLeft().endsWith("eight "));
-		assertTrue(contexts.get(9).getLeft().endsWith("twentyseven "));
+		assertTrue(contexts.get(9).getLeft().endsWith("thirtyfour "));
+		
+		// test phrase with no slop (order matters)
+		parameters.removeParameter("dir");
+		parameters.removeParameter("sort");
+		parameters.setParameter("query", "\"keywordOne nine\"");
+		documentContexts = new DocumentContexts(storage, parameters);
+		documentContexts.run();
+		contexts = documentContexts.getContexts();
+		assertEquals(2, contexts.size());
+
+		// same but order doesn't mattee
+		parameters.setParameter("query", "\"keywordOne nine\"~0");
+		documentContexts = new DocumentContexts(storage, parameters);
+		documentContexts.run();
+		contexts = documentContexts.getContexts();
+		assertEquals(3, contexts.size());
+
+
 		
 		storage.destroy();
 	}

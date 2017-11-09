@@ -60,6 +60,10 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 		Query query = super.parse(queryText);
 		if (query instanceof SpanQuery) {
 			if (query instanceof SpanNearQuery) {
+				// if the original query doesn't specify a slop, make sure words are in order
+				if (queryText.contains("~")==false) {
+					query = new SpanNearQuery(((SpanNearQuery) query).getClauses(), ((SpanNearQuery) query).getSlop(), true);
+				}
 				SpanQuery[] spanQueries = ((SpanNearQuery) query).getClauses();
 				if (spanQueries.length==1) {return spanQueries[0];}
 			}
