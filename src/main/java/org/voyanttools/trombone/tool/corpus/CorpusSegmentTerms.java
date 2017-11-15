@@ -13,7 +13,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 
+import org.apache.commons.collections4.ListUtils;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.DocumentToken;
@@ -39,21 +41,23 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamConverter(CorpusSegmentTerms.CorpusSegmentTermsConverter.class)
 public class CorpusSegmentTerms extends AbstractCorpusTool {
 
+	/* package visibility primarily for testing */
 	@XStreamOmitField
-	private List<DocumentToken[]> segmentMarkers = new ArrayList<DocumentToken[]>();
+	List<DocumentToken[]> segmentMarkers = new ArrayList<DocumentToken[]>();
+
+	/* package visibility primarily for testing */
 	@XStreamOmitField
-	private int segments;
-	@XStreamOmitField
-	private List<Map.Entry<String, int[]>> sortedSegmentTerms = null;
+	List<Map.Entry<String, double[]>> sortedSegmentTerms = null;
+
 	@XStreamOmitField
 	private int total;
+	
 	@XStreamOmitField
 	private TokenType tokenType;
 	
 	
 	public CorpusSegmentTerms(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
-		segments = parameters.getParameterIntValue("segments", 10);
 		tokenType = TokenType.getTokenTypeForgivingly(parameters.getParameterValue("tokenType", "lexical"));
 	}
 
@@ -62,68 +66,68 @@ public class CorpusSegmentTerms extends AbstractCorpusTool {
 	 */
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
-		int tokensCount = corpusMapper.getCorpus().getTokensCount(TokenType.lexical);
-		int[] tokensCounts = corpusMapper.getCorpus().getTokensCounts(TokenType.lexical);
-		int tokensPerSegment = Math.round(tokensCount/segments);
-		FlexibleParameters params = parameters.clone();
-		params.setParameter("limit", tokensPerSegment);
-		params.setParameter("noOthers", "true");
-		List<DocumentToken> documentTokens;
-		List<Map<String, AtomicInteger>> termsToFreqsMapList = new ArrayList<Map<String, AtomicInteger>>();
-		int tokensConsumed = 0;
-		int start = 0;
-		for (int i=0; i<segments; i++) {
-			Map<String, AtomicInteger> freqs = new HashMap<String, AtomicInteger>();
-			int c = 0;
-			for (int j=0, len=tokensCounts.length; j<len; j++) {
-				if (tokensConsumed<c+tokensCounts[j]) {
-					params.setParameter("skipToDocId", corpusMapper.getDocumentIdFromDocumentPosition(j));
-					start = tokensConsumed-c;
-					break;
-				}
-				c+=tokensCounts[j];
-			}
-			params.setParameter("start", start);
+		int segments = parameters.getParameterIntValue("segments", corpusMapper.getCorpus().size());
+		int corpusTokensCount = corpusMapper.getCorpus().getTokensCount(TokenType.lexical);
+		int[] documentTokensCounts = corpusMapper.getCorpus().getTokensCounts(TokenType.lexical);
+		FlexibleParameters params = parameters.clone(); // should include stopwords as needed
+		params.setParameter("noOthers", "true"); // only keep worda
+		params.removeParameter("start"); // make sure to start at the beginning
+		params.setParameter("limit", Integer.MAX_VALUE); // make sure to grab all tokens for this document
+		List<DocumentToken> documentTokens;	
+		List<Map<String, Double>> termsToFreqsMapList = new ArrayList<Map<String, Double>>();
+		for (int i=0, len=documentTokensCounts.length; i<len; i++) {
+			params.setParameter("docIndex", i); // limit to current document
 			DocumentTokens tokens = new DocumentTokens(storage, params);
 			tokens.run(corpusMapper);
 			documentTokens = tokens.getDocumentTokens();
-			tokensConsumed+=documentTokens.size();
-			for (DocumentToken documentToken : documentTokens) {
-				String term = documentToken.getTerm();
-				if (tokenType==TokenType.lexical) {
-					term = term.toLowerCase();
+			int docUnits = (int) (((float) documentTokensCounts[i])*segments)/corpusTokensCount;
+			if (docUnits<1) {docUnits=1;}
+			int size = (int) ((float) documentTokens.size())/docUnits;
+			List<List<DocumentToken>> tokensUnits = ListUtils.partition(documentTokens, size+1);
+			for (List<DocumentToken> tokensUnit : tokensUnits) {
+				System.out.println(documentTokens.size()+" "+tokensUnit.size()+" "+size);
+				Map<String, AtomicInteger> unitFreqs = new HashMap<String, AtomicInteger>();
+				for (DocumentToken documentToken : tokensUnit) {
+					String term = documentToken.getTerm();
+					if (tokenType==TokenType.lexical) {term = term.toLowerCase();}
+					if (unitFreqs.containsKey(term)) {unitFreqs.get(term).incrementAndGet();}
+					else {unitFreqs.put(term, new AtomicInteger(1));}
 				}
-				if (freqs.containsKey(term)) {freqs.get(term).incrementAndGet();}
-				else {freqs.put(term, new AtomicInteger(1));}
+				Map<String, Double> relativeMap = new HashMap<String, Double>();
+				int tokensUnitSize = tokensUnit.size();
+				for (Map.Entry<String, AtomicInteger> unitFreqsEntry : unitFreqs.entrySet()) {
+					relativeMap.put(unitFreqsEntry.getKey(), (double) ((double) unitFreqsEntry.getValue().get()/tokensUnitSize));
+				}
+				termsToFreqsMapList.add(relativeMap);
+				segmentMarkers.add(new DocumentToken[]{tokensUnit.get(0),tokensUnit.get(tokensUnit.size()-1)});
 			}
-			termsToFreqsMapList.add(freqs);
-			segmentMarkers.add(new DocumentToken[]{documentTokens.get(0),documentTokens.get(documentTokens.size()-1)});
+			
 		}
 		
 		// build a list of all terms
 		Set<String> termsSet = new HashSet<String>();
-		for (Map<String, AtomicInteger> map : termsToFreqsMapList) {
+		for (Map<String, Double> map : termsToFreqsMapList) {
 			termsSet.addAll(map.keySet());
 		}
 		total = termsSet.size(); // make sure to set total before subsetting
 		
 		// build map of freqs
-		Map<String, int[]> termFreqs = new HashMap<String, int[]>();
+		Map<String, double[]> termFreqs = new HashMap<String, double[]>();
 		for (String term : termsSet) {
-			int[] freqs = new int[termsToFreqsMapList.size()];
+			double[] freqs = new double[termsToFreqsMapList.size()];
 			for (int i=0, len=termsToFreqsMapList.size(); i<len; i++) {
-				Map<String, AtomicInteger> freqsMap = termsToFreqsMapList.get(i);
-				freqs[i] = freqsMap.containsKey(term) ?  freqsMap.get(term).get() : 0;
+				Map<String, Double> freqsMap = termsToFreqsMapList.get(i);
+				freqs[i] = freqsMap.containsKey(term) ?  freqsMap.get(term) : 0;
 			}
 			termFreqs.put(term, freqs);
 		}
 		sortedSegmentTerms = termFreqs.entrySet().stream()
-			.sorted((m1, m2) -> Integer.compare(Arrays.stream(m2.getValue()).sum(), Arrays.stream(m1.getValue()).sum()))
+			.sorted((m1, m2) -> Double.compare(Arrays.stream(m2.getValue()).sum(), Arrays.stream(m1.getValue()).sum()))
 			.limit(parameters.getParameterIntValue("limit", Integer.MAX_VALUE))
 			.collect(Collectors.toList());
 		
 	}
-
+	
 	public static class CorpusSegmentTermsConverter implements Converter {
 
 		/* (non-Javadoc)
@@ -168,7 +172,7 @@ public class CorpusSegmentTerms extends AbstractCorpusTool {
 	        writer.endNode();
 
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
-			for (Map.Entry<String, int[]> corpusSegmentTerm : corpusSegmentTerms.sortedSegmentTerms) {
+			for (Map.Entry<String, double[]> corpusSegmentTerm : corpusSegmentTerms.sortedSegmentTerms) {
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
 		        
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);

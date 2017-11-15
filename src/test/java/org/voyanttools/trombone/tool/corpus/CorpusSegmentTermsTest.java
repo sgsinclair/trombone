@@ -31,8 +31,23 @@ public class CorpusSegmentTermsTest {
 		
 		CorpusSegmentTerms corpusSegmentTerms;
 		
+		// default values
+		/*
 		corpusSegmentTerms = new CorpusSegmentTerms(storage, parameters);
 		corpusSegmentTerms.run();
+		assertEquals(3, corpusSegmentTerms.segmentMarkers.size());
+		assertEquals("de", corpusSegmentTerms.sortedSegmentTerms.get(0).getKey());
+		assertEquals("procès", corpusSegmentTerms.sortedSegmentTerms.get(corpusSegmentTerms.sortedSegmentTerms.size()-1).getKey());
+		*/
+
+		parameters.setParameter("stopList", "auto");
+		parameters.setParameter("limit", 10);
+		parameters.setParameter("segments", 6);
+		corpusSegmentTerms = new CorpusSegmentTerms(storage, parameters);
+		corpusSegmentTerms.run();
+		assertEquals(5, corpusSegmentTerms.segmentMarkers.size()); // corpus is lop-sided so we get 4 segments instead of 6
+		assertEquals("droit", corpusSegmentTerms.sortedSegmentTerms.get(0).getKey());
+		assertEquals("derechos", corpusSegmentTerms.sortedSegmentTerms.get(corpusSegmentTerms.sortedSegmentTerms.size()-1).getKey());
 	}
 
 }
