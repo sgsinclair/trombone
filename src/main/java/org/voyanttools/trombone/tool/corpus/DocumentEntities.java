@@ -14,6 +14,7 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentEntity;
 import org.voyanttools.trombone.model.EntityType;
 import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -46,11 +47,12 @@ public class DocumentEntities extends AbstractCorpusTool {
 	 */
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
+		boolean verbose = parameters.getParameterBooleanValue("verbose");
 		List<String> ids = getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());
 		for (String docId : ids) {
 			// only check for "withDistributions" though this will actually shift to this class
 			// TODO: offset to token mapping should happen here instead of in the annotator
-			String id = "cached-document-entities-"+String.valueOf(this.getVersion())+DigestUtils.md5Hex(docId+parameters.getParameterValue("withDistributions",""));
+			String id = "cached-document-entities-"+String.valueOf(this.getVersion())+DigestUtils.md5Hex(docId+parameters.getParameterValue("withDistributions","")+parameters.getParameterValue("entityType",""));
 			List<DocumentEntity> entitiesList = new ArrayList<DocumentEntity>();
 			if (storage.isStored(id, Storage.Location.object)) {
 				try {
@@ -62,10 +64,21 @@ public class DocumentEntities extends AbstractCorpusTool {
 			else {
 				IndexedDocument indexedDocument = corpusMapper.getCorpus().getDocument(docId);
 				String lang = indexedDocument.getMetadata().getLanguageCode();
+				Set<EntityType> types =  new HashSet<EntityType>();
+				if (parameters.containsKey("entityType")) {
+					for (String entityType : parameters.getParameterValues("entityType")) {
+						EntityType type = EntityType.getForgivingly(entityType);
+						if (type!=EntityType.unknnown) {
+							types.add(type);
+						}
+					}
+				}
+					 
+				
 				if (lang.equals("en")) {
 					NlpAnnotator nlpAnnotator = storage.getNlpAnnotatorFactory().getNlpAnnotator(lang);
 					// get all types that are recognized (though not ordinals and numbers)
-					entitiesList = nlpAnnotator.getEntities(corpusMapper, indexedDocument, new HashSet<EntityType>(), parameters);
+					entitiesList = nlpAnnotator.getEntities(corpusMapper, indexedDocument, types, parameters);
 					storage.store(entitiesList, id, Storage.Location.object);
 				}
 			}
@@ -85,6 +98,10 @@ public class DocumentEntities extends AbstractCorpusTool {
 				if (types.isEmpty() || types.contains(entity.getType())) {
 					entities.add(entity);
 				}
+			}
+			
+			if (verbose) {
+				System.out.println("document: "+docId+" has "+entitiesList.size()+" entities ("+entities.size()+" total)");
 			}
 		}
 	}

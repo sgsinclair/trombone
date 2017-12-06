@@ -396,11 +396,14 @@ public class XmlExtractor implements Extractor, Serializable {
 			StringWriter sw = new StringWriter(); // no need to close
 			Result streamResult = new StreamResult(sw);
 			try {
-				
-				transformer.transform(new DOMSource(newParentNode), streamResult);
+				DOMSource domSource = new DOMSource(newParentNode);
+				transformer.transform(domSource, streamResult);
 			} catch (TransformerException e) {
 				throw new IOException(
 						"Unable to transform node during XML extraction: "+storedDocumentSource);
+			} catch (Exception e) {
+				throw new IOException(
+						"Unable to transform node during XML extraction: "+storedDocumentSource, e);
 			}
 	
 			String string = sw.toString();

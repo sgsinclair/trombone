@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd">
+  <titleInfo>
+    <title>Anne of the Island</title>
+  </titleInfo>
+  <name type="personal">
+    <namePart>Lucy Maud Montgomery</namePart>
+  </name>
+  <genre type="formatType">Born Digital</genre>
+  <physicalDescription>
+    <form>electronic</form>
+    <digitalOrigin>born digital</digitalOrigin>
+  </physicalDescription>
+  <recordInfo>
+    <recordOrigin>This MODS record was created using the Islandora XML Forms collection of Drupal modules.</recordOrigin>
+    <languageOfCataloging>
+      <languageTerm type="text">English</languageTerm>
+    </languageOfCataloging>
+    <recordContentSource>Canadian Writing Research Collaboratory</recordContentSource>
+  </recordInfo>
+</mods>

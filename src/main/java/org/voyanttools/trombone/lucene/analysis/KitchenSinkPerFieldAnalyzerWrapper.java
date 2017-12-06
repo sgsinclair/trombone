@@ -47,9 +47,9 @@ public class KitchenSinkPerFieldAnalyzerWrapper extends AnalyzerWrapper {
 			@Override
 			Analyzer getAnalyzer(Storage storage) {return keywordAnalyzer;}
 		},
-		STEMMED_EN("stemmed-en") {
+		STEM("stem") {
 			@Override
-			Analyzer getAnalyzer(Storage storage) {return new MultiLingualStemAnalyzer("en");}
+			Analyzer getAnalyzer(Storage storage) {return new MultiLingualStemAnalyzer();}
 		},
 		// TODO: re-enable lemmatization
 //		LEMMATIZED_EN("lemmatized-en") {

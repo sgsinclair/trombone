@@ -49,6 +49,7 @@ public class StanfordNlpAnnotator implements NlpAnnotator {
 	StanfordNlpAnnotator(String languageCode) {
 	    Properties props = new Properties();
 	    props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, entitymentions");
+	    // props.setProperty("ner.verbose", "true");
 	    if (languageCode.equals("fr")) {
 	    	props.setProperty("props", "StanfordCoreNLP-french.properties");
 	    }
@@ -65,6 +66,7 @@ public class StanfordNlpAnnotator implements NlpAnnotator {
 		for (CoreMap entity : entitiesMap) {
 			String term = entity.get(TextAnnotation.class);
 			EntityType type = EntityType.getForgivingly(entity.get(NamedEntityTagAnnotation.class));
+			if (types.isEmpty()==false && types.contains(type)==false) {continue;}
 			String key = term+" --" +type.name(); 
 			if (!stringEntitiesMap.containsKey(key)) {
 				stringEntitiesMap.put(key, new ArrayList<CoreMap>());
@@ -72,7 +74,7 @@ public class StanfordNlpAnnotator implements NlpAnnotator {
 			stringEntitiesMap.get(key).add(entity);
 		}
 		
-		Map<Integer, Integer> offsetToTokenPositionMap = parameters.getParameterBooleanValue("withDistribution") ? getOffsetsToPositionsMap(corpusMapper, indexedDocument, entitiesMap) : null;
+		Map<Integer, Integer> offsetToTokenPositionMap = parameters.getParameterBooleanValue("withDistributions") ? getOffsetsToPositionsMap(corpusMapper, indexedDocument, entitiesMap) : null;
 		
 		List<DocumentEntity> entities = new ArrayList<DocumentEntity>();
 		int corpusDocumentIndex = corpusMapper.getCorpus().getDocumentPosition(indexedDocument.getId());
@@ -153,7 +155,8 @@ public class StanfordNlpAnnotator implements NlpAnnotator {
 	}
 	
 	private List<CoreMap> getSentences(String text) {
-		return getAnnotated(text).get(SentencesAnnotation.class);
+		Annotation annotation = getAnnotated(text);
+		return annotation.get(SentencesAnnotation.class);
 	}
 	
 //	public static void main(String[] args) {

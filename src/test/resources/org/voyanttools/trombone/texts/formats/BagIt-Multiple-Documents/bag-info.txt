@@ -1,0 +1,4 @@
+Source-Organization: Canadian Writing Research Collaboratory
+Organization-Address: University of Alberta
+Contact-Email: cwrc@ualberta.ca
+Bagging-Date: 2016-06-16

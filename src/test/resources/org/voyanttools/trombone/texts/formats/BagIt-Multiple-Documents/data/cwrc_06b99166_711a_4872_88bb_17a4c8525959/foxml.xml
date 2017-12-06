@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject VERSION="1.1" PID="cwrc:06b99166-711a-4872-88bb-17a4c8525959"
+xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+<foxml:objectProperties>
+<foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Active"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="Further Chronicles of Avonlea"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE="Colin Faulkner"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2016-05-24T15:40:12.979Z"/>
+<foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2016-06-08T17:14:19.943Z"/>
+</foxml:objectProperties>
+<foxml:datastream ID="AUDIT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+<foxml:datastreamVersion ID="AUDIT.0" LABEL="Audit Trail for this object" CREATED="2016-05-24T15:40:12.979Z" MIMETYPE="text/xml" FORMAT_URI="info:fedora/fedora-system:format/xml.fedora.audit">
+<foxml:xmlContent>
+<audit:auditTrail xmlns:audit="info:fedora/fedora-system:def/audit#">
+<audit:record ID="AUDREC1">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>Colin Faulkner</audit:responsibility>
+<audit:date>2016-05-26T15:23:52.665Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC2">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>POLICY</audit:componentID>
+<audit:responsibility>Colin Faulkner</audit:responsibility>
+<audit:date>2016-05-26T15:23:52.770Z</audit:date>
+<audit:justification>Copied datastream from cwrc:06b99166-711a-4872-88bb-17a4c8525959.</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC3">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>Colin Faulkner</audit:responsibility>
+<audit:date>2016-05-26T15:23:53.004Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC4">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>Colin Faulkner</audit:responsibility>
+<audit:date>2016-05-26T15:23:53.157Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC5">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>TN</audit:componentID>
+<audit:responsibility>Colin Faulkner</audit:responsibility>
+<audit:date>2016-05-26T15:27:40.792Z</audit:date>
+<audit:justification>Copied datastream from cwrc:06b99166-711a-4872-88bb-17a4c8525959.</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC6">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:11.578Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC7">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>POLICY</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:11.791Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC8">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:12.071Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC9">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:12.209Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC10">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:30.764Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC11">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>POLICY</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:30.933Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC12">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:31.274Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC13">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T16:59:31.591Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC14">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:13:28.773Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC15">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>CWRC</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:13:28.993Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC16">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:13:30.120Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC17">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>POLICY</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:13:30.282Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC18">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:13:30.543Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC19">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:13:30.681Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC20">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>WORKFLOW</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:13:36.548Z</audit:date>
+<audit:justification>Copied datastream from cwrc:06b99166-711a-4872-88bb-17a4c8525959.</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC21">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:14:47.310Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC22">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>POLICY</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:14:47.511Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC23">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:14:47.829Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC24">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>ilovan</audit:responsibility>
+<audit:date>2016-06-06T18:14:48.115Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC25">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>adminUP</audit:responsibility>
+<audit:date>2016-06-08T17:14:19.077Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC26">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>POLICY</audit:componentID>
+<audit:responsibility>adminUP</audit:responsibility>
+<audit:date>2016-06-08T17:14:19.313Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC27">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>adminUP</audit:responsibility>
+<audit:date>2016-06-08T17:14:19.785Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC28">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>adminUP</audit:responsibility>
+<audit:date>2016-06-08T17:14:19.943Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+</audit:auditTrail>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="RELS-EXT.0" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-05-24T15:40:12.989Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="711">
+<foxml:xmlContent>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:cwrc="http://cwrc.ca/ns/cw#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.1" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-05-26T15:23:52.665Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="947">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>Colin Faulkner</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.2" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-05-26T15:23:53.004Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="1009">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>Colin Faulkner</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.3" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-05-26T15:23:53.157Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="1071">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>Colin Faulkner</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+    <islandora:locked-by>Colin Faulkner</islandora:locked-by>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.4" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T16:59:11.578Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="835">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+    <islandora:locked-by>Colin Faulkner</islandora:locked-by>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.5" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T16:59:12.071Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="773">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:locked-by>Colin Faulkner</islandora:locked-by>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.6" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T16:59:12.209Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="711">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.7" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T16:59:30.764Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="939">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>ilovan</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.8" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T16:59:31.274Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="1001">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>ilovan</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.9" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T16:59:31.591Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="1055">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>ilovan</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+    <islandora:locked-by>ilovan</islandora:locked-by>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.10" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T18:13:28.773Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="1055">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <islandora:isManageableByUser>ilovan</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+    <islandora:locked-by>ilovan</islandora:locked-by>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.11" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T18:13:30.120Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="827">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+    <islandora:locked-by>ilovan</islandora:locked-by>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.12" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T18:13:30.543Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="765">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <islandora:locked-by>ilovan</islandora:locked-by>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.13" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T18:13:30.681Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="711">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.14" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T18:14:47.310Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="939">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>ilovan</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.15" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T18:14:47.829Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="1001">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>ilovan</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.16" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-06T18:14:48.115Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="1055">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:isManageableByUser>ilovan</islandora:isManageableByUser>
+    <islandora:isManageableByUser>fedoraAdmin</islandora:isManageableByUser>
+    <islandora:isManageableByRole>administrator</islandora:isManageableByRole>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+    <islandora:locked-by>ilovan</islandora:locked-by>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.17" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-08T17:14:19.077Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="827">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:lock-expiry>indefinite</islandora:lock-expiry>
+    <islandora:locked-by>ilovan</islandora:locked-by>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.18" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-08T17:14:19.785Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="765">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+    <islandora:locked-by>ilovan</islandora:locked-by>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.19" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2016-06-08T17:14:19.943Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="711">
+<foxml:xmlContent>
+<rdf:RDF xmlns:cwrc="http://cwrc.ca/ns/cw#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="info:fedora/cwrc:06b99166-711a-4872-88bb-17a4c8525959">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/cwrc:lmm_texts"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/cwrc:documentCModel"></fedora-model:hasModel>
+    <cwrc:hasSchema rdf:resource="info:fedora/cwrc:13d0b3bf-4d37-4ead-bb05-c91260233532"></cwrc:hasSchema>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="MODS" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+<foxml:datastreamVersion ID="MODS.0" LABEL="MODS Record" CREATED="2016-05-24T15:40:12.989Z" MIMETYPE="application/xml" SIZE="998">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/MODS/2016-05-24T15:40:12.989Z"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DC.0" LABEL="DC Record" CREATED="2016-05-24T15:40:12.989Z" MIMETYPE="text/xml" SIZE="549">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>Further Chronicles of Avonlea</dc:title>
+  <dc:contributor>Lucy Maud Montgomery</dc:contributor>
+  <dc:type>Born Digital</dc:type>
+  <dc:format>electronic</dc:format>
+  <dc:identifier>cwrc:06b99166-711a-4872-88bb-17a4c8525959</dc:identifier>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="CWRC" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+<foxml:datastreamVersion ID="CWRC.0" LABEL="FurtherChroniclesofAvonleabyLMLucyMaudMontgomery5340.xml" CREATED="2016-05-24T15:40:12.989Z" MIMETYPE="application/xml" SIZE="462735">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/CWRC/2016-05-24T15:40:12.989Z"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="CWRC.1" LABEL="FurtherChroniclesofAvonleabyLMLucyMaudMontgomery5340.xml" CREATED="2016-06-06T18:13:28.993Z" MIMETYPE="application/xml" SIZE="462995">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/CWRC/2016-06-06T18:13:28.993Z"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="POLICY" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+<foxml:datastreamVersion ID="POLICY.0" LABEL="XACML Policy Stream" CREATED="2016-05-26T15:23:52.770Z" MIMETYPE="application/xml" SIZE="12312">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/POLICY/2016-05-26T15:23:52.770Z"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="POLICY.1" LABEL="XACML Policy Stream" CREATED="2016-06-06T16:59:11.791Z" MIMETYPE="application/xml" SIZE="725">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/POLICY/2016-06-06T16:59:11.791Z"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="POLICY.2" LABEL="XACML Policy Stream" CREATED="2016-06-06T16:59:30.933Z" MIMETYPE="application/xml" SIZE="12304">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/POLICY/2016-06-06T16:59:30.933Z"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="POLICY.3" LABEL="XACML Policy Stream" CREATED="2016-06-06T18:13:30.282Z" MIMETYPE="application/xml" SIZE="725">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/POLICY/2016-06-06T18:13:30.282Z"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="POLICY.4" LABEL="XACML Policy Stream" CREATED="2016-06-06T18:14:47.511Z" MIMETYPE="application/xml" SIZE="12304">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/POLICY/2016-06-06T18:14:47.511Z"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="POLICY.5" LABEL="XACML Policy Stream" CREATED="2016-06-08T17:14:19.313Z" MIMETYPE="application/xml" SIZE="725">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/POLICY/2016-06-08T17:14:19.313Z"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="TN" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+<foxml:datastreamVersion ID="TN.0" LABEL="Thumbnail" CREATED="2016-05-26T15:27:40.792Z" MIMETYPE="image/jpeg" SIZE="7454239">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/TN/2016-05-26T15:27:40.792Z"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="WORKFLOW" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+<foxml:datastreamVersion ID="WORKFLOW.0" LABEL="WORKFLOW DS" CREATED="2016-06-06T18:13:36.548Z" MIMETYPE="text/xml" SIZE="177">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="http://localhost:8080/fedora/get/cwrc:06b99166-711a-4872-88bb-17a4c8525959/WORKFLOW/2016-06-06T18:13:36.548Z"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+</foxml:digitalObject>

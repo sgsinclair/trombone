@@ -30,17 +30,15 @@ import org.apache.lucene.analysis.snowball.SnowballFilter;
  */
 public class MultiLingualStemAnalyzer extends LexicalAnalyzer {
 
-	private StemmableLanguage sl;
-	
-	public MultiLingualStemAnalyzer(String lang) {
-		sl = lang.length()==2 ? StemmableLanguage.fromCode(lang) : StemmableLanguage.valueOf(lang);
-	}
-	
 	/* (non-Javadoc)
 	 * @see org.apache.lucene.analysis.Analyzer#createComponents(java.lang.String, java.io.Reader)
 	 */
 	@Override
 	protected TokenStreamComponents createComponents(String fieldName) {
+		StemmableLanguage sl= StemmableLanguage.fromCode(lang);
+		if (sl==null) {
+			throw new IllegalArgumentException("This language ("+sl+") can't be stemmed currently.");
+		}
 		TokenStreamComponents tsc = super.createComponents(fieldName);
 		return new TokenStreamComponents(tsc.getTokenizer(), new SnowballFilter(tsc.getTokenStream(), StringUtils.capitalize(sl.name().toLowerCase())));
 	}

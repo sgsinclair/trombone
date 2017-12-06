@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--This is just an example file.-->
+<files>
+ <file>RELS-EXT.rdf</file>
+ <file>MODS.bin</file>
+ <file>DC.xml</file>
+ <file>CWRC.bin</file>
+ <file>POLICY.bin</file>
+ <file>TN.jpg</file>
+ <file>WORKFLOW.xml</file>
+</files>

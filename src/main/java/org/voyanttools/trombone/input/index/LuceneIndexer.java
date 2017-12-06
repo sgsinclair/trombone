@@ -397,6 +397,10 @@ public class LuceneIndexer implements Indexer {
 					document.add(new Field("lemma", getString() + "<!-- "+ p.getAsQueryString()+" -->", ft));
 				}
 				
+				if (parameters.getParameterBooleanValue("stem")) {
+					// pass in parameters, including language, used by lemmatizer
+					document.add(new Field("stem", getString() + "<!-- "+ p.getAsQueryString()+" -->", ft));
+				}
 				
 				// TODO: add lemmatization
 				/*

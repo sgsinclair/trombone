@@ -91,7 +91,10 @@ public class StoredDocumentSourceExtractor {
 		}
 		try {
 			for (Future<StoredDocumentSource> future : list) {
-				extractedStoredDocumentSources.add(future.get());
+				StoredDocumentSource sds = future.get();
+				if (sds!=null) {
+					extractedStoredDocumentSources.add(sds);
+				}
 			}
 		} catch (InterruptedException e) {
 			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
