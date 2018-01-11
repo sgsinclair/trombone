@@ -148,13 +148,14 @@ public class CorpusBuilder extends AbstractTool {
 	private void indexCorpusTerms(Corpus corpus) throws IOException {
 		
 		CorpusMapper corpusMapper = new CorpusMapper(storage, corpus);
-		indexCorpusTerms(corpusMapper, corpus, TokenType.lexical);
-		
-		// build lemmatized forms if requested (assumes lemmatization has been done upstream)
-		if (parameters.getParameterBooleanValue("lemmatize")) {
-			indexCorpusTerms(corpusMapper, corpus, TokenType.lemma);
-		}
-		
+		if (corpus.size()>0) {
+			indexCorpusTerms(corpusMapper, corpus, TokenType.lexical);
+			
+			// build lemmatized forms if requested (assumes lemmatization has been done upstream)
+			if (parameters.getParameterBooleanValue("lemmatize")) {
+				indexCorpusTerms(corpusMapper, corpus, TokenType.lemma);
+			}
+		}		
 	}
 	private void indexCorpusTerms(CorpusMapper corpusMapper, Corpus corpus, TokenType tokenType) throws IOException {
 		boolean verbose = parameters.getParameterBooleanValue("verbose");

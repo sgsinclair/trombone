@@ -23,6 +23,7 @@ package org.voyanttools.trombone.model;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
@@ -55,7 +56,8 @@ public class CorpusMetadata implements Serializable {
 	}
 	
 	public List<String> getDocumentIds() {
-		return Arrays.asList(parameters.getParameterValues("documentIds"));
+		String[] ids = parameters.getParameterValues("documentIds");
+		return ids.length==1 && ids[0].isEmpty() ? new ArrayList<String>() : Arrays.asList(parameters.getParameterValues("documentIds"));
 	}
 
 	public String getId() {

@@ -156,6 +156,7 @@ class XmlExpander implements Expander {
 			}
 		}
 
+		
 		// check to see if we need to set xmlDocumentsXpath using defaults for format
 		if (xmlDocumentsXpath.isEmpty() && (parameters.getParameterValue("inputFormat","").isEmpty()==false || guessedFormat!=DocumentFormat.UNKNOWN)) {
 			

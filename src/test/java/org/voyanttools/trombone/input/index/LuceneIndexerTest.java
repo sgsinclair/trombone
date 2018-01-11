@@ -132,6 +132,23 @@ public class LuceneIndexerTest {
 		storage.destroy();		
 	}
 	
+	
+	//@Test
+	public void testGreek() throws IOException {
+		Storage storage = TestHelper.getDefaultTestStorage();
+		
+		// extract and index with no parameters
+		FlexibleParameters parameters = new FlexibleParameters();
+		File file = TestHelper.getResource("i18n/grc_ancientgreek_utf8.txt");
+		String text = FileUtils.readFileToString(file);
+		parameters.setParameter("string", text);
+		parameters.setParameter("language", ""); // default, probably uses generic lower-case filter
+		CorpusTerms corpusTerms = new CorpusTerms(storage, parameters);
+		corpusTerms.run();
+		//assertEquals(1, corpusTerms.getTotal());
+
+		storage.destroy();		
+	}
 	/**
 	 * The code below is a bit hard to follow, but essentially we're wanting to use the usual extraction
 	 * workflow (which produces a guessed language code), then Lucene analysis to double-check the

@@ -132,6 +132,7 @@ public class Corpus implements Iterable<IndexedDocument> {
 		int[] counts = new int[size()];
 		int i=0;
 		for (String pos : countList) {
+			if (pos.isEmpty()==false)
 			counts[i++] = Integer.parseInt(pos);
 		}
 		return counts;
@@ -154,7 +155,9 @@ public class Corpus implements Iterable<IndexedDocument> {
 		int[] positions = new int[size()];
 		int i=0;
 		for (String pos : positionsList) {
-			positions[i++] = Integer.parseInt(pos);
+			if (pos.isEmpty()==false) {
+				positions[i++] = Integer.parseInt(pos);
+			}
 		}
 		return positions;
 	}
