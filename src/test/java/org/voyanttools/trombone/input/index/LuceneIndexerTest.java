@@ -4,10 +4,12 @@
 package org.voyanttools.trombone.input.index;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,16 +29,19 @@ import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
 import org.voyanttools.trombone.model.Corpus;
+import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
+import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.tool.corpus.CorpusManager;
 import org.voyanttools.trombone.tool.corpus.CorpusTerms;
+import org.voyanttools.trombone.tool.corpus.DocumentTerms;
 import org.voyanttools.trombone.tool.corpus.DocumentTokens;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
@@ -133,22 +138,99 @@ public class LuceneIndexerTest {
 	}
 	
 	
-	//@Test
+	@Test
 	public void testGreek() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		// FIXME: this works properly for file storage (typical use) but not memory storage where values remain the same
+		Storage storage = new FileStorage(TestHelper.getTemporaryTestStorageDirectory());
 		
-		// extract and index with no parameters
-		FlexibleParameters parameters = new FlexibleParameters();
-		File file = TestHelper.getResource("i18n/grc_ancientgreek_utf8.txt");
-		String text = FileUtils.readFileToString(file);
-		parameters.setParameter("string", text);
-		parameters.setParameter("language", ""); // default, probably uses generic lower-case filter
-		CorpusTerms corpusTerms = new CorpusTerms(storage, parameters);
-		corpusTerms.run();
-		//assertEquals(1, corpusTerms.getTotal());
+		FlexibleParameters parameters;
+		CorpusCreator creator;
+		DocumentMetadata documentMetadata;
+		Collection<String> langs;
+		
+		// extract and index with no special parameters
+		parameters = new FlexibleParameters();
+		String[] files = new String[]{"voyant_test_el.txt","voyant_test_grc_oxia.txt","voyant_test_grc_tonos_nfc.txt"};
+		for (int i=0; i<files.length; i++) {
+			files[i] =  TestHelper.getResource("i18n/"+File.separator+files[i]).getAbsolutePath();
+		}
+		parameters.setParameter("file", files);
+		creator = new CorpusCreator(storage, parameters);
+		creator.run();
+		String id = creator.getStoredId();
+		Corpus defaultCorpus = storage.getCorpusStorage().getCorpus(id);
+		assertEquals(3, defaultCorpus.size());
+		langs = defaultCorpus.getLanguageCodes();
+		assertEquals(1, langs.size());
+		assertTrue(langs.contains("el")); // N.B. all three get recognized as modern Greek
 
+		// extract and index with language parameter set to English (no GreekLowerCaseFilter)
+		parameters.setParameter("language", "en");
+		creator = new CorpusCreator(storage, parameters);
+		creator.run();
+		Corpus englishCorpus = storage.getCorpusStorage().getCorpus(creator.getStoredId());
+		assertEquals(3, englishCorpus.size());
+		langs = englishCorpus.getLanguageCodes();
+		assertEquals(1, langs.size());
+		assertTrue(langs.contains("en"));
+		
+		// voyant_test_el.txt (note different types count because of GreekLowerCaseFilter)
+		documentMetadata = defaultCorpus.getDocument(0).getMetadata();
+		assertEquals(files[0], documentMetadata.getLocation());
+		assertEquals(89, documentMetadata.getTokensCount(TokenType.lexical));
+		assertEquals(64, documentMetadata.getTypesCount(TokenType.lexical));
+		documentMetadata = englishCorpus.getDocument(0).getMetadata();
+		assertEquals(files[0], documentMetadata.getLocation());
+		assertEquals(89, documentMetadata.getTokensCount(TokenType.lexical));
+		assertEquals(65, documentMetadata.getTypesCount(TokenType.lexical));
+
+		// voyant_test_grc_oxia.txt (note different types count because of GreekLowerCaseFilter)
+		documentMetadata = defaultCorpus.getDocument(1).getMetadata();
+		assertEquals(files[1], documentMetadata.getLocation());
+		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
+		assertEquals(105, documentMetadata.getTypesCount(TokenType.lexical));
+		documentMetadata = englishCorpus.getDocument(1).getMetadata();
+		assertEquals(files[1], documentMetadata.getLocation());
+		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
+		assertEquals(108, documentMetadata.getTypesCount(TokenType.lexical));
+
+		// voyant_test_grc_tonos_nfc.txt (note different types count because of GreekLowerCaseFilter)
+		documentMetadata = defaultCorpus.getDocument(2).getMetadata();
+		assertEquals(files[2], documentMetadata.getLocation());
+		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
+		assertEquals(105, documentMetadata.getTypesCount(TokenType.lexical));
+		documentMetadata = englishCorpus.getDocument(2).getMetadata();
+		assertEquals(files[2], documentMetadata.getLocation());
+		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
+		assertEquals(108, documentMetadata.getTypesCount(TokenType.lexical));
+		
+		// corpus terms and the interaction with stoplists aren't really about indexing, but let's test here anyway to keep things together
+		DocumentTerms documentTermsTool;
+		parameters = new FlexibleParameters();
+		parameters.setParameter("stopList", "auto");
+		parameters.setParameter("corpus", id);
+		
+		// voyant_test_el.txt
+		parameters.setParameter("docIndex", 0);		
+		documentTermsTool = new DocumentTerms(storage, parameters);
+		documentTermsTool.run();
+		assertEquals(46, documentTermsTool.getTotal());
+
+		// voyant_test_grc_oxia.txt
+		parameters.setParameter("docIndex", 1);		
+		documentTermsTool = new DocumentTerms(storage, parameters);
+		documentTermsTool.run();
+		assertEquals(101, documentTermsTool.getTotal());
+
+		// voyant_test_grc_tonos_nfc.txt
+		parameters.setParameter("docIndex", 2);		
+		documentTermsTool = new DocumentTerms(storage, parameters);
+		documentTermsTool.run();
+		assertEquals(101, documentTermsTool.getTotal());
+		
 		storage.destroy();		
 	}
+	
 	/**
 	 * The code below is a bit hard to follow, but essentially we're wanting to use the usual extraction
 	 * workflow (which produces a guessed language code), then Lucene analysis to double-check the

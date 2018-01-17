@@ -93,13 +93,14 @@ public class LuceneIndexer implements Indexer {
 	public String index(List<StoredDocumentSource> storedDocumentSources) throws IOException {
 		
 		// let's check if we need to create new sources because of tokenization parameters
-		if (parameters.getParameterValue("tokenization", "").isEmpty()==false) {
+		if (parameters.getParameterValue("tokenization", "").isEmpty()==false || parameters.getParameterValue("language", "").isEmpty()==false) {
 			StoredDocumentSourceStorage sourceDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
-			String params = parameters.getParameterValue("tokenization");
+			String tokenizationParam = parameters.getParameterValue("tokenization","");
+			String langParam = parameters.getParameterValue("language","");
 			for (int i=0, len=storedDocumentSources.size(); i<len; i++) {
 				StoredDocumentSource storedDocumentSource = storedDocumentSources.get(i);
 				String id = storedDocumentSource.getId();
-				String newId = DigestUtils.md5Hex(id+params);
+				String newId = DigestUtils.md5Hex(id+tokenizationParam+langParam);
 				InputStream inputStream = sourceDocumentSourceStorage.getStoredDocumentSourceInputStream(id);
 				DocumentMetadata metadata = storedDocumentSource.getMetadata();
 				metadata.setLastTokenPositionIndex(TokenType.lexical, 0); // this is crucial to ensure that document is re-analyzed and metadata re-rewritten
@@ -238,7 +239,6 @@ public class LuceneIndexer implements Indexer {
 		@Override
 		public void run() {
 
-			
 			if (verbose) {
 //				System.out.println("analyzing indexed document "+storedDocumentSource.getMetadata());
 			}

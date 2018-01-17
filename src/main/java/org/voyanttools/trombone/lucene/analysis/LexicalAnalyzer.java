@@ -35,6 +35,7 @@ import org.apache.lucene.analysis.core.LetterTokenizer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
 import org.apache.lucene.analysis.core.LowerCaseTokenizer;
 import org.apache.lucene.analysis.core.UnicodeWhitespaceTokenizer;
+import org.apache.lucene.analysis.el.GreekLowerCaseFilter;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
 import org.apache.tika.io.IOUtils;
 import org.voyanttools.trombone.lucene.analysis.icu.TromboneICUTokenizerConfig;
@@ -118,6 +119,11 @@ public class LexicalAnalyzer extends Analyzer {
 		else if (lang.equals("bo") && fieldName.equals(TokenType.lexical.name())) { // Tibetan
 			Tokenizer tokenizer = new ICUTokenizer(new TromboneICUTokenizerConfig(true, true, lang));
 			TokenStream stream = new LowerCaseFilter(tokenizer);
+			return new TokenStreamComponents(tokenizer, stream);
+		}
+		else if (lang.equals("grc") /* Ancient Greek */ || lang.equals("el") /* Modern Greek */) {
+			Tokenizer tokenizer = new ICUTokenizer();
+			TokenStream stream = new GreekLowerCaseFilter(tokenizer);
 			return new TokenStreamComponents(tokenizer, stream);
 		}
 		else { // default case
