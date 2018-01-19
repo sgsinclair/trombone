@@ -31,13 +31,12 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.cn.smart.HMMChineseTokenizer;
-import org.apache.lucene.analysis.core.LetterTokenizer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
 import org.apache.lucene.analysis.core.LowerCaseTokenizer;
 import org.apache.lucene.analysis.core.UnicodeWhitespaceTokenizer;
-import org.apache.lucene.analysis.el.GreekLowerCaseFilter;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
 import org.apache.tika.io.IOUtils;
+import org.voyanttools.trombone.lucene.analysis.el.GreekCustomFilter;
 import org.voyanttools.trombone.lucene.analysis.icu.TromboneICUTokenizerConfig;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -123,7 +122,7 @@ public class LexicalAnalyzer extends Analyzer {
 		}
 		else if (lang.equals("grc") /* Ancient Greek */ || lang.equals("el") /* Modern Greek */) {
 			Tokenizer tokenizer = new ICUTokenizer();
-			TokenStream stream = new GreekLowerCaseFilter(tokenizer);
+			TokenStream stream = new GreekCustomFilter(tokenizer);
 			return new TokenStreamComponents(tokenizer, stream);
 		}
 		else { // default case

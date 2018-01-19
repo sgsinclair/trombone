@@ -76,7 +76,7 @@ import edu.stanford.nlp.util.StringUtils;
  */
 public class LuceneIndexer implements Indexer {
 	
-	private static int VERSION = 1; // helpful for setting unique version of
+	private static int VERSION = 3; // helpful for setting unique version of
 	// document based not only on Lucene version but also this code,
 	// the actual number doesn't matter but will usually just
 	// increment to uniqueness
