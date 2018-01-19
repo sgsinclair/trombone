@@ -25,26 +25,27 @@ public final class GreekCustomFilter extends TokenFilter {
   @Override
   public boolean incrementToken() throws IOException {
     if (input.incrementToken()) {
-      char[] chArray = termAtt.buffer();
-      int chLen = termAtt.length();
-      for (int i = 0; i < chLen;) {
-        i += Character.toChars(
-            lowerCase(Character.codePointAt(chArray, i, chLen), i+1==chLen), chArray, i);
-       }
+        char[] chArray = termAtt.buffer();
+        int chLen = termAtt.length();
+        for (int i = 0; i < chLen;) {
+          i += Character.toChars(lowerCase(Character.codePointAt(chArray, i, chLen), i+1==chLen), chArray, i);
+         }
       return true;
     } else {
       return false;
     }
   }
   
-  private int lowerCase(int codepoint,  boolean isLast) {
+  private int lowerCase(int codepoint, boolean isLast) {
     switch(codepoint) {
     		// see https://github.com/aurelberra/stopwords/blob/master/revision_notes.md#precombined-diacritics
 		// and https://github.com/sgsinclair/Voyant/issues/382#issuecomment-358821892
-    		case '\u03C3': // small sigma 
+    		case '\u03C3': // small sigma
+    		case '\u03A3': // upper sigma
 		case '\u03C2': // small final sigma 
 		case '\u03F2': // lunate sigma
-			return isLast ? '\u03C2' /* small final sigma */ : '\u03C3' /*small final sigma */;
+		case '\u03F9': // upper lunate sigma
+			return isLast ? '\u03C2' /* small final sigma */ : '\u03C3' /*small sigma */;
 	    case '\u1F71': return '\u03AC'; // Lowercase Alpha + acute 
 	    case '\u1FBB': return '\u0386'; // Uppercase Alpha + acute 
 	    case '\u1F73': return '\u03AD'; // Lowercase Epsilon + acute 

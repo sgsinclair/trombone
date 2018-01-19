@@ -188,7 +188,7 @@ public class LuceneIndexerTest {
 		documentMetadata = defaultCorpus.getDocument(1).getMetadata();
 		assertEquals(files[1], documentMetadata.getLocation());
 		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
-		assertEquals(108, documentMetadata.getTypesCount(TokenType.lexical));
+		assertEquals(107, documentMetadata.getTypesCount(TokenType.lexical));
 		documentMetadata = englishCorpus.getDocument(1).getMetadata();
 		assertEquals(files[1], documentMetadata.getLocation());
 		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
@@ -198,7 +198,7 @@ public class LuceneIndexerTest {
 		documentMetadata = defaultCorpus.getDocument(2).getMetadata();
 		assertEquals(files[2], documentMetadata.getLocation());
 		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
-		assertEquals(108, documentMetadata.getTypesCount(TokenType.lexical));
+		assertEquals(107, documentMetadata.getTypesCount(TokenType.lexical));
 		documentMetadata = englishCorpus.getDocument(2).getMetadata();
 		assertEquals(files[2], documentMetadata.getLocation());
 		assertEquals(156, documentMetadata.getTokensCount(TokenType.lexical));
@@ -220,7 +220,7 @@ public class LuceneIndexerTest {
 		parameters.setParameter("docIndex", 1);		
 		documentTermsTool = new DocumentTerms(storage, parameters);
 		documentTermsTool.run();
-		assertEquals(105, documentTermsTool.getTotal());
+		assertEquals(104, documentTermsTool.getTotal());
 		String doc = defaultCorpus.getDocument(1).getDocumentString();
 		assertEquals(17, doc.indexOf('\u1F71')); // oxia
 		assertEquals(-1, doc.indexOf('\u03AC')); // tonos
@@ -232,7 +232,7 @@ public class LuceneIndexerTest {
 		parameters.setParameter("docIndex", 2);		
 		documentTermsTool = new DocumentTerms(storage, parameters);
 		documentTermsTool.run();
-		assertEquals(105, documentTermsTool.getTotal());
+		assertEquals(104, documentTermsTool.getTotal());
 		doc = defaultCorpus.getDocument(2).getDocumentString();
 		assertEquals(-1, doc.indexOf('\u1F71')); // oxia
 		assertEquals(17, doc.indexOf('\u03AC')); // tonos
