@@ -40,6 +40,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	private static String PREFIX_SEPARATOR = ":";
 	private static Pattern RANGE_PATTERN = Pattern.compile("^\\[([\\p{L}0-9]+)-([\\p{L}0-9]+)\\]$");
 	private static Pattern REGEX_PATTERN = Pattern.compile("[\\[\\]\\?.]");
+	private static Pattern LETTER_NUMBER = Pattern.compile("[\\p{L}\\p{N}]");
 	protected static TokenType DEFAULT_TOKENTYPE = TokenType.lexical;
 	protected IndexReader reader;
 	protected String defaultPrefix;
@@ -75,6 +76,7 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 		Map<String, Query> map = new HashMap<String, Query>();
 		for (String queryString : queries) {
 			if (queryString.trim().isEmpty()) {continue;}
+			if (containsAlphaNumeric(queryString)==false) {continue;}
 			boolean isReallyQueryExpand = isQueryExpand;
 			if (queryString.startsWith("^")) {
 				isReallyQueryExpand = true;
@@ -223,6 +225,10 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 		String start = matcher.group(1);
 		String end = matcher.group(2);
 		return TermRangeQuery.newStringRange(field, start, end, true, true);
+	}
+	
+	protected boolean containsAlphaNumeric(String string) {
+		return LETTER_NUMBER.matcher(string).find();
 	}
 
 }

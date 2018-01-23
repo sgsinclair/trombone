@@ -131,6 +131,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 		Map<String, SpanQuery> map = new HashMap<String, SpanQuery>();
 		for (String query : queries) {
 			if (query.trim().isEmpty()) {continue;}
+			if (containsAlphaNumeric(query)==false) {continue;}
 			boolean isReallyQueryExpand = isQueryExpand;
 			if (query.startsWith("^")) {
 				isReallyQueryExpand = true;
