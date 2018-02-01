@@ -219,6 +219,7 @@ public class FileStorage implements Storage {
 	}
 	
 	File getResourceFile(String id, Location location) {
+		id = new File(id).getName(); // make sure we're not doing any directory traversal
 		// package level for migrators
 		if (id==null) {
 			throw new IllegalArgumentException("No ID provided for stored resource");
