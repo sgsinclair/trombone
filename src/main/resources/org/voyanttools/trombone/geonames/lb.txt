@@ -1,0 +1,396 @@
+292223	Dubai	25.0657	55.17128	1137347	Dubai	Dubai	Vereenegt Arabesch Emiraten+UAE
+292672	Sharjah	25.33737	55.41206	543733	Schardscha		Vereenegt Arabesch Emiraten+UAE
+292878	Al Fujayrah	25.11641	56.34141	62415	Fudschaira	Al Fujayrah	Vereenegt Arabesch Emiraten+UAE
+292913	Al Ain	24.19167	55.76056	408733	Al Ain		Vereenegt Arabesch Emiraten+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu Dhabi		Vereenegt Arabesch Emiraten+UAE
+616052	Yerevan	40.18111	44.51361	1093485	Eriwan	Yerevan	Armenien
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola
+2764557	Steinach am Brenner	47.08333	11.46667	0	Steinach um Brenner		
+2773300	Kufstein	47.58333	12.16667	16115	Kufstein		
+2775220	Innsbruck	47.26266	11.39454	112467	Innsbruck		
+2077895	Alice Springs	-23.69748	133.88362	25186	Alice Springs	Nërdlechen Territoire+NT	Australien
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Australien
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Australien
+2783307	Zeebrugge	51.32901	3.18188	4500	Zeebruges		Belsch
+2784775	Vielsalm	50.28407	5.91502	7291	Vielsalm	Wallonia+Walloon	Belsch
+2784821	Verviers	50.58907	5.86241	52824	Verviers	Wallonia+Walloon	Belsch
+2786318	Spa	50.48375	5.86674	10756	Spa	Wallonia+Walloon	Belsch
+2786545	Sint-Truiden	50.81679	5.18647	37859	Sint-Truiden		Belsch
+2787315	Saint-Vith	50.28146	6.12724	9135	Sankt Väit	Wallonia+Walloon	Belsch
+2789786	Ostend	51.21551	2.927	69011	Oostende		Belsch
+2790471	Namur	50.4669	4.86746	106284	Namouer	Wallonia+Walloon	Belsch
+2791272	Messancy	49.59201	5.81879	7144	Miezeg	Wallonia+Walloon	Belsch
+2791537	Mechelen	51.02574	4.47762	77530	Mechelen		Belsch
+2791834	Malmédy	50.42686	6.02794	11514	Malmedy	Wallonia+Walloon	Belsch
+2792179	Lommel	51.23074	5.31349	31993	Lommel		Belsch
+2792348	Limbourg	50.61222	5.9412	5612	Limbourg	Wallonia+Walloon	Belsch
+2792413	Liège	50.63373	5.56749	182597	Léck	Wallonia+Walloon	Belsch
+2794210	Knokke-Heist	51.35	3.26667	33781	Knokke-Heist		Belsch
+2795322	Houffalize	50.13235	5.78962	4614	Houffalize	Wallonia+Walloon	Belsch
+2797656	Gent	51.05	3.71667	231493	Gent		Belsch
+2798573	Eupen	50.6279	6.03647	18029	Eupen	Wallonia+Walloon	Belsch
+2800782	Bullange	50.40731	6.25749	5340	Büllingen	Wallonia+Walloon	Belsch
+2800866	Brussels	50.85045	4.34878	1019022	Bréissel	Brussels-Capital Region	Belsch
+2800931	Brugge	51.20892	3.22424	116709	Bruges		Belsch
+2801093	Bree	51.14152	5.5969	14363	Bree		Belsch
+2801283	Bouillon	49.79324	5.06703	5347	Bouillon	Wallonia+Walloon	Belsch
+2801467	Borgloon	50.80505	5.34366	9955	Borgloon		Belsch
+2801924	Bilzen	50.87325	5.5184	29622	Bilzen		Belsch
+2802170	Beringen	51.04954	5.22606	40930	Beringen		Belsch
+2802501	Beauraing	50.11042	4.95554	8242	Beauraing	Wallonia+Walloon	Belsch
+2802583	Bastogne	50.00347	5.71844	14395	Baaschtnech	Wallonia+Walloon	Belsch
+2802816	Baarle-Hertog	51.40504	4.89226	2305	Baarle-Hertog		Belsch
+2802990	Aubange	49.56652	5.80492	14932	Éibeng	Wallonia+Walloon	Belsch
+2803073	Arlon	49.68333	5.81667	26179	Arel	Wallonia+Walloon	Belsch
+2803138	Antwerpen	51.21989	4.40346	459805	Antwerpen		Belsch
+2803242	Amblève	50.35357	6.17002	5221	Amel	Wallonia+Walloon	Belsch
+2803246	Amay	50.54829	5.30974	13307	Amay	Wallonia+Walloon	Belsch
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Ouagadougou		
+425378	Bujumbura	-3.3822	29.3644	331700	Bujumbura	Bujumbura Mairie	
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto Novo	Quémé	
+6182962	Windsor	42.30008	-83.01654	278013	Windsor	ON+Ontario	
+2657928	Zermatt	46.01998	7.74863	6629	Zermatt		
+2658038	Weggis	47.03208	8.43219	3863	Weggis		
+2658377	Thun	46.75118	7.62166	42136	Thun+3600		
+2658813	St. Moritz	46.49937	9.84327	4952	Sankt Moritz		
+2659422	Nyon	46.38318	6.23955	16797	Nyon	VD	
+2659811	Luzern	47.05048	8.30635	57066	Luzern		
+2659992	Lauterbrunnen	46.59307	7.90938	2646	Lauterbrunnen		
+2660253	Interlaken	46.68387	7.86638	5067	Interlaken		
+2660498	Grindelwald	46.62396	8.03601	3730	Grindelwald		
+2660600	Gland	46.42082	6.2701	10641	Gland VD	VD	
+2661316	Bürglen	46.87565	8.66539	3996	Bürglen UR		
+2661398	Brienz	46.7545	8.03847	2899	Brienz		
+2661552	Bern	46.94809	7.44744	121631	Bern		
+2661750	Andermatt	46.63565	8.59388	1258	Andermatt		
+2661780	Altdorf	46.88042	8.64441	8678	Altdorf UR		
+1790630	Xi’an	34.25833	108.92861	6501190	Xian	Shaanxi	Volleksrepublik China
+1804430	Lanzhou	36.05701	103.83987	2628426	Lanzhou		Volleksrepublik China
+1809498	Guilin	25.28194	110.28639	649352	Guilin		Volleksrepublik China
+1809858	Guangzhou	23.11667	113.25	11071424	Guangzhou		Volleksrepublik China
+1816670	Beijing	39.9075	116.39723	11716620	Peking		Volleksrepublik China
+3534915	Trinidad	21.80224	-79.98467	60206	Trinidad	Sancti Spíritus	Kuba
+3537906	Santa Clara	22.40694	-79.96472	250512	Santa Clara	Villa Clara	Kuba
+3544091	Pinar del Río	22.41667	-83.69667	186990	Pinar del Río	Pinar del Río	Kuba
+3553478	Havana	23.13302	-82.38304	2163824	Havanna		Kuba
+3564124	Cienfuegos	22.14957	-80.44662	186644	Cienfuegos	Cienfuegos	Kuba
+146268	Nicosia	35.17531	33.3642	200452	Nikosia		Zypern
+3067696	Prague	50.08804	14.42076	1165581	Prag+Praha	Hlavní město Praha	Tschechesch Republik+Czechia
+2807240	Wittlich	49.98596	6.89308	17887	Wittlech		Däitschland
+2808310	Wincheringen	49.60904	6.42597	1499	Wëncher		Däitschland
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Däitschland
+2821164	Trier	49.75565	6.63935	100129	Tréier		Däitschland
+2829130	Stegen	47.98333	7.96667	4490	Steeën	Baden-Württemberg	Däitschland
+2832495	Siegen	50.87481	8.02431	107242	Siegen	NRW	Däitschland
+2842647	Saarbrücken	49.23262	7.00982	181227	Saarbrécken	Saarland	Däitschland
+2849483	Regensburg	49.01513	12.10161	129151	Regensburg	Bayern	Däitschland
+2852458	Potsdam	52.39886	13.06566	145292	Potsdam+Podstupim	Brandenburg+http://www.brandenburg.de	Däitschland
+2862351	Nittel	49.65	6.45	1920	Nëttel		Däitschland
+2872155	Meissen	51.16158	13.4737	28492	Meissen		Däitschland
+2875601	Lübeck	53.86893	10.68729	212207	Lübeck	Schleswig-Holstein	Däitschland
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Däitschland
+2880565	Langsur	49.72442	6.49906	1634	Laser		Däitschland
+2886242	Köln	50.93333	6.95	963395	Köln	NRW	Däitschland
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt am Main	Hessen	Däitschland
+2931574	Eisenach	50.9807	10.31522	43846	Eisenach		Däitschland
+2934691	Duisburg	51.43247	6.76516	504358	Duisburg	NRW	Däitschland
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Däitschland
+2945358	Brandenburg an der Havel	52.41667	12.55	59826	Brandenburg un der Havel	Brandenburg+http://www.brandenburg.de	Däitschland
+2946657	Bollendorf	49.85268	6.35795	1552	Bollenduerf		Däitschland
+2948184	Bitburg	49.96794	6.52734	12908	Béibreg		Däitschland
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Däitschland
+2953504	Baden-Baden	48.7606	8.23975	54239	Baden-Baden+b+b	Baden-Württemberg	Däitschland
+3247449	Aachen	50.77664	6.08342	265208	Oochen	NRW	Däitschland
+223817	Djibouti	11.58901	43.14503	623891	Dschibuti	Djibouti	Dschibuti
+2618425	Copenhagen	55.67594	12.56553	1153615	Kopenhagen		Dänemark
+2507480	Algiers	36.73225	3.08746	1977663	Alger	Alger	Algerien
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harjumaa	Estland
+355635	Idfū	24.97916	32.87722	133000	Edfu		Egypten
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo	Kastilien-La Mancha	Spuenien+España
+2509887	Vallehermosa	28.17944	-17.26664	3303	Vallehermoso	Kanaresch Inselen	Spuenien+España
+2509954	Valencia	39.46975	-0.37739	814208	Valencia	Valencia	Spuenien+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	Spuenien+España
+2516395	Jaén	37.76922	-3.79028	116557	Jaén	Andalusien	Spuenien+España
+2519477	Chipiona	36.73663	-6.43703	18583	Chipiona	Andalusien	Spuenien+España
+2520496	Calp	38.6447	0.0445	29666	Calpe	Valencia	Spuenien+España
+2520600	Cadiz	36.52672	-6.2891	126766	Cádiz	Andalusien	Spuenien+España
+2522258	Albacete	38.99424	-1.85643	169716	Albacete	Kastilien-La Mancha	Spuenien+España
+3104324	Zaragoza	41.65606	-0.87734	674317	Saragossa+ZGZ	Aragón	Spuenien+España
+3104499	Gasteiz / Vitoria	42.84998	-2.67268	235661	Vitoria	Euskadi	Spuenien+España
+3105311	Villanúa	42.6797	-0.53769	411	Villanúa	Aragón	Spuenien+España
+3107784	Torrejón de Ardoz	40.45535	-3.46973	118162	Torrejón de Ardoz	Madrid	Spuenien+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicien+Galicia	Spuenien+España
+3109718	Santander	43.46472	-3.80444	182700	Santander	Kantabrien+Cantabria	Spuenien+España
+3110040	San Sebastián de los Reyes	40.55555	-3.62733	75912	San Sebastián de los Reyes	Madrid	Spuenien+España
+3111108	Salamanca	40.96882	-5.66388	155619	Salamanca	Kastilien-León+Castilla y León	Spuenien+España
+3112989	Pozuelo de Alarcón	40.43293	-3.81338	82428	Pozuelo de Alarcón	Madrid	Spuenien+España
+3113415	Pinto	40.24147	-3.69999	43501	Pinto	Madrid	Spuenien+España
+3114256	Parla	40.23604	-3.76752	115611	Parla	Madrid	Spuenien+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Spuenien+España
+3118594	Leganés	40.32718	-3.7635	186066	Leganés	Madrid	Spuenien+España
+3119841	A Coruña	43.37135	-8.396	246056	A Coruña	Galicien+Galicia	Spuenien+España
+3121245	Gràcia	41.40237	2.15641	121502	Distrikt Gràcia	Catalunya	Spuenien+España
+3121424	Gijón	43.53573	-5.66152	277554	Gijón+Xixón	Asturias	Spuenien+España
+3121437	Getafe	40.30571	-3.73295	167164	Getafe	Madrid	Spuenien+España
+3121960	Fuenlabrada	40.28419	-3.79415	197836	Fuenlabrada	Madrid	Spuenien+España
+3123124	Entrena	42.38782	-2.53066	1248	Entrena	La Rioja	Spuenien+España
+3124408	Coslada	40.42378	-3.56129	90280	Coslada	Madrid	Spuenien+España
+3124794	Collado-Villalba	40.63506	-4.00486	55027	Collado Villalba	Madrid	Spuenien+España
+3125144	Chinchón	40.1402	-3.42267	4886	Chinchón	Madrid	Spuenien+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	Spuenien+España
+3129857	Aranjuez	40.03108	-3.60246	54055	Aranjuez	Madrid	Spuenien+España
+3130564	Alcorcón	40.34582	-3.82487	167967	Alcorcón	Madrid	Spuenien+España
+3130583	Alcobendas	40.54746	-3.64197	107514	Alcobendas	Madrid	Spuenien+España
+3130616	Alcalá de Henares	40.48205	-3.35996	204574	Alcalá de Henares	Madrid	Spuenien+España
+6252065	Nou Barris	41.44163	2.17727	166310	Distrikt Nou Barris	Catalunya	Spuenien+España
+6544100	Eixample	41.38896	2.16179	266477	Distrikt Ensanche	Catalunya	Spuenien+España
+6544103	Horta-Guinardó	41.41849	2.1677	168092	Distrikt Horta-Guinardó	Catalunya	Spuenien+España
+6544104	Sants-Montjuïc	41.37263	2.1546	183120	Distrikt Sants-Montjuïc	Catalunya	Spuenien+España
+6544105	Sant Martí	41.41814	2.19933	235719	Distrikt Sant Martí	Catalunya	Spuenien+España
+6544106	Ciutat Vella	41.38022	2.17319	102347	Distrikt Ciutat Vella	Catalunya	Spuenien+España
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Finnland
+2968749	Villefranche-sur-Mer	43.70392	7.31088	7105	Villefranche-sur-Mer+06230		Frankräich+France
+2969679	Versailles	48.8	2.13333	85416	Versailles+78000		Frankräich+France
+2972811	Thionville	49.36667	6.16667	44311	Diddenuewen+57100	ACAL	Frankräich+France
+2973783	Strasbourg	48.58392	7.74553	274845	Stroossbuerg+67000	ACAL	Frankräich+France
+2974609	Sierck-les-Bains	49.43992	6.36057	1926	Sierk	ACAL	Frankräich+France
+2974733	Sète	43.4028	3.69278	40736	Sète+34200		Frankräich+France
+2975088	Senlis	49.2	2.58333	19160	Senlis+60300	http://en.wikipedia.org/wiki/Hauts-de-France	Frankräich+France
+2976742	Saint-Tropez	43.26932	6.63981	5939	Saint-Tropez+83990		Frankräich+France
+2978640	Saint-Malo	48.65	-2.01667	50676	Saint-Malo+35400	Bretagne	Frankräich+France
+2982652	Rouen	49.44313	1.09932	112787	Rouen+76000		Frankräich+France
+2984521	Ramatuelle	43.21696	6.61137	2330	Ramatuelle		Frankräich+France
+2984699	Quimperlé	47.86667	-3.55	12312	Quimperlé+29300	Bretagne	Frankräich+France
+2988507	Paris	48.85341	2.3488	2138551	Paräis+75001		Frankräich+France
+2989877	Noyon	49.58333	3	15138	Noyon+60400	http://en.wikipedia.org/wiki/Hauts-de-France	Frankräich+France
+2990440	Nice	43.70313	7.26608	338620	Nice+06000		Frankräich+France
+2990969	Nantes	47.21725	-1.55336	277269	Nantes+44000+http://www.nantes.fr/		Frankräich+France
+2990999	Nancy	48.68439	6.18496	105334	Nanzeg+54000	ACAL	Frankräich+France
+2992260	Montmédy	49.52096	5.36835	2188	Montmédy	ACAL	Frankräich+France
+2994160	Metz	49.11911	6.17269	123914	Metz+57000	ACAL	Frankräich+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001		Frankräich+France
+2997395	Lourdes	43.1	-0.05	15786	Lourdes+65100		Frankräich+France
+2997638	Longwy	49.51936	5.76882	14695	Lonkech+54400	ACAL	Frankräich+France
+2998150	Lisieux	49.1466	0.22925	24473	Lisieux+14100		Frankräich+France
+3006787	La Rochelle	46.16667	-1.15	76810	La Rochelle+17000		Frankräich+France
+3013350	Hettange-Grande	49.40639	6.15057	6922	Grouss-Hetteng	ACAL	Frankräich+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenobel+38000		Frankräich+France
+3015756	Goetzenbruck	48.97778	7.3796	1810	Gœtzenbruck	ACAL	Frankräich+France
+3017829	Fontoy	49.35624	5.99936	3250	Fensch+Fontoy	ACAL	Frankräich+France
+3021933	Dabo	48.65371	7.23636	2875	Dabo	ACAL	Frankräich+France
+3027301	Chamonix-Mont-Blanc	45.92375	6.86933	10614	Chamonix+74400		Frankräich+France
+3028236	Cattenom	49.40755	6.24426	2417	Kettenuewen	ACAL	Frankräich+France
+3028431	Cassis	43.21241	5.5451	8361	Cassis+13260		Frankräich+France
+3028808	Cannes	43.55135	7.01275	70011	Cannes+06150		Frankräich+France
+3030300	Brest	48.39029	-4.48628	144899	Brest+29200	Bretagne	Frankräich+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Bordeaux+33000		Frankräich+France
+3031801	Bonifacio	41.3874	9.15941	2781	Bonifacio		Frankräich+France
+3032518	Bitche	49.05009	7.42672	5668	Bitche+57230	ACAL	Frankräich+France
+3032797	Biarritz	43.48012	-1.55558	33188	Biarritz+64200		Frankräich+France
+3034006	Beauvais	49.43333	2.08333	53393	Beauvais+60000	http://en.wikipedia.org/wiki/Hauts-de-France	Frankräich+France
+3034126	Beaune	47.03333	4.83333	24162	Beaune+21200		Frankräich+France
+3036107	Aumetz	49.41294	5.94916	2293	Aumetz	ACAL	Frankräich+France
+3036226	Audun-le-Tiche	49.47228	5.95694	5935	Däitsch-Oth	ACAL	Frankräich+France
+3036784	Arras	50.29301	2.78186	47052	Arras+62000	http://en.wikipedia.org/wiki/Hauts-de-France	Frankräich+France
+3037456	Antibes	43.56241	7.12777	76393	Antibes+06160		Frankräich+France
+3037838	Amnéville	49.25749	6.14203	10162	Amnéville+57360	ACAL	Frankräich+France
+3037854	Amiens	49.9	2.3	143086	Amiens+80000	http://en.wikipedia.org/wiki/Hauts-de-France	Frankräich+France
+3037943	Ambérieu-en-Bugey	45.95885	5.3432	13260	Ambérieu-en-Bugey+01500		Frankräich+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Aix-en-Provence+13080		Frankräich+France
+3038738	Abreschviller	48.63647	7.09466	1332	Abreschviller	ACAL	Frankräich+France
+2633352	York	53.95763	-1.08271	153717	York+Jórvík		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2634739	Warrington	53.39254	-2.58024	165456	Warrington		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2636841	Stoke-on-Trent	53.00415	-2.18538	372775	Stoke-on-Trent		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2637433	Southend-on-Sea	51.53782	0.71433	295310	Southend-on-Sea		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2637487	Southampton	50.90395	-1.40428	246201	Southampton		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2640101	Poole	50.71429	-1.98458	150092	Poole		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2640194	Plymouth	50.37153	-4.14305	260203	Plymouth		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2640354	Peterborough	52.57364	-0.24777	163379	Peterborough		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2641170	Nottingham	52.9536	-1.15047	729977	Nottingham		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2642607	Middlesbrough	54.57623	-1.23483	142707	Middlesbrough		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2643339	Luton	51.87967	-0.41748	258018	Luton		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	London		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2644080	Llanfairpwllgwyngyll	53.22141	-4.20329	3107	Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch	Galles	Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2644668	Leicester	52.6386	-1.13169	508916	Leicester		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2645425	Kingston upon Hull	53.7446	-0.33525	314018	Kingston-upon-Hull		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2651347	Derby	52.92277	-1.47663	270468	Derby		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2651513	Darlington	54.52429	-1.55039	92363	Darlington		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2654675	Bristol	51.45523	-2.59665	617280	Bristol		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2655095	Bournemouth	50.72048	-1.8795	163600	Bournemouth		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2655459	Blackpool	53.81667	-3.05	239409	Blackpool		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2656173	Bath	51.3751	-2.36172	94782	Bath		Groussbritannien+Groussbritannien an Nordirland+http://en.wikipedia.org/wiki/United_Kingdom
+2411585	Gibraltar	36.14474	-5.35257	26544	Gibraltar		Gibraltar
+255274	Piraeus	37.94745	23.63708	163688	Piräus		Griicheland+Griekanmua
+256637	Náfplio	37.56863	22.80691	14582	Nafplio		Griicheland+Griekanmua
+256952	Mílos	36.74536	24.4265	819	Mílos		Griicheland+Griekanmua
+264371	Athens	37.97945	23.71622	664046	Athen		Griicheland+Griekanmua
+264668	Argostólion	38.18109	20.48903	9820	Argostoli		Griicheland+Griekanmua
+3190261	Split	43.50891	16.43915	176314	Split		Kroatien
+3197710	Korčula	42.96038	17.13525	3141	Korčula	Dubrovačko-Neretvanska	Kroatien
+3201047	Dubrovnik	42.64807	18.09216	28428	Dubrovnik	Dubrovačko-Neretvanska	Kroatien
+3053163	Esztergom	47.7928	18.74148	28785	Esztergom		Ungarn
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Ungarn
+281184	Jerusalem	31.76904	35.21633	801000	Jerusalem		Israel
+293322	Tiberias	32.79221	35.53124	39790	Tiberias		Israel
+293397	Tel Aviv	32.08088	34.78057	432892	Tel Aviv		Israel
+294098	Nazareth	32.69925	35.30483	64800	Nazareth		Israel
+294801	Haifa	32.81841	34.9885	267300	Haifa		Israel
+295530	Beersheba	31.25181	34.7913	186600	Beersheba	HaDarom	Israel
+1271308	Ghāziābād	28.66535	77.43915	1199191	Ghaziabad	UP	Indien
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavík+101		Island
+3415212	Kópavogur	64.11234	-21.91298	31719	Kópavogur+200		Island
+3417195	Garðabær	64.08865	-21.92298	11421	Garðabær+210		Island
+2522975	Taormina	37.85358	15.28851	5790	Taormina	Sizilien	Italien
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Sizilien	Italien
+2524170	Messina	38.19394	15.55256	219948	Messina	Sizilien	Italien
+3164409	Vico del Gargano	41.89661	15.95682	7284	Vico del Gargano		Italien
+3164603	Venice	45.43713	12.33265	51298	Venedeg	Venetien	Italien
+3164699	Varese	45.82058	8.82511	76851	Varese		Italien
+3165524	Turin	45.07049	7.68682	870456	Turin	Piemont+Piemonte	Italien
+3169070	Rome	41.89193	12.51133	2318895	Roum	Lazio	Italien
+3169409	Scena	46.6884	11.18855	1304	Schenna		Italien
+3170065	Portovenere	44.05083	9.83431	1025	Portovenere		Italien
+3170092	Portofino	44.30349	9.20942	406	Portofino		Italien
+3170094	Portoferraio	42.81233	10.31297	8296	Portoferraio	Toskana	Italien
+3170647	Pisa	43.70853	10.4036	77007	Pisa	Toskana	Italien
+3171457	Parma	44.79935	10.32618	146299	Parma	Emilia-Romagna	Italien
+3177838	Cremona	45.13325	10.02129	59561	Cremona		Italien
+3180630	Capri	40.55073	14.24263	6770	Capri	Kampanien	Italien
+3181555	Brescello	44.89531	10.51269	2839	Brescello	Emilia-Romagna	Italien
+3181913	Bolzano	46.49067	11.33982	99049	Bozen		Italien
+3183130	Amalfi	40.6349	14.60238	4933	Amalfi	Kampanien	Italien
+250441	Amman	31.95522	35.94503	1275857	Amman		Al Mamlakah al Urdunīyah al Hāshimīyah
+1528675	Bishkek	42.87	74.59	900000	Bischkek	Gorod Bishkek	
+1871859	Pyongyang	39.03385	125.75432	3222000	Pjöngjang		http://en.wikipedia.org/wiki/North_Korea
+1526273	Astana	51.1801	71.44598	345604	Astana	Astana Qalasy	Kasachstan
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Litauen+http://en.wikipedia.org/wiki/Lithuania
+598098	Klaipėda	55.70888	21.14312	192307	Klaipeda+Klaipėda		Litauen+http://en.wikipedia.org/wiki/Lithuania
+2959959	Wormeldange	49.61114	6.40546	786	Wuermeldeng	Gréiwemaacher+Kanton Gréiwemaacher	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2959968	Winseler	49.96778	5.89028	126	Gemeng Wanseler	Wolz+Kanton Wolz	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2959977	Wiltz	49.96547	5.9339	4816	Wolz	Wolz+Kanton Wolz	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960010	Walferdange	49.66321	6.13224	740	Walfer	Lëtzebuerg+Kanton Lëtzebuerg	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960017	Wahl	49.83667	5.90639	235	Wal	Kanton Redange	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960019	Vichten	49.80306	6	764	Viichten	Kanton Redange	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960021	Vianden	49.935	6.20889	1626	Veianen	Veianen+Kanton Veianen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960022	Useldange	49.76972	5.98222	657	Useldeng	Kanton Redange	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960027	Tuntange	49.71778	6.01028	605	Tënten	Miersch+Kanton Miersch	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960030	Troisvierges	50.12111	6.00028	1457	Gemeng Ëlwen	Klierf+Kanton Klierf	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960045	Tandel	49.8975	6.18333	89	Tandel	Veianen+Kanton Veianen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960061	Steinfort	49.66139	5.91917	2225	Stengefort	Kanton Kapellen+Kapellen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960102	Schifflange	49.50639	6.01278	8155	Schëffleng		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960107	Schengen	49.47	6.362	470	Gemeng Schengen	Réimech+Kanton Réimech	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960115	Sanem	49.54806	5.92889	2489	Suessem		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960117	Sandweiler	49.61471	6.22221	2522	Gemeng Sandweiler	Lëtzebuerg+Kanton Lëtzebuerg	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960120	Saeul	49.72722	5.98639	316	Sëll	Kanton Redange	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960135	Roeser	49.53721	6.14629	708	Gemeng Réiser		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960154	Remich	49.545	6.36694	3187	Réimech	Réimech+Kanton Réimech	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960156	Reisdorf	49.86861	6.26778	493	Reisduerf	Dikrech+Kanton Dikrech	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960160	Redange-sur-Attert	49.76437	5.88997	1164	Réiden	Kanton Redange	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960164	Reckange-sur-Mess	49.5625	6.00889	571	Reckeng op der Mess		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960167	Rambrouch	49.83083	5.845	401	Gemeng Rammerech	Kanton Redange	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960168	Putscheid	49.96083	6.14306	38	Pëtscht	Veianen+Kanton Veianen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960187	Pétange	49.55833	5.88056	7187	Gemeng Péiteng		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960228	Niedercorn	49.53611	5.89306	3164	Nidderkuer		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960231	Niederanven	49.65196	6.26199	1508	Gemeng Nidderaanwen	Lëtzebuerg+Kanton Lëtzebuerg	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960250	Müllendorf	49.68028	6.13	1024	Mëllerëf	Lëtzebuerg+Kanton Lëtzebuerg	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960257	Mondorf-les-Bains	49.505	6.28111	3113	Gemeng Munneref	Réimech+Kanton Réimech	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960276	Mersch	49.74889	6.10611	3464	Miersch+Gemeng Miersch	Miersch+Kanton Miersch	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960299	Mamer	49.6275	6.02333	5017	Gemeng Mamer	Kanton Kapellen+Kapellen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960316	Luxembourg	49.61167	6.13	76684	Lëtzebuerg+Stad Lëtzebuerg	Lëtzebuerg+Kanton Lëtzebuerg	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960367	Koerich	49.67	5.95	1066	Gemeng Käerch	Kanton Kapellen+Kapellen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960391	Kayl	49.48917	6.03972	4396	Gemeng Keel		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960453	Hobscheid	49.68861	5.91472	1051	Habscht	Kanton Kapellen+Kapellen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960515	Grevenmacher	49.67751	6.44022	3958	Gréiwemaacher	Gréiwemaacher+Kanton Gréiwemaacher	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960534	Goesdorf	49.92131	5.96601	251	Géisdref	Wolz+Kanton Wolz	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960549	Garnich	49.61667	5.9525	824	Garnech	Kanton Kapellen+Kapellen	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960556	Frisange	49.51616	6.18858	1355	Fréiseng		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960568	Flaxweiler	49.66602	6.34321	358	Fluessweller	Gréiwemaacher+Kanton Gréiwemaacher	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960589	Ettelbruck	49.8475	6.10417	6364	Gemeng Ettelbréck	Dikrech+Kanton Dikrech	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960595	Esch-sur-Sûre	49.91139	5.93639	333	Gemeng Esch-Sauer	Wolz+Kanton Wolz	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960596	Esch-sur-Alzette	49.49583	5.98056	28228	Esch-Uelzecht		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960630	Echternach	49.81212	6.41846	4787	Iechternach	Iechternach+Kanton Iechternach	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960634	Dudelange	49.48056	6.0875	18013	Gemeng Diddeleng		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960651	Differdange	49.52417	5.89139	5296	Gemeng Déifferdeng		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960657	Diekirch	49.86778	6.15583	6242	Dikrech	Dikrech+Kanton Dikrech	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960684	Clervaux	50.05472	6.03139	1103	Cliärref+Gemeng Klierf	Klierf+Kanton Klierf	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960775	Bettendorf	49.87667	6.21806	1072	Bettenduerf	Dikrech+Kanton Dikrech	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960777	Bettembourg	49.51861	6.10278	7437	Gemeng Beetebuerg		Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960807	Bech	49.7526	6.36379	380	Gemeng Bech	Iechternach+Kanton Iechternach	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+2960809	Beaufort	49.83583	6.29167	1418	Beefort	Iechternach+Kanton Iechternach	Lëtzebuerg+Groussherzogtum Lëtzebuerg
+456172	Riga	56.946	24.10589	742572	Rīga	Riga	Lettland
+2210247	Tripoli	32.87519	13.18746	1150989	Tripolis		
+2553604	Casablanca	33.58831	-7.61138	3144909	Casablanca		Marokko
+1298824	Yangon	16.80528	96.15611	4477638	Rangun	Yangon	
+1298987	Pyinmana	19.7381	96.20742	97409	Pyinmana Naypyidaw		
+2562305	Valletta	35.89972	14.51472	6794	Valletta		
+3530517	Coatzacoalcos	18.13346	-94.44242	230717	Coatzacoalcos	VER	Mexiko
+1734759	Malacca	2.196	102.2405	180671	Malakka	MLK+Melaka	Malaysia+Malaysien
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Kuala Lumpur	KUL	Malaysia+Malaysien
+3352136	Windhoek	-22.55941	17.08323	268132	Windhoek	Khomas	Namibien
+2750053	Nijmegen	51.8425	5.85278	158732	Nijmegen	GLD+gd+Gelderland	Holland
+2753011	Katwijk aan den Rijn	52.19417	4.42222	5940	Katwijk	zh+Zuid-Holland	Holland
+2758598	Borne	52.30136	6.7482	20550	Borne	ov+Overijssel	Holland
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Holland
+779554	Honningsvåg	70.98209	25.97037	2541	Honningsvåg		Norwegen
+779683	Hammerfest	70.66336	23.68209	6788	Hammerfest		Norwegen
+3133880	Trondheim	63.43049	10.39506	147139	Trondheim	Sør-Trøndelag	Norwegen
+3133895	Tromsø	69.6489	18.95508	52436	Tromsø	Troms	Norwegen
+3135020	Svolvær	68.23417	14.56834	4197	Svolvær	Nordland	Norwegen
+3137115	Stavanger	58.97005	5.73332	121610	Stavanger	Rogaland	Norwegen
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norwegen
+3145580	Molde	62.73752	7.15912	18594	Molde	Møre og Romsdal	Norwegen
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norwegen
+1283240	Kathmandu	27.70169	85.3206	1442271	Katmandu		
+287286	Muscat	23.58413	58.40778	797000	Maskat		
+1168197	Peshawar	34.008	71.57849	1218773	Peshawar		Pakistan
+756135	Warsaw	52.22977	21.01178	1702139	Warschau	Mazowieckie	Polen
+763523	Nowy Targ	49.47783	20.03228	33763	Nowy Targ	Małopolskie	Polen
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polen
+770149	Jedwabne	53.28554	22.30353	2204	Jedwabne	Podlaskie	Polen
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polen
+284315	Bethlehem	31.70487	35.20376	29019	Betlehem		
+2262744	Tavira	37.12734	-7.64861	15133	Tavira	Faro	Portugal
+2267057	Lisbon	38.71667	-9.13333	517802	Lissabon	Lisboa	Portugal
+2268326	Fátima	39.62071	-8.65237	11798	Fátima	Santarém	Portugal
+667268	Sibiu	45.8	24.15	151894	Sibiu	Sibiu	Rumänien
+671768	Oradea	47.0458	21.91833	206614	Oradea		Rumänien
+468902	Yaroslavl	57.62987	39.87368	606730	Jaroslawl	Jaroslavl	
+471430	Votkinsk	57.04865	53.98717	98633	Wotkinsk		
+490068	Sovetsk	55.08392	21.87851	43309	Sowetsk	Kaliningrad	
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sankt Péitersbuerg+Санкт-Петербург		
+510291	Peterhof	59.88333	29.9	73199	Peterhof		
+524901	Moscow	55.75222	37.61556	10381222	Moskau+Moskva		
+1503901	Kemerovo	55.33333	86.08333	477090	Kemerowo	Kemerovo	
+2026643	Birobidzhan	48.79284	132.92386	76146	Birobidjan		
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Schweden+Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Ljubljana		Slowenien
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	Slowakei
+3170472	Poggio di Chiesanuova	43.90451	12.42142	951	Chiesanuova		
+3176966	Fiorentino	43.91001	12.45738	2510	Fiorentino	Fiorentino	
+3181793	Borgo Maggiore	43.94193	12.44738	6424	Borgo Maggiore	Borgo Maggiore	
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadischu		
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		
+162183	Ashgabat	37.95	58.38333	727700	Aschchabad		
+2464915	Sousse	35.82539	10.63699	164123	Sousse	Sūsah	
+305359	Kuşadası	37.85562	27.2566	63177	Kusadasi		Tierkei+Turkanmua
+320995	Bodrum	37.03833	27.42917	39317	Bodrum		Tierkei+Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Ankara		Tierkei+Turkanmua
+688533	Yalta	44.50218	34.16624	77003	Jalta		Ukraine+http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Odessa		Ukraine+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kiew		Ukraine+http://en.wikipedia.org/wiki/Ukraine
+4155966	Fort Lauderdale	26.12231	-80.14338	178590	Fort Lauderdale+Ft. Lauderdale	FL+Florida	U.S.+USA+U.S.A.
+4164143	Miami Beach	25.79065	-80.13005	92312	Miami Beach	FL+Florida	U.S.+USA+U.S.A.
+4244967	Mount Carmel	38.41088	-87.76142	7027	Mount Carmel	IL+Illinois	U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	LA+Louisiana	U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York City+NYC+NY	NY	U.S.+USA+U.S.A.
+5357527	Hollywood	34.09834	-118.32674	167664	Hollywood	Kalifornien+CA+Calif+California	U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	Sacramento	Kalifornien+CA+Calif+California	U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San José	Kalifornien+CA+Calif+California	U.S.+USA+U.S.A.
+5393015	Santa Clara	37.35411	-121.95524	126215	Santa Clara	Kalifornien+CA+Calif+California	U.S.+USA+U.S.A.
+3440034	Tacuarembó	-31.71694	-55.98111	51854	Tacuarembó	Tacuarembó	
+1512569	Tashkent	41.26465	69.21627	1978028	Taschkent	Toshkent Shahri	
+1007311	Durban	-29.8579	31.0292	3120282	Durban		Südafrika
+3369157	Cape Town	-33.92584	18.42322	3433441	Kapstad	Western Cape	Südafrika
+8030223	Musina	-22.34881	30.04074	0	Messina		Südafrika

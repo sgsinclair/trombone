@@ -1,0 +1,171 @@
+292223	Dubai	25.0657	55.17128	1137347	Dubai	Dubai	Muugano wa Falme za Nchi za Kiarabu+Falme za Kiarabu+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu Dhabi		Muugano wa Falme za Nchi za Kiarabu+Falme za Kiarabu+UAE
+1138958	Kabul	34.52813	69.17233	3043532	Kabul		Afghanistan+Afuganistani
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola
+3191281	Sarajevo	43.84864	18.35644	696731	Sarayevo	Federation of Bosnia and Herzegovina	Bosnia na Hezegovina+Bosnia na Herzegovina
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Wagadugu		Burkina Faso+Bukinafaso
+425378	Bujumbura	-3.3822	29.3644	331700	Bujumbura	Bujumbura Mairie	Burundi
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto Novo	Quémé	Benin+Benini
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Brazili+Brazil
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brazili+Brazil
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brazili+Brazil
+933773	Gaborone	-24.65451	25.90859	208411	Gaborone		Botswana
+625144	Minsk	53.9	27.56667	1742124	Minsk		Belarus+Belarusi
+3582672	Belmopan	17.25	-88.76667	13381	Belmopan	Cayo	Belize
+3582677	Belize City	17.49952	-88.19756	61461	Belize City	Belize	Belize
+5940956	Dollard-Des Ormeaux	45.49452	-73.82419	48930	Dollard-des-Ormeaux	QC	Kanada
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Kanada
+6325494	Québec	46.81228	-71.21454	528595	Jiji la Quebec+Québec	QC	Kanada
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinshasa	Kinshasa	Jamhuri ya Kidemokrasia ya Kongo+Kongo [Jamhuri ya Kidemokrasia]
+2389853	Bangui	4.36122	18.55496	542393	Bangui	Bangui	Jamhuri ya Afrika ya Kati
+2260535	Brazzaville	-4.26613	15.28318	1284609	Brazzaville	Brazzaville	Kongo+Jamhuri ya Kongo
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Yamoussoukro		Kodivaa+Cote d'Ivoire+Côte de l’Ivoire
+2293538	Abidjan	5.30966	-4.01266	3677115	Abidjan		Kodivaa+Cote d'Ivoire+Côte de l’Ivoire
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaiso	Valparaíso	Chile
+3893629	Coquimbo	-29.95332	-71.33947	161317	Mkoa wa Coquimbo	Coquimbo	Chile
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaunde		Kameruni
+2232593	Douala	4.04827	9.70428	1338082	Douala		Kameruni
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		Kolombia
+3621849	San José	9.93333	-84.08333	335007	San Jose	San José	Kostarika
+3553478	Havana	23.13302	-82.38304	2163824	Havana		Kuba
+3374333	Praia	14.93152	-23.51254	113364	Praia	Praia	Kepuvede
+146268	Nicosia	35.17531	33.3642	200452	Nikosia		Kuprosi
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Udachi+Ujerumani
+2944388	Bremen	53.07516	8.80777	546501	Bremen	Bremen	Udachi+Ujerumani
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Udachi+Ujerumani
+223817	Djibouti	11.58901	43.14503	623891	Jibuti	Djibouti	Jibuti
+2618425	Copenhagen	55.67594	12.56553	1153615	Kopenhagen		Denmaki+Denmark
+3575635	Roseau	15.30174	-61.38808	16571	Roseau	Saint George	Dominika+Dominica
+2475687	Tlemcen	34.87833	-1.315	132341	Wilaya ya Tlemcen	Tlemcen	Aljeria
+2496049	Ghardaïa	32.49094	3.67347	93423	Jimbo ya Ghardaïa	Ghardaïa	Aljeria
+2506999	Annaba	36.9	7.76667	206570	Hippo	Annaba	Aljeria
+2507480	Algiers	36.73225	3.08746	1977663	Algiers	Alger	Aljeria
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	Ekwado
+359792	Aswan	24.09082	32.89942	241261	Aswan		Misri
+360630	Cairo	30.06263	31.24967	7734614	Kairo		Misri
+361055	Ismailia	30.60427	32.27225	284813	Ismaïlia	Al Ismā‘īlīyah	Misri
+361058	Alexandria	31.20176	29.91582	3811516	Aleksandria		Misri
+2462881	Laayoune	27.1418	-13.18797	196331	El Aaiún		Sahara Magharibi
+343300	Asmara	15.33805	38.93184	563930	Asmara	Maʼākel	Eritrea
+2511174	Santa Cruz de Tenerife	28.46824	-16.25462	222417	Santa Cruz de Tenerife	Visiwa vya Kanari	Uhispania+Hispania+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	Uhispania+Hispania+España
+2515270	Las Palmas de Gran Canaria	28.09973	-15.41343	381847	Las Palmas de Gran Canaria	Visiwa vya Kanari	Uhispania+Hispania+España
+331180	Mek'ele	13.49667	39.47528	215546	Mekelle		Uhabeshi+Ethiopia
+344979	Addis Ababa	9.02497	38.74689	2757729	Addis Ababa	Ādīs Ābeba+Addis Ababa Region	Uhabeshi+Ethiopia
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Ufini
+2977295	Saint-Quentin	49.84889	3.28757	55407	Saint-Quentin+02100	http://en.wikipedia.org/wiki/Hauts-de-France	Ufaransa+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Ufaransa+France
+2989317	Orléans	47.90289	1.90389	124149	Orléans+45000		Ufaransa+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Ufaransa+France
+2399697	Libreville	0.39241	9.45356	578156	Libreville	Mkoa wa Estuaire	Gabon+Gaboni
+3382160	Cayenne	4.93333	-52.33333	61550	Cayenne		Gwiyana ya Ufaransa
+2294700	Tema	5.6698	-0.01657	155782	Tema	Greater Accra	Ghana
+2298890	Kumasi	6.68848	-1.62443	1468609	Kumasi	Ashanti	Ghana
+2306104	Accra	5.55602	-0.1969	1963264	Accra	Greater Accra	Ghana
+2413876	Banjul	13.45274	-16.57803	34589	Banjul	Banjul	Gambia
+2422465	Conakry	9.53795	-13.67729	1767200	Conakry	Conakry	Guinea+Gine
+2309527	Malabo	3.75578	8.78166	155963	Malabo	Bioko Norte	Ginekweta+Guinee Espagnol
+264371	Athens	37.97945	23.71622	664046	Athens		Ugiriki+Griekanmua
+3598132	Guatemala City	14.64072	-90.51327	994938	Guatemala City	Guatemala	Guatemala+Gwatemala
+2374775	Bissau	11.86357	-15.59767	388028	Bisau	Bissau Region	Guinea Bisau+Ginebisau
+3378644	Georgetown	6.80448	-58.15527	235017	Georgetown	Demerara-Mahaica	Guyana
+3600949	Tegucigalpa	14.0818	-87.20681	850848	Tegucigalpa	Francisco Morazán	Honduras+Hondurasi
+3186886	Zagreb	45.81444	15.97798	698966	Zagreb	Grad Zagreb	Korasia
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta	Jakarta Raya	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+2965727	Carrick-on-Shannon	53.94694	-8.09	3980	Carrick on Shannon		Ayalandi+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Yerusalemu		Israeli
+1261481	New Delhi	28.63576	77.22445	317797	New Delhi	DL	India
+112931	Tehran	35.69439	51.42151	7153309	Tehran	Tehrān	Uajemi
+3169070	Rome	41.89193	12.51133	2318895	Mji wa Roma	Lazio	Uitaliani+Italia
+1853574	Ōtsu	35	135.86667	298164	Otsu	Mkoa wa Shiga+Shiga	Ujapani+Japani
+1859100	Kōfu	35.66667	138.56667	190000	Kofu	Mkoa wa Yamanashi	Ujapani+Japani
+184622	Nakuru	-0.28333	36.06667	259903	Nakuru		Kenya
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobi	Nairobi Area	Kenya
+186301	Mombasa	-4.05466	39.66359	799668	Mombasa		Kenya
+198629	Eldoret	0.52036	35.26993	218446	Eldoret	Wilaya ya Uasin Gishu	Kenya
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnom Penh		Kambodia+Kamboja+http://en.wikipedia.org/wiki/Cambodia
+921772	Moroni	-11.70216	43.25506	42872	Moroni	Ngazija+Grande Comore	Visiwa vya Komoro+Komoro+Komori
+1835848	Seoul	37.566	126.9784	10349312	Seoul		Korea ya Kusini+Jamhuri ya Korea+Korea Kusini+http://en.wikipedia.org/wiki/South_Korea
+1651944	Vientiane	17.96667	102.6	196731	Vientiane		Laos+Laosi
+268064	Sidon	33.55751	35.37148	163554	Sidoni	Liban-Sud	Lebanoni
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Lishenteni
+2274895	Monrovia	6.30054	-10.7969	939524	Monrovia		Liberia
+932505	Maseru	-29.31667	27.48333	118355	Maseru		Lesotho+Lesoto
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Lituanya+Litwania+http://en.wikipedia.org/wiki/Lithuania
+2537763	Sale	34.0531	-6.79846	903485	Sale		Moroko
+2538475	Rabat	34.01325	-6.83255	1655753	Rabat		Moroko
+2548885	Fès	34.03313	-5.00028	964891	Fes		Moroko
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarivo		Madagaska+Bukini
+785842	Skopje	41.99646	21.43141	474889	Skopje		Jamhuri ya Masedonia+Masedonia+ARYM+FYROM
+2449067	Timbuktu	16.77348	-3.00742	32460	Timbuktu		Mali
+2460596	Bamako	12.65	-8	1297281	Bamako	Bamako	Mali
+2028462	Ulan Bator	47.90771	106.88324	844818	Ulaanbaatar	Ulaanbaatar	Mongolia
+2377450	Nouakchott	18.08581	-15.9785	661400	Nouakchott		Mauritania+Moritania
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Malta
+934154	Port Louis	-20.16194	57.49889	155226	Port Louis		Morisi
+1282027	Male	4.17521	73.50916	103693	Malé		Maldivi+Modivu
+927967	Lilongwe	-13.96692	33.78725	646750	Lilongwe		Malawi
+3530597	Mexico City	19.42847	-99.12766	12294193	Mexico	The Federal District+Distrito Federal	Meksiko+Mexiko
+1040652	Maputo	-25.96553	32.58322	1191613	Maputo	Maputo City	Msumbiji
+3352136	Windhoek	-22.55941	17.08323	268132	Windhoek	Mkoa wa Khomas+Khomas	Namibia
+2440485	Niamey	13.51366	2.1098	774235	Niamey	Niamey	Niger+Nijeri
+2332459	Lagos	6.45407	3.39467	9000000	Lagos		Nigeria+Nijeria
+2335204	Kano	12.00012	8.51672	3626068	Kano		Nigeria+Nijeria
+2352778	Abuja	9.05785	7.49508	590400	Abuja	FCTA+Abuja Federal Capital Territory	Nigeria+Nijeria
+779330	Kautokeino	69.01247	23.04116	2000	Guovdageaidnu		Norwe+Norwei
+287286	Muscat	23.58413	58.40778	797000	Muskat		Omani
+3703443	Panamá	8.9936	-79.51973	408168	Panama City		Panama
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Poland+Polandi
+284899	Jericho	31.86667	35.45	19783	Yeriko		Ukingo wa Magharibi na Ukanda wa Gaza wa Palestina
+7303419	East Jerusalem	31.78336	35.23388	428304	Yerusalemu ya Mashariki		Ukingo wa Magharibi na Ukanda wa Gaza wa Palestina
+2267827	Funchal	32.66568	-16.92547	100847	Funchal		Ureno
+3439389	Asunción	-25.30066	-57.63591	1482200	Asuncion		Paragwai+Paraguay
+290030	Doha	25.28545	51.53096	344939	Doha		Qatar+Katari
+935264	Saint-Denis	-20.88231	55.4504	137195	Saint-Denis+97400		Riyunioni
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzerzhinsk	Nizjnij Novgorod	Urusi
+202061	Kigali	-1.94995	30.05885	745261	Kigali		Rwanda
+109223	Medina	24.46861	39.61417	1300000	Madina		Saudi
+241131	Victoria	-4.62001	55.45501	22881	Victoria		Visiwa vya Shelisheli+Shelisheli
+365137	Omdurman	15.64453	32.47773	1200000	Omdurman		Sudan+Sudani
+379252	Khartoum	15.55177	32.53241	1974647	Khartoum		Sudan+Sudani
+3196359	Ljubljana	46.05108	14.50513	272220	Lyublyana		Slovenia
+2409306	Freetown	8.484	-13.22994	802639	Freetown		Sierra Leone+Siera Leoni
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadishu		Somalia+Somali
+55671	Kismayo	-0.35817	42.54536	234852	Kismayu	Jubbada Hoose	Somalia+Somali
+3383330	Paramaribo	5.86638	-55.16682	223757	Paramaribo	Paramaribo	Surinam+Surinamu
+2410763	São Tomé	0.33654	6.72732	53300	Sao Tome		Sao Tome na Principe
+170654	Damascus	33.5102	36.29128	1569394	Dameski		Syria+Siria
+934985	Mbabane	-26.31667	31.13333	76218	Mbabane	Hhohho	Uswazi
+2427123	N'Djamena	12.10672	15.0444	721081	N'Djamena	Chari-Baguirmi	Chadi+Chad
+2365267	Lomé	6.12874	1.22154	749700	Lome		Togo
+1221874	Dushanbe	38.53575	68.77905	679400	Dushanbe		Tajikistan+Tajikistani
+2464470	Tunis	36.81897	10.16579	693210	Tunis	Tūnis	Tunisia
+299817	Tarsus	36.91766	34.89277	256482	Tarso	Mkoa wa Mersin	Uturuki+Turkanmua
+751057	Bartın	41.63583	32.3375	37427	Bartın Merkez	Mkoa wa Bartın+Bartın İli	Uturuki+Turkanmua
+1668341	Taipei	25.04776	121.53185	7871900	Taipei		Taiwani+Jamhuri ya China
+149606	Tanga	-5.06893	39.09875	224876	Tanga	Mkoa wa Tanga+Tanga	Tanzania
+152224	Mwanza	-2.51667	32.9	436801	Mwanza	Mkoa wa Mwanza+Mwanza	Tanzania
+153209	Moshi	-3.35	37.33333	156959	Moshi	Mkoa wa Kilimanjaro+Kilimanjaro	Tanzania
+153220	Morogoro	-6.82102	37.66122	250902	Mkoa wa Morogoro	Mkoa wa Morogoro	Tanzania
+154380	Mbeya	-8.9	33.45	291649	Mbeya	Mkoa wa Mbeya+Mbeya	Tanzania
+157738	Kigoma	-4.87694	29.62667	164268	Kigoma-Ujiji	Mkoa wa Kigoma+Kigoma	Tanzania
+160196	Dodoma	-6.17221	35.73947	180541	Dodoma	Mkoa wa Dodoma+Dodoma	Tanzania
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Dar es Salaam	Dar es Salaam	Tanzania
+161290	Bagamoyo	-6.44222	38.90422	82426	Bagamoyo	Pwani+Mkoa wa Pwani	Tanzania
+161312	Babati	-4.21667	35.75	34291	Babati Mjini	Mkoa wa Manyara+Manyara	Tanzania
+161325	Arusha	-3.36667	36.68333	341136	Arusha	Mkoa wa Arusha+Arusha	Tanzania
+232422	Kampala	0.31628	32.58219	1353189	Kampala	Central Region	Uganda
+5098278	Freehold	40.26011	-74.27376	11959	Freehold Borough	NJ+New Jersey	Marekani+U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Seattle	WA+Washington	Marekani+U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Urugwai+Uruguay
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Venezuela
+3577430	Road Town	18.42693	-64.62079	8449	Road Town		Visiwa vya Virgin vya Uingereza+BVI
+4795467	Charlotte Amalie	18.3419	-64.9307	20000	Charlotte Amalie		Visiwa vya Virgin vya Marekani
+921815	Mamoudzou	-12.78234	45.22878	54831	Mamoudzou		Mayotte
+964137	Pretoria	-25.74486	28.18783	1619438	Pretoria	Gauteng	Afrika ya Kusini+Afrika Kusini
+993800	Johannesburg	-26.20227	28.04363	2026469	Johannesburg	Gauteng	Afrika ya Kusini+Afrika Kusini
+1018725	Bloemfontein	-29.12107	26.214	463064	Bloemfontein		Afrika ya Kusini+Afrika Kusini
+3369157	Cape Town	-33.92584	18.42322	3433441	Cape Town	Western Cape	Afrika ya Kusini+Afrika Kusini
+895953	Zambezi	-13.54323	23.10467	7074	Zambezi	North-Western	Zambia
+909137	Lusaka	-15.40669	28.28713	1267440	Lusaka	Lusaka	Zambia
+1106542	Chitungwiza	-18.01274	31.07555	340360	Chitungwiza		Zimbabwe

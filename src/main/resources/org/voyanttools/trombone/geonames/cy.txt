@@ -1,0 +1,310 @@
+3833883	Trelew	-43.24895	-65.30505	93442	Trelew	CH	Yr Ariannin
+3839307	Rawson	-43.30016	-65.10228	26335	Rawson	CH	Yr Ariannin
+3840092	Puerto Madryn	-42.7692	-65.03851	64555	Puerto Madryn+Porth Madryn	CH	Yr Ariannin
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Awstralia
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Awstralia
+7281838	Logan City	-27.63917	153.10944	282673	Logan	QLD	Awstralia
+2798573	Eupen	50.6279	6.03647	18029	Eupen	Wallonia+Walloon	Gwlad Belg
+2800866	Brussels	50.85045	4.34878	1019022	Brwsel	Brussels-Capital Region	Gwlad Belg
+2803138	Antwerpen	51.21989	4.40346	459805	Antwerp		Gwlad Belg
+727011	Sofia	42.69751	23.32415	1152556	Sofia		Bwlgaria
+728193	Plovdiv	42.15	24.75	340494	Plovdiv		Bwlgaria
+728199	Pliska	43.36667	27.11667	1263	Pliska		Bwlgaria
+732770	Burgas	42.50606	27.46781	195966	Burgas		Bwlgaria
+3582677	Belize City	17.49952	-88.19756	61461	Dinas Belize	Belize	Belize+Belîs
+5959878	Gaspé	48.83341	-64.48194	14819	Gaspé	QC	Canada
+6077243	Montréal	45.50884	-73.58781	1600000	Montreal	QC	Canada
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Canada
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	Canada
+6173331	Vancouver	49.24966	-123.11934	600000	Vancouver	BC+British Columbia	Canada
+6174041	Victoria	48.43294	-123.3693	289625	Victoria	BC+British Columbia	Canada
+2658898	Saas-Fee	46.10805	7.92741	1611	Saas Fee		Y Swistir
+2659811	Luzern	47.05048	8.30635	57066	Lucerne		Y Swistir
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaoundé		Y Camerŵn+Camerŵn
+2232593	Douala	4.04827	9.70428	1338082	Douala		Y Camerŵn+Camerŵn
+1816670	Beijing	39.9075	116.39723	11716620	Beijing		Tseina+Gweriniaeth Pobl Tsieina
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotá		Colombia
+146268	Nicosia	35.17531	33.3642	200452	Nicosia		Cyprus
+3067696	Prague	50.08804	14.42076	1165581	Prâg+Prag+Praha	Hlavní město Praha	Gweriniaeth Tsiec+Czechia
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Yr Almaen
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Yr Almaen
+2886242	Köln	50.93333	6.95	963395	Cwlen	NRW	Yr Almaen
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Yr Almaen
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Yr Almaen
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Yr Almaen
+223817	Djibouti	11.58901	43.14503	623891	Dinas Jibwti	Djibouti	Djibouti
+2479215	Souk Ahras	36.28639	7.95111	156745	Souk-Ahras	Souk Ahras	Algeria
+2507480	Algiers	36.73225	3.08746	1977663	Alger	Alger	Algeria
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo		Sbaen+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Sbaen+España
+3128026	Bilbao	43.26271	-2.92528	354860	Bilbo	Euskadi	Sbaen+España
+3129111	Ayerbe	42.27267	-0.68844	1096	Ayerbe	Aragón	Sbaen+España
+633268	Utsjoki	69.90864	27.02843	1401	Ohcejohka		Y Ffindir
+660229	Enontekiö	68.38573	23.63215	2145	Eanodat		Y Ffindir
+2970777	Vannes	47.66667	-2.75	54020	Gwened+56000	Llydaw+Bretagne	Ffrainc+France
+2971929	Tréguier	48.78333	-3.23333	3011	Landreger	Llydaw+Bretagne	Ffrainc+France
+2973783	Strasbourg	48.58392	7.74553	274845	Strasbwrg+67000	ACAL	Ffrainc+France
+2977390	Saint-Pol-de-Léon	48.68333	-3.98333	7627	Kastell-Paol	Llydaw+Bretagne	Ffrainc+France
+2977921	Saint-Nazaire	47.28333	-2.2	67054	Sant-Nazer+44600		Ffrainc+France
+2978640	Saint-Malo	48.65	-2.01667	50676	Sant-Maloù+35400	Llydaw+Bretagne	Ffrainc+France
+2979207	Saint-Jean-Pied-de-Port	43.16363	-1.23738	1824	Donibane Garazi		Ffrainc+France
+2980933	Saint-Cyr-sur-Mer	43.18352	5.70914	12185	St-Cyr-sur-Mer		Ffrainc+France
+2981280	Saint-Brieuc	48.51513	-2.76838	52774	Sant-Brieg+22000	Llydaw+Bretagne	Ffrainc+France
+2982809	Roscoff	48.72381	-3.98709	3772	Rosko+29680	Llydaw+Bretagne	Ffrainc+France
+2983990	Rennes	48.11198	-1.67429	209375	Roazhon+35000+Rennes	Llydaw+Bretagne	Ffrainc+France
+2984699	Quimperlé	47.86667	-3.55	12312	Kemperle+29300	Llydaw+Bretagne	Ffrainc+France
+2984701	Quimper	48	-4.1	63849	Kemper+29000	Llydaw+Bretagne	Ffrainc+France
+2985810	Pouldergat	48.05	-4.33333	1347	Pouldregad	Llydaw+Bretagne	Ffrainc+France
+2986160	Pontivy	48.06667	-2.98333	16752	Pondi+56300	Llydaw+Bretagne	Ffrainc+France
+2986616	Pluguffan	47.98333	-4.18333	3370	Pluguen	Llydaw+Bretagne	Ffrainc+France
+2986712	Plomeur	47.83333	-4.28333	3402	Ploveur	Llydaw+Bretagne	Ffrainc+France
+2987863	Perros-Guirec	48.81454	-3.43963	8062	Perroz-Gireg	Llydaw+Bretagne	Ffrainc+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Ffrainc+France
+2990440	Nice	43.70313	7.26608	338620	Nice+06000		Ffrainc+France
+2991772	Morlaix	48.58333	-3.83333	17516	Montroulez+29600	Llydaw+Bretagne	Ffrainc+France
+2995107	Mauléon-Licharre	43.22684	-0.88038	3313	Maule-Lextarre		Ffrainc+France
+2997577	Lorient	47.75	-3.36667	58112	An Oriant+56100	Llydaw+Bretagne	Ffrainc+France
+2997943	Loctudy	47.83333	-4.16667	3867	Loktudi	Llydaw+Bretagne	Ffrainc+France
+2997957	Locoal-Mendon	47.7052	-3.10796	2322	Lokoal-Mendon	Llydaw+Bretagne	Ffrainc+France
+3007609	Lannion	48.73333	-3.46667	21473	Lannuon+22300	Llydaw+Bretagne	Ffrainc+France
+3007874	Landerneau	48.45252	-4.25252	16052	Landerne+29800	Llydaw+Bretagne	Ffrainc+France
+3013521	Hennebont	47.80512	-3.27337	14288	Henbont+56700	Llydaw+Bretagne	Ffrainc+France
+3013534	Hendaye	43.37172	-1.77382	14415	Hendaia+64700		Ffrainc+France
+3014221	Guingamp	48.55	-3.15	9023	Gwengamp+22200	Llydaw+Bretagne	Ffrainc+France
+3023911	Congénies	43.76667	4.16667	1168	Congenies		Ffrainc+France
+3026262	Châteaulin	48.2	-4.08333	5379	Kastellin	Llydaw+Bretagne	Ffrainc+France
+3028575	Carnac	47.58351	-3.07884	4777	Karnag+56340	Llydaw+Bretagne	Ffrainc+France
+3028603	Carhaix-Plouguer	48.27594	-3.57326	8270	Karaez-Plougêr+29270	Llydaw+Bretagne	Ffrainc+France
+3030102	Briec	48.10167	-3.99833	4880	Brieg	Llydaw+Bretagne	Ffrainc+France
+3030300	Brest	48.39029	-4.48628	144899	Brest+29200	Llydaw+Bretagne	Ffrainc+France
+3032898	Beuzec-Cap-Sizun	48.07567	-4.512	1097	Beuzeg-ar-Chab	Llydaw+Bretagne	Ffrainc+France
+3034475	Bayonne	43.48333	-1.48333	44396	Baiona+64100		Ffrainc+France
+3036059	Auray	47.67025	-2.99183	12269	An Alre+56400	Llydaw+Bretagne	Ffrainc+France
+2633352	York	53.95763	-1.08271	153717	Efrog+Jórvík	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2633485	Wrexham	53.04664	-2.99132	65692	Wrecsam	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2633563	Worcester	52.18935	-2.22001	101659	Caerwrangon	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2633858	Winchester	51.06513	-1.3187	46074	Caerwynt	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2633985	Wick	51.43944	-3.54944	698	Y Wig	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2634035	Whitland	51.81889	-4.61528	1514	Hendy Gwyn	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2634124	Whitchurch	52.96667	-2.68333	9710	Yr Eglwys Wen	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2634308	Weston-super-Mare	51.34603	-2.97665	82903	Weston super Mare	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2634560	Welshpool	52.65973	-3.1471	5948	Y Trallwng	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2635052	Usk	51.70347	-2.90332	2834	Brynbuga	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2635412	Truro	50.26526	-5.05436	23041	Truro	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2635496	Treorchy	51.65958	-3.50587	8105	Treorci	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2635754	Tobermory	56.62198	-6.07231	1010	Tobar Mhoire	苏格兰	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2636104	Tenby	51.67279	-4.70447	4696	Dinbych-y-pysgod	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2636432	Swansea	51.62079	-3.94323	300352	Abertawe	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2636790	Stornoway	58.20925	-6.38649	7500	Steòrnabhagh	苏格兰	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2637126	Staines	51.43092	-0.50606	51040	Staines-upon-Thames	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2637891	Shrewsbury	52.71009	-2.75208	71715	Amwythig	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2638077	Sheffield	53.38297	-1.4659	685368	Sheffield	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2638664	Salisbury	51.06931	-1.79569	44748	Caersallog	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2638778	St Ives	50.20861	-5.4875	9966	Porth Ia	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2638822	Saint Davids	51.88094	-5.26554	1800	Tyddewi	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2638855	Saint Asaph	53.25815	-3.44524	3355	Llanelwy	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2638925	Ruthin	53.11368	-3.31782	5461	Rhuthun	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639014	Ruabon	52.9878	-3.03883	3091	Rhiwabon	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639110	Ross on Wye	51.91667	-2.56667	10582	Rhosan ar Wy	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639409	Rhyl	53.31929	-3.49228	25874	Y Rhyl	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639447	Rhondda	51.65896	-3.44885	59450	Y Rhondda	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639470	Rhayader	52.30154	-3.51146	1824	Rhaeadr Gwy	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639577	Reading	51.45625	-0.97113	318014	Reading	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639700	Raglan	51.765	-2.85331	1183	Rhaglan	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2639924	Presteigne	52.27183	-3.00579	2056	Llanandras	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640006	Portree	57.41288	-6.19418	2410	Port Rìgh	苏格兰	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640045	Porthmadog	52.92924	-4.13137	2981	Porthmadog	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640106	Pontypool	51.70111	-3.04444	35686	Pont-y-pŵl	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640111	Pontyates	51.75182	-4.21718	1449	Pontiets	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640354	Peterborough	52.57364	-0.24777	163379	Peterborough	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640485	Pen-clawdd	51.64028	-4.09917	1935	Pen-clawdd	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640503	Pembroke	51.67464	-4.91286	7552	Penfro	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640685	Padstow	50.53885	-4.93664	2296	Lannwedhenek	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640729	Oxford	51.75222	-1.25596	171380	Rhydychen	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2640861	Oswestry	52.86195	-3.05497	18743	Croesoswallt	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641170	Nottingham	52.9536	-1.15047	729977	Nottingham	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641523	Newtown	52.51667	-3.3	11357	Y Drenewydd	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641588	New Quay	52.21515	-4.35887	694	Y Cei Newydd	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641596	Newport	52.01667	-4.83333	851	Trefdraeth	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641598	Newport	51.58774	-2.99835	306844	Casnewydd	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641673	Newcastle upon Tyne	54.97328	-1.61396	192382	Newcastle upon Tyne	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641676	Newcastle Emlyn	52.04056	-4.4667	1883	Castellnewydd Emlyn	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2641843	Neath	51.66317	-3.80443	46126	Castell Nedd	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642116	Mountain Ash	51.68361	-3.38008	11230	Aberpennar	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642180	Morriston	51.66995	-3.92941	0	Treforys	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642302	Montrose	56.71683	-2.46695	11880	Monadh Rois	苏格兰	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642313	Monmouth	51.81265	-2.71363	10110	Trefynwy	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642372	Mold	53.16674	-3.14143	10058	Yr Wyddgrug	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642534	Milford Haven	51.71278	-5.0341	13582	Aberdaugleddau	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642687	Mevagissey	50.27324	-4.79166	2117	Lannvorek	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642705	Merthyr Tydfil	51.74794	-3.37779	43820	Merthyr Tudful	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2642755	Menai Bridge	53.22775	-4.16926	4958	Porthaethwy	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manceinion	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2643425	Ludlow	52.37431	-2.71311	10515	Llwydlo	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2643741	City of London	51.51279	-0.09184	8072	Dinas Llundain	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Llundain	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2643933	Llantwit Major	51.4107	-3.48632	14384	Llanilltud Fawr	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644080	Llanfairpwllgwyngyll	53.22141	-4.20329	3107	Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644122	Llandrindod Wells	52.24164	-3.37868	5309	Llandrindod	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644127	Llandovery	51.99415	-3.79637	2065	Llanymddyfri	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Lerpwl	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644613	Leominster	52.22583	-2.74491	10938	Llanllieni	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644668	Leicester	52.6386	-1.13169	508916	Caerlŷr	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644972	Lancaster	54.04649	-2.79988	47162	Caerhirfryn	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2644981	Lampeter	52.11285	-4.08039	2970	Llanbedr Pont Steffan	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2645155	Knighton	52.34251	-3.04708	3007	Trefyclo	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2645411	Kington	52.2	-2.01667	2655	Ceintun	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2645663	Kilgetty	51.73203	-4.71983	1968	Cilgeti	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2645720	Kidwelly	51.73639	-4.30333	2782	Cydweli	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2646673	Holywell	53.27466	-3.22895	6969	Treffynnon	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2646686	Holyhead	53.30621	-4.63211	11431	Caergybi	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2647074	Hereford	52.05684	-2.71482	60415	Henffordd	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2647138	Hemel Hempstead	51.75368	-0.44975	85629	Hemel Hempstead	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2647303	Hawarden	53.18478	-3.02578	25513	Penarlâg	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2647311	Haverfordwest	51.80169	-4.96914	14596	Hwlffordd	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2647840	Grosmont	51.91667	-2.86667	0	Y Grysmwnt	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2648404	Gloucester	51.86568	-2.2431	150053	Caerloyw	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glasgow	苏格兰	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2649301	Flint	53.24488	-3.13231	26442	Y Fflint	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2649372	Fishguard	51.99376	-4.97631	3419	Abergwaun	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2649715	Falmouth	50.15441	-5.07113	31988	Aberfal	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2649808	Exeter	50.7236	-3.52751	117763	Caerwysg	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Caeredin	苏格兰	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2650285	Ebbw Vale	51.77714	-3.20792	33068	Glyn Ebwy	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2651154	Dolgellau	52.74222	-3.88611	2688	Dolgellau	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2651386	Denbigh	53.18333	-3.41667	8514	Dinbych	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2651654	Cwmbran	51.65446	-3.02281	48157	Cwmbrân	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2651986	Crickhowell	51.85992	-3.13771	2063	Cucywel+Crucywel	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2651994	Criccieth	52.92053	-4.2346	1753	Cricieth	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2652209	Cowbridge	51.46028	-3.44167	3804	Y Bont-faen	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2652426	Conwy	53.28077	-3.83039	3873	Conwy	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2652513	Colwyn Bay	53.29483	-3.72674	34284	Bae Colwyn	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653131	Chirk	52.93586	-3.05738	4007	Y Waun	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653228	Chester	53.1905	-2.89189	90524	Caer	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653256	Chepstow	51.64087	-2.67683	16169	Cas-gwent	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653755	Carmarthen	51.85552	-4.30535	15854	Caerfyrddin	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653775	Carlisle	54.8951	-2.9382	78470	Caerliwelydd	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653818	Cardigan	52.08373	-4.66228	5301	Aberteifi	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653822	Cardiff	51.48	-3.18	447287	Caerdydd	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653877	Canterbury	51.27904	1.07992	55240	Caergaint	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2653941	Cambridge	52.2	0.11667	158434	Caergrawnt	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654089	Caerphilly	51.57452	-3.218	31060	Caerffili	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654092	Caernarfon	53.14126	-4.27016	9730	Caernarfon	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654093	Caerleon	51.60952	-2.95378	8747	Caerllion	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654229	Burry Port	51.68435	-4.24687	8310	Porth Tywyn	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654359	Builth Wells	52.1494	-3.40469	2829	Llanfair-ym-Muallt	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654380	Bude	50.82435	-4.5413	7011	Bud	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654394	Buckley	53.16667	-3.08333	63576	Bwcle	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654437	Brynmawr	51.8	-3.18333	14924	Bryn-mawr	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654675	Bristol	51.45523	-2.59665	617280	Bryste	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654755	Bridgend	51.50583	-3.57722	58380	Pen-y-bont ar Ogwr	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654817	Brecon	51.94612	-3.38887	8250	Brycheiniog+Aberhonddu	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2654993	Bradford	53.79391	-1.75206	299310	Bradford	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmingham	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2655613	Birkenhead	53.39337	-3.01479	325264	Penbedw	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Belffast		Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2656073	Beaumaris	53.26315	-4.09233	1370	Biwmares	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2656173	Bath	51.3751	-2.36172	94782	Caerfaddon	Lloegr	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2656235	Barry	51.39979	-3.2838	54673	Y Barri	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2656311	Barmouth	52.72377	-4.05748	2315	Abermaw	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2656615	Bala	52.91111	-3.59722	1974	Y Bala	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2657345	Ammanford	51.79279	-3.98833	23709	Rhydaman	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2657782	Aberystwyth	52.41548	-4.08292	18749	Aberystwyth	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2657784	Abertillery	51.72981	-3.13432	10946	Abertyleri	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2657815	Abergavenny	51.82098	-3.01743	14651	Y Fenni	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2657835	Aberdare	51.71438	-3.44918	31135	Aberdâr	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+2657850	Aberaeron	52.24247	-4.25871	1422	Aberaeron	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+3345189	Tumble	51.78361	-4.10972	4040	y Tymbl	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+3345317	Blackwood	51.66778	-3.2075	15476	Coed-duon	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+6620349	Tintern	51.69677	-2.68142	750	Tyndyrn	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+6951032	Y Felinheli	53.18737	-4.20476	2284	Y Felinheli+Felinheli	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+8299616	Deeside	53.20053	-3.03841	32000	Glannau Dyfrdwy	Cymru+Galles	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Ynysoedd Erch	苏格兰	Prydain Fawr+Y Deyrnas Unedig+http://en.wikipedia.org/wiki/United_Kingdom
+614622	Gagra	43.27858	40.27124	8266	Gagra		Georgia
+3042287	Saint Peter Port	49.45981	-2.53527	16488	St Peter Port		
+3421319	Nuuk	64.18347	-51.72157	14798	Nuuk		Yr Ynys Las
+255274	Piraeus	37.94745	23.63708	163688	Piraeus		Gwlad Groeg+Griekanmua
+2960992	Waterford	52.25833	-7.11194	47904	Port Láirge		Iwerddon+Gweriniaeth Iwerddon+Ire
+2961297	Swords	53.45972	-6.21806	36924	Sord Cholmcille	Laighin	Iwerddon+Gweriniaeth Iwerddon+Ire
+2962840	Longford	53.72536	-7.79823	7787	An Longfort	Laighin	Iwerddon+Gweriniaeth Iwerddon+Ire
+2964405	Ennis	52.84361	-8.98639	24427	Inis		Iwerddon+Gweriniaeth Iwerddon+Ire
+2964574	Dublin	53.33306	-6.24889	1024027	Dulyn	Laighin	Iwerddon+Gweriniaeth Iwerddon+Ire
+2964782	Dingle	52.14083	-10.26889	1965	An Daingean		Iwerddon+Gweriniaeth Iwerddon+Ire
+2965140	Cork	51.89797	-8.47061	190384	Corc		Iwerddon+Gweriniaeth Iwerddon+Ire
+3310247	Shannon	52.70389	-8.86417	9673	Shannon		Iwerddon+Gweriniaeth Iwerddon+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Jeriwsalem		Israel
+1273467	Dārjiling	27.03333	88.26667	123797	Darjeeling	Gorllewin Bengal+WB+West Bengal	India
+1275004	Kolkata	22.56263	88.36304	4631392	Calcutta	Gorllewin Bengal+WB+West Bengal	India
+122285	Neyshābūr	36.21329	58.79575	220929	Nishapur	Khorāsān-e Raẕāvī	Iran
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Sisili	Yr Eidal
+3164582	Ventimiglia	43.78956	7.60872	18442	Ventimiglia		Yr Eidal
+3165524	Turin	45.07049	7.68682	870456	Torino	Piemonte	Yr Eidal
+3169070	Rome	41.89193	12.51133	2318895	Rhufain+Roma	Lazio	Yr Eidal
+3170092	Portofino	44.30349	9.20942	406	Portofino		Yr Eidal
+3174856	Lerici	44.07587	9.91121	8793	Lerici		Yr Eidal
+3175081	La Spezia	44.103	9.82375	88491	La Spezia		Yr Eidal
+3176219	Genoa	44.40478	8.94439	580223	Genova		Yr Eidal
+3176959	Florence	43.77925	11.24626	349296	Fflorens		Yr Eidal
+1850147	Tokyo	35.6895	139.69171	8336599	Tokyo		Siapan+Japan
+1853909	Osaka	34.69374	135.50218	2592413	Osaka		Siapan+Japan
+1871859	Pyongyang	39.03385	125.75432	3222000	P'yŏngyang		Gogledd Corea+http://en.wikipedia.org/wiki/North_Korea
+1248991	Colombo	6.93194	79.84778	648034	Colombo	Western	Sri Lanka
+2960316	Luxembourg	49.61167	6.13	76684	Dinas Lwcsembwrg		Lwcsembwrg
+459283	Jēkabpils	56.49903	25.85735	27078	Jēkabpils	http://jekabpilsnovads.lv/+Jēkabpils novads	Latfia
+81302	Tobruk	32.08361	23.97639	121052	Tobruch		Libia
+2538475	Rabat	34.01325	-6.83255	1655753	Rabat		Moroco
+2542051	Mohammedia	33.68607	-7.38298	187708	Mohammédia		Moroco
+2544333	Khenifra	32.93492	-5.66167	73906	Khénifra		Moroco
+2544571	Kenitra	34.26101	-6.5802	366570	Kénitra		Moroco
+2550078	El Jadid	33.25682	-8.50882	147549	El Jadida		Moroco
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Montenegro
+785842	Skopje	41.99646	21.43141	474889	Skopje		Macedonia+Gweriniaeth Macedonia+ARYM+FYROM
+2449067	Timbuktu	16.77348	-3.00742	32460	Tombouctou		Mali
+2377450	Nouakchott	18.08581	-15.9785	661400	Nouakchott		Mawritania
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Malta
+2562619	Victoria	36.04444	14.23972	6596	Victoria		Malta
+2562746	Imdina	35.88694	14.4025	360	Mdina a Rabat		Malta
+2747373	The Hague	52.07667	4.29861	474292	Den Haag	zh+Zuid-Holland	Yr Iseldiroedd
+2751773	Leiden	52.15833	4.49306	119713	Leiden	zh+Zuid-Holland	Yr Iseldiroedd
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Yr Iseldiroedd
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norwy
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norwy
+3703443	Panamá	8.9936	-79.51973	408168	Panamá		Panama+Panamá
+756135	Warsaw	52.22977	21.01178	1702139	Warsaw	Mazowieckie	Gwlad Pwyl
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Gwlad Pwyl
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Gwlad Pwyl
+3099434	Gdańsk	54.35205	18.64637	461865	Gdańsk+Gydanysg	Pomorskie	Gwlad Pwyl
+284315	Bethlehem	31.70487	35.20376	29019	Bethlehem		Tiriogaeth Palesteina
+2267057	Lisbon	38.71667	-9.13333	517802	Lisbon+Lisboa	Lisboa	Portiwgal
+671768	Oradea	47.0458	21.91833	206614	Oradea		Rwmania
+786827	Požarevac	44.62133	21.18782	41736	Požarevac	Central Serbia	Serbia
+498817	Saint Petersburg	59.93863	30.31413	5028000	St Petersburg+Санкт-Петербург		Rwsia
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov-ar-Ddon		Rwsia
+524901	Moscow	55.75222	37.61556	10381222	Moscfa+Moskva		Rwsia
+104515	Mecca	21.42664	39.82563	1323624	Mecca	Makkah	Sawdi-Arabia+Sawdi Arabia
+109223	Medina	24.46861	39.61417	1300000	Medina		Sawdi-Arabia+Sawdi Arabia
+379252	Khartoum	15.55177	32.53241	1974647	Khartoum		Y Swdan+Swdan
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Sweden+Ruoččii
+3168070	San Marino	43.93667	12.44639	4500	Dinas San Marino	San Marino	San Marino
+170017	Ḩamāh	35.13179	36.75783	460602	Hama		Syria
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Gwlad Thai
+2464470	Tunis	36.81897	10.16579	693210	Tiwnis	Tūnis	Tiwnisia+Tunisia
+323786	Ankara	39.91987	32.85427	3517182	Ankara		Twrci+Turkanmua
+148730	Zanzibar	-6.16394	39.19793	403658	Sansibar	Zanzibar Urban/West	Tansanïa+Tanzania
+701822	Mariupol	47.09514	37.54131	481626	Mariupol	Donetsk	Wcráin+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kiev		Wcráin+http://en.wikipedia.org/wiki/Ukraine
+711134	Burshtyn	49.25867	24.62777	14729	Ambr	Ivano-Frankivsk	Wcráin+http://en.wikipedia.org/wiki/Ukraine
+4392388	Jefferson City	38.5767	-92.17352	43169	Dinas Jefferson	MO+Missouri	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+4393217	Kansas City	39.09973	-94.57857	475378	Dinas Kansas	MO+Missouri	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+4508722	Cincinnati	39.12711	-84.51439	296943	Cincinnati	OH	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	Dinas Oklahoma	OK+Oklahoma	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+4711156	Midlothian	32.48236	-96.99445	22318	Midlothian	TX+Texas	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+4839416	New London	41.35565	-72.09952	27179	Llundain Newydd	CT+Connecticut	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chicago	IL+Illinois	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+5099836	Jersey City	40.72816	-74.07764	264290	Dinas Jersey	NJ+New Jersey	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Efrog Newydd+NYC+NY	Efrog Newydd+NY	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+5145215	Yonkers	40.93121	-73.89875	201116	Yonkers	Efrog Newydd+NY	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	Califfornia+CA+Calif+California	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas	NV+Nevada	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+5746545	Portland	45.52345	-122.67621	632309	Portland	Oregon+OR	Yr Unol Daleithiau+U.S.+USA+U.S.A.
+3369157	Cape Town	-33.92584	18.42322	3433441	Tref y Penrhyn	Western Cape	De Affrica

@@ -1,0 +1,748 @@
+292968	Abu Dhabi	24.46667	54.36667	603492	Abú Daibí		Aontas na nÉimíríochtaí Arabacha+UAE
+1138958	Kabul	34.52813	69.17233	3043532	Cabúl		An Afganastáin
+3183875	Tirana	41.3275	19.81889	374801	Tiorána		An Albáin
+616052	Yerevan	40.18111	44.51361	1093485	Eireaván	Yerevan	An Airméin
+2761369	Vienna	48.20849	16.37208	1691468	Vín		An Ostair
+2063523	Perth	-31.95224	115.8614	1896548	Perth	WA	An Astráil
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	An Astráil
+2174003	Brisbane	-27.46794	153.02809	2189878	Brisbane	QLD	An Astráil
+3191281	Sarajevo	43.84864	18.35644	696731	Sairéavó	Federation of Bosnia and Herzegovina	An Bhoisnia agus Heirseagóvéin+An Bhoisnia-Heirseagaivéin
+3374036	Bridgetown	13.10732	-59.62021	98511	Bridgetown	Saint Michael	Barbadós
+2800866	Brussels	50.85045	4.34878	1019022	An Bhruiséil	Brussels-Capital Region	An Bheilg
+2803138	Antwerpen	51.21989	4.40346	459805	Antuairp	Flóndras	An Bheilg
+727011	Sofia	42.69751	23.32415	1152556	Sóifia		An Bhulgáir
+3394023	Natal	-5.795	-35.20944	763043	Natal	RN+Rio Grande do Norte	An Bhrasaíl
+3444924	Vitória	-20.31944	-40.33778	312656	Vitória	ES	An Bhrasaíl
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	An Bhrasaíl
+3450554	Salvador	-12.97111	-38.51083	2711840	Salvador	BA	An Bhrasaíl
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	An Bhrasaíl
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasília	DF	An Bhrasaíl
+3663517	Manaus	-3.10194	-60.025	1598210	Manaus	AM	An Bhrasaíl
+933773	Gaborone	-24.65451	25.90859	208411	Gaborone		An Bhotsuáin
+625144	Minsk	53.9	27.56667	1742124	Minsc		An Bhealarúis
+5886182	Antigonish	45.61685	-61.99858	5003	Antigonis	Albain Nua+NS+Nova Scotia	Ceanada
+5920288	Charlottetown	46.23899	-63.13414	42402	Charlottetown	Oileán Phrionsa Éadbhard+PE+PEI+Prince Edward Island	Ceanada
+5961564	Glace Bay	46.19695	-59.95698	19968	Glasbaidh	Albain Nua+NS+Nova Scotia	Ceanada
+6077243	Montréal	45.50884	-73.58781	1600000	Montréal	QC	Ceanada
+6087579	New Glasgow	45.58344	-62.64863	20322	Glaschu Úr	Albain Nua+NS+Nova Scotia	Ceanada
+6167865	Toronto	43.70011	-79.4163	2600000	Torontó	ON+Ontario	Ceanada
+6173331	Vancouver	49.24966	-123.11934	600000	Vancouver	An Cholóim Bhriotanach+BC+British Columbia	Ceanada
+6324733	St. John's	47.56494	-52.70931	99182	Baile Sheáin	Talamh an Éisc agus Labradar+NL+Newfoundland	Ceanada
+6325494	Québec	46.81228	-71.21454	528595	Cathair Québec+Québec	QC	Ceanada
+6354908	Sydney	46.1351	-60.1831	105968	Baile Shidni	Albain Nua+NS+Nova Scotia	Ceanada
+2657996	Wil	47.46152	9.04552	16808	Wil SG		An Eilvéis
+2661337	Bulle	46.61797	7.0569	12095	Bulle FR		An Eilvéis
+2661552	Bern	46.94809	7.44744	121631	Beirn		An Eilvéis
+2661646	Baden	47.47333	8.30592	16118	Baden AG		An Eilvéis
+1280737	Lhasa	29.65	91.1	118721	Lása		An tSín
+1796236	Shanghai	31.22222	121.45806	22315474	Shang-hai		An tSín
+1816670	Beijing	39.9075	116.39723	11716620	Béising		An tSín
+3536729	Santiago de Cuba	20.02083	-75.82667	555865	Santiago de Cúba	Santiago de Cuba	Cúba
+146268	Nicosia	35.17531	33.3642	200452	Nicosia+An Leafcóis		An Chipir
+3067696	Prague	50.08804	14.42076	1165581	Prág+Praha	Hlavní město Praha	Poblacht na Seice+An tSeic+Czechia
+2842647	Saarbrücken	49.23262	7.00982	181227	Sárbrúch	An tSárlainn+Saarland	An Ghearmáin
+2861982	Nordhausen	51.5018	10.7957	43912	Nordhausen		An Ghearmáin
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	An Ghearmáin
+2919054	Göppingen	48.70354	9.65209	58040	Göppingen	Baden-Württemberg	An Ghearmáin
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	An Ghearmáin
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		An Ghearmáin
+2950159	Berlin	52.52437	13.41053	3426354	Beirlín	Beirlín+Berlin	An Ghearmáin
+3247449	Aachen	50.77664	6.08342	265208	Aachen	NRW	An Ghearmáin
+223817	Djibouti	11.58901	43.14503	623891	Diobúití	Djibouti	Djibouti+Diobúití
+2618425	Copenhagen	55.67594	12.56553	1153615	Cóbanhávan		An Danmhairg
+2507480	Algiers	36.73225	3.08746	1977663	Cathair na hAilgéire	Alger	An Ailgéir
+588409	Tallinn	59.43696	24.75353	394024	Taillinn	Harjumaa	An Eastóin
+359796	Suez	29.97371	32.52627	488125	Suais	As Suways	An Éigipt
+360502	Luxor	25.69893	32.6421	422407	Lucsar		An Éigipt
+361058	Alexandria	31.20176	29.91582	3811516	Cathair Alastair		An Éigipt
+2509954	Valencia	39.46975	-0.37739	814208	València	Valencia	An Spáinn+España
+2510911	Sevilla	37.38283	-5.97317	703206	Sevilla	An Andalúis	An Spáinn+España
+2513917	Mérida	38.91611	-6.34366	56395	Mérida	Extremadura	An Spáinn+España
+2521886	Almería	36.83814	-2.45974	188810	Almeria	An Andalúis	An Spáinn+España
+3106050	Vic	41.93012	2.25486	39844	Vic	Catalunya	An Spáinn+España
+3109402	Cerdanyola del Vallès	41.49109	2.14079	58747	Cerdanyola del Vallès	Catalunya	An Spáinn+España
+3109442	Sant Vicenç dels Horts	41.39317	2.00689	27701	Sant Vicenç dels Horts	Catalunya	An Spáinn+España
+3109546	Sant Just Desvern	41.38389	2.06758	15811	Sant Just Desvern	Catalunya	An Spáinn+España
+3109983	Santa Coloma de Cervelló	41.36736	2.01426	7086	Santa Coloma de Cervelló	Catalunya	An Spáinn+España
+3110519	Sant Joan Despí	41.36718	2.0574	32030	Sant Joan Despí	Catalunya	An Spáinn+España
+3110642	Sant Feliu de Llobregat	41.38333	2.05	42919	Sant Feliu de Llobregat	Catalunya	An Spáinn+España
+3110834	Sant Boi de Llobregat	41.34357	2.03659	82428	Sant Boi de Llobregat	Catalunya	An Spáinn+España
+3111607	Ripoll	42.20064	2.19033	11057	Ripoll	Catalunya	An Spáinn+España
+3114516	Pallejà	41.42394	1.99505	11134	Pallejà	Catalunya	An Spáinn+España
+3114938	Orís	42.05967	2.22066	0	Orís	Catalunya	An Spáinn+España
+3115093	Olot	42.18096	2.49012	33524	Olot	Catalunya	An Spáinn+España
+3116562	Molins de Rei	41.41667	2.01667	24067	Molins de Rei	Catalunya	An Spáinn+España
+3117539	Manlleu	42.00228	2.28476	20647	Manlleu	Catalunya	An Spáinn+España
+3117735	Madrid	40.4165	-3.70256	3255944	Maidrid	Madrid	An Spáinn+España
+3121397	Gironella	42.03433	1.88019	4867	Gironella	Catalunya	An Spáinn+España
+3122826	Esplugues de Llobregat	41.37732	2.08809	46862	Esplugues de Llobregat	Catalunya	An Spáinn+España
+3124201	Cubelles	41.20772	1.67267	13711	Cubelles	Catalunya	An Spáinn+España
+3124569	Cornellà de Llobregat	41.35	2.08333	86519	Cornellà de Llobregat	Catalunya	An Spáinn+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	An Spáinn+España
+632370	Varkaus	62.31533	27.873	22365	Varkaus		An Fhionlainn
+633679	Turku	60.45148	22.26869	175945	Túrcú		An Fhionlainn
+634963	Tampere	61.49911	23.78712	202687	Tampere		An Fhionlainn
+638936	Rovaniemi	66.5	25.71667	34781	Rovaniemi	An Laplainn	An Fhionlainn
+656789	Ikaalinen	61.76951	23.0658	7309	Ikaalinen		An Fhionlainn
+658225	Helsinki	60.16952	24.93545	558457	Heilsincí		An Fhionlainn
+659101	Hanko	59.83333	22.95	9962	Hanko		An Fhionlainn
+2984701	Quimper	48	-4.1	63849	Kemper+29000	An Bhriotáin+Bretagne	An Fhrainc+France
+2988507	Paris	48.85341	2.3488	2138551	Páras+75001		An Fhrainc+France
+3028575	Carnac	47.58351	-3.07884	4777	Karnag+56340	An Bhriotáin+Bretagne	An Fhrainc+France
+3033470	Bénodet	47.87531	-4.1058	2898	Benoded	An Bhriotáin+Bretagne	An Fhrainc+France
+3034475	Bayonne	43.48333	-1.48333	44396	Baiona+64100		An Fhrainc+France
+2633352	York	53.95763	-1.08271	153717	Eabhrac+Jórvík	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2633485	Wrexham	53.04664	-2.99132	65692	Wrecsam	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2633765	Wishaw	55.76667	-3.91667	30510	Camas Neachdain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2633982	Wick	58.43906	-3.09424	7140	Inbhir Úige	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2634378	West Kilbride	55.69004	-4.85771	4760	Cille Bhríghde an Iar	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2634451	West Drayton	51.5	-0.46667	12156	Drayton Thiar	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2634491	West Bromwich	52.51868	-1.9945	135618	Bromwich Thiar	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2634560	Welshpool	52.65973	-3.1471	5948	Y Trallwng	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2634743	Warrenpoint	54.10148	-6.25731	7670	An Phointe		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2634812	Wandsworth	51.4577	-0.20784	0	London Borough of Wandsworth	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2635199	Ullapool	57.89872	-5.16039	1510	Ulapul	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2635329	Turriff	57.5384	-2.45932	5060	Baile Thurra	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2635442	Troon	55.54359	-4.66335	14680	An t-Srón	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2635754	Tobermory	56.62198	-6.07231	1010	Tobar Mhoire	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2635881	Thurso	58.59271	-3.52594	7760	Inbhir Theórsa	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636321	Tain	57.80903	-4.05991	3690	Baile Dhubhthaich	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636432	Swansea	51.62079	-3.94323	300352	Abertawe	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636638	Stromness	58.96498	-3.29601	1730	Sróimnis	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636707	Strathblane	55.98596	-4.30658	1960	Strath Bhláthain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636710	Strathaven	55.6771	-4.0668	7480	Strath Aibhne	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636719	Stranraer	54.90234	-5.02731	10510	An t-Sròn Reamhar	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636744	Strabane	54.82373	-7.46916	14198	An Srath Bán		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636790	Stornoway	58.20925	-6.38649	7500	Steórnabhagh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636814	Stonehaven	56.96365	-2.21177	11370	Cala na Creige	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636910	Stirling	56.11903	-3.93682	36440	Sruighle	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636932	Stewarton	55.67986	-4.51435	7140	Baile nan Stiúbhartach	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2636938	Stevenston	55.6397	-4.75339	9290	Baile Steafain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2637329	South Shields	54.99859	-1.4323	83655	Shields Theas	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2637347	South Petherton	50.94829	-2.80708	3064	Petherton Theas	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2637373	South Molton	51.01667	-3.83333	5108	Molton Theas	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2637435	South Elmsall	53.59709	-1.28034	18835	Elmsall Theas	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2637461	South Cave	53.76987	-0.60107	3879	Cave Theas	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2637476	South Benfleet	51.55295	0.55962	48824	Benfleet Theas	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2638520	Sanquhar	55.36527	-3.9216	1980	An t-Seann Chathair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2638648	Saltcoats	55.63616	-4.78588	12800	Baile an t-Salainn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2638925	Ruthin	53.11368	-3.31782	5461	Rhuthun	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639022	Royal Tunbridge Wells	51.13321	0.26256	68910	Tunbridge Wells	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639083	Rothesay	55.83648	-5.05508	4540	Baile Bhóid	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639104	Rosyth	56.03689	-3.438	13690	Ros Fhíobh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639409	Rhyl	53.31929	-3.49228	25874	Y Rhyl	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639495	Renfrew	55.87197	-4.39253	22010	Rinn Friú	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639700	Raglan	51.765	-2.85331	1183	Rhaglan	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639788	Queensferry	55.99089	-3.39847	8960	Cas Chaolas	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639991	Portstewart	55.18132	-6.71402	8394	Port Stíobhaird		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2639992	Portsoy	57.68144	-2.68956	1730	Port Saoidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640004	Portrush	55.19592	-6.6493	6684	Port Rois		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640006	Portree	57.41288	-6.19418	2410	Port Rígh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640030	Portlethen	57.06942	-2.13246	8200	Am Port Leathann	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640060	Port Glasgow	55.93464	-4.6895	15190	Port Ghlaschú	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640084	Portaferry	54.38086	-5.54569	2525	Port an Pheire		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640085	Portadown	54.42302	-6.44434	22000	Port an Dúnáin		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640155	Polmont	55.9905	-3.70737	5390	Poll Mhonadh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640242	Pittenweem	56.21406	-2.72839	1490	Baile na h-Uaimh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640255	Pitlochry	56.70514	-3.73432	2860	Baile Chloichridh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640351	Peterhead	57.50584	-1.79806	18450	Ceann Phádraig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640358	Perth	56.39522	-3.43139	47180	Peairt	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640377	Penzance	50.11861	-5.53715	19872	Pen Sans	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640416	Penrith	54.66579	-2.75757	15181	Píoraid	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640465	Penicuik	55.83116	-3.22608	16110	Peighinn na Cuthaig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640526	Peebles	55.6519	-3.1888	8380	Na Púballan	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640677	Paisley	55.83173	-4.43254	76220	Páislig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2640967	Omagh	54.6	-7.3	21056	An Ómaigh		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641007	Oldmeldrum	57.33492	-2.3199	3230	Meall Druim	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641014	Old Kilpatrick	55.92241	-4.45567	4850	Cille Phádraig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641108	Oban	56.41535	-5.47184	8540	An t-Óban	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641233	North Walsham	52.82121	1.38746	12463	Walsham Thuaidh	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641267	North Shields	55.01646	-1.44925	39747	Shields Thuaidh	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641280	North Queensferry	56.00899	-3.39134	1070	Port na Banrighinn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641419	North Berwick	56.05825	-2.7229	6650	Bearaig-a-Tuath	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641519	Newtownards	54.59236	-5.69092	29363	Baile Nua na hArda		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641520	Newtownabbey	54.65983	-5.90858	63860	Baile na Mainistreach		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641528	Newton Stewart	54.95784	-4.48315	4010	Baile Úr nan Stiúbhartach	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641542	Newtonmore	57.06567	-4.12097	1100	Baile Ur an t-Sléibh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641544	Newton Mearns	55.77334	-4.33339	24650	Baile Úr na Maoirne	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641577	Scone	56.41942	-3.40507	4840	Sgáin	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641581	Newry	54.17841	-6.33739	27757	Iúir Cinn Trá+Iúr Cinn Trá		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641598	Newport	51.58774	-2.99835	306844	Casnewydd	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641676	Newcastle Emlyn	52.04056	-4.4667	1883	Castellnewydd Emlyn	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641815	Neilston	55.78574	-4.42637	5310	Baile Néill	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641910	Nairn	57.58094	-3.87973	9860	Inbhir Narann	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2641942	Musselburgh	55.9417	-3.04991	23620	Baile nam Feusgan	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642135	Motherwell	55.78924	-3.99187	32120	Tobar na Máthar	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642302	Montrose	56.71683	-2.46695	11880	Monadh Rois	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642313	Monmouth	51.81265	-2.71363	10110	Trefynwy	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642342	Monifieth	56.48227	-2.81732	8210	Monadh Feith	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642372	Mold	53.16674	-3.14143	10058	Yr Wyddgrug	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642376	Moira	54.48021	-6.22822	4098	Maigh Rath		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642384	Moffat	55.33527	-3.44142	2550	Am Magh Fada	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642484	Milngavie	55.94071	-4.32311	13110	Muileann Dháibhidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642705	Merthyr Tydfil	51.74794	-3.37779	43820	Merthyr Tudful	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642755	Menai Bridge	53.22775	-4.16926	4958	Porthaethwy	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642769	Melrose	55.59969	-2.7277	2340	Maol Ros	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2642904	Mauchline	55.51604	-4.37928	4130	Machlainn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchain	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643208	Magherafelt	54.75356	-6.60656	9157	Machaire Fíolta		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643211	Maghera	54.8439	-6.67145	4085	Machaire Rátha		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643262	Macduff	57.67012	-2.49686	4030	An Dún	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643587	Lossiemouth	57.72136	-3.28341	7620	Inbhir Losaidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643736	Derry	54.9981	-7.30934	83652	Doire		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643741	City of London	51.51279	-0.09184	8072	Cathair Londan	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londain	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643791	Lockerbie	55.12302	-3.35635	4290	Logarbaidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643797	Lochwinnoch	55.79521	-4.63034	2900	Loch Eanach	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643812	Lochmaben	55.13011	-3.44286	2100	Loch Mhabain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643825	Lochgilphead	56.03796	-5.43206	2390	Ceann Loch Gilb	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2643933	Llantwit Major	51.4107	-3.48632	14384	Llanilltud Fawr	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644122	Llandrindod Wells	52.24164	-3.37868	5309	Llandrindod	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644127	Llandovery	51.99415	-3.79637	2065	Llanymddyfri	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644204	Livingston	55.90288	-3.52261	56570	Baile Dhún Léibhe	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Learpholl	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644444	Linlithgow	55.97639	-3.60364	13320	Gleann Iucha	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644501	Limavady	55.05045	-6.95074	12970	Léim an Mhadaidh		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644577	Leven	56.2	-3	8960	Inbhir Líobhann	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644605	Lerwick	60.15339	-1.14427	7040	Liúrabhaig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644818	Lauder	55.71908	-2.74755	1610	Labhdar	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644849	Larne	54.85	-5.81667	18421	Latharna		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644853	Larkhall	55.73333	-3.96667	15020	Taigh na h-Uiseig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644860	Largs	55.79629	-4.86337	11340	An Leargaidh Ghallda	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644867	Larbert	56.02246	-3.82872	9530	Léirbert	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644927	Langholm	55.15101	-2.99889	2250	Langaim	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644976	Lanark	55.67371	-3.7817	8890	Lannraig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644981	Lampeter	52.11285	-4.08039	2970	Llanbedr Pont Steffan	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2644984	Lamlash	55.53358	-5.12956	1030	An t-Eilean Árd	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645191	Kirriemuir	56.67398	-3.00343	6160	Cearan Mhoire	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645198	Kirkwall	58.98479	-2.95873	7150	Bágh na h-Eaglaise	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645261	Kirkintilloch	55.93933	-4.15262	19630	Cathair Cheann Tulaich	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645287	Kirkcudbright	54.8383	-4.04908	3390	Cille Chuithbeirt	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645298	Kirkcaldy	56.11683	-3.15999	49460	Cair Chaladain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645365	Kinross	56.20466	-3.42138	4910	Ceann Rois	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645409	Kingussie	57.07996	-4.05231	1450	Ceann a Ghiúthsaich	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645541	Kilwinning	55.65333	-4.70666	16420	Cill Fhinnean	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645548	Kilsyth	55.97596	-4.05916	9860	Cill Saidhe	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645599	Kilmaurs	55.63801	-4.5273	2800	Cille Mhára	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645605	Kilmarnock	55.61171	-4.49581	46350	Cill Mheárnaig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645712	Kilbirnie	55.75082	-4.68791	7520	Cille Bhraonaidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645849	Kelso	55.59814	-2.43382	5600	Cealsaidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645880	Keith	57.53633	-2.94811	4740	Baile Ché	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645951	Johnstone	55.82906	-4.51605	16390	Baile Iain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2645970	Jedburgh	55.47997	-2.552	3980	Deadard	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646032	Irvine	55.6194	-4.65508	33740	Irbhinn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646073	Inverurie	57.28446	-2.37736	12760	Inbhir Úraidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646088	Inverness	57.47908	-4.22398	46870	Inbhear Nis	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646104	Inverkeithing	56.03297	-3.39555	5220	Inbhir Chéitinn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646115	Invergordon	57.6886	-4.16745	4130	Inbhir Ghórdain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646384	Huntly	57.44741	-2.78608	4720	Srath Bhalgaidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646507	Houston	55.86859	-4.55201	6420	Cille Pheadair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646670	Holywood	54.63863	-5.82473	13109	Ard Mhic Nasca		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2646686	Holyhead	53.30621	-4.63211	11431	Caergybi	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647178	Helensburgh	56.00614	-4.72648	13720	Baile Eilidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647297	Hawick	55.42273	-2.78666	14050	Hamhaig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647311	Haverfordwest	51.80169	-4.96914	14596	Hwlffordd	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647570	Hamilton	55.76667	-4.03333	53200	Hamaltan	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647630	Halkirk	58.51227	-3.49155	1020	Hacraig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647686	Haddington	55.95612	-2.78332	9020	Baile Adainn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647778	Gullane	56.03652	-2.82829	2570	A Ghualainn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647948	Greenock	55.94838	-4.76121	43690	Grianaig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2647957	Greenisland	54.70081	-5.87479	5073	Inis Glas		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2648259	Gourock	55.96157	-4.81789	10570	Guireag	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2648438	Glenrothes	56.19514	-3.17316	39100	Gleann Ráthais	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glaschú	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2648683	Giffnock	55.80373	-4.29488	12070	Giofnag	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2648909	Galston	55.60093	-4.38172	4690	Baile nan Gall	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2648928	Galashiels	55.61458	-2.80695	12660	An Geal Áth+Galashiels	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649089	Fraserburgh	57.68744	-2.01844	13140	A Bhruaich	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649169	Fort William	56.81648	-5.11208	5830	An Gearasdan	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649192	Forres	57.60997	-3.62115	9900	Farrais	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649207	Forfar	56.64382	-2.89001	13970	Baile Fharfair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649269	Fochabers	57.61445	-3.09947	1690	Fachabair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649301	Flint	53.24488	-3.13231	26442	Y Fflint	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649398	Fintona	54.5	-7.31667	1373	Fionntamhnach		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649723	Falkirk	56.0021	-3.78535	35310	An Eaglais Bhreac	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649784	Eyemouth	55.8713	-2.0901	3430	Inbhir Eighe	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649851	Evanton	57.66385	-4.34004	1380	Baile Eóghainn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2649984	Enniskillen	54.34615	-7.64133	14472	Inis Ceithleann		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650122	Elgin	57.64947	-3.31843	22980	Eilginn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Dún Éideann	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650405	East Kilbride	55.76412	-4.17669	74740	Cille Bhríghde an Ear	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650541	Earlston	55.63856	-2.67495	1780	Dún Airchill	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650572	Eaglesham	55.74119	-4.27459	3150	Baile na h-Eaglais	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650673	Duns	55.77704	-2.34575	2680	An Dún	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650681	Dunoon	55.95031	-4.92734	8160	Dún Omhain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650726	Dungiven	54.93333	-6.91667	3066	Dún Geimhin		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650729	Dungannon	54.50344	-6.76723	11935	Dún Geanainn		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650732	Dunfermline	56.07156	-3.45887	50380	Dún Phárlain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650749	Dundonald	54.59196	-5.79803	13985	Dún Dónaill		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650752	Dundee	56.46913	-2.97489	147710	Dún Déagh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650769	Dunblane	56.18843	-3.96417	8830	Dùn Bhlàthain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650776	Dunbar	56.00062	-2.51418	8470	Dún Barra	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650798	Dumfries	55.06959	-3.61139	33280	Dún Phris	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2650833	Dufftown	57.44571	-3.12708	1660	Baile Bháinidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651023	Downpatrick	54.32814	-5.71529	10507	Dún Pádraig		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651060	Doune	56.18995	-4.05288	1760	An Dún	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651088	Dornoch	57.8805	-4.02879	1270	Dórnach	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651133	Donaghadee	54.64126	-5.53591	7369	Domhnach Daoi		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651245	Dingwall	57.59531	-4.42721	5520	Inbhir Pheofharain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651386	Denbigh	53.18333	-3.41667	8514	Dinbych	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651496	Darvel	55.60976	-4.28142	3860	Darbhail	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651561	Dalry	55.70956	-4.72167	5560	Dail Ruighe	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651587	Dalkeith	55.89317	-3.06806	12720	Dail Cheith	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651609	Dalbeattie	54.93278	-3.82271	4260	Dail Bheithe	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651698	Cupar	56.31876	-3.01204	9270	Cúbar	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651706	Cumnock	55.45445	-4.26644	8920	Cumnag	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651715	Cumbernauld	55.94685	-3.99051	51610	Comar nan Allt	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651753	Cullen	57.69045	-2.81818	1450	Inbhir Cuilinn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651983	Crieff	56.37268	-3.83891	7430	Craoibh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2651986	Crickhowell	51.85992	-3.13771	2063	Crughywel	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652102	Crail	56.26042	-2.62676	1670	Cathair Aile	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652207	Cowdenbeath	56.11194	-3.34426	11460	Cúl Dún Beithe	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652417	Cookstown	54.64305	-6.74595	11081	An Chorr Chríochach		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652478	Comrie	56.3688	-3.97882	1900	Cuimrigh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652505	Comber	54.54937	-5.74379	9190	An Comar		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652513	Colwyn Bay	53.29483	-3.72674	34284	Bae Colwyn	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652586	Coleraine	55.13333	-6.66667	25681	Cúil Rathin+Cúil Raithin		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652601	Coldstream	55.65111	-2.25295	1870	An Sruthan Fuar	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652696	Coatbridge	55.86216	-4.02469	43970	Drochaid an Chóta	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652703	Coalisland	54.5418	-6.70166	5416	Oileán an Ghuail		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2652730	Clydebank	55.90137	-4.4057	26640	Bruach Chluaidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653131	Chirk	52.93586	-3.05738	4007	Y Waun	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653256	Chepstow	51.64087	-2.67683	16169	Cas-gwent	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653534	Castlewellan	54.2569	-5.94446	2499	Caisleán Uidhilín		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653590	Castle Douglas	54.94095	-3.92784	4070	Caisteal Dhúghlais	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653680	Carrickfergus	54.7158	-5.8058	29208	Carraig Fhearghais		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653704	Carnoustie	56.50263	-2.7053	11430	Cárn Fheusta	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653755	Carmarthen	51.85552	-4.30535	15854	Caerfyrddin	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653756	Carluke	55.73595	-3.83019	13370	Cathair MoLuaig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653775	Carlisle	54.8951	-2.9382	78470	Cathair Luail	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653822	Cardiff	51.48	-3.18	447287	Caerdydd	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653915	Campbeltown	55.42583	-5.60764	4800	Ceann Loch Chille Chiaráin	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653935	Cambuslang	55.80966	-4.16096	27610	Camas Long	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2653989	Callander	56.2441	-4.21637	3120	Calasraid	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654054	Cairnryan	54.97104	-5.01982	3757	Machair an Sgithich	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654175	Bushmills	55.20493	-6.51918	1309	Muileann na Buaise		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654255	Burntisland	56.06248	-3.23176	6370	Eilean a Chroinn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654303	Burghead	57.70113	-3.48992	1930	Am Broch	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654359	Builth Wells	52.1494	-3.40469	2829	Llanfair-ym-Muallt	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654394	Buckley	53.16667	-3.08333	63576	Bwcle	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654411	Buckie	57.6757	-2.96238	8430	Bucaidh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654480	Broxburn	55.93415	-3.47133	15360	Srath Bhroc	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654545	Brora	58.00989	-3.85182	1290	Brúra	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654675	Bristol	51.45523	-2.59665	617280	Briostó	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654817	Brecon	51.94612	-3.38887	8250	Aberhonddu	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2654824	Brechin	56.72993	-2.65729	7520	Breichinn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2655582	Bishopbriggs	55.90669	-4.21869	23430	Coille Dobhair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmingham	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2655692	Biggar	55.62297	-3.52455	2330	Bigear	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Béal Feirste		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2655994	Beith	55.74923	-4.6368	6170	Beithe	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656073	Beaumaris	53.26315	-4.09233	1370	Biwmares	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656076	Beauly	57.48345	-4.46144	1360	A Mhanachainn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656086	Bearsden	55.91536	-4.33279	27340	Cille Phádraig Úr	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656169	Bathgate	55.90204	-3.64398	21070	Both Chéit	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656235	Barry	51.39979	-3.2838	54673	Y Barri	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656258	Barrhead	55.79916	-4.39285	17620	Ceann a Bhárra	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656295	Barnet	51.65	-0.2	30000	Buirg Londan Barnet	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656311	Barmouth	52.72377	-4.05748	2315	Bermo	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656382	Bannockburn	56.08978	-3.91092	7040	Allt a Bhonnaich	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656396	Bangor	54.65338	-5.66895	60385	Beannchar		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656402	Banff	57.66477	-2.52964	4020	Banbh,	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656405	Banchory	57.05168	-2.48824	7520	Beannchar	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656425	Bamburgh	55.60652	-1.71704	279	Dún Guaire	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656483	Ballynahinch	54.4023	-5.89717	5701	Baile na hInse		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656488	Ballymoney	55.0708	-6.51009	9625	Baile Monaidh		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656490	Ballymena	54.86357	-6.27628	28932	An Baile Meánach		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656528	Ballyclare	54.75089	-5.99944	9472	Bealach Cláir		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656531	Ballycastle	55.20444	-6.24298	5566	Baile an Chaistil		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656565	Ballater	57.05011	-3.03798	1550	Bealadair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656615	Bala	52.91111	-3.59722	1974	Y Bala	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656708	Ayr	55.46273	-4.63393	47190	Inbhir Áir	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2656752	Aviemore	57.19553	-3.8259	3150	An Aghaidh Mhór	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657060	Armagh	54.35	-6.66667	14801	Ard Mhacha		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657125	Ardrossan	55.65018	-4.80659	10930	Áird Rosain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657182	Ardglass	54.26312	-5.60981	1676	Ard Ghlais		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657215	Arbroath	56.56317	-2.58736	23640	Obar Bhrothaig	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657255	Antrim	54.7	-6.2	19661	Aontroim		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657267	Anstruther	56.22315	-2.70229	3420	Ánstruthair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657293	Annan	54.98839	-3.25647	8920	Inbhir Anainn	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657445	Alness	57.69596	-4.2551	5700	Alanais	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657471	Alloa	56.11586	-3.78997	20390	Alamhagh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657613	Airdrie	55.86602	-3.98025	37130	An t-Árd Ruigh	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657775	Aboyne	57.07546	-2.78023	2650	Abéidh+Aboyne	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657784	Abertillery	51.72981	-3.13432	10946	Abertyleri	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657798	Aberlour	57.47076	-3.22509	1120	Obar Lobhair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657803	Aberlady	56.00884	-2.85851	1180	Obar Líobhaite	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657829	Aberdour	56.05417	-3.30058	1650	Obar Dobhair	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Obar Dheathain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2657835	Aberdare	51.71438	-3.44918	31135	Aberdâr	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+3345317	Blackwood	51.66778	-3.2075	15476	Coed Duon	an Bhreatain Bheag+Galles	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+3345440	Craigavon	54.44709	-6.387	59236	Creag Abhann		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+6639623	Erskine	55.9005	-4.45028	15530	Arascain	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+6695976	Newcastle	54.21804	-5.88979	7444	An Caisleán Nua		An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+7911271	Canvey Island	51.52199	0.5809	38170	Oileán Canvey	Sasana	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+8015341	Shotts	55.81951	-3.79749	8235	Na Seots	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Inse Orc	Albain+苏格兰	An Ríocht Aontaithe+http://en.wikipedia.org/wiki/United_Kingdom
+2309527	Malabo	3.75578	8.78166	155963	Malabo	Bioko Norte	An Ghuine Mheánchriosach+Guinee Espagnol
+261779	Ioánnina	39.66486	20.85189	65574	Ioannina		An Ghréig+Griekanmua
+264371	Athens	37.97945	23.71622	664046	An Aithin		An Ghréig+Griekanmua
+3600949	Tegucigalpa	14.0818	-87.20681	850848	Tegucigalpa	Francisco Morazán	Hondúras
+3186886	Zagreb	45.81444	15.97798	698966	Ságrab	Grad Zagreb	An Chróit
+3054643	Budapest	47.49801	19.03991	1741041	Búdaipeist		An Ungáir
+1642911	Jakarta	-6.21462	106.84513	8540121	Iacárta	Jakarta Raya	An Indinéis+http://en.wikipedia.org/wiki/Indonesia
+2654332	Buncrana	55.13333	-7.45	5546	Bun Cranncha	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2960869	Youghal	51.95	-7.85056	6868	Eochaill	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2960936	Wicklow	52.975	-6.04944	14048	Cill Mhantáin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2960952	Whitegate	51.83056	-8.22972	1067	An Geata Bán	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2960964	Loch Garman	52.33417	-6.4575	19913	Loch Garman	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2960970	Westport	53.8	-9.51667	6200	Cathair na Mart		Éire+Poblacht na hÉireann+Ire
+2960987	Watergrasshill	52.01139	-8.34417	1161	Cnocán na Biolraí	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2960992	Waterford	52.25833	-7.11194	47904	Port Láirge	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961006	Virginia	53.83389	-7.07556	2282	Achadh an Iúir	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2961079	Tullow	52.80028	-6.73694	3972	An Tulach	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961086	Tullamore	53.27389	-7.48889	11575	Tulach Mhór	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961099	Tuam	53.51667	-8.85	6130	Tuaim		Éire+Poblacht na hÉireann+Ire
+2961107	Trim	53.555	-6.79167	1800	Baile Átha Troim	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961123	Tralee	52.27042	-9.70264	22941	Trá Lí	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961182	Tobercurry	54.05	-8.73333	1747	Tobar an Choire		Éire+Poblacht na hÉireann+Ire
+2961192	Tipperary	52.47333	-8.15583	4976	Tiobraid Árann	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961214	Thurles	52.68194	-7.80222	7588	Durlas+Dúrlas Éile	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961224	Thomastown	52.52667	-7.13722	2273	Baile Mhic Andáin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961231	Termonfeckin	53.76333	-6.26778	1443	Tearmann Feichín	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961237	Templemore	52.79472	-7.83389	2264	An Teampall Mór	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961284	Tallaght	53.2859	-6.37344	64282	Tamhlacht	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961297	Swords	53.45972	-6.21806	36924	Sord	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961299	Swinford	53.95	-8.95	1435	Béal Átha na Muice		Éire+Poblacht na hÉireann+Ire
+2961349	Stradbally	53.01556	-7.15278	1154	An Sráidbhaile	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961423	Sligo	54.26969	-8.46943	20228	Sligeach		Éire+Poblacht na hÉireann+Ire
+2961450	Slane	53.71	-6.54333	1349	Baile Shláine	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961459	Skibbereen	51.55	-9.26667	2098	An Sciobairin+An Sciobairín	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961461	Skerries	53.58278	-6.10833	9671	Na Sceirí	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961470	Sixmilebridge	52.74139	-8.77417	2507	Droíchead Abhann Ó gCearnaigh+Droichead Abhann Uí gCearnaigh	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961607	Sallins	53.24889	-6.66611	5283	Na Solláin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961636	Saggart	53.28028	-6.44444	2144	Teach Sagard	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961690	Rosslare	52.27583	-6.38444	1547	Ros Láir	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961730	Roscrea	52.95111	-7.80167	5403	Ros Cré	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961732	Roscommon	53.63333	-8.18333	5693	Ros Comáin		Éire+Poblacht na hÉireann+Ire
+2961770	Rochfortbridge	53.41417	-7.29611	1494	Droichead Chaisleán Loiste	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961872	Ratoath	53.50806	-6.4625	9043	Ráth Tó	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961884	Rathnew	52.99056	-6.08528	2964	Ráth Naoi	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961896	Rathmines	53.32028	-6.26333	11044	Ráth Maonais	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961897	Ramelton	55.03673	-7.64923	1212	Ráth Mealtain	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2961905	Rathkeale	52.52444	-8.93806	1550	Ráth Caola	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961918	Rathdrum	52.92639	-6.23556	1586	Ráth Droma	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961920	Rathdowney	52.85472	-7.58028	1208	Ráth Domhnaigh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961924	Rathcormac	52.07694	-8.28194	1534	Ráth Chormaic	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2961929	Rathcoole	53.28278	-6.47278	3421	Ráth Cúil	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961938	Rathangan	53.22139	-6.995	2374	Ráth Iomgháin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961944	Raphoe	54.87472	-7.59833	1157	Ráth Bhoth	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2961960	Raheny	53.38681	-6.18067	7197	Ráth Eanaigh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2961994	Prosperous	53.29028	-6.75389	2248	An Chorrchoill	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962010	Portumna	53.08917	-8.21889	1530	Port Omna		Éire+Poblacht na hÉireann+Ire
+2962019	Portmarnock	53.42306	-6.1375	9285	Port Mearnóg	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962025	Portlaw	52.28833	-7.32056	1696	Port Lách	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962026	Portlaoise	53.03441	-7.29979	13622	Port Laoighise+Port Laoise	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962029	Portarlington	53.16222	-7.19111	7788	Cúil an tSúdaire	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962045	Piltown	52.35333	-7.34028	1187	Baile an Phoill	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962054	Daingean	53.29611	-7.28944	1037	An Daingean	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962066	Passage West	51.87389	-8.34444	4907	An Pasáiste	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962144	Oughterard	53.41667	-9.33333	1333	Uachtar Ard		Éire+Poblacht na hÉireann+Ire
+2962153	Oranmore	53.26833	-8.92	4799	Órán Mór		Éire+Poblacht na hÉireann+Ire
+2962179	Oldcastle	53.76648	-7.16284	1384	An Seanchaisleán	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962235	Newtown Cunningham	54.99639	-7.51917	1067	An Baile Nua	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2962252	New Ross	52.39667	-6.93667	6695	Ros Mhic Thriúin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962257	Newport	52.71111	-8.40972	1806	An Port Nua	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962262	Newmarket on Fergus	52.76	-8.89556	1773	Cora Chaitlín	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962281	Newcastle	53.30111	-6.50222	2659	An Caisleán Nua	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962283	Newcastle West	52.44917	-9.06111	6327	An Caisleán Nua+An Caisleán Nua Thiar	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962304	Nenagh	52.86194	-8.19667	5500	An tAonach+Aonach Urmhumhan	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962308	Navan	53.65278	-6.68139	24545	An Uaimh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962334	Naas	53.21583	-6.66694	20713	An Nás	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962361	An Muileann gCearr	53.53333	-7.35	17262	An Muileann gCearr	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962376	Mullagh	53.81306	-6.95139	1137	An Mullach	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2962389	Muff	55.06667	-7.26667	1271	Magh	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2962440	Moycullen	53.33783	-9.18002	1559	Maigh Cuilinn		Éire+Poblacht na hÉireann+Ire
+2962450	Moville	55.19153	-7.03873	1481	Bun an Phobail	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2962465	Mountrath	52.99889	-7.47278	1661	Maighean Rátha	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962476	Mountmellick	53.11361	-7.32	3547	Móinteach Mílic	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962539	Moone	52.97556	-6.815	1195	Maoin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962540	Mooncoin	52.28944	-7.24833	1166	Móin Choinn	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962556	Monasterevin	53.14056	-7.06639	3710	Mainistir Eimhín	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962568	Monaghan	54.25	-6.96667	5937	Muineachán	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2962587	Mitchelstown	52.26583	-8.26806	3677	Baile Mhistéala	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962613	Millstreet	52.05935	-9.06031	1574	Sráid an Mhuilinn	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962630	Midleton	51.91526	-8.18052	8891	Mainister na Corann+Mainistir na Corann	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962668	Maynooth	53.385	-6.59361	12510	Maigh Nuad	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962706	Manorhamilton	54.30639	-8.17611	1336	Cluainín		Éire+Poblacht na hÉireann+Ire
+2962714	Mallow	52.13333	-8.63333	9495	Mala+Maigh Eala	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962725	Malahide	53.45083	-6.15444	15846	Mullach Íde	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962745	Macroom	51.90663	-8.96968	3169	Maigh Chromtha	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962769	Lusk	53.52743	-6.16423	7022	Lusca	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962785	Lucan	53.35736	-6.44859	15269	Leamhcán	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962800	Loughrea	53.19694	-8.56694	5062	Baile Locha Riach		Éire+Poblacht na hÉireann+Ire
+2962840	Longford	53.72536	-7.79823	7787	An Longfort	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2962864	Listowel	52.44639	-9.485	4143	Lios Tuathail	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962943	Luimneach	52.66472	-8.62306	90054	Luimneach	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2962945	Leifear	54.83194	-7.48361	1658	Leifear	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2962961	Letterkenny	54.95	-7.73333	16901	Leitir Ceanainn	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2962974	Leixlip	53.36583	-6.49556	15452	Léim an Bhradáin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963007	Laytown	53.68194	-6.23917	10889	An Inse	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963025	Strandhill	54.27194	-8.59333	1596	An Leathros		Éire+Poblacht na hÉireann+Ire
+2963036	Lanesborough	53.66667	-7.98333	1377	Béal Átha Liag	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963155	Kinsale	51.7075	-8.53056	3843	Cionn tSáile	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963158	Kinnegad	53.45222	-7.09972	2662	Cionn Átha Gad	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963162	Kinlough	54.45	-8.28333	1018	Cionn Locha		Éire+Poblacht na hÉireann+Ire
+2963169	Kingscourt	53.90806	-6.80556	2326	Dún An Ri	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2963208	Kiltamagh	53.85	-9	1127	Coillte Mach		Éire+Poblacht na hÉireann+Ire
+2963218	Kilrush	52.63972	-9.48333	2712	Cill Rois	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963275	Kilmallock	52.4	-8.57722	1635	Cill Mocheallóg	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963295	Killybegs	54.63333	-8.45	1297	Na Cealla Beaga	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2963311	Killorglin	52.1	-9.78333	2082	Cill Orglan	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963370	Cill Airne	52.05	-9.51667	7300	Cill Airne	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963376	Killaloe	52.80667	-8.44361	1292	Cill Dalua	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963398	Kilkenny	52.65417	-7.25222	21589	Cill Chainnigh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963436	Kildare	53.15611	-6.91444	8142	Cill Dara	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963444	Kilcullen	53.13028	-6.74444	3473	Cill Chuillinn	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963460	Kilcoole	53.10278	-6.065	4049	Cill Chomhghaill	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963472	Kilcock	53.40222	-6.67083	5533	Cill Choca	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963499	Kilbeggan	53.36944	-7.50333	1199	Cill Bheagáin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963522	Kenmare	51.88333	-9.58333	2175	Neidin+An Neidín	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963528	Kells	53.72639	-6.87917	4820	Ceanannas	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963555	Kanturk	52.16667	-8.9	2263	Ceann Toirc	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2963658	Inishcrone	54.21591	-9.09197	1223	Inis Crabhann		Éire+Poblacht na hÉireann+Ire
+2963722	Howth	53.38778	-6.06528	4574	Binn Éadair	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963827	Gweedore	55.05028	-8.23194	4200	Gaoth Dobhair	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2963848	Greystones	53.14083	-6.06306	13492	Na Clocha Liatha	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963902	Granard	53.77928	-7.49429	1021	Gránard	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963905	Graiguenamanagh	52.54028	-6.95472	1543	Gráig na Manach	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2963958	Gort	53.06639	-8.81667	2644	An Gort+Gort Inse Guaire		Éire+Poblacht na hÉireann+Ire
+2963962	Gorey	52.67472	-6.2925	6040	Guaire	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964102	Glasnevin	53.38028	-6.26417	3633	Glas Naíon	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964180	Gaillimh	53.27194	-9.04889	70686	Gaillimh		Éire+Poblacht na hÉireann+Ire
+2964233	Foxford	53.9807	-9.11551	1326	Béal Easa		Éire+Poblacht na hÉireann+Ire
+2964303	Finglas	53.38917	-6.29694	19768	Fionnghlas	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964310	Fethard	52.46722	-7.69111	1541	Fiodh Ard	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964318	Ferns	52.58833	-6.49972	1362	Fearna	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964320	Fermoy	52.13583	-8.27583	4933	Mainistir Fhear Maí	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964322	Ferbane	53.26944	-7.82694	1165	An Féar Bán	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964401	Enniskerry	53.1925	-6.16917	1811	Áth na Sceire	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964403	Enniscorthy	52.50083	-6.55778	9709	Inis Córthaidh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964405	Ennis	52.84361	-8.98639	24427	Inis	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964407	Enfield	53.41419	-6.83229	2929	An Bóthar Buí+Enfield	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964434	Edgeworthstown	53.7	-7.61667	1744	Meathas Troim	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964436	Edenderry	53.34528	-7.04972	4890	Éaden Doire+Éadan Doire	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964472	Dunshaughlin	53.5125	-6.54	3903	Dún Seachlainn	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964492	Dunmore East	52.15108	-6.99872	1559	Dún Mór	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964496	Dunmanway	51.71667	-9.11667	1585	Dún Mánmhaí+Dúnmaonmhuí	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964503	Dunlewy	55.01667	-8.1	3400	Dún Lúiche	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2964504	Dunleer	53.835	-6.39611	1786	Dún Léire	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964506	Dún Laoghaire	53.29395	-6.13586	185400	Dún Laoghaire+Dún Laoire	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964524	Dungloe	54.95111	-8.35917	1183	An Clochán Liath	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2964528	Dungarvan	52.08806	-7.62528	7551	Dún Garbhán	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964540	Dundalk	54	-6.41667	33428	Dún Dealgan	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964547	Dunboyne	53.41901	-6.47375	6959	Dún Búinne	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964558	Duleek	53.65667	-6.41917	3988	Damhliag	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964574	Dublin	53.33306	-6.24889	1024027	Baile Átha Cliath	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964661	Drogheda	53.71889	-6.34778	33441	Droichead Átha	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964752	Donegal	54.65378	-8.11134	2607	Dún na nGall	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2964765	Donabate	53.48722	-6.15194	6778	Domhnach Bat	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964782	Dingle	52.14083	-10.26889	1965	An Daingean+Daingean Uí Chuis	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964817	Derrybeg	55.08333	-8.28944	1553	Doirí Beaga	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2964892	Dalkey	53.27833	-6.10028	6622	Deilginis	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2964980	Crossmolina	54.1	-9.31667	1061	Crois Mhaoilíona		Éire+Poblacht na hÉireann+Ire
+2964985	Crosshaven	51.79833	-8.30083	2093	Bun an Tábhairne	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2964999	Croom	52.51944	-8.71778	1157	Cromadh	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965092	Courtown	52.64424	-6.22899	2857	Baile na Cúirte	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965140	Cork	51.89797	-8.47061	190384	Corcaigh	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965158	Cootehill	54.0725	-7.08194	1713	Muinchille	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965226	Convoy	54.86083	-7.66556	1438	Conmhaigh	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965248	Collooney	54.18333	-8.5	1369	Cúil Mhuine		Éire+Poblacht na hÉireann+Ire
+2965260	Cobh	51.85722	-8.29917	10501	An Cóbh	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965276	Cloyne	51.86278	-8.12444	1562	Cluain	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965353	Cluain Meala	52.355	-7.70389	17394	Cluain Meala	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965367	Clones	54.18333	-7.23333	1834	Cluain Eois	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965381	Clondalkin	53.32444	-6.39722	14508	Cluain Dolcáin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965402	Clonakilty	51.62306	-8.87056	4065	Cloich na Coillte	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965420	Clogherhead	53.79361	-6.2375	1993	Ceann Chlochair	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965449	Clifden	53.48907	-10.0191	2056	An Clochán		Éire+Poblacht na hÉireann+Ire
+2965471	Claremorris	53.71667	-9	3412	Clár Chlainne Mhuiris+Clár Clainne Mhuiris		Éire+Poblacht na hÉireann+Ire
+2965474	Claregalway	53.33861	-8.945	1217	Baile Chláir		Éire+Poblacht na hÉireann+Ire
+2965482	Clara	53.3425	-7.61389	3242	Clóirtheach	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965484	Clane	53.29139	-6.68917	6702	Claonadh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965529	Celbridge	53.33861	-6.54361	19537	Cill Droichid	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965535	Cavan	53.99083	-7.36056	6388	An Cabhán	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965570	Castlerea	53.76667	-8.5	1985	An Caisleán Riabhach		Éire+Poblacht na hÉireann+Ire
+2965573	Castlepollard	53.67935	-7.29736	1042	Baile na gCros	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965590	Castlemartyr	51.91028	-8.05389	1277	Baile na Martra	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965599	Castleknock	53.37483	-6.36336	8301	Caisleán Cnucha	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965604	Castleisland	52.23333	-9.46667	2513	Oileán Ciarraí	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965632	Castledermot	52.90889	-6.84222	1398	Díseart Diarmada	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965643	Castlecomer	52.80611	-7.21056	1456	Caisleán an Chomair	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965645	Castlebridge	52.38639	-6.44944	1726	Droichead an Chaisleáin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965649	Castleblayney	54.11667	-6.73333	3006	Baile na Lorgan	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965653	Castlebellingham	53.90083	-6.39028	1035	Baile an Ghearlánaigh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965654	Castlebar	53.85	-9.3	12874	Caisleán an Bharraigh		Éire+Poblacht na hÉireann+Ire
+2965664	Cashel	52.51583	-7.88556	2798	Caiseal	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965694	Carrigtwohill	51.90833	-8.26333	4551	Carraig Thuathail	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965715	Carrigaline	51.81167	-8.39861	14775	Carraig Uí Leighin	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965726	Carrick-on-Suir	52.34917	-7.41306	5710	Carraig na Siúire	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965727	Carrick-on-Shannon	53.94694	-8.09	3980	Cora Droma Rúisc		Éire+Poblacht na hÉireann+Ire
+2965733	Carrickmacross	53.97278	-6.71889	3995	Carraig Mhachaire Rois	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965760	Carnew	52.70806	-6.49444	1091	Carn an Bhua	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965761	Carndonagh	55.25	-7.26667	2534	Carn Domhnach	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965768	Carlow	52.84083	-6.92611	20055	Ceatharlach	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965772	Carlingford	54.04	-6.18833	1045	Cairlinn	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965841	Callan	52.545	-7.39111	2330	Callain	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2965852	Cahersiveen	51.94861	-10.22222	1168	Cathair Saidhbhín	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965865	Caherconlish	52.59361	-8.47028	1279	Cathair Chinn Lis	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965873	Cahir	52.37694	-7.92167	3578	Án Chathair+An Chathair	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2965929	Bundoran	54.47782	-8.28094	1865	Bun Dobhráin	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2965932	Bunclody	52.6553	-6.65359	2012	Bun Clóidi	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966022	Bray	53.20278	-6.09833	6477	Bré	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966044	Boyle	53.96667	-8.3	2199	Mainistir na Búille		Éire+Poblacht na hÉireann+Ire
+2966101	Blessington	53.17	-6.5325	5010	Baile Coimín	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966107	Blarney	51.93333	-8.56667	2437	An Bhlarna	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2966110	Blanchardstown	53.38806	-6.37556	16511	Baile Bhlainséir	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966131	Blackrock	53.3015	-6.1778	8821	Carraig Dubh+An Charraig Dhubh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966154	Birr	53.09139	-7.91333	4549	Biorra	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966201	Belturbet	54.1	-7.45	1277	Béal Tairbirt	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2966208	Belmullet	54.225	-9.99083	1089	Béal an Mhuirthead		Éire+Poblacht na hÉireann+Ire
+2966342	Bearna	53.25194	-9.14972	1878	Bearna		Éire+Poblacht na hÉireann+Ire
+2966356	Bantry	51.68333	-9.45	3348	Beanntraí	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2966370	Bandon	51.74694	-8.7425	5492	Droichead na Bandon+Droichead na Bandan	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2966371	Banagher	53.18861	-7.98667	1653	Beannchar	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966375	Baltinglass	52.93722	-6.70917	2061	Bealach Conglais	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966406	Ballyshannon	54.5	-8.18333	2683	Béal Átha Seanaidh	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2966420	Ballyragget	52.78889	-7.33028	1089	Béal Átha Ragad	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966492	Ballymote	54.08333	-8.51667	1539	Baile an Mhóta		Éire+Poblacht na hÉireann+Ire
+2966515	Ballymahon	53.56667	-7.76667	1563	Baile Uí Mhatháin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966550	Ballyjamesduff	53.86528	-7.20278	2568	Baile Shéamais Dhuibh	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2966566	Ballyhaunis	53.76667	-8.76667	2312	Béal Átha hAmhnais		Éire+Poblacht na hÉireann+Ire
+2966638	Ballyconnell	54.11667	-7.58333	1061	Béal Átha Conaill	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2966658	Ballybunnion	52.51108	-9.67097	1354	Baile an Bhuinneánaigh	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2966668	Ballybofey	54.8	-7.78333	4852	Bealach Féich	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2966690	Ballivor	53.53167	-6.96111	1727	Baile Íomhair	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966715	Ballinrobe	53.63333	-9.23333	2704	Baile an Róba		Éire+Poblacht na hÉireann+Ire
+2966753	Ballinasloe	53.3275	-8.21944	6388	Béal Átha na Sluaighe		Éire+Poblacht na hÉireann+Ire
+2966778	Ballina	54.11667	-9.16667	10087	Béal An Átha+Béal an Átha		Éire+Poblacht na hÉireann+Ire
+2966784	Ballaghaderreen	53.9	-8.58333	1822	Bealach an Doirín		Éire+Poblacht na hÉireann+Ire
+2966793	Baldoyle	53.39972	-6.12583	8043	Baile Dúill	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966794	Balbriggan	53.61278	-6.18194	23364	Baile Brigín	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966796	Bailieborough	53.91667	-6.96667	2530	Coill an Chollaigh	Cúige Uladh	Éire+Poblacht na hÉireann+Ire
+2966800	Bagenalstown	52.70031	-6.96181	3033	Muine Bheag	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966817	Aughrim	52.85333	-6.3275	1364	Eachroim	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966837	Athy	52.99139	-6.98028	12855	Baile Átha Í	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966839	Athlone	53.43333	-7.95	15951	Baile Átha Luain	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966843	Athenry	53.29639	-8.74306	3950	Baile Átha an Rí		Éire+Poblacht na hÉireann+Ire
+2966848	Athboy	53.62327	-6.91434	2397	Baile Átha Buí	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966857	Askeaton	52.59972	-8.97556	1149	Eas Géitine	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2966870	Ashbourne	53.51163	-6.39821	11355	Cill Dhéagláin	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966883	Arklow	52.79306	-6.14139	11761	An tInbhear Mór	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2966925	Ardee	53.85972	-6.54056	4008	Baile Átha Fhirdhia	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2967076	Adare	52.56194	-8.79556	1106	Áth Dara	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+2967092	Abbeyleix	52.91331	-7.34456	1827	Mainistir Laoise	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+2967095	Abbeyfeale	52.38139	-9.3025	2007	Mainistir na Féile	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+3305640	Castleconnell	52.71389	-8.49944	1917	Caisleáñ Ui Chonaill	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+3310247	Shannon	52.70389	-8.86417	9673	An tSionna+Sionainn	Cúige Mumhan	Éire+Poblacht na hÉireann+Ire
+3314017	Moate	53.39389	-7.71722	2731	An Móta	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+3314724	Kill	53.25139	-6.59167	3095	An Chill	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+3315010	Ashford	53.00833	-6.11139	1449	Ath na Fuinseoige	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+3315312	Drumcondra	53.37058	-6.25298	4465	Droim Conrach	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+3315378	Ballyfermot	53.34528	-6.35889	8558	Baile Formaid	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+3315404	Templeogue	53.29528	-6.30889	7023	Teach Mealóg	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+6691006	Booterstown	53.30447	-6.19985	7142	Baile an Bhóthair	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+6691030	Coolock	53.3887	-6.19998	2632	An Chúlóg	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+6691033	Donaghmede	53.39845	-6.16179	15299	Domhnach Mide	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+8642910	Balally	53.27504	-6.23594	9051	Baile Amhlaoibh	Cúige Laighean	Éire+Poblacht na hÉireann+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Iarúsailéim		Iosrael
+295328	Dimona	31.07079	35.03269	33558	Dimóna	HaDarom	Iosrael
+3042192	Ramsey	54.32273	-4.38526	7309	Rhumsaa		Oileán Mhanann
+3042198	Peel	54.22209	-4.69099	3781	Purt na hInse		Oileán Mhanann
+3042237	Douglas	54.15	-4.48333	26218	Dubh Lios		Oileán Mhanann
+3042255	Castletown	54.07445	-4.65365	3100	Baile Chaistil		Oileán Mhanann
+1275004	Kolkata	22.56263	88.36304	4631392	Calcúta	Beangál Thiar+WB+West Bengal	An India
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbai	MH+Mahārāshtra	An India
+1275841	Bhopal	23.25469	77.40289	1599914	Bópal	MP	An India
+98860	Najaf	32.02594	44.34625	482576	Najaf	An Najaf	An Iaráic
+3413829	Reykjavík	64.13548	-21.89541	118918	Réicivíc+101		An Íoslainn
+3415496	Keflavík	64.00492	-22.56242	0	Keflavík+230		An Íoslainn
+2523083	Siracusa	37.07542	15.28664	97472	Sioracús	An tSicil	An Iodáil
+3164603	Venice	45.43713	12.33265	51298	an Veinéis		An Iodáil
+3165243	Trento	46.06787	11.12108	80425	Trionta		An Iodáil
+3167096	Sassari	40.72586	8.55552	91895	Sassari		An Iodáil
+3169070	Rome	41.89193	12.51133	2318895	An Róimh	Lazio	An Iodáil
+3173435	Milan	45.46427	9.18951	1236837	Milan		An Iodáil
+3176959	Florence	43.77925	11.24626	349296	Flórans	An Tuscáin	An Iodáil
+3181928	Bologna	44.49381	11.33875	366133	Bologna	Emilia-Romagna	An Iodáil
+1835848	Seoul	37.566	126.9784	10349312	Seoul		An Chóiré Theas+http://en.wikipedia.org/wiki/South_Korea
+276781	Beirut	33.89332	35.50157	1916100	Béiriút		An Liobáin
+593116	Vilnius	54.68916	25.2798	542366	Vilnias		An Liotuáin+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Lucsamburg		Lucsamburg
+456172	Riga	56.946	24.10589	742572	Ríge	Riga	An Laitvia
+2210247	Tripoli	32.87519	13.18746	1150989	Tripilí		An Libia
+3193044	Podgorica	42.44111	19.26361	136473	Podgairítse		Montainéagró
+2562305	Valletta	35.89972	14.51472	6794	Vaileite		Málta
+2747373	The Hague	52.07667	4.29861	474292	An Háig	zh+Zuid-Holland	An Ísiltír
+2755003	Haarlem	52.38084	4.63683	147590	Haarlem	nh+Nord-Holland+Noord-Holland	An Ísiltír
+2755251	Groningen	53.21917	6.56667	181194	Groningen	gr+Groningen	An Ísiltír
+2756253	Eindhoven	51.44083	5.47778	209620	Eindhoven	nb+Noord-Brabant	An Ísiltír
+2759794	Amsterdam	52.37403	4.88969	741636	Amstardam	nh+Nord-Holland+Noord-Holland	An Ísiltír
+3143244	Oslo	59.91273	10.74609	580000	Osló	Oslo	An Iorua
+3936456	Lima	-12.04318	-77.02824	7737002	Líoma	Lima Province	Peiriú
+1701668	Manila	14.6042	120.9822	1600000	Mainile	Metro Manila	Na hOileáin Fhilipíneacha
+756135	Warsaw	52.22977	21.01178	1702139	Vársá	Mazowieckie	An Pholainn
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	An Pholainn
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	An Pholainn
+4568127	San Juan	18.46633	-66.10572	418140	San Juan		Portó Ríce
+284315	Bethlehem	31.70487	35.20376	29019	Beitheal		Na Críocha Pailistíneacha
+284899	Jericho	31.86667	35.45	19783	Ireachó		Na Críocha Pailistíneacha
+2267057	Lisbon	38.71667	-9.13333	517802	Liospóin	Lisboa	An Phortaingéil
+2735943	Porto	41.14961	-8.61099	249633	Oporto	Porto	An Phortaingéil
+470546	Vyborg	60.70763	28.75283	78633	Víobórg		Cónaidhm na Rúise
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov na Donu		Cónaidhm na Rúise
+524901	Moscow	55.75222	37.61556	10381222	Moscó+Moskva		Cónaidhm na Rúise
+546554	Kola	68.88062	33.01842	10600	Cola+Кола	Murmansk	Cónaidhm na Rúise
+202061	Kigali	-1.94995	30.05885	745261	Kigali		Ruanda
+104515	Mecca	21.42664	39.82563	1323624	Meice	Makkah	An Araib Shádach
+108410	Riyadh	24.68773	46.72185	4205961	Riyadh		An Araib Shádach
+379252	Khartoum	15.55177	32.53241	1974647	Cartúm		An tSúdáin
+2673730	Stockholm	59.33258	18.0649	1515017	Stócólm	Stócólm+Stockholms Län	An tSualainn+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	An tSualainn+Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Liúibleána		An tSlóvéin
+3060972	Bratislava	48.14816	17.10674	423737	An Bhratasláiv	Bratislavský kraj	An tSlóvaic
+3168070	San Marino	43.93667	12.44639	4500	Cathair San Mairíne	San Marino	San Mairíne
+2253354	Dakar	14.6937	-17.44406	2476400	Dacár	Dakar	An tSeineagáil
+53654	Mogadishu	2.03711	45.34375	2587183	Mogaidisiú		An tSomáil
+170654	Damascus	33.5102	36.29128	1569394	An Damaisc		An tSiria
+1609350	Bangkok	13.75398	100.50144	5104476	Bancác		An Téalainn
+2464470	Tunis	36.81897	10.16579	693210	Túinis	Tūnis	An Túinéis
+6940561	Çatalhöyük	37.66847	32.82689	10000	Çatal Hüyük		An Tuirc+Turkanmua
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Dárasalám	Dar es Salaam	An Tansáin
+703448	Kyiv	50.45466	30.5238	2797553	Cív		An Úcráin+http://en.wikipedia.org/wiki/Ukraine
+4049979	Birmingham	33.52066	-86.80249	212461	Birmingham	Alabama+AL	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4076784	Montgomery	32.36681	-86.29997	200602	Montgomery	Alabama+AL	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4155966	Fort Lauderdale	26.12231	-80.14338	178590	Fort Lauderdale+Ft. Lauderdale	FL+Florida	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4174715	Tallahassee	30.43826	-84.28073	189907	Tallahassee	FL+Florida	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	Atlanta	GA+Georgia	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	LA+Louisiana	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	Cathair Oklahoma	OK+Oklahoma	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4709272	Marshall	32.54487	-94.36742	23820	Marshall	TX+Texas	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4835797	Hartford	41.76371	-72.68509	124006	Hartford	Connecticut+CT	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Bostún	MA+Massachusetts	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5037649	Minneapolis	44.97997	-93.26384	410939	Minneapolis	MN+Minnesota	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5045360	Saint Paul	44.94441	-93.09327	285068	Saint Paul	MN+Minnesota	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Cathair Nua Eabhraic+Nua-Eabhrac+NYC+NY	Nua-Eabhrac+NY	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5192726	Harrisburg	40.2737	-76.88442	49081	Harrisburg	PA	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Phoenix	Arizona+AZ	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	CA+Calif+California	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Denver	CO+Colorado	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas	NV+Nevada	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5586437	Boise	43.6135	-116.20345	145987	Boise	ID+Idaho	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5703670	Elko	40.83242	-115.76312	20279	Contae Elko	NV+Nevada	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5780993	Salt Lake City	40.76078	-111.89105	192672	Cathair Salt Lake+SLC	UT+Utah	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Honolúlú	Haváí+HI+Hawaii	Stáit Aontaithe Mheiriceá+U.S.+USA+U.S.A.
+1566083	Ho Chi Minh City	10.82302	106.62965	3467331	Cathair Ho Chi Minh+HCMC	Cathair Ho Chi Minh	Vít Neam
+1580240	Huế	16.4619	107.59546	287217	Hué	Thừa Thiên-Huế	Vít Neam
+1581130	Hanoi	21.0245	105.84117	1431270	Ha Noi	Ha Nội	Vít Neam
+415189	Aden	12.77944	45.03667	550602	Áidin	‘Adan	Éimin

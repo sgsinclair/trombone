@@ -1,0 +1,1719 @@
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andorra la Vella		Andorra
+292223	Dubai	25.0657	55.17128	1137347	Dubai+Dubaj	Dubai	Egyesült Arab Emirátus+Egyesült Arab Emírségek+UAE
+292672	Sharjah	25.33737	55.41206	543733	Sardzsa		Egyesült Arab Emirátus+Egyesült Arab Emírségek+UAE
+292913	Al Ain	24.19167	55.76056	408733	El-Ajn		Egyesült Arab Emirátus+Egyesült Arab Emírségek+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu-Dzabi		Egyesült Arab Emirátus+Egyesült Arab Emírségek+UAE
+363243	Sarandë	39.87556	20.00528	15147	Sarandë		Albánia
+781443	Tepelenë	40.29583	20.01917	11955	Tepelenë		Albánia
+781988	Pogradec	40.9025	20.6525	61530	Pogradec		Albánia
+782061	Peshkopi	41.685	20.42889	14848	Peshkopi		Albánia
+782661	Kukës	42.07694	20.42194	17832	Kukës		Albánia
+782756	Korçë	40.61861	20.78083	58259	Korçë		Albánia
+783148	Gjirokastër	40.07583	20.13889	23437	Gjirokastër		Albánia
+783493	Burrel	41.61028	20.00889	15405	Burrel		Albánia
+3183719	Vlorë	40.46667	19.48972	89546	Vlorë		Albánia
+3183875	Tirana	41.3275	19.81889	374801	Tirana		Albánia
+3184081	Shkodër	42.06828	19.51258	88245	Shkodër		Albánia
+3184935	Lezhë	41.78361	19.64361	18695	Lezhë		Albánia
+3185082	Krujë	41.50917	19.79278	21286	Krujë		Albánia
+3185211	Kavajë	41.18556	19.55694	29354	Kavajë		Albánia
+3185672	Fier	40.72389	19.55611	56297	Fier		Albánia
+3185728	Durrës	41.32306	19.44139	122034	Durrës		Albánia
+3186084	Berat	40.70583	19.95222	46866	Berat		Albánia
+3186145	Ballsh	40.59889	19.73472	10361	Ballsh		Albánia
+174979	Artashat	39.96144	44.54447	20562	Artasat	Ararat	Örményország
+616052	Yerevan	40.18111	44.51361	1093485	Jereván	Yerevan	Örményország
+616635	Gyumri	40.7942	43.84528	148381	Gjumri	Shirak	Örményország
+616877	Ashtarak	40.2991	44.36204	18779	Astarak	Aragatsotn	Örményország
+3832899	Viedma	-40.81345	-62.99668	48940	Viedma	RN+Río Negro	Argentína
+3844421	Mendoza	-32.89084	-68.82717	876884	Capital megye	MZ+Mendoza	Argentína
+2608246	Neuhaus am Klausenbach	46.86667	16.03333	961	Vasdobra+Vas-Dobra	Burgenland+Bgld	Ausztria
+2760449	Zurndorf	47.98314	17.00315	0	Zurány	Burgenland+Bgld	Ausztria
+2760563	Zillingtal	47.81442	16.40928	0	Völgyfalva	Burgenland+Bgld	Ausztria
+2760762	Zagersdorf	47.76471	16.51382	0	Zárány	Burgenland+Bgld	Ausztria
+2760825	Wulkaprodersdorf	47.79753	16.50447	0	Vulkapordány	Burgenland+Bgld	Ausztria
+2761123	Winden am See	47.95	16.75	0	Sásony	Burgenland+Bgld	Ausztria
+2761147	Wimpassing an der Leitha	47.91667	16.43333	0	Vimpác	Burgenland+Bgld	Ausztria
+2761306	Wiesen	47.73776	16.33798	0	Rétfalu	Burgenland+Bgld	Ausztria
+2761353	Wiener Neustadt	47.80485	16.23196	38481	Bécsújváros+Bécsújhely+Német-Újhely	Alsó-Ausztria	Ausztria
+2761369	Vienna	48.20849	16.37208	1691468	Bécs		Ausztria
+2761482	Weppersdorf	47.57954	16.42679	0	Veperd	Burgenland+Bgld	Ausztria
+2761689	Weingraben	47.51393	16.36375	0	Borosd	Burgenland+Bgld	Ausztria
+2761754	Weiden bei Rechnitz	47.3	16.35	0	Bándoly	Burgenland+Bgld	Ausztria
+2761758	Weiden am See	47.92532	16.86899	0	Védeny	Burgenland+Bgld	Ausztria
+2761964	Wallern im Burgenland	47.72847	16.93706	0	Valla	Burgenland+Bgld	Ausztria
+2762572	Unterwart	47.25	16.23333	0	Alsóor	Burgenland+Bgld	Ausztria
+2762952	Unterfrauenhaid	47.57116	16.49885	0	Lók	Burgenland+Bgld	Ausztria
+2763406	Trausdorf an der Wulka	47.8135	16.5576	0	Darázsfalu	Burgenland+Bgld	Ausztria
+2763960	Tadten	47.76667	16.98333	0	Mosontétény	Burgenland+Bgld	Ausztria
+2764140	Strem	47.04498	16.41426	0	Strém	Burgenland+Bgld	Ausztria
+2764225	Stotzing	47.90688	16.5458	0	Lajtaszék	Burgenland+Bgld	Ausztria
+2764238	Stoob	47.52845	16.4776	0	Csáva	Burgenland+Bgld	Ausztria
+2764296	Steinbrunn	47.83333	16.41667	0	Büdöskút	Burgenland+Bgld	Ausztria
+2764587	Stegersbach	47.16667	16.16667	0	Szentelek	Burgenland+Bgld	Ausztria
+2765092	Sieggraben	47.65128	16.37993	0	Szikra	Burgenland+Bgld	Ausztria
+2765472	Schwarzenbach	47.63547	16.35109	0	Feketevár	Alsó-Ausztria	Ausztria
+2765558	Schützen am Gebirge	47.85233	16.62334	0	Sérc	Burgenland+Bgld	Ausztria
+2766121	Schattendorf	47.70973	16.50979	0	Somfalva	Burgenland+Bgld	Ausztria
+2766162	Schandorf	47.24183	16.42267	0	Csém	Burgenland+Bgld	Ausztria
+2766233	Schachendorf	47.26667	16.43333	0	Csajta	Burgenland+Bgld	Ausztria
+2766294	Bad Sauerbrunn	47.77439	16.32841	2176	Savanyúkút	Burgenland+Bgld	Ausztria
+2766549	Sankt Margarethen im Burgenland	47.80335	16.60875	0	Szentmargitbánya	Burgenland+Bgld	Ausztria
+2766769	Sankt Andrä am Zicksee	47.7841	16.94195	0	Mosonszentandrás	Burgenland+Bgld	Ausztria
+2766824	Salzburg	47.79941	13.04399	150269	Salzburg		Ausztria
+2766939	Rust	47.80122	16.67158	1726	Ruszt	Burgenland+Bgld	Ausztria
+2767111	Rotenturm an der Pinka	47.25	16.25	0	Vasvörösvár	Burgenland+Bgld	Ausztria
+2767283	Rohrbach bei Mattersburg	47.7052	16.43005	0	Fraknónádasd	Burgenland+Bgld	Ausztria
+2767346	Ritzing	47.61316	16.49546	0	Récény	Burgenland+Bgld	Ausztria
+2767458	Riedlingsdorf	47.35	16.13333	0	Rödöny	Burgenland+Bgld	Ausztria
+2767815	Rechnitz	47.30467	16.44095	0	Rohonc	Burgenland+Bgld	Ausztria
+2768071	Raiding	47.56581	16.53056	0	Doborján	Burgenland+Bgld	Ausztria
+2768459	Potzneusiedl	48.04504	16.9477	0	Lajtafalu	Burgenland+Bgld	Ausztria
+2768464	Pöttsching	47.80445	16.37109	0	Pecsenyéd	Burgenland+Bgld	Ausztria
+2768475	Pöttelsdorf	47.75369	16.43864	0	Petőfalva	Burgenland+Bgld	Ausztria
+2768622	Podersdorf am See	47.85412	16.83706	0	Pátfalu	Burgenland+Bgld	Ausztria
+2768787	Piringsdorf	47.44826	16.41516	0	Répcebónya	Burgenland+Bgld	Ausztria
+2768811	Pinkafeld	47.36667	16.11667	5257	Pinkafő	Burgenland+Bgld	Ausztria
+2768829	Pilgersdorf	47.44106	16.3492	0	Pörgölény	Burgenland+Bgld	Ausztria
+2769242	Parndorf	47.99963	16.86049	4050	Pándorfalu	Burgenland+Bgld	Ausztria
+2769258	Pamhagen	47.70092	16.90779	0	Pomogy	Burgenland+Bgld	Ausztria
+2769259	Pama	48.05	17.03333	0	Lajtakörtvélyes	Burgenland+Bgld	Ausztria
+2769396	Oslip	47.82906	16.61957	0	Oszlop	Burgenland+Bgld	Ausztria
+2769623	Oberwart	47.28971	16.20595	6879	Felsőőr	Burgenland+Bgld	Ausztria
+2769738	Oberschützen	47.35138	16.20732	0	Felsőlövő	Burgenland+Bgld	Ausztria
+2769812	Oberpullendorf	47.50352	16.50447	0	Felsőpulya	Burgenland+Bgld	Ausztria
+2769945	Oberloisdorf	47.44736	16.50764	0	Felsőlászló	Burgenland+Bgld	Ausztria
+2770487	Nikitsch	47.53615	16.66017	0	Füles	Burgenland+Bgld	Ausztria
+2770630	Nickelsdorf	47.94056	17.06944	0	Miklóshalma	Burgenland+Bgld	Ausztria
+2770649	Neutal	47.54548	16.44619	0	Sopronújlak+Nyujtál	Burgenland+Bgld	Ausztria
+2770684	Neusiedl am See	47.94901	16.8417	5949	Nezsider	Burgenland+Bgld	Ausztria
+2770788	Neufeld an der Leitha	47.86558	16.37856	0	Lajtaújfalu	Burgenland+Bgld	Ausztria
+2770803	Neudörfl	47.79655	16.2977	4183	Lajtaszentmiklós	Burgenland+Bgld	Ausztria
+2770897	Neckenmarkt	47.59964	16.5467	0	Sopronnyék	Burgenland+Bgld	Ausztria
+2771049	Müllendorf	47.83943	16.46258	0	Szárazvám	Burgenland+Bgld	Ausztria
+2771194	Moschendorf	47.05843	16.47728	0	Nagysároslak	Burgenland+Bgld	Ausztria
+2771219	Mörbisch am See	47.75	16.66667	0	Fertőmeggyes	Burgenland+Bgld	Ausztria
+2771284	Mönchhof	47.8802	16.94126	0	Barátudvar	Burgenland+Bgld	Ausztria
+2771322	Mogersdorf	46.94917	16.23222	0	Nagyfalva	Burgenland+Bgld	Ausztria
+2771567	Mischendorf	47.19277	16.31444	0	Pinkamiske	Burgenland+Bgld	Ausztria
+2771817	Mattersburg	47.73333	16.4	6448	Nagymarton	Burgenland+Bgld	Ausztria
+2771847	Marz	47.71667	16.41667	0	Márczfalva	Burgenland+Bgld	Ausztria
+2771866	Markt Sankt Martin	47.56205	16.42508	0	Sopronszentmárton	Burgenland+Bgld	Ausztria
+2771870	Markt Neuhodis	47.29565	16.39564	0	Városhodász	Burgenland+Bgld	Ausztria
+2771903	Mariasdorf	47.3658	16.23136	0	Máriafalva	Burgenland+Bgld	Ausztria
+2772001	Mannersdorf an der Rabnitz	47.42815	16.52678	0	Répcekethely	Burgenland+Bgld	Ausztria
+2772168	Lutzmannsburg	47.46373	16.63665	0	Locsmánd	Burgenland+Bgld	Ausztria
+2772255	Loretto	47.91559	16.5179	0	Lorettom	Burgenland+Bgld	Ausztria
+2772294	Loipersbach im Burgenland	47.69656	16.47919	0	Lépesfalva	Burgenland+Bgld	Ausztria
+2772400	Linz	48.30639	14.28611	181162	Linz		Ausztria
+2772709	Leithaprodersdorf	47.93348	16.47915	0	Lajtapordány	Burgenland+Bgld	Ausztria
+2773181	Lackendorf	47.58996	16.50404	0	Lakfalva	Burgenland+Bgld	Ausztria
+2773184	Lackenbach	47.59042	16.46533	0	Lakompak	Burgenland+Bgld	Ausztria
+2773300	Kufstein	47.58333	12.16667	16115	Kufstein		Ausztria
+2773528	Krensdorf	47.78552	16.41495	0	Tormafalu	Burgenland+Bgld	Ausztria
+2773823	Kohfidisch	47.17472	16.35701	0	Gyepufüzes	Burgenland+Bgld	Ausztria
+2773866	Kobersdorf	47.59572	16.39173	0	Kabold	Burgenland+Bgld	Ausztria
+2773938	Klingenbach	47.75202	16.54069	0	Kelénpatak	Burgenland+Bgld	Ausztria
+2774076	Kleinmürbisch	47.03299	16.32448	0	Felsőmedves	Burgenland+Bgld	Ausztria
+2774348	Kittsee	48.0925	17.06389	2070	Köpcsény	Burgenland+Bgld	Ausztria
+2774612	Katzelsdorf	47.78055	16.26985	0	Macskásd	Alsó-Ausztria	Ausztria
+2774932	Kaisersdorf	47.53741	16.39198	0	Császárfalu	Burgenland+Bgld	Ausztria
+2775040	Jois	47.96165	16.79604	0	Nyulas	Burgenland+Bgld	Ausztria
+2775089	Jennersdorf	46.93848	16.14158	4319	Gyanafalva	Burgenland+Bgld	Ausztria
+2775220	Innsbruck	47.26266	11.39454	112467	Innsbruck		Ausztria
+2775327	Illmitz	47.76148	16.80024	0	Illmic	Burgenland+Bgld	Ausztria
+2775499	Hornstein	47.88049	16.44447	0	Szarvkő	Burgenland+Bgld	Ausztria
+2775525	Horitschon	47.58729	16.54696	0	Haracsony	Burgenland+Bgld	Ausztria
+2776197	Hirm	47.78652	16.4546	0	Félszerfalva	Burgenland+Bgld	Ausztria
+2776582	Heiligenkreuz im Lafnitztal	46.98917	16.26083	0	Rábakeresztúr	Burgenland+Bgld	Ausztria
+2776594	Heiligenbrunn	47.02705	16.41688	0	Szentkút	Burgenland+Bgld	Ausztria
+2776891	Hannersdorf	47.22895	16.3825	0	Sámfalva	Burgenland+Bgld	Ausztria
+2776957	Halbturn	47.87019	16.97542	0	Féltorony	Burgenland+Bgld	Ausztria
+2777216	Güssing	47.05936	16.32431	0	Németújvár	Burgenland+Bgld	Ausztria
+2777627	Grosspetersdorf	47.23895	16.31783	3525	Nagyszentmihály	Burgenland+Bgld	Ausztria
+2778067	Graz	47.06667	15.45	222326	Grác	Stájerország	Ausztria
+2778355	Gols	47.89689	16.91113	0	Gálos	Burgenland+Bgld	Ausztria
+2778794	Gattendorf	48.01667	16.98333	0	Lajtakáta	Burgenland+Bgld	Ausztria
+2779115	Fürstenfeld	47.05	16.08333	5962	Fölöstöm	Stájerország	Ausztria
+2779275	Freistadt	48.51103	14.50453	7574	Freistadt		Ausztria
+2779324	Frauenkirchen	47.83678	16.92581	0	Boldogasszony	Burgenland+Bgld	Ausztria
+2780190	Eisenstadt	47.84565	16.52327	12190	Kismarton	Burgenland+Bgld	Ausztria
+2780448	Edelstal	48.1	16.98333	600	Nemesvölgy	Burgenland+Bgld	Ausztria
+2780539	Eberau	47.10764	16.46044	0	Monyorókerék	Burgenland+Bgld	Ausztria
+2780553	Ebenfurth	47.87738	16.36731	0	Ebenfurt	Alsó-Ausztria	Ausztria
+2780842	Donnerskirchen	47.89425	16.64635	0	Fertőfehéregyháza	Burgenland+Bgld	Ausztria
+2781024	Deutschkreutz	47.6	16.63333	0	Sopronkeresztúr	Burgenland+Bgld	Ausztria
+2781361	Bruckneudorf	48.01667	16.78333	0	Királyhida	Burgenland+Bgld	Ausztria
+2781472	Breitenbrunn	47.94452	16.73149	0	Fertőszéleskút	Burgenland+Bgld	Ausztria
+2781820	Bernstein	47.4	16.25	0	Borostyánko	Burgenland+Bgld	Ausztria
+2782045	Bad Tatzmannsdorf	47.33126	16.23067	1329	Tarcsafürdő	Burgenland+Bgld	Ausztria
+2782454	Apetlon	47.74394	16.8302	0	Mosonbánfalva+Apátlan	Burgenland+Bgld	Ausztria
+2782479	Antau	47.77377	16.47984	0	Ottova+Selegszántó	Burgenland+Bgld	Ausztria
+2782552	Andau	47.77441	17.03293	0	Mosontarcsa	Burgenland+Bgld	Ausztria
+6692403	Lockenhaus	47.40753	16.41623	0	Léka	Burgenland+Bgld	Ausztria
+2063523	Perth	-31.95224	115.8614	1896548	Perth	WA	Ausztrália
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Ausztrália
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Ausztrália
+3041732	Mariehamn	60.09726	19.93481	10682	Mariehamn		Aland-szigetek
+587084	Baku	40.37767	49.89201	1116513	Bakı	Baki	Azerbajdzsán
+3187609	Visoko	43.98889	18.17806	17890	Visoko	Federation of Bosnia and Herzegovina	Bosznia-Hercegovina+Bosznia és Hercegovina
+3190159	Srebrenica	44.10748	19.29669	2862	Srebrenica		Bosznia-Hercegovina+Bosznia és Hercegovina
+3191281	Sarajevo	43.84864	18.35644	696731	Szarajevó	Federation of Bosnia and Herzegovina	Bosznia-Hercegovina+Bosznia és Hercegovina
+3198934	Jajce	44.34203	17.27059	9763	Jajca	Federation of Bosnia and Herzegovina	Bosznia-Hercegovina+Bosznia és Hercegovina
+3204222	Bihać	44.81694	15.87083	75641	Bihács	Federation of Bosnia and Herzegovina	Bosznia-Hercegovina+Bosznia és Hercegovina
+3204541	Banja Luka	44.77842	17.19386	221106	Banja Luka		Bosznia-Hercegovina+Bosznia és Hercegovina
+1185099	Sylhet	24.89904	91.87198	237000	Szilhet	Sylhet	Banglades
+1185241	Dhaka	23.7104	90.40744	10356500	Dakka		Banglades
+1205733	Chittagong	22.3384	91.83168	3920222	Csittagong		Banglades
+2783308	Zedelgem	51.14236	3.1368	21968	Zedelgem		Belgium
+2800866	Brussels	50.85045	4.34878	1019022	Brüsszel	Brussels-Capital Region	Belgium
+726050	Varna	43.21667	27.91667	312770	Várna		Bulgária
+726174	Targovishte	43.2512	26.57215	37774	Targoviste	Tŭrgovishte	Bulgária
+727011	Sofia	42.69751	23.32415	1152556	Szófia		Bulgária
+727221	Silistra	44.11667	27.26667	39715	Szilisztra		Bulgária
+727523	Ruse	43.85639	25.97083	156238	Rusze		Bulgária
+728782	Nikopol	43.70255	24.89645	4137	Nikápoly		Bulgária
+728825	Nesebar	42.65921	27.73602	6302	Neszebar		Bulgária
+732770	Burgas	42.50606	27.46781	195966	Burgasz		Bulgária
+290340	Manama	26.22787	50.58565	147074	Manáma	Muḩāfaz̧at al ‘Āşimah	Bahrain+Bahrein
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto Novo	Quémé	Benin
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Bandar Seri Begawan		Brunei Darussalam+Brunei
+3903987	Sucre	-19.03332	-65.26274	224838	Sucre történelmi óvárosa	Chuquisaca	Bolívia
+3911925	La Paz	-16.5	-68.15	812799	La Paz	La Paz	Bolívia
+3390760	Recife	-8.05389	-34.88111	1478098	Recife	PE	Brazília
+3445983	Tucano	-10.95817	-38.79084	31203	Ramphastinae	BA	Brazília
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Brazília
+3450554	Salvador	-12.97111	-38.51083	2711840	Salvador da Bahia	BA	Brazília
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brazília
+3456160	Nova Iguaçu	-22.75917	-43.45111	1002118	Nova Iguaçu	RJ	Brazília
+3460629	Itaqui	-29.12528	-56.55306	34631	Itaqui	RS+Rio Grande do Sul	Brazília
+3469058	Brasília	-15.77972	-47.92972	2207718	Brazíliaváros	DF	Brazília
+3571824	Nassau	25.05823	-77.34306	227940	Nassau		Bahamák+Bahama-szigetek
+1252416	Thimphu	27.46609	89.64191	98676	Timpu		Bhután+Bh2utan
+620127	Vitebsk	55.1904	30.2049	342700	Vicebszk	Vitsyebskaya Voblastsʼ	Fehéroroszország+Belorusszia
+620391	Vawkavysk	53.1561	24.4513	47300	Vavkaviszk		Fehéroroszország+Belorusszia
+621048	Svislach	53.0368	24.0957	6886	Szviszlacs		Fehéroroszország+Belorusszia
+621266	Stowbtsy	53.4785	26.7434	15500	Sztovbci		Fehéroroszország+Belorusszia
+621838	Slawharad	53.4429	31.0014	8300	Szlavharad	Mahilyowskaya Voblastsʼ	Fehéroroszország+Belorusszia
+622428	Salihorsk	52.7876	27.5415	101614	Szalihorszk		Fehéroroszország+Belorusszia
+623317	Polatsk	55.4879	28.7856	82258	Polack	Vitsyebskaya Voblastsʼ	Fehéroroszország+Belorusszia
+623549	Pinsk	52.1229	26.0951	130777	Pinszk	Brestskaya Voblastsʼ	Fehéroroszország+Belorusszia
+623760	Pastavy	55.11676	26.83263	20218	Pasztavi	Vitsyebskaya Voblastsʼ	Fehéroroszország+Belorusszia
+624079	Orsha	54.5081	30.4172	125347	Orsa	Vitsyebskaya Voblastsʼ	Fehéroroszország+Belorusszia
+624700	Nyasvizh	53.2189	26.6779	12847	Nyaszvizs		Fehéroroszország+Belorusszia
+624784	Navapolatsk	55.5318	28.5987	100885	Navapolack	Vitsyebskaya Voblastsʼ	Fehéroroszország+Belorusszia
+624785	Navahrudak	53.5942	25.8191	30748	Navahrudak		Fehéroroszország+Belorusszia
+625144	Minsk	53.9	27.56667	1742124	Minszk		Fehéroroszország+Belorusszia
+625324	Mazyr	52.0495	29.2456	112137	Mazir		Fehéroroszország+Belorusszia
+625665	Mahilyow	53.9168	30.3449	369200	Mahiljov	Mahilyowskaya Voblastsʼ	Fehéroroszország+Belorusszia
+626081	Lida	53.88333	25.29972	98036	Lida		Fehéroroszország+Belorusszia
+626939	Karelichy	53.5648	26.1406	7800	Karelicsi		Fehéroroszország+Belorusszia
+627904	Hrodna	53.6884	23.8258	317365	Hrodna		Fehéroroszország+Belorusszia
+627907	Gomel	52.4345	30.9754	480951	Homel		Fehéroroszország+Belorusszia
+628634	Dzyarzhynsk	53.6832	27.138	24609	Dzjarzsinszk		Fehéroroszország+Belorusszia
+628968	Damachava	51.75	23.6	1200	Damacsava	Brestskaya Voblastsʼ	Fehéroroszország+Belorusszia
+629390	Chachersk	52.9164	30.9179	7600	Csacserszk		Fehéroroszország+Belorusszia
+629634	Brest	52.09755	23.68775	300715	Breszt	Brestskaya Voblastsʼ	Fehéroroszország+Belorusszia
+629640	Braslaw	55.6413	27.0418	12378	Braszlav	Vitsyebskaya Voblastsʼ	Fehéroroszország+Belorusszia
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Kanada
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	Kanada
+2317397	Bandundu	-3.31687	17.38063	118211	Bandundu tartomány	Kwilu tartomány	Kongó, Demokratikus köztársaság+Kongói Demokratikus Köztársaság+Kongó - Kinshasa
+2260535	Brazzaville	-4.26613	15.28318	1284609	Brazzaville	Brazzaville	Kongó [Köztársaság]+Kongói Köztársaság
+2657896	Zürich	47.36667	8.55	341730	Zürich	ZH	Svájc
+2659529	Murten/Morat	46.92827	7.11715	5800	Murten		Svájc
+2659994	Lausanne	46.516	6.63282	116751	Lausanne+1000	VD	Svájc
+2660076	La Chaux-de-Fonds	47.09993	6.82586	36825	La Chaux-de-Fonds	Neuchâtel kanton	Svájc
+2660646	Genève	46.20222	6.14569	183981	Genf+1200	Genf kanton	Svájc
+2661513	Biel/Bienne	47.13713	7.24608	48614	Biel		Svájc
+2661552	Bern	46.94809	7.44744	121631	Bern		Svájc
+2661604	Basel	47.55839	7.57327	164488	Bázel+EAP+4000		Svájc
+2661881	Aarau	47.39254	8.04422	15501	Aarau+5000		Svájc
+3871336	Santiago	-33.45694	-70.64827	4837295	Santiago de Chile+Stgo.		Chile+Csile
+3887127	Iquique	-20.22036	-70.13913	227499	Iquique		Chile+Csile
+1280737	Lhasa	29.65	91.1	118721	Lhásza		Kína
+1280849	Kashgar	39.47066	75.98951	274717	Kasgar		Kína
+1529102	Ürümqi	43.80096	87.60046	3029372	Ürümcsi		Kína
+1784658	Zhengzhou	34.75778	113.64861	4253913	Csengcsou		Kína
+1788852	Xining	36.62554	101.75739	767531	Hszining		Kína
+1790353	Xianyang	34.33778	108.70261	1034081	Hszienjang	Senhszi+Shaanxi	Kína
+1790645	Xiamen	24.47979	118.08187	3531347	Hsziamen		Kína
+1790923	Wuxi	31.56887	120.28857	3543719	Vuhszi		Kína
+1791247	Wuhan	30.58333	114.26667	9785388	Vuhan+武汉		Kína
+1791388	Wenzhou	27.99942	120.66682	865672	Vencsou		Kína
+1792947	Tianjin	39.14222	117.17667	11090314	Tiencsin+Tianjin		Kína
+1793511	Taiyuan	37.86944	112.56028	3426519	Tajjüan		Kína
+1795270	Shijiazhuang	38.04139	114.47861	2834942	Sicsiacsuang		Kína
+1795565	Shenzhen	22.54554	114.0683	10358381	Sencsen		Kína
+1795940	Shantou	23.36814	116.71479	5329024	Santou		Kína
+1796236	Shanghai	31.22222	121.45806	22315474	Sanghaj		Kína
+1797333	Qufu	35.59667	116.99111	85144	Csüfu		Kína
+1797929	Qingdao	36.06488	120.38042	3718835	Csingtao		Kína
+1800163	Nanchang	28.68396	115.85306	2357839	Nancsang		Kína
+1801792	Luoyang	34.68361	112.45361	1390581	Lojang		Kína
+1804430	Lanzhou	36.05701	103.83987	2628426	Lancsou		Kína
+1805518	Jining	35.405	116.58139	450327	Csining		Kína
+1805753	Jinan	36.66833	116.99722	4335989	Csinan		Kína
+1808722	Hefei	31.86389	117.28083	3310268	Hofej		Kína
+1808926	Hangzhou	30.29365	120.16142	6241971	Hangcsou		Kína
+1809078	Haikou	20.04583	110.34167	615835	Hajkou		Kína
+1809858	Guangzhou	23.11667	113.25	11071424	Kanton		Kína
+1810821	Fuzhou	26.06139	119.30611	1179720	Fucsou		Kína
+1812545	Dongguan	23.01797	113.74866	8000000	Tungkuan		Kína
+1814906	Chongqing	29.56278	106.55278	7457600	Csungking+Chongqing		Kína
+1815286	Chengdu	30.66667	104.06667	7415590	Csengtu	Sichuan	Kína
+1815456	Changzhou	31.77359	119.95401	949018	Csangcsou		Kína
+1815577	Changsha	28.19874	112.97087	3093980	Csangsa		Kína
+1816670	Beijing	39.9075	116.39723	11716620	Peking		Kína
+1886760	Suzhou	31.30408	120.59538	5345961	Szucsou		Kína
+2034937	Shenyang	41.79222	123.43278	6255921	Senjang		Kína
+2036502	Jilin	43.85083	126.56028	1881977	Csilin		Kína
+2037355	Fushun	41.88669	123.94363	1400646	Fusun		Kína
+2038180	Changchun	43.88	125.32278	4193073	Csangcsun		Kína
+2038432	Baotou	40.65222	109.82222	1301768	Paotou		Kína
+3685533	Cúcuta	7.89391	-72.50782	721398	San José de Cúcuta	Norte de Santander	Kolumbia
+3687925	Cali	3.43722	-76.5225	2392877	Cali		Kolumbia
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotá		Kolumbia
+3621849	San José	9.93333	-84.08333	335007	San José de Costa Rica	San José	Costa Rica
+3536729	Santiago de Cuba	20.02083	-75.82667	555865	Santiago de Cuba	Santiago de Cuba	Kuba
+3553478	Havana	23.13302	-82.38304	2163824	Havanna		Kuba
+146268	Nicosia	35.17531	33.3642	200452	Nicosia		Ciprus
+146400	Larnaca	34.92291	33.6233	72000	Lárnaka		Ciprus
+146412	Kyrenia	35.33634	33.31729	26701	Kerínia		Ciprus
+3061344	Znojmo	48.8555	16.0488	35280	Znojmo	Dél-Morva kerület+Jihomoravský kraj	Cseh Köztársaság+Csehország+Czechia
+3061368	Zliv	49.06608	14.36613	3656	Zliv	Dél-csehországi kerület+Jihočeský kraj	Cseh Köztársaság+Csehország+Czechia
+3063735	Uherský Ostroh	48.98556	17.38984	4526	Magyarsárvár	Zlínský kraj	Cseh Köztársaság+Csehország+Czechia
+3063736	Uherský Brod	49.02513	17.64715	17508	Magyarbród	Zlínský kraj	Cseh Köztársaság+Csehország+Czechia
+3063739	Uherské Hradiště	49.06975	17.45969	26421	Magyarhradis	Zlínský kraj	Cseh Köztársaság+Csehország+Czechia
+3063835	Tvarožná	49.19177	16.77146	1159	Tvarožná	Dél-Morva kerület+Jihomoravský kraj	Cseh Köztársaság+Csehország+Czechia
+3064307	Telnice	49.10187	16.71774	1296	Telnice	Dél-Morva kerület+Jihomoravský kraj	Cseh Köztársaság+Csehország+Czechia
+3064373	Tachov	49.79528	12.63365	12640	Tachov	Plzeňský kraj	Cseh Köztársaság+Csehország+Czechia
+3065249	Starý Plzenec	49.69768	13.4735	4387	Starý Plzeňec	Plzeňský kraj	Cseh Köztársaság+Csehország+Czechia
+3065328	Staré Město	50.087	14.42024	10127	Óváros	Hlavní město Praha	Cseh Köztársaság+Csehország+Czechia
+3065901	Šlapanice	49.16863	16.72731	7109	Šlapanice	Dél-Morva kerület+Jihomoravský kraj	Cseh Köztársaság+Csehország+Czechia
+3067580	Přerov	49.45511	17.4509	47311	Přerov	Olomoucký Kraj	Cseh Köztársaság+Csehország+Czechia
+3067696	Prague	50.08804	14.42076	1165581	Prága+Praha	Hlavní město Praha	Cseh Köztársaság+Csehország+Czechia
+3068020	Podolí	49.19042	16.72084	1165	Podolí	Dél-Morva kerület+Jihomoravský kraj	Cseh Köztársaság+Csehország+Czechia
+3068160	Pilsen	49.74747	13.37759	164180	Plzeň	Plzeňský kraj	Cseh Köztársaság+Csehország+Czechia
+3069011	Olomouc	49.59552	17.25175	101268	Olmütz	Olomoucký Kraj	Cseh Köztársaság+Csehország+Czechia
+3069808	Netolice	49.0493	14.197	2721	Netolice	Dél-csehországi kerület+Jihočeský kraj	Cseh Köztársaság+Csehország+Czechia
+3070720	Mikulov	48.80556	16.6378	7608	Nikolsburg	Dél-Morva kerület+Jihomoravský kraj	Cseh Köztársaság+Csehország+Czechia
+3071024	Mariánské Lázně	49.96459	12.70118	14277	Mariánské Lázně	Karlovarský kraj	Cseh Köztársaság+Csehország+Czechia
+3071213	Malá Strana	50.08774	14.40449	6350	Kisoldal	Hlavní město Praha	Cseh Köztársaság+Csehország+Czechia
+3072463	Kutná Hora	49.94839	15.26816	21280	Kutná Hora	Közép-csehországi kerület+Středočeský kraj	Cseh Köztársaság+Csehország+Czechia
+3073803	Karlovy Vary	50.23271	12.87117	51807	Karlovy Vary	Karlovarský kraj	Cseh Köztársaság+Csehország+Czechia
+3077929	Česká Lípa	50.68551	14.53764	38841	Česká Lípa	Liberecký kraj	Cseh Köztársaság+Csehország+Czechia
+3078513	Buchlovice	49.08627	17.33852	2487	Buchlovice	Zlínský kraj	Cseh Köztársaság+Csehország+Czechia
+3078610	Brno	49.19522	16.60796	369559	Brno+Brünn	Dél-Morva kerület+Jihomoravský kraj	Cseh Köztársaság+Csehország+Czechia
+2804880	Zell im Fichtelgebirge	50.13532	11.82266	2275	Zell	Bajorország+Bayern	Németország
+2809346	Wiesbaden	50.08258	8.24932	272432	Wiesbaden	Hessen	Németország
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Németország
+2820256	Ulm	48.39841	9.99155	120451	Ulm	Baden-Württemberg	Németország
+2820860	Tübingen	48.52266	9.05222	83416	Tübingen	Baden-Württemberg	Németország
+2821807	Torgau	51.56016	12.99617	18746	Torgau		Németország
+2824841	Sulzbach	49.29882	7.05696	18364	Sulzbach/Saar	Saar-vidék+Saarland	Németország
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Baden-Württemberg	Németország
+2830582	Speyer	49.32083	8.43111	50343	Speyer	Rajna-vidék-Pfalz	Németország
+2842647	Saarbrücken	49.23262	7.00982	181227	Saarbrücken	Saar-vidék+Saarland	Németország
+2842884	Rüsselsheim	49.98955	8.42251	59730	Rüsselsheim am Main	Hessen	Németország
+2850954	Radolfzell am Bodensee	47.74194	8.97098	30096	Radolfzell	Baden-Württemberg	Németország
+2852458	Potsdam	52.39886	13.06566	145292	Potsdam+Podstupim	Brandenburg+http://www.brandenburg.de	Németország
+2858586	Oberweißbach	50.58231	11.14382	1653	Oberweißbach/Thüringer Wald		Németország
+2861650	Nürnberg	49.45421	11.07752	499237	Nürnberg	Bajorország+Bayern	Németország
+2861982	Nordhausen	51.5018	10.7957	43912	Nordhausen		Németország
+2862620	Nienburg	52.6461	9.22086	32629	Nienburg/Weser	Alsó-Szászország+Neddersassen+Läichsaksen+Donja Saska	Németország
+2867714	Munich	48.13743	11.57549	1260391	München	Bajorország+Bayern	Németország
+2867996	Mühlhausen	51.20896	10.45275	38108	Mühlhausen/Thüringen		Németország
+2868531	Mühlberg	51.43453	13.22177	4758	Mühlberg/Elbe	Brandenburg+http://www.brandenburg.de	Németország
+2872155	Meissen	51.16158	13.4737	28492	Meissen		Németország
+2873759	Marburg an der Lahn	50.80904	8.77069	78895	Marburg	Hessen	Németország
+2874225	Mainz	49.98419	8.2791	184997	Mainz	Rajna-vidék-Pfalz	Németország
+2874545	Magdeburg	52.12773	11.62916	229826	Magdeburg+Madeborch	Szász-Anhalt+Sassen-Anholt	Németország
+2875623	Lübbenau	51.86217	13.95168	17461	Lübbenau/Spreewald	Brandenburg+http://www.brandenburg.de	Németország
+2876837	List	55.01917	8.43132	2642	List auf Sylt	Schleswig-Holstein	Németország
+2879139	Leipzig	51.33962	12.37129	504971	Lipcse		Németország
+2886242	Köln	50.93333	6.95	963395	Köln	NRW	Németország
+2891122	Kiel	54.32133	10.13489	232758	Kiel	Schleswig-Holstein	Németország
+2891282	Ketzin	52.47809	12.8453	6500	Ketzin/Havel	Brandenburg+http://www.brandenburg.de	Németország
+2895044	Jena	50.92878	11.5899	104712	Jéna		Németország
+2907911	Heidelberg	49.40768	8.69079	143345	Heidelberg	Baden-Württemberg	Németország
+2910831	Hannover	52.37052	9.73322	515140	Hannover+Hannauver	Alsó-Szászország+Neddersassen+Läichsaksen+Donja Saska	Németország
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Németország
+2921232	Gera	50.88029	12.08187	104659	Gera		Németország
+2923544	Fürth	49.47593	10.98856	112025	Fürth	Bajorország+Bayern	Németország
+2924206	Fröndenberg	51.47563	7.76946	22964	Fröndenberg/Ruhr	NRW	Németország
+2925181	Freiburg	53.82529	9.28803	1890	Freiburg/Elbe	Alsó-Szászország+Neddersassen+Läichsaksen+Donja Saska	Németország
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt+Frankfurt am Main	Hessen	Németország
+2925535	Frankfurt (Oder)	52.34714	14.55062	51691	Frankfurt an der Oder	Brandenburg+http://www.brandenburg.de	Németország
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		Németország
+2934246	Düsseldorf	51.22172	6.77616	573057	Düsseldorf	NRW	Németország
+2935022	Dresden	51.05089	13.73832	486854	Drezda		Németország
+2936267	Donaueschingen	47.95514	8.49707	21604	Donaueschingen	Baden-Württemberg	Németország
+2939811	Cottbus	51.75769	14.32888	84754	Cottbus	Brandenburg+http://www.brandenburg.de	Németország
+2944368	Bremerhaven	53.55021	8.57673	117446	Bremerhaven	Bréma+Bremen	Németország
+2944388	Bremen	53.07516	8.80777	546501	Bréma	Bréma+Bremen	Németország
+2944440	Breitungen	50.76355	10.32724	5281	Breitungen/Werra		Németország
+2945024	Braunschweig	52.26594	10.52673	244715	Braunschweig	Alsó-Szászország+Neddersassen+Läichsaksen+Donja Saska	Németország
+2947416	Bochum	51.48165	7.21648	385729	Bochum	NRW	Németország
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Németország
+2951881	Bautzen	51.18035	14.43494	41972	Bautzen		Németország
+2952984	Bamberg	49.89873	10.90067	70047	Bamberg	Bajorország+Bayern	Németország
+2953459	Bad Frankenhausen	51.35609	11.09977	8824	Bad Frankenhausen/Kyffhäuser		Németország
+2955394	Artern	51.36431	11.29167	6270	Artern/Unstrut		Németország
+2959927	Aalen	48.83777	10.0933	67085	Aalen	Baden-Württemberg	Németország
+3247449	Aachen	50.77664	6.08342	265208	Aachen	NRW	Németország
+223817	Djibouti	11.58901	43.14503	623891	Dzsibuti	Djibouti	Dzsibuti
+2614481	Roskilde	55.64152	12.08035	44285	Roskilde	Sjælland régió	Dánia
+2614600	Rødovre	55.68062	12.45373	30000	Rødovre község		Dánia
+2615876	Odense	55.39594	10.38831	145931	Odense	Syddanmark régió	Dánia
+2618425	Copenhagen	55.67594	12.56553	1153615	Koppenhága		Dánia
+2620473	Helsingør	56.03606	12.6136	35048	Helsingør		Dánia
+2621356	Glostrup	55.6666	12.40377	20673	Glostrup község		Dánia
+2622447	Esbjerg	55.47028	8.45187	72205	Esbjerg	Syddanmark régió	Dánia
+2624341	Ballerup	55.73165	12.36328	40000	Ballerup község		Dánia
+2624652	Århus	56.15674	10.21076	237551	Aarhus	Midtjylland régió	Dánia
+2624886	Aalborg	57.048	9.9187	122219	Aalborg+Ålborg		Dánia
+2624906	Albertslund	55.65691	12.36381	30000	Albertslund község		Dánia
+2476028	Tipasa	36.58972	2.4475	25225	Tipáza	Tipaza	Algéria
+2479215	Souk Ahras	36.28639	7.95111	156745	Szúk Ahrász	Souk Ahras	Algéria
+2485926	Oran	35.69906	-0.63588	645984	Orán	Oran	Algéria
+2506999	Annaba	36.9	7.76667	206570	Annába	Annaba	Algéria
+2507480	Algiers	36.73225	3.08746	1977663	Algír	Alger	Algéria
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	Ecuador+Ekvádor
+3657509	Guayaquil	-2.20584	-79.90795	1952029	Guayaquil	Guayas	Ecuador+Ekvádor
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harjumaa	Észtország
+358048	Damietta	31.41648	31.81332	76839	Damietta		Egyiptom
+359792	Aswan	24.09082	32.89942	241261	Asszuán		Egyiptom
+359796	Suez	29.97371	32.52627	488125	Szuez	As Suways	Egyiptom
+360630	Cairo	30.06263	31.24967	7734614	Kairó		Egyiptom
+361055	Ismailia	30.60427	32.27225	284813	Iszmáilija	Al Ismā‘īlīyah	Egyiptom
+361058	Alexandria	31.20176	29.91582	3811516	Alexandria		Egyiptom
+361291	Hurghada	27.25738	33.81291	95622	Gurdaka		Egyiptom
+343300	Asmara	15.33805	38.93184	563930	Aszmara	Maʼākel	Eritrea
+2510911	Sevilla	37.38283	-5.97317	703206	Sevilla	Andalúzia	Spanyolország+España
+2512313	Pozorrubio	39.81645	-2.94936	442	Pozorrubio de Santiago	Kasztília-La Mancha	Spanyolország+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	Spanyolország+España
+2517117	Granada	37.18817	-3.60667	234325	Grenada	Andalúzia	Spanyolország+España
+2520600	Cadiz	36.52672	-6.2891	126766	Cádiz	Andalúzia	Spanyolország+España
+2522333	Águilas	37.4063	-1.58289	34533	Águilas	Murcia	Spanyolország+España
+3104324	Zaragoza	41.65606	-0.87734	674317	Zaragoza+ZGZ	Aragón	Spanyolország+España
+3105976	Vigo	42.23282	-8.72264	297332	Vigo	Galicia	Spanyolország+España
+3106492	Valls	41.28612	1.24993	25092	Valls	Catalunya	Spanyolország+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	Spanyolország+España
+3111468	Roda de Barà	41.18645	1.45893	4464	Roda de Berà	Catalunya	Spanyolország+España
+3111933	Reus	41.15612	1.10687	107118	Reus	Catalunya	Spanyolország+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Spanyolország+España
+3118135	Lomas	42.27362	-4.55095	54	Lomas de Campos	Kasztília és León+Castilla y León	Spanyolország+España
+3122453	Figueres	42.26645	2.96163	43330	Figueres	Catalunya	Spanyolország+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	Spanyolország+España
+3128978	Balaguer	41.79117	0.81094	16779	Balaguer	Catalunya	Spanyolország+España
+3129738	Arcos	42.26664	-3.75458	0	Arcos de la Llana	Kasztília és León+Castilla y León	Spanyolország+España
+331180	Mek'ele	13.49667	39.47528	215546	Mek’ele		Etiópia
+344979	Addis Ababa	9.02497	38.74689	2757729	Addisz-Abeba	Ādīs Ābeba+Addis Ababa Region	Etiópia
+634963	Tampere	61.49911	23.78712	202687	Tampere		Finnország
+638936	Rovaniemi	66.5	25.71667	34781	Rovaniemi		Finnország
+640999	Pori	61.48333	21.78333	76772	Pori	Satakunta tartomány	Finnország
+643492	Oulu	65.01236	25.46816	128618	Oulu	Észak-Pohjanmaa	Finnország
+649924	Kuusamo	65.96667	29.18333	17400	Kuusamo	Észak-Pohjanmaa	Finnország
+650224	Kuopio	62.89238	27.67703	89104	Kuopio		Finnország
+653272	Kemijärvi	66.66667	27.41667	8883	Kemijärvi		Finnország
+658225	Helsinki	60.16952	24.93545	558457	Helsinki	Nyland tartomány	Finnország
+659169	Hamina	60.56974	27.19794	21712	Hamina		Finnország
+2198148	Suva	-18.14161	178.44149	77366	Suva		Fidzsi+Fidzsi-szigetek
+2611396	Tórshavn	62.00973	-6.77164	13200	Tórshavn		Feröer+Feröer-szigetek
+2618795	Klaksvík	62.22655	-6.58901	4664	Klaksvík		Feröer+Feröer-szigetek
+2619693	Hoyvík	62.03407	-6.78127	2777	Hoyvík		Feröer+Feröer-szigetek
+2621808	Fuglafjørður	62.24398	-6.81395	1542	Fuglafjørður		Feröer+Feröer-szigetek
+2624653	Argir	61.99595	-6.77154	1871	Argir		Feröer+Feröer-szigetek
+2969284	Vienne	45.51667	4.86667	32293	Vienne+38200		Franciaország+France
+2971053	Valence	44.93333	4.9	63864	Valence+26000		Franciaország+France
+2973783	Strasbourg	48.58392	7.74553	274845	Strasbourg+67000	ACAL	Franciaország+France
+2977178	Saint-Riquier	50.13235	1.94755	1215	Centula	http://en.wikipedia.org/wiki/Hauts-de-France	Franciaország+France
+2980392	Saint-Émilion	44.88333	-0.15	2619	Saint-Émilion hegyközség+33330		Franciaország+France
+2985290	Privas	44.73333	4.6	9545	Privas+07000		Franciaország+France
+2988507	Paris	48.85341	2.3488	2138551	Párizs+75001		Franciaország+France
+2989467	Oradour-sur-Glane	45.93405	1.0317	2088	Oradour-sur-Glane		Franciaország+France
+2990440	Nice	43.70313	7.26608	338620	Nizza+06000	Provence-Alpes-Côte d’Azur	Franciaország+France
+2990999	Nancy	48.68439	6.18496	105334	Nancy+54000	ACAL	Franciaország+France
+2991214	Mulhouse	47.75	7.33333	111430	Mulhouse	ACAL	Franciaország+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001	Provence-Alpes-Côte d’Azur	Franciaország+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Franciaország+France
+3003253	Mont-Dore	45.56667	2.81667	1787	Le Mont-Dore		Franciaország+France
+3007477	Laon	49.56667	3.61667	28688	Laon+02000	http://en.wikipedia.org/wiki/Hauts-de-France	Franciaország+France
+3024635	Clermont-Ferrand	45.77966	3.08628	138681	Clermont-Ferrand+63000		Franciaország+France
+3028808	Cannes	43.55135	7.01275	70011	Cannes+06150	Provence-Alpes-Côte d’Azur	Franciaország+France
+3031009	Bourg-en-Bresse	46.20574	5.2258	45340	Bourg-en-Bresse+01000		Franciaország+France
+3032824	Bezons	48.92426	2.2128	27570	Bezons+95870		Franciaország+France
+3034911	Bar-le-Duc	48.78333	5.16667	18595	Bar-le-Duc+55000	ACAL	Franciaország+France
+3036938	Arles	43.67681	4.63031	53431	Arles+13104	Provence-Alpes-Côte d’Azur	Franciaország+France
+3038334	Ajaccio	41.91886	8.73812	54364	Ajaccio+20000		Franciaország+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Aix-en-Provence+13080	Provence-Alpes-Côte d’Azur	Franciaország+France
+6543862	Villeneuve-d'Ascq	50.61669	3.16664	62400	Villeneuve-d’Ascq+59491	http://en.wikipedia.org/wiki/Hauts-de-France	Franciaország+France
+2636503	Sutton	51.35	-0.2	187600	Sutton kerület		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2636841	Stoke-on-Trent	53.00415	-2.18538	372775	The Potteries		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2638864	Saint Andrews	56.33871	-2.79902	16800	St. Andrews	苏格兰	Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2640729	Oxford	51.75222	-1.25596	171380	Oxford		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchester		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2643736	Derry	54.9981	-7.30934	83652	Londonderry		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	London		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2644080	Llanfairpwllgwyngyll	53.22141	-4.20329	3107	Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch	Galles	Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2644597	Letchworth	51.97944	-0.2284	33955	Letchworth Garden City		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2644605	Lerwick	60.15339	-1.14427	7040	Lerwick	苏格兰	Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2644668	Leicester	52.6386	-1.13169	508916	Leicester		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2645198	Kirkwall	58.98479	-2.95873	7150	Kirkwall	苏格兰	Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2646517	Hounslow	51.46839	-0.36092	0	Hounslow kerület		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2647421	Harrow on the Hill	51.57142	-0.33371	10632	Harrow kerület		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2650567	Ealing	51.51216	-0.30204	0	Ealing kerület		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2653941	Cambridge	52.2	0.11667	158434	Cambridge		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2654588	Bromley	51.40606	0.01519	0	Bromley kerület		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2654710	Brighton	50.82838	-0.13947	139001	Brighton		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmingham		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2655775	Bexley	51.44162	0.14866	228000	Bexley kerület		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Belfast		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2656173	Bath	51.3751	-2.36172	94782	Bath		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+2656295	Barnet	51.65	-0.2	30000	Barnet kerület		Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Orkney-szigetek	苏格兰	Egyesült Királyság+http://en.wikipedia.org/wiki/United_Kingdom
+611548	Tsalka	41.5946	44.08909	1570	Calka	Alsó-Kartli	Grúzia
+611717	Tbilisi	41.69411	44.83368	1049498	Tbiliszi	T'bilisi	Grúzia
+612890	Mtskheta	41.84514	44.71875	7423	Mcheta	Mcheta-Mtianeti	Grúzia
+3382160	Cayenne	4.93333	-52.33333	61550	Cayenne		Francia Guyana
+2411585	Gibraltar	36.14474	-5.35257	26544	Gibraltár		Gibraltár
+3421319	Nuuk	64.18347	-51.72157	14798	Nuuk		Grönland
+255274	Piraeus	37.94745	23.63708	163688	Pireusz		Görögország+Griekanmua
+261414	Kallithéa	37.95	23.7	100641	Kalithéa		Görögország+Griekanmua
+261745	Irákleion	35.32787	25.14341	137154	Iráklio		Görögország+Griekanmua
+263219	Delphi	38.47942	22.49357	2373	Delphoi		Görögország+Griekanmua
+264371	Athens	37.97945	23.71622	664046	Athén		Görögország+Griekanmua
+734330	Sérres	41.08499	23.54757	58287	Széresz		Görögország+Griekanmua
+1819729	Hong Kong	22.27832	114.17469	7012738	Hongkong		Hongkong+http://en.wikipedia.org/wiki/Hong_Kong
+3186303	Žumberak	45.75	15.43333	0	Zsumberk	Zagrebačka	Horvátország
+3186886	Zagreb	45.81444	15.97798	698966	Zágráb	Grad Zagreb	Horvátország
+3186952	Zadar	44.11972	15.24222	71258	Zadar	Zadarska	Horvátország
+3187047	Vukovar	45.34333	18.99972	29584	Vukovár	Vukovarsko-Srijemska	Horvátország
+3187694	Virovitica	45.83194	17.38389	15665	Verőce	Virovitičk-Podravska	Horvátország
+3187719	Vinkovci	45.28833	18.80472	33314	Vinkovce	Vukovarsko-Srijemska	Horvátország
+3188279	Velika	45.45444	17.66139	2260	Velike	Požeško-Slavonska	Horvátország
+3188380	Varaždinske Toplice	46.20917	16.41917	0	Varasdfürdő	Varaždinska	Horvátország
+3188383	Varaždin	46.30444	16.33778	41808	Varasd	Varaždinska	Horvátország
+3188395	Valpovo	45.66083	18.41861	7943	Valpó	Osječko-Baranjska	Horvátország
+3188763	Trogir	43.5125	16.25167	10960	Trau+Trogir		Horvátország
+3190261	Split	43.50891	16.43915	176314	Split		Horvátország
+3190359	Solin	43.5432	16.49314	20212	Salona		Horvátország
+3190523	Slunj	45.11507	15.58458	1785	Szluin	Karlovačka	Horvátország
+3190586	Slavonski Brod	45.16028	18.01556	60742	Bród	Brodsko-Posavska	Horvátország
+3190589	Požega	45.34028	17.68528	21153	Pozsega	Požeško-Slavonska	Horvátország
+3190813	Sisak	45.46611	16.37833	35748	Sziszek	Sisačko-Moslavačka	Horvátország
+3190865	Sinj	43.70361	16.63944	11524	Sinj		Horvátország
+3190941	Šibenik	43.72722	15.90583	37112	Šibenik	Šibensko-Kniniska	Horvátország
+3191055	Senj	44.98944	14.90583	5518	Senj	Ličko-Senjska	Horvátország
+3191316	Samobor	45.80306	15.71806	15221	Samobor	Zagrebačka	Horvátország
+3191648	Rijeka	45.32673	14.44241	141172	Fiume	Primorsko-Goranska	Horvátország
+3192178	Rab	44.75694	14.76083	557	Rab	Primorsko-Goranska	Horvátország
+3192224	Pula	44.86833	13.84806	59078	Pula		Horvátország
+3192699	Poreč	45.22567	13.59511	10499	Poreč		Horvátország
+3193187	Pleternica	45.28861	17.80639	3757	Pleterniceszentmiklós	Požeško-Slavonska	Horvátország
+3193706	Pakrac	45.43639	17.18889	4795	Pakrác	Požeško-Slavonska	Horvátország
+3193726	Pag	44.445	15.0575	2714	Pag	Zadarska	Horvátország
+3193788	Otočac	44.86944	15.2375	4375	Otocsán	Ličko-Senjska	Horvátország
+3193935	Osijek	45.55111	18.69389	88140	Eszék	Osječko-Baranjska	Horvátország
+3194064	Orahovica	45.54	17.88472	4283	Orahovica	Virovitičk-Podravska	Horvátország
+3194099	Opatija	45.33771	14.30515	7888	Abbázia+Opatija	Primorsko-Goranska	Horvátország
+3194114	Omiš	43.44472	16.68861	6597	Omiš		Horvátország
+3194355	Novi Vinodolski	45.12806	14.78889	5282	Novi Vinodolski	Primorsko-Goranska	Horvátország
+3195890	Makarska	43.29694	17.01778	13446	Makarska		Horvátország
+3196657	Lepoglava	46.21056	16.03556	4104	Lepoglava	Varaždinska	Horvátország
+3196954	Kumrovec	46.0775	15.67556	0	Kumrovec	Krapinsko-Zagorska	Horvátország
+3197230	Križevci	46.02194	16.5425	11597	Kőrös	Koprivničko-Križevačka	Horvátország
+3197369	Krapina	46.16083	15.87889	4725	Krapina	Krapinsko-Zagorska	Horvátország
+3197390	Kraljevica	45.27395	14.5683	2857	Kraljevica	Primorsko-Goranska	Horvátország
+3197594	Hrvatska Kostajnica	45.23167	16.53917	2746	Hrvatska Kostajnica	Sisačko-Moslavačka	Horvátország
+3197710	Korčula	42.96038	17.13525	3141	Korčula	Dubrovačko-Neretvanska	Horvátország
+3197728	Koprivnica	46.16278	16.8275	25579	Kapronca	Koprivničko-Križevačka	Horvátország
+3197986	Knin	44.04063	16.19662	11182	Knin	Šibensko-Kniniska	Horvátország
+3198799	Jastrebarsko	45.66833	15.64861	5445	Jastrebarsko	Zagrebačka	Horvátország
+3199128	Ilok	45.22222	19.37694	5926	Újlak	Vukovarsko-Srijemska	Horvátország
+3199873	Gospić	44.54611	15.37472	6118	Gospić	Ličko-Senjska	Horvátország
+3201047	Dubrovnik	42.64807	18.09216	28428	Dubrovnik	Dubrovačko-Neretvanska	Horvátország
+3202184	Daruvar	45.59056	17.225	9863	Daruvár	Bjelovarsko-Bilogorska	Horvátország
+3202220	Đakovo	45.30833	18.41056	19491	Diakovár	Osječko-Baranjska	Horvátország
+3202507	Crikvenica	45.17722	14.69278	7156	Crikvenica	Primorsko-Goranska	Horvátország
+3202820	Čazma	45.74818	16.6139	2892	Csázma	Bjelovarsko-Bilogorska	Horvátország
+3202888	Čakovec	46.38444	16.43389	15867	Csáktornya	Međimurska	Horvátország
+3202905	Čaglin	45.34972	17.98972	0	Cseglény	Požeško-Slavonska	Horvátország
+3203434	Brestovac	45.33056	17.59694	0	Brestovac Pozaski	Požeško-Slavonska	Horvátország
+3203639	Bosiljevo	45.40139	15.28833	0	Bosiljevo Čazmansko	Karlovačka	Horvátország
+3204317	Belišće	45.68028	18.40583	7232	Belistye	Osječko-Baranjska	Horvátország
+3204320	Beli Manastir	45.77	18.60361	8713	Pélmonostor	Osječko-Baranjska	Horvátország
+3204612	Bakar	45.30861	14.53028	1574	Bakar	Primorsko-Goranska	Horvátország
+714659	Tokaj	48.11667	21.41667	5071	Tokaj	Borsod-Abaúj-Zemplén megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+715126	Szolnok	47.18333	20.2	75474	Szolnok	Jász-Nagykun-Szolnok megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+715466	Szarvas	46.86667	20.55	18170	Szarvas	Békés megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+715839	Sátoraljaújhely	48.39492	21.65871	18052	Sátoraljaújhely	Borsod-Abaúj-Zemplén megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+715951	Sajóörös	47.95	21.03333	1180	S.örös	Borsod-Abaúj-Zemplén megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+717582	Miskolc	48.1	20.78333	172637	Miskolc	Borsod-Abaúj-Zemplén megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+720334	Gyula	46.65	21.28333	32269	Gyula	Békés megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+721239	Eger	47.90265	20.37329	56647	Eger		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+721472	Debrecen	47.53333	21.63333	204124	Debrecen	Hajdú-Bihar megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+721592	Csongrád	46.71332	20.14241	18580	Csongrád		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+722437	Békéscsaba	46.68333	21.1	65206	Békéscsaba	Békés megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+722439	Békés	46.76667	21.13333	21198	Békés+Békés megye	Békés megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3042430	Zugló	47.51758	19.10549	130000	Budapest XIV. kerület		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3042638	Zalaegerszeg	46.84	16.84389	61898	Zalaegerszeg	Zala megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3042824	Visegrád	47.78526	18.9709	1713	Visegrád		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3042929	Veszprém	47.09327	17.91149	62023	Veszprém+Veszprém megye		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3043293	Vác	47.77591	19.13612	35108	Vác		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3043778	Törökbálint	47.42931	18.91356	11658	Török-bálint		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3043927	Tihany	46.91369	17.88918	1438	Tihany		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044082	Tatabánya	47.58494	18.39325	70541	Tatabánya	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044083	Tata	47.65289	18.31838	23868	Tata	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044088	Taszár	46.37467	17.90594	2013	Taszár		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044122	Tardos	47.66192	18.44416	1625	Tardosbánya	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044154	Sülysáp	47.45206	19.53369	8258	Tápiósáp+Tápiósüly+Sülysáp		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044310	Szombathely	47.23088	16.62155	79534	Szombathely	Vas megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044681	Szentendre	47.66943	19.07561	23606	Szentendre		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044760	Szekszárd	46.35014	18.70905	34174	Szekszárd		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044774	Székesfehérvár	47.18995	18.41034	101600	Székesfehérvár	Fejér megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3044861	Szárliget	47.51581	18.4948	2337	Újszár	Fejér megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3045190	Sopron	47.68501	16.59049	57210	Sopron	Győr-Moson-Sopron megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3045332	Siófok	46.90413	18.058	23028	Siófok		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3046526	Pécs	46.08333	18.23333	156649	Pécs	Baranya megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3046693	Pannonhalma	47.54946	17.75535	4089	Pannonhalma	Győr-Moson-Sopron megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3047679	Nagykanizsa	46.45347	16.99104	50823	Nagykanizsa	Zala megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3047896	Mosonmagyaróvár	47.86789	17.26994	30359	Mosonmagyaróvár	Győr-Moson-Sopron megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3047967	Mohács	45.99306	18.68306	18711	Mohács	Baranya megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3048005	Mocsa	47.66999	18.18505	2265	Mocsa	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3049036	Lábatlan	47.74735	18.49623	5357	Lábatlan	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3049519	Komárom	47.74318	18.11913	19646	Komárom	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3049631	Kocs	47.6075	18.21517	2655	Kocs	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3050088	Kisbér	47.50289	18.03665	5850	Kisbér	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3050160	Kincsesbánya	47.26444	18.2779	1506	Kincses	Fejér megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3050165	Kimle	47.81726	17.36642	2312	Horvátkimle	Győr-Moson-Sopron megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3050290	Kistarcsa	47.54757	19.26247	10986	Kerepestarcsa		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3050434	Kecskemét	46.90618	19.69128	109847	Kecskemét	Bács-Kiskun megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3050616	Kaposvár	46.36667	17.8	67746	Kaposvár		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3051477	Hévíz	46.79031	17.18408	4438	Héviz Szent András+Hévíz	Zala megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3052009	Győr	47.68333	17.63512	128265	Győr	Győr-Moson-Sopron megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3052236	Gödöllő	47.59657	19.35515	32374	Gödöllő		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3052645	Fertőd	47.62173	16.87088	3396	Eszterháza+Fertőd	Győr-Moson-Sopron megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3053163	Esztergom	47.7928	18.74148	28785	Esztergom	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3053176	Erzsébetváros	47.50207	19.07218	62000	Budapest VII. kerület		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3053281	Érd	47.39489	18.91361	62408	Érd+Hamzsabég		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3053438	Dunaújváros	46.96479	18.93974	50084	Sztálinváros+Dunaújváros	Fejér megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3053497	Dunaalmás	47.72868	18.32235	1479	Dunaalmás	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3054533	Celldömölk	47.25713	17.15027	11421	Kiscell+Celldömölk	Vas megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3055685	Baja	46.17496	18.95639	37714	Baja	Bács-Kiskun megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3056290	Almásfüzitő	47.72752	18.26153	2348	Kiskolónia	Komárom-Esztergom megye	Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3056357	Ajka	47.10196	17.55892	31407	Ajka		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+3056436	Acsa	47.79425	19.38795	1500	Acsa		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+7284912	Kerepes	47.56008	19.28289	9960	Kerepestarcsa		Magyar Köztársaság+A Magyar Népköztársaság+Magyar Népköztársaság+A Magyar Köztársaság+Magyarország
+1214520	Medan	3.58333	98.66667	1750971	Medan		Indonézia+http://en.wikipedia.org/wiki/Indonesia
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta	Jakarta Raya	Indonézia+http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	Dublin		Írország+Ire
+2965632	Castledermot	52.90889	-6.84222	1398	Castledermoti nagykeresztek		Írország+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Jeruzsálem		Izrael
+293397	Tel Aviv	32.08088	34.78057	432892	Tel-Aviv		Izrael
+294071	Netanya	32.33291	34.85992	171676	Netánja	HaMerkaz	Izrael
+295277	Eilat	29.55805	34.94821	45588	Elat	HaDarom	Izrael
+295530	Beersheba	31.25181	34.7913	186600	Beér-Seva	HaDarom	Izrael
+295629	Ashdod	31.79213	34.64966	224656	Asdód	HaDarom	Izrael
+3042237	Douglas	54.15	-4.48333	26218	Douglas		Man-sziget+Man sziget
+1252942	Wardha	20.73933	78.59784	113759	Vardhá	Mahárástra+MH+Mahārāshtra	India
+1252948	Warangal	18	79.58333	557802	Varangal	Telangána+TG	India
+1253102	Visakhapatnam	17.68009	83.20161	1063178	Visákhapatnam	Ándhra Prades+AP+Andhra Pradesh	India
+1253184	Vijayawada	16.50745	80.6466	874587	Vidzsajavádá	Ándhra Prades+AP+Andhra Pradesh	India
+1253914	Ujjain	23.18239	75.77643	457346	Uddzsaín	Madhja Prades+MP	India
+1254388	Tiruchirappalli	10.8155	78.69651	775484	Tiruccsirápalli	Tamilnádu+TN+Tamil Nādu	India
+1255634	Srinagar	34.08565	74.80555	975857	Szrinagar	JK+Jammu and Kashmīr	India
+1256237	Shimla	31.10442	77.16662	173503	Simlá	Himácsal Prades+HP	India
+1257629	Salem	11.65376	78.15538	778396	Szálem	Tamilnádu+TN+Tamil Nādu	India
+1258526	Ranchi	23.34316	85.3094	846454	Ráncsí	Dzshárkhand+JH+Jharkhand	India
+1258698	Rameswaram	9.2885	79.31271	39960	Rámesvaram	Tamilnádu+TN+Tamil Nādu	India
+1258980	Raipur	21.23333	81.63333	679995	Rájpur	Cshattíszgarh+CT+Chhattisgarh	India
+1259148	Pushkar	26.49022	74.55211	16173	Puskár	Rádzsasztán+RJ+Rājasthān	India
+1259229	Pune	18.51957	73.85535	2935744	Púna	Mahárástra+MH+Mahārāshtra	India
+1260086	Patna	25.59408	85.13563	1599920	Patna	Bihár+BR	India
+1260607	Panaji	15.49574	73.82624	65586	Panadzsi	Goa+GA	India
+1261033	Orchha	25.35192	78.64033	8500	Órcsha	Madhja Prades+MP	India
+1261731	Nashik	19.99727	73.79096	1289497	Nászik	Mahárástra+MH+Mahārāshtra	India
+1262180	Nagpur	21.14631	79.08491	2228018	Nágpur	Mahárástra+MH+Mahārāshtra	India
+1262321	Mysore	12.29791	76.63925	868313	Májszúr	Karnátaka+KA+Karnātaka	India
+1263214	Meerut	28.98002	77.70636	1223184	Mirát	Uttar Prades+UP	India
+1263780	Mangalore	12.91723	74.85603	417387	Mangalor	Karnátaka+KA+Karnātaka	India
+1264521	Madurai	9.91769	78.11898	909908	Maduráj	Tamilnádu+TN+Tamil Nādu	India
+1264527	Chennai	13.08784	80.27847	4328063	Csennai	Tamilnádu+TN+Tamil Nādu	India
+1265873	Kozhikode	11.24802	75.7804	439922	Kozsíkóde	KL	India
+1267635	Karwar	14.81361	74.12972	64457	Kárvár	Karnátaka+KA+Karnātaka	India
+1268782	Jalandhar	31.32556	75.57917	785178	Dzsálandhár	PB	India
+1268865	Jodhpur	26.26841	73.00594	921476	Dzsódhpur	Rádzsasztán+RJ+Rājasthān	India
+1269300	Jamshedpur	22.80278	86.18545	616338	Dzsamsedpur	Dzshárkhand+JH+Jharkhand	India
+1269507	Jaisalmer	26.91763	70.90387	67604	Dzsaiszalmer	Rádzsasztán+RJ+Rājasthān	India
+1269515	Jaipur	26.91962	75.78781	2711758	Dzsaipur	Rádzsasztán+RJ+Rājasthān	India
+1269633	Jabalpur	23.16697	79.95006	1030168	Dzsabalpur	Madhja Prades+MP	India
+1269935	Hospet	15.26954	76.3871	197846	Hoszpet	Karnátaka+KA+Karnātaka	India
+1270351	Haridwar	29.94791	78.16025	186079	Haridvár	UT	India
+1270642	Gurgaon	28.4601	77.02635	197340	Gurgáon	Harijána+HR+Haryāna	India
+1271146	Goa Velha	15.44384	73.88572	5656	Ó-Goa	Goa+GA	India
+1271476	Guwahati	26.1844	91.7458	899094	Gauháti	Asszám+AS+Assam	India
+1273294	Delhi	28.65195	77.23149	10927986	Delhi	DL	India
+1273780	Cuttack	20.46497	85.87927	580000	Kattak	OR+Orissa	India
+1273865	Coimbatore	11.00555	76.96612	959823	Kojambuttúr	Tamilnádu+TN+Tamil Nādu	India
+1275004	Kolkata	22.56263	88.36304	4631392	Kalkutta	Nyugat-Bengál+WB+West Bengal	India
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbai	Mahárástra+MH+Mahārāshtra	India
+1275389	Buddh Gaya	24.69808	84.9869	35188	Bodh-Gaja	Bihár+BR	India
+1275701	Bijapur	16.82442	75.71537	271064	Bídzsápur	Karnátaka+KA+Karnātaka	India
+1275841	Bhopal	23.25469	77.40289	1599914	Bhopál	Madhja Prades+MP	India
+1275901	Bhiwandi	19.30023	73.05881	707035	Bhivándi	Mahárástra+MH+Mahārāshtra	India
+1275971	Bhilai	21.20919	81.4285	625138	Bilaj	Cshattíszgarh+CT+Chhattisgarh	India
+1277013	Bareilly	28.36678	79.43167	745435	Bareli	Uttar Prades+UP	India
+1277333	Bengaluru	12.97194	77.59369	5104047	Bengaluru	Karnátaka+KA+Karnātaka	India
+1278710	Amritsar	31.62234	74.87534	1092450	Amritszár	PB	India
+1278946	Alwar	27.56246	76.625	283228	Alvar	Rádzsasztán+RJ+Rājasthān	India
+1279159	Ajmer	26.4521	74.63867	517911	Ádzsmír	Rádzsasztán+RJ+Rājasthān	India
+1279233	Ahmedabad	23.02579	72.58727	3719710	Ahmadábád	Gudzsarát+GJ	India
+98182	Baghdad	33.34058	44.40088	7216000	Bagdad		Irak
+98717	Ramadi	33.42056	43.30778	274539	Ramádi	Al Anbār	Irak
+98860	Najaf	32.02594	44.34625	482576	Nedzsef	An Najaf	Irak
+99072	Mosul	36.335	43.11889	1739800	Moszul	Nīnawá	Irak
+111822	Yazd	31.89722	54.3675	477905	Jazd	Yazd	Irán
+112931	Tehran	35.69439	51.42151	7153309	Teherán	Tehrān	Irán
+115019	Shiraz	29.61031	52.53113	1249942	Siráz		Irán
+116996	Sari	36.56332	53.06009	255396	Szári		Irán
+119208	Qom	34.6401	50.8764	900000	Kom	Qom	Irán
+128234	Kerman	30.28321	57.07879	577514	Kermán		Irán
+128747	Karaj	35.83266	50.99155	1448075	Karadzs		Irán
+141681	Bandar Abbas	27.1865	56.2808	352173	Bandar-Abbász		Irán
+144448	Ahvaz	31.31901	48.6842	841145	Ahváz		Irán
+145459	Abadan	30.3392	48.3043	370180	Ábádán		Irán
+418863	Isfahan	32.65246	51.67462	1547164	Iszfahán		Irán
+1159301	Zahedan	29.4963	60.8629	551980	Záhedán		Irán
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavík+101		Izland
+2522975	Taormina	37.85358	15.28851	5790	Taormina	Szicília	Olaszország
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Szicília	Olaszország
+2524085	Monreale	38.08125	13.28947	21964	Monreale	Szicília	Olaszország
+2524170	Messina	38.19394	15.55256	219948	Messina	Szicília	Olaszország
+2525041	Cefalù	38.03856	14.02285	11613	Cefalù	Szicília	Olaszország
+2525473	Cagliari	39.23054	9.11917	149257	Cagliari		Olaszország
+2525646	Augusta	37.24065	15.22121	30723	Augusta	Szicília	Olaszország
+2525764	Agrigento	37.31065	13.57661	32514	Agrigento	Szicília	Olaszország
+3164028	Vittorio Veneto	45.98026	12.30065	24789	Vittorio Veneto		Olaszország
+3164419	Vicenza	45.54672	11.5475	107129	Vicenza		Olaszország
+3164603	Venice	45.43713	12.33265	51298	Velence		Olaszország
+3165185	Trieste	45.64953	13.77678	187056	Trieszt	FVG	Olaszország
+3165524	Turin	45.07049	7.68682	870456	Torino	Piemont+Piemonte	Olaszország
+3165912	Tarvisio	46.50567	13.58689	2509	Tarvisio	FVG	Olaszország
+3168673	Salerno	40.67545	14.79328	125797	Salerno		Olaszország
+3169070	Rome	41.89193	12.51133	2318895	Róma	Lazio	Olaszország
+3169561	Ravenna	44.41344	12.20121	80868	Ravenna	Emilia-Romagna	Olaszország
+3169984	Pozzuoli	40.84394	14.0952	45575	Pozzuoli		Olaszország
+3170051	Positano	40.62829	14.48427	2334	Positano		Olaszország
+3171728	Padova	45.40797	11.88586	203725	Padova		Olaszország
+3172394	Naples	40.85216	14.26811	959470	Nápoly		Olaszország
+3172402	Nago-Torbole	45.87594	10.89106	2679	Nago–Torbole		Olaszország
+3172581	Morolo	41.63838	13.19809	634	Morolo	Lazio	Olaszország
+3173370	Mirandola	44.88515	11.06902	17380	Mirandola	Emilia-Romagna	Olaszország
+3173435	Milan	45.46427	9.18951	1236837	Milánó		Olaszország
+3174051	Mantova	45.16031	10.79784	39260	Mantua megye		Olaszország
+3176219	Genoa	44.40478	8.94439	580223	Genova		Olaszország
+3176959	Florence	43.77925	11.24626	349296	Firenze	Toszkána	Olaszország
+3180749	Caorle	45.59656	12.8758	7511	Caorle		Olaszország
+3180874	Candela	41.13601	15.51537	2197	Kandela		Olaszország
+3181303	Caderzone Terme	46.12945	10.75619	645	Caderzone		Olaszország
+3181913	Bolzano	46.49067	11.33982	99049	Bolzano		Olaszország
+3181928	Bologna	44.49381	11.33875	366133	Bologna	Emilia-Romagna	Olaszország
+3182351	Bari	41.11148	16.8554	277387	Bari		Olaszország
+3182722	Assisi	43.06671	12.62109	3732	Assisi		Olaszország
+3182943	Aquileia	45.7683	13.36779	2939	Aquileia	FVG	Olaszország
+3183130	Amalfi	40.6349	14.60238	4933	Amalfi		Olaszország
+250441	Amman	31.95522	35.94503	1275857	Ammán		Jordánia+Al Mamlakah al Urdunīyah al Hāshimīyah
+1850147	Tokyo	35.6895	139.69171	8336599	Tokió		Japán
+1850892	Takayama	36.13333	137.25	66636	Takajama	Gifu prefektúra	Japán
+1851100	Takamatsu	34.33333	134.05	334223	Takamacu		Japán
+1853564	Ōtsuki	35.61851	138.97396	31226	Ócuki	Jamanasi prefektúra	Japán
+1853909	Osaka	34.69374	135.50218	2592413	Oszaka+Ószaka		Japán
+1854747	Odawara	35.25556	139.15972	203035	Odavara	Kanagava prefektúra	Japán
+1855395	Nikkō	36.75	139.61667	16041	Nikkó		Japán
+1856177	Nagasaki	32.75	129.88333	410204	Nagaszaki		Japán
+1857594	Masuda	34.66667	131.85	48576	Maszuda		Japán
+1857910	Kyoto	35.02107	135.75385	1459640	Kiotó		Japán
+1859171	Kobe	34.6913	135.183	1528478	Kóbe	Hjógo prefektúra	Japán
+1859307	Kitakyushu	33.85181	130.85034	997536	Kitakjúsú	Fukuoka prefektúra	Japán
+1859642	Kawasaki	35.52056	139.71722	1306785	Kavaszaki	Kanagava prefektúra	Japán
+1861290	Itō	34.96667	139.08333	71578	Itó	Sizuoka prefektúra	Japán
+1864549	Chiryū	35	137.03333	67062	Csirjú		Japán
+1865294	Anjō	34.95828	137.08054	178402	Andzsó		Japán
+1926099	Matsuyama	33.83916	132.76574	443322	Macujama		Japán
+2127515	Wakkanai	45.40944	141.67389	41556	Vakkanai		Japán
+2128295	Sapporo	43.06667	141.35	1883027	Szapporo		Japán
+2130057	Hirosaki	40.59306	140.4725	174972	Hiroszaki	Aomori prefektúra	Japán
+6822202	Yurihonjō	39.3895	140.05813	0	Jurihondzsó	Akita prefektúra	Japán
+6822212	Aisai	35.16349	136.73222	0	Aiszai		Japán
+7281819	Fujikawaguchiko	35.48933	138.68832	23097	Fudzsikavagucsiko	Jamanasi prefektúra	Japán
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobi	Nairobi Area	Kenya
+1527534	Osh	40.52828	72.7985	200000	Os		Kirgizisztán
+1528249	Jalal-Abad	40.93333	73	75700	Dzsalalabad		Kirgizisztán
+1528675	Bishkek	42.87	74.59	900000	Biskek	Gorod Bishkek	Kirgizisztán
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnompen		Kambodzsa+http://en.wikipedia.org/wiki/Cambodia
+1822214	Siem Reap	13.36179	103.86056	139458	Sziemreap		Kambodzsa+http://en.wikipedia.org/wiki/Cambodia
+3575551	Basseterre	17.29484	-62.7261	12920	Basseterre	Saint George Basseterre	Saint Kitts és Nevis
+1871859	Pyongyang	39.03385	125.75432	3222000	Phenjan		Korea, Észak+Észak-Korea+http://en.wikipedia.org/wiki/North_Korea
+2040893	Sinŭiju	40.10056	124.39806	288112	Sinidzsu	P'yŏngan-bukto	Korea, Észak+Észak-Korea+http://en.wikipedia.org/wiki/North_Korea
+2044757	Chongjin	41.79556	129.77583	327000	Cshongdzsin	Hamgyŏng-bukto	Korea, Észak+Észak-Korea+http://en.wikipedia.org/wiki/North_Korea
+1835848	Seoul	37.566	126.9784	10349312	Szöul		Korea, Dél+Dél-Korea+http://en.wikipedia.org/wiki/South_Korea
+1838469	Pyeongchang	37.37028	128.39306	9940	Phjongcshang		Korea, Dél+Dél-Korea+http://en.wikipedia.org/wiki/South_Korea
+1839726	Asan	36.78361	127.00417	97749	Aszan		Korea, Dél+Dél-Korea+http://en.wikipedia.org/wiki/South_Korea
+1841811	Gwangju	35.15472	126.91556	1416938	Kvangdzsu		Korea, Dél+Dél-Korea+http://en.wikipedia.org/wiki/South_Korea
+1843564	Incheon	37.45646	126.70515	2628000	Incshon+JCN		Korea, Dél+Dél-Korea+http://en.wikipedia.org/wiki/South_Korea
+1846326	Changwon	35.22806	128.68111	550000	Cshangvon		Korea, Dél+Dél-Korea+http://en.wikipedia.org/wiki/South_Korea
+1526273	Astana	51.1801	71.44598	345604	Asztana	Astana Qalasy	Kazahsztán
+1526384	Almaty	43.25667	76.92861	2000900	Almati	Almaty Qalasy	Kazahsztán
+1651944	Vientiane	17.96667	102.6	196731	Vientián		Laoszi Népi Demokratikus Köztársaság+Laosz
+1655559	Luang Prabang	19.88601	102.13503	47378	Luangprabang	Louangphabang	Laoszi Népi Demokratikus Köztársaság+Laosz
+268064	Sidon	33.55751	35.37148	163554	Szidón	Dél kormányzóság+Liban-Sud	Libanon
+273203	Jbaïl	34.12111	35.64806	20784	Büblosz	Mont-Liban	Libanon
+276781	Beirut	33.89332	35.50157	1916100	Bejrút		Libanon
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Liechtenstein
+1229901	Polonnaruwa	7.93965	81.00274	13900	Polonnaruva	North Central	Sri Lanka+Srí Lanka
+1248991	Colombo	6.93194	79.84778	648034	Colombo	Western	Sri Lanka+Srí Lanka
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Litvánia+http://en.wikipedia.org/wiki/Lithuania
+598098	Klaipėda	55.70888	21.14312	192307	Klaipėda		Litvánia+http://en.wikipedia.org/wiki/Lithuania
+600438	Birzai	56.2	24.75	14911	Birzai+Biržai		Litvánia+http://en.wikipedia.org/wiki/Lithuania
+2960107	Schengen	49.47	6.362	470	Schengen		Luxemburg
+2960316	Luxembourg	49.61167	6.13	76684	Luxembourg		Luxemburg
+455898	Salaspils	56.86014	24.36544	17606	Salaspils	Salaspils	Lettország
+456172	Riga	56.946	24.10589	742572	Riga	Riga	Lettország
+456202	Rēzekne	56.51028	27.34	38340	Rēzekne	Rēzekne	Lettország
+457065	Ogre	56.8162	24.61401	26760	Ogre		Lettország
+457954	Liepāja	56.52707	21.02357	85132	Liepāja	Liepāja	Lettország
+459201	Jūrmala	56.968	23.77038	54088	Jūrmala		Lettország
+459279	Jelgava	56.65	23.71278	61791	Jelgava		Lettország
+459283	Jēkabpils	56.49903	25.85735	27078	Jēkabpils	http://jekabpilsnovads.lv/+Jēkabpils novads	Lettország
+460413	Daugavpils	55.88333	26.53333	111564	Daugavpils	http://www.daugavpilsnovads.lv/	Lettország
+88319	Benghazi	32.11486	20.06859	650629	Bengázi	Banghāzī	Líbiai Arab Jamahiriya+Líbia
+89113	Ajdabiya	30.75545	20.22625	134358	Adzsdábija		Líbiai Arab Jamahiriya+Líbia
+2210554	Sirte	31.20892	16.58866	128123	Szurt	Surt	Líbiai Arab Jamahiriya+Líbia
+2218840	Bani Walid	31.74554	13.98354	46350	Bani Valíd	Mişrātah	Líbiai Arab Jamahiriya+Líbia
+2542997	Marrakesh	31.63416	-7.99994	839296	Marrákes		Marokkó
+2549263	Essaouira	31.5125	-9.77	70634	Szavíra		Marokkó
+618426	Chisinau	47.00556	28.8575	635994	Kisinyov		Moldáv Köztársaság+Moldova
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Montenegró
+3203106	Budva	42.28639	18.84	18000	Budva		Montenegró
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarivo		Madagaszkár
+784027	Zajas	41.60722	20.93833	12218	Zajasz		Macedónia, Köztársaság+Macedónia+Macedón Köztársaság+ARYM+FYROM
+785842	Skopje	41.99646	21.43141	474889	Szkopje		Macedónia, Köztársaság+Macedónia+Macedón Köztársaság+ARYM+FYROM
+789527	Kičevo	41.51267	20.95886	31123	Kicsevo		Macedónia, Köztársaság+Macedónia+Macedón Köztársaság+ARYM+FYROM
+790295	Gostivar	41.79601	20.90819	50974	Gosztivar		Macedónia, Köztársaság+Macedónia+Macedón Köztársaság+ARYM+FYROM
+790744	Gevgelija	41.14166	22.50141	20664	Gyevgyelija		Macedónia, Köztársaság+Macedónia+Macedón Köztársaság+ARYM+FYROM
+7886881	Centar Župa	41.47849	20.55945	45412	Centar Zsupa		Macedónia, Köztársaság+Macedónia+Macedón Köztársaság+ARYM+FYROM
+1298824	Yangon	16.80528	96.15611	4477638	Rangun	Yangon	Mianmar+Burma
+1311874	Mandalay	21.97473	96.08359	1208099	Mandalaj	Mandalay	Mianmar+Burma
+2028462	Ulan Bator	47.90771	106.88324	844818	Ulánbátor	Ulaanbaatar	Mongólia
+2028606	Tsetserleg	47.475	101.45417	5876	Cecerleg	Arhangay	Mongólia
+1821274	Macau	22.20056	113.54611	520400	Makaó		Makaó
+2377450	Nouakchott	18.08581	-15.9785	661400	Nouakchott		Mauritánia
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Málta
+3522507	Oaxaca	17.06542	-96.72365	262566	Oaxaca	OAX	Mexikó
+3529947	Cuernavaca	18.9261	-99.23075	343769	Cuernavaca	MOR	Mexikó
+3530757	Cholula	19.06406	-98.30352	151667	San Andrés Cholula	PUE	Mexikó
+4005539	Guadalajara	20.66682	-103.39182	1640589	Guadalajara	JAL	Mexikó
+2353151	Aba	5.10658	7.36667	897560	Aba	Abia	Nigéria
+2747373	The Hague	52.07667	4.29861	474292	Hága	zh+Zuid-Holland	Hollandia
+2751285	Maassluis	51.92333	4.25	32780	Maassluis	zh+Zuid-Holland	Hollandia
+2753719	Hoogeveen	52.7225	6.47639	38754	Hoogeveen	dr	Hollandia
+2755251	Groningen	53.21917	6.56667	181194	Groningen	gr+Groningen	Hollandia
+2756669	Dordrecht	51.81	4.67361	119260	Dordrecht	zh+Zuid-Holland	Hollandia
+2759794	Amsterdam	52.37403	4.88969	741636	Amszterdam	nh+Nord-Holland+Noord-Holland	Hollandia
+2760134	Aalsmeer	52.25917	4.75972	22991	Aalsmeer	nh+Nord-Holland+Noord-Holland	Hollandia
+777019	Vardø	70.37048	31.11066	2075	Vardő+Vardø		Norvégia
+779683	Hammerfest	70.66336	23.68209	6788	Hammerfest község		Norvégia
+3133895	Tromsø	69.6489	18.95508	52436	Tromsø	Troms	Norvégia
+3137942	Sola	58.88854	5.65285	0	Sola község	Rogaland	Norvégia
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norvégia
+3144987	Narvik	68.43838	17.4272	14114	Narvik	Nordland	Norvégia
+3160881	Bodø	67.28	14.40501	34073	Bodø	Nordland	Norvégia
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norvégia
+3162657	Asker	59.83333	10.43721	0	Asker község		Norvégia
+2206854	Gisborne	-38.65333	178.00417	34274	East Cape		Új-Zéland
+287286	Muscat	23.58413	58.40778	797000	Maszkat		Omán
+288967	Seeb	23.67027	58.18911	237816	Szíb		Omán
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Peru
+3941584	Cusco	-13.52264	-71.96734	312140	Cuzco		Peru
+1164408	Sukkur	27.70323	68.85889	417767	Szukkúr	Szindh	Pakisztán
+1166993	Rawalpindi	33.6007	73.0679	1743101	Ravalpindi	Punjab	Pakisztán
+1167528	Quetta	30.18414	67.00141	733675	Kvetta	Balochistān	Pakisztán
+1168197	Peshawar	34.008	71.57849	1218773	Pesavar		Pakisztán
+1172451	Lahore	31.558	74.35071	6310888	Lahor	Punjab	Pakisztán
+1174872	Karachi	24.8608	67.0104	11624219	Karacsi	Szindh	Pakisztán
+1176615	Islamabad	33.72148	73.04329	601600	Iszlámábád	Islāmābād	Pakisztán
+1176734	Hyderabad	25.39242	68.37366	1386330	Hiderábád	Szindh	Pakisztán
+756135	Warsaw	52.22977	21.01178	1702139	Varsó	Mazowieckie	Lengyelország
+757026	Tarnów	50.01381	20.98698	117799	Tarnów	Małopolskie	Lengyelország
+758282	Stary Sącz	49.56364	20.63496	8959	Ószandec	Małopolskie	Lengyelország
+758633	Sokołów Małopolski	50.22909	22.11968	3975	Sokołów Małopolski	Podkarpackie	Lengyelország
+758973	Sławatycze	51.76338	23.5546	2647	Sławatycze	Lubelskie	Lengyelország
+759591	Sanok	49.55573	22.2056	39684	Sánók	Podkarpackie	Lengyelország
+759734	Rzeszów	50.04132	21.99901	158382	Rzeszów	Podkarpackie	Lengyelország
+760778	Radom	51.40253	21.14714	226794	Radom	Mazowieckie	Lengyelország
+763523	Nowy Targ	49.47783	20.03228	33763	Nowy Targ	Małopolskie	Lengyelország
+763534	Nowy Sącz	49.62177	20.69705	84376	Újszandec	Małopolskie	Lengyelország
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lubelskie	Lengyelország
+765876	Lublin	51.25	22.56667	360044	Lublin	Lubelskie	Lengyelország
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Lengyelország
+769250	Kielce	50.87033	20.62752	208598	Kielce+http://www.um.kielce.pl/	Świętokrzyskie	Lengyelország
+774747	Busko-Zdrój	50.47078	20.71884	17095	Busko-Zdrój	Świętokrzyskie	Lengyelország
+776069	Białystok	53.13333	23.16433	291855	Białystok	Podlaskie	Lengyelország
+3079986	Zubrzyca Górna	49.56174	19.64973	2987	Felsőzubrica	Małopolskie	Lengyelország
+3080165	Zielona Góra	51.93548	15.50643	118433	Zielona Góra	Lubuskie	Lengyelország
+3080985	Zabrze	50.32492	18.78576	192177	Zabrze	Śląskie	Lengyelország
+3081368	Wrocław	51.1	17.03333	634893	Wrocław	Dolnośląskie	Lengyelország
+3081741	Włocławek	52.64817	19.0678	120339	Włocławek	Kujawsko-Pomorskie	Lengyelország
+3082197	Wieluń	51.22097	18.56964	24384	Wieluń	Łódzkie	Lengyelország
+3082707	Wałbrzych	50.77141	16.28432	127431	Wałbrzych	Dolnośląskie	Lengyelország
+3082914	Tychy	50.13717	18.96641	130000	Tychy	Śląskie	Lengyelország
+3083271	Toruń	53.01375	18.59814	208717	Toruń	Kujawsko-Pomorskie	Lengyelország
+3083829	Szczecin	53.42894	14.55302	407811	Szczecin		Lengyelország
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Lengyelország
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Śląskie	Lengyelország
+3084840	Stargard	53.33672	15.0499	71224	Stargard		Lengyelország
+3085128	Sosnowiec	50.28682	19.10385	227295	Sosnowiec	Śląskie	Lengyelország
+3086586	Rybnik	50.09713	18.54179	142510	Rybnik	Śląskie	Lengyelország
+3086800	Ruda Śląska	50.2584	18.85632	146189	Ruda Śląska	Śląskie	Lengyelország
+3088574	Podwilk	49.5476	19.73874	2396	Podvilk	Małopolskie	Lengyelország
+3088825	Płock	52.54682	19.70638	127474	Płock	Mazowieckie	Lengyelország
+3089123	Piekielnik	49.47688	19.7681	2314	Pekelnik	Małopolskie	Lengyelország
+3089578	Pabianice	51.66446	19.35473	70542	Pabianice	Łódzkie	Lengyelország
+3089658	Oświęcim	50.03437	19.21037	41143	Oświęcim	Małopolskie	Lengyelország
+3090048	Opole	50.67211	17.92533	127676	Opole	Opolskie	Lengyelország
+3091831	Mikołów	50.17103	18.9041	38821	Miklós	Śląskie	Lengyelország
+3092080	Miastko	54.00283	16.98263	10954	Miásztkó	Pomorskie	Lengyelország
+3093133	Łódź	51.75	19.46667	768755	Łódź	Łódzkie	Lengyelország
+3093282	Lipnica Wielka	49.47404	19.63883	4100	Alsólipnica	Małopolskie	Lengyelország
+3093283	Lipnica Mała	49.51507	19.63497	2537	Felsőlipnica	Małopolskie	Lengyelország
+3094802	Kraków	50.06143	19.93658	755050	Krakkó	Małopolskie	Lengyelország
+3095049	Koszalin	54.19438	16.17222	107450	Koszalin		Lengyelország
+3095797	Koło	52.20024	18.63865	23493	Koło	Wielkopolskie	Lengyelország
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Lengyelország
+3096880	Kalisz	51.76109	18.09102	108759	Kalisz	Wielkopolskie	Lengyelország
+3097391	Jastrzębie Zdrój	49.95542	18.57479	95813	Jastrzębie-Zdrój	Śląskie	Lengyelország
+3097528	Jarocin	51.97266	17.50256	25665	Jarocin	Wielkopolskie	Lengyelország
+3097823	Jabłonka	49.47968	19.6937	4767	Jablonka	Małopolskie	Lengyelország
+3097902	Iława	53.59601	19.56849	32557	Iława		Lengyelország
+3098722	Gorzów Wielkopolski	52.73679	15.22878	124430	Gorzów Wielkopolski	Lubuskie	Lengyelország
+3099112	Gniezno	52.53481	17.58259	70269	Gniezno	Wielkopolskie	Lengyelország
+3099213	Głogów	51.66361	16.0845	68530	Głogów	Dolnośląskie	Lengyelország
+3099230	Gliwice	50.29761	18.67658	198835	Gliwice	Śląskie	Lengyelország
+3099424	Gdynia	54.51889	18.53188	253730	Gdynia	Pomorskie	Lengyelország
+3099434	Gdańsk	54.35205	18.64637	461865	Gdansk+Gdańsk	Pomorskie	Lengyelország
+3099759	Elbląg	54.1522	19.40884	127558	Elbląg		Lengyelország
+3100796	Dąbrowa Górnicza	50.31818	19.2374	130601	Dąbrowa Górnicza	Śląskie	Lengyelország
+3100946	Częstochowa	50.79646	19.12409	248125	Częstochowa	Śląskie	Lengyelország
+3101453	Chyżne	49.42672	19.66956	1069	Chizsne	Małopolskie	Lengyelország
+3101619	Chorzów	50.30582	18.9742	113430	Chorzów	Śląskie	Lengyelország
+3101787	Chełmża	53.18463	18.60466	15403	Chełmża	Kujawsko-Pomorskie	Lengyelország
+3101950	Bytom	50.34802	18.93282	189186	Bytom	Śląskie	Lengyelország
+3102014	Bydgoszcz	53.1235	18.00762	366452	Bydgoszcz	Kujawsko-Pomorskie	Lengyelország
+3103402	Bielsko-Biala	49.82245	19.04686	176515	Bielsko-Biała	Śląskie	Lengyelország
+281133	Gaza	31.50161	34.46672	410000	Gáza	Gázai övezet	Palesztin Terület
+282239	Ramallah	31.89964	35.20422	24599	Rámalláh		Palesztin Terület
+282615	Nablus	32.22111	35.25444	130326	Náblusz		Palesztin Terület
+284315	Bethlehem	31.70487	35.20376	29019	Betlehem		Palesztin Terület
+284899	Jericho	31.86667	35.45	19783	Jerikó		Palesztin Terület
+285066	Hebron	31.52935	35.0938	160470	Hebron		Palesztin Terület
+2267057	Lisbon	38.71667	-9.13333	517802	Lisszabon	Lisszabon+Lisboa	Portugália
+2267827	Funchal	32.66568	-16.92547	100847	Funchal		Portugália
+2268326	Fátima	39.62071	-8.65237	11798	Fátima	Santarém	Portugália
+2732438	Vila Real	41.30062	-7.74413	17001	Vila Real	Vila Real	Portugália
+2735943	Porto	41.14961	-8.61099	249633	Porto	Porto	Portugália
+2738752	Guimarães	41.44443	-8.29619	40604	Guimarães	Braga	Portugália
+2740637	Coimbra	40.20564	-8.41955	106582	Coimbra	Coimbra	Portugália
+2742032	Braga	41.55032	-8.42005	121394	Braga	Braga	Portugália
+3439389	Asunción	-25.30066	-57.63591	1482200	Asunción		Paraguay
+662217	Zetea	46.38333	25.36667	5670	Zetelaka		Románia
+662266	Zau de Câmpie	46.61382	24.1308	2393	Mezőzáh	Maros megye+Maros	Románia
+662270	Zăuan	47.22495	22.66328	1163	Zovány+Szilágyzovány		Románia
+662334	Zalău	47.2	23.05	63232	Zilah		Románia
+662373	Zăbala	45.9	26.18333	4729	Zabola		Románia
+662455	Voșlăbeni	46.65	25.63333	1176	Vasláb		Románia
+662570	Vlăhiţa	46.35	25.51667	6922	Szentegyháza		Románia
+662704	Viscri	46.05522	25.09389	2476	Szászfehéregyháza		Románia
+662767	Vârghiş	46.13333	25.53333	1876	Vargyas		Románia
+663100	Vatra Dornei	47.35	25.36667	16054	Dornavátra		Románia
+663111	Vaţa de Jos	46.18333	22.6	4239	Alváca		Románia
+663118	Vaslui	46.63333	27.73333	69225	Vaslui+Vászló		Románia
+663158	Vărşag	46.51667	25.35	1493	Székelyvarság		Románia
+663237	Văliug	45.23333	22.03333	953	Ferenczfalva		Románia
+663692	Valea lui Mihai	47.51667	22.15	10240	Érmihályfalva	Bihar megye	Románia
+664007	Vadu Izei	47.88821	23.93209	2336	Farkasrév	Máramaros	Románia
+664202	General Berthelot	45.61667	22.88333	239	Alsófarkadin		Románia
+664212	Arini	46.35	27.18333	1295	Magyarfalu		Románia
+664460	Turda	46.56667	23.78333	54586	Torda	Kolozs megye+Kolozs	Románia
+664511	Tulgheş	46.95	25.76667	3543	Tölgyes		Románia
+664518	Tulcea	45.16667	28.8	92475	Tulcsa		Románia
+664845	Tohanu Nou	45.55208	25.38622	1393	Újtohán		Románia
+664963	Târnăveni	46.33191	24.29662	28634	Dicsőszentmárton	Maros megye+Maros	Románia
+665000	Târgu Secuiesc	46	26.13333	20067	Kézdivásárhely		Románia
+665002	Târgu Ocna	46.27899	26.61301	13127	Aknavásár		Románia
+665003	Târgu Neamţ	47.2	26.36667	20473	Nemetvásár		Románia
+665004	Târgu-Mureş	46.54245	24.55747	146863	Marosvásárhely+Vásárhely	Maros megye+Maros	Románia
+665010	Târgu Jiu	45.05	23.28333	97179	Zsilvásárhely		Románia
+665024	Târgovişte	44.92543	25.4567	88435	Târgovişte	Dâmboviţa	Románia
+665087	Timişoara	45.75372	21.22571	315053	Temesvár	Temes megye+Temes	Románia
+665104	Tileagd	47.06667	22.2	6994	Telegd	Bihar megye	Románia
+665268	Teliucu Inferior	45.71667	22.88333	2527	Alsótelek		Románia
+665304	Telciu	47.43333	24.4	5314	Telcs	Beszterce-Naszód megye	Románia
+665355	Tecuci	45.84973	27.43441	41154	Tekucs		Románia
+665377	Tazlău	46.71667	26.46667	3002	Tázló		Románia
+665382	Tăuții-Măgherăuș	47.65	23.48333	2761	Miszmogyorós	Máramaros	Románia
+665497	Tărlungeni	45.63333	25.75	7219	Tartrang		Románia
+665521	Tarcău	46.86667	26.13333	3504	Tarkő		Románia
+665560	Tămășeu	47.22116	21.9276	991	Paptamási+Tamási	Bihar megye	Románia
+665820	Şugag	45.76667	23.63333	3175	Sugág		Románia
+665850	Suceava	47.63333	26.25	105796	Szucsáva		Románia
+666126	Stânceni	46.98333	25.23333	692	Gödemesterháza	Maros megye+Maros	Románia
+666395	Sovata	46.58333	25.06667	11465	Szováta	Maros megye+Maros	Románia
+666524	Şoimuş	45.91667	22.9	3502	Marossolymos		Románia
+666767	Slatina	44.43333	24.36667	78988	Slatina	Olt megye	Románia
+666770	Slănic-Moldova	46.22308	26.47413	4955	Szlanikfürdő		Románia
+666830	Siret	47.95	26.06667	9246	Szeretvásár		Románia
+666907	Sântimbru	46.28126	25.85439	2086	Szentimre		Románia
+666973	Sânnicolau Mare	46.08333	20.63333	12888	Nagyszentmiklós	Temes megye+Temes	Románia
+667004	Sânmărtin	47.00953	24.07811	296	Szépkenyerűszentmárton	Kolozs megye+Kolozs	Románia
+667034	Sângeorgiu de Mureş	46.5696	24.59453	7776	Marosszentgyörgy	Maros megye+Maros	Románia
+667055	Sândominic	46.584	25.78028	6306	Csíkszentdomokos		Románia
+667065	Sâncrai	46.36667	25.31667	1105	Székelyszentkirály		Románia
+667078	Șinca Nouă	45.69457	25.24348	1466	Újsinka		Románia
+667091	Sinaia	45.35	25.55	11918	Sinaia	Prahova megye	Románia
+667121	Simeria	45.85	23.01667	13827	Piski		Románia
+667141	Sâmbăta de Sus	45.76178	24.82053	1465	Felsőszombatfalva		Románia
+667144	Sâmbăta	46.80173	22.20357	467	Szombatság	Bihar megye	Románia
+667152	Silivașu de Câmpie	46.78333	24.3	872	Mezőszilvás	Beszterce-Naszód megye	Románia
+667227	Sighetu Marmaţiei	47.93195	23.88603	40653	Máramarossziget	Máramaros	Románia
+667262	Sic	46.93333	23.88333	2725	Szék	Kolozs megye+Kolozs	Románia
+667268	Sibiu	45.8	24.15	151894	Nagy-Szében+Nagyszeben+Szeben	Szeben megye+Szeben+Sibiu	Románia
+667303	Sfântu-Gheorghe	45.86667	25.78333	60677	Sepsiszentgyőrgy		Románia
+667873	Satu Mare	47.79926	22.86255	112490	Szatmár+Szatmár-Németi+Szatmárnémeti		Románia
+667923	Saschiz	46.18333	24.96667	2009	Szászkézd	Maros megye+Maros	Románia
+667961	Șaroș pe Târnave	46.2	24.55	1640	Szászsáros	Szeben megye+Szeben+Sibiu	Románia
+667964	Sarmizegetusa	45.51667	22.78333	1369	Sarmisegethuza		Románia
+668091	Șanț	47.45	24.9	2909	Újradna	Beszterce-Naszód megye	Románia
+668129	Salonta	46.8	21.65	17561	Nagyszalonta	Bihar megye	Románia
+668142	Săliştea de Sus	47.65	24.35	5119	Felsőszelistye	Máramaros	Románia
+668153	Sălişte	45.79633	23.88677	5660	Szelistye	Szeben megye+Szeben+Sibiu	Románia
+668278	Sadu	45.66667	24.18333	2430	Cód	Szeben megye+Szeben+Sibiu	Románia
+668297	Săcueni	47.35	22.1	7075	Székelyhíd	Bihar megye	Románia
+668304	Sacoşu Turcesc	45.65194	21.42889	3121	Törökszákos	Temes megye+Temes	Románia
+668314	Săcele	45.61674	25.71101	29918	Négyfalu		Románia
+668320	Săcel	47.63333	24.43333	3723	Szacsal+Izaszacsal	Máramaros	Románia
+668342	Săcălaz	45.75833	21.11222	6176	Szakálháza	Temes megye+Temes	Románia
+668442	Rupea	46.03333	25.21667	5610	Kőhalom		Románia
+668639	Roșia Montană	46.30669	23.13373	1556	Verespatak		Románia
+668732	Roman	46.92119	26.92646	67819	Románvásár		Románia
+668809	Râu Sadului	45.61667	24.06667	627	Riuszád	Szeben megye+Szeben+Sibiu	Románia
+668828	Râşnov	45.58333	25.45	15253	Barcarozsnyó		Románia
+668842	Râșca	46.73967	23.10625	902	Roska	Kolozs megye+Kolozs	Románia
+668900	Rimetea	46.45	23.56667	1191	Torockó		Románia
+668954	Reşiţa	45.30083	21.88917	81228	Resicabánya		Románia
+668997	Reghin	46.7742	24.70216	0	Régen+Szászrégen	Maros megye+Maros	Románia
+669156	Răşinari	45.7	24.06667	5403	Resinár	Szeben megye+Szeben+Sibiu	Románia
+669163	Răscruci	46.90569	23.7686	1522	Válaszút	Kolozs megye+Kolozs	Románia
+669289	Rădăuți	47.85	25.91667	23822	Radóc		Románia
+669354	Gârlenii de Sus	46.65414	26.79491	1626	Rácsila		Románia
+669540	Prundu Bârgăului	47.21975	24.74123	4345	Borgóprund	Beszterce-Naszód megye	Románia
+669691	Prejmer	45.71667	25.76667	8106	Prázsmár		Románia
+669704	Predeal	45.5	25.56667	5615	Predeál		Románia
+669735	Praid	46.55	25.13333	6739	Parajd		Románia
+669809	Porumbești	47.98305	22.98076	1560	Kökényesd		Románia
+669993	Poienile Izei	47.7	24.11667	1016	Sajómező	Máramaros	Románia
+670213	Poieni	46.9188	22.85826	1051	Kissebes	Kolozs megye+Kolozs	Románia
+670401	Ploscoș	46.64303	23.84663	337	Palackos+Ploszkos	Kolozs megye+Kolozs	Románia
+670474	Ploieşti	44.95	26.01667	228851	Ploieşti	Prahova megye	Románia
+670926	Pianu de Jos	45.93528	23.48912	1142	Alsópián		Románia
+670938	Petroşani	45.41667	23.36667	44187	Petrozsény		Románia
+670985	Petreştii de Jos	46.58333	23.65	1861	Magyarpeterd	Kolozs megye+Kolozs	Románia
+671136	Pericei	47.23333	22.88333	2785	Szilágyperecsen		Románia
+671229	Păuleni-Ciuc	46.4	25.83333	1711	Csíkpálfalva		Románia
+671368	Păpăuți	45.78333	26.13333	1275	Papolc		Románia
+671644	Oșorhei	47.03333	22.05	3179	Fugyivásárhely	Bihar megye	Románia
+671711	Orlat	45.75	23.96667	3193	Orlát	Szeben megye+Szeben+Sibiu	Románia
+671746	Oraviţa	45.0325	21.68944	12332	Oravicabánya		Románia
+671768	Oradea	47.0458	21.91833	206614	Nagyvárad	Bihar megye	Románia
+671948	Ogra	46.43333	24.31667	2403	Marosugra	Maros megye+Maros	Románia
+671964	Odorheiu Secuiesc	46.3	25.3	36532	Székelyudvarhely		Románia
+672021	Ocna Şugatag	47.78333	23.93333	4147	Aknasugatag	Máramaros	Románia
+672023	Ocna Sibiului	45.88333	24.05	4021	Vízakna	Szeben megye+Szeben+Sibiu	Románia
+672026	Ocna Dejului	47.11581	23.85934	2246	Désakna	Kolozs megye+Kolozs	Románia
+672110	Oarda	46.03333	23.56667	2241	Alsóváradja		Románia
+672163	Nou	45.83333	24.28333	1606	Szászújfalu	Szeben megye+Szeben+Sibiu	Románia
+672212	Nireș	47.11499	23.98092	1233	Szásznyíres+Nyíres	Kolozs megye+Kolozs	Románia
+672546	Nădlac	46.16667	20.75	8067	Nagylak		Románia
+672700	Mugeni	46.25	25.21667	5784	Bögöz		Románia
+672868	Moraviţa	45.25583	21.27028	2368	Temesmóra	Temes megye+Temes	Románia
+672905	Moldoveneşti	46.5	23.65	3618	Várfalva	Kolozs megye+Kolozs	Románia
+672912	Moldova Nouă	44.7375	21.66694	13263	Újmoldova		Románia
+672922	Moisei	47.65562	24.54011	8877	Mojszin+Majszin+Moiseu	Máramaros	Románia
+672968	Moeciu de Jos	45.48333	25.31667	4680	Alsómoécs		Románia
+673123	Mireşu Mare	47.5	23.33333	5054	Nagynyíres+Nagy-Nyíres	Máramaros	Románia
+673365	Mihai Viteazu	46.53333	23.75	5659	Alsószentmihályfalva+Szentmihály	Kolozs megye+Kolozs	Románia
+673441	Miercurea-Ciuc	46.35	25.8	41282	Csíkszereda		Románia
+673619	Mehadia	44.90083	22.36694	4336	Mehádia		Románia
+673634	Mediaş	46.16667	24.35	53040	Medgyes+Aranyosmeggyes	Szeben megye+Szeben+Sibiu	Románia
+673816	Marghita	47.35	22.33333	13871	Margitta	Bihar megye	Románia
+674413	Lunca de Sus	46.53333	25.96667	3375	Gyimesfelsőlok		Románia
+674419	Lunca de Jos	46.56667	25.98333	5152	Gyimesközéplok		Románia
+674498	Luna de Sus	46.74313	23.43539	2015	Magyarlóna	Kolozs megye+Kolozs	Románia
+674523	Luizi-Călugăra	46.53333	26.83333	4596	Lujzakalagor		Románia
+674531	Lugoj	45.68861	21.90306	43243	Lugos	Temes megye+Temes	Románia
+674536	Lueta	46.26667	25.48333	3473	Lövéte		Románia
+674975	Lăzarea	46.75	25.53333	3555	Szárhegy		Románia
+675261	Jibou	47.25896	23.25651	11183	Zsibó		Románia
+675399	Izvin	45.80034	21.46066	1396	Őszény	Temes megye+Temes	Románia
+675449	Viile Tecii	46.93333	24.48333	1125	Kolozsnagyida+Nagyida	Beszterce-Naszód megye	Románia
+675606	Ineu	46.43372	21.84048	10051	Borosjenő		Románia
+675703	Ighiu	46.15	23.51667	6294	Magyarigen+Igen		Románia
+675721	Ieud	47.67796	24.23399	4139	Jód	Máramaros	Románia
+675810	Iaşi	47.16667	27.6	318012	Jászvásár		Románia
+675918	Hunedoara	45.75	22.9	69136	Vajdahunyad		Románia
+675937	Huedin	46.86667	23.05	9395	Bánffyhunyad	Kolozs megye+Kolozs	Románia
+676277	Haţeg	45.61667	22.95	10865	Hátszeg		Románia
+676287	Hășmaș	46.5	22.08333	444	Bélhagymás		Románia
+676304	Hărman	45.71667	25.68333	4321	Szászhermány		Románia
+676438	Gurghiu	46.76667	24.85	6277	Görgényszentimre	Maros megye+Maros	Románia
+676495	Gura Râului	45.73333	23.98333	3546	Guraró	Szeben megye+Szeben+Sibiu	Románia
+677106	Giurgiu	43.88333	25.96667	69067	Gyurgyevó		Románia
+677160	Giroc	45.69417	21.23583	4250	Gyüreg	Temes megye+Temes	Románia
+677192	Girișu de Criș	47.06416	21.76108	1482	Körösgyéres	Bihar megye	Románia
+677201	Gârda de Sus	46.45	22.81667	1822	Felsőgirda		Románia
+677283	Gilău	46.73245	23.36174	7745	Gyalu	Kolozs megye+Kolozs	Románia
+677313	Ghiroda	45.76389	21.30028	4857	Győröd	Temes megye+Temes	Románia
+677357	Ghindari	46.5	24.91667	4997	Makkafalva+Makfalva	Maros megye+Maros	Románia
+677377	Ghimeş-Făget	46.58333	26.06667	5248	Gyimesbükk		Románia
+677382	Ghimbav	45.66667	25.5	4967	Vidombák		Románia
+677429	Gherla	47.03333	23.91667	23741	Szamosújvár	Kolozs megye+Kolozs	Románia
+677458	Gheorgheni	46.72292	25.60055	19777	Gyergyószentmiklós		Románia
+677463	Onesti	46.25	26.75	0	Onyest		Románia
+677479	Ghelinţa	45.95	26.23333	4702	Gelence+Gelencze		Románia
+677481	Ghelari	45.71667	22.78333	1670	Gyalár		Románia
+677667	Galda de Jos	46.18333	23.61667	4772	Alsógáld		Románia
+677697	Galaţi	45.45	28.05	294087	Galac+Galați		Románia
+677835	Fundata	45.45	25.3	990	Fundáta		Románia
+678015	Focșani	45.7	27.18333	77313	Foksány	Vrancea megye	Románia
+678089	Fizeşu Gherlii	47.01667	23.98333	2614	Ördöngösfüzes	Kolozs megye+Kolozs	Románia
+678208	Finiş	46.63333	22.31667	3624	Várasfenes	Bihar megye	Románia
+678352	Feliceni	46.26667	25.26667	2984	Felsoboldogfalva		Románia
+678355	Feleacu	46.71667	23.61667	3764	Erdöfelek	Kolozs megye+Kolozs	Románia
+678361	Feldioara	45.81667	25.6	6307	Földvár		Románia
+678459	Fălticeni	47.45	26.3	29576	Falticsén		Románia
+678499	Făgăraș	45.85	24.96667	30714	Fogaras		Románia
+678529	Eşelniţa	44.69917	22.36222	2994	Jeselnica	Mehedinţi	Románia
+678688	Dumbrăviţa	45.79694	21.2425	2644	Újszentes	Temes megye+Temes	Románia
+678817	Drobeta-Turnu Severin	44.63194	22.65611	102346	Szörényvár	Mehedinţi	Románia
+678922	Dragomireşti	47.66839	24.29111	3116	Dragomerfalva+Dragomerfalu	Máramaros	Románia
+679065	Dorohoi	47.95	26.4	30776	Dorohoj		Románia
+679084	Dorneşti	47.87174	26.0043	4371	Hadikfalva		Románia
+679167	Dofteana	46.31667	26.51667	10785	Doftána		Románia
+679177	Ștei	46.53333	22.45	6529	Vaskohsziklás	Bihar megye	Románia
+679310	Ditrău	46.81667	25.51667	5858	Gyergyóditró		Románia
+679328	Dârjiu	46.2	25.2	1160	Székelyders+Szèkelyders		Románia
+679340	Diosig	47.3	22	6529	Bihardiószeg+Diószeg	Bihar megye	Románia
+679445	Dezmir	46.76475	23.72451	1140	Dezmér	Kolozs megye+Kolozs	Románia
+679452	Deva	45.88333	22.9	67802	Déva		Románia
+679506	Deleni	46.2634	24.34119	1122	Magyarsáros	Maros megye+Maros	Románia
+679550	Dej	47.15	23.86667	38033	Dés	Kolozs megye+Kolozs	Románia
+679564	Deda	46.93333	24.9	4263	Déda	Maros megye+Maros	Románia
+679692	Deaj	46.34711	24.40206	1359	Désfalva	Maros megye+Maros	Románia
+679886	Cuzdrioara	47.16667	23.91667	2076	Kozárvár	Kolozs megye+Kolozs	Románia
+679901	Curtici	46.35	21.3	9615	Kürtös		Románia
+679907	Curtea de Argeş	45.13422	24.67409	32178	Argyasudvarhely		Románia
+679995	Cugir	45.83651	23.36998	24734	Kudzsir		Románia
+680148	Cristuru Secuiesc	46.28333	25.03333	9554	Székelykeresztúr		Románia
+680152	Cristur	45.82936	22.94323	1376	Csernakeresztúr		Románia
+680332	Craiova	44.31667	23.8	304142	Craiova		Románia
+680396	Cozmeni	46.22678	25.94209	1407	Csíkkozmás		Románia
+680430	Covasna	45.85	26.18333	10979	Kovászna		Románia
+680674	Corund	46.46667	25.18333	6091	Korond		Románia
+680676	Corunca	46.52075	24.61792	0	Koronka	Maros megye+Maros	Románia
+680701	Coroieni	47.36667	23.76667	376	Karulyfalva	Máramaros	Románia
+680836	Cordău	46.95	21.98333	1440	Kardó	Bihar megye	Románia
+680963	Constanţa	44.18073	28.63432	303399	Konstanca		Románia
+681025	Comandău	45.76667	26.26667	1034	Kommandó		Románia
+681057	Coltău	47.59837	23.52459	1583	Koltó	Máramaros	Románia
+681179	Codlea	45.7	25.45	24188	Feketehalom		Románia
+681290	Cluj-Napoca	46.76667	23.6	316748	Kolozsvár	Kolozs megye+Kolozs	Románia
+681371	Ciurila	46.65	23.55	1506	Csürülye	Kolozs megye+Kolozs	Románia
+681436	Ciumani	46.68333	25.51667	4428	Gyergyócsomafalva		Románia
+681517	Cârţişoara	45.71667	24.58333	1133	Kercisóra	Szeben megye+Szeben+Sibiu	Románia
+681845	Câmpulung Moldovenesc	47.53333	25.56667	19765	Moldvahosszúmező		Románia
+681862	Câmpina	45.12619	25.73496	41554	Campina	Prahova megye	Románia
+681865	Câmpia Turzii	46.55	23.88333	26457	Aranyosgyéres	Kolozs megye+Kolozs	Románia
+681936	Cidreag	47.98677	22.96395	1066	Csedreg		Románia
+682287	Certeju de Sus	45.96667	22.96667	3422	Felsőcsertés		Románia
+682321	Cernavodă	44.33957	28.03273	18502	Cernavodă		Románia
+682331	Cernat	45.95	26.03333	3963	Csernáton		Románia
+682442	Cehu Silvaniei	47.41177	23.17489	0	Szilágycseh		Románia
+682459	Ceuașu de Câmpie	46.63333	24.51667	1656	Mezőcsávás	Maros megye+Maros	Románia
+682483	Ceahlău	47.05	25.96667	2458	Csalhó		Románia
+682508	Cavnic	47.66667	23.86667	5072	Kapnikbánya	Máramaros	Románia
+682685	Carei	47.68333	22.46667	20775	Nagykároly		Románia
+682729	Caransebeş	45.41667	22.21667	27521	Karánsebes		Románia
+683004	Călăţele	46.76667	23.01667	2689	Kiskalota	Kolozs megye+Kolozs	Románia
+683105	Buziaş	45.64917	21.60361	7625	Buziásfürdő	Temes megye+Temes	Románia
+683123	Buzău	45.15	26.83333	130954	Bodzavásár		Románia
+683304	Bulzeștii de Sus	46.3007	22.76118	47	Felsőbulzesd		Románia
+683506	Bucharest	44.43225	26.10626	1877155	Bukarest		Románia
+683681	Brâncoveneşti	46.85632	24.75941	0	Marosvécs	Maros megye+Maros	Románia
+683716	Breţcu	46.05	26.3	3866	Bereczk		Románia
+683745	Breb	47.74854	23.90494	1307	Bréb	Máramaros	Románia
+683844	Braşov	45.64861	25.60613	276088	Brassó		Románia
+683890	Bran	45.51667	25.35	5177	Törcsvár		Románia
+683974	Brad	46.13333	22.78333	15988	Brád		Románia
+684039	Botoşani	47.75	26.66667	114783	Botosán		Románia
+684143	Borsec	46.95	25.56667	2815	Borszék		Románia
+684657	Bistriţa	47.13316	24.50011	81318	Beszterce	Beszterce-Naszód megye	Románia
+684802	Bârlad	46.23175	27.66907	67818	Barlád		Románia
+684882	Biharia	47.15	21.91667	3493	Bihar	Bihar megye	Románia
+684888	Biertan	46.13333	24.51667	2939	Berethalom	Szeben megye+Szeben+Sibiu	Románia
+684897	Bixad	46.1	25.86667	1799	Sepsibükszád		Románia
+684915	Bicaz-Chei	46.81667	25.88333	3082	Almásmező		Románia
+684976	Berzasca	44.64712	21.95428	1619	Berszászkó		Románia
+685174	Beiuş	46.66667	22.35	10721	Belényes	Bihar megye	Románia
+685233	Bazna	46.2	24.28333	3824	Bázna	Szeben megye+Szeben+Sibiu	Románia
+685337	Bârgăuani	46.98333	26.63333	1009	Bargován		Románia
+685419	Baraolt	46.07514	25.60029	9429	Barót		Románia
+685759	Băiuţ	47.61667	24	2652	Erzsébetbánya	Máramaros	Románia
+685782	Băile Tuşnad	46.15	25.85	1675	Tusnádfürdő		Románia
+685789	Băile Olăneşti	45.2	24.23333	4562	Cserépfürdő	Vâlcea	Románia
+685796	Băile Herculane	44.87972	22.4125	6022	Herkulesfürdő		Románia
+685823	Baia Sprie	47.66189	23.69215	16746	Felsőbánya	Máramaros	Románia
+685826	Baia Mare	47.65729	23.56808	136553	Nagybánya	Máramaros	Románia
+685948	Bacău	46.56718	26.91384	171396	Bákó		Románia
+686011	Avrig	45.71667	24.38333	14032	Felek	Szeben megye+Szeben+Sibiu	Románia
+686016	Avram Iancu	46.38333	22.78333	1806	Felsővidra		Románia
+686206	Ardud	47.63333	22.88333	6357	Erdőd		Románia
+686218	Arcuș	45.90077	25.77673	1248	Árkos		Románia
+686254	Arad	46.18333	21.31667	169065	Arad		Románia
+686324	Anina	45.07944	21.85694	8689	Stájerlakanina		Románia
+686431	Alțâna	45.93333	24.46667	1094	Alcina	Szeben megye+Szeben+Sibiu	Románia
+686578	Alba Iulia	46.06667	23.58333	66085	Gyulafehérvár		Románia
+686580	Albac	46.45246	22.95164	2168	Fehérvölgy		Románia
+686590	Aiud	46.31006	23.72128	28341	Nagyenyed		Románia
+686616	Agnita	45.96667	24.61667	10505	Szentágota	Szeben megye+Szeben+Sibiu	Románia
+686627	Aghireșu-Fabrici	46.8669	23.27129	3193	Egeres-gyártelep+Egeres-bányatelep	Kolozs megye+Kolozs	Románia
+686705	Acăţari	46.47975	24.63324	4719	Ákosfalva	Maros megye+Maros	Románia
+686712	Abrud	46.27406	23.06339	6122	Abrudbánya		Románia
+8436351	Sighișoara	46.22141	24.79279	34537	Segesvár	Maros megye+Maros	Románia
+10861430	Vințu de Jos	45.99462	23.48612	3113	Alvinc		Románia
+10941973	Sâniob	47.26461	22.12778	1391	Szentjobb	Bihar megye	Románia
+10942240	Racoș	46.02524	25.41075	2856	Alsórákos		Románia
+10942363	Bonțida	46.9155	23.81475	2979	Bonchida	Kolozs megye+Kolozs	Románia
+10942368	Luna	46.50659	23.91959	2392	Aranyoslóna	Kolozs megye+Kolozs	Románia
+10943036	Gurasada	45.95483	22.59491	395	Guraszáda		Románia
+11001447	Toaca	46.79975	24.9641	1871	Toka	Maros megye+Maros	Románia
+11002072	Tarna Mare	48.09175	23.19369	1951	Nagytarna		Románia
+783814	Zrenjanin	45.38361	20.38194	79773	Nagybecskerek	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+783887	Žitište	45.485	20.54972	3060	Begaszentgyörgy	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+784136	Vršac	45.11667	21.30361	36300	Versec	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+785288	Surčin	44.79306	20.28028	12575	Szurcsin városi község	Central Serbia	Szerbia
+785559	Stara Pazova	44.985	20.16083	16217	Ópazova	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+785756	Smederevo	44.66278	20.93	62000	Szendrő	Central Serbia	Szerbia
+785965	Senta	45.9275	20.07722	20302	Zenta+Szénta+Szintarév	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+786106	Sanad	45.97596	20.10816	1584	Szanád	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+786827	Požarevac	44.62133	21.18782	41736	Pozsarevác	Central Serbia	Szerbia
+787237	Pančevo	44.87083	20.64028	76654	Pancsal+Pancsaly+Pancsova	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+787274	Padej	45.82756	20.16279	3465	Padé+Szerb-Padé+Magyarpadé	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+787341	Ostojićevo	45.88863	20.16642	3395	Tiszaszentmiklós	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+787600	Novi Kneževac	46.05	20.1	8166	Kanizsa+Rév-Kanizsa+Kis-Kanizsa+Torontál-Józseffalva+Törökkanizsa	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+787610	Novi Bečej	45.59861	20.13556	0	Aracs+Törökbecse	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+787621	Nova Crnja	45.66833	20.605	2739	Magyarcsernye	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+787747	Adorjan	46.00333	20.04007	1203	Adorján	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+787855	Mol	45.76457	20.13286	7950	Mohol+Mohorréve	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+789168	Kovin	44.7475	20.97611	14250	Temes-Kubin+Kevevára	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+789518	Kikinda	45.82972	20.46528	41935	Nagykikinda	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+789600	Kanjiža	46.06667	20.05	10200	Magyarkanizsa+Kanizsa	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+789828	Jazovo	45.89876	20.2213	1261	Hódegyház+Jázova+Hodics+Hódegyháza+Jászova+Jázovó	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+790015	Inđija	45.04816	20.08165	26247	Ingyia+Indjija	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+790394	Gornji Breg	45.91995	20.01766	2536	Felsőhegy	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+790560	Golubac	44.65296	21.63199	1655	Galambóc	Central Serbia	Szerbia
+791672	Čurug	45.47221	20.06861	9231	Csurog	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+791900	Čoka	45.9425	20.14333	5414	Csóka	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+792680	Belgrade	44.80401	20.46513	1273651	Belgrád+Nándorfehérvár	Central Serbia	Szerbia
+792814	Bečej	45.61632	20.03331	25774	Óbecse+Becsej+Becse	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+793014	Bačko Petrovo Selo	45.70681	20.07928	8959	Petrovoszelló+Péterréve	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+793015	Bačko Gradište	45.53271	20.03082	5764	Földvár+Tisza-Földvár+Bácsföldvár	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+793171	Ada	45.8025	20.12583	0	Ada+Asszonyfalva	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3189595	Subotica	46.1	19.66667	100000	Szabadka	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3190922	Šid	45.12833	19.22639	0	Sid	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3191376	Šabac	44.74667	19.69	55114	Szabács	Central Serbia	Szerbia
+3191429	Ruma	45.00806	19.82222	32229	Árpatarló	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3193406	Petrovaradin	45.24667	19.87944	13917	Pétervárad	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3193540	Pećinci	44.90889	19.96639	2232	Pecsince	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3194360	Novi Sad	45.25167	19.83694	215400	Újvidék	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3196973	Kula	45.60889	19.52639	0	Kúla	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3204289	Beočin	45.20829	19.72063	0	Belcsény	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+3204793	Apatin	45.67111	18.98472	18320	Apatin	Vajdaság Autonóm Tartomány+Vajdaság	Szerbia
+461916	Zvenigovo	55.97539	48.01304	12484	Zvenyigovo		Oroszországi Föderáció
+463828	Zelenogradsk	54.95893	20.47668	12846	Zelenogradszk	Kaliningrad	Oroszországi Föderáció
+468902	Yaroslavl	57.62987	39.87368	606730	Jaroszlavl	Jaroslavl	Oroszországi Föderáció
+470905	Vuktyl	63.85667	57.30944	13693	Vuktil	Komiföld	Oroszországi Föderáció
+471430	Votkinsk	57.04865	53.98717	98633	Votkinszk		Oroszországi Föderáció
+472459	Vologda	59.2239	39.88398	314900	Vologda	Vologda	Oroszországi Föderáció
+472757	Volgograd	48.71939	44.50183	1011417	Volgográd+Volgograd	Volgograd	Oroszországi Föderáció
+473247	Vladimir	56.13655	40.39658	310024	Vlagyimir	Vladimir	Oroszországi Föderáció
+477301	Valday	57.97472	33.2525	18549	Valdaj	Novgorod	Oroszországi Föderáció
+477940	Ust-Tsilma	65.44104	52.14978	5100	Uszty-Cilma	Komiföld	Oroszországi Föderáció
+479123	Ulyanovsk	54.32824	48.38657	640680	Uljanovszk	Uljanovszki terület+Uljanovsk	Oroszországi Föderáció
+483684	Temnikov	54.63023	43.21483	8252	Tyemnyikov		Oroszországi Föderáció
+485239	Syktyvkar	61.67642	50.80994	230139	Sziktivkar	Komiföld	Oroszországi Föderáció
+487495	Sterlitamak	53.62462	55.95015	267231	Sztyerlitamak		Oroszországi Föderáció
+490067	Sovetsk	57.58475	48.95844	17869	Szovjetszk	Kirov	Oroszországi Föderáció
+490068	Sovetsk	55.08392	21.87851	43309	Szovjetszk	Kaliningrad	Oroszországi Föderáció
+490276	Sosnovka	56.25496	51.28419	12354	Szosznovka	Kirov	Oroszországi Föderáció
+490391	Sosnogorsk	63.60229	53.88175	29343	Szosznogorszk	Komiföld	Oroszországi Föderáció
+490466	Sortavala	61.71233	30.70953	20760	Szortavala+Sortavala	Karélia+Karél Köztársaság	Oroszországi Föderáció
+491023	Solikamsk	59.6316	56.7685	100812	Szolikamszk	Permi határterület+Perm	Oroszországi Föderáció
+491687	Smolensk	54.7818	32.0401	320991	Szmolenszk+Смоленск	Smolensk	Oroszországi Föderáció
+493463	Shumerlya	55.5005	46.41288	35220	Sumerlja		Oroszországi Föderáció
+496278	Severomorsk	69.06889	33.41622	53921	Szeveromorszk	Murmansk	Oroszországi Föderáció
+498525	Sarov	54.93583	43.32352	88000	Szarov	Nizjnij Novgorod	Oroszországi Föderáció
+498677	Saratov	51.54056	46.00861	863725	Szaratov	Saratov	Oroszországi Föderáció
+498687	Sarapul	56.47633	53.79782	98830	Szarapul		Oroszországi Föderáció
+498698	Saransk	54.1838	45.1749	303394	Szaranszk		Oroszországi Föderáció
+498817	Saint Petersburg	59.93863	30.31413	5028000	Szentpétervár+Санкт-Петербург	Szentpétervár	Oroszországi Föderáció
+499099	Samara	53.20007	50.15	1134730	Szamara	Samara	Oroszországi Föderáció
+499292	Salavat	53.38365	55.90773	159893	Szalavat		Oroszországi Föderáció
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rosztov-na-Donu		Oroszországi Föderáció
+501183	Rostov	57.1914	39.41394	33803	Rosztov+Ростов	Jaroslavl	Oroszországi Föderáció
+504341	Pskov	57.8136	28.3496	201990	Pszkov	Pskov	Oroszországi Föderáció
+507624	Pokhvistnevo	53.65237	52.12738	28300	Pohvisztnyevo+Похвистнево	Samara	Oroszországi Föderáció
+509026	Plesetsk	62.70804	40.29159	10870	Pleszeck		Oroszországi Föderáció
+509820	Petrozavodsk	61.78491	34.34691	265025	Petrozavodszk	Karélia+Karél Köztársaság	Oroszországi Föderáció
+512052	Pavlovsk	59.68333	30.43472	16087	Pavlovszk	Szentpétervár	Oroszországi Föderáció
+514706	Osa	57.283	55.4589	23292	Osza	Permi határterület+Perm	Oroszországi Föderáció
+515267	Omutninsk	58.67001	52.1932	25364	Omutnyinszk	Kirov	Oroszországi Föderáció
+516073	Okhansk	57.7203	55.3882	7920	Ohanszk	Permi határterület+Perm	Oroszországi Föderáció
+516576	Nytva	57.9437	55.3396	20525	Nitva	Permi határterület+Perm	Oroszországi Föderáció
+518659	Novokuybyshevsk	53.0959	49.9462	111800	Novokujbisevszk	Samara	Oroszországi Föderáció
+518970	Novocherkassk	47.42096	40.09185	166974	Novocserkasszk		Oroszországi Föderáció
+520041	Nolinsk	57.55962	49.93629	10282	Nolinszk	Kirov	Oroszországi Föderáció
+522594	Nerekhta	57.45881	40.57471	25352	Nyerehta	Kostroma	Oroszországi Föderáció
+522942	Neftekamsk	56.092	54.2661	126805	Nyeftyekamszk		Oroszországi Föderáció
+523812	Mytishchi	55.91163	37.73076	160542	Mityiscsi+Мытищи	Moszkvai terület+MO	Oroszországi Föderáció
+524305	Murmansk	68.97917	33.09251	319263	Murmanszk	Murmansk	Oroszországi Föderáció
+524901	Moscow	55.75222	37.61556	10381222	Moszkva+Moskva		Oroszországi Föderáció
+534341	Lomonosov	59.90612	29.77253	42505	Lomonoszov	Szentpétervár	Oroszországi Föderáció
+535121	Lipetsk	52.60311	39.57076	515655	Lipeck	Lipetsk	Oroszországi Föderáció
+539817	Kudymkar	59.01306	54.65556	31596	Kudimkar	Permi határterület+Perm	Oroszországi Föderáció
+542212	Krasnoslobodsk	54.4253	43.78963	10748	Krasznoszlobodszk		Oroszországi Föderáció
+542327	Krasnokamsk	58.0796	55.7552	52689	Krasznokamszk	Permi határterület+Perm	Oroszországi Föderáció
+542423	Krasnoborsk	61.55978	45.93396	4838	Krasznoborszk		Oroszországi Föderáció
+543436	Kovylkino	54.03876	43.91385	21400	Kovilkino		Oroszországi Föderáció
+543704	Kotlas	61.25745	46.64963	59180	Kotlasz		Oroszországi Föderáció
+543878	Kostroma	57.76647	40.92686	277656	Kosztroma	Kostroma	Oroszországi Föderáció
+548333	Kirs	59.33882	52.24467	11385	Kirsz	Kirov	Oroszországi Föderáció
+548408	Kirov	58.59665	49.66007	457383	Kirov	Kirov	Oroszországi Föderáció
+551487	Kazan	55.78874	49.12214	1104738	Kazán		Oroszországi Föderáció
+552256	Karpogory	64.00189	44.44513	4441	Karpogori		Oroszországi Föderáció
+554234	Kaliningrad	54.70649	20.51095	434954	Kalinyingrád	Kaliningrad	Oroszországi Föderáció
+554840	Izhevsk	56.84976	53.20448	631038	Izsevszk		Oroszországi Föderáció
+555312	Ivanovo	56.99719	40.97139	420839	Ivanovo+Иваново	Ivanovo	Oroszországi Föderáció
+556268	Ostrovnoy	68.05306	39.51306	4746	Osztrovnoj	Murmansk	Oroszországi Föderáció
+556318	Insar	53.86531	44.37382	8837	Inszar		Oroszországi Föderáció
+558209	Gubakha	58.83862	57.55325	26605	Gubaha	Permi határterület+Perm	Oroszországi Föderáció
+559475	Gorodovikovsk	46.08785	41.93353	9809	Gorodovikovszk+Городовиковск		Oroszországi Föderáció
+559752	Gornozavodsk	58.37583	58.32111	12796	Gornozavodszk	Permi határterület+Perm	Oroszországi Föderáció
+561887	Gatchina	59.57639	30.12833	89761	Gatcsina		Oroszországi Föderáció
+562161	Galich	58.37884	42.34633	18594	Galics	Kostroma	Oroszországi Föderáció
+563514	Elista	46.30778	44.25583	106971	Eliszta		Oroszországi Föderáció
+564654	Dubovka	49.05825	44.829	15217	Dubovkai járás	Volgograd	Oroszországi Föderáció
+567434	Chusovoy	58.3013	57.8131	50205	Csuszovoj	Permi határterület+Perm	Oroszországi Föderáció
+569223	Cherepovets	59.13333	37.9	315738	Cserepovec	Vologda	Oroszországi Föderáció
+569696	Cheboksary	56.13222	47.25194	446781	Csebokszári+Csebokszari+Чебоксары		Oroszországi Föderáció
+571159	Buguruslan	53.6554	52.442	53511	Buguruszlan	Orenburg	Oroszországi Föderáció
+575410	Boksitogorsk	59.47405	33.84853	17366	Bokszitogorszk		Oroszországi Föderáció
+576116	Blagoveshchensk	55.035	55.97806	34238	Blagovescsenszk		Oroszországi Föderáció
+576317	Birsk	55.42111	55.54278	41014	Birszk		Oroszországi Föderáció
+577206	Berezniki	59.4091	56.8204	167748	Bereznyiki	Permi határterület+Perm	Oroszországi Föderáció
+577881	Beloretsk	53.96306	58.39806	70468	Beloreck		Oroszországi Föderáció
+578120	Belebey	54.11667	54.11667	62582	Belebej		Oroszországi Föderáció
+578152	Belaya Kholunitsa	58.84	50.85278	11658	Belaja Holunyica	Kirov	Oroszországi Föderáció
+579760	Bagrationovsk	54.38714	20.64372	7306	Bagratyionovszk	Kaliningrad	Oroszországi Föderáció
+580054	Azov	47.10779	39.41648	82133	Azov		Oroszországi Föderáció
+580497	Astrakhan	46.34968	48.04076	502533	Asztrahán	Astrakhan	Oroszországi Föderáció
+580724	Arzamas	55.39485	43.83992	109479	Arzamasz	Nizjnij Novgorod	Oroszországi Föderáció
+583041	Aleksandrovsk	59.1581	57.5695	15486	Alekszandrovszk	Permi határterület+Perm	Oroszországi Föderáció
+863061	Usinsk	65.99389	57.52806	44078	Uszinszk	Komiföld	Oroszországi Föderáció
+1485357	Zavodoukovsk	56.5042	66.55153	25682	Zavodoukovszk		Oroszországi Föderáció
+1486209	Yekaterinburg	56.8519	60.6122	1349772	Jekatyerinburg	Sverdlovsk	Oroszországi Föderáció
+1488754	Tyumen	57.15222	65.52722	519119	Tyumeny		Oroszországi Föderáció
+1489425	Tomsk	56.49771	84.97437	485519	Tomszk	Tomsk	Oroszországi Föderáció
+1490624	Surgut	61.25	73.41667	300367	Szurgut	Khanty-Mansiyskiy Avtonomnyy Okrug	Oroszországi Föderáció
+1492517	Shadrinsk	56.0852	63.6335	79479	Sadrinszk	Kurgan	Oroszországi Föderáció
+1493197	Salekhard	66.53	66.60194	38025	Szalehard+Салехард	Yamalo-Nenetskiy Avtonomnyy Okrug	Oroszországi Föderáció
+1496153	Omsk	54.99244	73.36859	1129281	Omszk	Omsk	Oroszországi Föderáció
+1496747	Novosibirsk	55.0415	82.9346	1419007	Novoszibirszk	Novosibirsk	Oroszországi Föderáció
+1496990	Novokuznetsk	53.7557	87.1099	539616	Novokuznyeck+Новокузнецк	Kemerovo	Oroszországi Föderáció
+1497337	Norilsk	69.3535	88.2027	140800	Norilszk	Krasnoyarskiy Kray	Oroszországi Föderáció
+1497549	Nizhneudinsk	54.9076	99.0276	38723	Nyizsnyeugyinszk	Irkutsk	Oroszországi Föderáció
+1498894	Miass	55.045	60.10833	167500	Miassz	Tsjeljabinsk	Oroszországi Föderáció
+1503335	Kirovgrad	57.42972	60.05972	22685	Kirovgrád	Sverdlovsk	Oroszországi Föderáció
+1503772	Khanty-Mansiysk	61.00417	69.00194	67800	Hanti-Manszijszk	Khanty-Mansiyskiy Avtonomnyy Okrug	Oroszországi Föderáció
+1507116	Dudinka	69.40583	86.17778	23619	Dugyinka	Krasnoyarskiy Kray	Oroszországi Föderáció
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Cseljabinszk	Tsjeljabinsk	Oroszországi Föderáció
+2013348	Vladivostok	43.10562	131.87353	587022	Vlagyivosztok	Primorskiy Kray	Oroszországi Föderáció
+2013392	Vilyuysk	63.74683	121.63339	9948	Viljujszk	Sakha	Oroszországi Föderáció
+2014006	Ussuriysk	43.80291	131.94578	157068	Usszurijszk	Primorskiy Kray	Oroszországi Föderáció
+2014407	Ulan-Ude	51.82721	107.60627	360278	Ulan-Ude		Oroszországi Föderáció
+2015306	Tiksi	71.69002	128.86467	5700	Tyikszi	Sakha	Oroszországi Föderáció
+2015310	Fokino	42.97429	132.40574	25827	Fokino	Primorskiy Kray	Oroszországi Föderáció
+2015842	Svirsk	53.08583	103.3325	14717	Szvirszk	Irkutsk	Oroszországi Föderáció
+2018116	Partizansk	43.12165	133.12347	42489	Partyizanszk	Primorskiy Kray	Oroszországi Föderáció
+2019326	Nerchinsk	51.98333	116.58333	15360	Nyercsinszk	Zabaykalsky	Oroszországi Föderáció
+2019528	Nakhodka	42.81384	132.87348	146920	Nahodka	Primorskiy Kray	Oroszországi Föderáció
+2019951	Mirny	62.53528	113.96111	40308	Mirnij	Sakha	Oroszországi Föderáció
+2020812	Lesozavodsk	45.47885	133.42825	41778	Leszozavodszk	Primorskiy Kray	Oroszországi Föderáció
+2022083	Kirensk	57.78528	108.11194	13308	Kirenszk	Irkutsk	Oroszországi Föderáció
+2022890	Khabarovsk	48.48271	135.08379	579000	Habarovszk	Khabarovskiy Kray	Oroszországi Föderáció
+2023469	Irkutsk	52.29778	104.29639	586695	Irkutszk	Irkutsk	Oroszországi Föderáció
+2026609	Blagoveshchensk	50.27961	127.5405	221296	Blagovescsenszk	Amur	Oroszországi Föderáció
+2026643	Birobidzhan	48.79284	132.92386	76146	Birobidzsan		Oroszországi Föderáció
+2027667	Angarsk	52.53667	103.88639	243158	Angarszk	Irkutsk	Oroszországi Föderáció
+2118647	Vilyuchinsk	52.9311	158.40469	25204	Viljucsinszk	Kamtsjatka	Oroszországi Föderáció
+2119441	Yuzhno-Sakhalinsk	46.95407	142.73603	176484	Juzsno-Szahalinszk	Sakhalin	Oroszországi Föderáció
+2120864	Susuman	62.78075	148.15396	7367	Szuszuman	Magadan	Oroszországi Föderáció
+2122104	Petropavlovsk-Kamchatsky	53.04444	158.65076	187282	Petropavlovszk-Kamcsatszkij	Kamtsjatka	Oroszországi Föderáció
+2122605	Okhotsk	59.362	143.21468	5570	Ohotszk	Khabarovskiy Kray	Oroszországi Föderáció
+2127202	Anadyr	64.73424	177.5103	10332	Anadir	Chukotskiy Avtonomnyy Okrug	Oroszországi Föderáció
+202905	Gisenyi	-1.70278	29.25639	83623	Gisenyi		Ruanda
+105343	Jeddah	21.54238	39.19797	2867446	Dzsidda	Makkah	Szaud-Arábia+Szaúd-Arábia
+108410	Riyadh	24.68773	46.72185	4205961	Rijád		Szaud-Arábia+Szaúd-Arábia
+109223	Medina	24.46861	39.61417	1300000	Medina		Szaud-Arábia+Szaúd-Arábia
+2108502	Honiara	-9.43333	159.95	56298	Honiara		Salamon-szigetek
+365137	Omdurman	15.64453	32.47773	1200000	Omdurmán		Szudán
+372753	Kassala	15.45099	36.39998	401477	Kaszala		Szudán
+377039	Port Sudan	19.61745	37.21644	489725	Port Szudán		Szudán
+379252	Khartoum	15.55177	32.53241	1974647	Kartúm		Szudán
+604490	Luleå	65.58415	22.15465	43574	Luleå	Norrbottens Län	Svédország+Ruoččii
+2666199	Uppsala	59.85882	17.63889	149245	Uppsala	Uppsala Län	Svédország+Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Svédország+Ruoččii
+2674672	Gamla Stan	59.32627	18.07251	3000	Gamla stan	Stockholms Län	Svédország+Ruoččii
+2676209	Södermalm	59.31278	18.07577	127323	Södermalm	Stockholms Län	Svédország+Ruoččii
+2679302	Sigtuna	59.61731	17.72361	9074	Sigtuna+Sigtuna járás	Stockholms Län	Svédország+Ruoččii
+2685828	Östermalm	59.33879	18.08487	36418	Stockholm kerületei	Stockholms Län	Svédország+Ruoččii
+2692969	Malmö	55.60587	13.00073	301706	Malmö	Skåne län	Svédország+Ruoččii
+2693678	Lund	55.70584	13.19321	87244	Lund	Skåne län	Svédország+Ruoččii
+2698691	Kungsholmen	59.33183	18.04118	69363	Kungsholmen	Stockholms Län	Svédország+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Svédország+Ruoččii
+2706767	Helsingborg	56.04673	12.69437	104250	Helsingborg	Skåne län	Svédország+Ruoččii
+2711537	Göteborg	57.70716	11.96679	572799	Göteborg	Västra Götaland megye+Västra Götalands län	Svédország+Ruoččii
+2716586	Ekerö	59.291	17.81212	11505	Ekerö	Stockholms Län	Svédország+Ruoččii
+3188606	Turnišče	46.62778	16.32028	1509	Bántornya		Szlovénia
+3190530	Slovenske Konjice	46.33667	15.42583	4869	Slovenske Konjice	Slovenska Konjice	Szlovénia
+3190536	Slovenj Gradec	46.51028	15.08056	7519	Slovenj Gradec		Szlovénia
+3191329	Šalovci	46.825	16.29806	426	Sal	Šalovci	Szlovénia
+3192139	Radenci	46.64201	16.03781	2201	Radenci		Szlovénia
+3192241	Ptuj	46.42005	15.87018	18164	Ptuj		Szlovénia
+3192673	Postojna	45.77435	14.21528	9183	Postojna		Szlovénia
+3193341	Piran	45.52778	13.57056	4192	Piran		Szlovénia
+3194213	Odranci	46.58667	16.28028	1693	Adorjánháza		Szlovénia
+3194351	Novo Mesto	45.80397	15.16886	23341	Novo mesto		Szlovénia
+3194648	Murska Sobota	46.6625	16.16639	11614	Muraszombat		Szlovénia
+3196359	Ljubljana	46.05108	14.50513	272220	Ljubljana		Szlovénia
+3196681	Lendava	46.56494	16.45091	3129	Alsólendva	Lendva Község+Lendva	Szlovénia
+3197373	Kranjska Gora	46.45689	13.77824	1439	Kranjska Gora		Szlovénia
+3197378	Kranj	46.23887	14.35561	36874	Kranj		Szlovénia
+3197753	Koper	45.54694	13.72944	24996	Koper		Szlovénia
+3197943	Kočevje	45.64333	14.86333	8672	Kočevje		Szlovénia
+3197983	Kobarid	46.24761	13.57907	1121	Kobarid		Szlovénia
+3199017	Izola	45.53694	13.66194	11223	Izola		Szlovénia
+3199361	Hodoš	46.82333	16.33417	228	Őrihodos	Hodos Község+Hodos	Szlovénia
+3200197	Gornja Radgona	46.67333	15.99222	3159	Regede		Szlovénia
+3203611	Bovec	46.33808	13.55245	1631	Bovec		Szlovénia
+3204854	Ajdovščina	45.88601	13.90946	6656	Ajdovščina		Szlovénia
+2729907	Longyearbyen	78.22334	15.64689	2060	Longyearbyen	Spitzbergák	Spitzbergák és Jan Mayen-szigetek
+723077	Žehra	48.9796	20.7917	2360	Zsigra+Zsegra	Eperjesi körzet+Prešovský kraj	Szlovákia
+723082	Ždiar	49.271	20.26239	1330	Zár	Eperjesi körzet+Prešovský kraj	Szlovákia
+723195	Vranov nad Topľou	48.88836	21.68479	23246	Varannó	Eperjesi körzet+Prešovský kraj	Szlovákia
+723358	Trebišov	48.62858	21.71954	22947	Tőketerebes	Kassai körzet+Košický kraj	Szlovákia
+723411	Svit	49.06014	20.20695	7445	Szvit	Eperjesi körzet+Prešovský kraj	Szlovákia
+723417	Svidník	49.30819	21.5703	12428	Felsővízköz	Eperjesi körzet+Prešovský kraj	Szlovákia
+723455	Stropkov	49.20211	21.65216	10874	Sztropkó	Eperjesi körzet+Prešovský kraj	Szlovákia
+723470	Strážske	48.8735	21.83668	4474	Őrmező	Kassai körzet+Košický kraj	Szlovákia
+723505	Stará Ľubovňa	49.29859	20.6862	16000	Ólubló	Eperjesi körzet+Prešovský kraj	Szlovákia
+723519	Spišské Podhradie	49.00088	20.75307	3780	Szepesváralja	Eperjesi körzet+Prešovský kraj	Szlovákia
+723526	Spišská Nová Ves	48.94464	20.56153	39195	Igló	Kassai körzet+Košický kraj	Szlovákia
+723529	Spišská Belá	49.18725	20.45948	6136	Szepesbéla	Eperjesi körzet+Prešovský kraj	Szlovákia
+723554	Sobrance	48.74455	22.18136	6262	Szobránc	Kassai körzet+Košický kraj	Szlovákia
+723559	Snina	48.98857	22.15099	22221	Szinna	Eperjesi körzet+Prešovský kraj	Szlovákia
+723637	Sečovce	48.70074	21.66104	7819	Gálszécs	Kassai körzet+Košický kraj	Szlovákia
+723674	Sabinov	49.10309	21.0988	12290	Kisszeben	Eperjesi körzet+Prešovský kraj	Szlovákia
+723713	Rožňava	48.66009	20.53758	19261	Rozsnyó	Kassai körzet+Košický kraj	Szlovákia
+723736	Rimavská Sobota	48.38284	20.02239	25235	Rimaszombat	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+723747	Revúca	48.68346	20.11734	13466	Nagyrőce	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+723819	Prešov	48.99839	21.23393	94718	Eperjes	Eperjesi körzet+Prešovský kraj	Szlovákia
+723866	Podolínec	49.25869	20.536	3173	Podolin	Eperjesi körzet+Prešovský kraj	Szlovákia
+724111	Moldava nad Bodvou	48.61428	20.99957	9525	Szepsi	Kassai körzet+Košický kraj	Szlovákia
+724144	Michalovce	48.75434	21.9195	40360	Nagymihály	Kassai körzet+Košický kraj	Szlovákia
+724156	Medzilaborce	49.27195	21.90073	6741	Boró+Mezőlaborc	Eperjesi körzet+Prešovský kraj	Szlovákia
+724159	Medzev	48.70041	20.89367	3667	Mecenzéf	Kassai körzet+Košický kraj	Szlovákia
+724286	Lipany	49.15376	20.96382	6130	Héthárs	Eperjesi körzet+Prešovský kraj	Szlovákia
+724294	Levoča	49.02173	20.59212	14511	Lőcse	Eperjesi körzet+Prešovský kraj	Szlovákia
+724377	Krompachy	48.91447	20.87514	8812	Korompa	Kassai körzet+Košický kraj	Szlovákia
+724443	Košice	48.71395	21.25808	236563	Kassa	Kassai körzet+Košický kraj	Szlovákia
+724503	Kežmarok	49.13571	20.43352	21391	Késmárk	Eperjesi körzet+Prešovský kraj	Szlovákia
+724516	Kavečany	48.77592	21.20587	1287	Kavocsán	Kassai körzet+Košický kraj	Szlovákia
+724627	Humenné	48.93707	21.91625	35367	Homonna	Eperjesi körzet+Prešovský kraj	Szlovákia
+724784	Giraltovce	49.11398	21.51731	4189	Girált	Eperjesi körzet+Prešovský kraj	Szlovákia
+724800	Gelnica	48.85584	20.93713	6404	Gölnicbánya	Kassai körzet+Košický kraj	Szlovákia
+724893	Dobšiná	48.82073	20.36988	4896	Dobsina	Kassai körzet+Košický kraj	Szlovákia
+725168	Bardejov	49.29175	21.27271	33060	Bártfa	Eperjesi körzet+Prešovský kraj	Szlovákia
+3056459	Zvolen	48.57442	19.15324	44502	Zólyom	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3056495	Zlaté Moravce	48.38553	18.40063	15618	Aranyosmarót	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3056508	Žilina	49.22315	18.73941	85985	Zsolna	Zsolnai körzet+Žilinský kraj	Szlovákia
+3056547	Želiezovce	48.05075	18.65421	7522	Zselíz	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3056589	Žarnovica	48.48123	18.71565	6596	Zsarnóca	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3056683	Vrútky	49.11328	18.91714	7298	Ruttka	Zsolnai körzet+Žilinský kraj	Szlovákia
+3056697	Vrbové	48.61973	17.7226	6249	Verbó	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3056711	Vráble	48.24371	18.30846	9493	Verebély	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3056825	Veľký Krtíš	48.21059	19.35043	12608	Nagykürtös	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3057063	Tvrdošín	49.337	19.556	9544	Turdossin	Zsolnai körzet+Žilinský kraj	Szlovákia
+3057069	Turzovka	49.40429	18.62258	7854	Turzófalva	Zsolnai körzet+Žilinský kraj	Szlovákia
+3057086	Turčianske Teplice	48.86225	18.86048	0	Stubnyafürdő	Zsolnai körzet+Žilinský kraj	Szlovákia
+3057124	Trnava	48.37741	17.58723	69785	Nagyszombat	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3057140	Trenčín	48.89452	18.04436	58278	Trencsén	Trencséni körzet+Trenčiansky kraj	Szlovákia
+3057141	Trenčianske Teplice	48.91063	18.16691	4438	Trencsénteplic	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3057174	Topoľčany	48.56361	18.16712	0	Nagytapolcsány+Nagy Tapolcsán	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3057197	Tisovec	48.67738	19.94364	4215	Tiszolc	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3057273	Svodín	47.91054	18.49967	2649	Szőgyén	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3057304	Svätý Jur	48.25216	17.21539	4614	Szentgyörgy	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3057311	Svätý Anton	48.41923	18.9401	1172	Szentantal	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3057339	Šurany	48.08613	18.18447	10491	Nagysurány+Surány	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3057379	Štúrovo	47.79495	18.7175	11708	Párkány	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3057384	Stupava	48.27474	17.03173	8063	Stomfa	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3057602	Sládkovičovo	48.20137	17.63852	6078	Diószeg	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3057691	Senica	48.67922	17.36697	21741	Szenice	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3057692	Senec	48.21951	17.40043	14673	Szenc	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3057769	Sellye	48.15127	17.88062	24513	Sellye+Vágsellye	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3057772	Šahy	48.07408	18.94946	8061	Ipolyság+Ipoly Ságh	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3057789	Ružomberok	49.0748	19.30751	30806	Rózsahegy	Zsolnai körzet+Žilinský kraj	Szlovákia
+3057963	Púchov	49.12494	18.32597	18833	Puhó	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3058000	Prievidza	48.77446	18.6275	52987	Privigye	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3058060	Považská Bystrica	49.12153	18.42169	43936	Vágbeszterce	Trencséni körzet+Trenčiansky kraj	Szlovákia
+3058202	Piešťany	48.59479	17.82591	30000	Pöstyén	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3058210	Pezinok	48.28986	17.26664	21343	Bazin	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3058268	Partizánske	48.62861	18.38455	24370	Simony	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3058472	Nové Zámky	47.98544	18.16195	42044	Érsekújvár	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3058477	Nové Mesto nad Váhom	48.75763	17.8309	21527	Ótura+Vágújhely	Trencséni körzet+Trenčiansky kraj	Szlovákia
+3058496	Nová Dubnica	48.93479	18.14632	12358	Kiskelecsény+Újtölgyes	Trencséni körzet+Trenčiansky kraj	Szlovákia
+3058498	Nová Baňa	48.42305	18.64037	7505	Újbánya	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3058531	Nitra	48.30763	18.08453	86329	Nyitra	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3058579	Námestovo	49.4079	19.48032	8135	Námesztó	Zsolnai körzet+Žilinský kraj	Szlovákia
+3058663	Modra	48.33397	17.30711	8536	Modor	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3058780	Martin	49.06651	18.92399	60817	Turócszentmárton	Zsolnai körzet+Žilinský kraj	Szlovákia
+3058786	Marianka	48.24903	17.064	1700	Máriavölgy	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3058897	Malacky	48.43604	17.02188	17773	Malacka	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3058981	Lúčky	49.12944	19.40228	1787	Lucski	Zsolnai körzet+Žilinský kraj	Szlovákia
+3058986	Lučenec	48.33249	19.66708	28159	Losonc	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3059050	Liptovský Mikuláš	49.08061	19.62218	33509	Liptószentmiklós	Zsolnai körzet+Žilinský kraj	Szlovákia
+3059053	Liptovský Hrádok	49.03962	19.72335	8232	Liptóújvár	Zsolnai körzet+Žilinský kraj	Szlovákia
+3059101	Levice	48.21563	18.60705	37574	Léva	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3059111	Leopoldov	48.44575	17.76458	3999	Újvároska	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3059179	Kysucké Nové Mesto	49.3	18.78333	16558	Kiszucaújhely	Zsolnai körzet+Žilinský kraj	Szlovákia
+3059244	Krupina	48.3554	19.06474	7991	Korpona	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3059282	Kremnica	48.70519	18.91834	5822	Körmöcbánya	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3059436	Komárno	47.76356	18.12263	36279	Komárom+Észak-Komárom	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3059448	Kolárovo	47.92294	17.98467	10823	Gúta	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3059767	Ivanka pri Dunaji	48.18675	17.2554	6245	Pozsonyivánka	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3059796	Ilava	48.99769	18.2353	5411	Illava	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3059821	Hurbanovo	47.86984	18.19233	8153	Ógyalla	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3059865	Hrochoť,Slovakia	48.65567	19.31284	1500	Horhát	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3059870	Hriňová	48.57787	19.52574	8289	Herencsvölgy	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3060077	Holíč	48.81105	17.16238	11416	Holics	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3060095	Hlohovec	48.43174	17.8031	23930	Galgóc	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3060139	Handlová	48.7276	18.76012	18018	Nyitrabánya	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3060219	Galanta	48.19001	17.72747	16365	Galánta	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3060242	Fiľakovo	48.26757	19.82473	10198	Fülek	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3060280	Bratislava - Vajnory	48.20563	17.20759	5484	Pozsonyszőlős+Prácsa	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3060308	Dunajská Streda	47.99268	17.61211	23639	Dunaszerdahely	Nagyszombati körzet+Trnavský kraj	Szlovákia
+3060317	Dudince	48.17135	18.88782	1503	Gyűgy	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3060346	Dubnica nad Váhom	48.95981	18.16634	26617	Máriatölgyes	Trencséni körzet+Trenčiansky kraj	Szlovákia
+3060405	Dolný Kubín	49.20983	19.30341	18995	Alsókubin	Zsolnai körzet+Žilinský kraj	Szlovákia
+3060589	Detva	48.56082	19.41954	15020	Gyetva	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3060835	Čadca	49.43503	18.78895	24670	Csaca	Zsolnai körzet+Žilinský kraj	Szlovákia
+3060852	Bytča	49.22404	18.55878	11279	Nagybiccse	Zsolnai körzet+Žilinský kraj	Szlovákia
+3060950	Brezno	48.80431	19.63631	21331	Breznóbánya	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3060972	Bratislava	48.14816	17.10674	423737	Pozsony	Pozsonyi körzet+Bratislavský kraj	Szlovákia
+3061015	Bojnice	48.78511	18.5864	5006	Bajmóc	Nyitrai körzet+Nitriansky kraj	Szlovákia
+3061184	Banská Štiavnica	48.44858	18.91003	10191	Selmecbánya	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3061186	Banská Bystrica	48.73946	19.15349	82336	Besztercebánya	Besztercebányai körzet+Banskobystrický kraj	Szlovákia
+3061188	Bánovce nad Bebravou	48.7213	18.25754	18933	Bán	Trencséni körzet+Trenčiansky kraj	Szlovákia
+3168070	San Marino	43.93667	12.44639	4500	San Marino	San Marino	San Marino
+3170472	Poggio di Chiesanuova	43.90451	12.42142	951	Chiesanuova		San Marino
+3172906	Monte Giardino	43.90878	12.48201	910	Montegiardino	Montegiardino	San Marino
+3176966	Fiorentino	43.91001	12.45738	2510	Fiorentino	Fiorentino	San Marino
+3177299	Faetano	43.92831	12.49798	1177	Faetano	Faetano	San Marino
+3181793	Borgo Maggiore	43.94193	12.44738	6424	Borgo Maggiore	Borgo Maggiore	San Marino
+64013	Bosaso	11.28421	49.18158	74287	Boosaaso		Szomália
+3383330	Paramaribo	5.86638	-55.16682	223757	Paramaribo	Paramaribo	Suriname
+163808	Tadmur	34.5624	38.28402	51015	Palmyra+Palmüra		Szíriai Arab Köztársaság+Szíria
+169577	Homs	34.72682	36.72339	775404	Homsz		Szíriai Arab Köztársaság+Szíria
+170063	Aleppo	36.20124	37.16117	1602264	Aleppó		Szíriai Arab Köztársaság+Szíria
+170654	Damascus	33.5102	36.29128	1569394	Damaszkusz		Szíriai Arab Köztársaság+Szíria
+170794	Deir ez-Zor	35.33588	40.14084	242565	Dajr ez-Zaur		Szíriai Arab Köztársaság+Szíria
+2425791	Sarh	9.1429	18.3923	102528	Sarh	Moyen-Chari	Csád
+2427123	N'Djamena	12.10672	15.0444	721081	N'Djamena+N’Djamena	Chari-Baguirmi	Csád
+2365267	Lomé	6.12874	1.22154	749700	Lomé		Togo
+1150515	Surat Thani	9.14011	99.33311	127201	Szuratthani	Surat Thani	Thaiföld
+1151933	Nakhon Si Thammarat	8.43333	99.96667	120836	Nakhon Szi Thammarat	Nakhon Si Thammarat	Thaiföld
+1153081	Kanchanaburi	14.00412	99.54832	63699	Kancsanaburi	Kanchanaburi	Thaiföld
+1153557	Chumphon	10.4957	99.17971	55835	Csumphon	Chumphon	Thaiföld
+1605239	Udon Thani	17.41567	102.78589	247231	Udonthani		Thaiföld
+1607708	Phitsanulok	16.82481	100.25858	103427	Phitszanulok	Phitsanulok	Thaiföld
+1608529	Nakhon Ratchasima	14.97066	102.10196	208781	Nakhon Ratcsaszima	Nakhon Ratchasima	Thaiföld
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Thaiföld
+1609776	Khon Kaen	16.44671	102.833	147579	Khonken	Khon Kaen	Thaiföld
+1610780	Hat Yai	7.00836	100.47668	191696	Hatjaj	Songkhla	Thaiföld
+1282601	Tursunzoda	38.51271	68.23163	37000	Turszunzoda		Tadzsikisztán+Tádzsikisztán
+1645457	Dili	-8.55861	125.57361	150000	Dili		Kelet-Timor
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat		Türkmenisztán
+2464470	Tunis	36.81897	10.16579	693210	Tunisz	Tūnis	Tunézia
+2464915	Sousse	35.82539	10.63699	164123	Szúsza	Sūsah	Tunézia
+2465840	Sidi Bouzid	35.03823	9.48494	42098	Szidi Bú Zid	Sīdī Bū Zayd	Tunézia
+2467454	Sfax	34.74056	10.76028	277278	Szfaksz	Şafāqis	Tunézia
+2470173	Zarzis	33.50398	11.11215	79316	Dzsardzsísz	Madanīn	Tunézia
+2473493	Monastir	35.77799	10.82617	71546	Monasztir	Al Munastīr	Tunézia
+309647	Ağrı	39.71944	43.05139	92022	Ağrı	Ağrı	Törökország+Turkanmua
+311046	İzmir	38.41273	27.13838	2500603	İzmir		Törökország+Turkanmua
+313947	Göreme	38.6437	34.83529	6350	Göreme		Törökország+Turkanmua
+317109	Denizli	37.77417	29.0875	313238	Denizli		Törökország+Turkanmua
+321025	Bitlis	38.40115	42.10784	46111	Bitlis	Bitlis	Törökország+Turkanmua
+321426	Bergama	39.12074	27.18052	57200	Pergamon		Törökország+Turkanmua
+323777	Antalya	36.90812	30.69556	758188	Antalya	Antalya	Törökország+Turkanmua
+323779	Antakya	36.20655	36.15722	210000	Antiochia		Törökország+Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Ankara	Ankara	Törökország+Turkanmua
+325303	Afyonkarahisar	38.75667	30.54333	146136	Afyonkarahisar		Törökország+Turkanmua
+325330	Adıyaman	37.76441	38.27629	223744	Adıyaman		Törökország+Turkanmua
+325363	Adana	37.00167	35.32889	1248988	Adana	Adana	Törökország+Turkanmua
+738927	Tekirdağ	40.9781	27.51101	122287	Rodostó		Törökország+Turkanmua
+740483	Rize	41.02083	40.52194	92772	Rize		Törökország+Turkanmua
+745026	İznik	40.42861	29.72111	22230	Nicea		Törökország+Turkanmua
+745028	İzmit	40.76694	29.91694	196571	Izmit		Törökország+Turkanmua
+745044	Istanbul	41.01384	28.94966	14804116	Bizánc+Konstantinápoly+Isztambul+Istanbul+http://en.wikipedia.org/wiki/Istanbul		Törökország+Turkanmua
+747712	Edirne	41.67719	26.55597	126470	Drinápoly+Edirne		Törökország+Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Bursa		Törökország+Turkanmua
+752015	Amasya	40.65333	35.83306	82896	Amasya	Amasya	Törökország+Turkanmua
+1668355	Tainan	22.99083	120.21333	771235	Tajnan		Tajvan+Kínai Köztársaság
+148730	Zanzibar	-6.16394	39.19793	403658	Zanzibár	Zanzibar Urban/West	Tanzánia
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Dar es-Salaam	Dar es Salaam	Tanzánia
+686967	Zhytomyr	50.26487	28.67669	282192	Zsitomir	Zhytomyr	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+688746	Vynohradiv	48.14135	23.02666	27600	Nagyszőlős	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+688749	Vylok	48.10915	22.83865	3292	Tiszaújlak	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+690197	Velykyi Bereznyi	48.88831	22.46052	7078	Nagyberezna	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+690434	Vary	48.12207	22.71281	2998	Mezővári	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+690544	Batiovo	48.36166	22.3997	3046	Bátyú	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+690548	Uzhgorod	48.61667	22.3	117878	Ungvár	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+691179	Truskavets’	49.27837	23.50618	26600	Truszkavec	Lviv	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+692194	Sumy	50.9216	34.80029	294456	Szumi	Sumy	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+693176	Solotvyno	47.94604	23.87035	8931	Aknaszlatina	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+693581	Slavuta	50.30155	26.86506	33080	Szlavuta	Khmelnytskyi	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+693791	Synevyr	48.48745	23.62575	4623	Alsószinevér	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+693805	Simferopol	44.95719	34.11079	336460	Szimferopol		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+693809	Simeiz	44.40646	34.00704	2604	Szimejiz		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+694423	Sevastopol	44.58883	33.5224	416263	Szevasztopol		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+694864	Sambir	49.5183	23.19752	35197	Szambir	Lviv	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+694910	Saki	45.13424	33.59996	28322	Szaki		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+695594	Rivne	50.62308	26.22743	255106	Rivne	Rivne	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+695844	Rakoshyno	48.46713	22.59687	3145	Beregrákos	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+696478	Poroshkovo	48.66832	22.75328	3645	Poroskő	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+697750	Perechyn	48.73616	22.482	7000	Perecseny	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+698131	Ovruch	51.3246	28.80351	16398	Ovrucs	Zhytomyr	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+698232	Ostroh	50.32942	26.51425	14251	Osztroh	Rivne	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+698606	Oleshnyk	48.16406	22.96167	4696	Egres	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Odessza		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+700581	Muzhiyevo	48.17959	22.69943	2086	Nagymuzsaly+Nagy-Muzsaly	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+700646	Mukacheve	48.43919	22.71779	81633	Munkács	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+701091	Mynay	48.5888	22.27502	2973	Minaj	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Lviv	Lviv	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+702569	Lutsk	50.75932	25.34244	213661	Luck	Volyn	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+702658	Luhansk	48.56705	39.31706	452000	Luhanszk	Luhansk	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+703042	Lypcha	48.26107	23.38336	3640	Lipcse	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kijev		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+703455	Kvasy	48.14973	24.27995	1200	Tiszaborkút	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+703845	Kryvyi Rih	47.90966	33.38044	652380	Krivij Rih	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+704055	Kryva	48.17234	23.23647	2911	Nagykirva+Tiszakirva	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+704147	Kremenchuk	49.06802	33.42041	227494	Kremencsuk+Kremenchuk	Poltava	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+704778	Koson’	48.25505	22.45597	2338	Mezőkaszony	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+704901	Korosten’	50.95937	28.63855	65000	Koroszteny	Zhytomyr	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+704920	Korolevo	48.15247	23.13659	7844	Királyháza	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+705433	Kolochava	48.42851	23.6959	4839	Alsókalocsa	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+706165	Khust	48.1793	23.29909	27999	Huszt	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+706244	Khotyn	48.50693	26.49121	10799	Chocimi csata		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Herszon	Kherson	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+706524	Kerch	45.3531	36.47429	148932	Kercs		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+707127	Kalyny	48.14078	23.8738	5627	Alsókálinfalva	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+707281	Kacha	44.77635	33.54387	4282	Kascsa		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+707317	Iza	48.21525	23.32867	5237	Iza	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+707559	Irshava	48.31667	23.03846	9161	Ilosva	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+709516	Dubove	48.17205	23.88954	8902	Dombó	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+709717	Donetsk	48.023	37.80224	1024700	Doneck	Donetsk	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+709808	Dovhe	48.36527	23.27904	6541	Dolha	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+709930	Dnipro	48.4593	35.03865	1032822	Dnyipropetrovszk+Dnipro	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+710400	Chortkiv	49.01709	25.79804	28855	Csortkiv	Ternopil	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+710409	Chop	48.43198	22.20555	8587	Csap	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Csernyivci		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+710735	Chernihiv	51.50551	31.28487	307684	Csernyihiv		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Cserkaszi	Cherkas'ka Oblast'+Cherkasy	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+711105	Bushtyno	48.05121	23.48579	8236	Bustyaháza	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+711669	Boryslav	49.28672	23.43238	36704	Boriszlav	Lviv	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+711952	Bohdan	48.04122	24.35222	3155	Tiszabogdány	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+712023	Bobovo	48.07166	22.89585	2216	Bobovoje+Tiszabökény	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+712276	Berezovo	48.30943	23.474	2885	Berezna	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+712423	Berehove	48.20555	22.64418	25741	Beregszász	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+829745	Kopashnovo	48.2197	23.48457	3010	Gernyés	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+6930327	Slavutych	51.51964	30.73434	25000	Szlavutics		Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+8394261	Mizhhiria	48.51876	23.50233	10000	Ökörmező	Kárpátalja+Zakarpattia	Ukrajna+http://en.wikipedia.org/wiki/Ukraine
+4076784	Montgomery	32.36681	-86.29997	200602	Montgomery	Alabama+AL	Egyesült Államok+U.S.+USA+U.S.A.
+4164138	Miami	25.77427	-80.19366	441003	Miami	FL+Florida	Egyesült Államok+U.S.+USA+U.S.A.
+4174757	Tampa	27.94752	-82.45843	369075	Tampa	FL+Florida	Egyesült Államok+U.S.+USA+U.S.A.
+4219934	Roswell	34.02316	-84.36159	94501	Roswell	GA+Georgia	Egyesült Államok+U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	LA+Louisiana	Egyesült Államok+U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	MO+Missouri	Egyesült Államok+U.S.+USA+U.S.A.
+4644585	Nashville	36.16589	-86.78444	530852	Nashville	TN+Tennessee	Egyesült Államok+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chicago	IL+Illinois	Egyesült Államok+U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Boston	MA+Massachusetts	Egyesült Államok+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroit	MI	Egyesült Államok+U.S.+USA+U.S.A.
+5024719	Duluth	46.78327	-92.10658	86110	Duluth	MN+Minnesota	Egyesült Államok+U.S.+USA+U.S.A.
+5037649	Minneapolis	44.97997	-93.26384	410939	Minneapolis	MN+Minnesota	Egyesült Államok+U.S.+USA+U.S.A.
+5110302	Brooklyn	40.6501	-73.94958	2300664	Brooklyn+BK	New York+NY	Egyesült Államok+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	New York+NY	Egyesült Államok+U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Phoenix	Arizona+AZ	Egyesült Államok+U.S.+USA+U.S.A.
+5350937	Fresno	36.74773	-119.77237	520052	Fresno	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+5357527	Hollywood	34.09834	-118.32674	167664	Hollywood	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+5368335	Los Altos	37.38522	-122.11413	30671	Los Altos	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+5391811	San Diego	32.71533	-117.15726	1394928	San Diego	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San José	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+5454711	Albuquerque	35.08449	-106.65114	559121	Albuquerque	Új-Mexikó+NM+New Mexico	Egyesült Államok+U.S.+USA+U.S.A.
+5488441	Roswell	33.39437	-104.52491	48544	Roswell	Új-Mexikó+NM+New Mexico	Egyesült Államok+U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas	NV+Nevada	Egyesült Államok+U.S.+USA+U.S.A.
+5554072	Juneau	58.30194	-134.41972	32756	Juneau	Alaszka+AK+Alaska	Egyesült Államok+U.S.+USA+U.S.A.
+5557293	Sitka	57.05315	-135.33088	8863	Sitka	Alaszka+AK+Alaska	Egyesült Államok+U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Seattle	WA+Washington	Egyesült Államok+U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Honolulu	Hawaii+HI	Egyesült Államok+U.S.+USA+U.S.A.
+5870133	Nome	64.50111	-165.40639	3806	Nome	Alaszka+AK+Alaska	Egyesült Államok+U.S.+USA+U.S.A.
+5879400	Anchorage	61.21806	-149.90028	298695	Anchorage	Alaszka+AK+Alaska	Egyesült Államok+U.S.+USA+U.S.A.
+7261098	Edwards Air Force Base	34.91637	-117.93535	2063	Edwards légitámaszpont+Edwards Air Force Base	Kalifornia+CA+Calif+California	Egyesült Államok+U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Uruguay
+1217662	Bukhara	39.77472	64.42861	247644	Buhara		Üzbegisztán
+1512569	Tashkent	41.26465	69.21627	1978028	Taskent	Toshkent Shahri	Üzbegisztán
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Venezuela
+1566083	Ho Chi Minh City	10.82302	106.62965	3467331	Ho Si Minh-város+HCMC	Ho Si Minh-város	Vietnám+Vietnam
+1581130	Hanoi	21.0245	105.84117	1431270	Hanoi	Ha Nội	Vietnám+Vietnam
+1583477	Dien Bien Phu	21.38602	103.02301	40282	Dien Bien Phu		Vietnám+Vietnam
+2135171	Port-Vila	-17.73381	168.32188	35901	Port Vila	Shefa	Vanuatu
+786714	Pristina	42.67272	21.16688	550000	Pristina+Prishtina		Koszovó
+786950	Podujeva	42.91056	21.19306	35000	Podujevó		Koszovó
+415189	Aden	12.77944	45.03667	550602	Áden	‘Adan	Jemen
+980595	Mahikeng	-25.86522	25.64421	14000	Mafeking	North-West	Dél-Afrika+Dél-afrikai Köztársaság
+3369157	Cape Town	-33.92584	18.42322	3433441	Fokváros	Western Cape	Dél-Afrika+Dél-afrikai Köztársaság
+895953	Zambezi	-13.54323	23.10467	7074	Zambézi	North-Western	Zambia

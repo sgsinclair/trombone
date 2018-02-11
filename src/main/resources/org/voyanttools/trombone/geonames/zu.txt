@@ -1,0 +1,18 @@
+933773	Gaborone	-24.65451	25.90859	208411	IGaborone		IButswana+i-Botswana
+2818067	Uetersen	53.68769	9.66394	17921	I-Uetersen	Schleswig-Holstein	IJalimani+i-Germany
+2820860	Tübingen	48.52266	9.05222	83416	ITübingen	Baden-Württemberg	IJalimani+i-Germany
+2851523	Quakenbrück	52.67502	7.94983	12727	IQuakenbrück	Neddersassen+Läichsaksen+Donja Saska	IJalimani+i-Germany
+2939797	Crailsheim	49.13444	10.07193	32262	ICrailsheim	Baden-Württemberg	IJalimani+i-Germany
+2520600	Cadiz	36.52672	-6.2891	126766	Iungadir		i-Spain+España
+2643741	City of London	51.51279	-0.09184	8072	Idolobha weLondon	INgilandi	i-United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	ILondon	INgilandi	i-United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+593116	Vilnius	54.68916	25.2798	542366	IVilnyusi		i-Lithuania+http://en.wikipedia.org/wiki/Lithuania
+2759794	Amsterdam	52.37403	4.88969	741636	I-Amsterdami	nh+Nord-Holland+Noord-Holland	i-Netherlands
+498677	Saratov	51.54056	46.00861	863725	ISaratov	Saratov	i-Russia
+1572151	Nha Trang	12.24507	109.19432	283441	INhatrang	Khánh Hòa	i-Vietnam
+964137	Pretoria	-25.74486	28.18783	1619438	IPitoli	IGauteng+Gauteng	IRiphabliki yaseNingizimu Afrika+iNingizimu Afrika+iRiphabhuliki yase Ningizimu Afrika
+964420	Port Elizabeth	-33.96109	25.61494	967677	Ibhayi	KwaXhosa	IRiphabliki yaseNingizimu Afrika+iNingizimu Afrika+iRiphabhuliki yase Ningizimu Afrika
+993800	Johannesburg	-26.20227	28.04363	2026469	EGoli+IGoli	IGauteng+Gauteng	IRiphabliki yaseNingizimu Afrika+iNingizimu Afrika+iRiphabhuliki yase Ningizimu Afrika
+1007311	Durban	-29.8579	31.0292	3120282	ITheku	KwaZulu-Natali	IRiphabliki yaseNingizimu Afrika+iNingizimu Afrika+iRiphabhuliki yase Ningizimu Afrika
+1018725	Bloemfontein	-29.12107	26.214	463064	IBloemfontein		IRiphabliki yaseNingizimu Afrika+iNingizimu Afrika+iRiphabhuliki yase Ningizimu Afrika
+3369157	Cape Town	-33.92584	18.42322	3433441	iKapa+IKapa	Western Cape	IRiphabliki yaseNingizimu Afrika+iNingizimu Afrika+iRiphabhuliki yase Ningizimu Afrika

@@ -1,0 +1,218 @@
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andorra la Vella		Andorra+ئاندۆرا
+1138958	Kabul	34.52813	69.17233	3043532	Kabûl		Efxanistan+ئەفغانستان
+1147290	Balkh	36.75635	66.8972	114883	Belx		Efxanistan+ئەفغانستان
+3576022	Saint John’s	17.12096	-61.84329	24226	Saint John's	Saint John	Antigûa û Berbûda+ئانتیگوا و باربودا
+3183875	Tirana	41.3275	19.81889	374801	Tîrana		Albanya+ئەڵبانیا
+174979	Artashat	39.96144	44.54447	20562	Artaşat	Ararat	Ermenistan+ئەرمەنستان
+616052	Yerevan	40.18111	44.51361	1093485	Êrîvan	Yerevan	Ermenistan+ئەرمەنستان
+616631	Armavir	40.15446	44.03815	25963	Armawîr	Armavir	Ermenistan+ئەرمەنستان
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola+ئەنگۆلا
+3838583	Rosario	-32.94682	-60.63932	1173533	Rozarîyo	SF+Santa Fe	Arjantîn+ئارجەنتینا
+2760772	Ybbs an der Donau	48.16667	15.08333	5676	Îps		نەمسا
+2147714	Sydney	-33.86785	151.20732	4627345	Sîdney	NSW	Awistralya+ئۆسترالیا
+2172517	Canberra	-35.28346	149.12807	367752	Kanberra	ACT+Australian Capital Territory	Awistralya+ئۆسترالیا
+587084	Baku	40.37767	49.89201	1116513	Bakû	Baki	Azerbaycan+ئازەربایجان
+3191281	Sarajevo	43.84864	18.35644	696731	Sarayevo	Federation of Bosnia and Herzegovina	Bosniya û Herzegovîna+بۆسنیا و ھەرزەگۆڤینا
+1185241	Dhaka	23.7104	90.40744	10356500	Daka		Bangladeş+بەنگلادیش
+2800866	Brussels	50.85045	4.34878	1019022	Bruksel	Brussels-Capital Region	Belçîka+بەلژیک
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto Novo	Quémé	Bênîn+بنین
+625144	Minsk	53.9	27.56667	1742124	Mînsk		Belarûs+بیلاڕووس
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	کانەدا
+6173331	Vancouver	49.24966	-123.11934	600000	Venkûver	BC+British Columbia	کانەدا
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kînşasa	Kinshasa	کۆنگۆ کینشاسا+Kongoya Demokratîk
+1816670	Beijing	39.9075	116.39723	11716620	Pekîn		Çîn+چین
+3067696	Prague	50.08804	14.42076	1165581	Prag+Praha	Hlavní město Praha	Komara Çêkiyayê+کۆماری چیک+Czechia
+3078513	Buchlovice	49.08627	17.33852	2487	Buxlovîtse	Zlínský kraj	Komara Çêkiyayê+کۆماری چیک+Czechia
+2805615	Würzburg	49.79391	9.95121	133731	Wûrzburg	Bayern	Almanya+ئەڵمانیا
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Baden-Württemberg	Almanya+ئەڵمانیا
+2867714	Munich	48.13743	11.57549	1260391	Munîh	Bayern	Almanya+ئەڵمانیا
+2886242	Köln	50.93333	6.95	963395	Köln	NRW	Almanya+ئەڵمانیا
+2910831	Hannover	52.37052	9.73322	515140	Hannover+Hannauver	Neddersassen+Läichsaksen+Donja Saska	Almanya+ئەڵمانیا
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+Hambûrg+HH	HH+H+H+Hamburg	Almanya+ئەڵمانیا
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Almanya+ئەڵمانیا
+2947416	Bochum	51.48165	7.21648	385729	Bochum	NRW	Almanya+ئەڵمانیا
+2950159	Berlin	52.52437	13.41053	3426354	Berlîn	Berlîn+Berlin	Almanya+ئەڵمانیا
+2507480	Algiers	36.73225	3.08746	1977663	Cezayir	Alger	Cezayir+ئەلجەزایر
+359792	Aswan	24.09082	32.89942	241261	Eswan		Misir+میسر
+2519240	Córdoba	37.89155	-4.77275	328428	Kordoba	Endulus	Spanya+ئیسپانیا+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrîd	Madrid	Spanya+ئیسپانیا+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barselona	Catalunya	Spanya+ئیسپانیا+España
+632978	Vaasa	63.096	21.61577	57014	Vaasa		Fînlenda+فینلاند
+655563	Joutseno	61.11796	28.50763	10603	Joutseno		Fînlenda+فینلاند
+658225	Helsinki	60.16952	24.93545	558457	Helsînkî		Fînlenda+فینلاند
+2988507	Paris	48.85341	2.3488	2138551	Parîs+75001		Fransa+فەڕەنسا+France
+2995469	Marseille	43.29695	5.38107	794811	Marsêy+13001		Fransa+فەڕەنسا+France
+2996944	Lyon	45.74846	4.84671	472317	Liyon		Fransa+فەڕەنسا+France
+3035681	Avignon	43.94834	4.80892	89769	Avignon+84000		Fransa+فەڕەنسا+France
+2643743	London	51.50853	-0.12574	7556900	London	Îngilistan	Keyatiya Yekbûyî ya Brîtaniya Mezin û Îrlanda+Keyaniya Yekbûyî+شانشینی یەکگرتوو+http://en.wikipedia.org/wiki/United_Kingdom
+611717	Tbilisi	41.69411	44.83368	1049498	Tibîlîsî	T'bilisi	Gurcistan+گورجستان
+734077	Thessaloníki	40.64361	22.93086	354290	Tesalonîkî		Yewnanistan+یۆنان+Griekanmua
+3054643	Budapest	47.49801	19.03991	1741041	Budapeşt		Hûngarya+مەجارستان
+1642911	Jakarta	-6.21462	106.84513	8540121	Cakarta	Jakarta Raya	Endonezya+Indonesiya+ئیندۆنیزیا+http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	Dublîn		Komara Îrlanda+ئیرلەند+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Orşelîm		Îsraîl+ئیسرائیل
+1273294	Delhi	28.65195	77.23149	10927986	Delhî	DL	Hindistan+ھیندستان
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbaî	MH+Mahārāshtra	Hindistan+ھیندستان
+1277333	Bengaluru	12.97194	77.59369	5104047	Bangalor	KA+Karnātaka	Hindistan+ھیندستان
+89482	Zāwītah	36.90568	43.14324	0	Zawête+زاوێتە+Zawîte+زاويتە	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+89570	Zaxo	37.14871	42.68591	95052	Zaxo+زاخۆ+Zaxu	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+90026	Tozkhurmato	34.88808	44.63256	59886	Tuz Xurmatu+توزخورماتو	Şalāḩ ad Dīn	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+90220	Dāqūq	35.13923	44.44907	0	Daquq	Kerkuk+كەركوك	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+90393	Tall ‘Afar	36.37913	42.44806	0	Tele‘fer+تەلەعفەر	Nīnawá	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+90532	Saymayl	36.85823	42.8482	0	Sumêl+سومێل+Sêmêl+سێمێل	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+90708	Sīnah	36.80752	43.03831	128776	Sîne+سينە	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+91083	Shaqlāwah	36.40422	44.32563	0	Sheqławe+شەقڵاوە	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+91283	Seyid Sadiq	35.35278	45.86682	0	Seyd Şadiq+Seyd Sadiq+سەيد صادق+سەيد سادق+Seyid Sadiq+Seyid Şadiq	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+92002	Ruwāndiz	36.61207	44.52372	22943	Ṟuwandiz+ڕواندز+Ṟewanduz+ڕەواندوز	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+92052	Ṟaniye	36.25511	44.88239	0	ڕانيە+Ṟaniye	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+92436	Qeredagh	35.3071	45.3906	0	Qere Dagh+Qeredagh+قەرەداغ	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+92615	Qeładizê	36.18536	45.12735	0	Qeładizê+قەڵادزێ+Qeładize+قەڵادزە	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+93455	Mêrgasur	36.84308	44.30094	0	Mêrge Sur+مێرگە سور+Mêrge Sûr+مێرگە سوور+Mêrgasur+مێرگەسور	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+93562	Mawet	35.9012	45.41301	0	Mawet+ماوەت	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+93818	Mexmur	35.77622	43.57974	0	Mokhmur+Mexmûr+مەخموور+Mexmur+مەخمور	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+94220	Koysinceq	36.08289	44.62873	44987	كۆيە+Koysinjaq+Koye+Koysinceq+كۆيسنجەق	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+94298	Kifrī	34.68963	44.96057	30143	Kifrî+كفرى		Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+94591	Khānaqīn	34.3482	45.39065	0	Xaneqîn+خانەقين		Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+94787	Kirkuk	35.46806	44.39222	601433	Kerkûk+كه‌ركووك+Karkuk+كەركوك+Kerkuk	Kerkuk+كەركوك	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+94824	Karbala	32.61603	44.02488	434450	Kerbela	Karbalāʼ	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+95005	Kelar	34.62805	45.31852	0	Kelar+كەلار	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+95446	Erbil	36.19257	44.01062	932800	Hewlêr+هەولێر+Erbil	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+96205	Ḩalabjah	35.17778	45.98611	57333	Helebce	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+96833	Xebat	36.27798	43.67065	0	Xebat+كەلەك+خەبات+Kelek	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+96953	Dukan	35.92922	44.96282	0	Dukan	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+96961	Soran	36.6532	44.54407	0	Soran+سۆران+Diyane+Diyana+ديانە	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+96994	Dihok	36.86709	42.98845	284000	Dûhok+دووهۆک+Duhok+Dihok+دهۆك+Dihuk+دهۆک	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+97001	Dibis	35.67482	44.07067	0	Dibs+Dibiz+دبز	Kerkuk+كەركوك	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+97145	Derkar	37.19989	42.82361	0	Derkar+دەركار	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+97329	Chwarta	35.72659	45.57232	0	Chwarta+چوارتا	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+97417	Jamjamāl	35.53356	44.8343	75634	Chemchemał+چەمچەماڵ	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98012	Baynjiwayn	35.62329	45.94714	27116	Pêncwên+پێنجوێن+Pênciwên	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98069	Bāmarnī	37.12163	43.2709	0	Bameṟnî+بامەڕنى+Bameṟnê+بامەڕنێ	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98156	Baḩirkah	36.31556	44.03533	0	Beḧirke+بەحركە	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98182	Baghdad	33.34058	44.40088	7216000	Bexda+Beghdad+بەغداد		Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98293	Ash Shaykhān	36.69595	43.35202	0	‘Eyn Sifnî+Shêxan+شێخان+عەين سفنى+Îsifnê+ئيسفنێ	Nīnawá	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98304	‘Aynkāwah	36.2306	43.99442	0	‘Eynkawa+عەينكاوا	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98463	As Sulaymānīyah	35.56496	45.4329	723170	Silêmanî+سلێمانی+Slêmanî+سلێمانى	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+98822	‘Aqrah	36.73322	43.87964	23000	Akrê+ئاكرێ	Nīnawá	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+99072	Mosul	36.335	43.11889	1739800	Mûsil+Musił+موسڵ	Nīnawá	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+99611	Al ‘Amādīyah	37.09214	43.48769	0	Amêdî+ئامێدى+Amîdî+ئاميدى	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+384945	Derbendîxan	35.11207	45.68663	0	Derbendîxan+دەربەنديخان	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+446174	Qūshtabah	36.00193	44.03827	0	Qushtepe+قوشتەپە	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+446185	Dāratū	36.12062	44.05972	0	Dare Tû+دارە توو	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+446208	Kasnazān	36.20067	44.13263	0	Kesnezanî Îsma‘îl+Kesnezan Teḧsîn+كەسنەزانى اسماعيل+كەسنەزان تەحسين	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+447741	Choman	36.63665	44.8882	0	Choman+چۆمان	Hewlêr+هەولێر+Parêzga-î Hewlêr+پارێزگاى هەولێر+Arbīl	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+448149	Sinjār	36.3209	41.87656	38294	Sncar+شەنگال	Nīnawá	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+6998238	Ibrāhīm al Khalīl	37.13963	42.56995	0	Îbrahîm Xelîl+ئيبراهيم خەليل+Ṟizgarî+ڕزگارى	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+9797125	Zaxu	37.14246	42.68187	0	Zaxu+Zaxo+زاخۆ	Dihok+Parêzga-î Dihok+دھۆك+پارێزگاى دھۆك+Parêzgeha Dihok+پارێزگەھا دھۆك+Dihuk+Dahūk	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+9875575	Ḩalabjah al Jadīdah	35.31975	45.68948	0	Hełebcey Taze+ھەڵەبجەى تازە	Parêzga-î Slêmanî+Slêmanî+پارێزگاى سلێمانى+سلێمانى+As Sulaymānīyah	Iraq+عێراق+Komar-î ‘Êraq+‘Êraq+كۆمارى عێراق
+66093	Yasuj	30.66824	51.58796	96786	Yasûc	Kohgīlūyeh va Būyer Aḩmad	Îran+ئێران
+112931	Tehran	35.69439	51.42151	7153309	Tehran	Tehrān	Îran+ئێران
+113646	Tabriz	38.08	46.2919	1424641	Tewrêz		Îran+ئێران
+115019	Shiraz	29.61031	52.53113	1249942	Şîraz	Fars	Îran+ئێران
+116996	Sari	36.56332	53.06009	255396	Sarî	Mazenderan	Îran+ئێران
+117392	Saqqez	36.24992	46.2735	151237	Seqiz	Kordestān	Îran+ئێران
+117574	Sanandaj	35.31495	46.99883	349176	Sine	Kordestān	Îran+ئێران
+118743	Rasht	37.27611	49.58862	594590	Reşt	Gīlān	Îran+ئێران
+119208	Qom	34.6401	50.8764	900000	Qûm	Qom	Îran+ئێران
+119505	Qazvin	36.26877	50.0041	333635	Qazwên	Qazvīn	Îran+ئێران
+121110	Piranshahr	36.701	45.1413	61973	Pîranşar	Āz̄ārbāyjān-e Gharbī	Îran+ئێران
+121801	Orūmīyeh	37.55274	45.07605	577307	Ûrmiye	Āz̄ārbāyjān-e Gharbī	Îran+ئێران
+124665	Mashhad	36.31559	59.56796	2307177	Meşhed	Xorasana Rezewî+Khorāsān-e Raẕāvī	Îran+ئێران
+125446	Mahābād	36.7631	45.7222	162434	Mehabad	Āz̄ārbāyjān-e Gharbī	Îran+ئێران
+128226	Kermanshah	34.31417	47.065	621100	Kirmaşan	Kermānshāh	Îran+ئێران
+128747	Karaj	35.83266	50.99155	1448075	Kerec		Îran+ئێران
+137436	Darreh Shahr	33.14447	47.3799	24961	Madakto	Īlām	Îran+ئێران
+141681	Bandar Abbas	27.1865	56.2808	352173	Bender Ebbas	Hormozgan	Îran+ئێران
+144448	Ahvaz	31.31901	48.6842	841145	Ehvaz	Xûzistan	Îran+ئێران
+418863	Isfahan	32.65246	51.67462	1547164	Îsfehan		Îran+ئێران
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavik+101		Îslanda+ئایسلەند
+1850147	Tokyo	35.6895	139.69171	8336599	Tokyo		Japon+Japonya+ژاپۆن
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobî	Nairobi Area	Kenya
+1528675	Bishkek	42.87	74.59	900000	Bîşkek	Gorod Bishkek	Qirgizîstan+قرغیزستان
+1835848	Seoul	37.566	126.9784	10349312	Sêûl		Komara Korêyê+کۆریای باشوور+http://en.wikipedia.org/wiki/South_Korea
+276781	Beirut	33.89332	35.50157	1916100	Bêrût		Libnan+لوبنان
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Lîtvanya+لیتوانایا+http://en.wikipedia.org/wiki/Lithuania
+2210247	Tripoli	32.87519	13.18746	1150989	Trablûs		Lîbya+لیبیا
+2553604	Casablanca	33.58831	-7.61138	3144909	Kazablanka		Maroko+مەغریب
+3193044	Podgorica	42.44111	19.26361	136473	Podgorika		مۆنتینیگرۆ
+785842	Skopje	41.99646	21.43141	474889	Skopye		Komara Makedonyayê+ARYM+FYROM
+3936456	Lima	-12.04318	-77.02824	7737002	Lîma	Lima Province	پیروو
+1166993	Rawalpindi	33.6007	73.0679	1743101	Rawalpindî	Punjab	Pakistan+پاکستان
+1174872	Karachi	24.8608	67.0104	11624219	Keraçî		Pakistan+پاکستان
+1176615	Islamabad	33.72148	73.04329	601600	Îslamabad	Islāmābād	Pakistan+پاکستان
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lubelskie	Polonya+پۆڵەندا
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polonya+پۆڵەندا
+3096472	Katowice	50.25841	19.02754	317316	Katovîts	Śląskie	Polonya+پۆڵەندا
+281133	Gaza	31.50161	34.46672	410000	Xeze	Şirîta Xezeyê	فەلەستین
+282239	Ramallah	31.89964	35.20422	24599	Ramella		فەلەستین
+792680	Belgrade	44.80401	20.46513	1273651	Belgrad	Central Serbia	Serbistan+سربیا
+3194360	Novi Sad	45.25167	19.83694	215400	Novî Sad		Serbistan+سربیا
+473247	Vladimir	56.13655	40.39658	310024	Vladîmîr	Vladimir	ڕووسیا
+524901	Moscow	55.75222	37.61556	10381222	Mosko+Moskow+Moskva		ڕووسیا
+558418	Groznyy	43.31195	45.68895	226100	Grosnî		ڕووسیا
+580497	Astrakhan	46.34968	48.04076	502533	Astraxan	Astrakhan	ڕووسیا
+2026643	Birobidzhan	48.79284	132.92386	76146	Bîrobîcan		ڕووسیا
+104515	Mecca	21.42664	39.82563	1323624	Meke	Makkah	Erebistana Siyûdî+عەرەبستانی سەعوودی
+109223	Medina	24.46861	39.61417	1300000	Medîne		Erebistana Siyûdî+عەرەبستانی سەعوودی
+2673730	Stockholm	59.33258	18.0649	1515017	Stokholm	Stockholms Län	Swêd+سوید+Ruoččii
+3060972	Bratislava	48.14816	17.10674	423737	Bratîslava	Bratislavský kraj	Slovakya+سلۆڤاکیا
+2410763	São Tomé	0.33654	6.72732	53300	Sao Tome		ساوتۆمێ و پرینسیپی
+170063	Aleppo	36.20124	37.16117	1602264	Heleb		Sûrî+سووریا
+170654	Damascus	33.5102	36.29128	1569394	Şam		Sûrî+سووریا
+173377	Al Qāmishlī	37.05215	41.23142	0	Qamişlo		Sûrî+سووریا
+173530	Al Mālikīyah	37.17701	42.14006	0	Dêrîk+دێريك		Sûrî+سووریا
+173711	Al Jawādīyah	36.9866	41.82015	0	Chil Agha+چل ئاغا		Sûrî+سووریا
+383661	Al Ya‘rubīyah	36.81138	42.06206	0	Tel Kochek+تەل كۆچەك		Sûrî+سووریا
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat		Tirkmenistan+تورکمانستان
+2464470	Tunis	36.81897	10.16579	693210	Tûnis	Tūnis	توونس
+296173	Yüksekova	37.57362	44.28716	71729	Gever	Hekarî+Hakkâri	Tirkiye+تورکیا+Turkanmua
+297461	Yayladere	39.22614	40.0695	3925	Xorxol	Bîngol	Tirkiye+تورکیا+Turkanmua
+298117	Van	38.49457	43.38323	371713	Wan	Wan	Tirkiye+تورکیا+Turkanmua
+298728	Tut	37.79529	37.9161	7560	Tût		Tirkiye+تورکیا+Turkanmua
+298846	Tunceli	39.09921	39.54351	29062	Mamekî	Dêrsim	Tirkiye+تورکیا+Turkanmua
+300619	Sivas	39.74833	37.01611	264022	Sêwas	Sêwas	Tirkiye+تورکیا+Turkanmua
+300796	Silvan	38.13708	41.00817	65956	Farqîn	Diyarbakır	Tirkiye+تورکیا+Turkanmua
+300822	Siirt	37.9293	41.94134	114034	Sêrt	Sêrt	Tirkiye+تورکیا+Turkanmua
+301943	Samsat	37.58194	38.47417	9308	Semîsad		Tirkiye+تورکیا+Turkanmua
+302525	Polatlı	39.57715	32.14132	93262	Polatlî		Tirkiye+تورکیا+Turkanmua
+302724	Pertek	38.86574	39.32273	6837	Pêrtag	Dêrsim	Tirkiye+تورکیا+Turkanmua
+303107	Ovacık	39.35259	39.2089	0	Pulur	Dêrsim	Tirkiye+تورکیا+Turkanmua
+303195	Osmaniye	37.07417	36.24778	202837	Kinikan		Tirkiye+تورکیا+Turkanmua
+304081	Muş	38.73163	41.48482	82536	Mûş	Mûş	Tirkiye+تورکیا+Turkanmua
+304531	Mersin	36.81196	34.63886	537842	Mêrsîn	Mêrsîn	Tirkiye+تورکیا+Turkanmua
+304797	Mardin	37.31309	40.74357	71373	Mêrdîn+Mêrdin	Mêrdîn	Tirkiye+تورکیا+Turkanmua
+304922	Malatya	38.35018	38.31667	441805	Meletî	Meletî	Tirkiye+تورکیا+Turkanmua
+306571	Konya	37.87135	32.48464	875530	Qonye	Qonye	Tirkiye+تورکیا+Turkanmua
+307864	Kilis	36.71611	37.115	82301	Kilîs	Kilîs	Tirkiye+تورکیا+Turkanmua
+308998	Aladağ	37.5485	35.39603	7613	Aladag		Tirkiye+تورکیا+Turkanmua
+309647	Ağrı	39.71944	43.05139	92022	Qerekose	Agirî	Tirkiye+تورکیا+Turkanmua
+310859	Kahramanmaraş	37.5847	36.92641	376045	Meres+Gurgum	Mereş	Tirkiye+تورکیا+Turkanmua
+311111	İskenderun	36.58718	36.17347	159965	Îskenderûn	Xetay	Tirkiye+تورکیا+Turkanmua
+311665	Iğdır	39.92371	44.045	75721	Îdir	Îdir	Tirkiye+تورکیا+Turkanmua
+311704	İdil	37.33481	41.88944	22960	Hezex	Şirnex	Tirkiye+تورکیا+Turkanmua
+312479	Hasankeyf	37.70612	41.4048	3676	Heskîf		Tirkiye+تورکیا+Turkanmua
+314136	Gölbaşı	37.78361	37.63667	28078	Sergol		Tirkiye+تورکیا+Turkanmua
+314830	Gaziantep	37.05944	37.3825	1065975	Dîlok	Entab	Tirkiye+تورکیا+Turkanmua
+315368	Erzurum	39.90861	41.27694	420691	Erzîrom	Erzîrom	Tirkiye+تورکیا+Turkanmua
+315373	Erzincan	39.73919	39.49015	114027	Ezirgan	Erzîngan	Tirkiye+تورکیا+Turkanmua
+315795	Elbistan	38.20591	37.1983	80456	Elbistan	Mereş	Tirkiye+تورکیا+Turkanmua
+315808	Elazığ	38.67431	39.22321	298004	Elezîz	Parezgah Zilan	Tirkiye+تورکیا+Turkanmua
+316411	Doğubayazıt	39.54694	44.08417	70171	Bazîd	Agirî	Tirkiye+تورکیا+Turkanmua
+316541	Diyarbakır	37.91363	40.21721	644763	Amed	Diyarbakır	Tirkiye+تورکیا+Turkanmua
+316542	Diyadin	39.54056	43.67135	18172	Giyadîn	Agirî	Tirkiye+تورکیا+Turkanmua
+321025	Bitlis	38.40115	42.10784	46111	Bidlîs	Bidlîs	Tirkiye+تورکیا+Turkanmua
+321337	Besni	37.69278	37.86111	41892	Bêsnî		Tirkiye+تورکیا+Turkanmua
+321836	Batman	37.88738	41.13221	381990	Êlih		Tirkiye+تورکیا+Turkanmua
+323716	Yüreğir	36.97439	35.35916	0	Yuregir		Tirkiye+تورکیا+Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Enqere		Tirkiye+تورکیا+Turkanmua
+324944	Akçakale	36.71111	38.9475	32114	Kaniya Xezalan		Tirkiye+تورکیا+Turkanmua
+325330	Adıyaman	37.76441	38.27629	223744	Semsûr		Tirkiye+تورکیا+Turkanmua
+325363	Adana	37.00167	35.32889	1248988	Edene		Tirkiye+تورکیا+Turkanmua
+739600	Sinop	42.02683	35.16253	34834	Sînop		Tirkiye+تورکیا+Turkanmua
+743952	Kars	40.59825	43.08548	77486	Qers	Kars	Tirkiye+تورکیا+Turkanmua
+751952	Ardahan	41.10871	42.70222	21020	Erdêxan	Erdêxan	Tirkiye+تورکیا+Turkanmua
+703448	Kyiv	50.45466	30.5238	2797553	Kîev		Ukrayna+ئۆکرانیا+http://en.wikipedia.org/wiki/Ukraine
+5072006	Lincoln	40.8	-96.66696	277348	Lincoln	NE	وڵاتە یەکگرتووەکان+U.S.+USA+U.S.A.
+5084868	Concord	43.20814	-71.53757	42620	Concord	New Hampshire+NH	وڵاتە یەکگرتووەکان+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York City+NYC+NY	New York+NY	وڵاتە یەکگرتووەکان+U.S.+USA+U.S.A.
+1512569	Tashkent	41.26465	69.21627	1978028	Taşkent	Toshkent Shahri	Ûzbêkistan+ئوزبەکستان

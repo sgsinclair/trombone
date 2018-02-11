@@ -1,0 +1,95 @@
+3448439	São Paulo	-23.5475	-46.63611	10021295	Sao Paulo	SP+São Paulo	
+6049430	Langley	49.08297	-122.58589	93726	Distretu de Langley	Colùmbia Britànnica+BC+British Columbia	
+6138517	Saint John	45.27271	-66.06766	87857	Saint-Jean	NB+New Brunswick	
+6174041	Victoria	48.43294	-123.3693	289625	Victòria	Colùmbia Britànnica+BC+British Columbia	
+2661176	Chiasso	45.83203	9.03119	8060	Chiassu	Cantone Ticino	
+2661552	Bern	46.94809	7.44744	121631	Berna		
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaiso	Valparaíso	Cile
+3553478	Havana	23.13302	-82.38304	2163824	La Havana		
+2861650	Nürnberg	49.45421	11.07752	499237	Norimberga	Bayern	Germània
+2867714	Munich	48.13743	11.57549	1260391	Monaco de Baviera	Bayern	Germània
+2879139	Leipzig	51.33962	12.37129	504971	Lipsia		Germània
+2886242	Köln	50.93333	6.95	963395	Colonia	NRW	Germània
+2931414	Eislingen	48.69515	9.70676	20585	Eislingen/Fils	Baden-Württemberg	Germània
+2944388	Bremen	53.07516	8.80777	546501	Brema	Bremen	Germània
+2959686	Achern	48.63115	8.07607	24478	Achern	Baden-Württemberg	Germània
+2618425	Copenhagen	55.67594	12.56553	1153615	Copenaghen		Danimarca
+361058	Alexandria	31.20176	29.91582	3811516	Lisàndria dEgittu		
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Ispagna+España
+3128760	Barcelona	41.38879	2.15899	1621537	Bartzellona	Catalunya	Ispagna+España
+2972315	Toulouse	43.60426	1.44367	433055	Tolosa+31000		Frantza+France
+2972328	Toulon	43.12442	5.92836	168701	Tolone+83000		Frantza+France
+2982456	Roussillon	43.90084	5.2947	1254	Catalogna Nord		Frantza+France
+2988507	Paris	48.85341	2.3488	2138551	Parigi+75001		Frantza+France
+2990440	Nice	43.70313	7.26608	338620	Nitza+06000		Frantza+France
+2996944	Lyon	45.74846	4.84671	472317	Lione		Frantza+France
+3035681	Avignon	43.94834	4.80892	89769	Avignone+84000		Frantza+France
+2643743	London	51.50853	-0.12574	7556900	Londra	Inghilterra	http://en.wikipedia.org/wiki/United_Kingdom
+3186886	Zagreb	45.81444	15.97798	698966	Zagàbria	Grad Zagreb	
+2964574	Dublin	53.33306	-6.24889	1024027	Dublinu		Ire
+281184	Jerusalem	31.76904	35.21633	801000	Gerusalemme		
+294801	Haifa	32.81841	34.9885	267300	Haïfa		
+1275339	Mumbai	19.07283	72.88261	12691836	Bombay	MH+Mahārāshtra	Ìndia
+2522958	Terralba	39.72056	8.63504	9583	Tarraba		Itàlia
+2523062	Soleminis	39.3476	9.18127	1734	Solèminis		Itàlia
+2523530	Samugheo	39.94854	8.94152	3183	Samugheu		Itàlia
+2523833	Perdasdefogu	39.67959	9.44082	2042	Foghesu		Itàlia
+2523964	Oristano	39.9036	8.59257	24641	Aristanis		Itàlia
+2524692	Furtei	39.56253	8.94773	1590	Furtei		Itàlia
+2525362	Carbonia	39.16465	8.5213	21664	Carbònia		Itàlia
+2525379	Capoterra	39.1752	8.97199	11255	Cabuderra		Itàlia
+2525473	Cagliari	39.23054	9.11917	149257	Casteddu		Itàlia
+2525491	Buggerru	39.39831	8.40186	1037	Bugerru		Itàlia
+2525565	Belvì	39.96181	9.18419	664	Brebì		Itàlia
+2525608	Ballao	39.54919	9.36178	858	Ballau		Itàlia
+2525647	Atzara	39.99249	9.07616	1196	Atzara		Itàlia
+2525655	Assemini	39.29123	8.99879	25257	Assèmini		Itàlia
+2525667	Armungia	39.52154	9.38066	488	Armunja		Itàlia
+2525691	Arbatax	39.93444	9.70556	2272	Arbatassa		Itàlia
+2525751	Ales	39.7683	8.8152	1300	Abas		Itàlia
+3165524	Turin	45.07049	7.68682	870456	Torinu	Piemonte	Itàlia
+3165828	Tempio Pausania	40.90068	9.10456	12706	Tèmpiu		Itàlia
+3167096	Sassari	40.72586	8.55552	91895	Tattari+Tàthari		Itàlia
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	Itàlia
+3170060	Posada	40.63203	9.71904	2025	Pasada		Itàlia
+3171180	Perugia	43.1122	12.38878	120137	Perugia		Itàlia
+3171861	Oschiri	40.71977	9.10102	3327	Oscheri		Itàlia
+3171962	Orgosolo	40.2053	9.35445	4342	Orgòsolo		Itàlia
+3172059	Oliena	40.27617	9.40193	7264	Ulìana		Itàlia
+3172087	Olbia	40.92337	9.49802	42930	Terranòa		Itàlia
+3172154	Nuoro	40.31991	9.32568	35948	Nùgoro		Itàlia
+3172158	Nulvi	40.78447	8.74358	2827	Nujvi		Itàlia
+3172394	Naples	40.85216	14.26811	959470	Nàpoli		Itàlia
+3174241	Magomadas	40.26321	8.52327	450	Magomadas		Itàlia
+3174437	Luras	40.93643	9.1748	2531	Luras+Lurisi		Itàlia
+3174482	Lula	40.47048	9.48684	1479	Lùvula		Itàlia
+3176219	Genoa	44.40478	8.94439	580223	Genova		Itàlia
+3176832	Fonni	40.11932	9.25347	4002	Onne		Itàlia
+3176903	Florinas	40.649	8.66548	1341	Fiolinas		Itàlia
+3177719	Cuglieri	40.18804	8.56806	2141	Cullieri		Itàlia
+3178858	Chiaramonti	40.74829	8.82114	1602	Tzaramonte		Itàlia
+3179470	Castelsardo	40.91256	8.71453	3747	Casteddu Sardu		Itàlia
+3181384	Busachi	40.03422	8.88848	1378	Busache		Itàlia
+3181712	Bortigali	40.28268	8.83946	1331	Bortigali		Itàlia
+3181899	Bonarcado	40.09836	8.65534	1623	Bonàrcado		Itàlia
+3181913	Bolzano	46.49067	11.33982	99049	Bolzanu		Itàlia
+3183070	Anela	40.44176	9.05743	652	Anela		Itàlia
+3183284	Alghero	40.55969	8.31953	34261	Alighera		Itàlia
+3183443	Aggius	40.92995	9.06517	1381	Agghju		Itàlia
+1298824	Yangon	16.80528	96.15611	4477638	Rangoon	Yangon	
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polonia
+3094802	Kraków	50.06143	19.93658	755050	Cracòvia	Małopolskie	Polonia
+2267057	Lisbon	38.71667	-9.13333	517802	Lisbona	Lisboa	Portogallo
+2673730	Stockholm	59.33258	18.0649	1515017	Stoccolma	Stockholms Län	Isvetzia+Ruoččii
+170654	Damascus	33.5102	36.29128	1569394	Damasco		
+308464	Kayseri	38.73222	35.48528	592840	Cesarea		Turkanmua
+6940561	Çatalhöyük	37.66847	32.82689	10000	Çatal Hüyük		Turkanmua
+4259418	Indianapolis	39.76838	-86.15804	829718	Indianàpolis	IN+Indiana	U.S.+USA+U.S.A.
+4347778	Baltimore	39.29038	-76.61219	621849	Baltimòra	MD+Maryland	U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	MO+Missouri	U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Filadelfia	PA	U.S.+USA+U.S.A.
+4575352	Columbia	34.00071	-81.03481	133803	Colùmbia	Carolina de Sud+SC+South Carolina	U.S.+USA+U.S.A.
+4726206	San Antonio	29.42412	-98.49363	1469845	San Antònio	TX+Texas	U.S.+USA+U.S.A.
+4791259	Virginia Beach	36.85293	-75.97799	452745	Virgìnia Beach	Virgìnia+VA+Virginia	U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San José	Califòrnia+CA+Calif+California	U.S.+USA+U.S.A.

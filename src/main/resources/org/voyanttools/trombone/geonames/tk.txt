@@ -1,0 +1,63 @@
+3435910	Buenos Aires	-34.61315	-58.37723	13076300	Buenos-Aýres	CF	
+2147714	Sydney	-33.86785	151.20732	4627345	Sidneý	NSW	
+1185241	Dhaka	23.7104	90.40744	10356500	Dakka		Bangladeş
+726418	Dobrich	43.56667	27.83333	94831	Dobriç		
+726848	Stara Zagora	42.43278	25.64194	143431	Stara-Zagora		
+727011	Sofia	42.69751	23.32415	1152556	Sofiýa		
+728193	Plovdiv	42.15	24.75	340494	Plowdiw		
+3448439	São Paulo	-23.5475	-46.63611	10021295	San-Paulu	SP+São Paulo	
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio-de-Žaneýro	RJ	
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinşasa	Kinshasa	Kongo Demokratik Respublikasy
+3893894	Concepción	-36.82699	-73.04977	215413	Konsepsion	Biobío	
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		
+2935022	Dresden	51.05089	13.73832	486854	Drezden		
+2988507	Paris	48.85341	2.3488	2138551	Pariž+75001		France
+281184	Jerusalem	31.76904	35.21633	801000	Iýerusalim		
+1273294	Delhi	28.65195	77.23149	10927986	Deli	DL	Hindistan
+1275004	Kolkata	22.56263	88.36304	4631392	Kalkutta	WB+West Bengal	Hindistan
+113646	Tabriz	38.08	46.2919	1424641	Töwriz		
+119208	Qom	34.6401	50.8764	900000	Kum	Qom	
+122285	Neyshābūr	36.21329	58.79575	220929	Nişabur	Khorāsān-e Raẕāvī	
+124665	Mashhad	36.31559	59.56796	2307177	Maşat	Khorāsān-e Raẕāvī	
+144448	Ahvaz	31.31901	48.6842	841145	Ahwaz		
+418863	Isfahan	32.65246	51.67462	1547164	Yspyhan		
+1159716	Sarakhs	36.5449	61.1577	46499	Sarahs	Khorāsān-e Raẕāvī	
+184745	Nairobi	-1.28333	36.81667	2750547	Naýrobi	Nairobi Area	
+1527534	Osh	40.52828	72.7985	200000	Oş		
+610529	Atyrau	47.11667	51.88333	180000	Atyraw		Gazagystan
+1518980	Shymkent	42.3	69.6	414032	Çimkent		Gazagystan
+1520240	Pavlodar	52.28333	76.96667	329002	Pawlodar		Gazagystan
+1298824	Yangon	16.80528	96.15611	4477638	Ýangon	Yangon	
+1174872	Karachi	24.8608	67.0104	11624219	Karaçi		
+667268	Sibiu	45.8	24.15	151894	Hermanştat	Sibiu	
+1512236	Abakan	53.71556	91.42917	167289	Abakan		
+105343	Jeddah	21.54238	39.19797	2867446	Jidde	Makkah	
+2673730	Stockholm	59.33258	18.0649	1515017	Stokgolm	Stockholms Län	Ruoččii
+170654	Damascus	33.5102	36.29128	1569394	Damask		
+161616	Balkanabat	39.51075	54.36713	87822	Nebit-Dag	Balkan welaýaty	Türkmenistan
+161931	Serdar	38.97644	56.27575	12000	Serdar	Balkan welaýaty	Türkmenistan
+161980	Magtymguly	38.43749	56.28081	0	Magtymguly	Balkan welaýaty	Türkmenistan
+161983	Arçabil	37.915	58.08987	3000	Arçabil	Ahal welaýaty	Türkmenistan
+162099	Abadan	38.05415	58.19721	39481	Abadan	Ahal welaýaty	Türkmenistan
+162158	Baharly	38.43624	57.43158	22991	Baharly	Ahal welaýaty	Türkmenistan
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat	Ahal welaýaty	Türkmenistan
+601594	Türkmenbaşy	40.02216	52.95517	68292	Türkmenbaşy	Balkan welaýaty	Türkmenistan
+601608	Köneürgench	42.32773	59.15442	30000	Köneürgenç	Dashhowuz Oblasty	Türkmenistan
+601734	Daşoguz	41.83625	59.96661	166500	Daşoguz	Dashhowuz Oblasty	Türkmenistan
+1218239	Tejen	37.38338	60.50545	67294	Tejen	Ahal welaýaty	Türkmenistan
+1218667	Mary	37.59378	61.83031	114680	Mary	Mary welaýaty	Türkmenistan
+1219377	Serhetabat	35.27992	62.34383	5200	Serhetabat+Guşgy	Mary welaýaty	Türkmenistan
+1219649	Türkmenabat	39.07328	63.57861	234817	Türkmenabat	Lebap welaýaty	Türkmenistan
+311046	İzmir	38.41273	27.13838	2500603	İzmir		Türkiýe+Turkanmua
+311073	Isparta	37.76444	30.55222	172334	Ysparta		Türkiýe+Turkanmua
+318755	Çeşme	38.32614	26.30574	21316	Çeşme		Türkiýe+Turkanmua
+745175	İnebolu	41.97472	33.76083	9935	İnebolu		Türkiýe+Turkanmua
+698740	Odessa	46.47747	30.73262	1001558	Odesa		http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Lwiw	Lviv	http://en.wikipedia.org/wiki/Ukraine
+709717	Donetsk	48.023	37.80224	1024700	Donesk	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los-Anjeles	CA+Calif+California	U.S.+USA+U.S.A.
+601294	Nukus	42.45306	59.61028	230006	Nökis	Qoraqalpog iston	
+1217662	Bukhara	39.77472	64.42861	247644	Buhara		
+1512569	Tashkent	41.26465	69.21627	1978028	Daşkent	Toshkent Shahri	
+3369157	Cape Town	-33.92584	18.42322	3433441	Keýptaun	Western Cape	

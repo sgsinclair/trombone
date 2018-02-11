@@ -1,0 +1,8 @@
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaiso	Valparaíso	
+3872594	Salamanca	-31.77922	-70.96389	13265	Salamanka	Coquimbo	
+2507480	Algiers	36.73225	3.08746	1977663	Alger	Alger	
+361058	Alexandria	31.20176	29.91582	3811516	Aleksandria		
+2306104	Accra	5.55602	-0.1969	1963264	Nkran	Greater Accra	Ghana
+281184	Jerusalem	31.76904	35.21633	801000	Yerusalem		
+2523630	Reggio Calabria	38.11047	15.66129	169140	Regio	Calabria	
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	

@@ -1,0 +1,224 @@
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andorra la Vella		Andurra
+616052	Yerevan	40.18111	44.51361	1093485	Yiriwan	Yerevan	Arminya
+3838233	Salta	-24.7859	-65.41166	512686	Salta llaqta	SA+Salta	Arhintina
+3838583	Rosario	-32.94682	-60.63932	1173533	Rosario	SF+Santa Fe	Arhintina
+3848950	La Rioja	-29.41105	-66.85067	162620	La Rioja llaqta	LR+La Rioja	Arhintina
+3860259	Córdoba	-31.4135	-64.18105	1428214	Córdoba	CD+Córdoba	Arhintina
+2766824	Salzburg	47.79941	13.04399	150269	Salzburg		
+3191281	Sarajevo	43.84864	18.35644	696731	Sarajevo	Federation of Bosnia and Herzegovina	Busna-Hirsiquwina
+2800866	Brussels	50.85045	4.34878	1019022	Brussel	Brussels-Capital Region	Bilgasuyu+Bilhika
+727011	Sofia	42.69751	23.32415	1152556	Sofiya		Bulgariya+Bulgarya
+3902202	Tupiza	-21.44345	-65.71875	22233	Tupisa	Potosí	Bulibiya+Puliwya
+3902377	Trinidad	-14.83333	-64.9	84259	Kimsantin llaqta	El Beni	Bulibiya+Puliwya
+3902523	Totora	-17.72662	-65.1932	1597	Tutura	Cochabamba	Bulibiya+Puliwya
+3903391	Tarabuco	-19.18168	-64.91517	2428	Tarapuku	Chuquisaca	Bulibiya+Puliwya
+3903987	Sucre	-19.03332	-65.26274	224838	Chuqichaka	Chuquisaca	Bulibiya+Puliwya
+3904043	Sorata	-15.77305	-68.64973	2190	Surata	La Paz	Bulibiya+Puliwya
+3905658	San Ignacio de Velasco	-16.36667	-60.95	23569	San Inasyu	Santa Cruz	Bulibiya+Puliwya
+3905951	Samaipata	-18.18005	-63.87552	3500	Samaypata	Santa Cruz	Bulibiya+Puliwya
+3906194	Sacaba	-17.39799	-66.03825	107628	Sakawa	Cochabamba	Bulibiya+Puliwya
+3906791	Quillacollo	-17.39228	-66.27838	87309	Killaqullu	Cochabamba	Bulibiya+Puliwya
+3907584	Potosí	-19.58361	-65.75306	141251	Putusi	Potosí	Bulibiya+Puliwya
+3908339	Patacamaya	-17.2358	-67.92169	12260	Patakamaya	La Paz	Bulibiya+Puliwya
+3909234	Oruro	-17.98333	-67.15	208684	Uru Uru	Oruro	Bulibiya+Puliwya
+3911409	Llallagua	-18.42426	-66.58388	28069	Llallawa	Potosí	Bulibiya+Puliwya
+3911925	La Paz	-16.5	-68.15	812799	Chuqiyapu	La Paz	Bulibiya+Puliwya
+3915061	Huachacalla	-18.79298	-68.26157	0	Wachaqalla	Oruro	Bulibiya+Puliwya
+3915350	Guayaramerín	-10.8258	-65.3581	36008	Wayaramirin	El Beni	Bulibiya+Puliwya
+3918938	Cotoca	-17.74959	-62.83442	0	Qutuqa	Santa Cruz	Bulibiya+Puliwya
+3919085	Coroico	-16.19386	-67.72998	2361	Quruyqu	La Paz	Bulibiya+Puliwya
+3919703	Comarapa	-17.91537	-64.53163	4445	Kumarapa	Santa Cruz	Bulibiya+Puliwya
+3919968	Cochabamba	-17.3895	-66.1568	900414	Quchapampa	Cochabamba	Bulibiya+Puliwya
+3919998	Cobija	-11.02671	-68.76918	26585	Kuwiha	Pando	Bulibiya+Puliwya
+3922414	Camiri	-20.03849	-63.51833	27961	Kamiri	Santa Cruz	Bulibiya+Puliwya
+3923154	Bermejo	-22.73206	-64.33724	35411	Panti llaqta	Tarija	Bulibiya+Puliwya
+3923570	Atocha	-20.93515	-66.22139	1833	Atucha	Potosí	Bulibiya+Puliwya
+3924610	Achacachi	-16.05	-68.68333	8447	Jachakachi	La Paz	Bulibiya+Puliwya
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brasil
+625144	Minsk	53.9	27.56667	1742124	Minsk		Bilarus
+6324733	St. John's	47.56494	-52.70931	99182	Saint John	NL+Newfoundland	
+6325494	Québec	46.81228	-71.21454	528595	Quebec llaqta+Québec	QC	
+2657896	Zürich	47.36667	8.55	341730	Zürich	ZH	
+2660646	Genève	46.20222	6.14569	183981	Genève+1200		
+2661552	Bern	46.94809	7.44744	121631	Bern		
+3870282	Talcahuano	-36.72494	-73.11684	252968	Talkawanu	Biobío	Chili
+3870294	Talca	-35.4264	-71.65542	197479	Talka	Maule	Chili
+3871336	Santiago	-33.45694	-70.64827	4837295	Santiago+Stgo.	Santiago suyu	Chili
+3876353	Pica	-20.49128	-69.33118	0	Piqa	Tarapaka suyu	Chili
+3893629	Coquimbo	-29.95332	-71.33947	161317	Kukimpu	Coquimbo	Chili
+3893656	Copiapó	-27.36679	-70.3314	129280	Qhupiyapu	Atacama	Chili
+3897347	Calama	-22.45667	-68.92371	143084	Kalama	Antofagasta	Chili
+3899361	Arica	-18.4746	-70.29792	185999	Arica+Arika	Arica y Parinacota	Chili
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaundé		
+1790645	Xiamen	24.47979	118.08187	3531347	Hiyamin		Chunwa
+1799962	Nanjing	32.06167	118.77778	7165292	Namkin		Chunwa
+1816670	Beijing	39.9075	116.39723	11716620	Pikkin		Chunwa
+3674962	Medellín	6.25184	-75.56359	1999979	Medellín		Kulumbiya+Kulumbya
+3685533	Cúcuta	7.89391	-72.50782	721398	Cúcuta	Norte de Santander	Kulumbiya+Kulumbya
+3687238	Cartagena	10.39972	-75.51444	952024	Cartagena	Bolívar	Kulumbiya+Kulumbya
+3687925	Cali	3.43722	-76.5225	2392877	Cali		Kulumbiya+Kulumbya
+3688465	Bucaramanga	7.12539	-73.1198	571820	Bucaramanga		Kulumbiya+Kulumbya
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotá		Kulumbiya+Kulumbya
+3689147	Barranquilla	10.96854	-74.78132	1380425	Barranquilla		Kulumbiya+Kulumbya
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Alimaniya+Alimanya
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Alimaniya+Alimanya
+2928810	Essen	51.45657	7.01228	593085	Essen	NRW	Alimaniya+Alimanya
+2950159	Berlin	52.52437	13.41053	3426354	Berlin+Berlín	Berlin	Alimaniya+Alimanya
+2618425	Copenhagen	55.67594	12.56553	1153615	København		Danmarka+Dansuyu
+3650472	Tulcán	0.81187	-77.71727	86498	Tulkan	Carchi	
+3650721	Tena	-0.9938	-77.81286	17172	Tina	Napo	
+3652350	Riobamba	-1.67098	-78.64712	124478	Rispampa	Chimborazo	
+3652462	Quito	-0.22985	-78.52495	1399814	Kitu	Pichincha	
+3652584	Puyo	-1.48369	-78.00257	24881	Puyu llaqta	Pastaza	
+3653693	Otavalo	0.23457	-78.26248	32330	Utawalu	Imbabura	
+3654870	Latacunga	-0.93521	-78.61554	51717	Latakunka	Cotopaxi	
+3655185	Nueva Loja	0.086	-76.89528	24211	Musuq Loja	Sucumbios	
+3657509	Guayaquil	-2.20584	-79.90795	1952029	Guayaquil+Wayakil	Guayas	
+3657571	Guaranda	-1.59263	-79.00098	22199	Waranta	Bolívar	
+3658666	Cuenca	-2.90055	-79.00453	276964	Tumipampa	Azuay	
+3659139	Chone	-0.69819	-80.09361	44751	Chuni	Manabí	
+3660434	Azogues	-2.73969	-78.8486	34877	Asuwi	Cañar	
+3660689	Ambato	-1.24908	-78.61675	154369	Ampatu llaqta	Tungurahua	
+588409	Tallinn	59.43696	24.75353	394024	Tallin	Harjumaa	Istunya
+360502	Luxor	25.69893	32.6421	422407	Al Uqsur		
+361058	Alexandria	31.20176	29.91582	3811516	Iskandariya		
+2510145	Trujillo	39.45786	-5.88203	9317	Trujillo	Ikstrimadura+Extremadura	Ispaña+España
+3106054	Vicálvaro	40.4	-3.6	66439	Vicálvaro distritu	Madrid	Ispaña+España
+3112737	Puente de Vallecas	40.39354	-3.662	244151	Puente de Vallecas distritu	Madrid	Ispaña+España
+3116156	Moratalaz	40.40742	-3.64935	104923	Moratalaz distritu	Madrid	Ispaña+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Ispaña+España
+3120635	Hortaleza	40.47444	-3.6411	161661	Hortaleza distritu	Madrid	Ispaña+España
+3121245	Gràcia	41.40237	2.15641	121502	Gràcia distritu	Catalunya	Ispaña+España
+3124964	Ciudad Lineal	40.44505	-3.65132	228171	Ciudad Lineal distritu	Madrid	Ispaña+España
+6252065	Nou Barris	41.44163	2.17727	166310	Nou Barris distritu	Catalunya	Ispaña+España
+6544099	Moncloa-Aravaca	40.43547	-3.7317	116531	Moncloa-Aravaca distritu+Moncloa-Aravaca	Madrid	Ispaña+España
+6544100	Eixample	41.38896	2.16179	266477	Eixample distritu	Catalunya	Ispaña+España
+6544103	Horta-Guinardó	41.41849	2.1677	168092	Horta-Guinardó distritu	Catalunya	Ispaña+España
+6544104	Sants-Montjuïc	41.37263	2.1546	183120	Sants-Montjuïc distritu	Catalunya	Ispaña+España
+6544105	Sant Martí	41.41814	2.19933	235719	Sant Martí distritu	Catalunya	Ispaña+España
+6544106	Ciutat Vella	41.38022	2.17319	102347	Ciutat Vella de Barcelona	Catalunya	Ispaña+España
+6544487	Arganzuela	40.40021	-3.69618	148797	Arganzuela distritu	Madrid	Ispaña+España
+6544489	Latina	40.38897	-3.74569	256644	Latina distritu	Madrid	Ispaña+España
+6544492	Chamberí	40.43404	-3.70379	145934	Chamberí distritu	Madrid	Ispaña+España
+6544493	Carabanchel	40.39094	-3.7242	253678	Carabanchel distritu	Madrid	Ispaña+España
+6544495	Retiro	40.41317	-3.68307	126058	Retiro distritu	Madrid	Ispaña+España
+8285535	Villa de Vallecas	40.36695	-3.60146	65162	Villa de Vallecas distritu	Madrid	Ispaña+España
+634963	Tampere	61.49911	23.78712	202687	Tampere		Finlandiya+Phinsuyu
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Finlandiya+Phinsuyu
+2972328	Toulon	43.12442	5.92836	168701	Toulon+83000	Provence-Alpes-Côte d'Azur	Fransiya+Fransya+France
+2973783	Strasbourg	48.58392	7.74553	274845	Strasbourg+67000	ACAL	Fransiya+Fransya+France
+2983990	Rennes	48.11198	-1.67429	209375	Rennes+35000	Bretagne	Fransiya+Fransya+France
+2989187	Orthez	43.48839	-0.77244	11857	Ortès+64300		Fransiya+Fransya+France
+2990363	Nîmes	43.83333	4.35	148236	Nîmes+30000		Fransiya+Fransya+France
+2990440	Nice	43.70313	7.26608	338620	Nice+06000	Provence-Alpes-Côte d'Azur	Fransiya+Fransya+France
+2990969	Nantes	47.21725	-1.55336	277269	Nantes+44000+http://www.nantes.fr/		Fransiya+Fransya+France
+2992166	Montpellier	43.61092	3.87723	248252	Montpellier+34000		Fransiya+Fransya+France
+2993331	Monein	43.33333	-0.58333	4510	Monenh		Fransiya+Fransya+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001	Provence-Alpes-Côte d'Azur	Fransiya+Fransya+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Fransiya+Fransya+France
+2998324	Lille	50.63297	3.05858	228328	Lille+59000	http://en.wikipedia.org/wiki/Hauts-de-France	Fransiya+Fransya+France
+3003796	Le Havre	49.4938	0.10767	185972	Le Havre+76600		Fransiya+Fransya+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Fransiya+Fransya+France
+3021372	Dijon	47.31667	5.01667	149782	Dijon+21000		Fransiya+Fransya+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Aix-en-Provence+13080	Provence-Alpes-Côte d'Azur	Fransiya+Fransya+France
+2643743	London	51.50853	-0.12574	7556900	London	Inlatirra	Hukllachasqa Qhapaq Suyu+http://en.wikipedia.org/wiki/United_Kingdom
+264371	Athens	37.97945	23.71622	664046	Athina		Grisya+Griekanmua
+2374775	Bissau	11.86357	-15.59767	388028	Wisaw	Bissau Region	
+3378644	Georgetown	6.80448	-58.15527	235017	Georgetown	Demerara-Mahaica	Wayana
+3186886	Zagreb	45.81444	15.97798	698966	Zagreb	Grad Zagreb	Hurwatsuyu
+3718426	Port-au-Prince	18.53917	-72.335	1234742	Port au Prince	Ouest	
+2964574	Dublin	53.33306	-6.24889	1024027	Baile Átha Cliath		Ire
+1273294	Delhi	28.65195	77.23149	10927986	Dilhi	DL	Barat+Indiya
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavík+101		Islandiya+Islandya
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	Italya
+1857910	Kyoto	35.02107	135.75385	1459640	Kyōto		Nihun
+921772	Moroni	-11.70216	43.25506	42872	Muruni	Grande Comore	
+1835848	Seoul	37.566	126.9784	10349312	Siul		http://en.wikipedia.org/wiki/South_Korea
+1526273	Astana	51.1801	71.44598	345604	Astana	Astana Qalasy	
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Liechtenstein
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Lituwa+Lituwaniya+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Luksimbur		Luksimbur
+456172	Riga	56.946	24.10589	742572	Riga	Riga	Lituniya+Litunya
+2553604	Casablanca	33.58831	-7.61138	3144909	Ad Dar al Bayda		
+618426	Chisinau	47.00556	28.8575	635994	Chişinău		Mulduwa
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Yanaurqu
+785842	Skopje	41.99646	21.43141	474889	Skopje		ARYM+FYROM
+2562305	Valletta	35.89972	14.51472	6794	Valletta		
+3522507	Oaxaca	17.06542	-96.72365	262566	Oaxaka de Juárez	OAX	Mishiku
+3530580	Ciudad Victoria	23.74174	-99.14599	269923	Victoria llaqta	TAM+Tamps	Mishiku
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Urasuyu+Uray Llaqta Suyu
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Nurwiga
+2193733	Auckland	-36.84853	174.76349	417910	Awklanda		Musuq Silanda
+3691148	Tumbes	-3.56694	-80.45153	109223	Tumpis	Tumpis Suyu+Tumpis suyu	Piruw
+3691175	Trujillo	-8.11599	-79.02998	747450	Truhillu	Qispi kay Suyu+Qispi Kay suyu	Piruw
+3691348	Tingo María	-9.29532	-75.99574	53177	Tinku Mariya	Wanuku Suyu	Piruw
+3691474	Tarapoto	-6.50139	-76.36556	0	Taraputu	San Martin Suyu+San Martín	Piruw
+3691674	Sullana	-4.90389	-80.68528	160789	Sullana	Piwra Suyu+Piwra suyu	Piruw
+3692310	San Pedro de Lloc	-7.4289	-79.50416	16250	San Pedro Lluq	Qispi kay Suyu+Qispi Kay suyu	Piruw
+3693345	Pucallpa	-8.37915	-74.55387	310750	Pukallpa	Ukayali Suyu+Ukayali suyu	Piruw
+3693528	Piura	-5.19449	-80.63282	325466	Piwra	Piwra Suyu+Piwra suyu	Piruw
+3694112	Paita	-5.08917	-81.11444	56151	Payta	Piwra Suyu+Piwra suyu	Piruw
+3694564	Moyobamba	-6.03416	-76.97168	44276	Muyupampa	San Martin Suyu+San Martín	Piruw
+3695754	Lambayeque	-6.70111	-79.90611	43710	Lampalliqi	Lampalliqi Suyu+Lampalliqi suyu	Piruw
+3696183	Iquitos	-3.74912	-73.25383	437620	Ikitus	Luritu Suyu+Luritu suyu	Piruw
+3696378	Huaraz	-9.52779	-77.52778	86934	Waras	Anqash Suyu+Anqash suyu+Ancash	Piruw
+3696417	Huánuco	-9.93062	-76.24223	147959	Wanuku	Wanuku Suyu	Piruw
+3696448	Huanchaco	-8.08333	-79.11667	0	Wanchaku	Qispi kay Suyu+Qispi Kay suyu	Piruw
+3698304	Chimbote	-9.08528	-78.57833	316966	Chimputi	Anqash Suyu+Anqash suyu+Ancash	Piruw
+3698350	Chiclayo	-6.77137	-79.84088	577375	Chiklayu	Lampalliqi Suyu+Lampalliqi suyu	Piruw
+3698540	Chachapoyas	-6.23169	-77.86903	20279	Chachapuyas	Amarumayu Suyu+Amarumayu suyu	Piruw
+3698545	Chacas	-9.23333	-77.38333	0	Chakas	Anqash Suyu+Anqash suyu+Ancash	Piruw
+3699088	Cajamarca	-7.16378	-78.50027	135000	Qashamarka+Kashamarka	Kashamarka Suyu	Piruw
+3927803	Taquile	-15.76667	-69.68333	2000	Intika	Punu Suyu+Punu suyu	Piruw
+3928128	Tacna	-18.01465	-70.25362	280098	Taqna	Taqna Suyu+Taqna suyu	Piruw
+3931276	Puno	-15.8422	-70.0199	116552	Punu	Punu Suyu+Punu suyu	Piruw
+3932145	Pisco	-13.71029	-76.20538	61869	Pisqu llaqta	Ika Suyu+Ika suyu	Piruw
+3934055	Ollantaytambo	-13.25722	-72.26306	2000	Ullantaytanpu+Ullantaytampu	Qusqu Suyu	Piruw
+3934356	Nazca	-14.83098	-74.93895	23556	Naska	Ika Suyu+Ika suyu	Piruw
+3934608	Moquegua	-17.19832	-70.93567	54517	Muqiwa		Piruw
+3934707	Mollendo	-17.02306	-72.01472	28953	Mullintu	Ariqipa Suyu+Ariqipa suyu	Piruw
+3936456	Lima	-12.04318	-77.02824	7737002	Limaq	Lima Province	Piruw
+3936952	La Oroya	-11.51893	-75.89935	33345	Uruya llaqta	Hunin Suyu+Sunin suyu	Piruw
+3937513	Juliaca	-15.5	-70.13333	245675	Hullaqa	Punu Suyu+Punu suyu	Piruw
+3938415	Ilo	-17.63944	-71.3375	53476	Ilu		Piruw
+3938527	Ica	-14.06777	-75.72861	246844	Ika	Ika Suyu+Ika suyu	Piruw
+3939285	Huaral	-11.495	-77.20778	62174	Waral	Lima Suyu+Lima suyu	Piruw
+3939386	Huanta	-12.93333	-74.25	18627	Wanta	Ayakuchu Suyu+Ayakuchu suyu	Piruw
+3939459	Huancayo	-12.06513	-75.20486	376657	Wankayu	Hunin Suyu+Sunin suyu	Piruw
+3939470	Huancavelica	-12.78261	-74.97266	41576	Wankawillka	Wankawillka Suyu+Wankawillka suyu	Piruw
+3940002	Huacho	-11.10667	-77.605	54545	Wachu llaqta	Lima Suyu+Lima suyu	Piruw
+3941584	Cusco	-13.52264	-71.96734	312140	Qusqu	Qusqu Suyu	Piruw
+3943789	Chincha Alta	-13.40985	-76.13235	153076	Hanan Chincha	Ika Suyu+Ika suyu	Piruw
+3944797	Cerro de Pasco	-10.66748	-76.25668	78910	Pasqu urqu	Pasqu Suyu+Pasqu suyu	Piruw
+3946083	Callao	-12.05659	-77.11814	813264	Kallaw	Qallaw Suyu	Piruw
+3947019	Ayacucho	-13.15878	-74.22321	140033	Wamanqa	Ayakuchu Suyu+Ayakuchu suyu	Piruw
+3947322	Arequipa	-16.39889	-71.535	841130	Arikipa+Ariqipa	Ariqipa Suyu+Ariqipa suyu	Piruw
+3947740	Andahuaylas	-13.65556	-73.38722	17444	Antawaylla	Apurimaq Suyu+Apurímac	Piruw
+3948642	Abancay	-13.63389	-72.88139	55111	Abankay+Awankay	Apurimaq Suyu+Apurímac	Piruw
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Pulska+Pulunya
+2267057	Lisbon	38.71667	-9.13333	517802	Lisboa	Lisboa distritu+Lisboa	Purtugal
+3439389	Asunción	-25.30066	-57.63591	1482200	Asunción		Parawayi
+792680	Belgrade	44.80401	20.46513	1273651	Beograd	Central Serbia	Sirbya
+109223	Medina	24.46861	39.61417	1300000	Madina		Sawud Arabya
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Suwidsuyu+Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Ljubljana		Isluwiniya+Isluwinya
+3060972	Bratislava	48.14816	17.10674	423737	Bratislawa	Bratislavský kraj	Isluwakya
+3168070	San Marino	43.93667	12.44639	4500	San Marino	San Marino	San Marino
+53654	Mogadishu	2.03711	45.34375	2587183	Mugadishu		Sumalya
+3383330	Paramaribo	5.86638	-55.16682	223757	Paramaribo	Paramaribo	Surinam
+323786	Ankara	39.91987	32.85427	3517182	Ankara		Turkiya+Turkya+Turkanmua
+1667905	Taoyuan	24.9896	121.3187	0	Taoyuen		Chunwa Republika
+1668355	Tainan	22.99083	120.21333	771235	Taynam		Chunwa Republika
+1668399	Taichung	24.1469	120.6839	1040725	Taychun		Chunwa Republika
+702550	Lviv	49.83826	24.02324	717803	Lwiw	Lviv	Ukranya+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kiyiw		Ukranya+http://en.wikipedia.org/wiki/Ukraine
+4544349	Oklahoma City	35.46756	-97.51643	631346	Oklahoma llaqta	Oklahoma suyu+OK+Oklahoma	U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	New York suyu+NY	U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Uruwayi
+3625549	Valencia	10.16202	-68.00765	1385083	Valincia		Biniswila+Winisuyla
+3632998	Maracay	10.23535	-67.59113	1754256	Marakay		Biniswila+Winisuyla
+3633009	Maracaibo	10.66663	-71.61245	2225000	Marakaypu		Biniswila+Winisuyla
+3645532	Ciudad Bolívar	8.12923	-63.54086	338000	Bolívar llaqta		Biniswila+Winisuyla
+3646738	Caracas	10.48801	-66.87919	3000000	Karakas		Biniswila+Winisuyla
+3648546	Barinas	8.62261	-70.20749	353442	Barinas llaqta		Biniswila+Winisuyla
+1581130	Hanoi	21.0245	105.84117	1431270	Ha Nui	Ha Nội	Witnam

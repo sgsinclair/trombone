@@ -1,0 +1,40 @@
+616052	Yerevan	40.18111	44.51361	1093485	Yérévan	Yerevan	
+147774	Xocalı	39.91297	46.79028	5810	Rayon Khojali	Xocalı	
+290340	Manama	26.22787	50.58565	147074	Al-Manamah	Muḩāfaz̧at al ‘Āşimah	
+3454690	Paulínia	-22.76111	-47.15417	65595	Paulinia	SP+São Paulo	
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	
+1796236	Shanghai	31.22222	121.45806	22315474	Shanghai		
+2507480	Algiers	36.73225	3.08746	1977663	Aljir	Alger	
+2509954	Valencia	39.46975	-0.37739	814208	Valéncia	Valencia	España
+659169	Hamina	60.56974	27.19794	21712	Hamina		
+7911309	Länsi-Turunmaa	60.29972	22.3004	15498	Länsi-Turunmaa+Parainen		
+1215502	Banda Aceh	5.54167	95.33333	250757	Kota Banda Acéh	Aceh	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1624494	Tegal	-6.8694	109.1402	237084	Kota Tegal	Jawa Tengah	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1624647	Tasikmalaya	-7.3274	108.2207	271143	Kota Tasikmalaya	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1625084	Tangerang	-6.17806	106.63	1372124	Kota Tangerang		Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1625812	Surakarta	-7.55611	110.83167	555308	Kota Surakarta	Jawa Tengah	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1626381	Sukabumi	-6.91806	106.92667	276414	Kota Sukabumi	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1636884	Magelang	-7.47056	110.21778	111461	Kota Magelang	Jawa Tengah	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1640660	Kediri	-7.81667	112.01667	235143	Kota Kediri	Jawa Wétan+Jawa Timur	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1642858	Jambi City	-1.6	103.61667	420323	Jambi		Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta	Jakarta Raya	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1645524	Depok	-6.4	106.81861	1198129	Kota Dépok	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1646170	Cirebon	-6.7063	108.557	254298	Kota Cirebon	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1646448	Cimahi	-6.87222	107.5425	493698	Kota Cimahi	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1647142	Cianjur	-6.82222	107.13944	0	Kabupatén Cianjur	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1648473	Bogor	-6.59444	106.78917	800000	Kota Bogor	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1649150	Bengkulu	-3.80044	102.26554	309712	Bengkulu	Bengkulu	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1649378	Bekasi	-6.2349	106.9896	1520119	Kota Bekasi	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+1650357	Bandung	-6.92222	107.60694	1699719	Kota Bandung	Jawa Kulon	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+2082600	Jayapura	-2.53371	140.71813	134895	Port Numbay	Papua	Indonésia+Républik Indonésia+http://en.wikipedia.org/wiki/Indonesia
+281184	Jerusalem	31.76904	35.21633	801000	Yerusalem		
+99135	Kufa	32.05114	44.44017	110000	Kufah	An Najaf	
+1859100	Kōfu	35.66667	138.56667	190000	Kofu	Préféktur Yamanashi	Jepang
+1863641	Gifu-shi	35.42291	136.76039	397714	Gifu	Préféktur Gifu	Jepang
+598098	Klaipėda	55.70888	21.14312	192307	Klaipéda		http://en.wikipedia.org/wiki/Lithuania
+1821274	Macau	22.20056	113.54611	520400	Makau		
+1684712	Tacloban	11.24333	125.00472	242089	Dayeuh Tacloban		
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	
+3093158	Łobez	53.63918	15.62129	10609	Lobez		
+107797	Dhahran	26.28864	50.11396	99540	Zhahran		Saudi Arabia
+109223	Medina	24.46861	39.61417	1300000	Madinah		Saudi Arabia

@@ -1,0 +1,86 @@
+2768905	Pfunds	46.96667	10.55	0	Fuond		Austria
+3903987	Sucre	-19.03332	-65.26274	224838	Sucre	Chuquisaca	Bolivia
+3911925	La Paz	-16.5	-68.15	812799	La Paz	La Paz	Bolivia
+3450554	Salvador	-12.97111	-38.51083	2711840	Salvador da Bahia	BA	Brasilia+Brasila
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brasilia+Brasila
+3582672	Belmopan	17.25	-88.76667	13381	Belmopan	Cayo	Belize
+2657896	Zürich	47.36667	8.55	341730	Turitg	Chantun Turitg+Turitg+ZH	Svizra
+2657898	Zuoz	46.60206	9.95965	1209	Zuoz	Chantun Grischun+Grischun	Svizra
+2657916	Zizers	46.93575	9.56491	3009	Zezras+Zir	Chantun Grischun+Grischun	Svizra
+2657926	Zernez	46.69862	10.09268	1053	Zernez	Chantun Grischun+Grischun	Svizra
+2657970	Winterthur	47.50564	8.72413	91908	Winterthur	Chantun Turitg+Turitg+ZH	Svizra
+2658191	Vals Platz	46.61647	9.18025	1006	Val+Vals	Chantun Grischun+Grischun	Svizra
+2658232	Untervaz	46.9275	9.53422	2303	Vaz Sut	Chantun Grischun+Grischun	Svizra
+2658299	Trun	46.74292	8.98716	1243	Trun	Chantun Grischun+Grischun	Svizra
+2658311	Trimmis	46.90075	9.5612	2831	Termin	Chantun Grischun+Grischun	Svizra
+2658365	Tiefencastel	46.66014	9.57883	244	Casti	Chantun Grischun+Grischun	Svizra
+2658371	Thusis	46.69724	9.43938	2572	Tusaun	Chantun Grischun+Grischun	Svizra
+2658427	Tamins	46.82964	9.40648	1160	Tumein	Chantun Grischun+Grischun	Svizra
+2658564	Solothurn	47.20791	7.53714	14853	Soloturn	Chantun Soloturn+Soloturn	Svizra
+2658576	Sitten	46.22739	7.35559	28045	Sion	Chantun Vallais+Vallais	Svizra
+2658588	Silvaplana	46.4581	9.79514	973	Silvaplauna+Silvaplana	Chantun Grischun+Grischun	Svizra
+2658660	Scuol	46.79671	10.29804	2184	Scuol	Chantun Grischun+Grischun	Svizra
+2658665	Schwyz	47.02076	8.65414	14177	Sviz	Chantun Sviz+Sviz	Svizra
+2658738	Schiers	46.96973	9.6872	2423	Aschera	Chantun Grischun+Grischun	Svizra
+2658753	Scharans	46.71814	9.45903	867	Scharons	Chantun Grischun+Grischun	Svizra
+2658761	Schaffhausen	47.69732	8.63493	33863	Schaffusa	Chantun Schaffusa+Schaffusa	Svizra
+2658813	St. Moritz	46.49937	9.84327	4952	San Murezzan	Chantun Grischun+Grischun	Svizra
+2658822	Sankt Gallen	47.42391	9.37477	70572	Son Gagl	Chantun Son Gagl+Son Gagl	Svizra
+2658846	Samedan	46.53399	9.87276	2700	Samedan	Chantun Grischun+Grischun	Svizra
+2659064	Rhäzüns	46.79891	9.39764	1257	Razén	Chantun Grischun+Grischun	Svizra
+2659165	Poschiavo	46.32441	10.05823	3428	Puschlav	Chantun Grischun+Grischun	Svizra
+2659172	Pontresina	46.4955	9.90126	1863	Puntraschigna	Chantun Grischun+Grischun	Svizra
+2659177	La Punt Chamues-ch	46.57887	9.92015	0	La Punt+La Punt-Chamues-ch	Chantun Grischun+Grischun	Svizra
+2659784	Malans	46.98096	9.57527	2051	Malans GR	Chantun Grischun+Grischun	Svizra
+2659787	Maienfeld	47.00472	9.53115	2435	Maiavilla	Chantun Grischun+Grischun	Svizra
+2659811	Luzern	47.05048	8.30635	57066	Lucerna	Chantun Lucerna+Lucerna	Svizra
+2659869	Locarno	46.17086	8.79953	14509	Locarno	Chantun Tessin+Tessin+Republica ed Chantun Tessin+Cantone Ticino	Svizra
+2659950	Lenzerheide	46.72215	9.55905	2610	Lai	Chantun Grischun+Grischun	Svizra
+2659994	Lausanne	46.516	6.63282	116751	Losanna+1000	Chantun Vad+Vad+VD	Svizra
+2660226	Jenaz	46.92892	9.71275	1130	Gianatsch	Chantun Grischun+Grischun	Svizra
+2660275	Ilanz	46.77413	9.20461	2321	Glion	Chantun Grischun+Grischun	Svizra
+2660277	Igis	46.94531	9.57218	6828	Eigias	Chantun Grischun+Grischun	Svizra
+2660341	Hinterrhein	46.53333	9.2	108	Rein Posteriur+Valragn	Chantun Grischun+Grischun	Svizra
+2660465	Grüsch	46.97965	9.64639	1243	Crusch	Chantun Grischun+Grischun	Svizra
+2660594	Glarus	47.04057	9.06804	5681	Glaruna	Chantun Glaruna+Glaruna	Svizra
+2660646	Genève	46.20222	6.14569	183981	Genevra+1200	Chantun Genevra+Genevra+Republica ed Chantun Genevra	Svizra
+2660718	Fribourg	46.80237	7.15128	32827	Friburg	Chantun Friburg+Friburg	Svizra
+2660757	Flims	46.83705	9.28458	2536	Flem	Chantun Grischun+Grischun	Svizra
+2660802	Felsberg	46.84566	9.47588	2088	Favugn	Chantun Grischun+Grischun	Svizra
+2661009	Disentis	46.70341	8.8509	2193	Mustér	Chantun Grischun+Grischun	Svizra
+2661039	Davos	46.80429	9.83723	11024	Tavau+Tafaas	Chantun Grischun+Grischun	Svizra
+2661167	Churwalden	46.78143	9.54377	1214	Curvalda	Chantun Grischun+Grischun	Svizra
+2661169	Chur	46.84986	9.53287	32429	Cuira+Cuera	Chantun Grischun+Grischun	Svizra
+2661241	Celerina	46.51217	9.85794	1241	Schlarigna	Chantun Grischun+Grischun	Svizra
+2661242	Cazis	46.7194	9.43271	1641	Cazas	Chantun Grischun+Grischun	Svizra
+2661365	Brusio	46.25953	10.12385	1152	Brüsch	Chantun Grischun+Grischun	Svizra
+2661414	Breíl	46.76986	9.06036	1344	Breíl	Chantun Grischun+Grischun	Svizra
+2661453	Bonaduz	46.81103	9.39821	2654	Panaduz	Chantun Grischun+Grischun	Svizra
+2661513	Biel/Bienne	47.13713	7.24608	48614	Bienna+Biel/Bienne	Chantun Berna+Berna	Svizra
+2661552	Bern	46.94809	7.44744	121631	Berna	Chantun Berna+Berna	Svizra
+2661604	Basel	47.55839	7.57327	164488	Basilea+EAP+4000	Chantun Basilea-Citad+Basilea-Citad	Svizra
+2661703	Arzier	46.45962	6.20813	1919	Arzier-Le Muids	Chantun Vad+Vad+VD	Svizra
+2661712	Arosa	46.77793	9.67621	2307	Arosa	Chantun Grischun+Grischun	Svizra
+2661750	Andermatt	46.63565	8.59388	1258	Ursera	Chantun Uri+Uri	Svizra
+2661780	Altdorf	46.88042	8.64441	8678	Altdorf	Chantun Uri+Uri	Svizra
+2661881	Aarau	47.39254	8.04422	15501	Aarau+5000	Argovia+Chantun Argovia	Svizra
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotá		Colombia+Columbia
+2867714	Munich	48.13743	11.57549	1260391	Minca	Bayern	Germania
+2874225	Mainz	49.98419	8.2791	184997	Magonza	Renania-Palatinat	Germania
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Germania
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Germania
+3125602	Catoira	42.66748	-8.72323	3519	Catoira	Galicia	Spagna+España
+2643743	London	51.50853	-0.12574	7556900	Londra	Engalterra	Reginavel Unì da la Gronda Britannia ed Irlanda dal Nord+Reginavel Unì+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	Reginavel Unì da la Gronda Britannia ed Irlanda dal Nord+Reginavel Unì+http://en.wikipedia.org/wiki/United_Kingdom
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Ungaria
+281184	Jerusalem	31.76904	35.21633	801000	Jerusalem		Israel
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	Italia
+3181913	Bolzano	46.49067	11.33982	99049	Bulsaun		Italia
+1835848	Seoul	37.566	126.9784	10349312	Seoul		Corea dal Sid+http://en.wikipedia.org/wiki/South_Korea
+618426	Chisinau	47.00556	28.8575	635994	Chisinau		Moldavia
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Peru
+3439389	Asunción	-25.30066	-57.63591	1482200	Asunción		Paraguay+Paraguai
+683506	Bucharest	44.43225	26.10626	1877155	Bucaresta		Rumenia
+3168070	San Marino	43.93667	12.44639	4500	Citad da San Marino	San Marino	San Marino
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Uruguay
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Venezuela

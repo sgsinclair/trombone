@@ -1,0 +1,104 @@
+146268	Nicosia	35.17531	33.3642	200452	Nikosia		Kypros
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Duiska+Duiskka
+2618425	Copenhagen	55.67594	12.56553	1153615	Københámman		Dánmárku
+2515270	Las Palmas de Gran Canaria	28.09973	-15.41343	381847	Las Palmas	Kanáriasullot	Spánia+Espánjja+España
+630779	Ylitornio	66.30893	23.67734	5104	Badje-Duortnus		Suopma
+632453	Vantaa	60.29414	25.04099	190058	Vanda		Suopma
+633268	Utsjoki	69.90864	27.02843	1401	Ohcejohka		Suopma
+634093	Tornio	65.84811	24.14662	21236	Duortnus		Suopma
+634592	Tervola	66.08333	24.8	3538	Tervola		Suopma
+636464	Sodankylä	67.41667	26.6	8942	Soađegilli		Suopma
+636802	Simo	65.66667	25.05	3582	Simo		Suopma
+637284	Savukoski	67.2925	28.15806	1357	Suovvaguoika		Suopma
+638074	Salla	66.83333	28.66667	4401	Salla		Suopma
+638936	Rovaniemi	66.5	25.71667	34781	Roavvenjárga		Suopma
+639888	Ranua	65.91667	26.53333	4833	Ranua		Suopma
+640893	Posio	66.10856	28.17186	4252	Posio		Suopma
+642367	Pello	66.77364	23.96255	4542	Pello		Suopma
+642377	Pelkosenniemi	67.11083	27.51056	1221	Pelkosenniemi		Suopma
+644100	Nykarleby	63.52277	22.53073	7338	Uusikaarlepyy		Suopma
+645081	Närpes	62.47283	21.33707	0	Närpiö		Suopma
+645165	Nagu	60.19375	21.90972	1410	Nauvo	Varsinais-Suopma	Suopma
+645672	Muonio	67.95	23.7	2412	Muoná		Suopma
+649924	Kuusamo	65.96667	29.18333	17400	Guossán	Davvi-Pohjanmaa eanangoddi	Suopma
+650754	Kronoby	63.72859	23.03387	6813	Kruunupyy		Suopma
+650769	Kristinestad	62.27429	21.37596	7712	Kristiinankaupunki		Suopma
+651889	Kolari	67.33047	23.77785	3908	Kolari		Suopma
+652590	Kittilä	67.66474	24.89356	5713	Gihttel		Suopma
+653272	Kemijärvi	66.66667	27.41667	8883	Giemajávri		Suopma
+653280	Keminmaa	65.80158	24.54483	8980	Keminmaa		Suopma
+653281	Kemi	65.73641	24.56371	22641	Giepma		Suopma
+654047	Karis	60.07178	23.66163	8853	Karjaa		Suopma
+655563	Joutseno	61.11796	28.50763	10603	Joutseno		Suopma
+656130	Jakobstad	63.67486	22.70256	19238	Pietarsaari		Suopma
+656652	Ingå	60.04587	24.00459	5205	Inkoo		Suopma
+656657	Inari	68.90596	27.02881	7049	Anár		Suopma
+658225	Helsinki	60.16952	24.93545	558457	Helsset		Suopma
+660229	Enontekiö	68.38573	23.63215	2145	Eanodat		Suopma
+661601	Alahärmä	63.23333	22.85	4915	Alahärmä	Lulli-Pohjanmaa eanangoddi	Suopma
+2638925	Ruthin	53.11368	-3.31782	5461	Rhuthun	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+2639409	Rhyl	53.31929	-3.49228	25874	Y Rhyl	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+2641523	Newtown	52.51667	-3.3	11357	Y Drenewydd	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+2641598	Newport	51.58774	-2.99835	306844	Casnewydd	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+2646686	Holyhead	53.30621	-4.63211	11431	Caergybi	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+2653755	Carmarthen	51.85552	-4.30535	15854	Caerfyrddin	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+2654817	Brecon	51.94612	-3.38887	8250	Aberhonddu	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+2656311	Barmouth	52.72377	-4.05748	2315	Abermaw	Galles	Stuorra-Británnia+http://en.wikipedia.org/wiki/United_Kingdom
+3416888	Grindavík	63.83849	-22.43931	2856	Grindavíkurbær+240		Islánda
+3418653	Akranes	64.32179	-22.0749	6612	Akraneskaupstaður+300		Islánda
+2753011	Katwijk aan den Rijn	52.19417	4.42222	5940	Katwijk	zh+Zuid-Holland	Hollánda+Vuolleeatnamat
+777019	Vardø	70.37048	31.11066	2075	Várggát	Finnmárku	Norga+Norgga
+777032	Vuonnabahta	70.17278	28.55598	0	Vuonnabahta+Vuodnabatta	Finnmárku	Norga+Norgga
+777073	Vadsø	70.07348	29.74943	5139	Čáhcesuolu	Finnmárku	Norga+Norgga
+778346	Olderdalen	69.60407	20.53272	312	Dálvesvággi	Romsa+Troms	Norga+Norgga
+778362	Øksfjord	70.23936	22.3507	515	Akšuvuodna+Ákšovuotna	Finnmárku	Norga+Norgga
+779082	Lakselv	70.05133	24.97182	2168	Leavdnja	Finnmárku	Norga+Norgga
+779146	Kvalsund	70.50271	23.97974	0	Ráhkkerávju+Rakkeravjo+Fálesnuorri	Finnmárku	Norga+Norgga
+779303	Kirkenes	69.72706	30.04578	3282	Girkonjárga	Finnmárku	Norga+Norgga
+779330	Kautokeino	69.01247	23.04116	2000	Guovdageaidnu+Guovdagæino+Guovdageainnu suohkan+Guov'dagæi'dno	Finnmárku	Norga+Norgga
+779350	Kárášjohka	69.47187	25.51122	1908	Kárášjohka	Finnmárku	Norga+Norgga
+779554	Honningsvåg	70.98209	25.97037	2541	Honnesváhki	Finnmárku	Norga+Norgga
+779622	Ávanuorri	70.99634	24.66217	1138	Ávanuorri+Avanuorri	Finnmárku	Norga+Norgga
+779683	Hammerfest	70.66336	23.68209	6788	Hámmárfeasta	Finnmárku	Norga+Norgga
+780687	Berlevåg	70.85778	29.08636	1085	Bearalváhki	Finnmárku	Norga+Norgga
+780717	Båtsfjord	70.63428	29.7175	2166	Báhcavuotna	Finnmárku	Norga+Norgga
+847633	Alta	69.96887	23.27165	12077	Áltá	Finnmárku	Norga+Norgga
+3133880	Trondheim	63.43049	10.39506	147139	Troandin	Sør-Trøndelag	Norga+Norgga
+3133895	Tromsø	69.6489	18.95508	52436	Romsa	Romsa+Troms	Norga+Norgga
+3137405	Sortland	68.69569	15.40498	4620	Suorta	Nordland	Norga+Norgga
+3141332	Røros	62.57468	11.3842	3496	Plassje	Sør-Trøndelag	Norga+Norgga
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norga+Norgga
+3144987	Narvik	68.43838	17.4272	14114	Narviika	Nordland	Norga+Norgga
+3145023	Namsos	64.46624	11.49572	9035	Njaarke	Nord-Trøndelag	Norga+Norgga
+3146023	Meråker	63.41406	11.74298	961	Muorahká	Nord-Trøndelag	Norga+Norgga
+3147698	Levanger	63.74644	11.29963	8411	Lievenge	Nord-Trøndelag	Norga+Norgga
+3153823	Harstad	68.79833	16.54165	19433	Hárštá	Romsa+Troms	Norga+Norgga
+3154084	Hamar	60.7945	11.06798	29479	Hámar		Norga+Norgga
+3157897	Fagernes	60.98584	9.23236	1788	Čoalbmi		Norga+Norgga
+3157994	Evenskjer	68.58283	16.57203	601	Skearri+Viervá	Romsa+Troms	Norga+Norgga
+3160881	Bodø	67.28	14.40501	34073	Budejju	Nordland	Norga+Norgga
+3161732	Bergen	60.39299	5.32415	213585	Birgon	Hordaland	Norga+Norgga
+3162108	Ballangen	68.34283	16.83145	956	Bálat+Bálák	Nordland	Norga+Norgga
+7626393	Hattfjelldal	65.59736	13.98791	0	Árbordi	Nordland	Norga+Norgga
+7626403	Sørreisa	69.14527	18.15292	0	Årjesraisa+Orjješ-Ráisa	Romsa+Troms	Norga+Norgga
+7626405	Hatteng	69.27072	19.95944	0	Háhtta	Romsa+Troms	Norga+Norgga
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polen+Polska
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polen+Polska
+524305	Murmansk	68.97917	33.09251	319263	Murmánska	Murmánska+Murmansk	Ruošša
+533933	Lovozero	68.00638	35.01589	2963	Lujávri	Murmánska+Murmansk	Ruošša
+546554	Kola	68.88062	33.01842	10600	Guoládat+Кола	Murmánska+Murmansk	Ruošša
+602150	Umeå	63.82842	20.25972	83249	Ubmi		Ruoŧŧa+Ruoččii
+604490	Luleå	65.58415	22.15465	43574	Luleju	Norrbottens Län	Ruoŧŧa+Ruoččii
+605155	Kiruna	67.85572	20.22513	17037	Giron	Norrbottens Län	Ruoŧŧa+Ruoččii
+606086	Gällivare	67.13387	20.65278	10362	Jiellevárri+Váhčir+Jiellevári gielda+Jiellevárre	Norrbottens Län	Ruoŧŧa+Ruoččii
+606531	Boden	65.82518	21.68864	16830	Suttes	Norrbottens Län	Ruoŧŧa+Ruoččii
+2664939	Vårgårda	58.03706	12.80907	5384	Vårgårda gielda	Oarje-Götalándda leatna+Västra Götalands län	Ruoŧŧa+Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholbma	Stockholms Län	Ruoŧŧa+Ruoččii
+2675079	Sorsele	65.53484	17.53702	1175	Suarsa		Ruoŧŧa+Ruoččii
+2688172	Norsjö	64.91206	19.48153	2057	Nåarene		Ruoŧŧa+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Ruoŧŧa+Ruoččii
+2702997	Jokkmokk	66.60665	19.82324	2794	Jåhkåmåhkke	Norrbottens Län	Ruoŧŧa+Ruoččii
+2706982	Hedemora	60.27973	15.98855	7371	Hedemora gielda		Ruoŧŧa+Ruoččii
+2717401	Dorotea	64.26185	16.41306	1491	Döörte		Ruoŧŧa+Ruoččii
+2724958	Åsele	64.16026	17.34762	1706	Sjeltie+Åsele		Ruoŧŧa+Ruoččii
+744562	Karabük	41.20488	32.62768	97481	Karabük		Durka+Turkanmua

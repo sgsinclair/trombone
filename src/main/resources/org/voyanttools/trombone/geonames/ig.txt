@@ -1,0 +1,6 @@
+2324774	Port Harcourt	4.77742	7.0134	1148665	Ugwu Ọcha	Rivers	Naigeria+Nigeria
+2325330	Owerri	5.48363	7.03325	215038	Owẹrrẹ	Imo	Naigeria+Nigeria
+2326016	Onitsha	6.14978	6.78569	561066	Onịchạ		Naigeria+Nigeria
+2343279	Enugu	6.44132	7.49883	688862	Enúgwu	Enugu	Naigeria+Nigeria
+2348773	Awka	6.21269	7.07199	167738	Óká		Naigeria+Nigeria
+2353151	Aba	5.10658	7.36667	897560	Abá	Abia	Naigeria+Nigeria

@@ -1,0 +1,297 @@
+3435910	Buenos Aires	-34.61315	-58.37723	13076300	Lungsod ng Buenos Aires	CF	Arhentina
+3837213	San Juan	-31.5375	-68.53639	447048	Lalawigan ng San Juan	SJ+San Juan	Arhentina
+2766824	Salzburg	47.79941	13.04399	150269	Salzburg+Lungsod ng Salzburg		
+147774	Xocalı	39.91297	46.79028	5810	Distrito ng Khojali	Xocalı	Aserbayan
+2797656	Gent	51.05	3.71667	231493	Gante		Belhika
+2803138	Antwerpen	51.21989	4.40346	459805	Amberes		Belhika
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brazil
+1252416	Thimphu	27.46609	89.64191	98676	Timbu		Butan+Bh2utan
+6077243	Montréal	45.50884	-73.58781	1600000	Lungsod ng Montréal	QC	
+6325494	Québec	46.81228	-71.21454	528595	Lungsod ng Québec+Québec	QC	
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinsasa	Kinshasa	Demokratikong Republika ng Congo
+2657896	Zürich	47.36667	8.55	341730	Zürich+Lungsod ng Zürich	ZH	
+2658145	Vevey	46.46299	6.84345	15812	Lungsod ng Vevey+Vevey	VD	
+2661552	Bern	46.94809	7.44744	121631	Berna		
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaiso	Valparaíso	Tsile
+2220957	Yaoundé	3.86667	11.51667	1299369	Jaunde		Cameroon
+2037013	Harbin	45.75	126.65	5878939	Harbin+Lungsod ng Harbin		Tsina
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		Colombia
+3792383	Agustín Codazzi	10.03672	-73.23558	51478	Codazzi	Cesar	Colombia
+3067696	Prague	50.08804	14.42076	1165581	Prague+Praha	Hlavní město Praha	Czech Republic+Czechia
+2861650	Nürnberg	49.45421	11.07752	499237	Nuremberg	Bayern	Alemanya
+2867714	Munich	48.13743	11.57549	1260391	Munich+Lungsod ng München	Bayern	Alemanya
+2886242	Köln	50.93333	6.95	963395	Cologne+Lungsod ng Cologne	NRW	Alemanya
+2928810	Essen	51.45657	7.01228	593085	Essen	NRW	Alemanya
+2935022	Dresden	51.05089	13.73832	486854	Dresde		Alemanya
+3247449	Aachen	50.77664	6.08342	265208	Lungsod ng Aachen	NRW	Alemanya
+223817	Djibouti	11.58901	43.14503	623891	Lungsod ng Djibouti	Djibouti	Hiboti
+2507480	Algiers	36.73225	3.08746	1977663	Arhel	Alger	Arhelya
+360630	Cairo	30.06263	31.24967	7734614	Cairo+Lungsod ng Cairo		Ehipto
+361058	Alexandria	31.20176	29.91582	3811516	Alehandriya		Ehipto
+2509954	Valencia	39.46975	-0.37739	814208	València	Valencia	Espanya+España
+2510911	Sevilla	37.38283	-5.97317	703206	Sevilla+Lungsod ng Sevilla		Espanya+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla+Lungsod ng Melilla	Melilla	Espanya+España
+2517117	Granada	37.18817	-3.60667	234325	Lungsod ng Granada		Espanya+España
+3106672	Valladolid	41.65518	-4.72372	317864	Lungsod ng Valladolid	Castilla y León	Espanya+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Lungsod ng Santiago de Compostela	Galicia	Espanya+España
+3114472	Pamplona	42.81687	-1.64323	198491	Lungsod ng Iruñea	Navarra	Espanya+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid+Lungsod ng Madrid	Madrid	Espanya+España
+3128760	Barcelona	41.38879	2.15899	1621537	Lungsod ng Barcelona	Catalunya	Espanya+España
+658225	Helsinki	60.16952	24.93545	558457	Lungsod ng Helsinki		Finland
+2973783	Strasbourg	48.58392	7.74553	274845	Lungsod ng Strasbourg+67000	ACAL	Pransya+France
+2980291	Saint-Étienne	45.43389	4.39	176280	Saint-Étienne+Lungsod ng Saint-Étienne+42000		Pransya+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+Lungsod ng Paris+75001		Pransya+France
+3020686	Dunkerque	51.03297	2.377	71287	Dunkerque+Lungsod ng Dunkerque+59140	http://en.wikipedia.org/wiki/Hauts-de-France	Pransya+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Burdeos+33000		Pransya+France
+3032797	Biarritz	43.48012	-1.55558	33188	Lungsod ng Biarritz+64200		Pransya+France
+6543862	Villeneuve-d'Ascq	50.61669	3.16664	62400	Villeneuve-d’Ascq+59491	http://en.wikipedia.org/wiki/Hauts-de-France	Pransya+France
+2643741	City of London	51.51279	-0.09184	8072	Lungsod ng Londres	Inglatera	Nagkakaisang Kaharain+Nagkakaisang Kaharian+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londres	Inglatera	Nagkakaisang Kaharain+Nagkakaisang Kaharian+http://en.wikipedia.org/wiki/United_Kingdom
+2653822	Cardiff	51.48	-3.18	447287	Kardip	Galles	Nagkakaisang Kaharain+Nagkakaisang Kaharian+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Belpas		Nagkakaisang Kaharain+Nagkakaisang Kaharian+http://en.wikipedia.org/wiki/United_Kingdom
+2411585	Gibraltar	36.14474	-5.35257	26544	Gibraltar		Hibraltar
+264371	Athens	37.97945	23.71622	664046	Athína+Lungsod ng Athína		Gresya+Griekanmua
+734077	Thessaloníki	40.64361	22.93086	354290	Tesalonica		Gresya+Griekanmua
+1819729	Hong Kong	22.27832	114.17469	7012738	Hong Kong		http://en.wikipedia.org/wiki/Hong_Kong
+3186886	Zagreb	45.81444	15.97798	698966	Lungsod ng Zagreb	Grad Zagreb	Kroasya
+1624863	Tanjung Pinang	0.91667	104.45833	192493	Tanjungpinang	Kepulauan Riau	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1642911	Jakarta	-6.21462	106.84513	8540121	Yakarta	Jakarta Raya	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+281184	Jerusalem	31.76904	35.21633	801000	Jerusalem+Herusalem		Israel
+293322	Tiberias	32.79221	35.53124	39790	Tiberias		Israel
+293397	Tel Aviv	32.08088	34.78057	432892	Tel Aviv+Lungsod ng Tel Aviv-Yafo		Israel
+294071	Netanya	32.33291	34.85992	171676	Ntanya+Lungsod ng Ntanya	HaMerkaz	Israel
+294074	Ness Ziona	31.92933	34.79868	38700	Nes Tziyona	HaMerkaz	Israel
+294098	Nazareth	32.69925	35.30483	64800	Lungsod ng Nazaret		Israel
+294778	Herzliya	32.16627	34.82536	83600	Herẕliyya+Lungsod ng Herẕliyya		Israel
+294801	Haifa	32.81841	34.9885	267300	Ḥeyfa+Lungsod ng Ḥefa		Israel
+295277	Eilat	29.55805	34.94821	45588	Elat+Lungsod ng Elat	HaDarom	Israel
+295530	Beersheba	31.25181	34.7913	186600	B’er Sheva‘+Berseba	HaDarom	Israel
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbai+Lungsod ng Mumbai	MH+Mahārāshtra	India
+1279259	Agra	27.18333	78.01667	1430055	Agra+Lungsod ng Agra	UP	India
+98182	Baghdad	33.34058	44.40088	7216000	Baghdad+Lungsod ng Baghdad		Iraq
+418863	Isfahan	32.65246	51.67462	1547164	Esfahān		Iran
+3413829	Reykjavík	64.13548	-21.89541	118918	Reikiavik+101		Iceland
+2523083	Siracusa	37.07542	15.28664	97472	Lungsod ng Siracusa		Italya
+2524881	Crotone	39.08077	17.12764	48704	Krotona	Calabria	Italya
+2525473	Cagliari	39.23054	9.11917	149257	Lungsod ng Cagliari		Italya
+3164627	Velturno	46.66705	11.59712	1300	Feldthurns		Italya
+3165124	Tubre	46.64403	10.46328	723	Taufers im Münstertal		Italya
+3165524	Turin	45.07049	7.68682	870456	Lungsod ng Turino	Piemonte	Italya
+3165728	Tesimo	46.56542	11.16937	628	Tisens		Italya
+3165796	Terento	46.82992	11.78288	1121	Terenten		Italya
+3166166	Stelvio	46.59767	10.5458	444	Stilfs		Italya
+3167131	Sarentino	46.64121	11.35411	2299	Sarntal		Italya
+3167905	San Pancrazio	46.586	11.08571	323	St Pankraz		Italya
+3168043	San Martino in Passiria	46.78392	11.22727	1783	St Martin in Passeier		Italya
+3168160	San Leonardo in Passiria	46.81282	11.24577	1671	St Leonhard in Passeier		Italya
+3169070	Rome	41.89193	12.51133	2318895	Roma+Lungsod ng Roma	Lazio	Italya
+3169646	Racines	46.86667	11.3	4128	Ratschings		Italya
+3169874	Predoi	47.04031	12.10663	337	Prettau		Italya
+3170259	Ponte Gardena	46.59712	11.53088	157	Waidbruck		Italya
+3171225	Perca	46.79343	11.98339	639	Percha		Italya
+3171468	Parcines	46.68422	11.07337	1211	Partschins		Italya
+3171891	Ortisei	46.57603	11.67176	4306	Urtijëi		Italya
+3172190	Nova Ponente	46.41404	11.42523	1483	Deutschnofen		Italya
+3172526	Moso in Passiria	46.83154	11.16708	322	Moos in Passeier		Italya
+3173113	Montagna	46.33033	11.30027	947	Montan		Italya
+3173435	Milan	45.46427	9.18951	1236837	Milano+Lungsod ng Milano		Italya
+3173600	Meltina	46.58744	11.25487	365	Mölten		Italya
+3174953	Lecce	40.35481	18.17244	80695	Lungsod ng Lecce		Italya
+3176959	Florence	43.77925	11.24626	349296	Lungsod ng Florencia	Tuskanya	Italya
+3177231	Falzes	46.81359	11.88308	1754	Pfalzen		Italya
+3180908	Campo Tures	46.90844	11.96036	2025	Sand in Taufers		Italya
+3180976	Campo di Trens	46.87412	11.48605	833	Freienfeld		Italya
+3183038	Anterivo	46.2781	11.36665	226	Altrei		Italya
+6534705	Isola del Giglio	42.35791	10.90724	1406	Giglio Island	Tuskanya	Italya
+8949708	Villandro	46.63086	11.53808	773	Villanders		Italya
+9035534	Verano	46.60442	11.22565	365	Vöran		Italya
+250441	Amman	31.95522	35.94503	1275857	Aman		Hordan+Al Mamlakah al Urdunīyah al Hāshimīyah
+1847947	Shingū	33.73333	135.98333	31619	Shingu	Prepektura ng Wakayama	Hapon
+1847966	Akashi	34.65524	135.00687	297279	Akasyi	Prepektura ng Hyōgo	Hapon
+1848004	Zama	35.4879	139.39101	134671	Sama	Prepektura ng Kanagawa	Hapon
+1848087	Yukuhashi	33.72873	130.983	71277	Yukuhasyi	Prepektura ng Fukuoka	Hapon
+1848096	Yūki	36.3	139.88333	51574	Yuki	Prepektura ng Ibaraki	Hapon
+1848373	Yokkaichi	34.96667	136.61667	295841	Yokkaitsi		Hapon
+1848774	Yaizu	34.86877	138.31952	121057	Yaisu	Prepektura ng Shizuoka	Hapon
+1849237	Uozu	36.8	137.4	45848	Uosu		Hapon
+1849372	Uji	34.89044	135.80325	192925	Udyi		Hapon
+1849846	Toyohashi	34.76667	137.38333	378374	Toyohasyi		Hapon
+1849892	Tottori	35.5	134.23333	154098	Lungsod ng Tottori	Prepektura ng Tottori	Hapon
+1850181	Tokorozawa	35.79916	139.46903	339435	Tokorosawa		Hapon
+1850311	Tochigi	36.38333	139.73333	82133	Lungsod ng Tochigi	Prepektura ng Tochigi	Hapon
+1851137	Takahashi	34.78333	133.61667	24819	Takahasyi	Prepektura ng Okayama	Hapon
+1851348	Suzuka	34.88333	136.58333	191477	Susuka		Hapon
+1851717	Shizuoka	34.98333	138.38333	701561	Lungsod ng Shizuoka	Prepektura ng Shizuoka	Hapon
+1852046	Shinshiro	34.9	137.5	36069	Syinsyiro		Hapon
+1852357	Shimoda	34.67652	138.94456	26704	Syimoda	Prepektura ng Shizuoka	Hapon
+1852472	Shimada	34.81667	138.18333	75781	Syimada	Prepektura ng Shizuoka	Hapon
+1852607	Shibata	37.95	139.33333	80793	Syibata	Prepektura ng Niigata	Hapon
+1853564	Ōtsuki	35.61851	138.97396	31226	Otsuki	Prepektura ng Yamanashi	Hapon
+1853677	Ōta	36.3	139.36667	152104	Ota	Prepektura ng Gunma	Hapon
+1854083	Ōmuta	33.03333	130.45	131974	Omuta	Prepektura ng Fukuoka	Hapon
+1854093	Ōmura	32.92139	129.95389	89918	Omura		Hapon
+1854376	Okazaki	34.95	137.16667	352361	Okasaki		Hapon
+1854902	Numazu	35.1	138.86667	204318	Numasu	Prepektura ng Shizuoka	Hapon
+1855189	Nishio	34.86667	137.05	103337	Nisyio		Hapon
+1856584	Moriguchi	34.73333	135.56667	148350	Morigutsi		Hapon
+1856977	Mishima	35.11667	138.91667	113479	Misyima	Prepektura ng Shizuoka	Hapon
+1857910	Kyoto	35.02107	135.75385	1459640	Lungsod ng Kyoto		Hapon
+1858301	Kurayoshi	35.43333	133.81667	48347	Kurayosyi	Prepektura ng Tottori	Hapon
+1858311	Kurashiki	34.58333	133.76667	437581	Kurasyiki	Prepektura ng Okayama	Hapon
+1858729	Koshigaya	35.89035	139.78916	317437	Kosyigaya		Hapon
+1859171	Kobe	34.6913	135.183	1528478	Lungsod ng Kobe	Prepektura ng Hyōgo	Hapon
+1859307	Kitakyushu	33.85181	130.85034	997536	Kitakyushu	Prepektura ng Fukuoka	Hapon
+1859405	Kiryū	36.4	139.33333	110219	Kiryu	Prepektura ng Gunma	Hapon
+1859586	Kazo	36.11667	139.6	71291	Kaso		Hapon
+1859730	Kawaguchi	35.80521	139.71072	468565	Kawagutsi		Hapon
+1859908	Kashiwazaki	37.36667	138.55	86183	Kasyiwasaki	Prepektura ng Niigata	Hapon
+1861084	Izumo	35.36667	132.76667	89286	Isumo	Prepektura ng Shimane	Hapon
+1861290	Itō	34.96667	139.08333	71578	Ito	Prepektura ng Shizuoka	Hapon
+1861835	Iizuka	33.63654	130.68678	78206	Iisuka	Prepektura ng Fukuoka	Hapon
+1862198	Honjō	36.2378	139.19023	61868	Hondyo		Hapon
+1863173	Hanyū	36.16667	139.53333	58686	Hanyu		Hapon
+1863183	Hannō	35.85194	139.31806	86262	Hanno		Hapon
+1863482	Gyōda	36.14074	139.46011	86343	Gyoda		Hapon
+1863592	Gojō	34.35	135.7	34342	Godyo		Hapon
+1863693	Gamagōri	34.83333	137.23333	80786	Gamagori		Hapon
+1863945	Fukuroi	34.75	137.91667	63045	Pukuroi	Prepektura ng Shizuoka	Hapon
+1864092	Fujisawa	35.34926	139.47666	394624	Pudyisawa	Prepektura ng Kanagawa	Hapon
+1864105	Fujinomiya	35.21667	138.61667	121515	Pudyinomiya	Prepektura ng Shizuoka	Hapon
+1864549	Chiryū	35	137.03333	67062	Tsiryu		Hapon
+1864637	Chichibu	35.99028	139.07639	58507	Tsitsibu		Hapon
+1865294	Anjō	34.95828	137.08054	178402	Andyo		Hapon
+1894616	Okinawa	26.33583	127.80139	125483	Lungsod ng Okinawa	Prepektura ng Okinawa	Hapon
+1926020	Uwajima	33.22375	132.56001	58971	Uwadyima		Hapon
+1926054	Saijō	33.91667	133.18333	58823	Saidyo		Hapon
+1926055	Ōzu	33.5	132.55	38833	Osu		Hapon
+2110498	Yonezawa	37.91	140.11667	94486	Yonesawa	Prepektura ng Yamagata	Hapon
+2110735	Tōno	39.31667	141.53333	26781	Tono	Prepektura ng Iwate	Hapon
+2111258	Ryūgasaki	35.9	140.18333	85761	Ryugasaki	Prepektura ng Ibaraki	Hapon
+2111325	Ōtawara	36.86667	140.03333	58888	Otawara	Prepektura ng Tochigi	Hapon
+2112444	Kamaishi	39.27694	141.86801	43107	Kamaisyi	Prepektura ng Iwate	Hapon
+2112576	Ishinomaki	38.41667	141.3	117233	Isyinomaki	Prepektura ng Miyagi	Hapon
+2127419	Yūbari	43.03778	141.95778	0	Yubari		Hapon
+2129376	Kushiro	42.975	144.37472	183612	Kusyiro		Hapon
+2129395	Kuroishi	40.64581	140.58354	38615	Kuroisyi	Prepektura ng Aomori	Hapon
+2131612	Goshogawara	40.80444	140.44139	49110	Gosyogawara	Prepektura ng Aomori	Hapon
+6417596	Kōya	34.21294	135.62244	5013	Koya	Prepektura ng Wakayama	Hapon
+6822120	Kashiba	34.53472	135.70925	0	Kasyiba		Hapon
+6822136	Higashiyamato	35.76298	139.44575	0	Higasyiyamato		Hapon
+6822138	Niiza	35.82088	139.55791	0	Niisa		Hapon
+6822142	Suzu	37.43459	137.26009	0	Susu		Hapon
+6822146	Ōnojō	33.53567	130.47861	94957	Onodyo	Prepektura ng Fukuoka	Hapon
+6822192	Izu	34.97159	138.94643	0	Isu	Prepektura ng Shizuoka	Hapon
+6822196	Omaezaki	34.59882	138.21934	0	Omaesaki	Prepektura ng Shizuoka	Hapon
+6822202	Yurihonjō	39.3895	140.05813	0	Yurihondyo	Prepektura ng Akita	Hapon
+6822209	Nisshin	35.13676	137.05238	0	Nissyin		Hapon
+6822219	Gujō	35.73691	136.95852	46918	Gudyo	Prepektura ng Gifu	Hapon
+7422816	Dazaifu	33.51278	130.52389	70587	Dasaipu	Prepektura ng Fukuoka	Hapon
+1528675	Bishkek	42.87	74.59	900000	Biskek	Gorod Bishkek	Kyrgyzstan
+1871859	Pyongyang	39.03385	125.75432	3222000	Pionyang		Hilagang Korea+http://en.wikipedia.org/wiki/North_Korea
+598098	Klaipėda	55.70888	21.14312	192307	Klaipėda+Lungsod ng Klaipėda		Lithuania+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Lungsod ng Luksemburgo		Luxembourg
+1821274	Macau	22.20056	113.54611	520400	Makaw		
+2562305	Valletta	35.89972	14.51472	6794	La Valeta		
+3521081	Puebla	19.03793	-98.20346	1590256	Lungsod ng Puebla	PUE	Mehiko
+3522507	Oaxaca	17.06542	-96.72365	262566	Lungsod ng Oaxaca	OAX	Mehiko
+3530580	Ciudad Victoria	23.74174	-99.14599	269923	Lungsod ng Victoria	TAM+Tamps	Mehiko
+3530597	Mexico City	19.42847	-99.12766	12294193	México+Lungsod ng México	The Federal District+Distrito Federal	Mehiko
+4013704	Ciudad Obregón	27.48642	-109.94083	258162	Lungsod ng Obregón	SON	Mehiko
+4013708	Ciudad Juárez	31.72024	-106.46084	1512354	Lungsod Juárez	CHH+CH	Mehiko
+4013728	Ciudad Acuña	29.32322	-100.95217	144669	Lungsod ng Acuña	COA+Coah	Mehiko
+287286	Muscat	23.58413	58.40778	797000	Maskate		Oman
+3936456	Lima	-12.04318	-77.02824	7737002	Lungsod ng Lima	Lima Province	Peru
+1679432	Zamboanga	6.91028	122.07389	457623	Lungsod ng Zamboanga		Pilipinas
+1679980	Vigan	17.57472	120.38694	48545	Lungsod ng Vigan		Pilipinas
+1680932	Tuguegarao	17.61577	121.72285	115105	Lungsod ng Tuguegarao+Tuguegarao	Lambak ng Cagayan	Pilipinas
+1683302	Tandag	9.07833	126.19861	29011	Lungsod ng Tandag		Pilipinas
+1684553	Tagaytay	14.09532	120.93355	71181	Lungsod ng Tagaytay		Pilipinas
+1684712	Tacloban	11.24333	125.00472	242089	Lungsod ng Tacloban	Silangang Kabisayaan	Pilipinas
+1685218	Surigao	9.789	125.495	87832	Lungsod ng Surigao		Pilipinas
+1686435	Silway 7	6.17711	125.12068	7893	Silway Pito		Pilipinas
+1688830	San Pablo	14.0683	121.3256	207577	Lungsod ng San Pablo		Pilipinas
+1689395	San Jose del Monte	14.81389	121.04528	357828	Lungsod ng San Jose del Monte	Gitnang Luzon	Pilipinas
+1690033	San Fernando	16.61591	120.31663	83003	Lungsod ng San Fernando		Pilipinas
+1690039	San Fernando	15.03425	120.68445	251248	Lungsod ng San Fernando	Gitnang Luzon	Pilipinas
+1692685	Puerto Princesa	9.73917	118.73528	222673	Lungsod ng Puerto Princesa		Pilipinas
+1697018	Ormoc	11.00639	124.6075	191200	Lungsod ng Ormoc	Silangang Kabisayaan	Pilipinas
+1697175	Olongapo	14.82917	120.28278	221178	Lungsod ng Olongapo	Gitnang Luzon	Pilipinas
+1698829	Naga	13.61917	123.18139	174931	Lungsod ng Naga		Pilipinas
+1698839	Naga	10.20898	123.758	28571	Lungsod ng Naga	Gitnang Kabisayaan	Pilipinas
+1701668	Manila	14.6042	120.9822	1600000	Maynila	Metro Manila	Pilipinas
+1702540	Malolos	14.8443	120.81039	198748	Lungsod ng Malolos	Gitnang Luzon	Pilipinas
+1702934	Malaybalay	8.1575	125.12778	61524	Lungsod ng Malaybalay	Hilagang Mindanao	Pilipinas
+1705357	Lucena	13.93139	121.61722	228758	Lungsod ng Lucena		Pilipinas
+1707404	Laoag	18.1978	120.5957	102105	Lungsod ng Laoag		Pilipinas
+1710914	Imus	14.42972	120.93667	216099	Lungsod ng Imus		Pilipinas
+1711084	Iligan	8.2289	124.24344	342618	Lungsod ng Iligan	Hilagang Mindanao	Pilipinas
+1713014	General Trias	14.38694	120.88167	96022	Heneral Trias		Pilipinas
+1713022	General Santos	6.11278	125.17167	679588	Heneral Santos		Pilipinas
+1714674	Dipolog	8.56697	123.33471	93549	Lungsod ng Dipolog		Pilipinas
+1715348	Davao	7.07306	125.61278	1212504	Lungsod ng Dabaw		Pilipinas
+1716198	Dagupan	16.04313	120.33325	171271	Lungsod ng Dagupan		Pilipinas
+1717641	Cavite City	14.48369	120.89878	115932	Lungsod ng Kabite		Pilipinas
+1717911	Catbalogan	11.77528	124.88611	68081	Lungsod ng Catbalogan	Silangang Kabisayaan	Pilipinas
+1720561	Calapan	13.4117	121.1803	66008	Lungsod ng Calapan		Pilipinas
+1721080	Cagayan de Oro	8.48222	124.64722	445103	Lungsod ng Cagayan de Oro	Hilagang Mindanao	Pilipinas
+1721281	Cabuyao	14.2726	121.1262	308745	Lungsod ng Cabuyao		Pilipinas
+1722186	Butuan	8.94917	125.54361	309709	Lungsod ng Butuan		Pilipinas
+1724767	Bislig	8.21528	126.31639	67567	Lungsod ng Bislig		Pilipinas
+1725115	Biñan	14.34267	121.08071	300000	Lungsod ng Biñan		Pilipinas
+1728930	Baguio	16.41639	120.59306	272714	Lungsod ng Baguio	Rehiyong Pampangasiwaan ng Cordillera	Pilipinas
+1729524	Bacoor	14.45903	120.92903	356974	Lungsod ng Bacoor		Pilipinas
+1729564	Bacolod City	10.66667	122.95	454898	Lungsod ng Bacolod	Kanlurang Kabisayaan	Pilipinas
+1174872	Karachi	24.8608	67.0104	11624219	Karachi		Pakistan
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	poland+Polonya
+284315	Bethlehem	31.70487	35.20376	29019	Belén		
+3439389	Asunción	-25.30066	-57.63591	1482200	Asuncion		Paraguay
+671768	Oradea	47.0458	21.91833	206614	Oradea		Rumanya
+498817	Saint Petersburg	59.93863	30.31413	5028000	San Petersburgo+Lungsod ng Sankt-Peterburg+Санкт-Петербург		
+526480	Mineralnye Vody	44.21028	43.13528	76280	Mineralnyye Vody	Stavropol'skiy Kray	
+541947	Krasnoznamensk	54.94222	22.48972	3724	Krasnoznamyonsk	Kaliningrad	
+554234	Kaliningrad	54.70649	20.51095	434954	Kaliningrado	Kaliningrad	
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzerzhinsk	Nizjnij Novgorod	
+583041	Aleksandrovsk	59.1581	57.5695	15486	Alexandrovsk	Perm	
+2014006	Ussuriysk	43.80291	131.94578	157068	Ussurijsk+Lungsod ng Ussurijsk	Primorskiy Kray	
+2673730	Stockholm	59.33258	18.0649	1515017	Estokolmo	Stockholms Län	Suwesya+Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Liubliana		Eslobenya
+2410763	São Tomé	0.33654	6.72732	53300	San Tomas		São Tomé at Príncipe
+170654	Damascus	33.5102	36.29128	1569394	Damasko		Syria
+1608529	Nakhon Ratchasima	14.97066	102.10196	208781	Lungsod ng Nakhon Ratchasima	Nakhon Ratchasima	Taylandiya
+162183	Ashgabat	37.95	58.38333	727700	Ashabat		Turkmenistan
+4259418	Indianapolis	39.76838	-86.15804	829718	Indiyanapolis	Indiyana+IN+Indiana	U.S.+USA+U.S.A.
+4297983	Lexington	37.98869	-84.47772	225366	Lexington-Fayette	Kentaki+KY+Kentucky	U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	Bagong Orleans	Luwisiyana+LA+Louisiana	U.S.+USA+U.S.A.
+4392388	Jefferson City	38.5767	-92.17352	43169	Lungsod ng Jefferson	Misuri+MO+Missouri	U.S.+USA+U.S.A.
+4393217	Kansas City	39.09973	-94.57857	475378	Lungsod ng Kansas	Misuri+MO+Missouri	U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	Misuri+MO+Missouri	U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	Lungsod ng Oklahoma	OK+Oklahoma	U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Tsikago	IL+Illinois	U.S.+USA+U.S.A.
+5037649	Minneapolis	44.97997	-93.26384	410939	Minyapolis	Minesota+MN+Minnesota	U.S.+USA+U.S.A.
+5045360	Saint Paul	44.94441	-93.09327	285068	San Pablo	Minesota+MN+Minnesota	U.S.+USA+U.S.A.
+5110629	Buffalo	42.88645	-78.87837	258071	Bupalo	New York+NY	U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Lungsod ng New York+NYC+NY	New York+NY	U.S.+USA+U.S.A.
+5261457	Madison	43.07305	-89.40123	248951	Madison	WI	U.S.+USA+U.S.A.
+5334519	Carson	33.83141	-118.28202	93281	Lungsod ng Carson	CA+Calif+California	U.S.+USA+U.S.A.
+5335006	Cathedral City	33.77974	-116.46529	53826	Lungsod ng Cathedral	CA+Calif+California	U.S.+USA+U.S.A.
+5339631	Corona	33.87529	-117.56644	164226	Korona	CA+Calif+California	U.S.+USA+U.S.A.
+5339663	Coronado	32.68589	-117.18309	24812	Koronado	CA+Calif+California	U.S.+USA+U.S.A.
+5341256	Cypress	33.81696	-118.03729	49290	Sipres	CA+Calif+California	U.S.+USA+U.S.A.
+5341430	Daly City	37.70577	-122.46192	106562	Lungsod ng Daly	CA+Calif+California	U.S.+USA+U.S.A.
+5345032	East Palo Alto	37.46883	-122.14108	29662	Silangang Palo Alto	CA+Calif+California	U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles+Lungsod ng Los Angeles	CA+Calif+California	U.S.+USA+U.S.A.
+5376200	National City	32.67811	-117.0992	61060	Lungsod ng National	CA+Calif+California	U.S.+USA+U.S.A.
+5376502	Nevada City	39.26173	-121.01779	3152	Lungsod ng Nevada	CA+Calif+California	U.S.+USA+U.S.A.
+5381002	Paradise	39.75961	-121.62192	26476	Paraiso	CA+Calif+California	U.S.+USA+U.S.A.
+5386834	Redwood City	37.48522	-122.23635	85288	Lungsod ng Redwood	CA+Calif+California	U.S.+USA+U.S.A.
+5391811	San Diego	32.71533	-117.15726	1394928	San Diego+Lungsod ng San Diego	CA+Calif+California	U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+Lungsod ng San Francisco+SF	CA+Calif+California	U.S.+USA+U.S.A.
+5397376	South El Monte	34.05195	-118.04673	20878	Timog El Monte	CA+Calif+California	U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Denber	Kolorado+CO+Colorado	U.S.+USA+U.S.A.
+5501344	Carson City	39.1638	-119.7674	54521	Lungsod ng Carson	Nebada+NV+Nevada	U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas+Lungsod ng Las Vegas	Nebada+NV+Nevada	U.S.+USA+U.S.A.
+5516233	Amarillo	35.222	-101.8313	198645	Amarilyo	Teksas+TX+Texas	U.S.+USA+U.S.A.
+5780993	Salt Lake City	40.76078	-111.89105	192672	Lungsod ng Salt Lake+SLC	UT+Utah	U.S.+USA+U.S.A.
+5784607	West Valley City	40.69161	-112.00105	136208	West Valley	UT+Utah	U.S.+USA+U.S.A.
+1512569	Tashkent	41.26465	69.21627	1978028	Taskent	Toshkent Shahri	Uzbekistan
+1581130	Hanoi	21.0245	105.84117	1431270	Hanoi	Ha Nội	Vietnam

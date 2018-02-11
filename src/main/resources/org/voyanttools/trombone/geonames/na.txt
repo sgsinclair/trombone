@@ -1,0 +1,80 @@
+3039163	Sant Julià de Lòria	42.46372	1.49129	8022	Sant Julià de Lòria		Andorra
+3039678	Ordino	42.55623	1.53319	3066	Ordino		Andorra
+3040051	les Escaldes	42.50729	1.53414	15853	Escaldes-Engordany		Andorra
+3040132	la Massana	42.54499	1.51483	7211	La Massana		Andorra
+3040686	Encamp	42.53474	1.58014	11223	Encamp		Andorra
+3041204	Canillo	42.5676	1.59756	3292	Canillo		Andorra
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andorra la Vella		Andorra
+616062	Ejmiatsin	40.16557	44.29462	49513	Echmiadzin	Armavir	Arminiya
+2797656	Gent	51.05	3.71667	231493	Ghent		Belgium
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto Novo	Quémé	Benin
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Yamoussoukrou		Aibori Kot+Côte de l’Ivoire
+2282006	San-Pédro	4.74851	-6.6363	196751	San Pédro		Aibori Kot+Côte de l’Ivoire
+1816670	Beijing	39.9075	116.39723	11716620	Beijing		
+3067696	Prague	50.08804	14.42076	1165581	Praha	Hlavní město Praha	Republik Czechia+Czechia
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Germany
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	
+3654533	Machala	-3.25861	-79.96053	198123	Machala	El Oro	
+3657509	Guayaquil	-2.20584	-79.90795	1952029	Guayaquil	Guayas	
+3658666	Cuenca	-2.90055	-79.00453	276964	Cuenca	Azuay	
+2517117	Granada	37.18817	-3.60667	234325	Grenada		Pain+España
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Pinrand
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		France
+3186886	Zagreb	45.81444	15.97798	698966	Zagrev	Grad Zagreb	Kroaitsiya
+3171573	Palmanova	45.9054	13.30998	2515	Palmanov	FVG	Italy
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Niterand
+756135	Warsaw	52.22977	21.01178	1702139	Warsaw	Mazowieckie	Poran
+757026	Tarnów	50.01381	20.98698	117799	Tarnów	Małopolskie	Poran
+757718	Suwałki	54.11175	22.93087	69222	Suwalki	Podlaskie	Poran
+759734	Rzeszów	50.04132	21.99901	158382	Rzeszów	Podkarpackie	Poran
+760778	Radom	51.40253	21.14714	226794	Radom	Mazowieckie	Poran
+764269	Mszczonów	51.97415	20.52083	6267	Mszczonów	Mazowieckie	Poran
+765876	Lublin	51.25	22.56667	360044	Lublin	Lubelskie	Poran
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Poran
+769250	Kielce	50.87033	20.62752	208598	Kielce+http://www.um.kielce.pl/	Świętokrzyskie	Poran
+772621	Ełk	53.82824	22.36469	55769	Ełk		Poran
+776069	Białystok	53.13333	23.16433	291855	Białystok	Podlaskie	Poran
+3080165	Zielona Góra	51.93548	15.50643	118433	Zielona Góra	Lubuskie	Poran
+3080944	Żagań	51.61759	15.31486	26251	Żagań	Lubuskie	Poran
+3080985	Zabrze	50.32492	18.78576	192177	Zabrze	Śląskie	Poran
+3081368	Wrocław	51.1	17.03333	634893	Wrocław	Dolnośląskie	Poran
+3081741	Włocławek	52.64817	19.0678	120339	Włocławek	Kujawsko-Pomorskie	Poran
+3082707	Wałbrzych	50.77141	16.28432	127431	Wałbrzych	Dolnośląskie	Poran
+3082914	Tychy	50.13717	18.96641	130000	Tychy	Śląskie	Poran
+3083271	Toruń	53.01375	18.59814	208717	Toruń	Kujawsko-Pomorskie	Poran
+3083829	Szczecin	53.42894	14.55302	407811	Szczecin		Poran
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Poran
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Śląskie	Poran
+3084840	Stargard	53.33672	15.0499	71224	Stargard		Poran
+3085128	Sosnowiec	50.28682	19.10385	227295	Sosnowiec	Śląskie	Poran
+3085151	Sopot	54.4418	18.56003	40142	Sopot	Pomorskie	Poran
+3085450	Słupsk	54.46405	17.02872	98608	Słupsk	Pomorskie	Poran
+3086024	Siemianowice Śląskie	50.32738	19.02901	73121	Siemianowice Śląskie	Śląskie	Poran
+3086586	Rybnik	50.09713	18.54179	142510	Rybnik	Śląskie	Poran
+3086800	Ruda Śląska	50.2584	18.85632	146189	Ruda Śląska	Śląskie	Poran
+3088825	Płock	52.54682	19.70638	127474	Płock	Mazowieckie	Poran
+3090048	Opole	50.67211	17.92533	127676	Opole	Opolskie	Poran
+3093066	Łowicz	52.10714	19.94525	29809	Łowicz	Łódzkie	Poran
+3093133	Łódź	51.75	19.46667	768755	Łódź	Łódzkie	Poran
+3094802	Kraków	50.06143	19.93658	755050	Krakow	Małopolskie	Poran
+3095049	Koszalin	54.19438	16.17222	107450	Koszalin		Poran
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Poran
+3096880	Kalisz	51.76109	18.09102	108759	Kalisz	Wielkopolskie	Poran
+3097391	Jastrzębie Zdrój	49.95542	18.57479	95813	Jastrzębie Zdrój	Śląskie	Poran
+3098218	Grudziądz	53.48411	18.75366	99486	Grudziądz	Kujawsko-Pomorskie	Poran
+3098722	Gorzów Wielkopolski	52.73679	15.22878	124430	Gorzów Wielkopolski	Lubuskie	Poran
+3099112	Gniezno	52.53481	17.58259	70269	Gniezno	Wielkopolskie	Poran
+3099213	Głogów	51.66361	16.0845	68530	Głogów	Dolnośląskie	Poran
+3099230	Gliwice	50.29761	18.67658	198835	Gliwice	Śląskie	Poran
+3099424	Gdynia	54.51889	18.53188	253730	Gdynia	Pomorskie	Poran
+3099434	Gdańsk	54.35205	18.64637	461865	Gdańsk	Pomorskie	Poran
+3099759	Elbląg	54.1522	19.40884	127558	Elblag		Poran
+3100796	Dąbrowa Górnicza	50.31818	19.2374	130601	Dąbrowa Górnicza	Śląskie	Poran
+3100946	Częstochowa	50.79646	19.12409	248125	Częstochowa	Śląskie	Poran
+3101619	Chorzów	50.30582	18.9742	113430	Chorzów	Śląskie	Poran
+3101787	Chełmża	53.18463	18.60466	15403	Chełmża	Kujawsko-Pomorskie	Poran
+3101950	Bytom	50.34802	18.93282	189186	Bytom	Śląskie	Poran
+3102014	Bydgoszcz	53.1235	18.00762	366452	Bydgoszcz	Kujawsko-Pomorskie	Poran
+3103402	Bielsko-Biala	49.82245	19.04686	176515	Bielsko-Biała	Śląskie	Poran
+4152872	Daytona Beach	29.21081	-81.02283	64736	Daytona	FL+Florida	U.S.+USA+U.S.A.
+5385955	Rancho Cucamonga	34.1064	-117.59311	175236	Cucamonga	CA+Calif+California	U.S.+USA+U.S.A.

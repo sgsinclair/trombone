@@ -1,0 +1,4 @@
+5554072	Juneau	58.30194	-134.41972	32756	Tisaantikii Hiinii	AK+Alaska	U.S.+USA+U.S.A.
+5866726	Kotzebue	66.89846	-162.59809	3277	Qikiqtaġruk	AK+Alaska	U.S.+USA+U.S.A.
+5879400	Anchorage	61.21806	-149.90028	298695	Kisaġvik	AK+Alaska	U.S.+USA+U.S.A.
+5880054	Barrow	71.29058	-156.78872	4384	Utqiaġvik	AK+Alaska	U.S.+USA+U.S.A.

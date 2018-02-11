@@ -1,0 +1,396 @@
+292223	Dubai	25.0657	55.17128	1137347	دۇبائى	Dubai	ئەرەب بىرلەشمە خەلىپىلىكى+UAE
+1138958	Kabul	34.52813	69.17233	3043532	كابۇل		ئافغانىستان
+3183875	Tirana	41.3275	19.81889	374801	تىرانا		ئالبانىيە
+616052	Yerevan	40.18111	44.51361	1093485	يېرېۋان	Yerevan	
+3435910	Buenos Aires	-34.61315	-58.37723	13076300	Buénos Ayrés	CF	ئارگېنتىنا
+2766824	Salzburg	47.79941	13.04399	150269	Saltzburg		
+2770993	Mürzzuschlag	47.6	15.68333	9410	مۇرززۇسچلاگ	سترىيە	
+2078025	Adelaide	-34.92866	138.59863	1225235	ئادېلايدې	SA	ئاۋستىرالىيە
+2147714	Sydney	-33.86785	151.20732	4627345	Sidnéy	NSW	ئاۋستىرالىيە
+2158177	Melbourne	-37.814	144.96332	4246375	مېلبۇرن	VIC	ئاۋستىرالىيە
+2172517	Canberra	-35.28346	149.12807	367752	Kanbérra	ACT+Australian Capital Territory	ئاۋستىرالىيە
+2174003	Brisbane	-27.46794	153.02809	2189878	برىسبان	QLD	ئاۋستىرالىيە
+3191281	Sarajevo	43.84864	18.35644	696731	سارايېۋو	Federation of Bosnia and Herzegovina	بوسنىيە ۋە ھېرسېگوۋىنا
+1185241	Dhaka	23.7104	90.40744	10356500	داكا		بانگلادېش
+2797656	Gent	51.05	3.71667	231493	Gant		
+2800866	Brussels	50.85045	4.34878	1019022	بريۇسسېل	Brussels-Capital Region	
+2803138	Antwerpen	51.21989	4.40346	459805	Antwérp		
+727011	Sofia	42.69751	23.32415	1152556	سوفىيە		بۇلغارىيە
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	باندار سەرى بەگاۋان		برۇنېي
+3903987	Sucre	-19.03332	-65.26274	224838	سۇكرې	Chuquisaca	بولىۋىيە
+3448439	São Paulo	-23.5475	-46.63611	10021295	San Pawlo	SP+São Paulo	برازىلىيە
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio dé Janéyro	RJ	برازىلىيە
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	برازىلىيە
+1252416	Thimphu	27.46609	89.64191	98676	تىمپۇ		بۇتان+Bh2utan
+625144	Minsk	53.9	27.56667	1742124	مىنىسكى		بېلورۇسسىيە
+3582677	Belize City	17.49952	-88.19756	61461	بېلىز شەھىرى	Belize	بېلىز
+5913490	Calgary	51.05011	-114.08529	1019942	Kalgari	Albérta+AB+Alberta	
+5946768	Edmonton	53.55014	-113.46871	712391	Édmonton	Albérta+AB+Alberta	
+6077243	Montréal	45.50884	-73.58781	1600000	مونترېئال	QC	
+6167865	Toronto	43.70011	-79.4163	2600000	تورونتو	ON+Ontario	
+6173331	Vancouver	49.24966	-123.11934	600000	Wankuwér	Britani Kolumbiye+BC+British Columbia	
+6174041	Victoria	48.43294	-123.3693	289625	Wiktoriye	Britani Kolumbiye+BC+British Columbia	
+6183235	Winnipeg	49.8844	-97.14704	632063	Winnipég+WPG	Manitoba Ölkisi+MB+Manitoba	
+6325494	Québec	46.81228	-71.21454	528595	Kwébék Shehiri+Kwébék+Québec	QC	
+2657896	Zürich	47.36667	8.55	341730	سيۇرىخ	ZH	
+2660646	Genève	46.20222	6.14569	183981	Jenwe+1200		
+2661552	Bern	46.94809	7.44744	121631	بېرن		
+2279755	Yamoussoukro	6.82055	-5.27674	194530	يامۇسسۇكرو		كوتى دى ئىۋۇئېر+Côte de l’Ivoire
+3871336	Santiago	-33.45694	-70.64827	4837295	سانتىياگو+Stgo.		چىلى
+1279501	Zepu	38.18867	77.27075	0	پوسكام+Поскам+Poskam	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1279524	Zangguy	37.28333	78.76667	13027	زاڭگۇي+Заңгуй	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1279564	Yopurga	39.23938	76.76432	0	Yopurƣa+Yopurgha+يوپۇرغا+Ёпурға	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1279987	Shule	39.40231	76.0508	0	Yengixəh̨ər+Yéngisheher+يېڭىشەھەر+Еңишәһәр	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280037	Shache	38.41667	77.24056	82509	Yəkən+Yeken+يەكەن+Якән	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280122	Ruoqiang	39.02003	88.16465	0	Qak̩ilik̩+Chaqiliq+چاقىلىق+Чақылық	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280227	Qira	37.02847	80.80287	0	چىرا+Чира+Qira Zhen	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280249	Qiemo	38.13407	85.52977	0	Qərqən+چەرچەن+Чәрчән	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280327	Guma	37.6168	78.28087	0	گۇما+Гума	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280541	Karakax	37.27225	79.73728	0	K̩arak̩ax+Qaraqash+قاراقاش+Қарақаш	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280555	Niya	37.06553	82.68933	0	نىيا+Ния	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280691	Lop	37.07403	80.18231	0	لوپ+Лоп	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280737	Lhasa	29.65	91.1	118721	لاسا شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280849	Kashgar	39.47066	75.98951	274717	قەشقەر+K̩əxk̩ər+Qeshqer+Қәшқәр	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1280959	Jiashi	39.49554	76.74282	0	Pəyziwat+Peyziwat+پەيزىۋات+Пәйзиват	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1281019	Hotan	37.1075	79.93548	114000	خوتەن شەھىرى+Hotən+Xoten+خوتەن+Хотән	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1528992	Zhaosu	43.12278	81.07583	0	Mongƣulkürə+Mongghulküre+موڭغۇلكۈرە+Моңғулкүрә	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529007	Yiwu	43.24918	94.6943	0	ئاراتۈرۈك+Аратүрүк+Aratürük	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529013	Yining	43.97799	81.51804	0	Ƣulja+Ghulja+غۇلجا+Ғулҗа	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529031	Yanqi	42.06204	86.56632	0	K̩araxəh̨ər+Qarasheher+قاراشەھەر+Қарашәһәр	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529046	Xinyuan	43.42649	83.24959	300000	Künəs+كۈنەس+Күнәс	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529049	Xinhe	41.55028	82.61667	0	Tok̩su+Toqsu+توقسۇ+Тоқсу	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529075	Xayar	41.23	82.80583	0	Shayar+شايار+Шаяр	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529084	Wushi	41.15167	79.225	0	Uchturpan+ئۇچتۇرپان+Учтурпан	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529088	Wensu	41.27196	80.24085	0	Onsu+ئونسۇ+Онсу	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529102	Ürümqi	43.80096	87.60046	3029372	ئۈرۈمچی+ئۈرۈمچى شەھىرى+Ürümchi+ئۈرۈمچى+Үрүмчи	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529114	Turpan	42.94769	89.17886	254900	تۇرپان+Турпан	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529124	Toli	45.93859	83.60056	0	تولى+Толи	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529126	Toksun	42.79359	88.64163	0	Tok̩sun+توقسۇن+Тоқсун+Toqsun	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529147	Tekes	43.21669	81.83973	0	Tekəs+Tékes+تېكەس+Текәс+Tekes Xian	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529167	Tacheng	46.74535	82.95847	0	Qɵqək+Chöchek+چۆچەك+Чөчәк	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529195	Shihezi	44.3023	86.03694	572772	شىخەنزە شەھرى+شىخەنزە شەھىرى+Xihənzə+Shixenze+شىخەنزە+Шихәнзә	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529214	Shanshan	42.8675	90.20463	0	Pichan+پىچان+Пичан	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529250	Qitai	44.02788	89.5798	0	Guqung+Guchung+گۇچۇڭ+Гучуң	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529256	Qinghe	46.66725	90.37864	0	Chinggil+چىڭگىل+Чиңгил	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529279	Qapqal	43.80194	81.08722	160000	Chapchal+چاپچال+Чапчал	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529290	Nilka	43.78894	82.49599	0	Nilqa+نىلقا+Нилқа+Nilka Xian	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529303	Mori	43.82442	90.19476	0	مورى+Мори	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529333	Luntai	41.77389	84.24417	0	بۈگۈر+Бүгүр+Bügür	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529355	Kuytun	44.42707	84.90069	0	كۈيتۇن+Күйтун+Küytun	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529363	Kuqa	41.72778	82.93639	68105	كۇچا+Куча	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529376	Korla	41.76055	86.15231	179465	كورلا شەھىرى+كورلا+Корла	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529401	Karamay	45.58473	84.88724	260000	قاراماي شەھىرى	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529408	Kalpin	40.52755	79.06577	0	Kəlpin+كەلپىن+Кәлпин+Kalpin Xian	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529419	Jimsar	43.98333	89.06667	0	جىمسار+Җимсар	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529438	Khutubi	44.19035	86.88521	0	K̩utubi+Qutubi+قۇتۇبى+Қутуби	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529451	Hoxut	42.25861	86.85778	0	Hoxut+Xoshut+خوشۇت+Хошут	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529475	Hejing	42.31639	86.38278	0	Xéjing+خېجىڭ+Хеҗиң	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529484	Hami	42.83393	93.50601	137072	قۇمۇل شەھىرى+K̩umul+قۇمۇل+Қумул	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529498	Tokkuztara	43.46667	82.14889	0	Tok̩k̩uztara+Toqquztara+توققۇزتارا+Тоққузтара	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529506	Bofeng	44.15874	87.97418	0	فۇكاڭ+Фукаң	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529522	Emin	46.52574	83.63325	0	Dɵrbiljin+Dörbiljin+دۆربىلجىن+Дөрбилҗин	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529528	Dushanzi	44.33333	84.85	0	Maytaƣ+Maytagh+مايتاغ+Майтағ	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529563	Dabancheng	43.35833	88.32004	0	Dawanqing+Dawanching+داۋانچىڭ+Даванчиң	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529569	Changji	44.00782	87.30461	198776	سانجى+Санҗи+Sanji	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529584	Bohu	41.98434	86.62198	0	Baƣrax+Baghrash+باغراش+Бағраш	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529614	Barkol	43.59881	93.00862	0	Barkɵl+Barköl+باركۆل+Баркөл+باركۆل بازىرى	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529629	Baicheng	41.77389	81.86889	0	باي+Бай	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529630	Aykol	40.95759	80.13574	11260	Aykɵl+Ayköl+ئايكۆل+Айкөл	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529634	Awat	40.63837	80.37965	0	ئاۋات+Ават+Awat Xian	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529641	Aral	40.54184	81.26566	260000	ئارال+Арал+Aral	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529651	Altay	47.84864	88.13361	139341	ئالتاي+Алтай+ئالتاي شەھىرى	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529660	Aksu	41.18418	80.27921	340020	ئاقسۇ شەھىرى+Ak̩su+ئاقسۇ+Ақсу	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1529662	Akqi	40.94152	78.44379	0	Ak̩qi+Aqchi+ئاقچى+Ақчи	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1538336	Topterek	47.43403	85.87113	0	Topterək+Toptérek+توپتېرەك+Топтерәк	Xinjiang Uygur Zizhiqu+Xinjiang Uyghur Zizhiqu	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1784130	Zhoukou	33.63333	114.63333	377061	Juko shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1784642	Zhenjiang	32.21086	119.45508	632552	جېنجياڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1784658	Zhengzhou	34.75778	113.64861	4253913	جېڭجۇ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1784990	Zhanjiang	21.28145	110.34271	637790	جاڭجياڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1785018	Zhangzhou	24.51333	117.65556	589831	Jyangju shehiri	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1785286	Zibo	36.79056	118.06333	3129228	زىبو شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1786657	Yinchuan	38.46806	106.27306	475101	يىنچۈئەن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1786764	Yichang	30.71444	111.28472	476725	يىچاڭ شەھىرى	خۇبېي ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1787093	Yantai	37.47649	121.44081	719332	يەنتەي شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1787227	Yangzhou	32.39722	119.43583	539715	Yangjo shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1787746	Yancheng	33.3575	120.1573	628441	يەنچېن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1787824	Tongshan	34.18045	117.15707	1199193	شۈجو شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1788694	Xinpu	34.59972	119.15944	392444	ليەنيۈنگاڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1788852	Xining	36.62554	101.75739	767531	Shining shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1790254	Xiaogan	30.92689	113.92221	160437	شياۋگەن شەھىرى	خۇبېي ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1790437	Zhuhai	22.27694	113.56778	501199	Juxey shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1790587	Xiangyang	32.0422	112.14479	462956	شياڭفان شەھىرى	خۇبېي ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1790630	Xi’an	34.25833	108.92861	6501190	شىئەن شەھىرى	شېنشى ئۆلكىسى+Shaanxi	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1790645	Xiamen	24.47979	118.08187	3531347	شيامېن شەھىرى	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1790923	Wuxi	31.56887	120.28857	3543719	ۋۇشى شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1791247	Wuhan	30.58333	114.26667	9785388	ۋۇخەن شەھىرى+武汉	خۇبېي ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1791388	Wenzhou	27.99942	120.66682	865672	Wénju shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1791673	Weihai	37.50914	122.11356	152595	ۋېيخەي شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1792947	Tianjin	39.14222	117.17667	11090314	تيەنجىن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1793346	Tangshan	39.63333	118.18333	3372102	تاڭشەن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1793505	Taizhou	32.49069	119.90812	612356	Teyju shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1793511	Taiyuan	37.86944	112.56028	3426519	تەييۈەن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1793743	Suzhou	33.63611	116.97889	205130	شيۇجۇ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1795270	Shijiazhuang	38.04139	114.47861	2834942	شىجياجۇاڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1795565	Shenzhen	22.54554	114.0683	10358381	شېنجېن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1795855	Shaoxing	30.00237	120.57864	421283	Shawshin shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1795940	Shantou	23.36814	116.71479	5329024	شەنتۇ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1796236	Shanghai	31.22222	121.45806	22315474	شاڭخەي+شاڭخەي شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1796556	Sanya	18.24306	109.505	144753	Senya shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1796663	Sanming	26.24861	117.61861	209444	Senming shehiri	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1797353	Quanzhou	24.91389	118.58583	184143	Chüenju shehiri	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1797595	Qinhuangdao	39.93167	119.58833	759718	Chinxuangdaw shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1797929	Qingdao	36.06488	120.38042	3718835	چىڭداۋ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1798449	Putian	25.43944	119.01028	376558	Putyen shehiri	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1798827	Pingdingshan	33.73847	113.30119	889675	Tekshi choqqiliq tagh shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1799397	Ningbo	29.87819	121.54945	3491597	نىڭبو شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1799629	Nanyang	32.99472	112.53278	251532	Nenyang shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1799722	Nantong	32.03028	120.87472	666251	Nentung shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1799846	Nanping	26.645	118.17361	171674	Nenping shehiri	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1799869	Nanning	22.81667	108.31667	803788	نەننىڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1799962	Nanjing	32.06167	118.77778	7165292	نەنجىڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1800163	Nanchang	28.68396	115.85306	2357839	نەنچاڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1800627	Mianyang	31.46784	104.68168	264136	ميەنياڭ شەھىرى	Sichuan	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1801792	Luoyang	34.68361	112.45361	1390581	لوياڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1802276	Longyan	25.10722	117.0225	0	Longyen shehiri	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1804430	Lanzhou	36.05701	103.83987	2628426	لەنجۇ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1804651	Kunming	25.03889	102.71833	3855346	كۈنمىڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1804879	Kaifeng	34.7986	114.30742	900000	Keyféng shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1805611	Jingmen	31.03361	112.20472	167750	جىڭمېن شەھىرى	خۇبېي ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1805753	Jinan	36.66833	116.99722	4335989	جىنەن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1805953	Jiaxing	30.7522	120.75	466101	جياشىڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1806097	Ningde	26.66167	119.52278	65170	نىڭدې شەھىرى	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1806776	Huizhou	23.11147	114.41523	289201	Xuyjo shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1807234	Huangshi	30.24706	115.04814	688090	خۇئاڭشى شەھىرى	خۇبېي ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1808370	Hengyang	26.88946	112.61888	759602	Xéngyang shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1808722	Hefei	31.86389	117.28083	3310268	خېفېي شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1808926	Hangzhou	30.29365	120.16142	6241971	خاڭجۇ شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1808963	Handan	36.60056	114.46778	1358318	خەندەن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1809078	Haikou	20.04583	110.34167	615835	Xeyko shehir		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1809461	Guiyang	26.58333	106.71667	1171633	گۇيياڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1809498	Guilin	25.28194	110.28639	649352	گۇيلىن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1809858	Guangzhou	23.11667	113.25	11071424	گۇاڭجۇ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1810821	Fuzhou	26.06139	119.30611	1179720	فۇجو شەھىرى	فۇجيەن ئۆلكىسى	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1811103	Foshan	23.02677	113.13148	3600000	فۇشەن شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1812545	Dongguan	23.01797	113.74866	8000000	Dongwen shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1813253	Lijiang	26.86879	100.22072	1137600	لىجياڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1814757	Chuzhou	32.32194	118.29778	280582	Chuju shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1814906	Chongqing	29.56278	106.55278	7457600	چۇڭچىڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1815286	Chengdu	30.66667	104.06667	7415590	چېڭدۇ شەھىر	Sichuan	جۇڭخۇا خەلق جۇمھۇرىيىتى
+1815456	Changzhou	31.77359	119.95401	949018	چاڭجو شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1815577	Changsha	28.19874	112.97087	3093980	چاڭشا شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1816080	Cangzhou	38.31667	116.86667	527681	ساڭجو شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1816440	Bengbu	32.94083	117.36083	576648	بېڭبۇ شەھەرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1816670	Beijing	39.9075	116.39723	11716620	بېيجىڭ+بېيجىڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1816705	Beihai	21.48333	109.1	289568	بېيخەي شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1816971	Baoding	38.85111	115.49028	995652	Bawding shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1817993	Anqing	30.51365	117.04723	358661	ئەنچىڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+1886760	Suzhou	31.30408	120.59538	5345961	سۇجۇ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2034937	Shenyang	41.79222	123.43278	6255921	شېنياڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2035265	Qiqihar	47.34088	123.96045	882364	چىچىخار شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2035715	Mudanjiang	44.58333	129.6	665915	مۇدەنجياڭ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2036113	Liaoyang	41.27194	123.17306	687890	لياۋياڭ شەھەر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2036502	Jilin	43.85083	126.56028	1881977	جىلىن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2036581	Jiamusi	46.79927	130.31633	549549	جيامۇسى شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2036892	Hohhot	40.81056	111.65222	774477	Kökxot shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2037013	Harbin	45.75	126.65	5878939	خاربىن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2037799	Datong	40.09361	113.29139	1052678	داتۇڭ شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2037860	Daqing	46.58333	125	203488	داچىڭ شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2038180	Changchun	43.88	125.32278	4193073	چاڭچۈن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2038432	Baotou	40.65222	109.82222	1301768	باۋتۇ شەھىر		جۇڭخۇا خەلق جۇمھۇرىيىتى
+2038632	Anshan	41.12361	122.99	1199275	ئەنشەن شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+6986104	Zhongshan	22.52306	113.37912	0	Jongshen shehiri		جۇڭخۇا خەلق جۇمھۇرىيىتى
+8400694	Taizhou	28.66266	121.43312	0	تەيجۇ شەھىرى		جۇڭخۇا خەلق جۇمھۇرىيىتى
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		كولومبىيە
+3621849	San José	9.93333	-84.08333	335007	سان خوسې	San José	
+3374333	Praia	14.93152	-23.51254	113364	پرايا	Praia	
+146268	Nicosia	35.17531	33.3642	200452	نىكوسىيە		
+3067696	Prague	50.08804	14.42076	1165581	پراگا+Praha	Hlavní město Praha	Czechia
+2825297	Stuttgart	48.78232	9.17702	589793	Shtutgart	Baden-Württemberg	گېرمانىيە
+2861650	Nürnberg	49.45421	11.07752	499237	Nyurnbérg	Bayern	گېرمانىيە
+2867714	Munich	48.13743	11.57549	1260391	Myunxén	Bayern	گېرمانىيە
+2873891	Mannheim	49.4891	8.46694	307960	Man'géym	Baden-Württemberg	گېرمانىيە
+2879139	Leipzig	51.33962	12.37129	504971	Léypzig		گېرمانىيە
+2886242	Köln	50.93333	6.95	963395	Kolon	NRW	گېرمانىيە
+2907911	Heidelberg	49.40768	8.69079	143345	Héydélbérg	Baden-Württemberg	گېرمانىيە
+2910831	Hannover	52.37052	9.73322	515140	Hanofér+Hannauver	Neddersassen+Läichsaksen+Donja Saska	گېرمانىيە
+2925533	Frankfurt am Main	50.11552	8.68417	650000	فرانكفورت	Hessen	گېرمانىيە
+2928810	Essen	51.45657	7.01228	593085	Ésén	NRW	گېرمانىيە
+2935022	Dresden	51.05089	13.73832	486854	Drézdén		گېرمانىيە
+2944388	Bremen	53.07516	8.80777	546501	Brémén	Bremen	گېرمانىيە
+2945024	Braunschweig	52.26594	10.52673	244715	Braunshwéyg	Neddersassen+Läichsaksen+Donja Saska	گېرمانىيە
+2950159	Berlin	52.52437	13.41053	3426354	بېرلىن	Bérlin+Berlin	گېرمانىيە
+2618425	Copenhagen	55.67594	12.56553	1153615	كوپېنھاگېن		دانىيە
+2507480	Algiers	36.73225	3.08746	1977663	ئالجىر	Alger	ئالجىرىيە
+3652462	Quito	-0.22985	-78.52495	1399814	كىتو	Pichincha	
+588409	Tallinn	59.43696	24.75353	394024	تاللىن	Harjumaa	
+360630	Cairo	30.06263	31.24967	7734614	قاھىرە+Kayro		مىسىر
+2509954	Valencia	39.46975	-0.37739	814208	Walénsiye	Valencia	ئىسپانىيە+España
+2510911	Sevilla	37.38283	-5.97317	703206	Séwéliye	Andalusiye	ئىسپانىيە+España
+2517117	Granada	37.18817	-3.60667	234325	گرېنادا	Andalusiye	ئىسپانىيە+España
+2519240	Córdoba	37.89155	-4.77275	328428	Kordowa	Andalusiye	ئىسپانىيە+España
+3104324	Zaragoza	41.65606	-0.87734	674317	Saragossa+ZGZ	Aragón	ئىسپانىيە+España
+3117735	Madrid	40.4165	-3.70256	3255944	مادرىد	Madrid	ئىسپانىيە+España
+3128026	Bilbao	43.26271	-2.92528	354860	Bilbaw	Euskadi	ئىسپانىيە+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barsélona	Catalunya	ئىسپانىيە+España
+344979	Addis Ababa	9.02497	38.74689	2757729	ئەددىس -ئەبىبە	Ādīs Ābeba+Addis Ababa Region	ئېفىئوپىيە
+658225	Helsinki	60.16952	24.93545	558457	Xélsinki		فىنلاندىيە
+2983990	Rennes	48.11198	-1.67429	209375	Rénn Shehiri+35000+Rennes	Bretagne	فرانسىيە+France
+2988507	Paris	48.85341	2.3488	2138551	پارىژ+75001		فرانسىيە+France
+2990440	Nice	43.70313	7.26608	338620	Nis+06000		فرانسىيە+France
+2996944	Lyon	45.74846	4.84671	472317	Lion		فرانسىيە+France
+2998324	Lille	50.63297	3.05858	228328	Lil+59000	http://en.wikipedia.org/wiki/Hauts-de-France	فرانسىيە+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Bordo+33000		فرانسىيە+France
+2640194	Plymouth	50.37153	-4.14305	260203	Plimowt		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2640729	Oxford	51.75222	-1.25596	171380	Oksford		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchéstér		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	لوندون		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liwérpol		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2644668	Leicester	52.6386	-1.13169	508916	Léyséstér		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2644688	Leeds	53.79648	-1.54785	455123	Ritis		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2644972	Lancaster	54.04649	-2.79988	47162	Lankastér		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2648404	Gloucester	51.86568	-2.2431	150053	Glutséstér		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	گلاسگوۋ	苏格兰	بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Idinburg	苏格兰	بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2651347	Derby	52.92277	-1.47663	270468	Dérbi		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2653941	Cambridge	52.2	0.11667	158434	Kambrij		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmin'gxam		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Bélfast		بۈيۈك بېرىتانىيە+http://en.wikipedia.org/wiki/United_Kingdom
+611717	Tbilisi	41.69411	44.83368	1049498	تبىلىسى	T'bilisi	گرۇزىيە
+264371	Athens	37.97945	23.71622	664046	ئافېنا		گرېتسىيە+Griekanmua
+1819729	Hong Kong	22.27832	114.17469	7012738	شياڭگاڭ		http://en.wikipedia.org/wiki/Hong_Kong
+3186886	Zagreb	45.81444	15.97798	698966	Zagréb	Grad Zagreb	كرودىيە
+3054643	Budapest	47.49801	19.03991	1741041	Budapésht		ۋېنگرىيە
+1642911	Jakarta	-6.21462	106.84513	8540121	جاكارتا	Jakarta Raya	ھىندۇنېزىيە+http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	دۇبلىن		Ire
+281184	Jerusalem	31.76904	35.21633	801000	قۇدس		ئىسرائىلىيە
+293397	Tel Aviv	32.08088	34.78057	432892	تېلاۋىف		ئىسرائىلىيە
+1264733	Lucknow	26.83928	80.92313	2472011	Luknow	UP	ھىندىستان
+1269515	Jaipur	26.91962	75.78781	2711758	Jaypur	RJ+Rājasthān	ھىندىستان
+1273294	Delhi	28.65195	77.23149	10927986	Déhli	DL	ھىندىستان
+1275004	Kolkata	22.56263	88.36304	4631392	Kalkutta	WB+West Bengal	ھىندىستان
+1275339	Mumbai	19.07283	72.88261	12691836	Bombay	MH+Mahārāshtra	ھىندىستان
+1277333	Bengaluru	12.97194	77.59369	5104047	Bangalor	KA+Karnātaka	ھىندىستان
+1279233	Ahmedabad	23.02579	72.58727	3719710	Exmetabad	گۇجارات+GJ	ھىندىستان
+94824	Karbala	32.61603	44.02488	434450	كةربالا	Karbalāʼ	ئىراق
+3413829	Reykjavík	64.13548	-21.89541	118918	رېيكياۋىك+101		ئىسلاندىيە
+3164603	Venice	45.43713	12.33265	51298	ۋېنىتسىيە		
+3165524	Turin	45.07049	7.68682	870456	Turin	Piemonte	
+3169070	Rome	41.89193	12.51133	2318895	رىم	Lazio	
+3172394	Naples	40.85216	14.26811	959470	Naplés		
+3173435	Milan	45.46427	9.18951	1236837	مىلان		
+3176959	Florence	43.77925	11.24626	349296	Florénsa		
+250441	Amman	31.95522	35.94503	1275857	ئاممان		Al Mamlakah al Urdunīyah al Hāshimīyah
+1850147	Tokyo	35.6895	139.69171	8336599	توكيو		ياپونىيە
+1853909	Osaka	34.69374	135.50218	2592413	ئوساكا		ياپونىيە
+184745	Nairobi	-1.28333	36.81667	2750547	نايروبى	Nairobi Area	كېنىيە
+1821306	Phnom Penh	11.56245	104.91601	1573544	فنوم پېن		كامبودژا+http://en.wikipedia.org/wiki/Cambodia
+1871859	Pyongyang	39.03385	125.75432	3222000	پيوڭياڭ		http://en.wikipedia.org/wiki/North_Korea
+1835848	Seoul	37.566	126.9784	10349312	سېئول		http://en.wikipedia.org/wiki/South_Korea
+1526384	Almaty	43.25667	76.92861	2000900	ئالمۇتا	Almaty Qalasy	قازاقسىتان
+1651944	Vientiane	17.96667	102.6	196731	Wyéntyan		لائوس
+276781	Beirut	33.89332	35.50157	1916100	بېيرۇت		لىۋان
+1248991	Colombo	6.93194	79.84778	648034	كولومبو	Western	
+2960316	Luxembourg	49.61167	6.13	76684	ليۇكسېمبۇرگ شەھىرى		ليۇكسېمبۇرگ
+456172	Riga	56.946	24.10589	742572	رىگا	Riga	لاتۋىيە
+2210247	Tripoli	32.87519	13.18746	1150989	ترىپولى		لىۋىيە
+2538475	Rabat	34.01325	-6.83255	1655753	رابات		ماراكەش
+785842	Skopje	41.99646	21.43141	474889	سكوپليې		ماكېدونىيە+ARYM+FYROM
+1298824	Yangon	16.80528	96.15611	4477638	Rangon	Yangon	بىرما
+1821274	Macau	22.20056	113.54611	520400	ئاۋمېن		ئاۋمېن
+3530597	Mexico City	19.42847	-99.12766	12294193	مېكسىكا شەھىرى	The Federal District+Distrito Federal	مېكسىكا
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	كۇئالالۇمپۇر	KUL	مالايسىيا
+3617763	Managua	12.13282	-86.2504	973087	ماناگۇئا	Managua	
+2747891	Rotterdam	51.9225	4.47917	598199	Rottérdam	zh+Zuid-Holland	گوللاندىيە
+2759661	Arnhem	51.98	5.91111	141674	Arném	GLD+gd+Gelderland	گوللاندىيە
+2759794	Amsterdam	52.37403	4.88969	741636	ئامستېردام	nh+Nord-Holland+Noord-Holland	گوللاندىيە
+3143244	Oslo	59.91273	10.74609	580000	ئوسلو	Oslo	نورۋېگىيە
+1283240	Kathmandu	27.70169	85.3206	1442271	كاتماندۇ		نېپال
+2179537	Wellington	-41.28664	174.77557	381900	ۋېللىنگتون	ۋېللىنگتون	يېڭى زېلاندىيە
+2193733	Auckland	-36.84853	174.76349	417910	ئاۋكلاند	ئاۋكلاند	يېڭى زېلاندىيە
+287286	Muscat	23.58413	58.40778	797000	مۇسكات		ئومان
+3936456	Lima	-12.04318	-77.02824	7737002	لىما	Lima Province	پېرۇ
+2088122	Port Moresby	-9.44314	147.17972	283733	مورېسبى پورتى		پاپۇئا يېڭى گۋىنېيە
+1701668	Manila	14.6042	120.9822	1600000	مانىلا	Metro Manila	فىلىپپىن
+1166993	Rawalpindi	33.6007	73.0679	1743101	راۋالپىندى	Punjab	پاكىستان
+1168197	Peshawar	34.008	71.57849	1218773	پېشاۋار		پاكىستان
+1172451	Lahore	31.558	74.35071	6310888	Lahor	Punjab	پاكىستان
+1174872	Karachi	24.8608	67.0104	11624219	كاراچى		پاكىستان
+1176615	Islamabad	33.72148	73.04329	601600	ئىسلامئاباد	Islāmābād	پاكىستان
+756135	Warsaw	52.22977	21.01178	1702139	ۋارشاۋا	Mazowieckie	لەھىستان
+766980	Kurów	51.38941	22.18637	2804	Kurow	Lubelskie	لەھىستان
+3081368	Wrocław	51.1	17.03333	634893	Wroklaw	Dolnośląskie	لەھىستان
+3083829	Szczecin	53.42894	14.55302	407811	Shchétsin		لەھىستان
+3088171	Poznań	52.40692	16.92993	570352	Poznan	Wielkopolskie	لەھىستان
+3094802	Kraków	50.06143	19.93658	755050	Krakow	Małopolskie	لەھىستان
+2267057	Lisbon	38.71667	-9.13333	517802	لىسابون	Lisboa	پورتۇگالىيە
+3439389	Asunción	-25.30066	-57.63591	1482200	ئاسۇنسىئون		پاراگۋاي
+290030	Doha	25.28545	51.53096	344939	دوھا		قاتار
+683506	Bucharest	44.43225	26.10626	1877155	بۇخارېست		رۇمىنىيە
+792680	Belgrade	44.80401	20.46513	1273651	بېلگراد	Central Serbia	سېربىيە
+524901	Moscow	55.75222	37.61556	10381222	موسكۋا+Moskva		
+551487	Kazan	55.78874	49.12214	1104738	قازان		
+580497	Astrakhan	46.34968	48.04076	502533	Astiraxan	Astrakhan	
+1496747	Novosibirsk	55.0415	82.9346	1419007	Nowosibirski	Novosibirsk	
+2123628	Magadan	59.5638	150.80347	95282	ماگادان	Magadan	
+108410	Riyadh	24.68773	46.72185	4205961	رىياد		سەئۇدى ئەرەبىستان
+2673730	Stockholm	59.33258	18.0649	1515017	Stokgolm	Stockholms Län	Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	ليۇبليانا		سلوۋېنىيە
+3060972	Bratislava	48.14816	17.10674	423737	براتىسلاۋا	Bratislavský kraj	سلوۋاكىيە
+3583361	San Salvador	13.68935	-89.18718	525990	سان سالۋادور	San Salvador	ئەل سالۋادور
+170654	Damascus	33.5102	36.29128	1569394	دەمەشىق		
+2365267	Lomé	6.12874	1.22154	749700	لومې		توگو
+1609350	Bangkok	13.75398	100.50144	5104476	بانگكوك		
+1645457	Dili	-8.55861	125.57361	150000	دىلى		
+162183	Ashgabat	37.95	58.38333	727700	ئاشخاباد		تۈركمەنىستان
+2464470	Tunis	36.81897	10.16579	693210	تۇنىس شەھىرى	Tūnis	تۇنىس
+323786	Ankara	39.91987	32.85427	3517182	Enqere		تۈركىيە جۇمھۇرىيىتى+Turkanmua
+325303	Afyonkarahisar	38.75667	30.54333	146136	ئافيون قاراھىسار		تۈركىيە جۇمھۇرىيىتى+Turkanmua
+325330	Adıyaman	37.76441	38.27629	223744	ئادىياما		تۈركىيە جۇمھۇرىيىتى+Turkanmua
+325363	Adana	37.00167	35.32889	1248988	ئادانا	ئادانا ۋىلايىتى	تۈركىيە جۇمھۇرىيىتى+Turkanmua
+747014	Gebze	40.80276	29.43068	281436	گەبزە	كوجائەلى ۋىلايىتى	تۈركىيە جۇمھۇرىيىتى+Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	بۇرسا		تۈركىيە جۇمھۇرىيىتى+Turkanmua
+1668341	Taipei	25.04776	121.53185	7871900	تەيبېي		تەيۋەن
+1668355	Tainan	22.99083	120.21333	771235	Teynen shehiri		تەيۋەن
+1668399	Taichung	24.1469	120.6839	1040725	Teyjong shehiri		تەيۋەن
+160263	Dar es Salaam	-6.82349	39.26951	2698652	دارېسسالام	Dar es Salaam	تانزانىيە
+703448	Kyiv	50.45466	30.5238	2797553	كىيېۋ		ئۇكرائىنا+http://en.wikipedia.org/wiki/Ukraine
+232422	Kampala	0.31628	32.58219	1353189	كامپالا	Central Region	ئۇگاندا
+4335045	New Orleans	29.95465	-90.07507	389617	Yéngi Orléan	Loyizanna Shitati+LA+Louisiana	U.S.+USA+U.S.A.
+4347778	Baltimore	39.29038	-76.61219	621849	Baltimor	Maryland Shitati+MD+Maryland	U.S.+USA+U.S.A.
+4393217	Kansas City	39.09973	-94.57857	475378	Kanzas Shehiri	Missori Shitati+MO+Missouri	U.S.+USA+U.S.A.
+4460243	Charlotte	35.22709	-80.84313	827097	Sharlot	Shimaliy Karolina Shitati+NC+North Carolina	U.S.+USA+U.S.A.
+4509177	Columbus	39.96118	-82.99879	850106	Kolumbu	Oxayo Shtati+OH	U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	Oklaxoma Shehiri	Oklaxoma Shitati+OK+Oklahoma	U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Filadélfiye	Pénsilwaniye Shitati+PA	U.S.+USA+U.S.A.
+4641239	Memphis	35.14953	-90.04898	655770	Mémfis	Ténnéssi Shitati+TN+Tennessee	U.S.+USA+U.S.A.
+4644585	Nashville	36.16589	-86.78444	530852	Nashwil	Ténnéssi Shitati+TN+Tennessee	U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	داللاس	Téksas Shitati+TX+Texas	U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Hyuston	Téksas Shitati+TX+Texas	U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chikago	Illinoyiz Shitati+IL+Illinois	U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	بوستون	Massachuséts Shitati+MA+Massachusetts	U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Détroyt	Michigan Shitati+MI	U.S.+USA+U.S.A.
+5037649	Minneapolis	44.97997	-93.26384	410939	Minnéapolis	Minnésota Shitati+MN+Minnesota	U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Nyu York Shehiri+NYC+NY	Nyuyork Shitati+NY	U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Féniks	Arizona Shitati+AZ+Arizona	U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	لوس ئانجېلېس+Los Anjélés	Kaliforniye Shitati+CA+Calif+California	U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	Sakraménto	Kaliforniye Shitati+CA+Calif+California	U.S.+USA+U.S.A.
+5391811	San Diego	32.71533	-117.15726	1394928	San Diyégo	Kaliforniye Shitati+CA+Calif+California	U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Fransisko+SF	Kaliforniye Shitati+CA+Calif+California	U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San Xosé	Kaliforniye Shitati+CA+Calif+California	U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Dénwér	Kolorado Shitati+CO+Colorado	U.S.+USA+U.S.A.
+5454711	Albuquerque	35.08449	-106.65114	559121	Albukwér kwé	Yéngi Méksika Shitati+NM+New Mexico	U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Séatl	Washingiton Shitati+WA+Washington	U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	مونتېۋىدېئو		ئۇرۇگۋاي
+1216265	Samarqand	39.65417	66.95972	319366	Semerqend		ئۆزبېكىستان
+1217662	Bukhara	39.77472	64.42861	247644	Buxara		ئۆزبېكىستان
+1512569	Tashkent	41.26465	69.21627	1978028	تاشكەنت	Toshkent Shahri	ئۆزبېكىستان
+1514019	Fergana	40.38421	71.78432	164322	فەرغانە	Farg ona	ئۆزبېكىستان
+1514588	Andijon	40.78206	72.34424	318419	ظةنجان		ئۆزبېكىستان
+3646738	Caracas	10.48801	-66.87919	3000000	Karakas		ۋېنېسۇئېلا
+1566083	Ho Chi Minh City	10.82302	106.62965	3467331	سايگون+HCMC	سايگون	ۋيېتنام
+1581130	Hanoi	21.0245	105.84117	1431270	خانوي	Ha Nội	ۋيېتنام
+964137	Pretoria	-25.74486	28.18783	1619438	Prétoriye	Gauteng	جەنۇبىي ئافرىقا
+993800	Johannesburg	-26.20227	28.04363	2026469	Yohannésburg	Gauteng	جەنۇبىي ئافرىقا
+3369157	Cape Town	-33.92584	18.42322	3433441	Kapétown	Western Cape	جەنۇبىي ئافرىقا
+909137	Lusaka	-15.40669	28.28713	1267440	لۇساكا	Lusaka	
+890299	Harare	-17.82772	31.05337	1542813	ھارارې		

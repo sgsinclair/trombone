@@ -1,0 +1,200 @@
+2661552	Bern	46.94809	7.44744	121631	Berne		
+146268	Nicosia	35.17531	33.3642	200452	Lefkosia		
+2886242	Köln	50.93333	6.95	963395	Koloin	NRW	Yn Ghermaan
+2967183	Yvignac-la-Tour	48.35	-2.18333	1124	Ivinieg	Yn Vritaan+Bretagne	Yn Rank+France
+2967234	Yffiniac	48.48428	-2.67647	4392	Ilfinieg	Yn Vritaan+Bretagne	Yn Rank+France
+2970777	Vannes	47.66667	-2.75	54020	Gwened+56000	Yn Vritaan+Bretagne	Yn Rank+France
+2971825	Trémuson	48.52325	-2.84833	1763	Tremuzon	Yn Vritaan+Bretagne	Yn Rank+France
+2971976	Treffléan	47.68163	-2.61287	1544	Trevlean	Yn Vritaan+Bretagne	Yn Rank+France
+2972462	Tonquédec	48.66886	-3.39712	1120	Tonkedeg	Yn Vritaan+Bretagne	Yn Rank+France
+2972979	Theix	47.62916	-2.65186	5402	Teiz	Yn Vritaan+Bretagne	Yn Rank+France
+2973303	Taulé	48.6	-3.9	2941	Taole	Yn Vritaan+Bretagne	Yn Rank+France
+2973858	Spézet	48.2	-3.71667	1881	Speied	Yn Vritaan+Bretagne	Yn Rank+France
+2974949	Sérent	47.82333	-2.50571	2905	Serent	Yn Vritaan+Bretagne	Yn Rank+France
+2975485	Scaër	48.03333	-3.7	5525	Skaer	Yn Vritaan+Bretagne	Yn Rank+France
+2975916	Sarzeau	47.52772	-2.76933	7116	Sarzhav	Yn Vritaan+Bretagne	Yn Rank+France
+2976791	Saint-Thégonnec	48.51667	-3.95	2387	Sant-Tegoneg	Yn Vritaan+Bretagne	Yn Rank+France
+2977189	Saint-Renan	48.43333	-4.61667	7231	Lokournan	Yn Vritaan+Bretagne	Yn Rank+France
+2977299	Saint-Quay-Portrieux	48.64992	-2.83059	3024	Sant-Ke-Porzh-Olued	Yn Vritaan+Bretagne	Yn Rank+France
+2977869	Saint-Nicolas-du-Pélem	48.31222	-3.16465	1959	Sant-Nikolaz-ar-Pelem	Yn Vritaan+Bretagne	Yn Rank+France
+2978640	Saint-Malo	48.65	-2.01667	50676	Sant-Maloù+35400	Yn Vritaan+Bretagne	Yn Rank+France
+2981280	Saint-Brieuc	48.51513	-2.76838	52774	Sant-Brieg+22000	Yn Vritaan+Bretagne	Yn Rank+France
+2982809	Roscoff	48.72381	-3.98709	3772	Rosko+29680	Yn Vritaan+Bretagne	Yn Rank+France
+2983730	Riantec	47.71093	-3.31629	4945	Rianteg	Yn Vritaan+Bretagne	Yn Rank+France
+2984640	Quistinic	47.9041	-3.134	1337	Kistinid	Yn Vritaan+Bretagne	Yn Rank+France
+2984699	Quimperlé	47.86667	-3.55	12312	Kemperle+29300	Yn Vritaan+Bretagne	Yn Rank+France
+2984701	Quimper	48	-4.1	63849	Kemper+29000	Yn Vritaan+Bretagne	Yn Rank+France
+2984741	Quiberon	47.48412	-3.11963	5430	Kiberen+56170	Yn Vritaan+Bretagne	Yn Rank+France
+2984794	Querrien	47.96667	-3.53333	1689	Kerien	Yn Vritaan+Bretagne	Yn Rank+France
+2986102	Pont-Scorff	47.83343	-3.40251	2826	Pont-Skorf	Yn Vritaan+Bretagne	Yn Rank+France
+2986160	Pontivy	48.06667	-2.98333	16752	Pondi+56300	Yn Vritaan+Bretagne	Yn Rank+France
+2986609	Plumelin	47.86036	-2.88754	1900	Pluverin	Yn Vritaan+Bretagne	Yn Rank+France
+2986640	Plounévez-Lochrist	48.61667	-4.21667	2463	Gwinevez	Yn Vritaan+Bretagne	Yn Rank+France
+2986653	Plouigneau	48.56667	-3.7	4311	Plouigno	Yn Vritaan+Bretagne	Yn Rank+France
+2986670	Plougoulm	48.66667	-4.05	1718	Plougouloum	Yn Vritaan+Bretagne	Yn Rank+France
+2986676	Plougasnou	48.7	-3.8	3575	Plouganoù	Yn Vritaan+Bretagne	Yn Rank+France
+2986695	Ploubalay	48.58109	-2.14069	2506	Plouvalae	Yn Vritaan+Bretagne	Yn Rank+France
+2986699	Plouaret	48.61667	-3.46667	2207	Plouared	Yn Vritaan+Bretagne	Yn Rank+France
+2986730	Ploeren	47.65713	-2.86397	4245	Ploveren	Yn Vritaan+Bretagne	Yn Rank+France
+2986732	Ploemeur	47.73333	-3.43333	20652	Plañvour+56270	Yn Vritaan+Bretagne	Yn Rank+France
+2986768	Pleudihen-sur-Rance	48.51667	-1.96667	2618	Pleudehen	Yn Vritaan+Bretagne	Yn Rank+France
+2986795	Plérin	48.54249	-2.77983	13860	Plerin+22190	Yn Vritaan+Bretagne	Yn Rank+France
+2986800	Pléneuf-Val-André	48.593	-2.54675	3942	Pleneg-Nantraezh	Yn Vritaan+Bretagne	Yn Rank+France
+2986818	Plédran	48.446	-2.74667	5550	Pledran	Yn Vritaan+Bretagne	Yn Rank+France
+2986875	Planguenoual	48.533	-2.57642	1614	Plangonwal	Yn Vritaan+Bretagne	Yn Rank+France
+2987863	Perros-Guirec	48.81454	-3.43963	8062	Perroz-Gireg	Yn Vritaan+Bretagne	Yn Rank+France
+2988054	Penvénan	48.81182	-3.2955	2545	Perwenan	Yn Vritaan+Bretagne	Yn Rank+France
+2988507	Paris	48.85341	2.3488	2138551	Paarys+75001		Yn Rank+France
+2993647	Moëlan-sur-Mer	47.81418	-3.62892	6984	Molan	Yn Vritaan+Bretagne	Yn Rank+France
+2994268	Meslan	47.99502	-3.43285	1278	Mêlann	Yn Vritaan+Bretagne	Yn Rank+France
+2994431	Merdrignac	48.19372	-2.41533	3159	Medrigneg	Yn Vritaan+Bretagne	Yn Rank+France
+2994608	Ménéac	48.13972	-2.46134	1808	Menieg	Yn Vritaan+Bretagne	Yn Rank+France
+2994653	Melrand	47.98002	-3.10941	1631	Mêlrant	Yn Vritaan+Bretagne	Yn Rank+France
+2995009	Mauron	48.08257	-2.28477	3426	Maoron	Yn Vritaan+Bretagne	Yn Rank+France
+2995329	Marzan	47.54069	-2.32466	1806	Marzhan	Yn Vritaan+Bretagne	Yn Rank+France
+2996832	Maël-Carhaix	48.28444	-3.42322	1509	Mêl-Karaez	Yn Vritaan+Bretagne	Yn Rank+France
+2997465	Loudéac	48.17826	-2.75433	10552	Loudieg+22600	Yn Vritaan+Bretagne	Yn Rank+France
+2997577	Lorient	47.75	-3.36667	58112	An Oriant+56100	Yn Vritaan+Bretagne	Yn Rank+France
+2997964	Locmariaquer	47.56915	-2.94468	1468	Lokmaria-Kaer	Yn Vritaan+Bretagne	Yn Rank+France
+3003045	Le Palais	47.34557	-3.15411	2645	Porzh-Lae	Yn Vritaan+Bretagne	Yn Rank+France
+3004222	Le Folgoët	48.56359	-4.33641	3286	Ar Folgoad	Yn Vritaan+Bretagne	Yn Rank+France
+3006796	La Roche-Derrien	48.74627	-3.26142	1063	Ar Roch-Derrien	Yn Vritaan+Bretagne	Yn Rank+France
+3007481	Lanvollon	48.63117	-2.98641	1474	Lannolon	Yn Vritaan+Bretagne	Yn Rank+France
+3007610	Lannilis	48.57091	-4.52233	4686	Lanniliz	Yn Vritaan+Bretagne	Yn Rank+France
+3007636	Lanmeur	48.64733	-3.71645	2195	Lanneur	Yn Vritaan+Bretagne	Yn Rank+France
+3007663	Languidic	47.83266	-3.15821	7000	Langedig	Yn Vritaan+Bretagne	Yn Rank+France
+3007794	Lanester	47.76132	-3.33965	24352	Lannarstêr+56600	Yn Vritaan+Bretagne	Yn Rank+France
+3007842	Landivisiau	48.50784	-4.06833	8747	Landivizio+29400	Yn Vritaan+Bretagne	Yn Rank+France
+3007885	Landéda	48.58733	-4.571	3082	Landeda	Yn Vritaan+Bretagne	Yn Rank+France
+3008225	Lamballe	48.46762	-2.51436	12344	Lambal+22400	Yn Vritaan+Bretagne	Yn Rank+France
+3009239	La Gacilly	47.76562	-2.1322	2453	Gazilieg+56200	Yn Vritaan+Bretagne	Yn Rank+France
+3009352	La Forêt-Fouesnant	47.9101	-3.97858	2955	Ar Forest-Fouenant	Yn Vritaan+Bretagne	Yn Rank+France
+3009390	La Forest-Landerneau	48.42589	-4.31578	1686	Ar Forest-Landerne	Yn Vritaan+Bretagne	Yn Rank+France
+3011506	Kervignac	47.76289	-3.23778	4477	Kervignag	Yn Vritaan+Bretagne	Yn Rank+France
+3011624	Kernilis	48.57075	-4.418	1174	Kerniliz	Yn Vritaan+Bretagne	Yn Rank+France
+3012778	Inguiniel	47.97658	-3.28072	2042	An Ignel	Yn Vritaan+Bretagne	Yn Rank+France
+3013504	Henvic	48.63256	-3.92623	1247	Henvig	Yn Vritaan+Bretagne	Yn Rank+France
+3013521	Hennebont	47.80512	-3.27337	14288	Henbont+56700	Yn Vritaan+Bretagne	Yn Rank+France
+3014221	Guingamp	48.55	-3.15	9023	Gwengamp+22200	Yn Vritaan+Bretagne	Yn Rank+France
+3014280	Guilers	48.42545	-4.55801	7328	Gwiler-Leon	Yn Vritaan+Bretagne	Yn Rank+France
+3014403	Guengat	48.04193	-4.2047	1686	Gwengad	Yn Vritaan+Bretagne	Yn Rank+France
+3015305	Grand-Champ	47.75804	-2.84635	4528	Gregam	Yn Vritaan+Bretagne	Yn Rank+France
+3015601	Gouesnou	48.45267	-4.46456	6388	Gouenoù	Yn Vritaan+Bretagne	Yn Rank+France
+3017624	Fouesnant	47.89187	-4.01484	8722	Fouenant	Yn Vritaan+Bretagne	Yn Rank+France
+3019480	Étables-sur-Mer	48.63333	-2.83333	2623	Staol	Yn Vritaan+Bretagne	Yn Rank+France
+3019875	Erquy	48.63186	-2.4628	3722	Erge-ar-Mor	Yn Vritaan+Bretagne	Yn Rank+France
+3019920	Ergué-Gabéric	47.99562	-4.02223	7326	An Erge-Vras	Yn Vritaan+Bretagne	Yn Rank+France
+3019943	Erbrée	48.09745	-1.12479	1655	Ervored	Yn Vritaan+Bretagne	Yn Rank+France
+3020283	Elliant	47.99417	-3.88966	2929	Eliant	Yn Vritaan+Bretagne	Yn Rank+France
+3022242	Crozon	48.24643	-4.48993	8123	Kraozon	Yn Vritaan+Bretagne	Yn Rank+France
+3023777	Coray	48.05934	-3.83056	1704	Kore	Yn Vritaan+Bretagne	Yn Rank+France
+3024035	Concarneau	47.87502	-3.92245	21397	Konk-Kerne+29900	Yn Vritaan+Bretagne	Yn Rank+France
+3024459	Coësmes	47.88325	-1.44074	1168	Koem	Yn Vritaan+Bretagne	Yn Rank+France
+3024572	Clohars-Fouesnant	47.89657	-4.06396	1994	Kloar-Fouenant	Yn Vritaan+Bretagne	Yn Rank+France
+3024682	Cléguer	47.85407	-3.38219	3278	Kleger	Yn Vritaan+Bretagne	Yn Rank+France
+3026262	Châteaulin	48.2	-4.08333	5379	Kastellin	Yn Vritaan+Bretagne	Yn Rank+France
+3027767	Cesson-Sévigné	48.1212	-1.603	16222	Saozon-Sevigneg+35510	Yn Vritaan+Bretagne	Yn Rank+France
+3028217	Caudan	47.80877	-3.3425	7241	Kaodan+56850	Yn Vritaan+Bretagne	Yn Rank+France
+3028575	Carnac	47.58351	-3.07884	4777	Karnag+56340	Yn Vritaan+Bretagne	Yn Rank+France
+3028603	Carhaix-Plouguer	48.27594	-3.57326	8270	Karaez-Plougêr+29270	Yn Vritaan+Bretagne	Yn Rank+France
+3029126	Callac	48.40292	-3.428	2564	Kallag	Yn Vritaan+Bretagne	Yn Rank+France
+3029925	Broons	48.31748	-2.25952	2542	Bronn	Yn Vritaan+Bretagne	Yn Rank+France
+3030102	Briec	48.10167	-3.99833	4880	Brieg	Yn Vritaan+Bretagne	Yn Rank+France
+3030283	Breteil	48.14534	-1.89886	3242	Brezhiel	Yn Vritaan+Bretagne	Yn Rank+France
+3030403	Bréhand	48.40333	-2.57412	1321	Brehant-Monkontour	Yn Vritaan+Bretagne	Yn Rank+France
+3030456	Bréal-sous-Montfort	48.04876	-1.86438	4168	Breal-Moñforzh	Yn Vritaan+Bretagne	Yn Rank+France
+3030522	Brasparts	48.30167	-3.95516	1071	Brasparzh	Yn Vritaan+Bretagne	Yn Rank+France
+3030565	Brandérion	47.79412	-3.19474	1030	Prederion	Yn Vritaan+Bretagne	Yn Rank+France
+3031081	Bourbriac	48.47384	-3.18758	2349	Boulvriag	Yn Vritaan+Bretagne	Yn Rank+France
+3032600	Binic	48.60074	-2.82602	3272	Binig	Yn Vritaan+Bretagne	Yn Rank+France
+3032685	Bignan	47.87935	-2.77153	2532	Begnen	Yn Vritaan+Bretagne	Yn Rank+France
+3033681	Belle-Isle-en-Terre	48.54478	-3.395	1139	Benach	Yn Vritaan+Bretagne	Yn Rank+France
+3033884	Bégard	48.62754	-3.30067	4779	Bear	Yn Vritaan+Bretagne	Yn Rank+France
+3034413	Bazouges-la-Pérouse	48.42606	-1.57431	1849	Bazeleg-ar-Veineg	Yn Vritaan+Bretagne	Yn Rank+France
+3034538	Baulon	47.9859	-1.93114	1491	Beloen	Yn Vritaan+Bretagne	Yn Rank+France
+3035316	Bains-sur-Oust	47.70362	-2.07047	3317	Baen-Ballon	Yn Vritaan+Bretagne	Yn Rank+France
+3035324	Bain-de-Bretagne	47.84418	-1.68486	6098	Baen-Veur	Yn Vritaan+Bretagne	Yn Rank+France
+3036059	Auray	47.67025	-2.99183	12269	An Alre+56400	Yn Vritaan+Bretagne	Yn Rank+France
+3036791	Arradon	47.62709	-2.8215	5206	Aradon	Yn Vritaan+Bretagne	Yn Rank+France
+3037016	Argentré-du-Plessis	48.05697	-1.14601	4007	Argantreg-ar-Genkiz	Yn Vritaan+Bretagne	Yn Rank+France
+3037418	Antrain	48.46031	-1.48354	1523	Entraven	Yn Vritaan+Bretagne	Yn Rank+France
+3037797	Ancenis	47.36667	-1.16667	7840	Ankiniz+44150	Broioù al Liger	Yn Rank+France
+3038698	Acigné	48.13333	-1.53704	5746	Egineg	Yn Vritaan+Bretagne	Yn Rank+France
+2633982	Wick	58.43906	-3.09424	7140	Yn Ooig	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2635412	Truro	50.26526	-5.05436	23041	Truru	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2636432	Swansea	51.62079	-3.94323	300352	Abertawe	Galles	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2636790	Stornoway	58.20925	-6.38649	7500	Steornavaie	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2640377	Penzance	50.11861	-5.53715	19872	Pen Sans	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2641581	Newry	54.17841	-6.33739	27757	Yn Euar		Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2641589	Newquay	50.41557	-5.07319	20189	Tewynblustri	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2641598	Newport	51.58774	-2.99835	306844	Casnewydd	Galles	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2642372	Mold	53.16674	-3.14143	10058	Yr Wyddgrug	Galles	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2642705	Merthyr Tydfil	51.74794	-3.37779	43820	Co-chorp Coontae Verthyr Tudful	Galles	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchuin	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Lunnin	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Lerphoyll	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2646088	Inverness	57.47908	-4.22398	46870	Inbhir Nis	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2647948	Greenock	55.94838	-4.76121	43690	Grianaig	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glaschu	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2649169	Fort William	56.81648	-5.11208	5830	An Gearasdan	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Doon Edin	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2650405	East Kilbride	55.76412	-4.17669	74740	Keeill Vreeshey Hiar	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2653228	Chester	53.1905	-2.89189	90524	Yn Çhaayr	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2653822	Cardiff	51.48	-3.18	447287	Cayr Deeth	Galles	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2653915	Campbeltown	55.42583	-5.60764	4800	Balley Keeill Charane	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2655613	Birkenhead	53.39337	-3.01479	325264	Kione Beih	Sostyn	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Beeal Feirshtey		Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2657060	Armagh	54.35	-6.66667	14801	Ard Maghey		Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2657125	Ardrossan	55.65018	-4.80659	10930	Ard Rushen	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Aberdon	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Yn Orkaid	苏格兰	Rywvaneth Unys+Reeriaght Unnaneysit+http://en.wikipedia.org/wiki/United_Kingdom
+2654332	Buncrana	55.13333	-7.45	5546	Bun Cranncha	Queiggey Ulley	Pobblaght Nerin+Ire
+2960869	Youghal	51.95	-7.85056	6868	Yoal	Queiggey Mooan	Pobblaght Nerin+Ire
+2960970	Westport	53.8	-9.51667	6200	Caair ny Mart		Pobblaght Nerin+Ire
+2960992	Waterford	52.25833	-7.11194	47904	Purt Largey	Queiggey Mooan	Pobblaght Nerin+Ire
+2961107	Trim	53.555	-6.79167	1800	Baile Átha Troim	Queiggey Lion	Pobblaght Nerin+Ire
+2961123	Tralee	52.27042	-9.70264	22941	Traie Lee	Queiggey Mooan	Pobblaght Nerin+Ire
+2961423	Sligo	54.26969	-8.46943	20228	Shliggagh		Pobblaght Nerin+Ire
+2961450	Slane	53.71	-6.54333	1349	Baile Shláine	Queiggey Lion	Pobblaght Nerin+Ire
+2961944	Raphoe	54.87472	-7.59833	1157	Ráth Bhoth	Queiggey Ulley	Pobblaght Nerin+Ire
+2962308	Navan	53.65278	-6.68139	24545	Yn Ooive	Queiggey Lion	Pobblaght Nerin+Ire
+2962961	Letterkenny	54.95	-7.73333	16901	Littyr Kennain	Queiggey Ulley	Pobblaght Nerin+Ire
+2963155	Kinsale	51.7075	-8.53056	3843	Kione Sailley	Queiggey Mooan	Pobblaght Nerin+Ire
+2963295	Killybegs	54.63333	-8.45	1297	Na Cealla Beaga	Queiggey Ulley	Pobblaght Nerin+Ire
+2963398	Kilkenny	52.65417	-7.25222	21589	Keeill Chennee	Queiggey Lion	Pobblaght Nerin+Ire
+2963436	Kildare	53.15611	-6.91444	8142	Keeill Darey	Queiggey Lion	Pobblaght Nerin+Ire
+2963722	Howth	53.38778	-6.06528	4574	Binn Éadair	Queiggey Lion	Pobblaght Nerin+Ire
+2964320	Fermoy	52.13583	-8.27583	4933	Mannishter er Maigh	Queiggey Mooan	Pobblaght Nerin+Ire
+2964405	Ennis	52.84361	-8.98639	24427	Innys	Queiggey Mooan	Pobblaght Nerin+Ire
+2964540	Dundalk	54	-6.41667	33428	Doon Jialgan	Queiggey Lion	Pobblaght Nerin+Ire
+2964547	Dunboyne	53.41901	-6.47375	6959	Dún Búinne	Queiggey Lion	Pobblaght Nerin+Ire
+2964574	Dublin	53.33306	-6.24889	1024027	Divlyn	Queiggey Lion	Pobblaght Nerin+Ire
+2964661	Drogheda	53.71889	-6.34778	33441	Droghad Aah	Queiggey Lion	Pobblaght Nerin+Ire
+2964782	Dingle	52.14083	-10.26889	1965	Yn Dein	Queiggey Mooan	Pobblaght Nerin+Ire
+2965140	Cork	51.89797	-8.47061	190384	Corkee	Queiggey Mooan	Pobblaght Nerin+Ire
+2965535	Cavan	53.99083	-7.36056	6388	Yn Cavan	Queiggey Ulley	Pobblaght Nerin+Ire
+2965727	Carrick-on-Shannon	53.94694	-8.09	3980	Cora Droma Rúisc		Pobblaght Nerin+Ire
+2965929	Bundoran	54.47782	-8.28094	1865	Bun Dobhráin	Queiggey Ulley	Pobblaght Nerin+Ire
+2966406	Ballyshannon	54.5	-8.18333	2683	Béal Átha Seanaidh	Queiggey Ulley	Pobblaght Nerin+Ire
+2966668	Ballybofey	54.8	-7.78333	4852	Bealach Féich	Queiggey Ulley	Pobblaght Nerin+Ire
+2966753	Ballinasloe	53.3275	-8.21944	6388	Beeal Aah ny Sluigh		Pobblaght Nerin+Ire
+2966778	Ballina	54.11667	-9.16667	10087	Beeal yn Aah		Pobblaght Nerin+Ire
+2966843	Athenry	53.29639	-8.74306	3950	Aah yn Ree		Pobblaght Nerin+Ire
+2966870	Ashbourne	53.51163	-6.39821	11355	Cill Dhéagláin	Queiggey Lion	Pobblaght Nerin+Ire
+2966883	Arklow	52.79306	-6.14139	11761	Inver Mooar	Queiggey Lion	Pobblaght Nerin+Ire
+293397	Tel Aviv	32.08088	34.78057	432892	Tel Aviv-Yafo		
+3042192	Ramsey	54.32273	-4.38526	7309	Rhumsaa	Rhumsaa	Mannin
+3042198	Peel	54.22209	-4.69099	3781	Purt ny h-Inshey		Mannin
+3042201	Onchan	54.17329	-4.45324	0	Kione Droghad	Kione Droghad	Mannin
+3042237	Douglas	54.15	-4.48333	26218	Doolish	Doolish	Mannin
+3042255	Castletown	54.07445	-4.65365	3100	Balley Chashtal	Balley Chashtal	Mannin
+2960316	Luxembourg	49.61167	6.13	76684	Lucsemburg		
+456172	Riga	56.946	24.10589	742572	Rīga	Riga	
+2751792	Leeuwarden	53.20139	5.80859	91424	Ljouwert	fr	
+2758682	Bolsward	53.06555	5.53176	9160	Boalsert	fr	
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Yn Pholynn
+769177	Kije	50.60721	20.57121	452	Baljaght Kije	Świętokrzyskie	Yn Pholynn
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat		Yn Turkmenistaan
+703448	Kyiv	50.45466	30.5238	2797553	Kyiv		http://en.wikipedia.org/wiki/Ukraine
+4544349	Oklahoma City	35.46756	-97.51643	631346	Caayr Oklahoma	OK+Oklahoma	U.S.+USA+U.S.A.
+786714	Pristina	42.67272	21.16688	550000	Prishtina		

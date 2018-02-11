@@ -1,0 +1,82 @@
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu Dabi		Imaaraadka Carabta ee Midoobay+Imaaraatka Carabta+UAE
+2172517	Canberra	-35.28346	149.12807	367752	Kanbera	ACT+Australian Capital Territory	Awstaraaliya
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Ougadougou		Burkiina Faaso
+2392087	Porto-Novo	6.49646	2.60359	234168	Borto-Novo	Quémé	Biniin
+2220957	Yaoundé	3.86667	11.51667	1299369	Yawunde		Kaameruun
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		Kolombiya
+3374333	Praia	14.93152	-23.51254	113364	Braia	Praia	Cape Verde Islands
+2804008	Zittau	50.89772	14.80764	25785	Žitawa		Jarmal+Jarmalka
+223817	Djibouti	11.58901	43.14503	623891	Jabuuti	Djibouti	Jabuuti
+333795	Jijiga	9.35	42.8	56821	Jigjiga	Sumalē	Itoobiya+Itoobbiya
+2988507	Paris	48.85341	2.3488	2138551	Baariis+75001		Faransiis+Faransiiska+France
+2399697	Libreville	0.39241	9.45356	578156	Librefille		Gaaboon
+3382160	Cayenne	4.93333	-52.33333	61550	Kayene		French Guiana
+2306104	Accra	5.55602	-0.1969	1963264	Akara	Greater Accra	Gaana
+281184	Jerusalem	31.76904	35.21633	801000	Qudus		Israaʼiil
+178443	Wajir	1.7471	40.05732	45771	Wajeer		Kiiniya+Kiinya
+184745	Nairobi	-1.28333	36.81667	2750547	Nayroobi	Nairobi Area	Kiiniya+Kiinya
+186301	Mombasa	-4.05466	39.66359	799668	Mombaaso		Kiiniya+Kiinya
+197745	Garissa	-0.45275	39.64601	67861	Gaarisa		Kiiniya+Kiinya
+1248991	Colombo	6.93194	79.84778	648034	Kolonbo	Western	Sirilaanka
+2274895	Monrovia	6.30054	-10.7969	939524	Monrofia		Laybeeriya
+2210247	Tripoli	32.87519	13.18746	1150989	Triboli		Liibiya
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarifo		Madagaskar
+2377450	Nouakchott	18.08581	-15.9785	661400	Nawakshot		Muritaaniya
+934154	Port Louis	-20.16194	57.49889	155226	Bort Lois		Murishiyoos
+1040652	Maputo	-25.96553	32.58322	1191613	Mabuto	Maputo City	Musambiig
+2745912	Utrecht	52.09083	5.12222	290529	Magaalada Utrecht	ut+Utrecht	Netherlands
+2759794	Amsterdam	52.37403	4.88969	741636	Amistardam	nh+Nord-Holland+Noord-Holland	Netherlands
+1174872	Karachi	24.8608	67.0104	11624219	Karaaji		Bakistaan
+290030	Doha	25.28545	51.53096	344939	Dooxa		Qadar
+241131	Victoria	-4.62001	55.45501	22881	Fiktoria		Sishelis
+49747	Xuddur	4.12129	43.88945	12500	Xuddur		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+50064	Xarardheere	4.6544	47.8575	2018	Xarardheere		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+50672	Wanlaweyn	2.6185	44.8938	22022	Wanlaweyn		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+52867	Qoryooley	1.78784	44.52999	51720	Qoryooley		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+53157	Qandala	11.47197	49.87282	15923	Qandala		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+53372	Oodweyne	9.4092	45.06397	5491	Oodweyne+Codweyne	Gobolka Togdheer	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+53654	Mogadishu	2.03711	45.34375	2587183	Muqdisho		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+54225	Marka	1.71594	44.77166	230100	Marka		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+54460	Mahaddayweyne	2.9726	45.5347	8273	Mahaddayweyne	Shabeellaha Dhexe	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+54746	Lughaye	10.68573	43.94397	0	Lughaye	Gobolka Awdal	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+55223	Las Khorey	11.1595	48.1967	6941	Laasqoray		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+55671	Kismayo	-0.35817	42.54536	234852	Kismaayo	Gobolka Jubbada Hoose+Jubbada Hoose	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+56335	Jawhar	2.78087	45.50048	47086	Jawhar	Shabeellaha Dhexe	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+56414	Jalalaqsi	3.3766	45.5996	9743	Jalalaqsi		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+56505	Iskushuban	10.2837	50.23	5759	Iskushuban		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+57000	Hobyo	5.3505	48.5268	12564	Hobyo		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+58933	Garoowe	8.40207	48.48284	57300	Garoowe	Gobolka Nugaal	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+59611	Gaalkacyo	6.76972	47.43083	61200	Gaalkacyo		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+60019	Eyl	7.9803	49.8164	18904	Eyl	Gobolka Nugaal	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+60928	Dhuusamarreeb	5.53597	46.38666	9000	Dhuusamarreeb		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+62691	Ceerigaabo	10.61616	47.36795	33853	Ceerigaabo		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+62788	Ceeldheer	3.84878	47.18064	26562	Ceeldheer		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+63081	Caluula	11.96611	50.75694	6100	Caluula		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+63344	Cadale	2.7603	46.3222	5385	Cadale	Shabeellaha Dhexe	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+63571	Buurhakaba	2.80257	44.07805	27792	Buurhakaba		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+63580	Buur Gaabo	-1.21917	41.83725	3096	Buur Gaabo	Gobolka Jubbada Hoose+Jubbada Hoose	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+63689	Buulobarde	3.85375	45.56744	16928	Buulobarde		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+63795	Burao	9.52213	45.53363	99270	Burco	Gobolka Togdheer	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+64013	Bosaso	11.28421	49.18158	74287	Boosaaso		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+64412	Bereeda	11.87037	51.05795	11262	Bereeda		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+64435	Berbera	10.43959	45.01432	242344	Berbera	Gobolka Woqooyi Galbeed	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+64536	Baidoa	3.11383	43.6498	129839	Baydhabo		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+64670	Bargaal	11.28636	51.0773	6798	Bargaal		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+64814	Bandarbeyla	9.4942	50.8122	13753	Bandarbeyla		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+65785	Afgooye	2.1381	45.1212	65461	Afgooye		Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+400769	Laascaanood	8.47738	47.35971	60100	Laascaanood	Gobolka Sool	Soomaaliya+Jamhuuriyadda Federaalka Soomaaliya+Jamhuuriyadda Soomaaliyeed
+2410763	São Tomé	0.33654	6.72732	53300	Sao Tome		São Tomé and Príncipe
+170063	Aleppo	36.20124	37.16117	1602264	Xalab		Suuriya
+170654	Damascus	33.5102	36.29128	1569394	Dimishiq		Suuriya
+934985	Mbabane	-26.31667	31.13333	76218	Mabane	Hhohho	Iswaasilaand
+2365267	Lomé	6.12874	1.22154	749700	Lome		Toogo
+232422	Kampala	0.31628	32.58219	1353189	Kambaala	Central Region	Ugaanda
+4393217	Kansas City	39.09973	-94.57857	475378	Caasimada Kansas	MO+Missouri	Maraykanka+U.S.+USA+U.S.A.
+4509177	Columbus	39.96118	-82.99879	850106	Kolumbus	OH	Maraykanka+U.S.+USA+U.S.A.
+4641239	Memphis	35.14953	-90.04898	655770	Memfis	TN+Tennessee	Maraykanka+U.S.+USA+U.S.A.
+4644585	Nashville	36.16589	-86.78444	530852	Nashfile	TN+Tennessee	Maraykanka+U.S.+USA+U.S.A.
+4726206	San Antonio	29.42412	-98.49363	1469845	San Antoniyo	TX+Texas	Maraykanka+U.S.+USA+U.S.A.
+5018739	Bloomington	44.8408	-93.29828	86435	Bloominton	MN+Minnesota	Maraykanka+U.S.+USA+U.S.A.
+1217662	Bukhara	39.77472	64.42861	247644	Bukhaara		Uusbakistaan
+415189	Aden	12.77944	45.03667	550602	Cadan	‘Adan	Yaman
+3369157	Cape Town	-33.92584	18.42322	3433441	Kab town	Western Cape	Koonfur Afrika

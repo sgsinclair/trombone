@@ -1,0 +1,10 @@
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiyba	PR+Paraná	Burezili
+1496747	Novosibirsk	55.0415	82.9346	1419007	Novossibirsk	Novosibirsk	Uburusiya
+3168070	San Marino	43.93667	12.44639	4500	Ville de Saint-Marin	San Marino	Sanimarino
+3170472	Poggio di Chiesanuova	43.90451	12.42142	951	Chiesanuova		Sanimarino
+3172906	Monte Giardino	43.90878	12.48201	910	Montegiardino	Montegiardino	Sanimarino
+3176966	Fiorentino	43.91001	12.45738	2510	Fiorentino	Fiorentino	Sanimarino
+3177299	Faetano	43.92831	12.49798	1177	Faetano	Faetano	Sanimarino
+3181793	Borgo Maggiore	43.94193	12.44738	6424	Borgo Maggiore	Borgo Maggiore	Sanimarino
+618835	Zhydachiv	49.38468	24.14254	0	Жидачов	Lviv	Ikerene+http://en.wikipedia.org/wiki/Ukraine
+692702	Staryy Sambir	49.43856	23.00056	5603	Старый Самбор+Staryy Sambir	Lviv	Ikerene+http://en.wikipedia.org/wiki/Ukraine

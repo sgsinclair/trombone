@@ -1,0 +1,53 @@
+2789529	Oudenaarde	50.85168	3.60891	27935	Oudenaarde		Belgia
+2794788	Kalmthout	51.38442	4.47556	17485	Kalmthout		Belgia
+2803204	Andenne	50.48941	5.09513	24055	Andenne	Wallonia+Walloon	Belgia
+3919998	Cobija	-11.02671	-68.76918	26585	Cobija	Pando	Bolivia
+3553478	Havana	23.13302	-82.38304	2163824	Havanna		Cuba
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Tyskland
+2624144	Billund	55.73349	9.10785	6160	Billund		Danmark
+634317	Akaa	61.16667	23.86667	8258	Ackas		Finland
+634963	Tampere	61.49911	23.78712	202687	Tammerfors		Finland
+638582	Rymättylä	60.37658	21.94184	1987	Rimito		Finland
+639248	Ristiina	61.50579	27.24643	5171	Kristina		Finland
+640124	Raisio	60.48592	22.16895	23597	Reso		Finland
+649360	Lahti	60.98267	25.66151	98826	Lahtis		Finland
+654075	Karijoki	62.30851	21.70856	1621	Bötom		Finland
+658225	Helsinki	60.16952	24.93545	558457	Helsingfors		Finland
+2990440	Nice	43.70313	7.26608	338620	Nice+06000		Frankrike+France
+2643736	Derry	54.9981	-7.30934	83652	Derry		Storbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2657835	Aberdare	51.71438	-3.44918	31135	Aberdare	Galles	Storbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavík+101		Island
+1298824	Yangon	16.80528	96.15611	4477638	Yangon	Yangon	Myanmar+Burma
+3142396	Randaberg	58.99955	5.61871	0	Randaberg	Rogaland	Norge
+3144953	Naustdal	61.51108	5.71694	1071	Naustdal	Sogn og Fjordane	Norge
+7303419	East Jerusalem	31.78336	35.23388	428304	Øst-Jerusalem		Palestinsk territorium
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzerzjinsk	Nizjnij Novgorod	Den russiske føderasjon+Russland
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Sverige+Ruoččii
+2708365	Halmstad	56.67446	12.85676	66124	Halmstad		Sverige+Ruoččii
+1150954	Ratchaburi	13.53671	99.81712	92448	Ratchaburi	Ratchaburi	Thailand
+1150965	Ranong	9.96583	98.63476	24561	Ranong	Ranong	Thailand
+1151074	Prachuap Khiri Khan	11.82098	99.7841	33521	Prachuap Khiri Khan	Prachuap Khiri Khan	Thailand
+1151933	Nakhon Si Thammarat	8.43333	99.96667	120836	Nakhon Si Thammarat	Nakhon Si Thammarat	Thailand
+1152633	Krabi	8.07257	98.91052	31219	Krabi	Krabi	Thailand
+1153557	Chumphon	10.4957	99.17971	55835	Chumphon	Chumphon	Thailand
+1604870	Yala	6.53995	101.28128	93558	Yala	Yala	Thailand
+1606270	Sing Buri	14.88786	100.40464	20046	Singburi	Sing Buri	Thailand
+1606586	Samut Songkhram	13.41456	100.00264	35065	Samut Songkhram	Samut Songkhram	Thailand
+1606588	Samut Sakhon	13.54753	100.27362	63498	Samut Sakhon	Samut Sakhon	Thailand
+1606790	Sakon Nakhon	17.16116	104.14725	76237	Sakhon Nakhon	Sakon Nakhon	Thailand
+1606807	Sa Kaeo	13.81411	102.07222	28497	Sa Kaeo	Sa Kaeo	Thailand
+1607017	Rayong	12.68095	101.25798	106737	Rayong	Rayong	Thailand
+1607779	Phatthalung	7.61786	100.07792	43522	Phatthalung	Phatthalung	Thailand
+1607983	Pathum Thani	14.01346	100.53049	24547	Pathum Thani	Pathum Thani	Thailand
+1608531	Nakhon Phanom	17.41081	104.77856	34595	Nakhon Phanom	Nakhon Phanom	Thailand
+1608539	Nakhon Nayok	14.20463	101.21295	21309	Nakhon Nayok	Nakhon Nayok	Thailand
+1608597	Mukdahan	16.54531	104.72351	40480	Mukdahan	Mukdahan	Thailand
+1608900	Maha Sarakham	16.18483	103.30067	51584	Maha Sarakham	Maha Sarakham	Thailand
+1609032	Lop Buri	14.79808	100.65397	57761	Lopburi	Lop Buri	Thailand
+1609071	Loei	17.49052	101.72749	35273	Loei	Loei	Thailand
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Thailand
+1610469	Kalasin	16.43281	103.50658	55102	Kalasin	Kalasin	Thailand
+1611407	Chaiyaphum	15.81047	102.02881	58350	Chaiyaphum	Chaiyaphum	Thailand
+1611453	Buri Ram	14.99433	103.10392	28283	Buriram	Buriram	Thailand
+1621035	Ang Thong	14.58839	100.45283	13738	Ang Thong	Ang Thong	Thailand
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	NY	USA+Amerikas forente stater+Forente stater+U.S.+U.S.A.

@@ -1,0 +1,44 @@
+3553478	Havana	23.13302	-82.38304	2163824	Ħavana		Kuba
+146268	Nicosia	35.17531	33.3642	200452	Nikosija		Ċipru
+2911298	Hamburg	53.57532	10.01534	1739117	Ħamburg+HH	HH+H+H+Hamburg	Ġermanja
+2510911	Sevilla	37.38283	-5.97317	703206	Sivilja		Spanja+España
+3104324	Zaragoza	41.65606	-0.87734	674317	Żaragoża+ZGZ	Aragón	Spanja+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barċellona	Catalunya	Spanja+España
+658225	Helsinki	60.16952	24.93545	558457	Ħelsinki		Finlandja
+2973783	Strasbourg	48.58392	7.74553	274845	Strażburgu+67000	ACAL	Franza+France
+2643743	London	51.50853	-0.12574	7556900	Londra	Ingilterra	Ingilterra+Renju Unit+http://en.wikipedia.org/wiki/United_Kingdom
+3186886	Zagreb	45.81444	15.97798	698966	Żagreb	Grad Zagreb	Kroazja
+3413829	Reykjavík	64.13548	-21.89541	118918	Rejkjavik+101		Islanda
+3181913	Bolzano	46.49067	11.33982	99049	Bolzano		Italja
+2960316	Luxembourg	49.61167	6.13	76684	Lussemburgu		Lussemburgu
+2562266	Żabbar	35.87611	14.535	15030	Ħaż-Żabbar	Ħaż-Żabbar+Żabbar	Malta
+2562305	Valletta	35.89972	14.51472	6794	Valletta	Il-Belt Valletta+Valletta	Malta
+2562501	Sliema	35.9125	14.50194	11318	Sliema	Tas-Sliema+Sliema	Malta
+2562557	San Ġiljan	35.91839	14.48977	6799	San Ġiljan	San Ġiljan	Malta
+2562619	Victoria	36.04444	14.23972	6596	Rabat	Ir-Rabat+Ir-Rabat Għawdex	Malta
+2562698	Imsida	35.8925	14.48278	6920	Imsida	L-Imsida+Imsida	Malta
+2562704	Mosta	35.90917	14.42556	17789	Mosta	Il-Mosta+Mosta	Malta
+2562735	Imġarr	35.92056	14.36639	3000	Imġarr	L-Imġarr+Imġarr	Malta
+2562746	Imdina	35.88694	14.4025	360	Mdina+Imdina	L-Imdina+Imdina	Malta
+2562792	Senglea	35.8875	14.51694	2964	Senglea	L-Isla+Isla	Malta
+2562850	Swieqi	35.9225	14.48	5973	Swieqi	Is-Swieqi+Swieqi	Malta
+2562955	Floriana	35.89583	14.50833	2516	Furjana	Il-Furjana+Floriana	Malta
+2562966	Vittoriosa	35.89222	14.51833	2936	Birgu	Il-Birgu+Birgu	Malta
+2563189	Birżebbuġa	35.82583	14.52694	8668	Birżebbuġa	Birżebbuġa	Malta
+2563191	Birkirkara	35.89722	14.46111	21676	Birkirkara	Birkirkara	Malta
+2563217	Balzan	35.90028	14.455	3240	Balzan	Ħal Balzan+Balzan	Malta
+2563232	Attard	35.88972	14.4425	9510	Attard	Ħ’Attard+Attard	Malta
+8337342	Fontana	36.0375	14.23611	1011	Fontana	Il-Fontana+Fontana	Malta
+8337353	Pembroke	35.93056	14.47639	3038	Pembroke	Pembroke	Malta
+756135	Warsaw	52.22977	21.01178	1702139	Varsavja	Mazowieckie	Polonja
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lubelskie	Polonja
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polonja
+3082801	Uniejów	51.97428	18.79308	2932	Uniejów	Łódzkie	Polonja
+3083829	Szczecin	53.42894	14.55302	407811	Szczecin		Polonja
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Polonja
+3094802	Kraków	50.06143	19.93658	755050	Krakovja	Małopolskie	Polonja
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polonja
+792680	Belgrade	44.80401	20.46513	1273651	Belgrad	Central Serbia	Serbja
+2673730	Stockholm	59.33258	18.0649	1515017	Stokkolma	Stockholms Län	Żvezja+Svezja+Ruoččii
+703448	Kyiv	50.45466	30.5238	2797553	Kjiv		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+786714	Pristina	42.67272	21.16688	550000	Prixtina		

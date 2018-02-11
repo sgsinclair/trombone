@@ -1,0 +1,160 @@
+2783385	Yvoir	50.3279	4.88059	8169	Uwar	Wallonia+Walloon	Beldjike
+2783862	Wellin	50.08133	5.11413	2937	Welin	Wallonia+Walloon	Beldjike
+2783870	Welkenraedt	50.6605	5.97034	9006	Welkenrote	Wallonia+Walloon	Beldjike
+2783941	Wavre	50.71717	4.60138	32112	Wåve	Wallonia+Walloon	Beldjike
+2783985	Waterloo	50.71469	4.3991	29778	Waterlô	Wallonia+Walloon	Beldjike
+2784066	Waremme	50.6976	5.25524	13737	Wareme	Wallonia+Walloon	Beldjike
+2784189	Walcourt	50.25401	4.43796	17501	Walcoû	Wallonia+Walloon	Beldjike
+2784555	Virton	49.56824	5.53259	11259	Vierton	Wallonia+Walloon	Beldjike
+2784775	Vielsalm	50.28407	5.91502	7291	Li Viye Såm	Wallonia+Walloon	Beldjike
+2784821	Verviers	50.58907	5.86241	52824	Vervî	Wallonia+Walloon	Beldjike
+2784994	Vaux-sur-Sûre	49.911	5.57848	4581	Li Vå-so-Seure	Wallonia+Walloon	Beldjike
+2785208	Trooz	50.57026	5.69521	7559	Li Trô	Wallonia+Walloon	Beldjike
+2785517	Thuin	50.33933	4.28604	14682	Twin	Wallonia+Walloon	Beldjike
+2785593	Theux	50.53323	5.81245	11587	Teu	Wallonia+Walloon	Beldjike
+2785745	Tenneville	50.09501	5.52895	2510	Tiniveye	Wallonia+Walloon	Beldjike
+2785793	Tellin	50.08038	5.21638	2353	Telin	Wallonia+Walloon	Beldjike
+2786185	Stavelot	50.395	5.93124	6646	Ståvleu	Wallonia+Walloon	Beldjike
+2786318	Spa	50.48375	5.86674	10756	Spå	Wallonia+Walloon	Beldjike
+2786344	Soumagne	50.61385	5.74679	15237	Soûmagne	Wallonia+Walloon	Beldjike
+2786387	Somme-Leuze	50.33699	5.36705	4532	Some-Leuze	Wallonia+Walloon	Beldjike
+2786390	Sombreffe	50.52865	4.60087	7452	Sombrefe	Wallonia+Walloon	Beldjike
+2786420	Soignies	50.57904	4.07129	24869	Sougniye	Wallonia+Walloon	Beldjike
+2786545	Sint-Truiden	50.81679	5.18647	37859	Sint-Trond		Beldjike
+2786824	Seraing	50.58362	5.50115	60737	Serè	Wallonia+Walloon	Beldjike
+2787769	Ronse	50.74574	3.6005	24204	Rinais		Beldjike
+2787989	Rixensart	50.71229	4.52529	21616	Ricsinsåt	Wallonia+Walloon	Beldjike
+2788186	Rendeux	50.23423	5.50414	2320	Rindeu	Wallonia+Walloon	Beldjike
+2788499	Quaregnon	50.44067	3.8653	18491	Cargnon	Wallonia+Walloon	Beldjike
+2788577	Profondeville	50.37581	4.86506	11401	Parfondveye	Wallonia+Walloon	Beldjike
+2789016	Philippeville	50.19612	4.54374	8051	Flipveye	Wallonia+Walloon	Beldjike
+2789156	Perwez	50.62426	4.81354	7340	Perwé	Wallonia+Walloon	Beldjike
+2789162	Péruwelz	50.50819	3.59373	16647	Perwé-e-Hinnot	Wallonia+Walloon	Beldjike
+2789354	Paliseul	49.90395	5.13537	5037	Palijhoû	Wallonia+Walloon	Beldjike
+2789471	Oupeye	50.71184	5.6468	23594	Oûpêye	Wallonia+Walloon	Beldjike
+2789908	Ohey	50.4357	5.12375	4324	Ohè	Wallonia+Walloon	Beldjike
+2790101	Nivelles	50.59833	4.32848	24149	Nivele	Wallonia+Walloon	Beldjike
+2790471	Namur	50.4669	4.86746	106284	Nameur	Wallonia+Walloon	Beldjike
+2790756	Mont-Saint-Guibert	50.63427	4.61061	6557	Mont-Sint-Wubert	Wallonia+Walloon	Beldjike
+2790869	Mons	50.45413	3.95229	91277	Mont	Wallonia+Walloon	Beldjike
+2791261	Mettet	50.32119	4.66232	12014	Metet	Wallonia+Walloon	Beldjike
+2791272	Messancy	49.59201	5.81879	7144	Messanceye	Wallonia+Walloon	Beldjike
+2791419	Meix-devant-Virton	49.60581	5.48045	2637	Méch-divant-Vierton	Wallonia+Walloon	Beldjike
+2791642	Martelange	49.83195	5.73655	1440	Måtlindje	Wallonia+Walloon	Beldjike
+2791733	Marchin	50.46707	5.2428	5063	Mårcin	Wallonia+Walloon	Beldjike
+2791744	Marche-en-Famenne	50.22678	5.34416	16856	Måtche-el-Fåmene	Wallonia+Walloon	Beldjike
+2791814	Manage	50.50312	4.23589	22196	Manadje	Wallonia+Walloon	Beldjike
+2791834	Malmédy	50.42686	6.02794	11514	Måmdey	Wallonia+Walloon	Beldjike
+2792073	Louvain-la-Neuve	50.66829	4.61443	29521	Li Noû Lovén	Wallonia+Walloon	Beldjike
+2792245	Lobbes	50.35258	4.26716	5467	Lôbe	Wallonia+Walloon	Beldjike
+2792332	Lincent	50.71222	5.03654	2884	Lîssin	Wallonia+Walloon	Beldjike
+2792400	Lierneux	50.28477	5.79236	3332	Lierneu	Wallonia+Walloon	Beldjike
+2792413	Liège	50.63373	5.56749	182597	Lidje	Wallonia+Walloon	Beldjike
+2792985	Léglise	49.79985	5.53652	3865	Leglijhe	Wallonia+Walloon	Beldjike
+2793279	La Roche-en-Ardenne	50.18361	5.57547	4200	Li Rotche	Wallonia+Walloon	Beldjike
+2793508	La Louvière	50.48657	4.18785	76668	El Lovire	Wallonia+Walloon	Beldjike
+2793548	La Hulpe	50.73091	4.48577	7415	L Elpe	Wallonia+Walloon	Beldjike
+2793722	La Calamine	50.71809	6.01107	10232	Calmène	Wallonia+Walloon	Beldjike
+2794895	Jodoigne	50.72357	4.86914	11930	Djodogne	Wallonia+Walloon	Beldjike
+2794989	Jalhay	50.55876	5.96764	7688	Djalhé	Wallonia+Walloon	Beldjike
+2795017	Ittre	50.64396	4.26476	6014	Ite	Wallonia+Walloon	Beldjike
+2795113	Huy	50.51894	5.23284	19973	Hu	Wallonia+Walloon	Beldjike
+2795238	Houyet	50.18619	5.00762	4505	Houyet	Wallonia+Walloon	Beldjike
+2795322	Houffalize	50.13235	5.78962	4614	Oufalijhe	Wallonia+Walloon	Beldjike
+2795337	Hotton	50.26742	5.44609	4969	Houton	Wallonia+Walloon	Beldjike
+2795930	Herstal	50.66415	5.62346	36503	Hesta	Wallonia+Walloon	Beldjike
+2796037	Herbeumont	49.78086	5.2358	1612	Arbûmont	Wallonia+Walloon	Beldjike
+2796369	Havelange	50.38931	5.23816	4790	Havlondje	Wallonia+Walloon	Beldjike
+2796583	Hannut	50.67142	5.07898	14129	Haneu	Wallonia+Walloon	Beldjike
+2796627	Hamois	50.3402	5.15619	6662	Hamwè	Wallonia+Walloon	Beldjike
+2796629	Hamoir	50.42675	5.53304	3500	Hamwer	Wallonia+Walloon	Beldjike
+2797128	Grez-Doiceau	50.73901	4.69829	12367	Gré	Wallonia+Walloon	Beldjike
+2797346	Gouvy	50.186	5.93917	4706	Gouvi	Wallonia+Walloon	Beldjike
+2797523	Gingelom	50.74792	5.13422	7930	Gingelom		Beldjike
+2797581	Gesves	50.40146	5.07457	6150	Djeve	Wallonia+Walloon	Beldjike
+2797598	Gerpinnes	50.33789	4.52731	11977	Djerpene	Wallonia+Walloon	Beldjike
+2797694	Genappe	50.61173	4.45152	14266	Djinape	Wallonia+Walloon	Beldjike
+2797713	Gembloux	50.56149	4.69889	21676	Djiblou	Wallonia+Walloon	Beldjike
+2797781	Gedinne	49.98037	4.93674	4416	Djedene	Wallonia+Walloon	Beldjike
+2798023	Frameries	50.40578	3.89603	20598	Framriye	Wallonia+Walloon	Beldjike
+2798099	Fosses-la-Ville	50.39517	4.69623	9062	Fosse-li-Veye	Wallonia+Walloon	Beldjike
+2798272	Florenville	49.69983	5.3074	5464	Floravile	Wallonia+Walloon	Beldjike
+2798276	Florennes	50.25127	4.60636	10723	Florene	Wallonia+Walloon	Beldjike
+2798279	Floreffe	50.43452	4.7596	7480	Florefe	Wallonia+Walloon	Beldjike
+2798297	Fleurus	50.48351	4.55006	22080	Fleuru	Wallonia+Walloon	Beldjike
+2798357	Fexhe-le-Haut-Clocher	50.6654	5.39978	3082	Fexhe-å-Hôt-Clokî	Wallonia+Walloon	Beldjike
+2798438	Fauvillers	49.85116	5.66405	1952	Faiviè	Wallonia+Walloon	Beldjike
+2798470	Farciennes	50.43006	4.54152	11488	Fårcene	Wallonia+Walloon	Beldjike
+2798573	Eupen	50.6279	6.03647	18029	Neyåw	Wallonia+Walloon	Beldjike
+2798636	Esneux	50.53596	5.56775	13497	Esneu	Wallonia+Walloon	Beldjike
+2798698	Érezée	50.29292	5.55815	2930	Erezêye	Wallonia+Walloon	Beldjike
+2798743	Engis	50.58156	5.39916	5737	Indji	Wallonia+Walloon	Beldjike
+2798747	Enghien	50.68373	4.03284	11367	Inguî	Wallonia+Walloon	Beldjike
+2798949	Éghezée	50.59076	4.91175	14352	Inguezêye	Wallonia+Walloon	Beldjike
+2799047	Durbuy	50.35291	5.45631	10251	Derbu	Wallonia+Walloon	Beldjike
+2799226	Dour	50.39583	3.77792	16861	Doû	Wallonia+Walloon	Beldjike
+2799328	Doische	50.13356	4.73545	2739	Dweche	Wallonia+Walloon	Beldjike
+2799357	Dinant	50.25807	4.91166	12875	Dinant	Wallonia+Walloon	Beldjike
+2799851	Daverdisse	50.02161	5.11811	1299	Dåvdisse	Wallonia+Walloon	Beldjike
+2800025	Couvin	50.05284	4.49495	13518	Couvén	Wallonia+Walloon	Beldjike
+2800042	Court-Saint-Étienne	50.63378	4.56851	9353	Coû-Sint-Stiene	Wallonia+Walloon	Beldjike
+2800063	Courcelles	50.46379	4.3747	29473	Courcele	Wallonia+Walloon	Beldjike
+2800204	Comblain-au-Pont	50.47488	5.57711	5308	Comblin-å-Pont	Wallonia+Walloon	Beldjike
+2800298	Ciney	50.29449	5.10015	14830	Cînè	Wallonia+Walloon	Beldjike
+2800320	Chiny	49.73833	5.34104	4897	Tchini	Wallonia+Walloon	Beldjike
+2800325	Chimay	50.04856	4.31712	9720	Chimai	Wallonia+Walloon	Beldjike
+2800328	Chièvres	50.58787	3.80711	6045	Chieve	Wallonia+Walloon	Beldjike
+2800430	Chaumont-Gistoux	50.67753	4.7212	10943	Tchåmont-Djistou	Wallonia+Walloon	Beldjike
+2800438	Chaudfontaine	50.5828	5.6341	20960	Tchôfontinne	Wallonia+Walloon	Beldjike
+2800448	Châtelet	50.40338	4.52826	35238	Tcheslet	Wallonia+Walloon	Beldjike
+2800481	Charleroi	50.41136	4.44448	200132	Tchålerwè	Wallonia+Walloon	Beldjike
+2800866	Brussels	50.85045	4.34878	1019022	Brussele	Brussels-Capital Region	Beldjike
+2800931	Brugge	51.20892	3.22424	116709	Brudje		Beldjike
+2801150	Braine-le-Comte	50.60979	4.14658	20133	Brinne-e-Hinnot	Wallonia+Walloon	Beldjike
+2801154	Braine-l'Alleud	50.68363	4.36784	37512	Brinne-l'-Alou	Wallonia+Walloon	Beldjike
+2801226	Boussu	50.43417	3.7944	20058	Boussu-dlé-Mont	Wallonia+Walloon	Beldjike
+2801922	Binche	50.41155	4.16469	32030	Bince	Wallonia+Walloon	Beldjike
+2801949	Bièvre	49.94085	5.01591	3207	Bive	Wallonia+Walloon	Beldjike
+2802106	Bertrix	49.85596	5.25539	8063	Bietris	Wallonia+Walloon	Beldjike
+2802113	Bertogne	50.08364	5.66689	2852	Biertogne	Wallonia+Walloon	Beldjike
+2802143	Berloz	50.69829	5.21236	2770	Bierlô	Wallonia+Walloon	Beldjike
+2802483	Beauvechain	50.78195	4.7718	6334	Bôvetchén	Wallonia+Walloon	Beldjike
+2802501	Beauraing	50.11042	4.95554	8242	Biarin	Wallonia+Walloon	Beldjike
+2802837	Aywaille	50.47411	5.67684	10636	Aiwêye	Wallonia+Walloon	Beldjike
+2802849	Awans	50.66774	5.46329	8612	Awan	Wallonia+Walloon	Beldjike
+2802990	Aubange	49.56652	5.80492	14932	Åbindje	Wallonia+Walloon	Beldjike
+2803010	Ath	50.62937	3.77801	26681	Ate	Wallonia+Walloon	Beldjike
+2803073	Arlon	49.68333	5.81667	26179	Årlon	Wallonia+Walloon	Beldjike
+2803138	Antwerpen	51.21989	4.40346	459805	Anverse		Beldjike
+2803148	Anthisnes	50.48323	5.519	4116	Antene	Wallonia+Walloon	Beldjike
+2803160	Ans	50.6623	5.52029	27297	Anse	Wallonia+Walloon	Beldjike
+2803174	Anhée	50.31039	4.87827	7125	Anhêye	Wallonia+Walloon	Beldjike
+2803204	Andenne	50.48941	5.09513	24055	Andene	Wallonia+Walloon	Beldjike
+2803246	Amay	50.54829	5.30974	13307	Ama	Wallonia+Walloon	Beldjike
+3448439	São Paulo	-23.5475	-46.63611	10021295	Sawo Pålo	SP+São Paulo	
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinchassa	Kinshasa	Congo-Kinchassa
+2314705	Kikwit	-5.04098	18.81619	186991	Kicwite	Province do Cwilou	Congo-Kinchassa
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparayso	Valparaíso	Tchili
+2809889	Wetzlar	50.56109	8.50495	52656	Weslår	Hessen	
+2844277	Roetgen	50.65	6.2	8177	Li Reutxhene	NRW	
+2869756	Monschau	50.55462	6.24001	12945	Mondjoye	NRW	
+3247449	Aachen	50.77664	6.08342	265208	Åxhe	NRW	
+2485926	Oran	35.69906	-0.63588	645984	Waradinne	Oran	Aldjereye
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Sint-Djåke-el-Galice	Galicia	España
+2967956	Vireux-Molhain	50.07874	4.72426	1833	Vireu-Molén	ACAL	France
+2990363	Nîmes	43.83333	4.35	148236	Nîme+30000		France
+3015904	Givet	50.13796	4.82545	7448	Djivet	ACAL	France
+3016907	Fumay	49.99132	4.70771	4650	Fumwè	ACAL	France
+2411585	Gibraltar	36.14474	-5.35257	26544	Djibraltar		Djibraltar
+281184	Jerusalem	31.76904	35.21633	801000	Djeruzalem		
+598098	Klaipėda	55.70888	21.14312	192307	Klaipeda		Litwaneye+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Lussimbork veye		Grande-Dutcheye do Lussimbork
+2960630	Echternach	49.81212	6.41846	4787	Echternak		Grande-Dutcheye do Lussimbork
+2750053	Nijmegen	51.8425	5.85278	158732	Nîmegue	GLD+gd+Gelderland	Bas Payis
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	
+667268	Sibiu	45.8	24.15	151894	Sibiu	Sibiu	Roumaneye
+675810	Iaşi	47.16667	27.6	318012	Iaşi		Roumaneye
+684657	Bistriţa	47.13316	24.50011	81318	Bistriţa		Roumaneye
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sint Petersbork+Санкт-Петербург		
+524901	Moscow	55.75222	37.61556	10381222	Moscou+Moskva		
+706524	Kerch	45.3531	36.47429	148932	Keritch		Oucrinne+http://en.wikipedia.org/wiki/Ukraine

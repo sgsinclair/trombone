@@ -1,0 +1,618 @@
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andorra la Vella		
+292672	Sharjah	25.33737	55.41206	543733	Шарҗә		Берләшкән Гарәп Әмирлекләре+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Әбу-Даби		Берләшкән Гарәп Әмирлекләре+UAE
+1138958	Kabul	34.52813	69.17233	3043532	Кабул		Әфганстан
+3183875	Tirana	41.3275	19.81889	374801	Тирана		
+616052	Yerevan	40.18111	44.51361	1093485	Ереван	Yerevan	
+2147714	Sydney	-33.86785	151.20732	4627345	Сидней	NSW	
+2172517	Canberra	-35.28346	149.12807	367752	Канберра	ACT+Australian Capital Territory	
+587084	Baku	40.37767	49.89201	1116513	Бакы	Baki	Азәрбайҗан
+3186573	Zenica	44.20169	17.90397	164423	Зеница	Federation of Bosnia and Herzegovina	Босния һәм Герцеговина
+3188582	Tuzla	44.53842	18.66709	142486	Тузла	Federation of Bosnia and Herzegovina	Босния һәм Герцеговина
+3191281	Sarajevo	43.84864	18.35644	696731	Сараево	Federation of Bosnia and Herzegovina	Босния һәм Герцеговина
+3203521	Brčko	44.86995	18.81012	38968	Брчко	Brcko	Босния һәм Герцеговина
+3204186	Bijeljina	44.75874	19.21437	37692	Биелина		Босния һәм Герцеговина
+3204222	Bihać	44.81694	15.87083	75641	Бихач	Federation of Bosnia and Herzegovina	Босния һәм Герцеговина
+3204541	Banja Luka	44.77842	17.19386	221106	Баня-Лука		Босния һәм Герцеговина
+1185241	Dhaka	23.7104	90.40744	10356500	Dakka		Бангладеш
+727011	Sofia	42.69751	23.32415	1152556	Sofiä		
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Бандар-Сери-Бегаван		
+3903987	Sucre	-19.03332	-65.26274	224838	Sukre	Chuquisaca	
+3911925	La Paz	-16.5	-68.15	812799	La-Pas	La Paz	
+3448439	São Paulo	-23.5475	-46.63611	10021295	Сан-Паулу	SP+São Paulo	
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Рио-де-Жанейро	RJ	
+3464975	Curitiba	-25.42778	-49.27306	1718421	Куритиба	PR+Paraná	
+3469058	Brasília	-15.77972	-47.92972	2207718	Бразилиа	DF	
+620391	Vawkavysk	53.1561	24.4513	47300	Волковыск		
+621741	Slutsk	53.0274	27.5597	62228	Слуцк		
+621754	Slonim	53.0869	25.3163	51434	Слоним		
+622428	Salihorsk	52.7876	27.5415	101614	Солигорск		
+622739	Rahachow	53.0934	30.0495	34700	Рогачёв		
+623317	Polatsk	55.4879	28.7856	82258	Полоцк	Vitsyebskaya Voblastsʼ	
+623760	Pastavy	55.11676	26.83263	20218	Поставы	Vitsyebskaya Voblastsʼ	
+624784	Navapolatsk	55.5318	28.5987	100885	Новополоцк	Vitsyebskaya Voblastsʼ	
+625144	Minsk	53.9	27.56667	1742124	Минск		
+627145	Kobryn	52.2138	24.3564	50691	Кобрин	Brestskaya Voblastsʼ	
+627904	Hrodna	53.6884	23.8258	317365	Гродно		
+627905	Horki	54.2862	30.9863	33897	Горки	Mahilyowskaya Voblastsʼ	
+628634	Dzyarzhynsk	53.6832	27.138	24609	Дзержинск		
+629447	Bykhaw	53.521	30.2454	17500	Быхов	Mahilyowskaya Voblastsʼ	
+629634	Brest	52.09755	23.68775	300715	Брест	Brestskaya Voblastsʼ	
+6167865	Toronto	43.70011	-79.4163	2600000	Торонто	Онтарио+ON+Ontario	
+6173331	Vancouver	49.24966	-123.11934	600000	Ванкувер	BC+British Columbia	
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinşasa	Kinshasa	Конго Демократик Җөмһүрияте
+2657896	Zürich	47.36667	8.55	341730	Tsürix	ZH	
+2661552	Bern	46.94809	7.44744	121631	Берн		
+3868626	Valparaíso	-33.036	-71.62963	282448	Вальпараисо	Valparaíso	Чили
+3893894	Concepción	-36.82699	-73.04977	215413	Консепсьон	Biobío	Чили
+3899539	Antofagasta	-23.65236	-70.3954	309832	Антофагаста	Antofagasta	Чили
+1529102	Ürümqi	43.80096	87.60046	3029372	Öremçe		
+1791247	Wuhan	30.58333	114.26667	9785388	Үһән+武汉		
+1797929	Qingdao	36.06488	120.38042	3718835	Чиңдау		
+1799962	Nanjing	32.06167	118.77778	7165292	Нәнҗиң		
+1809858	Guangzhou	23.11667	113.25	11071424	Гуаңҗу		
+1815286	Chengdu	30.66667	104.06667	7415590	Чыңду	Sichuan	
+1816670	Beijing	39.9075	116.39723	11716620	Пекин		
+2034937	Shenyang	41.79222	123.43278	6255921	Шеньяң		
+2037013	Harbin	45.75	126.65	5878939	Харбин		
+3688689	Bogotá	4.60971	-74.08175	7674366	Богота		
+146268	Nicosia	35.17531	33.3642	200452	Никосия		
+3068927	Opava	49.93866	17.90257	60252	Опава	Moravskoslezský kraj	Czechia
+3074967	Hradec Králové	50.20923	15.83277	95195	Һрадец-Кралове	Královéhradecký Kraj	Czechia
+3076127	Frýdek-Místek	49.68333	18.35	59416	Фридек-Мистек	Moravskoslezský kraj	Czechia
+3077244	Děčín	50.78215	14.21478	52058	Дечин	Ústecký kraj	Czechia
+3077685	Chomutov	50.46048	13.41779	50251	Хомутов	Ústecký kraj	Czechia
+2867714	Munich	48.13743	11.57549	1260391	Мүнхен	Bayern	
+2879139	Leipzig	51.33962	12.37129	504971	Лейпциг		
+2886242	Köln	50.93333	6.95	963395	Көлн	NRW	
+2934246	Düsseldorf	51.22172	6.77616	573057	Дүсселдорф	NRW	
+2935022	Dresden	51.05089	13.73832	486854	Дрезден		
+3652462	Quito	-0.22985	-78.52495	1399814	Кито	Pichincha	
+588409	Tallinn	59.43696	24.75353	394024	Таллинн	Harjumaa	Estonia+Éstonia
+589663	Paldiski	59.35667	24.05306	4202	Палдиски	Harjumaa	Estonia+Éstonia
+590031	Narva	59.37722	28.19028	66980	Нарва		Estonia+Éstonia
+3128760	Barcelona	41.38879	2.15899	1621537	Барселона	Catalunya	España
+3129879	Arancón	41.80017	-2.28141	108	Аранкон	Castilla y León	España
+3130313	Almazán	41.48648	-2.53088	5773	Almazan	Castilla y León	España
+634963	Tampere	61.49911	23.78712	202687	Тампере		Финляндия
+658225	Helsinki	60.16952	24.93545	558457	Һельсинки		Финляндия
+2972315	Toulouse	43.60426	1.44367	433055	Тулуза+31000		France
+2980827	Saint-Dié-des-Vosges	48.28333	6.95	24628	Sen-Dye-de-Voj+88100	ACAL	France
+2988507	Paris	48.85341	2.3488	2138551	Париж+75001		France
+2995469	Marseille	43.29695	5.38107	794811	Марсель+13001		France
+2640729	Oxford	51.75222	-1.25596	171380	Оксфорд	Англия	http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Лондон	Англия	http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glazgo	苏格兰	http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Эдинбург	苏格兰	http://en.wikipedia.org/wiki/United_Kingdom
+614622	Gagra	43.27858	40.27124	8266	Gagra	Абхазия	Гөрҗистан
+3421319	Nuuk	64.18347	-51.72157	14798	Нуук		
+1819729	Hong Kong	22.27832	114.17469	7012738	Һоң Коң		http://en.wikipedia.org/wiki/Hong_Kong
+3186886	Zagreb	45.81444	15.97798	698966	Загреб	Grad Zagreb	
+3186952	Zadar	44.11972	15.24222	71258	Задар	Zadarska	
+3192224	Pula	44.86833	13.84806	59078	Пула		
+3345300	Karlovac	45.49167	15.55	46833	Карловац	Karlovačka	
+716935	Nyíregyháza	47.95539	21.71671	116298	Ньиредьхаза		Маҗарстан
+3053402	Ecser	47.44389	19.3245	3333	Эчер		Маҗарстан
+3054643	Budapest	47.49801	19.03991	1741041	Будапешт		Маҗарстан
+2964574	Dublin	53.33306	-6.24889	1024027	Дублин		Ire
+281184	Jerusalem	31.76904	35.21633	801000	Иерусалим		
+1273294	Delhi	28.65195	77.23149	10927986	Dähli	DL	Hindstan
+1275004	Kolkata	22.56263	88.36304	4631392	Kälküttä	WB+West Bengal	Hindstan
+94787	Kirkuk	35.46806	44.39222	601433	Кәркүк		Ğíraq
+113646	Tabriz	38.08	46.2919	1424641	Тәбриз		
+117574	Sanandaj	35.31495	46.99883	349176	Сәнәндәҗ	Kordestān	
+118743	Rasht	37.27611	49.58862	594590	Рәшт	Gīlān	
+124665	Mashhad	36.31559	59.56796	2307177	Мәшһәд	Khorāsān-e Raẕāvī	
+2633274	Akureyri	65.68353	-18.0878	17693	Акюрейри+600		
+3413829	Reykjavík	64.13548	-21.89541	118918	Рейкьявик+101		
+3415212	Kópavogur	64.11234	-21.91298	31719	Коупавогюр+200		
+3416706	Hafnarfjörður	64.0671	-21.93774	26808	Хабнарфьордюр+220		
+3176959	Florence	43.77925	11.24626	349296	Флоренция		
+250441	Amman	31.95522	35.94503	1275857	Амман		Al Mamlakah al Urdunīyah al Hāshimīyah
+184745	Nairobi	-1.28333	36.81667	2750547	Найроби	Nairobi Area	
+1528121	Karakol	42.49068	78.39362	70171	Каракол	Ysyk-Köl	
+1871859	Pyongyang	39.03385	125.75432	3222000	Пхеньян		http://en.wikipedia.org/wiki/North_Korea
+608668	Oral	51.23333	51.36667	200000	Җаек		Qazaqstan
+610529	Atyrau	47.11667	51.88333	180000	Атырау		Qazaqstan
+610612	Aktau	43.65	51.16667	147443	Актау		Qazaqstan
+1518542	Taldykorgan	45.01556	78.37389	116558	Талдыкорган		Qazaqstan
+1518980	Shymkent	42.3	69.6	414032	Чимкент		Qazaqstan
+1520172	Petropavl	54.86667	69.15	200920	Петропавел		Qazaqstan
+1520240	Pavlodar	52.28333	76.96667	329002	Павлодар		Qazaqstan
+1526384	Almaty	43.25667	76.92861	2000900	Алматы	Almaty Qalasy	Qazaqstan
+276781	Beirut	33.89332	35.50157	1916100	Бәйрут		
+593871	Trakai	54.63783	24.93433	5530	Trakai		Litua+http://en.wikipedia.org/wiki/Lithuania
+593926	Telsiai	55.98139	22.24722	30098	Telšiai		Litua+http://en.wikipedia.org/wiki/Lithuania
+598098	Klaipėda	55.70888	21.14312	192307	Klaipėda		Litua+http://en.wikipedia.org/wiki/Lithuania
+598316	Kaunas	54.90272	23.90961	374643	Каунас		Litua+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Люксембург		
+456172	Riga	56.946	24.10589	742572	Рига	Riga	Latviä
+460413	Daugavpils	55.88333	26.53333	111564	Даугавпилс	http://www.daugavpilsnovads.lv/	Latviä
+617239	Tiraspol	46.84274	29.62909	157000	Тирасполь		
+785082	Tetovo	42.00973	20.97155	72944	Тетово		ARYM+FYROM
+787487	Ohrid	41.11722	20.80194	54908	Охрид		ARYM+FYROM
+2028462	Ulan Bator	47.90771	106.88324	844818	Ulaanbaatar	Ulaanbaatar	Монголия
+2562305	Valletta	35.89972	14.51472	6794	Валлетта		
+2747891	Rotterdam	51.9225	4.47917	598199	Роттердам	zh+Zuid-Holland	
+2759794	Amsterdam	52.37403	4.88969	741636	Амстердам	nh+Nord-Holland+Noord-Holland	
+3143244	Oslo	59.91273	10.74609	580000	Осло	Oslo	
+3147474	Lillehammer	61.11514	10.46628	19096	Лиллехаммер		
+3936456	Lima	-12.04318	-77.02824	7737002	Лима	Lima Province	
+1174872	Karachi	24.8608	67.0104	11624219	Karaçi		
+1176615	Islamabad	33.72148	73.04329	601600	İslamabad	Islāmābād	
+753866	Zamość	50.72314	23.25196	66034	Замосць	Lubelskie	
+756867	Tomaszów Mazowiecki	51.53131	20.00855	67197	Томашув-Мазовецки	Łódzkie	
+757033	Tarnobrzeg	50.57304	21.67937	50459	Тарнобжег	Podkarpackie	
+758390	Starachowice	51.0374	21.07126	53739	Стараховице	Świętokrzyskie	
+758445	Stalowa Wola	50.58286	22.05334	66495	Сталёва-Воля	Podkarpackie	
+759412	Siedlce	52.16772	22.29006	77185	Седльце	Mazowieckie	
+760778	Radom	51.40253	21.14714	226794	Радом	Mazowieckie	
+760924	Puławy	51.41655	21.96939	49759	Пулавы	Lubelskie	
+761168	Przemyśl	49.78498	22.76728	67013	Пшемысль	Podkarpackie	
+761228	Pruszków	52.17072	20.81214	55371	Прушкув	Mazowieckie	
+762863	Ostrowiec Świętokrzyski	50.92936	21.38525	73989	Островец-Свентокшижски	Świętokrzyskie	
+762909	Ostrołęka	53.08621	21.57566	53740	Остроленка	Mazowieckie	
+763534	Nowy Sącz	49.62177	20.69705	84376	Новы-Сонч	Małopolskie	
+764849	Mielec	50.28709	21.4239	60993	Мелец	Podkarpackie	
+765876	Lublin	51.25	22.56667	360044	Люблин	Lubelskie	
+766027	Łomża	53.17806	22.05935	63723	Ломжа	Podlaskie	
+766555	Legionowo	52.40149	20.92664	50786	Легьоново	Mazowieckie	
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	
+769250	Kielce	50.87033	20.62752	208598	Кельце+http://www.um.kielce.pl/	Świętokrzyskie	
+772621	Ełk	53.82824	22.36469	55769	Элк		
+774558	Chełm	51.14312	23.4716	68043	Хелм	Lubelskie	
+3080004	Żory	50.04523	18.70062	63174	Жоры	Śląskie	
+3080165	Zielona Góra	51.93548	15.50643	118433	Зелёна-Гура	Lubuskie	
+3080251	Zgierz	51.85561	19.40623	58036	Згеж	Łódzkie	
+3080526	Zawiercie	50.48766	19.41679	53159	Заверце	Śląskie	
+3080944	Żagań	51.61759	15.31486	26251	Jaganʻ	Lubuskie	
+3080985	Zabrze	50.32492	18.78576	192177	Забже	Śląskie	
+3081677	Wodzisław Śląski	50.00377	18.47205	49521	Водзислав-Шлёнски	Śląskie	
+3081741	Włocławek	52.64817	19.0678	120339	Влоцлавек	Kujawsko-Pomorskie	
+3082707	Wałbrzych	50.77141	16.28432	127431	Валбжих	Dolnośląskie	
+3083271	Toruń	53.01375	18.59814	208717	Торунь	Kujawsko-Pomorskie	
+3083440	Tarnowskie Góry	50.44548	18.86147	60938	Тарновске-Гуры	Śląskie	
+3084093	Świdnica	50.84378	16.48859	60351	Свидница	Dolnośląskie	
+3085450	Słupsk	54.46405	17.02872	98608	Слупск	Pomorskie	
+3086586	Rybnik	50.09713	18.54179	142510	Рыбник	Śląskie	
+3087497	Radomsko	51.06713	19.44477	49175	Радомско	Łódzkie	
+3087584	Racibórz	50.09195	18.21928	58464	Рацибуж	Śląskie	
+3088171	Poznań	52.40692	16.92993	570352	Познань	Wielkopolskie	
+3088825	Płock	52.54682	19.70638	127474	Плоцк	Mazowieckie	
+3088972	Piotrków Trybunalski	51.40547	19.70321	80128	Пётркув-Трыбунальски	Łódzkie	
+3089033	Piła	53.15145	16.73782	75532	Пила	Wielkopolskie	
+3089125	Piekary Śląskie	50.38017	18.92653	59757	Пекары-Шлёнске	Śląskie	
+3089578	Pabianice	51.66446	19.35473	70542	Пабьянице	Łódzkie	
+3089684	Ostrów Wielkopolski	51.65501	17.80686	72898	Острув-Велькопольски	Wielkopolskie	
+3091232	Mysłowice	50.20745	19.16668	75281	Мысловице	Śląskie	
+3092931	Lubin	51.40089	16.20149	77532	Любин	Dolnośląskie	
+3093133	Łódź	51.75	19.46667	768755	Лодзь	Łódzkie	
+3093524	Leszno	51.84034	16.57494	63565	Лешно	Wielkopolskie	
+3093692	Legnica	51.21006	16.1619	106033	Легница	Dolnośląskie	
+3095049	Koszalin	54.19438	16.17222	107450	Кошалин		
+3095321	Konin	52.22338	18.25121	81258	Конин	Wielkopolskie	
+3096372	Kędzierzyn-Koźle	50.34984	18.22606	65636	Кендзежин-Козле+Kędzierzyn-Koźle	Opolskie	
+3096472	Katowice	50.25841	19.02754	317316	Katovitse	Śląskie	
+3096880	Kalisz	51.76109	18.09102	108759	Калиш	Wielkopolskie	
+3097872	Inowrocław	52.79886	18.26387	77597	Иновроцлав	Kujawsko-Pomorskie	
+3098218	Grudziądz	53.48411	18.75366	99486	Грудзёндз	Kujawsko-Pomorskie	
+3098722	Gorzów Wielkopolski	52.73679	15.22878	124430	Гожув-Велькопольски	Lubuskie	
+3099112	Gniezno	52.53481	17.58259	70269	Гнезно	Wielkopolskie	
+3099213	Głogów	51.66361	16.0845	68530	Глогув	Dolnośląskie	
+3099230	Gliwice	50.29761	18.67658	198835	Гливице	Śląskie	
+3099424	Gdynia	54.51889	18.53188	253730	Гдыня	Pomorskie	
+3099759	Elbląg	54.1522	19.40884	127558	Эльблонг		
+3100946	Częstochowa	50.79646	19.12409	248125	Ченстохова	Śląskie	
+3101619	Chorzów	50.30582	18.9742	113430	Хожув	Śląskie	
+3103709	Bełchatów	51.36883	19.35671	62896	Белхатув	Łódzkie	
+3103719	Będzin	50.32607	19.12565	58236	Бендзин	Śląskie	
+281133	Gaza	31.50161	34.46672	410000	Газзә		
+662334	Zalău	47.2	23.05	63232	Залыу		
+663118	Vaslui	46.63333	27.73333	69225	Васлуй		
+664460	Turda	46.56667	23.78333	54586	Турда		
+664518	Tulcea	45.16667	28.8	92475	Тулчә		
+665010	Târgu Jiu	45.05	23.28333	97179	Тыргу-Жиу		
+665087	Timişoara	45.75372	21.22571	315053	Timişoara		
+665850	Suceava	47.63333	26.25	105796	Сучәва		
+667268	Sibiu	45.8	24.15	151894	Сибиу	Sibiu	
+667873	Satu Mare	47.79926	22.86255	112490	Сату-Маре		
+668872	Râmnicu Vâlcea	45.1	24.36667	107558	Рымнику-Вылча	Vâlcea	
+671768	Oradea	47.0458	21.91833	206614	Oradä		
+673636	Medgidia	44.25	28.28333	43315	Мәҗидия		
+678817	Drobeta-Turnu Severin	44.63194	22.65611	102346	Дробета-Турну-Северин	Mehedinţi	
+679452	Deva	45.88333	22.9	67802	Дева		
+680332	Craiova	44.31667	23.8	304142	Крайова		
+681290	Cluj-Napoca	46.76667	23.6	316748	Клуж-Напока		
+683123	Buzău	45.15	26.83333	130954	Бузыу		
+684802	Bârlad	46.23175	27.66907	67818	Бырлад		
+686578	Alba Iulia	46.06667	23.58333	66085	Алба-Юлия		
+783814	Zrenjanin	45.38361	20.38194	79773	Зренянин		Сербия
+784227	Vranje	42.55139	21.90028	56199	Вране	Central Serbia	Сербия
+785756	Smederevo	44.66278	20.93	62000	Смедерево	Central Serbia	Сербия
+786827	Požarevac	44.62133	21.18782	41736	Пожаревац	Central Serbia	Сербия
+788709	Leskovac	42.99806	21.94611	94758	Лесковац	Central Serbia	Сербия
+788975	Kruševac	43.58	21.33389	75256	Крушевац	Central Serbia	Сербия
+789107	Kraljevo	43.72583	20.68944	82846	Кралево	Central Serbia	Сербия
+789128	Kragujevac	44.01667	20.91667	147473	Крагуевац	Central Serbia	Сербия
+792078	Čačak	43.89139	20.34972	117072	Чачак	Central Serbia	Сербия
+3188402	Valjevo	44.27513	19.89821	61035	Валево	Central Serbia	Сербия
+3188434	Užice	43.85861	19.84878	63577	Ужице	Central Serbia	Сербия
+3190342	Sombor	45.77417	19.11222	48454	Сомбор		Сербия
+3191376	Šabac	44.74667	19.69	55114	Шабац	Central Serbia	Сербия
+3194360	Novi Sad	45.25167	19.83694	215400	Нови-Сад		Сербия
+461699	Sasovo	54.35369	41.91986	29858	Саз+Сасово	Rjazan	Россия
+461916	Zvenigovo	55.97539	48.01304	12484	Звенигово		Россия
+461920	Zvenigorod	55.73401	36.85918	16395	Звенигород	Мәскәү өлкәсе+MO	Россия
+462008	Zubtsov	56.17533	34.58935	7397	Зубцов		Россия
+462413	Zlynka	52.4267	31.7378	5260	Злынка	Brjansk	Россия
+462444	Zlatoust	55.17111	59.65083	191366	Златоуст	Tsjeljabinsk	Россия
+462626	Zilair	52.2332	57.4392	5872	Җылаер		Россия
+463828	Zelenogradsk	54.95893	20.47668	12846	Зеленоградск	Kaliningrad	Россия
+463830	Zelenogorsk	60.19968	29.70183	14958	Зеленогорск		Россия
+463835	Zelenodolsk	55.84376	48.51784	99600	Яшел Үзән	Татарстан	Россия
+464112	Zavolzhsk	57.4823	42.13779	12847	Заволжск	Ivanovo	Россия
+465543	Zainsk	55.3195	52.06942	42044	Зәй шәһәре	Татарстан	Россия
+466060	Yuzhno-Sukhokumsk	44.65811	45.6436	10665	Южно-Сухокумск	Дагстан	Россия
+467120	Yershov	51.3513	48.2766	23681	Ершов	Saratov	Россия
+467260	Yermekeyevo	54.07614	53.67125	4214	Ярмәкәй		Россия
+468082	Yelabuga	55.76127	52.06493	72643	Алабуга	Татарстан	Россия
+468902	Yaroslavl	57.62987	39.87368	606730	Ярославль	Jaroslavl	Россия
+469960	Vytegra	61.00636	36.44811	11099	Вытегра	Vologda	Россия
+469995	Vysotsk	60.62879	28.57048	1873	Высоцк		Россия
+470444	Vyksa	55.3175	42.17444	61664	Выкса	Nizjnij Novgorod	Россия
+470546	Vyborg	60.70763	28.75283	78633	Выборг		Россия
+470905	Vuktyl	63.85667	57.30944	13693	Вуктыл	Коми Республикасы	Россия
+471101	Vsevolozhsk	60.01512	30.67314	48224	Всеволожск		Россия
+471430	Votkinsk	57.04865	53.98717	98633	Воткинск		Россия
+471656	Voskresensk	55.31733	38.65264	77086	Воскресенск	Мәскәү өлкәсе+MO	Россия
+471760	Vorsma	55.99062	43.27249	12362	Ворсма	Nizjnij Novgorod	Россия
+472357	Volosovo	59.44525	29.48911	12096	Волосово		Россия
+472433	Volokolamsk	56.03361	35.96944	25000	Волоколамск	Мәскәү өлкәсе+MO	Россия
+472494	Volodarsk	56.23105	43.18767	10862	Володарск	Nizjnij Novgorod	Россия
+472722	Volkhov	59.9258	32.33819	45673	Волхов		Россия
+472757	Volgograd	48.71939	44.50183	1011417	Волгоград+Volgograd	Volgograd	Россия
+472761	Volgodonsk	47.51361	42.15139	167731	Волгодонск		Россия
+474462	Verkhnyaya Tura	58.36083	59.80667	10608	Югары Түре	Sverdlovsk	Россия
+475030	Verkhniye Tatyshly	56.29117	55.8575	6341	Югары Тәтешле		Россия
+475100	Verkhniye Kigi	55.40833	58.60444	6885	Югары Кыйгы		Россия
+477940	Ust-Tsilma	65.44104	52.14978	5100	Усть-Цильма	Коми Республикасы	Россия
+478581	Urus-Martan	43.13053	45.53791	41480	Урыс-Мартан		Россия
+479123	Ulyanovsk	54.32824	48.38657	640680	Сембер	Сембер өлкәсе+Uljanovsk	Россия
+479933	Tyrnyauz	43.38278	42.91833	20104	Тырныавыз		Россия
+480060	Tver	56.85836	35.90057	400212	Тверь		Россия
+480716	Tuapse	44.1053	39.0802	64234	Туапсе	Krasnodarskiy Kray	Россия
+481608	Troitsk	55.48498	37.30736	37591	Троицк		Россия
+481964	Tosno	59.54	30.8775	40198	Тосно		Россия
+482042	Toropets	56.49779	31.63528	14187	Торопец		Россия
+483019	Tikhvin	59.64511	33.52937	62075	Тихвин		Россия
+483029	Tikhoretsk	45.85472	40.12528	64387	Тихорецк	Krasnodarskiy Kray	Россия
+483684	Temnikov	54.63023	43.21483	8252	Төмән		Россия
+483873	Teberda	43.44565	41.7448	7705	Теберда		Россия
+484287	Tarusa	54.72436	37.17272	10180	Таруса	Kaluga	Россия
+484826	Taldom	56.73333	37.53333	13112	Талдом	Мәскәү өлкәсе+MO	Россия
+485239	Syktyvkar	61.67642	50.80994	230139	Сыктывкар	Коми Республикасы	Россия
+485639	Svetogorsk	61.11213	28.86321	15733	Светогорск+Enšo		Россия
+485698	Svetlograd	45.33528	42.85472	39727	Светлоград	Stavropol'skiy Kray	Россия
+487095	Strunino	56.37328	38.58321	15483	Струнино	Vladimir	Россия
+487495	Sterlitamak	53.62462	55.95015	267231	Стәрлетамак		Россия
+490067	Sovetsk	57.58475	48.95844	17869	Советск	Kirov	Россия
+490068	Sovetsk	55.08392	21.87851	43309	Советск	Kaliningrad	Россия
+493463	Shumerlya	55.5005	46.41288	35220	Шөмерле		Россия
+495957	Shali	43.14806	45.90194	25000	Шали		Россия
+496957	Serafimovich	49.5786	42.736	9847	Серафимович	Volgograd	Россия
+498418	Satka	55.0425	59.04	49384	Чаткы	Tsjeljabinsk	Россия
+498525	Sarov	54.93583	43.32352	88000	Сарыкылыч	Nizjnij Novgorod	Россия
+498677	Saratov	51.54056	46.00861	863725	Сарытау	Saratov	Россия
+498687	Sarapul	56.47633	53.79782	98830	Сарапул		Россия
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sankt-Peterburg+Санкт-Петербург		Россия
+499099	Samara	53.20007	50.15	1134730	Самара	Samara	Россия
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Тындагы Ростов		Россия
+502011	Revda	56.80097	59.93028	61785	Рәүде	Sverdlovsk	Россия
+502793	Rasskazovo	52.65599	41.88461	45957	Рассказово	Tambov	Россия
+504042	Pushchino	54.83373	37.61138	20072	Пущино	Мәскәү өлкәсе+MO	Россия
+504576	Protvino	54.86821	37.21583	37329	Протвино	Мәскәү өлкәсе+MO	Россия
+509820	Petrozavodsk	61.78491	34.34691	265025	Петрозаводск	Kareliä+Kareliä Cömhüriäte	Россия
+510291	Peterhof	59.88333	29.9	73199	Петергоф		Россия
+511196	Perm	58.01046	56.25017	982419	Пермь	Пермь крае+Perm	Россия
+511785	Pechory	57.81642	27.6119	13246	Печоры	Pskov	Россия
+514734	Orsk	51.20487	58.56685	246836	Орски	Orenburg	Россия
+515003	Orenburg	51.7727	55.0988	550204	Ырынбур+Оренбург	Orenburg	Россия
+515698	Olenegorsk	68.1432	33.25287	23670	Оленегорск	Murmansk	Россия
+515771	Okulovka	58.40083	33.29083	13852	Окуловка	Novgorod	Россия
+516716	Nurlat	54.42766	50.80511	34451	Норлат	Татарстан	Россия
+517269	Novozybkov	52.5396	31.9275	42571	Яңа Зыбков	Brjansk	Россия
+517739	Novouzensk	50.45917	48.14306	16932	Яңа Үзән	Saratov	Россия
+517836	Novotroitsk	51.20301	58.32665	106186	Яңа Троицк	Orenburg	Россия
+518383	Novopavlovsk	43.96222	43.63417	24408	Яңа Павловск	Stavropol'skiy Kray	Россия
+518557	Novomoskovsk	54.0105	38.2846	130982	Яңа Мәскәү	Tula	Россия
+518659	Novokuybyshevsk	53.0959	49.9462	111800	Яңа Куйбышев	Samara	Россия
+518682	Novokubansk	45.117	41.0267	36401	Яңа Кубанск	Krasnodarskiy Kray	Россия
+518909	Novodvinsk	64.4165	40.8122	42900	Яңа Двинск		Россия
+519106	Novoaleksandrovsk	45.4948	41.22075	27610	Яңа Александровск	Stavropol'skiy Kray	Россия
+520204	Nizhnyaya Tura	58.6293	59.8118	22600	Түбән Түре+Нижняя Тура	Sverdlovsk	Россия
+520667	Nizhniye Sergi	56.66139	59.30333	12077	Түбән Сырга+Нижние Серги	Sverdlovsk	Россия
+521118	Nizhnekamsk	55.63657	51.82447	234297	Түбән Кама	Татарстан	Россия
+522594	Nerekhta	57.45881	40.57471	25352	Нерехта	Kostroma	Россия
+522942	Neftekamsk	56.092	54.2661	126805	Нефтекама		Россия
+523443	Narimanov	46.6927	47.8498	11905	Нариман+Нариманов	Astrakhan	Россия
+523750	Naberezhnyye Chelny	55.72545	52.41122	509870	Яр Чаллы	Татарстан	Россия
+524294	Murom	55.575	42.0426	126931	Мөрәм	Vladimir	Россия
+524736	Mozdok	43.74359	44.65177	40823	Моздок		Россия
+524901	Moscow	55.75222	37.61556	10381222	Мәскәү+Moskva		Россия
+526480	Mineralnye Vody	44.21028	43.13528	76280	Минеральные Воды	Stavropol'skiy Kray	Россия
+527529	Menzelinsk	55.72706	53.10258	16858	Минзәлә	Татарстан	Россия
+527717	Meleuz	52.96467	55.93277	65362	Мәләвез		Россия
+529073	Marks	51.71111	46.74861	32929	Маркс	Saratov	Россия
+531129	Malgobek	43.51118	44.58821	43400	Малгобәк		Россия
+536162	Leninogorsk	54.60256	52.46087	66263	Лениногорск	Татарстан	Россия
+536206	Yubileyny	55.93333	37.83333	32508	Юбилейный	Мәскәү өлкәсе+MO	Россия
+537158	Laishevo	55.40464	49.55037	7744	Лаеш	Татарстан	Россия
+538138	Kuvandyk	51.4781	57.3552	28706	Куандык	Orenburg	Россия
+538340	Kushva	58.29056	59.75917	34058	Кошва	Sverdlovsk	Россия
+539147	Kungur	57.4368	56.9593	66389	Көңгер	Пермь крае+Perm	Россия
+539283	Kumertau	52.76667	55.78333	65321	Күмертау		Россия
+539555	Kulebaki	55.41333	42.5325	37622	Кулебаки	Nizjnij Novgorod	Россия
+541950	Krasnozavodsk	56.45	38.21667	11694	Краснозаводск	Мәскәү өлкәсе+MO	Россия
+543436	Kovylkino	54.03876	43.91385	21400	Ковылкино		Россия
+543605	Kotovsk	52.58666	41.5021	33077	Котовск	Tambov	Россия
+546105	Kolpino	59.75069	30.58856	138979	Колпино		Россия
+546230	Kolomna	55.07944	38.77833	147690	Коломна	Мәскәү өлкәсе+MO	Россия
+547560	Klimovsk	55.36352	37.52984	55206	Климовск	Мәскәү өлкәсе+MO	Россия
+547875	Kizel	59.04709	57.64767	21807	Кизел	Пермь крае+Perm	Россия
+548493	Kirgiz-Miyaki	53.6324	54.7979	7673	Кыргыз-Миякә		Россия
+548605	Kineshma	57.43914	42.12894	92983	Киңәшмә	Ivanovo	Россия
+550671	Kharabali	47.41958	47.25678	18223	Хәрәбәле	Astrakhan	Россия
+551487	Kazan	55.78874	49.12214	1104738	Казан	Татарстан	Россия
+551794	Katav-Ivanovsk	54.75306	58.19556	19339	Кытау-Ивановск	Tsjeljabinsk	Россия
+551891	Kasimov	54.94111	41.39528	35355	Ханкирмән	Rjazan	Россия
+552951	Karabulak	43.30513	44.89949	34511	Караболак		Россия
+553216	Kanash	55.50962	47.49127	49886	Канаш		Россия
+553518	Kamennogorsk	60.95451	29.13391	6208	Каменногорск		Россия
+554840	Izhevsk	56.84976	53.20448	631038	Ижау		Россия
+558118	Gudermes	43.35071	46.10925	32769	Гудермес		Россия
+558209	Gubakha	58.83862	57.55325	26605	Губаха	Пермь крае+Perm	Россия
+559459	Gorokhovets	56.20152	42.69351	14247	Гороховец	Vladimir	Россия
+559678	Gorodets	56.65493	43.47273	31788	Городец	Nizjnij Novgorod	Россия
+560285	Gorbatov	56.1311	43.06363	2495	Горбатов	Nizjnij Novgorod	Россия
+562245	Gadzhiyevo	69.25506	33.33616	14225	Гаҗиево	Murmansk	Россия
+563514	Elista	46.30778	44.25583	106971	Элиста		Россия
+563708	Dzerzhinsk	56.24143	43.45539	233126	Дзержинск	Nizjnij Novgorod	Россия
+565381	Domodedovo	55.4413	37.75367	53887	Домодедово	Мәскәү өлкәсе+MO	Россия
+566199	Dimitrovgrad	54.21386	49.61838	132226	Мәләкәс	Сембер өлкәсе+Uljanovsk	Россия
+566532	Derbent	42.06779	48.28987	105965	Дәрбәнт	Дагстан	Россия
+567006	Davlekanovo	54.22145	55.03434	23952	Дәүләкән		Россия
+567990	Chistopol’	55.36311	50.64244	62200	Чистай	Татарстан	Россия
+569696	Cheboksary	56.13222	47.25194	446781	Чабаксар+Чебоксары		Россия
+570427	Buzuluk	52.7807	52.2635	87714	Бозаулык	Orenburg	Россия
+571155	Buinsk	54.97119	48.29184	20266	Bua	Татарстан	Россия
+571159	Buguruslan	53.6554	52.442	53511	Богырыслан	Orenburg	Россия
+571170	Bugul’ma	54.5378	52.7985	91900	Бөгелмә	Татарстан	Россия
+572525	Borisoglebsk	51.36713	42.08494	68597	Борисоглебск	Voronezj	Россия
+575560	Bogorodsk	56.10513	43.51294	36652	Богородск	Nizjnij Novgorod	Россия
+576317	Birsk	55.42111	55.54278	41014	Бөре		Россия
+577206	Berezniki	59.4091	56.8204	167748	Березники	Пермь крае+Perm	Россия
+577881	Beloretsk	53.96306	58.39806	70468	Белорет		Россия
+577922	Belomorsk	64.52322	34.7668	12165	Беломорск	Kareliä+Kareliä Cömhüriäte	Россия
+578120	Belebey	54.11667	54.11667	62582	Бәләбәй		Россия
+578152	Belaya Kholunitsa	58.84	50.85278	11658	Белая Холуница	Kirov	Россия
+578155	Belaya Kalitva	48.18585	40.77424	47521	Белая Калитва		Россия
+578931	Barysh	53.65533	47.11229	18547	Барыш	Сембер өлкәсе+Uljanovsk	Россия
+579432	Balezino	57.9787	53.0138	16618	Балезино		Россия
+579492	Balakovo	52.02782	47.8007	199572	Балаково	Saratov	Россия
+579574	Baksan	43.68806	43.53694	37519	Баксан		Россия
+579738	Bakal	54.9417	58.8083	21762	Бакал	Tsjeljabinsk	Россия
+579760	Bagrationovsk	54.38714	20.64372	7306	Багратионовск	Kaliningrad	Россия
+580054	Azov	47.10779	39.41648	82133	Азак		Россия
+580420	Atkarsk	51.87185	45.00775	27554	Аткар	Saratov	Россия
+580497	Astrakhan	46.34968	48.04076	502533	Әстерхан	Astrakhan	Россия
+580724	Arzamas	55.39485	43.83992	109479	Арзамас	Nizjnij Novgorod	Россия
+580783	Arti	56.42344	58.53276	13564	Әртә	Sverdlovsk	Россия
+580850	Arsk	56.09151	49.87783	17243	Арча	Татарстан	Россия
+580922	Armavir	44.9892	41.1234	199548	Армавир	Krasnodarskiy Kray	Россия
+581080	Arkadak	51.93261	43.49779	14392	Аркадаг	Saratov	Россия
+581126	Argun	43.29713	45.87454	28100	Аргун		Россия
+581179	Ardon	43.1772	44.29702	18313	Ардон		Россия
+581187	Ardatov	54.84767	46.23878	9478	Ардатов		Россия
+581313	Apsheronsk	44.46472	39.73417	40451	Апшеронск	Krasnodarskiy Kray	Россия
+581321	Aprelevka	55.55194	37.0801	17780	Апрелевка	Мәскәү өлкәсе+MO	Россия
+581357	Apatity	67.56414	33.4031	61186	Апатиты	Murmansk	Россия
+582182	Anapa	44.89084	37.3239	53600	Анапа	Krasnodarskiy Kray	Россия
+582432	Al’met’yevsk	54.90442	52.3154	140437	Әлмәт	Татарстан	Россия
+582533	Alikovo	55.73827	46.75493	2886	Әлек		Россия
+582750	Aleksin	54.50503	37.0674	66885	Алексин	Tula	Россия
+583041	Aleksandrovsk	59.1581	57.5695	15486	Александровск	Пермь крае+Perm	Россия
+583350	Aleksandrov	56.39516	38.71216	64088	Александров	Vladimir	Россия
+583983	Agryz	56.52034	52.99422	18601	Әгерҗе	Татарстан	Россия
+584441	Abinsk	44.86803	38.15728	34668	Абинск	Krasnodarskiy Kray	Россия
+584471	Abdulino	53.7	53.66667	21195	Абдулла	Orenburg	Россия
+797781	Neftekumsk	44.75583	44.9925	27716	Нефтекумск	Stavropol'skiy Kray	Россия
+802078	Alagir	43.04222	44.22222	19665	Алагир		Россия
+863061	Usinsk	65.99389	57.52806	44078	Усинск	Коми Республикасы	Россия
+1485042	Zmeinogorsk	51.15776	82.19534	11514	Змеиногорск	Altayskiy Kray	Россия
+1485357	Zavodoukovsk	56.5042	66.55153	25682	Заводоуковск		Россия
+1485439	Zarinsk	53.7074	84.9493	52209	Заринск	Altayskiy Kray	Россия
+1486039	Yemanzhelinsk	54.75472	61.32083	29849	Яманъелга	Tsjeljabinsk	Россия
+1486910	Vorkuta	67.49884	64.05253	80039	Воркута	Коми Республикасы	Россия
+1487277	Verkhnyaya Salda	58.04874	60.55949	48992	Югары Саллы	Sverdlovsk	Россия
+1487281	Verkhnyaya Pyshma	56.97047	60.58219	59061	Югары Пышма	Sverdlovsk	Россия
+1488253	Zelenogorsk	56.1124	94.5985	71354	Зеленогорск	Krasnoyarskiy Kray	Россия
+1488754	Tyumen	57.15222	65.52722	519119	Төмән		Россия
+1488933	Turinsk	58.04575	63.69605	18555	Түре	Sverdlovsk	Россия
+1488950	Turan	52.1449	93.91887	5528	Туран		Россия
+1489246	Troitsk	54.0979	61.5773	82338	Троицк	Tsjeljabinsk	Россия
+1489425	Tomsk	56.49771	84.97437	485519	Томск	Tomsk	Россия
+1489962	Tavda	58.04254	65.27258	39480	Тәүде	Sverdlovsk	Россия
+1490003	Tatarsk	55.21903	75.98283	25150	Татарск	Novosibirsk	Россия
+1490085	Tarko-Sale	64.91611	77.77457	18568	Тарко-Сале	Yamalo-Nenetskiy Avtonomnyy Okrug	Россия
+1490624	Surgut	61.25	73.41667	300367	Соргыт	Khanty-Mansiyskiy Avtonomnyy Okrug	Россия
+1491291	Sosnovoborsk	56.1217	93.3385	31632	Сосновоборск	Krasnoyarskiy Kray	Россия
+1492401	Sharypovo	55.54028	89.20083	42773	Шарып	Krasnoyarskiy Kray	Россия
+1492517	Shadrinsk	56.0852	63.6335	79479	Шадрин	Kurgan	Россия
+1496153	Omsk	54.99244	73.36859	1129281	Омск	Omsk	Россия
+1496747	Novosibirsk	55.0415	82.9346	1419007	Новосибирск	Novosibirsk	Россия
+1497543	Nizhnevartovsk	60.9344	76.5531	244937	Түбән Варта	Khanty-Mansiyskiy Avtonomnyy Okrug	Россия
+1497951	Nazarovo	56.0104	90.4011	55252	Назарово	Krasnoyarskiy Kray	Россия
+1498693	Minusinsk	53.71028	91.6875	72781	Минусинск	Krasnoyarskiy Kray	Россия
+1498894	Miass	55.045	60.10833	167500	Мияс	Tsjeljabinsk	Россия
+1500607	Lesosibirsk	58.23583	92.48278	65945	Лесосибирск	Krasnoyarskiy Kray	Россия
+1500665	Leninsk-Kuznetsky	54.6567	86.1737	109023	Ленинск-Кузнецкий	Kemerovo	Россия
+1500973	Kyzyl	51.71472	94.45338	108240	Кызыл		Россия
+1501141	Kuybyshev	55.44753	78.32181	48308	Каен	Novosibirsk	Россия
+1501255	Kurtamysh	54.91028	64.43194	17936	Кортамыш	Kurgan	Россия
+1503037	Kodinsk	58.68806	99.18444	15670	Кодинск	Krasnoyarskiy Kray	Россия
+1503901	Kemerovo	55.33333	86.08333	477090	Кемерово	Kemerovo	Россия
+1504251	Kasli	55.8909	60.7616	17911	Кәсле	Tsjeljabinsk	Россия
+1504317	Kartaly	53.05285	60.64903	28503	Кәртәле	Tsjeljabinsk	Россия
+1504682	Kansk	56.20167	95.7175	101502	Канск	Krasnoyarskiy Kray	Россия
+1504769	Kamyshlov	56.84278	62.71111	28006	Камышлы	Sverdlovsk	Россия
+1505074	Kalachinsk	55.05286	74.57511	24059	Калачлы	Omsk	Россия
+1505453	Ishim	56.11281	69.49015	67762	Ишем		Россия
+1505526	Irbit	57.67052	63.071	41647	Эрбет	Sverdlovsk	Россия
+1505579	Inta	66.03169	60.16594	1900	Инта	Коми Республикасы	Россия
+1507116	Dudinka	69.40583	86.17778	23619	Дудинка	Krasnoyarskiy Kray	Россия
+1507379	Divnogorsk	55.9581	92.3726	30018	Дивногорск	Krasnoyarskiy Kray	Россия
+1507390	Dikson	73.50819	80.52918	1113	Диксон	Krasnoyarskiy Kray	Россия
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Чиләбе	Tsjeljabinsk	Россия
+1508943	Borodino	55.9061	94.9079	19602	Бородино	Krasnoyarskiy Kray	Россия
+1509852	Bogotol	56.20778	89.53417	23622	Боготол	Krasnoyarskiy Kray	Россия
+1510350	Berdsk	54.7551	83.0967	90250	Бердск	Novosibirsk	Россия
+1510502	Belokurikha	51.9959	84.9896	14733	Белокуриха	Altayskiy Kray	Россия
+1510853	Barnaul	53.36056	83.76361	599579	Барнаул	Altayskiy Kray	Россия
+1510916	Barabinsk	55.35709	78.35697	31508	Бараба	Novosibirsk	Россия
+1511309	Asino	56.99987	86.14393	27070	Асино	Tomsk	Россия
+1511330	Asbest	57.00993	61.45776	74583	Әсбест	Sverdlovsk	Россия
+1511466	Aramil	56.6977	60.8369	15237	Әрәмәле	Sverdlovsk	Россия
+1511783	Aleysk	52.4926	82.7822	28019	Алейск	Altayskiy Kray	Россия
+1512064	Ak-Dovurak	51.18333	90.6	12593	Ак-Довурак		Россия
+1512165	Achinsk	56.2694	90.4993	117634	Ачинск	Krasnoyarskiy Kray	Россия
+1512205	Abaza	52.655	90.09278	18094	Абаза		Россия
+1512236	Abakan	53.71556	91.42917	167289	Абакан		Россия
+1538637	Seversk	56.60056	84.88639	109844	Северск	Tomsk	Россия
+1540356	Raduzhny	62.09611	77.475	47679	Радужный	Khanty-Mansiyskiy Avtonomnyy Okrug	Россия
+1540711	Muravlenko	63.78977	74.52301	39137	Муравленко	Yamalo-Nenetskiy Avtonomnyy Okrug	Россия
+2012626	Zavitinsk	50.11118	129.44156	13198	Завитинск	Amur	Россия
+2012728	Zakamensk	50.3741	103.2863	12250	Закаменск		Россия
+2013348	Vladivostok	43.10562	131.87353	587022	Владивосток	Primorskiy Kray	Россия
+2014624	Udachny	66.42989	112.4021	15266	Удачный	Sakha	Россия
+2014718	Tynda	55.156	124.72479	37335	Тында	Amur	Россия
+2014833	Tura	64.27769	100.21849	5444	Тура	Krasnoyarskiy Kray	Россия
+2014927	Tulun	54.56358	100.58143	51330	Тулун	Irkutsk	Россия
+2015179	Tommot	58.95717	126.29158	9034	Томмот	Sakha	Россия
+2015306	Tiksi	71.69002	128.86467	5700	Тикси	Sakha	Россия
+2015842	Svirsk	53.08583	103.3325	14717	Свирск	Irkutsk	Россия
+2019951	Mirny	62.53528	113.96111	40308	Мирный	Sakha	Россия
+2020838	Lensk	60.72528	114.92778	23694	Ленск	Sakha	Россия
+2022083	Kirensk	57.78528	108.11194	13308	Киренск	Irkutsk	Россия
+2023469	Irkutsk	52.29778	104.29639	586695	Өркет	Irkutsk	Россия
+2026895	Belogorsk	50.91644	128.47726	67911	Белогорск	Amur	Россия
+2027667	Angarsk	52.53667	103.88639	243158	Ангарск	Irkutsk	Россия
+2027749	Amursk	50.23685	136.88136	46993	Амурск	Khabarovskiy Kray	Россия
+2118647	Vilyuchinsk	52.9311	158.40469	25204	Вилючинск	Kamtsjatka	Россия
+2119441	Yuzhno-Sakhalinsk	46.95407	142.73603	176484	Южно-Сахалинск	Sakhalin	Россия
+2120261	Uglegorsk	49.08047	142.06449	12669	Углегорск	Sakhalin	Россия
+2120864	Susuman	62.78075	148.15396	7367	Сусуман	Magadan	Россия
+2121025	Srednekolymsk	67.45659	153.70246	3459	Среднеколымск	Sakha	Россия
+2123628	Magadan	59.5638	150.80347	95282	Магадан	Magadan	Россия
+2126682	Bilibino	68.05464	166.43721	5757	Билибино	Chukotskiy Avtonomnyy Okrug	Россия
+2127154	Aniva	46.71492	142.52866	7963	Анива	Sakhalin	Россия
+2127202	Anadyr	64.73424	177.5103	10332	Анадырь	Chukotskiy Avtonomnyy Okrug	Россия
+6313621	Magas	43.22257	44.77261	2502	Магас		Россия
+6417459	Krasnoznamensk	55.59944	37.03861	33700	Краснознаменск	Мәскәү өлкәсе+MO	Россия
+6695754	Kogalym	62.26537	74.47906	57800	Когалым	Khanty-Mansiyskiy Avtonomnyy Okrug	Россия
+6931086	Peresvet	56.42302	38.17612	15000	Пересвет	Мәскәү өлкәсе+MO	Россия
+109223	Medina	24.46861	39.61417	1300000	Мәдинә		
+2673730	Stockholm	59.33258	18.0649	1515017	Стокгольм	Stockholms Län	Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Любляна		
+3202781	Celje	46.23092	15.26044	37520	Целе		
+724443	Košice	48.71395	21.25808	236563	Кошице	Košický kraj	
+3056508	Žilina	49.22315	18.73941	85985	Жилина	Žilinský kraj	
+3058000	Prievidza	48.77446	18.6275	52987	Приевидза	Nitriansky kraj	
+3058531	Nitra	48.30763	18.08453	86329	Нитра	Nitriansky kraj	
+3060972	Bratislava	48.14816	17.10674	423737	Братислава	Bratislavský kraj	
+170063	Aleppo	36.20124	37.16117	1602264	Хәлеб		
+170654	Damascus	33.5102	36.29128	1569394	Dimäşq		
+173576	Latakia	35.53168	35.79011	340181	Lataqiä		
+1220253	Istaravshan	39.9142	69.00328	52851	Истәраушан		
+1220798	Panjakent	39.49524	67.60931	35085	Пәнҗәкәнт		
+1514891	Konibodom	40.29414	70.43122	50359	Канибадам		
+1514896	Isfara	40.12649	70.62526	37738	Исфәрә		
+162183	Ashgabat	37.95	58.38333	727700	Ашкабад		Төрекмәнстан
+601594	Türkmenbaşy	40.02216	52.95517	68292	Төрекмәнбашы		Төрекмәнстан
+323786	Ankara	39.91987	32.85427	3517182	Әнкара		Төркия+Turkanmua
+613273	Lebedyn	50.58518	34.4849	27695	Лебедин	Sumy	http://en.wikipedia.org/wiki/Ukraine
+686967	Zhytomyr	50.26487	28.67669	282192	Житомир	Zhytomyr	http://en.wikipedia.org/wiki/Ukraine
+687196	Zhovti Vody	48.34493	33.50374	51559	Жёлтые Воды	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	http://en.wikipedia.org/wiki/Ukraine
+688373	Yasynuvata	48.1298	37.8594	37600	Ясиноватая	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+690412	Vasylkiv	50.18693	30.31346	39700	Васильков		http://en.wikipedia.org/wiki/Ukraine
+690548	Uzhgorod	48.61667	22.3	117878	Ужгород	Zakarpattia	http://en.wikipedia.org/wiki/Ukraine
+691179	Truskavets’	49.27837	23.50618	26600	Трускавец	Lviv	http://en.wikipedia.org/wiki/Ukraine
+691374	Torez	48.03876	38.59685	68037	Торез	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+691469	Tokmak	47.25522	35.71238	34926	Токмак		http://en.wikipedia.org/wiki/Ukraine
+691803	Tatarbunary	45.83731	29.61424	10396	Татарбунары		http://en.wikipedia.org/wiki/Ukraine
+692194	Sumy	50.9216	34.80029	294456	Сумы	Sumy	http://en.wikipedia.org/wiki/Ukraine
+692975	Stakhanov	48.56818	38.64352	84425	Стаханов	Luhansk	http://en.wikipedia.org/wiki/Ukraine
+693457	Smila	49.22242	31.88714	67530	Смела	Cherkas'ka Oblast'+Cherkasy	http://en.wikipedia.org/wiki/Ukraine
+693468	Sloviansk	48.86667	37.61667	124800	Славянск	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+693581	Slavuta	50.30155	26.86506	33080	Славута	Khmelnytskyi	http://en.wikipedia.org/wiki/Ukraine
+693805	Simferopol	44.95719	34.11079	336460	Акмәсҗит		http://en.wikipedia.org/wiki/Ukraine
+694423	Sevastopol	44.58883	33.5224	416263	Акъяр		http://en.wikipedia.org/wiki/Ukraine
+694677	Selydove	48.14708	37.30032	24269	Селидово	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+694864	Sambir	49.5183	23.19752	35197	Самбор	Lviv	http://en.wikipedia.org/wiki/Ukraine
+695464	Romny	50.75104	33.47471	48570	Ромны	Sumy	http://en.wikipedia.org/wiki/Ukraine
+696643	Poltava	49.59373	34.54073	317847	Полтава	Poltava	http://en.wikipedia.org/wiki/Ukraine
+697889	Pavlohrad	48.53426	35.87098	115932	Павлоград	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	http://en.wikipedia.org/wiki/Ukraine
+698232	Ostroh	50.32942	26.51425	14251	Острог	Rivne	http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Одесса		http://en.wikipedia.org/wiki/Ukraine
+698770	Ochakiv	46.61283	31.54982	16300	Очаков	Mykolaiv	http://en.wikipedia.org/wiki/Ukraine
+698782	Obukhiv	50.10689	30.61848	31557	Обухов		http://en.wikipedia.org/wiki/Ukraine
+699839	Nova Kakhovka	46.75451	33.34864	50672	Новая Каховка	Kherson	http://en.wikipedia.org/wiki/Ukraine
+701075	Myrhorod	49.96854	33.60886	41377	Миргород	Poltava	http://en.wikipedia.org/wiki/Ukraine
+702116	Malyn	50.77233	29.23833	27068	Малин	Zhytomyr	http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Львов	Lviv	http://en.wikipedia.org/wiki/Ukraine
+702658	Luhansk	48.56705	39.31706	452000	Луганск	Luhansk	http://en.wikipedia.org/wiki/Ukraine
+702723	Lubny	50.01625	32.99694	52600	Лубны	Poltava	http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Киев		http://en.wikipedia.org/wiki/Ukraine
+703656	Kupjansk	49.71055	37.61517	32449	Купянск	Kharkiv	http://en.wikipedia.org/wiki/Ukraine
+703845	Kryvyi Rih	47.90966	33.38044	652380	Кривой Рог	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	http://en.wikipedia.org/wiki/Ukraine
+704147	Kremenchuk	49.06802	33.42041	227494	Кирмәнчек+Kremenchuk	Poltava	http://en.wikipedia.org/wiki/Ukraine
+704403	Krasnodon	48.29235	39.73921	49352	Краснодон	Luhansk	http://en.wikipedia.org/wiki/Ukraine
+705135	Konotop	51.24032	33.20263	91798	Канатып	Sumy	http://en.wikipedia.org/wiki/Ukraine
+705812	Kropyvnytskyi	48.5132	32.2597	249454	Кировоград	Kirovohrad+http://en.wikipedia.org/wiki/Kropyvnytskyi	http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Херсон	Kherson	http://en.wikipedia.org/wiki/Ukraine
+706524	Kerch	45.3531	36.47429	148932	Keriç		http://en.wikipedia.org/wiki/Ukraine
+706900	Kaniv	49.75182	31.46004	25666	Канев	Cherkas'ka Oblast'+Cherkasy	http://en.wikipedia.org/wiki/Ukraine
+707244	Kakhovka	46.81371	33.48698	36816	Каховка	Kherson	http://en.wikipedia.org/wiki/Ukraine
+707565	Irpin	50.52175	30.25055	40789	Ирпень		http://en.wikipedia.org/wiki/Ukraine
+707753	Horlivka	48.33576	38.05325	278550	Һорливка	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+707758	Hlukhiv	51.67822	33.9162	35387	Глухов	Sumy	http://en.wikipedia.org/wiki/Ukraine
+709248	Fastiv	50.0767	29.9177	51143	Фастов		http://en.wikipedia.org/wiki/Ukraine
+709717	Donetsk	48.023	37.80224	1024700	Донецк	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+709930	Dnipro	48.4593	35.03865	1032822	Днепропетровск+Dnipro	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	http://en.wikipedia.org/wiki/Ukraine
+710035	Myrnohrad	48.30523	37.26091	49646	Димитров	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+710400	Chortkiv	49.01709	25.79804	28855	Чортков	Ternopil	http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Черновцы		http://en.wikipedia.org/wiki/Ukraine
+710735	Chernihiv	51.50551	31.28487	307684	Чернигов		http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Черкассы	Cherkas'ka Oblast'+Cherkasy	http://en.wikipedia.org/wiki/Ukraine
+711390	Brovary	50.51809	30.80671	88506	Бровары		http://en.wikipedia.org/wiki/Ukraine
+711669	Boryslav	49.28672	23.43238	36704	Борислав	Lviv	http://en.wikipedia.org/wiki/Ukraine
+711850	Bolekhiv	49.06607	23.86435	10590	Болехов	Ivano-Frankivsk	http://en.wikipedia.org/wiki/Ukraine
+712165	Bila Tserkva	49.80939	30.11209	199163	Белая Церковь		http://en.wikipedia.org/wiki/Ukraine
+712423	Berehove	48.20555	22.64418	25741	Берегово	Zakarpattia	http://en.wikipedia.org/wiki/Ukraine
+712441	Berdychiv	49.89928	28.60235	86250	Бердичев	Zhytomyr	http://en.wikipedia.org/wiki/Ukraine
+4560349	Philadelphia	39.95233	-75.16379	1567442	Filadelfiä	Пенсильвания+PA	U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Hyuston	Техас+TX+Texas	U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Çikago	Иллинойс+IL+Illinois	U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Finiks	Аризона+AZ+Arizona	U.S.+USA+U.S.A.
+5357527	Hollywood	34.09834	-118.32674	167664	Голливуд	Калифорния+CA+Calif+California	U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Лос-Анджелес	Калифорния+CA+Calif+California	U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	Сан-Франциско+SF	Калифорния+CA+Calif+California	U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Сиэтл	Вашингтон+WA+Washington	U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Монтевидео		
+1512569	Tashkent	41.26465	69.21627	1978028	Ташкент	Toshkent Shahri	Үзбәкстан
+3632308	Mérida	8.58972	-71.15611	300000	Мерида		
+3646738	Caracas	10.48801	-66.87919	3000000	Каракас		
+1581130	Hanoi	21.0245	105.84117	1431270	Hanoy	Ha Nội	
+786714	Pristina	42.67272	21.16688	550000	Приштина		
+964137	Pretoria	-25.74486	28.18783	1619438	Pretoriä	Gauteng	
+993800	Johannesburg	-26.20227	28.04363	2026469	Yohannesburg	Gauteng	
+3369157	Cape Town	-33.92584	18.42322	3433441	Keyptawn	Western Cape	

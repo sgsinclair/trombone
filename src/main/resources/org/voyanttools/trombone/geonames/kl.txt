@@ -1,0 +1,23 @@
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	Brasilien
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brasilien
+3893894	Concepción	-36.82699	-73.04977	215413	Concepcion	Biobío	
+2618425	Copenhagen	55.67594	12.56553	1153615	København		Danmarki
+3419842	Sisimiut	66.93946	-53.6735	5227	Sisimiut	Qeqqata Kommunia	Kalaallit Nunaat
+3420768	Qasigiannguit	68.81926	-51.19221	1341	Qasigiannguit	Qaasuitsup Kommunia	Kalaallit Nunaat
+3420846	Qaqortoq	60.71839	-46.03561	3224	Qaqortoq	Kommune Kujalleq	Kalaallit Nunaat
+3421193	Paamiut	61.99402	-49.66776	1862	Paamiut	Kommuneqarfik Sermersooq	Kalaallit Nunaat
+3421319	Nuuk	64.18347	-51.72157	14798	Nuuk	Kommuneqarfik Sermersooq	Kalaallit Nunaat
+3421982	Maniitsoq	65.41506	-52.89822	2866	Maniitsoq	Qeqqata Kommunia	Kalaallit Nunaat
+3423146	Ilulissat	69.21981	-51.09861	4413	Ilulissat	Qaasuitsup Kommunia	Kalaallit Nunaat
+3424901	Aasiaat	68.70981	-52.86988	3005	Aasiaat	Qaasuitsup Kommunia	Kalaallit Nunaat
+779330	Kautokeino	69.01247	23.04116	2000	Guovdageaidnu		Norge
+287286	Muscat	23.58413	58.40778	797000	Masqat		Oman
+7303419	East Jerusalem	31.78336	35.23388	428304	Østjerusalem		
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov ved Don		Ruslandi
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Tjeljabinsk	Tsjeljabinsk	Ruslandi
+2122090	Pevek	69.70287	170.29993	4837	Peeqin	Chukotskiy Avtonomnyy Okrug	Ruslandi
+2127202	Anadyr	64.73424	177.5103	10332	Qagiirgiin	Chukotskiy Avtonomnyy Okrug	Ruslandi
+1608529	Nakhon Ratchasima	14.97066	102.10196	208781	Nakhon Ratchasim	Nakhon Ratchasima	Thailandi
+703448	Kyiv	50.45466	30.5238	2797553	Kyiv		Ukraine+Ukraina+http://en.wikipedia.org/wiki/Ukraine
+1568510	Rạch Giá	10.01245	105.08091	228356	Rach Gia	Kiến Giang	Vietnam
+1580240	Huế	16.4619	107.59546	287217	Hue	Thừa Thiên-Huế	Vietnam

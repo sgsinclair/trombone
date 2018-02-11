@@ -1,0 +1,11 @@
+7304467	Ebaye	8.77479	167.73919	15000	Epjā		Aolepān Aorōkin M̧ajeļ
+7306512	Ebon	4.58199	168.69636	714	Epoon		Aolepān Aorōkin M̧ajeļ
+7306517	Lae	8.92217	166.26344	319	Lae		Aolepān Aorōkin M̧ajeļ
+7306518	Utrik	11.22778	169.84739	409	Utrōk		Aolepān Aorōkin M̧ajeļ
+7306519	Ujae	8.93218	165.76416	448	Ujae+Wūjae		Aolepān Aorōkin M̧ajeļ
+7306520	Rongelap	11.16351	166.89408	19	Ron̄ļap		Aolepān Aorōkin M̧ajeļ
+7306522	Namdrik	5.59944	168.10282	814	Nam̧dik		Aolepān Aorōkin M̧ajeļ
+7306523	Mejit	10.27531	170.86461	300	Mājej+Mājeej		Aolepān Aorōkin M̧ajeļ
+7306526	Jabat	7.75003	168.97513	112	Jebat		Aolepān Aorōkin M̧ajeļ
+7306529	Wotho	10.16575	166.01022	160	Wōtto		Aolepān Aorōkin M̧ajeļ
+2267057	Lisbon	38.71667	-9.13333	517802	Lisbon	Lisboa	

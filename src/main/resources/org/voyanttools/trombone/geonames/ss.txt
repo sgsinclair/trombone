@@ -1,0 +1,4 @@
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	
+934985	Mbabane	-26.31667	31.13333	76218	Embabane	Hhohho	Umbuso weSwatini
+964137	Pretoria	-25.74486	28.18783	1619438	Pitoli	Gauteng	iRiphabhulikhi ye Ningizimu Afrika
+993800	Johannesburg	-26.20227	28.04363	2026469	IJohannesburg	Gauteng	iRiphabhulikhi ye Ningizimu Afrika

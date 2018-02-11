@@ -1,0 +1,3 @@
+965301	Pietermaritzburg	-29.61679	30.39278	750845	Mokokotlofo	Hazolo-Natala	Rephaboliki ya Afrika Borwa+Afrika Borwa
+1007311	Durban	-29.8579	31.0292	3120282	Thekong	Hazolo-Natala	Rephaboliki ya Afrika Borwa+Afrika Borwa
+1018725	Bloemfontein	-29.12107	26.214	463064	Mangaung		Rephaboliki ya Afrika Borwa+Afrika Borwa

@@ -1,0 +1,171 @@
+2800866	Brussels	50.85045	4.34878	1019022	Brusel	Brussels-Capital Region	Belgia
+425378	Bujumbura	-3.3822	29.3644	331700	Bujumbura	Bujumbura Mairie	
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	
+2659811	Luzern	47.05048	8.30635	57066	Canton Lucerne		
+1816670	Beijing	39.9075	116.39723	11716620	Beijing		
+3687238	Cartagena	10.39972	-75.51444	952024	Cartagena de Indias	Bolívar	
+146268	Nicosia	35.17531	33.3642	200452	Nikosia		
+3068160	Pilsen	49.74747	13.37759	164180	Pilzno	Plzeňský kraj	Czechia
+2925535	Frankfurt (Oder)	52.34714	14.55062	51691	Frankfurt an der Oder	Brandenburg+http://www.brandenburg.de	Jerman
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Jerman
+2507480	Algiers	36.73225	3.08746	1977663	Aljir	Alger	
+359796	Suez	29.97371	32.52627	488125	Suèz	As Suways	
+360630	Cairo	30.06263	31.24967	7734614	Kairo		
+361546	Arish	31.13159	33.79844	128855	Al Arish	Shamāl Sīnāʼ	
+2994160	Metz	49.11911	6.17269	123914	Métz+57000	ACAL	France
+255274	Piraeus	37.94745	23.63708	163688	Piraeus		Griekanmua
+1214026	Sabang	5.88969	95.31644	24519	Kutha Sabang	Aceh	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1214520	Medan	3.58333	98.66667	1750971	Kutha Medan	Sumatra Lor	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1215502	Banda Aceh	5.54167	95.33333	250757	Kutha Banda Acèh	Aceh	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1621177	Yogyakarta	-7.80139	110.36472	636660	Kutha Ngayogyakarta+DIY		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624494	Tegal	-6.8694	109.1402	237084	Kutha Tegal	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624647	Tasikmalaya	-7.3274	108.2207	271143	Tasikmalaya kutha	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624725	Tarakan	3.31332	117.59152	97478	Kutha Tarakan		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624863	Tanjung Pinang	0.91667	104.45833	192493	Kutha Tanjungpinang	Kepulauan Riau	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1625084	Tangerang	-6.17806	106.63	1372124	Kutha Tangerang		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1625812	Surakarta	-7.55611	110.83167	555308	Kutha Surakarta	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1625822	Surabaya	-7.24917	112.75083	2374658	Kutha Surabaya	Jawa Wétan+Jawa Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1626381	Sukabumi	-6.91806	106.92667	276414	Kutha Sukabumi	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1627896	Semarang	-6.99306	110.42083	1288084	Kutha Semarang	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1629001	Samarinda	-0.49167	117.14583	355160	Kutha Samarinda	Kalimantan Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1630789	Pontianak	-0.03194	109.325	455173	Kutha Pontianak	Kalimantan Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1631761	Pekanbaru	0.51667	101.44167	703956	Kutha Pekanbaru	Riau	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1633070	Palembang	-2.91673	104.7458	1441500	Kutha Palembang	Sumatra Kidul	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1633419	Padang	-0.94924	100.35427	840352	Kutha Padang	Sumatera Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1635882	Mataram	-8.58333	116.11667	318674	Kutha Mataram		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1636308	Manokwari	-0.86291	134.06402	53190	Kutha Manokwari	Irian Jaya Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1636544	Manado	1.48218	124.84892	451893	Kutha Manado	Sulawesi Lor	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1636722	Malang	-7.9797	112.6304	746716	Kutha Malang	Jawa Wétan+Jawa Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1636884	Magelang	-7.47056	110.21778	111461	Kutha Magelang	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1639900	Klaten	-7.70583	110.60639	126831	Klathen	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1640344	Kendari	-3.9778	122.51507	195006	Kutha Kendhari	Sulawesi Tenggara	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1640660	Kediri	-7.81667	112.01667	235143	Kutha Kedhiri	Jawa Wétan+Jawa Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1642414	Jombang	-7.54595	112.23307	126465	Jombang	Jawa Wétan+Jawa Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta	Jakarta Raya	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1645524	Depok	-6.4	106.81861	1198129	Depok kutha	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1645528	Denpasar	-8.65	115.21667	834881	Kutha Denpasar	Bali	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1646170	Cirebon	-6.7063	108.557	254298	Cirebon kutha+Kutha Cirebon	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1646448	Cimahi	-6.87222	107.5425	493698	Cimahi kutha	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1647142	Cianjur	-6.82222	107.13944	0	Kabupatèn Cianjur	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1647866	Bukittinggi	-0.30907	100.37055	98746	Kutha Bukittinggi	Sumatera Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1648473	Bogor	-6.59444	106.78917	800000	Kutha Bogor	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1649150	Bengkulu	-3.80044	102.26554	309712	Kutha Bengkulu	Bengkulu	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1649378	Bekasi	-6.2349	106.9896	1520119	Kutha Bekasi	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1650357	Bandung	-6.92222	107.60694	1699719	Kutha Bandhung	Jawa Kulon	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1650527	Balikpapan	-1.26753	116.82887	433866	Kutha Balikpapan	Kalimantan Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1651531	Ambon	-3.69583	128.18333	355596	Kutha Ambon	Maluku Province	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+2057087	Kupang	-10.17083	123.60694	282396	Kutha Kupang	Nusa Tenggara Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+2082600	Jayapura	-2.53371	140.71813	134895	Port Numbay	Papua	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+281184	Jerusalem	31.76904	35.21633	801000	Yérusalem		
+1263364	Mathura	27.5035	77.67215	330511	Mandura	UP	India
+3174051	Mantova	45.16031	10.79784	39260	Provinsi Mantova		
+2960316	Luxembourg	49.61167	6.13	76684	Luksemburg		
+1821274	Macau	22.20056	113.54611	520400	Makau		
+2745912	Utrecht	52.09083	5.12222	290529	Gemeente Utrecht	ut+Utrecht	
+2751792	Leeuwarden	53.20139	5.80859	91424	Leeuwarden	fr	
+2754669	Heerenveen	52.95929	5.91854	43094	Heerenveen	fr	
+2754817	Harlingen	53.17477	5.42244	16119	Harlingen	fr	
+2758682	Bolsward	53.06555	5.53176	9160	Bolsward	fr	
+753394	Żelechów	51.81051	21.89721	4087	Żelechów	Mazowieckie	Polandia
+756135	Warsaw	52.22977	21.01178	1702139	Warsawa	Mazowieckie	Polandia
+757033	Tarnobrzeg	50.57304	21.67937	50459	Tarnobrzeg	Podkarpackie	Polandia
+758633	Sokołów Małopolski	50.22909	22.11968	3975	Sokołów Małopolski	Podkarpackie	Polandia
+762106	Piwniczna-Zdrój	49.44056	20.71423	5793	Piwniczna	Małopolskie	Polandia
+762909	Ostrołęka	53.08621	21.57566	53740	Ostrołęka	Mazowieckie	Polandia
+766027	Łomża	53.17806	22.05935	63723	Łomża	Podlaskie	Polandia
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polandia
+770759	Iwonicz-Zdrój	49.56319	21.78992	1860	Iwonicz Zdrój	Podkarpackie	Polandia
+770966	Hrubieszów	50.80502	23.89251	18605	Hrubieszów	Lubelskie	Polandia
+771804	Gorlice	49.65563	21.16035	28609	Gorlice	Małopolskie	Polandia
+772621	Ełk	53.82824	22.36469	55769	Ełk		Polandia
+773569	Dąbrowa Tarnowska	50.17462	20.98633	11291	Dąbrowa Tarnowska	Małopolskie	Polandia
+774558	Chełm	51.14312	23.4716	68043	Chełm	Lubelskie	Polandia
+774747	Busko-Zdrój	50.47078	20.71884	17095	Busko Zdrój	Świętokrzyskie	Polandia
+775758	Bochnia	49.96905	20.43028	29184	Bochnia	Małopolskie	Polandia
+775922	Biłgoraj	50.54114	22.72204	26987	Biłgoraj	Lubelskie	Polandia
+776053	Biecz	49.73596	21.26301	4564	Biecz	Małopolskie	Polandia
+776069	Białystok	53.13333	23.16433	291855	Białystok	Podlaskie	Polandia
+776172	Biała Rawska	51.80779	20.47259	3231	Biała Rawska	Łódzkie	Polandia
+776175	Biała Podlaska	52.03238	23.11652	57541	Biała Podlaska	Lubelskie	Polandia
+776337	Bartoszyce	54.25354	20.80819	25660	Bartoszyce		Polandia
+776597	Augustów	53.84321	22.97979	29752	Augustów	Podlaskie	Polandia
+776677	Annopol	50.88551	21.85678	2654	Annopol	Lubelskie	Polandia
+3081368	Wrocław	51.1	17.03333	634893	Wrocław	Dolnośląskie	Polandia
+3082756	Ustka	54.58048	16.86194	16250	Ustka	Pomorskie	Polandia
+3083677	Szklarska Poręba	50.82567	15.52274	6970	Szklarska Poręba	Dolnośląskie	Polandia
+3083829	Szczecin	53.42894	14.55302	407811	Szczecin		Polandia
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Polandia
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Śląskie	Polandia
+3084074	Świecie	53.40953	18.44742	25843	Świecie	Kujawsko-Pomorskie	Polandia
+3084093	Świdnica	50.84378	16.48859	60351	Świdnica	Dolnośląskie	Polandia
+3085047	Środa Śląska	51.16406	16.59508	8912	Środa Śląska	Dolnośląskie	Polandia
+3085495	Słubice	52.35088	14.56065	17567	Słubice	Lubuskie	Polandia
+3085610	Sławno	54.36276	16.67888	13415	Sławno		Polandia
+3087601	Rabka-Zdrój	49.60889	19.96654	13071	Rabka	Małopolskie	Polandia
+3088825	Płock	52.54682	19.70638	127474	Płock	Mazowieckie	Polandia
+3089282	Pelplin	53.92834	18.6977	8320	Pelpin	Pomorskie	Polandia
+3090048	Opole	50.67211	17.92533	127676	Opole	Opolskie	Polandia
+3093066	Łowicz	52.10714	19.94525	29809	Łowicz	Łódzkie	Polandia
+3093133	Łódź	51.75	19.46667	768755	Łódź	Łódzkie	Polandia
+3093726	Łęczyca	52.05959	19.19972	15528	Łęczyca	Łódzkie	Polandia
+3094303	Kudowa-Zdrój	50.44297	16.24397	10176	Kudowa-Zdrój	Dolnośląskie	Polandia
+3095151	Kościan	52.08829	16.64866	24096	Kościan	Wielkopolskie	Polandia
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polandia
+3096880	Kalisz	51.76109	18.09102	108759	Kalisz	Wielkopolskie	Polandia
+3097301	Jedlina-Zdrój	50.72005	16.34645	5062	Jedlina Zdrój	Dolnośląskie	Polandia
+3097391	Jastrzębie Zdrój	49.95542	18.57479	95813	Jastrzębie Zdrój	Śląskie	Polandia
+3097528	Jarocin	51.97266	17.50256	25665	Jarocin	Wielkopolskie	Polandia
+3097872	Inowrocław	52.79886	18.26387	77597	Inowrocław	Kujawsko-Pomorskie	Polandia
+3097902	Iława	53.59601	19.56849	32557	Iława		Polandia
+3098030	Hel	54.60814	18.8013	4136	Hel	Pomorskie	Polandia
+3098130	Gubin	51.94956	14.72837	16629	Gubin	Lubuskie	Polandia
+3098200	Gryfino	53.25243	14.48831	21270	Gryfino		Polandia
+3098218	Grudziądz	53.48411	18.75366	99486	Grudziądz	Kujawsko-Pomorskie	Polandia
+3098722	Gorzów Wielkopolski	52.73679	15.22878	124430	Gorzów Wielkopolski	Lubuskie	Polandia
+3098966	Goleniów	53.56392	14.82854	22505	Goleniów		Polandia
+3099213	Głogów	51.66361	16.0845	68530	Głogów	Dolnośląskie	Polandia
+3099230	Gliwice	50.29761	18.67658	198835	Gliwice	Śląskie	Polandia
+3099424	Gdynia	54.51889	18.53188	253730	Gdynia	Pomorskie	Polandia
+3099634	Frombork	54.35766	19.68029	2529	Frombork		Polandia
+3099992	Duszniki-Zdrój	50.40327	16.39091	4888	Duszniki Zdrój	Dolnośląskie	Polandia
+3100127	Drezdenko	52.83831	15.83079	10541	Drezdenko	Lubuskie	Polandia
+3100363	Dobra	53.58625	15.30977	2336	Dobra Nowogardzka		Polandia
+3100637	Darłowo	54.42095	16.4107	14398	Darłowo		Polandia
+3100796	Dąbrowa Górnicza	50.31818	19.2374	130601	Dąbrowa Górnicza	Śląskie	Polandia
+3100946	Częstochowa	50.79646	19.12409	248125	Częstochowa	Śląskie	Polandia
+3101321	Cieszyn	49.75133	18.63213	35586	Cieszyn	Śląskie	Polandia
+3101547	Chrzanów	50.13546	19.40203	39973	Chrzanów	Małopolskie	Polandia
+3101619	Chorzów	50.30582	18.9742	113430	Chorzów	Śląskie	Polandia
+3101660	Chojnów	51.27373	15.93661	14209	Chojnów	Dolnośląskie	Polandia
+3101672	Chojnice	53.69554	17.55701	39407	Chojnice	Pomorskie	Polandia
+3101787	Chełmża	53.18463	18.60466	15403	Chełmża	Kujawsko-Pomorskie	Polandia
+3101943	Bytów	54.17057	17.49187	16724	Bytów	Pomorskie	Polandia
+3101950	Bytom	50.34802	18.93282	189186	Bytom	Śląskie	Polandia
+3102014	Bydgoszcz	53.1235	18.00762	366452	Bydgoszcz	Kujawsko-Pomorskie	Polandia
+3102390	Brzeziny	51.80023	19.75144	12289	Brzeziny	Łódzkie	Polandia
+3102444	Brzeszcze	49.98203	19.15157	11787	Brzeszcze	Małopolskie	Polandia
+3102447	Brześć Kujawski	52.60532	18.90173	4522	Brześć Kujawski	Kujawsko-Pomorskie	Polandia
+3102488	Brusy	53.88446	17.71786	4728	Brusy	Pomorskie	Polandia
+3102627	Brodnica	53.25967	19.39653	27341	Brodnica	Kujawsko-Pomorskie	Polandia
+3102677	Braniewo	54.37971	19.81959	18356	Braniewo		Polandia
+3102987	Bolesławiec	51.26418	15.5697	40682	Bolesławiec	Dolnośląskie	Polandia
+3103096	Bogatynia	50.90747	14.95634	18688	Bogatynia	Dolnośląskie	Polandia
+3103402	Bielsko-Biala	49.82245	19.04686	176515	Bielsko-Biała	Śląskie	Polandia
+3103556	Białogard	54.00696	15.98751	24265	Białogard		Polandia
+3103644	Biała	50.38587	17.66035	2605	Biała Prudnicka	Opolskie	Polandia
+3103709	Bełchatów	51.36883	19.35671	62896	Bełchatów	Łódzkie	Polandia
+3103719	Będzin	50.32607	19.12565	58236	Będzin	Śląskie	Polandia
+3103847	Bardo	50.50589	16.73986	2763	Bardo Śląskie	Dolnośląskie	Polandia
+3103856	Barcin	52.86607	17.94625	7682	Barcin	Kujawsko-Pomorskie	Polandia
+3104002	Babimost	52.16488	15.82769	4182	Babimost+http://de.wikipedia.org/wiki/Babimost	Lubuskie	Polandia
+3104127	Alwernia	50.06056	19.53953	3362	Alwernia	Małopolskie	Polandia
+3104132	Aleksandrów Łódzki	51.81965	19.30384	20292	Aleksandrów Łódzki	Łódzkie	Polandia
+3104133	Aleksandrów Kujawski	52.87659	18.69345	12290	Aleksandrów Kujawski	Kujawsko-Pomorskie	Polandia
+7303419	East Jerusalem	31.78336	35.23388	428304	Yerusalem Wétan		
+202061	Kigali	-1.94995	30.05885	745261	Kigali		Rwanda
+109223	Medina	24.46861	39.61417	1300000	Madinah		
+702550	Lviv	49.83826	24.02324	717803	Lviv	Lviv	http://en.wikipedia.org/wiki/Ukraine
+4544349	Oklahoma City	35.46756	-97.51643	631346	Kutha Oklahoma	OK+Oklahoma	U.S.+USA+U.S.A.
+4696233	Harlingen	26.19063	-97.6961	65774	Harlingen	TX+Texas	U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San José	CA+Calif+California	U.S.+USA+U.S.A.
+786714	Pristina	42.67272	21.16688	550000	Priština		

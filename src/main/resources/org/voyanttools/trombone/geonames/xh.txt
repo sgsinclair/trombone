@@ -1,0 +1,14 @@
+2910831	Hannover	52.37052	9.73322	515140	IHanoveri+Hannauver	Neddersassen+Läichsaksen+Donja Saska	
+281184	Jerusalem	31.76904	35.21633	801000	IJerusalem		
+232422	Kampala	0.31628	32.58219	1353189	IKampala	Central Region	
+4887398	Chicago	41.85003	-87.65005	2720546	E-Chicago	IL+Illinois	U.S.+USA+U.S.A.
+5402535	Tiburon	37.87354	-122.45664	9214	E-Tiburon	CA+Calif+California	U.S.+USA+U.S.A.
+963516	Queenstown	-31.89756	26.87533	105309	EKomani	IPhondo laseMpuma-Koloni	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+964137	Pretoria	-25.74486	28.18783	1619438	E-Pitoli	IPhondo yaRhawuti+Gauteng	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+964420	Port Elizabeth	-33.96109	25.61494	967677	IBhayi	IPhondo laseMpuma-Koloni	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+993800	Johannesburg	-26.20227	28.04363	2026469	EGoli	IPhondo yaRhawuti+Gauteng	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+1000501	Grahamstown	-33.30422	26.53276	91548	IRhini	IPhondo laseMpuma-Koloni	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+1006984	East London	-33.01529	27.91162	478676	EMonti	IPhondo laseMpuma-Koloni	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+1007311	Durban	-29.8579	31.0292	3120282	EThekwini	KwaZulu-Natala	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+1018725	Bloemfontein	-29.12107	26.214	463064	EBloemfontein		UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika
+3369157	Cape Town	-33.92584	18.42322	3433441	IKapa	Ntshona Koloni+Western Cape	UMzantsi Afrika+iRiphabliki yom Zantsi Afrika+umZantsi Afrika

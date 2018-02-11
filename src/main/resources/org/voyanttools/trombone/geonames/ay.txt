@@ -1,0 +1,60 @@
+3901501	Villazón	-22.08659	-65.59422	30253	Willasun	Potosí	Wuliwya
+3902202	Tupiza	-21.44345	-65.71875	22233	Tupisa	Potosí	Wuliwya
+3903320	Tarija	-21.53549	-64.72956	159269	Tarixa	Tarija	Wuliwya
+3903987	Sucre	-19.03332	-65.26274	224838	Sukri	Chuquisaca	Wuliwya
+3907584	Potosí	-19.58361	-65.75306	141251	Putusi	Potosí	Wuliwya
+3909234	Oruro	-17.98333	-67.15	208684	Ururu	Oruro	Wuliwya
+3910971	Machacamarca	-18.17251	-67.02099	2044	Machakamarka	Oruro	Wuliwya
+3911409	Llallagua	-18.42426	-66.58388	28069	Llallawa	Potosí	Wuliwya
+3911925	La Paz	-16.5	-68.15	812799	Chukiyawu+Chuqi Yapu	La Paz	Wuliwya
+3915061	Huachacalla	-18.79298	-68.26157	0	Wachakalla	Oruro	Wuliwya
+3919968	Cochabamba	-17.3895	-66.1568	900414	Kuchawampa+Quchapampa	Cochabamba	Wuliwya
+3919998	Cobija	-11.02671	-68.76918	26585	Kuwixa	Pando	Wuliwya
+3924610	Achacachi	-16.05	-68.68333	8447	Jachakachi	La Paz	Wuliwya
+3446652	Telêmaco Borba	-24.32389	-50.61556	58880	Telemaco Borba	PR+Paraná	
+3448439	São Paulo	-23.5475	-46.63611	10021295	San Pauluw	SP+São Paulo	
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiwa	PR+Paraná	
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	
+3870282	Talcahuano	-36.72494	-73.11684	252968	Talkawanu	Biobío	Chili
+3870294	Talca	-35.4264	-71.65542	197479	Talka	Maule	Chili
+3873775	Rancagua	-34.17083	-70.74444	212695	Rankawa	O'Higgins	Chili
+1816670	Beijing	39.9075	116.39723	11716620	Pekin'		
+3688689	Bogotá	4.60971	-74.08175	7674366	Wukuta		
+3621849	San José	9.93333	-84.08333	335007	San Jusiy	San José	
+3652462	Quito	-0.22985	-78.52495	1399814	Kitu	Pichincha	
+3657509	Guayaquil	-2.20584	-79.90795	1952029	Wayakil	Guayas	
+3130313	Almazán	41.48648	-2.53088	5773	Almasan	Castilla y León	España
+593116	Vilnius	54.68916	25.2798	542366	Wilñus		Lituania+http://en.wikipedia.org/wiki/Lithuania
+594739	Šiauliai	55.93333	23.31667	130587	Shawllay		Lituania+http://en.wikipedia.org/wiki/Lithuania
+598272	Kėdainiai	55.28782	23.97275	31980	Kidayñay		Lituania+http://en.wikipedia.org/wiki/Lithuania
+598316	Kaunas	54.90272	23.90961	374643	Kawnas		Lituania+http://en.wikipedia.org/wiki/Lithuania
+3617763	Managua	12.13282	-86.2504	973087	Manawa	Managua	
+3691348	Tingo María	-9.29532	-75.99574	53177	Tinku Mariya	Wanuku Jach’a Suyu	Piruw
+3693345	Pucallpa	-8.37915	-74.55387	310750	Pukallpa	Ukayali Jach’a Suyu+Ukayali jacha suyu	Piruw
+3693528	Piura	-5.19449	-80.63282	325466	Piwra	Piura Jach’a Suyu+Piwra jacha suyu	Piruw
+3694564	Moyobamba	-6.03416	-76.97168	44276	Muyupampa	San Martin Jach’a Suyu+San Martín	Piruw
+3696378	Huaraz	-9.52779	-77.52778	86934	Waras	Ankashu Jach’a Suyu+Ankashu jach'a suyu+Ancash	Piruw
+3696417	Huánuco	-9.93062	-76.24223	147959	Wanuku	Wanuku Jach’a Suyu	Piruw
+3698304	Chimbote	-9.08528	-78.57833	316966	Chimputi	Ankashu Jach’a Suyu+Ankashu jach'a suyu+Ancash	Piruw
+3698540	Chachapoyas	-6.23169	-77.86903	20279	Chachapuyas	Amasunu Jach’a Suyu+Amarujawira jacha suyu	Piruw
+3699088	Cajamarca	-7.16378	-78.50027	135000	Qajamarka	Qajamarka Jach’a Suyu	Piruw
+3928128	Tacna	-18.01465	-70.25362	280098	Taqna	Takna Jach’a Suyu+Taqna jacha suyu	Piruw
+3931276	Puno	-15.8422	-70.0199	116552	Punu	Puno Jach’a Suyu+Punu jacha suyu	Piruw
+3934608	Moquegua	-17.19832	-70.93567	54517	Mukiwa		Piruw
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Piruw
+3936952	La Oroya	-11.51893	-75.89935	33345	Uruya	Junin Jach’a Suyu+Hunin jacha suyu	Piruw
+3937513	Juliaca	-15.5	-70.13333	245675	Hullaqa	Puno Jach’a Suyu+Punu jacha suyu	Piruw
+3938415	Ilo	-17.63944	-71.3375	53476	Ilu		Piruw
+3938527	Ica	-14.06777	-75.72861	246844	Ika	Ika Jach’a Suyu+Ika jacha suyu	Piruw
+3939386	Huanta	-12.93333	-74.25	18627	Wanta	Ayaquchu Jach’a Suyu+Ayaquchu jacha suyu	Piruw
+3939459	Huancayo	-12.06513	-75.20486	376657	Wankayu	Junin Jach’a Suyu+Hunin jacha suyu	Piruw
+3939470	Huancavelica	-12.78261	-74.97266	41576	Wankawillka	Wankawelika Jach’a Suyu+Wankawillka jacha suyu	Piruw
+3941584	Cusco	-13.52264	-71.96734	312140	Qusqu	Kusku Jach’a Suyu	Piruw
+3944797	Cerro de Pasco	-10.66748	-76.25668	78910	Pasqu qullu	Pasqu Jach’a Suyu+Pasqu jacha suyu	Piruw
+3946083	Callao	-12.05659	-77.11814	813264	Kallao	Kallao Jach’a Suyu	Piruw
+3947019	Ayacucho	-13.15878	-74.22321	140033	Ayaquchu	Ayaquchu Jach’a Suyu+Ayaquchu jacha suyu	Piruw
+3948642	Abancay	-13.63389	-72.88139	55111	Awankay	Apurimaq Jach’a Suyu+Apurímac	Piruw
+766980	Kurów	51.38941	22.18637	2804	Kuruw	Lubelskie	
+768217	Końskowola	51.40922	22.05175	2208	Konskowola	Lubelskie	
+3439389	Asunción	-25.30066	-57.63591	1482200	Asunsyun		
+3441575	Montevideo	-34.90328	-56.18816	1270737	Muntividëw		

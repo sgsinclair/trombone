@@ -1,0 +1,11 @@
+616052	Yerevan	40.18111	44.51361	1093485	Jerevan	Yerevan	
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	
+2657896	Zürich	47.36667	8.55	341730	Zúrich	ZH	
+2507480	Algiers	36.73225	3.08746	1977663	Alger	Alger	
+3114531	Palencia	42.00955	-4.52406	82651	Liste del villagies locata in Palencia	Castilla y León	España
+2964407	Enfield	53.41419	-6.83229	2929	Innfield+Enfield		Ire
+2210247	Tripoli	32.87519	13.18746	1150989	Tripolis		
+1609350	Bangkok	13.75398	100.50144	5104476	Banghok		
+323786	Ankara	39.91987	32.85427	3517182	Ancara		Turkanmua
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Daressalaam	Dar es Salaam	
+786714	Pristina	42.67272	21.16688	550000	Priština		

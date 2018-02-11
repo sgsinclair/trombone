@@ -33,6 +33,9 @@ public class CorpusTermMinimalsDB extends AbstractDB {
 	public Collection<CorpusTermMinimal> values() {
 		return map.values();
 	}
+	public boolean exists(String term) {
+		return map.containsKey(term);
+	}
 	private static String getName(Corpus corpus, String field) {
 		return corpus.getId()+"-corpusTermMinimals-"+field;
 	}

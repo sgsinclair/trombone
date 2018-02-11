@@ -1,0 +1,10 @@
+4038647	Talofofo Village	13.35513	144.75835	3215	Talo'fo'fo	Talo'fo'fo+Talofofo	Guåhan+Islan Guåhan+Guahan
+4038733	Umatac Village	13.29843	144.66314	903	Humåtak	Humåtak	Guåhan+Islan Guåhan+Guahan
+4038809	Yona Village	13.40974	144.77697	6484	Yo’ ña	Yo’ ña	Guåhan+Islan Guåhan+Guahan
+4043399	Merizo Village	13.26584	144.66908	2152	Malesso	Malesso+Merizo	Guåhan+Islan Guåhan+Guahan
+4043499	Inarajan Village	13.27363	144.74845	3052	Inalåhan	Inalåhan	Guåhan+Islan Guåhan+Guahan
+4043525	Agana Heights Village	13.46559	144.74795	3940	Tutuhan		Guåhan+Islan Guåhan+Guahan
+4043804	Agat Village	13.38855	144.65852	5656	Hågat	Hågat	Guåhan+Islan Guåhan+Guahan
+4043812	Asan-Maina Village	13.47215	144.71654	2137	Assan	Assan-Ma'Ina	Guåhan+Islan Guåhan+Guahan
+7874631	Tamuning	13.48754	144.78143	19685	Tamuneng	Tamuneng	Guåhan+Islan Guåhan+Guahan
+766980	Kurów	51.38941	22.18637	2804	Kurou	Lubelskie	

@@ -1,0 +1,39 @@
+2172517	Canberra	-35.28346	149.12807	367752	Kānapera	ACT+Australian Capital Territory	Ahitereiria+Ò-tāi-lī-a
+2783308	Zedelgem	51.14236	3.1368	21968	Zedelgem		
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	Pāniora+España
+3113209	Pontevedra	42.431	-8.64435	81576	Pontevedra	Galicia	Pāniora+España
+3114965	Ourense	42.33669	-7.86407	107742	Ourense	Galicia	Pāniora+España
+3117814	Lugo	43.00992	-7.55602	96678	Lugo	Galicia	Pāniora+España
+660158	Espoo	60.2052	24.6522	256760	Espoo		
+2988507	Paris	48.85341	2.3488	2138551	Parī+75001		France
+2643743	London	51.50853	-0.12574	7556900	Rānana	Ingarangi	Kīngitanga Kotahi+http://en.wikipedia.org/wiki/United_Kingdom
+3042287	Saint Peter Port	49.45981	-2.53527	16488	St Peter Port		
+2411585	Gibraltar	36.14474	-5.35257	26544	Kamaka		Kāmaka
+281184	Jerusalem	31.76904	35.21633	801000	Hiruharama		
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavik+101		
+2960316	Luxembourg	49.61167	6.13	76684	Rakapuō		
+3143244	Oslo	59.91273	10.74609	580000	Ōhoro	Oslo	
+2179537	Wellington	-41.28664	174.77557	381900	Te Whanga-nui-a-Tara	Whanganui-a-Tara+Te Whanga-nui-a-Tara	Aotearoa
+2181133	Timaru	-44.39672	171.25364	28007	Te Tihi-o-Maru	Waitaha	Aotearoa
+2181742	Taupo	-38.68333	176.08333	22469	Taupō-nui-a-Tia		Aotearoa
+2185018	Palmerston North	-40.35636	175.61113	75996	Te Papa-i-oea		Aotearoa
+2186239	New Plymouth	-39.06667	174.08333	49168	Ngāmotu		Aotearoa
+2186280	Nelson	-41.27078	173.28404	59200	Whakatū		Aotearoa
+2186313	Napier	-39.4926	176.91233	56787	Ahuriri		Aotearoa
+2188164	Lower Hutt	-41.21667	174.91667	101194	Awakairangi	Whanganui-a-Tara+Te Whanga-nui-a-Tara	Aotearoa
+2189529	Invercargill	-46.4	168.35	47287	Waihopai	Murihiku	Aotearoa
+2190224	Hastings	-39.6381	176.84918	61696	Heretaunga		Aotearoa
+2190324	Hamilton	-37.78333	175.28333	152641	Kirikiriroa		Aotearoa
+2191562	Dunedin	-45.87416	170.50361	114347	Ōtepoti	Ōtākou	Aotearoa
+2192362	Christchurch	-43.53333	172.63333	363926	Ōtautahi	Waitaha	Aotearoa
+2193733	Auckland	-36.84853	174.76349	417910	Tāmaki-makau-rau	Tāmaki Makaurau+Tāmaki-makau-rau	Aotearoa
+2206854	Gisborne	-38.65333	178.00417	34274	Te Tai-rāwhiti	Tūranga-nui-a-Kiwa	Aotearoa
+2206895	Greymouth	-42.46667	171.2	9419	Māwhera	Te Tai-poutini	Aotearoa
+2208032	Tauranga	-37.68611	176.16667	110338	Tauranga-moana	Te Moana-a-Toi	Aotearoa
+6230919	Whangarei	-35.73167	174.32391	50900	Whangārei-terenga-paraoa	Te Tai-tokerau	Aotearoa
+6241325	Rotorua	-38.13874	176.24516	65901	Rotorua-nui-a-Kahu	Te Moana-a-Toi	Aotearoa
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	
+3096472	Katowice	50.25841	19.02754	317316	Katowice+Katowihi	Śląskie	
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Ruoččii
+323786	Ankara	39.91987	32.85427	3517182	Anakara		Turkanmua
+703448	Kyiv	50.45466	30.5238	2797553	Kieu		http://en.wikipedia.org/wiki/Ukraine

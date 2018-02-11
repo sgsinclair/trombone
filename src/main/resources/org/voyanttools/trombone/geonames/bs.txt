@@ -1,0 +1,373 @@
+292223	Dubai	25.0657	55.17128	1137347	Dubai	Dubai	Ujedinjeni Arapski Emirati+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu Dhabi		Ujedinjeni Arapski Emirati+UAE
+1147290	Balkh	36.75635	66.8972	114883	Belh		Afganistan+Avganistan
+3183875	Tirana	41.3275	19.81889	374801	Tirana		Albanija
+3184081	Shkodër	42.06828	19.51258	88245	Skadar		Albanija
+3185728	Durrës	41.32306	19.44139	122034	Drač		Albanija
+616052	Yerevan	40.18111	44.51361	1093485	Erevan	Yerevan	Ermenija
+616877	Ashtarak	40.2991	44.36204	18779	Aštarak	Aragatsotn	Ermenija
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola
+2761353	Wiener Neustadt	47.80485	16.23196	38481	Bečko Novo Mjesto	Donja Austrija	Austrija
+2761369	Vienna	48.20849	16.37208	1691468	Beč		Austrija
+2766824	Salzburg	47.79941	13.04399	150269	Salzburg		Austrija
+2775220	Innsbruck	47.26266	11.39454	112467	Innsbruck		Austrija
+2778067	Graz	47.06667	15.45	222326	Graz	Štajerska	Austrija
+2781520	Braunau am Inn	48.25628	13.04343	16403	Braunau na Innu		Austrija
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Australija
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Australija
+2172517	Canberra	-35.28346	149.12807	367752	Canberra	Teritorija australijskog glavnog grada+ACT+Australian Capital Territory	Australija
+587084	Baku	40.37767	49.89201	1116513	Baku	Baki	Azerbejdžan
+3186246	Zvornik	44.38605	19.10247	8026	Zvornik		Bosna i Hercegovina
+3186573	Zenica	44.20169	17.90397	164423	Zenica	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3187609	Visoko	43.98889	18.17806	17890	Visoko	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3187681	Višegrad	43.7826	19.29256	6087	Višegrad		Bosna i Hercegovina
+3188225	Velika Kladuša	45.18497	15.80579	19330	Velika Kladuša	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3188582	Tuzla	44.53842	18.66709	142486	Tuzla	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3188893	Trebinje	42.71197	18.34362	33178	Trebinje		Bosna i Hercegovina
+3188924	Travnik	44.22637	17.66583	31127	Travnik	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3190159	Srebrenica	44.10748	19.29669	2862	Srebrenica		Bosna i Hercegovina
+3191281	Sarajevo	43.84864	18.35644	696731	Sarajevo	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3191297	Sanski Most	44.7667	16.667	13551	Sanski Most	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3192409	Prijedor	44.97991	16.71401	36347	Prijedor		Bosna i Hercegovina
+3193692	Pale	43.81664	18.56949	7458	Pale		Bosna i Hercegovina
+3194514	Neum	42.92333	17.61556	4200	Neum	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3194828	Mostar	43.34333	17.80806	104518	Mostar	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3195946	Maglaj	44.54771	18.10003	7399	Maglaj	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3196410	Livno	43.82695	17.00746	11748	livno+Livno	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3198934	Jajce	44.34203	17.27059	9763	Jajce	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3200396	Goražde	43.66795	18.97564	17650	Goražde	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3200930	Tomislavgrad	43.71849	17.22515	7737	Tomislavgrad	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3202081	Derventa	44.97839	17.90779	9773	Derventa		Bosna i Hercegovina
+3202822	Cazin	44.96694	15.94306	21741	Cazin	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3203099	Bugojno	44.05722	17.45083	41378	Bugojno	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3203645	Šamac	45.05987	18.46756	3599	Bosanski Šamac		Bosna i Hercegovina
+3203651	Brod	45.13747	17.98722	9249	Bosanski Brod		Bosna i Hercegovina
+3204161	Bileća	42.87645	18.42967	13257	Bileća		Bosna i Hercegovina
+3204186	Bijeljina	44.75874	19.21437	37692	Bijeljina		Bosna i Hercegovina
+3204222	Bihać	44.81694	15.87083	75641	Bihać	Federacija Bosne i Hercegovine+Federation of Bosnia and Herzegovina	Bosna i Hercegovina
+3204541	Banja Luka	44.77842	17.19386	221106	Banja Luka		Bosna i Hercegovina
+2800866	Brussels	50.85045	4.34878	1019022	Brisel	Brussels-Capital Region	Belgija
+2800931	Brugge	51.20892	3.22424	116709	Briž		Belgija
+727011	Sofia	42.69751	23.32415	1152556	Sofija		Bugarska
+731108	Gotse Delchev	41.56667	23.73333	20471	Goce Delčev		Bugarska
+290340	Manama	26.22787	50.58565	147074	Manama	Muḩāfaz̧at al ‘Āşimah	Bahrein
+3448439	São Paulo	-23.5475	-46.63611	10021295	Sao Paulo	SP+São Paulo	Brazil
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brazil
+3451328	Ribeirão Preto	-21.1775	-47.81028	619746	Ribeirão Preto	SP+São Paulo	Brazil
+3469058	Brasília	-15.77972	-47.92972	2207718	Brazilija	DF	Brazil
+625144	Minsk	53.9	27.56667	1742124	Minsk		Bjelorusija+Belorusija
+3582672	Belmopan	17.25	-88.76667	13381	Belmopan	Cayo	Beliz+Belise
+6077243	Montréal	45.50884	-73.58781	1600000	Montreal	QC	Kanada
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Kanada
+2260535	Brazzaville	-4.26613	15.28318	1284609	Brazzaville	Brazzaville	Republika Kongo+Kongo
+2657896	Zürich	47.36667	8.55	341730	Zürich	ZH	Švajcarska
+2659811	Luzern	47.05048	8.30635	57066	Lucern		Švajcarska
+2659994	Lausanne	46.516	6.63282	116751	Lausanne+1000	VD	Švajcarska
+2660646	Genève	46.20222	6.14569	183981	Ženeva+1200	Ženeva	Švajcarska
+2661552	Bern	46.94809	7.44744	121631	Bern		Švajcarska
+2661604	Basel	47.55839	7.57327	164488	Basel+EAP+4000		Švajcarska
+2293538	Abidjan	5.30966	-4.01266	3677115	Abidjan		Obala Slonovače+Côte de l’Ivoire
+3887127	Iquique	-20.22036	-70.13913	227499	Iquique		Čile
+1796236	Shanghai	31.22222	121.45806	22315474	Shanghai		Narodna Republika Kina+Kina
+1809858	Guangzhou	23.11667	113.25	11071424	Kanton		Narodna Republika Kina+Kina
+1816670	Beijing	39.9075	116.39723	11716620	Peking		Narodna Republika Kina+Kina
+2038180	Changchun	43.88	125.32278	4193073	Čangčun		Narodna Republika Kina+Kina
+3621849	San José	9.93333	-84.08333	335007	San Jose	San José	Kostarika
+3553478	Havana	23.13302	-82.38304	2163824	Havana		Kuba
+146268	Nicosia	35.17531	33.3642	200452	Nikozija		Kipar
+3067696	Prague	50.08804	14.42076	1165581	Prag+Praha	Hlavní město Praha	Češka+Czechia
+3078610	Brno	49.19522	16.60796	369559	Brno	Južnomoravski kraj+Jihomoravský kraj	Češka+Czechia
+2806142	Worms	49.63278	8.35916	81099	Worms	Porajnje-Falačka	Njemačka+Nemačka
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Njemačka+Nemačka
+2812482	Weimar	50.9803	11.32903	64727	Weimar		Njemačka+Nemačka
+2821807	Torgau	51.56016	12.99617	18746	Torgau		Njemačka+Nemačka
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Baden-Württemberg	Njemačka+Nemačka
+2861982	Nordhausen	51.5018	10.7957	43912	Nordhausen		Njemačka+Nemačka
+2867714	Munich	48.13743	11.57549	1260391	Minhen	Bavarska+Bayern	Njemačka+Nemačka
+2872155	Meissen	51.16158	13.4737	28492	Meißen		Njemačka+Nemačka
+2874225	Mainz	49.98419	8.2791	184997	Mainz	Porajnje-Falačka	Njemačka+Nemačka
+2875601	Lübeck	53.86893	10.68729	212207	Lübeck	Schleswig-Holstein	Njemačka+Nemačka
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Njemačka+Nemačka
+2886242	Köln	50.93333	6.95	963395	Köln	NRW	Njemačka+Nemačka
+2897132	Husum	54.4858	9.05239	20841	Husum	Schleswig-Holstein	Njemačka+Nemačka
+2907911	Heidelberg	49.40768	8.69079	143345	Heidelberg	Baden-Württemberg	Njemačka+Nemačka
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Njemačka+Nemačka
+2919765	Glücksburg	54.83522	9.54853	5946	Glücksburg	Schleswig-Holstein	Njemačka+Nemačka
+2921232	Gera	50.88029	12.08187	104659	Gera		Njemačka+Nemačka
+2922530	Garmisch-Partenkirchen	47.49209	11.09576	26022	Garmisch-Partenkirchen	Bavarska+Bayern	Njemačka+Nemačka
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt+Frankfurt am Main	Hessen	Njemačka+Nemačka
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		Njemačka+Nemačka
+2934246	Düsseldorf	51.22172	6.77616	573057	Düsseldorf	NRW	Njemačka+Nemačka
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Njemačka+Nemačka
+2935517	Dortmund	51.51494	7.466	588462	Dortmund	NRW	Njemačka+Nemačka
+2937959	Dessau	51.83864	12.24555	77315	Dessau	Sassen-Anholt	Njemačka+Nemačka
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Njemačka+Nemačka
+2950978	Bensheim	49.68369	8.61839	39439	Bensheim	Hessen	Njemačka+Nemačka
+2610319	Viborg	56.45319	9.40201	34831	Viborg		Danska
+2610613	Vejle	55.70927	9.5357	51177	Vejle		Danska
+2618425	Copenhagen	55.67594	12.56553	1153615	Kopenhagen		Danska
+2618528	Kolding	55.4904	9.47216	55363	Kolding		Danska
+2507480	Algiers	36.73225	3.08746	1977663	Alžir	Alger	Alžir
+3652350	Riobamba	-1.67098	-78.64712	124478	Riobamba	Chimborazo	Ekvador
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	Ekvador
+3655673	Ibarra	0.35171	-78.12233	132977	Ibarra	Imbabura	Ekvador
+3657509	Guayaquil	-2.20584	-79.90795	1952029	Guayaquil	Guayas	Ekvador
+3657571	Guaranda	-1.59263	-79.00098	22199	Guaranda	Bolívar	Ekvador
+3660689	Ambato	-1.24908	-78.61675	154369	Ambato	Tungurahua	Ekvador
+588409	Tallinn	59.43696	24.75353	394024	Talin	Harjumaa	Estonija
+359792	Aswan	24.09082	32.89942	241261	Asuan		Egipat
+359796	Suez	29.97371	32.52627	488125	Suec	As Suways	Egipat
+360630	Cairo	30.06263	31.24967	7734614	Kairo		Egipat
+361058	Alexandria	31.20176	29.91582	3811516	Aleksandrija		Egipat
+343300	Asmara	15.33805	38.93184	563930	Asmara	Maʼākel	Eritreja
+2509954	Valencia	39.46975	-0.37739	814208	Valencija	Valencia	Španija+España
+2513947	Melilla	35.29369	-2.93833	73460	Melila	Melilla	Španija+España
+2517117	Granada	37.18817	-3.60667	234325	Grenada	Andaluzija	Španija+España
+2519240	Córdoba	37.89155	-4.77275	328428	Kordoba	Andaluzija	Španija+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicija+Galicia	Španija+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Španija+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	Španija+España
+344979	Addis Ababa	9.02497	38.74689	2757729	Adis Abeba	Ādīs Ābeba+Addis Ababa Region	Etiopija
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Finska
+2972315	Toulouse	43.60426	1.44367	433055	Toulouse+31000		Francuska+France
+2988507	Paris	48.85341	2.3488	2138551	Pariz+75001		Francuska+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001		Francuska+France
+2640729	Oxford	51.75222	-1.25596	171380	Oxford	Engleska	Ujedinjeno Kraljevstvo+Velika Britanija+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	London	Engleska	Ujedinjeno Kraljevstvo+Velika Britanija+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	Ujedinjeno Kraljevstvo+Velika Britanija+http://en.wikipedia.org/wiki/United_Kingdom
+2653941	Cambridge	52.2	0.11667	158434	Cambridge	Engleska	Ujedinjeno Kraljevstvo+Velika Britanija+http://en.wikipedia.org/wiki/United_Kingdom
+611717	Tbilisi	41.69411	44.83368	1049498	Tbilisi	T'bilisi	Gruzija
+2306104	Accra	5.55602	-0.1969	1963264	Accra	Greater Accra	Gana
+2411585	Gibraltar	36.14474	-5.35257	26544	Gibraltar		Gibraltar
+3421319	Nuuk	64.18347	-51.72157	14798	Nuuk		Grenland
+2413876	Banjul	13.45274	-16.57803	34589	Banjul	Banjul	Gambija
+264371	Athens	37.97945	23.71622	664046	Atina+Atena		Grčka+Griekanmua
+734077	Thessaloníki	40.64361	22.93086	354290	Solun		Grčka+Griekanmua
+3186294	Županja	45.0775	18.6975	13842	Županja	Vukovarsko-Srijemska	Hrvatska
+3186886	Zagreb	45.81444	15.97798	698966	Zagreb	Grad Zagreb	Hrvatska
+3186952	Zadar	44.11972	15.24222	71258	Zadar	Zadarska	Hrvatska
+3187047	Vukovar	45.34333	18.99972	29584	Vukovar	Vukovarsko-Srijemska	Hrvatska
+3187719	Vinkovci	45.28833	18.80472	33314	Vinkovci	Vukovarsko-Srijemska	Hrvatska
+3188383	Varaždin	46.30444	16.33778	41808	Varaždin	Varaždinska	Hrvatska
+3188763	Trogir	43.5125	16.25167	10960	Trogir		Hrvatska
+3190261	Split	43.50891	16.43915	176314	Split		Hrvatska
+3190359	Solin	43.5432	16.49314	20212	Solin		Hrvatska
+3190865	Sinj	43.70361	16.63944	11524	Sinj		Hrvatska
+3191055	Senj	44.98944	14.90583	5518	Senj	Ličko-Senjska	Hrvatska
+3191316	Samobor	45.80306	15.71806	15221	Samobor	Zagrebačka	Hrvatska
+3191518	Rovinj	45.08	13.64	13533	Rovinj		Hrvatska
+3191648	Rijeka	45.32673	14.44241	141172	Rijeka	Primorsko-Goranska	Hrvatska
+3193561	Pazin	45.24028	13.93667	5010	Pazin		Hrvatska
+3193935	Osijek	45.55111	18.69389	88140	Osijek	Osječko-Baranjska	Hrvatska
+3194099	Opatija	45.33771	14.30515	7888	Opatija	Primorsko-Goranska	Hrvatska
+3194114	Omiš	43.44472	16.68861	6597	Omiš		Hrvatska
+3195890	Makarska	43.29694	17.01778	13446	Makarska		Hrvatska
+3196954	Kumrovec	46.0775	15.67556	0	Kumrovec	Krapinsko-Zagorska	Hrvatska
+3197986	Knin	44.04063	16.19662	11182	Knin	Šibensko-Kniniska	Hrvatska
+3199128	Ilok	45.22222	19.37694	5926	Ilok	Vukovarsko-Srijemska	Hrvatska
+3201047	Dubrovnik	42.64807	18.09216	28428	Dubrovnik	Dubrovačko-Neretvanska	Hrvatska
+3202220	Đakovo	45.30833	18.41056	19491	Đakovo	Osječko-Baranjska	Hrvatska
+3202523	Cres	44.96092	14.41246	2289	Cres	Primorsko-Goranska	Hrvatska
+3046526	Pécs	46.08333	18.23333	156649	Pečuh		Mađarska
+3054643	Budapest	47.49801	19.03991	1741041	Budimpešta		Mađarska
+1642911	Jakarta	-6.21462	106.84513	8540121	Džakarta	Jakarta Raya	Indonezija+http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	Dublin		Irska+Republika Irska+Ire
+293397	Tel Aviv	32.08088	34.78057	432892	Tel Aviv		Izrael
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbai	MH+Mahārāshtra	Indija
+98182	Baghdad	33.34058	44.40088	7216000	Bagdad		Irak
+99347	Al Ḩillah	32.46367	44.41963	289709	Al Hillah	Bābil	Irak
+112931	Tehran	35.69439	51.42151	7153309	Teheran	Tehrān	Iran
+124665	Mashhad	36.31559	59.56796	2307177	Mašhad	Khorāsān-e Raẕāvī	Iran
+3413829	Reykjavík	64.13548	-21.89541	118918	Rejkjavik+101		Island
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Sicilija	Italija
+2524170	Messina	38.19394	15.55256	219948	Messina	Sicilija	Italija
+2525059	Catanzaro	38.88247	16.60086	78970	Catanzaro	Kalabrija+Calabria	Italija
+2525068	Catania	37.49223	15.07041	290927	Catania	Sicilija	Italija
+2525473	Cagliari	39.23054	9.11917	149257	Cagliari		Italija
+3164527	Verona	45.4299	10.98444	219103	Verona		Italija
+3164603	Venice	45.43713	12.33265	51298	Venecija		Italija
+3165185	Trieste	45.64953	13.77678	187056	Trst	FVG	Italija
+3165243	Trento	46.06787	11.12108	80425	Trento		Italija
+3165524	Turin	45.07049	7.68682	870456	Torino	Pijemont+Piemonte	Italija
+3165803	Teramo	42.66123	13.69901	36099	Teramo		Italija
+3165926	Taranto	40.46438	17.24707	181082	Tarento	Apulija	Italija
+3169070	Rome	41.89193	12.51133	2318895	Rim	Lacio+Lazio	Italija
+3169361	Rimini	44.05755	12.56528	118673	Rimini	Emilia-Romagna	Italija
+3169561	Ravenna	44.41344	12.20121	80868	Ravenna	Emilia-Romagna	Italija
+3170027	Potenza	40.64175	15.80794	56433	Potenza		Italija
+3171168	Pescara	42.4584	14.20283	116596	Pescara		Italija
+3171180	Perugia	43.1122	12.38878	120137	Perugia	Umbrija	Italija
+3171728	Padova	45.40797	11.88586	203725	Padova		Italija
+3172394	Naples	40.85216	14.26811	959470	Napulj	Kampanija	Italija
+3174659	Livorno	43.54427	10.32615	153773	Livorno	Toskana	Italija
+3175121	L'Aquila	42.35055	13.39954	33691	L'Aquila		Italija
+3176219	Genoa	44.40478	8.94439	580223	Genova	Ligurija	Italija
+3176959	Florence	43.77925	11.24626	349296	Firenca	Toskana	Italija
+3180991	Campobasso	41.55947	14.66737	39723	Campobasso		Italija
+3181913	Bolzano	46.49067	11.33982	99049	Bocen		Italija
+3182179	Benevento	41.1307	14.77816	48931	Benevento	Kampanija	Italija
+3182997	Aosta	45.73764	7.31722	32295	Aosta	Valle di Aosta	Italija
+3183089	Ancona	43.5942	13.50337	89994	Ancona		Italija
+250441	Amman	31.95522	35.94503	1275857	Aman+Amman		Jordan+Al Mamlakah al Urdunīyah al Hāshimīyah
+1848313	Yokosuka	35.28361	139.66722	428992	Jokosuka		Japan
+1849592	Tsuruga	35.64547	136.0558	68482	Tsuruga		Japan
+1863641	Gifu-shi	35.42291	136.76039	397714	Gifu		Japan
+2128295	Sapporo	43.06667	141.35	1883027	Sapporo		Japan
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobi	Nairobi Area	Kenija
+1871859	Pyongyang	39.03385	125.75432	3222000	Pjongjang		Sjeverna Koreja+Severna Koreja+http://en.wikipedia.org/wiki/North_Korea
+1835848	Seoul	37.566	126.9784	10349312	Seoul+Seul		Južna Koreja+http://en.wikipedia.org/wiki/South_Korea
+1526273	Astana	51.1801	71.44598	345604	Astana	Astana Qalasy	Kazahstan
+267008	Tyre	33.27333	35.19389	135204	Tir	Liban-Sud	Libanon+Liban
+276781	Beirut	33.89332	35.50157	1916100	Bejrut		Libanon+Liban
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Lihtenštajn
+1248991	Colombo	6.93194	79.84778	648034	Colombo	Western	Šri Lanka
+2274895	Monrovia	6.30054	-10.7969	939524	Monrovia		Liberija
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Litvanija+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Luxembourg		Luksemburg
+456172	Riga	56.946	24.10589	742572	Riga	Riga	Latvija+Letonija
+2538475	Rabat	34.01325	-6.83255	1655753	Rabat		Maroko
+2542997	Marrakesh	31.63416	-7.99994	839296	Marakeš		Maroko
+618426	Chisinau	47.00556	28.8575	635994	Kišinjev		Moldavija
+3188516	Ulcinj	41.92936	19.22436	10828	Ulcinj		Crna Gora
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Crna Gora
+3193161	Pljevlja	43.3567	19.35843	19489	Pljevlja		Crna Gora
+3199071	Berane	42.8425	19.87333	11073	Berane		Crna Gora
+3199394	Herceg-Novi	42.45306	18.5375	19536	Herceg Novi		Crna Gora
+3202641	Cetinje	42.39063	18.91417	15137	Cetinje		Crna Gora
+3203106	Budva	42.28639	18.84	18000	Budva		Crna Gora
+3204176	Bijelo Polje	43.03834	19.74758	15400	Bijelo Polje		Crna Gora
+3204509	Bar	42.09306	19.10028	17727	Bar		Crna Gora
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarivo		Madagaskar
+785842	Skopje	41.99646	21.43141	474889	Skoplje		Republika Makedonija+Makedonija+ARYM+FYROM
+787487	Ohrid	41.11722	20.80194	54908	Ohrid		Republika Makedonija+Makedonija+ARYM+FYROM
+789403	Kochani	41.91639	22.41278	34258	Kočani		Republika Makedonija+Makedonija+ARYM+FYROM
+1298824	Yangon	16.80528	96.15611	4477638	Rangoon	Yangon	Mjanmar+Mijanmar
+1821274	Macau	22.20056	113.54611	520400	Makao		Makao
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Malta
+3530597	Mexico City	19.42847	-99.12766	12294193	Mexico City	The Federal District+Distrito Federal	Meksiko
+3352136	Windhoek	-22.55941	17.08323	268132	Windhoek	Khomas	Namibija
+2440485	Niamey	13.51366	2.1098	774235	Niamey	Niamey	Niger
+2332459	Lagos	6.45407	3.39467	9000000	Lagos		Nigerija
+2352778	Abuja	9.05785	7.49508	590400	Abuja	FCTA+Abuja Federal Capital Territory	Nigerija
+3617763	Managua	12.13282	-86.2504	973087	Managua	Managua	Nikaragva
+2747373	The Hague	52.07667	4.29861	474292	Haag+Den Haag	zh+Zuid-Holland	Nizozemska+Holandija
+2747891	Rotterdam	51.9225	4.47917	598199	Rotterdam	zh+Zuid-Holland	Nizozemska+Holandija
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Nizozemska+Holandija
+3137115	Stavanger	58.97005	5.73332	121610	Stavanger	Rogaland	Norveška
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norveška
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norveška
+1283240	Kathmandu	27.70169	85.3206	1442271	Katmandu		Nepal
+287286	Muscat	23.58413	58.40778	797000	Muskat		Oman
+3703443	Panamá	8.9936	-79.51973	408168	Panama City		Panama
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Filipini
+1172451	Lahore	31.558	74.35071	6310888	Lahor	Punjab	Pakistan
+1174872	Karachi	24.8608	67.0104	11624219	Karači		Pakistan
+1181065	Chitral	35.84623	71.7858	0	Čitral		Pakistan
+756135	Warsaw	52.22977	21.01178	1702139	Varšava	Mazowieckie	Poljska
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lubelskie	Poljska
+765876	Lublin	51.25	22.56667	360044	Lublin	Lubelskie	Poljska
+766980	Kurów	51.38941	22.18637	2804	Kurov	Lubelskie	Poljska
+3080985	Zabrze	50.32492	18.78576	192177	Zabže	Śląskie	Poljska
+3083988	Świętochłowice	50.29636	18.91726	55600	Svjetohlovice	Śląskie	Poljska
+3085450	Słupsk	54.46405	17.02872	98608	Słupsk	Pomorskie	Poljska
+3094802	Kraków	50.06143	19.93658	755050	Krakov+Kraków	Małopolskie	Poljska
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Poljska
+3097391	Jastrzębie Zdrój	49.95542	18.57479	95813	Jastrzębie-Zdrój	Śląskie	Poljska
+281133	Gaza	31.50161	34.46672	410000	Gaza	Pojas Gaze	Palestinska Teritorija
+284899	Jericho	31.86667	35.45	19783	Jerihon		Palestinska Teritorija
+7303419	East Jerusalem	31.78336	35.23388	428304	Istočni Jerusalem		Palestinska Teritorija
+2267057	Lisbon	38.71667	-9.13333	517802	Lisabon	Lisboa	Portugal
+2742032	Braga	41.55032	-8.42005	121394	Braga	Braga	Portugal
+679550	Dej	47.15	23.86667	38033	Dej		Rumunija
+683506	Bucharest	44.43225	26.10626	1877155	Bukurešt		Rumunija
+783814	Zrenjanin	45.38361	20.38194	79773	Zrenjanin		Srbija
+784136	Vršac	45.11667	21.30361	36300	Vršac		Srbija
+785756	Smederevo	44.66278	20.93	62000	Smederevo	Central Serbia	Srbija
+786827	Požarevac	44.62133	21.18782	41736	Požarevac	Central Serbia	Srbija
+787595	Novi Pazar	43.13667	20.51222	85996	Novi Pazar	Central Serbia	Srbija
+787657	Niš	43.32472	21.90333	250000	Niš	Central Serbia	Srbija
+788975	Kruševac	43.58	21.33389	75256	Kruševac	Central Serbia	Srbija
+789107	Kraljevo	43.72583	20.68944	82846	Kraljevo	Central Serbia	Srbija
+789128	Kragujevac	44.01667	20.91667	147473	Kragujevac	Central Serbia	Srbija
+789518	Kikinda	45.82972	20.46528	41935	Kikinda		Srbija
+792078	Čačak	43.89139	20.34972	117072	Čačak	Central Serbia	Srbija
+792680	Belgrade	44.80401	20.46513	1273651	Beograd	Central Serbia	Srbija
+3188402	Valjevo	44.27513	19.89821	61035	Valjevo	Central Serbia	Srbija
+3188434	Užice	43.85861	19.84878	63577	Užice	Central Serbia	Srbija
+3189595	Subotica	46.1	19.66667	100000	Subotica		Srbija
+3193406	Petrovaradin	45.24667	19.87944	13917	Petrovaradin		Srbija
+3194360	Novi Sad	45.25167	19.83694	215400	Novi Sad		Srbija
+3204793	Apatin	45.67111	18.98472	18320	Apatin		Srbija
+3302765	Zlatibor	43.729	19.70029	2344	Kraljeve Vode	Central Serbia	Srbija
+479123	Ulyanovsk	54.32824	48.38657	640680	Uljanovsk	Uljanovska oblast+Uljanovsk	Rusija
+479561	Ufa	54.74306	55.96779	1033338	Ufa		Rusija
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sankt Peterburg+Санкт-Петербург		Rusija
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov na Donu		Rusija
+515012	Orël	52.96508	36.07849	324200	Orjol	Orjol	Rusija
+524901	Moscow	55.75222	37.61556	10381222	Moskva		Rusija
+551487	Kazan	55.78874	49.12214	1104738	Kazanj		Rusija
+554234	Kaliningrad	54.70649	20.51095	434954	Kalinjingrad	Kaliningrad	Rusija
+558118	Gudermes	43.35071	46.10925	32769	Gudermes		Rusija
+580054	Azov	47.10779	39.41648	82133	Azov		Rusija
+580497	Astrakhan	46.34968	48.04076	502533	Astrahan	Astrakhan	Rusija
+1488754	Tyumen	57.15222	65.52722	519119	Tjumenj		Rusija
+1499053	Megion	61.0296	76.1136	48691	Megion	Khanty-Mansiyskiy Avtonomnyy Okrug	Rusija
+1503772	Khanty-Mansiysk	61.00417	69.00194	67800	Hanti-Mansijsk	Khanty-Mansiyskiy Avtonomnyy Okrug	Rusija
+1512086	Akademgorodok	54.8523	83.106	50000	Akademgorodok	Novosibirsk	Rusija
+1512205	Abaza	52.655	90.09278	18094	Abaza		Rusija
+2022890	Khabarovsk	48.48271	135.08379	579000	Habarovsk	Khabarovskiy Kray	Rusija
+2026643	Birobidzhan	48.79284	132.92386	76146	Birobidžan		Rusija
+104515	Mecca	21.42664	39.82563	1323624	Mekka	Makkah	Saudijska Arabija
+105343	Jeddah	21.54238	39.19797	2867446	Džedda	Makkah	Saudijska Arabija
+107968	Ta’if	21.27028	40.41583	530848	Ta’if	Makkah	Saudijska Arabija
+108410	Riyadh	24.68773	46.72185	4205961	Rijad		Saudijska Arabija
+2673730	Stockholm	59.33258	18.0649	1515017	Štokholm	Stockholms Län	Švedska+Ruoččii
+2692969	Malmö	55.60587	13.00073	301706	Malme	Skåne län	Švedska+Ruoččii
+3194351	Novo Mesto	45.80397	15.16886	23341	Novo mesto		Slovenija
+3195506	Maribor	46.55472	15.64667	95171	Maribor		Slovenija
+3196359	Ljubljana	46.05108	14.50513	272220	Ljubljana		Slovenija
+724443	Košice	48.71395	21.25808	236563	Košice	Košický kraj	Slovačka
+3057140	Trenčín	48.89452	18.04436	58278	Trenčin+Trenčín	Trenčiansky kraj	Slovačka
+3060405	Dolný Kubín	49.20983	19.30341	18995	Dolný Kubín	Žilinský kraj	Slovačka
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	Slovačka
+3061186	Banská Bystrica	48.73946	19.15349	82336	Banska Bystrica+Banská Bystrica	Banskobystrický kraj	Slovačka
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadiš		Somalija
+170063	Aleppo	36.20124	37.16117	1602264	Halep		Sirija
+170654	Damascus	33.5102	36.29128	1569394	Damask		Sirija
+2427123	N'Djamena	12.10672	15.0444	721081	N'Djamena	Chari-Baguirmi	Čad
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Tajland
+1221874	Dushanbe	38.53575	68.77905	679400	Dušanbe		Tadžikistan
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat		Turkmenistan
+2473449	Kairouan	35.6781	10.09633	119794	Kairuan	Al Qayrawān	Republika Tunis+Tunis
+306571	Konya	37.87135	32.48464	875530	Konya		Turska+Turkanmua
+323777	Antalya	36.90812	30.69556	758188	Antalija	Antalya	Turska+Turkanmua
+323779	Antakya	36.20655	36.15722	210000	Antiohija		Turska+Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Ankara		Turska+Turkanmua
+325363	Adana	37.00167	35.32889	1248988	Adana	Adana	Turska+Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Bursa		Turska+Turkanmua
+750938	Bayburt	40.25631	40.22289	31258	Bayburt		Turska+Turkanmua
+6940561	Çatalhöyük	37.66847	32.82689	10000	Čatal Hejuk		Turska+Turkanmua
+698740	Odessa	46.47747	30.73262	1001558	Odesa		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Lavov	Lviv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kijev		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+232422	Kampala	0.31628	32.58219	1353189	Kampala	Central Region	Uganda
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	LA+Louisiana	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	MO+Missouri	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Philadelphia	PA	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	Dallas	TX+Texas	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Houston	TX+Texas	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+4744709	Arlington	38.88101	-77.10428	207627	Arlington	VA+Virginia	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chicago	IL+Illinois	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroit	MI	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York City+NYC+NY	New York+NY	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	Kalifornija+CA+Calif+California	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	Kalifornija+CA+Calif+California	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+5501344	Carson City	39.1638	-119.7674	54521	Carson City	NV+Nevada	Sjedinjene Američke Države+U.S.+USA+U.S.A.
+1217662	Bukhara	39.77472	64.42861	247644	Buhara		Uzbekistan
+1512569	Tashkent	41.26465	69.21627	1978028	Taškent	Toshkent Shahri	Uzbekistan
+1581130	Hanoi	21.0245	105.84117	1431270	Hanoi	Ha Nội	Vijetnam
+786712	Prizren	42.21389	20.73972	171464	Prizren		
+786714	Pristina	42.67272	21.16688	550000	Pristina+Priština		
+786950	Podujeva	42.91056	21.19306	35000	Podujevo		
+787157	Peć	42.65913	20.28828	48962	Peć		
+909137	Lusaka	-15.40669	28.28713	1267440	Lusaka	Lusaka	Zambija

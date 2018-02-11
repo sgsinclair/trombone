@@ -1,0 +1,32 @@
+3191281	Sarajevo	43.84864	18.35644	696731	Saarayego	Federation of Bosnia and Herzegovina	Bosni
+727011	Sofia	42.69751	23.32415	1152556	Sofiya		
+2657896	Zürich	47.36667	8.55	341730	Zurich	ZH	
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaunde		
+2507480	Algiers	36.73225	3.08746	1977663	Alse	Alger	Alseeri
+588409	Tallinn	59.43696	24.75353	394024	Talin	Harjumaa	
+361058	Alexandria	31.20176	29.91582	3811516	Alegsàndiri		
+658225	Helsinki	60.16952	24.93545	558457	Elsinki		
+2988507	Paris	48.85341	2.3488	2138551	Pari+75001		France
+2399697	Libreville	0.39241	9.45356	578156	Libarwil		Gaboŋ
+2643743	London	51.50853	-0.12574	7556900	Londar		http://en.wikipedia.org/wiki/United_Kingdom
+611717	Tbilisi	41.69411	44.83368	1049498	Tibilisi	T'bilisi	Jeoorji
+2413876	Banjul	13.45274	-16.57803	34589	Banjul	Banjul	Gàmbi
+3186886	Zagreb	45.81444	15.97798	698966	Sagreb	Grad Zagreb	
+295629	Ashdod	31.79213	34.64966	224656	Asot	HaDarom	
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjawik+101		
+593116	Vilnius	54.68916	25.2798	542366	Wilniyus		http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Luksambuur		
+3193044	Podgorica	42.44111	19.26361	136473	Podgorika		
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananariwo		
+1821274	Macau	22.20056	113.54611	520400	Makaaw		
+2562305	Valletta	35.89972	14.51472	6794	Waleta		
+241131	Victoria	-4.62001	55.45501	22881	Wiktoria		
+2673730	Stockholm	59.33258	18.0649	1515017	Stokolm	Stockholms Län	Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Jubaljana		
+3060972	Bratislava	48.14816	17.10674	423737	Baratislawa	Bratislavský kraj	
+2244322	Touba	14.85	-15.88333	529176	Tuubaa	Diiwaanu Njaaréem+Diourbel	Senegaal
+2252309	Diourbel	14.64792	-16.24363	0	Jurbel	Diiwaanu Njaaréem+Diourbel	Senegaal
+2253354	Dakar	14.6937	-17.44406	2476400	Ndakaaru	Diiwaanu Ndakaaru+Dakar	Senegaal
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadisu		Somali
+323777	Antalya	36.90812	30.69556	758188	Atali		Turkanmua
+890299	Harare	-17.82772	31.05337	1542813	Arare		

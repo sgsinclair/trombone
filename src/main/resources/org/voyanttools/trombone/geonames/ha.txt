@@ -1,0 +1,4 @@
+2988507	Paris	48.85341	2.3488	2138551	Pariis+75001		Faransa+France
+2317765	Zaria	11.11128	7.7227	975153	Zariya	Kaduna	Nijeriya+Najeriya
+2335204	Kano	12.00012	8.51672	3626068	Kano		Nijeriya+Najeriya
+109223	Medina	24.46861	39.61417	1300000	Madinah		Ƙasar Makka

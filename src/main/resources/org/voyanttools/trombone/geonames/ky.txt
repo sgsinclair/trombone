@@ -1,0 +1,1162 @@
+292968	Abu Dhabi	24.46667	54.36667	603492	Абу-Даби		Бириккен Араб Эмирликтери+UAE
+1138958	Kabul	34.52813	69.17233	3043532	Кабул		Афганстан
+3573374	The Valley	18.21704	-63.05783	2035	Валли		
+616052	Yerevan	40.18111	44.51361	1093485	Ереван	Yerevan	
+2240449	Luanda	-8.83682	13.23432	2776168	Луанда	Luanda	
+3432043	La Plata	-34.92145	-57.95453	694167	Ла-Плата шаары	BA+Buenos Aires	
+3435910	Buenos Aires	-34.61315	-58.37723	13076300	Буэнос-Айрес	CF	
+3838583	Rosario	-32.94682	-60.63932	1173533	Росарио	SF+Santa Fe	
+3860259	Córdoba	-31.4135	-64.18105	1428214	Кордова	CD+Córdoba	
+2078025	Adelaide	-34.92866	138.59863	1225235	Аделаида	SA	
+2147714	Sydney	-33.86785	151.20732	4627345	Сидней	NSW	
+2172517	Canberra	-35.28346	149.12807	367752	Канберра	ACT+Australian Capital Territory	
+2174003	Brisbane	-27.46794	153.02809	2189878	Брисбен	QLD	
+3577154	Oranjestad	12.52398	-70.02703	29998	Ораньестад		
+587084	Baku	40.37767	49.89201	1116513	Баку	Baki	
+3191281	Sarajevo	43.84864	18.35644	696731	Сараево	Federation of Bosnia and Herzegovina	Босния жана Герцеговина
+1185241	Dhaka	23.7104	90.40744	10356500	Дакка		Баңгладеш
+1336135	Khulna	22.80979	89.56439	1342339	Кхелна		Баңгладеш
+2795100	Ieper	50.85114	2.88569	35089	Ипр		
+2797656	Gent	51.05	3.71667	231493	Гент		
+2800931	Brugge	51.20892	3.22424	116709	Брюгге		
+2803138	Antwerpen	51.21989	4.40346	459805	Антверпен		
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Уагадугу		Буркина-Фасо
+2362344	Bobo-Dioulasso	11.17715	-4.2979	360106	Бобо-Диулаco шаары	High-Basins	Буркина-Фасо
+726050	Varna	43.21667	27.91667	312770	Варна		
+727011	Sofia	42.69751	23.32415	1152556	София		
+732770	Burgas	42.50606	27.46781	195966	Бургас		
+290340	Manama	26.22787	50.58565	147074	Манама	Muḩāfaz̧at al ‘Āşimah	
+425378	Bujumbura	-3.3822	29.3644	331700	Бужумбура	Bujumbura Mairie	
+2392087	Porto-Novo	6.49646	2.60359	234168	Порто-Ново	Quémé	
+3573197	Hamilton	32.2949	-64.78303	902	Гамильтон	Hamilton	
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Бандар-Сери-Бегаван		
+3911925	La Paz	-16.5	-68.15	812799	Ла-Пас шаары	La Paz	
+3919968	Cochabamba	-17.3895	-66.1568	900414	Кочабамба	Cochabamba	
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Рио-де-Жанейро	RJ	
+3464975	Curitiba	-25.42778	-49.27306	1718421	Куритиба	PR+Paraná	
+3469058	Brasília	-15.77972	-47.92972	2207718	Бразилия шаары	DF	
+3571824	Nassau	25.05823	-77.34306	227940	Нассау		
+1252416	Thimphu	27.46609	89.64191	98676	Тхимпху		Бутан+Bh2utan
+933773	Gaborone	-24.65451	25.90859	208411	Габороне		
+625144	Minsk	53.9	27.56667	1742124	Минск		
+629634	Brest	52.09755	23.68775	300715	Брест	Brestskaya Voblastsʼ	
+5959974	Gatineau	45.47723	-75.70164	242124	Гатино	QC	
+6173331	Vancouver	49.24966	-123.11934	600000	Ванкувер	BC+British Columbia	
+6183235	Winnipeg	49.8844	-97.14704	632063	Виннипег+WPG	MB+Manitoba	
+6325494	Québec	46.81228	-71.21454	528595	Квебек+Québec	QC	
+922704	Lubumbashi	-11.66089	27.47938	1373770	Лубумбаши шаары		Конго Демократиялык Республикасы
+2314302	Kinshasa	-4.32758	15.31357	7785965	Киншаса	Kinshasa	Конго Демократиялык Республикасы
+2657896	Zürich	47.36667	8.55	341730	Цюрих	ZH	
+2661552	Bern	46.94809	7.44744	121631	Берн		
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Ямусукро		Côte de l’Ivoire
+2290956	Bouaké	7.69385	-5.03031	567481	Буаке		Côte de l’Ivoire
+2293538	Abidjan	5.30966	-4.01266	3677115	Абиджан шаары		Côte de l’Ivoire
+3868626	Valparaíso	-33.036	-71.62963	282448	Вальпараисо	Valparaíso	Чили
+2220957	Yaoundé	3.86667	11.51667	1299369	Яунде		
+2232593	Douala	4.04827	9.70428	1338082	Дуала		
+1280737	Lhasa	29.65	91.1	118721	Лхаса шаары		
+1280849	Kashgar	39.47066	75.98951	274717	Кашкар		
+1529102	Ürümqi	43.80096	87.60046	3029372	Үрүмчү		
+1799962	Nanjing	32.06167	118.77778	7165292	Нанкин		
+1800163	Nanchang	28.68396	115.85306	2357839	Наньчан		
+1801792	Luoyang	34.68361	112.45361	1390581	Лоян шаары		
+1804430	Lanzhou	36.05701	103.83987	2628426	Ланьчжоу шаары		
+1804651	Kunming	25.03889	102.71833	3855346	Куньмин шаары		
+1809858	Guangzhou	23.11667	113.25	11071424	Гуанчжоу		
+1813253	Lijiang	26.86879	100.22072	1137600	Лицзян шаары		
+2036502	Jilin	43.85083	126.56028	1881977	Гирин		
+2038432	Baotou	40.65222	109.82222	1301768	Баотоу шаары		
+2038632	Anshan	41.12361	122.99	1199275	Аньшань		
+3534632	Varadero	23.15678	-81.24441	20000	Варадеро	Matanzas	
+3553478	Havana	23.13302	-82.38304	2163824	Гaванa		
+3374333	Praia	14.93152	-23.51254	113364	Прая	Praia	
+3374462	Mindelo	16.89014	-24.98042	70611	Минделу	São Vicente	
+3513090	Willemstad	12.1084	-68.93354	125000	Виллемстад		
+146268	Nicosia	35.17531	33.3642	200452	Лефкоша		
+146384	Limassol	34.68406	33.03794	154000	Лимасол шаары		
+3072232	Lednice	48.79992	16.80339	2355	Леднице	Jihomoravský kraj	Czechia
+3072649	Kroměříž	49.29785	17.39312	29126	Кромержиж	Zlínský kraj	Czechia
+3078610	Brno	49.19522	16.60796	369559	Брно	Jihomoravský kraj	Czechia
+2803537	Zwiesel	49.01693	13.23765	10327	Цвизел	Bayern	
+2805385	Xanten	51.65877	6.45297	21587	Ксантен	NRW	
+2806082	Wörth am Main	49.7972	9.15389	4983	Майндагы Вёрт	Bayern	
+2806162	Wörlitz	51.84172	12.42116	1681	Вөрлиц	Sassen-Anholt	
+2806919	Wolfen	51.66122	12.26873	25251	Вольфен	Sassen-Anholt	
+2807465	Wismar	53.89314	11.45286	45255	Висмар	Mecklenburg-Vorpommern	
+2807579	Wippra	51.573	11.27498	1621	Випра	Sassen-Anholt	
+2809025	Bad Wildbad	48.75071	8.5504	9565	Бад-Вильдбад	Baden-Württemberg	
+2809845	Weyerbusch	50.71667	7.55	1456	Вайербуш		
+2809944	Wetterzeube	51	12.01667	1145	Веттерцойбе	Sassen-Anholt	
+2810345	Westerhausen	51.80566	11.05631	2169	Вестерхаузен+06502	Sassen-Anholt	
+2810808	Wernigerode	51.83652	10.78216	34463	Вернигероде	Sassen-Anholt	
+2810833	Werne	51.66446	7.63421	30810	Верне	NRW	
+2811278	Wenden	50.96667	7.86667	19924	Венден	NRW	
+2811899	Weißenfels	51.20148	11.96843	29792	Вайсенфельс	Sassen-Anholt	
+2812043	Weißandt-Gölzau	51.6707	12.07338	1434	Вайсандт-Гөльцау	Sassen-Anholt	
+2812071	Weiskirchen	49.55	6.81667	6316	Вайскирхен	Saarland	
+2812958	Weidenstetten	48.5525	9.9961	1249	Вайденштеттен	Baden-Württemberg	
+2813383	Wegeleben	51.88376	11.17347	3132	Вегелебен	Sassen-Anholt	
+2813405	Weferlingen	52.31205	11.05791	2444	Веферлинген	Sassen-Anholt	
+2813732	Wasserleben	51.92089	10.7567	1509	Вассерлебен	Sassen-Anholt	
+2814181	Wanzleben	52.06087	11.4408	5397	Ванцлебен	Sassen-Anholt	
+2814613	Wallerfangen	49.32749	6.71102	9733	Валлерфанген	Saarland	
+2815559	Wadgassen	49.26667	6.78333	18464	Вадгассен	Saarland	
+2815565	Wadern	49.54122	6.88774	17282	Вадерн	Saarland	
+2815605	Wackernheim	49.97444	8.11667	2652	Ваккернхайм		
+2816616	Volkmarsen	51.40895	9.11814	6959	Фолькмарзен	Hessen	
+2816630	Völklingen	49.25162	6.85873	41132	Фөльклинген	Saarland	
+2817722	Velburg	49.23212	11.6716	5373	Фельбург	Bayern	
+2817752	Veilsdorf	50.40876	10.80947	3225	Файльсдорф		
+2818067	Uetersen	53.68769	9.66394	17921	Уетерсен	Schleswig-Holstein	
+2818246	Bad Urach	48.49107	9.40009	12831	Бад-Урах	Baden-Württemberg	
+2820583	Überherrn	49.24187	6.6984	12071	Иберхерн	Saarland	
+2821029	Troisdorf	50.80901	7.14968	74749	Тройсдорф	NRW	
+2821555	Trappstadt	50.3188	10.56995	1037	Трапштадт	Bayern	
+2821963	Töging am Inn	48.26018	12.5846	9392	Инндеги Тёгинг	Bayern	
+2822563	Thüngersheim	49.87833	9.84917	2726	Тюнгерсхайм	Bayern	
+2822713	Tholey	49.48374	7.03691	13157	Толай	Saarland	
+2824255	Tangerhütte	52.4353	11.80724	6039	Тангерхютте	Sassen-Anholt	
+2824841	Sulzbach	49.29882	7.05696	18364	Зульцбах	Saarland	
+2824998	Südlohn	51.93333	6.86667	9024	Зюдлон	NRW	
+2825638	Strullendorf	49.84429	10.97208	7926	Штруллендорф	Bayern	
+2826356	Stößen	51.1144	11.92405	1191	Штөссен	Sassen-Anholt	
+2826909	Stockach	47.85105	9.0091	16844	Штоках	Baden-Württemberg	
+2829701	Bad Staffelstein	50.10199	11.00128	10618	Бад-Штаффельштайн	Bayern	
+2830452	Spiesen-Elversberg	49.31667	7.13333	14570	Шпизен-Эльверсберг	Saarland	
+2831403	Sömmerda	51.15914	11.11524	20853	Зөммерда		
+2831580	Solingen	51.17343	7.0845	164359	Золинген	NRW	
+2832264	Siggelkow	53.38742	11.93802	1056	Зиггельков	Mecklenburg-Vorpommern	
+2835635	Bad Schussenried	48.00468	9.65741	8319	Бад-Шуссенрид	Baden-Württemberg	
+2837885	Schmidgaden	49.4234	12.09247	2881	Шмидгаден	Bayern	
+2838628	Schlettau	50.55882	12.95269	2733	Шлеттау		
+2839050	Schkeuditz	51.39678	12.22141	18487	Шкойдиц		
+2839090	Schirgiswalde	51.07641	14.42834	3009	Ширгисвальде		
+2839194	Schiltberg	48.46293	11.24876	1824	Шильтберг	Bayern	
+2839303	Schildau	51.45721	12.93024	3838	Шильдау		
+2840021	Scheibenberg	50.54023	12.91215	2358	Шайбенберг		
+2841047	Sayda	50.71123	13.42172	2235	Зайда		
+2842621	Saarwellingen	49.3543	6.80487	13930	Саарвеллинген	Saarland	
+2842632	Saarlouis	49.31366	6.75154	38333	Саарлуис	Saarland	
+2842647	Saarbrücken	49.23262	7.00982	181227	Саарбрюккен	Saarland	
+2843054	Runding	49.21513	12.76208	2336	Рундинг	Bayern	
+2844245	Rötha	51.19783	12.41447	4199	Рөта		
+2844604	Roßwein	51.06589	13.18308	7568	Росвайн		
+2845131	Rosdorf	51.5	9.9	11840	Росдорф	Neddersassen+Läichsaksen+Donja Saska	
+2845953	Rodewisch	50.53083	12.41329	7577	Родевиш		
+2846261	Rochlitz	51.05007	12.79754	6847	Рохлиц		
+2846806	Rietschen	51.4	14.78333	3072	Ричен		
+2846939	Riesa	51.30777	13.29168	37156	Риза		
+2847033	Riegelsberg	49.3	6.93333	15647	Ригельсберг	Saarland	
+2847271	Riede	52.96667	8.95	2716	Риде	Neddersassen+Läichsaksen+Donja Saska	
+2847490	Richtenberg	54.20131	12.89409	1429	Рихтенберг	Mecklenburg-Vorpommern	
+2848269	Remse	50.85	12.56667	1956	Ремзе		
+2848779	Reinhardtsgrimma	50.8927	13.75534	3094	Райнхардтсгримма		
+2849464	Regis-Breitingen	51.08883	12.43841	4185	Регис-Брайтинген		
+2849727	Rechenberg-Bienenmühle	50.73777	13.53502	2506	Рехенберг-Биненмюле		
+2850195	Rathmannsdorf	50.92993	14.14224	1155	Ратмансдорф		
+2850303	Raschau	50.53127	12.83312	4085	Рашау		
+2850648	Rammenau	51.15	14.13333	1522	Рамменау		
+2850740	Ralingen	49.81667	6.5	1997	Ралинген		
+2850980	Radibor	51.24481	14.39842	3651	Радибор		
+2851074	Radeburg	51.21516	13.7281	7812	Радебург		
+2851077	Radebeul	51.10654	13.66047	32643	Радебойль		
+2851079	Radeberg	51.11112	13.91199	18747	Радеберг		
+2851113	Rackwitz	51.43333	12.38333	3118	Раквиц		
+2851132	Räckelwitz	51.25	14.23333	1216	Рэкельвиц		
+2851337	Quierschied	49.31667	7.05	14545	Квиршид	Saarland	
+2851465	Quedlinburg	51.78843	11.15006	22814	Кведлинбург	Sassen-Anholt	
+2851584	Püttlingen	49.2855	6.88723	21052	Пютлинген	Saarland	
+2851631	Puschwitz	51.25501	14.30111	1049	Пушвиц		
+2852054	Priestewitz	51.25	13.51667	3598	Пристевиц		
+2852154	Pretzschendorf	50.87385	13.52499	4440	Пречендорф		
+2852162	Pretzfeld	49.75454	11.1743	2499	Прецфельд	Bayern	
+2853065	Pocking	48.40149	13.31315	14646	Поккинг	Bayern	
+2853071	Pockau	50.7	13.23333	4283	Поккау		
+2853085	Pobershau	50.64079	13.21776	2031	Поберсхау		
+2853292	Plauen	50.4973	12.13782	66412	Плауэн		
+2853658	Pinneberg	53.66732	9.78936	40577	Пиннеберг	Schleswig-Holstein	
+2854967	Penig	50.93336	12.70422	10557	Пениг		
+2855047	Peine	52.31928	10.2352	49953	Пайне	Neddersassen+Läichsaksen+Donja Saska	
+2855068	Pegau	51.16715	12.25144	4759	Пегау		
+2855574	Panschwitz-Kuckau	51.23333	14.2	2242	Паншвиц-Кукау		
+2855917	Ottweiler	49.40133	7.16424	15503	Отвайлер	Saarland	
+2856107	Ottendorf-Okrilla	51.18333	13.83333	10093	Оттендорф-Окрилла		
+2856205	Ostritz	51.01451	14.93059	2988	Остриц		
+2856839	Oßling	51.35999	14.16567	2622	Осслинг		
+2856930	Oschersleben	52.03039	11.22898	17900	Ошерслебен	Sassen-Anholt	
+2856944	Oschatz	51.30001	13.10984	16000	Ошац		
+2857105	Oerel	53.48333	9.05	1854	Эрель	Neddersassen+Läichsaksen+Donja Saska	
+2857182	Oppach	51.06667	14.5	3060	Оппах		
+2857481	Olbersdorf	50.87304	14.77035	5948	Ольберсдорф		
+2857484	Olbernhau	50.6587	13.3425	11162	Ольбернхау		
+2857603	Ohorn	51.17199	14.04669	2500	Охорн		
+2857970	Oederan	50.86064	13.17164	7143	Эдеран		
+2858548	Oberwiera	50.88913	12.54415	1227	Обервира		
+2859119	Oberschöna	50.89759	13.25379	3764	Обершөна		
+2859562	Obernfeld	51.55	10.23333	1022	Обернфельд	Neddersassen+Läichsaksen+Donja Saska	
+2859843	Oberlungwitz	50.7823	12.70789	6794	Оберлунгвиц		
+2861671	Nünchritz	51.29993	13.38555	6846	Нюнхриц		
+2861788	Nossen	51.05798	13.29652	7588	Носсен		
+2861814	Northeim	51.70662	9.99997	30894	Нортхайм	Neddersassen+Läichsaksen+Donja Saska	
+2861817	Nörten-Hardenberg	51.62878	9.93593	8514	Нөртен-Харденберг	Neddersassen+Läichsaksen+Donja Saska	
+2861914	Nördlingen	48.85122	10.48868	19492	Нёрдлинген	Bayern	
+2862174	Nonnweiler	49.60762	6.96986	9417	Нонвайлер	Saarland	
+2862294	Nohfelden	49.58693	7.14283	10687	Нофельден	Saarland	
+2862460	Niesky	51.29241	14.82107	11111	Ниски		
+2862724	Niederwiesa	50.86667	13.01667	5221	Нидервиза		
+2863643	Niederau	51.1773	13.54563	4334	Нидерау		
+2863652	Aschau im Chiemgau	47.77689	12.32297	5410	Ашау-им-Химгау	Bayern	
+2863795	Neu Wulmstorf	53.46667	9.8	20150	Ной-Вульмсторф	Neddersassen+Läichsaksen+Donja Saska	
+2863941	Neu-Ulm	48.39279	10.01112	51389	Ной-Ульм	Bayern	
+2864053	Neustadt bei Coburg	50.32975	11.12058	16715	Нойштадт-бай-Кобург	Bayern	
+2864056	Neustadt an der Donau	48.80705	11.76952	12899	Нойштадт-ан-дер-Донау	Bayern	
+2864057	Neustadt an der Aisch	49.57953	10.61126	12448	Нойштадт-ан-дер-Айш	Bayern	
+2864089	Neustadt in Sachsen	51.02844	14.21785	14000	Нойштадт		
+2864265	Neusalza-Spremberg	51.03945	14.5356	2489	Нойзальца-Шпремберг		
+2864324	Neureichenau	48.74861	13.74699	4480	Нойрайхенау	Bayern	
+2864771	Neukirch/Lausitz	51.09727	14.30789	5567	Нойкирх		
+2864778	Neukieritzsch	51.14995	12.4109	3602	Нойкирич		
+2865293	Neugersdorf	50.97729	14.60881	6260	Нойгерсдорф		
+2865575	Neuensalz	50.5	12.21667	2400	Нойензальц		
+2866046	Neu Darchau	53.22901	10.88529	1535	Ной-Дархау	Neddersassen+Läichsaksen+Donja Saska	
+2866070	Neuburg an der Donau	48.73218	11.18709	28370	Нойбург-ан-дер-Донау	Bayern	
+2866175	Neubeuern	47.77368	12.14002	4234	Нойбойерн	Bayern	
+2866280	Neu-Anspach	50.31667	8.5	15276	Ной-Анспах	Hessen	
+2866304	Netzschkau	50.61411	12.24382	4448	Нечкау		
+2866466	Neschwitz	51.27056	14.329	2653	Нешвиц		
+2866492	Nerchau	51.27094	12.78912	4073	Нерхау		
+2866810	Nebelschütz	51.26227	14.15849	1241	Небельшюц		
+2867120	Namborn	49.52166	7.1407	7642	Намборн	Saarland	
+2867127	Nalbach	49.38333	6.78333	9715	Нальбах	Saarland	
+2868002	Mühlhausen	49.75443	10.77563	1723	Мюльхаузен	Bayern	
+2869257	Moringen	51.69915	9.87107	7513	Моринген	Neddersassen+Läichsaksen+Donja Saska	
+2870996	Mintraching	48.95357	12.24209	4668	Минтрахинг	Bayern	
+2871071	Groß Miltzow	53.53565	13.59354	1285	Грос-Мильцов	Mecklenburg-Vorpommern	
+2871538	Mettlach	49.49489	6.58562	3279	Метлах	Saarland	
+2871675	Merzig	49.44331	6.63874	31118	Мерциг	Saarland	
+2871832	Merchweiler	49.35	7.05	10863	Мерхвайлер	Saarland	
+2872237	Meinerzhagen	51.1074	7.64838	21982	Майнерцхаген	NRW	
+2873224	Marpingen	49.45228	7.0582	11358	Марпинген	Saarland	
+2873251	Marloffstein	49.61794	11.06323	1612	Марлофштайн	Bayern	
+2873292	Markt Nordheim	49.59095	10.35564	1182	Маркт-Нордхайм	Bayern	
+2875102	Lunestedt	53.43621	8.75193	2557	Лунештедт	Neddersassen+Läichsaksen+Donja Saska	
+2876147	Lohr am Main	49.98922	9.57223	16127	Лор-ам-Майн	Bayern	
+2876510	Loddin	54.02252	14.00754	1037	Лоддин	Mecklenburg-Vorpommern	
+2876721	Bad Lobenstein	50.45223	11.6393	6164	Бад-Лобенштайн		
+2878351	Leun	50.55129	8.35836	6116	Лойн	Hessen	
+2879139	Leipzig	51.33962	12.37129	504971	Лейпциг		
+2879653	Legden	52.03333	7.1	6725	Легден	NRW	
+2879832	Lebach	49.41122	6.90988	21583	Лебах	Saarland	
+2880144	Lauf an der Pegnitz	49.51386	11.28247	26403	Лауф-ан-дер-Пегниц	Bayern	
+2881509	Landsberg am Lech	48.04819	10.88282	27017	Ландсберг-ам-Лех	Bayern	
+2881650	Landau an der Isar	48.67249	12.69316	12997	Ландау-ан-дер-Изар	Bayern	
+2881972	Bad Laer	52.1	8.08333	9151	Бад-Лар	Neddersassen+Läichsaksen+Donja Saska	
+2881991	Ladbergen	52.13333	7.75	6414	Ладберген	NRW	
+2882091	Bad Laasphe	50.93139	8.42502	15184	Бад-Ласфе	NRW	
+2882224	Kutenholz	53.48152	9.32118	4964	Кутенхольц	Neddersassen+Läichsaksen+Donja Saska	
+2882440	Künzell	50.5442	9.71792	16124	Күнселль	Hessen	
+2882597	Küllstedt	51.27582	10.2804	1578	Кюльштедт		
+2883602	Kröpelin	54.06963	11.79473	4044	Крөпелин	Mecklenburg-Vorpommern	
+2883647	Kronshagen	54.33333	10.08333	11856	Кронсхаген	Schleswig-Holstein	
+2885829	Bad Königshofen im Grabfeld	50.30082	10.46887	7066	Бад-Кёнигсхофен-им-Грабфельд	Bayern	
+2887194	Knetzgau	49.98333	10.55	6647	Кнецгау	Bayern	
+2887987	Klein-Winternheim	49.93833	8.21194	3485	Клайн-Винтернхайм		
+2888436	Klein Nordende	53.72219	9.65424	3027	Клайн-Норденде	Schleswig-Holstein	
+2889709	Kleinblittersdorf	49.1578	7.03734	12948	Клайнблиттерсдорф	Saarland	
+2889729	Klein Berßen	52.76797	7.46182	1177	Клайн-Берсен	Neddersassen+Läichsaksen+Donja Saska	
+2890158	Kitzingen	49.73973	10.15072	21387	Китцинген	Bayern	
+2890278	Kirrweiler	49.30124	8.16288	2034	Кирвайлер		
+2890322	Kirkel	49.28333	7.23333	10330	Киркель	Saarland	
+2890336	Kirchweidach	48.08575	12.6453	2274	Кирхвайдах	Bayern	
+2890586	Kirchen	50.80849	7.88634	9342	Кирхен		
+2891014	Kierspe	51.13403	7.59075	18188	Кирспе	NRW	
+2891834	Kelheim	48.91725	11.88618	15723	Кельхайм	Bayern	
+2892118	Katzhütte	50.55191	11.05293	2207	Кацхютте		
+2892786	Karlstadt	49.96034	9.77239	15272	Карлштадт	Bayern	
+2892810	Karlshuld	48.6819	11.28503	5012	Карлсхульд	Bayern	
+2892865	Karlshagen	54.11107	13.83193	3066	Карлсхаген	Mecklenburg-Vorpommern	
+2892867	Bad Karlshafen	51.64263	9.45477	4097	Бад-Карлсхафен	Hessen	
+2894245	Kahl am Main	50.06981	9.00553	7198	Майндагы Каль	Bayern	
+2896538	Illingen	49.37362	7.04758	18488	Иллинген	Saarland	
+2901420	Hohenstein-Ernstthal	50.80064	12.71287	16542	Хоэнштайн-Эрнстталь		
+2903012	Höchstädt an der Donau	48.61124	10.56816	6795	Дунайдагы Хөхштедт	Bayern	
+2903016	Höchstadt an der Aisch	49.70617	10.81329	13418	Айштагы Хөхштадт	Bayern	
+2903125	Hochkirch	51.14898	14.57063	2525	Хохкирх		
+2904789	Hildesheim	52.15077	9.95112	103052	Хильдесхайм	Neddersassen+Läichsaksen+Donja Saska	
+2904985	Heusweiler	49.33632	6.93036	20006	Хойсвайлер	Saarland	
+2905164	Hetzles	49.63333	11.13333	1286	Хецлес	Bayern	
+2905643	Herrnhut	51.01624	14.74381	2830	Хернхут		
+2906152	Herdecke	51.39999	7.43584	25618	Хердекке	NRW	
+2906660	Helpsen	52.31131	9.11676	2005	Хельпзен	Neddersassen+Läichsaksen+Donja Saska	
+2907018	Helbra	51.55	11.5	4723	Хельбра	Sassen-Anholt	
+2907545	Heilbad Heiligenstadt	51.37819	10.13744	17230	Хайльбад-Хайлигенштадт		
+2907852	Heidenheim	49.01719	10.74347	2589	Хайденхайм	Bayern	
+2908273	Heeslingen	53.31667	9.33333	4803	Хеслинген	Neddersassen+Läichsaksen+Donja Saska	
+2909944	Harzgerode	51.64189	11.1433	4428	Гарцгероде	Sassen-Anholt	
+2910140	Hartha	51.09863	12.97391	7227	Харта		
+2910488	Hargesheim	49.86667	7.83333	2991	Харгесхайм		
+2911322	Hambergen	53.30826	8.8252	5472	Хамберген	Neddersassen+Läichsaksen+Donja Saska	
+2911426	Halsbrücke	50.95	13.35	3619	Хальсбрюке		
+2911833	Hainewalde	50.91014	14.70387	1826	Хайневальде		
+2913328	Guttau	51.25904	14.56132	1736	Гуттау		
+2914186	Grünhainichen	50.7672	13.15366	1383	Грюнхайнихен		
+2914457	Grünbach	50.44995	12.36186	1927	Грюнбах		
+2915046	Großschweidnitz	51.06939	14.64297	1377	Гросшвайдниц		
+2915076	Großschirma	50.96602	13.2859	6179	Гросширма		
+2915111	Großrückerswalde	50.63333	13.11667	4005	Гросрюкерсвальде		
+2915116	Großrosseln	49.20296	6.84148	9215	Гросроссельн	Saarland	
+2915124	Großröhrsdorf	51.14528	14.01917	7306	Гросрөрсдорф		
+2915172	Großpostwitz	51.12083	14.44065	3116	Гроспоствиц		
+2915173	Großpösna	51.26667	12.5	5608	Гроспөсна		
+2915209	Großolbersdorf	50.7	13.08333	3234	Гросольберсдорф		
+2915212	Groß Oesingen	52.64761	10.46366	2017	Грос-Эзинген	Neddersassen+Läichsaksen+Donja Saska	
+2915427	Groß Kiesow	54.01261	13.47851	1585	Грос-Кизов	Mecklenburg-Vorpommern	
+2915438	Großkarolinenfeld	47.89102	12.08101	6865	Гроскаролиненфельд	Bayern	
+2915523	Großhennersdorf	50.98597	14.78776	1539	Гросхеннерсдорф		
+2915550	Großhartmannsdorf	50.8	13.33333	2921	Гросхартмансдорф		
+2915552	Großharthau	51.10694	14.09911	3415	Гросхартау		
+2916630	Großenhain	51.28951	13.5335	16573	Гросенхайн		
+2916839	Großdubrau	51.25422	14.45897	4793	Гросдубрау		
+2916840	Groß Düben	51.56667	14.56667	1310	Грос-Дюбен		
+2917170	Groitzsch	51.15536	12.28279	7607	Гройч		
+2917206	Gröbzig	51.68226	11.87453	2747	Грөбциг	Sassen-Anholt	
+2917325	Grimma	51.23367	12.71959	17991	Гримма		
+2918258	Grafenwöhr	49.71728	11.90645	6790	Графенвёр	Bayern	
+2918868	Goseck	51.2	11.86667	1149	Гозек	Sassen-Anholt	
+2918899	Görzig	51.66381	11.99759	1295	Гөрциг	Sassen-Anholt	
+2918951	Gornsdorf	50.7	12.88333	2266	Горнсдорф		
+2918970	Gornau	50.75901	13.03731	4101	Горнау		
+2918987	Görlitz	51.15518	14.98853	57751	Гөрлиц		
+2919138	Gommern	52.07391	11.82297	5992	Гоммерн	Sassen-Anholt	
+2920020	Glauchau	50.81987	12.54493	26473	Глаухау		
+2920027	Glaubitz	51.32498	13.37817	1962	Глаубиц		
+2920342	Gingst	54.45654	13.25737	1554	Гингст	Mecklenburg-Vorpommern	
+2920348	Gingen an der Fils	48.65979	9.78092	4365	Гинген-на-Фильсе	Baden-Württemberg	
+2920728	Geyer	50.62632	12.92074	4118	Гайер		
+2920768	Geusa	51.33914	11.94382	1519	Гойза	Sassen-Anholt	
+2920921	Gersheim	49.15	7.2	7264	Герсхайм	Saarland	
+2921089	Geringswalde	51.07677	12.90725	5125	Герингсвальде		
+2921164	Gerbstedt	51.63281	11.62669	2885	Гербштедт	Sassen-Anholt	
+2921242	Georgsmarienhütte	52.20296	8.0448	32580	Георгсмариенхютте	Neddersassen+Läichsaksen+Donja Saska	
+2921309	Genthin	52.40668	12.1592	14059	Гентин	Sassen-Anholt	
+2921566	Geithain	51.05528	12.69674	6459	Гайтхайн		
+2921684	Geising	50.75742	13.79278	3283	Гайзинг		
+2922342	Gatersleben	51.82215	11.28661	2589	Гатерслебен	Sassen-Anholt	
+2922580	Gardelegen	52.5252	11.39523	11868	Гарделеген	Sassen-Anholt	
+2923500	Bad Füssing	48.351	13.312	6701	Бад-Фюссинг	Bayern	
+2923503	Fußgönheim	49.46111	8.29222	2436	Фусгөнхайм		
+2924313	Frohburg	51.05719	12.55746	7983	Фробург		
+2924360	Friesoythe	53.0226	7.85764	20311	Фризойте	Neddersassen+Läichsaksen+Donja Saska	
+2924910	Freudenburg	49.54348	6.53292	1512	Фройденбург		
+2925017	Freital	51.00166	13.6488	39027	Фрайталь		
+2925038	Freisen	49.55	7.25	8778	Фрайзен	Saarland	
+2925192	Freiberg	50.91089	13.33881	43670	Фрайберг		
+2925458	Frasdorf	47.80376	12.28512	3005	Фрасдорф	Bayern	
+2926147	Flöha	50.85613	13.07407	11143	Флөа		
+2926426	Flachslanden	49.39845	10.51323	2559	Флаксланден	Bayern	
+2926703	Finsing	48.21615	11.82412	4068	Финзинг	Bayern	
+2927871	Bad Fallingbostel	52.86641	9.69558	13473	Бад-Фаллингбостель	Neddersassen+Läichsaksen+Donja Saska	
+2928862	Espenhain	51.18926	12.47885	2843	Эспенхайн		
+2929649	Ergoldsbach	48.69263	12.20442	7482	Эргольдсбах	Bayern	
+2929865	Eppelborn	49.4	6.96667	18079	Эппельборн	Saarland	
+2930367	Bad Endorf	47.90901	12.29795	7465	Бад-Эндорф	Bayern	
+2930408	Bad Endbach	50.75	8.5	8734	Бад-Эндбах	Hessen	
+2930449	Emsdetten	52.1734	7.52781	35582	Эмсдеттен	NRW	
+2930662	Elterlein	50.57663	12.86836	3282	Эльтерлайн		
+2930672	Elstra	51.22172	14.13201	3176	Эльстра		
+2930682	Elstertrebnitz	51.15	12.23333	1549	Эльстертребниц		
+2930687	Elsterberg	50.60841	12.16787	5153	Эльстерберг		
+2930708	Elsnig	51.61024	12.92833	1687	Эльсниг		
+2931838	Eilsleben	52.14708	11.21035	2282	Айльслебен	Sassen-Anholt	
+2931871	Eilenburg	51.45984	12.63338	17609	Айленбург		
+2932119	Eichigt	50.35	12.16667	1354	Айхигт		
+2932376	Eichenbarleben	52.16688	11.40125	1163	Айхенбарлебен	Sassen-Anholt	
+2932738	Eibenstock	50.49431	12.59978	6706	Айбеншток		
+2932756	Eibau	50.98272	14.66214	5103	Айбау		
+2932828	Ehrenfriedersdorf	50.64934	12.97009	5360	Эренфридерсдорф		
+2934246	Düsseldorf	51.22172	6.77616	573057	Дүсселдорф	NRW	
+2934324	Dürrhennersdorf	51.04863	14.60383	1213	Дюрхеннерсдорф		
+2934662	Dülmen	51.83149	7.28075	47495	Дюльмен	NRW	
+2934728	Duderstadt	51.51312	10.25951	22910	Дудерштадт	Neddersassen+Läichsaksen+Donja Saska	
+2935303	Drebach	50.67583	13.0162	2574	Дребах		
+2936089	Dorfhain	50.93333	13.56667	1255	Дорфхайн		
+2936280	Dommitzsch	51.64071	12.8794	3163	Доммич		
+2936302	Dombühl	49.25349	10.28542	1660	Домбюль	Bayern	
+2936470	Dohna	50.95621	13.85839	6140	Дона		
+2936473	Dohma	50.91667	13.93333	2190	Дома		
+2936616	Doberschütz	51.4987	12.74792	4612	Добершюц		
+2936658	Döbeln	51.1221	13.11027	21338	Дөбельн		
+2936842	Dippoldiswalde	50.89621	13.66905	10959	Диппольдисвальде		
+2937553	Diedorf	48.3532	10.78206	10006	Дидорф	Bayern	
+2937789	Deutzen	51.11217	12.42541	2176	Дойцен		
+2938295	Demitz-Thumitz	51.14149	14.24719	3128	Демиц-Тумиц		
+2938376	Delitzsch	51.52546	12.34284	24998	Делич		
+2939687	Cunewalde	51.1	14.51667	5601	Куневальде		
+2939710	Crottendorf	50.51667	12.95	4705	Кроттендорф		
+2939714	Crostwitz	51.23832	14.24338	1201	Кроствиц		
+2939717	Crostau	51.08462	14.45589	1786	Кростау		
+2939747	Crimmitschau	50.81644	12.39045	22442	Криммичау		
+2939927	Colditz	51.12821	12.80295	5173	Кольдиц		
+2939972	Clingen	51.23206	10.93281	1103	Клинген		
+2939995	Clausthal-Zellerfeld	51.80949	10.33821	15345	Клаусталь-Целлерфельд	Neddersassen+Läichsaksen+Donja Saska	
+2939997	Claußnitz	50.93333	12.88333	3505	Клаусниц		
+2940218	Cavertitz	51.38333	13.13333	2584	Кафертиц		
+2940381	Bad Camberg	50.29695	8.26896	14195	Бад-Камберг	Hessen	
+2940397	Callenberg	50.85	12.63333	5763	Калленберг		
+2940993	Burkhardtsdorf	50.73333	12.91667	7067	Буркхардтсдорф		
+2941028	Burkau	51.17579	14.17329	3000	Буркау		
+2941150	Burgstädt	50.91333	12.806	12477	Бургштедт		
+2942634	Buchen	49.52416	9.32293	18890	Бухен	Baden-Württemberg	
+2942810	Buch am Buchrain	48.2151	11.99509	1355	Бух-ам-Бухрайн	Bayern	
+2942922	Bubesheim	48.43333	10.25	1414	Бубесхайм	Bayern	
+2944288	Brennberg	49.06667	12.4	1834	Бренберг	Bayern	
+2944800	Breisach am Rhein	48.03279	7.58294	14367	Брайзах-на-Рейне	Baden-Württemberg	
+2945041	Braunsbedra	51.28602	11.88987	6599	Браунсбедра	Sassen-Anholt	
+2945341	Brand-Erbisdorf	50.86643	13.32285	11284	Бранд-Эрбисдорф		
+2945698	Boxberg	51.40373	14.57598	3093	Боксберг		
+2945891	Bösenbrunn	50.39703	12.09998	1460	Бөзенбрунн		
+2945980	Borstendorf	50.77323	13.17918	1363	Борстендорф		
+2946016	Borsdorf	51.35	12.53333	8489	Борсдорф		
+2946445	Bonndorf im Schwarzwald	47.81863	8.34139	6875	Бондорф	Baden-Württemberg	
+2947372	Bockelwitz	51.19942	12.95618	2794	Бокельвиц		
+2947403	Bockau	50.54209	12.68639	2599	Бокау		
+2947739	Blieskastel	49.23724	7.25617	23212	Блискастел	Saarland	
+2948267	Bischofswerda	51.12771	14.17974	13085	Бишофсверда		
+2948384	Bad Birnbach	48.44489	13.09103	5533	Бад-Бирнбах	Bayern	
+2949221	Biederitz	52.15	11.71667	4545	Бидериц	Sassen-Anholt	
+2949470	Bexbach	49.34615	7.25527	19115	Бексбах	Saarland	
+2949511	Bad Bevensen	53.07923	10.58129	8700	Бад-Бевензен	Neddersassen+Läichsaksen+Donja Saska	
+2950073	Bernburg	51.79464	11.7401	32113	Бернбург	Sassen-Anholt	
+2950999	Bennstedt	51.48201	11.8262	1514	Бенштедт	Sassen-Anholt	
+2951026	Bennewitz	51.36074	12.71376	5211	Бенневиц		
+2951124	Bempflingen	48.57178	9.26834	3390	Бемпфлинген	Baden-Württemberg	
+2951258	Belgern	51.48263	13.12382	5148	Бельгерн		
+2951352	Beilrode	51.56667	13.06667	2666	Байльроде		
+2951679	Beckingen	49.4	6.7	15983	Беккинген	Saarland	
+2951863	Bawinkel	52.6	7.4	2343	Бавинкель	Neddersassen+Läichsaksen+Donja Saska	
+2951881	Bautzen	51.18035	14.43494	41972	Баутцен		
+2952564	Barleben	52.20193	11.6177	5895	Барлебен	Sassen-Anholt	
+2952916	Bannewitz	50.99291	13.71712	10851	Банневиц		
+2953060	Ballenstedt	51.719	11.23265	8064	Балленштедт	Sassen-Anholt	
+2953310	Bad Zwischenahn	53.18333	8	27550	Бад-Цвишенан	Neddersassen+Läichsaksen+Donja Saska	
+2953312	Bad Wurzach	47.90799	9.89686	14323	Бад-Вурцах	Baden-Württemberg	
+2953313	Bad Wörishofen	48.00674	10.59666	14028	Бад-Вөрисхофен	Bayern	
+2953314	Bad Windsheim	49.50274	10.41539	12022	Бад-Виндсхайм	Bayern	
+2953315	Bad Wimpfen	49.22971	9.15648	6968	Бад-Вимпфен	Baden-Württemberg	
+2953317	Bad Wildungen	51.11963	9.12475	18037	Бад-Вильдунген	Hessen	
+2953318	Bad Wiessee	47.71667	11.71667	4293	Бад-Висзе	Bayern	
+2953320	Bad Waldsee	47.92027	9.7549	19840	Бад-Вальдзе	Baden-Württemberg	
+2953321	Bad Vilbel	50.17866	8.73756	30736	Бад-Фильбель	Hessen	
+2953322	Bad Überkingen	48.59991	9.79586	3987	Бад-Иберкинген	Baden-Württemberg	
+2953324	Bad Tölz	47.76111	11.5589	17434	Бад-Төльц	Bayern	
+2953325	Bad Tennstedt	51.15447	10.83873	2480	Бад-Тенштедт		
+2953327	Bad Sülze	54.11084	12.66054	1938	Бад-Зүльце	Mecklenburg-Vorpommern	
+2953330	Bad Sulza	51.08929	11.62474	3027	Бад-Зульца		
+2953331	Bad Suderode	51.73333	11.11667	1791	Бад-Зудероде	Sassen-Anholt	
+2953334	Bad Steben	50.36648	11.64438	3640	Бад-Штебен+Bad Steben	Bayern	
+2953336	Bad Sooden-Allendorf	51.27092	9.97483	8915	Бад-Зоден-Аллендорф	Hessen	
+2953338	Bad Soden-Salmünster	50.27574	9.36705	13953	Бад-Зоден-Зальмюнстер	Hessen	
+2953348	Bad Schwalbach	50.14196	8.06964	11112	Бад-Швальбах	Hessen	
+2953350	Bad Schmiedeberg	51.68516	12.73483	4241	Бад-Шмидеберг	Sassen-Anholt	
+2953352	Bad Schandau	50.91743	14.15494	3078	Бад-Шандау		
+2953355	Bad Sassendorf	51.58333	8.16667	11659	Бад-Зассендорф	NRW	
+2953357	Bad Salzungen	50.81342	10.2361	16410	Бад-Зальцунген		
+2953358	Bad Salzuflen	52.0862	8.74434	54899	Бад-Зальцуфлен	NRW	
+2953359	Bad Salzschlirf	50.62388	9.50815	3204	Бад-Зальцшлирф	Hessen	
+2953362	Bad Salzdetfurth	52.05777	10.0058	14349	Бад-Зальцдетфурт	Neddersassen+Läichsaksen+Donja Saska	
+2953363	Bad Säckingen	47.55371	7.94612	16549	Бад-Зекинген	Baden-Württemberg	
+2953364	Bad Sachsa	51.59499	10.55546	8244	Бад-Закса	Neddersassen+Läichsaksen+Donja Saska	
+2953367	Bad Rothenfelde	52.11667	8.16667	7299	Бад-Ротенфельде	Neddersassen+Läichsaksen+Donja Saska	
+2953371	Bad Reichenhall	47.72947	12.87819	16910	Бад-Райхенхалль	Bayern	
+2953374	Bad Rappenau	49.23848	9.1018	20581	Бад-Раппенау	Baden-Württemberg	
+2953379	Bad Pyrmont	51.98589	9.25246	21629	Бад-Пирмонт	Neddersassen+Läichsaksen+Donja Saska	
+2953384	Bad Orb	50.22788	9.34782	10186	Бад-Орб	Hessen	
+2953386	Bad Oeynhausen	52.20699	8.80365	49513	Бад-Эйнхаузен	NRW	
+2953389	Bad Neustadt an der Saale	50.32174	10.20673	16064	Бад-Нойштадт-ан-дер-Зале	Bayern	
+2953391	Bad Neuenahr-Ahrweiler	50.54322	7.1113	27823	Бад-Нойенар-Арвайлер		
+2953394	Bad Nenndorf	52.33703	9.37904	10255	Бад-Нендорф	Neddersassen+Läichsaksen+Donja Saska	
+2953397	Bad Muskau	51.55051	14.7124	4027	Бад-Мускау		
+2953398	Bad Münstereifel	50.55667	6.76424	19051	Бад-Мюнстерайфель	NRW	
+2953399	Bad Münster am Stein-Ebernburg	49.81159	7.84523	3940	Штайн-Эбернбургдагы Бад-Мүнстөр		
+2953400	Bad Münder am Deister	52.19551	9.46421	18726	Бад-Мюндер-ам-Дайстер	Neddersassen+Läichsaksen+Donja Saska	
+2953402	Bad Mergentheim	49.4925	9.77361	22472	Бад-Мергентхайм	Baden-Württemberg	
+2953404	Bad Marienberg	50.64947	7.94958	5838	Бад-Мариенберг		
+2953405	Bad Lippspringe	51.78333	8.81683	15175	Бад-Липшпринге	NRW	
+2953407	Bad Liebenzell	48.77427	8.72971	9616	Бад-Либенцелль	Baden-Württemberg	
+2953408	Bad Liebenwerda	51.51826	13.39459	10890	Бад-Либенверда	Brandenburg+http://www.brandenburg.de	
+2953410	Bad Lauterberg im Harz	51.63272	10.47031	11784	Бад-Лаутерберг+Bad Lauterberg im Harz	Neddersassen+Läichsaksen+Donja Saska	
+2953411	Bad Lausick	51.14495	12.64449	9026	Бад-Лаузик		
+2953412	Bad Lauchstädt	51.38652	11.86956	5018	Бад-Лаукстедт	Sassen-Anholt	
+2953413	Bad Langensalza	51.10771	10.646	18183	Бад-Лангензальца		
+2953416	Bad Kreuznach	49.8414	7.86713	43213	Бад-Кройцнах		
+2953417	Bad Köstritz	50.93032	12.01005	3924	Бад-Көстриц		
+2953418	Bad Kösen	51.13431	11.72203	5522	Бад-Көзен	Sassen-Anholt	
+2953419	Bad König	49.7432	9.0075	9687	Бад-Көниг	Hessen	
+2953420	Bad Kohlgrub	47.66667	11.05	2416	Бад-Кольгруб	Bayern	
+2953421	Bad Klosterlausnitz	50.91667	11.86667	3521	Бад-Клостерлаусниц		
+2953422	Bad Kleinen	53.77134	11.47165	3787	Бад-Клайнен	Mecklenburg-Vorpommern	
+2953424	Bad Kissingen	50.20228	10.07784	21328	Бад-Киссинген	Bayern	
+2953430	Bad Iburg	52.1549	8.04216	11554	Бад-Ибург	Neddersassen+Läichsaksen+Donja Saska	
+2953434	Bad Hönningen	50.51689	7.31195	5772	Бад-Хөннинген		
+2953435	Bad Honnef	50.64336	7.2278	25348	Бад-Хоннеф+Bad Honnef	NRW	
+2953436	Bad Homburg vor der Höhe	50.22683	8.61816	51859	Бад-Хомбург	Hessen	
+2953439	Bad Hersfeld	50.87197	9.70891	30725	Бад-Херсфельд	Hessen	
+2953440	Bad Herrenalb	48.79787	8.43617	7521	Бад-Херренальб	Baden-Württemberg	
+2953443	Bad Heilbrunn	47.74671	11.45934	3697	Бад-Хайльбрунн	Bayern	
+2953449	Bad Harzburg	51.88268	10.56157	22954	Бад-Гарцбург	Neddersassen+Läichsaksen+Donja Saska	
+2953451	Bad Grund	51.81021	10.23694	2393	Бад-Грунд	Neddersassen+Läichsaksen+Donja Saska	
+2953456	Bad Gandersheim	51.87167	10.02537	11099	Бад-Гандерсхайм	Neddersassen+Läichsaksen+Donja Saska	
+2953459	Bad Frankenhausen	51.35609	11.09977	8824	Бад-Франкенхаузен-Кифхойзер		
+2953460	Bad Feilnbach	47.77331	12.00973	7203	Бад-Файльнбах	Bayern	
+2953464	Bad Essen	52.31667	8.33333	15732	Бад-Эссен	Neddersassen+Läichsaksen+Donja Saska	
+2953482	Badenweiler	47.80223	7.67236	3829	Баденвайлер	Baden-Württemberg	
+2953493	Badenhausen	51.76996	10.20493	1996	Баденхаузен	Neddersassen+Läichsaksen+Donja Saska	
+2953507	Bad Ems	50.33544	7.71369	9735	Бад-Эмс		
+2953509	Bad Elster	50.28192	12.2343	4021	Бад-Эльстер		
+2953516	Bad Eilsen	52.24215	9.09822	2288	Бад-Айльзен	Neddersassen+Läichsaksen+Donja Saska	
+2953520	Bad Dürrheim	48.02093	8.53056	12829	Бад-Дюрхайм	Baden-Württemberg	
+2953521	Bad Dürrenberg	51.29545	12.06583	11479	Бад-Дюрренберг	Sassen-Anholt	
+2953522	Bad Dürkheim	49.4618	8.17236	18698	Бад-Дүркхайм		
+2953524	Bad Düben	51.59174	12.58492	8998	Бад-Дюбен		
+2953525	Bad Driburg	51.73297	9.01969	19553	Бад-Дрибург	NRW	
+2953528	Bad Doberan	54.10712	11.90051	11559	Бад-Доберан	Mecklenburg-Vorpommern	
+2953529	Bad Ditzenbach	48.5883	9.70393	3704	Бад-Дитценбах	Baden-Württemberg	
+2953531	Baddeckenstedt	52.08333	10.23333	3278	Баддеккенштедт	Neddersassen+Läichsaksen+Donja Saska	
+2953534	Bad Buchau	48.06231	9.61244	4040	Бад-Бухау	Baden-Württemberg	
+2953535	Bad Brückenau	50.30853	9.78985	7304	Бад-Брюккенау	Bayern	
+2953536	Bad Breisig	50.50523	7.28861	8959	Бад-Брайзиг		
+2953540	Bad Bocklet	50.26648	10.07902	4642	Бад-Боклет	Bayern	
+2953541	Bad Blankenburg	50.68189	11.27369	7625	Бад-Бланкенбург		
+2953542	Bad Bibra	51.20796	11.58517	2192	Бад-Бибра	Sassen-Anholt	
+2953544	Bad Berneck im Fichtelgebirge	50.04564	11.67238	4723	Бад-Бернек	Bayern	
+2953545	Bad Berleburg	51.05224	8.39227	20757	Бад-Берлебург	NRW	
+2953548	Bad Berka	50.89982	11.28245	7744	Бад-Берка		
+2953549	Bad Bergzabern	49.10245	8.00092	7641	Бад-Бергцаберн		
+2953550	Badbergen	52.63333	7.98333	4507	Бадберген	Neddersassen+Läichsaksen+Donja Saska	
+2953552	Bad Bentheim	52.30066	7.15763	15508	Бад-Бентхайм	Neddersassen+Läichsaksen+Donja Saska	
+2953553	Bad Bellingen	47.73147	7.55756	3759	Бад-Беллинген	Baden-Württemberg	
+2953558	Bad Aibling	47.8638	12.01055	17672	Бад-Айблинг	Bayern	
+2953559	Bad Abbach	48.93754	12.04494	10882	Бад-Аббах	Bayern	
+2953768	Babensham	48.08333	12.26667	2892	Бабенсхам	Bayern	
+2953771	Babenhausen	48.14497	10.25325	5342	Бабенхаузен	Bayern	
+2953970	Ausleben	52.09049	11.11192	2023	Ауслебен	Sassen-Anholt	
+2954006	Aurich	53.46919	7.48232	40319	Аурих	Neddersassen+Läichsaksen+Donja Saska	
+2954048	Auma	50.70044	11.89958	3235	Аума		
+2954123	Auhagen	52.39828	9.29194	1321	Аухаген	Neddersassen+Läichsaksen+Donja Saska	
+2954127	Augustusburg	50.81192	13.10197	5202	Августусбург		
+2954164	Augustdorf	51.90944	8.73173	9889	Аугустдорф	NRW	
+2954197	Auggen	47.78333	7.6	2404	Аугген	Baden-Württemberg	
+2954774	Aub	49.55267	10.0653	1637	Ауб	Bayern	
+2954775	Au am Rhein	48.95	8.23333	3365	Ау-на-Рейне	Baden-Württemberg	
+2954897	Atting	48.89412	12.48776	1716	Аттинг	Bayern	
+2954906	Attenweiler	48.13333	9.7	1696	Аттенвайлер	Baden-Württemberg	
+2954910	Attenkirchen	48.50526	11.76011	2585	Аттенкирхен	Bayern	
+2954932	Attendorn	51.12645	7.90333	24773	Аттендорн	NRW	
+2955168	Aschersleben	51.75742	11.46084	24892	Ашерслебен	Sassen-Anholt	
+2955389	Artlenburg	53.37182	10.48793	1640	Артленбург	Neddersassen+Läichsaksen+Donja Saska	
+2955394	Artern	51.36431	11.29167	6270	Артерн		
+2955421	Bad Arolsen	51.37982	9.01445	16854	Бад-Арользен	Hessen	
+2955439	Arnstadt	50.84048	10.95198	25678	Арнштадт		
+2955464	Arnschwang	49.27663	12.81595	2058	Арншванг	Bayern	
+2955471	Arnsberg	51.38333	8.08333	76612	Арнсберг	NRW	
+2955519	Arneburg	52.67565	12.00514	1754	Арнебург	Sassen-Anholt	
+2955542	Armsheim	49.80972	8.05667	2645	Армсхайм		
+2955633	Arenshausen	51.37613	9.9687	1014	Аренсхаузен		
+2955770	Apolda	51.02624	11.51638	24793	Апольда		
+2955815	Apensen	53.43333	9.61667	2987	Апензен	Neddersassen+Läichsaksen+Donja Saska	
+2955817	Apen	53.21667	7.8	10992	Апен	Neddersassen+Läichsaksen+Donja Saska	
+2955822	Apelern	52.28979	9.3358	2673	Апелерн	Neddersassen+Läichsaksen+Donja Saska	
+2955835	Anzing	48.15171	11.8533	3531	Анцинг	Bayern	
+2955940	Anröchte	51.56667	8.33333	10847	Анрөхте	NRW	
+2955999	Annaburg	51.73298	13.04729	3512	Аннабург	Sassen-Anholt	
+2956005	Annaberg-Buchholz	50.57953	13.00627	23092	Аннаберг-Буххольц		
+2956014	Ankum	52.55	7.88333	7186	Анкум	Neddersassen+Läichsaksen+Donja Saska	
+2956018	Anklam	53.85637	13.68965	14694	Анклам	Mecklenburg-Vorpommern	
+2956044	Anhausen	50.5	7.55	1324	Анхаузен		
+2956090	Angern	52.35	11.73333	1380	Ангерн	Sassen-Anholt	
+2956206	Andernach	50.43109	7.40425	29599	Андернах		
+2956277	Amtzell	47.7	9.75	3530	Амтцелль	Baden-Württemberg	
+2956310	Amstetten	48.57876	9.87388	3999	Амштеттен	Baden-Württemberg	
+2956404	Amöneburg	50.79595	8.9233	5390	Амөнебург	Hessen	
+2958121	Alsleben	51.70161	11.67648	2786	Альслебен	Sassen-Anholt	
+2958266	Allstedt	51.40379	11.38689	3153	Альштедт	Sassen-Anholt	
+2958545	Bad Alexandersbad	50.01667	12.01667	1188	Бад-Александерсбад	Bayern	
+2958781	Aken	51.85274	12.04461	9240	Акен	Sassen-Anholt	
+2958975	Aichach	48.45755	11.13413	21042	Айхах	Bayern	
+2959083	Ahrensburg	53.67515	10.22593	30103	Аренсбург	Schleswig-Holstein	
+2959084	Ahrensbök	54.00862	10.57434	8643	Аренсбөк	Schleswig-Holstein	
+2959150	Ahnsbeck	52.61071	10.28534	1667	Ансбек	Neddersassen+Läichsaksen+Donja Saska	
+2959368	Affalterbach	48.92267	9.32362	4623	Аффальтербах	Baden-Württemberg	
+2959766	Abtsgmünd	48.89503	10.00172	7381	Абтсгмюнд	Baden-Württemberg	
+2959793	Abstatt	49.0682	9.2907	4456	Абштат	Baden-Württemberg	
+2959855	Abenberg	49.24282	10.96401	5484	Абенберг	Bayern	
+2959927	Aalen	48.83777	10.0933	67085	Ален	Baden-Württemberg	
+3206151	Bad Peterstal-Griesbach	48.43333	8.21667	3006	Бад-Петерсталь-Грисбах	Baden-Württemberg	
+3206152	Bad Rippoldsau-Schapbach	48.42883	8.32584	2326	Бад-Риппольдзау-Шапбах	Baden-Württemberg	
+3206153	Bad Teinach-Zavelstein	48.69051	8.69285	3053	Бад-Тайнах-Цафельштайн	Baden-Württemberg	
+3208129	Waldbrunn	50.51875	8.10812	6124	Вальдбрунн	Hessen	
+6548670	Bertsdorf-Hörnitz	50.88593	14.73696	2616	Бертсдорф-Хөрниц		
+223817	Djibouti	11.58901	43.14503	623891	Жибути шаары	Djibouti	
+2615876	Odense	55.39594	10.38831	145931	Оденсе		
+3575635	Roseau	15.30174	-61.38808	16571	Розо	Saint George	Доминика
+2476028	Tipasa	36.58972	2.4475	25225	Типаса	Tipaza	
+2507480	Algiers	36.73225	3.08746	1977663	Алжир шаары	Alger	
+3652462	Quito	-0.22985	-78.52495	1399814	Кито	Pichincha	
+3658666	Cuenca	-2.90055	-79.00453	276964	Куэнка шаары	Azuay	
+588409	Tallinn	59.43696	24.75353	394024	Таллин	Harjumaa	
+360502	Luxor	25.69893	32.6421	422407	Луксор шаары		
+361058	Alexandria	31.20176	29.91582	3811516	Александрия		
+343300	Asmara	15.33805	38.93184	563930	Асмара	Maʼākel	
+2509954	Valencia	39.46975	-0.37739	814208	Валенсия	Valencia	España
+2519240	Córdoba	37.89155	-4.77275	328428	Кордова		España
+3105976	Vigo	42.23282	-8.72264	297332	Виго шаары	Galicia	España
+3117735	Madrid	40.4165	-3.70256	3255944	Мадрид	Madrid	España
+3128760	Barcelona	41.38879	2.15899	1621537	Барселона	Catalunya	España
+658225	Helsinki	60.16952	24.93545	558457	Хельсинки		
+2204506	Lautoka	-17.61686	177.45049	52500	Лаутока		
+2982652	Rouen	49.44313	1.09932	112787	Руан+76000		France
+2988507	Paris	48.85341	2.3488	2138551	Париж+75001		France
+2989317	Orléans	47.90289	1.90389	124149	Орлеан+45000		France
+2990440	Nice	43.70313	7.26608	338620	Ницца+06000		France
+2998324	Lille	50.63297	3.05858	228328	Лилль+59000	http://en.wikipedia.org/wiki/Hauts-de-France	France
+3002465	Le Puy-en-Velay	45.04366	3.88523	22718	Ле-Пюи+43000		France
+3003796	Le Havre	49.4938	0.10767	185972	Гавр+76600		France
+3028808	Cannes	43.55135	7.01275	70011	Канн+06150		France
+3029162	Calais	50.95194	1.85635	74433	Кале шаары+62100	http://en.wikipedia.org/wiki/Hauts-de-France	France
+3031005	Bourges	47.08333	2.4	67987	Бурж+18000		France
+3031582	Bordeaux	44.84044	-0.5805	231844	Бордо+33000		France
+2399697	Libreville	0.39241	9.45356	578156	Либревил		
+2643743	London	51.50853	-0.12574	7556900	Лондон	Англия	http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Глазго	苏格兰	http://en.wikipedia.org/wiki/United_Kingdom
+2653877	Canterbury	51.27904	1.07992	55240	Кентербери	Англия	http://en.wikipedia.org/wiki/United_Kingdom
+611717	Tbilisi	41.69411	44.83368	1049498	Тбилиси	T'bilisi	Грузия
+614622	Gagra	43.27858	40.27124	8266	Гагра		Грузия
+3382160	Cayenne	4.93333	-52.33333	61550	Кайенна		
+2298890	Kumasi	6.68848	-1.62443	1468609	Кумаси шаары	Ashanti	
+2306104	Accra	5.55602	-0.1969	1963264	Аккра	Greater Accra	
+2413876	Banjul	13.45274	-16.57803	34589	Банжул	Banjul	Гамбия
+3579732	Basse-Terre	15.99854	-61.72548	11472	Бас-тер		
+2309527	Malabo	3.75578	8.78166	155963	Малабо	Bioko Norte	Guinee Espagnol
+2374775	Bissau	11.86357	-15.59767	388028	Бисау	Bissau Region	
+3378644	Georgetown	6.80448	-58.15527	235017	Жоржтаун	Demerara-Mahaica	
+3600949	Tegucigalpa	14.0818	-87.20681	850848	Тегусигальпа	Francisco Morazán	
+3186886	Zagreb	45.81444	15.97798	698966	Загреб	Grad Zagreb	Хорватия
+3718426	Port-au-Prince	18.53917	-72.335	1234742	Порт-о-Пренс	Ouest	
+281184	Jerusalem	31.76904	35.21633	801000	Кудус		
+1253102	Visakhapatnam	17.68009	83.20161	1063178	Вишакхапатнaм	AP+Andhra Pradesh	India
+1253573	Vadodara	22.29941	73.20812	1409476	Вaдодaрa	GJ	India
+1260086	Patna	25.59408	85.13563	1599920	Патна	BR	India
+1261731	Nashik	19.99727	73.79096	1289497	Нашик	MH+Mahārāshtra	India
+1262180	Nagpur	21.14631	79.08491	2228018	Нагпур	MH+Mahārāshtra	India
+1264521	Madurai	9.91769	78.11898	909908	Мадурай	TN+Tamil Nādu	India
+1264733	Lucknow	26.83928	80.92313	2472011	Лакхнау шаары	UP	India
+1269515	Jaipur	26.91962	75.78781	2711758	Жайпур	RJ+Rājasthān	India
+1271476	Guwahati	26.1844	91.7458	899094	Гаухати	AS+Assam	India
+1275004	Kolkata	22.56263	88.36304	4631392	Калькутта	WB+West Bengal	India
+1275841	Bhopal	23.25469	77.40289	1599914	Бхопал	MP	India
+1278710	Amritsar	31.62234	74.87534	1092450	Амритсар	PB	India
+1279233	Ahmedabad	23.02579	72.58727	3719710	Ахмадабад шаары	GJ	India
+94824	Karbala	32.61603	44.02488	434450	Кербела	Karbalāʼ	
+99072	Mosul	36.335	43.11889	1739800	Мосeл	Nīnawá	
+113646	Tabriz	38.08	46.2919	1424641	Тебриз		
+119208	Qom	34.6401	50.8764	900000	Кум шаары	Qom	
+124665	Mashhad	36.31559	59.56796	2307177	Мешхед	Khorāsān-e Raẕāvī	
+128234	Kerman	30.28321	57.07879	577514	Керман		
+128747	Karaj	35.83266	50.99155	1448075	Кереж		
+144448	Ahvaz	31.31901	48.6842	841145	Ахваз шаары		
+418863	Isfahan	32.65246	51.67462	1547164	Исфахан		
+2525473	Cagliari	39.23054	9.11917	149257	Кальяри		
+3176959	Florence	43.77925	11.24626	349296	Флоренция		
+1853574	Ōtsu	35	135.86667	298164	Оцу	Shiga	Жапония
+1859642	Kawasaki	35.52056	139.71722	1306785	Кавасаки		Жапония
+1860672	Kamakura	35.30889	139.55028	166016	Камакура		Жапония
+184745	Nairobi	-1.28333	36.81667	2750547	Найроби	Nairobi Area	
+1222554	Tayan	39.9026	71.10826	0	Таян	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1222562	Suluktu	39.93652	69.56779	15019	Сүлүктү	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1222618	Korgon	39.88899	69.93559	0	Коргон	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1222635	Aydarken	39.94319	71.34184	11857	Khaydarkan+Aidarken	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1222640	Katran	39.84434	70.01474	0	Катран	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1222662	Isfana	39.83895	69.5276	16952	Исфана	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1222708	Andarak	39.76849	69.46398	0	Андарак	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527004	Balykchy	42.46017	76.18709	40000	Balykchy+Балыкчы шаары	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527103	Uch-Korgon	40.22881	72.05924	0	Үч-Коргон	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527121	Tyup	42.7276	78.36476	13437	Тюп	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527199	Tokmok	42.84194	75.30149	63047	Токмок	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527232	Ak-Suu	42.49948	78.52702	10823	Ак-Суу	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527260	Tash-Kumyr	41.34612	72.21707	23594	Tash-Kömür	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527299	Talas	42.52277	72.24274	35172	Talas	Talas Oblasty+Talas Oblusu+Талас+Талас Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527317	Suzak	40.8982	72.90481	0	Suzak	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527338	Chuy	42.81973	75.28233	0	Chüy	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527351	Sosnovka	42.63707	73.89608	5885	Сосновка	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527360	Sokuluk	42.85401	74.30257	0	Сокулук	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527496	Pokrovka	42.7362	71.60982	0	Pokrovka	Talas Oblasty+Talas Oblusu+Талас+Талас Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527497	Kyzyl-Suu	42.34211	78.00644	16927	Кызыл-Суу	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527513	Uzgen	40.76994	73.30068	40360	Özgön+Өзгөн шаары	Ош Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527534	Osh	40.52828	72.7985	200000	Ош	Ош Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527566	Orozbekovo	40.05689	71.66945	0	Орозбеков	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527592	Naryn	41.42866	75.99111	52300	Naryn	Naryn Oblasty+Naryn+Naryn Oblusu+Нарын+Нарын Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527688	Bakai-Ata	42.49298	71.9236	0	Бакай-Ата	Talas Oblasty+Talas Oblusu+Талас+Талас Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527689	Massy	41.0601	72.63285	0	Массы	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527690	Lebedinovka	42.88454	74.67819	0	Lebedinovka	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527719	Kyzyl-Kyya	40.25684	72.12793	32000	Кызыл-Кыя	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527902	Kochkor	42.21552	75.75659	0	Кочкор	Naryn Oblasty+Naryn+Naryn Oblusu+Нарын+Нарын Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527903	Kochkor-Ata	41.03709	72.4832	14814	Kochkor-Ata	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527919	Kyzyl-Adyr	42.61981	71.5891	0	Кызыл-Адыр	Talas Oblasty+Talas Oblusu+Талас+Талас Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1527951	Khalmion	40.21218	71.63274	0	Халмион+Halmion	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528005	Kazarman	41.40452	74.02828	0	Kazarman	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528052	Kerben	41.49399	71.75826	14141	Кербен	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528053	Karavan	40.29513	72.18627	1100	Караван	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528091	Kara Suu	40.7046	72.86666	17800	Kara-Suu	Ош Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528121	Karakol	42.49068	78.39362	70171	Каракол+Karakol	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528161	Kara-Dzhygach	40.12209	72.09271	0	Кара-Жыгач+Kara-Djygach	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528182	Kara-Balta	42.81423	73.84813	62796	Кара-Балта	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528190	Kanysh-Kyya	41.76536	71.09181	0	Каныш-Кыя	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528193	Kant	42.89106	74.85077	20181	Kant	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528234	Kaindy	42.82469	73.67585	10616	Kayyngdy	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528241	Kadzhi-Say	42.14107	77.17848	4000	Kaji-Say	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528249	Jalal-Abad	40.93333	73	75700	Jalal-Abad+Жалал-Абад шаары	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528252	Ivanovka	42.88778	75.085	0	Ivanovka	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528253	Ivanovo-Alekseyevka	42.54689	72.20921	0	Ivano-Alekseevka+Këk-Oy	Talas Oblasty+Talas Oblusu+Талас+Талас Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528283	Iradan	40.26667	72.1	26200	Ирадан	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528320	Gul’cha	40.3138	73.44418	0	Гүлчө	Ош Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528512	Cholpon-Ata	42.64944	77.08225	18595	Cholpon-Ata	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528566	Chayek	41.92768	74.51699	0	Чаек	Naryn Oblasty+Naryn+Naryn Oblusu+Нарын+Нарын Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528606	Kemin	42.78611	75.69167	10295	Кемин	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528666	Bokombayevskoye	42.11769	76.99332	0	Бөкөнбай	Ysyk-Köl Oblasty+Ysyk-Köl+Ysyk-Köl Oblusu+Ысык-Көл+Ысык-Көл Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528675	Bishkek	42.87	74.59	900000	Бишкек	Bishkek Shaary+Бишкек Шаары+Бишкек+Gorod Bishkek	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528702	Belovodskoye	42.82944	74.1083	0	Belovodskoe	Chüy Oblasty+Chüy+Chüy Oblusu+Чүй+Чүй Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528717	Bazar-Korgon	41.0376	72.74586	27704	Bazar-Korgon	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528735	Batken	40.06259	70.81939	10155	Баткен	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528766	Baetovo	41.26668	74.95698	0	Баетов	Naryn Oblasty+Naryn+Naryn Oblusu+Нарын+Нарын Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528796	At-Bashi	41.16951	75.80099	15226	Ат-Башы	Naryn Oblasty+Naryn+Naryn Oblusu+Нарын+Нарын Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528831	Aravan	40.51608	72.4996	0	Араван	Ош Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528856	Alga	40.2363	71.49899	0	Алга	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1528875	Ala-Buka	41.4105	71.48628	0	Ala-Buka	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1538310	Beshkent	40.03083	69.81861	0	Бешкент	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+1538648	Toktogul	41.87442	72.94192	19336	Токтогул	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+7648391	Pulgon	40.14724	71.72962	0	Пулгон	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8134212	Üch-Terek	41.76222	73.20033	0	Уч-Терег	Jalal-Abad Oblasty+Jalal-Abad Oblusu+Жалал-Абад+Жалал-Абад Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8139689	Kara-Dëbë	40.24428	72.04475	0	Kara-Döbö	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8145969	Kara-Kulja	40.63223	73.59249	0	Kara-Kulja	Ош Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8375110	Chek	40.10934	70.84636	0	Чек	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8375150	Kara-Bak	40.16169	70.81959	0	Кара-Бак	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8375152	Samarkandyk	39.9981	70.54589	0	Самаркандык	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8376052	Kyrgyz-Kyshtak	40.31055	71.34966	0	Киргиз-Кыштак	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8376054	Kyzyl-Bulak	40.0517	71.73726	0	Кызыл-Булак	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8376076	Boz-Adyr	39.9986	71.07338	0	Boz-Adyr	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8376125	Markaz	40.24019	71.89983	0	Марказ	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8377525	Kulundu	40.10635	69.64127	0	Кулунду	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8377866	Ak-Suu	39.89877	69.3716	0	Ак-Суу	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8377922	Toguz-Bulak	39.84331	69.71355	0	Тогуз-Булак	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8382860	Ak-Tatyr	39.9599	70.48451	0	Ak-Tatyr	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+8388007	Ormosh	39.94591	71.26086	0	Ормош	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+10370337	Ak-Say	39.87438	70.52211	0	Ak-Sai	Batken Oblasty+Batken+Batken Oblusu+Баткен+Баткен Облусу	Kyrgyz Respublikasy+Кыргызстан+Kyrgyzstan Respublikasy+Кыргыз Республикасы
+921772	Moroni	-11.70216	43.25506	42872	Морони	Grande Comore	
+3575551	Basseterre	17.29484	-62.7261	12920	Бастер	Saint George Basseterre	
+1835848	Seoul	37.566	126.9784	10349312	Сеул		http://en.wikipedia.org/wiki/South_Korea
+1841811	Gwangju	35.15472	126.91556	1416938	Кванже		http://en.wikipedia.org/wiki/South_Korea
+1843082	Gapyeong	37.83101	127.51059	55415	Капхён+가평		http://en.wikipedia.org/wiki/South_Korea
+610529	Atyrau	47.11667	51.88333	180000	Атырау		Казакстан Республикасы
+610612	Aktau	43.65	51.16667	147443	Актау		Казакстан Республикасы
+1518542	Taldykorgan	45.01556	78.37389	116558	Талды-Коргон		Казакстан Республикасы
+1518980	Shymkent	42.3	69.6	414032	Чымкент		Казакстан Республикасы
+1519928	Kostanay	53.21435	63.62463	210000	Костанай		Казакстан Республикасы
+1520240	Pavlodar	52.28333	76.96667	329002	Павлодар		Казакстан Республикасы
+1522203	Kokshetau	53.28333	69.4	124444	Көкчө-Тоо		Казакстан Республикасы
+1651944	Vientiane	17.96667	102.6	196731	Вьентьян		
+276781	Beirut	33.89332	35.50157	1916100	Бейрут		
+277130	Baalbek	34.00583	36.21806	30916	Баальбек	Baalbek-Hermel	
+1241622	Kandy	7.2955	80.6356	111701	Канди	Central	
+1248991	Colombo	6.93194	79.84778	648034	Коломбо	Western	
+2274895	Monrovia	6.30054	-10.7969	939524	Монровия		
+932505	Maseru	-29.31667	27.48333	118355	Масеру		
+593116	Vilnius	54.68916	25.2798	542366	Вильнюс		Литва+http://en.wikipedia.org/wiki/Lithuania
+598316	Kaunas	54.90272	23.90961	374643	Каунас		Литва+http://en.wikipedia.org/wiki/Lithuania
+456172	Riga	56.946	24.10589	742572	Рига	Riga	
+2210247	Tripoli	32.87519	13.18746	1150989	Триполи		
+2528910	Tétouan	35.57845	-5.36837	326261	Тетуан		
+2538475	Rabat	34.01325	-6.83255	1655753	Рабат		
+1070940	Antananarivo	-18.91368	47.53613	1391433	Антананариву		
+787487	Ohrid	41.11722	20.80194	54908	Охрид		ARYM+FYROM
+1298824	Yangon	16.80528	96.15611	4477638	Рангун	Yangon	Мьянма
+1311874	Mandalay	21.97473	96.08359	1208099	Мандалай	Mandalay	Мьянма
+2377450	Nouakchott	18.08581	-15.9785	661400	Нуакшот		
+2562305	Valletta	35.89972	14.51472	6794	Валлетта		
+934154	Port Louis	-20.16194	57.49889	155226	Порт-Луи		
+927967	Lilongwe	-13.96692	33.78725	646750	Лилонгве		
+931755	Blantyre	-15.78499	35.00854	584877	Блантайр		
+3531673	Cancún	21.17429	-86.84656	542043	Канкун	ROO+Q. Roo	Мексика
+3981609	Tijuana	32.5027	-117.00371	1376457	Тихуана	BCN+BC+Baja California	Мексика
+3991164	Santiago de Querétaro	20.58806	-100.38806	626495	Kepeтapo	QUE+Qro+Querétaro de Arteaga	Мексика
+1732905	Klang	3.03333	101.45	879867	Келанг	SGR+Selangor	
+1040652	Maputo	-25.96553	32.58322	1191613	Мапуту	Maputo City	
+3352136	Windhoek	-22.55941	17.08323	268132	Виндхук	Khomas	
+2139521	Nouméa	-22.27407	166.44884	93060	Нумеа		
+2440485	Niamey	13.51366	2.1098	774235	Ниамей	Niamey	
+2319133	Warri	5.51737	5.75006	536023	Bаppи		
+2332459	Lagos	6.45407	3.39467	9000000	Лагос шаары		
+2335204	Kano	12.00012	8.51672	3626068	Кано		
+2335727	Kaduna	10.52641	7.43879	1582102	Кадуна	Kaduna	
+2339354	Ibadan	7.37756	3.90591	3565108	Ибадан шаары	Oyo	
+2352778	Abuja	9.05785	7.49508	590400	Абужа	FCTA+Abuja Federal Capital Territory	
+3618030	León	12.43787	-86.87804	144538	Леон	León	
+2759794	Amsterdam	52.37403	4.88969	741636	Амстердам	nh+Nord-Holland+Noord-Holland	
+3143244	Oslo	59.91273	10.74609	580000	Осло	Oslo	
+1283240	Kathmandu	27.70169	85.3206	1442271	Катманду		
+2179537	Wellington	-41.28664	174.77557	381900	Веллингтон		Жаңы Зеландия
+287286	Muscat	23.58413	58.40778	797000	Маскат		
+3936456	Lima	-12.04318	-77.02824	7737002	Лима	Lima Province	
+3946083	Callao	-12.05659	-77.11814	813264	Кальяо		
+2092740	Lae	-6.72208	146.98469	76255	Лаэ шаары		
+1679980	Vigan	17.57472	120.38694	48545	Виган шаары		
+1172451	Lahore	31.558	74.35071	6310888	Лахор	Punjab	
+765876	Lublin	51.25	22.56667	360044	Люблин шаары	Lubelskie	
+766980	Kurów	51.38941	22.18637	2804	Kurów+Куров	Lubelskie	
+768217	Końskowola	51.40922	22.05175	2208	Коньсковоля	Lubelskie	
+3088171	Poznań	52.40692	16.92993	570352	Познань	Wielkopolskie	
+3093158	Łobez	53.63918	15.62129	10609	Лобез		
+3094802	Kraków	50.06143	19.93658	755050	Краков	Małopolskie	
+3096472	Katowice	50.25841	19.02754	317316	Katowice+Катовице	Śląskie	
+3099424	Gdynia	54.51889	18.53188	253730	Гдыня	Pomorskie	
+281133	Gaza	31.50161	34.46672	410000	Газa		
+282239	Ramallah	31.89964	35.20422	24599	Рамалла		
+290030	Doha	25.28545	51.53096	344939	Доха		
+472459	Vologda	59.2239	39.88398	314900	Bологда	Vologda	
+472757	Volgograd	48.71939	44.50183	1011417	Волгоград+Volgograd	Volgograd	
+473247	Vladimir	56.13655	40.39658	310024	Владимир шаары	Vladimir	
+473249	Vladikavkaz	43.03667	44.66778	317370	Владикавказ		
+480060	Tver	56.85836	35.90057	400212	Тверь		
+509820	Petrozavodsk	61.78491	34.34691	265025	Петрозаводск	Карилия	
+510291	Peterhof	59.88333	29.9	73199	Петергоф		
+511196	Perm	58.01046	56.25017	982419	Пермь	Perm	
+534341	Lomonosov	59.90612	29.77253	42505	Ломоносов шаары		
+535121	Lipetsk	52.60311	39.57076	515655	Липецк шаары	Lipetsk	
+551487	Kazan	55.78874	49.12214	1104738	Казан		
+555312	Ivanovo	56.99719	40.97139	420839	Иваново шаары+Иваново	Ivanovo	
+563514	Elista	46.30778	44.25583	106971	Элиста		
+578072	Belgorod	50.61074	36.58015	345289	Белгород шаары	Belgorod	
+580497	Astrakhan	46.34968	48.04076	502533	Астрахань	Astrakhan	
+1496153	Omsk	54.99244	73.36859	1129281	Омск	Omsk	
+1496747	Novosibirsk	55.0415	82.9346	1419007	Новосибирск	Novosibirsk	
+1500973	Kyzyl	51.71472	94.45338	108240	Кызыл шаары		
+1503901	Kemerovo	55.33333	86.08333	477090	Кемерово	Kemerovo	
+1507116	Dudinka	69.40583	86.17778	23619	Дудинка шаары	Krasnoyarskiy Kray	
+1510853	Barnaul	53.36056	83.76361	599579	Барнаул	Altayskiy Kray	
+1512236	Abakan	53.71556	91.42917	167289	Абакан шаары		
+2013348	Vladivostok	43.10562	131.87353	587022	Владивосток	Primorskiy Kray	
+2023469	Irkutsk	52.29778	104.29639	586695	Иркутск	Irkutsk	
+2026609	Blagoveshchensk	50.27961	127.5405	221296	Благовещенск шаары	Amur	
+2123628	Magadan	59.5638	150.80347	95282	Магадан	Magadan	
+202061	Kigali	-1.94995	30.05885	745261	Кигали		
+105343	Jeddah	21.54238	39.19797	2867446	Жидда	Makkah	
+108410	Riyadh	24.68773	46.72185	4205961	Эр-Рияд		
+109223	Medina	24.46861	39.61417	1300000	Медина		
+241131	Victoria	-4.62001	55.45501	22881	Виктория		
+365137	Omdurman	15.64453	32.47773	1200000	Омдурман		
+2662689	Visby	57.64089	18.29602	23402	Висбю		Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Стокгольм	Stockholms Län	Ruoččii
+3370903	Jamestown	-15.93872	-5.71675	637	Жеймстаун		
+3196359	Ljubljana	46.05108	14.50513	272220	Любляна		
+3202781	Celje	46.23092	15.26044	37520	Целле		
+724443	Košice	48.71395	21.25808	236563	Кошице	Košický kraj	
+3060972	Bratislava	48.14816	17.10674	423737	Братислава	Bratislavský kraj	
+2409306	Freetown	8.484	-13.22994	802639	Фритаун		
+3168070	San Marino	43.93667	12.44639	4500	Сан-Марино	San Marino	
+2253354	Dakar	14.6937	-17.44406	2476400	Дакар	Dakar	
+53654	Mogadishu	2.03711	45.34375	2587183	Могадишо		Сомали
+3383330	Paramaribo	5.86638	-55.16682	223757	Парамарибо	Paramaribo	
+2410763	São Tomé	0.33654	6.72732	53300	Сан-Томе		
+170654	Damascus	33.5102	36.29128	1569394	Дамаск		
+173576	Latakia	35.53168	35.79011	340181	Латакия шаары		
+934985	Mbabane	-26.31667	31.13333	76218	Мбабане	Hhohho	
+2365267	Lomé	6.12874	1.22154	749700	Ломе		
+1514831	Shŭrob	40.04605	70.54117	3984	Shorab		Тажикстан
+1514891	Konibodom	40.29414	70.43122	50359	Канибадам		Тажикстан
+1645457	Dili	-8.55861	125.57361	150000	Дили		
+162183	Ashgabat	37.95	58.38333	727700	Ашхабад		Түркмөнстан
+1218667	Mary	37.59378	61.83031	114680	Мары шаары		Түркмөнстан
+2464470	Tunis	36.81897	10.16579	693210	Тунис шаары	Tūnis	
+2473449	Kairouan	35.6781	10.09633	119794	Кайруан	Al Qayrawān	
+308464	Kayseri	38.73222	35.48528	592840	Кайсери		Turkanmua
+323777	Antalya	36.90812	30.69556	758188	Анталья		Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Анкара		Turkanmua
+325363	Adana	37.00167	35.32889	1248988	Адана		Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Бурса		Turkanmua
+3573890	Port of Spain	10.66668	-61.51889	49031	Порт-Оф-Спейн	Port-of-Spain	
+152224	Mwanza	-2.51667	32.9	436801	Мванза	Mwanza	
+160196	Dodoma	-6.17221	35.73947	180541	Додома	Dodoma	
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Дар-эс-Салам шаары	Dar es Salaam	
+692194	Sumy	50.9216	34.80029	294456	Сумы	Sumy	http://en.wikipedia.org/wiki/Ukraine
+696643	Poltava	49.59373	34.54073	317847	Полтава	Poltava	http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Одесса		http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Львов	Lviv	http://en.wikipedia.org/wiki/Ukraine
+702658	Luhansk	48.56705	39.31706	452000	Луганск	Luhansk	http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Киев		http://en.wikipedia.org/wiki/Ukraine
+703845	Kryvyi Rih	47.90966	33.38044	652380	Кривой Рог	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	http://en.wikipedia.org/wiki/Ukraine
+705812	Kropyvnytskyi	48.5132	32.2597	249454	Кировоград	Kirovohrad+http://en.wikipedia.org/wiki/Kropyvnytskyi	http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Херсон	Kherson	http://en.wikipedia.org/wiki/Ukraine
+706524	Kerch	45.3531	36.47429	148932	Керчь		http://en.wikipedia.org/wiki/Ukraine
+709717	Donetsk	48.023	37.80224	1024700	Донецк	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Черновцы		http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Черкассы	Cherkas'ka Oblast'+Cherkasy	http://en.wikipedia.org/wiki/Ukraine
+232422	Kampala	0.31628	32.58219	1353189	Кампала	Central Region	
+4076784	Montgomery	32.36681	-86.29997	200602	Монтгомери	AL+Alabama	U.S.+USA+U.S.A.
+4119403	Little Rock	34.74648	-92.28959	197992	Литл-Рок	AR	U.S.+USA+U.S.A.
+4142290	Dover	39.15817	-75.52437	37522	Довер	DE+Delaware	U.S.+USA+U.S.A.
+4160021	Jacksonville	30.33218	-81.65565	868031	Жэксонвилл	FL+Florida	U.S.+USA+U.S.A.
+4164138	Miami	25.77427	-80.19366	441003	Майами	FL+Florida	U.S.+USA+U.S.A.
+4167147	Orlando	28.53834	-81.37924	270934	Орландо	FL+Florida	U.S.+USA+U.S.A.
+4174715	Tallahassee	30.43826	-84.28073	189907	Таллахасси	FL+Florida	U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	Атланта	GA+Georgia	U.S.+USA+U.S.A.
+4259418	Indianapolis	39.76838	-86.15804	829718	Индианаполис	IN+Indiana	U.S.+USA+U.S.A.
+4282342	Alexandria	38.95951	-84.38799	9009	Александрия	KY+Kentucky	U.S.+USA+U.S.A.
+4282812	Auburn	36.86421	-86.71027	1352	Аубурн	KY+Kentucky	U.S.+USA+U.S.A.
+4283953	Benton	36.85728	-88.35031	4357	Бентон	KY+Kentucky	U.S.+USA+U.S.A.
+4285380	Brandenburg	37.99896	-86.16941	2852	Брэнденбург	KY+Kentucky	U.S.+USA+U.S.A.
+4285708	Brownsville	37.19255	-86.26775	826	Броунсвил	KY+Kentucky	U.S.+USA+U.S.A.
+4286280	Burkesville	36.79034	-85.37052	1515	Беркесвилл	KY+Kentucky	U.S.+USA+U.S.A.
+4286281	Burlington	39.02756	-84.72411	15926	Берлигтон	KY+Kentucky	U.S.+USA+U.S.A.
+4286479	Cadiz	36.86505	-87.8353	2626	Кадиз	KY+Kentucky	U.S.+USA+U.S.A.
+4286581	Calvert City	37.03339	-88.35004	2532	Кальверт Сити	KY+Kentucky	U.S.+USA+U.S.A.
+4286728	Campton	37.73425	-83.54741	431	Кэмптон	KY+Kentucky	U.S.+USA+U.S.A.
+4287050	Carrollton	38.6809	-85.1794	3886	Карролтон	KY+Kentucky	U.S.+USA+U.S.A.
+4289606	Dawson Springs	37.16727	-87.69251	2737	Доусон Спрингс	KY+Kentucky	U.S.+USA+U.S.A.
+4290886	Edmonton	36.98006	-85.61219	1568	Эдмонтон	KY+Kentucky	U.S.+USA+U.S.A.
+4291181	Eminence	38.37007	-85.18051	2535	Эминенс	KY+Kentucky	U.S.+USA+U.S.A.
+4292188	Frankfort	38.20091	-84.87328	27830	Франкфорт	KY+Kentucky	U.S.+USA+U.S.A.
+4292308	Frenchburg	37.95092	-83.62575	531	Френчбург	KY+Kentucky	U.S.+USA+U.S.A.
+4292424	Fulton	36.50423	-88.87423	2235	Фултон	KY+Kentucky	U.S.+USA+U.S.A.
+4294195	Hartford	37.45116	-86.90916	2750	Хартфорд	KY+Kentucky	U.S.+USA+U.S.A.
+4294872	Hindman	37.33593	-82.98044	741	Хайндман	KY+Kentucky	U.S.+USA+U.S.A.
+4294937	Hodgenville	37.57395	-85.73996	3256	Ходженвилл	KY+Kentucky	U.S.+USA+U.S.A.
+4295288	Horse Cave	37.1795	-85.90692	2344	Хорс Кэйв	KY+Kentucky	U.S.+USA+U.S.A.
+4295712	Hyden	37.16093	-83.37324	351	Хэйден	KY+Kentucky	U.S.+USA+U.S.A.
+4295776	Independence	38.94312	-84.54411	26819	Индепенденсе	KY+Kentucky	U.S.+USA+U.S.A.
+4295878	Inez	37.86648	-82.53876	684	Айнез	KY+Kentucky	U.S.+USA+U.S.A.
+4295954	Irvine	37.70064	-83.97381	2416	Ирвин	KY+Kentucky	U.S.+USA+U.S.A.
+4296081	Jackson	37.55315	-83.38351	2152	Джэксон	KY+Kentucky	U.S.+USA+U.S.A.
+4296173	Jamestown	36.98479	-85.06301	1804	Джэймстоун	KY+Kentucky	U.S.+USA+U.S.A.
+4296229	Jenkins	37.17344	-82.63099	2103	Дженкинс	KY+Kentucky	U.S.+USA+U.S.A.
+4296734	Junction City	37.58674	-84.79384	2283	Джанкшн Сити	KY+Kentucky	U.S.+USA+U.S.A.
+4297354	Lancaster	37.61952	-84.578	3864	Ланкастер	KY+Kentucky	U.S.+USA+U.S.A.
+4297581	Lawrenceburg	38.0373	-84.89662	11103	Лауренсбург	KY+Kentucky	U.S.+USA+U.S.A.
+4297653	Lebanon	37.56979	-85.25274	5680	Лебанон	KY+Kentucky	U.S.+USA+U.S.A.
+4297882	Leitchfield	37.48005	-86.29386	6873	Лэйтчфилд	KY+Kentucky	U.S.+USA+U.S.A.
+4297979	Lewisport	37.937	-86.90221	1698	Льюуиспорт	KY+Kentucky	U.S.+USA+U.S.A.
+4298003	Liberty	37.31841	-84.9394	2160	Либерти	KY+Kentucky	U.S.+USA+U.S.A.
+4298960	London	37.12898	-84.08326	8126	Лондон	KY+Kentucky	U.S.+USA+U.S.A.
+4299275	Louisa	38.11425	-82.60321	2455	Луйза	KY+Kentucky	U.S.+USA+U.S.A.
+4299531	Ludlow	39.09256	-84.54744	4551	Ладлоу	KY+Kentucky	U.S.+USA+U.S.A.
+4299562	Lyndon	38.25674	-85.60163	11372	Линдон	KY+Kentucky	U.S.+USA+U.S.A.
+4299670	Madisonville	37.3281	-87.49889	19539	Мэдисонвиль	KY+Kentucky	U.S.+USA+U.S.A.
+4299741	Manchester	37.1537	-83.76186	1401	Манчестер	KY+Kentucky	U.S.+USA+U.S.A.
+4300105	Mayfield	36.74172	-88.63672	10080	Мэйфилд	KY+Kentucky	U.S.+USA+U.S.A.
+4301349	Morgantown	37.2256	-86.6836	2475	Моргантуан	KY+Kentucky	U.S.+USA+U.S.A.
+4302529	Newport	39.09145	-84.49578	15354	Ньюпорт	KY+Kentucky	U.S.+USA+U.S.A.
+4303441	Owingsville	38.1448	-83.76408	1581	Оуингсвилл	KY+Kentucky	U.S.+USA+U.S.A.
+4303543	Paintsville	37.81454	-82.80711	4249	Пэйнтсвилл	KY+Kentucky	U.S.+USA+U.S.A.
+4304058	Pewee Valley	38.31062	-85.48746	1529	Пиви Вэллей	KY+Kentucky	U.S.+USA+U.S.A.
+4304396	Pineville	36.76203	-83.69492	1762	Пайнвилл	KY+Kentucky	U.S.+USA+U.S.A.
+4305210	Prestonsburg	37.66565	-82.77155	3347	Престонбург	KY+Kentucky	U.S.+USA+U.S.A.
+4305266	Princeton	37.10922	-87.88196	6174	Прицтон	KY+Kentucky	U.S.+USA+U.S.A.
+4307616	Sandy Hook	38.08647	-83.12628	630	Сэнди Хук	KY+Kentucky	U.S.+USA+U.S.A.
+4307837	Scottsville	36.75338	-86.19054	4411	Скотсвилл	KY+Kentucky	U.S.+USA+U.S.A.
+4315588	Baton Rouge	30.45075	-91.15455	228590	Батон-Руж	LA+Louisiana	U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	Жаңы орлеан	LA+Louisiana	U.S.+USA+U.S.A.
+4347242	Annapolis	38.97845	-76.49218	39474	Аннаполис	MD+Maryland	U.S.+USA+U.S.A.
+4347778	Baltimore	39.29038	-76.61219	621849	Балтимор шаары	MD+Maryland	U.S.+USA+U.S.A.
+4378070	Bowling Green	39.34199	-91.19514	5388	Боулинг Грин	MO+Missouri	U.S.+USA+U.S.A.
+4389418	Hannibal	39.70838	-91.35848	17839	Ханнибал	MO+Missouri	U.S.+USA+U.S.A.
+4391812	Independence	39.09112	-94.41551	117255	Индэпенденс	MO+Missouri	U.S.+USA+U.S.A.
+4392388	Jefferson City	38.5767	-92.17352	43169	Джэфферсон Сити	MO+Missouri	U.S.+USA+U.S.A.
+4393217	Kansas City	39.09973	-94.57857	475378	Канзас-Сити	MO+Missouri	U.S.+USA+U.S.A.
+4395052	Liberty	39.24611	-94.41912	30450	Либэрти	MO+Missouri	U.S.+USA+U.S.A.
+4407665	Savannah	39.94166	-94.83025	5108	Саванна	MO+Missouri	U.S.+USA+U.S.A.
+4420161	Byhalia	34.87232	-89.69064	1255	Бихалиа	MS+Mississippi	U.S.+USA+U.S.A.
+4422442	Columbus	33.49567	-88.42726	23168	Колумбус	MS+Mississippi	U.S.+USA+U.S.A.
+4428667	Gulfport	30.36742	-89.09282	71856	Гулфпорт	MS+Mississippi	U.S.+USA+U.S.A.
+4429295	Hattiesburg	31.32712	-89.29034	46805	Хаттисберг	MS+Mississippi	U.S.+USA+U.S.A.
+4430981	Indianola	33.45095	-90.65509	9943	Индианола	MS+Mississippi	U.S.+USA+U.S.A.
+4431410	Jackson	32.29876	-90.18481	170674	Жэксон	MS+Mississippi	U.S.+USA+U.S.A.
+4440397	Pascagoula	30.36576	-88.55613	22126	Паскагула	MS+Mississippi	U.S.+USA+U.S.A.
+4487042	Raleigh	35.7721	-78.63861	451066	Роли	NC+North Carolina	U.S.+USA+U.S.A.
+4509177	Columbus	39.96118	-82.99879	850106	Колумбус	OH	U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	Оклахома-Сити	OK+Oklahoma	U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Филадельфия	PA	U.S.+USA+U.S.A.
+4575352	Columbia	34.00071	-81.03481	133803	Колумбия	SC+South Carolina	U.S.+USA+U.S.A.
+4641239	Memphis	35.14953	-90.04898	655770	Мемфис	TN+Tennessee	U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	Остин	TX+Texas	U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	Даллас шаары	TX+Texas	U.S.+USA+U.S.A.
+4781708	Richmond	37.55376	-77.46026	220289	Ричмонд	VA+Virginia	U.S.+USA+U.S.A.
+4791259	Virginia Beach	36.85293	-75.97799	452745	Виргиния-Бич	VA+Virginia	U.S.+USA+U.S.A.
+4801859	Charleston	38.34982	-81.63262	49736	Чарлстон	WV+West Virginia	U.S.+USA+U.S.A.
+4832121	Cromwell	41.5951	-72.64537	13750	Кромвэлл	CT+Connecticut	U.S.+USA+U.S.A.
+4832294	Revere	42.40843	-71.01199	53422	Рэвиа	MA+Massachusetts	U.S.+USA+U.S.A.
+4832425	Darien	41.07871	-73.46929	20732	Дариэн	CT+Connecticut	U.S.+USA+U.S.A.
+4833363	East Haddam	41.45315	-72.4612	9042	Ист Хаддам	CT+Connecticut	U.S.+USA+U.S.A.
+4835654	Hamden	41.39593	-72.89677	59847	Хамдэн	CT+Connecticut	U.S.+USA+U.S.A.
+4835797	Hartford	41.76371	-72.68509	124006	Харфорд	CT+Connecticut	U.S.+USA+U.S.A.
+4835969	Hebron	41.65788	-72.36592	9298	Хэброн	CT+Connecticut	U.S.+USA+U.S.A.
+4838611	Middlebury	41.52787	-73.12761	6974	Миддлбюри	CT+Connecticut	U.S.+USA+U.S.A.
+4838633	Middletown	41.56232	-72.65065	46756	Миддлтаун	CT+Connecticut	U.S.+USA+U.S.A.
+4839345	New Fairfield	41.46648	-73.48568	14126	Нью Файрфилд	CT+Connecticut	U.S.+USA+U.S.A.
+4840035	Old Saybrook	41.29177	-72.3762	10627	Олд Сэйбрук	CT+Connecticut	U.S.+USA+U.S.A.
+4842818	Seymour	41.39676	-73.07594	16562	Сеймур	CT+Connecticut	U.S.+USA+U.S.A.
+4842898	Shelton	41.31649	-73.09316	41296	Шелтон	CT+Connecticut	U.S.+USA+U.S.A.
+4842937	Sherman	41.57926	-73.49568	3827	Шерман	CT+Connecticut	U.S.+USA+U.S.A.
+4843215	Somers	41.98537	-72.4462	1789	Сомерс	CT+Connecticut	U.S.+USA+U.S.A.
+4843353	South Windsor	41.82371	-72.6212	24412	Саус Виндзор	CT+Connecticut	U.S.+USA+U.S.A.
+4843362	Southbury	41.48148	-73.21317	19836	Саусбюри	CT+Connecticut	U.S.+USA+U.S.A.
+4843553	Stafford	41.98482	-72.28897	12029	Стаффорд	CT+Connecticut	U.S.+USA+U.S.A.
+4843564	Stamford	41.05343	-73.53873	128874	Стамфорд	CT+Connecticut	U.S.+USA+U.S.A.
+4843811	Stratford	41.18454	-73.13317	51384	Стратфорд	CT+Connecticut	U.S.+USA+U.S.A.
+4845411	West Hartford	41.76204	-72.74204	63268	Вест Харфорд	CT+Connecticut	U.S.+USA+U.S.A.
+4845419	West Haven	41.27065	-72.94705	54927	Вест Хэвен	CT+Connecticut	U.S.+USA+U.S.A.
+4845585	Westport	41.14149	-73.3579	26391	Вестпорт	CT+Connecticut	U.S.+USA+U.S.A.
+4845898	Windham	41.69982	-72.15702	23072	Виндхам	CT+Connecticut	U.S.+USA+U.S.A.
+4847385	Atlantic	41.4036	-95.01388	6833	Атлантик	IA+Iowa	U.S.+USA+U.S.A.
+4852711	Corning	40.98999	-94.74081	1537	Корнинг	IA+Iowa	U.S.+USA+U.S.A.
+4853828	Des Moines	41.60054	-93.60911	210330	Де-Мойн	IA+Iowa	U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Чикаго	Иллинойс+IL+Illinois	U.S.+USA+U.S.A.
+4928662	Abington	42.10482	-70.94532	15985	Абингтон	MA+Massachusetts	U.S.+USA+U.S.A.
+4928720	Acushnet	41.68066	-70.90782	10850	Акюшнет	MA+Massachusetts	U.S.+USA+U.S.A.
+4928788	Agawam	42.06954	-72.61481	28761	Агавам	MA+Massachusetts	U.S.+USA+U.S.A.
+4929399	Attleboro	41.94454	-71.28561	44284	Аттлборо	MA+Massachusetts	U.S.+USA+U.S.A.
+4929417	Auburn	42.19454	-71.83563	16724	Аубурн	MA+Massachusetts	U.S.+USA+U.S.A.
+4930173	Becket	42.33203	-73.08288	1786	Бэкэт	MA+Massachusetts	U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Бостон	MA+Massachusetts	U.S.+USA+U.S.A.
+4931429	Brockton	42.08343	-71.01838	95314	Броктон	MA+Massachusetts	U.S.+USA+U.S.A.
+4931972	Cambridge	42.3751	-71.10561	110402	Кембриж	MA+Massachusetts	U.S.+USA+U.S.A.
+4936159	Fall River	41.70149	-71.15505	88777	Фол Ривэ	MA+Massachusetts	U.S.+USA+U.S.A.
+4937355	Freetown	41.76677	-71.03282	8472	Фритаун	MA+Massachusetts	U.S.+USA+U.S.A.
+4937829	Gloucester	42.61593	-70.66199	29781	Глоусэстэр	MA+Massachusetts	U.S.+USA+U.S.A.
+4938064	Granby	42.25648	-72.5162	1368	Грэнби	MA+Massachusetts	U.S.+USA+U.S.A.
+4938092	Granville	42.06676	-72.86149	1548	Гранвилл	MA+Massachusetts	U.S.+USA+U.S.A.
+4938157	Great Barrington	42.19592	-73.36206	2231	Грит Баррингтон	MA+Massachusetts	U.S.+USA+U.S.A.
+4938862	Hardwick	42.35009	-72.19952	2668	Хардуик	MA+Massachusetts	U.S.+USA+U.S.A.
+4939693	Holliston	42.2001	-71.4245	14010	Холлистон	MA+Massachusetts	U.S.+USA+U.S.A.
+4941873	Leominster	42.52509	-71.75979	41569	Леоминстер	MA+Massachusetts	U.S.+USA+U.S.A.
+4942618	Lowell	42.63342	-71.31617	110699	Лауэлл	MA+Massachusetts	U.S.+USA+U.S.A.
+4942807	Lynn	42.46676	-70.94949	92457	Линн	MA+Massachusetts	U.S.+USA+U.S.A.
+4943170	Marlborough	42.34593	-71.55229	39818	Марлборо	MA+Massachusetts	U.S.+USA+U.S.A.
+4944193	Milton	42.24954	-71.06616	27003	Милтон	MA+Massachusetts	U.S.+USA+U.S.A.
+4944350	Monson	42.10426	-72.31897	8505	Монсон	MA+Massachusetts	U.S.+USA+U.S.A.
+4945121	New Bedford	41.63622	-70.93421	94958	Нью Бэдфорд	MA+Massachusetts	U.S.+USA+U.S.A.
+4945819	Northampton	42.32509	-72.6412	28540	Норсэмптон	MA+Massachusetts	U.S.+USA+U.S.A.
+4947459	Pittsfield	42.45008	-73.24538	43303	Питсфилд	MA+Massachusetts	U.S.+USA+U.S.A.
+4947597	Plymouth	41.95844	-70.66726	7494	Плимаус	MA+Massachusetts	U.S.+USA+U.S.A.
+4948247	Quincy	42.25288	-71.00227	93618	Куайнси	MA+Massachusetts	U.S.+USA+U.S.A.
+4948462	Reading	42.52565	-71.09533	24747	Ридинг	MA+Massachusetts	U.S.+USA+U.S.A.
+4948936	Rockport	42.65565	-70.62032	4966	Рокпорт	MA+Massachusetts	U.S.+USA+U.S.A.
+4951788	Springfield	42.10148	-72.58981	154341	Спрингфилд	MA+Massachusetts	U.S.+USA+U.S.A.
+4956184	Worcester	42.26259	-71.80229	184815	Уорсестэр	MA+Massachusetts	U.S.+USA+U.S.A.
+4957003	Augusta	44.31062	-69.77949	18471	Огаста	ME+Maine	U.S.+USA+U.S.A.
+4984016	Allen Park	42.25754	-83.21104	27425	Олэн Парк	MI	U.S.+USA+U.S.A.
+4984565	Auburn Hills	42.68753	-83.2341	22672	Аубурн Хиллс	MI	U.S.+USA+U.S.A.
+4984692	Bad Axe	43.80196	-83.00078	3011	Бэд Акс	MI	U.S.+USA+U.S.A.
+4985153	Battle Creek	42.3173	-85.17816	51589	Батл Крик	MI	U.S.+USA+U.S.A.
+4985180	Bay City	43.59447	-83.88886	33917	Бэй Сити	MI	U.S.+USA+U.S.A.
+4985711	Benton Harbor	42.11671	-86.45419	9976	Бентон Харбор	MI	U.S.+USA+U.S.A.
+4985761	Berrien Springs	41.94643	-86.3389	1764	Бэрриен Спрингс	MI	U.S.+USA+U.S.A.
+4986020	Big Rapids	43.69808	-85.48366	10397	Биг Рапидс	MI	U.S.+USA+U.S.A.
+4986759	Boyne City	45.21668	-85.01394	3776	Бойн Сити	MI	U.S.+USA+U.S.A.
+4990121	Crystal Falls	46.09801	-88.33402	1414	Кристал Фолс	MI	U.S.+USA+U.S.A.
+4990512	Dearborn Heights	42.33698	-83.27326	56145	Дирборн Хэйтс	MI	U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Детройт	MI	U.S.+USA+U.S.A.
+4991600	East Grand Rapids	42.94114	-85.61003	11311	Ист Гранд Рапидс	MI	U.S.+USA+U.S.A.
+4991753	Eaton Rapids	42.5092	-84.65581	5225	Итон Рапидс	MI	U.S.+USA+U.S.A.
+4993659	Garden City	42.32559	-83.33104	26920	Гарден Сити	MI	U.S.+USA+U.S.A.
+4994325	Grand Haven	43.06307	-86.22839	11062	Гранд Хэйвен	MI	U.S.+USA+U.S.A.
+4994358	Grand Rapids	42.96336	-85.66809	195097	Гранд Рапидс	MI	U.S.+USA+U.S.A.
+4994864	Grosse Pointe Farms	42.4092	-82.89186	9232	Гросс Пойнте Фармс	MI	U.S.+USA+U.S.A.
+4994868	Grosse Pointe Park	42.37587	-82.93742	11220	Гросс Пойнте Парк	MI	U.S.+USA+U.S.A.
+4996956	Imlay City	43.02475	-83.07772	3573	Имлэй Сити	MI	U.S.+USA+U.S.A.
+4997238	Iron River	46.09273	-88.64235	2904	Айрон Ривэ	MI	U.S.+USA+U.S.A.
+4997249	Ironwood	46.45467	-90.17101	5002	Айрон Вуд	MI	U.S.+USA+U.S.A.
+4997384	Jackson	42.24587	-84.40135	33133	Джэксон	MI	U.S.+USA+U.S.A.
+4998830	Lansing	42.73253	-84.55553	115056	Лансинг	MI	U.S.+USA+U.S.A.
+4999311	Lincoln Park	42.25059	-83.17854	37012	Линкольн Парк Мичиган	MI	U.S.+USA+U.S.A.
+5000306	Ludington	43.95528	-86.45258	8058	Людингтон	MI	U.S.+USA+U.S.A.
+5000500	Madison Heights	42.48587	-83.1052	30198	Мэдисон Хэйтс	MI	U.S.+USA+U.S.A.
+5000873	Marine City	42.71948	-82.49213	4143	Марин Сити	MI	U.S.+USA+U.S.A.
+5002656	Mount Clemens	42.59726	-82.87798	16400	Маунт Клэменс+Mt. Clemens	MI	U.S.+USA+U.S.A.
+5002714	Mount Pleasant	43.59781	-84.76751	26060	Маунт Плисант	MI	U.S.+USA+U.S.A.
+5003374	New Buffalo	41.79393	-86.74392	1876	Нью Буффало	MI	U.S.+USA+U.S.A.
+5004005	Norton Shores	43.1689	-86.26395	24208	Нортон Шорэс	MI	U.S.+USA+U.S.A.
+5004188	Oak Park	42.45948	-83.18271	29752	Оак Парк	MI	U.S.+USA+U.S.A.
+5006233	Port Huron	42.97086	-82.42491	29330	Порт Хюрон	MI	U.S.+USA+U.S.A.
+5006946	Reed City	43.87502	-85.51005	2390	Рид Сити	MI	U.S.+USA+U.S.A.
+5007141	Richmond	42.8092	-82.75576	5864	Ричмонд	MI	U.S.+USA+U.S.A.
+5007477	Rogers City	45.4214	-83.81833	2712	Роджэрс Сити	MI	U.S.+USA+U.S.A.
+5007585	Roscommon	44.49835	-84.59197	1061	Роскоммон	MI	U.S.+USA+U.S.A.
+5014413	West Branch	44.27641	-84.23861	2067	Вэст Бранч	MI	U.S.+USA+U.S.A.
+5016024	Albert Lea	43.64801	-93.36827	17674	Альберт Ли	MN+Minnesota	U.S.+USA+U.S.A.
+5021632	Cloquet	46.72161	-92.45936	12075	Клогуэт	MN+Minnesota	U.S.+USA+U.S.A.
+5024237	Detroit Lakes	46.81718	-95.84533	9002	Детройт Лэйкс	MN+Minnesota	U.S.+USA+U.S.A.
+5026416	Fergus Falls	46.28302	-96.07756	13281	Фергас Фоллс	MN+Minnesota	U.S.+USA+U.S.A.
+5028537	Grand Rapids	47.23717	-93.53021	11127	Грэнд Рапидс	MN+Minnesota	U.S.+USA+U.S.A.
+5037649	Minneapolis	44.97997	-93.26384	410939	Миннеаполис	MN+Minnesota	U.S.+USA+U.S.A.
+5038195	Mora	45.8769	-93.29384	3462	Мора	MN+Minnesota	U.S.+USA+U.S.A.
+5043752	Roseau	48.84609	-95.76277	2715	Росиу	MN+Minnesota	U.S.+USA+U.S.A.
+5045360	Saint Paul	44.94441	-93.09327	285068	Сент-Пол	MN+Minnesota	U.S.+USA+U.S.A.
+5046026	Sauk Centre	45.73747	-94.95252	4357	Саук Сентр	MN+Minnesota	U.S.+USA+U.S.A.
+5048814	Stillwater	45.05636	-92.80604	18924	Стиллуатэр	MN+Minnesota	U.S.+USA+U.S.A.
+5050847	Tyler	44.2783	-96.13475	1110	Тайлэр	MN+Minnesota	U.S.+USA+U.S.A.
+5051735	Walker	47.10135	-94.58722	928	Валкэр	MN+Minnesota	U.S.+USA+U.S.A.
+5053156	Winona	44.04996	-91.63932	27094	Винона	MN+Minnesota	U.S.+USA+U.S.A.
+5072006	Lincoln	40.8	-96.66696	277348	Линкольн	NE	U.S.+USA+U.S.A.
+5084868	Concord	43.20814	-71.53757	42620	Конкорд	NH+New Hampshire	U.S.+USA+U.S.A.
+5105496	Trenton	40.21705	-74.74294	84225	Трентон	Нью-Джерси+NJ+New Jersey	U.S.+USA+U.S.A.
+5106834	Albany	42.65258	-73.75623	98469	Олбани	NY	U.S.+USA+U.S.A.
+5192726	Harrisburg	40.2737	-76.88442	49081	Гаррисберг	PA	U.S.+USA+U.S.A.
+5206379	Pittsburgh	40.44062	-79.99589	304391	Питсбург	PA	U.S.+USA+U.S.A.
+5224151	Providence	41.82399	-71.41283	179207	Провиденс	RI	U.S.+USA+U.S.A.
+5238685	Montpelier	44.26006	-72.57539	7592	Монтпилиер	VT+Vermont	U.S.+USA+U.S.A.
+5261457	Madison	43.07305	-89.40123	248951	Мадисон	WI	U.S.+USA+U.S.A.
+5281020	Groton	42.6112	-71.57451	1124	Гротон	MA+Massachusetts	U.S.+USA+U.S.A.
+5282297	Bethel	41.37121	-73.41401	9549	Бесэл	CT+Connecticut	U.S.+USA+U.S.A.
+5283054	Branford	41.27954	-72.8151	29438	Брэнфорд	CT+Connecticut	U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Финикс	AZ+Arizona	U.S.+USA+U.S.A.
+5357527	Hollywood	34.09834	-118.32674	167664	Голливуд	CA+Calif+California	U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Лос-Анжелес шаары	CA+Calif+California	U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	Сакраменто	CA+Calif+California	U.S.+USA+U.S.A.
+5412822	Basalt	39.36887	-107.03282	3891	Базальт	CO+Colorado	U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Денвер	CO+Colorado	U.S.+USA+U.S.A.
+5428184	Leadville	39.25082	-106.29252	2644	Лидвилл	CO+Colorado	U.S.+USA+U.S.A.
+5490263	Santa Fe	35.68698	-105.9378	84099	Санта-Фе	NM+New Mexico	U.S.+USA+U.S.A.
+5501344	Carson City	39.1638	-119.7674	54521	Карсон-Сити	NV+Nevada	U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Лас-Вегас	NV+Nevada	U.S.+USA+U.S.A.
+5554072	Juneau	58.30194	-134.41972	32756	Жуно	Аляска+AK+Alaska	U.S.+USA+U.S.A.
+5574199	Akron	40.16054	-103.21438	1724	Акрон	CO+Colorado	U.S.+USA+U.S.A.
+5586437	Boise	43.6135	-116.20345	145987	Бойсе	ID+Idaho	U.S.+USA+U.S.A.
+5656882	Helena	46.59271	-112.03611	30581	Хелена	MT	U.S.+USA+U.S.A.
+5688025	Bismarck	46.80833	-100.78374	71167	Бисмарк	ND	U.S.+USA+U.S.A.
+5750162	Salem	44.9429	-123.0351	164549	Сейлем	OR	U.S.+USA+U.S.A.
+5767918	Pierre	44.36832	-100.35097	14002	Пирр	SD+South Dakota	U.S.+USA+U.S.A.
+5780993	Salt Lake City	40.76078	-111.89105	192672	Солт-Лейк-Сити+SLC	UT+Utah	U.S.+USA+U.S.A.
+5805687	Olympia	47.03787	-122.9007	50302	Олимпия	WA+Washington	U.S.+USA+U.S.A.
+5821086	Cheyenne	41.13998	-104.82025	63335	Шайенн	WY	U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Гонолулу	HI+Hawaii	U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Монтевидео		
+601294	Nukus	42.45306	59.61028	230006	Нукус	Qoraqalpog iston	Өзбекстан
+1216189	Shohimardon	39.98322	71.80512	5100	Shaymardan	Farg ona	Өзбекстан
+1216311	Qarshi	38.86056	65.78905	222898	Каршы		Өзбекстан
+1217662	Bukhara	39.77472	64.42861	247644	Бухара		Өзбекстан
+1512569	Tashkent	41.26465	69.21627	1978028	Ташкен	Toshkent Shahri	Өзбекстан
+1513131	Navoiy	40.08444	65.37917	129725	Навои		Өзбекстан
+1513157	Namangan	40.9983	71.67257	432456	Наманган		Өзбекстан
+1513271	Asaka	40.64153	72.23868	56736	Asake		Өзбекстан
+1513600	Xo‘jaobod	40.66886	72.56002	16889	Kojo-Abad		Өзбекстан
+1513886	Jizzax	40.11583	67.84222	152642	Жызак		Өзбекстан
+1514581	Angren	41.01667	70.14361	126957	Ангрен		Өзбекстан
+3625549	Valencia	10.16202	-68.00765	1385083	Валенсия		
+3645213	Coro	11.4045	-69.67344	195227	Коро шаары		
+4035413	Apia	-13.83333	-171.76666	40407	Апиа		
+415189	Aden	12.77944	45.03667	550602	Аден шаары	‘Adan	
+964137	Pretoria	-25.74486	28.18783	1619438	Претория	Gauteng	
+993800	Johannesburg	-26.20227	28.04363	2026469	Йоханнесбург	Gauteng	
+3369157	Cape Town	-33.92584	18.42322	3433441	Кейптаун	Western Cape	
+901344	Ndola	-12.95867	28.63659	394518	Ндола	Copperbelt	
+909137	Lusaka	-15.40669	28.28713	1267440	Лусака	Lusaka	
+910111	Livingstone	-17.84194	25.85425	109203	Ливингстон шаары	Southern	
+890299	Harare	-17.82772	31.05337	1542813	Хараре		

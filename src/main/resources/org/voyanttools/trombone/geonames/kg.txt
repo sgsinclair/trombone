@@ -1,0 +1,21 @@
+2240449	Luanda	-8.83682	13.23432	2776168	Lwanda	Luanda	Angola+Ngola
+3347939	Lobito	-12.3644	13.53601	207932	Lubitu	Benguela	Angola+Ngola
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	
+216281	Goma	-1.67409	29.22845	144124	Goma	Nord-Kivu	Repubilika ya Kôngo ya Dimokalasi
+2312888	Mbanza-Ngungu	-5.25837	14.85838	86356	Mbanza-Ngungu	Bas-Congo	Repubilika ya Kôngo ya Dimokalasi
+2313002	Matadi	-5.83861	13.46306	180109	Matadi	Bas-Congo	Repubilika ya Kôngo ya Dimokalasi
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinsasa	Kinshasa	Repubilika ya Kôngo ya Dimokalasi
+2316702	Boma	-5.85098	13.05364	162521	Mboma	Bas-Congo	Repubilika ya Kôngo ya Dimokalasi
+2317397	Bandundu	-3.31687	17.38063	118211	Bandundu		Repubilika ya Kôngo ya Dimokalasi
+2258261	Dolisie	-4.19834	12.66664	103894	Dolizi	Niari	Repubilika ya Kongo
+2260535	Brazzaville	-4.26613	15.28318	1284609	Braza+Brazzaville	Brazzaville	Repubilika ya Kongo
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaounde		
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		
+223817	Djibouti	11.58901	43.14503	623891	Mbanza ya Djibuti	Djibouti	
+2507480	Algiers	36.73225	3.08746	1977663	Alger	Alger	
+3031582	Bordeaux	44.84044	-0.5805	231844	Bordo+33000		France
+2398269	Moanda	-1.56652	13.1987	30151	Muanda	Haut-Ogooué	
+2400555	Franceville	-1.63333	13.58357	42967	Masuku	Haut-Ogooué	
+2410763	São Tomé	0.33654	6.72732	53300	Sao Tome		
+2365267	Lomé	6.12874	1.22154	749700	Lome		

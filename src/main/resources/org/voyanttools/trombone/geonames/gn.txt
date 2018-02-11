@@ -1,0 +1,44 @@
+3430340	Oberá	-27.48706	-55.11994	56528	Obera	MN	Argentina
+3433658	Gualeguaychú	-33.00937	-58.51722	78676	Gualeguaychu	ER+Entre Ríos	Argentina
+3435103	Curuzú Cuatiá	-29.79171	-58.0546	36390	Kurusu Kuatia	CR+Corrientes	Argentina
+3435217	Corrientes	-27.4806	-58.8341	339067	Taragui	CR+Corrientes	Argentina
+3841956	Paraná	-31.73197	-60.5238	262295	Parana	ER+Entre Ríos	Argentina
+7647007	San Carlos de Bariloche	-41.14557	-71.30822	95394	Bariloche	RN+Río Negro	Argentina
+3405870	Belém	-1.45583	-48.50444	1407737	Velẽ	Para+PA+Pará	Brasil
+3446652	Telêmaco Borba	-24.32389	-50.61556	58880	Telemaco Borba	PR+Paraná	Brasil
+3446682	Taubaté	-23.02639	-45.55528	251641	Táva yvate	SP+São Paulo	Brasil
+3453643	Piracicaba	-22.72528	-47.64917	342209	Pirasykava	SP+São Paulo	Brasil
+3457381	Mauá	-23.66778	-46.46139	386069	Maua	SP+São Paulo	Brasil
+3459462	Jundiaí	-23.18639	-46.88417	321589	Jurundiay	SP+São Paulo	Brasil
+3460535	Itu	-23.26417	-47.29917	137586	Ytu	SP+São Paulo	Brasil
+3461789	Guarujá	-23.99306	-46.25639	310424	Guyrajára	SP+São Paulo	Brasil
+3462089	Gravataí	-29.94218	-50.99278	238778	Karavatay	RS+Rio Grande do Sul	Brasil
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuriytýva	PR+Paraná	Brasil
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brasil
+3470279	Bauru	-22.31472	-49.06056	335024	Yvauru	SP+São Paulo	Brasil
+6173331	Vancouver	49.24966	-123.11934	600000	Vangúve	Kolumbia Vyretañagua+BC+British Columbia	
+6325494	Québec	46.81228	-71.21454	528595	Kévek táva+Québec	QC	
+2867714	Munich	48.13743	11.57549	1260391	Múnich	Bayern	Alemaña
+588409	Tallinn	59.43696	24.75353	394024	Talin	Harjumaa	
+2988507	Paris	48.85341	2.3488	2138551	Parĩ+75001		France
+2643743	London	51.50853	-0.12574	7556900	Londye	Ingyaterra	http://en.wikipedia.org/wiki/United_Kingdom
+281184	Jerusalem	31.76904	35.21633	801000	Herusalẽ		
+1275004	Kolkata	22.56263	88.36304	4631392	Kalkuta	WB+West Bengal	India
+250441	Amman	31.95522	35.94503	1275857	Amã		Al Mamlakah al Urdunīyah al Hāshimīyah
+1283240	Kathmandu	27.70169	85.3206	1442271	Katemandu		
+3436714	Villarrica	-25.74946	-56.43518	41157	Villarrika		Paraguái+Tetã Paraguái
+3437148	Salto del Guairá	-24.0625	-54.30694	7385	Salto del Guaira	Canindeyú	Paraguái+Tetã Paraguái
+3437600	Paraguarí	-25.62083	-57.14722	10079	Paraguari		Paraguái+Tetã Paraguái
+3437863	Lambaré	-25.34682	-57.60647	126377	Lambare		Paraguái+Tetã Paraguái
+3437918	Itauguá	-25.39258	-57.35421	64997	Ytaygua		Paraguái+Tetã Paraguái
+3439214	Capiatá	-25.3552	-57.44545	198553	Kapiatã		Paraguái+Tetã Paraguái
+3439297	Caazapá	-26.19583	-56.36806	23996	Kaasapa		Paraguái+Tetã Paraguái
+3439320	Caacupé	-25.38575	-57.14217	21696	Kaakupe		Paraguái+Tetã Paraguái
+3439389	Asunción	-25.30066	-57.63591	1482200	Paraguay		Paraguái+Tetã Paraguái
+551487	Kazan	55.78874	49.12214	1104738	Kasã		
+170063	Aleppo	36.20124	37.16117	1602264	Alepo		
+170654	Damascus	33.5102	36.29128	1569394	Ndamáko		
+4887398	Chicago	41.85003	-87.65005	2720546	Chikago	IL+Illinois	U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Ángeles	CA+Calif+California	U.S.+USA+U.S.A.
+3440034	Tacuarembó	-31.71694	-55.98111	51854	Tacuarembo	Tacuarembó	
+3369157	Cape Town	-33.92584	18.42322	3433441	Yvy akua Táva	Western Cape	

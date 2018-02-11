@@ -1,0 +1,48 @@
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Autereraria
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Autereraria
+2172517	Canberra	-35.28346	149.12807	367752	Canberra	ACT+Australian Capital Territory	Autereraria
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	
+620127	Vitebsk	55.1904	30.2049	342700	Vitsebsk	Vitsyebskaya Voblastsʼ	
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Heremani
+3105184	Vilanova i la Geltrú	41.22392	1.72511	65890	Vilanova i la Geltrú	Catalunya	Paniora+España
+3105600	Vilafranca del Penedès	41.34618	1.69713	38425	Vilafranca del Penedès	Catalunya	Paniora+España
+3105994	Vielha	42.70196	0.79556	5385	Vielha	Catalunya	Paniora+España
+3106050	Vic	41.93012	2.25486	39844	Vic	Catalunya	Paniora+España
+3106180	El Vendrell	41.21667	1.53333	35821	El Vendrell	Catalunya	Paniora+España
+3106492	Valls	41.28612	1.24993	25092	Valls	Catalunya	Paniora+España
+3107519	Tremp	42.16703	0.89487	5639	Tremp	Catalunya	Paniora+España
+3107677	Tortosa	40.81249	0.5216	35143	Tortosa	Catalunya	Paniora+España
+3108286	Terrassa	41.56667	2.01667	210941	Terrassa	Catalunya	Paniora+España
+3108288	Tarragona	41.11667	1.25	140323	Tarragona	Catalunya	Paniora+España
+3108747	Solsona	41.99395	1.51706	8343	Solsona	Catalunya	Paniora+España
+3109143	la Seu d'Urgell	42.35877	1.46144	13063	La Seu d'Urgell	Catalunya	Paniora+España
+3109982	Santa Coloma de Farners	41.86667	2.66667	11739	Santa Coloma de Farners	Catalunya	Paniora+España
+3110642	Sant Feliu de Llobregat	41.38333	2.05	42919	Sant Feliu de Llobregat	Catalunya	Paniora+España
+3110643	Sant Feliu de Guíxols	41.78333	3.03333	21977	Sant Feliu de Guíxols	Catalunya	Paniora+España
+3111607	Ripoll	42.20064	2.19033	11057	Ripoll	Catalunya	Paniora+España
+3111933	Reus	41.15612	1.10687	107118	Reus	Catalunya	Paniora+España
+3112680	Puigcerdà	42.4316	1.92819	8845	Puigcerdà	Catalunya	Paniora+España
+3114566	Palamós	41.84843	3.12912	18161	Palamós	Catalunya	Paniora+España
+3114567	Palafrugell	41.91738	3.1631	22365	Palafrugell	Catalunya	Paniora+España
+3115093	Olot	42.18096	2.49012	33524	Olot	Catalunya	Paniora+España
+3117164	Mataró	41.54211	2.4445	121722	Mataró	Catalunya	Paniora+España
+3117533	Manresa	41.72815	1.82399	76558	Manresa	Catalunya	Paniora+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Paniora+España
+3118514	Lleida	41.61674	0.62218	135919	Lleida	Catalunya	Paniora+España
+3119952	la Bisbal d'Empordà	41.95	3.05	10385	La Bisbal d'Empordà	Catalunya	Paniora+España
+3120431	Igualada	41.58098	1.6172	38918	Igualada	Catalunya	Paniora+España
+3121145	Granollers	41.60797	2.28773	60658	Granollers	Catalunya	Paniora+España
+3121456	Girona	41.98311	2.82493	96188	Girona	Catalunya	Paniora+España
+3122453	Figueres	42.26645	2.96163	43330	Figueres	Catalunya	Paniora+España
+3128201	Berga	42.10429	1.84628	17160	Berga	Catalunya	Paniora+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	Paniora+España
+3128885	Banyoles	42.11667	2.76667	18327	Banyoles	Catalunya	Paniora+España
+3128978	Balaguer	41.79117	0.81094	16779	Balaguer	Catalunya	Paniora+España
+3130131	Amposta	40.70995	0.57856	21240	Amposta	Catalunya	Paniora+España
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Farāni+France
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	’Itāria
+2179537	Wellington	-41.28664	174.77557	381900	Whanga-nui-a-Tara		Aotearoa
+4033936	Papeete	-17.53733	-149.5665	26357	Pape’ete		Franzöösch-Polynesien
+2267057	Lisbon	38.71667	-9.13333	517802	Lisboa	Lisboa	Pōtītī
+2673730	Stockholm	59.33258	18.0649	1515017	Stockolm	Stockholms Län	Ruoččii

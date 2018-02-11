@@ -1,0 +1,433 @@
+292968	Abu Dhabi	24.46667	54.36667	603492	Aboe Dhabi		Verenigde Arabiese Emirate+UAE
+1138958	Kabul	34.52813	69.17233	3043532	Kaboel		Afganistan+Afghanistan
+616052	Yerevan	40.18111	44.51361	1093485	Jerewan	Yerevan	Armenië+Arminië
+616320	Oshakan	40.26392	44.31671	4768	Osjakan	Aragatsotn	Armenië+Arminië
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola
+3430863	Mar del Plata	-38.00228	-57.55754	553935	Mar del Plata	BA+Buenos Aires	Argentinië
+3432043	La Plata	-34.92145	-57.95453	694167	La Plata	BA+Buenos Aires	Argentinië
+7647007	San Carlos de Bariloche	-41.14557	-71.30822	95394	Bariloche	RN+Río Negro	Argentinië
+2766429	Sankt Pölten	48.2	15.63333	49001	St. Pölten	Neder-Oostenryk	Oostenryk
+2778067	Graz	47.06667	15.45	222326	Graz	Stiermarke	Oostenryk
+2063523	Perth	-31.95224	115.8614	1896548	Perth	WA	Australië
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Australië
+2164025	Hamilton	-37.74425	142.02202	10104	Hamilton	VIC	Australië
+2173911	Broken Hill	-31.9652	141.4512	18430	Broken Hill	NSW	Australië
+2174003	Brisbane	-27.46794	153.02809	2189878	Brisbane	QLD	Australië
+3577154	Oranjestad	12.52398	-70.02703	29998	Oranjestad		Aruba
+587084	Baku	40.37767	49.89201	1116513	Bakoe	Baki	Aserbeidjan+Azerbeidjan+Aserbaijan
+2785341	Tournai	50.60715	3.38932	67721	Doornik	Wallonia+Walloon	België
+2785622	Tervuren	50.82372	4.51418	20623	Tervuren		België
+2790869	Mons	50.45413	3.95229	91277	Mons	Wallonia+Walloon	België
+2794788	Kalmthout	51.38442	4.47556	17485	Kalmthout		België
+2795113	Huy	50.51894	5.23284	19973	Huy	Wallonia+Walloon	België
+2797656	Gent	51.05	3.71667	231493	Gent		België
+2797713	Gembloux	50.56149	4.69889	21676	Gembloers	Wallonia+Walloon	België
+2798573	Eupen	50.6279	6.03647	18029	Eupen	Wallonia+Walloon	België
+2800866	Brussels	50.85045	4.34878	1019022	Brussel	Brussels-Capital Region	België
+2800931	Brugge	51.20892	3.22424	116709	Brugge		België
+2801283	Bouillon	49.79324	5.06703	5347	Bouillon	Wallonia+Walloon	België
+2803073	Arlon	49.68333	5.81667	26179	Arlon	Wallonia+Walloon	België
+727011	Sofia	42.69751	23.32415	1152556	Sofia		Bulgarye
+732770	Burgas	42.50606	27.46781	195966	Boergas		Bulgarye
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Brasilië
+3450554	Salvador	-12.97111	-38.51083	2711840	Salvador da Bahia	BA	Brasilië
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brasilië
+3456283	Niterói	-22.88333	-43.10361	456456	Niterói	RJ	Brasilië
+3463237	Florianópolis	-27.59667	-48.54917	412724	Florianópolis	SC+Santa Catarina	Brasilië
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasília	Federale Distrik+DF	Brasilië
+5913490	Calgary	51.05011	-114.08529	1019942	Calgary	AB+Alberta	Kanada
+5946768	Edmonton	53.55014	-113.46871	712391	Edmonton	AB+Alberta	Kanada
+5959878	Gaspé	48.83341	-64.48194	14819	Gaspé	QC	Kanada
+5959974	Gatineau	45.47723	-75.70164	242124	Gatineau	QC	Kanada
+6050610	Laval	45.56995	-73.692	376845	Laval	QC	Kanada
+6059891	Longueuil	45.53121	-73.51806	229330	Longueuil	QC	Kanada
+6076211	Moncton	46.09454	-64.7965	87467	Moncton	Nieu-Brunswyk+NB+New Brunswick	Kanada
+6077243	Montréal	45.50884	-73.58781	1600000	Montréal	QC	Kanada
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Kanada
+6137270	Saguenay	48.41675	-71.06573	143692	Saguenay	QC	Kanada
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	Kanada
+6169141	Trois-Rivières	46.34515	-72.5477	119693	Trois-Rivières	QC	Kanada
+6173331	Vancouver	49.24966	-123.11934	600000	Vancouver	Brits-Columbië+BC+British Columbia	Kanada
+6183235	Winnipeg	49.8844	-97.14704	632063	Winnipeg+WPG	MB+Manitoba	Kanada
+6325494	Québec	46.81228	-71.21454	528595	Quebecstad+Québec	QC	Kanada
+2657896	Zürich	47.36667	8.55	341730	Zürich	ZH	Switserland
+2659601	Montreux	46.43301	6.91143	22897	Montreux	VD	Switserland
+2659994	Lausanne	46.516	6.63282	116751	Lausanne+1000	VD	Switserland
+2660646	Genève	46.20222	6.14569	183981	Genève+1200		Switserland
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaíso	Valparaíso	Chili
+3871336	Santiago	-33.45694	-70.64827	4837295	Santiago+Stgo.		Chili
+3893894	Concepción	-36.82699	-73.04977	215413	Concepción	Biobío	Chili
+3899539	Antofagasta	-23.65236	-70.3954	309832	Antofagasta	Antofagasta	Chili
+1783763	Zhuzhou	27.83333	113.15	709358	Zhutsjou		Sjina+Volksrepubliek van Sjina
+1783934	Shangqiu	34.45	115.65	181218	Sjangqiu		Sjina+Volksrepubliek van Sjina
+1784130	Zhoukou	33.63333	114.63333	377061	Tsjoukou		Sjina+Volksrepubliek van Sjina
+1784658	Zhengzhou	34.75778	113.64861	4253913	Zhengtsjou		Sjina+Volksrepubliek van Sjina
+1785018	Zhangzhou	24.51333	117.65556	589831	Zhangtsjou	Foekien	Sjina+Volksrepubliek van Sjina
+1787227	Yangzhou	32.39722	119.43583	539715	Yangtsjou		Sjina+Volksrepubliek van Sjina
+1787858	Shangrao	28.45179	117.94287	318769	Sjangrao		Sjina+Volksrepubliek van Sjina
+1791388	Wenzhou	27.99942	120.66682	865672	Wentsjou		Sjina+Volksrepubliek van Sjina
+1793505	Taizhou	32.49069	119.90812	612356	Taitsjou		Sjina+Volksrepubliek van Sjina
+1795855	Shaoxing	30.00237	120.57864	421283	Sjaoxing		Sjina+Volksrepubliek van Sjina
+1795940	Shantou	23.36814	116.71479	5329024	Sjantou		Sjina+Volksrepubliek van Sjina
+1797353	Quanzhou	24.91389	118.58583	184143	Quantsjou	Foekien	Sjina+Volksrepubliek van Sjina
+1798827	Pingdingshan	33.73847	113.30119	889675	Pingdingsjan		Sjina+Volksrepubliek van Sjina
+1801640	Luzhou	28.8903	105.42575	0	Lutsjou	Sichuan	Sjina+Volksrepubliek van Sjina
+1803245	Lishui	28.46042	119.91029	98946	Lisjui		Sjina+Volksrepubliek van Sjina
+1804430	Lanzhou	36.05701	103.83987	2628426	Lantsjou		Sjina+Volksrepubliek van Sjina
+1805540	Jingzhou	30.35028	112.19028	177878	Jingtsjou		Sjina+Volksrepubliek van Sjina
+1806776	Huizhou	23.11147	114.41523	289201	Huitsjou		Sjina+Volksrepubliek van Sjina
+1807234	Huangshi	30.24706	115.04814	688090	Huangsji		Sjina+Volksrepubliek van Sjina
+1808926	Hangzhou	30.29365	120.16142	6241971	Hangtsjou		Sjina+Volksrepubliek van Sjina
+1809858	Guangzhou	23.11667	113.25	11071424	Kwangtsjou		Sjina+Volksrepubliek van Sjina
+1810638	Ganzhou	25.84664	114.9326	0	Gantsjou		Sjina+Volksrepubliek van Sjina
+1810821	Fuzhou	26.06139	119.30611	1179720	Futsjou	Foekien	Sjina+Volksrepubliek van Sjina
+1811103	Foshan	23.02677	113.13148	3600000	Fosjan		Sjina+Volksrepubliek van Sjina
+1812955	Dezhou	37.45127	116.31046	379555	Detsjou		Sjina+Volksrepubliek van Sjina
+1814757	Chuzhou	32.32194	118.29778	280582	Chutsjou		Sjina+Volksrepubliek van Sjina
+1815395	Chaozhou	23.65396	116.62262	424787	Chaotsjou		Sjina+Volksrepubliek van Sjina
+1815456	Changzhou	31.77359	119.95401	949018	Changtsjou		Sjina+Volksrepubliek van Sjina
+1815577	Changsha	28.19874	112.97087	3093980	Changsja		Sjina+Volksrepubliek van Sjina
+1816080	Cangzhou	38.31667	116.86667	527681	Cangzou		Sjina+Volksrepubliek van Sjina
+1816336	Binzhou	37.36667	118.01667	115893	Bintsjou		Sjina+Volksrepubliek van Sjina
+1816670	Beijing	39.9075	116.39723	11716620	Beijing		Sjina+Volksrepubliek van Sjina
+1886760	Suzhou	31.30408	120.59538	5345961	Sutsjou		Sjina+Volksrepubliek van Sjina
+2034937	Shenyang	41.79222	123.43278	6255921	Sjenyang		Sjina+Volksrepubliek van Sjina
+2036427	Jinzhou	41.10778	121.14167	604269	Jintsjou		Sjina+Volksrepubliek van Sjina
+2036502	Jilin	43.85083	126.56028	1881977	Jilinstad		Sjina+Volksrepubliek van Sjina
+2037355	Fushun	41.88669	123.94363	1400646	Fusjun		Sjina+Volksrepubliek van Sjina
+2038632	Anshan	41.12361	122.99	1199275	Ansjan		Sjina+Volksrepubliek van Sjina
+8400694	Taizhou	28.66266	121.43312	0	Taitsjou		Sjina+Volksrepubliek van Sjina
+2807363	Witten	51.44362	7.35258	101247	Witten	NRW	Duitsland
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Duitsland
+2812482	Weimar	50.9803	11.32903	64727	Weimar		Duitsland
+2821164	Trier	49.75565	6.63935	100129	Trier	Rynland-Palts	Duitsland
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Baden-Württemberg	Duitsland
+2849483	Regensburg	49.01513	12.10161	129151	Regensburg	Beiere+Bayern	Duitsland
+2852458	Potsdam	52.39886	13.06566	145292	Potsdam+Podstupim	Brandenburg+http://www.brandenburg.de	Duitsland
+2861650	Nürnberg	49.45421	11.07752	499237	Neurenberg	Beiere+Bayern	Duitsland
+2861982	Nordhausen	51.5018	10.7957	43912	Nordhausen		Duitsland
+2867714	Munich	48.13743	11.57549	1260391	München	Beiere+Bayern	Duitsland
+2867838	Mülheim	51.43218	6.87967	171000	Mülheim an der Ruhr	NRW	Duitsland
+2872155	Meissen	51.16158	13.4737	28492	Meissen		Duitsland
+2874545	Magdeburg	52.12773	11.62916	229826	Maagdenburg+Madeborch	Sassen-Anholt	Duitsland
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Duitsland
+2886242	Köln	50.93333	6.95	963395	Keulen	NRW	Duitsland
+2895992	Ingolstadt	48.76508	11.42372	120658	Ingolstadt	Beiere+Bayern	Duitsland
+2907669	Heilbronn	49.13995	9.22054	120733	Heilbronn	Baden-Württemberg	Duitsland
+2907911	Heidelberg	49.40768	8.69079	143345	Heidelberg	Baden-Württemberg	Duitsland
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Duitsland
+2925177	Freiburg	47.9959	7.85222	215966	Freiburg im Breisgau	Baden-Württemberg	Duitsland
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt am Main	Hessen	Duitsland
+2925535	Frankfurt (Oder)	52.34714	14.55062	51691	Frankfurt	Brandenburg+http://www.brandenburg.de	Duitsland
+2934246	Düsseldorf	51.22172	6.77616	573057	Düsseldorf	NRW	Duitsland
+2934691	Duisburg	51.43247	6.76516	504358	Duisburg	NRW	Duitsland
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Duitsland
+2945024	Braunschweig	52.26594	10.52673	244715	Brunswyk	Nedersakse+Neddersassen+Läichsaksen+Donja Saska	Duitsland
+2950159	Berlin	52.52437	13.41053	3426354	Berlyn	Berlyn+Berlin	Duitsland
+2950978	Bensheim	49.68369	8.61839	39439	Bensheim	Hessen	Duitsland
+2957773	Altenburg	50.98763	12.43684	38568	Altenburg		Duitsland
+3247449	Aachen	50.77664	6.08342	265208	Aken	NRW	Duitsland
+223817	Djibouti	11.58901	43.14503	623891	Djiboeti	Djibouti	Djiboeti
+2614481	Roskilde	55.64152	12.08035	44285	Roskilde		Denemarke
+2618425	Copenhagen	55.67594	12.56553	1153615	Kopenhagen		Denemarke
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harjumaa	Estland
+358048	Damietta	31.41648	31.81332	76839	Doemjat		Egipte
+359792	Aswan	24.09082	32.89942	241261	Aswan		Egipte
+360630	Cairo	30.06263	31.24967	7734614	Kaïro		Egipte
+361058	Alexandria	31.20176	29.91582	3811516	Alexandrië		Egipte
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo		Spanje+España
+2509954	Valencia	39.46975	-0.37739	814208	Valencia	Valencia	Spanje+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	Spanje+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Spanje+España
+3129111	Ayerbe	42.27267	-0.68844	1096	Ayerbe	Aragón	Spanje+España
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Finland
+2611396	Tórshavn	62.00973	-6.77164	13200	Tórshavn		Faroëreilande
+2968748	Villefranche-sur-Saône	45.98333	4.71667	32994	Villefranche-sur-Saône+69400		Frankryk+France
+2969679	Versailles	48.8	2.13333	85416	Versailles+78000		Frankryk+France
+2970777	Vannes	47.66667	-2.75	54020	Vannes+56000	Historiese Bretagne+Bretagne	Frankryk+France
+2972315	Toulouse	43.60426	1.44367	433055	Toulouse+31000		Frankryk+France
+2972328	Toulon	43.12442	5.92836	168701	Toulon+83000		Frankryk+France
+2973783	Strasbourg	48.58392	7.74553	274845	Straatsburg+67000	ACAL	Frankryk+France
+2976742	Saint-Tropez	43.26932	6.63981	5939	Saint-Tropez+83990		Frankryk+France
+2978640	Saint-Malo	48.65	-2.01667	50676	Saint-Malo+35400	Historiese Bretagne+Bretagne	Frankryk+France
+2982652	Rouen	49.44313	1.09932	112787	Rouen+76000		Frankryk+France
+2983451	Riquewihr	48.16672	7.29707	1271	Riquewihr	ACAL	Frankryk+France
+2983990	Rennes	48.11198	-1.67429	209375	Rennes+35000	Historiese Bretagne+Bretagne	Frankryk+France
+2984699	Quimperlé	47.86667	-3.55	12312	Quimperlé+29300	Historiese Bretagne+Bretagne	Frankryk+France
+2984701	Quimper	48	-4.1	63849	Quimper+29000	Historiese Bretagne+Bretagne	Frankryk+France
+2986160	Pontivy	48.06667	-2.98333	16752	Pontivy+56300	Historiese Bretagne+Bretagne	Frankryk+France
+2987914	Perpignan	42.69764	2.89541	110706	Perpignan+66000		Frankryk+France
+2988507	Paris	48.85341	2.3488	2138551	Parys+75001		Frankryk+France
+2989317	Orléans	47.90289	1.90389	124149	Orléans+45000		Frankryk+France
+2990440	Nice	43.70313	7.26608	338620	Nice+06000		Frankryk+France
+2990611	Neuilly-sur-Seine	48.8846	2.26965	61300	Neuilly-sur-Seine+92200		Frankryk+France
+2990683	Neuf-Brisach	48.01783	7.52795	2249	Neuf-Brisach	ACAL	Frankryk+France
+2990969	Nantes	47.21725	-1.55336	277269	Nantes+44000+http://www.nantes.fr/		Frankryk+France
+2990970	Nanterre	48.89198	2.20675	86719	Nanterre+92000		Frankryk+France
+2992166	Montpellier	43.61092	3.87723	248252	Montpellier+34000		Frankryk+France
+2993875	Millau	44.1	3.08333	23307	Millau+12100		Frankryk+France
+2994160	Metz	49.11911	6.17269	123914	Metz+57000	ACAL	Frankryk+France
+2994497	Menton	43.77649	7.50435	29649	Menton+06500		Frankryk+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001		Frankryk+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Frankryk+France
+2997577	Lorient	47.75	-3.36667	58112	Lorient+56100	Historiese Bretagne+Bretagne	Frankryk+France
+2997620	Loos	50.60982	3.01874	22107	Loos+59120	http://en.wikipedia.org/wiki/Hauts-de-France	Frankryk+France
+2998324	Lille	50.63297	3.05858	228328	Lille+59000	http://en.wikipedia.org/wiki/Hauts-de-France	Frankryk+France
+3003796	Le Havre	49.4938	0.10767	185972	Le Havre+76600		Frankryk+France
+3004306	Le Faou	48.29456	-4.17927	1703	Le Faou	Historiese Bretagne+Bretagne	Frankryk+France
+3006787	La Rochelle	46.16667	-1.15	76810	La Rochelle+17000		Frankryk+France
+3013173	Honfleur	49.41985	0.23294	8148	Honfleur+14600		Frankryk+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Frankryk+France
+3014856	Grasse	43.66667	6.91667	47581	Grasse+06130		Frankryk+France
+3020686	Dunkerque	51.03297	2.377	71287	Duinkerken+59140	http://en.wikipedia.org/wiki/Hauts-de-France	Frankryk+France
+3021668	Deauville	49.357	0.06995	4677	Deauville+14800		Frankryk+France
+3024297	Colmar	48.08333	7.36667	65405	Colmar+68000	ACAL	Frankryk+France
+3024534	Cluny	46.43318	4.65845	4581	Cluny		Frankryk+France
+3024635	Clermont-Ferrand	45.77966	3.08628	138681	Clermont-Ferrand+63000		Frankryk+France
+3026233	Châteauneuf-du-Pape	44.05638	4.83244	2212	Châteauneuf-du-Pape+84230		Frankryk+France
+3027301	Chamonix-Mont-Blanc	45.92375	6.86933	10614	Chamonix+74400		Frankryk+France
+3028431	Cassis	43.21241	5.5451	8361	Cassis+13260		Frankryk+France
+3028808	Cannes	43.55135	7.01275	70011	Cannes+06150		Frankryk+France
+3029030	Cambrai	50.16667	3.23333	36492	Cambrai+59400	http://en.wikipedia.org/wiki/Hauts-de-France	Frankryk+France
+3030300	Brest	48.39029	-4.48628	144899	Brest+29200	Historiese Bretagne+Bretagne	Frankryk+France
+3034697	Indre	47.2	-1.66667	3897	Indre		Frankryk+France
+3035639	Avranches	48.68333	-1.36667	9295	Avranches+50300		Frankryk+France
+3035681	Avignon	43.94834	4.80892	89769	Avignon+84000		Frankryk+France
+3036059	Auray	47.67025	-2.99183	12269	Auray+56400	Historiese Bretagne+Bretagne	Frankryk+France
+3036784	Arras	50.29301	2.78186	47052	Arras+62000	http://en.wikipedia.org/wiki/Hauts-de-France	Frankryk+France
+3036938	Arles	43.67681	4.63031	53431	Arles+13104		Frankryk+France
+3037253	Arcachon	44.65	-1.16667	12321	Arcachon+33120		Frankryk+France
+3037456	Antibes	43.56241	7.12777	76393	Antibes+06160		Frankryk+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Aix-en-Provence+13080		Frankryk+France
+3038493	Aigues-Mortes	43.56683	4.19068	6526	Aigues-Mortes		Frankryk+France
+2640354	Peterborough	52.57364	-0.24777	163379	Peterborough	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2640729	Oxford	51.75222	-1.25596	171380	Oxford	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londen	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2647356	Hastings	50.85519	0.57292	133422	Hastings	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2647632	Halifax	53.71667	-1.85	82624	Halifax	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2649808	Exeter	50.7236	-3.52751	117763	Exeter	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburg	苏格兰	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2654710	Brighton	50.82838	-0.13947	139001	Brighton	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmingham	Engeland	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Belfast		Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Aberdeen	苏格兰	Groot-Brittanje+Verenigde Koninkryk+http://en.wikipedia.org/wiki/United_Kingdom
+615532	Batumi	41.64228	41.63392	121806	Batoemi	Ajaria	Georgië
+2411989	Serekunda	13.43833	-16.67806	340000	Serrekunda	Banjul	Gambië
+2413876	Banjul	13.45274	-16.57803	34589	Banjul	Banjul	Gambië
+2422465	Conakry	9.53795	-13.67729	1767200	Conakry	Conakry	Guinee
+734426	Ptolemaḯda	40.51472	21.67861	30045	Ptolemaida		Griekeland+Griekanmua
+4044012	Hagåtña	13.47567	144.74886	1051	Hagåtña		Guam
+2374775	Bissau	11.86357	-15.59767	388028	Bissau	Bissau Region	Guinee-Bissau
+3191648	Rijeka	45.32673	14.44241	141172	Rijeka	Primorsko-Goranska	Kroasië
+3054643	Budapest	47.49801	19.03991	1741041	Boedapest		Hongarye
+1631761	Pekanbaru	0.51667	101.44167	703956	Pekanbaroe	Riau	Indonesië+http://en.wikipedia.org/wiki/Indonesia
+1642911	Jakarta	-6.21462	106.84513	8540121	Djakarta	Jakarta Raya	Indonesië+http://en.wikipedia.org/wiki/Indonesia
+2082600	Jayapura	-2.53371	140.71813	134895	Djajapoera	Papua	Indonesië+http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	Dublin		Ierland+Republiek van Ierland+Ire
+295721	Acre	32.92814	35.07647	45603	Akko		Israel
+1275004	Kolkata	22.56263	88.36304	4631392	Kalkutta	Wes-Bengale+WB+West Bengal	Indië
+1275339	Mumbai	19.07283	72.88261	12691836	Moembaai	MH+Mahārāshtra	Indië
+6619347	Navi Mumbai	19.03681	73.01582	2600000	Navi Moembaai	MH+Mahārāshtra	Indië
+94787	Kirkuk	35.46806	44.39222	601433	Kirkoek		Irak
+99072	Mosul	36.335	43.11889	1739800	Mosoel	Nīnawá	Irak
+113646	Tabriz	38.08	46.2919	1424641	Tabris		Iran
+115019	Shiraz	29.61031	52.53113	1249942	Sjiraz		Iran
+121110	Piranshahr	36.701	45.1413	61973	Piransjahr	Āz̄ārbāyjān-e Gharbī	Iran
+122285	Neyshābūr	36.21329	58.79575	220929	Nishapur	Khorāsān-e Raẕāvī	Iran
+124665	Mashhad	36.31559	59.56796	2307177	Mashhad	Khorāsān-e Raẕāvī	Iran
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavik+101		Ysland
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Sisilië	Italië
+3165185	Trieste	45.64953	13.77678	187056	Triëst	FVG	Italië
+3165524	Turin	45.07049	7.68682	870456	Turyn	Piëmont+Piemonte	Italië
+3172394	Naples	40.85216	14.26811	959470	Napels	Kampanië	Italië
+3173435	Milan	45.46427	9.18951	1236837	Milaan		Italië
+3175081	La Spezia	44.103	9.82375	88491	La Spezia	Ligurië	Italië
+3176219	Genoa	44.40478	8.94439	580223	Genua	Ligurië	Italië
+3176959	Florence	43.77925	11.24626	349296	Florence	Toskane	Italië
+3181913	Bolzano	46.49067	11.33982	99049	Bozen		Italië
+1853909	Osaka	34.69374	135.50218	2592413	Osaka		Japan
+1859307	Kitakyushu	33.85181	130.85034	997536	Kitakyushu		Japan
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobi	Nairobi Area	Kenia
+1528675	Bishkek	42.87	74.59	900000	Bisjkek	Gorod Bishkek	Kirgisië
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnom Penh		Kambodja+http://en.wikipedia.org/wiki/Cambodia
+1871859	Pyongyang	39.03385	125.75432	3222000	Pjongjang		Noord-Korea+http://en.wikipedia.org/wiki/North_Korea
+1835848	Seoul	37.566	126.9784	10349312	Seoel		Suid-Korea+http://en.wikipedia.org/wiki/South_Korea
+3580661	George Town	19.2866	-81.37436	29370	Georgetown		Kaaimanseilande
+276781	Beirut	33.89332	35.50157	1916100	Beiroet		Libanon
+2960316	Luxembourg	49.61167	6.13	76684	Luxemburg		Luxemburg
+2960630	Echternach	49.81212	6.41846	4787	Echternach		Luxemburg
+458995	Karosta	56.55128	21.01287	7500	Karosta	Liepāja	Letland
+81302	Tobruk	32.08361	23.97639	121052	Tobroek		Libië
+2460596	Bamako	12.65	-8	1297281	Bamako	Bamako	Mali
+1028434	Quelimane	-17.87861	36.88833	188964	Quelimane	Zambézia	Mosambiek
+1039854	Matola	-25.96222	32.45889	675422	Matola	Maputo	Mosambiek
+1040652	Maputo	-25.96553	32.58322	1191613	Maputo	Maputo City	Mosambiek
+1052373	Beira	-19.84361	34.83889	530604	Beira	Sofala	Mosambiek
+3352136	Windhoek	-22.55941	17.08323	268132	Windhoek	Khomas	Namibië
+3352844	Swakopmund	-22.67842	14.52663	25047	Swakopmund	Erongo	Namibië
+3355672	Lüderitz	-26.64807	15.15383	15137	Lüderitz	Karas	Namibië
+3356264	Keetmanshoop	-26.58333	18.13333	15608	Keetmanshoop	Karas	Namibië
+3359638	Walvis Bay	-22.9575	14.50528	52058	Walvisbaai	Erongo	Namibië
+2322911	Sokoto	13.06269	5.24322	563861	Sokoto stad	Sokoto	Nigerië
+2347283	Benin City	6.33815	5.62575	1125058	Benin-stad	Edo	Nigerië
+2745743	Feanwâlden	53.23558	5.98832	3440	Veenwouden+http://en.wikipedia.org/wiki/Feanw%C3%A2lden	fr	Nederland
+2745912	Utrecht	52.09083	5.12222	290529	Utrecht	ut+Utrecht	Nederland
+2747357	's-Heerenberg	51.8767	6.25877	4720	’s-Heerenberg	GLD+gd+Gelderland	Nederland
+2747373	The Hague	52.07667	4.29861	474292	Den Haag	Suid-Holland+zh+Zuid-Holland	Nederland
+2747596	Schiedam	51.91917	4.38889	75438	Schiedam	Suid-Holland+zh+Zuid-Holland	Nederland
+2750325	Nieuwegein	52.02917	5.08056	61489	Nieuwegein	ut+Utrecht	Nederland
+2751773	Leiden	52.15833	4.49306	119713	Leiden	Suid-Holland+zh+Zuid-Holland	Nederland
+2751792	Leeuwarden	53.20139	5.80859	91424	Leeuwarden	fr	Nederland
+2753011	Katwijk aan den Rijn	52.19417	4.42222	5940	Katwijk	Suid-Holland+zh+Zuid-Holland	Nederland
+2753106	Kampen	52.555	5.91111	48980	Kampen	ov+Overijssel	Nederland
+2754669	Heerenveen	52.95929	5.91854	43094	Heerenveen	fr	Nederland
+2755251	Groningen	53.21917	6.56667	181194	Groningen	gr+Groningen	Nederland
+2755920	Ferwert	53.33784	5.82533	1935	Ferwerd	fr	Nederland
+2756039	Ermelo	52.29833	5.62222	10255	Ermelo	GLD+gd+Gelderland	Nederland
+2756669	Dordrecht	51.81	4.67361	119260	Dordrecht	Suid-Holland+zh+Zuid-Holland	Nederland
+2759633	Assen	52.99667	6.5625	62237	Assen	dr	Nederland
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Nederland
+3144987	Narvik	68.43838	17.4272	14114	Narvik	Nordland	Noorweë
+1283240	Kathmandu	27.70169	85.3206	1442271	Katmandoe		Nepal
+2186239	New Plymouth	-39.06667	174.08333	49168	Nieu-Plymouth		Nieu-Seeland
+2190324	Hamilton	-37.78333	175.28333	152641	Hamilton		Nieu-Seeland
+1684712	Tacloban	11.24333	125.00472	242089	Takloban		Filippyne
+1715348	Davao	7.07306	125.61278	1212504	Davao Stad		Filippyne
+1168197	Peshawar	34.008	71.57849	1218773	Pesjawar		Pakistan
+1174872	Karachi	24.8608	67.0104	11624219	Karatsji		Pakistan
+756135	Warsaw	52.22977	21.01178	1702139	Warskou	Woiwodskap Masowië+Mazowieckie	Pole
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Pole
+768217	Końskowola	51.40922	22.05175	2208	Końskowola	Lubelskie	Pole
+3081368	Wrocław	51.1	17.03333	634893	Wrocław	Dolnośląskie	Pole
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Pole
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Śląskie	Pole
+3087691	Puck	54.7179	18.40841	11415	Puck	Pommere+Pomorskie	Pole
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Pole
+3099434	Gdańsk	54.35205	18.64637	461865	Gdansk	Pommere+Pomorskie	Pole
+3102014	Bydgoszcz	53.1235	18.00762	366452	Bydgoszcz	Kujavië-Pommere+Kujawsko-Pomorskie	Pole
+281133	Gaza	31.50161	34.46672	410000	Gasa	Gasastrook	Palestina
+2267057	Lisbon	38.71667	-9.13333	517802	Lissabon	Lisboa	Portugal
+468902	Yaroslavl	57.62987	39.87368	606730	Jaroslawl	Jaroslavl	Rusland
+472757	Volgograd	48.71939	44.50183	1011417	Wolgograd+Volgograd	Volgograd	Rusland
+473249	Vladikavkaz	43.03667	44.66778	317370	Wladikafkaz		Rusland
+479123	Ulyanovsk	54.32824	48.38657	640680	Oeljanofsk	Oeljanofsk-oblast+Uljanovsk	Rusland
+479561	Ufa	54.74306	55.96779	1033338	Oefa		Rusland
+480562	Tula	54.19609	37.61822	468825	Toela	Tula	Rusland
+484646	Tambov	52.73169	41.44326	290933	Tambof	Tambov	Rusland
+485239	Syktyvkar	61.67642	50.80994	230139	Siktifkar	Republiek van Komi	Rusland
+498677	Saratov	51.54056	46.00861	863725	Saratof	Saratov	Rusland
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostof aan die Don		Rusland
+504341	Pskov	57.8136	28.3496	201990	Pskof	Pskov	Rusland
+509820	Petrozavodsk	61.78491	34.34691	265025	Petrozawodsk	Republiek van Karelië	Rusland
+518970	Novocherkassk	47.42096	40.09185	166974	Nowotsjerkassk		Rusland
+524305	Murmansk	68.97917	33.09251	319263	Moermansk	Murmansk	Rusland
+524901	Moscow	55.75222	37.61556	10381222	Moskou+Moskva		Rusland
+548408	Kirov	58.59665	49.66007	457383	Kirof	Kirov	Rusland
+553915	Kaluga	54.5293	36.27542	338978	Kaloega	Kaluga	Rusland
+554234	Kaliningrad	54.70649	20.51095	434954	Kaliningrad	Kaliningrad	Rusland
+554840	Izhevsk	56.84976	53.20448	631038	Izjefsk		Rusland
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzerzhinsk	Nizjnij Novgorod	Rusland
+569696	Cheboksary	56.13222	47.25194	446781	Tsjeboksari+Чебоксары		Rusland
+580497	Astrakhan	46.34968	48.04076	502533	Astrachan	Astrakhan	Rusland
+1488754	Tyumen	57.15222	65.52722	519119	Tjoemen		Rusland
+1493197	Salekhard	66.53	66.60194	38025	Salechard+Салехард	Yamalo-Nenetskiy Avtonomnyy Okrug	Rusland
+1496990	Novokuznetsk	53.7557	87.1099	539616	Nowokoeznetsk+Новокузнецк	Kemerovo	Rusland
+1501321	Kurgan	55.45	65.33333	343129	Koergan	Kurgan	Rusland
+1503772	Khanty-Mansiysk	61.00417	69.00194	67800	Chanti-Mansiisk	Khanty-Mansiyskiy Avtonomnyy Okrug	Rusland
+1503901	Kemerovo	55.33333	86.08333	477090	Kemerowo	Kemerovo	Rusland
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Tsjeljabinsk	Tsjeljabinsk	Rusland
+1510853	Barnaul	53.36056	83.76361	599579	Barnaoel	Altayskiy Kray	Rusland
+2013348	Vladivostok	43.10562	131.87353	587022	Wladiwostok	Primorskiy Kray	Rusland
+2022890	Khabarovsk	48.48271	135.08379	579000	Chabarofsk	Khabarovskiy Kray	Rusland
+2023469	Irkutsk	52.29778	104.29639	586695	Irkoetsk	Irkutsk	Rusland
+2026609	Blagoveshchensk	50.27961	127.5405	221296	Blagowesjtsjensk	Amur	Rusland
+2026643	Birobidzhan	48.79284	132.92386	76146	Birobidzjan		Rusland
+2119441	Yuzhno-Sakhalinsk	46.95407	142.73603	176484	Joezjno-Sachalinsk	Sakhalin	Rusland
+2122104	Petropavlovsk-Kamchatsky	53.04444	158.65076	187282	Petropawlofsk-Kamtsjatski	Kamtsjatka	Rusland
+2127202	Anadyr	64.73424	177.5103	10332	Anadir	Chukotskiy Avtonomnyy Okrug	Rusland
+105343	Jeddah	21.54238	39.19797	2867446	Djedda	Makkah	Saoedi-Arabië+Saudi-Arabië
+108410	Riyadh	24.68773	46.72185	4205961	Riaad		Saoedi-Arabië+Saudi-Arabië
+365137	Omdurman	15.64453	32.47773	1200000	Omdoerman		Soedan
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Swede+Ruoččii
+2711537	Göteborg	57.70716	11.96679	572799	Gotenburg	Västra Götalands län	Swede+Ruoččii
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	Slowakye
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadisjoe		Somalië
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Thailand
+162183	Ashgabat	37.95	58.38333	727700	Asjchabat		Turkmenië+Turkmenistan
+1668341	Taipei	25.04776	121.53185	7871900	Taipei		Taiwan+Republiek van Sjina
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Dar-es-Salaam	Dar es Salaam	Tanzanië
+161325	Arusha	-3.36667	36.68333	341136	Arusha	Arusha	Tanzanië
+692194	Sumy	50.9216	34.80029	294456	Soemi	Sumy	Oekraine+Oekraïne+http://en.wikipedia.org/wiki/Ukraine
+693468	Sloviansk	48.86667	37.61667	124800	Slowiansk	Donetsk	Oekraine+Oekraïne+http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Lwif	Lviv	Oekraine+Oekraïne+http://en.wikipedia.org/wiki/Ukraine
+702658	Luhansk	48.56705	39.31706	452000	Loehansk	Luhansk	Oekraine+Oekraïne+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kiëf		Oekraine+Oekraïne+http://en.wikipedia.org/wiki/Ukraine
+705812	Kropyvnytskyi	48.5132	32.2597	249454	Kirowohrad	Kirovohrad+http://en.wikipedia.org/wiki/Kropyvnytskyi	Oekraine+Oekraïne+http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Tsjerkasi	Cherkas'ka Oblast'+Cherkasy	Oekraine+Oekraïne+http://en.wikipedia.org/wiki/Ukraine
+4058262	Dauphin Island	30.25548	-88.10972	1251	Dauphin-eiland	AL+Alabama	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4160021	Jacksonville	30.33218	-81.65565	868031	Jacksonville	FL+Florida	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4168228	Pensacola	30.42131	-87.21691	53193	Pensacola	FL+Florida	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	Atlanta	GA+Georgia	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4250542	Springfield	39.80172	-89.64371	116565	Springfield	IL+Illinois	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4267354	Abilene	38.91722	-97.21391	6558	Abilene	KS+Kansas	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	LA+Louisiana	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4393217	Kansas City	39.09973	-94.57857	475378	Kansas City	MO+Missouri	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Houston	TX+Texas	Verenigde State van Amerika+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroit	MI	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5105496	Trenton	40.21705	-74.74294	84225	Trenton	NJ+New Jersey	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York Stad+NYC+NY	NY	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5197079	Lancaster	40.03788	-76.30551	59339	Lancaster	Pennsilvanië+PA	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5251436	Eau Claire	44.81135	-91.49849	67778	Eau Claire	WI	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5258393	Kenosha	42.58474	-87.82119	99858	Kenosha	WI	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5261457	Madison	43.07305	-89.40123	248951	Madison	WI	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5263045	Milwaukee	43.0389	-87.90647	600155	Milwaukee	WI	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5357527	Hollywood	34.09834	-118.32674	167664	Hollywood	Kalifornië+CA+Calif+California	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	Kalifornië+CA+Calif+California	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5391811	San Diego	32.71533	-117.15726	1394928	San Diego	Kalifornië+CA+Calif+California	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	Kalifornië+CA+Calif+California	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5393052	Santa Cruz	36.97412	-122.0308	64220	Santa Cruz	Kalifornië+CA+Calif+California	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5746545	Portland	45.52345	-122.67621	632309	Portland	OR	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Honolulu	HI+Hawaii	Verenigde State van Amerika+U.S.+USA+U.S.A.
+5879400	Anchorage	61.21806	-149.90028	298695	Anchorage	AK+Alaska	Verenigde State van Amerika+U.S.+USA+U.S.A.
+3440939	Punta del Este	-34.94747	-54.93382	7234	Punta del Este		Uruguay
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Uruguay
+3443013	Colonia del Sacramento	-34.46262	-57.83976	21714	Colonia del Sacramento		Uruguay
+1512569	Tashkent	41.26465	69.21627	1978028	Tasjkent	Toshkent Shahri	Oesbekistan
+3625549	Valencia	10.16202	-68.00765	1385083	Valencia		Venezuela
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Venezuela
+945945	Upington	-28.44776	21.25612	71373	Upington	Noord-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+946877	Uitenhage	-33.75757	25.3971	228912	Uitenhage	Oos-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+957487	Sasolburg	-26.81358	27.81695	77016	Sasolburg	Vrystaat	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+958724	Rustenburg	-25.66756	27.24208	124064	Rustenburg	North-West	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+964137	Pretoria	-25.74486	28.18783	1619438	Pretoria	Gauteng	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+964349	Potchefstroom	-26.71667	27.1	123669	Potchefstroom	North-West	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+964420	Port Elizabeth	-33.96109	25.61494	967677	Port Elizabeth	Oos-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+965289	Polokwane	-23.90449	29.46885	123749	Pietersburg+Polokwane		Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+965301	Pietermaritzburg	-29.61679	30.39278	750845	Pietermaritzburg	KwaZulu-Natal	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+965528	Phalaborwa	-23.94299	31.14107	109468	Phalaborwa		Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+966166	Parys	-26.9033	27.45727	71319	Parys	Vrystaat	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+967106	Oudtshoorn	-33.60047	22.19955	61507	Oudtshoorn	Wes-Kaap+Western Cape	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+967542	Orania	-29.81381	24.41205	1200	Orania	Noord-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+971534	Nelspruit	-25.47448	30.97033	110159	Nelspruit	Mpumalanga	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+980595	Mahikeng	-25.86522	25.64421	14000	Mafikeng	North-West	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+982899	Lichtenburg	-26.152	26.15968	65863	Lichtenburg	North-West	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+986822	Krugersdorp	-26.08577	27.77515	378821	Krugersdorp	Gauteng	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+988698	Knysna	-34.03627	23.04713	68659	Knysna	Wes-Kaap+Western Cape	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+990930	Kimberley	-28.73226	24.76232	142089	Kimberley	Noord-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+993800	Johannesburg	-26.20227	28.04363	2026469	Johannesburg	Gauteng	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1000501	Grahamstown	-33.30422	26.53276	91548	Grahamstad	Oos-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1000543	Graaff-Reinet	-32.25215	24.53075	62896	Graaff-Reinet	Oos-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1002145	George	-33.963	22.46173	12345	George	Wes-Kaap+Western Cape	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1006984	East London	-33.01529	27.91162	478676	Oos Londen	Oos-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1007311	Durban	-29.8579	31.0292	3120282	Durban	KwaZulu-Natal	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1016181	Brakpan	-26.23656	28.36938	305692	Brakpan	Gauteng	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1018725	Bloemfontein	-29.12107	26.214	463064	Bloemfontein	Vrystaat	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1019330	Bhisho	-32.84721	27.44218	137287	Bisho	Oos-Kaap	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1021086	Barberton	-25.78842	31.05319	67927	Barberton	Mpumalanga	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+1105777	Centurion	-25.85891	28.18577	233386	Centurion	Gauteng	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+3361025	Stellenbosch	-33.93462	18.86676	94263	Stellenbos	Wes-Kaap+Western Cape	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+3369157	Cape Town	-33.92584	18.42322	3433441	Kaapstad	Wes-Kaap+Western Cape	Republiek van Suid-Afrika+Unie van Suid-Afrika+Suid-Afrika
+909137	Lusaka	-15.40669	28.28713	1267440	Lusaka	Lusaka	Zambië
+911148	Kitwe	-12.80243	28.21323	400914	Kitwe	Copperbelt	Zambië
+916095	Kabwe	-14.4469	28.44644	188979	Kabwe	Central	Zambië

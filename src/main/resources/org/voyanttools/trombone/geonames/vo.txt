@@ -1,0 +1,347 @@
+292968	Abu Dhabi	24.46667	54.36667	603492	Äbu Saby		Lemiräns Larabik Pebalöl+UAE
+3183875	Tirana	41.3275	19.81889	374801	Tirana		Lalbanän
+2761615	Weissenbach an der Triesting	47.98211	16.03935	0	Weißenbach an der Triesting		
+2766757	Sankt Anton am Arlberg	47.1275	10.26372	2848	St. Anton am Arlberg		
+587084	Baku	40.37767	49.89201	1116513	Bakı	Baki	
+3374036	Bridgetown	13.10732	-59.62021	98511	Bridgetown	Saint Michael	Barbadeän
+1185241	Dhaka	23.7104	90.40744	10356500	Dhaka		Bangladejän
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Ouagadougou		Burkinän
+727011	Sofia	42.69751	23.32415	1152556	Sofia+Sofiya		Bulgarän
+290340	Manama	26.22787	50.58565	147074	Mänamä	Muḩāfaz̧at al ‘Āşimah	Bahruäns
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto-Novo	Quémé	Beninän
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Bandar Seri Begawan		Brunän
+3446621	Teófilo Otoni	-17.8575	-41.50528	101170	Teófilo Otôni	MG	Brasilän
+3448879	São João del Rei	-21.13556	-44.26167	78592	São João del-Rei	MG	Brasilän
+3469989	Birigui	-21.28861	-50.34	102277	Birigüi	SP+São Paulo	Brasilän
+1252416	Thimphu	27.46609	89.64191	98676	Thimphu		Butän+Bh2utan
+627907	Gomel	52.4345	30.9754	480951	Homyel		Belarusän
+3582672	Belmopan	17.25	-88.76667	13381	Belmopan	Cayo	Belisän
+5898138	Beloeil	45.56839	-73.20568	18927	Belœil	QC	
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	
+2658537	Speicher	47.4109	9.44335	3985	Speicher		
+2658665	Schwyz	47.02076	8.65414	14177	Schwyz		
+2658761	Schaffhausen	47.69732	8.63493	33863	Schaffhausen		
+2660718	Fribourg	46.80237	7.15128	32827	Freiburg		
+2661513	Biel/Bienne	47.13713	7.24608	48614	Biel-Bienne		
+2661552	Bern	46.94809	7.44744	121631	Bern		
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaoundé		Kamerunän
+3621849	San José	9.93333	-84.08333	335007	San José	San José	
+3374333	Praia	14.93152	-23.51254	113364	Praia	Praia	
+146268	Nicosia	35.17531	33.3642	200452	Lefkosia		
+2803560	Zwickau	50.72724	12.48839	98796	Zwickau		Deutän
+2804748	Zerbst	51.9662	12.08517	15680	Zerbst/Anhalt	Sassen-Anholt	Deutän
+2805615	Würzburg	49.79391	9.95121	133731	Würzburg	Bayän+Bayern	Deutän
+2809346	Wiesbaden	50.08258	8.24932	272432	Wiesbaden	Hessen	Deutän
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Deutän
+2810808	Wernigerode	51.83652	10.78216	34463	Wernigerode	Sassen-Anholt	Deutän
+2811698	Weißwasser	51.50403	14.64017	22099	Weißwasser/O.L.		Deutän
+2815678	Wachtberg	50.63333	7.1	20032	Arzdorf	NRW	Deutän
+2820256	Ulm	48.39841	9.99155	120451	Ulm	Badän-Vürtän+Baden-Württemberg	Deutän
+2824841	Sulzbach	49.29882	7.05696	18364	Sulzbach/Saar	Sarlän+Saarlän+Saarland	Deutän
+2826287	Stralsund	54.30911	13.0818	58976	Stralsund	Mecklenburg-Vorpommern	Deutän
+2826584	Stollberg	50.70999	12.78034	12948	Stollberg/Erzgeb.		Deutän
+2831580	Solingen	51.17343	7.0845	164359	Solingen	NRW	Deutän
+2832013	Simmern	49.98198	7.52351	7979	Simmern/Hunsrück	Rinän-Palzän	Deutän
+2832495	Siegen	50.87481	8.02431	107242	Siegen	NRW	Deutän
+2834282	Schwerin	53.62937	11.41316	96641	Schwerin	Mecklenburg-Vorpommern	Deutän
+2834978	Schwarzenberg	50.53791	12.78522	18523	Schwarzenberg/Erzgeb.		Deutän
+2842150	Salzgitter	52.15705	10.4154	101079	Salzgitter	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2842647	Saarbrücken	49.23262	7.00982	181227	Saarbrücken	Sarlän+Saarlän+Saarland	Deutän
+2842688	Saalfeld	50.64826	11.36536	28023	Saalfeld/Saale		Deutän
+2847736	Reutlingen	48.49144	9.20427	112627	Reutlingen	Badän-Vürtän+Baden-Württemberg	Deutän
+2848273	Remscheid	51.17983	7.1925	117118	Remscheid	NRW	Deutän
+2849483	Regensburg	49.01513	12.10161	129151	Regensburg	Bayän+Bayern	Deutän
+2849647	Recklinghausen	51.61379	7.19738	122438	Recklinghausen	NRW	Deutän
+2852458	Potsdam	52.39886	13.06566	145292	Potsdam+Podstupim	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2855745	Paderborn	51.71905	8.75439	142161	Paderborn	NRW	Deutän
+2856883	Osnabrück	52.27264	8.0498	166462	Osnabrück	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2858586	Oberweißbach	50.58231	11.14382	1653	Oberweißbach/Thüringer Wald		Deutän
+2860410	Oberhausen	51.47805	6.8625	219176	Oberhausen	NRW	Deutän
+2861650	Nürnberg	49.45421	11.07752	499237	Nürnberg	Bayän+Bayern	Deutän
+2862026	Norderstedt	53.6859	9.98041	71439	Norderstedt	Jlesvigän-Holstän+Schleswig-Holstein	Deutän
+2862620	Nienburg	52.6461	9.22086	32629	Nienburg/Weser	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2864475	Neumünster	54.07477	9.98195	78383	Neumünster	Jlesvigän-Holstän+Schleswig-Holstein	Deutän
+2867543	Münster	51.96236	7.62571	270184	Münster	NRW	Deutän
+2867714	Munich	48.13743	11.57549	1260391	München	Bayän+Bayern	Deutän
+2867838	Mülheim	51.43218	6.87967	171000	Mülheim	NRW	Deutän
+2867996	Mühlhausen	51.20896	10.45275	38108	Mühlhausen/Thüringen		Deutän
+2868531	Mühlberg	51.43453	13.22177	4758	Mühlberg/Elbe	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2869894	Mönchengladbach	51.18539	6.44172	261742	Mönchengladbach	NRW	Deutän
+2871609	Meßkirch	47.99457	9.11479	8736	Meßkirch	Badän-Vürtän+Baden-Württemberg	Deutän
+2872155	Meissen	51.16158	13.4737	28492	Meißen		Deutän
+2873759	Marburg an der Lahn	50.80904	8.77069	78895	Marburg	Hessen	Deutän
+2874225	Mainz	49.98419	8.2791	184997	Mainz	Rinän-Palzän	Deutän
+2875376	Ludwigshafen am Rhein	49.48121	8.44641	163196	Ludwigshafen	Rinän-Palzän	Deutän
+2875601	Lübeck	53.86893	10.68729	212207	Lübeck	Jlesvigän-Holstän+Schleswig-Holstein	Deutän
+2875623	Lübbenau	51.86217	13.95168	17461	Lübbenau/Spreewald	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2878234	Leverkusen	51.0303	6.98432	162738	Leverkusen	NRW	Deutän
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Deutän
+2881885	Lahr	48.34042	7.86886	43863	Lahr/Schwarzwald	Badän-Vürtän+Baden-Württemberg	Deutän
+2885237	Köthen	51.75185	11.97093	28710	Köthen	Sassen-Anholt	Deutän
+2886242	Köln	50.93333	6.95	963395	Köln	NRW	Deutän
+2886946	Koblenz	50.35357	7.57883	107319	Koblenz	Rinän-Palzän	Deutän
+2887835	Kleve	51.78826	6.13865	49072	Kleve	NRW	Deutän
+2891122	Kiel	54.32133	10.13489	232758	Kiel	Jlesvigän-Holstän+Schleswig-Holstein	Deutän
+2892518	Kassel	51.31667	9.5	194501	Kassel	Hessen	Deutän
+2892794	Karlsruhe	49.00937	8.40444	283799	Karlsruhe	Badän-Vürtän+Baden-Württemberg	Deutän
+2894003	Kaiserslautern	49.443	7.77161	98732	Kaiserslautern	Rinän-Palzän	Deutän
+2895992	Ingolstadt	48.76508	11.42372	120658	Ingolstadt	Bayän+Bayern	Deutän
+2898304	Hoyerswerda	51.43787	14.23549	43681	Hoyerswerda		Deutän
+2898321	Höxter	51.77501	9.38155	32713	Höxter	NRW	Deutän
+2905891	Herne	51.5388	7.22572	172108	Herne	NRW	Deutän
+2907669	Heilbronn	49.13995	9.22054	120733	Heilbronn	Badän-Vürtän+Baden-Württemberg	Deutän
+2907911	Heidelberg	49.40768	8.69079	143345	Heidelberg	Badän-Vürtän+Baden-Württemberg	Deutän
+2910831	Hannover	52.37052	9.73322	515140	Hannover+Hannauver	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2911240	Hamm	51.68033	7.82089	185327	Hamm	NRW	Deutän
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Deutän
+2911520	Halle	52.06007	8.36083	21071	Halle	NRW	Deutän
+2911522	Halle (Saale)	51.48158	11.97947	234107	Halle	Sassen-Anholt	Deutän
+2912621	Hagen	51.36081	7.47168	198972	Hagen	NRW	Deutän
+2917788	Greifswald	54.09311	13.38786	52731	Greifswald	Mecklenburg-Vorpommern	Deutän
+2918632	Göttingen	51.53443	9.93228	122149	Göttingen	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2918987	Görlitz	51.15518	14.98853	57751	Görlitz		Deutän
+2921466	Gelsenkirchen	51.50508	7.09654	270028	Gelsenkirchen	NRW	Deutän
+2923544	Fürth	49.47593	10.98856	112025	Fürth	Bayän+Bayern	Deutän
+2923822	Fulda	50.55162	9.67518	63760	Fulda	Hessen	Deutän
+2924206	Fröndenberg	51.47563	7.76946	22964	Fröndenberg/Ruhr	NRW	Deutän
+2925177	Freiburg	47.9959	7.85222	215966	Freiburg	Badän-Vürtän+Baden-Württemberg	Deutän
+2925181	Freiburg	53.82529	9.28803	1890	Freiburg/Elbe	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt am Main	Hessen	Deutän
+2925535	Frankfurt (Oder)	52.34714	14.55062	51691	Frankfurt len Oder	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2925630	Frankenberg	50.91297	13.04011	16850	Frankenberg/Sa.		Deutän
+2926271	Flensburg	54.78431	9.43961	85838	Flensburg	Jlesvigän-Holstän+Schleswig-Holstein	Deutän
+2928810	Essen	51.45657	7.01228	593085	Essen	NRW	Deutän
+2929567	Erlangen	49.59099	11.00783	102675	Erlangen	Bayän+Bayern	Deutän
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		Deutän
+2931414	Eislingen	48.69515	9.70676	20585	Eislingen/Fils	Badän-Vürtän+Baden-Württemberg	Deutän
+2931481	Eisenhüttenstadt	52.15	14.65	32052	Eisenhüttenstadt	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2933882	Eberswalde	52.83492	13.81951	41980	Eberswalde	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2934246	Düsseldorf	51.22172	6.77616	573057	Düsseldorf	NRW	Deutän
+2934691	Duisburg	51.43247	6.76516	504358	Duisburg	NRW	Deutän
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Deutän
+2935517	Dortmund	51.51494	7.466	588462	Dortmund	NRW	Deutän
+2937959	Dessau	51.83864	12.24555	77315	Dessau	Sassen-Anholt	Deutän
+2938323	Delmenhorst	53.0511	8.63091	75893	Delmenhorst	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2939811	Cottbus	51.75769	14.32888	84754	Cottbus	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2940132	Chemnitz	50.8357	12.92922	247220	Chemnitz		Deutän
+2940213	Celle	52.62264	10.08047	71010	Celle	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2944368	Bremerhaven	53.55021	8.57673	117446	Bremerhaven	Bremen	Deutän
+2944388	Bremen	53.07516	8.80777	546501	Bremen	Bremen	Deutän
+2945024	Braunschweig	52.26594	10.52673	244715	Braunschweig	Dona-Saxän+Neddersassen+Läichsaksen+Donja Saska	Deutän
+2945358	Brandenburg an der Havel	52.41667	12.55	59826	Brandenburg	Brandänburgän+Brandenburg+http://www.brandenburg.de	Deutän
+2945698	Boxberg	51.40373	14.57598	3093	Boxberg/O.L.		Deutän
+2945756	Bottrop	51.52392	6.9285	119909	Bottrop	NRW	Deutän
+2946821	Boizenburg	53.38153	10.72375	10783	Boizenburg/Elbe	Mecklenburg-Vorpommern	Deutän
+2947416	Bochum	51.48165	7.21648	385729	Bochum	NRW	Deutän
+2948825	Bingen am Rhein	49.96675	7.8992	24657	Bingen	Rinän-Palzän	Deutän
+2949186	Bielefeld	52.03333	8.53333	331906	Bielefeld+http://de.wikipedia.org/wiki/Bielefeld	NRW	Deutän
+2950073	Bernburg	51.79464	11.7401	32113	Bernburg	Sassen-Anholt	Deutän
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Deutän
+2950349	Bergisch Gladbach	50.9856	7.13298	106184	Bergisch Gladbach	NRW	Deutän
+2951881	Bautzen	51.18035	14.43494	41972	Bautzen		Deutän
+2954172	Augsburg	48.37154	10.89851	259196	Augsburg	Bayän+Bayern	Deutän
+3247449	Aachen	50.77664	6.08342	265208	Aachen	NRW	Deutän
+2618425	Copenhagen	55.67594	12.56553	1153615	Köbenhavn+København		Danän
+2507480	Algiers	36.73225	3.08746	1977663	Cäsair	Alger	
+3651857	Sangolquí	-0.33405	-78.45217	5114	Sangolqui	Pichincha	
+360630	Cairo	30.06263	31.24967	7734614	Kahirä		Lägüptän
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Spanyän+España
+2968703	Ville-la-Grand	46.203	6.2501	7033	Ville la Grand		Fransän+France
+2972516	Tocane-Saint-Apre	45.25404	0.49682	1527	Tocane-Saint-Âpre		Fransän+France
+2975535	Savigny-Lévescault	46.53502	0.47719	1007	Savigny-lÉvescault		Fransän+France
+2985163	Publier	46.38773	6.54356	5525	Publier - Amphion-les-Bains		Fransän+France
+2996255	Mandelieu-la-Napoule	43.55	6.93333	19292	Mandelieu-La Napoule+06210		Fransän+France
+2997698	Longpont-sur-Orge	48.64171	2.29278	6149	Longpont sur Orge		Fransän+France
+3010529	La Celle-Saint-Cloud	48.85029	2.14523	21539	La Celle Saint-Cloud+78170		Fransän+France
+3013705	Hauteville-Lompnes	45.97794	5.60114	4096	Hauteville-Lompnès		Fransän+France
+3017556	Fouquières-lès-Lens	50.42842	2.91321	7008	Fouquières-lez-Lens	http://en.wikipedia.org/wiki/Hauts-de-France	Fransän+France
+3027999	Celle-Lévescault	46.42406	0.1881	1139	Celle-lÉvescault		Fransän+France
+3030264	Bretignolles-sur-Mer	46.63333	-1.86667	3293	Brétignolles-sur-Mer		Fransän+France
+3038225	Aléria	42.1024	9.51575	2163	Aleria		Fransän+France
+2399697	Libreville	0.39241	9.45356	578156	Libreville		Gabunän
+2643743	London	51.50853	-0.12574	7556900	London	Linglän	http://en.wikipedia.org/wiki/United_Kingdom
+2644597	Letchworth	51.97944	-0.2284	33955	Letchworth Garden City	Linglän	http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Aberdeen	苏格兰	http://en.wikipedia.org/wiki/United_Kingdom
+3579925	Saint George's	12.05288	-61.75226	7500	Saint George's	Saint George	Grenadeän
+611717	Tbilisi	41.69411	44.83368	1049498	Tbilisi	T'bilisi	Georgän+Grusiyän
+611847	Sokhumi	43.00697	40.9893	81546	Akva	Labkasän	Georgän+Grusiyän
+615532	Batumi	41.64228	41.63392	121806	Batumi	Ajaria	Georgän+Grusiyän
+2306104	Accra	5.55602	-0.1969	1963264	Accra	Greater Accra	Ganän
+2413876	Banjul	13.45274	-16.57803	34589	Banjul	Banjul	Gambiyän
+255274	Piraeus	37.94745	23.63708	163688	Pireas		Grikän+Griekanmua
+261414	Kallithéa	37.95	23.7	100641	Kallithea		Grikän+Griekanmua
+264371	Athens	37.97945	23.71622	664046	Aten		Grikän+Griekanmua
+3378644	Georgetown	6.80448	-58.15527	235017	Georgetown	Demerara-Mahaica	Gvayän
+3718426	Port-au-Prince	18.53917	-72.335	1234742	Port-au-Prince	Ouest	Haitiyän
+2964574	Dublin	53.33306	-6.24889	1024027	Baile Átha Cliath		Lireyän+Ire
+2965140	Cork	51.89797	-8.47061	190384	Corcaigh		Lireyän+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Hierusalem		
+98182	Baghdad	33.34058	44.40088	7216000	Bagdad		Lirakän
+112931	Tehran	35.69439	51.42151	7153309	Tehran	Tehrān	Lirän
+2630299	Höfn	64.25388	-15.21212	1690	Höfn í Hornafirði+780		Lisladeän
+3164603	Venice	45.43713	12.33265	51298	Venezia		Litaliyän
+3165912	Tarvisio	46.50567	13.58689	2509	Tarvisio	FVG	Litaliyän
+3166848	Seborga	43.8273	7.69585	193	Seborgän		Litaliyän
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	Litaliyän
+3174186	Malè	46.35356	10.91246	1872	Malé		Litaliyän
+250441	Amman	31.95522	35.94503	1275857	Amman		Yordän+Al Mamlakah al Urdunīyah al Hāshimīyah
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnum Pénh		Kambocän+http://en.wikipedia.org/wiki/Cambodia
+921772	Moroni	-11.70216	43.25506	42872	Moroni	Grande Comore	Komoruäns
+1871859	Pyongyang	39.03385	125.75432	3222000	Pyöngyang		Nolüda-Koreyän+http://en.wikipedia.org/wiki/North_Korea
+1835848	Seoul	37.566	126.9784	10349312	Söul		Sulüda-Koreyän+http://en.wikipedia.org/wiki/South_Korea
+285787	Kuwait City	29.36972	47.97833	60064	Kuväyt		Kovätän
+1526273	Astana	51.1801	71.44598	345604	Astana	Astana Qalasy	Kasakistän
+1651944	Vientiane	17.96667	102.6	196731	Viengtjan		Laosän
+276781	Beirut	33.89332	35.50157	1916100	Bäyrut		Lubnän
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Ligtänstän
+2274895	Monrovia	6.30054	-10.7969	939524	Monrovia		Liberän
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Lietuvän+http://en.wikipedia.org/wiki/Lithuania
+456172	Riga	56.946	24.10589	742572	Rīga	Riga	Latviyän
+81302	Tobruk	32.08361	23.97639	121052	Tubruk		Lübän
+87205	Darnah	32.76704	22.63669	78782	Därnä	Darnah	Lübän
+88319	Benghazi	32.11486	20.06859	650629	Bängasi	Banghāzī	Lübän
+88903	Al Marj	32.48798	20.83174	85315	Märciän		Lübän
+89113	Ajdabiya	30.75545	20.22625	134358	Äcdabiya+Läcdabiän		Lübän
+2208791	Yafran	32.06329	12.52859	67638	Yäfräniän		Lübän
+2210247	Tripoli	32.87519	13.18746	1150989	Tarabulus		Lübän
+2210554	Sirte	31.20892	16.58866	128123	Surtän+Surtiän	Surt	Lübän
+2212775	Sabhā	27.03766	14.42832	130000	Säbha+Säbhiän	Sabhā	Lübän
+2214603	Murzuq	25.91552	13.91839	43732	Mursuk	Murzuq	Lübän
+2217440	Ghadāmis	30.13366	9.50072	7000	Gadamis		Lübän
+2218840	Bani Walid	31.74554	13.98354	46350	Bäni Välid	Mişrātah	Lübän
+2219905	Al Khums	32.64861	14.26191	201943	Kums		Lübän
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Montenegrän
+785842	Skopje	41.99646	21.43141	474889	Skopje		Makedonän+Makedoniyän+ARYM+FYROM
+789541	Kavadarci	41.43306	22.01194	38799	Kavadartsi		Makedonän+Makedoniyän+ARYM+FYROM
+790744	Gevgelija	41.14166	22.50141	20664	Gevgeliya		Makedonän+Makedoniyän+ARYM+FYROM
+2377450	Nouakchott	18.08581	-15.9785	661400	Nävakjut		Moritän
+934154	Port Louis	-20.16194	57.49889	155226	Port Louis		Moriseän
+927967	Lilongwe	-13.96692	33.78725	646750	Lilongwe		Malaviyän
+3981461	Tlaquepaque	20.64091	-103.29327	493646	San Pedro Tlaquepaque	JAL	Mäxikän
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Kuala Lumpur	KUL	Malaysiyän
+3352136	Windhoek	-22.55941	17.08323	268132	Windhoek	Khomas	Namibiyän
+2749753	Nuth	50.9175	5.88611	4585	Nuth	lb	Nedän
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norgän
+1283240	Kathmandu	27.70169	85.3206	1442271	Kathmandau		Nepalän
+287286	Muscat	23.58413	58.40778	797000	Mäskat		Lomän
+3943789	Chincha Alta	-13.40985	-76.13235	153076	Chincha		Peruvän
+3946083	Callao	-12.05659	-77.11814	813264	El Callao		Peruvän
+1701668	Manila	14.6042	120.9822	1600000	Maynila	Metro Manila	Filipuäns
+756135	Warsaw	52.22977	21.01178	1702139	Warszawa	Mazowieckie	Polän
+764269	Mszczonów	51.97415	20.52083	6267	Mszczonów	Mazowieckie	Polän
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polän
+3081368	Wrocław	51.1	17.03333	634893	Wrocław	Dolnośląskie	Polän
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Polän
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Śląskie	Polän
+4568127	San Juan	18.46633	-66.10572	418140	San Juan		
+290030	Doha	25.28545	51.53096	344939	Däuha		
+683506	Bucharest	44.43225	26.10626	1877155	Bucharest+Bucureşti		Rumän
+792680	Belgrade	44.80401	20.46513	1273651	Beograd	Central Serbia	Särbän
+524901	Moscow	55.75222	37.61556	10381222	Moskva		
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Tsyelyabinsk	Tsjeljabinsk	
+101628	Tabuk	28.3998	36.57151	455450	Täbuk		Sauda-Larabän
+104515	Mecca	21.42664	39.82563	1323624	Mäkkä	Makkah	Sauda-Larabän
+105343	Jeddah	21.54238	39.19797	2867446	Ciddä	Makkah	Sauda-Larabän
+107304	Buraydah	26.32599	43.97497	391336	Buräydä		Sauda-Larabän
+108410	Riyadh	24.68773	46.72185	4205961	Riyad		Sauda-Larabän
+109223	Medina	24.46861	39.61417	1300000	Mädinä		Sauda-Larabän
+110336	Dammam	26.43442	50.10326	768602	Dämmam		Sauda-Larabän
+110690	Abha	18.21639	42.50528	210886	Äbha		Sauda-Larabän
+2108502	Honiara	-9.43333	159.95	56298	Honiara		Solomonuäns
+241131	Victoria	-4.62001	55.45501	22881	Victoria		Säceluäns
+602150	Umeå	63.82842	20.25972	83249	Umeå		Svedän+Ruoččii
+602913	Skellefteå	64.75067	20.95279	35516	Skellefteå		Svedän+Ruoččii
+603570	Piteå	65.31717	21.47944	23067	Piteå	Nolüda-Botniän+Norrbottens Län	Svedän+Ruoččii
+604490	Luleå	65.58415	22.15465	43574	Luleå	Nolüda-Botniän+Norrbottens Län	Svedän+Ruoččii
+2662149	Ystad	55.42966	13.82041	18806	Ystad	Skåne län	Svedän+Ruoččii
+2662689	Visby	57.64089	18.29602	23402	Visby		Svedän+Ruoččii
+2663536	Växjö	56.87767	14.80906	65383	Växjö	Kronobergs Län	Svedän+Ruoččii
+2664203	Västervik	57.7584	16.63733	21178	Västervik	Kalmar Län	Svedän+Ruoččii
+2664454	Västerås	59.61617	16.55276	117746	Västerås	Västmanlands län	Svedän+Ruoččii
+2664996	Varberg	57.10557	12.25078	34248	Varberg	Halläniän	Svedän+Ruoččii
+2665902	Vadstena	58.44863	14.88969	5674	Vadstena	Östergötlands län	Svedän+Ruoččii
+2666199	Uppsala	59.85882	17.63889	149245	Uppsala	Uppsala Län	Svedän+Ruoččii
+2666670	Uddevalla	58.34784	11.9424	34781	Uddevalla	Götaläniän Vesüdik+Västra Götalands län	Svedän+Ruoččii
+2667402	Trelleborg	55.37514	13.15691	29316	Trelleborg	Skåne län	Svedän+Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Svedän+Ruoččii
+2675365	Sölvesborg	56.05205	14.57525	8972	Sölvesborg	Blekingiän	Svedän+Ruoččii
+2676176	Södertälje	59.19554	17.62525	70777	Södertälje	Stockholms Län	Svedän+Ruoččii
+2677234	Skövde	58.39118	13.84506	36842	Skövde	Götaläniän Vesüdik+Västra Götalands län	Svedän+Ruoččii
+2679302	Sigtuna	59.61731	17.72361	9074	Sigtuna	Stockholms Län	Svedän+Ruoččii
+2681825	Ronneby	56.20999	15.27602	12612	Ronneby	Blekingiän	Svedän+Ruoččii
+2685750	Östersund	63.1792	14.63566	49806	Östersund		Svedän+Ruoččii
+2686657	Örebro	59.27412	15.2066	115765	Örebro	Lörebroiän+Örebro län	Svedän+Ruoččii
+2687636	Nynäshamn	58.90337	17.94793	14532	Nynäshamn	Stockholms Län	Svedän+Ruoččii
+2687700	Nyköping	58.753	17.00788	32224	Nyköping	Södermanlands län	Svedän+Ruoččii
+2688368	Norrköping	58.59419	16.1826	93765	Norrköping	Östergötlands län	Svedän+Ruoččii
+2690960	Motala	58.53706	15.03649	30944	Motala	Östergötlands län	Svedän+Ruoččii
+2692633	Mariefred	59.25963	17.223	3911	Mariefred	Södermanlands län	Svedän+Ruoččii
+2692969	Malmö	55.60587	13.00073	301706	Malmö	Skåne län	Svedän+Ruoččii
+2693678	Lund	55.70584	13.19321	87244	Lund	Skåne län	Svedän+Ruoččii
+2693759	Ludvika	60.14959	15.18776	15245	Ludvika	Dalarniän	Svedän+Ruoččii
+2694762	Linköping	58.41086	15.62157	106502	Linköping	Östergötlands län	Svedän+Ruoččii
+2697720	Landskrona	55.8708	12.83016	32229	Landskrona	Skåne län	Svedän+Ruoččii
+2699310	Kristianstad	56.03129	14.15242	39762	Kristianstad	Skåne län	Svedän+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Svedän+Ruoččii
+2701713	Karlskrona	56.16156	15.58661	36477	Karlskrona	Blekingiän	Svedän+Ruoččii
+2701727	Karlshamn	56.1706	14.86188	20112	Karlshamn	Blekingiän	Svedän+Ruoččii
+2702261	Kalmar	56.66157	16.36163	38408	Kalmar	Kalmar Län	Svedän+Ruoččii
+2702979	Jönköping	57.78145	14.15618	93797	Jönköping	Jönköpings län	Svedän+Ruoččii
+2704136	Huskvarna	57.78596	14.30214	21500	Huskvarna	Jönköpings län	Svedän+Ruoččii
+2706767	Helsingborg	56.04673	12.69437	104250	Helsingborg	Skåne län	Svedän+Ruoččii
+2707684	Härnösand	62.63228	17.93794	18426	Härnösand	Västernorrlands län	Svedän+Ruoččii
+2711174	Gränna	58.01667	14.46667	2726	Gränna	Jönköpings län	Svedän+Ruoččii
+2712414	Gävle	60.67452	17.14174	74884	Gävle	Gävleborgiän	Svedän+Ruoččii
+2715459	Falun	60.60357	15.62597	37000	Falun	Dalarniän	Svedän+Ruoččii
+2715573	Falkenberg	56.90552	12.49118	24099	Falkenberg	Halläniän	Svedän+Ruoččii
+2715953	Eskilstuna	59.36661	16.5077	67359	Eskilstuna	Södermanlands län	Svedän+Ruoččii
+2720383	Borlänge	60.4858	15.43714	41955	Borlänge	Dalarniän	Svedän+Ruoččii
+2720437	Borgholm	56.8793	16.65634	4344	Borgholm	Kalmar Län	Svedän+Ruoččii
+2720501	Borås	57.72101	12.9401	71700	Borås	Götaläniän Vesüdik+Västra Götalands län	Svedän+Ruoččii
+2725123	Arvika	59.65528	12.58518	13926	Arvika	Värmlands län	Svedän+Ruoččii
+3194351	Novo Mesto	45.80397	15.16886	23341	Novo mesto		Sloveniyän
+3196359	Ljubljana	46.05108	14.50513	272220	Ljubljana		Sloveniyän
+2409306	Freetown	8.484	-13.22994	802639	Freetown		Sieraleonän
+3170472	Poggio di Chiesanuova	43.90451	12.42142	951	Chiesanuova		Sanmarinän
+3172906	Monte Giardino	43.90878	12.48201	910	Montegiardino	Montegiardino	Sanmarinän
+3176966	Fiorentino	43.91001	12.45738	2510	Fiorentino	Fiorentino	Sanmarinän
+3177299	Faetano	43.92831	12.49798	1177	Faetano	Faetano	Sanmarinän
+3181793	Borgo Maggiore	43.94193	12.44738	6424	Borgo Maggiore	Borgo Maggiore	Sanmarinän
+3583361	San Salvador	13.68935	-89.18718	525990	San Salvador	San Salvador	Salvadorän
+170654	Damascus	33.5102	36.29128	1569394	Dimäjk		Süriyän
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat		Turkmenän
+310859	Kahramanmaraş	37.5847	36.92641	376045	Kahramanmaraş	Kahramanmarajiän	Türkän+Turkanmua
+314830	Gaziantep	37.05944	37.3825	1065975	Gaziantep	Gasiantäpiän	Türkän+Turkanmua
+316541	Diyarbakır	37.91363	40.21721	644763	Diyarbakır	Diyarbakır	Türkän+Turkanmua
+317109	Denizli	37.77417	29.0875	313238	Denizli	Dänisliän	Türkän+Turkanmua
+321025	Bitlis	38.40115	42.10784	46111	Bitlis	Bitlisiän	Türkän+Turkanmua
+322165	Balıkesir	39.64917	27.88611	238151	Balıkesir	Balikäsiriän	Türkän+Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Ankara	Lankariän	Türkän+Turkanmua
+738648	Trabzon	41.005	39.72694	244083	Trabzon	Trabsoniän	Türkän+Turkanmua
+738743	Tokat	40.31389	36.55444	129702	Tokatiän		Türkän+Turkanmua
+738927	Tekirdağ	40.9781	27.51101	122287	Tekirdağ	Täkirdagiän	Türkän+Turkanmua
+746425	Gumushkhane	40.46001	39.47176	32250	Gümüşhane		Türkän+Turkanmua
+746881	Giresun	40.91698	38.38741	98864	Giresun	Giräsuniän	Türkän+Turkanmua
+749780	Çanakkale	40.15552	26.41271	87791	Çanakkale	Tjanakkaliän	Türkän+Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Bursa		Türkän+Turkanmua
+750938	Bayburt	40.25631	40.22289	31258	Bayburtiän		Türkän+Turkanmua
+3573890	Port of Spain	10.66668	-61.51889	49031	Port of Spain	Port-of-Spain	Trinidadeän e Tobageäns
+698740	Odessa	46.47747	30.73262	1001558	Odesa		Lukrayän+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Küyiv		Lukrayän+http://en.wikipedia.org/wiki/Ukraine
+703845	Kryvyi Rih	47.90966	33.38044	652380	Krüvüy Rih	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Lukrayän+http://en.wikipedia.org/wiki/Ukraine
+232422	Kampala	0.31628	32.58219	1353189	Kampala	Central Region	Lugandayän
+4141974	Claymont	39.80067	-75.45964	8253	Gwinhurst	DE+Delaware	U.S.+USA+U.S.A.
+4152888	DeFuniak Springs	30.72102	-86.11522	5795	De Funiak Springs	FL+Florida	U.S.+USA+U.S.A.
+4220629	St. Marys	30.73051	-81.54649	17968	Saint Marys	GA+Georgia	U.S.+USA+U.S.A.
+4406831	Saint Charles	38.78394	-90.48123	65794	St. Charles	MO+Missouri	U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	MO+Missouri	U.S.+USA+U.S.A.
+4628044	Harrogate	36.5823	-83.65686	4388	Harrogate-Shawanee	TN+Tennessee	U.S.+USA+U.S.A.
+4853551	De Witt	41.82336	-90.53819	5242	DeWitt	IA+Iowa	U.S.+USA+U.S.A.
+5045360	Saint Paul	44.94441	-93.09327	285068	St. Paul	MN+Minnesota	U.S.+USA+U.S.A.
+5098278	Freehold	40.26011	-74.27376	11959	Freehold Borough	NJ+New Jersey	U.S.+USA+U.S.A.
+8480031	Waterford	41.3417	-72.13597	19281	Central Waterford	CT+Connecticut	U.S.+USA+U.S.A.
+1512569	Tashkent	41.26465	69.21627	1978028	Toshkent	Toshkent Shahri	Lusbekän
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Venesolän
+2135171	Port-Vila	-17.73381	168.32188	35901	Port Vila	Shefa	Vanuatuäns
+786714	Pristina	42.67272	21.16688	550000	Priština		

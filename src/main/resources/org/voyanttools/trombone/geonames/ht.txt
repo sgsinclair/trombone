@@ -1,0 +1,207 @@
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andò-la-Vyèy		
+292968	Abu Dhabi	24.46667	54.36667	603492	Abou Dabi		Emira Arab Ini+UAE
+616052	Yerevan	40.18111	44.51361	1093485	Erevàn	Yerevan	
+2240449	Luanda	-8.83682	13.23432	2776168	Louanda	Luanda	Angola
+3435910	Buenos Aires	-34.61315	-58.37723	13076300	Bwènozè	CF	Ajantin
+2172517	Canberra	-35.28346	149.12807	367752	Kanbera	ACT+Australian Capital Territory	
+587084	Baku	40.37767	49.89201	1116513	Bakou	Baki	
+3191281	Sarajevo	43.84864	18.35644	696731	Sarayevo	Federation of Bosnia and Herzegovina	Bosni ak Erzegovin
+1185241	Dhaka	23.7104	90.40744	10356500	Daka		Bangladèch
+425378	Bujumbura	-3.3822	29.3644	331700	Boujoumboura	Bujumbura Mairie	Bouroundi
+2392087	Porto-Novo	6.49646	2.60359	234168	Pòto-Novo	Quémé	Benen
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Banda Seri		Brouney
+3903987	Sucre	-19.03332	-65.26274	224838	Sik	Chuquisaca	Bolivi
+3911925	La Paz	-16.5	-68.15	812799	La Paz	La Paz	Bolivi
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paolo	SP+São Paulo	Brezil
+3469058	Brasília	-15.77972	-47.92972	2207718	Brazilia	DF	Brezil
+3571824	Nassau	25.05823	-77.34306	227940	Naso		
+1252416	Thimphu	27.46609	89.64191	98676	Timfou		Boutan+Bh2utan
+933773	Gaborone	-24.65451	25.90859	208411	Gaboròn		Botswana
+3582672	Belmopan	17.25	-88.76667	13381	Bèlmopan	Cayo	Beliz
+6077243	Montréal	45.50884	-73.58781	1600000	Monreyal	QC	
+6094817	Ottawa	45.41117	-75.69812	812129	Otawa	ON+Ontario	
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinchasa	Kinshasa	Kongo
+2657896	Zürich	47.36667	8.55	341730	Zirik	ZH	
+2661552	Bern	46.94809	7.44744	121631	Bèn		
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Yamousoukro		Côte de l’Ivoire
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaounde		
+1816670	Beijing	39.9075	116.39723	11716620	Peken		
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		Kolonbi
+3621849	San José	9.93333	-84.08333	335007	San Jozé	San José	
+3546434	Morón	22.10774	-78.62667	66060	Moron	Ciego de Ávila	Kiba
+3553478	Havana	23.13302	-82.38304	2163824	La Avàn		Kiba
+3565432	Cárdenas	23.03661	-81.20596	98515	Cardenas	Matanzas	Kiba
+146268	Nicosia	35.17531	33.3642	200452	Nikozi		Chip
+3575635	Roseau	15.30174	-61.38808	16571	Rozo	Saint George	Dominik
+2507480	Algiers	36.73225	3.08746	1977663	Alje	Alger	Aljeri
+3652462	Quito	-0.22985	-78.52495	1399814	Kito	Pichincha	
+588409	Tallinn	59.43696	24.75353	394024	Talin	Harjumaa	Estoni
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galisiya+Galicia	Espay+España
+658225	Helsinki	60.16952	24.93545	558457	Èlzinki		Fenlann
+2198148	Suva	-18.14161	178.44149	77366	Souva		Fidji
+2972315	Toulouse	43.60426	1.44367	433055	Toulouz+31000		Frans+France
+2973783	Strasbourg	48.58392	7.74553	274845	Estrasbou+67000	ACAL	Frans+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Bordo+33000		Frans+France
+3037656	Angers	47.46667	-0.55	168279	Anje+49000		Frans+France
+2399697	Libreville	0.39241	9.45356	578156	Libvil		
+2643743	London	51.50853	-0.12574	7556900	Lonn	Angletè	Wayòm Ini+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinbo	苏格兰	Wayòm Ini+http://en.wikipedia.org/wiki/United_Kingdom
+2653822	Cardiff	51.48	-3.18	447287	Kadif	Galles	Wayòm Ini+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Bèlfast		Wayòm Ini+http://en.wikipedia.org/wiki/United_Kingdom
+2413876	Banjul	13.45274	-16.57803	34589	Banjoul	Banjul	Ganbi
+2374775	Bissau	11.86357	-15.59767	388028	Biso	Bissau Region	
+3378644	Georgetown	6.80448	-58.15527	235017	Jòjtòn	Demerara-Mahaica	Giyàn
+3600949	Tegucigalpa	14.0818	-87.20681	850848	Tegousigoualpa	Francisco Morazán	Ondiras
+3716044	Verrettes	19.0505	-72.46585	48724	Vèrèt	Artibonite	Ayiti+Repiblik d Ayiti
+3716224	Trou du Nord	19.61668	-72.02442	10569	Trou di Nò	Nord-Est	Ayiti+Repiblik d Ayiti
+3716403	Torbeck	18.16338	-73.80949	1918	Tòbèk	Depatman Sid+Sid+Sud	Ayiti+Repiblik d Ayiti
+3716663	Thomonde	19.0173	-71.96235	3696	Tomond	Depatman Sant+Sant	Ayiti+Repiblik d Ayiti
+3716667	Thomazeau	18.65297	-72.09391	52017	Tomazo	Ouest	Ayiti+Repiblik d Ayiti
+3716669	Thomassique	19.08209	-71.83855	4857	Tomasik	Depatman Sant+Sant	Ayiti+Repiblik d Ayiti
+3716679	Thiotte	18.24384	-71.84157	2461	Tyòt	Depatman Sidès+Sidès+Sud-Est	Ayiti+Repiblik d Ayiti
+3717546	Saint-Raphaël	19.43877	-72.1991	37739	Sen Rafayèl	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3717596	Saint-Louis du Sud	18.26241	-73.54603	1528	Sen Lwi di Sid	Depatman Sid+Sid+Sud	Ayiti+Repiblik d Ayiti
+3717600	Saint-Louis du Nord	19.93397	-72.72138	11849	Sen Lwi di Nò	Depatman Nòdwès+Nòdwès+Nord-Ouest	Ayiti+Repiblik d Ayiti
+3717916	Roche-à-Bateau	18.18182	-74.00345	1662	Wòchabato	Depatman Sid+Sid+Sud	Ayiti+Repiblik d Ayiti
+3718199	Ranquitte	19.41327	-72.08077	1391	Rankit	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3718278	Quartier Morin	19.69696	-72.15712	1299	Katye Moren	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3718411	Port-Margot	19.7518	-72.43006	3070	Pò Mago	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3718420	Port-de-Paix	19.9389	-72.83257	250000	Pòdepè+Pòdpè	Depatman Nòdwès+Nòdwès+Nord-Ouest	Ayiti+Repiblik d Ayiti
+3718426	Port-au-Prince	18.53917	-72.335	1234742	Pòtoprens	Ouest	Ayiti+Repiblik d Ayiti
+3718666	Plaisance	19.59795	-72.46994	4152	Plezans	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3718707	Plaine du Nord	19.67707	-72.26969	2492	Plèn di Nò	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3718826	Pilate	19.66745	-72.55229	4227	Pilat	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3718834	Pignon	19.33594	-72.11662	6731	Piyon	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3718962	Tigwav	18.43117	-72.86521	117504	Tigwav	Ouest	Ayiti+Repiblik d Ayiti
+3719028	Pétionville	18.5125	-72.28528	283052	Petyon-Vil	Ouest	Ayiti+Repiblik d Ayiti
+3719099	Perches	19.52201	-71.92323	1889	Pèch	Nord-Est	Ayiti+Repiblik d Ayiti
+3719436	Ouanaminthe	19.54934	-71.72475	10118	Wanament	Nord-Est	Ayiti+Repiblik d Ayiti
+3720455	Moron	18.56039	-74.25777	1830	Monwon	Grandans+Depatman Grandans+GrandʼAnse	Ayiti+Repiblik d Ayiti
+3720667	Montòrganize	19.40815	-71.78132	2104	Montòrganize	Nord-Est	Ayiti+Repiblik d Ayiti
+3720811	Mirebalais	18.83455	-72.1048	9082	Mibalè	Depatman Sant+Sant	Ayiti+Repiblik d Ayiti
+3720854	Milot	19.60837	-72.21319	5534	Milo	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3721280	Marmelade	19.51736	-72.36133	2184	Mamelad	Artibonite	Ayiti+Repiblik d Ayiti
+3721313	Marigot	18.23167	-72.32289	1698	Marigo	Depatman Sidès+Sidès+Sud-Est	Ayiti+Repiblik d Ayiti
+3721711	Mayisad	19.17607	-72.13958	5204	Mayisad	Depatman Sant+Sant	Ayiti+Repiblik d Ayiti
+3722110	Limonade	19.67014	-72.1243	3810	Limonad	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3722124	Lenbe	19.70603	-72.40336	32645	Lenbe	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3722286	Léogâne	18.5111	-72.63343	134190	Leyogàn	Ouest	Ayiti+Repiblik d Ayiti
+3722339	Borgne	19.84507	-72.52349	4288	Obòy	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3722579	Lascahobas	18.83047	-71.93563	7574	Laskawobas	Depatman Sant+Sant	Ayiti+Repiblik d Ayiti
+3723440	Kenscoff	18.44773	-72.28398	42175	Kenskòf	Ouest	Ayiti+Repiblik d Ayiti
+3723593	Jérémie	18.65	-74.11667	97503	Jeremi	Grandans+Depatman Grandans+GrandʼAnse	Ayiti+Repiblik d Ayiti
+3723618	Jean-Rabel	19.85379	-73.19131	5419	Jan Rabèl	Depatman Nòdwès+Nòdwès+Nord-Ouest	Ayiti+Repiblik d Ayiti
+3723779	Jacmel	18.23427	-72.53539	137966	Jakmèl	Depatman Sidès+Sidès+Sud-Est	Ayiti+Repiblik d Ayiti
+3723841	Hinche	19.15	-72.01667	18590	Ench	Depatman Sant+Sant	Ayiti+Repiblik d Ayiti
+3724145	Gros Morne	19.6708	-72.67808	7294	Gromòn	Artibonite	Ayiti+Repiblik d Ayiti
+3724337	Grangwav	18.4259	-72.76995	49288	Grangwav	Ouest	Ayiti+Repiblik d Ayiti
+3724439	Grande Rivière du Nord	19.57744	-72.16872	8836	Grann Rivyè di Nò	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3724696	Gonayiv	19.44749	-72.68903	84961	Gonayiv	Artibonite	Ayiti+Repiblik d Ayiti
+3725170	Fort Liberté	19.66273	-71.83798	11465	Fòlibète	Nord-Est	Ayiti+Repiblik d Ayiti
+3725222	Fonds Verrettes	18.39566	-71.85634	2789	Fon Vèrèt	Ouest	Ayiti+Repiblik d Ayiti
+3725519	Ferrier	19.61549	-71.77792	3804	Fèrye	Nord-Est	Ayiti+Repiblik d Ayiti
+3725663	Ennery	19.48342	-72.48537	1511	Ennri	Artibonite	Ayiti+Repiblik d Ayiti
+3726540	Dessalines	19.26177	-72.51611	12288	Desalin	Artibonite	Ayiti+Repiblik d Ayiti
+3727287	Kotdefè	18.18872	-73.00287	2393	Kotdefè	Depatman Sidès+Sidès+Sud-Est	Ayiti+Repiblik d Ayiti
+3727297	Koto	18.20601	-74.04013	2065	Koto	Depatman Sid+Sid+Sud	Ayiti+Repiblik d Ayiti
+3727327	Cornillon	18.67546	-71.95271	7572	Kòniyon	Ouest	Ayiti+Repiblik d Ayiti
+3727398	Corail	18.56766	-73.88942	2782	Koray	Grandans+Depatman Grandans+GrandʼAnse	Ayiti+Repiblik d Ayiti
+3727984	Chambellan	18.55037	-74.31317	1397	Chanbèlan	Grandans+Depatman Grandans+GrandʼAnse	Ayiti+Repiblik d Ayiti
+3728054	Cerca la Source	19.16696	-71.79015	2792	Sèka Lasous	Depatman Sant+Sant	Ayiti+Repiblik d Ayiti
+3728093	Cayes-Jacmel	18.2311	-72.39545	1609	Kay Jakmèl	Depatman Sidès+Sidès+Sud-Est	Ayiti+Repiblik d Ayiti
+3728097	Les Cayes	18.19331	-73.74601	125799	Okay	Depatman Sid+Sid+Sud	Ayiti+Repiblik d Ayiti
+3728122	Cavaillon	18.29987	-73.65455	1023	Kavayon	Depatman Sid+Sid+Sud	Ayiti+Repiblik d Ayiti
+3728386	Carice	19.37795	-71.8303	2104	Karis	Nord-Est	Ayiti+Repiblik d Ayiti
+3728428	Caracol	19.69274	-72.01733	1549	Karakòl	Nord-Est	Ayiti+Repiblik d Ayiti
+3728474	Okap	19.75938	-72.19815	134815	Kap Ayisyen+Okap	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3728964	Cabaret	18.73582	-72.41929	3951	Kabarè	Ouest	Ayiti+Repiblik d Ayiti
+3729548	Bombardopolis	19.69142	-73.33769	1974	Bonbadopolis	Depatman Nòdwès+Nòdwès+Nord-Ouest	Ayiti+Repiblik d Ayiti
+3730363	Belle-Anse	18.23768	-72.06638	2611	Belans	Depatman Sidès+Sidès+Sud-Est	Ayiti+Repiblik d Ayiti
+3730800	Baradères	18.48255	-73.63884	1666	Baradè	Nippes	Ayiti+Repiblik d Ayiti
+3730932	Baie de Henne	19.66307	-73.20943	1660	Be de Èn	Depatman Nòdwès+Nòdwès+Nord-Ouest	Ayiti+Repiblik d Ayiti
+3730937	Bahon	19.46959	-72.11466	1618	Bawon	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3731095	Aquin	18.27974	-73.39433	5246	Aken	Depatman Sid+Sid+Sud	Ayiti+Repiblik d Ayiti
+3731105	Anse Rouge	19.63382	-73.0553	4437	Answouj	Artibonite	Ayiti+Repiblik d Ayiti
+3731132	Anse à Galets	18.83449	-72.86644	7178	Ansagalè	Ouest	Ayiti+Repiblik d Ayiti
+3731233	Acul du Nord	19.68075	-72.31978	3454	Akil di Nò	Depatman Nò+Nò+Nord	Ayiti+Repiblik d Ayiti
+3731257	Les Abricots	18.64901	-74.30786	1245	Abriko	Grandans+Depatman Grandans+GrandʼAnse	Ayiti+Repiblik d Ayiti
+3054643	Budapest	47.49801	19.03991	1741041	Boudapès		Ongri
+2964574	Dublin	53.33306	-6.24889	1024027	Diblin		Ire
+3413829	Reykjavík	64.13548	-21.89541	118918	Rèkyavik+101		
+3174186	Malè	46.35356	10.91246	1872	Malé		Itali
+250441	Amman	31.95522	35.94503	1275857	Amàn		Al Mamlakah al Urdunīyah al Hāshimīyah
+184745	Nairobi	-1.28333	36.81667	2750547	Nayrobi	Nairobi Area	
+1528675	Bishkek	42.87	74.59	900000	Bichkek	Gorod Bishkek	Kirgistan
+3575551	Basseterre	17.29484	-62.7261	12920	Bastè	Saint George Basseterre	
+1835848	Seoul	37.566	126.9784	10349312	Seoul		Kore disid+http://en.wikipedia.org/wiki/South_Korea
+1841811	Gwangju	35.15472	126.91556	1416938	Gouanjou		Kore disid+http://en.wikipedia.org/wiki/South_Korea
+1651944	Vientiane	17.96667	102.6	196731	Vyantyàn		Laos
+276781	Beirut	33.89332	35.50157	1916100	Bewout		Liban
+3576812	Castries	13.9957	-61.00614	20000	Kastri	Castries	Sent Lisi
+1248991	Colombo	6.93194	79.84778	648034	Kolonbo	Western	
+932505	Maseru	-29.31667	27.48333	118355	Maserou		
+593116	Vilnius	54.68916	25.2798	542366	Vilnis		Lityani+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Liksanbou		
+2538475	Rabat	34.01325	-6.83255	1655753	Raba		
+3570675	Fort-de-France	14.60892	-61.07334	89995	Fòd Fwans+97200		
+2562305	Valletta	35.89972	14.51472	6794	La Valèt		
+934154	Port Louis	-20.16194	57.49889	155226	Pò-Loui		Moris
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Kouala Loumpou	KUL	Malezi
+1040652	Maputo	-25.96553	32.58322	1191613	Mapouto	Maputo City	
+3352136	Windhoek	-22.55941	17.08323	268132	Windoèk	Khomas	
+2440485	Niamey	13.51366	2.1098	774235	Niamè	Niamey	
+2352778	Abuja	9.05785	7.49508	590400	Abouja	FCTA+Abuja Federal Capital Territory	Nijerya
+3617763	Managua	12.13282	-86.2504	973087	Managoua	Managua	Nikaragwa
+2759794	Amsterdam	52.37403	4.88969	741636	Amstèdam	nh+Nord-Holland+Noord-Holland	
+1283240	Kathmandu	27.70169	85.3206	1442271	Katmandou		Nepal
+7626461	Yaren	-0.55085	166.9252	1100	Yarèn		Naorou
+2179537	Wellington	-41.28664	174.77557	381900	Welintòn		Nouvèl Zelann
+3703443	Panamá	8.9936	-79.51973	408168	Panama		Panama
+2088122	Port Moresby	-9.44314	147.17972	283733	Pò Moresbi		
+1701668	Manila	14.6042	120.9822	1600000	Manyl	Metro Manila	Filipin
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	
+284315	Bethlehem	31.70487	35.20376	29019	Bètleyèm		
+3439389	Asunción	-25.30066	-57.63591	1482200	Asounsyòn		
+241131	Victoria	-4.62001	55.45501	22881	Viktorya		
+2673730	Stockholm	59.33258	18.0649	1515017	Stokolm	Stockholms Län	Syèd+Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Lyoubyana		
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	
+2409306	Freetown	8.484	-13.22994	802639	Fritonn		
+3168070	San Marino	43.93667	12.44639	4500	Sen Maren	San Marino	
+53654	Mogadishu	2.03711	45.34375	2587183	Moukdicho		Somali
+2410763	São Tomé	0.33654	6.72732	53300	Sao Tome		
+3583361	San Salvador	13.68935	-89.18718	525990	San Salvadò	San Salvador	
+934985	Mbabane	-26.31667	31.13333	76218	Mbabàn	Hhohho	
+2365267	Lomé	6.12874	1.22154	749700	Lome		Togo
+162183	Ashgabat	37.95	58.38333	727700	Achgabat		Tirkmenistan
+2464470	Tunis	36.81897	10.16579	693210	Tinis	Tūnis	
+3573890	Port of Spain	10.66668	-61.51889	49031	Pò of Espay	Port-of-Spain	
+703448	Kyiv	50.45466	30.5238	2797553	Kyèv		http://en.wikipedia.org/wiki/Ukraine
+232422	Kampala	0.31628	32.58219	1353189	Kanpala	Central Region	
+4129962	Salem	36.37118	-91.82265	1634	Salem in Fulton County	Akennsas+AR	U.S.+USA+U.S.A.
+4161075	LaBelle	26.76173	-81.43841	4753	La Belle	Florid+FL+Florida	U.S.+USA+U.S.A.
+4204241	LaFayette	34.7048	-85.2819	7173	La Fayette	GA+Georgia	U.S.+USA+U.S.A.
+4220629	St. Marys	30.73051	-81.54649	17968	Saint Marys	GA+Georgia	U.S.+USA+U.S.A.
+4321781	DeRidder	30.84631	-93.28905	10890	De Ridder	Lwiziana+LA+Louisiana	U.S.+USA+U.S.A.
+4347242	Annapolis	38.97845	-76.49218	39474	Anapolis	Merilann+MD+Maryland	U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	Misouri+MO+Missouri	U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	Dalas	Teksas+TX+Texas	U.S.+USA+U.S.A.
+4703938	La Feria	26.15896	-97.82389	7338	Arroyo Alto	Teksas+TX+Texas	U.S.+USA+U.S.A.
+4791259	Virginia Beach	36.85293	-75.97799	452745	Vijini Beach	Vijini+VA+Virginia	U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chikago	Ilinwa+IL+Illinois	U.S.+USA+U.S.A.
+5059163	Fargo	46.87719	-96.7898	118523	Fàgo	Dakota dinò+ND	U.S.+USA+U.S.A.
+5059429	Grand Forks	47.92526	-97.03285	57011	Grann Fòks	Dakota dinò+ND	U.S.+USA+U.S.A.
+5098430	Glen Ridge	40.80538	-74.20376	7660	Glen Ridge Borough	Nou Jèze+NJ+New Jersey	U.S.+USA+U.S.A.
+5338929	Commerce	34.00057	-118.15979	13081	City of Commerce	Kalifòni+CA+Calif+California	U.S.+USA+U.S.A.
+5688025	Bismarck	46.80833	-100.78374	71167	Bismàk	Dakota dinò+ND	U.S.+USA+U.S.A.
+5688789	Dickinson	46.87918	-102.78962	23765	Dikinsòn	Dakota dinò+ND	U.S.+USA+U.S.A.
+5740898	Milton-Freewater	45.93263	-118.38774	7035	Freewater	OR	U.S.+USA+U.S.A.
+7261418	Heber-Overgaard	34.41414	-110.56956	2822	Heber+Heber-Overgaard	AZ+Arizona	U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Irigwe
+1512569	Tashkent	41.26465	69.21627	1978028	Tachkènt	Toshkent Shahri	Ouzbekistan
+3646738	Caracas	10.48801	-66.87919	3000000	Karakas		
+1581130	Hanoi	21.0245	105.84117	1431270	Anòy	Ha Nội	
+4035413	Apia	-13.83333	-171.76666	40407	Apiya		
+3369157	Cape Town	-33.92584	18.42322	3433441	Li Kap	Western Cape	Afrik Disid+Afrik disid
+909137	Lusaka	-15.40669	28.28713	1267440	Louzaka	Lusaka	
+890299	Harare	-17.82772	31.05337	1542813	Arare		

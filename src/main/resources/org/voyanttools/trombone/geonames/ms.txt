@@ -1,0 +1,366 @@
+1133453	Maymana	35.92139	64.78361	75900	Daerah Maymana		Afghanistan
+1147290	Balkh	36.75635	66.8972	114883	Daerah Balkh	Wilayah Balkh	Afghanistan
+2766429	Sankt Pölten	48.2	15.63333	49001	St. Pölten		Austria
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Australia
+147774	Xocalı	39.91297	46.79028	5810	Daerah Khojali	Xocalı	Azerbaijan
+587379	Martakert	40.21238	46.82086	10167	Aghdara	Tǝrtǝr	Azerbaijan
+3187609	Visoko	43.98889	18.17806	17890	Visoko	Federation of Bosnia and Herzegovina	Bosnia dan Herzegovina
+1185241	Dhaka	23.7104	90.40744	10356500	Dhaka		Bangladesh
+2800866	Brussels	50.85045	4.34878	1019022	Brussels	Brussels-Capital Region	Belgium
+2803138	Antwerpen	51.21989	4.40346	459805	Antwerp		Belgium
+290340	Manama	26.22787	50.58565	147074	Manama	Muḩāfaz̧at al ‘Āşimah	Bahrain
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Bandar Seri Begawan		Brunei
+3911925	La Paz	-16.5	-68.15	812799	La Paz	La Paz	Bolivia
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Brazil
+3582677	Belize City	17.49952	-88.19756	61461	Bandaraya Belize	Belize	Belize
+6325494	Québec	46.81228	-71.21454	528595	Bandaraya Quebec+Québec	QC	Kanada
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinshasa	Kinshasa	Congo [DRC]+Republik Demokratik Congo
+2658188	Vandœuvres	46.22179	6.20285	2826	Vandoeuvres	Wilayah Geneva	Switzerland
+2282006	San-Pédro	4.74851	-6.6363	196751	San Pédro		Ivory Coast+Côte d'Ivoire+Côte de l’Ivoire
+3868626	Valparaíso	-33.036	-71.62963	282448	Balparaiso	Valparaíso	Cile+Chile
+2232239	Edéa	3.8	10.13333	203149	Édéa		Kamerun+Cameroon
+2233410	Buea	4.15342	9.24231	47300	Buéa	Sud-Ouest	Kamerun+Cameroon
+1796236	Shanghai	31.22222	121.45806	22315474	Shanghai		China+Republik Rakyat China
+1809858	Guangzhou	23.11667	113.25	11071424	Guangzhou		China+Republik Rakyat China
+1816670	Beijing	39.9075	116.39723	11716620	Beijing		China+Republik Rakyat China
+3792383	Agustín Codazzi	10.03672	-73.23558	51478	Codazzi	Cesar	Colombia
+3061368	Zliv	49.06608	14.36613	3656	Zliv	Wilayah Bohemia Selatan+Jihočeský kraj	Republik Czech+Czechia
+3063835	Tvarožná	49.19177	16.77146	1159	Tvarožná	Wilayah Moravia Selatan+Jihomoravský kraj	Republik Czech+Czechia
+3064307	Telnice	49.10187	16.71774	1296	Telnice	Wilayah Moravia Selatan+Jihomoravský kraj	Republik Czech+Czechia
+3065901	Šlapanice	49.16863	16.72731	7109	Šlapanice	Wilayah Moravia Selatan+Jihomoravský kraj	Republik Czech+Czechia
+3068020	Podolí	49.19042	16.72084	1165	Podolí	Wilayah Moravia Selatan+Jihomoravský kraj	Republik Czech+Czechia
+3069808	Netolice	49.0493	14.197	2721	Netolice	Wilayah Bohemia Selatan+Jihočeský kraj	Republik Czech+Czechia
+3078513	Buchlovice	49.08627	17.33852	2487	Buchlovice	Zlínský kraj	Republik Czech+Czechia
+2810716	Wertheim	49.759	9.50852	24869	Wertheim am Main	Baden-Württemberg	Jerman
+2812931	Weidhausen bei Coburg	50.20354	11.14006	3331	Weidhausen	Bayern	Jerman
+2837085	Schönau am Königssee	47.60055	12.98704	5319	Schönau am Königsee	Bayern	Jerman
+2843396	Rüdesheim	49.85	7.81667	2408	Rüdesheim an der Nahe	Rhineland-Palatinate	Jerman
+2844265	Roth	49.24762	11.09111	25083	Roth bei Nürnberg	Bayern	Jerman
+2849170	Reichenbach	49.18333	12.35	1178	Reichenbach am Regen	Bayern	Jerman
+2856284	Ostheim vor der Rhön	50.45996	10.23057	3729	Ostheim	Bayern	Jerman
+2861650	Nürnberg	49.45421	11.07752	499237	Nuremberg	Bayern	Jerman
+2867673	Münchhausen	50.96081	8.71837	3594	Münchhausen am Christenberg	Hessen	Jerman
+2867714	Munich	48.13743	11.57549	1260391	Munich	Bayern	Jerman
+2874225	Mainz	49.98419	8.2791	184997	Mainz	Rhineland-Palatinate	Jerman
+2881505	Landsberied	48.16667	11.16667	1384	Maisach	Bayern	Jerman
+2886242	Köln	50.93333	6.95	963395	Cologne	NRW	Jerman
+2892786	Karlstadt	49.96034	9.77239	15272	Karlstadt am Main	Bayern	Jerman
+2893264	Kamp-Lintfort	51.50467	6.54587	39490	Lapangan Terbang Kamp-Lintfort	NRW	Jerman
+2911271	Hameln	52.10397	9.35623	58666	Hamelin	Sachsen Hilir+Neddersassen+Läichsaksen+Donja Saska	Jerman
+2918987	Görlitz	51.15518	14.98853	57751	Gorlitz		Jerman
+2920512	Gießen	50.58727	8.67554	74411	Giessen	Hessen	Jerman
+2921466	Gelsenkirchen	51.50508	7.09654	270028	Gelsenkirchen	NRW	Jerman
+2924916	Freudenberg	49.75349	9.32748	4089	Freudenberg am Main	Baden-Württemberg	Jerman
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Jerman
+2929802	Erbach	49.66148	8.99402	13771	Erbach im Odenwald	Hessen	Jerman
+2948071	Blankenburg	51.79025	10.95509	15963	Blankenburg am Harz	Sassen-Anholt	Jerman
+2948825	Bingen am Rhein	49.96675	7.8992	24657	Bingen am Rhein	Rhineland-Palatinate	Jerman
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Jerman
+2959548	Adelebsen	51.58272	9.75461	6541	Dransfeld+http://de.wikipedia.org/wiki/Adelebsen	Sachsen Hilir+Neddersassen+Läichsaksen+Donja Saska	Jerman
+2620425	Herning	56.13932	8.97378	44763	Munisipaliti Herning	Wilayah Midtjylland	Denmark
+2624341	Ballerup	55.73165	12.36328	40000	Munisipaliti Ballerup		Denmark
+2624906	Albertslund	55.65691	12.36381	30000	Munisipaliti Albertslund		Denmark
+2496049	Ghardaïa	32.49094	3.67347	93423	Ghardaia	Ghardaïa	Aljazair+Algeria
+2497796	El Kseur	36.67942	4.8555	26050	El-Kseur	Bejaïa	Aljazair+Algeria
+2499193	Douera	36.67	2.94444	26926	Douéra	Tipaza	Aljazair+Algeria
+588831	Saku	59.30354	24.66382	4548	Paroki Saku	Daerah Harju+Harjumaa	Estonia
+589223	Raasiku	59.36639	25.18306	1317	Paroki Raasiku	Daerah Harju+Harjumaa	Estonia
+590888	Kuusalu	59.44389	25.44139	1238	Paroki Kuusalu	Daerah Harju+Harjumaa	Estonia
+360630	Cairo	30.06263	31.24967	7734614	Kaherah		Mesir
+361058	Alexandria	31.20176	29.91582	3811516	Iskandariah		Mesir
+2510140	Tuéjar	39.76667	-1.03333	1212	Toixa	Valencia	Sepanyol+España
+2513680	Monóvar	38.43809	-0.84062	13060	Monòver	Valencia	Sepanyol+España
+2516369	Jarafuel	39.14013	-1.07306	861	Xarafull	Valencia	Sepanyol+España
+2517117	Granada	37.18817	-3.60667	234325	Grenada		Sepanyol+España
+2517740	Fernán-Núñez	37.67044	-4.7264	9374	Fernán Núñez		Sepanyol+España
+2518797	Dos Aguas	39.28333	-0.8	441	Dosaigües	Valencia	Sepanyol+España
+2519240	Córdoba	37.89155	-4.77275	328428	Cordoba		Sepanyol+España
+2519373	Cofrentes	39.22926	-1.06061	948	Cofrents	Valencia	Sepanyol+España
+2520726	Buñol	39.41667	-0.78333	10062	Bunyol	Valencia	Sepanyol+España
+2520751	Bufali	38.86775	-0.51617	199	Bufalí	Valencia	Sepanyol+España
+2520874	Bolbaite	39.06041	-0.67466	1458	Bolbait	Valencia	Sepanyol+España
+2521149	Benagéber	39.71667	-1.1	177	Benaixeve	Valencia	Sepanyol+España
+2521451	Ayora	39.05852	-1.05635	5508	Aiora	Valencia	Sepanyol+España
+2522047	Alfarp	39.28333	-0.55	1369	Alfarb	Valencia	Sepanyol+España
+3112732	Puente la Reina	42.67291	-1.81412	2577	Puente La Reina	Navarra	Sepanyol+España
+3114997	Orkoien	42.8238	-1.70485	2087	Orcoyen	Navarra	Sepanyol+España
+3122762	Estella-Lizarra	42.67182	-2.03226	14238	Estella-Lizarra	Navarra	Sepanyol+España
+2972315	Toulouse	43.60426	1.44367	433055	Lapangan Terbang Blagnac+31000		Perancis+France
+2973783	Strasbourg	48.58392	7.74553	274845	Strasbourg+67000	ACAL	Perancis+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Perancis+France
+2991153	Muret	43.46667	1.35	24313	Lapangan Terbang LHerm+31600		Perancis+France
+2993947	Miélan	43.43054	0.30794	1360	Polastron		Perancis+France
+2643741	City of London	51.51279	-0.09184	8072	Bandaraya London		United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	London		United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool		United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+2645298	Kirkcaldy	56.11683	-3.15999	49460	Kirkcaldy	苏格兰	United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glasgow	苏格兰	United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+256866	Mytilene	39.10772	26.55529	28322	Mytilene		Yunani+Griekanmua
+1819729	Hong Kong	22.27832	114.17469	7012738	Hong Kong		Hong Kong+http://en.wikipedia.org/wiki/Hong_Kong
+1214520	Medan	3.58333	98.66667	1750971	Medan	Sumatra Utara	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1214658	Lhokseumawe	5.1801	97.1507	88974	Lhokseumawe	Aceh	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1215355	Binjai	3.6001	98.4854	228763	Binjai	Sumatra Utara	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1215502	Banda Aceh	5.54167	95.33333	250757	Banda Aceh	Aceh	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1621177	Yogyakarta	-7.80139	110.36472	636660	Kota Yogyakarta+DIY		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1622786	Makassar	-5.14861	119.43194	1321717	Makassar	Sulawesi Selatan	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624041	Ternate	0.79065	127.38424	101731	Ternate	Maluku Utara	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624494	Tegal	-6.8694	109.1402	237084	Kota Tegal	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624725	Tarakan	3.31332	117.59152	97478	Kota Tarakan		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1624863	Tanjung Pinang	0.91667	104.45833	192493	Kota Tanjung Pinang	Kepulauan Riau	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1625084	Tangerang	-6.17806	106.63	1372124	Kota Tangerang		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1625812	Surakarta	-7.55611	110.83167	555308	Kota Surakarta	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1625822	Surabaya	-7.24917	112.75083	2374658	Kota Surabaya	Jawa Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1627896	Semarang	-6.99306	110.42083	1288084	Kota Semarang	Jawa Tengah	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1629001	Samarinda	-0.49167	117.14583	355160	Kota Samarinda	Kalimantan Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1630789	Pontianak	-0.03194	109.325	455173	Kota Pontianak	Kalimantan Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1631905	Payakumbuh	-0.2159	100.6334	121572	Payakumbuh	Sumatra Barat+Sumatera Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1633070	Palembang	-2.91673	104.7458	1441500	Palembang		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1633419	Padang	-0.94924	100.35427	840352	Kota Padang	Sumatra Barat+Sumatera Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1635882	Mataram	-8.58333	116.11667	318674	Kota Mataram		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1636308	Manokwari	-0.86291	134.06402	53190	Kabupaten Manokwari	Irian Jaya Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1640344	Kendari	-3.9778	122.51507	195006	Kota Kendari	Sulawesi Tenggara	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1642858	Jambi City	-1.6	103.61667	420323	Jambi		Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta	Jakarta Raya	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1645528	Denpasar	-8.65	115.21667	834881	Denpasar	Bali	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1646170	Cirebon	-6.7063	108.557	254298	Kota Cirebon	Jawa Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1647866	Bukittinggi	-0.30907	100.37055	98746	Bukittinggi	Sumatra Barat+Sumatera Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1649150	Bengkulu	-3.80044	102.26554	309712	Kota Bengkulu	Bengkulu	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1650357	Bandung	-6.92222	107.60694	1699719	Bandung	Jawa Barat	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1650527	Balikpapan	-1.26753	116.82887	433866	Balikpapan	Kalimantan Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+1651531	Ambon	-3.69583	128.18333	355596	Kota Ambon	Maluku Province	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+2057087	Kupang	-10.17083	123.60694	282396	Kota Kupang	Nusa Tenggara Timur	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+2082600	Jayapura	-2.53371	140.71813	134895	Port Numbay	Papua	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+281184	Jerusalem	31.76904	35.21633	801000	Baitulmuqaddis		Israel
+293788	Ramat Gan	32.08227	34.81065	128095	Ramat-Gan		Israel
+294514	Kfar Saba	32.175	34.90694	80773	Kefar Sava	HaMerkaz	Israel
+1254331	Tiruvallur	13.14376	79.90889	48095	Thiruvallur	TN+Tamil Nādu	Hindia+India
+1258294	Raxaul	26.97982	84.85065	47965	Raxaul Bazar	BR	Hindia+India
+1260962	Pachmarhi	22.46791	78.43312	3228	Pachmarhi Cantt	MP	Hindia+India
+1261033	Orchha	25.35192	78.64033	8500	Orachha	MP	Hindia+India
+1262374	Mussoorie	30.45498	78.07068	25753	Mussoori	UT	Hindia+India
+1265859	Krishnanagar	23.40576	88.49073	145926	Krishnagiri	Benggala Barat+WB+West Bengal	Hindia+India
+1270498	Haldwani	29.22254	79.5286	139497	Haldwani-cum-Kathgodam	UT	Hindia+India
+1270990	Gondiā	21.46026	80.19205	124897	Gondiya	MH+Mahārāshtra	Hindia+India
+1274406	Cherrapunji	25.30089	91.69619	11090	Cherapunjee	ML+Meghālaya	Hindia+India
+1275004	Kolkata	22.56263	88.36304	4631392	Kolkata	Benggala Barat+WB+West Bengal	Hindia+India
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbai	MH+Mahārāshtra	Hindia+India
+1275971	Bhilai	21.20919	81.4285	625138	Bhilai Nagar	CT+Chhattisgarh	Hindia+India
+1277599	Balasore	21.49266	86.93348	114321	Baleshwar	OR+Orissa	Hindia+India
+1278297	Ashoknagar	24.57578	77.73123	64722	Ashok Nagar	MP	Hindia+India
+6690108	Panchkula	30.69461	76.8504	200000	Pusat Bandar Panchkula	HR+Haryāna	Hindia+India
+8629640	Thoothukudi	8.76735	78.13425	410760	Thoothukkudi	TN+Tamil Nādu	Hindia+India
+99135	Kufa	32.05114	44.44017	110000	Kufah	An Najaf	Iraq
+112931	Tehran	35.69439	51.42151	7153309	Tehran	Tehrān	Iran
+141736	Bam	29.106	58.357	99268	Bam		Iran
+9533872	Rey	35.59354	51.43997	0	Rayy	Tehrān	Iran
+3418076	Borgarnes	64.53834	-21.92064	1759	Borgarbyggð+310		Iceland
+2523083	Siracusa	37.07542	15.28664	97472	Syracuse		Itali
+3164627	Velturno	46.66705	11.59712	1300	Feldthurns		Itali
+3165124	Tubre	46.64403	10.46328	723	Taufers im Münstertal		Itali
+3165524	Turin	45.07049	7.68682	870456	Turin	Piemonte	Itali
+3165728	Tesimo	46.56542	11.16937	628	Tisens		Itali
+3165796	Terento	46.82992	11.78288	1121	Terenten		Itali
+3165912	Tarvisio	46.50567	13.58689	2509	Tarvisio	FVG	Itali
+3166166	Stelvio	46.59767	10.5458	444	Stilfs		Itali
+3167131	Sarentino	46.64121	11.35411	2299	Sarntal		Itali
+3169070	Rome	41.89193	12.51133	2318895	Rom	Latium+Lazio	Itali
+3169424	Riccione	43.99942	12.65689	32744	Riccione	Emilia-Romagna	Itali
+3169646	Racines	46.86667	11.3	4128	Ratschings		Itali
+3169874	Predoi	47.04031	12.10663	337	Prettau		Itali
+3170259	Ponte Gardena	46.59712	11.53088	157	Waidbruck		Itali
+3171225	Perca	46.79343	11.98339	639	Percha		Itali
+3171468	Parcines	46.68422	11.07337	1211	Partschins		Itali
+3171891	Ortisei	46.57603	11.67176	4306	Urtijëi		Itali
+3172190	Nova Ponente	46.41404	11.42523	1483	Deutschnofen		Itali
+3172526	Moso in Passiria	46.83154	11.16708	322	Moos in Passeier		Itali
+3173113	Montagna	46.33033	11.30027	947	Montan		Itali
+3173600	Meltina	46.58744	11.25487	365	Mölten		Itali
+3174051	Mantova	45.16031	10.79784	39260	Wilayah Mantua		Itali
+3175628	Jesi	43.52142	13.24368	36985	Iesi		Itali
+3176959	Florence	43.77925	11.24626	349296	Florence		Itali
+3177231	Falzes	46.81359	11.88308	1754	Pfalzen		Itali
+3179069	Cermes	46.63277	11.14696	1119	Tscherms		Itali
+3180874	Candela	41.13601	15.51537	2197	Kandela		Itali
+3180908	Campo Tures	46.90844	11.96036	2025	Sand in Taufers		Itali
+3180976	Campo di Trens	46.87412	11.48605	833	Freienfeld		Itali
+3181917	Bolsena	42.64326	11.98514	3468	Tasik Bolsena	Latium+Lazio	Itali
+3183038	Anterivo	46.2781	11.36665	226	Altrei		Itali
+8949708	Villandro	46.63086	11.53808	773	Villanders		Itali
+9035534	Verano	46.60442	11.22565	365	Vöran		Itali
+1850147	Tokyo	35.6895	139.69171	8336599	Tokyo		Jepun
+1853909	Osaka	34.69374	135.50218	2592413	Osaka		Jepun
+1854162	Ōme	35.78389	139.24306	149323	Ome		Jepun
+1854376	Okazaki	34.95	137.16667	352361	Aichi		Jepun
+1863440	Hachiōji	35.65583	139.32389	579399	Hachioji		Jepun
+1835848	Seoul	37.566	126.9784	10349312	Seoul		Selatan Korea+Korea Selatan+http://en.wikipedia.org/wiki/South_Korea
+598098	Klaipėda	55.70888	21.14312	192307	Klaipėda		Lithuania+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Bandar Luxembourg		Luksembourg+Luxembourg
+1732602	Jerantut	3.936	102.3626	33606	Jerantut	PHG+Pahang	Malaysia
+1732663	Raub	3.7899	101.857	40024	Raub	PHG+Pahang	Malaysia
+1732687	Batu Pahat	1.8548	102.9325	156236	Bandar Penggaram+Batu Pahat+BP+http://www.mpbp.gov.my/latar-belakang-bp	JHR+Johor	Malaysia
+1732698	Parit Raja	1.8681	103.1124	17441	Parit Raja	JHR+Johor	Malaysia
+1732706	Pekan Nenas	1.51	103.5141	23292	Pekan Nenas	JHR+Johor	Malaysia
+1732711	Pontian Kechil	1.4866	103.3896	50836	Pontian Kechil	JHR+Johor	Malaysia
+1732721	Kampung Pasir Gudang Baru	1.4726	103.878	145639	Kampung Pasir Gudang Baru	JHR+Johor	Malaysia
+1732738	Kota Tinggi	1.7381	103.8999	52743	Kota Tinggi	JHR+Johor	Malaysia
+1732741	Taman Senai	1.6006	103.6419	73176	Taman Senai	JHR+Johor	Malaysia
+1732742	Kulai	1.6561	103.6032	63762	Kulai	JHR+Johor	Malaysia
+1732752	Johor Bahru	1.4655	103.7578	802489	Johor Bahru	JHR+Johor	Malaysia
+1732811	Kluang	2.03046	103.31689	169828	Kluang	JHR+Johor	Malaysia
+1732814	Yong Peng	2.0136	103.0659	27138	Yong Peng	JHR+Johor	Malaysia
+1732826	Mersing	2.4312	103.8405	22007	Mersing	JHR+Johor	Malaysia
+1732846	Segamat	2.5148	102.8158	69816	Segamat	JHR+Johor	Malaysia
+1732857	Tangkak	2.2673	102.5453	35109	Tangkak	JHR+Johor	Malaysia
+1732869	Muar	2.0442	102.5689	127897	Muar	JHR+Johor	Malaysia
+1732871	Bakri	2.0441	102.6527	30280	Bakri	JHR+Johor	Malaysia
+1732877	Labis	2.385	103.021	21906	Labis	JHR+Johor	Malaysia
+1732884	Chaah	2.249	103.048	11844	Chaah	JHR+Johor	Malaysia
+1732903	Shah Alam	3.08507	101.53281	481654	Shah Alam	SGR+Selangor	Malaysia
+1733023	Kuala Lipis	4.1842	102.0468	15448	Kuala Lipis	PHG+Pahang	Malaysia
+1733432	Kota Kinabalu	5.9749	116.0724	457326	Kota Kinabalu	SBH+Sabah	Malaysia
+1733449	Kinarut	5.8231	116.0466	15716	Kinarut	SBH+Sabah	Malaysia
+1733502	Ranau	5.9538	116.6641	19294	Ranau	SBH+Sabah	Malaysia
+1733874	Beaufort	5.3473	115.7455	15855	Beaufort	SBH+Sabah	Malaysia
+1733953	Lahad Datu	5.0268	118.327	105622	Lahad Datu	SBH+Sabah	Malaysia
+1734052	Sandakan	5.8402	118.1179	392288	Sandakan	SBH+Sabah	Malaysia
+1734098	Keningau	5.3378	116.1602	77650	Keningau	SBH+Sabah	Malaysia
+1734313	Paka	4.6374	103.4368	21044	Paka	TRG+Terengganu	Malaysia
+1734316	Kertih	4.5141	103.4483	24401	Kertih	TRG+Terengganu	Malaysia
+1734393	Kulim	5.36499	100.56177	170889	Kulim	KDH+Kedah	Malaysia
+1734409	Bagan Serai	5.0108	100.54101	20476	Bagan Serai	PRK+Perak	Malaysia
+1734439	Bedong	5.72743	100.50876	47585	Bedong	KDH+Kedah	Malaysia
+1734586	Taiping	4.85	100.73333	217647	Bandar Taiping	PRK+Perak	Malaysia
+1734634	Ipoh	4.5841	101.0829	673318	Ipoh	PRK+Perak	Malaysia
+1734651	Gua Musang	4.88441	101.96857	19731	Gua Musang	KTN+Kelantan	Malaysia
+1734705	Kuala Terengganu	5.3302	103.1408	285065	Bandar Kuala Terengganu+Kuala Terengganu	TRG+Terengganu	Malaysia
+1734715	Marang	5.2056	103.2059	21410	Marang	TRG+Terengganu	Malaysia
+1734738	Tampin	2.4701	102.2302	28238	Tampin	NSN+Negeri Sembilan	Malaysia
+1734745	Alor Gajah	2.3804	102.2089	20163	Alor Gajah	MLK+Melaka	Malaysia
+1734753	Kampung Ayer Keroh	2.2654	102.2801	37716	Kampung Ayer Keroh	MLK+Melaka	Malaysia
+1734757	Sungai Udang	2.269	102.1427	26044	Sungai Udang	MLK+Melaka	Malaysia
+1734759	Malacca	2.196	102.2405	180671	Melaka	MLK+Melaka	Malaysia
+1734769	Pelabuhan Klang	2.99959	101.39287	20000	Pelabuhan Kelang+Pelabohan Klang+Pelabuhan Kelang Selatan+Pelabuhan Klang	SGR+Selangor	Malaysia
+1734798	Semenyih	2.9516	101.843	92491	Semenyih+Semeyih	SGR+Selangor	Malaysia
+1734810	Seremban	2.7297	101.9381	372917	Seremban	NSN+Negeri Sembilan	Malaysia
+1734815	Port Dickson	2.53718	101.80571	89198	Port Dickson	NSN+Negeri Sembilan	Malaysia
+1734821	Sepang	2.6931	101.7498	212050	Sepang	SGR+Selangor	Malaysia
+1734839	Bahau	2.8079	102.4049	31273	Bahau	NSN+Negeri Sembilan	Malaysia
+1734841	Kuala Pilah	2.7389	102.2487	19510	Kuala Pilah	NSN+Negeri Sembilan	Malaysia
+1734879	Buloh Kasap	2.5536	102.764	13088	Buloh Kasap	JHR+Johor	Malaysia
+1734949	Kampung Tekek	2.8147	104.1592	2000	Kampung Tekek	PHG+Pahang	Malaysia
+1734971	Pekan	3.4836	103.3996	31826	Pekan	PHG+Pahang	Malaysia
+1735018	Mentekab	3.4854	102.3484	42171	Mentekab	PHG+Pahang	Malaysia
+1735022	Temerluh	3.4506	102.4176	59916	Temerluh	PHG+Pahang	Malaysia
+1735076	Butterworth	5.3991	100.36382	107591	Butterworth	PNG+Pulau Pinang	Malaysia
+1735079	Bukit Mertajam	5.36301	100.4667	212329	Bukit Mertajam	PNG+Pulau Pinang	Malaysia
+1735089	Parit Buntar	5.12671	100.49316	27313	Parit Buntar	PRK+Perak	Malaysia
+1735106	George Town	5.41123	100.33543	300000	Georgetown+George Town	PNG+Pulau Pinang	Malaysia
+1735148	Serendah	3.3646	101.6041	28484	Serendah	SGR+Selangor	Malaysia
+1735150	Rawang	3.3213	101.5767	120447	Rawang	SGR+Selangor	Malaysia
+1735158	Petaling Jaya	3.10726	101.60671	520698	Petaling Jaya	SGR+Selangor	Malaysia
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Kuala Lumpur	KUL	Malaysia
+1735195	Sabak Bernam	3.7698	100.9879	17251	Sabak Bernam	SGR+Selangor	Malaysia
+1735199	Sungai Besar	3.6746	100.9867	26939	Sungai Besar	SGR+Selangor	Malaysia
+1735227	Kuantan	3.8077	103.326	366229	Kuantan	PHG+Pahang	Malaysia
+1735262	Tanah Rata	4.46361	101.3763	7000	Tanah Rata	PHG+Pahang	Malaysia
+1735268	Batu Gajah	4.46916	101.04107	46183	Batu Gajah	PRK+Perak	Malaysia
+1735450	Lumut	4.2323	100.6298	39595	Lumut	PRK+Perak	Malaysia
+1735459	Teluk Intan	4.02219	101.02083	63353	Teluk Intan	PRK+Perak	Malaysia
+1735498	Sungai Petani	5.647	100.48772	228843	Sungai Petani	KDH+Kedah	Malaysia
+1735506	Kepala Batas	5.51707	100.4265	17131	Kepala Batas	PNG+Pulau Pinang	Malaysia
+1735535	Ketereh	5.95701	102.24817	0	Ketereh	KTN+Kelantan	Malaysia
+1735543	Pulai Chondong	5.87133	102.23177	0	Pulai Chondong	KTN+Kelantan	Malaysia
+1735634	Kuching	1.55	110.33333	570407	Kuching	SRW+Sarawak	Malaysia
+1736278	Kangar	6.4414	100.19862	63869	Kangar	PLS+Perlis	Malaysia
+1736302	Jitra	6.26812	100.42167	63489	Jitra	KDH+Kedah	Malaysia
+1736309	Alor Setar	6.12104	100.36014	217368	Alor Star+Alor Setar	KDH+Kedah	Malaysia
+1736356	Tumpat	6.19775	102.17098	12280	Tumpat	KTN+Kelantan	Malaysia
+1736372	Pasir Mas	6.04934	102.13987	19017	Pasir Mas	KTN+Kelantan	Malaysia
+1736376	Kota Bharu	6.13328	102.2386	1459994	Kota Bharu	KTN+Kelantan	Malaysia
+1736400	Kuala Besut	5.83303	102.55514	2400	Kampung Kuala Besut+Kuala Besut	TRG+Terengganu	Malaysia
+1736405	Jertih	5.7336	102.4897	13526	Jertih+Jerteh	TRG+Terengganu	Malaysia
+1736458	Kudat	6.88732	116.82364	32393	Kudat	SBH+Sabah	Malaysia
+1736660	Kota Belud	6.351	116.4305	12825	Kota Belud	SBH+Sabah	Malaysia
+1738050	Miri	4.39928	113.99163	228212	Miri+Bandar Miri	SRW+Sarawak	Malaysia
+1741550	Tanjung Tokong	5.46061	100.30742	24071	Tanjung Tokong	PNG+Pulau Pinang	Malaysia
+1741562	Tanjung Sepat	2.6579	101.5629	22340	Tanjung Sepat	SGR+Selangor	Malaysia
+1749659	Pulau Sebang	2.455	102.2329	11879	Pulau Sebang	MLK+Melaka	Malaysia
+1750500	Permatang Kuching	5.46339	100.38144	27191	Permatang Kuching	PNG+Pulau Pinang	Malaysia
+1750974	Ladang Seri Kundang	3.2856	101.519	23307	Ladang Seri Kundang	SGR+Selangor	Malaysia
+1752256	Pantai Remis	4.4557	100.6288	16317	Pantai Remis	PRK+Perak	Malaysia
+1759486	Kuang	3.2594	101.5541	21185	Kuang	SGR+Selangor	Malaysia
+1759513	Kuala Sungai Baru	2.3594	102.0353	12269	Kuala Sungai Baru	MLK+Melaka	Malaysia
+1761242	Klebang Besar	2.2186	102.1995	38643	Klebang Besar	MLK+Melaka	Malaysia
+1761293	Kelapa Sawit	1.6698	103.5327	13239	Kelapa Sawit	JHR+Johor	Malaysia
+1763412	Kampung Tanjung Karang	3.4242	101.1849	16393	Kampung Tanjung Karang	SGR+Selangor	Malaysia
+1764318	Kampung Simpang Renggam	1.8278	103.3	17528	Kampung Simpang Renggam	JHR+Johor	Malaysia
+1770351	Kampung Bukit Baharu	2.2152	102.2851	55656	Kampung Bukit Baharu	MLK+Melaka	Malaysia
+1770925	Kampung Batu Feringgi	5.46948	100.24449	4000	Kampung Batu Feringgi	PNG+Pulau Pinang	Malaysia
+1771287	Kampung Baharu Nilai	2.8033	101.7972	36720	Kampung Baharu Nilai	NSN+Negeri Sembilan	Malaysia
+1771485	Kampung Ayer Molek	2.2139	102.3278	15497	Kampung Ayer Molek	MLK+Melaka	Malaysia
+1772148	Juru	5.31201	100.44229	12265	Juru	PNG+Pulau Pinang	Malaysia
+1778290	Bukit Rambai	2.2594	102.1838	17391	Bukit Rambai	MLK+Melaka	Malaysia
+1779926	Bemban	2.2684	102.3746	14329	Bemban	MLK+Melaka	Malaysia
+1780890	Batu Berendam	2.2487	102.246	25028	Batu Berendam	MLK+Melaka	Malaysia
+6893768	Kampung Kuala Besut	5.83297	102.55061	2400	Kampung Kuala Besut	TRG+Terengganu	Malaysia
+7068135	Kampung Lemal	6.03021	102.14126	0	Kampung Lemal	KTN+Kelantan	Malaysia
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Belanda
+2185018	Palmerston North	-40.35636	175.61113	75996	Palmerston Utara		New Zealand
+2188164	Lower Hutt	-41.21667	174.91667	101194	Hutt Bawah		New Zealand
+2190224	Hastings	-39.6381	176.84918	61696	Daerah Hastings		New Zealand
+6244895	Upper Hutt	-41.13827	175.0502	38400	Hutt Atas		New Zealand
+7303619	Kaikoura	-42.40749	173.68132	2172	Daerah Kaikoura	Wilayah Canterbury	New Zealand
+288967	Seeb	23.67027	58.18911	237816	As Sib		Oman
+1684712	Tacloban	11.24333	125.00472	242089	Bandaraya Tacloban		Filipina
+1697175	Olongapo	14.82917	120.28278	221178	Bandaraya Olongapo		Filipina
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Filipina
+1717641	Cavite City	14.48369	120.89878	115932	Bandar Cavite		Filipina
+1722186	Butuan	8.94917	125.54361	309709	Butuan City		Filipina
+1728523	Balanga	14.67611	120.53611	72954	Balanga City		Filipina
+758633	Sokołów Małopolski	50.22909	22.11968	3975	Sokołów Małopolski	Podkarpackie	Poland
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Poland
+3080004	Żory	50.04523	18.70062	63174	Zory	Śląskie	Poland
+3081368	Wrocław	51.1	17.03333	634893	Wrocław	Dolnośląskie	Poland
+3082197	Wieluń	51.22097	18.56964	24384	Wielun	Łódzkie	Poland
+3083271	Toruń	53.01375	18.59814	208717	Torun	Kujawsko-Pomorskie	Poland
+3083988	Świętochłowice	50.29636	18.91726	55600	Swietochlowice	Śląskie	Poland
+3088972	Piotrków Trybunalski	51.40547	19.70321	80128	Piotrkow Trybunalski	Łódzkie	Poland
+3089684	Ostrów Wielkopolski	51.65501	17.80686	72898	Ostrow Wielkopolski	Wielkopolskie	Poland
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Poland
+3098218	Grudziądz	53.48411	18.75366	99486	Grudziadz	Kujawsko-Pomorskie	Poland
+3099213	Głogów	51.66361	16.0845	68530	Głogów	Dolnośląskie	Poland
+3100946	Częstochowa	50.79646	19.12409	248125	Czestochowa	Śląskie	Poland
+3101619	Chorzów	50.30582	18.9742	113430	Chorzow	Śląskie	Poland
+3103402	Bielsko-Biala	49.82245	19.04686	176515	Bielsko-Biala	Śląskie	Poland
+3103644	Biała	50.38587	17.66035	2605	Biała Prudnicka	Opolskie	Poland
+7303419	East Jerusalem	31.78336	35.23388	428304	Baitulmuqaddis Timur		Palestinian Territory
+2262581	Torres Vedras	39.09109	-9.2586	24443	Lapangan Terbang Santa Cruz	Daerah Lisboa+Lisboa	Feringgi+Portugal
+2267057	Lisbon	38.71667	-9.13333	517802	Lisbon	Daerah Lisboa+Lisboa	Feringgi+Portugal
+2733851	Soure	40.05989	-8.62605	8416	Perbandaran Soure	Coimbra	Feringgi+Portugal
+3439389	Asunción	-25.30066	-57.63591	1482200	Gunung Berapi Asuncion		Paraguay
+290030	Doha	25.28545	51.53096	344939	Doha		Qatar
+675810	Iaşi	47.16667	27.6	318012	Iași		Romania
+678499	Făgăraș	45.85	24.96667	30714	Făgăraş		Romania
+679177	Ștei	46.53333	22.45	6529	Ştei		Romania
+2013348	Vladivostok	43.10562	131.87353	587022	Vladivostok	Primorskiy Kray	Rusia
+104515	Mecca	21.42664	39.82563	1323624	Makkah al-Mukarramah	Makkah	Arab Saudi
+109223	Medina	24.46861	39.61417	1300000	Madinah al-Munawwarah		Arab Saudi
+2108502	Honiara	-9.43333	159.95	56298	Honiara		Kepulauan Solomon
+606834	Älvsbyn	65.67624	21.00162	4976	Alvsbyn	Norrbottens Län	Sweden+Ruoččii
+2667303	Trollhättan	58.28365	12.28864	48573	Trollhattan	Daerah Västra Götaland+Västra Götalands län	Sweden+Ruoččii
+723077	Žehra	48.9796	20.7917	2360	Žehra	Prešovský kraj	Slovakia
+3058981	Lúčky	49.12944	19.40228	1787	Lúčky	Žilinský kraj	Slovakia
+3060405	Dolný Kubín	49.20983	19.30341	18995	Dolný Kubín	Žilinský kraj	Slovakia
+170654	Damascus	33.5102	36.29128	1569394	Damsyik		Syria
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Thailand
+2473247	Ariana	36.86012	10.19337	97687	Aryanah	Ariana	Tunisia
+4984247	Ann Arbor	42.27756	-83.74088	117070	Ann Arbor	MI	Amerika Syarikat+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Bandar Raya New York+NYC+NY	New York+NY	Amerika Syarikat+U.S.+USA+U.S.A.
+5288523	Carefree	33.82226	-111.9182	3610	Bandar Carefree	Arizona+AZ	Amerika Syarikat+U.S.+USA+U.S.A.
+5460567	Carrizozo	33.64174	-105.87721	941	Gunung Berapi Carrizozo	NM+New Mexico	Amerika Syarikat+U.S.+USA+U.S.A.
+1580541	Hội An	15.87944	108.335	32757	Hoi An	Quảng Nam	Vietnam
+786714	Pristina	42.67272	21.16688	550000	Priština		
+964137	Pretoria	-25.74486	28.18783	1619438	Pretoria	Gauteng	Afrika Selatan
+971534	Nelspruit	-25.47448	30.97033	110159	Mbombela	Mpumalanga	Afrika Selatan
+1007311	Durban	-29.8579	31.0292	3120282	Durban		Afrika Selatan

@@ -1,0 +1,134 @@
+1138958	Kabul	34.52813	69.17233	3043532	ទីក្រុងកាបូល		អាហ្វហ្គានីស្ថាន+សាធារណរដ្ឋឥស្លាមអាហ្វហ្កានីស្ថាន
+2147714	Sydney	-33.86785	151.20732	4627345	ស៊ីដនីយ៏	NSW	អូស្ត្រាលី
+1816670	Beijing	39.9075	116.39723	11716620	ប៉េកាំង		ចិន
+3674962	Medellín	6.25184	-75.56359	1999979	ទីក្រុងមេឌេយីណ		កូឡុំប៊ី
+3688689	Bogotá	4.60971	-74.08175	7674366	ទីក្រុងបូកូតា		កូឡុំប៊ី
+2988507	Paris	48.85341	2.3488	2138551	ប៉ារីស+75001		បារាំង+France
+1819729	Hong Kong	22.27832	114.17469	7012738	ហុងកុង		ហុងកុង+http://en.wikipedia.org/wiki/Hong_Kong
+1642911	Jakarta	-6.21462	106.84513	8540121	ចាការតា	Jakarta Raya	ឥណ្ឌូនេស៊ី+http://en.wikipedia.org/wiki/Indonesia
+281184	Jerusalem	31.76904	35.21633	801000	ເຢ​ຣູ​ຊາ​ເລັມ		អ៊ីស្រាអែល
+1863357	Hakone	35.18945	139.02649	13339	ក្រុងហាកុណិ	ខេត្តខាន់ណាហ្គាវ៉ា	ជប៉ុន
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnum Pénh+ភ្នំកំពង់ត្រាច+ភ្នំពេញ		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1821394	Veun Sai	13.97598	106.81144	0	Veun Sai	Khétt Rôtânôkiri+ខេត្តរតនគិរី	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1821935	Ta Khmau	11.48333	104.95	52066	កណ្តាល	ខេត្តកណ្ដាល+កណ្តាល	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1822003	Svay Chek	13.80539	102.96184	0	Svay Chek	ខេត្តបន្ទាយមានជ័យ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1822102	Srae Ambel	11.12212	103.75383	0	Srae Ambel	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1822214	Siem Reap	13.36179	103.86056	139458	Siĕmréab+ក្រុងសៀមរាប		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1822640	S’ang	11.36067	105.00776	0	S’ang+ព្រែកតូច	ខេត្តកណ្ដាល+កណ្តាល	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1822644	Koah Thum	11.12421	105.05722	0	Koah Thum+ព្រែកថ្ម	ខេត្តកណ្ដាល+កណ្តាល	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1823750	Bak Khlang	11.56903	102.95542	0	Bak Khlang	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1823887	Thma Puok	13.93987	103.05307	0	Thma Puok+ភូមិ ថ្មពក+Phum Thmâ Pôk	ខេត្តបន្ទាយមានជ័យ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1824235	Ta Loas	12.8079	103.46023	0	Ta Loas+Phum Talŭh+ភូមិ តាលន់	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1825200	Sala Krau	12.95612	102.60891	0	Sala Krau+ភូមិ សាលាក្រៅ	Khétt Pailĭn	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1825978	Preaek Prasab	12.35367	106.03562	0	Preaek Prasab+ភូមិ ព្រែកប្រសប់		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1827523	Koas Krala	12.75588	103.25514	0	Koas Krala+ភូមិ គាស់ក្រឡ+Phum Kôâs Krâlâ	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1828227	Kampong Seila	11.09167	103.90078	0	Kampong Seila	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1828985	Chhloung	12.2561	105.97004	0	Chhloung+ភូមិ ឆ្លូង+Phum Chhlong		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1829514	Bavel	13.25128	102.87795	0	Bavel	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1829673	Banan	12.93964	103.14239	0	Banan	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830098	Tbêng Méanchey	13.80731	104.98046	24380	Tbêng Méanchey	ខេត្តព្រះវិហារ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830194	Paoy Paet	13.65805	102.56365	79000	Paoy Paet+ប៉ោយប៉ែត	ខេត្តបន្ទាយមានជ័យ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830205	Pailin	12.84895	102.60928	17850	ក្រុងប៉ៃលិន	Khétt Pailĭn	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830298	Moung Ruessei	12.77452	103.44926	0	Moung Ruessei+មោងឬស្សី	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830377	Lumphat	13.49146	106.98022	19205	Lumphat+លំផាត់	Khétt Rôtânôkiri+ខេត្តរតនគិរី	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830454	Kuleaen	13.82147	104.69824	0	Kuleaen+គូលេន	ខេត្តព្រះវិហារ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830467	Krong Kep	10.48291	104.31672	11658	រូបភាពក្រុង	Khétt Kêb+ខេត្តកែប	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830468	Koh Kong	11.61531	102.9838	33134	Kaôh Kŏng+កោះកុង	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1830564	Kratié	12.48811	106.01879	19975	ក្រចេះ		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831112	Kampot	10.61041	104.18145	22691	កំពត+ក្រុងកំពត	ខេត្តកំពត	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831118	Kampong Trach	10.55847	104.46753	0	Kampong Trach	ខេត្តកំពត	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831120	Kampong Trabaek	11.14379	105.48275	0	Kampong Trabaek		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831125	Kampong Thom	12.71112	104.88873	19951	Kâmpóng Thom		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831142	Sihanoukville	10.60932	103.52958	156691	ក្រុងព្រះសីហនុ	Khétt Preăh Seihânŭ+ខេត្តព្រះសីហនុ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831167	Kampong Chhnang	12.25	104.66667	75244	ក្រុងកំពង់ឆ្នាំង	ខេត្តកំពង់ឆ្នាំង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831173	Kampong Cham	11.99339	105.4635	61750	ក្រុងកំពង់ចាម	ខេត្តកំពង់ចាម	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831180	Sesan	13.55329	106.09224	0	Sesan+កំភុន		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831795	Odongk	11.68267	104.69945	0	Odongk		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831797	Battambang	13.10271	103.19822	150444	ក្រុងបាត់ដំបង	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831856	Bar Kaev	13.6862	107.21417	0	Bar Kaev	Khétt Rôtânôkiri+ខេត្តរតនគិរី	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831866	Pal Hal	13.79226	104.97859	0	Pal Hal	ខេត្តព្រះវិហារ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1831898	Anlong Veaeng	14.23223	104.08107	0	Anlong Veaeng+Ânlūng Vêng		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+8403851	Sampov Lun	13.4319	102.37574	0	Sâmpŏu Lun	ខេត្តបន្ទាយមានជ័យ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11320707	Phnum Proek	13.2235	102.39546	0	Phnum Proek	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11320731	Kamrieng	13.08806	102.49074	0	Kamrieng	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11338555	Ou Chrov	13.63885	102.58356	0	Ou Chrov	ខេត្តបន្ទាយមានជ័យ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11349490	Veal Veaeng	12.30491	103.1023	0	Veal Veaeng	ខេត្តពោធិ៍សាត់	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11369422	Aek Phnum	13.15993	103.23134	0	Aek Phnum	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11374152	Bat Dambang	13.26298	103.09037	0	Bat Dambang	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11376380	Kralanh	13.60535	103.41903	0	Kralanh+Sala Srŏk Krâlanh		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11407734	Mongkol Borei	13.54057	103.02693	0	Mongkol Borei	ខេត្តបន្ទាយមានជ័យ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11407738	Preah Netr Preah	13.62371	103.18212	0	Preah Netr Preah	ខេត្តបន្ទាយមានជ័យ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11416658	Mondul Seima	11.62411	102.95015	0	Mondul Seima	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11416659	Smach Meanchey	11.60412	102.98801	0	Smach Meanchey	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11423896	Botum Sakor	11.1872	103.47117	0	Botum Sakor	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11424654	Sangkae	13.07943	103.24454	0	Sangkae	ខេត្តបាត់ដំបង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11424848	Mittakpheap	10.62268	103.52473	0	Mittakpheap	Khétt Preăh Seihânŭ+ខេត្តព្រះសីហនុ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11441372	Thma Bang	11.62925	103.52958	0	Thma Bang	ខេត្តកោះកុង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11441587	Phnum Kravanh	12.35121	103.7694	0	Phnum Kravanh	ខេត្តពោធិ៍សាត់	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11448939	Srei Snam	13.8342	103.51315	0	Srei Snam		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11449306	Chum Kiri	10.92522	104.42185	0	Chum Kiri	ខេត្តកំពត	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11449447	Kampot	10.60421	104.25611	0	Kampot	ខេត្តកំពត	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11449475	Damnak Chang’aeur	10.53021	104.36881	0	Damnak Chang’aeur	Khétt Kêb+ខេត្តកែប	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11450607	Phnum Sruoch	11.385	104.37165	0	Phnum Sruoch		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11450764	Thpong	11.75375	104.42743	0	Thpong		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11456467	Soutr Nikom	13.23879	104.13784	0	Soutr Nikom		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11458564	Trapeang Prasat	14.18689	104.35533	0	Trapeang Prasat		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11459753	Kiri Vongs	10.63781	104.87319	0	Kiri Vongs		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11459805	Banteay Meas	10.66781	104.56026	0	Banteay Meas	ខេត្តកំពត	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11459958	Kandal Stueng	11.4135	104.82648	0	Kandal Stueng	ខេត្តកណ្ដាល+កណ្តាល	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11459959	Ta Khmau	11.44641	104.94556	0	Ta Khmau	ខេត្តកណ្ដាល+កណ្តាល	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11460015	Tram Kak	11.01173	104.67631	0	Tram Kak		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11460019	Basedth	11.14918	104.53641	0	Basedth		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11475204	Mukh Kampul	11.73577	104.97713	0	Mukh Kampul	ខេត្តកណ្ដាល+កណ្តាល	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11475218	Ponhea Lueu	11.65577	104.86684	0	Ponhea Lueu		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11475248	Ruessei Kaev	11.62439	104.90941	0	Ruessei Kaev		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11475273	Dangkao	11.56173	104.85553	0	Dangkao		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11475282	Mean Chey	11.53264	104.93662	0	Mean Chey		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11476646	Kampong Leaeng	12.27446	104.72737	0	Kampong Leaeng	ខេត្តកំពង់ឆ្នាំង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11476830	Stueng Saen	12.71121	104.89108	0	Stueng Saen		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11476892	Stoung	12.9404	104.57072	0	Stoung		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11477985	Bourei Cholsar	10.83431	105.01851	0	Bourei Cholsar		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478031	Preah Sdach	11.09511	105.38447	0	Preah Sdach		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478169	Kang Meas	11.94627	105.27491	0	Kang Meas	ខេត្តកំពង់ចាម	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478187	Kaoh Soutin	11.88548	105.42782	0	Kaoh Soutin	ខេត្តកំពង់ចាម	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478225	Sithor Kandal	11.77264	105.38274	0	Sithor Kandal		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478256	Prey Veaeng	11.57101	105.42058	0	Prey Veaeng		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478677	Chamkar Leu	12.30851	105.28186	0	Chamkar Leu	ខេត្តកំពង់ចាម	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478720	Cheung Prey	12.05685	105.07475	0	Cheung Prey	ខេត្តកំពង់ចាម	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11478722	Prey Chhor	12.05804	105.25723	0	Prey Chhor	ខេត្តកំពង់ចាម	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11481395	Sandan	13.10459	105.25407	0	Sandan		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11482105	Rumduol	11.15888	105.82261	0	Rumduol	ខេត្តស្វាយរៀង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11482149	Svay Teab	11.05456	105.88531	0	Svay Teab	ខេត្តស្វាយរៀង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11482204	Me Sang	11.32761	105.54605	0	Me Sang		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11482496	Stueng Trang	12.25578	105.53522	0	Stueng Trang+Sala Srŏk Stœ̆ng Trâng	ខេត្តកំពង់ចាម	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11482666	Chantrea	10.98431	106.12486	0	Chantrea	ខេត្តស្វាយរៀង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11483299	Kaev Seima	12.18739	106.88061	0	Kaev Seima	Môndôl Kiri	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11483430	Ou Chum	13.7978	106.99378	0	Ou Chum	Khétt Rôtânôkiri+ខេត្តរតនគិរី	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11483923	Andoung Meas	13.86724	107.29682	0	Andoung Meas	Khétt Rôtânôkiri+ខេត្តរតនគិរី	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11484016	Ou Ya Dav	13.67061	107.34701	0	Ou Ya Dav	Khétt Rôtânôkiri+ខេត្តរតនគិរី	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11502544	Sangkom Thmei	13.58147	104.91315	0	Sangkom Thmei	ខេត្តព្រះវិហារ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11503558	Peam Ro	11.30852	105.28366	0	Peam Ro		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11503566	Kampong Leav	11.49308	105.34318	0	Kampong Leav		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11504394	Leuk Daek	11.1751	105.2292	0	Leuk Daek+Sala Srŏk Leuk Dêk+សាលាស្រុកលើកដែក	ខេត្តកណ្ដាល+កណ្តាល	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11504398	Peam Chor	11.09877	105.22114	0	Peam Chor+Sala Srŏk Péam Chôr+សាលាស្រុកពាមជរ		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11518574	Koun Mom	13.57767	106.77289	0	Koun Mom	Khétt Rôtânôkiri+ខេត្តរតនគិរី	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11531574	Pechreada	12.55254	107.42393	0	Pechreada	Môndôl Kiri	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11533018	Prey Nob	10.70939	103.82091	0	Prey Nob	Khétt Preăh Seihânŭ+ខេត្តព្រះសីហនុ	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11538889	Bakan	12.60209	103.78579	0	Bakan	ខេត្តពោធិ៍សាត់	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11559400	Angkor Thum	13.48339	103.87413	0	Angkor Thum		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11562962	Bakong	13.34741	103.98756	0	Bakong		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11584517	Varin	13.79322	103.76085	0	Varin		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11586874	Angkor Chum	13.68385	103.6479	0	Angkor Chum		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11598833	Aoral	11.68778	104.12959	0	Aoral		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11598978	Baribour	12.43758	104.46286	0	Baribour	ខេត្តកំពង់ឆ្នាំង	កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+11603215	Chi Kraeng	13.12234	104.34627	0	Chi Kraeng		កម្ពុជា+ព្រះរាជាណាចក្រកម្ពុជា+http://en.wikipedia.org/wiki/Cambodia
+1835848	Seoul	37.566	126.9784	10349312	សេអ៊ូល		សាធារណរដ្ឋកូរ៉េ+កូរេ+កូរ៉េ+http://en.wikipedia.org/wiki/South_Korea
+1298824	Yangon	16.80528	96.15611	4477638	យ៉ាំងហ្គូន	Yangon	មីយ៉ាន់ម៉ា
+1880252	Singapore	1.28967	103.85007	3547809	សិង្ហបុរី		សិង្ហបុរី
+1608529	Nakhon Ratchasima	14.97066	102.10196	208781	នគររាជសីមា	Nakhon Ratchasima	ថៃ
+4076598	Mobile	30.69436	-88.04305	194288	ម៉ូបាល	AL+Alabama	សហរដ្ឋអាមេរិក+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	ភីឡាដេលផ្យា	PA	សហរដ្ឋអាមេរិក+U.S.+USA+U.S.A.
+4942618	Lowell	42.63342	-71.31617	110699	ក្រុងឡូវែល រដ្ឋម៉ាស្សាឈូស៊ែត	MA+Massachusetts	សហរដ្ឋអាមេរិក+U.S.+USA+U.S.A.
+5367929	Long Beach	33.76696	-118.18923	474140	ឡងប៊ិច	CA+Calif+California	សហរដ្ឋអាមេរិក+U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	ស៊ីតថល	WA+Washington	សហរដ្ឋអាមេរិក+U.S.+USA+U.S.A.
+1581130	Hanoi	21.0245	105.84117	1431270	ទីក្រុងហានូយ	Ha Nội	វៀតណាម

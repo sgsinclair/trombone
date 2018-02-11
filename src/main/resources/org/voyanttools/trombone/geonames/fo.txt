@@ -1,0 +1,129 @@
+3553478	Havana	23.13302	-82.38304	2163824	Havanna		Kuba
+146268	Nicosia	35.17531	33.3642	200452	Nikosia		Kýpros
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt am Main	Hessen	Týskland
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Týskland
+2610075	Vojens	55.24639	9.30603	8019	Vojens	Región Suðurdanmark	Danmørk+Danmark
+2610140	Vissenbjerg	55.38482	10.13784	3055	Vissenbjerg	Región Suðurdanmark	Danmørk+Danmark
+2610307	Videbæk	56.0876	8.62852	4052	Videbæk	Región Miðjútland	Danmørk+Danmark
+2610634	Vejen	55.48117	9.13795	8525	Vejen	Región Suðurdanmark	Danmørk+Danmark
+2611497	Tønder	54.93306	8.86674	7841	Tønder	Región Suðurdanmark	Danmørk+Danmark
+2611684	Tinglev	54.93099	9.25243	2829	Tinglev	Región Suðurdanmark	Danmørk+Danmark
+2611862	Tårnby	55.6303	12.60035	10000	Tårnby		Danmørk+Danmark
+2612192	Stubbekøbing	54.88875	12.04102	2301	Stubbekøbing		Danmørk+Danmark
+2612204	Struer	56.49122	8.58376	11317	Struer	Región Miðjútland	Danmørk+Danmark
+2613451	Slangerup	55.85	12.18333	6829	Slangerup		Danmørk+Danmark
+2613471	Skævinge	55.90785	12.15036	2555	Skævinge		Danmørk+Danmark
+2613672	Skørping	56.83626	9.89255	2722	Skørping		Danmørk+Danmark
+2613715	Skjern	55.95	8.5	7145	Skjern	Región Miðjútland	Danmørk+Danmark
+2613731	Skive	56.56699	9.02707	20815	Skive	Región Miðjútland	Danmørk+Danmark
+2613887	Skanderborg	56.03434	9.93177	13543	Skanderborg	Región Miðjútland	Danmørk+Danmark
+2614010	Sindal	57.47117	10.20312	2898	Sindal		Danmørk+Danmark
+2614328	Sakskøbing	54.7997	11.62599	4928	Sakskøbing		Danmørk+Danmark
+2614547	Rønnede	55.2571	12.02125	2395	Rønnede		Danmørk+Danmark
+2614600	Rødovre	55.68062	12.45373	30000	Rødovre		Danmørk+Danmark
+2614611	Rødekro	55.07076	9.33531	5452	Rødekro	Región Suðurdanmark	Danmørk+Danmark
+2614626	Rødby	54.69495	11.38885	2379	Rødby		Danmørk+Danmark
+2614764	Ringsted	55.4426	11.79011	20188	Ringsted		Danmørk+Danmark
+2615089	Præstø	55.12374	12.04477	3695	Præstø		Danmørk+Danmark
+2615222	Pandrup	57.22147	9.67569	2942	Pandrup		Danmørk+Danmark
+2615749	Ølgod	55.80682	8.62859	3891	Ølgod	Región Suðurdanmark	Danmørk+Danmark
+2615876	Odense	55.39594	10.38831	145931	Odense	Región Suðurdanmark	Danmørk+Danmark
+2615886	Odder	55.97313	10.153	11009	Odder	Región Miðjútland	Danmørk+Danmark
+2616176	Nordborg	55.05732	9.7408	7406	Nordborg	Región Suðurdanmark	Danmørk+Danmark
+2616365	Nørre Alslev	54.89784	11.88414	2128	Nørre Alslev		Danmørk+Danmark
+2616599	Nakskov	54.83038	11.13567	14081	Nakskov		Danmørk+Danmark
+2617076	Mariager	56.64985	9.97515	2433	Mariager		Danmørk+Danmark
+2617457	Løgumkloster	55.05941	8.95508	3056	Løgumkloster	Región Suðurdanmark	Danmørk+Danmark
+2617467	Løgstør	56.96245	9.2583	4469	Løgstør		Danmørk+Danmark
+2618361	Korsør	55.32993	11.13857	15029	Korsør		Danmørk+Danmark
+2618425	Copenhagen	55.67594	12.56553	1153615	Keypmannahavn		Danmørk+Danmark
+2619154	Kalundborg	55.67954	11.08864	15939	Kalundborg		Danmørk+Danmark
+2619287	Jægerspris	55.85248	11.98565	3805	Jægerspris		Danmørk+Danmark
+2619377	Ishøj	55.61543	12.35182	19453	Ishøj		Danmørk+Danmark
+2619528	Hvidovre	55.65719	12.47364	49380	Hvidovre		Danmørk+Danmark
+2619856	Hørsholm	55.88098	12.50111	36670	Hørsholm		Danmørk+Danmark
+2619882	Høng	55.51165	11.29032	3789	Høng		Danmørk+Danmark
+2620046	Holstebro	56.36009	8.61607	32072	Holstebro	Región Miðjútland	Danmørk+Danmark
+2620134	Holeby	54.71148	11.46416	1844	Holeby		Danmørk+Danmark
+2620167	Hobro	56.64306	9.79029	11064	Hobro		Danmørk+Danmark
+2620288	Hinnerup	56.26608	10.06299	7055	Hinnerup	Región Miðjútland	Danmørk+Danmark
+2620431	Herlev	55.72366	12.43998	0	Herlev		Danmørk+Danmark
+2620786	Hanstholm	57.11667	8.61667	2418	Hanstholm		Danmørk+Danmark
+2620835	Hammel	56.25762	9.86316	6138	Hammel	Región Miðjútland	Danmørk+Danmark
+2620952	Hadsund	56.71482	10.11682	5066	Hadsund		Danmørk+Danmark
+2620964	Haderslev	55.24943	9.48771	20825	Haderslev	Región Suðurdanmark	Danmørk+Danmark
+2621258	Gråsten	54.91918	9.59523	4022	Gråsten	Región Suðurdanmark	Danmørk+Danmark
+2621304	Gørlev	55.53926	11.22708	2269	Gørlev		Danmørk+Danmark
+2621356	Glostrup	55.6666	12.40377	20673	Glostrup kommuna		Danmørk+Danmark
+2621393	Glamsbjerg	55.27237	10.10483	3099	Glamsbjerg	Región Suðurdanmark	Danmørk+Danmark
+2621805	Fuglebjerg	55.30604	11.54766	1985	Fuglebjerg		Danmørk+Danmark
+2621910	Frederiksværk	55.97073	12.0225	12176	Frederiksværk		Danmørk+Danmark
+2621912	Frederikssund	55.83956	12.06896	14564	Frederikssund		Danmørk+Danmark
+2621927	Frederikshavn	57.44073	10.53661	24103	Frederikshavn kommuna		Danmørk+Danmark
+2622139	Fjerritslev	57.08822	9.26622	3441	Fjerritslev		Danmørk+Danmark
+2622310	Farsø	56.77276	9.33925	3271	Farsø		Danmørk+Danmark
+2622372	Faxe	55.25561	12.11926	3747	Fakse		Danmørk+Danmark
+2622447	Esbjerg	55.47028	8.45187	72205	Esbjerg	Región Suðurdanmark	Danmørk+Danmark
+2622686	Egtved	55.61796	9.30102	2151	Egtved	Región Suðurdanmark	Danmørk+Danmark
+2622888	Dronninglund	57.16035	10.29287	3084	Dronninglund		Danmørk+Danmark
+2622937	Dragør	55.5928	12.67221	11045	Dragør		Danmørk+Danmark
+2623183	Christiansfeld	55.35817	9.48701	2709	Christiansfeld	Región Suðurdanmark	Danmørk+Danmark
+2623306	Brovst	57.0975	9.52264	2710	Brovst		Danmørk+Danmark
+2623337	Brønderslev	57.27021	9.94102	11671	Brønderslev		Danmørk+Danmark
+2623394	Broager	54.88736	9.68096	3376	Broager	Región Suðurdanmark	Danmørk+Danmark
+2623554	Brande	55.93814	9.12178	6357	Brande	Región Miðjútland	Danmørk+Danmark
+2623570	Bramming	55.46946	8.70007	6726	Bramming	Región Suðurdanmark	Danmørk+Danmark
+2624112	Birkerød	55.84759	12.42791	18901	Birkerød		Danmørk+Danmark
+2624144	Billund	55.73349	9.10785	6160	Billund	Región Suðurdanmark	Danmørk+Danmark
+2624341	Ballerup	55.73165	12.36328	40000	Balleru		Danmørk+Danmark
+2624439	Augustenborg	54.95201	9.87216	3132	Augustenborg	Región Suðurdanmark	Danmørk+Danmark
+2624602	Aars	56.80399	9.51441	7771	Aars		Danmørk+Danmark
+2624906	Albertslund	55.65691	12.36381	30000	Albertslund		Danmørk+Danmark
+2625001	Ærøskøbing	54.88803	10.41117	951	Ærøskøbing	Región Suðurdanmark	Danmørk+Danmark
+2625037	Åbybro	57.16249	9.72996	4849	Aabybro		Danmørk+Danmark
+2507480	Algiers	36.73225	3.08746	1977663	Alger	Alger	Algeria
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	Spania+España
+2611396	Tórshavn	62.00973	-6.77164	13200	Tórshavn	Streymoyar sýsla	Føroyar
+2618795	Klaksvík	62.22655	-6.58901	4664	Klaksvík	Norðoyar sýsla	Føroyar
+2619693	Hoyvík	62.03407	-6.78127	2777	Hoyvík	Streymoyar sýsla	Føroyar
+2621808	Fuglafjørður	62.24398	-6.81395	1542	Fuglafjørður	Eysturoyar sýsla	Føroyar
+2622676	Eiði	62.2993	-7.09245	634	Eiðis Bygdasavn	Eysturoyar sýsla	Føroyar
+2624653	Argir	61.99595	-6.77154	1871	Argir	Streymoyar sýsla	Føroyar
+2644605	Lerwick	60.15339	-1.14427	7040	Lerwick	苏格兰	Stóra Bretland+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Orknoyggjar	苏格兰	Stóra Bretland+http://en.wikipedia.org/wiki/United_Kingdom
+264371	Athens	37.97945	23.71622	664046	Athen		Grikkaland+Griekanmua
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Ungarn
+281184	Jerusalem	31.76904	35.21633	801000	Jerúsalem		Ísrael
+293397	Tel Aviv	32.08088	34.78057	432892	Tel Aviv-Jaffa		Ísrael
+3416706	Hafnarfjörður	64.0671	-21.93774	26808	Hafnarfjarðarkaupstaður+220		Ísland
+3418653	Akranes	64.32179	-22.0749	6612	Akraneskaupstaður+300		Ísland
+2960316	Luxembourg	49.61167	6.13	76684	Luksemburg		Luksemborg
+779330	Kautokeino	69.01247	23.04116	2000	Kautokeino kommuna		Noreg
+3140390	Sandefjord	59.13118	10.21665	42654	Sandefjord kommuna		Noreg
+3162657	Asker	59.83333	10.43721	0	Asker kommuna		Noreg
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Pólland
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Pólland
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Pólland
+3099434	Gdańsk	54.35205	18.64637	461865	Gdansk	Pomorskie	Pólland
+284899	Jericho	31.86667	35.45	19783	Jeriko		Palestinskt territorium
+2662149	Ystad	55.42966	13.82041	18806	Ystad	Skåne län	Svøríki+Ruoččii
+2664203	Västervik	57.7584	16.63733	21178	Västervik	Kalmar Län	Svøríki+Ruoččii
+2664454	Västerås	59.61617	16.55276	117746	Västerås	Västmanlands län	Svøríki+Ruoččii
+2664996	Varberg	57.10557	12.25078	34248	Varberg		Svøríki+Ruoččii
+2666670	Uddevalla	58.34784	11.9424	34781	Uddevalla	Västra Götalands län	Svøríki+Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm+Stokkhólmur	Stockholms Län	Svøríki+Ruoččii
+2681825	Ronneby	56.20999	15.27602	12612	Ronneby		Svøríki+Ruoččii
+2686657	Örebro	59.27412	15.2066	115765	Örebro kommuna	Örebro län	Svøríki+Ruoččii
+2692969	Malmö	55.60587	13.00073	301706	Malmö	Skåne län	Svøríki+Ruoččii
+2693301	Lysekil	58.27429	11.43576	7734	Lysekil	Västra Götalands län	Svøríki+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Svøríki+Ruoččii
+2701715	Karlskoga	59.32667	14.52386	27490	Karlskoga	Örebro län	Svøríki+Ruoččii
+2702261	Kalmar	56.66157	16.36163	38408	Kalmar kommuna	Kalmar Län	Svøríki+Ruoččii
+2702979	Jönköping	57.78145	14.15618	93797	Jönköpings kommuna	Jönköpings län	Svøríki+Ruoččii
+2708365	Halmstad	56.67446	12.85676	66124	Halmstad		Svøríki+Ruoččii
+2725471	Arboga	59.39387	15.83882	10841	Arboga	Västmanlands län	Svøríki+Ruoččii
+2725901	Ängelholm	56.2428	12.86219	23240	Ängelholm	Skåne län	Svøríki+Ruoččii
+2729907	Longyearbyen	78.22334	15.64689	2060	Longyearbýur	Svalbarð	Svalbard og Jan Mayen
+702550	Lviv	49.83826	24.02324	717803	Ljviv	Lviv	Ukreina+Ukraina+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kyiv		Ukreina+Ukraina+http://en.wikipedia.org/wiki/Ukraine
+3369157	Cape Town	-33.92584	18.42322	3433441	Høvdastaður	Western Cape	Suðurafrika

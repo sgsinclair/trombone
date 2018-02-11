@@ -1,0 +1,1885 @@
+292223	Dubai	25.0657	55.17128	1137347	Dubaj	Dubai	Spojené arabské emiráty+UAE
+292672	Sharjah	25.33737	55.41206	543733	Šardžá		Spojené arabské emiráty+UAE
+292913	Al Ain	24.19167	55.76056	408733	Al Ajn		Spojené arabské emiráty+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abú Zabí		Spojené arabské emiráty+UAE
+1133453	Maymana	35.92139	64.78361	75900	Majmana		Afghánistán
+1135689	Kunduz	36.72895	68.857	161902	Kundúz	Kundúz	Afghánistán
+1138958	Kabul	34.52813	69.17233	3043532	Kábul		Afghánistán
+1147290	Balkh	36.75635	66.8972	114883	Balch		Afghánistán
+363243	Sarandë	39.87556	20.00528	15147	Sarandë		Albánie
+781443	Tepelenë	40.29583	20.01917	11955	Tepelenë		Albánie
+781988	Pogradec	40.9025	20.6525	61530	Pogradec		Albánie
+782061	Peshkopi	41.685	20.42889	14848	Peshkopi		Albánie
+782661	Kukës	42.07694	20.42194	17832	Kukës		Albánie
+782756	Korçë	40.61861	20.78083	58259	Korçë		Albánie
+783148	Gjirokastër	40.07583	20.13889	23437	Gjirokastër+Gjirokastra		Albánie
+783493	Burrel	41.61028	20.00889	15405	Burrel		Albánie
+3183719	Vlorë	40.46667	19.48972	89546	Vlorë		Albánie
+3183875	Tirana	41.3275	19.81889	374801	Tirana		Albánie
+3184081	Shkodër	42.06828	19.51258	88245	Skadar		Albánie
+3184935	Lezhë	41.78361	19.64361	18695	Lezhë		Albánie
+3185082	Krujë	41.50917	19.79278	21286	Krujë		Albánie
+3185211	Kavajë	41.18556	19.55694	29354	Kavajë		Albánie
+3185672	Fier	40.72389	19.55611	56297	Fier		Albánie
+3185728	Durrës	41.32306	19.44139	122034	Drač		Albánie
+3186084	Berat	40.70583	19.95222	46866	Berat		Albánie
+3186145	Ballsh	40.59889	19.73472	10361	Ballsh		Albánie
+174979	Artashat	39.96144	44.54447	20562	Artašat	Ararat	Arménie
+616052	Yerevan	40.18111	44.51361	1093485	Jerevan	Yerevan	Arménie
+616635	Gyumri	40.7942	43.84528	148381	Gjumri	Shirak	Arménie
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola
+6696480	McMurdo Station	-77.846	166.676	1258	Polární stanice McMurdo		Antarktida
+2760634	Zell am See	47.32556	12.79444	10046	Zell am See		Rakousko
+2761353	Wiener Neustadt	47.80485	16.23196	38481	Vídeňské Nové Město	Dolní Rakousy	Rakousko
+2761369	Vienna	48.20849	16.37208	1691468	Vídeň	Vídeň	Rakousko
+2766429	Sankt Pölten	48.2	15.63333	49001	Sankt Pölten	Dolní Rakousy	Rakousko
+2766824	Salzburg	47.79941	13.04399	150269	Salzburg+Salcburk		Rakousko
+2766939	Rust	47.80122	16.67158	1726	Rust	Burgenland+Bgld	Rakousko
+2771682	Melk	48.22737	15.33186	5272	Melk	Dolní Rakousy	Rakousko
+2772400	Linz	48.30639	14.28611	181162	Linec		Rakousko
+2773300	Kufstein	47.58333	12.16667	16115	Kufstein		Rakousko
+2774326	Klagenfurt am Wörthersee	46.62472	14.30528	90610	Klagenfurt	Korutany	Rakousko
+2774612	Katzelsdorf	47.78055	16.26985	0	Katzelsdorf an der Leitha	Dolní Rakousy	Rakousko
+2775220	Innsbruck	47.26266	11.39454	112467	Innsbruck		Rakousko
+2778067	Graz	47.06667	15.45	222326	Štýrský Hradec	Štýrsko	Rakousko
+2780190	Eisenstadt	47.84565	16.52327	12190	Eisenstadt	Burgenland+Bgld	Rakousko
+2781503	Bregenz	47.50311	9.7471	27611	Bregenz	Vorarlbersko	Rakousko
+2781520	Braunau am Inn	48.25628	13.04343	16403	Braunau am Inn		Rakousko
+2063523	Perth	-31.95224	115.8614	1896548	Perth	WA	Austrálie
+2078025	Adelaide	-34.92866	138.59863	1225235	Adelaide	SA	Austrálie
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Austrálie
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Austrálie
+2158651	Maroubra	-33.95	151.23333	26538	Maroubra Beach	NSW	Austrálie
+2172517	Canberra	-35.28346	149.12807	367752	Canberra	Teritorium hlavního města Austrálie+ACT+Australian Capital Territory	Austrálie
+8310780	Thursday Island	-10.58257	142.21949	2610	Thursday	QLD	Austrálie
+3041732	Mariehamn	60.09726	19.93481	10682	Mariehamn		Alandy
+146970	Xankandi	39.8177	46.7528	53100	Khankendi+Xankǝndi	Xankǝndi	Ázerbájdžán
+147625	Laçın	39.59881	46.55045	2300	Lačin	Laçın	Ázerbájdžán
+586523	Ganja	40.68278	46.36056	313300	Gandža	Gǝncǝ	Ázerbájdžán
+587084	Baku	40.37767	49.89201	1116513	Baku	Baki	Ázerbájdžán
+3186246	Zvornik	44.38605	19.10247	8026	Zvornik		Bosna a Hercegovina
+3186573	Zenica	44.20169	17.90397	164423	Zenica	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3187609	Visoko	43.98889	18.17806	17890	Visoko	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3188225	Velika Kladuša	45.18497	15.80579	19330	Velika Kladuša	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3188582	Tuzla	44.53842	18.66709	142486	Tuzla	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3188893	Trebinje	42.71197	18.34362	33178	Trebinje		Bosna a Hercegovina
+3188924	Travnik	44.22637	17.66583	31127	Travnik	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3190159	Srebrenica	44.10748	19.29669	2862	Srebrenica		Bosna a Hercegovina
+3191281	Sarajevo	43.84864	18.35644	696731	Sarajevo	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3191297	Sanski Most	44.7667	16.667	13551	Sanski Most	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3192409	Prijedor	44.97991	16.71401	36347	Prijedor		Bosna a Hercegovina
+3194514	Neum	42.92333	17.61556	4200	Neum	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3194828	Mostar	43.34333	17.80806	104518	Mostar	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3196410	Livno	43.82695	17.00746	11748	Livno	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3198934	Jajce	44.34203	17.27059	9763	Jajce	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3200396	Goražde	43.66795	18.97564	17650	Goražde	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3200930	Tomislavgrad	43.71849	17.22515	7737	Tomislavgrad	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3202822	Cazin	44.96694	15.94306	21741	Cazin	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3203099	Bugojno	44.05722	17.45083	41378	Bugojno	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3203651	Brod	45.13747	17.98722	9249	Bosanski Brod		Bosna a Hercegovina
+3204161	Bileća	42.87645	18.42967	13257	Bileća		Bosna a Hercegovina
+3204186	Bijeljina	44.75874	19.21437	37692	Bijeljina		Bosna a Hercegovina
+3204222	Bihać	44.81694	15.87083	75641	Bihać	Federation of Bosnia and Herzegovina	Bosna a Hercegovina
+3204541	Banja Luka	44.77842	17.19386	221106	Banja Luka		Bosna a Hercegovina
+1185241	Dhaka	23.7104	90.40744	10356500	Dháka		Bangladéš
+1205733	Chittagong	22.3384	91.83168	3920222	Čattagrám		Bangladéš
+2785341	Tournai	50.60715	3.38932	67721	Tournai	Wallonia+Walloon	Belgie
+2789786	Ostend	51.21551	2.927	69011	Ostende		Belgie
+2790471	Namur	50.4669	4.86746	106284	Namur	Wallonia+Walloon	Belgie
+2790869	Mons	50.45413	3.95229	91277	Mons	Wallonia+Walloon	Belgie
+2792413	Liège	50.63373	5.56749	182597	Lutych	Wallonia+Walloon	Belgie
+2792482	Leuven	50.87959	4.70093	92892	Lovaň		Belgie
+2795100	Ieper	50.85114	2.88569	35089	Ypry		Belgie
+2795113	Huy	50.51894	5.23284	19973	Huy	Wallonia+Walloon	Belgie
+2796491	Hasselt	50.93106	5.33781	69222	Hasselt		Belgie
+2797656	Gent	51.05	3.71667	231493	Gent		Belgie
+2797670	Genk	50.965	5.50082	63666	Genk		Belgie
+2799357	Dinant	50.25807	4.91166	12875	Dinant	Wallonia+Walloon	Belgie
+2800481	Charleroi	50.41136	4.44448	200132	Charleroi	Wallonia+Walloon	Belgie
+2800866	Brussels	50.85045	4.34878	1019022	Brusel	Brussels-Capital Region	Belgie
+2800931	Brugge	51.20892	3.22424	116709	Bruggy		Belgie
+2802170	Beringen	51.04954	5.22606	40930	Beringen		Belgie
+2802583	Bastogne	50.00347	5.71844	14395	Bastogne	Wallonia+Walloon	Belgie
+2803010	Ath	50.62937	3.77801	26681	Ath	Wallonia+Walloon	Belgie
+2803073	Arlon	49.68333	5.81667	26179	Arlon	Wallonia+Walloon	Belgie
+2803138	Antwerpen	51.21989	4.40346	459805	Antverpy		Belgie
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Ouagadougou		Burkina Faso
+726050	Varna	43.21667	27.91667	312770	Varna		Bulharsko
+726174	Targovishte	43.2512	26.57215	37774	Tărgovište	Tŭrgovishte	Bulharsko
+726848	Stara Zagora	42.43278	25.64194	143431	Stara Zagora		Bulharsko
+727011	Sofia	42.69751	23.32415	1152556	Sofia+Sofie		Bulharsko
+727233	Shumen	43.27064	26.92286	87283	Šumen		Bulharsko
+728193	Plovdiv	42.15	24.75	340494	Plovdiv		Bulharsko
+728203	Pleven	43.41667	24.61667	118675	Pleven		Bulharsko
+728378	Pazardzhik	42.2	24.33333	75977	Pazardžik	Pazardzhik	Bulharsko
+728674	Obzor	42.81998	27.88007	2002	Obzor		Bulharsko
+729794	Kardzhali	41.65	25.36667	51000	Kardžali		Bulharsko
+732770	Burgas	42.50606	27.46781	195966	Burgas		Bulharsko
+733191	Blagoevgrad	42.01667	23.1	71306	Blagojevgrad+Gorna Djoumaia		Bulharsko
+733264	Berkovitsa	43.23611	23.12583	15027	Obština Berkovica	Montana	Bulharsko
+290340	Manama	26.22787	50.58565	147074	Manáma	Muḩāfaz̧at al ‘Āşimah	Bahrajn
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto Novo	Quémé	Benin
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Bandar Seri Begawan		Brunej Darussalam+Brunej
+3911925	La Paz	-16.5	-68.15	812799	La Paz	La Paz	Bolívie
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Brazílie
+3449433	Santos	-23.96083	-46.33361	411403	Santos	SP+São Paulo	Brazílie
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brazílie
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasília	Federální distrikt+DF	Brazílie
+3470127	Belo Horizonte	-19.92083	-43.93778	2373224	Belo Horizonte	MG	Brazílie
+3663517	Manaus	-3.10194	-60.025	1598210	Manaus	AM	Brazílie
+618815	Zhytkavichy	52.2168	27.8561	13630	Žytkavičy		Bělorusko
+622739	Rahachow	53.0934	30.0495	34700	Rahačoŭ		Bělorusko
+623317	Polatsk	55.4879	28.7856	82258	Polock	Vitsyebskaya Voblastsʼ	Bělorusko
+624785	Navahrudak	53.5942	25.8191	30748	Novogrodek		Bělorusko
+625144	Minsk	53.9	27.56667	1742124	Minsk		Bělorusko
+628634	Dzyarzhynsk	53.6832	27.138	24609	Dzjaržynsk		Bělorusko
+629390	Chachersk	52.9164	30.9179	7600	Čačersk		Bělorusko
+629564	Buda-Kashalyova	52.7179	30.5701	0	Buda-Kašaljova		Bělorusko
+5920288	Charlottetown	46.23899	-63.13414	42402	Charlottetown	Ostrov prince Edwarda+PE+PEI+Prince Edward Island	Kanada
+5946768	Edmonton	53.55014	-113.46871	712391	Edmonton	AB+Alberta	Kanada
+5957776	Fredericton	45.94541	-66.66558	52337	Fredericton	Nový Brunšvik+NB+New Brunswick	Kanada
+5983720	Iqaluit	63.74697	-68.51727	6124	Iqaluit	NU+Nunavut	Kanada
+6077243	Montréal	45.50884	-73.58781	1600000	Montreal	QC	Kanada
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Kanada
+6119109	Regina	50.45008	-104.6178	176183	Regina	SK+Saskatchewan	Kanada
+6155721	St. Catharines	43.17126	-79.24267	131989	St. Catharines	ON+Ontario	Kanada
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	Kanada
+6173331	Vancouver	49.24966	-123.11934	600000	Vancouver	Britská Kolumbie+BC+British Columbia	Kanada
+6174041	Victoria	48.43294	-123.3693	289625	Victoria	Britská Kolumbie+BC+British Columbia	Kanada
+6180550	Whitehorse	60.71611	-135.05375	23272	Whitehorse	YT+Yukon	Kanada
+6183235	Winnipeg	49.8844	-97.14704	632063	Winnipeg+WPG	MB+Manitoba	Kanada
+6185377	Yellowknife	62.45411	-114.37248	15865	Yellowknife	NT+Northwest Territories	Kanada
+2312895	Mbandaka	0.04865	18.26034	184185	Mbandaka	Équateur	Kongo - DRK+Demokratická republika Kongo
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinshasa	Kinshasa	Kongo - DRK+Demokratická republika Kongo
+2657896	Zürich	47.36667	8.55	341730	Curych	ZH	Švýcarsko
+2657928	Zermatt	46.01998	7.74863	6629	Zermatt		Švýcarsko
+2658576	Sitten	46.22739	7.35559	28045	Sion		Švýcarsko
+2658822	Sankt Gallen	47.42391	9.37477	70572	St. Gallen		Švýcarsko
+2659531	Muri	47.27428	8.33854	6463	Muri		Švýcarsko
+2659811	Luzern	47.05048	8.30635	57066	Lucern		Švýcarsko
+2659994	Lausanne	46.516	6.63282	116751	Lausanne+1000	VD	Švýcarsko
+2660646	Genève	46.20222	6.14569	183981	Ženeva+1200	Ženeva	Švýcarsko
+2660902	Engelberg	46.82107	8.40133	4001	Engelberg		Švýcarsko
+2661552	Bern	46.94809	7.44744	121631	Bern		Švýcarsko
+2661604	Basel	47.55839	7.57327	164488	Basilej+EAP+4000		Švýcarsko
+2661750	Andermatt	46.63565	8.59388	1258	Andermatt		Švýcarsko
+2661881	Aarau	47.39254	8.04422	15501	Aarau+5000		Švýcarsko
+2293538	Abidjan	5.30966	-4.01266	3677115	Abidžan		Pobřeží slonoviny+Côte de l’Ivoire
+3871336	Santiago	-33.45694	-70.64827	4837295	Santiago de Chile+Stgo.	Metropolitní region Santiago	Chile
+2220957	Yaoundé	3.86667	11.51667	1299369	Jaunde		Kamerun
+1279945	Jiuquan	39.74318	98.51736	72732	Ťiou-čchüan		Čína+Čínská lidová republika
+1280517	Nagqu	31.47678	92.05729	30000	Nagčhu		Čína+Čínská lidová republika
+1280737	Lhasa	29.65	91.1	118721	Lhasa		Čína+Čínská lidová republika
+1280849	Kashgar	39.47066	75.98951	274717	Kašgar		Čína+Čínská lidová republika
+1280957	Jiayuguan	39.81121	98.28618	122396	Ťia-jü-kuan		Čína+Čínská lidová republika
+1281019	Hotan	37.1075	79.93548	114000	Chotan		Čína+Čínská lidová republika
+1529102	Ürümqi	43.80096	87.60046	3029372	Urumči		Čína+Čínská lidová republika
+1783621	Zunyi	27.68667	106.90722	466292	Cun-i		Čína+Čínská lidová republika
+1783745	Zigong	29.34162	104.77689	689961	C-kung	Sichuan	Čína+Čínská lidová republika
+1783763	Zhuzhou	27.83333	113.15	709358	Ču-čou		Čína+Čínská lidová republika
+1783934	Shangqiu	34.45	115.65	181218	Šang-čchiou		Čína+Čínská lidová republika
+1784130	Zhoukou	33.63333	114.63333	377061	Čou-kchou		Čína+Čínská lidová republika
+1784185	Yuxi	24.355	102.54222	103829	Jü-si		Čína+Čínská lidová republika
+1784285	Zhongwei	37.51129	105.19067	0	Čung-wej		Čína+Čínská lidová republika
+1784658	Zhengzhou	34.75778	113.64861	4253913	Čeng-čou		Čína+Čínská lidová republika
+1784841	Zhaotong	27.31667	103.71667	109400	Čao-tchung		Čína+Čínská lidová republika
+1784853	Zhaoqing	23.05116	112.45972	361969	Čao-čching		Čína+Čínská lidová republika
+1785018	Zhangzhou	24.51333	117.65556	589831	Čang-čou	Fu-ťien	Čína+Čínská lidová republika
+1785036	Zhangye	38.93417	100.45167	96228	Čang-jie		Čína+Čínská lidová republika
+1785286	Zibo	36.79056	118.06333	3129228	C-po		Čína+Čínská lidová republika
+1785294	Anyang	36.096	114.38278	781129	An-jang		Čína+Čínská lidová republika
+1785453	Zaozhuang	34.86472	117.55417	183665	Cao-čuang		Čína+Čínská lidová republika
+1785725	Yunfu	22.92833	112.03954	2612800	Jün-fu		Čína+Čínská lidová republika
+1785738	Yuncheng	35.02306	110.99278	201950	Jün-čcheng		Čína+Čínská lidová republika
+1785777	Yulinshi	38.29181	109.73753	90870	Jü-lin	Šen-si+Shaanxi	Čína+Čínská lidová republika
+1785781	Yulin	22.63333	110.15	148485	Jü-lin		Čína+Čínská lidová republika
+1786112	Heyuan	23.73333	114.68333	93718	Che-jüan		Čína+Čínská lidová republika
+1786657	Yinchuan	38.46806	106.27306	475101	Jin-čchuan		Čína+Čínská lidová republika
+1786746	Yichun	27.83333	114.4	152169	I-čchun		Čína+Čínská lidová republika
+1786764	Yichang	30.71444	111.28472	476725	I-čchang	Chu-pej	Čína+Čínská lidová republika
+1787093	Yantai	37.47649	121.44081	719332	Jen-tchaj		Čína+Čínská lidová republika
+1787227	Yangzhou	32.39722	119.43583	539715	Jang-čou		Čína+Čínská lidová republika
+1787351	Yangquan	37.8575	113.56333	413394	Jang-čchüan		Čína+Čínská lidová republika
+1787746	Yancheng	33.3575	120.1573	628441	Jen-čcheng		Čína+Čínská lidová republika
+1787858	Shangrao	28.45179	117.94287	318769	Šang-žao		Čína+Čínská lidová republika
+1788450	Xinzhou	38.40917	112.73333	154003	Sin-čou		Čína+Čínská lidová republika
+1788508	Xinyu	27.80429	114.93335	97480	Sin-jü		Čína+Čínská lidová republika
+1788852	Xining	36.62554	101.75739	767531	Si-ning		Čína+Čínská lidová republika
+1788927	Xingtai	37.06306	114.49417	611739	Sing-tchaj		Čína+Čínská lidová republika
+1790254	Xiaogan	30.92689	113.92221	160437	Siao-kan	Chu-pej	Čína+Čínská lidová republika
+1790353	Xianyang	34.33778	108.70261	1034081	Sien-jang	Šen-si+Shaanxi	Čína+Čínská lidová republika
+1790437	Zhuhai	22.27694	113.56778	501199	Ču-chaj		Čína+Čínská lidová republika
+1790492	Xiangtan	27.85	112.9	674189	Siang-tchan		Čína+Čínská lidová republika
+1790645	Xiamen	24.47979	118.08187	3531347	Sia-men	Fu-ťien	Čína+Čínská lidová republika
+1790840	Wuzhou	23.48333	111.31667	265846	Wu-čou		Čína+Čínská lidová republika
+1790923	Wuxi	31.56887	120.28857	3543719	Wu-si		Čína+Čínská lidová republika
+1791121	Changde	29.04638	111.6783	517780	Čchang-te		Čína+Čínská lidová republika
+1791236	Wuhu	31.33728	118.37351	507524	Wu-chu		Čína+Čínská lidová republika
+1791247	Wuhan	30.58333	114.26667	9785388	Wu-chan+武汉	Chu-pej	Čína+Čínská lidová republika
+1791249	Wuhai	39.68442	106.81583	218427	Wu-chaj		Čína+Čínská lidová republika
+1791388	Wenzhou	27.99942	120.66682	865672	Wen-čou		Čína+Čínská lidová republika
+1791636	Weinan	34.50355	109.50891	172321	Wej-nan	Šen-si+Shaanxi	Čína+Čínská lidová republika
+1791673	Weihai	37.50914	122.11356	152595	Wej-chaj		Čína+Čínská lidová republika
+1791681	Weifang	36.71	119.10194	394732	Wej-fang		Čína+Čínská lidová republika
+1792359	Huangshan	29.71139	118.3125	77000	Chuang-šan		Čína+Čínská lidová republika
+1792947	Tianjin	39.14222	117.17667	11090314	Tchien-ťin		Čína+Čínská lidová republika
+1793346	Tangshan	39.63333	118.18333	3372102	Tchang-šan		Čína+Čínská lidová republika
+1793505	Taizhou	32.49069	119.90812	612356	Tchaj-čou		Čína+Čínská lidová republika
+1793511	Taiyuan	37.86944	112.56028	3426519	Tchaj-jüan		Čína+Čínská lidová republika
+1793879	Suizhou	31.71111	113.36306	323945	Suej-čou	Chu-pej	Čína+Čínská lidová republika
+1793900	Suining	30.50802	105.57332	124924	Suej-ning	Sichuan	Čína+Čínská lidová republika
+1794903	Shiyan	32.6475	110.77806	3460000	Š-jen	Chu-pej	Čína+Čínská lidová republika
+1795196	Tongchuanshi	35.07474	109.08495	223603	Tchung-čchuan	Šen-si+Shaanxi	Čína+Čínská lidová republika
+1795270	Shijiazhuang	38.04139	114.47861	2834942	Š’-ťia-čuang		Čína+Čínská lidová republika
+1795565	Shenzhen	22.54554	114.0683	10358381	Šen-čen		Čína+Čínská lidová republika
+1795855	Shaoxing	30.00237	120.57864	421283	Šao-sing		Čína+Čínská lidová republika
+1795874	Shaoguan	24.8	113.58333	628749	Šao-kuan		Čína+Čínská lidová republika
+1795928	Shanwei	22.78199	115.3475	165699	Šan-wej		Čína+Čínská lidová republika
+1795940	Shantou	23.36814	116.71479	5329024	Šan-tchou		Čína+Čínská lidová republika
+1796236	Shanghai	31.22222	121.45806	22315474	Šanghaj		Čína+Čínská lidová republika
+1796556	Sanya	18.24306	109.505	144753	San-ja		Čína+Čínská lidová republika
+1796663	Sanming	26.24861	117.61861	209444	San-ming	Fu-ťien	Čína+Čínská lidová republika
+1797121	Jieyang	23.5418	116.36581	1001985	Ťie-jang		Čína+Čínská lidová republika
+1797264	Quzhou	28.95944	118.86861	82216	Čchü-čou		Čína+Čínská lidová republika
+1797318	Qujing	25.48333	103.78333	146015	Čchü-ťing		Čína+Čínská lidová republika
+1797333	Qufu	35.59667	116.99111	85144	Čchü-fu		Čína+Čínská lidová republika
+1797353	Quanzhou	24.91389	118.58583	184143	Čchüan-čou	Fu-ťien	Čína+Čínská lidová republika
+1797551	Qinzhou	21.97296	108.62612	100996	Čchin-čou		Čína+Čínská lidová republika
+1797595	Qinhuangdao	39.93167	119.58833	759718	Čchin-chuang-tao		Čína+Čínská lidová republika
+1797929	Qingdao	36.06488	120.38042	3718835	Čching-tao		Čína+Čínská lidová republika
+1797945	Qingyuan	23.7	113.03333	151287	Čching-jüan		Čína+Čínská lidová republika
+1798449	Putian	25.43944	119.01028	376558	Pchu-tchien	Fu-ťien	Čína+Čínská lidová republika
+1798654	Pingxiang	27.61672	113.85353	372123	Pching-siang		Čína+Čínská lidová republika
+1798760	Pingliang	35.53917	106.68611	108156	Pching-liang		Čína+Čínská lidová republika
+1798827	Pingdingshan	33.73847	113.30119	889675	Pching-ting-šan		Čína+Čínská lidová republika
+1799491	Neijiang	29.58354	105.06216	546854	Nej-ťiang	Sichuan	Čína+Čínská lidová republika
+1799629	Nanyang	32.99472	112.53278	251532	Nan-jang		Čína+Čínská lidová republika
+1799722	Nantong	32.03028	120.87472	666251	Nan-tchung		Čína+Čínská lidová republika
+1799846	Nanping	26.645	118.17361	171674	Nan-pching	Fu-ťien	Čína+Čínská lidová republika
+1799869	Nanning	22.81667	108.31667	803788	Nan-ning		Čína+Čínská lidová republika
+1800146	Nanchong	30.79508	106.08473	7150000	Nan-čchung	Sichuan	Čína+Čínská lidová republika
+1800163	Nanchang	28.68396	115.85306	2357839	Nan-čchang		Čína+Čínská lidová republika
+1800627	Mianyang	31.46784	104.68168	264136	Mien-jang	Sichuan	Čína+Čínská lidová republika
+1800779	Meizhou	24.28859	116.11768	144212	Mej-čou		Čína+Čínská lidová republika
+1801180	Maoming	21.65	110.9	0	Mao-ming		Čína+Čínská lidová republika
+1801640	Luzhou	28.8903	105.42575	0	Lu-čou	Sichuan	Čína+Čínská lidová republika
+1801722	Lüshun	38.8	121.26667	82345	Lušunkchou		Čína+Čínská lidová republika
+1801792	Luoyang	34.68361	112.45361	1390581	Luo-jang		Čína+Čínská lidová republika
+1801934	Luohe	33.56394	114.04272	417356	Luo-che		Čína+Čínská lidová republika
+1802276	Longyan	25.10722	117.0225	0	Lung-jen	Fu-ťien	Čína+Čínská lidová republika
+1803245	Lishui	28.46042	119.91029	98946	Li-šuej		Čína+Čínská lidová republika
+1803567	Linfen	36.08889	111.51889	232566	Lin-fen		Čína+Čínská lidová republika
+1803834	Liaocheng	36.45596	115.97766	226930	Liao-čcheng		Čína+Čínská lidová republika
+1804153	Leshan	29.56227	103.76386	154477	Le-šan	Sichuan	Čína+Čínská lidová republika
+1804430	Lanzhou	36.05701	103.83987	2628426	Lan-čou		Čína+Čínská lidová republika
+1804591	Laiwu	36.19278	117.65694	124108	Laj-wu		Čína+Čínská lidová republika
+1804609	Laibin	23.7	109.26667	59835	Laj-pin		Čína+Čínská lidová republika
+1804651	Kunming	25.03889	102.71833	3855346	Kchun-ming		Čína+Čínská lidová republika
+1804879	Kaifeng	34.7986	114.30742	900000	Kchaj-feng		Čína+Čínská lidová republika
+1805179	Jiujiang	29.70475	116.00206	258807	Ťiou-ťiang		Čína+Čínská lidová republika
+1805518	Jining	35.405	116.58139	450327	Ťi-ning		Čína+Čínská lidová republika
+1805528	Jinhua	29.10678	119.64421	142206	Ťin-chua		Čína+Čínská lidová republika
+1805540	Jingzhou	30.35028	112.19028	177878	Ťing-čou	Chu-pej	Čína+Čínská lidová republika
+1805611	Jingmen	31.03361	112.20472	167750	Ťing-men	Chu-pej	Čína+Čínská lidová republika
+1805733	Jinchang	38.50062	102.19379	144363	Ťin-čchang		Čína+Čínská lidová republika
+1805753	Jinan	36.66833	116.99722	4335989	Ťi-nan		Čína+Čínská lidová republika
+1805953	Jiaxing	30.7522	120.75	466101	Ťia-sing		Čína+Čínská lidová republika
+1805987	Jiaozuo	35.23972	113.23306	517540	Ťiao-cuo		Čína+Čínská lidová republika
+1806299	Jiangmen	22.58333	113.08333	532419	Ťiang-men		Čína+Čínská lidová republika
+1806408	Yangjiang	21.85563	111.96272	399735	Jang-ťiang		Čína+Čínská lidová republika
+1806466	Guangyuan	32.44201	105.823	213365	Kuang-jüan	Sichuan	Čína+Čínská lidová republika
+1806776	Huizhou	23.11147	114.41523	289201	Chuej-čou		Čína+Čínská lidová republika
+1807234	Huangshi	30.24706	115.04814	688090	Chuang-š	Chu-pej	Čína+Čínská lidová republika
+1807689	Huaihua	27.56337	110.00404	127322	Chuaj-chua		Čína+Čínská lidová republika
+1807700	Huaibei	33.97444	116.79167	903039	Chuaj-pej		Čína+Čínská lidová republika
+1808198	Heze	35.23929	115.47358	254602	Che-ce		Čína+Čínská lidová republika
+1808370	Hengyang	26.88946	112.61888	759602	Cheng-jang		Čína+Čínská lidová republika
+1808392	Hengshui	37.73222	115.70111	456356	Cheng-šuej		Čína+Čínská lidová republika
+1808722	Hefei	31.86389	117.28083	3310268	Che-fej		Čína+Čínská lidová republika
+1808770	Hebi	35.89917	114.1925	244662	Che-pi		Čína+Čínská lidová republika
+1808857	Hanzhong	33.07507	107.02214	145986	Chan-čung	Šen-si+Shaanxi	Čína+Čínská lidová republika
+1808926	Hangzhou	30.29365	120.16142	6241971	Chang-čou		Čína+Čínská lidová republika
+1808956	Changzhi	36.18389	113.10528	0	Čchang-č		Čína+Čínská lidová republika
+1808963	Handan	36.60056	114.46778	1358318	Chan-tan		Čína+Čínská lidová republika
+1809078	Haikou	20.04583	110.34167	615835	Chaj-kchou		Čína+Čínská lidová republika
+1809461	Guiyang	26.58333	106.71667	1171633	Kuej-jang		Čína+Čínská lidová republika
+1809498	Guilin	25.28194	110.28639	649352	Kuej-lin		Čína+Čínská lidová republika
+1809532	Guigang	23.09639	109.60917	76430	Kuej-kang		Čína+Čínská lidová republika
+1809858	Guangzhou	23.11667	113.25	11071424	Kanton		Čína+Čínská lidová republika
+1810638	Ganzhou	25.84664	114.9326	0	Kan-čou		Čína+Čínská lidová republika
+1810821	Fuzhou	26.06139	119.30611	1179720	Fu-čou	Fu-ťien	Čína+Čínská lidová republika
+1810845	Fuyang	32.9	115.81667	170023	Fu-jang		Čína+Čínská lidová republika
+1811103	Foshan	23.02677	113.13148	3600000	Fo-šan		Čína+Čínská lidová republika
+1812101	Shengli	37.46271	118.49165	306450	Tung-jing		Čína+Čínská lidová republika
+1812955	Dezhou	37.45127	116.31046	379555	Te-čou		Čína+Čínská lidová republika
+1812961	Deyang	31.13019	104.38198	152194	Te-jang	Sichuan	Čína+Čínská lidová republika
+1813171	Zhangjiajie	29.12944	110.47833	86083	Čang-ťia-ťie		Čína+Čínská lidová republika
+1813253	Lijiang	26.86879	100.22072	1137600	Li-ťiang		Čína+Čínská lidová republika
+1813325	Dazhou	31.21592	107.50092	130749	Ta-čou	Sichuan	Čína+Čínská lidová republika
+1814757	Chuzhou	32.32194	118.29778	280582	Čchu-čou		Čína+Čínská lidová republika
+1814906	Chongqing	29.56278	106.55278	7457600	Čchung-čching		Čína+Čínská lidová republika
+1815286	Chengdu	30.66667	104.06667	7415590	Čcheng-tu	Sichuan	Čína+Čínská lidová republika
+1815395	Chaozhou	23.65396	116.62262	424787	Čchao-čou		Čína+Čínská lidová republika
+1815456	Changzhou	31.77359	119.95401	949018	Čchang-čou		Čína+Čínská lidová republika
+1815577	Changsha	28.19874	112.97087	3093980	Čchang-ša		Čína+Čínská lidová republika
+1816080	Cangzhou	38.31667	116.86667	527681	Cchang-čou		Čína+Čínská lidová republika
+1816234	Bozhou	33.87722	115.77028	174140	Po-čou		Čína+Čínská lidová republika
+1816336	Binzhou	37.36667	118.01667	115893	Pin-čou		Čína+Čínská lidová republika
+1816373	Bijie	27.30193	105.28627	77645	Pi-ťie		Čína+Čínská lidová republika
+1816670	Beijing	39.9075	116.39723	11716620	Peking		Čína+Čínská lidová republika
+1816705	Beihai	21.48333	109.1	289568	Pej-chaj		Čína+Čínská lidová republika
+1817240	Baiyin	36.54696	104.17023	188533	Paj-jin		Čína+Čínská lidová republika
+1817968	Anshun	26.25	105.93333	351936	An-šun		Čína+Čínská lidová republika
+1817993	Anqing	30.51365	117.04723	358661	An-čching		Čína+Čínská lidová republika
+1886760	Suzhou	31.30408	120.59538	5345961	Su-čou		Čína+Čínská lidová republika
+1927639	Yueyang	29.37455	113.09481	1200000	Jüe-jang		Čína+Čínská lidová republika
+2033196	Zhangjiakou	40.81	114.87944	692602	Čang-ťia-kchou		Čína+Čínská lidová republika
+2033413	Yichun	47.72143	128.87529	155762	I-čchun		Čína+Čínská lidová republika
+2034414	Tonghua	41.71972	125.92639	510000	Tchung-chua		Čína+Čínská lidová republika
+2034655	Suihua	46.63954	126.99508	252245	Suej-chua		Čína+Čínská lidová republika
+2034714	Siping	43.16143	124.37785	555609	S-pching		Čína+Čínská lidová republika
+2034786	Shuangyashan	46.63611	131.15389	600000	Šuang-ja-šan		Čína+Čínská lidová republika
+2034937	Shenyang	41.79222	123.43278	6255921	Šen-jang		Čína+Čínská lidová republika
+2035265	Qiqihar	47.34088	123.96045	882364	Cicikar		Čína+Čínská lidová republika
+2035715	Mudanjiang	44.58333	129.6	665915	Mu-tan-ťiang		Čína+Čínská lidová republika
+2036109	Liaoyuan	42.90361	125.13583	465249	Liao-jüan		Čína+Čínská lidová republika
+2036113	Liaoyang	41.27194	123.17306	687890	Liao-jang		Čína+Čínská lidová republika
+2036389	Jixi	45.30109	130.95718	403759	Ťi-si		Čína+Čínská lidová republika
+2036427	Jinzhou	41.10778	121.14167	604269	Ťin-čou		Čína+Čínská lidová republika
+2036502	Jilin	43.85083	126.56028	1881977	Ťi-lin		Čína+Čínská lidová republika
+2036581	Jiamusi	46.79927	130.31633	549549	Ťia-mu-s’		Čína+Čínská lidová republika
+2036892	Hohhot	40.81056	111.65222	774477	Chöch chot		Čína+Čínská lidová republika
+2036973	Heihe	50.24413	127.49016	109427	Chej-che		Čína+Čínská lidová republika
+2036986	Hegang	47.35118	130.30012	743307	Che-kang		Čína+Čínská lidová republika
+2037013	Harbin	45.75	126.65	5878939	Charbin		Čína+Čínská lidová republika
+2037346	Fuxin	42.01556	121.65889	689050	Fu-sin		Čína+Čínská lidová republika
+2037355	Fushun	41.88669	123.94363	1400646	Fu-šun		Čína+Čínská lidová republika
+2037799	Datong	40.09361	113.29139	1052678	Ta-tchung		Čína+Čínská lidová republika
+2037860	Daqing	46.58333	125	203488	Ta-čching		Čína+Čínská lidová republika
+2038067	Chifeng	42.26833	118.96361	346654	Čch’-feng		Čína+Čínská lidová republika
+2038087	Chengde	40.9519	117.95883	449325	Čcheng-te		Čína+Čínská lidová republika
+2038180	Changchun	43.88	125.32278	4193073	Čchang-čchun		Čína+Čínská lidová republika
+2038300	Benxi	41.28861	123.765	987717	Pen-si		Čína+Čínská lidová republika
+2038432	Baotou	40.65222	109.82222	1301768	Pao-tchou		Čína+Čínská lidová republika
+2038569	Baicheng	45.60746	122.82076	316970	Paj-čcheng		Čína+Čínská lidová republika
+2038584	Baishan	41.93853	126.41965	183880	Paj-šan		Čína+Čínská lidová republika
+2038632	Anshan	41.12361	122.99	1199275	An-šan		Čína+Čínská lidová republika
+6986104	Zhongshan	22.52306	113.37912	0	Čung-šan		Čína+Čínská lidová republika
+8400694	Taizhou	28.66266	121.43312	0	Tchaj-čou		Čína+Čínská lidová republika
+8533133	Liupanshui	26.59444	104.83333	251900	Liou-pchan-šuej		Čína+Čínská lidová republika
+8537264	Huanggang	30.45143	114.87035	0	Chuang-kang	Chu-pej	Čína+Čínská lidová republika
+9072919	Rizhao	35.39579	119.53217	0	Ž’-čao		Čína+Čínská lidová republika
+9181182	Puyang	35.76318	115.01721	0	Pchu-jang		Čína+Čínská lidová republika
+3674962	Medellín	6.25184	-75.56359	1999979	Medellín		Kolumbie
+3675443	Manizales	5.06889	-75.51738	357814	Manizales	Caldas	Kolumbie
+3676623	Leticia	-4.21528	-69.94056	29666	Leticia		Kolumbie
+3687238	Cartagena	10.39972	-75.51444	952024	Cartagena	Bolívar	Kolumbie
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotá		Kolumbie
+3689147	Barranquilla	10.96854	-74.78132	1380425	Barranquilla		Kolumbie
+3689718	Arauca	7.08471	-70.75908	69264	Arauca	Arauca	Kolumbie
+3553478	Havana	23.13302	-82.38304	2163824	Havana		Kuba
+146268	Nicosia	35.17531	33.3642	200452	Nikósie		Kypr
+146384	Limassol	34.68406	33.03794	154000	Lemesos		Kypr
+3061344	Znojmo	48.8555	16.0488	35280	Znojmo	Jihomoravský kraj	Česká republika+Česko+Czechia
+3061368	Zliv	49.06608	14.36613	3656	Zliv	Jihočeský kraj	Česká republika+Česko+Czechia
+3061370	Zlín	49.22645	17.67065	78759	Gottwaldov+Zlín	Zlínský kraj	Česká republika+Česko+Czechia
+3061822	Žatec	50.32717	13.54577	19607	Žatec	Ústecký kraj	Česká republika+Česko+Czechia
+3061949	Zákupy	50.68475	14.64522	2792	Zákupy	Liberecký kraj	Česká republika+Česko+Czechia
+3062283	Vyškov	49.27747	16.99897	22265	Vyškov	Jihomoravský kraj	Česká republika+Česko+Czechia
+3063409	Valtice	48.74069	16.75499	3656	valtice+Valtice	Jihomoravský kraj	Česká republika+Česko+Czechia
+3063548	Ústí nad Labem	50.6607	14.03227	94105	Ústí nad Labem	Ústecký kraj	Česká republika+Česko+Czechia
+3063739	Uherské Hradiště	49.06975	17.45969	26421	Uherské Hradiště	Zlínský kraj	Česká republika+Česko+Czechia
+3063835	Tvarožná	49.19177	16.77146	1159	Tvarožná	Jihomoravský kraj	Česká republika+Česko+Czechia
+3063907	Trutnov	50.56101	15.9127	31398	Trutnov	Královéhradecký kraj+Královéhradecký Kraj	Česká republika+Česko+Czechia
+3064104	Třebíč	49.21492	15.88166	38785	Třebíč	Kraj Vysočina	Česká republika+Česko+Czechia
+3064268	Terezín	50.511	14.15055	2992	Terezín	Ústecký kraj	Česká republika+Česko+Czechia
+3064288	Teplice	50.6404	13.82451	51223	Teplice	Ústecký kraj	Česká republika+Česko+Czechia
+3064307	Telnice	49.10187	16.71774	1296	Telnice	Jihomoravský kraj	Česká republika+Česko+Czechia
+3064373	Tachov	49.79528	12.63365	12640	Tachov	Plzeňský kraj	Česká republika+Česko+Czechia
+3064379	Tábor	49.41441	14.6578	36264	Tábor	Jihočeský kraj	Česká republika+Česko+Czechia
+3064454	Svitavy	49.75594	16.46829	17427	Svitavy	Pardubický kraj	Česká republika+Česko+Czechia
+3065166	Šternberk	49.73044	17.29889	13967	Šternberk	Olomoucký kraj+Olomoucký Kraj	Česká republika+Česko+Czechia
+3065180	Štěpánov	50.16238	16.91702	3306	Štěpánov	Olomoucký kraj+Olomoucký Kraj	Česká republika+Česko+Czechia
+3065522	Špindlerův Mlýn	50.72615	15.60944	1302	Špindlerův Mlýn	Královéhradecký kraj+Královéhradecký Kraj	Česká republika+Česko+Czechia
+3065617	Sokolov	50.1813	12.6401	24901	Sokolov	Karlovarský kraj	Česká republika+Česko+Czechia
+3065824	Slavkov u Brna	49.15325	16.87649	5936	Slavkov u Brna	Jihomoravský kraj	Česká republika+Česko+Czechia
+3065901	Šlapanice	49.16863	16.72731	7109	Šlapanice	Jihomoravský kraj	Česká republika+Česko+Czechia
+3066045	Skalná	50.1703	12.36144	1950	Vildštejn+Skalná	Karlovarský kraj	Česká republika+Česko+Czechia
+3066323	Sedlec	49.96391	15.28846	1098	Sedlec	Středočeský kraj	Česká republika+Česko+Czechia
+3066879	Říčany	49.21497	16.39362	1702	Říčany u Brna	Jihomoravský kraj	Česká republika+Česko+Czechia
+3067421	Prostějov	49.47188	17.11184	47374	Prostějov	Olomoucký kraj+Olomoucký Kraj	Česká republika+Česko+Czechia
+3067433	Prosek	50.11525	14.50685	15581	Prosek	Hlavní město Praha	Česká republika+Česko+Czechia
+3067542	Příbram	49.68988	14.01043	35251	Příbram	Středočeský kraj	Česká republika+Česko+Czechia
+3067580	Přerov	49.45511	17.4509	47311	Přerov	Olomoucký kraj+Olomoucký Kraj	Česká republika+Česko+Czechia
+3067696	Prague	50.08804	14.42076	1165581	Praha	Hlavní město Praha	Česká republika+Česko+Czechia
+3068020	Podolí	49.19042	16.72084	1165	Podolí	Jihomoravský kraj	Česká republika+Česko+Czechia
+3068160	Pilsen	49.74747	13.37759	164180	Plzeň	Plzeňský kraj	Česká republika+Česko+Czechia
+3068293	Písek	49.3088	14.1475	29774	Písek	Jihočeský kraj	Česká republika+Česko+Czechia
+3068345	Petrovice u Karviné	49.89587	18.54779	4874	Petrovice u Karviné	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3068582	Pardubice	50.04075	15.77659	88741	Pardubice	Pardubický kraj	Česká republika+Česko+Czechia
+3068799	Ostrava	49.83465	18.28204	313088	Ostrava	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3068927	Opava	49.93866	17.90257	60252	Opava	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3069011	Olomouc	49.59552	17.25175	101268	Olomouc	Olomoucký kraj+Olomoucký Kraj	Česká republika+Česko+Czechia
+3069059	Oldřišov	49.9913	17.96074	1358	Oldřišov	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3069808	Netolice	49.0493	14.197	2721	Netolice	Jihočeský kraj	Česká republika+Česko+Czechia
+3070291	Most	50.50301	13.63617	67905	Most	Ústecký kraj	Česká republika+Česko+Czechia
+3070451	Mnichovo Hradiště	50.5272	14.97134	8368	Mnichovo Hradiště	Středočeský kraj	Česká republika+Česko+Czechia
+3070544	Mladá Boleslav	50.41135	14.90318	43684	Mladá Boleslav	Středočeský kraj	Česká republika+Česko+Czechia
+3070862	Mělník	50.3505	14.47411	19231	Mělník	Středočeský kraj	Česká republika+Česko+Czechia
+3071024	Mariánské Lázně	49.96459	12.70118	14277	Mariánské Lázně	Karlovarský kraj	Česká republika+Česko+Czechia
+3071213	Malá Strana	50.08774	14.40449	6350	Malá Strana	Hlavní město Praha	Česká republika+Česko+Czechia
+3071507	Louny	50.35699	13.79667	19147	Louny	Ústecký kraj	Česká republika+Česko+Czechia
+3071665	Litvínov	50.6042	13.61812	27022	Litvínov	Ústecký kraj	Česká republika+Česko+Czechia
+3071675	Litomyšl	49.86809	16.31298	10146	Litomyšl	Pardubický kraj	Česká republika+Česko+Czechia
+3071677	Litoměřice	50.53348	14.1318	24489	Litoměřice	Ústecký kraj	Česká republika+Česko+Czechia
+3071961	Liberec	50.76711	15.05619	97770	Liberec	Liberecký kraj	Česká republika+Česko+Czechia
+3072232	Lednice	48.79992	16.80339	2355	Lednice	Jihomoravský kraj	Česká republika+Česko+Czechia
+3072463	Kutná Hora	49.94839	15.26816	21280	Kutná Hora	Středočeský kraj	Česká republika+Česko+Czechia
+3072649	Kroměříž	49.29785	17.39312	29126	Kroměříž	Zlínský kraj	Česká republika+Česko+Czechia
+3072927	Králův Dvůr	49.94981	14.03445	5805	Králův Dvůr	Středočeský kraj	Česká republika+Česko+Czechia
+3073371	Kolín	50.02806	15.1998	29690	Kolín	Středočeský kraj	Česká republika+Česko+Czechia
+3073699	Kladno	50.14734	14.10285	70003	Kladno	Středočeský kraj	Česká republika+Česko+Czechia
+3073803	Karlovy Vary	50.23271	12.87117	51807	Karlovy Vary	Karlovarský kraj	Česká republika+Česko+Czechia
+3074199	Jihlava	49.3961	15.59124	50100	Jihlava	Kraj Vysočina	Česká republika+Česko+Czechia
+3074204	Jičín	50.43723	15.35162	16328	Jičín	Královéhradecký kraj+Královéhradecký Kraj	Česká republika+Česko+Czechia
+3074603	Jablonec nad Nisou	50.72431	15.17108	44878	Jablonec nad Nisou	Liberecký kraj	Česká republika+Česko+Czechia
+3074967	Hradec Králové	50.20923	15.83277	95195	Hradec Králové	Královéhradecký kraj+Královéhradecký Kraj	Česká republika+Česko+Czechia
+3074975	Hradec nad Moravici	49.87042	17.87843	5255	Hradec nad Moravici	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3075179	Horní Těrlicko	49.75177	18.4829	4134	Horní Těrlicko	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3075654	Hodonín	48.84893	17.13244	26345	Hodonín	Jihomoravský kraj	Česká republika+Česko+Czechia
+3075919	Havlíčkův Brod	49.60785	15.58069	24356	Havlíčkův Brod	Kraj Vysočina	Česká republika+Česko+Czechia
+3075921	Havířov	49.77984	18.43688	82768	Havířov	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3076311	Duchcov	50.60376	13.74621	8937	Duchcov	Ústecký kraj	Česká republika+Česko+Czechia
+3077184	Dětmarovice	49.89412	18.46079	3821	Dětmarovice	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3077244	Děčín	50.78215	14.21478	52058	Děčín	Ústecký kraj	Česká republika+Česko+Czechia
+3077665	Chotěbuz	49.76849	18.56912	1050	Chotěbuz	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3077685	Chomutov	50.46048	13.41779	50251	Chomutov	Ústecký kraj	Česká republika+Česko+Czechia
+3077835	Cheb	50.07963	12.37392	33242	Cheb	Karlovarský kraj	Česká republika+Česko+Czechia
+3077882	Český Těšín	49.74613	18.62613	25750	Český Těšín	Moravskoslezský kraj	Česká republika+Česko+Czechia
+3077889	Český Krumlov	48.81091	14.31521	14146	Český Krumlov	Jihočeský kraj	Česká republika+Česko+Czechia
+3077916	České Budějovice	48.97447	14.47434	96053	České Budějovice	Jihočeský kraj	Česká republika+Česko+Czechia
+3077929	Česká Lípa	50.68551	14.53764	38841	Česká Lípa	Liberecký kraj	Česká republika+Česko+Czechia
+3078513	Buchlovice	49.08627	17.33852	2487	Buchlovice	Zlínský kraj	Česká republika+Česko+Czechia
+3078610	Brno	49.19522	16.60796	369559	Brno	Jihomoravský kraj	Česká republika+Česko+Czechia
+3078773	Břeclav	48.75897	16.88203	25789	Břeclav	Jihomoravský kraj	Česká republika+Česko+Czechia
+3079273	Blansko	49.36304	16.64446	20384	Blansko	Jihomoravský kraj	Česká republika+Česko+Czechia
+3079508	Benešov	49.78162	14.68697	16257	Benešov	Středočeský kraj	Česká republika+Česko+Czechia
+2803560	Zwickau	50.72724	12.48839	98796	Zwickau		Německo
+2804008	Zittau	50.89772	14.80764	25785	Žitava		Německo
+2805385	Xanten	51.65877	6.45297	21587	Xanten	NRW	Německo
+2805615	Würzburg	49.79391	9.95121	133731	Würzburg	Bavorsko+Bayern	Německo
+2806654	Wolfsburg	52.42452	10.7815	123064	Wolfsburg	Dolní Sasko+Neddersassen+Läichsaksen+Donja Saska	Německo
+2809346	Wiesbaden	50.08258	8.24932	272432	Wiesbaden	Hessen	Německo
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Německo
+2812482	Weimar	50.9803	11.32903	64727	Výmar		Německo
+2820256	Ulm	48.39841	9.99155	120451	Ulm	Bádensko-Württembersko+Baden-Württemberg	Německo
+2820860	Tübingen	48.52266	9.05222	83416	Tübingen	Bádensko-Württembersko+Baden-Württemberg	Německo
+2821164	Trier	49.75565	6.63935	100129	Trevír	Porýní-Falc	Německo
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Bádensko-Württembersko+Baden-Württemberg	Německo
+2826287	Stralsund	54.30911	13.0818	58976	Stralsund	Mecklenburg-Vorpommern	Německo
+2830582	Speyer	49.32083	8.43111	50343	Špýr	Porýní-Falc	Německo
+2832232	Sigmaringen	48.08829	9.23033	16592	Sigmaringen	Bádensko-Württembersko+Baden-Württemberg	Německo
+2834282	Schwerin	53.62937	11.41316	96641	Schwerin	Mecklenburg-Vorpommern	Německo
+2837041	Schönau-Berzdorf	51.06402	14.88402	1796	Schönau-Berzdorf auf dem Eigen		Německo
+2838059	Schmalkalden	50.72136	10.44386	17710	Šmalkaldy		Německo
+2842647	Saarbrücken	49.23262	7.00982	181227	Saarbrücken	Sársko+Saarland	Německo
+2842884	Rüsselsheim	49.98955	8.42251	59730	Rüsselsheim am Main	Hessen	Německo
+2843636	Rottweil	48.16783	8.62719	25510	Rottweil	Bádensko-Württembersko+Baden-Württemberg	Německo
+2847736	Reutlingen	48.49144	9.20427	112627	Reutlingen	Bádensko-Württembersko+Baden-Württemberg	Německo
+2849483	Regensburg	49.01513	12.10161	129151	Řezno	Bavorsko+Bayern	Německo
+2852458	Potsdam	52.39886	13.06566	145292	Postupim+Podstupim	Braniborsko+Brandenburg+http://www.brandenburg.de	Německo
+2853292	Plauen	50.4973	12.13782	66412	Plavno		Německo
+2855328	Passau	48.5665	13.43122	50560	Passau+Pasov	Bavorsko+Bayern	Německo
+2861650	Nürnberg	49.45421	11.07752	499237	Norimberk	Bavorsko+Bayern	Německo
+2861982	Nordhausen	51.5018	10.7957	43912	Nordhausen		Německo
+2867714	Munich	48.13743	11.57549	1260391	Mnichov	Bavorsko+Bayern	Německo
+2872155	Meissen	51.16158	13.4737	28492	Meißen+Míšeň		Německo
+2874225	Mainz	49.98419	8.2791	184997	Mohuč	Porýní-Falc	Německo
+2874545	Magdeburg	52.12773	11.62916	229826	Magdeburk+Madeborch	Sassen-Anholt	Německo
+2875115	Lüneburg	53.2509	10.41409	71260	Lüneburg	Dolní Sasko+Neddersassen+Läichsaksen+Donja Saska	Německo
+2876755	Löbau	51.09954	14.66738	18374	Lobava		Německo
+2879139	Leipzig	51.33962	12.37129	504971	Lipsko		Německo
+2885679	Konstanz	47.66033	9.17582	81275	Kostnice	Bádensko-Württembersko+Baden-Württemberg	Německo
+2886242	Köln	50.93333	6.95	963395	Kolín nad Rýnem	NRW	Německo
+2891122	Kiel	54.32133	10.13489	232758	Kiel	Šlesvicko-Holštýnsko+Schleswig-Holstein	Německo
+2892518	Kassel	51.31667	9.5	194501	Kassel	Hessen	Německo
+2892794	Karlsruhe	49.00937	8.40444	283799	Karlsruhe	Bádensko-Württembersko+Baden-Württemberg	Německo
+2893437	Kamenz	51.26798	14.09374	18270	Kamenec		Německo
+2895044	Jena	50.92878	11.5899	104712	Jena		Německo
+2895992	Ingolstadt	48.76508	11.42372	120658	Ingolstadt	Bavorsko+Bayern	Německo
+2898304	Hoyerswerda	51.43787	14.23549	43681	Hojeřice+Hoyerswerda		Německo
+2910831	Hannover	52.37052	9.73322	515140	Hannover+Hannauver	Dolní Sasko+Neddersassen+Läichsaksen+Donja Saska	Německo
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburk+HH	HH+H+H+Hamburg	Německo
+2916606	Großenlüder	50.5925	9.54231	8768	Grossenlüder	Hessen	Německo
+2918987	Görlitz	51.15518	14.98853	57751	Görlitz+Zhořelec		Německo
+2921232	Gera	50.88029	12.08187	104659	Gera		Německo
+2923822	Fulda	50.55162	9.67518	63760	Fulda	Hessen	Německo
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt nad Mohanem	Hessen	Německo
+2928810	Essen	51.45657	7.01228	593085	Essen	NRW	Německo
+2929112	Eschelbronn	49.31944	8.86528	2572	Eschelbronn	Bádensko-Württembersko+Baden-Württemberg	Německo
+2929567	Erlangen	49.59099	11.00783	102675	Erlangen	Bavorsko+Bayern	Německo
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		Německo
+2930672	Elstra	51.22172	14.13201	3176	Halštrov		Německo
+2931574	Eisenach	50.9807	10.31522	43846	Eisenach		Německo
+2934246	Düsseldorf	51.22172	6.77616	573057	Düsseldorf	NRW	Německo
+2934691	Duisburg	51.43247	6.76516	504358	Duisburg	NRW	Německo
+2935022	Dresden	51.05089	13.73832	486854	Drážďany		Německo
+2935517	Dortmund	51.51494	7.466	588462	Dortmund	NRW	Německo
+2936470	Dohna	50.95621	13.85839	6140	Donín		Německo
+2938913	Darmstadt	49.87167	8.65027	140385	Darmstadt	Hessen	Německo
+2939811	Cottbus	51.75769	14.32888	84754	Chotěbuz	Braniborsko+Brandenburg+http://www.brandenburg.de	Německo
+2940132	Chemnitz	50.8357	12.92922	247220	Saská Kamenice+Chemnitz		Německo
+2944388	Bremen	53.07516	8.80777	546501	Brémy	Svobodné hanzovní město Brémy+Bremen	Německo
+2947416	Bochum	51.48165	7.21648	385729	Bochum	NRW	Německo
+2950159	Berlin	52.52437	13.41053	3426354	Berlín	Berlín+Berlin	Německo
+2950881	Berchtesgaden	47.63236	13.00187	7655	Berchtesgaden	Bavorsko+Bayern	Německo
+2950978	Bensheim	49.68369	8.61839	39439	Bensheim	Hessen	Německo
+2951825	Bayreuth	49.94782	11.57893	75061	Bayreuth	Bavorsko+Bayern	Německo
+2951881	Bautzen	51.18035	14.43494	41972	Budyšín		Německo
+2952984	Bamberg	49.89873	10.90067	70047	Bamberk	Bavorsko+Bayern	Německo
+2957773	Altenburg	50.98763	12.43684	38568	Altenburg		Německo
+3247449	Aachen	50.77664	6.08342	265208	Cáchy	NRW	Německo
+7290252	Spandau	52.5511	13.19921	34506	Špandava	Berlín+Berlin	Německo
+223817	Djibouti	11.58901	43.14503	623891	Džíbútí	Djibouti	Džibuti+Džibutsko
+2613715	Skjern	55.95	8.5	7145	Skjern	Midtjylland	Dánsko
+2614481	Roskilde	55.64152	12.08035	44285	Roskilde	Sjælland	Dánsko
+2614813	Ribe	55.33051	8.76966	7983	Ribe	Syddanmark	Dánsko
+2615876	Odense	55.39594	10.38831	145931	Odense	Syddanmark	Dánsko
+2618425	Copenhagen	55.67594	12.56553	1153615	Kodaň		Dánsko
+2620320	Hillerød	55.92791	12.30081	30853	Hillerød		Dánsko
+2620473	Helsingør	56.03606	12.6136	35048	Helsingør		Dánsko
+2624652	Århus	56.15674	10.21076	237551	Århus	Midtjylland	Dánsko
+2476301	Tindouf	27.67111	-8.14743	45966	Tindúf	Tindouf	Alžírsko
+2496049	Ghardaïa	32.49094	3.67347	93423	Ghardája	Ghardaïa	Alžírsko
+2507480	Algiers	36.73225	3.08746	1977663	Alžír	Alger	Alžírsko
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	Ekvádor
+3654870	Latacunga	-0.93521	-78.61554	51717	Latacunga	Cotopaxi	Ekvádor
+3657509	Guayaquil	-2.20584	-79.90795	1952029	Guayaquil	Guayas	Ekvádor
+587577	Viljandi	58.36389	25.59	20309	Viljandi		Estonsko
+588335	Tartu	58.38062	26.72509	101092	Tartu		Estonsko
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harjumaa	Estonsko
+589580	Pärnu	58.38588	24.49711	44192	Pärnu		Estonsko
+589663	Paldiski	59.35667	24.05306	4202	Paldiski	Harjumaa	Estonsko
+590031	Narva	59.37722	28.19028	66980	Narva		Estonsko
+590447	Maardu	59.46529	24.98215	16630	Maardu	Harjumaa	Estonsko
+590939	Kuressaare	58.24806	22.50389	14921	Kuressaare	Saaremaa	Estonsko
+591260	Kohtla-Järve	59.39861	27.27306	46060	Kohtla-Järve		Estonsko
+591893	Jõhvi	59.35917	27.42111	11469	Jõhvi		Estonsko
+592225	Haapsalu	58.94306	23.54139	11805	Haapsalu		Estonsko
+351434	Naja' Ḥammādī	26.04949	32.24142	41184	Nag Hammádí	Qinā	Egypt
+358048	Damietta	31.41648	31.81332	76839	Damietta		Egypt
+359792	Aswan	24.09082	32.89942	241261	Asuán		Egypt
+359796	Suez	29.97371	32.52627	488125	Suez	As Suways	Egypt
+360630	Cairo	30.06263	31.24967	7734614	Káhira		Egypt
+360995	Giza	30.00808	31.21093	2443203	Gíza	Al Jīzah	Egypt
+361055	Ismailia	30.60427	32.27225	284813	Ismáílíja	Al Ismā‘īlīyah	Egypt
+361058	Alexandria	31.20176	29.91582	3811516	Alexandrie		Egypt
+361291	Hurghada	27.25738	33.81291	95622	Hurghada		Egypt
+361546	Arish	31.13159	33.79844	128855	Aríš	Shamāl Sīnāʼ	Egypt
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo	Kastilie-La Mancha	Španělsko+España
+2509954	Valencia	39.46975	-0.37739	814208	Valencie	Valencia	Španělsko+España
+2510911	Sevilla	37.38283	-5.97317	703206	Sevilla	Andalusie	Španělsko+España
+2512989	Palma	39.56939	2.65024	401270	Palma de Mallorca	Islles Baleares+Islas Baleares	Španělsko+España
+2513416	Murcia	37.98704	-1.13004	436870	Murcia	Murcia	Španělsko+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	Španělsko+España
+2514256	Málaga	36.72016	-4.42034	568305	Málaga	Andalusie	Španělsko+España
+2515270	Las Palmas de Gran Canaria	28.09973	-15.41343	381847	Las Palmas de Gran Canaria	Kanárské ostrovy	Španělsko+España
+2516479	Ibiza	38.90883	1.43296	48684	Ibiza	Islles Baleares+Islas Baleares	Španělsko+España
+2516480	Ibi	38.62533	-0.57225	24113	Ibi	Valencia	Španělsko+España
+2517117	Granada	37.18817	-3.60667	234325	Grenada	Andalusie	Španělsko+España
+2519522	Cheste	39.48333	-0.68333	7255	Cheste	Valencia	Španělsko+España
+3104324	Zaragoza	41.65606	-0.87734	674317	Zaragoza+ZGZ	Aragón	Španělsko+España
+3105976	Vigo	42.23282	-8.72264	297332	Vigo	Galicie+Galicia	Španělsko+España
+3106672	Valladolid	41.65518	-4.72372	317864	Valladolid	Kastilie a León+Castilla y León	Španělsko+España
+3107661	Tossa de Mar	41.71667	2.93333	5001	Tossa de Mar	Catalunya	Španělsko+España
+3108126	Teruel	40.3456	-1.10646	35396	Teruel	Aragón	Španělsko+España
+3108286	Terrassa	41.56667	2.01667	210941	Terrassa	Catalunya	Španělsko+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicie+Galicia	Španělsko+España
+3117460	Marañón	42.62941	-2.43931	62	Marañón	Navarra	Španělsko+España
+3117636	Malgrat de Mar	41.64662	2.74135	18472	Malgrat de Mar	Catalunya	Španělsko+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Španělsko+España
+3118212	Lloret de Mar	41.69993	2.84565	39363	Lloret de Mar	Catalunya	Španělsko+España
+3123124	Entrena	42.38782	-2.53066	1248	Entrena	La Rioja	Španělsko+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	Španělsko+España
+3129111	Ayerbe	42.27267	-0.68844	1096	Ayerbe	Aragón	Španělsko+España
+332288	Lalībela	12.03219	39.04756	11152	Lalibela		Etiopie
+333795	Jijiga	9.35	42.8	56821	Džidžiga	Sumalē	Etiopie
+344979	Addis Ababa	9.02497	38.74689	2757729	Addis Abeba	Ādīs Ābeba+Addis Ababa Region	Etiopie
+633679	Turku	60.45148	22.26869	175945	Turku	Vlastní Finsko	Finsko
+634963	Tampere	61.49911	23.78712	202687	Tampere	Pirkanmaa	Finsko
+635696	Suomussalmi	64.88685	28.90778	9974	Suomussalmi		Finsko
+638936	Rovaniemi	66.5	25.71667	34781	Rovaniemi		Finsko
+640999	Pori	61.48333	21.78333	76772	Pori		Finsko
+643492	Oulu	65.01236	25.46816	128618	Oulu	Severní Pohjanmaa	Finsko
+644450	Nokia	61.46667	23.5	28676	Nokia	Pirkanmaa	Finsko
+646005	Mikkeli	61.68857	27.27227	46550	Mikkeli		Finsko
+648900	Lappeenranta	61.05871	28.18871	59276	Lappeenranta		Finsko
+649360	Lahti	60.98267	25.66151	98826	Lahti		Finsko
+650224	Kuopio	62.89238	27.67703	89104	Kuopio		Finsko
+653272	Kemijärvi	66.66667	27.41667	8883	Kemijärvi		Finsko
+655194	Jyväskylä	62.24147	25.72088	85026	Jyväskylä		Finsko
+655808	Joensuu	62.60118	29.76316	53388	Joensuu		Finsko
+658225	Helsinki	60.16952	24.93545	558457	Helsinky		Finsko
+659101	Hanko	59.83333	22.95	9962	Hanko		Finsko
+659180	Hämeenlinna	60.99596	24.46434	47261	Hämeenlinna		Finsko
+660158	Espoo	60.2052	24.6522	256760	Espoo		Finsko
+660561	Porvoo	60.39233	25.66507	47192	Porvoo		Finsko
+2198148	Suva	-18.14161	178.44149	77366	Suva		Fidži
+2611396	Tórshavn	62.00973	-6.77164	13200	Tórshavn		Faerské ostrovy
+2967245	Yerres	48.71785	2.49338	28897	Yerres+91330		Francie+France
+2967849	Vitry-sur-Seine	48.78716	2.40332	81001	Vitry-sur-Seine+94400		Francie+France
+2969679	Versailles	48.8	2.13333	85416	Versailles+78000		Francie+France
+2970761	Vanves	48.82345	2.29025	26068	Vanves+92170		Francie+France
+2970777	Vannes	47.66667	-2.75	54020	Vannes+56000	Bretaňský poloostrov+Bretagne	Francie+France
+2970962	Vallauris	43.57803	7.05451	27286	Vallauris+06220		Francie+France
+2971041	Valenciennes	50.35	3.53333	44821	Valenciennes+59300	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+2971053	Valence	44.93333	4.9	63864	Valence+26000		Francie+France
+2972315	Toulouse	43.60426	1.44367	433055	Toulouse+31000		Francie+France
+2972328	Toulon	43.12442	5.92836	168701	Toulon+83000		Francie+France
+2972893	Thiais	48.76496	2.3961	29724	Thiais+94320		Francie+France
+2973783	Strasbourg	48.58392	7.74553	274845	Štrasburk+67000	ACAL	Francie+France
+2974389	Soissons	49.38167	3.32361	31100	Soissons+02200	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+2974678	Sèvres	48.82292	2.21757	23724	Sèvres+92310		Francie+France
+2976043	Sarcelles	49	2.38333	57979	Sarcelles+95200		Francie+France
+2978179	Saint-Maur-des-Fossés	48.79395	2.49323	75402	Saint-Maur-des-Fossés+94100		Francie+France
+2978640	Saint-Malo	48.65	-2.01667	50676	Saint-Malo+35400	Bretaňský poloostrov+Bretagne	Francie+France
+2980916	Saint-Denis	48.93333	2.36667	96128	Saint-Denis+93200		Francie+France
+2980942	Saint-Cyr-l’École	48.79865	2.06814	16365	Saint-Cyr-l'École+78210		Francie+France
+2982146	Rungis	48.74607	2.35275	5583	Rungis+94150		Francie+France
+2982235	Rueil-Malmaison	48.8765	2.18967	76616	Rueil-Malmaison+92500		Francie+France
+2982652	Rouen	49.44313	1.09932	112787	Rouen+76000		Francie+France
+2983990	Rennes	48.11198	-1.67429	209375	Rennes+35000	Bretaňský poloostrov+Bretagne	Francie+France
+2984114	Reims	49.25	4.03333	196565	Remeš+51100+Reims	ACAL	Francie+France
+2984513	Rambouillet	48.65	1.83333	26674	Rambouillet+78120		Francie+France
+2986140	Pontoise	49.05	2.1	30290	Pontoise+95000		Francie+France
+2986501	Poissy	48.92902	2.04952	36431	Poissy+78300		Francie+France
+2988507	Paris	48.85341	2.3488	2138551	Paříž+75001		Francie+France
+2989204	Orsay	48.69572	2.18727	17817	Orsay+91400		Francie+France
+2989297	Orly	48.74792	2.39253	20528	Orly+94310		Francie+France
+2989317	Orléans	47.90289	1.90389	124149	Orléans+45000		Francie+France
+2990970	Nanterre	48.89198	2.20675	86719	Nanterre+92000		Francie+France
+2991214	Mulhouse	47.75	7.33333	111430	Mylhúzy	ACAL	Francie+France
+2992090	Montreuil	48.86415	2.44322	90652	Montreuil+93100		Francie+France
+2992166	Montpellier	43.61092	3.87723	248252	Montpellier+34000		Francie+France
+2992304	Montlignon	49.00636	2.28705	2674	Montlignon		Francie+France
+2992616	Montfermeil	48.8982	2.57913	23829	Montfermeil		Francie+France
+2994160	Metz	49.11911	6.17269	123914	Mety+57000	ACAL	Francie+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001		Francie+France
+2995652	Marly-le-Roi	48.86667	2.08333	17404	Marly-le-Roi+78160		Francie+France
+2996564	Maisons-Laffitte	48.95264	2.14521	22772	Maisons-Laffitte+78600		Francie+France
+2996653	Maintenon	48.58704	1.57847	4486	Maintenon		Francie+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Francie+France
+2997395	Lourdes	43.1	-0.05	15786	Lurdy+65100		Francie+France
+2998056	Livry-Gargan	48.9193	2.54305	39518	Livry-Gargan+93190		Francie+France
+2998324	Lille	50.63297	3.05858	228328	Lille+59000	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+2998632	L'Haÿ-les-Roses	48.78333	2.33333	29703	L'Haÿ-les-Roses+94240		Francie+France
+2998811	Le Vigan	43.98333	3.6	0	Le Vigan+30120		Francie+France
+3004630	Le Chesnay	48.8222	2.12213	29154	Le Chesnay+78150		Francie+France
+3005082	Le Bourget	48.93405	2.43584	12690	Le Bourget+93350		Francie+France
+3005825	La Valette-du-Var	43.13741	5.98314	23134	La Valette-du-Var+83160		Francie+France
+3009824	La Courneuve	48.92805	2.39627	37287	La Courneuve+93120		Francie+France
+3013097	Houilles	48.92161	2.19263	31121	Houilles+78800		Francie+France
+3014143	Guyancourt	48.77334	2.07393	31989	Guyancourt+78280		Francie+France
+3014634	Grimaud	43.27049	6.52491	4122	Port Grimaud		Francie+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Francie+France
+3015926	Gisors	49.28178	1.7801	12363	Gisors		Francie+France
+3016321	Gennevilliers	48.93333	2.3	42294	Gennevilliers+92230		Francie+France
+3016621	Garges-lès-Gonesse	48.96791	2.39781	39847	Garges-lès-Gonesse+95140		Francie+France
+3016830	Gagny	48.88333	2.53333	38134	Gagny+93220		Francie+France
+3017341	Franconville	48.98333	2.23333	34284	Franconville+95130		Francie+France
+3018074	Fontainebleau	48.4	2.7	19717	Fontainebleau+77300		Francie+France
+3019256	Évry	48.63333	2.45	51900	Évry+91000		Francie+France
+3019459	Étampes	48.43333	2.15	23012	Étampes+91150		Francie+France
+3019897	Ermont	48.99004	2.25804	28117	Ermont+95120		Francie+France
+3020020	Épinay-sur-Seine	48.9535	2.31514	46145	Épinay-sur-Seine+93800		Francie+France
+3020310	Élancourt	48.78421	1.9552	30831	Élancourt+78990		Francie+France
+3020601	Eaubonne	48.99712	2.28249	24096	Eaubonne+95600		Francie+France
+3020686	Dunkerque	51.03297	2.377	71287	Dunkerk+59140	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+3020832	Draveil	48.68466	2.41418	29316	Draveil+91210		Francie+France
+3021372	Dijon	47.31667	5.01667	149782	Dijon+21000		Francie+France
+3021411	Dieppe	49.93333	1.08333	35707	Dieppe+76200		Francie+France
+3022530	Créteil	48.78333	2.46667	84833	Créteil+94000		Francie+France
+3022569	Crépy-en-Valois	49.23359	2.88807	15694	Crépy-en-Valois+60800	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+3022622	Crécy-en-Ponthieu	50.25193	1.88085	1549	Kresčak	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+3023763	Corbeil-Essonnes	48.60603	2.48757	40527	Corbeil-Essonnes+91100		Francie+France
+3023924	Conflans-Sainte-Honorine	49.00158	2.09694	36358	Conflans-Sainte-Honorine+78700		Francie+France
+3024266	Colombes	48.91882	2.25404	82300	Colombes+92700		Francie+France
+3024297	Colmar	48.08333	7.36667	65405	Colmar+68000	ACAL	Francie+France
+3024596	Clichy-sous-Bois	48.9102	2.55323	29062	Clichy-sous-Bois		Francie+France
+3024635	Clermont-Ferrand	45.77966	3.08628	138681	Clermont-Ferrand+63000		Francie+France
+3024783	Clamart	48.80299	2.26692	51400	Clamart+92140		Francie+France
+3025055	Choisy-le-Roi	48.76846	2.41874	35590	Choisy-le-Roi+94600		Francie+France
+3025622	Chelles	48.88109	2.59295	46947	Chelles+77500		Francie+France
+3026033	Chatou	48.8898	2.15863	30091	Chatou+78400		Francie+France
+3026083	Châtillon	48.8024	2.29346	32383	Châtillon+92320		Francie+France
+3026108	Châtenay-Malabry	48.76507	2.26655	32715	Châtenay-Malabry+92290		Francie+France
+3026467	Chartres	48.44685	1.48925	43838	Chartres+28000		Francie+France
+3026613	Charleville-Mézières	49.76667	4.71667	52415	Charleville-Mézières+08000	ACAL	Francie+France
+3026637	Charenton-le-Pont	48.82209	2.41217	30910	Charenton-le-Pont+94220		Francie+France
+3026827	Chantilly	49.19461	2.47124	11085	Chantilly+60500	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+3027105	Champigny-sur-Marne	48.81642	2.49366	76726	Champigny-sur-Marne+94500		Francie+France
+3028641	Carcassonne	43.21667	2.35	49600	Carcassonne+11000		Francie+France
+3028808	Cannes	43.55135	7.01275	70011	Cannes+06150		Francie+France
+3029162	Calais	50.95194	1.85635	74433	Calais+62100	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+3029241	Caen	49.18585	-0.35912	110624	Caen+14000		Francie+France
+3030300	Brest	48.39029	-4.48628	144899	Brest+29200	Bretaňský poloostrov+Bretagne	Francie+France
+3031137	Boulogne-Billancourt	48.83333	2.25	108782	Boulogne-Billancourt+92100		Francie+France
+3031277	Bougival	48.86223	2.14148	8895	Bougival		Francie+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Bordeaux+33000		Francie+France
+3032179	Bobigny	48.9	2.45	44962	Bobigny+93000		Francie+France
+3032824	Bezons	48.92426	2.2128	27570	Bezons+95870		Francie+France
+3033123	Besançon	47.24878	6.01815	128426	Besançon+25000		Francie+France
+3033791	Belfort	47.63333	6.86667	54562	Belfort+90000		Francie+France
+3034475	Bayonne	43.48333	-1.48333	44396	Bayonne+64100		Francie+France
+3034483	Bayeux	49.27732	-0.7039	15963	Bayeux+14400		Francie+France
+3034640	Bastia	42.70278	9.45	41001	Bastia+20200		Francie+France
+3035403	Bagnolet	48.86667	2.41667	33504	Bagnolet+93170		Francie+France
+3035409	Bagneux	48.79565	2.30796	38900	Bagneux+92220		Francie+France
+3035681	Avignon	43.94834	4.80892	89769	Avignon+84000		Francie+France
+3035864	Auvers-sur-Oise	49.07158	2.16978	6972	Auvers-sur-Oise		Francie+France
+3036145	Aulnay-sous-Bois	48.93814	2.49402	80615	Aulnay-sous-Bois+93600		Francie+France
+3036460	Athis-Mons	48.70522	2.39147	31225	Athis-Mons+91200		Francie+France
+3037044	Argenteuil	48.95	2.25	101475	Argenteuil+95100		Francie+France
+3037598	Angoulême	45.65	0.15	49468	Angoulême+16000		Francie+France
+3037656	Angers	47.46667	-0.55	168279	Angers+49000		Francie+France
+3037854	Amiens	49.9	2.3	143086	Amiens+80000	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+3038213	Alfortville	48.80575	2.4204	37290	Alfortville+94140		Francie+France
+3038261	Albi	43.9298	2.148	52409	Albi+81000		Francie+France
+3038334	Ajaccio	41.91886	8.73812	54364	Ajaccio+20000		Francie+France
+3038350	Aix-les-Bains	45.69173	5.90863	27651	Aix-les-Bains+73100		Francie+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Aix-en-Provence+13080		Francie+France
+3038493	Aigues-Mortes	43.56683	4.19068	6526	Aigues-Mortes		Francie+France
+3038634	Agen	44.2	0.63333	34367	Agen+47000		Francie+France
+3038789	Abbeville	50.1	1.83333	26461	Abbeville+80100	http://en.wikipedia.org/wiki/Hauts-de-France	Francie+France
+2634812	Wandsworth	51.4577	-0.20784	0	Wandsworth	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2636503	Sutton	51.35	-0.2	187600	Sutton	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2636713	Stratford-upon-Avon	52.19166	-1.70734	27830	Stratford-upon-Avon	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2636910	Stirling	56.11903	-3.93682	36440	Stirling	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2637487	Southampton	50.90395	-1.40428	246201	Southampton	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2638077	Sheffield	53.38297	-1.4659	685368	Sheffield	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2638864	Saint Andrews	56.33871	-2.79902	16800	St. Andrews	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2639577	Reading	51.45625	-0.97113	318014	Reading	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2639996	Portsmouth	50.79899	-1.09125	194150	Portsmouth	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2640358	Perth	56.39522	-3.43139	47180	Perth	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2640729	Oxford	51.75222	-1.25596	171380	Oxford	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2641108	Oban	56.41535	-5.47184	8540	Oban	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2641170	Nottingham	52.9536	-1.15047	729977	Nottingham	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2641673	Newcastle upon Tyne	54.97328	-1.61396	192382	Newcastle	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchester	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2643741	City of London	51.51279	-0.09184	8072	City	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londýn	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2644080	Llanfairpwllgwyngyll	53.22141	-4.20329	3107	Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch	Galles	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2644668	Leicester	52.6386	-1.13169	508916	Leicester	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2644688	Leeds	53.79648	-1.54785	455123	Leeds	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2646088	Inverness	57.47908	-4.22398	46870	Inverness	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2646517	Hounslow	51.46839	-0.36092	0	Hounslow	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2647421	Harrow on the Hill	51.57142	-0.33371	10632	Harrow	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glasgow	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2649169	Fort William	56.81648	-5.11208	5830	Fort William	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2650122	Elgin	57.64947	-3.31843	22980	Elgin	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2650567	Ealing	51.51216	-0.30204	0	Ealing	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2650752	Dundee	56.46913	-2.97489	147710	Dundee	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2652618	Colchester	51.88921	0.90421	121859	Colchester	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2653941	Cambridge	52.2	0.11667	158434	Cambridge	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2654588	Bromley	51.40606	0.01519	0	Bromley	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2654675	Bristol	51.45523	-2.59665	617280	Bristol	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2655524	Blackburn	53.75	-2.48333	146521	Blackburn	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmingham	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2655775	Bexley	51.44162	0.14866	228000	Bexley	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Belfast		Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2656173	Bath	51.3751	-2.36172	94782	Bath	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2656402	Banff	57.66477	-2.52964	4020	Banff a Macduff	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2656725	Axminster	50.78259	-2.99787	5761	Axminsterský koberec	Anglie	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2657798	Aberlour	57.47076	-3.22509	1120	Charlestown of Aberlour	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Aberdeen	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Orkneje	苏格兰	Velká Británie+Spojené království+http://en.wikipedia.org/wiki/United_Kingdom
+611548	Tsalka	41.5946	44.08909	1570	Calka		Gruzie
+611717	Tbilisi	41.69411	44.83368	1049498	Tbilisi	T'bilisi	Gruzie
+611847	Sokhumi	43.00697	40.9893	81546	Suchumi	Abcházie	Gruzie
+612287	Rust’avi	41.54949	44.99323	50000	Rustavi		Gruzie
+612890	Mtskheta	41.84514	44.71875	7423	Mccheta	Mccheta-Mtianetie	Gruzie
+613607	Kutaisi	42.26791	42.69459	178338	Kutaisi	Imeretie	Gruzie
+613988	Khashuri	41.99414	43.59994	27811	Chašuri	Šida Kartli	Gruzie
+614455	Gori	41.98422	44.11578	46676	Gori	Šida Kartli	Gruzie
+614622	Gagra	43.27858	40.27124	8266	Gagra	Abcházie	Gruzie
+615403	Borjomi	41.85272	43.41284	13825	Bordžomi	Samcche-Džavachetie	Gruzie
+615532	Batumi	41.64228	41.63392	121806	Batumi	Ajaria	Gruzie
+615860	Akhaltsikhe	41.63901	42.98262	17298	Achalciche	Samcche-Džavachetie	Gruzie
+3382160	Cayenne	4.93333	-52.33333	61550	Cayenne		Francouzská Guyana
+2298890	Kumasi	6.68848	-1.62443	1468609	Kumasi	Ashanti	Ghana
+2306104	Accra	5.55602	-0.1969	1963264	Accra	Greater Accra	Ghana
+2411585	Gibraltar	36.14474	-5.35257	26544	Gibraltar		Gibraltar
+3421319	Nuuk	64.18347	-51.72157	14798	Nuuk		Grónsko
+2411989	Serekunda	13.43833	-16.67806	340000	Serekunda	Banjul	Gambie
+255274	Piraeus	37.94745	23.63708	163688	Pireus		Řecko+Griekanmua
+256866	Mytilene	39.10772	26.55529	28322	Mytiléna		Řecko+Griekanmua
+257365	Mégara	37.99471	23.34324	23456	Megara		Řecko+Griekanmua
+257717	Marathónas	38.15317	23.96278	7170	Marathón		Řecko+Griekanmua
+261745	Irákleion	35.32787	25.14341	137154	Iraklio		Řecko+Griekanmua
+263219	Delphi	38.47942	22.49357	2373	Delfy		Řecko+Griekanmua
+264371	Athens	37.97945	23.71622	664046	Athény		Řecko+Griekanmua
+734077	Thessaloníki	40.64361	22.93086	354290	Soluň		Řecko+Griekanmua
+734996	Ólynthos	40.29147	23.34205	1111	Olynthos		Řecko+Griekanmua
+735399	Litóchoro	40.10056	22.49778	6709	Litochoro		Řecko+Griekanmua
+735563	Kozáni	40.30069	21.78896	36481	Kozani		Řecko+Griekanmua
+3186886	Zagreb	45.81444	15.97798	698966	Záhřeb	Grad Zagreb	Chorvatsko
+3186952	Zadar	44.11972	15.24222	71258	Zadar	Zadarska	Chorvatsko
+3187047	Vukovar	45.34333	18.99972	29584	Vukovar	Vukovarsko-Srijemska	Chorvatsko
+3187694	Virovitica	45.83194	17.38389	15665	Virovitica	Virovitičk-Podravska	Chorvatsko
+3187719	Vinkovci	45.28833	18.80472	33314	Vinkovci	Vukovarsko-Srijemska	Chorvatsko
+3188244	Velika Gorica	45.7125	16.07556	35072	Velika Gorica	Zagrebačka	Chorvatsko
+3188383	Varaždin	46.30444	16.33778	41808	Varaždin	Varaždinska	Chorvatsko
+3188763	Trogir	43.5125	16.25167	10960	Trogir		Chorvatsko
+3189492	Supetar	43.38417	16.55083	3031	Supetar		Chorvatsko
+3190261	Split	43.50891	16.43915	176314	Split		Chorvatsko
+3190359	Solin	43.5432	16.49314	20212	Solin		Chorvatsko
+3190586	Slavonski Brod	45.16028	18.01556	60742	Slavonski Brod	Brodsko-Posavska	Chorvatsko
+3190589	Požega	45.34028	17.68528	21153	Požega	Požeško-Slavonska	Chorvatsko
+3190813	Sisak	45.46611	16.37833	35748	Sisak	Sisačko-Moslavačka	Chorvatsko
+3190941	Šibenik	43.72722	15.90583	37112	Šibenik	Šibensko-Kniniska	Chorvatsko
+3191316	Samobor	45.80306	15.71806	15221	Samobor	Zagrebačka	Chorvatsko
+3191518	Rovinj	45.08	13.64	13533	Rovinj		Chorvatsko
+3191648	Rijeka	45.32673	14.44241	141172	Rijeka	Primorsko-Goranska	Chorvatsko
+3192224	Pula	44.86833	13.84806	59078	Pula		Chorvatsko
+3193150	Ploče	43.05611	17.43278	0	Ploče	Dubrovačko-Neretvanska	Chorvatsko
+3193561	Pazin	45.24028	13.93667	5010	Pazin		Chorvatsko
+3193726	Pag	44.445	15.0575	2714	Pag	Zadarska	Chorvatsko
+3193935	Osijek	45.55111	18.69389	88140	Osijek	Osječko-Baranjska	Chorvatsko
+3194581	Našice	45.48861	18.08778	8213	Našice	Osječko-Baranjska	Chorvatsko
+3195222	Metković	43.05417	17.64833	13941	Metković	Dubrovačko-Neretvanska	Chorvatsko
+3195890	Makarska	43.29694	17.01778	13446	Makarska		Chorvatsko
+3196864	Kutina	45.475	16.78194	14886	Kutina	Sisačko-Moslavačka	Chorvatsko
+3197369	Krapina	46.16083	15.87889	4725	Krapina	Krapinsko-Zagorska	Chorvatsko
+3197594	Hrvatska Kostajnica	45.23167	16.53917	2746	Hrvatska Kostajnica	Sisačko-Moslavačka	Chorvatsko
+3197728	Koprivnica	46.16278	16.8275	25579	Koprivnica	Koprivničko-Križevačka	Chorvatsko
+3197986	Knin	44.04063	16.19662	11182	Knin	Šibensko-Kniniska	Chorvatsko
+3198799	Jastrebarsko	45.66833	15.64861	5445	Jastrebarsko	Zagrebačka	Chorvatsko
+3199069	Ivanić-Grad	45.70833	16.39694	0	Ivanić Grad	Zagrebačka	Chorvatsko
+3199111	Imotski	43.44667	17.21667	4368	Imotski		Chorvatsko
+3199873	Gospić	44.54611	15.37472	6118	Gospić	Ličko-Senjska	Chorvatsko
+3201047	Dubrovnik	42.64807	18.09216	28428	Dubrovnik	Dubrovačko-Neretvanska	Chorvatsko
+3201162	Drniš	43.8625	16.15556	3348	Drniš	Šibensko-Kniniska	Chorvatsko
+3201712	Brela	43.36889	16.93417	1626	Brela		Chorvatsko
+3202523	Cres	44.96092	14.41246	2289	Cres	Primorsko-Goranska	Chorvatsko
+3202888	Čakovec	46.38444	16.43389	15867	Čakovec	Međimurska	Chorvatsko
+3203765	Bol	43.26194	16.655	1655	Bol		Chorvatsko
+3216446	Nin	44.24139	15.17833	1132	Nin	Zadarska	Chorvatsko
+715126	Szolnok	47.18333	20.2	75474	Szolnok	Jász-Nagykun-Szolnok	Maďarsko
+717582	Miskolc	48.1	20.78333	172637	Miskolc		Maďarsko
+721239	Eger	47.90265	20.37329	56647	Eger		Maďarsko
+721472	Debrecen	47.53333	21.63333	204124	Debrecín		Maďarsko
+722437	Békéscsaba	46.68333	21.1	65206	Békéscsaba		Maďarsko
+3042638	Zalaegerszeg	46.84	16.84389	61898	Zalaegerszeg		Maďarsko
+3042824	Visegrád	47.78526	18.9709	1713	Visegrád		Maďarsko
+3042929	Veszprém	47.09327	17.91149	62023	Veszprém		Maďarsko
+3043293	Vác	47.77591	19.13612	35108	Vác		Maďarsko
+3044082	Tatabánya	47.58494	18.39325	70541	Tatabánya		Maďarsko
+3044310	Szombathely	47.23088	16.62155	79534	Szombathely		Maďarsko
+3044760	Szekszárd	46.35014	18.70905	34174	Szekszárd		Maďarsko
+3045190	Sopron	47.68501	16.59049	57210	Sopron	Győr-Moson-Sopron	Maďarsko
+3046526	Pécs	46.08333	18.23333	156649	Pécs		Maďarsko
+3047967	Mohács	45.99306	18.68306	18711	Moháč		Maďarsko
+3049519	Komárom	47.74318	18.11913	19646	Komárom		Maďarsko
+3050616	Kaposvár	46.36667	17.8	67746	Kaposvár		Maďarsko
+3052009	Győr	47.68333	17.63512	128265	Győr	Győr-Moson-Sopron	Maďarsko
+3053163	Esztergom	47.7928	18.74148	28785	Ostřihom		Maďarsko
+3053281	Érd	47.39489	18.91361	62408	Érd		Maďarsko
+3054643	Budapest	47.49801	19.03991	1741041	Budapešť		Maďarsko
+3056357	Ajka	47.10196	17.55892	31407	Ajka		Maďarsko
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta	Jakarta Raya	Indonésie+http://en.wikipedia.org/wiki/Indonesia
+2964180	Gaillimh	53.27194	-9.04889	70686	Galway		Irsko+Irská republika+Ire
+2964574	Dublin	53.33306	-6.24889	1024027	Dublin		Irsko+Irská republika+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Jeruzalém		Izrael
+293222	Yavné	31.87808	34.73983	31774	Javne+Kefar Yavne	HaMerkaz	Izrael
+293397	Tel Aviv	32.08088	34.78057	432892	Tel Aviv		Izrael
+293783	Ramat HaSharon	32.14613	34.8394	36137	Ramat ha-Šaron		Izrael
+293962	Or Yehuda	32.02923	34.85788	30802	Or Jehuda		Izrael
+294071	Netanya	32.33291	34.85992	171676	Netanja	HaMerkaz	Izrael
+294074	Ness Ziona	31.92933	34.79868	38700	Nes Cijona	HaMerkaz	Izrael
+294078	Nesher	32.76622	35.04425	21245	Nešer	Haifský distrikt	Izrael
+294098	Nazareth	32.69925	35.30483	64800	Nazaret		Izrael
+294117	Nahariyya	33.00892	35.09814	51200	Naharija		Izrael
+294760	Hod HaSharon	32.15934	34.8932	43185	Hod ha-Šaron	HaMerkaz	Izrael
+294801	Haifa	32.81841	34.9885	267300	Haifa	Haifský distrikt	Izrael
+295277	Eilat	29.55805	34.94821	45588	Ejlat	HaDarom	Izrael
+295530	Beersheba	31.25181	34.7913	186600	Beerševa	HaDarom	Izrael
+295548	Bat Yam	32.02379	34.75185	128979	Bat Jam		Izrael
+295629	Ashdod	31.79213	34.64966	224656	Ašdod	HaDarom	Izrael
+295721	Acre	32.92814	35.07647	45603	Akko		Izrael
+1253184	Vijayawada	16.50745	80.6466	874587	Vidžajavada	Ándhrapradéš+AP+Andhra Pradesh	Indie
+1253200	Vidisha	23.52604	77.81092	140045	Vidiša	Madhjapradéš+MP	Indie
+1253914	Ujjain	23.18239	75.77643	457346	Udždžain	Madhjapradéš+MP	Indie
+1253986	Udaipur	24.58584	73.71346	422784	Udajpur	Rádžasthán+RJ+Rājasthān	Indie
+1254163	Thiruvananthapuram	8.4855	76.94924	784153	Tiruvanantapuram	Kérala+KL	Indie
+1254388	Tiruchirappalli	10.8155	78.69651	775484	Tiruččiráppalli	Tamilnádu+TN+Tamil Nādu	Indie
+1254904	Tharangambadi	11.02764	79.85425	20841	Tarangambadi	Tamilnádu+TN+Tamil Nādu	Indie
+1255634	Srinagar	34.08565	74.80555	975857	Šrínagar	JK+Jammu and Kashmīr	Indie
+1256237	Shimla	31.10442	77.16662	173503	Šimla	Himáčalpradéš+HP	Indie
+1258526	Ranchi	23.34316	85.3094	846454	Ráňčí	Džhárkhand+JH+Jharkhand	Indie
+1259229	Pune	18.51957	73.85535	2935744	Puné	Maháráštra+MH+Mahārāshtra	Indie
+1260607	Panaji	15.49574	73.82624	65586	Panadží	Goa+GA	Indie
+1261033	Orchha	25.35192	78.64033	8500	Órčha	Madhjapradéš+MP	Indie
+1261481	New Delhi	28.63576	77.22445	317797	Nové Dillí	DL	Indie
+1262180	Nagpur	21.14631	79.08491	2228018	Nágpur	Maháráštra+MH+Mahārāshtra	Indie
+1262321	Mysore	12.29791	76.63925	868313	Maisúr	Karnátaka+KA+Karnātaka	Indie
+1263780	Mangalore	12.91723	74.85603	417387	Mangalúru	Karnátaka+KA+Karnātaka	Indie
+1264527	Chennai	13.08784	80.27847	4328063	Čennaí	Tamilnádu+TN+Tamil Nādu	Indie
+1264733	Lucknow	26.83928	80.92313	2472011	Laknaú	Uttarpradéš+UP	Indie
+1264976	Leh	34.16504	77.58402	37475	Léh	JK+Jammu and Kashmīr	Indie
+1265873	Kozhikode	11.24802	75.7804	439922	Kóžikkót	Kérala+KL	Indie
+1268865	Jodhpur	26.26841	73.00594	921476	Džódpur	Rádžasthán+RJ+Rājasthān	Indie
+1269321	Jammu	32.73569	74.86911	465567	Džammú	JK+Jammu and Kashmīr	Indie
+1269507	Jaisalmer	26.91763	70.90387	67604	Džaisalmér	Rádžasthán+RJ+Rājasthān	Indie
+1269515	Jaipur	26.91962	75.78781	2711758	Džajpur	Rádžasthán+RJ+Rājasthān	Indie
+1269633	Jabalpur	23.16697	79.95006	1030168	Džabalpur	Madhjapradéš+MP	Indie
+1269843	Hyderabad	17.38405	78.45636	3597816	Hajdarábád	Telangána+TG	Indie
+1270351	Haridwar	29.94791	78.16025	186079	Haridvár	UT	Indie
+1271146	Goa Velha	15.44384	73.88572	5656	Velha Goa	Goa+GA	Indie
+1273294	Delhi	28.65195	77.23149	10927986	Šáhdžahanabád+Dillí	DL	Indie
+1273865	Coimbatore	11.00555	76.96612	959823	Koimbatur	Tamilnádu+TN+Tamil Nādu	Indie
+1274406	Cherrapunji	25.30089	91.69619	11090	Čérápuňdží	Méghálaja+ML+Meghālaya	Indie
+1274746	Chandigarh	30.73629	76.7884	960787	Čandígarh	Čandígarh+CH+Chandīgarh	Indie
+1275004	Kolkata	22.56263	88.36304	4631392	Kalkata	Západní Bengálsko+WB+West Bengal	Indie
+1275339	Mumbai	19.07283	72.88261	12691836	Bombaj	Maháráštra+MH+Mahārāshtra	Indie
+1275389	Buddh Gaya	24.69808	84.9869	35188	Bódhgaja	Bihár+BR	Indie
+1275841	Bhopal	23.25469	77.40289	1599914	Bhópál	Madhjapradéš+MP	Indie
+1277333	Bengaluru	12.97194	77.59369	5104047	Bengalúru	Karnátaka+KA+Karnātaka	Indie
+1279105	Akola	20.70957	76.9981	428857	Akolá	Maháráštra+MH+Mahārāshtra	Indie
+1279233	Ahmedabad	23.02579	72.58727	3719710	Ahmadábád	Gudžarát+GJ	Indie
+94787	Kirkuk	35.46806	44.39222	601433	Kirkúk		Irák
+94824	Karbala	32.61603	44.02488	434450	Karbalá	Karbalāʼ	Irák
+98182	Baghdad	33.34058	44.40088	7216000	Bagdád		Irák
+98717	Ramadi	33.42056	43.30778	274539	Ramádí	Al Anbār	Irák
+98860	Najaf	32.02594	44.34625	482576	Nadžaf	An Najaf	Irák
+99072	Mosul	36.335	43.11889	1739800	Mosul	Nīnawá	Irák
+99135	Kufa	32.05114	44.44017	110000	Kúfa	An Najaf	Irák
+99532	Basrah	30.50852	47.7804	2600000	Basra		Irák
+66093	Yasuj	30.66824	51.58796	96786	Jásúdž	Kohgīlūyeh va Būyer Aḩmad	Írán
+111822	Yazd	31.89722	54.3675	477905	Jazd	Yazd	Írán
+112931	Tehran	35.69439	51.42151	7153309	Teherán	Tehrān	Írán
+113646	Tabriz	38.08	46.2919	1424641	Tabríz		Írán
+114593	Shūsh	32.1942	48.2436	52284	Súsy		Írán
+115019	Shiraz	29.61031	52.53113	1249942	Šíráz		Írán
+116996	Sari	36.56332	53.06009	255396	Sárí		Írán
+117574	Sanandaj	35.31495	46.99883	349176	Sanandadž	Kordestān	Írán
+118743	Rasht	37.27611	49.58862	594590	Rašt	Gīlān	Írán
+119505	Qazvin	36.26877	50.0041	333635	Kazvín	Qazvīn	Írán
+124665	Mashhad	36.31559	59.56796	2307177	Mašhad	Khorāsān-e Raẕāvī	Írán
+127319	Khorramshahr	30.44079	48.18428	330606	Chorramšahr		Írán
+128234	Kerman	30.28321	57.07879	577514	Kermán		Írán
+128747	Karaj	35.83266	50.99155	1448075	Karadž		Írán
+141681	Bandar Abbas	27.1865	56.2808	352173	Bandar Abbás		Írán
+144448	Ahvaz	31.31901	48.6842	841145	Ahváz		Írán
+145459	Abadan	30.3392	48.3043	370180	Ábádán		Írán
+418863	Isfahan	32.65246	51.67462	1547164	Isfahán		Írán
+1159301	Zahedan	29.4963	60.8629	551980	Záhedán		Írán
+1161724	Chabahar	25.2919	60.643	47287	Čáhbahár		Írán
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavík+101		Island
+2522713	Vittoria	36.95151	14.52788	50852	Vittoria	Sicílie	Itálie
+2522876	Trapani	38.0176	12.53617	58681	Trapani	Sicílie	Itálie
+2523083	Siracusa	37.07542	15.28664	97472	Syrakusy	Sicílie	Itálie
+2523630	Reggio Calabria	38.11047	15.66129	169140	Reggio di Calabria	Kalábrie+Calabria	Itálie
+2523650	Ragusa	36.92574	14.72443	61380	Ragusa	Sicílie	Itálie
+2523665	Quartu Sant'Elena	39.22935	9.25004	66620	Quartu Sant'Elena		Itálie
+2523890	Pantelleria	36.82836	11.94611	3455	Pantelleria	Sicílie	Itálie
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Sicílie	Itálie
+2524119	Modica	36.85868	14.75966	41126	Modica	Sicílie	Itálie
+2524170	Messina	38.19394	15.55256	219948	Messina	Sicílie	Itálie
+2524245	Marsala	37.7992	12.4367	77915	Marsala	Sicílie	Itálie
+2524653	Gela	37.07381	14.24038	73854	Gela	Sicílie	Itálie
+2524800	Falerna	39.00298	16.17151	988	Falerna	Kalábrie+Calabria	Itálie
+2524907	Cosenza	39.2989	16.25307	63852	Cosenza	Kalábrie+Calabria	Itálie
+2525059	Catanzaro	38.88247	16.60086	78970	Catanzaro	Kalábrie+Calabria	Itálie
+2525068	Catania	37.49223	15.07041	290927	Catania	Sicílie	Itálie
+2525448	Caltanissetta	37.49025	14.06216	56715	Caltanissetta	Sicílie	Itálie
+2525473	Cagliari	39.23054	9.11917	149257	Cagliari		Itálie
+2525764	Agrigento	37.31065	13.57661	32514	Agrigento	Sicílie	Itálie
+3164039	Viterbo	42.41937	12.1056	47134	Viterbo	Lazio	Itálie
+3164074	Vinci	43.78133	10.92365	1519	Vinci	Toskánsko	Itálie
+3164376	Vigevano	45.31407	8.85437	57970	Vigevano		Itálie
+3164387	Vieste	41.88209	16.17139	11227	Vieste	Apulie	Itálie
+3164419	Vicenza	45.54672	11.5475	107129	Vicenza	Benátsko	Itálie
+3164433	Viareggio	43.86693	10.2502	49099	Viareggio	Toskánsko	Itálie
+3164527	Verona	45.4299	10.98444	219103	Verona	Benátsko	Itálie
+3164603	Venice	45.43713	12.33265	51298	Benátky	Benátsko	Itálie
+3164699	Varese	45.82058	8.82511	76851	Varese		Itálie
+3165012	Uzzano	43.89728	10.70403	152	Uzzano	Toskánsko	Itálie
+3165185	Trieste	45.64953	13.77678	187056	Terst	FVG	Itálie
+3165201	Treviso	45.66673	12.2416	77604	Treviso	Benátsko	Itálie
+3165243	Trento	46.06787	11.12108	80425	Trento	Autonomní provincie Bolzano	Itálie
+3165322	Trani	41.27733	16.41011	53981	Trani	Apulie	Itálie
+3165456	Torre del Greco	40.78931	14.36806	85897	Torre del Greco	Kampánie	Itálie
+3165524	Turin	45.07049	7.68682	870456	Turín	Piemont+Piemonte	Itálie
+3165771	Terni	42.56335	12.64329	97050	Terni	Umbrie	Itálie
+3165773	Termoli	41.99994	14.99389	31044	Termoli		Itálie
+3165912	Tarvisio	46.50567	13.58689	2509	Tarvisio	FVG	Itálie
+3165926	Taranto	40.46438	17.24707	181082	Taranto	Apulie	Itálie
+3166498	Sirolo	43.52246	13.61498	2545	Sirolo		Itálie
+3166598	Sesto San Giovanni	45.53329	9.22585	76509	Sesto San Giovanni		Itálie
+3167022	Savona	44.30905	8.47715	58283	Savona	Ligurie	Itálie
+3167096	Sassari	40.72586	8.55552	91895	Sassari		Itálie
+3167731	San Severo	41.68564	15.38148	54880	San Severo	Apulie	Itálie
+3167777	San Remo	43.81725	7.7772	47043	Sanremo	Ligurie	Itálie
+3168309	San Giorgio a Cremano	40.83261	14.34162	45463	San Giorgio a Cremano	Kampánie	Itálie
+3168320	San Gimignano	43.4738	11.02975	3261	San Gimignano	Toskánsko	Itálie
+3168673	Salerno	40.67545	14.79328	125797	Salerno	Kampánie	Itálie
+3169070	Rome	41.89193	12.51133	2318895	Řím	Lazio	Itálie
+3169361	Rimini	44.05755	12.56528	118673	Rimini	Emilia-Romagna	Itálie
+3169447	Rho	45.53245	9.0402	47086	Rho		Itálie
+3169540	Recanati	43.40381	13.55379	14337	Recanati		Itálie
+3169561	Ravenna	44.41344	12.20121	80868	Ravenna	Emilia-Romagna	Itálie
+3169811	Priverno	41.47047	13.17867	10005	Priverno	Lazio	Itálie
+3169921	Prato	43.8805	11.09699	181820	Prato	Toskánsko	Itálie
+3169984	Pozzuoli	40.84394	14.0952	45575	Pozzuoli	Kampánie	Itálie
+3170023	Potenza Picena	43.36635	13.62249	4326	Potenza Picena		Itálie
+3170027	Potenza	40.64175	15.80794	56433	Potenza		Itálie
+3170075	Porto Recanati	43.43296	13.66165	10308	Porto Recanati		Itálie
+3170102	Civitanova Marche	43.30491	13.72068	41205	Civitanova Marche		Itálie
+3170116	Portici	40.81563	14.33716	55765	Portici	Kampánie	Itálie
+3170163	Porcari	43.84152	10.61632	6732	Porcari	Toskánsko	Itálie
+3170295	Ponte Buggianese	43.84599	10.74789	4850	Ponte Buggianese	Toskánsko	Itálie
+3170621	Pistoia	43.93064	10.92365	73832	Pistoia	Toskánsko	Itálie
+3170647	Pisa	43.70853	10.4036	77007	Pisa	Toskánsko	Itálie
+3171058	Piacenza	45.05242	9.69342	93228	Piacenza	Emilia-Romagna	Itálie
+3171148	Pescia	43.8871	10.68849	11567	Pescia	Toskánsko	Itálie
+3171168	Pescara	42.4584	14.20283	116596	Pescara		Itálie
+3171173	Pesaro	43.90921	12.9164	77241	Pesaro		Itálie
+3171180	Perugia	43.1122	12.38878	120137	Perugia	Umbrie	Itálie
+3171366	Pavia	45.19205	9.15917	65734	Pavia		Itálie
+3171457	Parma	44.79935	10.32618	146299	Parma	Emilia-Romagna	Itálie
+3171728	Padova	45.40797	11.88586	203725	Padova	Benátsko	Itálie
+3171848	Osimo	43.48539	13.48222	16610	Osimo		Itálie
+3172157	Numana	43.51136	13.62118	1322	Numana		Itálie
+3172189	Novara	45.44694	8.62118	93295	Novara	Piemont+Piemonte	Itálie
+3172394	Naples	40.85216	14.26811	959470	Neapol	Kampánie	Itálie
+3172564	Morrovalle	43.3183	13.59535	1821	Morrovalle		Itálie
+3172629	Monza	45.58005	9.27246	119618	Monza		Itálie
+3172845	Montemarciano	43.63847	13.30801	2493	Montemarciano		Itálie
+3172860	Montelupone	43.3427	13.57074	1827	Montelupone		Itálie
+3172961	Montecosaro	43.31619	13.63762	1453	Montecosaro		Itálie
+3172996	Montecatini-Terme	43.88153	10.7723	17954	Montecatini Terme	Toskánsko	Itálie
+3172997	Montecatini Val di Cecina	43.39234	10.74904	492	Montecatini	Toskánsko	Itálie
+3173008	Montecarlo	43.85218	10.66742	407	Montecarlo	Toskánsko	Itálie
+3173122	Monsummano Terme	43.8672	10.81295	12935	Monsummano Terme	Toskánsko	Itálie
+3173180	Moncalieri	44.9994	7.68236	49153	Moncalieri	Piemont+Piemonte	Itálie
+3173287	Molfetta	41.20036	16.59905	59557	Molfetta	Apulie	Itálie
+3173331	Modena	44.64783	10.92539	158886	Modena	Emilia-Romagna	Itálie
+3173435	Milan	45.46427	9.18951	1236837	Milán		Itálie
+3173721	Matera	40.66599	16.60463	54891	Matera		Itálie
+3173775	Massa	44.03541	10.13927	64783	Massa	Toskánsko	Itálie
+3173776	Massa	43.90925	10.74441	350	Massa e Cozzile	Toskánsko	Itálie
+3173901	Marliana	43.93385	10.77021	134	Marliana	Toskánsko	Itálie
+3174051	Mantova	45.16031	10.79784	39260	Provincie Mantova		Itálie
+3174092	Manfredonia	41.63065	15.91876	52911	Manfredonia	Apulie	Itálie
+3174295	Magenta	45.46456	8.88453	22566	Magenta		Itálie
+3174530	Lucca	43.84369	10.50447	81748	Lucca	Toskánsko	Itálie
+3174567	Loreto	43.43617	13.61232	7212	Loreto		Itálie
+3174659	Livorno	43.54427	10.32615	153773	Livorno	Toskánsko	Itálie
+3174921	Legnano	45.59788	8.91506	57589	Legnano		Itálie
+3174953	Lecce	40.35481	18.17244	80695	Lecce	Apulie	Itálie
+3175058	Latina	41.46614	12.9043	76305	Latina	Lazio	Itálie
+3175081	La Spezia	44.103	9.82375	88491	La Spezia	Ligurie	Itálie
+3175121	L'Aquila	42.35055	13.39954	33691	L'Aquila		Itálie
+3175537	Imola	44.35916	11.7132	52981	Imola	Emilia-Romagna	Itálie
+3176059	Giugliano in Campania	40.92849	14.20197	80269	Giugliano in Campania	Kampánie	Itálie
+3176219	Genoa	44.40478	8.94439	580223	Janov	Ligurie	Itálie
+3176521	Front	45.27941	7.66425	709	Fronta	Piemont+Piemonte	Itálie
+3176746	Forlì	44.22177	12.04144	93638	Forlì	Emilia-Romagna	Itálie
+3176885	Foggia	41.45845	15.55188	137032	Foggia	Apulie	Itálie
+3176959	Florence	43.77925	11.24626	349296	Florencie	Toskánsko	Itálie
+3177219	Fano	43.84052	13.01665	38999	Fano		Itálie
+3177250	Falconara Marittima	43.62558	13.39954	25948	Falconara Marittima		Itálie
+3177300	Faenza	44.29007	11.87948	41714	Faenza	Emilia-Romagna	Itálie
+3177363	Ercolano	40.80783	14.35012	53576	Ercolano	Kampánie	Itálie
+3177657	Cusio	45.99089	9.60175	252	Cusio		Itálie
+3177838	Cremona	45.13325	10.02129	59561	Cremona		Itálie
+3177948	Cortona	43.27467	11.98533	2167	Cortona	Toskánsko	Itálie
+3178019	Correggio	44.76737	10.78345	15571	Knížectví Correggio	Emilia-Romagna	Itálie
+3178229	Como	45.80819	9.0832	81975	Como		Itálie
+3178671	Cinisello Balsamo	45.55823	9.21495	71109	Cinisello Balsamo		Itálie
+3178784	Chioggia	45.21857	12.27774	41897	Chioggia	Benátsko	Itálie
+3178801	Chiesina Uzzanese	43.83891	10.72044	2186	Chiesina Uzzanese	Toskánsko	Itálie
+3178957	Cesena	44.1391	12.24315	79398	Cesena	Emilia-Romagna	Itálie
+3178999	Cerveteri	41.9908	12.09082	15883	Cerveteri	Lazio	Itálie
+3179333	Cavalese	46.29048	11.45862	3107	Cavalese	Autonomní provincie Bolzano	Itálie
+3179337	Cava Dè Tirreni	40.69954	14.70773	48127	Cava de' Tirreni	Kampánie	Itálie
+3179661	Castellammare di Stabia	40.70211	14.48685	65730	Stabie	Kampánie	Itálie
+3179806	Casoria	40.90751	14.293	58456	Casoria	Kampánie	Itálie
+3179866	Caserta	41.07262	14.33231	72844	Caserta	Kampánie	Itálie
+3180423	Carrara	44.07926	10.09789	58666	Carrara	Toskánsko	Itálie
+3180445	Carpi Centro	44.78237	10.8777	53024	Carpi	Emilia-Romagna	Itálie
+3180630	Capri	40.55073	14.24263	6770	Capri	Kampánie	Itálie
+3180632	Caprese Michelangelo	43.64031	11.98546	231	Caprese Michelangelo	Toskánsko	Itálie
+3180874	Candela	41.13601	15.51537	2197	Kandela	Apulie	Itálie
+3181102	Camerano	43.52774	13.55257	5368	Camerano		Itálie
+3181355	Busto Arsizio	45.61128	8.84914	79519	Busto Arsizio		Itálie
+3181528	Brindisi	40.63215	17.93607	78548	Brindisi	Apulie	Itálie
+3181550	Bressanone	46.71503	11.65598	15868	Brixen	Autonomní provincie Bolzano	Itálie
+3181554	Brescia	45.53558	10.21472	184826	Brescia		Itálie
+3181815	Borgo a Mozzano	43.97946	10.54489	1508	Borgo a Mozzano	Toskánsko	Itálie
+3181819	Borgo a Buggiano	43.87522	10.73482	7302	Buggiano	Toskánsko	Itálie
+3181913	Bolzano	46.49067	11.33982	99049	Bolzano	Autonomní provincie Bolzano	Itálie
+3181917	Bolsena	42.64326	11.98514	3468	Bolsena	Lazio	Itálie
+3181928	Bologna	44.49381	11.33875	366133	Bologna	Emilia-Romagna	Itálie
+3181995	Bitonto	41.11006	16.69086	51661	Bitonto	Apulie	Itálie
+3182007	Bisceglie	41.24264	16.50104	53648	Bisceglie	Apulie	Itálie
+3182164	Bergamo	45.69601	9.66721	114162	Bergamo		Itálie
+3182179	Benevento	41.1307	14.77816	48931	Benevento	Kampánie	Itálie
+3182340	Barletta	41.31429	16.28165	93279	Barletta	Apulie	Itálie
+3182351	Bari	41.11148	16.8554	277387	Bari	Apulie	Itálie
+3182640	Aversa	40.97259	14.20745	52830	Aversa	Kampánie	Itálie
+3182650	Avellino	40.91494	14.79103	48104	Avellino	Kampánie	Itálie
+3182714	Asti	44.90162	8.20751	61254	Asti	Piemont+Piemonte	Itálie
+3182957	Aprilia	41.59452	12.65419	41094	Aprilia	Lazio	Itálie
+3183072	Andria	41.23117	16.29797	98342	Andria	Apulie	Itálie
+3183089	Ancona	43.5942	13.50337	89994	Ancona		Itálie
+3183147	Altopascio	43.81618	10.67668	9413	Altopascio	Toskánsko	Itálie
+3183178	Altamura	40.82664	16.54952	67821	Altamura	Apulie	Itálie
+3183299	Alessandria	44.90924	8.61007	64178	Alessandria	Piemont+Piemonte	Itálie
+3183411	Agugliano	43.54368	13.38574	3465	Agugliano		Itálie
+3183455	Afragola	40.92298	14.30935	62775	Afragola	Kampánie	Itálie
+6534705	Isola del Giglio	42.35791	10.90724	1406	Giglio	Toskánsko	Itálie
+250441	Amman	31.95522	35.94503	1275857	Ammán		Jordánsko+Al Mamlakah al Urdunīyah al Hāshimīyah
+250582	Mafraq	32.34289	36.20804	57118	Mafrak	Al Mafraq	Jordánsko+Al Mamlakah al Urdunīyah al Hāshimīyah
+250774	Aqaba	29.52667	35.00778	95048	Akaba		Jordánsko+Al Mamlakah al Urdunīyah al Hāshimīyah
+1847963	Atsugi	35.44272	139.36931	229199	Acugi	Prefektura Kanagawa	Japonsko
+1848313	Yokosuka	35.28361	139.66722	428992	Jokosuka	Prefektura Kanagawa	Japonsko
+1848354	Yokohama	35.43333	139.65	3574443	Jokohama	Prefektura Kanagawa	Japonsko
+1848445	Honmachi	32.50439	130.59952	104341	Jacuširo	Prefektura Kumamoto	Japonsko
+1848689	Yamaguchi	34.18333	131.46667	145515	Jamaguči	Prefektura Jamaguči	Japonsko
+1848705	Yamaga	33.01667	130.68911	32298	Jamaga	Prefektura Kumamoto	Japonsko
+1849053	Utsunomiya	36.56667	139.88333	449865	Ucunomija	Prefektura Točigi	Japonsko
+1849372	Uji	34.89044	135.80325	192925	Udži		Japonsko
+1849796	Tsu	34.73333	136.51667	163461	Cu		Japonsko
+1849814	Toyota	35.08333	137.15	362383	Tojota		Japonsko
+1850147	Tokyo	35.6895	139.69171	8336599	Tokio		Japonsko
+1850158	Tokushima	34.06667	134.56667	267345	Tokušima		Japonsko
+1851100	Takamatsu	34.33333	134.05	334223	Takamacu	Prefektura Kagawa	Japonsko
+1851348	Suzuka	34.88333	136.58333	191477	Suzuka		Japonsko
+1851717	Shizuoka	34.98333	138.38333	701561	Šizuoka	Prefektura Šizuoka	Japonsko
+1852588	Shibushi	31.476	131.10114	18349	Šibuši		Japonsko
+1852595	Shibukawa	36.48333	139	48322	Šibukawa	Prefektura Gunma	Japonsko
+1852736	Satsumasendai	31.81667	130.3	73132	Sendai		Japonsko
+1853574	Ōtsu	35	135.86667	298164	Ócu	Prefektura Šiga+Shiga	Japonsko
+1853909	Osaka	34.69374	135.50218	2592413	Ósaka		Japonsko
+1853992	Onomichi	34.41667	133.2	90936	Onomiči		Japonsko
+1854376	Okazaki	34.95	137.16667	352361	Okazaki		Japonsko
+1854383	Okayama	34.65	133.93333	639652	Okajama	Prefektura Okajama	Japonsko
+1854487	Ōita	33.23333	131.6	448907	Óita		Japonsko
+1855203	Nishinoomote	30.73333	131	17832	Nišinoomote		Japonsko
+1855395	Nikkō	36.75	139.61667	16041	Nikkó	Prefektura Točigi	Japonsko
+1855431	Niigata	37.88637	139.00589	505272	Niigata	Prefektura Niigata	Japonsko
+1855612	Nara-shi	34.68505	135.80485	367353	Nara		Japonsko
+1856035	Naha	26.21667	127.68333	300795	Naha	Prefektura Okinawa	Japonsko
+1856057	Nagoya	35.18147	136.90641	2191279	Nagoja		Japonsko
+1856177	Nagasaki	32.75	129.88333	410204	Nagasaki		Japonsko
+1857519	Matsumoto	36.23333	137.96667	210667	Macumoto	Prefektura Nagano	Japonsko
+1857550	Matsue	35.48333	133.05	156811	Macue	Prefektura Šimane	Japonsko
+1857843	Maebashi	36.4	139.08333	282711	Maebaši	Prefektura Gunma	Japonsko
+1857910	Kyoto	35.02107	135.75385	1459640	Kjóto		Japonsko
+1858421	Kumamoto	32.80589	130.69181	680423	Kumamoto	Prefektura Kumamoto	Japonsko
+1859100	Kōfu	35.66667	138.56667	190000	Kófu	Prefektura Jamanaši	Japonsko
+1859171	Kobe	34.6913	135.183	1528478	Kóbe	Prefektura Hjógo	Japonsko
+1859307	Kitakyushu	33.85181	130.85034	997536	Kitakjúšú	Prefektura Fukuoka	Japonsko
+1860243	Kanazawa	36.6	136.61667	458937	Kanazawa		Japonsko
+1860827	Kagoshima	31.56667	130.55	555352	Kagošima		Japonsko
+1862415	Hiroshima	34.4	132.45	1143841	Hirošima		Japonsko
+1863289	Hamamatsu	34.7	137.73333	605098	Hamamacu	Prefektura Šizuoka	Japonsko
+1863641	Gifu-shi	35.42291	136.76039	397714	Gifu	Prefektura Gifu	Japonsko
+1863967	Fukuoka	33.6	130.41667	1392289	Fukuoka	Prefektura Fukuoka	Japonsko
+1864134	Fuji	35.16667	138.68333	240014	Fudži	Prefektura Šizuoka	Japonsko
+1926099	Matsuyama	33.83916	132.76574	443322	Macujama		Japonsko
+2111834	Morioka	39.7	141.15	295172	Morioka	Prefektura Iwate	Japonsko
+2112444	Kamaishi	39.27694	141.86801	43107	Kamaiši	Prefektura Iwate	Japonsko
+2113015	Chiba	35.6	140.11667	919729	Čiba		Japonsko
+2128295	Sapporo	43.06667	141.35	1883027	Sapporo		Japonsko
+2128787	Ōdate	40.27178	140.55756	64543	Ódate	Prefektura Akita	Japonsko
+2129376	Kushiro	42.975	144.37472	183612	Kuširo		Japonsko
+2130658	Aomori	40.81667	140.73333	298394	Aomori	Prefektura Aomori	Japonsko
+6417596	Kōya	34.21294	135.62244	5013	Kója	Prefektura Wakajama	Japonsko
+6822146	Ōnojō	33.53567	130.47861	94957	Ónodžó	Prefektura Fukuoka	Japonsko
+6822184	Ōshū	39.13927	141.1685	0	Óšú	Prefektura Iwate	Japonsko
+6822186	Hachimantai	39.89979	141.12989	0	Hačimantai	Prefektura Iwate	Japonsko
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobi	Nairobi Area	Keňa
+1527534	Osh	40.52828	72.7985	200000	Oš		Kyrgyzstán
+1528675	Bishkek	42.87	74.59	900000	Biškek	Gorod Bishkek	Kyrgyzstán
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnompenh		Kambodža+http://en.wikipedia.org/wiki/Cambodia
+1871859	Pyongyang	39.03385	125.75432	3222000	Pchjongjang		Severní Korea+http://en.wikipedia.org/wiki/North_Korea
+2044757	Chongjin	41.79556	129.77583	327000	Čchongdžin	Hamgyŏng-bukto	Severní Korea+http://en.wikipedia.org/wiki/North_Korea
+1832828	Yangsan	35.34199	129.03358	71936	Jangsan		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1835329	Daegu	35.87028	128.59111	2566540	Tegu		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1835848	Seoul	37.566	126.9784	10349312	Soul		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1838469	Pyeongchang	37.37028	128.39306	9940	Pchjongčchang		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1840536	Naju	35.0292	126.7175	42459	Nadžu		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1840886	Mungyeong	36.59458	128.19946	81525	Mungjong		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1841149	Miryang	35.49333	128.74889	53103	Mirjang		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1841810	Gwangju	37.41	127.25722	81780	Kwangdžu		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1841811	Gwangju	35.15472	126.91556	1416938	Kwangdžu		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1842944	Gimcheon	36.12176	128.11981	150000	Kimčchon		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1843564	Incheon	37.45646	126.70515	2628000	Inčchon+JCN		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1845136	Chuncheon	37.87472	127.73417	209746	Čchunčchon		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1845457	Jeonju	35.82194	127.14889	711424	Čondžu		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1845759	Cheonan	36.8065	127.1522	365114	Čchonan		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1846326	Changwon	35.22806	128.68111	550000	Čchangwon		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1884138	Yeosu	34.76062	127.66215	295538	Josu		Jižní Korea+http://en.wikipedia.org/wiki/South_Korea
+1518980	Shymkent	42.3	69.6	414032	Šymkent		Kazachstán
+1519422	Semey	50.42675	80.26669	292780	Semej		Kazachstán
+1522203	Kokshetau	53.28333	69.4	124444	Kokčetau		Kazachstán
+1526273	Astana	51.1801	71.44598	345604	Astana	Astana Qalasy	Kazachstán
+1526384	Almaty	43.25667	76.92861	2000900	Almaty	Almaty Qalasy	Kazachstán
+266826	Tripoli	34.43352	35.84415	229398	Tripolis	Liban-Nord	Libanon
+267008	Tyre	33.27333	35.19389	135204	Týros	Liban-Sud	Libanon
+268064	Sidon	33.55751	35.37148	163554	Sidón	Liban-Sud	Libanon
+276781	Beirut	33.89332	35.50157	1916100	Bejrút		Libanon
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Lichtenštejnsko
+1248991	Colombo	6.93194	79.84778	648034	Kolombo	Western	Srí Lanka
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Litva+http://en.wikipedia.org/wiki/Lithuania
+593871	Trakai	54.63783	24.93433	5530	Trakai		Litva+http://en.wikipedia.org/wiki/Lithuania
+594739	Šiauliai	55.93333	23.31667	130587	Šiauliai		Litva+http://en.wikipedia.org/wiki/Lithuania
+598098	Klaipėda	55.70888	21.14312	192307	Klajpeda		Litva+http://en.wikipedia.org/wiki/Lithuania
+601084	Alytus	54.39635	24.04142	70747	Alytus		Litva+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Lucemburk		Lucembursko
+456172	Riga	56.946	24.10589	742572	Riga	Riga	Lotyšsko
+459283	Jēkabpils	56.49903	25.85735	27078	Jēkabpils	http://jekabpilsnovads.lv/+Jēkabpils novads	Lotyšsko
+81302	Tobruk	32.08361	23.97639	121052	Tobrúk		Libye
+88319	Benghazi	32.11486	20.06859	650629	Benghází	Banghāzī	Libye
+89113	Ajdabiya	30.75545	20.22625	134358	Adžedábíja		Libye
+2208485	Zliten	32.46739	14.56874	109972	Zlitán	Mişrātah	Libye
+2210247	Tripoli	32.87519	13.18746	1150989	Tripolis		Libye
+2210554	Sirte	31.20892	16.58866	128123	Syrta	Surt	Libye
+2218840	Bani Walid	31.74554	13.98354	46350	Baní Walíd	Mişrātah	Libye
+2529923	Tarfaya	27.9392	-12.92604	5615	Tarfaja		Maroko
+2530335	Tangier	35.76727	-5.79975	688356	Tanger		Maroko
+2537881	Safi	32.29939	-9.23718	288163	Sáfí		Maroko
+2538475	Rabat	34.01325	-6.83255	1655753	rabat+Rabat		Maroko
+2542715	Meknès	33.89352	-5.54727	545705	Meknes		Maroko
+2542997	Marrakesh	31.63416	-7.99994	839296	Marrákeš		Maroko
+2548885	Fès	34.03313	-5.00028	964891	Fès		Maroko
+2549263	Essaouira	31.5125	-9.77	70634	As-Sawíra		Maroko
+2550078	El Jadid	33.25682	-8.50882	147549	Al-Džadída		Maroko
+2553604	Casablanca	33.58831	-7.61138	3144909	Casablanca		Maroko
+2561668	Agadir	30.42018	-9.59815	698310	Agádír		Maroko
+618426	Chisinau	47.00556	28.8575	635994	Kišiněv		Moldavsko, republika+Moldavsko+Moldavská republika
+3189073	Tivat	42.43639	18.69611	6280	Tivat		Černá Hora
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Černá Hora
+3193131	Plužine	43.15278	18.83944	1494	Plužine		Černá Hora
+3202641	Cetinje	42.39063	18.91417	15137	Cetinje		Černá Hora
+3203106	Budva	42.28639	18.84	18000	Budva		Černá Hora
+785387	Struga	41.17799	20.67784	37387	Struga		Macedonia+Republika Makedonie+Makedonie+ARYM+FYROM
+785842	Skopje	41.99646	21.43141	474889	Skopje		Macedonia+Republika Makedonie+Makedonie+ARYM+FYROM
+787487	Ohrid	41.11722	20.80194	54908	Ochrid		Macedonia+Republika Makedonie+Makedonie+ARYM+FYROM
+2449067	Timbuktu	16.77348	-3.00742	32460	Timbuktu		Mali
+2460596	Bamako	12.65	-8	1297281	Bamako	Bamako	Mali
+1298824	Yangon	16.80528	96.15611	4477638	Rangún	Yangon	Myanmar (Burma)+Myanmar
+1298987	Pyinmana	19.7381	96.20742	97409	Pjinmana		Myanmar (Burma)+Myanmar
+1311874	Mandalay	21.97473	96.08359	1208099	Mandalaj	Mandalay	Myanmar (Burma)+Myanmar
+2028462	Ulan Bator	47.90771	106.88324	844818	Ulánbátar	Ulaanbaatar	Mongolsko
+2028606	Tsetserleg	47.475	101.45417	5876	Cecerleg	Arhangay	Mongolsko
+2377450	Nouakchott	18.08581	-15.9785	661400	Nuakšott		Mauritánie+Mauretánie
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Malta
+2562704	Mosta	35.90917	14.42556	17789	Mosta		Malta
+2562746	Imdina	35.88694	14.4025	360	Mdina		Malta
+3515001	Tuxtla	16.75973	-93.11308	481128	Tuxtla Gutiérrez	Chiapas+CHP+Chis	Mexiko
+3516225	Taxco de Alarcón	18.55462	-99.60592	53217	Taxco	Guerrero+GRO	Mexiko
+3519537	San Cristóbal de las Casas	16.73176	-92.64126	128996	San Cristóbal de las Casas	Chiapas+CHP+Chis	Mexiko
+3521081	Puebla	19.03793	-98.20346	1590256	Puebla	Puebla+PUE	Mexiko
+3530139	Coyoacán	19.3467	-99.16174	628063	Coyoacán	The Federal District+Distrito Federal	Mexiko
+3530589	Ciudad Nezahualcoyotl	19.40061	-99.01483	1232220	Nezahualcóyotl	México+MEX	Mexiko
+3530597	Mexico City	19.42847	-99.12766	12294193	Ciudad de México	The Federal District+Distrito Federal	Mexiko
+3533462	Acapulco de Juárez	16.86336	-99.8901	652136	Acapulco	Guerrero+GRO	Mexiko
+4005539	Guadalajara	20.66682	-103.39182	1640589	Guadalajara	Jalisco+JAL	Mexiko
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Kuala Lumpur	KUL	Malajsie
+2332459	Lagos	6.45407	3.39467	9000000	Lagos		Nigérie
+2335204	Kano	12.00012	8.51672	3626068	Kano		Nigérie
+2343279	Enugu	6.44132	7.49883	688862	Enugu	Enugu	Nigérie
+2352778	Abuja	9.05785	7.49508	590400	Abuja	FCTA+Abuja Federal Capital Territory	Nigérie
+3617763	Managua	12.13282	-86.2504	973087	Managua	Managua	Nikaragua
+2745912	Utrecht	52.09083	5.12222	290529	Utrecht	ut+Utrecht	Nizozemsko
+2747373	The Hague	52.07667	4.29861	474292	Haag	Jižní Holandsko+zh+Zuid-Holland	Nizozemsko
+2747891	Rotterdam	51.9225	4.47917	598199	Rotterdam	Jižní Holandsko+zh+Zuid-Holland	Nizozemsko
+2750053	Nijmegen	51.8425	5.85278	158732	Nijmegen	GLD+gd+Gelderland	Nizozemsko
+2750521	Naarden	52.29583	5.1625	17115	Naarden	nh+Nord-Holland+Noord-Holland	Nizozemsko
+2755003	Haarlem	52.38084	4.63683	147590	Haarlem	nh+Nord-Holland+Noord-Holland	Nizozemsko
+2759661	Arnhem	51.98	5.91111	141674	Arnhem	GLD+gd+Gelderland	Nizozemsko
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Nizozemsko
+2759875	Alphen aan den Rijn	52.12917	4.65546	70251	Alphen aan den Rijn	Jižní Holandsko+zh+Zuid-Holland	Nizozemsko
+777073	Vadsø	70.07348	29.74943	5139	Vadsø		Norsko
+779554	Honningsvåg	70.98209	25.97037	2541	Honningsvåg		Norsko
+847633	Alta	69.96887	23.27165	12077	Alta		Norsko
+3133880	Trondheim	63.43049	10.39506	147139	Trondheim	Sør-Trøndelag	Norsko
+3133895	Tromsø	69.6489	18.95508	52436	Tromsø	Troms	Norsko
+3137115	Stavanger	58.97005	5.73332	121610	Stavanger	Rogaland	Norsko
+3139075	Skien	59.20962	9.60897	50595	Skien		Norsko
+3140084	Sarpsborg	59.28391	11.10962	52159	Sarpsborg		Norsko
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norsko
+3144987	Narvik	68.43838	17.4272	14114	Narvik	Nordland	Norsko
+3147474	Lillehammer	61.11514	10.46628	19096	Lillehammer		Norsko
+3154084	Hamar	60.7945	11.06798	29479	Hamar		Norsko
+3159016	Drammen	59.74389	10.20449	90722	Drammen		Norsko
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norsko
+3162955	Arendal	58.46151	8.77253	30916	Arendal		Norsko
+1283240	Kathmandu	27.70169	85.3206	1442271	Káthmándú		Nepál
+286245	Sur	22.56667	59.52889	71152	Súr		Omán
+286282	Sohar	24.34745	56.70937	108274	Suhár		Omán
+287614	Khasab	26.17993	56.24774	17904	Chasab		Omán
+288967	Seeb	23.67027	58.18911	237816	Síb		Omán
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Peru
+3941584	Cusco	-13.52264	-71.96734	312140	Cuzco		Peru
+2088122	Port Moresby	-9.44314	147.17972	283733	Port Moresby		Papua-Nová Guinea+Papua Nová Guinea
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Filipíny
+1166993	Rawalpindi	33.6007	73.0679	1743101	Rávalpindí	Punjab	Pákistán
+1167528	Quetta	30.18414	67.00141	733675	Kvéta	Balochistān	Pákistán
+1168197	Peshawar	34.008	71.57849	1218773	Péšávar		Pákistán
+1172451	Lahore	31.558	74.35071	6310888	Láhaur	Punjab	Pákistán
+1174872	Karachi	24.8608	67.0104	11624219	Karáčí		Pákistán
+1176615	Islamabad	33.72148	73.04329	601600	Islámábád	Islāmābād	Pákistán
+756135	Warsaw	52.22977	21.01178	1702139	Varšava	Mazovské vojvodství+Mazowieckie	Polsko
+759123	Skierniewice	51.95485	20.15837	49042	Skiernievice	Lodžské vojvodství+Łódzkie	Polsko
+759603	Sandomierz	50.68265	21.74898	25087	Sandoměř	Svatokřížské vojvodství+Świętokrzyskie	Polsko
+759734	Rzeszów	50.04132	21.99901	158382	Řešov	Podkarpatské vojvodství+Podkarpackie	Polsko
+761131	Przeworsk	50.05912	22.49408	15805	Převorsk	Podkarpatské vojvodství+Podkarpackie	Polsko
+761168	Przemyśl	49.78498	22.76728	67013	Přemyšl	Podkarpatské vojvodství+Podkarpackie	Polsko
+762021	Płońsk	52.62348	20.37552	22217	Płońsk	Mazovské vojvodství+Mazowieckie	Polsko
+763523	Nowy Targ	49.47783	20.03228	33763	Nowy Targ	Malopolské vojvodství+Małopolskie	Polsko
+763534	Nowy Sącz	49.62177	20.69705	84376	Nowy Sącz	Malopolské vojvodství+Małopolskie	Polsko
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lublinské vojvodství+Lubelskie	Polsko
+765876	Lublin	51.25	22.56667	360044	Lublin	Lublinské vojvodství+Lubelskie	Polsko
+766307	Lidzbark Warmiński	54.12588	20.57954	16540	Lidzbark Warmiński	Varmijsko-mazurské vojvodství	Polsko
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lublinské vojvodství+Lubelskie	Polsko
+769250	Kielce	50.87033	20.62752	208598	Kielce+http://www.um.kielce.pl/	Svatokřížské vojvodství+Świętokrzyskie	Polsko
+773569	Dąbrowa Tarnowska	50.17462	20.98633	11291	Dąbrowa Tarnowska	Malopolské vojvodství+Małopolskie	Polsko
+774747	Busko-Zdrój	50.47078	20.71884	17095	Busko-Zdrój	Svatokřížské vojvodství+Świętokrzyskie	Polsko
+775224	Brwinów	52.14269	20.71697	12315	Gmina Brwinów	Mazovské vojvodství+Mazowieckie	Polsko
+775758	Bochnia	49.96905	20.43028	29184	Bochnia	Malopolské vojvodství+Małopolskie	Polsko
+775922	Biłgoraj	50.54114	22.72204	26987	Biłgoraj	Lublinské vojvodství+Lubelskie	Polsko
+776092	Białowieża	52.7	23.86667	2670	Bělověž	Podleské vojvodství+Podlaskie	Polsko
+776172	Biała Rawska	51.80779	20.47259	3231	Biala Ravska	Lodžské vojvodství+Łódzkie	Polsko
+3080004	Żory	50.04523	18.70062	63174	Žory	Slezské vojvodství+Śląskie	Polsko
+3080165	Zielona Góra	51.93548	15.50643	118433	Zielona Góra	Lubušské vojvodství+Lubuskie	Polsko
+3080231	Zgorzelec	51.14942	15.00835	33247	Zgorzelec	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3080944	Żagań	51.61759	15.31486	26251	Zaháň	Lubušské vojvodství+Lubuskie	Polsko
+3081368	Wrocław	51.1	17.03333	634893	Vratislav	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3081677	Wodzisław Śląski	50.00377	18.47205	49521	Wodzisław Śląski	Slezské vojvodství+Śląskie	Polsko
+3081741	Włocławek	52.64817	19.0678	120339	Włocławek	Kujavsko-pomořské vojvodství+Kujawsko-Pomorskie	Polsko
+3082197	Wieluń	51.22097	18.56964	24384	Wieluń	Lodžské vojvodství+Łódzkie	Polsko
+3082707	Wałbrzych	50.77141	16.28432	127431	Wałbrzych	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3082751	Ustroń	49.72153	18.80198	15637	Ustroň	Slezské vojvodství+Śląskie	Polsko
+3082756	Ustka	54.58048	16.86194	16250	Ustka	Pomořské vojvodství+Pomorskie	Polsko
+3083271	Toruń	53.01375	18.59814	208717	Toruň	Kujavsko-pomořské vojvodství+Kujawsko-Pomorskie	Polsko
+3083677	Szklarska Poręba	50.82567	15.52274	6970	Szklarska Poręba	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3083829	Szczecin	53.42894	14.55302	407811	Štětín	Západopomořanské vojvodství+Západopomořské vojvodství	Polsko
+3083955	Świnoujście	53.91053	14.24712	40919	Svinoústí	Západopomořanské vojvodství+Západopomořské vojvodství	Polsko
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Slezské vojvodství+Śląskie	Polsko
+3084093	Świdnica	50.84378	16.48859	60351	Svídnice	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3084840	Stargard	53.33672	15.0499	71224	Stargard	Západopomořanské vojvodství+Západopomořské vojvodství	Polsko
+3085151	Sopot	54.4418	18.56003	40142	Sopoty	Pomořské vojvodství+Pomorskie	Polsko
+3085450	Słupsk	54.46405	17.02872	98608	Słupsk	Pomořské vojvodství+Pomorskie	Polsko
+3085786	Skoczów	49.80089	18.7877	14810	Skočov	Slezské vojvodství+Śląskie	Polsko
+3086586	Rybnik	50.09713	18.54179	142510	Rybnik	Slezské vojvodství+Śląskie	Polsko
+3087584	Racibórz	50.09195	18.21928	58464	Ratiboř	Slezské vojvodství+Śląskie	Polsko
+3087691	Puck	54.7179	18.40841	11415	Puck	Pomořské vojvodství+Pomorskie	Polsko
+3088065	Prudnik	50.32124	17.57461	23343	Prudník	Opolské vojvodství+Opolskie	Polsko
+3088171	Poznań	52.40692	16.92993	570352	Poznaň	Velkopolské vojvodství+Wielkopolskie	Polsko
+3088825	Płock	52.54682	19.70638	127474	Płock	Mazovské vojvodství+Mazowieckie	Polsko
+3088972	Piotrków Trybunalski	51.40547	19.70321	80128	Piotrków Trybunalski	Lodžské vojvodství+Łódzkie	Polsko
+3089658	Oświęcim	50.03437	19.21037	41143	Auschwitz	Malopolské vojvodství+Małopolskie	Polsko
+3090048	Opole	50.67211	17.92533	127676	Opolí	Opolské vojvodství+Opolskie	Polsko
+3090170	Oleśnica	51.21338	17.38986	36956	Olešnice	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3090401	Oborniki Śląskie	51.30137	16.91465	8440	Oborniki Śląskie	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3091979	Międzylesie	50.14778	16.66712	2766	Mezilesí	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3092472	Malbork	54.03591	19.0266	38655	Malbork	Pomořské vojvodství+Pomorskie	Polsko
+3092856	Luboń	52.34705	16.89267	26431	Luboň	Velkopolské vojvodství+Wielkopolskie	Polsko
+3093066	Łowicz	52.10714	19.94525	29809	Łowicz	Lodžské vojvodství+Łódzkie	Polsko
+3093133	Łódź	51.75	19.46667	768755	Lodž	Lodžské vojvodství+Łódzkie	Polsko
+3093524	Leszno	51.84034	16.57494	63565	Lešno	Velkopolské vojvodství+Wielkopolskie	Polsko
+3093692	Legnica	51.21006	16.1619	106033	Lehnice	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3094802	Kraków	50.06143	19.93658	755050	Krakov	Malopolské vojvodství+Małopolskie	Polsko
+3095335	Kończyce Wielkie	49.8351	18.64474	1844	Velké Kunčice	Slezské vojvodství+Śląskie	Polsko
+3095795	Kołobrzeg	54.17565	15.58342	44377	Kolobřeh	Západopomořanské vojvodství+Západopomořské vojvodství	Polsko
+3095797	Koło	52.20024	18.63865	23493	Koło	Velkopolské vojvodství+Wielkopolskie	Polsko
+3096053	Kłodzko	50.43488	16.66145	27941	Kladsko	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3096240	Kietrz	50.08042	18.00432	6306	Ketř	Opolské vojvodství+Opolskie	Polsko
+3096472	Katowice	50.25841	19.02754	317316	Katovice	Slezské vojvodství+Śląskie	Polsko
+3097257	Jelenia Góra	50.89973	15.72899	87310	Jelenia Góra	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3097391	Jastrzębie Zdrój	49.95542	18.57479	95813	Jastrzębie-Zdrój	Slezské vojvodství+Śląskie	Polsko
+3097902	Iława	53.59601	19.56849	32557	Iława	Varmijsko-mazurské vojvodství	Polsko
+3098959	Goleszów	49.7358	18.73675	4045	Holešov	Slezské vojvodství+Śląskie	Polsko
+3099112	Gniezno	52.53481	17.58259	70269	Hnězdno	Velkopolské vojvodství+Wielkopolskie	Polsko
+3099169	Głuchołazy	50.31505	17.38355	15120	Hlucholazy	Opolské vojvodství+Opolskie	Polsko
+3099174	Głubczyce	50.20086	17.82858	13697	Hlubčice	Opolské vojvodství+Opolskie	Polsko
+3099213	Głogów	51.66361	16.0845	68530	Hlohov	Dolnoslezské vojvodství+Dolnośląskie	Polsko
+3099230	Gliwice	50.29761	18.67658	198835	Gliwice	Slezské vojvodství+Śląskie	Polsko
+3099424	Gdynia	54.51889	18.53188	253730	Gdyně	Pomořské vojvodství+Pomorskie	Polsko
+3099434	Gdańsk	54.35205	18.64637	461865	Gdaňsk	Pomořské vojvodství+Pomorskie	Polsko
+3100946	Częstochowa	50.79646	19.12409	248125	Čenstochová	Slezské vojvodství+Śląskie	Polsko
+3101321	Cieszyn	49.75133	18.63213	35586	Těšín	Slezské vojvodství+Śląskie	Polsko
+3101619	Chorzów	50.30582	18.9742	113430	Chorzów	Slezské vojvodství+Śląskie	Polsko
+3101787	Chełmża	53.18463	18.60466	15403	Chełmża	Kujavsko-pomořské vojvodství+Kujawsko-Pomorskie	Polsko
+3102014	Bydgoszcz	53.1235	18.00762	366452	Bydhošť	Kujavsko-pomořské vojvodství+Kujawsko-Pomorskie	Polsko
+3103365	Bieruń	50.09	19.09291	19659	Beruň	Slezské vojvodství+Śląskie	Polsko
+3103402	Bielsko-Biala	49.82245	19.04686	176515	Bielsko-Biała+Bílsko-Bělá	Slezské vojvodství+Śląskie	Polsko
+282239	Ramallah	31.89964	35.20422	24599	Ramalláh		Palestinská území
+282615	Nablus	32.22111	35.25444	130326	Náblus		Palestinská území
+7303419	East Jerusalem	31.78336	35.23388	428304	Východní Jeruzalém		Palestinská území
+2267057	Lisbon	38.71667	-9.13333	517802	Lisabon	Distrikt Lisabon+Lisboa	Portugalsko
+2735943	Porto	41.14961	-8.61099	249633	Porto	Porto	Portugalsko
+2740637	Coimbra	40.20564	-8.41955	106582	Coimbra	Coimbra	Portugalsko
+2742032	Braga	41.55032	-8.42005	121394	Braga	Braga	Portugalsko
+3439389	Asunción	-25.30066	-57.63591	1482200	Asunción		Paraguay
+290030	Doha	25.28545	51.53096	344939	Dauhá		Katar
+662334	Zalău	47.2	23.05	63232	Zalău		Rumunsko
+663118	Vaslui	46.63333	27.73333	69225	Vaslui		Rumunsko
+664518	Tulcea	45.16667	28.8	92475	Tulcea		Rumunsko
+665004	Târgu-Mureş	46.54245	24.55747	146863	Târgu Mureş		Rumunsko
+665010	Târgu Jiu	45.05	23.28333	97179	Târgu Jiu		Rumunsko
+665024	Târgovişte	44.92543	25.4567	88435	Târgovişte	Dâmboviţa	Rumunsko
+665087	Timişoara	45.75372	21.22571	315053	Temešvár		Rumunsko
+665850	Suceava	47.63333	26.25	105796	Suceava		Rumunsko
+666767	Slatina	44.43333	24.36667	78988	Slatina		Rumunsko
+667268	Sibiu	45.8	24.15	151894	Sibiu	Sibiu	Rumunsko
+667873	Satu Mare	47.79926	22.86255	112490	Satu Mare		Rumunsko
+668872	Râmnicu Vâlcea	45.1	24.36667	107558	Râmnicu Vâlcea	Vâlcea	Rumunsko
+668954	Reşiţa	45.30083	21.88917	81228	Reşiţa		Rumunsko
+670474	Ploieşti	44.95	26.01667	228851	Ploieşti		Rumunsko
+670609	Piteşti	44.85	24.86667	167669	Piteşti		Rumunsko
+670889	Piatra Neamţ	46.91667	26.33333	102688	Piatra Neamţ		Rumunsko
+671768	Oradea	47.0458	21.91833	206614	Velký Varadín+Oradea		Rumunsko
+672546	Nădlac	46.16667	20.75	8067	Nădlac		Rumunsko
+672912	Moldova Nouă	44.7375	21.66694	13263	Nová Moldava		Rumunsko
+673441	Miercurea-Ciuc	46.35	25.8	41282	Miercurea Ciuc		Rumunsko
+675810	Iaşi	47.16667	27.6	318012	Jasy		Rumunsko
+677697	Galaţi	45.45	28.05	294087	Galaţi		Rumunsko
+678015	Focșani	45.7	27.18333	77313	Focşani		Rumunsko
+678817	Drobeta-Turnu Severin	44.63194	22.65611	102346	Drobeta-Turnu Severin	Mehedinţi	Rumunsko
+679452	Deva	45.88333	22.9	67802	Deva		Rumunsko
+680332	Craiova	44.31667	23.8	304142	Craiova		Rumunsko
+680963	Constanţa	44.18073	28.63432	303399	Constanţa		Rumunsko
+681290	Cluj-Napoca	46.76667	23.6	316748	Kluž		Rumunsko
+682428	Cenad	46.13333	20.58333	4218	Čanád		Rumunsko
+683123	Buzău	45.15	26.83333	130954	Buzău		Rumunsko
+683506	Bucharest	44.43225	26.10626	1877155	Bukurešť		Rumunsko
+683844	Braşov	45.64861	25.60613	276088	Braşov		Rumunsko
+683902	Brăila	45.26667	27.98333	213569	Brăila		Rumunsko
+684039	Botoşani	47.75	26.66667	114783	Botoşani		Rumunsko
+684657	Bistriţa	47.13316	24.50011	81318	Bistriţa		Rumunsko
+685826	Baia Mare	47.65729	23.56808	136553	Baia Mare		Rumunsko
+685948	Bacău	46.56718	26.91384	171396	Bacău		Rumunsko
+686254	Arad	46.18333	21.31667	169065	Arad		Rumunsko
+686578	Alba Iulia	46.06667	23.58333	66085	Alba Iulia		Rumunsko
+8436351	Sighișoara	46.22141	24.79279	34537	Sighişoara		Rumunsko
+785756	Smederevo	44.66278	20.93	62000	Smederevo	Central Serbia	Srbsko
+787607	Novi Beograd	44.80556	20.42417	0	Nový Bělehrad	Central Serbia	Srbsko
+787893	Mladenovac	44.43861	20.69917	0	Opština Mladenovac	Central Serbia	Srbsko
+789128	Kragujevac	44.01667	20.91667	147473	Kragujevac	Central Serbia	Srbsko
+792680	Belgrade	44.80401	20.46513	1273651	Bělehrad	Central Serbia	Srbsko
+3189595	Subotica	46.1	19.66667	100000	Subotica		Srbsko
+3193406	Petrovaradin	45.24667	19.87944	13917	Petrovaradín		Srbsko
+3194360	Novi Sad	45.25167	19.83694	215400	Novi Sad		Srbsko
+3195591	Mali Zvornik	44.37344	19.10651	4	Opština Mali Zvornik	Central Serbia	Srbsko
+466806	Yoshkar-Ola	56.63877	47.89078	279100	Joškar-Ola		Rusko
+466885	Yeysk	46.7055	38.2739	87814	Jejsk	Krasnodarskiy Kray	Rusko
+467978	Yelets	52.62366	38.50169	115688	Jelec	Lipetsk	Rusko
+472045	Voronezh	51.67204	39.1843	848752	Voroněž	Voronezj	Rusko
+472722	Volkhov	59.9258	32.33819	45673	Volchov		Rusko
+479123	Ulyanovsk	54.32824	48.38657	640680	Uljanovsk	Uljanovská oblast+Uljanovsk	Rusko
+479411	Ukhta	63.56705	53.68348	102187	Uchta	Republika Komi	Rusko
+479561	Ufa	54.74306	55.96779	1033338	Ufa		Rusko
+480060	Tver	56.85836	35.90057	400212	Tver		Rusko
+480562	Tula	54.19609	37.61822	468825	Tula	Tula	Rusko
+482283	Tol’yatti	53.5303	49.3461	702879	Toljatti	Samara	Rusko
+483019	Tikhvin	59.64511	33.52937	62075	Tichvin		Rusko
+485239	Syktyvkar	61.67642	50.80994	230139	Syktyvkar	Republika Komi	Rusko
+485639	Svetogorsk	61.11213	28.86321	15733	Světogorsk+Enšo		Rusko
+490996	Solnechnogorsk	56.18333	36.98333	58891	Solněčnogorsk	Moskevská oblast+MO	Rusko
+491687	Smolensk	54.7818	32.0401	320991	Smolensk+Смоленск	Smolensk	Rusko
+496527	Serpukhov	54.91578	37.41114	128158	Serpuchov	Moskevská oblast+MO	Rusko
+496638	Sergiyev Posad	56.3	38.13333	109252	Sergijev Posad+Сергиев Посад	Moskevská oblast+MO	Rusko
+498677	Saratov	51.54056	46.00861	863725	Saratov	Saratov	Rusko
+498817	Saint Petersburg	59.93863	30.31413	5028000	Petrohrad+Санкт-Петербург		Rusko
+499099	Samara	53.20007	50.15	1134730	Samara	Samara	Rusko
+499717	Rzhev	56.26241	34.32817	62246	Ržev		Rusko
+500096	Ryazan’	54.6269	39.6916	520173	Rjazaň	Rjazan	Rusko
+500886	Rtishchevo	52.26041	43.78745	44013	Rtiščevo	Saratov	Rusko
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov na Donu		Rusko
+504042	Pushchino	54.83373	37.61138	20072	Puščino	Moskevská oblast+MO	Rusko
+504341	Pskov	57.8136	28.3496	201990	Pskov	Pskov	Rusko
+504915	Prokhorovka	51.03741	36.73252	10136	Prochorovka	Belgorod	Rusko
+509820	Petrozavodsk	61.78491	34.34691	265025	Petrozavodsk	Karelská republika	Rusko
+510291	Peterhof	59.88333	29.9	73199	Petěrgof		Rusko
+511565	Penza	53.20066	45.00464	512602	Penza	Penza	Rusko
+511794	Pechora	65.14717	57.22439	46113	Pečora	Republika Komi	Rusko
+515003	Orenburg	51.7727	55.0988	550204	Orenburg+Оренбург	Orenburg	Rusko
+515024	Orekhovo-Zuyevo	55.80672	38.96178	120000	Orechovo-Zujevo	Moskevská oblast+MO	Rusko
+516215	Odintsovo	55.67798	37.27773	137041	Odincovo+Одинцово	Moskevská oblast+MO	Rusko
+517836	Novotroitsk	51.20301	58.32665	106186	Novotroick	Orenburg	Rusko
+518659	Novokuybyshevsk	53.0959	49.9462	111800	Novokujbyševsk	Samara	Rusko
+518970	Novocherkassk	47.42096	40.09185	166974	Novočerkassk		Rusko
+519336	Velikiy Novgorod	58.52131	31.27104	215062	Novgorod	Novgorod	Rusko
+521118	Nizhnekamsk	55.63657	51.82447	234297	Nižněkamsk		Rusko
+522377	Nevinnomyssk	44.6333	41.9444	134345	Něvinnomyssk	Stavropol'skiy Kray	Rusko
+522508	Nesterov	54.63056	22.57139	5071	Nestěrov	Kaliningrad	Rusko
+522942	Neftekamsk	56.092	54.2661	126805	Něftěkamsk		Rusko
+523750	Naberezhnyye Chelny	55.72545	52.41122	509870	Naberežnyje Čelny		Rusko
+523812	Mytishchi	55.91163	37.73076	160542	Mytišči+Мытищи	Moskevská oblast+MO	Rusko
+524712	Mozhaysk	55.50194	36.02722	31557	Možajsk	Moskevská oblast+MO	Rusko
+524901	Moscow	55.75222	37.61556	10381222	Moskva		Rusko
+525404	Monchegorsk	67.93972	32.87389	49868	Mončegorsk+Мончегорск	Murmanská oblast+Murmansk	Rusko
+529073	Marks	51.71111	46.74861	32929	Marx	Saratov	Rusko
+532096	Makhachkala	42.97638	47.50236	497959	Machačkala	Dagestán	Rusko
+532288	Magnitogorsk	53.41861	59.04722	413351	Magnitogorsk	Tsjeljabinsk	Rusko
+532615	Lyubertsy	55.67719	37.89322	154650	Ljubercy	Moskevská oblast+MO	Rusko
+535121	Lipetsk	52.60311	39.57076	515655	Lipeck	Lipetsk	Rusko
+538560	Kursk	51.73733	36.18735	409431	Kursk	Kursk	Rusko
+542420	Krasnodar	45.04484	38.97603	649851	Krasnodar+Краснодар	Krasnodarskiy Kray	Rusko
+543704	Kotlas	61.25745	46.64963	59180	Kotlas		Rusko
+546230	Kolomna	55.07944	38.77833	147690	Kolomna	Moskevská oblast+MO	Rusko
+547475	Klintsy	52.76019	32.23935	66336	Klincy	Brjansk	Rusko
+548408	Kirov	58.59665	49.66007	457383	Kirov	Kirov	Rusko
+548605	Kineshma	57.43914	42.12894	92983	Kiněšma	Ivanovo	Rusko
+548982	Khvalynsk	52.4906	48.1058	13437	Chvalynsk	Saratov	Rusko
+550280	Khimki	55.89704	37.42969	239967	Chimki+Химки	Moskevská oblast+MO	Rusko
+551487	Kazan	55.78874	49.12214	1104738	Kazaň		Rusko
+553287	Kamyshin	50.09833	45.41601	128626	Kamyšin	Volgograd	Rusko
+553915	Kaluga	54.5293	36.27542	338978	Kaluga	Kaluga	Rusko
+554234	Kaliningrad	54.70649	20.51095	434954	Kaliningrad	Kaliningrad	Rusko
+554397	Kalach-na-Donu	48.69099	43.52638	27522	Kalač na Donu	Volgograd	Rusko
+554840	Izhevsk	56.84976	53.20448	631038	Iževsk		Rusko
+555312	Ivanovo	56.99719	40.97139	420839	Ivanovo+Иваново	Ivanovo	Rusko
+558418	Groznyy	43.31195	45.68895	226100	Groznyj		Rusko
+561887	Gatchina	59.57639	30.12833	89761	Gatčina		Rusko
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzeržinsk	Nizjnij Novgorod	Rusko
+565348	Donetsk	48.33962	39.95948	50850	Doněck+Донецк		Rusko
+565381	Domodedovo	55.4413	37.75367	53887	Domodědovo	Moskevská oblast+MO	Rusko
+569223	Cherepovets	59.13333	37.9	315738	Čerepovec	Vologda	Rusko
+569696	Cheboksary	56.13222	47.25194	446781	Čeboksary+Чебоксары	Čuvašsko	Rusko
+571476	Bryansk	53.25209	34.37167	427236	Brjansk	Brjansk	Rusko
+578072	Belgorod	50.61074	36.58015	345289	Bělgorod	Belgorod	Rusko
+579464	Balashikha	55.80945	37.95806	150103	Balašicha	Moskevská oblast+MO	Rusko
+580497	Astrakhan	46.34968	48.04076	502533	Astrachaň	Astrakhan	Rusko
+581357	Apatity	67.56414	33.4031	61186	Apatity	Murmanská oblast+Murmansk	Rusko
+584243	Adler	43.42896	39.92391	70200	Adlerský rajón	Krasnodarskiy Kray	Rusko
+1486039	Yemanzhelinsk	54.75472	61.32083	29849	Jemanželinsk	Tsjeljabinsk	Rusko
+1486209	Yekaterinburg	56.8519	60.6122	1349772	Jekatěrinburg	Sverdlovsk	Rusko
+1486910	Vorkuta	67.49884	64.05253	80039	Vorkuta	Republika Komi	Rusko
+1488754	Tyumen	57.15222	65.52722	519119	Ťumeň		Rusko
+1489425	Tomsk	56.49771	84.97437	485519	Tomsk	Tomsk	Rusko
+1493197	Salekhard	66.53	66.60194	38025	Salechard+Салехард	Yamalo-Nenetskiy Avtonomnyy Okrug	Rusko
+1493467	Rubtsovsk	51.51473	81.20613	161065	Rubcovsk	Altayskiy Kray	Rusko
+1496153	Omsk	54.99244	73.36859	1129281	Omsk	Omsk	Rusko
+1496747	Novosibirsk	55.0415	82.9346	1419007	Novosibirsk	Novosibirsk	Rusko
+1496990	Novokuznetsk	53.7557	87.1099	539616	Novokuzněck+Новокузнецк	Kemerovo	Rusko
+1497549	Nizhneudinsk	54.9076	99.0276	38723	Nižněudinsk	Irkutsk	Rusko
+1500973	Kyzyl	51.71472	94.45338	108240	Kyzyl		Rusko
+1501141	Kuybyshev	55.44753	78.32181	48308	Kujbyšev	Novosibirsk	Rusko
+1503772	Khanty-Mansiysk	61.00417	69.00194	67800	Chanty-Mansijsk	Khanty-Mansiyskiy Avtonomnyy Okrug	Rusko
+1503901	Kemerovo	55.33333	86.08333	477090	Kemerovo	Kemerovo	Rusko
+1505453	Ishim	56.11281	69.49015	67762	Išim		Rusko
+1506271	Gorno-Altaysk	51.96056	85.91892	54917	Gorno-Altajsk	Altay	Rusko
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Čeljabinsk	Tsjeljabinsk	Rusko
+1510853	Barnaul	53.36056	83.76361	599579	Barnaul	Altayskiy Kray	Rusko
+1512064	Ak-Dovurak	51.18333	90.6	12593	Ak-Dovurak		Rusko
+1512165	Achinsk	56.2694	90.4993	117634	Ačinsk	Krasnoyarskiy Kray	Rusko
+1512236	Abakan	53.71556	91.42917	167289	Abakan		Rusko
+1536289	Snezhinsk	56.085	60.73139	50086	Sněžinsk	Tsjeljabinsk	Rusko
+2013348	Vladivostok	43.10562	131.87353	587022	Vladivostok	Primorskiy Kray	Rusko
+2014407	Ulan-Ude	51.82721	107.60627	360278	Ulan-Ude		Rusko
+2014624	Udachny	66.42989	112.4021	15266	Udačnyj	Sakha	Rusko
+2019528	Nakhodka	42.81384	132.87348	146920	Nachodka	Primorskiy Kray	Rusko
+2019951	Mirny	62.53528	113.96111	40308	Mirnyj	Sakha	Rusko
+2022890	Khabarovsk	48.48271	135.08379	579000	Chabarovsk	Khabarovskiy Kray	Rusko
+2023469	Irkutsk	52.29778	104.29639	586695	Irkutsk	Irkutsk	Rusko
+2026609	Blagoveshchensk	50.27961	127.5405	221296	Blagověščensk	Amur	Rusko
+2026643	Birobidzhan	48.79284	132.92386	76146	Birobidžan	Židovská autonomní oblast	Rusko
+2119441	Yuzhno-Sakhalinsk	46.95407	142.73603	176484	Južno-Sachalinsk	Sakhalin	Rusko
+2119447	Yuzhno-Kurilsk	44.02734	145.86146	6465	Južno-Kurilsk	Sakhalin	Rusko
+2120048	Ust-Nera	64.56968	143.237	9148	Usť-Něra	Sakha	Rusko
+2121025	Srednekolymsk	67.45659	153.70246	3459	Sredněkolymsk	Sakha	Rusko
+2122104	Petropavlovsk-Kamchatsky	53.04444	158.65076	187282	Petropavlovsk-Kamčatskij	Kamtsjatka	Rusko
+2122605	Okhotsk	59.362	143.21468	5570	Ochotsk	Khabarovskiy Kray	Rusko
+203112	Butare	-2.59667	29.73944	89600	Butaré		Rwanda
+104515	Mecca	21.42664	39.82563	1323624	Mekka	Makkah	Saúdská Arábie+Saudská Arábie
+105343	Jeddah	21.54238	39.19797	2867446	Džidda	Makkah	Saúdská Arábie+Saudská Arábie
+108410	Riyadh	24.68773	46.72185	4205961	Rijád		Saúdská Arábie+Saudská Arábie
+109223	Medina	24.46861	39.61417	1300000	Medína		Saúdská Arábie+Saudská Arábie
+110336	Dammam	26.43442	50.10326	768602	Dammám		Saúdská Arábie+Saudská Arábie
+110690	Abha	18.21639	42.50528	210886	Abhá		Saúdská Arábie+Saudská Arábie
+241131	Victoria	-4.62001	55.45501	22881	Victoria		Seychely
+363417	Dongola	19.18163	30.47689	13473	Dongola	Ash Shamālīyah	Súdán
+379252	Khartoum	15.55177	32.53241	1974647	Chartúm		Súdán
+602150	Umeå	63.82842	20.25972	83249	Umeå		Švédsko+Ruoččii
+604490	Luleå	65.58415	22.15465	43574	Luleå	Norrbottens Län	Švédsko+Ruoččii
+2666199	Uppsala	59.85882	17.63889	149245	Uppsala	Uppsala Län	Švédsko+Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Švédsko+Ruoččii
+2701713	Karlskrona	56.16156	15.58661	36477	Karlskrona		Švédsko+Ruoččii
+2712414	Gävle	60.67452	17.14174	74884	Gävle		Švédsko+Ruoččii
+2715459	Falun	60.60357	15.62597	37000	Falun		Švédsko+Ruoččii
+3186270	Žužemberk	45.83389	14.92917	1053	Žužemberk		Slovinsko
+3186906	Zagorje ob Savi	46.13179	14.99694	6439	Občina Zagorje ob Savi		Slovinsko
+3188915	Trbovlje	46.155	15.05333	15163	Trbovlje		Slovinsko
+3189075	Velenje	46.35917	15.11028	25456	Velenje		Slovinsko
+3190712	Škofljica	45.98333	14.57667	2209	Občina Škofljica		Slovinsko
+3192241	Ptuj	46.42005	15.87018	18164	Ptuj		Slovinsko
+3192673	Postojna	45.77435	14.21528	9183	Postojna		Slovinsko
+3194351	Novo Mesto	45.80397	15.16886	23341	Novo mesto		Slovinsko
+3195506	Maribor	46.55472	15.64667	95171	Maribor		Slovinsko
+3196359	Ljubljana	46.05108	14.50513	272220	Lublaň		Slovinsko
+3197378	Kranj	46.23887	14.35561	36874	Kranj		Slovinsko
+3197753	Koper	45.54694	13.72944	24996	Koper		Slovinsko
+3197943	Kočevje	45.64333	14.86333	8672	Občina Kočevje		Slovinsko
+3197983	Kobarid	46.24761	13.57907	1121	Občina Kobarid		Slovinsko
+3198549	Sveti Jurij ob Ščavnici	46.5695	16.02347	204	Občina Sveti Jurij ob Ščavnici		Slovinsko
+3202781	Celje	46.23092	15.26044	37520	Celje		Slovinsko
+723077	Žehra	48.9796	20.7917	2360	Žehra	Prešovský kraj	Slovensko
+723195	Vranov nad Topľou	48.88836	21.68479	23246	Vranov nad Topľou	Prešovský kraj	Slovensko
+723358	Trebišov	48.62858	21.71954	22947	Trebišov	Košický kraj	Slovensko
+723411	Svit	49.06014	20.20695	7445	Svit	Prešovský kraj	Slovensko
+723417	Svidník	49.30819	21.5703	12428	Svidník	Prešovský kraj	Slovensko
+723526	Spišská Nová Ves	48.94464	20.56153	39195	Spišská Nová Ves	Košický kraj	Slovensko
+723554	Sobrance	48.74455	22.18136	6262	Sobrance	Košický kraj	Slovensko
+723559	Snina	48.98857	22.15099	22221	Snina	Prešovský kraj	Slovensko
+723736	Rimavská Sobota	48.38284	20.02239	25235	Rimavská Sobota	Banskobystrický kraj	Slovensko
+723819	Prešov	48.99839	21.23393	94718	Prešov	Prešovský kraj	Slovensko
+724144	Michalovce	48.75434	21.9195	40360	Michalovce	Košický kraj	Slovensko
+724294	Levoča	49.02173	20.59212	14511	Levoča	Prešovský kraj	Slovensko
+724377	Krompachy	48.91447	20.87514	8812	Krompachy	Košický kraj	Slovensko
+724443	Košice	48.71395	21.25808	236563	Košice	Košický kraj	Slovensko
+724503	Kežmarok	49.13571	20.43352	21391	Kežmarok	Prešovský kraj	Slovensko
+724627	Humenné	48.93707	21.91625	35367	Humenné	Prešovský kraj	Slovensko
+725168	Bardejov	49.29175	21.27271	33060	Bardejov	Prešovský kraj	Slovensko
+3056459	Zvolen	48.57442	19.15324	44502	Zvolen	Banskobystrický kraj	Slovensko
+3056508	Žilina	49.22315	18.73941	85985	Žilina	Žilinský kraj	Slovensko
+3056697	Vrbové	48.61973	17.7226	6249	Vrbové	Trnavský kraj	Slovensko
+3057086	Turčianske Teplice	48.86225	18.86048	0	Turčianske Teplice	Žilinský kraj	Slovensko
+3057124	Trnava	48.37741	17.58723	69785	Trnava	Trnavský kraj	Slovensko
+3057140	Trenčín	48.89452	18.04436	58278	Trenčín	Trenčiansky kraj	Slovensko
+3057174	Topoľčany	48.56361	18.16712	0	Topoľčany	Nitriansky kraj	Slovensko
+3057339	Šurany	48.08613	18.18447	10491	Šurany	Nitriansky kraj	Slovensko
+3057379	Štúrovo	47.79495	18.7175	11708	Štúrovo	Nitriansky kraj	Slovensko
+3057769	Sellye	48.15127	17.88062	24513	Šaľa	Nitriansky kraj	Slovensko
+3057789	Ružomberok	49.0748	19.30751	30806	Ružomberok	Žilinský kraj	Slovensko
+3057963	Púchov	49.12494	18.32597	18833	Púchov	Nitriansky kraj	Slovensko
+3058000	Prievidza	48.77446	18.6275	52987	Prievidza	Nitriansky kraj	Slovensko
+3058060	Považská Bystrica	49.12153	18.42169	43936	Považská Bystrica	Trenčiansky kraj	Slovensko
+3058202	Piešťany	48.59479	17.82591	30000	Piešťany	Trnavský kraj	Slovensko
+3058268	Partizánske	48.62861	18.38455	24370	Partizánske	Nitriansky kraj	Slovensko
+3058472	Nové Zámky	47.98544	18.16195	42044	Nové Zámky	Nitriansky kraj	Slovensko
+3058496	Nová Dubnica	48.93479	18.14632	12358	Nová Dubnica	Trenčiansky kraj	Slovensko
+3058531	Nitra	48.30763	18.08453	86329	Nitra	Nitriansky kraj	Slovensko
+3058981	Lúčky	49.12944	19.40228	1787	Lúčky	Žilinský kraj	Slovensko
+3058986	Lučenec	48.33249	19.66708	28159	Lučenec	Banskobystrický kraj	Slovensko
+3059050	Liptovský Mikuláš	49.08061	19.62218	33509	Liptovský Mikuláš	Žilinský kraj	Slovensko
+3059101	Levice	48.21563	18.60705	37574	Levice	Nitriansky kraj	Slovensko
+3059111	Leopoldov	48.44575	17.76458	3999	Leopoldov	Trnavský kraj	Slovensko
+3059282	Kremnica	48.70519	18.91834	5822	Kremnica	Banskobystrický kraj	Slovensko
+3059436	Komárno	47.76356	18.12263	36279	Komárno	Nitriansky kraj	Slovensko
+3059796	Ilava	48.99769	18.2353	5411	Ilava	Nitriansky kraj	Slovensko
+3060095	Hlohovec	48.43174	17.8031	23930	Hlohovec	Trnavský kraj	Slovensko
+3060219	Galanta	48.19001	17.72747	16365	Galanta	Trnavský kraj	Slovensko
+3060308	Dunajská Streda	47.99268	17.61211	23639	Dunajská Streda	Trnavský kraj	Slovensko
+3060346	Dubnica nad Váhom	48.95981	18.16634	26617	Dubnica nad Váhom	Trenčiansky kraj	Slovensko
+3060405	Dolný Kubín	49.20983	19.30341	18995	Dolný Kubín	Žilinský kraj	Slovensko
+3060835	Čadca	49.43503	18.78895	24670	Čadca	Žilinský kraj	Slovensko
+3060950	Brezno	48.80431	19.63631	21331	Brezno	Banskobystrický kraj	Slovensko
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	Slovensko
+3061015	Bojnice	48.78511	18.5864	5006	Bojnice	Nitriansky kraj	Slovensko
+3061184	Banská Štiavnica	48.44858	18.91003	10191	Banská Štiavnica	Banskobystrický kraj	Slovensko
+3061186	Banská Bystrica	48.73946	19.15349	82336	Banská Bystrica	Banskobystrický kraj	Slovensko
+8436244	Dunajská Lužná	48.08347	17.26072	4482	Dunajská Lužná	Bratislavský kraj	Slovensko
+2409306	Freetown	8.484	-13.22994	802639	Freetown		Sierra Leone
+3170472	Poggio di Chiesanuova	43.90451	12.42142	951	Chiesanuova		San Marino
+3172906	Monte Giardino	43.90878	12.48201	910	Montegiardino	Montegiardino	San Marino
+3176966	Fiorentino	43.91001	12.45738	2510	Fiorentino	Fiorentino	San Marino
+3177299	Faetano	43.92831	12.49798	1177	Faetano	Faetano	San Marino
+3181793	Borgo Maggiore	43.94193	12.44738	6424	Borgo Maggiore	Borgo Maggiore	San Marino
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadišu		Somálsko
+59611	Gaalkacyo	6.76972	47.43083	61200	Gaalkayo		Somálsko
+64013	Bosaso	11.28421	49.18158	74287	Boosaaso		Somálsko
+370737	Malakal	9.53342	31.66049	160765	Malakál		
+163808	Tadmur	34.5624	38.28402	51015	Palmýra		Sýrie
+167357	Manbij	36.52815	37.95495	68888	Manbidž		Sýrie
+170654	Damascus	33.5102	36.29128	1569394	Damašek		Sýrie
+170794	Deir ez-Zor	35.33588	40.14084	242565	Dajr az-Zaur		Sýrie
+173576	Latakia	35.53168	35.79011	340181	Lázikíja		Sýrie
+2365267	Lomé	6.12874	1.22154	749700	Lomé		Togo
+1150533	Sukhothai	17.00778	99.823	37000	Sukhothaj	Sukhothai	Thajsko
+1608529	Nakhon Ratchasima	14.97066	102.10196	208781	Nakhon Ratčasima	Nakhon Ratchasima	Thajsko
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Thajsko
+1614295	Phatthaya	12.93333	100.88333	97296	Pattaya	Chon Buri	Thajsko
+1220253	Istaravshan	39.9142	69.00328	52851	Istaravšan		Tádžikistán
+1221874	Dushanbe	38.53575	68.77905	679400	Dušanbe		Tádžikistán
+1645457	Dili	-8.55861	125.57361	150000	Dili		Východní Timor
+162183	Ashgabat	37.95	58.38333	727700	Ašchabad		Turkmenistán
+2464470	Tunis	36.81897	10.16579	693210	Tunis	Tūnis	Tunisko
+2464915	Sousse	35.82539	10.63699	164123	Súsa	Sūsah	Tunisko
+2465840	Sidi Bouzid	35.03823	9.48494	42098	Sídí Bú Zíd	Sīdī Bū Zayd	Tunisko
+301256	Selçuk	37.95137	27.36849	29101	Selcuk+Ephesus		Turecko+Turkanmua
+304531	Mersin	36.81196	34.63886	537842	Mersin	Mersinská provincie	Turecko+Turkanmua
+304922	Malatya	38.35018	38.31667	441805	Malatya	Malatyjská provincie	Turecko+Turkanmua
+305359	Kuşadası	37.85562	27.2566	63177	Kuşadası	Aydınská provincie	Turecko+Turkanmua
+306571	Konya	37.87135	32.48464	875530	Konya	Konyanská provincie	Turecko+Turkanmua
+308464	Kayseri	38.73222	35.48528	592840	Kayseri		Turecko+Turkanmua
+310859	Kahramanmaraş	37.5847	36.92641	376045	Kahramanmaraş	Kahramanmaraşská provincie	Turecko+Turkanmua
+311046	İzmir	38.41273	27.13838	2500603	İzmir		Turecko+Turkanmua
+314830	Gaziantep	37.05944	37.3825	1065975	Gaziantep	Gaziantepská provincie	Turecko+Turkanmua
+315368	Erzurum	39.90861	41.27694	420691	Erzurum		Turecko+Turkanmua
+315808	Elazığ	38.67431	39.22321	298004	Elâzığ		Turecko+Turkanmua
+316541	Diyarbakır	37.91363	40.21721	644763	Diyarbakır	Diyarbakır	Turecko+Turkanmua
+317109	Denizli	37.77417	29.0875	313238	Denizli	Denizliská provincie	Turecko+Turkanmua
+323777	Antalya	36.90812	30.69556	758188	Antalya	Antalijská provincie	Turecko+Turkanmua
+323779	Antakya	36.20655	36.15722	210000	Antiochie	Hatayská provincie	Turecko+Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Ankara		Turecko+Turkanmua
+325330	Adıyaman	37.76441	38.27629	223744	Adıyamanská		Turecko+Turkanmua
+325363	Adana	37.00167	35.32889	1248988	Adana	Adanská provincie	Turecko+Turkanmua
+738743	Tokat	40.31389	36.55444	129702	Tokatská provincie		Turecko+Turkanmua
+739600	Sinop	42.02683	35.16253	34834	Sinop	Sinopská provincie	Turecko+Turkanmua
+740264	Samsun	41.27976	36.3361	394050	Samsun	Samsunská provincie	Turecko+Turkanmua
+740483	Rize	41.02083	40.52194	92772	Rizenská provincie		Turecko+Turkanmua
+745026	İznik	40.42861	29.72111	22230	Nikaia		Turecko+Turkanmua
+745044	Istanbul	41.01384	28.94966	14804116	Byzantion+Istanbul+http://en.wikipedia.org/wiki/Istanbul		Turecko+Turkanmua
+747712	Edirne	41.67719	26.55597	126470	Edirne	Edirneská provincie	Turecko+Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Bursa		Turecko+Turkanmua
+750938	Bayburt	40.25631	40.22289	31258	Bayburtská provincie		Turecko+Turkanmua
+6940561	Çatalhöyük	37.66847	32.82689	10000	Çatal Hüyük	Konyanská provincie	Turecko+Turkanmua
+1665196	Douliu	23.70944	120.54333	104723	Tou-liou		Čínská republika+Tajwan
+1667905	Taoyuan	24.9896	121.3187	0	Tchao-jüan		Čínská republika+Tajwan
+1668341	Taipei	25.04776	121.53185	7871900	Tchaj-pej		Čínská republika+Tajwan
+1668347	Taibao	23.45944	120.33222	0	Tchaj-pao		Čínská republika+Tajwan
+1668353	Xinying	23.30694	120.31056	0	Sin-jing		Čínská republika+Tajwan
+1668355	Tainan	22.99083	120.21333	771235	Tchaj-nan		Čínská republika+Tajwan
+1668399	Taichung	24.1469	120.6839	1040725	Tchaj-čung		Čínská republika+Tajwan
+1670481	Pingtung	22.67135	120.48814	0	Pching-tung		Čínská republika+Tajwan
+1671566	Nantou	23.91566	120.66387	105682	Nan-tchou		Čínská republika+Tajwan
+1673816	Fengshan	22.62659	120.36126	0	Feng-šan		Čínská republika+Tajwan
+1675151	Hsinchu	24.80361	120.96861	404109	Sin-ču		Čínská republika+Tajwan
+1677112	Zhubei	24.83833	121.00778	0	Ču-pej		Čínská republika+Tajwan
+1678228	Keelung	25.12825	121.7419	397515	Ťi-lung		Čínská republika+Tajwan
+6949678	Taitung City	22.7583	121.1444	109584	Tchaj-tung		Čínská republika+Tajwan
+618835	Zhydachiv	49.38468	24.14254	0	Žydačiv	Lviv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+686896	Zolochiv	49.80597	24.89436	22608	Zoločiv	Lviv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+686967	Zhytomyr	50.26487	28.67669	282192	Žytomyr	Zhytomyr	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+687196	Zhovti Vody	48.34493	33.50374	51559	Žovti Vody	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+688288	Yavoriv	49.93864	23.38254	13008	Javoriv	Lviv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+688373	Yasynuvata	48.1298	37.8594	37600	Jasynuvata	Donetsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+689198	Volnovakha	47.60103	37.49674	23731	Volnovacha	Donetsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+689487	Vyshneve	50.38913	30.3705	33183	Vyšneve	Kyjevská oblast	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+690197	Velykyi Bereznyi	48.88831	22.46052	7078	Velký Berezný	Zakarpattia	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+690544	Batiovo	48.36166	22.3997	3046	Baťovo	Zakarpattia	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+690548	Uzhgorod	48.61667	22.3	117878	Užhorod	Zakarpattia	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+691179	Truskavets’	49.27837	23.50618	26600	Truskavec	Lviv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+691650	Ternopil	49.55342	25.58918	235676	Ternopil	Ternopil	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+692975	Stakhanov	48.56818	38.64352	84425	Stachanov	Luhansk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+693468	Sloviansk	48.86667	37.61667	124800	Slovjansk	Donetsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+695965	Piatykhatky	48.41333	33.71056	20459	Pjatychatky	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+698131	Ovruch	51.3246	28.80351	16398	Ovruč	Zhytomyr	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Oděsa		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+698770	Ochakiv	46.61283	31.54982	16300	Očakiv	Mykolaiv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+698782	Obukhiv	50.10689	30.61848	31557	Obuchiv	Kyjevská oblast	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+699839	Nova Kakhovka	46.75451	33.34864	50672	Nova Kachovka	Kherson	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+699942	Nizhyn	51.04801	31.88688	75499	Nižyn		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+700646	Mukacheve	48.43919	22.71779	81633	Mukačevo	Zakarpattia	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+701404	Melitopol	46.84891	35.36533	158000	Melitopol		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+701822	Mariupol	47.09514	37.54131	481626	Mariupol	Donetsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Lvov	Lviv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kyjev		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+703845	Kryvyi Rih	47.90966	33.38044	652380	Krivoj Rog	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+704147	Kremenchuk	49.06802	33.42041	227494	Kremenčuk+Kremenchuk	Poltava	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+706352	Khodoriv	49.40993	24.3047	10172	Chodoriv	Lviv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Cherson	Kherson	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+706483	Kharkiv	49.98081	36.25272	1430885	Charkiv+Charkov	Kharkiv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+706524	Kerch	45.3531	36.47429	148932	Kerč		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+707244	Kakhovka	46.81371	33.48698	36816	Kachovka	Kherson	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+707565	Irpin	50.52175	30.25055	40789	Irpiň	Kyjevská oblast	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+707758	Hlukhiv	51.67822	33.9162	35387	Hluchiv	Sumy	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+709034	Halych	49.12179	24.72578	6256	Halyč	Ivano-Frankivsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+709717	Donetsk	48.023	37.80224	1024700	Doněck	Donetsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+709930	Dnipro	48.4593	35.03865	1032822	Dněpropetrovsk+Dnipro	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+710098	Derhachi	50.10659	36.12112	19322	Derhači	Kharkiv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+710400	Chortkiv	49.01709	25.79804	28855	Čortkiv	Ternopil	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Černovice		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+710735	Chernihiv	51.50551	31.28487	307684	Černihov		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Čerkasy	Cherkas'ka Oblast'+Cherkasy	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+711134	Burshtyn	49.25867	24.62777	14729	Burštyn	Ivano-Frankivsk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+711348	Buchach	49.06254	25.38798	12082	Bučač	Ternopil	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+711459	Bratslav	48.82257	28.9407	5819	Braclav	Vinnyts'ka Oblast'	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+711894	Bohodukhiv	50.16466	35.52765	17818	Bohoduchiv	Kharkiv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+712165	Bila Tserkva	49.80939	30.11209	199163	Bila Cerkva	Kyjevská oblast	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+712200	Bezlyudivka	49.87547	36.26539	9294	Bezljudivka	Kharkiv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+712374	Бережани	49.45	24.93333	16962	Berežany	Ternopil	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+712441	Berdychiv	49.89928	28.60235	86250	Berdyčiv	Zhytomyr	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+712775	Bashtanka	47.40719	32.43868	12657	Baštanka	Mykolaiv	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+713163	Artsyz	45.99194	29.41824	15761	Arcyz		Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+713259	Antratsyt	48.11503	39.09128	61600	Antracyt	Luhansk	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+6930327	Slavutych	51.51964	30.73434	25000	Slavutyč	Kyjevská oblast	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+8394261	Mizhhiria	48.51876	23.50233	10000	Volové	Zakarpattia	Ukrajina+http://en.wikipedia.org/wiki/Ukraine
+4119403	Little Rock	34.74648	-92.28959	197992	Little Rock	Arkansas+AR	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4174715	Tallahassee	30.43826	-84.28073	189907	Tallahassee	FL+Florida	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	Atlanta	GA+Georgia	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4244967	Mount Carmel	38.41088	-87.76142	7027	Karmel	IL+Illinois	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	LA+Louisiana	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4347778	Baltimore	39.29038	-76.61219	621849	Baltimore	Maryland+MD	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	St. Louis	MO+Missouri	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4460243	Charlotte	35.22709	-80.84313	827097	Charlotte	Severní Karolína+NC+North Carolina	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4509177	Columbus	39.96118	-82.99879	850106	Columbus	OH	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	Oklahoma City	OK+Oklahoma	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Filadelfie+Philadelphia	Pensylvánie+PA	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4597882	Sullivans Island	32.76323	-79.83675	1791	Sullivanův ostrov	Jižní Karolína+SC+South Carolina	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4669635	Abilene	32.44874	-99.73314	121721	Abilene	TX+Texas	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	Austin	TX+Texas	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	Dallas	TX+Texas	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4691930	Fort Worth	32.72541	-97.32085	833319	Fort Worth	TX+Texas	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Houston	TX+Texas	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4726206	San Antonio	29.42412	-98.49363	1469845	San Antonio	TX+Texas	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4853828	Des Moines	41.60054	-93.60911	210330	Des Moines	Iowa+IA	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chicago	IL+Illinois	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Boston	MA+Massachusetts	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroit	MI	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5106834	Albany	42.65258	-73.75623	98469	Albany	New York+NY	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5110302	Brooklyn	40.6501	-73.94958	2300664	Brooklyn+BK	New York+NY	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	New York+NY	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5150529	Cleveland	41.4995	-81.69541	388072	Cleveland	OH	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5263045	Milwaukee	43.0389	-87.90647	600155	Milwaukee	WI	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Phoenix	Arizona+AZ	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5327684	Berkeley	37.87159	-122.27275	120972	Berkeley	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5367929	Long Beach	33.76696	-118.18923	474140	Long Beach	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	Sacramento	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5391811	San Diego	32.71533	-117.15726	1394928	San Diego	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San José	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5490263	Santa Fe	35.68698	-105.9378	84099	Santa Fé	Nové Mexiko+NM+New Mexico	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas	NV+Nevada	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5520993	El Paso	31.75872	-106.48693	681124	El Paso	TX+Texas	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5554072	Juneau	58.30194	-134.41972	32756	Juneau	Aljaška+AK+Alaska	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5767918	Pierre	44.36832	-100.35097	14002	Pierre	Jižní Dakota+SD+South Dakota	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5785243	Aberdeen	46.97537	-123.81572	16276	Aberdeen	WA+Washington	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5808079	Redmond	47.67399	-122.12151	60598	Redmond	WA+Washington	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Seattle	WA+Washington	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5814616	Vancouver	45.63873	-122.66149	172860	Vancouver	WA+Washington	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5814647	Vashon	47.44732	-122.45985	10624	Vashonův ostrov	WA+Washington	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Honolulu	Havaj+HI+Hawaii	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+5879400	Anchorage	61.21806	-149.90028	298695	Anchorage	Aljaška+AK+Alaska	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+7259489	Scott Air Force Base	38.5427	-89.85035	3612	Scottova letecká základna+Scott Air Force Base	IL+Illinois	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+7259637	Whiteman Air Force Base	38.73018	-93.55895	2556	Whitemanova letecká základna	MO+Missouri	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+7260641	Robins Air Force Base	32.60911	-83.58444	1170	Robinsova letecká základna+Robins Air Force Base	GA+Georgia	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+7261098	Edwards Air Force Base	34.91637	-117.93535	2063	Edwardsova letecká základna+Edwards Air Force Base	Kalifornie+CA+Calif+California	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+7261152	Fairchild Air Force Base	47.61879	-117.64826	2776	Fairchildova letecká základna+Fairchild Air Force Base	WA+Washington	Spojené státy+Spojené státy americké+U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Uruguay
+1216187	Shahrisabz	39.05778	66.83417	57051	Šachrizabz		Uzbekistán
+1217662	Bukhara	39.77472	64.42861	247644	Buchara		Uzbekistán
+1512569	Tashkent	41.26465	69.21627	1978028	Taškent	Toshkent Shahri	Uzbekistán
+3633009	Maracaibo	10.66663	-71.61245	2225000	Maracaibo		Venezuela
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Venezuela
+1566083	Ho Chi Minh City	10.82302	106.62965	3467331	Ho Či Minovo Město+HCMC	Ho Či Minovo Město	Vietnam
+1580240	Huế	16.4619	107.59546	287217	Hue	Thừa Thiên-Huế	Vietnam
+1580541	Hội An	15.87944	108.335	32757	Hoi An	Quảng Nam	Vietnam
+1581130	Hanoi	21.0245	105.84117	1431270	Hanoj	Ha Nội	Vietnam
+2135171	Port-Vila	-17.73381	168.32188	35901	Port Vila	Shefa	Vanuatu
+786714	Pristina	42.67272	21.16688	550000	Priština		Kosovo
+786950	Podujeva	42.91056	21.19306	35000	Podujevo		Kosovo
+787157	Peć	42.65913	20.28828	48962	Peć		Kosovo
+990930	Kimberley	-28.73226	24.76232	142089	Kimberley		Jižní Afrika+Jihoafrická republika
+1007311	Durban	-29.8579	31.0292	3120282	Durban		Jižní Afrika+Jihoafrická republika
+3369157	Cape Town	-33.92584	18.42322	3433441	Kapské Město	Western Cape	Jižní Afrika+Jihoafrická republika
+895953	Zambezi	-13.54323	23.10467	7074	Zambezi	North-Western	Zambie

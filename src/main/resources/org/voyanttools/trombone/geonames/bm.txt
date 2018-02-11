@@ -1,0 +1,12 @@
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	Berezili
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	Esipaɲi+España
+2449067	Timbuktu	16.77348	-3.00742	32460	Timbuktu		Mali
+2451185	Sikasso	11.31755	-5.66654	144786	Sikaso		Mali
+2451478	Ségou	13.4317	-6.2157	92552	Segu		Mali
+2453348	Mopti	14.4843	-4.18296	108456	Mopti		Mali
+2454530	Koulikoro	12.86273	-7.55985	23919	Kulikɔrɔ		Mali
+2455290	Kidal	18.44111	1.40778	11643	Kidal		Mali
+2455518	Kayes	14.44693	-11.44448	78406	Kayi		Mali
+2458589	Djénné	13.90608	-4.55332	22382	Djenne		Mali
+2460489	Bandiagara	14.35005	-3.61038	6853	Bandiagara		Mali
+2460596	Bamako	12.65	-8	1297281	Bamakɔ	Bamako	Mali

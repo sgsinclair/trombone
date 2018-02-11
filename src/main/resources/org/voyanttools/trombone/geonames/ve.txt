@@ -1,0 +1,3 @@
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	
+949224	Thohoyandou	-22.94564	30.48497	44046	Thohoyanḓou		
+971534	Nelspruit	-25.47448	30.97033	110159	Naspoti	Mpumalanga	

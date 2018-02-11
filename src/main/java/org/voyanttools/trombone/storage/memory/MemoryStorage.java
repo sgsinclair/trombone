@@ -189,7 +189,8 @@ public class MemoryStorage implements Storage {
 		}
 		@Override
 		public void close() throws IOException {
-			storeString(id, this.toString(), location);
+			storeString(this.toString(), id, location);
+			super.close();
 		}
 		
 	}

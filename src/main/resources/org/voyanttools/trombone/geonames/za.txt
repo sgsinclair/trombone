@@ -1,0 +1,46 @@
+2172517	Canberra	-35.28346	149.12807	367752	Canberrah	ACT+Australian Capital Territory	
+3469058	Brasília	-15.77972	-47.92972	2207718	Bahsihleihya	DF	
+1784658	Zhengzhou	34.75778	113.64861	4253913	Cwngcouh		Cunghvaz Yinzminz Gunghozgoz
+1785781	Yulin	22.63333	110.15	148485	Yoglinz		Cunghvaz Yinzminz Gunghozgoz
+1786657	Yinchuan	38.46806	106.27306	475101	Yinzconh		Cunghvaz Yinzminz Gunghozgoz
+1788852	Xining	36.62554	101.75739	767531	Sihningz		Cunghvaz Yinzminz Gunghozgoz
+1790840	Wuzhou	23.48333	111.31667	265846	Ngouzcouh		Cunghvaz Yinzminz Gunghozgoz
+1790923	Wuxi	31.56887	120.28857	3543719	Vuzsiz		Cunghvaz Yinzminz Gunghozgoz
+1791247	Wuhan	30.58333	114.26667	9785388	Vujhan+武汉		Cunghvaz Yinzminz Gunghozgoz
+1793511	Taiyuan	37.86944	112.56028	3426519	Daiyienz		Cunghvaz Yinzminz Gunghozgoz
+1795270	Shijiazhuang	38.04139	114.47861	2834942	Swzgyahcuengh		Cunghvaz Yinzminz Gunghozgoz
+1797551	Qinzhou	21.97296	108.62612	100996	Ginhcouh		Cunghvaz Yinzminz Gunghozgoz
+1799869	Nanning	22.81667	108.31667	803788	Namzningz		Cunghvaz Yinzminz Gunghozgoz
+1799962	Nanjing	32.06167	118.77778	7165292	Nanzging		Cunghvaz Yinzminz Gunghozgoz
+1800163	Nanchang	28.68396	115.85306	2357839	Nanzcangh		Cunghvaz Yinzminz Gunghozgoz
+1804430	Lanzhou	36.05701	103.83987	2628426	Lanzcouh		Cunghvaz Yinzminz Gunghozgoz
+1804609	Laibin	23.7	109.26667	59835	Leizbingz		Cunghvaz Yinzminz Gunghozgoz
+1804651	Kunming	25.03889	102.71833	3855346	Gvwnhmingz		Cunghvaz Yinzminz Gunghozgoz
+1805753	Jinan	36.66833	116.99722	4335989	Cijnanz		Cunghvaz Yinzminz Gunghozgoz
+1808722	Hefei	31.86389	117.28083	3310268	Hozfeiz		Cunghvaz Yinzminz Gunghozgoz
+1808926	Hangzhou	30.29365	120.16142	6241971	Hangzcouh		Cunghvaz Yinzminz Gunghozgoz
+1809078	Haikou	20.04583	110.34167	615835	Haijgouj		Cunghvaz Yinzminz Gunghozgoz
+1809461	Guiyang	26.58333	106.71667	1171633	Gveiyangz		Cunghvaz Yinzminz Gunghozgoz
+1809498	Guilin	25.28194	110.28639	649352	Gveilinz		Cunghvaz Yinzminz Gunghozgoz
+1809532	Guigang	23.09639	109.60917	76430	Gveigangj		Cunghvaz Yinzminz Gunghozgoz
+1809858	Guangzhou	23.11667	113.25	11071424	Gvangjcouh		Cunghvaz Yinzminz Gunghozgoz
+1810821	Fuzhou	26.06139	119.30611	1179720	Fuzcouh		Cunghvaz Yinzminz Gunghozgoz
+1815286	Chengdu	30.66667	104.06667	7415590	Cwngzduh	Sichuan	Cunghvaz Yinzminz Gunghozgoz
+1815577	Changsha	28.19874	112.97087	3093980	Cangzsah		Cunghvaz Yinzminz Gunghozgoz
+1816269	Baise City	23.89972	106.61333	90603	Baksaek		Cunghvaz Yinzminz Gunghozgoz
+1816670	Beijing	39.9075	116.39723	11716620	Baekging		Cunghvaz Yinzminz Gunghozgoz
+1816705	Beihai	21.48333	109.1	289568	Baekhaij		Cunghvaz Yinzminz Gunghozgoz
+2034937	Shenyang	41.79222	123.43278	6255921	Swnjyangh		Cunghvaz Yinzminz Gunghozgoz
+2038180	Changchun	43.88	125.32278	4193073	Cangzcenh		Cunghvaz Yinzminz Gunghozgoz
+3553478	Havana	23.13302	-82.38304	2163824	Hahvaxnaz		
+2988507	Paris	48.85341	2.3488	2138551	Bahliz+75001		France
+3186886	Zagreb	45.81444	15.97798	698966	Sagwzlwgbouh	Grad Zagreb	
+1642911	Jakarta	-6.21462	106.84513	8540121	Yajgyadaz	Jakarta Raya	http://en.wikipedia.org/wiki/Indonesia
+2112141	Kōriyama	37.4	140.38333	340560	Ginqsan Si		Nditbonj
+2112539	Iwaki	37.05	140.88333	357309	Banjsingz Si		Nditbonj
+1651944	Vientiane	17.96667	102.6	196731	Fanhyiengh		
+1298824	Yangon	16.80528	96.15611	4477638	Yangjgvangh	Yangon	
+1821274	Macau	22.20056	113.54611	520400	Aumwnz		
+3518517	San Lucas Quiavini	16.89555	-96.46813	0	Quiavini	OAX	Maegsaego
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Gizlungzpoh	KUL	
+1675151	Hsinchu	24.80361	120.96861	404109	Sinhcuz		Cunghvaz Minzgoz

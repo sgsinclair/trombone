@@ -1,0 +1,2 @@
+2643743	London	51.50853	-0.12574	7556900	Landan		United Kingdom+http://en.wikipedia.org/wiki/United_Kingdom
+5809844	Seattle	47.60621	-122.33207	684451	Siyaatil	WA+Washington	United States+U.S.+USA+U.S.A.

@@ -1,0 +1,63 @@
+727011	Sofia	42.69751	23.32415	1152556	Sofia		Bulgaria
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brasil
+2660594	Glarus	47.04057	9.06804	5681	Canton Glarus		Suissa
+2037799	Datong	40.09361	113.29139	1052678	Daido+Datong		China+Republica Popular de China
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotá		Colombia
+3067696	Prague	50.08804	14.42076	1165581	Praga+Praha	Hlavní město Praha	Republica Chec+Republica Tchec+Czechia
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Germania
+2886242	Köln	50.93333	6.95	963395	Colonia	NRW	Germania
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Germania
+2945358	Brandenburg an der Havel	52.41667	12.55	59826	Brandenburg	Brandeburgo+Brandenburg+http://www.brandenburg.de	Germania
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Germania
+3247449	Aachen	50.77664	6.08342	265208	Aachen	NRW	Germania
+2620473	Helsingør	56.03606	12.6136	35048	Elsinor		Danmark
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harjumaa	Estonia
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo	Castilia-La Mancha	Espania+España
+2510911	Sevilla	37.38283	-5.97317	703206	Sevilla		Espania+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	Espania+España
+2517740	Fernán-Núñez	37.67044	-4.7264	9374	Fernán Núñez		Espania+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Espania+España
+3118135	Lomas	42.27362	-4.55095	54	Lomas de Campos	Castilia e Leon+Castilla y León	Espania+España
+3122622	Fariza	41.41667	-6.26667	689	Fariza de Sayago	Castilia e Leon+Castilla y León	Espania+España
+3123124	Entrena	42.38782	-2.53066	1248	Entrena	La Rioja	Espania+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	Espania+España
+3129111	Ayerbe	42.27267	-0.68844	1096	Ayerbe	Aragón	Espania+España
+655808	Joensuu	62.60118	29.76316	53388	Joensuu		Finlandia
+2987914	Perpignan	42.69764	2.89541	110706	Perpinia+66000		Francia+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Francia+France
+2990363	Nîmes	43.83333	4.35	148236	Nimes+30000		Francia+France
+2990919	Narbonne	43.18396	3.00141	50776	Narbona+11100		Francia+France
+2990999	Nancy	48.68439	6.18496	105334	Nancy+54000	ACAL	Francia+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Francia+France
+2643743	London	51.50853	-0.12574	7556900	London	Anglaterra	Regno Unite+http://en.wikipedia.org/wiki/United_Kingdom
+2411585	Gibraltar	36.14474	-5.35257	26544	Gibraltar		Gibraltar
+1275339	Mumbai	19.07283	72.88261	12691836	Bombay	MH+Mahārāshtra	India
+3165912	Tarvisio	46.50567	13.58689	2509	Tarvisio	FVG	Italia
+3169070	Rome	41.89193	12.51133	2318895	Roma	Latio+Lazio	Italia
+3172394	Naples	40.85216	14.26811	959470	Neapole		Italia
+3173331	Modena	44.64783	10.92539	158886	Modena	Emilia-Romagna	Italia
+1850147	Tokyo	35.6895	139.69171	8336599	Tokyo		Japon
+1835848	Seoul	37.566	126.9784	10349312	Seoul		Corea del Sud+http://en.wikipedia.org/wiki/South_Korea
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Pais Basse+Nederlandia
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norvegia
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norvegia
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Peru
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Philippinas
+756135	Warsaw	52.22977	21.01178	1702139	Varsovia	Mazowieckie	Polonia
+758157	Stoczek Łukowski	51.96135	21.97137	2718	Stoczek Łukowski	Lubelskie	Polonia
+764849	Mielec	50.28709	21.4239	60993	Mielec	Podkarpackie	Polonia
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polonia
+768217	Końskowola	51.40922	22.05175	2208	Konskowola	Lubelskie	Polonia
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polonia
+683506	Bucharest	44.43225	26.10626	1877155	Bucarest		Romania
+524901	Moscow	55.75222	37.61556	10381222	Moscova+Moskva		
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Svedia+Ruoččii
+2711537	Göteborg	57.70716	11.96679	572799	Göteborg	Västra Götalands län	Svedia+Ruoččii
+170654	Damascus	33.5102	36.29128	1569394	Damasco		Syria
+323786	Ankara	39.91987	32.85427	3517182	Ankara		Turchia+Turkanmua
+4280539	Topeka	39.04833	-95.67804	127265	Topeka	KS+Kansas	Statos Unite+U.S.+USA+U.S.A.
+4517140	Loveland	39.26895	-84.26383	12585	Loveland	OH	Statos Unite+U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	Austin	TX+Texas	Statos Unite+U.S.+USA+U.S.A.
+4853828	Des Moines	41.60054	-93.60911	210330	Des Moines	IA+Iowa	Statos Unite+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	NY	Statos Unite+U.S.+USA+U.S.A.
+895953	Zambezi	-13.54323	23.10467	7074	Zambezi	North-Western	Zambia

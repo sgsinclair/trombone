@@ -1,0 +1,497 @@
+3039163	Sant Julià de Lòria	42.46372	1.49129	8022	Sant Julià de Lòria		Andorra
+3039678	Ordino	42.55623	1.53319	3066	Ordino		Andorra
+3040051	les Escaldes	42.50729	1.53414	15853	Escaldes-Engordany		Andorra
+3040132	la Massana	42.54499	1.51483	7211	La Massana		Andorra
+3040686	Encamp	42.53474	1.58014	11223	Encamp		Andorra
+3041204	Canillo	42.5676	1.59756	3292	Canillo		Andorra
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andorra la Biella		Andorra
+3185728	Durrës	41.32306	19.44139	122034	Durrazo		Albania
+2766824	Salzburg	47.79941	13.04399	150269	Salzburgo		Austria
+147282	Sedarak	39.71427	44.88455	1853	Sadarak	Naxçivan	Azerbaichán
+587084	Baku	40.37767	49.89201	1116513	Bacú	Baki	Azerbaichán
+2792413	Liège	50.63373	5.56749	182597	Lidje	Wallonia+Walloon	Belchica
+2794055	Kortrijk	50.82803	3.26487	73879	Contrai		Belchica
+2797656	Gent	51.05	3.71667	231493	Gant		Belchica
+2800481	Charleroi	50.41136	4.44448	200132	Tchålerwè	Wallonia+Walloon	Belchica
+727011	Sofia	42.69751	23.32415	1152556	Sofiya		Bulgaria
+425378	Bujumbura	-3.3822	29.3644	331700	Buyumbura	Bujumbura Mairie	Burundi
+3664980	Boa Vista	2.81972	-60.67333	235150	Boa Vista	RR+Roraima	Brasil
+2657896	Zürich	47.36667	8.55	341730	Zúrich	ZH	
+2661552	Bern	46.94809	7.44744	121631	Berna		
+1796236	Shanghai	31.22222	121.45806	22315474	Shanghai		
+1816670	Beijing	39.9075	116.39723	11716620	Pequín		
+3553478	Havana	23.13302	-82.38304	2163824	LHabana		Cuba
+2849483	Regensburg	49.01513	12.10161	129151	Ratisbona	Bavera+Bayern	Alemaña
+2867714	Munich	48.13743	11.57549	1260391	Múnich	Bavera+Bayern	Alemaña
+2874225	Mainz	49.98419	8.2791	184997	Maganza	Renania-Palatinato	Alemaña
+2874545	Magdeburg	52.12773	11.62916	229826	Magdeburgo+Madeborch	Sassen-Anholt	Alemaña
+2886242	Köln	50.93333	6.95	963395	Colonia	NRW	Alemaña
+2911288	Hamburg-Mitte	53.55	10.01667	233144	Hamburgo-Centro	HH+H+H+Hamburg	Alemaña
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Fráncfort d'o Meno	Hessen	Alemaña
+2939623	Dachau	48.26	11.43402	39740	Dachau	Bavera+Bayern	Alemaña
+2950159	Berlin	52.52437	13.41053	3426354	Berlín	Berlín+Berlin	Alemaña
+8354626	Hamburg-Nord	53.58935	9.984	280000	Hamburgo-Norte	HH+H+H+Hamburg	Alemaña
+2618425	Copenhagen	55.67594	12.56553	1153615	Copenaguen		Dinamarca
+2475687	Tlemcen	34.87833	-1.315	132341	Termicén	Tlemcen	Alcheria
+2507480	Algiers	36.73225	3.08746	1977663	Alcher	Alger	Alcheria
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	
+3657509	Guayaquil	-2.20584	-79.90795	1952029	Guayaquil	Guayas	
+361058	Alexandria	31.20176	29.91582	3811516	Aleixandría		Echipto
+2509420	Viver	39.91667	-0.6	1442	Vivel	Valencia	España
+2509491	Villarrobledo	39.26992	-2.60119	26642	Billarrobledo	Castiella-La Mancha	España
+2509954	Valencia	39.46975	-0.37739	814208	Balenzia	Valencia	España
+2510140	Tuéjar	39.76667	-1.03333	1212	Tueixa	Valencia	España
+2510253	Torrevieja	37.97872	-0.68222	101792	Torrevella	Valencia	España
+2510348	Torralba del Pinar	39.98333	-0.43333	62	Torralba	Valencia	España
+2510809	Soneja	39.81667	-0.41667	1347	Sonecha	Valencia	España
+2510911	Sevilla	37.38283	-5.97317	703206	Sebilla		España
+2511752	Rojales	38.08799	-0.72544	20510	Rojals	Valencia	España
+2511969	Redován	38.11619	-0.90981	6507	Redovà	Valencia	España
+2512510	Pinoso	38.40164	-1.04196	7090	El Pinós	Valencia	España
+2512581	Pilar de la Horadada	37.86591	-0.79256	22050	El Pilar de la Foradada	Valencia	España
+2513076	Orihuela	38.08483	-0.94401	86164	Oriuela	Valencia	España
+2513343	Navajas	39.88333	-0.5	640	Navachas	Valencia	España
+2513680	Monóvar	38.43809	-0.84062	13060	Monòver	Valencia	España
+2513691	Monforte del Cid	38.38027	-0.7285	6001	Mont-fort	Valencia	España
+2513811	Mislata	39.47523	-0.41825	43756	Mizlata	Valencia	España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	España
+2514256	Málaga	36.72016	-4.42034	568305	Malaga		España
+2514593	Los Montesinos	38.02822	-0.74501	3194	Els Montesinos	Valencia	España
+2516255	Jumilla	38.47917	-1.325	25685	Chumiella	Murcia	España
+2516324	Jérica	39.91667	-0.56667	1542	Exerica	Valencia	España
+2516326	Jerez de la Frontera	36.68645	-6.13606	207532	Xerez de la Frontera		España
+2516389	Jalón	38.74063	-0.01129	2437	Xaló	Valencia	España
+2516655	Hondón de los Frailes	38.2739	-0.92938	1058	El Fondó dels Frares	Valencia	España
+2517117	Granada	37.18817	-3.60667	234325	Grenada		España
+2517264	Geldo	39.83333	-0.46667	739	Xeldo	Valencia	España
+2517740	Fernán-Núñez	37.67044	-4.7264	9374	Fernán Núñez		España
+2518559	Elche	38.26218	-0.70107	230112	Elch	Valencia	España
+2519240	Córdoba	37.89155	-4.77275	328428	Cordoba		España
+2520058	Cartagena	37.60512	-0.98623	211996	Cartachena	Murcia	España
+2520405	Camporrobles	39.65	-1.4	1372	Camporrobres	Valencia	España
+2520726	Buñol	39.41667	-0.78333	10062	Bunyol	Valencia	España
+2520751	Bufali	38.86775	-0.51617	199	Bufalí	Valencia	España
+2520874	Bolbaite	39.06041	-0.67466	1458	Bolbait	Valencia	España
+2521149	Benagéber	39.71667	-1.1	177	Benaixep	Valencia	España
+2521510	Aspe	38.34511	-0.76721	20180	Asp	Valencia	España
+2521978	Alicante	38.34517	-0.48149	334757	Alicant	Valencia	España
+2521992	Alhama de Murcia	37.85103	-1.42507	19860	Alfama de Murcia	Murcia	España
+2521999	Algueña	38.33905	-1.00433	1453	LAlguenya	Valencia	España
+2522013	Algeciras	36.13326	-5.45051	116209	Alchezira		España
+2522047	Alfarp	39.28333	-0.55	1369	Alfarb	Valencia	España
+2522098	Alcoy	38.70545	-0.47432	61552	Alcoi	Valencia	España
+2522129	Alzira	39.15	-0.43333	44690	Alchezira	Valencia	España
+2522203	Alboraya	39.5	-0.35	22405	Alboraia	Valencia	España
+2522258	Albacete	38.99424	-1.85643	169716	Albacet	Castiella-La Mancha	España
+2522505	Abanilla	38.20537	-1.04153	6079	Fabaniella	Murcia	España
+3104324	Zaragoza	41.65606	-0.87734	674317	Zaragoza+ZGZ	Aragón	España
+3105205	Villanueva de Oscos	43.31144	-6.98645	411	Vilanova de Ozcos	Asturias	España
+3105311	Villanúa	42.6797	-0.53769	411	Bellanuga+Villanuga	Aragón	España
+3106280	Vega de Valcarce	42.66068	-6.93785	802	A Veiga de Valcarce	Castiella y Leyón+Castilla y León	España
+3106293	Vegadeo	43.46834	-7.0539	4427	A Veiga	Asturias	España
+3106672	Valladolid	41.65518	-4.72372	317864	Valladolit	Castiella y Leyón+Castilla y León	España
+3106803	Valderrobres	40.87209	0.15431	2077	Baldecaxicos	Aragón	España
+3107275	Uncastillo	42.35963	-1.12842	852	Uncastiello	Aragón	España
+3107316	Ujué	42.5	-1.5	239	Uxué	Navarra	España
+3107438	Truchas	42.26093	-6.43605	647	Trueitas	Castiella y Leyón+Castilla y León	España
+3107830	Torrecilla en Cameros	42.25532	-2.63109	596	Torreciella en Cameros	A Riocha+La Rioja	España
+3107940	Toreno	42.69955	-6.51236	3661	Torenu	Castiella y Leyón+Castilla y León	España
+3108087	Tineo	43.33765	-6.41452	11146	Tinéu	Asturias	España
+3108126	Teruel	40.3456	-1.10646	35396	Tergüel	Aragón	España
+3108269	Tauste	41.91804	-1.25343	7334	Taust	Aragón	España
+3108360	Tamarit de Llitera / Tamarite de Litera	41.8691	0.42214	3655	Tamarit de Litera+Tamarit de Llitera / Tamarite de Litera	Aragón	España
+3108606	Soto del Barco	43.53288	-6.06984	4108	Sotul Barcu+Soto	Asturias	España
+3108980	Siétamo	42.12392	-0.28066	517	Sietemo	Aragón	España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	España
+3109878	Santa Eulalia de Gállego	42.287	-0.76065	133	Santolaria de Galligo	Aragón	España
+3109929	Santa Cruz de la Serós	42.52271	-0.67515	160	Santa Cruz d'as Serors	Aragón	España
+3110479	San Leonardo de Yagüe	41.83034	-3.0688	2354	San Leonardo de Yagüe	Castiella y Leyón+Castilla y León	España
+3110678	San Esteban de Gormaz	41.57436	-3.20418	3268	San Esteban de Gormaz	Castiella y Leyón+Castilla y León	España
+3111001	Sallent de Gállego	42.77127	-0.33448	1281	Sallén de Galligo+Sallent de Galligo	Aragón	España
+3111131	Sahagún	42.37085	-5.02942	2846	Safagún	Castiella y Leyón+Castilla y León	España
+3111185	Sabiñánigo	42.51924	-0.36607	10378	Samianigo	Aragón	España
+3111855	Ribadesella	43.46145	-5.05955	6245	Ribeseya	Asturias	España
+3112732	Puente la Reina	42.67291	-1.81412	2577	Puent de la Reina	Navarra	España
+3112781	Puebla de San Miguel	40.05	-1.13333	68	La Puebla de Sant Miguel	Valencia	España
+3113547	Pina de Montalgrao	40.01667	-0.65	146	Pina	Valencia	España
+3113664	Petilla de Aragón	42.45	-1.11667	32	Petiella dAragón	Navarra	España
+3114997	Orkoien	42.8238	-1.70485	2087	Orcoyen	Navarra	España
+3115162	Olite	42.47971	-1.65196	3431	Olit	Navarra	España
+3115668	Naval	42.19503	0.15183	295	Nabal	Aragón	España
+3115780	Nájera	42.41822	-2.72865	7789	Nachera	A Riocha+La Rioja	España
+3115837	Murillo de Río Leza	42.40099	-2.32464	1231	Muriello de Río Leza	A Riocha+La Rioja	España
+3115900	Munilla	42.189	-2.29506	124	Muniella	A Riocha+La Rioja	España
+3116441	Montalbán	40.83278	-0.80178	1472	Montalbán	Aragón	España
+3116456	Monreal	42.70421	-1.50785	369	Mont-reyal	Navarra	España
+3116595	Molina de Aragón	40.84358	-1.88762	3536	Molina dAragón	Castiella-La Mancha	España
+3116689	Miranda de Ebro	42.6865	-2.94695	39264	Miranda dEbro	Castiella y Leyón+Castilla y León	España
+3116770	Milagro	42.2416	-1.76588	3016	Miraglo	Navarra	España
+3116881	Mequinensa / Mequinenza	41.37211	0.30169	2479	Mequinenza+Mequinensa / Maquinenza	Aragón	España
+3117188	Matallana de Torío	42.8656	-5.52034	1494	Matachana de Toríu	Castiella y Leyón+Castilla y León	España
+3117460	Marañón	42.62941	-2.43931	62	Maranyón	Navarra	España
+3117490	Manzanera	40.05	-0.83333	460	Manzanera	Aragón	España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrit	Madrid	España
+3118150	Logroño	42.46667	-2.45	152107	Logronyo	A Riocha+La Rioja	España
+3118194	Loarre	42.31432	-0.62588	412	Lobarre	Aragón	España
+3118514	Lleida	41.61674	0.62218	135919	Lleida	Catalunya	España
+3118859	Laspuña	42.50374	0.15441	270	L'Espuna	Aragón	España
+3118967	Lascuarre	42.19611	0.5201	143	Llascuarri	Aragón	España
+3119219	Lapoblación	42.60478	-2.46008	170	La Población	Navarra	España
+3119841	A Coruña	43.37135	-8.396	246056	A Coruña	Galicia	España
+3120164	Jasa	42.6948	-0.66605	138	Chasa	Aragón	España
+3120211	Jaca	42.56898	-0.54987	13396	Chaca	Aragón	España
+3120413	Illano	43.33385	-6.8656	565	Eilao	Asturias	España
+3120472	Ibieca	42.16079	-0.20855	120	Ibieca	Aragón	España
+3120511	Huete	40.14526	-2.69026	2075	Huet	Castiella-La Mancha	España
+3120514	Huesca	42.13615	-0.4087	52059	Uesca	Aragón	España
+3120572	Hoz de Jaca	42.69045	-0.3065	75	Oz de Chaca	Aragón	España
+3120874	Haro	42.57634	-2.8476	12261	Haro	A Riocha+La Rioja	España
+3120998	Güeñes	43.21252	-3.09497	6147	Gueñes	Euskadi	España
+3121135	Graus	42.18885	0.33749	3436	Graus	Aragón	España
+3121238	Grado	43.38801	-6.07433	11033	Grau	Asturias	España
+3121394	Gistaín	42.5911	0.33478	158	Chistén	Aragón	España
+3121424	Gijón	43.53573	-5.66152	277554	Xixón	Asturias	España
+3121813	Fulleda	41.46334	1.02395	114	Fulleda	Catalunya	España
+3122157	Fraga	41.52294	0.34894	14302	Fraga	Aragón	España
+3122238	Forcall	40.64542	-0.19992	532	Forcallo	Valencia	España
+3123106	Épila	41.60045	-1.28007	4114	Epila	Aragón	España
+3123124	Entrena	42.38782	-2.53066	1248	Entrena	A Riocha+La Rioja	España
+3123688	Ejea de los Caballeros	42.12632	-1.13716	17331	Exeya dos Caballers	Aragón	España
+3124042	Culla	40.3365	-0.16569	677	Cuéllar	Valencia	España
+3124142	Cudillero	43.56217	-6.14589	5986	Cuideiru	Asturias	España
+3124936	Clavijo	42.34897	-2.42666	263	Clavillo	A Riocha+La Rioja	España
+3125161	Chía	42.5208	0.46563	114	Chía	Aragón	España
+3125880	Castellote	40.8	-0.31975	785	Castellot	Aragón	España
+3125939	Castejón de Sos	42.51235	0.49241	781	Castilló de Sos	Aragón	España
+3125994	Caspe	41.23402	-0.03945	8054	Casp	Aragón	España
+3126360	Carbellino	41.22975	-6.14901	243	Carbellinu	Castiella y Leyón+Castilla y León	España
+3126571	Cangas de Onís	43.3514	-5.12916	6623	Cangues dOnís	Asturias	España
+3126580	Canfranc	42.71628	-0.52563	589	Canfrán	Aragón	España
+3126791	Campo	42.40956	0.39615	0	Campo	Aragón	España
+3126863	Caminreal	40.83883	-1.32416	757	Camín Reyal	Aragón	España
+3127047	Calatayud	41.35353	-1.64318	21933	Calatayú	Aragón	España
+3127065	Calahorra	42.30506	-1.96521	24787	Calagorra	A Riocha+La Rioja	España
+3127858	Boltaña	42.4455	0.06802	897	Boltanya	Aragón	España
+3127954	Boal	43.432	-6.81513	2162	Bual	Asturias	España
+3128008	Bisaurri	42.49677	0.50647	259	Bisagorri	Aragón	España
+3128017	Binaced	41.82564	0.20084	1607	Binazed	Aragón	España
+3128026	Bilbao	43.26271	-2.92528	354860	Bilbau	Euskadi	España
+3128034	Biescas	42.62897	-0.32135	0	Biescas	Aragón	España
+3128037	Bierge	42.16216	-0.08326	247	Biarche	Aragón	España
+3128174	Bermeo	43.42088	-2.72152	16937	Bermeu	Euskadi	España
+3128296	Benasque	42.60528	0.52305	2231	Benás	Aragón	España
+3128304	Benavarri / Benabarre	42.10586	0.48211	1110	Benabarri+Benavarri / Benabarre	Aragón	España
+3128320	Belorado	42.42048	-3.19133	2104	Bilforato	Castiella y Leyón+Castilla y León	España
+3128365	Belchite	41.30325	-0.7505	1568	Belchit	Aragón	España
+3128760	Barcelona	41.38879	2.15899	1621537	Barzelona	Catalunya	España
+3128795	Barbastro	42.03565	0.12686	16924	Balbastro	Aragón	España
+3128948	Ballobar	41.62106	0.192	1021	Ballobar	Aragón	España
+3129066	Azlor	42.09427	-0.04594	151	Aflor	Aragón	España
+3129111	Ayerbe	42.27267	-0.68844	1096	Ayerbe	Aragón	España
+3129477	Arnedillo	42.21221	-2.23602	483	Arnediello	A Riocha+La Rioja	España
+3129723	Arcos de Jalón	41.21592	-2.2747	1867	Arcos de Xalón	Castiella y Leyón+Castilla y León	España
+3129738	Arcos	42.26664	-3.75458	0	Arcos de la Llana	Castiella y Leyón+Castilla y León	España
+3130248	Alquézar	42.17268	0.02586	307	Alquezra	Aragón	España
+3130606	Alcañiz	41.05	-0.13333	16392	Alcanyiz	Aragón	España
+3130637	Albocàsser	40.35	0.03333	1391	Albocázar	Valencia	España
+3130660	Alberite	42.40704	-2.43894	2289	Alberit	A Riocha+La Rioja	España
+3130679	Albarracín	40.40818	-1.44375	1009	Albarrazín	Aragón	España
+3130772	Aínsa	42.41547	0.14008	1500	L'Ainsa	Aragón	España
+3130909	Ágreda	41.85588	-1.92244	3214	Agreda	Castiella y Leyón+Castilla y León	España
+3131056	Abiego	42.12094	-0.06873	290	Abiego	Aragón	España
+7115111	Corvera de Asturias	43.53554	-5.88893	15955	Corvera	Asturias	España
+2967108	Blaye	45.13333	-0.66667	5277	Blaya+33390		Franzia+France
+2968510	Villeneuve-Tolosane	43.52316	1.34102	9258	Vilanòva Tolosana		Franzia+France
+2968626	Villemur-sur-Tarn	43.86708	1.50281	5580	Vilamur de Tarn		Franzia+France
+2968691	Villelongue-de-la-Salanque	42.72637	2.9824	2690	Vilallonga de la Salanca		Franzia+France
+2968758	Villefranche-de-Lauragais	43.4	1.71694	3701	Vilafranca de Lauragués		Franzia+France
+2969400	Vic-Fezensac	43.77183	0.31368	3799	Vic en Fesensac		Franzia+France
+2970086	Venerque	43.43457	1.44588	2633	Benèrca		Franzia+France
+2970777	Vannes	47.66667	-2.75	54020	Gwened+56000	Bretanya+Bretagne	Franzia+France
+2971265	Uzein	43.4	-0.43333	1189	Usenh		Franzia+France
+2971286	Ustaritz	43.3965	-1.45603	5662	Ustáriz		Franzia+France
+2971336	Urrugne	43.36361	-1.69921	7580	Urruña+64122		Franzia+France
+2971357	Urcuit	43.48594	-1.33668	1936	Urketa		Franzia+France
+2972191	Tours	47.38333	0.68333	141621	Tours+37000		Franzia+France
+2972237	Tournefeuille	43.58872	1.31922	29124	Tornafuèlha		Franzia+France
+2972315	Toulouse	43.60426	1.44367	433055	Tolosa+31000		Franzia+France
+2972317	Toulouges	42.66961	2.83008	5820	Toluges		Franzia+France
+2972665	Thuir	42.6329	2.75471	7933	Tuïr+66300		Franzia+France
+2973385	Tarbes	43.23333	0.08333	52106	Tarba+65000		Franzia+France
+2973959	Souraïde	43.34154	-1.47559	1161	Zuraide		Franzia+France
+2973973	Soumoulou	43.26667	-0.18333	1090	Somolon		Franzia+France
+2974203	Sorède	42.53069	2.95708	2941	Sureda		Franzia+France
+2974235	Soorts-Hossegor	43.6649	-1.39717	3615	Sòrts e Òssagòr+Soorts-Hossegor		Franzia+France
+2974821	Serres-Castet	43.38333	-0.35	3290	Sèrras-Castèth+64121		Franzia+France
+2975181	Séméac	43.22915	0.10602	4999	Semiac+65600		Franzia+France
+2975663	Sauveterre-de-Béarn	43.4	-0.93333	1547	Sauvatèrra		Franzia+France
+2975683	Sauvagnon	43.4	-0.38333	2531	Sauvanhon		Franzia+France
+2976021	Sare	43.3126	-1.58012	2330	Sara		Franzia+France
+2976444	Salies-de-Béarn	43.47422	-0.92448	5235	Salias		Franzia+France
+2977631	Saint-Pée-sur-Nivelle	43.35564	-1.55013	4682	Sant Per dIbarra		Franzia+France
+2977648	Saint-Paul-lès-Dax	43.72715	-1.05162	11839	Sent Pau dAcs+40990		Franzia+France
+2977683	Saint-Paul-de-Fenouillet	42.80938	2.50374	2049	Sant Pau de Fenolhet		Franzia+France
+2977832	Saint-Orens-de-Gameville	43.55402	1.53411	12576	Sent Orenç		Franzia+France
+2978661	Saint-Lys	43.51127	1.17557	6130	Sent Lis		Franzia+France
+2978975	Saint-Lary-Soulan	42.81713	0.32238	1068	Sent Lari e Sola+65170		Franzia+France
+2979074	Saint-Julien-en-Born	44.06311	-1.22445	1444	Sent Julian de Bòrn		Franzia+France
+2979207	Saint-Jean-Pied-de-Port	43.16363	-1.23738	1824	Sant Chuan Piet de Puerto		Franzia+France
+2979309	Saint-Jean-de-Luz	43.38871	-1.66267	14514	Sant Chuan de Luz+64500		Franzia+France
+2980278	Saint-Étienne-de-Baïgorry	43.17533	-1.3467	1646	Baigorri		Franzia+France
+2980313	Saint-Estève	42.71175	2.8449	10403	Sant Esteve del Monestir		Franzia+France
+2982456	Roussillon	43.90084	5.2947	1254	Rosellón	Provenza-Alpes-Costa Azul	Franzia+France
+2982652	Rouen	49.44313	1.09932	112787	Ruán+76000		Franzia+France
+2982836	Roquettes	43.49733	1.36848	3714	Roquetas		Franzia+France
+2983393	Rivesaltes	42.76945	2.87239	8836	Ribesaltes+66600		Franzia+France
+2983591	Rieux-Volvestre	43.25	1.2	2130	Rius		Franzia+France
+2983606	Rieumes	43.41143	1.11702	2980	Riumas		Franzia+France
+2984493	Ramonville-Saint-Agne	43.54618	1.47491	12573	Ramonvila e Sant Anha+31520		Franzia+France
+2984926	Puyoô	43.52502	-0.91283	1111	Pujòu		Franzia+France
+2985982	Portet-sur-Garonne	43.52333	1.40651	9794	Portèth de Garona+31120		Franzia+France
+2986313	Pontacq	43.18333	-0.11667	2815	Pontac		Franzia+France
+2986386	Pompertuzat	43.49277	1.51531	1357	Pompertusat		Franzia+France
+2986444	Pomarez	43.62971	-0.82934	1577	Pomarés		Franzia+France
+2986495	Poitiers	46.58333	0.33333	85960	Piteus+86000		Franzia+France
+2986582	Poey-de-Lescar	43.35	-0.46667	1639	Puei de Lescar		Franzia+France
+2987914	Perpignan	42.69764	2.89541	110706	Perpinyán+66000		Franzia+France
+2988251	Pechbonnieu	43.70242	1.46538	3357	Puègbonieu		Franzia+France
+2988358	Pau	43.3	-0.36667	82697	Pau+64000		Franzia+France
+2988507	Paris	48.85341	2.3488	2138551	París+75001		Franzia+France
+2988670	Pamiers	43.11667	1.6	16997	Pàmias+09100		Franzia+France
+2989108	Ossun	43.18333	-0.03333	2267	Aussun		Franzia+France
+2989187	Orthez	43.48839	-0.77244	11857	Ortès+64300		Franzia+France
+2989526	Ondes	43.7825	1.30823	1020	Ondas		Franzia+France
+2989569	Oloron-Sainte-Marie	43.19441	-0.61069	12611	Aulorón+64400		Franzia+France
+2989708	Ogeu-les-Bains	43.15	-0.5	1112	Augeu		Franzia+France
+2989970	Nousty	43.26667	-0.21667	1020	Nostin		Franzia+France
+2990284	Nogaro	43.75856	-0.03293	2120	Nogarò		Franzia+France
+2990440	Nice	43.70313	7.26608	338620	Niza+06000	Provenza-Alpes-Costa Azul	Franzia+France
+2990870	Navarrenx	43.32135	-0.75927	1275	Navarrencs		Franzia+France
+2990919	Narbonne	43.18396	3.00141	50776	Narbona+11100		Franzia+France
+2991040	Nailloux	43.35718	1.62302	1385	Nalhós		Franzia+France
+2991153	Muret	43.46667	1.35	24313	Muriel+31600		Franzia+France
+2991214	Mulhouse	47.75	7.33333	111430	Mülhausen	ACAL	Franzia+France
+2991431	Mourenx	43.38333	-0.6	8109	Morencs		Franzia+France
+2991546	Mouguerre	43.46795	-1.41824	4392	Mugerre		Franzia+France
+2992102	Montréjeau	43.08555	0.5647	2930	Montrejau		Franzia+France
+2992166	Montpellier	43.61092	3.87723	248252	Montpeller+34000		Franzia+France
+2992586	Montfort-en-Chalosse	43.71124	-0.83947	1305	Monthòrt		Franzia+France
+2992654	Montesquieu-Volvestre	43.20725	1.22862	2635	Montesquiu de Bolbèstra		Franzia+France
+2993002	Montauban	44.01667	1.35	52434	Montalban+82000		Franzia+France
+2993078	Montaigut-sur-Save	43.68947	1.23133	1360	Montagut de Sava		Franzia+France
+2993331	Monein	43.33333	-0.58333	4510	Monenh		Franzia+France
+2993721	Mirepeix	43.18333	-0.25	1040	Mirapeish		Franzia+France
+2993749	Mirande	43.51667	0.41667	4135	Miranda		Franzia+France
+2993876	Millas	42.69203	2.69508	3789	Millars		Franzia+France
+2993947	Miélan	43.43054	0.30794	1360	Mielan		Franzia+France
+2994868	Mazères-Lezons	43.26667	-0.35	2305	Masèras-Leson		Franzia+France
+2995054	Maureillas-las-Illas	42.49014	2.80752	2491	Morellàs i les Illes		Franzia+France
+2995107	Mauléon-Licharre	43.22684	-0.88038	3313	Maule-Lextarre		Franzia+France
+2995146	Maubourguet	43.46824	0.03578	2492	Mauborguet+65700		Franzia+France
+2995230	Masseube	43.42984	0.5781	1518	Masseuva		Franzia+France
+2995469	Marseille	43.29695	5.38107	794811	Marsiella+13001	Provenza-Alpes-Costa Azul	Franzia+France
+2996944	Lyon	45.74846	4.84671	472317	León do Roine		Franzia+France
+2996959	Luz-Saint-Sauveur	42.87191	-0.00323	1074	Lus e Sent Sauvaire		Franzia+France
+2997207	Lucq-de-Béarn	43.3	-0.66667	1047	Luc		Franzia+France
+2997340	Louvie-Juzon	43.08646	-0.41928	1059	Lobièr de Baish		Franzia+France
+2997395	Lourdes	43.1	-0.05	15786	Lorda+65100		Franzia+France
+2997577	Lorient	47.75	-3.36667	58112	An Oriant+56100	Bretanya+Bretagne	Franzia+France
+2997628	Lons	43.31667	-0.4	13872	Loos		Franzia+France
+2997812	Lombez	43.47501	0.91119	1451	Lombers		Franzia+France
+2997964	Locmariaquer	47.56915	-2.94468	1468	Lokmaria-Kaer	Bretanya+Bretagne	Franzia+France
+2998095	Lit-et-Mixe	44.03308	-1.2533	1571	Lit e Micse		Franzia+France
+2998286	Limoges	45.83153	1.25781	141176	Limòtges+87000		Franzia+France
+2999528	Lestelle-Bétharram	43.13333	-0.21667	1094	LEstela-Bètharram		Franzia+France
+3000139	Le Soler	42.68101	2.79335	6377	El Soler		Franzia+France
+3003874	Léguevin	43.60028	1.23236	6976	Legavin		Franzia+France
+3004350	Ledeuix	43.21667	-0.61667	1190	Laduish		Franzia+France
+3004381	Lectoure	43.93464	0.62107	4544	Leitora		Franzia+France
+3006363	Lasseube	43.23333	-0.48333	1635	La Seuva		Franzia+France
+3006572	Laruns	42.98826	-0.42658	1546	Laruntz		Franzia+France
+3006627	Larressore	43.36792	-1.43976	1426	Larresoro		Franzia+France
+3007622	Lannemezan	43.12517	0.38401	6606	Lanamesán+65300		Franzia+France
+3008719	Lahonce	43.48248	-1.39101	2046	Lehuntze		Franzia+France
+3009057	Lagor	43.38333	-0.65	1355	Lagòr		Franzia+France
+3009188	Lagardelle-sur-Lèze	43.41143	1.3892	2447	La Gardèla de Lesa		Franzia+France
+3009731	Lacroix-Falgarde	43.49968	1.40985	1678	La Crotz e Falgarda		Franzia+France
+3011154	Labège	43.53039	1.53596	3691	Labeja+31670		Franzia+France
+3011312	Labarthe-sur-Lèze	43.45206	1.39968	5208	La Barta de Lesa		Franzia+France
+3011313	Labarthe-Rivière	43.081	0.67134	1247	Era Barta dArribèra		Franzia+France
+3012049	Jurançon	43.2883	-0.38694	7041	Juranson		Franzia+France
+3012248	Josselin	47.9572	-2.54713	2756	Josilin	Bretanya+Bretagne	Franzia+France
+3012636	Itxassou	43.32893	-1.40617	1918	Itsasu		Franzia+France
+3012848	Ille-sur-Têt	42.67069	2.62162	5470	Illa		Franzia+France
+3012887	Igon	43.16667	-0.23333	1026	Aigon		Franzia+France
+3013534	Hendaye	43.37172	-1.77382	14415	Hendaia+64700		Franzia+France
+3013877	Hasparren	43.38377	-1.30499	6250	Hazparne		Franzia+France
+3014340	Guéthary	43.42285	-1.61073	1370	Guetaria		Franzia+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Franzia+France
+3016406	Gelos	43.28333	-0.36667	3728	Gelòs		Franzia+France
+3016940	Frouzins	43.51482	1.32523	6418	Frosins		Franzia+France
+3017798	Forcalquier	43.96667	5.78333	4729	Folcalquer+04300	Provenza-Alpes-Costa Azul	Franzia+France
+3018323	Fleurance	43.84824	0.66302	6564	Florença+32500		Franzia+France
+3019265	Évreux	49.02414	1.15082	57795	Evreus+27000		Franzia+France
+3019584	Estagel	42.77314	2.69665	2129	Estagell		Franzia+France
+3019699	Espelette	43.34015	-1.44737	2032	Espeleta		Franzia+France
+3020281	Elne	42.60031	2.97146	7007	Euna+66200		Franzia+France
+3020593	Eaunes	43.42079	1.35397	3831	Èunas		Franzia+France
+3022151	Cugnaux	43.53635	1.34428	15393	Cunhaus		Franzia+France
+3023606	Cornebarrieu	43.64895	1.32407	5256	Còrnabarriu		Franzia+France
+3024314	Collioure	42.52462	3.08235	3171	Cotlliure		Franzia+France
+3024525	Coarraze	43.16667	-0.23333	2440	Coarasa		Franzia+France
+3024635	Clermont-Ferrand	45.77966	3.08628	138681	Clarmont-Ferrand+63000		Franzia+France
+3024932	Cintegabelle	43.31316	1.53333	2516	Senta Gabèla		Franzia+France
+3024979	Ciboure	43.38287	-1.676	6814	Ziburu		Franzia+France
+3025472	Chéraute	43.23096	-0.86831	1325	Sohüta		Franzia+France
+3028050	Cazères	43.2071	1.08633	3769	Casèras		Franzia+France
+3028072	Cazaubon	43.93431	-0.06814	1628	Casaubon		Franzia+France
+3028152	Cauterets	42.88333	-0.11667	1080	Cautarès+65110		Franzia+France
+3028409	Castanet-Tolosan	43.51591	1.49864	11561	Castanet Tolosan+31320		Franzia+France
+3028575	Carnac	47.58351	-3.07884	4777	Karnag+56340	Bretanya+Bretagne	Franzia+France
+3028641	Carcassonne	43.21667	2.35	49600	Carcasona+11000		Franzia+France
+3028652	Carbonne	43.29857	1.2252	4215	Carbona		Franzia+France
+3028680	Capvern	43.10357	0.31604	1126	Capvèrn		Franzia+France
+3028797	Canohès	42.65461	2.83633	4780	Cànoes		Franzia+France
+3028832	Canet-en-Roussillon	42.7	3.01667	11148	Canet de Rosselló+66140		Franzia+France
+3029338	Buzet-sur-Tarn	43.77977	1.63301	1820	Buset de Tarn		Franzia+France
+3029494	Buros	43.35	-0.3	1528	Buròs		Franzia+France
+3029987	Briscous	43.45958	-1.33353	2160	Beskoitze		Franzia+France
+3031389	Boucau	43.5277	-1.46556	7532	Lo Bocau		Franzia+France
+3031469	Bosdarros	43.21667	-0.36667	1016	Bòsc dArròs		Franzia+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Bordeus+33000		Franzia+France
+3032153	Boeil-Bezing	43.21667	-0.26667	1013	Buelh-Vesing		Franzia+France
+3032469	Blagnac	43.63276	1.39399	24263	Blanhac+31700		Franzia+France
+3032496	Bizanos	43.28333	-0.35	5055	Visanòs		Franzia+France
+3032556	Biscarrosse	44.39454	-1.16721	10716	Biscarròssa+40600		Franzia+France
+3032639	Billère	43.3	-0.4	14914	Vilhèra+64140		Franzia+France
+3032771	Bidache	43.48299	-1.14121	1152	Bidaixon		Franzia+France
+3032797	Biarritz	43.48012	-1.55558	33188	Biàrritz+64200		Franzia+France
+3032833	Béziers	43.34122	3.21402	74081	Besers+34500		Franzia+France
+3033504	Bénéjacq	43.2	-0.21667	1724	Benejac		Franzia+France
+3034475	Bayonne	43.48333	-1.48333	44396	Bayona+64100		Franzia+France
+3034649	Bassussarry	43.44272	-1.51647	2429	Basusarri		Franzia+France
+3034992	Barcelonne-du-Gers	43.7036	-0.23619	1379	Barçalona de Gers		Franzia+France
+3035093	Banyuls-dels-Aspres	42.56567	2.86667	1100	Banyuls dels Aspres		Franzia+France
+3035295	Baixas	42.74969	2.81002	2419	Baixàs		Franzia+France
+3035388	Baho	42.7	2.82204	2727	Bao		Franzia+France
+3035416	Bagnères-de-Luchon	42.79079	0.59315	3380	Banyeras de Luixón		Franzia+France
+3035418	Bagnères-de-Bigorre	43.06667	0.15	8967	Banyeras de Bigorra+65200		Franzia+France
+3035576	Ayguesvives	43.43636	1.59505	2030	Aigasvivas		Franzia+France
+3035681	Avignon	43.94834	4.80892	89769	Avinyón+84000	Provenza-Alpes-Costa Azul	Franzia+France
+3036018	Aurignac	43.21695	0.88176	1209	Aurinhac		Franzia+France
+3036059	Auray	47.67025	-2.99183	12269	An Alre+56400	Bretanya+Bretagne	Franzia+France
+3036281	Auch	43.65	0.58333	24494	Aush+32000		Franzia+France
+3036596	Ascain	43.34521	-1.62073	3365	Azkaine		Franzia+France
+3036633	Arudy	43.11667	-0.43333	2417	Arudi		Franzia+France
+3036646	Artix	43.4	-0.55	3356	Artics		Franzia+France
+3036663	Artiguelouve	43.31667	-0.46667	1346	Artigaloba		Franzia+France
+3036684	Arthez-de-Béarn	43.46667	-0.6	1599	Artés		Franzia+France
+3036938	Arles	43.67681	4.63031	53431	Arlet+13104	Provenza-Alpes-Costa Azul	Franzia+France
+3037070	Argelès-Gazost	43.01667	-0.1	3516	Argelèrs de Gasòst+65400		Franzia+France
+3037089	Arette	43.1	-0.71667	1185	Areta		Franzia+France
+3037245	Arcangues	43.43124	-1.52237	2947	Arrangoitze		Franzia+France
+3037253	Arcachon	44.65	-1.16667	12321	Arcaishon+33120		Franzia+France
+3037265	Arbus	43.33333	-0.5	1107	Arbús		Franzia+France
+3037282	Arbonne	43.43248	-1.55118	1479	Arbona		Franzia+France
+3037598	Angoulême	45.65	0.15	49468	Engolesme+16000		Franzia+France
+3038334	Ajaccio	41.91886	8.73812	54364	Aiacciu+20000		Franzia+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Ais de Provença+13080	Provenza-Alpes-Costa Azul	Franzia+France
+2636432	Swansea	51.62079	-3.94323	300352	Abertawe	Galles	Reino Unito+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londres	Anglaterra	Reino Unito+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edimburgo	苏格兰	Reino Unito+http://en.wikipedia.org/wiki/United_Kingdom
+2654675	Bristol	51.45523	-2.59665	617280	Bristón	Anglaterra	Reino Unito+http://en.wikipedia.org/wiki/United_Kingdom
+614622	Gagra	43.27858	40.27124	8266	Gagra	Abkhasia	Cheorchia
+264371	Athens	37.97945	23.71622	664046	Atenas		Grezia+Griekanmua
+3186952	Zadar	44.11972	15.24222	71258	Chadra	Zadarska	Croacia
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Hongría
+1642911	Jakarta	-6.21462	106.84513	8540121	Yakarta	Jakarta Raya	Indonesia+http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	Dublín	Laighin	Irlanda+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Cherusalem		Israel
+293100	Safed	32.96465	35.496	27816	Safet		Israel
+294098	Nazareth	32.69925	35.30483	64800	Nazaret		Israel
+1261481	New Delhi	28.63576	77.22445	317797	Nueba Deli	DL	India
+1275004	Kolkata	22.56263	88.36304	4631392	Calcuta	WB+West Bengal	India
+1275339	Mumbai	19.07283	72.88261	12691836	Bombai	MH+Mahārāshtra	India
+98860	Najaf	32.02594	44.34625	482576	Nachaf	An Najaf	Iraq
+2523062	Soleminis	39.3476	9.18127	1734	Solèminis		Italia
+2523833	Perdasdefogu	39.67959	9.44082	2042	Foghesu		Italia
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Secilia	Italia
+2524554	Guardia Piemontese	39.46572	15.9997	410	Guardia Piemontesa	Calabria	Italia
+2525362	Carbonia	39.16465	8.5213	21664	Carbònia		Italia
+2525473	Cagliari	39.23054	9.11917	149257	Cáller		Italia
+2525565	Belvì	39.96181	9.18419	664	Brevìe		Italia
+2525751	Ales	39.7683	8.8152	1300	Abas		Italia
+3164603	Venice	45.43713	12.33265	51298	Benezia		Italia
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	Italia
+3170060	Posada	40.63203	9.71904	2025	Pasada		Italia
+3171861	Oschiri	40.71977	9.10102	3327	Oscheri		Italia
+3172158	Nulvi	40.78447	8.74358	2827	Nuivi		Italia
+3172394	Naples	40.85216	14.26811	959470	Nápols		Italia
+3174482	Lula	40.47048	9.48684	1479	Lùvula		Italia
+3176832	Fonni	40.11932	9.25347	4002	Fonne		Italia
+3176903	Florinas	40.649	8.66548	1341	Fiolinas		Italia
+3176959	Florence	43.77925	11.24626	349296	Florencia		Italia
+3178858	Chiaramonti	40.74829	8.82114	1602	Tzaramonte		Italia
+3179470	Castelsardo	40.91256	8.71453	3747	Caltheddu		Italia
+3181384	Busachi	40.03422	8.88848	1378	Busache		Italia
+3181683	Boscoreale	40.77274	14.48118	26861	Vuoscoriale		Italia
+3183443	Aggius	40.92995	9.06517	1381	Agghju		Italia
+1850147	Tokyo	35.6895	139.69171	8336599	Tokio		Chapón
+1835848	Seoul	37.566	126.9784	10349312	Seúl		Corea d'o Sur+http://en.wikipedia.org/wiki/South_Korea
+2960316	Luxembourg	49.61167	6.13	76684	Luxemburgo		Luxemburgo
+2538475	Rabat	34.01325	-6.83255	1655753	Rabat		Marruecos
+3017814	Fontvieille	43.72687	7.41766	3602	Fòntvielha		Monaco
+785842	Skopje	41.99646	21.43141	474889	Scopia		ARYM+FYROM
+2449067	Timbuktu	16.77348	-3.00742	32460	Timbuktú		Mali
+3533462	Acapulco de Juárez	16.86336	-99.8901	652136	Acapulco de Juárez	GRO	Mexico
+2747063	Sneek	53.03297	5.6589	32811	Snits	fr	Países Baixos
+2751792	Leeuwarden	53.20139	5.80859	91424	Ljouwert	fr	Países Baixos
+2754817	Harlingen	53.17477	5.42244	16119	Harns	fr	Países Baixos
+2758682	Bolsward	53.06555	5.53176	9160	Boalsert	fr	Países Baixos
+1283240	Kathmandu	27.70169	85.3206	1442271	Katmandú		Nepal
+3703443	Panamá	8.9936	-79.51973	408168	Ziudá de Panamá		Panamá
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lubelskie	Polonia
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polonia
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Śląskie	Polonia
+3085450	Słupsk	54.46405	17.02872	98608	Słupsk	Pomorskie	Polonia
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polonia
+284899	Jericho	31.86667	35.45	19783	Chericó		
+2737640	Miranda do Douro	41.49692	-6.27308	0	Miranda de l Douro		Portugal
+680963	Constanţa	44.18073	28.63432	303399	Constancia		Rumanía
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sant Petersburgo+Санкт-Петербург		
+524901	Moscow	55.75222	37.61556	10381222	Moscú+Moskva		
+569696	Cheboksary	56.13222	47.25194	446781	Shupashkar+Чебоксары		
+104515	Mecca	21.42664	39.82563	1323624	A Meca	Makkah	Arabia Saudí
+105343	Jeddah	21.54238	39.19797	2867446	Chidda	Makkah	Arabia Saudí
+2673730	Stockholm	59.33258	18.0649	1515017	Estocolmo	Stockholms Län	Suecia+Ruoččii
+3168070	San Marino	43.93667	12.44639	4500	Ciudad de San Marino	San Marino	San Marino
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadixo		Somalia
+170654	Damascus	33.5102	36.29128	1569394	Domás		Siria
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Tailandia
+2464470	Tunis	36.81897	10.16579	693210	Túniz	Tūnis	Tunicia
+738648	Trabzon	41.005	39.72694	244083	Trapesonda		Turquía+Turkanmua
+747712	Edirne	41.67719	26.55597	126470	Andrianoplin		Turquía+Turkanmua
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	MO+Missouri	U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Filadelfia	Pennsilvania+PA	U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Nueva York+NYC+NY	Nueva York+NY	U.S.+USA+U.S.A.
+5368335	Los Altos	37.38522	-122.11413	30671	Los Altos	CA+Calif+California	U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Ángeles	CA+Calif+California	U.S.+USA+U.S.A.
+3480908	La Asunción	11.03333	-63.86278	35084	La Asunción		Benezuela
+3625549	Valencia	10.16202	-68.00765	1385083	Balenzia		Benezuela
+3625929	Tucupita	9.05806	-62.05	51534	Tucupita	Estato Delta Amacuro	Benezuela
+3628473	San Cristóbal	7.76694	-72.225	246583	San Cristóbal		Benezuela
+3629710	Puerto Ayacucho	5.66049	-67.58343	52526	Puerto Ayacucho		Benezuela
+3632308	Mérida	8.58972	-71.15611	300000	Merida		Benezuela
+3633009	Maracaibo	10.66663	-71.61245	2225000	Maracaibo		Benezuela
+3637721	La Guaira	10.59901	-66.9346	25259	La Guaira		Benezuela
+3644768	Cumaná	10.45397	-64.18256	257783	Cumaná		Benezuela
+3645213	Coro	11.4045	-69.67344	195227	Coro		Benezuela
+3645527	Ciudad Ojeda	10.19635	-71.30818	0	Ciudat Ojeda		Benezuela
+3645528	Ciudad Guayana	8.35122	-62.64102	746535	Ciudat Guayana		Benezuela
+3645532	Ciudad Bolívar	8.12923	-63.54086	338000	Ziudá Bolívar		Benezuela
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas	Districto Capital	Benezuela
+3648522	Barquisimeto	10.0647	-69.35703	809490	Barquisimeto		Benezuela
+3648546	Barinas	8.62261	-70.20749	353442	Barinas		Benezuela
+3648559	Barcelona	10.13625	-64.68618	424795	Barcelona		Benezuela
+3778045	Maturín	9.74569	-63.18323	410972	Maturín		Benezuela
+3369157	Cape Town	-33.92584	18.42322	3433441	Ciudat do Cabo	Western Cape	Sudafrica

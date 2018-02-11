@@ -1,0 +1,31 @@
+2394819	Cotonou	6.36536	2.41833	780000	Kútọnu	Apá Littoral	Orílẹ́ède Bẹ̀nẹ̀
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kùrìtíbà	PR+Paraná	Orílẹ́ède Bàràsílì
+3469058	Brasília	-15.77972	-47.92972	2207718	Bràsílíà	DF	Orílẹ́ède Bàràsílì
+2661552	Bern	46.94809	7.44744	121631	Berne		Orílẹ́ède switiṣilandi
+2867714	Munich	48.13743	11.57549	1260391	Munich	Bayern	Jámánì+Orílẹ́ède Gemani
+223817	Djibouti	11.58901	43.14503	623891	Ìlú Djibouti	Djibouti	Orílẹ́ède Díbọ́ótì
+2988507	Paris	48.85341	2.3488	2138551	Parisi+75001		Orílẹ́ède Faranse+France
+2643743	London	51.50853	-0.12574	7556900	Lọndọnu	Ilẹ̀gẹ̀ẹ́sì	Orílẹ́ède Omobabirin+http://en.wikipedia.org/wiki/United_Kingdom
+2306104	Accra	5.55602	-0.1969	1963264	Aakrá	Greater Accra	Orílẹ́ède Gana
+281184	Jerusalem	31.76904	35.21633	801000	Jerúsálẹ́mù		Israel+Orílẹ́ède Iserẹli
+3172394	Naples	40.85216	14.26811	959470	Naples		Orílẹ́ède Italiyi
+1821274	Macau	22.20056	113.54611	520400	Màkáù		
+2322911	Sokoto	13.06269	5.24322	563861	Sókótó	Sokoto	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2332459	Lagos	6.45407	3.39467	9000000	Èkó		Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2334802	Katsina	12.99082	7.60177	432149	Kàtsínà	Katsina	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2335204	Kano	12.00012	8.51672	3626068	Kánò		Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2335727	Kaduna	10.52641	7.43879	1582102	Kàdúná	Kaduna	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2339354	Ibadan	7.37756	3.90591	3565108	Ìbàdàn	Oyo	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2343279	Enugu	6.44132	7.49883	688862	Ẹnúgu	Enugu	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2347283	Benin City	6.33815	5.62575	1125058	Ìlú Benin	Edo	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2350841	Akure	7.25256	5.19312	420594	Àkúrẹ́	Ondo	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2352778	Abuja	9.05785	7.49508	590400	Abùjá	Agbègbè Olúìlú Ìjọba Àpapọ̀ Abùjá+FCTA+Abuja Federal Capital Territory	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2352947	Abeokuta	7.15571	3.34509	593100	Abẹ́òkúta	Ogun	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+2353151	Aba	5.10658	7.36667	897560	Abá	Abia	Naijiriya+Nàìjíríà+Orílẹ́ède Nàìjíríà
+1176615	Islamabad	33.72148	73.04329	601600	Islàmabad	Islāmābād	Orílẹ́ède Pakisitan
+3168070	San Marino	43.93667	12.44639	4500	Ìlú San Màrínò	San Marino	Orílẹ́ède Sani Marino
+170654	Damascus	33.5102	36.29128	1569394	Dàmáskù		Orílẹ́ède Siria
+148730	Zanzibar	-6.16394	39.19793	403658	Ìlú Zanzibar	Zanzibar Urban/West	Orílẹ́ède Tanṣania
+4393217	Kansas City	39.09973	-94.57857	475378	Ìlú Kansas	Ìpínlẹ̀ Missouri+MO+Missouri	Orílẹ́ède Orilẹede Amerika+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Ṣìkágò	IL+Illinois	Orílẹ́ède Orilẹede Amerika+U.S.+USA+U.S.A.
+971534	Nelspruit	-25.47448	30.97033	110159	Mbombela	Mpumalanga	Orílẹ́ède Ariwa Afirika

@@ -1,0 +1,23 @@
+5961560	Gjoa Haven	68.62602	-95.87836	1109	Uqsuqtuuq	ᓄᓇᕗᑦ+NU+Nunavut	
+5983720	Iqaluit	63.74697	-68.51727	6124	ᐃᖃᓗᐃᑦ	ᓄᓇᕗᑦ+NU+Nunavut	
+6077243	Montréal	45.50884	-73.58781	1600000	ᒧᕆᐊᓪ	QC	
+6094817	Ottawa	45.41117	-75.69812	812129	ᐊᑐᕚ/atavaa	ᐋᓐᑎᐅᕆᔪ+ON+Ontario	
+3868626	Valparaíso	-33.036	-71.62963	282448	ᕙᓪᐸᕃᓱ	Valparaíso	
+2818067	Uetersen	53.68769	9.66394	17921	ᐃᐊᐃᑖᓯᓐ/iaitaatsin	Schleswig-Holstein	
+3421319	Nuuk	64.18347	-51.72157	14798	ᓅᒃ		
+593116	Vilnius	54.68916	25.2798	542366	ᕕᓪᓂᐅᔅ/vilnius		http://en.wikipedia.org/wiki/Lithuania
+598316	Kaunas	54.90272	23.90961	374643	ᑯᓇᔅ/kunas		http://en.wikipedia.org/wiki/Lithuania
+2127202	Anadyr	64.73424	177.5103	10332	ᑲᒌᕐᒌᓐ	Chukotskiy Avtonomnyy Okrug	
+2666199	Uppsala	59.85882	17.63889	149245	ᐆᑉᓴᓚ/uupsala	Uppsala Län	Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	ᔅᑑᒃᓱᓪᒻ/stuukhulm	Stockholms Län	Ruoččii
+2680764	Säffle	59.13229	12.92888	9150	ᓴᕝᓕ	Värmlands län	Ruoččii
+2691440	Mölnlycke	57.65893	12.11792	17579	ᒧᓪᓐᓕᑭ/ Mölnlycke	Västra Götalands län	Ruoččii
+2691459	Mölndal	57.6554	12.01378	59430	ᒧᓪᓐᑕᓪ/Mölndal	Västra Götalands län	Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	ᑲᕐᓪᔅᑕᑦ	Värmlands län	Ruoččii
+2709214	Hagfors	60.02378	13.67214	4869	ᐊᒡᕗᕐᔅ	Värmlands län	Ruoččii
+2710343	Grums	59.35141	13.11105	5040	ᒡᕈᒻᔅ	Värmlands län	Ruoččii
+2711537	Göteborg	57.70716	11.96679	572799	ᐃᐅᑕᐳᕆ	Västra Götalands län	Ruoččii
+2715081	Filipstad	59.71236	14.16831	6119	ᕕᓕᑉᔅᑕᑦ	Värmlands län	Ruoččii
+2725123	Arvika	59.65528	12.58518	13926	ᐊᕐᕕᑲ	Värmlands län	Ruoččii
+2725379	Årjäng	59.39217	12.13336	3302	ᐅᕐᔭᖕ	Värmlands län	Ruoččii
+4887398	Chicago	41.85003	-87.65005	2720546	ᓰᖄᑯ	ᐄᓚᓄᐃᔅ+IL+Illinois	U.S.+USA+U.S.A.

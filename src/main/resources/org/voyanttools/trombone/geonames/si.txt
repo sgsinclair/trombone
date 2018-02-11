@@ -1,0 +1,63 @@
+292968	Abu Dhabi	24.46667	54.36667	603492	අබුඩාබි		එක්සත් අරාබි එමිර් රාජ්‍යය+එක්සත් අරාබි එමීර් රාජ්‍යය+UAE
+1138958	Kabul	34.52813	69.17233	3043532	කාබුල්		ඇෆ්ගනිස්ථානය
+2147714	Sydney	-33.86785	151.20732	4627345	සිඩ්නි	NSW	ඕස්ට්‍රේලියාව
+2163355	Hobart	-42.87936	147.32941	216656	හෝබාර්ට්	TAS	ඕස්ට්‍රේලියාව
+2172517	Canberra	-35.28346	149.12807	367752	කැන්බරා	ACT+Australian Capital Territory	ඕස්ට්‍රේලියාව
+1185241	Dhaka	23.7104	90.40744	10356500	ඩකා		බංගලිදේශය+බංග්ලාදේශය
+1252416	Thimphu	27.46609	89.64191	98676	තිම්පු		භූතානය+Bh2utan
+5907364	Brampton	43.68341	-79.76633	433806	බ්‍රැම්ටන්	ON+Ontario	කැනඩාව
+5969782	Hamilton	43.25011	-79.84963	519949	හැමිල්ටන්	ON+Ontario	කැනඩාව
+6075357	Mississauga	43.5789	-79.6583	668549	මිසිසාගා	ON+Ontario	කැනඩාව
+3868626	Valparaíso	-33.036	-71.62963	282448	වල්පරයිසෝ	Valparaíso	චිලි ජනරජය+චිලී
+3872594	Salamanca	-31.77922	-70.96389	13265	සළමන්ක	Coquimbo	චිලි ජනරජය+චිලී
+1816670	Beijing	39.9075	116.39723	11716620	බෙයිජිං		චීනය
+2818067	Uetersen	53.68769	9.66394	17921	ඌඑටෙර්සෙන්	Schleswig-Holstein	ජර්මනිය
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	සන්තියාගෝ ඩි කොම්පොස්ටෙලා	Galicia	ස්පාඤ්ඤය+España
+3130313	Almazán	41.48648	-2.53088	5773	අල්මසාන්	Castilla y León	ස්පාඤ්ඤය+España
+644450	Nokia	61.46667	23.5	28676	නොකියා නගරය		ෆින්ලන්තය
+2643743	London	51.50853	-0.12574	7556900	ලන්ඩන්		එක්සත් රාජධානිය+http://en.wikipedia.org/wiki/United_Kingdom
+1819729	Hong Kong	22.27832	114.17469	7012738	හොංකොං		හොංකොං+http://en.wikipedia.org/wiki/Hong_Kong
+1258698	Rameswaram	9.2885	79.31271	39960	රාමේෂ්වරම්	TN+Tamil Nādu	ඉන්දියාව
+1262321	Mysore	12.29791	76.63925	868313	මයිසූර්	KA+Karnātaka	ඉන්දියාව
+1264527	Chennai	13.08784	80.27847	4328063	චෙන්නායි	TN+Tamil Nādu	ඉන්දියාව
+1275389	Buddh Gaya	24.69808	84.9869	35188	බුද්ධගයා	BR	ඉන්දියාව
+1277333	Bengaluru	12.97194	77.59369	5104047	බැංගලෝර්	KA+Karnātaka	ඉන්දියාව
+1857910	Kyoto	35.02107	135.75385	1459640	ක්යෝතෝ		ජපානය
+1894616	Okinawa	26.33583	127.80139	125483	ඔකිනාවා		ජපානය
+1225018	Vavuniya	8.7514	80.4971	60176	වවුනියාව	මධ්‍යම පළාත+උතුරු පළාත	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1226260	Trincomalee	8.5711	81.2335	108420	ත්‍රිකුණාමලය	නැගෙනහිර පළාත	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1228051	Sigiriya	7.94946	80.75037	1001	සීගිරිය	මධ්‍යම පළාත+Central	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1228730	Ratnapura	6.68278	80.39917	47832	රත්නපුර	සබරගමුව+Sabaragamuwa	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1229293	Puttalam	8.0362	79.8283	45661	පුත්තලම	වයඹ පළාත+North Western	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1229901	Polonnaruwa	7.93965	81.00274	13900	පොළොන්නරුව	උතුරු මැද පළාත+North Central	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1229989	Point Pedro	9.81667	80.23333	89810	පේදුරු තුඩුව	මධ්‍යම පළාත+උතුරු පළාත	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1232783	Nuwara Eliya	6.97078	80.78286	25775	නුවරඑළිය	මධ්‍යම පළාත+Central	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1233369	Negombo	7.2083	79.8358	137223	මීගමුව+Negombo	බස්නාහිර පළාත+Western	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1234569	Dehiwala-Mount Lavinia	6.84019	79.87116	219827	දෙහිවල-ගල්කිස්ස	බස්නාහිර පළාත+Western	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1234633	Moratuwa	6.773	79.8816	185031	මොරටුව	බස්නාහිර පළාත+Western	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1235846	Matara	5.94851	80.53528	76254	මාතර	දකුණු පළාත+Southern	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1235855	Matale	7.4698	80.6217	36462	මාතලේ	මධ්‍යම පළාත+Central	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1237980	Kurunegala	7.4863	80.3623	28571	කුරුණෑගල නගරය	වයඹ පළාත+North Western	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1240723	Kegalle	7.2523	80.3436	17962	කෑගල්ල	සබරගමුව+Sabaragamuwa	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1241622	Kandy	7.2955	80.6356	111701	මහනුවර	මධ්‍යම පළාත+Central	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1242833	Jaffna	9.66845	80.00742	169102	යාපනය	මධ්‍යම පළාත+උතුරු පළාත	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1246007	Gampaha	7.0897	79.9925	9350	ගම්පහ	බස්නාහිර පළාත+Western	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1246294	Galle	6.0367	80.217	93118	ගාල්ල	දකුණු පළාත+Southern	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1248749	Dambulla	7.86	80.65167	66716	දඹුල්ල	මධ්‍යම පළාත+Central	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1248991	Colombo	6.93194	79.84778	648034	ෙකාළඹ+කොළඹ	බස්නාහිර පළාත+Western	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1250161	Batticaloa	7.7102	81.6924	86742	මඩකලපුව නගරය	නැගෙනහිර පළාත	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1250615	Badulla	6.9895	81.0557	47587	බදුල්ල	ඌව+Uva	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+1251081	Anuradhapura	8.31223	80.41306	60943	අනුරාධපුර පෞරාණික නගරය	උතුරු මැද පළාත+North Central	Prajatantravadi Samajavadi Janarajaya Sri Lanka+Lankāva+ශ්‍රී ලංකාව
+2960107	Schengen	49.47	6.362	470	ෂෙන්ගන්		
+2759794	Amsterdam	52.37403	4.88969	741636	ඈම්ස්ටර්ඩෑම්	nh+Nord-Holland+Noord-Holland	නෙදර්ලන්තය
+1283240	Kathmandu	27.70169	85.3206	1442271	කත්මන්ඩු		නේපාලය
+1701668	Manila	14.6042	120.9822	1600000	මැනිලා	Metro Manila	පිලිපීනය
+1167528	Quetta	30.18414	67.00141	733675	ක්වේටා‍	Balochistān	පාකිස්තානය
+766980	Kurów	51.38941	22.18637	2804	කුරුෆ්	Lubelskie	පෝලන්තය
+768217	Końskowola	51.40922	22.05175	2208	කෝඤ්ශ්කෝවෝලා	Lubelskie	පෝලන්තය
+472757	Volgograd	48.71939	44.50183	1011417	වොල්ගාග්‍රාද්+Volgograd	Volgograd	රුසියාව
+202061	Kigali	-1.94995	30.05885	745261	කිගාලි		
+1609350	Bangkok	13.75398	100.50144	5104476	බැංකොක්		තායිලන්තය
+4119403	Little Rock	34.74648	-92.28959	197992	ලිට්ල් රොක්	AR	එක්සත් ජනපදය+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	සැන් ෆ්‍රැන්සිස්කෝ+SF	CA+Calif+California	එක්සත් ජනපදය+U.S.+USA+U.S.A.
+1581130	Hanoi	21.0245	105.84117	1431270	හැනෝයි	Ha Nội	වියට්නාමය

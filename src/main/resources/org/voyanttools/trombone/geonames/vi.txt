@@ -1,0 +1,1149 @@
+1133453	Maymana	35.92139	64.78361	75900	Quận Maymana		Áp-ga-ni-xtan+Afghanistan+A Phú Hãn (Afghanistan)
+1147290	Balkh	36.75635	66.8972	114883	Quận Balkh		Áp-ga-ni-xtan+Afghanistan+A Phú Hãn (Afghanistan)
+2766429	Sankt Pölten	48.2	15.63333	49001	St. Pölten		Áo
+2778067	Graz	47.06667	15.45	222326	Graz		Áo
+2782067	Baden	48.00543	16.23264	24893	Baden bei Wien		Áo
+2073124	Darwin	-12.46113	130.84185	129062	Darwin	Lãnh thổ Bắc Úc+NT	Úc+Australia (Úc)
+2078025	Adelaide	-34.92866	138.59863	1225235	Adelaide	SA	Úc+Australia (Úc)
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Úc+Australia (Úc)
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Úc+Australia (Úc)
+147774	Xocalı	39.91297	46.79028	5810	Khojaly	Xocalı	Ai-déc-bai-gian+Azerbaijan+Ai-déc-bai-gian (Azerbaijan)
+586523	Ganja	40.68278	46.36056	313300	Ganca	Gǝncǝ	Ai-déc-bai-gian+Azerbaijan+Ai-déc-bai-gian (Azerbaijan)
+587057	Barda	40.37577	47.12619	37372	Berde	Bǝrdǝ	Ai-déc-bai-gian+Azerbaijan+Ai-déc-bai-gian (Azerbaijan)
+587084	Baku	40.37767	49.89201	1116513	Baku	Baki	Ai-déc-bai-gian+Azerbaijan+Ai-déc-bai-gian (Azerbaijan)
+3187609	Visoko	43.98889	18.17806	17890	Visoko	Federation of Bosnia and Herzegovina	Bô-xni-a Héc-xê-gô-vi-na+Bosna và Hercegovina+Bô-xni-a Héc-xê-gô-vi-na (Bosnia và Herzegovina)
+1336136	Bhola	22.68759	90.64403	99079	Huyện Bhola		Băng-la-đét+Bangladesh+Băng-la-đét (Bangladesh)
+7649230	Magura	23.48702	89.41592	0	Huyện Magura		Băng-la-đét+Bangladesh+Băng-la-đét (Bangladesh)
+2790869	Mons	50.45413	3.95229	91277	Mons	Wallonia+Walloon	Bỉ
+2794055	Kortrijk	50.82803	3.26487	73879	Courtrai		Bỉ
+2798698	Érezée	50.29292	5.55815	2930	Erezée	Wallonia+Walloon	Bỉ
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Ouagadougou		Buốc-ki-na Pha-xô+Burkina Faso+Buốc-ki-na Pha-xô (Burkina Faso)
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Bra-xin+Brasil+Ba Tây (Bra-xin)
+3449696	Santo Ângelo	-28.29917	-54.26306	64606	Santo Angelo	RS+Rio Grande do Sul	Bra-xin+Brasil+Ba Tây (Bra-xin)
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Bra-xin+Brasil+Ba Tây (Bra-xin)
+3460087	Jardim	-21.48028	-56.13806	23780	Vườn	MS	Bra-xin+Brasil+Ba Tây (Bra-xin)
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	Quận liên bang+DF	Bra-xin+Brasil+Ba Tây (Bra-xin)
+625144	Minsk	53.9	27.56667	1742124	Minsk		Bê-la-rút+Belarus+Bê-la-rút (Belarus)
+3582677	Belize City	17.49952	-88.19756	61461	Thành phố Belize	Belize	Bê-li-xê
+5913490	Calgary	51.05011	-114.08529	1019942	Calgary	AB+Alberta	Ca-na-đa+Canada (Gia Nã Đại)
+5946768	Edmonton	53.55014	-113.46871	712391	Edmonton	AB+Alberta	Ca-na-đa+Canada (Gia Nã Đại)
+6062069	Lunenburg	44.37847	-64.31658	2473	Lunnenburg	NS+Nova Scotia	Ca-na-đa+Canada (Gia Nã Đại)
+6077243	Montréal	45.50884	-73.58781	1600000	Montréal	QC	Ca-na-đa+Canada (Gia Nã Đại)
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Ca-na-đa+Canada (Gia Nã Đại)
+6118158	Red Deer	52.26682	-113.802	73593	Red Deer	AB+Alberta	Ca-na-đa+Canada (Gia Nã Đại)
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	Ca-na-đa+Canada (Gia Nã Đại)
+6173331	Vancouver	49.24966	-123.11934	600000	Vancouver	BC+British Columbia	Ca-na-đa+Canada (Gia Nã Đại)
+6174041	Victoria	48.43294	-123.3693	289625	Victoria	BC+British Columbia	Ca-na-đa+Canada (Gia Nã Đại)
+6325494	Québec	46.81228	-71.21454	528595	Thành phố Québec+Québec	QC	Ca-na-đa+Canada (Gia Nã Đại)
+2657896	Zürich	47.36667	8.55	341730	Zürich	ZH	Thụy Sĩ
+2659811	Luzern	47.05048	8.30635	57066	Lucerne		Thụy Sĩ
+2660646	Genève	46.20222	6.14569	183981	Geneva+1200		Thụy Sĩ
+3871336	Santiago	-33.45694	-70.64827	4837295	Santiago+Stgo.		Chi-lê+Chile+Chi-lê (Chile)
+2220957	Yaoundé	3.86667	11.51667	1299369	Jaunde		Ca-mơ-run+Cameroon+Ca-mơ-run (Cameroon)
+1279945	Jiuquan	39.74318	98.51736	72732	Tửu Tuyền		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1280957	Jiayuguan	39.81121	98.28618	122396	Gia Dục Quan		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1783621	Zunyi	27.68667	106.90722	466292	Tuân Nghĩa		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1783633	Zoucheng	35.40056	116.96556	190537	Trâu Thành		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1783745	Zigong	29.34162	104.77689	689961	Tự Cống	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1783763	Zhuzhou	27.83333	113.15	709358	Chu Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1783934	Shangqiu	34.45	115.65	181218	Thương Khâu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1784130	Zhoukou	33.63333	114.63333	377061	Chu Khẩu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1784185	Yuxi	24.355	102.54222	103829	Ngọc Khê		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1784285	Zhongwei	37.51129	105.19067	0	Trung Vệ		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1784658	Zhengzhou	34.75778	113.64861	4253913	Trịnh Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1784841	Zhaotong	27.31667	103.71667	109400	Chiêu Thông		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1784853	Zhaoqing	23.05116	112.45972	361969	Triệu Khánh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1784990	Zhanjiang	21.28145	110.34271	637790	Trạm Giang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785018	Zhangzhou	24.51333	117.65556	589831	Chương Châu	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785036	Zhangye	38.93417	100.45167	96228	Trương Dịch		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785286	Zibo	36.79056	118.06333	3129228	Truy Bác		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785294	Anyang	36.096	114.38278	781129	An Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785453	Zaozhuang	34.86472	117.55417	183665	Tảo Trang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785623	Kunshan	31.37762	120.95431	1600000	Côn Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785725	Yunfu	22.92833	112.03954	2612800	Vân Phù		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785738	Yuncheng	35.02306	110.99278	201950	Vận Thành		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785777	Yulinshi	38.29181	109.73753	90870	Du Lâm	Thiểm Tây+Shaanxi	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1785781	Yulin	22.63333	110.15	148485	Ngọc Lâm		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1786112	Heyuan	23.73333	114.68333	93718	Hà Nguyên		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1786657	Yinchuan	38.46806	106.27306	475101	Thành phố Ngân Xuyên+Ngân Xuyên		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1786746	Yichun	27.83333	114.4	152169	Nghi Xuân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1786764	Yichang	30.71444	111.28472	476725	Nghi Xương	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1786770	Yibin	28.76667	104.62383	242111	Nghi Tân	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1787093	Yantai	37.47649	121.44081	719332	Yên Đài		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1787227	Yangzhou	32.39722	119.43583	539715	Dương Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1787351	Yangquan	37.8575	113.56333	413394	Dương Tuyền		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1787746	Yancheng	33.3575	120.1573	628441	Diêm Thành		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1787858	Shangrao	28.45179	117.94287	318769	Thượng Nhiêu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1788450	Xinzhou	38.40917	112.73333	154003	Hãn Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1788508	Xinyu	27.80429	114.93335	97480	Tân Dư		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1788852	Xining	36.62554	101.75739	767531	Tây Ninh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1788927	Xingtai	37.06306	114.49417	611739	Hình Đài		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790254	Xiaogan	30.92689	113.92221	160437	Hiếu Cảm	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790353	Xianyang	34.33778	108.70261	1034081	Hàm Dương	Thiểm Tây+Shaanxi	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790437	Zhuhai	22.27694	113.56778	501199	Châu Hải+Chu Hải		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790471	Xiangxiang	27.73333	112.53333	87592	Tương Hương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790492	Xiangtan	27.85	112.9	674189	Tương Đàm		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790630	Xi’an	34.25833	108.92861	6501190	Tây An	Thiểm Tây+Shaanxi	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790645	Xiamen	24.47979	118.08187	3531347	Hạ Môn	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790840	Wuzhou	23.48333	111.31667	265846	Ngô Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1790923	Wuxi	31.56887	120.28857	3543719	Vô Tích		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791121	Changde	29.04638	111.6783	517780	Thường Đức		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791236	Wuhu	31.33728	118.37351	507524	Vu Hồ		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791247	Wuhan	30.58333	114.26667	9785388	Vũ Hán+武汉	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791249	Wuhai	39.68442	106.81583	218427	Ô Hải		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791388	Wenzhou	27.99942	120.66682	865672	Ôn Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791544	Wenchang	19.6157	110.74894	115000	Văn Xương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791636	Weinan	34.50355	109.50891	172321	Vị Nam	Thiểm Tây+Shaanxi	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791673	Weihai	37.50914	122.11356	152595	Uy Hải		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1791681	Weifang	36.71	119.10194	394732	Duy Phường		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1792359	Huangshan	29.71139	118.3125	77000	Hoàng Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1792947	Tianjin	39.14222	117.17667	11090314	Thiên Tân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1793346	Tangshan	39.63333	118.18333	3372102	Đường Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1793505	Taizhou	32.49069	119.90812	612356	Thái Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1793511	Taiyuan	37.86944	112.56028	3426519	Thái Nguyên		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1793700	Taishan	22.25135	112.7799	145440	Đài Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1793879	Suizhou	31.71111	113.36306	323945	Tùy Châu	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1793900	Suining	30.50802	105.57332	124924	Toại Ninh	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1794903	Shiyan	32.6475	110.77806	3460000	Thập Yển	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1795196	Tongchuanshi	35.07474	109.08495	223603	Đồng Xuyên	Thiểm Tây+Shaanxi	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1795270	Shijiazhuang	38.04139	114.47861	2834942	Thạch Gia Trang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1795565	Shenzhen	22.54554	114.0683	10358381	Thâm Quyến		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1795855	Shaoxing	30.00237	120.57864	421283	Thiệu Hưng		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1795874	Shaoguan	24.8	113.58333	628749	Thiều Quan		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1795928	Shanwei	22.78199	115.3475	165699	Sán Vĩ		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1795940	Shantou	23.36814	116.71479	5329024	Sán Đầu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1796236	Shanghai	31.22222	121.45806	22315474	Thượng Hải		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1796556	Sanya	18.24306	109.505	144753	Tam Á		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1796663	Sanming	26.24861	117.61861	209444	Tam Minh	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797121	Jieyang	23.5418	116.36581	1001985	Yết Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797264	Quzhou	28.95944	118.86861	82216	Cù Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797318	Qujing	25.48333	103.78333	146015	Khúc Tĩnh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797333	Qufu	35.59667	116.99111	85144	Khúc Phụ		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797353	Quanzhou	24.91389	118.58583	184143	Tuyền Châu	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797551	Qinzhou	21.97296	108.62612	100996	Khâm Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797595	Qinhuangdao	39.93167	119.58833	759718	Tần Hoàng Đảo		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797658	Jinjiang	24.81978	118.57415	89623	Tấn Giang	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797929	Qingdao	36.06488	120.38042	3718835	Thanh Đảo		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1797945	Qingyuan	23.7	113.03333	151287	Thanh Viễn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1798449	Putian	25.43944	119.01028	376558	Phủ Điền	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1798654	Pingxiang	27.61672	113.85353	372123	Bình Hương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1798760	Pingliang	35.53917	106.68611	108156	Bình Lương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1798827	Pingdingshan	33.73847	113.30119	889675	Bình Đỉnh Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1799397	Ningbo	29.87819	121.54945	3491597	Ninh Ba		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1799491	Neijiang	29.58354	105.06216	546854	Nội Giang	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1799629	Nanyang	32.99472	112.53278	251532	Nam Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1799722	Nantong	32.03028	120.87472	666251	Nam Thông		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1799846	Nanping	26.645	118.17361	171674	Nam Bình	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1799869	Nanning	22.81667	108.31667	803788	Nam Ninh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1799962	Nanjing	32.06167	118.77778	7165292	Nam Kinh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1800146	Nanchong	30.79508	106.08473	7150000	Nam Sung	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1800163	Nanchang	28.68396	115.85306	2357839	Nam Xương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1800627	Mianyang	31.46784	104.68168	264136	Miên Dương	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1800779	Meizhou	24.28859	116.11768	144212	Mai Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1801180	Maoming	21.65	110.9	0	Mậu Danh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1801640	Luzhou	28.8903	105.42575	0	Lô Châu	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1801792	Luoyang	34.68361	112.45361	1390581	Lạc Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1801934	Luohe	33.56394	114.04272	417356	Tháp Hà		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1802238	Loudi	27.73444	111.99444	150684	Lâu Để		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1802276	Longyan	25.10722	117.0225	0	Long Nham	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1802940	Puning	23.31072	116.16869	118023	Phổ Ninh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1803245	Lishui	28.46042	119.91029	98946	Lệ Thủy		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1803318	Linyi	35.06306	118.34278	270669	Lâm Nghi		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1803567	Linfen	36.08889	111.51889	232566	Lâm Phần		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1803834	Liaocheng	36.45596	115.97766	226930	Liêu Thành		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804153	Leshan	29.56227	103.76386	154477	Lạc Sơn	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804169	Lengshuijiang	27.68806	111.42944	115399	Lãnh Thủy Giang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804430	Lanzhou	36.05701	103.83987	2628426	Lan Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804451	Lianyuan	27.68833	111.66417	66501	Liên Nguyên		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804591	Laiwu	36.19278	117.65694	124108	Lai Vu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804609	Laibin	23.7	109.26667	59835	Lai Tân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804651	Kunming	25.03889	102.71833	3855346	Côn Minh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1804879	Kaifeng	34.7986	114.30742	900000	Khai Phong		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805179	Jiujiang	29.70475	116.00206	258807	Cửu Giang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805518	Jining	35.405	116.58139	450327	Tế Ninh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805528	Jinhua	29.10678	119.64421	142206	Kim Hoa		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805540	Jingzhou	30.35028	112.19028	177878	Kinh Châu	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805611	Jingmen	31.03361	112.20472	167750	Kinh Môn	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805733	Jinchang	38.50062	102.19379	144363	Kim Xương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805741	Jincheng	35.50222	112.83278	332650	Tấn Thành		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805753	Jinan	36.66833	116.99722	4335989	Tế Nam		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805833	Jiexiu	37.02444	111.9125	77178	Giới Hưu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805953	Jiaxing	30.7522	120.75	466101	Gia Hưng		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1805987	Jiaozuo	35.23972	113.23306	517540	Tiêu Tác		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1806299	Jiangmen	22.58333	113.08333	532419	Giang Môn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1806408	Yangjiang	21.85563	111.96272	399735	Dương Giang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1806466	Guangyuan	32.44201	105.823	213365	Quảng Nguyên	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1806776	Huizhou	23.11147	114.41523	289201	Huệ Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1806882	Xinhui	22.456	113.0482	195129	Tân Hội		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1807234	Huangshi	30.24706	115.04814	688090	Hoàng Thạch	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1807689	Huaihua	27.56337	110.00404	127322	Hoài Hóa		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1807700	Huaibei	33.97444	116.79167	903039	Hoài Bắc		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808198	Heze	35.23929	115.47358	254602	Hà Trạch		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808370	Hengyang	26.88946	112.61888	759602	Hành Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808392	Hengshui	37.73222	115.70111	456356	Hành Thủy		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808722	Hefei	31.86389	117.28083	3310268	Hợp Phì		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808770	Hebi	35.89917	114.1925	244662	Hạc Bích		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808857	Hanzhong	33.07507	107.02214	145986	Hán Trung	Thiểm Tây+Shaanxi	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808926	Hangzhou	30.29365	120.16142	6241971	Hàng Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808956	Changzhi	36.18389	113.10528	0	Trường Trị		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1808963	Handan	36.60056	114.46778	1358318	Hàm Đan		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1809078	Haikou	20.04583	110.34167	615835	Hải Khẩu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1809461	Guiyang	26.58333	106.71667	1171633	Quý Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1809498	Guilin	25.28194	110.28639	649352	Quế Lâm		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1809532	Guigang	23.09639	109.60917	76430	Quý Cảng		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1809858	Guangzhou	23.11667	113.25	11071424	Quảng Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1810638	Ganzhou	25.84664	114.9326	0	Cám Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1810821	Fuzhou	26.06139	119.30611	1179720	Phúc Châu	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1810845	Fuyang	32.9	115.81667	170023	Phụ Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1811103	Foshan	23.02677	113.13148	3600000	Phật Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1812101	Shengli	37.46271	118.49165	306450	Đông Dinh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1812545	Dongguan	23.01797	113.74866	8000000	Đông Hoản		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1812955	Dezhou	37.45127	116.31046	379555	Đức Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1812961	Deyang	31.13019	104.38198	152194	Đức Dương	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1813171	Zhangjiajie	29.12944	110.47833	86083	Trương Gia Giới		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1813253	Lijiang	26.86879	100.22072	1137600	Lệ Giang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1813325	Dazhou	31.21592	107.50092	130749	Đạt Châu	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1814757	Chuzhou	32.32194	118.29778	280582	Trừ Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1814906	Chongqing	29.56278	106.55278	7457600	Trùng Khánh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1815286	Chengdu	30.66667	104.06667	7415590	Thành Đô	Sichuan	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1815395	Chaozhou	23.65396	116.62262	424787	Triều Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1815456	Changzhou	31.77359	119.95401	949018	Thường Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1815577	Changsha	28.19874	112.97087	3093980	Trường Sa		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816080	Cangzhou	38.31667	116.86667	527681	Thương Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816234	Bozhou	33.87722	115.77028	174140	Bạc Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816336	Binzhou	37.36667	118.01667	115893	Tân Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816373	Bijie	27.30193	105.28627	77645	Tất Tiết		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816440	Bengbu	32.94083	117.36083	576648	Bạng Phụ		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816670	Beijing	39.9075	116.39723	11716620	Bắc Kinh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816705	Beihai	21.48333	109.1	289568	Bắc Hải		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1816971	Baoding	38.85111	115.49028	995652	Bảo Định		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1817240	Baiyin	36.54696	104.17023	188533	Bạch Ngân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1817968	Anshun	26.25	105.93333	351936	An Thuận		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1817993	Anqing	30.51365	117.04723	358661	An Khánh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1886760	Suzhou	31.30408	120.59538	5345961	Tô Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1922014	Wuyishan	27.75995	118.03066	23041	Vũ Di Sơn	Phúc Kiến	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+1927639	Yueyang	29.37455	113.09481	1200000	Nhạc Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2033196	Zhangjiakou	40.81	114.87944	692602	Trương Gia Khẩu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2033413	Yichun	47.72143	128.87529	155762	Y Xuân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2033467	Yanji	42.9075	129.50778	326957	Diên Cát		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2034400	Tongliao	43.6125	122.26528	261110	Thông Liêu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2034414	Tonghua	41.71972	125.92639	510000	Thông Hóa		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2034655	Suihua	46.63954	126.99508	252245	Tuy Hóa		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2034714	Siping	43.16143	124.37785	555609	Tứ Bình		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2034786	Shuangyashan	46.63611	131.15389	600000	Song Áp Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2034937	Shenyang	41.79222	123.43278	6255921	Thẩm Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2035265	Qiqihar	47.34088	123.96045	882364	Tề Tề Cáp Nhĩ		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2035715	Mudanjiang	44.58333	129.6	665915	Mẫu Đơn Giang		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036109	Liaoyuan	42.90361	125.13583	465249	Liêu Nguyên		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036113	Liaoyang	41.27194	123.17306	687890	Liêu Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036389	Jixi	45.30109	130.95718	403759	Kê Tây		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036427	Jinzhou	41.10778	121.14167	604269	Cẩm Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036502	Jilin	43.85083	126.56028	1881977	Cát Lâm		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036581	Jiamusi	46.79927	130.31633	549549	Giai Mộc Tư		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036973	Heihe	50.24413	127.49016	109427	Hắc Hà		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2036986	Hegang	47.35118	130.30012	743307	Hạc Cương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2037013	Harbin	45.75	126.65	5878939	Cáp Nhĩ Tân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2037346	Fuxin	42.01556	121.65889	689050	Phụ Tân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2037355	Fushun	41.88669	123.94363	1400646	Phủ Thuận		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2037799	Datong	40.09361	113.29139	1052678	Đại Đồng		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2037860	Daqing	46.58333	125	203488	Đại Khánh		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2037886	Dandong	40.12917	124.39472	631973	Đan Đông		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038067	Chifeng	42.26833	118.96361	346654	Xích Phong		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038087	Chengde	40.9519	117.95883	449325	Thừa Đức		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038180	Changchun	43.88	125.32278	4193073	Trường Xuân		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038300	Benxi	41.28861	123.765	987717	Bản Khê		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038432	Baotou	40.65222	109.82222	1301768	Bao Đầu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038569	Baicheng	45.60746	122.82076	316970	Bạch Thành		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038584	Baishan	41.93853	126.41965	183880	Bạch Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+2038632	Anshan	41.12361	122.99	1199275	An Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+6986104	Zhongshan	22.52306	113.37912	0	Trung Sơn		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+8400694	Taizhou	28.66266	121.43312	0	Thai Châu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+8533133	Liupanshui	26.59444	104.83333	251900	Lục Bàn Thủy		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+8537264	Huanggang	30.45143	114.87035	0	Hoàng Cương	Hồ Bắc	Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+9072919	Rizhao	35.39579	119.53217	0	Nhật Chiếu		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+9181182	Puyang	35.76318	115.01721	0	Bộc Dương		Trung Quốc+Cộng hòa Nhân dân Trung Hoa+Trung Hoa
+3687318	Carmen de Viboral	6.08236	-75.33509	21152	El Carmen de Viboral		Cô-lôm-bi-a+Colombia+Cô-lôm-bi-a (Colombia)
+3688256	Buga	3.90089	-76.29783	118004	Guadalajara de Buga		Cô-lôm-bi-a+Colombia+Cô-lôm-bi-a (Colombia)
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotá		Cô-lôm-bi-a+Colombia+Cô-lôm-bi-a (Colombia)
+3536729	Santiago de Cuba	20.02083	-75.82667	555865	Santiago de Cuba	Santiago de Cuba	Cu Ba+Cuba+Cu-ba
+3550598	Las Tunas	20.96167	-76.95111	203684	Victoria de Las Tunas	Las Tunas	Cu Ba+Cuba+Cu-ba
+3553478	Havana	23.13302	-82.38304	2163824	La Habana		Cu Ba+Cuba+Cu-ba
+3061368	Zliv	49.06608	14.36613	3656	Zliv	Nam Bohemia+Jihočeský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3063835	Tvarožná	49.19177	16.77146	1159	Tvarožná	Nam Moravia+Jihomoravský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3065901	Šlapanice	49.16863	16.72731	7109	Šlapanice	Nam Moravia+Jihomoravský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3067696	Prague	50.08804	14.42076	1165581	Praha	Hlavní město Praha	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3068020	Podolí	49.19042	16.72084	1165	Podolí	Nam Moravia+Jihomoravský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3068160	Pilsen	49.74747	13.37759	164180	Pilsen	Plzeňský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3069808	Netolice	49.0493	14.197	2721	Netolice	Nam Bohemia+Jihočeský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3073803	Karlovy Vary	50.23271	12.87117	51807	Karlovy Vary	Karlovarský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+3078513	Buchlovice	49.08627	17.33852	2487	Buchlovice	Zlínský kraj	Cộng hòa Séc+Cộng hòa Séc (Czech)+Czechia
+2805762	Wunsiedel	50.03923	12.00342	10295	Wunsiedel im Fichtelgebirge	Bayern	Đức
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Đức
+2817599	Verden	52.92343	9.23491	26924	Verden an der Aller	Neddersassen+Läichsaksen+Donja Saska	Đức
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Baden-Württemberg	Đức
+2843396	Rüdesheim	49.85	7.81667	2408	Rüdesheim an der Nahe		Đức
+2844265	Roth	49.24762	11.09111	25083	Roth bei Nürnberg	Bayern	Đức
+2849170	Reichenbach	49.18333	12.35	1178	Reichenbach am Regen	Bayern	Đức
+2849483	Regensburg	49.01513	12.10161	129151	Regensburg	Bayern	Đức
+2852458	Potsdam	52.39886	13.06566	145292	Potsdam+Podstupim	Brandenburg+http://www.brandenburg.de	Đức
+2856284	Ostheim vor der Rhön	50.45996	10.23057	3729	Ostheim	Bayern	Đức
+2861650	Nürnberg	49.45421	11.07752	499237	Nürnberg	Bayern	Đức
+2862620	Nienburg	52.6461	9.22086	32629	Nienburg/Weser	Neddersassen+Läichsaksen+Donja Saska	Đức
+2867543	Münster	51.96236	7.62571	270184	Münster	NRW	Đức
+2867714	Munich	48.13743	11.57549	1260391	München	Bayern	Đức
+2872155	Meissen	51.16158	13.4737	28492	Meissen		Đức
+2873891	Mannheim	49.4891	8.46694	307960	Mannheim	Baden-Württemberg	Đức
+2875376	Ludwigshafen am Rhein	49.48121	8.44641	163196	Ludwigshafen am Rhein		Đức
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Đức
+2879697	Leer	53.23157	7.461	33886	Leer	Neddersassen+Läichsaksen+Donja Saska	Đức
+2886242	Köln	50.93333	6.95	963395	Köln	NRW	Đức
+2886946	Koblenz	50.35357	7.57883	107319	Koblenz		Đức
+2894003	Kaiserslautern	49.443	7.77161	98732	Kaiserslautern		Đức
+2895044	Jena	50.92878	11.5899	104712	Jena		Đức
+2902768	Hof	50.31297	11.91261	49239	Hof an der Saale	Bayern	Đức
+2910831	Hannover	52.37052	9.73322	515140	Hannover+Hannauver	Neddersassen+Läichsaksen+Donja Saska	Đức
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Đức
+2921232	Gera	50.88029	12.08187	104659	Gera		Đức
+2921466	Gelsenkirchen	51.50508	7.09654	270028	Gelsenkirchen	NRW	Đức
+2924206	Fröndenberg	51.47563	7.76946	22964	Fröndenberg/Ruhr	NRW	Đức
+2925177	Freiburg	47.9959	7.85222	215966	Freiburg im Breisgau	Baden-Württemberg	Đức
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt am Main	Hessen	Đức
+2925535	Frankfurt (Oder)	52.34714	14.55062	51691	Frankfurt	Brandenburg+http://www.brandenburg.de	Đức
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		Đức
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Đức
+2935517	Dortmund	51.51494	7.466	588462	Dortmund	NRW	Đức
+2939811	Cottbus	51.75769	14.32888	84754	Cottbus	Brandenburg+http://www.brandenburg.de	Đức
+2940132	Chemnitz	50.8357	12.92922	247220	Chemnitz		Đức
+2944388	Bremen	53.07516	8.80777	546501	Bremen	Bremen	Đức
+2948071	Blankenburg	51.79025	10.95509	15963	Blankenburg am Harz	Sassen-Anholt	Đức
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Đức
+2958266	Allstedt	51.40379	11.38689	3153	Ahlsdorf	Sassen-Anholt	Đức
+2478216	Tamanrasset	22.785	5.52278	73128	Tamenghasset	Tamanghasset	An-giê-ri+Algérie+An-ghê-ri (Algeria)
+2481007	Sidi Bel Abbès	35.18994	-0.63085	191769	Sidi Bel Abbes	Sidi Bel Abbès	An-giê-ri+Algérie+An-ghê-ri (Algeria)
+2496049	Ghardaïa	32.49094	3.67347	93423	Ghardaia	Ghardaïa	An-giê-ri+Algérie+An-ghê-ri (Algeria)
+2505530	Béchar	31.61667	-2.21667	143382	Bechar	Béchar	An-giê-ri+Algérie+An-ghê-ri (Algeria)
+360630	Cairo	30.06263	31.24967	7734614	Cairo		Ai Cập
+361058	Alexandria	31.20176	29.91582	3811516	Alexandria		Ai Cập
+2509954	Valencia	39.46975	-0.37739	814208	Valencia	Valencia	Tây Ban Nha+España
+2517117	Granada	37.18817	-3.60667	234325	Grenada		Tây Ban Nha+España
+2520751	Bufali	38.86775	-0.51617	199	Bufalí	Valencia	Tây Ban Nha+España
+2521149	Benagéber	39.71667	-1.1	177	Benagébe	Valencia	Tây Ban Nha+España
+2521992	Alhama de Murcia	37.85103	-1.42507	19860	Alhama de Múrcia	Murcia	Tây Ban Nha+España
+2522047	Alfarp	39.28333	-0.55	1369	Alfarb	Valencia	Tây Ban Nha+España
+3114997	Orkoien	42.8238	-1.70485	2087	Orcoyen	Navarra	Tây Ban Nha+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Tây Ban Nha+España
+3118236	Llívia	42.46462	1.9807	0	Llívia	Catalunya	Tây Ban Nha+España
+3122762	Estella-Lizarra	42.67182	-2.03226	14238	Estella - Lizarra	Navarra	Tây Ban Nha+España
+2969679	Versailles	48.8	2.13333	85416	Versailles+78000		Pháp+France
+2983591	Rieux-Volvestre	43.25	1.2	2130	Rieux		Pháp+France
+2983911	Ressons-sur-Matz	49.53858	2.74416	1568	Roye-sur-Matz	http://en.wikipedia.org/wiki/Hauts-de-France	Pháp+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+Pa-ri+75001		Pháp+France
+2990205	Noirmoutier-en-l’Île	46.99733	-2.27374	4800	Noirmoutier-en-l’Île		Pháp+France
+2994591	Ménestreau-en-Villette	47.69962	2.02333	1466	Marcilly-en-Villette		Pháp+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001		Pháp+France
+3003351	Le Mesnil-sur-Oger	48.94708	4.02263	1094	Mesnil-sur-Oger	ACAL	Pháp+France
+3008611	La Jarne	46.12773	-1.07259	2206	La Jarrie		Pháp+France
+3012834	Illkirch-Graffenstaden	48.52894	7.71523	27261	Illkirch-Grafenstaden+67400	ACAL	Pháp+France
+3013097	Houilles	48.92161	2.19263	31121	Houilles+78800		Pháp+France
+3013173	Honfleur	49.41985	0.23294	8148	Honfleur+14600		Pháp+France
+3013403	Hérouville-Saint-Clair	49.21088	-0.30653	24258	Hérouville-Saint-Clair+14200		Pháp+France
+3014143	Guyancourt	48.77334	2.07393	31989	Guyancourt+78280		Pháp+France
+3014398	Guenrouet	47.51881	-1.95381	2601	Guenrouët		Pháp+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Pháp+France
+3014867	Granville	48.83792	-1.59714	14289	Granville+50400		Pháp+France
+3015419	Gradignan	44.77262	-0.61393	24385	Gradignan+33170		Pháp+France
+3015894	Givry	46.78202	4.74262	3741	Givry		Pháp+France
+3015926	Gisors	49.28178	1.7801	12363	Gisors		Pháp+France
+3016147	Gevrey-Chambertin	47.22614	4.96806	3356	Gevrey-Chambertin		Pháp+France
+3016321	Gennevilliers	48.93333	2.3	42294	Gennevilliers+92230		Pháp+France
+3016621	Garges-lès-Gonesse	48.96791	2.39781	39847	Garges-lès-Gonesse+95140		Pháp+France
+3016702	Gap	44.56667	6.08333	42715	Gap+05000		Pháp+France
+3016711	Gannat	46.10015	3.19886	6096	Gannat		Pháp+France
+3016830	Gagny	48.88333	2.53333	38134	Gagny+93220		Pháp+France
+3016903	Fumel	44.49862	0.96506	5816	Fumel+47500		Pháp+France
+3017341	Franconville	48.98333	2.23333	34284	Franconville+95130		Pháp+France
+3017910	Fontenay-sous-Bois	48.85442	2.48268	52075	Fontenay-sous-Bois+94120		Pháp+France
+3018074	Fontainebleau	48.4	2.7	19717	Fontainebleau+77300		Pháp+France
+3019113	Falaise	48.89217	-0.19527	9107	Falaise		Pháp+France
+3019578	Estaires	50.64574	2.72782	5979	Bermerain	http://en.wikipedia.org/wiki/Hauts-de-France	Pháp+France
+3019897	Ermont	48.99004	2.25804	28117	Ermont+95120		Pháp+France
+3020832	Draveil	48.68466	2.41418	29316	Draveil+91210		Pháp+France
+3020839	Drancy	48.92578	2.44533	62488	Drancy+93700		Pháp+France
+3021356	Dinan	48.45	-2.03333	12237	Dinan+22100	Bretagne	Pháp+France
+3021372	Dijon	47.31667	5.01667	149782	Dijon+21000		Pháp+France
+3021661	Decize	46.82852	3.46192	6605	Decize+58300		Pháp+France
+3022530	Créteil	48.78333	2.46667	84833	Créteil+94000		Pháp+France
+3022569	Crépy-en-Valois	49.23359	2.88807	15694	Crépy-en-Valois+60800	http://en.wikipedia.org/wiki/Hauts-de-France	Pháp+France
+3023763	Corbeil-Essonnes	48.60603	2.48757	40527	Corbeil-Essonnes+91100		Pháp+France
+3023924	Conflans-Sainte-Honorine	49.00158	2.09694	36358	Conflans-Sainte-Honorine+78700		Pháp+France
+3024266	Colombes	48.91882	2.25404	82300	Colombes+92700		Pháp+France
+3024297	Colmar	48.08333	7.36667	65405	Colmar+68000	ACAL	Pháp+France
+3024534	Cluny	46.43318	4.65845	4581	Cluny		Pháp+France
+3024596	Clichy-sous-Bois	48.9102	2.55323	29062	Clichy-sous-Bois		Pháp+France
+3024597	Clichy	48.90018	2.30952	57467	Clichy+92110		Pháp+France
+3024635	Clermont-Ferrand	45.77966	3.08628	138681	Clermont-Ferrand+63000		Pháp+France
+3024782	Clamecy	47.45	3.51667	4531	Clamecy+58500		Pháp+France
+3024783	Clamart	48.80299	2.26692	51400	Clamart+92140		Pháp+France
+3025055	Choisy-le-Roi	48.76846	2.41874	35590	Choisy-le-Roi+94600		Pháp+France
+3025466	Cherbourg-Octeville	49.63984	-1.61636	26655	Cherbourg+50100		Pháp+France
+3025622	Chelles	48.88109	2.59295	46947	Chelles+77500		Pháp+France
+3026033	Chatou	48.8898	2.15863	30091	Chatou+78400		Pháp+France
+3026083	Châtillon	48.8024	2.29346	32383	Châtillon+92320		Pháp+France
+3026108	Châtenay-Malabry	48.76507	2.26655	32715	Châtenay-Malabry+92290		Pháp+France
+3026204	Châteauroux	46.81667	1.7	53301	Châteauroux+36000		Pháp+France
+3026467	Chartres	48.44685	1.48925	43838	Chartres+28000		Pháp+France
+3026613	Charleville-Mézières	49.76667	4.71667	52415	Charleville-Mézières+08000	ACAL	Pháp+France
+3026637	Charenton-le-Pont	48.82209	2.41217	30910	Charenton-le-Pont+94220		Pháp+France
+3026827	Chantilly	49.19461	2.47124	11085	Chantilly+60500	http://en.wikipedia.org/wiki/Hauts-de-France	Pháp+France
+3027105	Champigny-sur-Marne	48.81642	2.49366	76726	Champigny-sur-Marne+94500		Pháp+France
+3027422	Chambéry	45.56667	5.93333	61640	Chambéry+73000		Pháp+France
+3027453	Chamalières	45.77559	3.0631	20298	Chamalières+63400		Pháp+France
+3027484	Chalon-sur-Saône	46.78333	4.85	47251	Chalon-sur-Saône+71100		Pháp+France
+3027699	Chablis	47.81386	3.79835	2758	Chablis		Pháp+France
+3027763	Cestas	44.74345	-0.67905	18036	Cestas+33610		Pháp+France
+3027883	Cergy	49.03645	2.07613	57576	Cergy+95000		Pháp+France
+3027950	Cenon	44.8559	-0.51839	22393	Cenon+33150		Pháp+France
+3028575	Carnac	47.58351	-3.07884	4777	Carnac+56340	Bretagne	Pháp+France
+3028641	Carcassonne	43.21667	2.35	49600	Carcassonne+11000		Pháp+France
+3028808	Cannes	43.55135	7.01275	70011	Cannes+06150		Pháp+France
+3029162	Calais	50.95194	1.85635	74433	Calais+62100	http://en.wikipedia.org/wiki/Hauts-de-France	Pháp+France
+3029213	Cahors	44.4491	1.43663	23331	Cahors+46000		Pháp+France
+3029253	Cadillac	44.63631	-0.31702	2568	Cadillac		Pháp+France
+3029995	Brioude	45.3	3.4	7451	Brioude+43100		Pháp+France
+3030233	Bretteville-sur-Odon	49.16627	-0.41662	4320	Bretteville-sur-Odon		Pháp+France
+3031005	Bourges	47.08333	2.4	67987	Bourges+18000		Pháp+France
+3031009	Bourg-en-Bresse	46.20574	5.2258	45340	Bourg-en-Bresse+01000		Pháp+France
+3031090	Bourbon-Lancy	46.62214	3.76953	5484	Bourbon-Lancy		Pháp+France
+3031137	Boulogne-Billancourt	48.83333	2.25	108782	Boulogne-Billancourt+92100		Pháp+France
+3031815	Bondy	48.9018	2.48931	48268	Bondy+93140		Pháp+France
+3032179	Bobigny	48.9	2.45	44962	Bobigny+93000		Pháp+France
+3032213	Blois	47.58333	1.33333	53660	Blois+41000		Pháp+France
+3032452	Blainville-sur-Orne	49.22913	-0.30061	4598	Blainville-sur-Orne		Pháp+France
+3032556	Biscarrosse	44.39454	-1.16721	10716	Biscarrosse+40600		Pháp+France
+3032824	Bezons	48.92426	2.2128	27570	Bezons+95870		Pháp+France
+3033123	Besançon	47.24878	6.01815	128426	Besançon+25000		Pháp+France
+3033391	Bergerac	44.85	0.48333	28317	Bergerac+24100		Pháp+France
+3033458	Bénouville	49.24151	-0.28246	1828	Bénouville		Pháp+France
+3033679	Bellême	48.37329	0.57005	1803	Bellême		Pháp+France
+3033791	Belfort	47.63333	6.86667	54562	Belfort+90000		Pháp+France
+3034006	Beauvais	49.43333	2.08333	53393	Beauvais+60000	http://en.wikipedia.org/wiki/Hauts-de-France	Pháp+France
+3034126	Beaune	47.03333	4.83333	24162	Beaune+21200		Pháp+France
+3034483	Bayeux	49.27732	-0.7039	15963	Bayeux+14400		Pháp+France
+3034640	Bastia	42.70278	9.45	41001	Bastia+20200		Pháp+France
+3034911	Bar-le-Duc	48.78333	5.16667	18595	Bar-le-Duc+55000	ACAL	Pháp+France
+3035403	Bagnolet	48.86667	2.41667	33504	Bagnolet+93170		Pháp+France
+3035409	Bagneux	48.79565	2.30796	38900	Bagneux+92220		Pháp+France
+3035639	Avranches	48.68333	-1.36667	9295	Avranches+50300		Pháp+France
+3035681	Avignon	43.94834	4.80892	89769	Avignon+84000		Pháp+France
+3035768	Avallon	47.48333	3.9	8740	Avallon+89200		Pháp+France
+3035843	Auxerre	47.8	3.56667	41516	Auxerre+89000		Pháp+France
+3035864	Auvers-sur-Oise	49.07158	2.16978	6972	Auvers-sur-Oise		Pháp+France
+3035883	Autun	46.95	4.3	18283	Autun+71400		Pháp+France
+3036016	Aurillac	44.91667	2.45	34724	Aurillac+15000		Pháp+France
+3036059	Auray	47.67025	-2.99183	12269	Auray+56400	Bretagne	Pháp+France
+3036097	Aumont-Aubrac	44.72205	3.28466	1106	Auroux		Pháp+France
+3036145	Aulnay-sous-Bois	48.93814	2.49402	80615	Aulnay-sous-Bois+93600		Pháp+France
+3036386	Aubervilliers	48.91667	2.38333	70914	Aubervilliers+93300		Pháp+France
+3036460	Athis-Mons	48.70522	2.39147	31225	Athis-Mons+91200		Pháp+France
+3037044	Argenteuil	48.95	2.25	101475	Argenteuil+95100		Pháp+France
+3037051	Argentan	48.75	-0.01667	18230	Argentan+61200		Pháp+France
+3037253	Arcachon	44.65	-1.16667	12321	Arcachon+33120		Pháp+France
+3037423	Antony	48.75	2.3	59845	Antony+92160		Pháp+France
+3037543	Annecy	45.9	6.11667	49232	Annecy+74000		Pháp+France
+3037598	Angoulême	45.65	0.15	49468	Angoulême+16000		Pháp+France
+3037726	Andernos-les-Bains	44.74572	-1.10355	10236	Andernos-les-Bains		Pháp+France
+3037854	Amiens	49.9	2.3	143086	Amiens+80000	http://en.wikipedia.org/wiki/Hauts-de-France	Pháp+France
+3037937	Ambert	45.55	3.75	7901	Ambert		Pháp+France
+3038213	Alfortville	48.80575	2.4204	37290	Alfortville+94140		Pháp+France
+3038230	Alençon	48.43333	0.08333	30786	Alençon+61000		Pháp+France
+3038261	Albi	43.9298	2.148	52409	Albi+81000		Pháp+France
+3038334	Ajaccio	41.91886	8.73812	54364	Ajaccio+20000		Pháp+France
+3038498	Aigueperse	46.02284	3.20231	2614	Aigueperse		Pháp+France
+3038634	Agen	44.2	0.63333	34367	Agen+47000		Pháp+France
+2634812	Wandsworth	51.4577	-0.20784	0	Khu Wandsworth của Luân Đôn	Anh	Vương quốc Anh+Vương quốc Liên hiệp Anh và Bắc Ireland+http://en.wikipedia.org/wiki/United_Kingdom
+2641673	Newcastle upon Tyne	54.97328	-1.61396	192382	Newcastle trên sông Tyne	Anh	Vương quốc Anh+Vương quốc Liên hiệp Anh và Bắc Ireland+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchester	Anh	Vương quốc Anh+Vương quốc Liên hiệp Anh và Bắc Ireland+http://en.wikipedia.org/wiki/United_Kingdom
+2643741	City of London	51.51279	-0.09184	8072	Thành phố Luân Đôn	Anh	Vương quốc Anh+Vương quốc Liên hiệp Anh và Bắc Ireland+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Luân Đôn	Anh	Vương quốc Anh+Vương quốc Liên hiệp Anh và Bắc Ireland+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool	Anh	Vương quốc Anh+Vương quốc Liên hiệp Anh và Bắc Ireland+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glasgow	苏格兰	Vương quốc Anh+Vương quốc Liên hiệp Anh và Bắc Ireland+http://en.wikipedia.org/wiki/United_Kingdom
+3382160	Cayenne	4.93333	-52.33333	61550	Cayenne		Quiana thuộc Pháp
+2300379	Ho	6.60084	0.4713	69998	Ho	Volta	Gha-na+Ghana+Gha-na (Ghana)
+255274	Piraeus	37.94745	23.63708	163688	Piraeus		Hy Lạp+Griekanmua
+256329	Oinoússes	38.51458	26.22241	792	Inousses		Hy Lạp+Griekanmua
+256952	Mílos	36.74536	24.4265	819	Milos		Hy Lạp+Griekanmua
+261414	Kallithéa	37.95	23.7	100641	Kallithea		Hy Lạp+Griekanmua
+734517	Polýgyros	40.37704	23.44135	10000	Polygyros		Hy Lạp+Griekanmua
+735640	Komotiní	41.11917	25.40535	45631	Komotini		Hy Lạp+Griekanmua
+735927	Kastoria	40.52165	21.26341	13387	Kastoria		Hy Lạp+Griekanmua
+1819729	Hong Kong	22.27832	114.17469	7012738	Hồng Kông		Hồng Kông+http://en.wikipedia.org/wiki/Hong_Kong
+3042430	Zugló	47.51758	19.10549	130000	Quận XIV		Hung-ga-ri+Hungary+Hung-ga-ri (Hungary)
+3053176	Erzsébetváros	47.50207	19.07218	62000	Quận VII		Hung-ga-ri+Hungary+Hung-ga-ri (Hungary)
+1215502	Banda Aceh	5.54167	95.33333	250757	Banda Acheh	Aceh	Nam Dương+Indonesia+In-đô-nê-xi-a (Nam Dương)+http://en.wikipedia.org/wiki/Indonesia
+1625822	Surabaya	-7.24917	112.75083	2374658	Surabaya	Đông Java+Jawa Timur	Nam Dương+Indonesia+In-đô-nê-xi-a (Nam Dương)+http://en.wikipedia.org/wiki/Indonesia
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta	Jakarta Raya	Nam Dương+Indonesia+In-đô-nê-xi-a (Nam Dương)+http://en.wikipedia.org/wiki/Indonesia
+1650357	Bandung	-6.92222	107.60694	1699719	Bandung	Tây Java	Nam Dương+Indonesia+In-đô-nê-xi-a (Nam Dương)+http://en.wikipedia.org/wiki/Indonesia
+281184	Jerusalem	31.76904	35.21633	801000	Jerusalem		I-xra-en+Israel+Israel (Do Thái)
+1254331	Tiruvallur	13.14376	79.90889	48095	Thiruvallur	TN+Tamil Nādu	Ấn Độ
+1254388	Tiruchirappalli	10.8155	78.69651	775484	Tiruchirapalli	TN+Tamil Nādu	Ấn Độ
+1258294	Raxaul	26.97982	84.85065	47965	Raxaul Bazar	BR	Ấn Độ
+1260962	Pachmarhi	22.46791	78.43312	3228	Pachmarhi Cantt	MP	Ấn Độ
+1261033	Orchha	25.35192	78.64033	8500	Orachha	MP	Ấn Độ
+1261481	New Delhi	28.63576	77.22445	317797	New Delhi	DL	Ấn Độ
+1261852	Narasapur	16.43425	81.69845	59306	Narsapur	AP+Andhra Pradesh	Ấn Độ
+1262374	Mussoorie	30.45498	78.07068	25753	Mussoori	UT	Ấn Độ
+1270498	Haldwani	29.22254	79.5286	139497	Haldwani-cum-Kathgodam	UT	Ấn Độ
+1270990	Gondiā	21.46026	80.19205	124897	Gondiya	MH+Mahārāshtra	Ấn Độ
+1271064	Gokarna	14.55	74.31667	25851	Gokarn	KA+Karnātaka	Ấn Độ
+1272832	Dharamsala	32.22006	76.32013	19540	Dharamsala	HP	Ấn Độ
+1273626	Daltonganj	24.03971	84.0658	77704	Daltongganj	JH+Jharkhand	Ấn Độ
+1274353	Chāpra	25.78031	84.74709	201597	Chapra	BR	Ấn Độ
+1274406	Cherrapunji	25.30089	91.69619	11090	Cherapunjee	ML+Meghālaya	Ấn Độ
+1275004	Kolkata	22.56263	88.36304	4631392	Kolkata	Tây Bengal+WB+West Bengal	Ấn Độ
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbai	MH+Mahārāshtra	Ấn Độ
+1275971	Bhilai	21.20919	81.4285	625138	Bhilai Nagar	CT+Chhattisgarh	Ấn Độ
+1277333	Bengaluru	12.97194	77.59369	5104047	Bengaluru	KA+Karnātaka	Ấn Độ
+1277599	Balasore	21.49266	86.93348	114321	Baleshwar	OR+Orissa	Ấn Độ
+1278297	Ashoknagar	24.57578	77.73123	64722	Ashok Nagar	MP	Ấn Độ
+1279259	Agra	27.18333	78.01667	1430055	Agra	UP	Ấn Độ
+6690108	Panchkula	30.69461	76.8504	200000	Panchkula Urban Estate	HR+Haryāna	Ấn Độ
+8629640	Thoothukudi	8.76735	78.13425	410760	Thoothukkudi	TN+Tamil Nādu	Ấn Độ
+98182	Baghdad	33.34058	44.40088	7216000	Baghdad		I-rắc+Iraq
+112931	Tehran	35.69439	51.42151	7153309	Tehran	Tehrān	I-ran+Iran
+141681	Bandar Abbas	27.1865	56.2808	352173	Bandar-Abbas		I-ran+Iran
+3164603	Venice	45.43713	12.33265	51298	Venezia		Ý+Italia (Ý)
+3165524	Turin	45.07049	7.68682	870456	Torino	Piemonte	Ý+Italia (Ý)
+3165862	Tavullia	43.89791	12.75108	2315	Urbania		Ý+Italia (Ý)
+3168043	San Martino in Passiria	46.78392	11.22727	1783	San Martino in Badia		Ý+Italia (Ý)
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	Ý+Italia (Ý)
+3170997	Pian di Scò	43.64195	11.54523	2351	Pian di Sco		Ý+Italia (Ý)
+3171058	Piacenza	45.05242	9.69342	93228	Piacenza	Emilia-Romagna	Ý+Italia (Ý)
+3171457	Parma	44.79935	10.32618	146299	Parma	Emilia-Romagna	Ý+Italia (Ý)
+3172394	Naples	40.85216	14.26811	959470	Napoli		Ý+Italia (Ý)
+3176219	Genoa	44.40478	8.94439	580223	Genova		Ý+Italia (Ý)
+3181303	Caderzone Terme	46.12945	10.75619	645	Caderzone		Ý+Italia (Ý)
+6324374	Viganella	46.05173	8.19374	103	Viganella	Piemonte	Ý+Italia (Ý)
+6534436	San Siro	46.06573	9.26877	1712	Siro		Ý+Italia (Ý)
+6535281	Pila	45.76997	8.08122	51	Pilla	Piemonte	Ý+Italia (Ý)
+1848354	Yokohama	35.43333	139.65	3574443	Yokohama		Nhật Bản
+1850147	Tokyo	35.6895	139.69171	8336599	Tokyo		Nhật Bản
+1852736	Satsumasendai	31.81667	130.3	73132	Sendai		Nhật Bản
+1853909	Osaka	34.69374	135.50218	2592413	Osaka		Nhật Bản
+1855612	Nara-shi	34.68505	135.80485	367353	Nara		Nhật Bản
+1856057	Nagoya	35.18147	136.90641	2191279	Nagoya		Nhật Bản
+1856177	Nagasaki	32.75	129.88333	410204	Nagasaki		Nhật Bản
+1857910	Kyoto	35.02107	135.75385	1459640	Kyōto		Nhật Bản
+1859171	Kobe	34.6913	135.183	1528478	Kobe		Nhật Bản
+1862415	Hiroshima	34.4	132.45	1143841	Hiroshima		Nhật Bản
+1863967	Fukuoka	33.6	130.41667	1392289	Fukuoka		Nhật Bản
+2113015	Chiba	35.6	140.11667	919729	Chiba		Nhật Bản
+2128295	Sapporo	43.06667	141.35	1883027	Sapporo		Nhật Bản
+2130658	Aomori	40.81667	140.73333	298394	Aomori		Nhật Bản
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobi	Nairobi Area	Kê-ni-a+Kenya+Kê-ni-a (Kenya)
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnôm Pênh		Campuchia+Cam-pu-chia+http://en.wikipedia.org/wiki/Cambodia
+1822214	Siem Reap	13.36179	103.86056	139458	Xiêm Riệp		Campuchia+Cam-pu-chia+http://en.wikipedia.org/wiki/Cambodia
+1830205	Pailin	12.84895	102.60928	17850	Pailin		Campuchia+Cam-pu-chia+http://en.wikipedia.org/wiki/Cambodia
+1831142	Sihanoukville	10.60932	103.52958	156691	Sihanoukville		Campuchia+Cam-pu-chia+http://en.wikipedia.org/wiki/Cambodia
+1831797	Battambang	13.10271	103.19822	150444	Battambang		Campuchia+Cam-pu-chia+http://en.wikipedia.org/wiki/Cambodia
+1871859	Pyongyang	39.03385	125.75432	3222000	Bình Nhưỡng		Bắc Triều Tiên+Cộng hòa Dân chủ Nhân dân Triều Tiên+http://en.wikipedia.org/wiki/North_Korea
+1835329	Daegu	35.87028	128.59111	2566540	Đại Khâu		Hàn Quốc+Nam Triều Tiên+http://en.wikipedia.org/wiki/South_Korea
+1835848	Seoul	37.566	126.9784	10349312	Seoul		Hàn Quốc+Nam Triều Tiên+http://en.wikipedia.org/wiki/South_Korea
+1838524	Busan	35.10278	129.04028	3678555	Busan+Phủ San		Hàn Quốc+Nam Triều Tiên+http://en.wikipedia.org/wiki/South_Korea
+1843564	Incheon	37.45646	126.70515	2628000	Nhân Xuyên+JCN		Hàn Quốc+Nam Triều Tiên+http://en.wikipedia.org/wiki/South_Korea
+1651944	Vientiane	17.96667	102.6	196731	Viêng Chăn		Lào
+1653316	Savannakhét	16.56505	104.75273	66553	Savannakhet	Savannahkhét	Lào
+1654379	Pakse	15.12022	105.79898	88332	Pakxe	Champasak	Lào
+1655559	Luang Prabang	19.88601	102.13503	47378	Luangprabang	Louangphabang	Lào
+1238992	Sri Jayewardenepura Kotte	6.88297	79.90708	115826	Sri Jayawardenepura Kotte	Western	Xri Lan-ca+Xri Lan-ca (Sri Lanka)
+1248991	Colombo	6.93194	79.84778	648034	Colombo	Western	Xri Lan-ca+Xri Lan-ca (Sri Lanka)
+598098	Klaipėda	55.70888	21.14312	192307	Klaipėda		Li-tu-a-ni-a+Litva+Li-tu-a-ni-a (Lithuania)+http://en.wikipedia.org/wiki/Lithuania
+2960107	Schengen	49.47	6.362	470	Schengen		Lúc-xăm-bua+Luxembourg
+2553604	Casablanca	33.58831	-7.61138	3144909	Casablanca		Ma-rốc+Maroc+Ma-rốc (Morocco)
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarivo		Ma-đa-gát-xca+Madagascar+Ma-đa-gát-xca (Madagascar)
+1298824	Yangon	16.80528	96.15611	4477638	Yangon	Yangon	Mi-an-ma+Myanma+Miến Điện (Myanmar)
+2028462	Ulan Bator	47.90771	106.88324	844818	Ulan Bator	Ulaanbaatar	Mông Cổ
+1821274	Macau	22.20056	113.54611	520400	Ma Cao		Ma Cao+Macao
+3570675	Fort-de-France	14.60892	-61.07334	89995	Fort-de-France+97200		
+3530580	Ciudad Victoria	23.74174	-99.14599	269923	Victoria	TAM+Tamps	Mê-hi-cô+México+Mễ Tây Cơ (Mê-hi-cô)
+3530597	Mexico City	19.42847	-99.12766	12294193	Ciudad de Mexico	The Federal District+Distrito Federal	Mê-hi-cô+México+Mễ Tây Cơ (Mê-hi-cô)
+3533462	Acapulco de Juárez	16.86336	-99.8901	652136	Acapulco de Juárez	GRO	Mê-hi-cô+México+Mễ Tây Cơ (Mê-hi-cô)
+3979673	Ixtapa-Zihuatanejo	17.64344	-101.55212	61308	José Azueta	GRO	Mê-hi-cô+México+Mễ Tây Cơ (Mê-hi-cô)
+3995402	Morelia	19.70078	-101.18443	592797	Morelia	MIC+Mich	Mê-hi-cô+México+Mễ Tây Cơ (Mê-hi-cô)
+1732752	Johor Bahru	1.4655	103.7578	802489	Johor Bahru	JHR+Johor	Ma-lay-xi-a+Malaysia+Mã Lai (Ma-lay-xi-a)
+1734634	Ipoh	4.5841	101.0829	673318	Ipoh	PRK+Perak	Ma-lay-xi-a+Malaysia+Mã Lai (Ma-lay-xi-a)
+1735106	George Town	5.41123	100.33543	300000	Penang	PNG+Pulau Pinang	Ma-lay-xi-a+Malaysia+Mã Lai (Ma-lay-xi-a)
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Kuala Lumpur	KUL	Ma-lay-xi-a+Malaysia+Mã Lai (Ma-lay-xi-a)
+1735634	Kuching	1.55	110.33333	570407	Kuching	SRW+Sarawak	Ma-lay-xi-a+Malaysia+Mã Lai (Ma-lay-xi-a)
+2332459	Lagos	6.45407	3.39467	9000000	Lagos		Ni-giê-ri-a+Nigeria+Ni-giê-ri-a (Nigeria)
+2347283	Benin City	6.33815	5.62575	1125058	Thành phố Benin	Edo	Ni-giê-ri-a+Nigeria+Ni-giê-ri-a (Nigeria)
+2747373	The Hague	52.07667	4.29861	474292	Den Haag	Nam Hà Lan+zh+Zuid-Holland	Hà Lan
+2757345	Delft	52.00667	4.35556	95060	Delft	Nam Hà Lan+zh+Zuid-Holland	Hà Lan
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Hà Lan
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Na Uy
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Pê-ru+Peru
+3947019	Ayacucho	-13.15878	-74.22321	140033	Ayacucho	Vùng Ayacucho	Pê-ru+Peru
+1693239	Plaridel	14.88722	120.85722	70781	Pandi	Trung Luzon	Phi-lip-pin+Philippines+Phi-líp-pin (Phi Luật Tân)
+1699791	Miagao	10.6442	122.2352	8881	Miag-ao	Tây Visayas	Phi-lip-pin+Philippines+Phi-líp-pin (Phi Luật Tân)
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Phi-lip-pin+Philippines+Phi-líp-pin (Phi Luật Tân)
+1174872	Karachi	24.8608	67.0104	11624219	Karachi		Pa-ki-xtan+Pakistan+Pa-ki-xtan (Pakistan)
+756135	Warsaw	52.22977	21.01178	1702139	Warszawa	Mazowieckie	Ba Lan
+756320	Ursus	52.19517	20.88419	47285	Warszawa-Ursus	Mazowieckie	Ba Lan
+758470	Śródmieście	52.22904	21.01644	134306	Warszawa-Śródmieście	Mazowieckie	Ba Lan
+758633	Sokołów Małopolski	50.22909	22.11968	3975	Sokołów Małopolski	Podkarpackie	Ba Lan
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Ba Lan
+3085172	Solec Kujawski	53.08371	18.22572	15125	Solec Kujawski…	Kujawsko-Pomorskie	Ba Lan
+3094802	Kraków	50.06143	19.93658	755050	Kraków	Małopolskie	Ba Lan
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Ba Lan
+3101968	Bystrzyca Kłodzka	50.30179	16.64231	10375	Bystrzyca Klodzka	Dolnośląskie	Ba Lan
+7303419	East Jerusalem	31.78336	35.23388	428304	Đông Jerusalem		Lãnh thổ Palestine
+2267057	Lisbon	38.71667	-9.13333	517802	Lisboa	Lisbon+Lisboa	Bồ Đào Nha
+289962	Al Khawr	25.68389	51.50583	18923	Al Khor	Al Khawr	Ca-ta+Qatar
+662334	Zalău	47.2	23.05	63232	Zalau		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+663256	Vălenii de Munte	45.18333	26.03333	13276	Valenii de Munte		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+664437	Turnu Măgurele	43.75	24.86667	28783	Turnu Magurele		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+668639	Roșia Montană	46.30669	23.13373	1556	Rosia Montana		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+668873	Râmnicu Sărat	45.38333	27.05	38526	Râmnicu Sarat		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+669289	Rădăuți	47.85	25.91667	23822	Radauti		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+671768	Oradea	47.0458	21.91833	206614	Oradea		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+672912	Moldova Nouă	44.7375	21.66694	13263	Moldova Noua		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+677581	Gătaia	45.43111	21.43	8002	Gataia		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+678459	Fălticeni	47.45	26.3	29576	Falticeni		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+678499	Făgăraș	45.85	24.96667	30714	Fagaras		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+679177	Ștei	46.53333	22.45	6529	Stei		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+682321	Cernavodă	44.33957	28.03273	18502	Cernavoda		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+685174	Beiuş	46.66667	22.35	10721	Beius		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+8436351	Sighișoara	46.22141	24.79279	34537	Sighisoara		Ru-ma-ni+Romania+Ru-ma-ni-a (Romania)
+485824	Suzdal’	56.42274	40.44668	11183	Suzdal	Vladimir	Nga
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sankt-Peterburg+Санкт-Петербург		Nga
+500096	Ryazan’	54.6269	39.6916	520173	Ryazan	Rjazan	Nga
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov trên sông Đông		Nga
+519336	Velikiy Novgorod	58.52131	31.27104	215062	Veliky Novgorod	Novgorod	Nga
+524901	Moscow	55.75222	37.61556	10381222	Mát-xcơ-va+Moskva+Matxcơva		Nga
+538560	Kursk	51.73733	36.18735	409431	Kursk	Kursk	Nga
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzerzhinsk	Nizjnij Novgorod	Nga
+564719	Dubna	56.73333	37.16667	60604	Dubna	Moskva+MO	Nga
+566532	Derbent	42.06779	48.28987	105965	Derbent		Nga
+1497932	Nazyvayevsk	55.56975	71.35294	12284	Nazyvaevsk+Называевск	Omsk	Nga
+1507116	Dudinka	69.40583	86.17778	23619	Dudinka	Krasnoyarskiy Kray	Nga
+2013348	Vladivostok	43.10562	131.87353	587022	Vladivostok	Primorskiy Kray	Nga
+3168070	San Marino	43.93667	12.44639	4500	Thành phố San Marino	San Marino	Xan Ma-ri-nô+San Marino+Xan Ma-ri-nô (San Marino)
+1153669	Chiang Rai	19.90858	99.8325	78756	Thành phố Chiang Rai	Chiang Rai	Thái Lan
+1153671	Chiang Mai	18.79038	98.98468	200952	Chiang Mai	Chiang Mai	Thái Lan
+1606147	Songkhla	7.19882	100.5951	84264	Thành phố Songkhla	Songkhla	Thái Lan
+1607532	Phra Nakhon Si Ayutthaya	14.35167	100.57739	81962	Ayutthaya	Phra Nakhon Si Ayutthaya	Thái Lan
+1608232	Nong Khai	17.87847	102.742	63609	Nong Khai	Nong Khai	Thái Lan
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Thái Lan
+1610780	Hat Yai	7.00836	100.47668	191696	Hat Yai	Songkhla	Thái Lan
+1614295	Phatthaya	12.93333	100.88333	97296	Pattaya	Chon Buri	Thái Lan
+315808	Elazığ	38.67431	39.22321	298004	Elâzığ		Thổ Nhĩ Kỳ+Turkanmua
+1665196	Douliu	23.70944	120.54333	104723	Đấu Lục		Đài Loan
+1667905	Taoyuan	24.9896	121.3187	0	Quận Đào Viên		Đài Loan
+1668341	Taipei	25.04776	121.53185	7871900	Đài Bắc		Đài Loan
+1668347	Taibao	23.45944	120.33222	0	Thái Bảo		Đài Loan
+1668353	Xinying	23.30694	120.31056	0	Tân Doanh		Đài Loan
+1668355	Tainan	22.99083	120.21333	771235	Đài Nam		Đài Loan
+1668399	Taichung	24.1469	120.6839	1040725	Đài Trung		Đài Loan
+1670481	Pingtung	22.67135	120.48814	0	Bình Đông		Đài Loan
+1671566	Nantou	23.91566	120.66387	105682	Nam Đầu		Đài Loan
+1673816	Fengshan	22.62659	120.36126	0	Phượng Sơn		Đài Loan
+1674199	Yilan	24.757	121.753	94188	Nghi Lan		Đài Loan
+1674828	Xindian	24.96005	121.53892	0	Tân Điếm	Đài Bắc	Đài Loan
+1675151	Hsinchu	24.80361	120.96861	404109	Tân Trúc		Đài Loan
+1676242	Hengchun	22.00417	120.74389	31288	Hằng Xuân		Đài Loan
+1677112	Zhubei	24.83833	121.00778	0	Trúc Bắc		Đài Loan
+1678228	Keelung	25.12825	121.7419	397515	Cơ Long		Đài Loan
+6949678	Taitung City	22.7583	121.1444	109584	Đài Đông		Đài Loan
+698740	Odessa	46.47747	30.73262	1001558	Odessa		U-crai-na+Ukraina+U-crai-na (Ukraine)+http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Lviv	Lviv	U-crai-na+Ukraina+U-crai-na (Ukraine)+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kiev		U-crai-na+Ukraina+U-crai-na (Ukraine)+http://en.wikipedia.org/wiki/Ukraine
+703656	Kupjansk	49.71055	37.61517	32449	Kupiansk	Kharkiv	U-crai-na+Ukraina+U-crai-na (Ukraine)+http://en.wikipedia.org/wiki/Ukraine
+706483	Kharkiv	49.98081	36.25272	1430885	Kharkiv	Kharkiv	U-crai-na+Ukraina+U-crai-na (Ukraine)+http://en.wikipedia.org/wiki/Ukraine
+711134	Burshtyn	49.25867	24.62777	14729	Hổ phách	Ivano-Frankivsk	U-crai-na+Ukraina+U-crai-na (Ukraine)+http://en.wikipedia.org/wiki/Ukraine
+6930327	Slavutych	51.51964	30.73434	25000	Slavutych		U-crai-na+Ukraina+U-crai-na (Ukraine)+http://en.wikipedia.org/wiki/Ukraine
+4155966	Fort Lauderdale	26.12231	-80.14338	178590	Fort Lauderdale+Ft. Lauderdale	FL+Florida	Hoa Kỳ+U.S.+USA+U.S.A.
+4160021	Jacksonville	30.33218	-81.65565	868031	Jacksonville	FL+Florida	Hoa Kỳ+U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	Atlanta	GA+Georgia	Hoa Kỳ+U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	LA+Louisiana	Hoa Kỳ+U.S.+USA+U.S.A.
+4347778	Baltimore	39.29038	-76.61219	621849	Baltimore	Maryland+MD	Hoa Kỳ+U.S.+USA+U.S.A.
+4457719	Bryson City	35.43127	-83.44944	1458	Thành phố Bryson	Bắc Carolina+NC+North Carolina	Hoa Kỳ+U.S.+USA+U.S.A.
+4500546	Atlantic City	39.36428	-74.42293	39260	Thành phố Atlantic	NJ+New Jersey	Hoa Kỳ+U.S.+USA+U.S.A.
+4508722	Cincinnati	39.12711	-84.51439	296943	Cincinnati	OH	Hoa Kỳ+U.S.+USA+U.S.A.
+4517140	Loveland	39.26895	-84.26383	12585	Loveland	OH	Hoa Kỳ+U.S.+USA+U.S.A.
+4527760	Waverly	39.12673	-82.98546	4274	Waverly City	OH	Hoa Kỳ+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Philadelphia	PA	Hoa Kỳ+U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	Austin	TX+Texas	Hoa Kỳ+U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	Dallas	TX+Texas	Hoa Kỳ+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Houston	TX+Texas	Hoa Kỳ+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chicago	IL+Illinois	Hoa Kỳ+U.S.+USA+U.S.A.
+4898875	La Salle	41.33337	-89.09175	9609	LaSalle	IL+Illinois	Hoa Kỳ+U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Boston	MA+Massachusetts	Hoa Kỳ+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroit	MI	Hoa Kỳ+U.S.+USA+U.S.A.
+5099836	Jersey City	40.72816	-74.07764	264290	Thành phố Jersey	NJ+New Jersey	Hoa Kỳ+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Thành phố New York+NYC+NY	Tiểu bang New York+NY	Hoa Kỳ+U.S.+USA+U.S.A.
+5194302	Horsham	40.17844	-75.12851	14842	Xã Horsham	PA	Hoa Kỳ+U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Phoenix	Arizona+AZ	Hoa Kỳ+U.S.+USA+U.S.A.
+5325738	Bakersfield	35.37329	-119.01871	373640	Bakersfield	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5341430	Daly City	37.70577	-122.46192	106562	Thành phố Daly	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5367929	Long Beach	33.76696	-118.18923	474140	Long Beach	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5373900	Modesto	37.6391	-120.99688	211266	Modesto	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5376502	Nevada City	39.26173	-121.01779	3152	Thành phố Nevada	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	Sacramento	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5391811	San Diego	32.71533	-117.15726	1394928	San Diego	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San Jose	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5398563	Stanford	37.42411	-122.16608	13809	Stanford	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5404555	Union City	37.59577	-122.01913	74494	Thành phố Union	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5411015	Yuba City	39.14045	-121.61691	66941	Thành phố Yuba	CA+Calif+California	Hoa Kỳ+U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Denver	CO+Colorado	Hoa Kỳ+U.S.+USA+U.S.A.
+5493811	Taos	36.40725	-105.57307	5740	Thành phố Taos	NM+New Mexico	Hoa Kỳ+U.S.+USA+U.S.A.
+5500539	Boulder City	35.97859	-114.83249	15551	Thành phố Boulder	NV+Nevada	Hoa Kỳ+U.S.+USA+U.S.A.
+5501344	Carson City	39.1638	-119.7674	54521	Thành phố Carson	NV+Nevada	Hoa Kỳ+U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas	NV+Nevada	Hoa Kỳ+U.S.+USA+U.S.A.
+5509403	North Las Vegas	36.19886	-115.1175	234807	Bắc Las Vegas	NV+Nevada	Hoa Kỳ+U.S.+USA+U.S.A.
+5514428	Virginia City	39.30963	-119.64962	855	Thành phố Virginia	NV+Nevada	Hoa Kỳ+U.S.+USA+U.S.A.
+5712169	Baker City	44.77487	-117.83438	9752	Thành phố Baker	Oregon+OR	Hoa Kỳ+U.S.+USA+U.S.A.
+5744253	Oregon City	45.35734	-122.60676	35831	Thành phố Oregon	Oregon+OR	Hoa Kỳ+U.S.+USA+U.S.A.
+5780993	Salt Lake City	40.76078	-111.89105	192672	Thành phố Salt Lake+SLC	UT+Utah	Hoa Kỳ+U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Seattle	Tiểu bang Washington+WA+Washington	Hoa Kỳ+U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Honolulu	Hawaii+HI	Hoa Kỳ+U.S.+USA+U.S.A.
+7259489	Scott Air Force Base	38.5427	-89.85035	3612	Scott AFB+Scott Air Force Base	IL+Illinois	Hoa Kỳ+U.S.+USA+U.S.A.
+7259621	West Bloomfield Township	42.56891	-83.38356	64690	Xã West Bloomfield+West Bloomfield Township	MI	Hoa Kỳ+U.S.+USA+U.S.A.
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Vê-nê-zu-ê-la+Venezuela+Vê-nê-zu-ê-la (Venezuela)
+1560078	Yên Thành	18.99856	105.47116	0	Yên Thành	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1560166	Thị Trấn Yên Minh	23.11792	105.14159	0	Thị Trấn Yên Minh	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1560227	Yến Lạc	22.23693	106.18149	0	Yến Lạc	Bắc Kạn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1560229	Yên Lạc	21.23646	105.57297	0	Yên Lạc	Vĩnh Phúc	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1561914	Cai Doi Vam	8.85707	104.81199	0	Cái Đôi Vàm	Cà Mau	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1562176	Trảng Bom	10.95358	107.00589	0	Trảng Bom	Đồng Nai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1562414	Vũng Tàu	10.34599	107.08426	209683	Vũng Tàu	Bà Rịa-Vũng Tàu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1562418	Vũng Liêm	10.09576	106.18548	0	Vũng Liêm	Vĩnh Long	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1562568	Thị Trấn Vĩnh Tuy	22.27441	104.89091	0	Thị Trấn Vĩnh Tuy	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1562773	Vĩnh Châu	9.32439	105.98006	0	Vĩnh Châu	Sóc Trăng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563006	Vạn Giã	12.69203	109.22069	0	Vạn Giã	Khánh Hòa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563139	Vân Đình	20.73514	105.77236	0	Vân Đình	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563141	Văn Điển	20.9463	105.845	0	Văn Điển	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563241	Thành Phố Uông Bí	21.03433	106.77049	63829	Thành Phố Uông Bí	Quảng Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563265	Tuy Phước	13.82738	109.16651	0	Tuy Phước	Bình Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563281	Tuy Hòa	13.09546	109.32094	69596	Thành phố Tuy Hòa	Phú Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563287	Thành Phố Tuyên Quang	21.82356	105.21424	36430	Tuyên Quang+Thành Phố Tuyên Quang	Tuyên Quang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563359	Hòa Bình	19.26393	104.47232	0	Hòa Bình	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563370	Tư Nghĩa	15.08451	108.826	0	Tư Nghĩa+La Hà	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563704	Thị Trấn Trùng Khánh	22.83514	106.52496	0	Thị Trấn Trùng Khánh	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1563977	Trà Ôn	9.96261	105.92168	0	Trà Ôn	Vĩnh Long	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1564065	Thị Trấn Trạm Tấu	21.46659	104.37966	0	Thị Trấn Trạm Tấu	Yên Bái	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1564075	Tràm Chim	10.67001	105.56469	0	Tràm Chim	Đồng Tháp	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1564257	Trà Bồng	15.25569	108.51722	0	Trà Bồng+Trà Xuân	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1564576	Tiểu Cần	9.81166	106.19067	0	Tiểu Cần	Trà Vinh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1564629	Tiên Phước	15.48819	108.30736	0	Tiên Kỳ	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1565157	Thới Lai	10.06522	105.55863	0	Thới Lai	Cần Thơ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1565760	Ái Tử	16.76886	107.16504	0	Ái Tử	Quảng Trị	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1565969	Thị Trấn Thất Khê	22.25525	106.47359	0	Thị Trấn Thất Khê	Lạng Sơn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566029	Phú Lộc	9.42838	105.74111	0	Phú Lộc	Sóc Trăng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566053	Thanh Sơn	21.19867	105.17892	0	Huyện Thanh Sơn	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566083	Ho Chi Minh City	10.82302	106.62965	3467331	Thành phố Hồ Chí Minh+TPHCM+Sài Gòn+HCMC	Thành phố Hồ Chí Minh+Thành phố Sài Gòn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566166	Thanh Hóa	19.8	105.76667	112473	Thanh Hóa	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566206	Thanh Chương	18.77877	105.33356	0	Thanh Chương	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566226	Thanh Bình	10.5619	105.48411	0	Thanh Bình	Đồng Tháp	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566319	Thành Phố Thái Nguyên	21.59422	105.84817	133877	Thành Phố Thái Nguyên	Thái Nguyên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566346	Thành Phố Thái Bình	20.45	106.34002	53071	Thành Phố Thái Bình	Thái Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566378	Kim Tân	20.13053	105.67454	0	Kim Tân	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566411	Thạch Hà	18.36788	105.86122	0	Thạch Hà	Hà Tĩnh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566566	Tây Hồ	21.06895	105.81053	0	Tây Hồ	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566570	Tây Đằng	21.19809	105.42217	0	Tây Dằng+Tây Đằng+Huyện Ba Vì	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566912	Tân Kỳ	19.04756	105.26807	0	Tân Kỳ	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566958	Tánh Linh	11.08421	107.68095	0	Lạc Tánh	Bình Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1566963	Tân Hiệp	10.11709	105.28578	0	Tân Hiệp	Kiến Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1567178	Trai Ngau	21.39324	105.61441	0	Tam Đảo	Vĩnh Phúc	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1567201	Tam Bình	10.04811	106.00017	0	Tam Bình	Vĩnh Long	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1567221	Thị Trấn Tà Lùng	22.4979	106.5669	0	Thị Trấn Tà Lùng	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1567649	Sơn Dương	21.69676	105.39901	0	Huyên Sơn Dương	Tuyên Quang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1567681	Sơn La	21.3256	103.91882	19054	Thành Phố Sơn La	Sơn La	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1567878	Thị Trấn Sìn Hồ	22.36647	103.23438	0	Thị Trấn Sìn Hồ	Lai Châu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1567902	Si Ma Cai	22.6951	104.27857	0	Si Ma Cai	Lào Cai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568526	Mường Chiên	21.8424	103.56608	0	Mường Chiên	Sơn La	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568574	Qui Nhon	13.77648	109.22367	210338	Quy Nhơn	Bình Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568605	Oui Dat	17.80459	105.97044	0	Quy Đạt	Quảng Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568616	Quế Sơn	15.67356	108.2201	0	Đông Phú	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568619	Kim Sơn	19.60409	104.91903	0	Kim Sơn	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568728	Thị Trấn Quảng Uyên	22.69499	106.44235	0	Thị Trấn Quảng Uyên	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568759	Quán Hàu	17.40438	106.64072	0	Quán Hàu	Quảng Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1568770	Quảng Ngãi	15.12047	108.79232	32992	Thành phố Quảng Ngãi	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1569620	Plei Kần	14.70495	107.6862	0	Plei Kần	Kon Tum	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1569684	Pleiku	13.98333	108	114225	Plây Cu+Pleiku	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1569850	Phú Vang	16.43911	107.71438	0	Phú Vang	Thừa Thiên-Huế	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1569901	Phú Thọ	21.39963	105.22221	0	Thị Xã Phú Thọ	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1569991	Phú Phong	13.90964	108.91903	0	Phú Phong	Bình Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570243	Phước An	12.71298	108.30148	0	Phước An	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570319	Phụng Hiệp	9.77972	105.7338	0	Cây Dương		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570352	Phù Mỹ	14.17182	109.04888	0	Phù Mỹ	Bình Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570449	Thành Phố Phủ Lý	20.54531	105.91221	31801	Thành Phố Phủ Lý	Hà Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570752	Phù Cát	14.00316	109.05804	0	Phù Cát+Ngô Mây	Bình Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570815	Phong Thổ	22.54433	103.29776	0	Phong Thổ	Lai Châu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570863	Phong Điền	16.58321	107.36438	0	Phong Điền	Thừa Thiên-Huế	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570864	Phong Điền	9.99753	105.6673	0	Phong Điền	Cần Thơ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570880	Thị Trấn Phố Lu	22.31918	104.18719	0	Thị Trấn Phố Lu	Lào Cai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1570906	Bến Sung	19.63141	105.57815	0	Bến Sung	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1571058	Phan Thiết	10.92889	108.10208	160652	Phan Thiết	Bình Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1571725	Thị Trấn Nước Hai	22.73738	106.15216	0	Thị Trấn Nước Hai	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1571768	Núi Đèo	20.91569	106.6744	0	Núi Đèo	Hải Phòng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1571968	Thành Phố Ninh Bình	20.25809	105.97965	36864	Thành Phố Ninh Bình	Ninh Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572151	Nha Trang	12.24507	109.19432	283441	Nha Trang	Khánh Hòa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572249	Nhà Bè	10.69672	106.74032	0	Nhà Bè	Thành phố Hồ Chí Minh+Thành phố Sài Gòn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572274	Thị Trấn Nguyên Bình	22.64995	105.95985	0	Thị Trấn Nguyên Bình	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572368	Ngô Đồng	20.28296	106.44347	0	Ngô Đồng	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572446	Ngọc Lặc	20.09189	105.36761	0	Ngọc Lặc	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572536	Quán Hành	18.77927	105.64597	0	Quán Hành	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572575	Nghĩa Hành	15.04568	108.77724	0	Nghĩa Hành+Chợ Chùa	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572628	Vân Tùng	22.43082	105.99687	0	Vân Tùng	Bắc Kạn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572696	Thị Trấn Ngải Giao	10.6471	107.24577	0	Thị Trấn Ngải Giao	Bà Rịa-Vũng Tàu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1572898	Thị Trấn Na Sầm	22.05639	106.6151	0	Thị Trấn Na Sầm	Lạng Sơn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1573517	Thành Phố Nam Định	20.43389	106.17729	193499	Thành Phố Nam Định	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1573524	Nam Đàn	18.69799	105.49881	0	Nam Đàn	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1573993	Mỹ Xuyên	9.56006	105.98984	0	Mỹ Xuyên	Sóc Trăng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574023	Mỹ Tho	10.36004	106.35996	122310	Mỹ Tho	Tiền Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574024	Mỹ Thọ	10.44267	105.69508	0	Mỹ Thọ	Đồng Tháp	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574148	Thạnh Mỹ	15.74889	107.83678	0	Thạnh Mỹ	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574250	Mường Nhé	22.19236	102.4579	0	Mường Nhé		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574263	Thị Trấn Mường Khương	22.76141	104.12156	0	Thị Trấn Mường Khương	Lào Cai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574307	Mường Lát	20.52915	104.60138	0	Mường Lát	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574546	Mộ Đức	14.95513	108.88586	0	Mộ Đức	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574568	Mỏ Cày	10.13312	106.33519	0	Mỏ Cày	Bến Tre	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574638	Minh Lương	9.90248	105.1595	0	Minh Lương	Kiến Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574654	Minh Long	14.93218	108.70328	0	Minh Long	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1574706	Thị Trấn Mèo Vạc	23.16411	105.40993	0	Thị Trấn Mèo Vạc	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1575080	Ma Đa Gui	11.38702	107.53508	0	Ma Đa Gui	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1575703	Long Mỹ	9.68141	105.57226	0	Long Mỹ		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1575965	Lien De	20.22095	106.18747	0	Liễu Đề	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1576073	Kiến Giang	17.22328	106.79011	0	Kiến Giang	Quảng Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1576233	Lấp Vò	10.36161	105.51924	0	Lấp Vò	Đồng Tháp	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1576275	Lao Chải	22.31377	103.86844	2324	Lao Chải	Lào Cai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1576633	Thành Phố Lạng Sơn	21.85264	106.76101	55981	Thành Phố Lạng Sơn	Lạng Sơn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1576757	Thị Trấn Phước Bửu	10.53472	107.40202	0	Thị Trấn Phước Bửu	Bà Rịa-Vũng Tàu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1577285	Lũng Hồ	22.98479	105.23983	0	Lũng Hồ	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1577922	Lai Vung	10.28701	105.6617	0	Lai Vung	Đồng Tháp	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1577929	Lái Thiêu	10.90512	106.69949	0	Lái Thiêu	Bình Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1577958	Lai Cách	20.93252	106.24756	0	Lai Cách	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1577995	La Gi	10.65993	107.77206	160652	La Gi	Bình Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1578015	Lắk	12.41086	108.17682	0	Lắk	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1578127	Mường Xén	19.39795	104.15239	0	Mường Xén	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1578163	Kỳ Anh	18.06243	106.29832	0	Kỳ Anh	Hà Tĩnh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1578947	Kim Bài	20.85265	105.76963	0	Kim Bài	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1578998	Kiên Lương	10.28624	104.64616	0	Kiên Lương	Kiến Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1579615	Thị Trấn Khánh Yên	22.08935	104.25149	0	Thị Trấn Khánh Yên	Lào Cai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1579739	Kẻ Sặt	20.91007	106.14771	0	Kẻ Sặt	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1579743	Kế Sách	9.76743	105.98574	0	Kế Sách	Sóc Trăng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580092	Hương Trà	16.52539	107.4755	0	Hương Trà	Thừa Thiên-Huế	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580240	Huế	16.4619	107.59546	287217	Huế+Thành phố Huế	Thừa Thiên-Huế	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580410	Thành Phố Hạ Long	20.95045	107.07336	148066	Thành Phố Hạ Long	Quảng Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580541	Hội An	15.87944	108.335	32757	Hội An	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580572	Hóc Môn	10.8891	106.59533	0	Hóc Môn	Thành phố Hồ Chí Minh+Thành phố Sài Gòn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580593	Hòa Vang	15.98764	108.13893	0	Hòa Vang	Đà Nẵng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580793	Hoài Ân	14.36352	108.96476	0	Hoài Ân+Tăng Bạt Hổ	Bình Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580830	Thành Phố Hòa Bình	20.81717	105.33759	105260	Thành Phố Hòa Bình	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1580914	Doug An	15.58224	108.11422	0	Tân An	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1581130	Hanoi	21.0245	105.84117	1431270	Hà Nội	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1581268	Thị Trấn Thanh Nhật	22.68749	106.67004	0	Thị Trấn Thanh Nhật	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1581274	Hà Lam	15.73871	108.35062	0	Hà Lam	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1581298	Haiphong	20.86481	106.68345	602695	Hải Phòng	Hải Phòng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1581326	Thành Phố Hải Dương	20.94099	106.33302	58030	Thành Phố Hải Dương	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1581339	Hạ Hòa	21.56302	105.00512	0	Hạ Hòa	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1581364	Hà Đông	20.97136	105.77876	50877	Hà Đông	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582062	Duy Xuyên	15.82898	108.25956	0	Duy Xuyên+Nam Phước	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582173	Đưc Trọng	11.73559	108.3733	161232	Liên Nghĩa	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582175	Đức Thọ	18.53957	105.58302	0	Đức Thọ	Hà Tĩnh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582203	Tram de Dak Mil	12.44957	107.62237	0	Đắk Mil		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582436	Don Luan	11.53495	106.88324	23978	Đồng Xoài	Bình Phước	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582467	Thị Trấn Đồng Văn	23.27841	105.36291	0	Thị Trấn Đồng Văn	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582743	Đồng Mỏ	21.65701	106.57832	0	Đồng Mỏ	Lạng Sơn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582863	Thị Trấn Đông Khê	22.42939	106.43194	0	Thị Trấn Đông Khê	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1582886	Kwang Binh	17.46885	106.62226	31040	Đồng Hới	Quảng Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1583240	Đoan Hùng	21.62254	105.18462	0	Đoan Hùng+Huyện Đoan Hùng	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1583342	Đình Lập	21.54633	107.09812	0	Đình Lập	Lạng Sơn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1583477	Dien Bien Phu	21.38602	103.02301	40282	Điện Biên Phủ+Ðiện Biên Phủ		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1583478	Quang Nam	15.88853	108.25447	0	Vĩnh Điện	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1583497	Giemdiem	20.55832	106.56882	0	Diêm Điền	Thái Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1583752	Phuoc Tho	10.49093	107.27014	0	Thị Trấn Đất Đỏ	Bà Rịa-Vũng Tàu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1583992	Da Nang	16.06778	108.22083	752493	Đà Nẵng	Đà Nẵng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1584071	Ðà Lạt	11.94646	108.44193	197000	Ðà Lạt	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1584099	Đắk Song	12.25518	107.60924	0	Đắk Song		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1584301	Đại Lộc	15.88214	108.12092	0	Ái Nghĩa	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1584427	Đắk Tô	14.66092	107.8389	0	Đắk Tô	Kon Tum	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1584784	Cờ Đỏ	10.09377	105.42916	0	Cờ Đỏ	Cần Thơ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1584909	Con Cuông	19.04996	104.88124	0	Con Cuông	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1585243	Chúc Sơn	20.92375	105.70155	0	Chúc Sơn	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1585281	Chũ	21.37379	106.56649	0	Chũ	Bắc Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1585324	Chợ Mới	21.88374	105.77281	0	Chợ Mới	Bắc Kạn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1585332	Chợ Lách	10.26032	106.11892	0	Chợ Lách	Bến Tre	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1585346	Chợ Gạo	10.34984	106.4634	0	Chợ Gạo	Tiền Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1585356	Chợ Chu	21.90724	105.64219	0	Chợ Chu	Thái Nguyên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1585550	Huyện Chiêm Hóa	22.14413	105.27277	0	Huyện Chiêm Hóa+Chiêm Hóa	Tuyên Quang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586112	Cao Thượng	21.38707	106.12931	0	Cao Thượng	Bắc Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586185	Thành Phố Cao Bằng	22.66568	106.25786	41112	Thành Phố Cao Bằng	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586203	Cần Thơ	10.03711	105.78825	259598	Cần Thơ	Cần Thơ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586288	Cần Giờ	10.41115	106.95474	55137	Cần Thạnh	Thành phố Hồ Chí Minh+Thành phố Sài Gòn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586295	Cần Đước	10.50966	106.60308	0	Cần Đước	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586316	Cẩm Xuyên	18.25029	106.00132	0	Cẩm Xuyên	Hà Tĩnh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586524	Cái Nước	8.94231	105.01411	0	Cái Nước	Cà Mau	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586798	Buôn Trấp	12.48478	108.02982	0	Buôn Trấp	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1586896	Buôn Ma Thuột	12.66747	108.03775	146975	Buôn Ma Thuột	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1587759	Bình Thủy	10.07431	105.73974	0	Bình Thủy	Cần Thơ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1587791	Bình Sơn	15.29776	108.76124	0	Bình Sơn+Châu Ổ	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1587883	Bình Đại	10.18964	106.69149	0	Bình Đại	Bến Tre	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1587888	Tân Túc	10.69541	106.59128	0	Tân Túc	Thành phố Hồ Chí Minh+Thành phố Sài Gòn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1588178	Ba Tri	10.04427	106.5902	0	Ba Tri	Bến Tre	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1588182	Ba Tơ	14.7636	108.73223	0	Ba Tơ	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1588242	Thị Trấn Phố Ràng	22.23429	104.47643	0	Thị Trấn Phố Ràng	Lào Cai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1588278	Thị Trấn Bảo Lạc	22.94924	105.68046	0	Thị Trấn Bảo Lạc	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1588316	Bẩn Yên Nhân	20.93653	106.05711	0	Bẩn Yên Nhân+Mỹ Hào	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1590225	Ít Ong	21.5175	104.02701	0	Ít Ong	Sơn La	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1590900	Thị Trấn Thuận Châu	21.43849	103.69	0	Thị Trấn Thuận Châu	Sơn La	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1591449	Bắc Ninh	21.18608	106.07631	43564	Bắc Ninh	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1591474	Thành phố Bạc Liêu	9.29414	105.72776	107911	Thành phố Bạc Liêu	Bạc Liêu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1592152	Tân Trụ	10.51271	106.50762	0	Tân Trụ	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1594371	An Lão	14.61241	108.8899	0	An Lão	Bình Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1594454	An Dương	20.86382	106.6133	0	An Dương	Hải Phòng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1594518	An Biên	9.81532	105.06366	0	An Biên	Kiến Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1594548	A Lưới	16.27228	107.23385	0	A Lưới	Thừa Thiên-Huế	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+1904560	Quận Bảy	10.7118	106.73643	0	Quận Bảy+Phú Mỹ	Thành phố Hồ Chí Minh+Thành phố Sài Gòn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8200099	Yên Lập	21.34705	105.05739	0	Huyện Yên Lập+Yên Lập	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8200205	Thanh Ba	21.49881	105.14104	0	Huyện Thanh Hòa+Thanh Ba	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8200212	Sông Thao	21.4213	105.13374	0	Huyện Sông Thao+Sông Thao	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8200783	Hưng Hóa	21.25487	105.2953	0	Huyện Tam Thanh+Hưng Hóa	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8200836	Phong Châu	21.4068	105.31228	0	Huyện Phong Châu+Phong Châu	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8309330	Thị Trấn Tân Yên	22.0655	105.0345	0	Tân Yên+Thị Trấn Tân Yên	Tuyên Quang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8309683	Tân Việt	22.86407	105.45905	0	Tân Việt	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8309686	Pác Miầu	22.82968	105.49334	0	Păc Miều+Pác Miầu+Bảo Lâm	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8310244	Lập Thạch	21.41539	105.46081	0	Lập Thạch	Vĩnh Phúc	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8336866	An Châu	10.44559	105.38622	0	An Châu	An Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8336885	Núi Sập	10.26478	105.26676	0	Núi Sập	An Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8337809	Tầm Vu	10.44114	106.46793	0	Tầm Vu	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8340623	Gia Bình	21.05938	106.17468	0	Gia Bình	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8340640	Thứa	21.01937	106.20044	0	Thứa	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8340649	Chờ	21.19491	105.95471	0	Chờ	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8340671	Phố Mới	21.15328	106.15164	0	Phố Mới	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8340703	Hồ	21.06308	106.0857	0	Hồ	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8340720	Lim	21.14388	106.02018	0	Lim	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8340760	Cung Kiệm	21.18697	106.16076	80000	Cung Kiệm	Bắc Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8341023	Thị Trấn Gành Hào	9.03183	105.42115	0	Thị Trấn Gành Hào	Bạc Liêu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8341032	Thị Trấn Ngan Dừa	9.56703	105.45019	0	Thị Trấn Ngan Dừa	Bạc Liêu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8341039	Thị Trấn Phước Long	9.43753	105.46217	0	Thị Trấn Phước Long	Bạc Liêu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8341049	Thị Trấn Giá Rai	9.23789	105.45524	0	Thị Trấn Giá Rai	Bạc Liêu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8341067	Thị Trấn Hòa Bình	9.28471	105.62916	0	Thị Trấn Hòa Bình	Bạc Liêu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8376452	Cầu Gồ	21.47679	106.12653	0	Cầu Gồ	Bắc Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8376497	Đồi Ngô	21.30626	106.38673	0	Đồi Ngô	Bắc Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8376580	Neo	21.20048	106.24739	0	Neo	Bắc Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8376599	Bích Động	21.27421	106.10069	0	Bích Động	Bắc Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8376620	Thắng	21.35505	105.98344	0	Thắng	Bắc Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8381808	Bộc Bố	22.61206	105.66707	0	Bộc Bố	Bắc Kạn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8381874	Bằng Lũng	22.15777	105.59559	0	Bằng Lũng	Bắc Kạn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8421407	Thị Trấn Long Điền	10.48557	107.21226	0	Thị Trấn Long Điền	Bà Rịa-Vũng Tàu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8425634	Mường Chà	21.76172	103.09783	0	Thị Trấn Mường Chà+Mường Chà		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8425650	Thị Trấn Tủa Chùa	21.85771	103.3426	0	Thị Trấn Tủa Chùa		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8425679	Điện Biên Đông	21.29673	103.22009	0	Điện Biên Đông		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8425689	Thị Trấn Điện Biên	21.2596	103.0344	0	Thị Trấn Điện Biên		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8456727	Tam Đường	22.31812	103.62619	0	Tam Đường	Lai Châu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8456741	Lai Châu	22.39644	103.45824	0	Lai Châu	Lai Châu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8456777	Thị Trấn Mường Tè	22.38067	102.82011	0	Thị Trấn Mường Tè	Lai Châu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8473973	Thị Trấn Tam Sơn	23.0674	104.98926	0	Thị Trấn Tam Sơn	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8473987	Thị Trấn Vị Xuyên	22.66762	104.98191	0	Thị Trấn Vị Xuyên	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8473988	Thị Trấn Việt Lâm	22.62486	104.95988	0	Thị Trấn Việt Lâm	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8473997	Thị Trấn Việt Quang	22.41509	104.80682	0	Thị Trấn Việt Quang	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8474004	Yên Phú	22.73223	105.37145	0	Yên Phú	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8474041	Thị Trấn Vinh Quang	22.74085	104.67956	0	Thị Trấn Vinh Quang	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8474046	Yên Bình	22.40989	104.57949	0	Yên Bình	Hà Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8476780	Thị Trấn Thông Nông	22.7841	105.9832	0	Thị Trấn Thông Nông	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8476806	Thị Trấn Xuân Hoà	22.90243	106.07737	0	Thị Trấn Xuân Hoà	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8476898	Thị Trấn Hùng Quốc	22.82898	106.32335	0	Thị Trấn Hùng Quốc	Cao Bằng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8522260	Thị Trấn Cao Lộc	21.8665	106.76833	0	Thị Trấn Cao Lộc	Lạng Sơn	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8523103	Thị Trấn Vĩnh Lộc	22.1436	105.27192	0	Thị Trấn Vĩnh Lộc	Tuyên Quang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8526353	Sơn Thịnh	21.56252	104.5948	0	Sơn Thịnh+Văn Chấn	Yên Bái	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8526401	Cổ Phúc	21.75585	104.82768	0	Cổ Phúc	Yên Bái	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8526448	Thị Trấn Yên Thế	22.11075	104.76748	0	Thị Trấn Yên Thế	Yên Bái	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8538202	Thị Trấn Na Hang	22.34917	105.38241	0	Thị Trấn Na Hang+Na Hang	Tuyên Quang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8539621	Bình Minh	10.06821	105.82221	0	Cái Vồn+Bình Minh	Vĩnh Long	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8540986	An Phú	10.81591	105.09038	0	An Phú	An Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8540990	Phú Mỹ	10.59236	105.35573	0	Phú Mỹ	An Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8541545	Thị Trấn Phú Mỹ	10.6036	107.054	0	Thị Trấn Phú Mỹ	Bà Rịa-Vũng Tàu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8541991	Bát Xát	22.54311	103.88989	0	Thị Trấn Bát Xát+Bát Xát	Lào Cai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8545216	Hát Lót	21.19733	104.10595	0	Thị Trấn Hát Lót+Hát Lót	Sơn La	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8549842	Quảng Xương	19.72948	105.78273	0	Quảng Xương	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8549844	Nông Cống	19.62403	105.64941	0	Nông Cống	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8549876	Quan Sơn	20.25909	104.94521	0	Quan Sơn	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8549965	Yên Cát	19.66327	105.42854	0	Yên Cát	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550048	Bút Sơn	19.85797	105.85482	0	Bút Sơn	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550086	Cành Nàng	20.34803	105.22881	0	Cành Nàng	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550102	Hậu Lộc	19.91444	105.88615	0	Hậu Lộc	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550248	Triệu Sơn	19.81913	105.60392	0	Triệu Sơn	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550330	Quán Lào	19.97153	105.65106	0	Quán Lào	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550371	Hà Trung	20.01285	105.85322	0	Hà Trung	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550774	Rừng Thông	19.81906	105.73279	0	Rừng Thông	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8550778	Vạn Hà	19.88659	105.67879	0	Vạn Hà	Thanh Hóa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8551344	Đà Bắc	20.87714	105.25417	0	Đà Bắc	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8551391	Mường Khến	20.61441	105.27948	0	Mường Khến	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8551433	Hàng Trạm	20.39472	105.6224	0	Hàng Trạm	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8551473	Bo	20.67264	105.53625	0	Bo	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8551496	Lương Sơn	20.87148	105.52568	0	Lương Sơn	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8551505	Kỳ Sơn	20.88668	105.35244	0	Kỳ Sơn	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8551531	Cao Phong	20.70446	105.32063	0	Cao Phong	Hòa Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8553243	Me	20.34697	105.83615	0	Me	Ninh Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8553249	Thiên Tồn	20.29905	105.95198	0	Thiên Tồn	Ninh Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8553328	Yên Thịnh	20.16245	106.00697	0	Yên Thịnh	Ninh Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8554356	Xuân Trường	20.29227	106.33275	0	Xuân Trường	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8554357	Yên Định	20.20145	106.29578	0	Yên Định	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8554466	Lâm	20.32773	106.01208	0	Lâm	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8554483	Gôi	20.33335	106.07826	0	Gôi	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8554539	Nam Giang	20.33322	106.17754	0	Nam Giang	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8554560	Cổ Lễ	20.32336	106.26584	0	Cổ Lễ	Nam Định	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8564034	Quế	20.58064	105.87266	0	Quế	Hà Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8564068	Vĩnh Trụ	20.5602	106.02812	0	Vĩnh Trụ	Hà Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8564079	Bình Mỹ	20.49121	106.00955	0	Bình Mỹ	Hà Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8564088	Thanh Lưu	20.47398	105.95268	0	Thanh Lưu+Thanh Liêm	Hà Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8569519	Hưng Hà	20.5904	106.22445	0	Hưng Hà	Thái Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8569541	Vũ Thư	20.43671	106.29116	0	Vũ Thư	Thái Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8569646	Đông Hưng	20.55651	106.35532	0	Đông Hưng	Thái Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8594709	Thành Phố Bà Rịa	10.49629	107.16841	0	Thành Phố Bà Rịa	Bà Rịa-Vũng Tàu	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8594715	Thị Trấn Tuần Giáo	21.58992	103.42179	0	Thị Trấn Tuần Giáo		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8594716	Mường Ảng	21.51993	103.22294	0	Thị Trấn Mường Ảng+Mường Ảng		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8595083	An Lão	20.82294	106.55575	0	An Lão	Hải Phòng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8595111	Tiên Lãng	20.72464	106.55391	0	Tiên Lãng	Hải Phòng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8595146	Núi Đối	20.75078	106.66894	0	Núi Đối	Hải Phòng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8595948	Quảng Hà	21.4506	107.75592	0	Quảng Hà	Quảng Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8596004	Trới	21.03141	106.99101	0	Trới	Quảng Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8596063	Cô Tô	20.97268	107.76578	0	Cô Tô	Quảng Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607120	Thanh Miện	20.78714	106.24623	0	Thanh Miện	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607137	Nam Sách	20.99205	106.33613	0	Nam Sách	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607197	Gia Lộc	20.86783	106.3	0	Gia Lộc	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607207	Tứ Kỳ	20.81914	106.40661	0	Tứ Kỳ	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607221	Thanh Hà	20.89816	106.42612	0	Thanh Hà	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607234	Phú Thái	20.96278	106.5095	0	Phú Thái	Hải Dương	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607797	Đu	21.73847	105.70388	0	Đu	Thái Nguyên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607905	Hương Sơn	21.46014	105.97814	0	Hương Sơn	Thái Nguyên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8607921	Chùa Hang	21.62384	105.84168	0	Chùa Hang	Thái Nguyên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8608557	Thanh Thủy	21.17548	105.28388	0	Thanh Thủy	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8608578	Lâm Thao	21.3201	105.29156	0	Lâm Thao	Phú Thọ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8609125	Mê Linh	21.1831	105.72041	0	Mê Linh	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8609151	Vĩnh Tường	21.2165	105.51249	0	Vĩnh Tường	Vĩnh Phúc	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8609160	Hợp Hòa	21.37525	105.54256	0	Hợp Hòa	Vĩnh Phúc	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8612735	Văn Giang	20.94301	105.93119	0	Văn Giang	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8612761	Yên Mỹ	20.88557	106.0356	0	Yên Mỹ	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8612781	Khoái Châu	20.83912	105.97755	0	Khoái Châu	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8612792	Lương Bằng	20.74003	106.05998	0	Lương Bằng	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8612808	Ân Thi	20.81835	106.09118	0	Ân Thi	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8612817	Trần Cao	20.72952	106.17971	0	Trần Cao	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8612829	Vương	20.7011	106.11751	0	Vương	Hưng Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8615817	Liên Quan	21.05723	105.57919	0	Liên Quan	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8615841	Phúc Thọ	21.10345	105.54551	0	Phúc Thọ	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8615856	Phùng	21.08902	105.65901	0	Phùng	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8615873	Trôi	21.06953	105.70646	0	Trôi	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8615881	Quốc Oai	20.99019	105.64088	0	Quốc Oai	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8615957	Thường Tín	20.86874	105.86125	0	Thường Tín	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8615973	Phú Xuyên	20.74549	105.91363	0	Phú Xuyên	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616004	Đại Nghĩa	20.68667	105.74471	0	Đại Nghĩa	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616016	Sóc Sơn	21.25782	105.84894	0	Sóc Sơn	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616040	Đông Anh	21.13962	105.84926	0	Đông Anh	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616055	Cầu Diễn	21.03929	105.76659	0	Cầu Diễn	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616067	Trâu Quỳ	21.01951	105.93694	0	Trâu Quỳ	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616113	Cầu Giấy	21.03228	105.80073	0	Cầu Giấy	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616118	Thanh Xuân	20.99472	105.79977	0	Thanh Xuân	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616121	Đống Đa	21.02009	105.83097	0	Đống Đa	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616124	Hoàn Kiếm	21.02857	105.85064	0	Hoàn Kiếm	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8616127	Hai BàTrưng	21.01341	105.84772	0	Hai BàTrưng	Ha Nội	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8627929	Hưng Nguyên	18.67165	105.62882	0	Hưng Nguyên	Nghệ An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8637745	Vũ Quang	18.38385	105.5059	0	Vũ Quang	Hà Tĩnh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8637813	Nghèn	18.45119	105.77969	0	Nghèn	Hà Tĩnh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8646553	Đồng Lê	17.88389	106.02536	0	Đồng Lê	Quảng Bình	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8650753	Krông Klang	16.68906	106.8874	0	Krông Klang	Quảng Trị	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8656112	Khe Tre	16.1691	107.71793	0	Khe Tre	Thừa Thiên-Huế	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8656203	Sịa	16.57452	107.51066	0	Sịa	Thừa Thiên-Huế	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8656376	Thanh Khê	16.0706	108.19102	0	Thanh Khê	Đà Nẵng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8656395	Cẩm Lệ	16.01771	108.20381	0	Cẩm Lệ	Đà Nẵng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8656396	Sơn Trà	16.06068	108.23256	0	Sơn Trà	Đà Nẵng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8656409	Liên Chiểu	16.07272	108.15815	0	Liên Chiểu	Đà Nẵng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8656412	Ngũ Hành Sơn	16.01618	108.25335	0	Ngũ Hành Sơn	Đà Nẵng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8668502	Prao	15.92438	107.64814	0	Prao	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8668521	Khâm Đức	15.44508	107.79337	0	Khâm Đức	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8668557	Núi Thành	15.43194	108.65946	0	Núi Thành	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8668697	Phú Ninh	15.55473	108.41142	0	Phú Ninh	Quảng Nam	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8673079	Tây Trà	15.16948	108.35998	0	Tây Trà	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8673396	Lý Sơn	15.37198	109.11891	0	Lý Sơn	Quảng Ngãi	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8675891	Đắk Glei	15.08642	107.73577	0	Đắk Glei	Kon Tum	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8675937	Sa Thầy	14.41377	107.79339	0	Sa Thầy	Kon Tum	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8675967	Đắk Hà	14.51345	107.92102	0	Đắk Hà	Kon Tum	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8675975	Đắk Rve	14.50717	108.2473	0	Đắk Rve	Kon Tum	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8675985	Kon Plông	14.60064	108.29088	0	Kon Plông	Kon Tum	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8695369	Đăk Đoa	13.99501	108.11207	0	Đăk Đoa+Đak Đoa	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701187	K Bang	14.14453	108.59908	0	K Bang	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701220	Kông Chro	13.77532	108.52558	0	Kông Chro	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701230	Ia Pa	13.53361	108.45529	0	Ia Pa	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701253	A Yun Pa	13.40025	108.43503	0	A Yun Pa	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701288	Chư Sê	13.69153	108.08023	0	Chư Sê	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701301	Chư Prông	13.75684	107.88624	0	Chư Prông	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701320	Chư Ty	13.80507	107.6961	0	Chư Ty	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701330	Ia Kha	13.96242	107.84484	0	Ia Kha	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701345	Phú Hòa	14.10005	107.96896	0	Phú Hòa	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8701374	Kon Dơng	14.03886	108.25011	0	Kon Dơng	Gia Lai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8719315	Hai Riêng	12.97908	108.89732	0	Hai Riêng	Phú Yên	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8724967	Ea Súp	13.06616	107.88546	0	Ea Súp	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8724987	Ea Drăng	13.2045	108.21029	0	Ea Drăng	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8725000	Krông Năng	12.9517	108.34425	0	Krông Năng	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8725037	Quảng Phú	12.81965	108.07738	0	Quảng Phú	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8725054	Ea Kar	12.80816	108.44901	0	Ea Kar	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8725113	Krông Kmar	12.5045	108.33288	0	Krông Kmar	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8725127	M’Đrăk	12.74624	108.74281	0	M’Đrăk	Ðắc Lắk	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8743021	Khánh Vĩnh	12.28355	108.9047	0	Khánh Vĩnh	Khánh Hòa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8743031	Tô Hạp	12.00582	108.94868	0	Tô Hạp	Khánh Hòa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8743057	Cam Lâm	12.05398	109.16004	0	Cam Lâm	Khánh Hòa	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8746448	Ea T’ling	12.58904	107.89578	0	Ea T’ling		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8746533	Đắk Mâm	12.45789	107.86246	0	Đắk Mâm		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8991407	Đinh Văn	11.78624	108.24282	16036	Đinh Văn	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8991425	Thạnh Mỹ	11.76165	108.49473	0	Thạnh Mỹ	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8991482	Lộc Thắng	11.62836	107.83508	0	Lộc Thắng	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8991503	Đồng Nai	11.57981	107.36518	0	Đồng Nai	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8991515	Đạ Tẻh	11.51148	107.49092	0	Đạ Tẻh	Lâm Đồng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8993912	Bác Ái	11.84104	108.90316	0	Bác Ái	Ninh Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8993916	Tân Sơn	11.77521	108.7848	0	Tân Sơn	Ninh Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8993931	Phước Dân	11.52696	108.92996	0	Phước Dân	Ninh Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8993961	Khánh Hải	11.59105	109.04052	0	Khánh Hải	Ninh Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8998414	Chợ Lầu	11.22158	108.50707	0	Chợ Lầu	Bình Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8998439	Ma Lâm	11.07297	108.12997	0	Ma Lâm	Bình Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+8998450	Thuận Nam	10.85004	107.87864	0	Thuận Nam	Bình Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9000266	Phú Quý	10.5166	108.93292	0	Phú Quý	Bình Thuận	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9075694	Tân Phú	11.27221	107.43655	0	Tân Phú	Đồng Nai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9075713	Vĩnh An	11.08901	107.03516	0	Vĩnh An	Đồng Nai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9075749	Thống Nhất	10.95055	107.14571	0	Thống Nhất	Đồng Nai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9075789	Long Khánh	10.92655	107.24783	0	Long Khánh	Đồng Nai	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9078184	Tân Phú	11.45119	106.86811	0	Tân Phú	Bình Phước	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9081295	Tân Châu	11.55202	106.17245	0	Tân Châu	Tây Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9081304	Tân Biên	11.54441	106.01161	0	Tân Biên	Tây Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9081315	Châu Thành	11.31167	106.0295	0	Châu Thành	Tây Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9081327	Hòa Thành	11.28696	106.12936	0	Hòa Thành	Tây Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9081340	Gò Dầu	11.0885	106.26346	0	Gò Dầu	Tây Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9081358	Dương Minh Châu	11.38414	106.23078	0	Dương Minh Châu	Tây Ninh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9101346	Tân Hưng	10.83476	105.66135	0	Tân Hưng	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9101373	Vĩnh Hưng	10.89067	105.78495	0	Vĩnh Hưng	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9101389	Tân Thạnh	10.60666	106.04714	0	Tân Thạnh	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9101395	Thạnh Hóa	10.65744	106.18081	0	Thạnh Hóa	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9101404	Đông Thành	10.89221	106.30614	0	Đông Thành	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9101411	Hậu Nghĩa	10.89434	106.39695	0	Hậu Nghĩa	Long An	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9113556	Mỹ Phước	10.47711	106.19256	0	Mỹ Phước	Tiền Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9113580	Tân Hòa	10.31906	106.71128	0	Tân Hòa	Tiền Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9280687	Thứ Mười Một	9.61144	104.9465	0	Thứ Mười Một	Kiến Giang	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9289561	Sa Rài	10.87016	105.46583	0	Sa Rài	Đồng Tháp	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9290486	Long Hồ	10.19281	106.01229	0	Long Hồ	Vĩnh Long	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9292220	Duyên Hải	9.63497	106.49237	0	Duyên Hải	Trà Vinh	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9531891	Châu Thành	10.30122	106.35701	0	Châu Thành	Bến Tre	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9533392	Vĩnh Thạnh	10.22263	105.39841	0	Vĩnh Thạnh	Cần Thơ	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9534523	Nàng Mau	9.75129	105.53448	0	Nàng Mau		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9534547	Ngã Bảy	9.81371	105.82096	0	Ngã Bảy		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9534553	Ngã Sáu	9.92303	105.80542	0	Ngã Sáu		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9534559	Một Ngàn	9.92402	105.62964	0	Một Ngàn		Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9534807	Cù Lao Dung	9.67314	106.14874	0	Cù Lao Dung	Sóc Trăng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9534824	Châu Thành	9.7007	105.90202	0	Châu Thành	Sóc Trăng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9534829	Huỳnh Hữu Nghĩa	9.63537	105.81165	0	Huỳnh Hữu Nghĩa	Sóc Trăng	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9643200	U Minh	9.41286	104.97353	0	U Minh	Cà Mau	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9643221	Trần Văn Thời	9.07713	104.97914	0	Trần Văn Thời	Cà Mau	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+9643257	Ngọc Hiển	8.65724	105.06021	0	Ngọc Hiển	Cà Mau	Công Hòa Xã Hội Chủ Nghĩa Việt Nam+Việt Nam
+786714	Pristina	42.67272	21.16688	550000	Priština		Kosovo
+993800	Johannesburg	-26.20227	28.04363	2026469	Johannesburg	Gauteng	Nam Phi+Cộng hòa Nam Phi
+3369157	Cape Town	-33.92584	18.42322	3433441	Cape Town	Western Cape	Nam Phi+Cộng hòa Nam Phi

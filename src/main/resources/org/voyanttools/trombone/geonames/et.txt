@@ -1,0 +1,1607 @@
+3041563	Andorra la Vella	42.50779	1.52109	20430	Andorra la Vella		Andorra
+292223	Dubai	25.0657	55.17128	1137347	Dubai emiraat	Dubai	Araabia Ühendemiraadid+UAE
+292672	Sharjah	25.33737	55.41206	543733	Ash-Shāriqah emiraat		Araabia Ühendemiraadid+UAE
+292878	Al Fujayrah	25.11641	56.34141	62415	Al-Fujayrah' emiraat	Al Fujayrah	Araabia Ühendemiraadid+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu Dhabi emiraat		Araabia Ühendemiraadid+UAE
+1133453	Maymana	35.92139	64.78361	75900	Meymaneh	Fāryābi provints	Afganistan
+1138336	Kandahār	31.61332	65.71013	391190	Kandahār		Afganistan
+1138958	Kabul	34.52813	69.17233	3043532	Kabul	Kabuli provints	Afganistan
+1141269	Ghazni	33.55391	68.42096	141000	Ghaznī	Ghaznī	Afganistan
+1142264	Farah	32.37451	62.11638	43561	Farāh		Afganistan
+1147540	Baghlān	36.13068	68.70829	108449	Baghlān		Afganistan
+363243	Sarandë	39.87556	20.00528	15147	Sarandë		Albaania
+783148	Gjirokastër	40.07583	20.13889	23437	Gjirokastër		Albaania
+783493	Burrel	41.61028	20.00889	15405	Burrel		Albaania
+3183875	Tirana	41.3275	19.81889	374801	Tirana		Albaania
+3184081	Shkodër	42.06828	19.51258	88245	Shkodër		Albaania
+3185211	Kavajë	41.18556	19.55694	29354	Kavajë		Albaania
+3185728	Durrës	41.32306	19.44139	122034	Durrës		Albaania
+3186084	Berat	40.70583	19.95222	46866	Berat		Albaania
+174710	Yeghegnadzor	39.76389	45.33239	8200	Jeghegnadzor	Vayotsʼ Dzor	Armeenia
+174979	Artashat	39.96144	44.54447	20562	Artašat	Ararat	Armeenia
+616052	Yerevan	40.18111	44.51361	1093485	Jerevan	Yerevan	Armeenia
+616333	Noyemberyan	41.17244	44.99917	5119	Nojemberjan	Tavush	Armeenia
+616530	Vanadzor	40.80456	44.4939	101098	Vanadzor	Lorri	Armeenia
+616627	Ijevan	40.87877	45.14851	14737	Idževan	Tavush	Armeenia
+616635	Gyumri	40.7942	43.84528	148381	Gjumri	Shirak	Armeenia
+616752	Dilijan	40.7417	44.8501	13478	Dilidžan	Tavush	Armeenia
+616877	Ashtarak	40.2991	44.36204	18779	Aštarak	Aragatsotn	Armeenia
+617026	Abovyan	40.27368	44.63348	35673	Abovjan	Kotaykʼ	Armeenia
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola
+3347019	Namibe	-15.19611	12.15222	80149	Namibe	Namibe	Angola
+3348313	Huambo	-12.77611	15.73917	226145	Huambo	Huambo provints+Huambo	Angola
+3432043	La Plata	-34.92145	-57.95453	694167	La Plata	BA+Buenos Aires	Argentina+Argentiina
+3833367	Ushuaia	-54.8	-68.3	58028	Ushuaia	TF+Tierra del Fuego	Argentina+Argentiina
+2761369	Vienna	48.20849	16.37208	1691468	Viin		Austria
+2764957	Sölden	46.96667	11	3449	Söldeni vald		Austria
+2766757	Sankt Anton am Arlberg	47.1275	10.26372	2848	St. Anton am Arlberg		Austria
+2766824	Salzburg	47.79941	13.04399	150269	Salzburgi liidumaa+Salzburg		Austria
+2772400	Linz	48.30639	14.28611	181162	Linz		Austria
+2775000	Jungholz	47.57409	10.44723	0	Jungholzi vald		Austria
+2775220	Innsbruck	47.26266	11.39454	112467	Innsbruck		Austria
+2778067	Graz	47.06667	15.45	222326	Graz	Steiermargi liidumaa	Austria
+2779674	Feldkirch	47.23306	9.6	31082	Feldkirch	Vorarlberg	Austria
+2781520	Braunau am Inn	48.25628	13.04343	16403	Braunau Inni ääres		Austria
+2063523	Perth	-31.95224	115.8614	1896548	Perth	WA	Austraalia
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Austraalia
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Austraalia
+2172517	Canberra	-35.28346	149.12807	367752	Canberra	Austraalia pealinna ala+ACT+Australian Capital Territory	Austraalia
+2174003	Brisbane	-27.46794	153.02809	2189878	Brisbane	QLD	Austraalia
+3577154	Oranjestad	12.52398	-70.02703	29998	Oranjestad		Aruba
+635815	Sund	60.25	20.11667	1080	Sundi vald		Ahvenamaa
+3041792	Geta	60.37453	19.84455	452	Geta vald		Ahvenamaa
+3041807	Eckerö	60.21249	19.61442	1028	Eckerö vald		Ahvenamaa
+146970	Xankandi	39.8177	46.7528	53100	Xankəndi+Xankǝndi	Xankǝndi	Aserbaidžaan+AserbaidĪaan
+147105	Shushi	39.76006	46.74989	18662	Şuşa	Şuşa	Aserbaidžaan+AserbaidĪaan
+585514	Mingelchaur	40.76395	47.05953	95453	Mingəçevir	Mingǝcevir	Aserbaidžaan+AserbaidĪaan
+586523	Ganja	40.68278	46.36056	313300	Gəncə	Gǝncǝ	Aserbaidžaan+AserbaidĪaan
+587084	Baku	40.37767	49.89201	1116513	Bakuu	Baki	Aserbaidžaan+AserbaidĪaan
+587379	Martakert	40.21238	46.82086	10167	Ağdərə	Tǝrtǝr	Aserbaidžaan+AserbaidĪaan
+3191281	Sarajevo	43.84864	18.35644	696731	Sarajevo	Federation of Bosnia and Herzegovina	Bosnia ja Hertsegoviina+Bosnia ja Herzegovina
+1205733	Chittagong	22.3384	91.83168	3920222	Chittagong	Chittagongi jaotis	Bangladesh
+2783862	Wellin	50.08133	5.11413	2937	Wellini vald	Wallonia+Walloon	Belgia
+2784068	Waregem	50.88898	3.42756	35896	Waregemi vald		Belgia
+2785427	Tinlot	50.47493	5.37755	2236	Tinlot vald	Wallonia+Walloon	Belgia
+2785745	Tenneville	50.09501	5.52895	2510	Tennevillei vald	Wallonia+Walloon	Belgia
+2785793	Tellin	50.08038	5.21638	2353	Tellini vald	Wallonia+Walloon	Belgia
+2787889	Roeselare	50.94653	3.12269	56016	Roeselare vald		Belgia
+2789354	Paliseul	49.90395	5.13537	5037	Paliseuli vald	Wallonia+Walloon	Belgia
+2790515	Musson	49.55835	5.70525	4225	Mussoni vald	Wallonia+Walloon	Belgia
+2791067	Mol	51.19188	5.11662	32659	Moli vald		Belgia
+2792442	Libin	49.98107	5.25612	4609	Libini vald	Wallonia+Walloon	Belgia
+2795322	Houffalize	50.13235	5.78962	4614	Houffalizei vald	Wallonia+Walloon	Belgia
+2796491	Hasselt	50.93106	5.33781	69222	Hasselt		Belgia
+2796542	Harelbeke	50.85343	3.30935	25978	Harelbeke vald		Belgia
+2797656	Gent	51.05	3.71667	231493	Gent		Belgia
+2798636	Esneux	50.53596	5.56775	13497	Esneux vald	Wallonia+Walloon	Belgia
+2798698	Érezée	50.29292	5.55815	2930	Erezée	Wallonia+Walloon	Belgia
+2800866	Brussels	50.85045	4.34878	1019022	Brüssel	Brussels-Capital Region	Belgia
+2800931	Brugge	51.20892	3.22424	116709	Brugge		Belgia
+2801147	Braives	50.61745	5.13302	5672	Braivesi vald	Wallonia+Walloon	Belgia
+2801150	Braine-le-Comte	50.60979	4.14658	20133	Braine-le-Comte	Wallonia+Walloon	Belgia
+2803073	Arlon	49.68333	5.81667	26179	Arloni vald	Wallonia+Walloon	Belgia
+2803429	Aarschot	50.98715	4.83695	27656	Aarschoti vald		Belgia
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Ouagadougou		Burkina Faso
+725905	Vidin	43.99	22.8725	54409	Vidin		Bulgaaria
+726174	Targovishte	43.2512	26.57215	37774	Tǎrgovište	Tŭrgovishte	Bulgaaria
+727233	Shumen	43.27064	26.92286	87283	Šumen		Bulgaaria
+728193	Plovdiv	42.15	24.75	340494	Plovdiv		Bulgaaria
+290340	Manama	26.22787	50.58565	147074	Al-Manāmah	Muḩāfaz̧at al ‘Āşimah	Bahrein
+2394819	Cotonou	6.36536	2.41833	780000	Cotonou		Benin
+3919968	Cochabamba	-17.3895	-66.1568	900414	Cochabamba	Cochabamba	Boliivia
+3399415	Fortaleza	-3.71722	-38.54306	2400000	Fortaleza	CE+Ceará	Brasiilia
+3407297	Arara	-6.82833	-35.75833	7641	Arara vald	PB+Paraíba	Brasiilia
+3407882	Altamira	-3.20333	-52.20639	70888	Altamira vald	Pará osariik+PA+Pará	Brasiilia
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Brasiilia
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brasiilia
+3467747	Campo Grande	-20.44278	-54.64639	729151	Campo Grande	Mato Grosso do Suli osariik+MS	Brasiilia
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasília	DF	Brasiilia
+3664980	Boa Vista	2.81972	-60.67333	235150	Boa Vista	RR+Roraima	Brasiilia
+1252416	Thimphu	27.46609	89.64191	98676	Thimphu		Bhutan+Bh2utan
+1252484	Phuntsholing	26.85164	89.38837	17043	Phuentsholing		Bhutan+Bh2utan
+933305	Molepolole	-24.40659	25.49508	63248	Molepolole	Kweneng	Botswana
+933778	Francistown	-21.17	27.50778	89979	Francistown		Botswana
+619066	Zaslawye	54.0114	27.2695	13500	Zasłaŭje		Valgevene
+620127	Vitebsk	55.1904	30.2049	342700	Viciebsk	Vitsyebskaya Voblastsʼ	Valgevene
+620391	Vawkavysk	53.1561	24.4513	47300	Vaŭkavysk		Valgevene
+620540	Ushachy	55.179	28.6158	6071	Ušačy	Vitsyebskaya Voblastsʼ	Valgevene
+621048	Svislach	53.0368	24.0957	6886	Svisłač		Valgevene
+621266	Stowbtsy	53.4785	26.7434	15500	Stoŭbcy		Valgevene
+621741	Slutsk	53.0274	27.5597	62228	Słuck		Valgevene
+621754	Slonim	53.0869	25.3163	51434	Słonim		Valgevene
+622428	Salihorsk	52.7876	27.5415	101614	Saligorsk		Valgevene
+623317	Polatsk	55.4879	28.7856	82258	Połack	Vitsyebskaya Voblastsʼ	Valgevene
+623941	Astravyets	54.61378	25.95537	8300	Astraviec		Valgevene
+624784	Navapolatsk	55.5318	28.5987	100885	Navapołack	Vitsyebskaya Voblastsʼ	Valgevene
+624785	Navahrudak	53.5942	25.8191	30748	Navahradak		Valgevene
+625144	Minsk	53.9	27.56667	1742124	Minsk		Valgevene
+625665	Mahilyow	53.9168	30.3449	369200	Mahiloŭ	Mahilyowskaya Voblastsʼ	Valgevene
+626081	Lida	53.88333	25.29972	98036	Lida		Valgevene
+626939	Karelichy	53.5648	26.1406	7800	Kareličy		Valgevene
+627904	Hrodna	53.6884	23.8258	317365	Hrodna		Valgevene
+627907	Gomel	52.4345	30.9754	480951	Homiel		Valgevene
+627909	Hantsavichy	52.758	26.43	13800	Hancavičy	Brestskaya Voblastsʼ	Valgevene
+628634	Dzyarzhynsk	53.6832	27.138	24609	Dziaržynsk		Valgevene
+628968	Damachava	51.75	23.6	1200	Damačava	Brestskaya Voblastsʼ	Valgevene
+629002	Dokshytsy	54.8918	27.7667	8190	Dokšycy	Vitsyebskaya Voblastsʼ	Valgevene
+629634	Brest	52.09755	23.68775	300715	Brest	Brestskaya Voblastsʼ	Valgevene
+629640	Braslaw	55.6413	27.0418	12378	Brasłaŭ	Vitsyebskaya Voblastsʼ	Valgevene
+630515	Ashmyany	54.421	25.936	14345	Ašmiany		Valgevene
+3582672	Belmopan	17.25	-88.76667	13381	Belmopan	Cayo	Belize
+5913490	Calgary	51.05011	-114.08529	1019942	Calgary	AB+Alberta	Kanada
+5983720	Iqaluit	63.74697	-68.51727	6124	Iqaluit	NU+Nunavut	Kanada
+6058560	London	42.98339	-81.23304	346765	London	ON+Ontario	Kanada
+6077243	Montréal	45.50884	-73.58781	1600000	Montréal	QC	Kanada
+6085772	Nanaimo	49.16638	-123.94003	84905	Nanaimo	Briti Columbia+BC+British Columbia	Kanada
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Kanada
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	Kanada
+6173331	Vancouver	49.24966	-123.11934	600000	Vancouver	Briti Columbia+BC+British Columbia	Kanada
+6180550	Whitehorse	60.71611	-135.05375	23272	Whitehorse	YT+Yukon	Kanada
+6183235	Winnipeg	49.8844	-97.14704	632063	Winnipeg+WPG	Manitoba provints+MB+Manitoba	Kanada
+6185377	Yellowknife	62.45411	-114.37248	15865	Yellowknife	NT+Northwest Territories	Kanada
+6324733	St. John's	47.56494	-52.70931	99182	Saint John's	NL+Newfoundland	Kanada
+209228	Mbuji-Mayi	-6.13603	23.58979	874761	Mbuji-Mayi	Kasaï Oriental	Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+212730	Kisangani	0.51528	25.19099	539158	Kisangani		Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+214481	Kananga	-5.89624	22.41659	463546	Kananga	Kasaï-Central	Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+216281	Goma	-1.67409	29.22845	144124	Goma	Nord-Kivu	Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+217831	Bukavu	-2.49077	28.84281	225389	Bukavu	Sud-Kivu	Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+922704	Lubumbashi	-11.66089	27.47938	1373770	Lubumbashi		Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+922773	Kolwezi	-10.71484	25.46674	418000	Kolwezi		Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+2313002	Matadi	-5.83861	13.46306	180109	Matadi	Bas-Congo	Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinshasa	Kinshasa	Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+2316702	Boma	-5.85098	13.05364	162521	Boma	Bas-Congo	Kongo DV+Kongo Demokraatlik Vabariik+Kongo-Kinshasa
+236950	Obo	5.39586	26.49211	12887	Obo		Kesk-Aafrika Vabariik+Kesk Aafrika Vabariik
+240604	Bambari	5.76795	20.67565	32547	Bambari		Kesk-Aafrika Vabariik+Kesk Aafrika Vabariik
+2255414	Pointe-Noire	-4.77609	11.86352	659084	Pointe-Noire		Kongo+Kongo Vabariik+Kongo-Brazzaville
+2260535	Brazzaville	-4.26613	15.28318	1284609	Brazzaville	Brazzaville	Kongo+Kongo Vabariik+Kongo-Brazzaville
+2657887	Zweisimmen	46.55539	7.37302	2813	Zweisimmeni vald		Šveits+Ĩveits
+2657896	Zürich	47.36667	8.55	341730	Zürich	ZH	Šveits+Ĩveits
+2658813	St. Moritz	46.49937	9.84327	4952	Sankt Moritz		Šveits+Ĩveits
+2659700	Meiringen	46.72709	8.1872	4652	Meiringen		Šveits+Ĩveits
+2659900	Leysin	46.34183	7.01151	3066	Leysini vald	VD	Šveits+Ĩveits
+2659994	Lausanne	46.516	6.63282	116751	Lausanne+1000	VD	Šveits+Ĩveits
+2660253	Interlaken	46.68387	7.86638	5067	Interlaken		Šveits+Ĩveits
+2660646	Genève	46.20222	6.14569	183981	Genf+1200	Genfi kanton	Šveits+Ĩveits
+2660788	Feuerthalen	47.69054	8.64357	2165	Feuerthaleni vald	ZH	Šveits+Ĩveits
+2660902	Engelberg	46.82107	8.40133	4001	Engelbergi vald		Šveits+Ĩveits
+2661398	Brienz	46.7545	8.03847	2899	Brienz		Šveits+Ĩveits
+2661552	Bern	46.94809	7.44744	121631	Bern		Šveits+Ĩveits
+2661881	Aarau	47.39254	8.04422	15501	Aarau+5000		Šveits+Ĩveits
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Yamoussoukro		Cote d’Ivoire+Elevandiluurannik+Côte d’Ivoire+Côte de l’Ivoire
+2293538	Abidjan	5.30966	-4.01266	3677115	Abidjan		Cote d’Ivoire+Elevandiluurannik+Côte d’Ivoire+Côte de l’Ivoire
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaíso	Valparaíso	Tšiili+Tiiili
+3871336	Santiago	-33.45694	-70.64827	4837295	Santiago+Stgo.		Tšiili+Tiiili
+3887127	Iquique	-20.22036	-70.13913	227499	Iquique	Tarapacá piirkond	Tšiili+Tiiili
+3899361	Arica	-18.4746	-70.29792	185999	Arica	Arica y Parinacota	Tšiili+Tiiili
+3899539	Antofagasta	-23.65236	-70.3954	309832	Antofagasta	Antofagasta	Tšiili+Tiiili
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaoundé		Kamerun
+2233410	Buea	4.15342	9.24231	47300	Buea	Sud-Ouest	Kamerun
+1280737	Lhasa	29.65	91.1	118721	Lhasa		Hiina+Hiina Rahvavabariik
+1280849	Kashgar	39.47066	75.98951	274717	Kaxgar		Hiina+Hiina Rahvavabariik
+1529102	Ürümqi	43.80096	87.60046	3029372	Ürümqi		Hiina+Hiina Rahvavabariik
+1784658	Zhengzhou	34.75778	113.64861	4253913	Zhengzhou Shi		Hiina+Hiina Rahvavabariik
+1787824	Tongshan	34.18045	117.15707	1199193	Xuzhou		Hiina+Hiina Rahvavabariik
+1790492	Xiangtan	27.85	112.9	674189	Xiangtan Shi		Hiina+Hiina Rahvavabariik
+1791247	Wuhan	30.58333	114.26667	9785388	Wuhan+武汉	Hubei	Hiina+Hiina Rahvavabariik
+1791388	Wenzhou	27.99942	120.66682	865672	Wenzhou Shi		Hiina+Hiina Rahvavabariik
+1792947	Tianjin	39.14222	117.17667	11090314	Tianjin		Hiina+Hiina Rahvavabariik
+1795270	Shijiazhuang	38.04139	114.47861	2834942	Shijiazhuang		Hiina+Hiina Rahvavabariik
+1796236	Shanghai	31.22222	121.45806	22315474	Shanghai		Hiina+Hiina Rahvavabariik
+1797929	Qingdao	36.06488	120.38042	3718835	Qingdao Shi		Hiina+Hiina Rahvavabariik
+1798449	Putian	25.43944	119.01028	376558	Putian Shi		Hiina+Hiina Rahvavabariik
+1799962	Nanjing	32.06167	118.77778	7165292	Nanjing Shi		Hiina+Hiina Rahvavabariik
+1800627	Mianyang	31.46784	104.68168	264136	Mianyang Shi	Sichuan	Hiina+Hiina Rahvavabariik
+1804430	Lanzhou	36.05701	103.83987	2628426	Lanzhou		Hiina+Hiina Rahvavabariik
+1808926	Hangzhou	30.29365	120.16142	6241971	Hangzhou Shi		Hiina+Hiina Rahvavabariik
+1808963	Handan	36.60056	114.46778	1358318	Handan Shi		Hiina+Hiina Rahvavabariik
+1809498	Guilin	25.28194	110.28639	649352	Guilin Shi		Hiina+Hiina Rahvavabariik
+1814906	Chongqing	29.56278	106.55278	7457600	Chongqing		Hiina+Hiina Rahvavabariik
+1816670	Beijing	39.9075	116.39723	11716620	Peking		Hiina+Hiina Rahvavabariik
+2035265	Qiqihar	47.34088	123.96045	882364	Qiqihar Shi		Hiina+Hiina Rahvavabariik
+2036502	Jilin	43.85083	126.56028	1881977	Jilin Shi		Hiina+Hiina Rahvavabariik
+2036973	Heihe	50.24413	127.49016	109427	Heihe Shi		Hiina+Hiina Rahvavabariik
+2037886	Dandong	40.12917	124.39472	631973	Dandong Shi		Hiina+Hiina Rahvavabariik
+2038632	Anshan	41.12361	122.99	1199275	Anshan Shi		Hiina+Hiina Rahvavabariik
+3621849	San José	9.93333	-84.08333	335007	San José	San José	Costa Rica
+3624370	Cartago	9.86444	-83.91944	26594	Cartago	Cartago	Costa Rica
+3553478	Havana	23.13302	-82.38304	2163824	Havanna		Kuuba
+3513090	Willemstad	12.1084	-68.93354	125000	Willemstad		
+146268	Nicosia	35.17531	33.3642	200452	Nikosia		Küpros+Küprus
+3064373	Tachov	49.79528	12.63365	12640	Tachov	Plzeňský kraj	Tšehhi Vabariik+Tšehhi+Těehhi+Czechia
+3067696	Prague	50.08804	14.42076	1165581	Praha	Hlavní město Praha	Tšehhi Vabariik+Tšehhi+Těehhi+Czechia
+3068160	Pilsen	49.74747	13.37759	164180	Plzeň	Plzeňský kraj	Tšehhi Vabariik+Tšehhi+Těehhi+Czechia
+3069011	Olomouc	49.59552	17.25175	101268	Olomouc	Olomoucký Kraj	Tšehhi Vabariik+Tšehhi+Těehhi+Czechia
+3071961	Liberec	50.76711	15.05619	97770	Liberec	Liberecký kraj	Tšehhi Vabariik+Tšehhi+Těehhi+Czechia
+3073803	Karlovy Vary	50.23271	12.87117	51807	Karlovy Vary	Karlovarský kraj	Tšehhi Vabariik+Tšehhi+Těehhi+Czechia
+3078610	Brno	49.19522	16.60796	369559	Brno	Lõuna-Morava maakond+Jihomoravský kraj	Tšehhi Vabariik+Tšehhi+Těehhi+Czechia
+2803489	Zwochau	51.46467	12.26844	1167	Zwochau vald		Saksamaa
+2803560	Zwickau	50.72724	12.48839	98796	Zwickau		Saksamaa
+2803827	Zschepplin	51.5	12.6	3373	Zschepplini vald		Saksamaa
+2804939	Zeithain	51.33356	13.33809	5839	Zeithaini vald		Saksamaa
+2805365	Zabeltitz	51.35147	13.50462	3047	Zabeltitzi vald		Saksamaa
+2805385	Xanten	51.65877	6.45297	21587	Xanten	NRW	Saksamaa
+2805615	Würzburg	49.79391	9.95121	133731	Würzburg	Baieri+Bayern	Saksamaa
+2805753	Wuppertal	51.27027	7.16755	360797	Wuppertal	NRW	Saksamaa
+2805861	Wülknitz	51.36667	13.4	1877	Wülknitzi vald		Saksamaa
+2806142	Worms	49.63278	8.35916	81099	Worms		Saksamaa
+2807363	Witten	51.44362	7.35258	101247	Witten	NRW	Saksamaa
+2807465	Wismar	53.89314	11.45286	45255	Wismar	Mecklenburg-Vorpommern	Saksamaa
+2808544	Willingen	51.29418	8.6091	6564	Willingeni vald	Hessen	Saksamaa
+2808720	Wilhelmshaven	53.52998	8.11253	84393	Wilhelmshaven	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2809346	Wiesbaden	50.08258	8.24932	272432	Wiesbaden	Hessen	Saksamaa
+2809628	Wiedemar	51.46667	12.2	2274	Wiedemari vald		Saksamaa
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Saksamaa
+2810702	Wertingen	48.56314	10.68149	8958	Wertingeni vald	Baieri+Bayern	Saksamaa
+2810808	Wernigerode	51.83652	10.78216	34463	Wernigerode	Sassen-Anholt	Saksamaa
+2811361	Welver	51.61667	7.96667	12993	Welveri vald	NRW	Saksamaa
+2811713	Weißkeißel	51.49405	14.71515	1481	Weißkeißeli vald		Saksamaa
+2812225	Weinböhla	51.16667	13.56667	10456	Weinböhla vald		Saksamaa
+2812482	Weimar	50.9803	11.32903	64727	Weimar		Saksamaa
+2813410	Weeze	51.62678	6.19792	10131	Weeze vald	NRW	Saksamaa
+2813524	Wechselburg	51.00214	12.77661	2223	Wechselburgi vald		Saksamaa
+2817220	Villingen-Schwenningen	48.06226	8.49358	81770	Villingen-Schwenningen	Baden-Württemberg	Saksamaa
+2820087	Unna	51.53795	7.68969	66734	Unna	NRW	Saksamaa
+2820256	Ulm	48.39841	9.99155	120451	Ulm	Baden-Württemberg	Saksamaa
+2820693	Tuttlingen	47.98464	8.8177	34847	Tuttlingen	Baden-Württemberg	Saksamaa
+2820860	Tübingen	48.52266	9.05222	83416	Tübingen	Baden-Württemberg	Saksamaa
+2821164	Trier	49.75565	6.63935	100129	Trier		Saksamaa
+2821450	Trebendorf	51.53333	14.56667	1106	Trebendorfi vald		Saksamaa
+2821807	Torgau	51.56016	12.99617	18746	Torgau		Saksamaa
+2822786	Thiendorf	51.29375	13.74124	2298	Thiendorfi vald		Saksamaa
+2823049	Thallwitz	51.43333	12.68333	3894	Thallwitzi vald		Saksamaa
+2823788	Tauscha	51.26667	13.8	1559	Tauscha vald		Saksamaa
+2824948	Suhl	50.60911	10.69401	43509	Suhl		Saksamaa
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Baden-Württemberg	Saksamaa
+2826287	Stralsund	54.30911	13.0818	58976	Stralsund	Mecklenburg-Vorpommern	Saksamaa
+2827479	Stendal	52.6069	11.85867	37722	Stendal	Sassen-Anholt	Saksamaa
+2827907	Steinigtwolmsdorf	51.06314	14.3454	3422	Steinigtwolmsdorfi vald		Saksamaa
+2829402	Stauchitz	51.2435	13.21437	3463	Stauchitzi vald		Saksamaa
+2830582	Speyer	49.32083	8.43111	50343	Speyer		Saksamaa
+2831580	Solingen	51.17343	7.0845	164359	Solingen	NRW	Saksamaa
+2832495	Siegen	50.87481	8.02431	107242	Siegen	NRW	Saksamaa
+2833654	Seelitz	51.03333	12.81667	2114	Seelitzi vald		Saksamaa
+2834282	Schwerin	53.62937	11.41316	96641	Schwerin	Mecklenburg-Vorpommern	Saksamaa
+2834296	Schwepnitz	51.32809	13.95772	2823	Schwepnitzi vald		Saksamaa
+2834498	Schweinfurt	50.04937	10.22175	54012	Schweinfurt	Baieri+Bayern	Saksamaa
+2836581	Schönheide	50.50458	12.52158	5310	Schönheide vald		Saksamaa
+2837041	Schönau-Berzdorf	51.06402	14.88402	1796	Schönau-Berzdorfi vald		Saksamaa
+2842150	Salzgitter	52.15705	10.4154	101079	Salzgitter	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2842647	Saarbrücken	49.23262	7.00982	181227	Saarbrücken	Saarimaa+Saarland	Saksamaa
+2843203	Ruhpolding	47.76667	12.65	6419	Ruhpoldingi vald	Baieri+Bayern	Saksamaa
+2844056	Rothenburg ob der Tauber	49.37885	10.18711	11106	Rothenburg	Baieri+Bayern	Saksamaa
+2844588	Rostock	54.0887	12.14049	198293	Rostock	Mecklenburg-Vorpommern	Saksamaa
+2844988	Rosenheim	47.85637	12.12247	60167	Rosenheim	Baieri+Bayern	Saksamaa
+2846806	Rietschen	51.4	14.78333	3072	Rietscheni vald		Saksamaa
+2847736	Reutlingen	48.49144	9.20427	112627	Reutlingen	Baden-Württemberg	Saksamaa
+2848245	Rendsburg	54.30663	9.66313	28323	Rendsburg	Schleswig-Holstein	Saksamaa
+2848273	Remscheid	51.17983	7.1925	117118	Remscheid	NRW	Saksamaa
+2849483	Regensburg	49.01513	12.10161	129151	Regensburg	Baieri+Bayern	Saksamaa
+2849647	Recklinghausen	51.61379	7.19738	122438	Recklinghausen	NRW	Saksamaa
+2850174	Ratingen	51.29724	6.84929	91606	Ratingen	NRW	Saksamaa
+2850648	Rammenau	51.15	14.13333	1522	Rammenau vald		Saksamaa
+2850954	Radolfzell am Bodensee	47.74194	8.97098	30096	Radolfzell	Baden-Württemberg	Saksamaa
+2850980	Radibor	51.24481	14.39842	3651	Radibori vald		Saksamaa
+2851113	Rackwitz	51.43333	12.38333	3118	Rackwitzi vald		Saksamaa
+2851132	Räckelwitz	51.25	14.23333	1216	Räckelwitzi vald		Saksamaa
+2851465	Quedlinburg	51.78843	11.15006	22814	Quedlinburg	Sassen-Anholt	Saksamaa
+2851631	Puschwitz	51.25501	14.30111	1049	Puschwitzi vald		Saksamaa
+2852054	Priestewitz	51.25	13.51667	3598	Priestewitzi vald		Saksamaa
+2852458	Potsdam	52.39886	13.06566	145292	Potsdam+Podstupim	Brandenburg+http://www.brandenburg.de	Saksamaa
+2853292	Plauen	50.4973	12.13782	66412	Plauen		Saksamaa
+2853574	Pirmasens	49.20145	7.60529	43582	Pirmasens		Saksamaa
+2853969	Pforzheim	48.88436	8.69892	119313	Pforzheim	Baden-Württemberg	Saksamaa
+2855328	Passau	48.5665	13.43122	50560	Passau	Baieri+Bayern	Saksamaa
+2855745	Paderborn	51.71905	8.75439	142161	Paderborn	NRW	Saksamaa
+2856107	Ottendorf-Okrilla	51.18333	13.83333	10093	Ottendorf-Okrilla vald		Saksamaa
+2856839	Oßling	51.35999	14.16567	2622	Oßlingi vald		Saksamaa
+2856883	Osnabrück	52.27264	8.0498	166462	Osnabrück	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2857182	Oppach	51.06667	14.5	3060	Oppachi vald		Saksamaa
+2857458	Oldenburg	53.14118	8.21467	159218	Oldenburg	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2857481	Olbersdorf	50.87304	14.77035	5948	Olbersdorfi vald		Saksamaa
+2858964	Oberstdorf	47.40724	10.27939	9788	Oberstdorf	Baieri+Bayern	Saksamaa
+2859119	Oberschöna	50.89759	13.25379	3764	Oberschöna vald		Saksamaa
+2860410	Oberhausen	51.47805	6.8625	219176	Oberhausen	NRW	Saksamaa
+2861650	Nürnberg	49.45421	11.07752	499237	Nürnberg	Baieri+Bayern	Saksamaa
+2861671	Nünchritz	51.29993	13.38555	6846	Nünchritzi vald		Saksamaa
+2862724	Niederwiesa	50.86667	13.01667	5221	Niederwiesa vald		Saksamaa
+2863643	Niederau	51.1773	13.54563	4334	Niederau vald		Saksamaa
+2864054	Neustadt	49.35009	8.13886	53984	Neustadt an der Weinstrasse		Saksamaa
+2864118	Neuss	51.19807	6.68504	152457	Neuss	NRW	Saksamaa
+2864475	Neumünster	54.07477	9.98195	78383	Neumünster	Schleswig-Holstein	Saksamaa
+2864778	Neukieritzsch	51.14995	12.4109	3602	Neukieritzschi vald		Saksamaa
+2865098	Neuhausen	50.67647	13.4675	3325	Neuhauseni vald		Saksamaa
+2866135	Neubrandenburg	53.56414	13.27532	68082	Neubrandenburg	Mecklenburg-Vorpommern	Saksamaa
+2866486	Neresheim	48.75511	10.33041	8271	Neresheimi vald	Baden-Württemberg	Saksamaa
+2866810	Nebelschütz	51.26227	14.15849	1241	Nebelschützi vald		Saksamaa
+2867066	Narsdorf	51.01667	12.71667	1917	Narsdorfi vald		Saksamaa
+2867543	Münster	51.96236	7.62571	270184	Münster	NRW	Saksamaa
+2867714	Munich	48.13743	11.57549	1260391	München	Baieri+Bayern	Saksamaa
+2867838	Mülheim	51.43218	6.87967	171000	Mülheim	NRW	Saksamaa
+2868923	Mücka	51.31667	14.7	1275	Mücka vald		Saksamaa
+2869894	Mönchengladbach	51.18539	6.44172	261742	Mönchengladbach	NRW	Saksamaa
+2870221	Moers	51.45342	6.6326	107816	Moers	NRW	Saksamaa
+2870687	Mittelherwigsdorf	50.91667	14.76667	4334	Mittelherwigsdorfi vald		Saksamaa
+2871142	Mildenau	50.58689	13.07263	3749	Mildenau vald		Saksamaa
+2871992	Memmingen	47.98372	10.18527	41135	Memmingen	Baieri+Bayern	Saksamaa
+2872155	Meissen	51.16158	13.4737	28492	Meißen		Saksamaa
+2873759	Marburg an der Lahn	50.80904	8.77069	78895	Marburg	Hessen	Saksamaa
+2873891	Mannheim	49.4891	8.46694	307960	Mannheim	Baden-Württemberg	Saksamaa
+2874225	Mainz	49.98419	8.2791	184997	Mainz		Saksamaa
+2874545	Magdeburg	52.12773	11.62916	229826	Magdeburg+Madeborch	Sassen-Anholt	Saksamaa
+2874642	Machern	51.36667	12.63333	6747	Macherni vald		Saksamaa
+2875115	Lüneburg	53.2509	10.41409	71260	Lüneburg	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2875376	Ludwigshafen am Rhein	49.48121	8.44641	163196	Ludwigshafen		Saksamaa
+2875601	Lübeck	53.86893	10.68729	212207	Lübeck	Schleswig-Holstein	Saksamaa
+2877550	Lindau	47.54612	9.68431	24518	Lindau+Lindau saar	Baieri+Bayern	Saksamaa
+2878109	Lichtenberg	51.18333	13.96667	1736	Lichtenbergi vald		Saksamaa
+2878234	Leverkusen	51.0303	6.98432	162738	Leverkusen	NRW	Saksamaa
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Saksamaa
+2880001	Laußnitz	51.25	13.88333	2102	Laußnitzi vald		Saksamaa
+2880002	Laußig	51.54676	12.6293	2082	Laußigi vald		Saksamaa
+2881485	Landshut	48.52961	12.16179	60488	Landshut	Baieri+Bayern	Saksamaa
+2881682	Lampertswalde	51.31108	13.67694	2060	Lampertswalde vald		Saksamaa
+2882329	Seiffen	50.65	13.45	2600	Seiffeni vald		Saksamaa
+2883552	Krostitz	51.46208	12.4536	4033	Krostitzi vald		Saksamaa
+2884509	Krefeld	51.33645	6.55381	237984	Krefeld	NRW	Saksamaa
+2885679	Konstanz	47.66033	9.17582	81275	Konstanz	Baden-Württemberg	Saksamaa
+2885742	Königswartha	51.31028	14.32797	3767	Königswartha vald		Saksamaa
+2885746	Königswalde	50.55	13.05	2477	Königswalde vald		Saksamaa
+2885863	Königshain	51.18333	14.86667	1283	Königshaini vald		Saksamaa
+2886242	Köln	50.93333	6.95	963395	Köln	NRW	Saksamaa
+2886846	Kodersdorf	51.24272	14.89336	2728	Kodersdorfi vald		Saksamaa
+2886946	Koblenz	50.35357	7.57883	107319	Koblenz		Saksamaa
+2887645	Klipphausen	51.06841	13.51374	6161	Klipphauseni vald		Saksamaa
+2891122	Kiel	54.32133	10.13489	232758	Kiel	Schleswig-Holstein	Saksamaa
+2892080	Kaufbeuren	47.88238	10.62192	42505	Kaufbeuren	Baieri+Bayern	Saksamaa
+2892518	Kassel	51.31667	9.5	194501	Kassel	Hessen	Saksamaa
+2892794	Karlsruhe	49.00937	8.40444	283799	Karlsruhe	Baden-Württemberg	Saksamaa
+2894003	Kaiserslautern	49.443	7.77161	98732	Kaiserslautern		Saksamaa
+2894970	Jesewitz	51.42276	12.56312	3174	Jesewitzi vald		Saksamaa
+2895044	Jena	50.92878	11.5899	104712	Jena		Saksamaa
+2895669	Iserlohn	51.37547	7.70281	97910	Iserlohn	NRW	Saksamaa
+2895992	Ingolstadt	48.76508	11.42372	120658	Ingolstadt	Baieri+Bayern	Saksamaa
+2896514	Ilmenau	50.68322	10.91858	27055	Ilmenau		Saksamaa
+2898304	Hoyerswerda	51.43787	14.23549	43681	Hoyerswerda		Saksamaa
+2902768	Hof	50.31297	11.91261	49239	Hof	Baieri+Bayern	Saksamaa
+2903125	Hochkirch	51.14898	14.57063	2525	Hochkirchi vald		Saksamaa
+2905891	Herne	51.5388	7.22572	172108	Herne	NRW	Saksamaa
+2906121	Herford	52.11457	8.67343	64879	Herford	NRW	Saksamaa
+2906595	Hemer	51.38707	7.77019	37502	Hemer	NRW	Saksamaa
+2907669	Heilbronn	49.13995	9.22054	120733	Heilbronn	Baden-Württemberg	Saksamaa
+2907911	Heidelberg	49.40768	8.69079	143345	Heidelberg	Baden-Württemberg	Saksamaa
+2910831	Hannover	52.37052	9.73322	515140	Hannover+Hannauver	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2911240	Hamm	51.68033	7.82089	185327	Hamm	NRW	Saksamaa
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Saksamaa
+2911426	Halsbrücke	50.95	13.35	3619	Halsbrücke vald		Saksamaa
+2911522	Halle (Saale)	51.48158	11.97947	234107	Halle	Sassen-Anholt	Saksamaa
+2912184	Hähnichen	51.3654	14.86098	1528	Hähnicheni vald		Saksamaa
+2912621	Hagen	51.36081	7.47168	198972	Hagen	NRW	Saksamaa
+2913366	Gütersloh	51.90693	8.37853	96180	Gütersloh	NRW	Saksamaa
+2915172	Großpostwitz	51.12083	14.44065	3116	Großpostwitzi vald		Saksamaa
+2915173	Großpösna	51.26667	12.5	5608	Großpösna vald		Saksamaa
+2915550	Großhartmannsdorf	50.8	13.33333	2921	Großhartmannsdorfi vald		Saksamaa
+2915552	Großharthau	51.10694	14.09911	3415	Großharthau vald		Saksamaa
+2916839	Großdubrau	51.25422	14.45897	4793	Großdubrau vald		Saksamaa
+2916840	Groß Düben	51.56667	14.56667	1310	Groß Dübeni vald		Saksamaa
+2917788	Greifswald	54.09311	13.38786	52731	Greifswald	Mecklenburg-Vorpommern	Saksamaa
+2918632	Göttingen	51.53443	9.93228	122149	Göttingen	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2918752	Gotha	50.94823	10.70193	46615	Gotha		Saksamaa
+2918970	Gornau	50.75901	13.03731	4101	Gornau vald		Saksamaa
+2918987	Görlitz	51.15518	14.98853	57751	Görlitz		Saksamaa
+2919054	Göppingen	48.70354	9.65209	58040	Göppingen	Baden-Württemberg	Saksamaa
+2919609	Göda	51.178	14.31951	3476	Göda vald		Saksamaa
+2920027	Glaubitz	51.32498	13.37817	1962	Glaubitzi vald		Saksamaa
+2920236	Gladbeck	51.57077	6.98593	76940	Gladbeck	NRW	Saksamaa
+2921232	Gera	50.88029	12.08187	104659	Gera		Saksamaa
+2921466	Gelsenkirchen	51.50508	7.09654	270028	Gelsenkirchen	NRW	Saksamaa
+2923544	Fürth	49.47593	10.98856	112025	Fürth	Baieri+Bayern	Saksamaa
+2923822	Fulda	50.55162	9.67518	63760	Fulda	Hessen	Saksamaa
+2924585	Friedrichshafen	47.65689	9.47554	58403	Friedrichshafen	Baden-Württemberg	Saksamaa
+2925177	Freiburg	47.9959	7.85222	215966	Freiburg	Baden-Württemberg	Saksamaa
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Saksamaa
+2925535	Frankfurt (Oder)	52.34714	14.55062	51691	Frankfurt Oderi ääres	Brandenburg+http://www.brandenburg.de	Saksamaa
+2925550	Frankenthal	49.53414	8.35357	47438	Frankenthal		Saksamaa
+2926271	Flensburg	54.78431	9.43961	85838	Flensburg	Schleswig-Holstein	Saksamaa
+2928810	Essen	51.45657	7.01228	593085	Essen	NRW	Saksamaa
+2928862	Espenhain	51.18926	12.47885	2843	Espenhaini vald		Saksamaa
+2929567	Erlangen	49.59099	11.00783	102675	Erlangen	Baieri+Bayern	Saksamaa
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		Saksamaa
+2930682	Elstertrebnitz	51.15	12.23333	1549	Elstertrebnitzi vald		Saksamaa
+2933882	Eberswalde	52.83492	13.81951	41980	Eberswalde	Brandenburg+http://www.brandenburg.de	Saksamaa
+2934246	Düsseldorf	51.22172	6.77616	573057	Düsseldorf	NRW	Saksamaa
+2934324	Dürrhennersdorf	51.04863	14.60383	1213	Dürrhennersdorfi vald		Saksamaa
+2934486	Düren	50.80434	6.49299	93440	Düren	NRW	Saksamaa
+2934691	Duisburg	51.43247	6.76516	504358	Duisburg	NRW	Saksamaa
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Saksamaa
+2935517	Dortmund	51.51494	7.466	588462	Dortmund	NRW	Saksamaa
+2937317	Diepholz	52.60783	8.37005	16783	Diepholzi vald	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2937789	Deutzen	51.11217	12.42541	2176	Deutzeni vald		Saksamaa
+2937936	Detmold	51.93855	8.87318	73680	Detmold	NRW	Saksamaa
+2937959	Dessau	51.83864	12.24555	77315	Dessau	Sassen-Anholt	Saksamaa
+2938323	Delmenhorst	53.0511	8.63091	75893	Delmenhorst	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2938913	Darmstadt	49.87167	8.65027	140385	Darmstadt	Hessen	Saksamaa
+2939658	Cuxhaven	53.87176	8.69087	52677	Cuxhaven	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2939714	Crostwitz	51.23832	14.24338	1201	Crostwitzi vald		Saksamaa
+2939717	Crostau	51.08462	14.45589	1786	Crostau vald		Saksamaa
+2939811	Cottbus	51.75769	14.32888	84754	Cottbus	Brandenburg+http://www.brandenburg.de	Saksamaa
+2939927	Colditz	51.12821	12.80295	5173	Colditz		Saksamaa
+2939997	Claußnitz	50.93333	12.88333	3505	Claußnitzi vald		Saksamaa
+2940132	Chemnitz	50.8357	12.92922	247220	Chemnitz		Saksamaa
+2940213	Celle	52.62264	10.08047	71010	Celle	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2940383	Calw	48.71419	8.74031	23740	Calw	Baden-Württemberg	Saksamaa
+2940386	Calvörde	52.39551	11.29463	1742	Calvörde vald	Sassen-Anholt	Saksamaa
+2944368	Bremerhaven	53.55021	8.57673	117446	Bremerhaven	Bremeni liidumaa+Bremen	Saksamaa
+2944388	Bremen	53.07516	8.80777	546501	Bremen	Bremeni liidumaa+Bremen	Saksamaa
+2944630	Breitenbrunn	50.47553	12.76649	3741	Breitenbrunni vald		Saksamaa
+2945024	Braunschweig	52.26594	10.52673	244715	Braunschweig	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2945358	Brandenburg an der Havel	52.41667	12.55	59826	Brandenburg	Brandenburg+http://www.brandenburg.de	Saksamaa
+2945698	Boxberg	51.40373	14.57598	3093	Boxbergi vald		Saksamaa
+2945726	Bovenden	51.58836	9.9222	13964	Bovendeni vald	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2945756	Bottrop	51.52392	6.9285	119909	Bottrop	NRW	Saksamaa
+2946016	Borsdorf	51.35	12.53333	8489	Borsdorfi vald		Saksamaa
+2946206	Borkum	53.58094	6.69153	5186	Borkum	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2947372	Bockelwitz	51.19942	12.95618	2794	Bockelwitzi vald		Saksamaa
+2947416	Bochum	51.48165	7.21648	385729	Bochum	NRW	Saksamaa
+2949186	Bielefeld	52.03333	8.53333	331906	Bielefeld+http://de.wikipedia.org/wiki/Bielefeld	NRW	Saksamaa
+2950159	Berlin	52.52437	13.41053	3426354	Berliin	Berliin+Berlin	Saksamaa
+2950349	Bergisch Gladbach	50.9856	7.13298	106184	Bergisch Gladbach	NRW	Saksamaa
+2951026	Bennewitz	51.36074	12.71376	5211	Bennewitzi vald		Saksamaa
+2951825	Bayreuth	49.94782	11.57893	75061	Bayreuth	Baieri+Bayern	Saksamaa
+2951881	Bautzen	51.18035	14.43494	41972	Bautzen		Saksamaa
+2952415	Barsbüttel	53.56667	10.16667	12363	Barsbütteli vald	Schleswig-Holstein	Saksamaa
+2952984	Bamberg	49.89873	10.90067	70047	Bamberg	Baieri+Bayern	Saksamaa
+2953504	Baden-Baden	48.7606	8.23975	54239	Baden-Baden+b+b	Baden-Württemberg	Saksamaa
+2953528	Bad Doberan	54.10712	11.90051	11559	Bad Doberan	Mecklenburg-Vorpommern	Saksamaa
+2954172	Augsburg	48.37154	10.89851	259196	Augsburg	Baieri+Bayern	Saksamaa
+2955389	Artlenburg	53.37182	10.48793	1640	Artlenburgi vald	Alam-Saksi+Neddersassen+Läichsaksen+Donja Saska	Saksamaa
+2955936	Ansbach	49.30481	10.5931	31839	Ansbach	Baieri+Bayern	Saksamaa
+2956656	Amberg	49.44287	11.86267	44737	Amberg	Baieri+Bayern	Saksamaa
+2959927	Aalen	48.83777	10.0933	67085	Aalen	Baden-Württemberg	Saksamaa
+3247449	Aachen	50.77664	6.08342	265208	Aachen	NRW	Saksamaa
+2613102	Sønderborg	54.90896	9.78917	27033	Sønderborg	Lõuna-Taani piirkond	Taani
+2614481	Roskilde	55.64152	12.08035	44285	Roskilde	Sjællandi piirkond	Taani
+2614813	Ribe	55.33051	8.76966	7983	Ribe	Lõuna-Taani piirkond	Taani
+2615876	Odense	55.39594	10.38831	145931	Odense	Lõuna-Taani piirkond	Taani
+2618425	Copenhagen	55.67594	12.56553	1153615	Kopenhaagen		Taani
+2622447	Esbjerg	55.47028	8.45187	72205	Esbjerg	Lõuna-Taani piirkond	Taani
+2624652	Århus	56.15674	10.21076	237551	Århus	Kesk-Jüütimaa piirkond	Taani
+2624886	Aalborg	57.048	9.9187	122219	Aalborg		Taani
+2625070	Aabenraa	55.04434	9.41741	16344	Åbenrå	Lõuna-Taani piirkond	Taani
+3575635	Roseau	15.30174	-61.38808	16571	Roseau	Saint George	Dominica
+2481700	Sétif	36.19112	5.41373	288461	Sétif	Sétif	Alžeeria+AlĪeeria
+2485926	Oran	35.69906	-0.63588	645984	Oran	Oran	Alžeeria+AlĪeeria
+2507480	Algiers	36.73225	3.08746	1977663	Alžiir	Alger	Alžeeria+AlĪeeria
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	Ecuador
+3657990	Esmeraldas	0.9592	-79.65397	165216	Esmeraldas	Esmeraldas	Ecuador
+587450	Võru	57.83389	27.01944	14631	Võru vald	Võru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+587577	Viljandi	58.36389	25.59	20309	Viljandi	Viljandi maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+587876	Valga	57.77781	26.0473	13945	Valga	Valga maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588174	Tudulinna	59.03722	27.08528	295	Tudulinna vald	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588215	Tori	58.47889	24.82417	526	Tori vald	Pärnu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588228	Tooni	58.37306	27.52333	0	Tooni	Tartu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588264	Toila	59.42127	27.50807	2304	Toila vald	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588335	Tartu	58.38062	26.72509	101092	Tartu	Tartu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588627	Sonda	59.34361	26.83639	594	Sonda vald	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588686	Sillamäe	59.39697	27.76331	16672	Sillamäe	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+588831	Saku	59.30354	24.66382	4548	Saku vald	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589117	Räpina	58.09806	27.46361	2901	Räpina	Põlva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589165	Rakvere	59.34639	26.35583	16736	Rakvere_vald	Lääne-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589223	Raasiku	59.36639	25.18306	1317	Raasiku vald	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589253	Püssi	59.36	27.04972	1840	Püssi	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589379	Põltsamaa	58.6525	25.97056	4764	Põltsamaa_vald	Jõgeva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589580	Pärnu	58.38588	24.49711	44192	Pärnu	Pärnu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589663	Paldiski	59.35667	24.05306	4202	Paldiski	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589703	Paikuse	58.37917	24.63444	1996	Paikuse	Pärnu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589709	Paide	58.88556	25.55722	9735	Paide_vald	Järva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589741	Padise	59.23111	24.14056	392	Padise	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+589810	Orava	57.89667	27.45917	300	Orava	Võru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590030	Narva-Jõesuu	59.45889	28.04083	2802	Narva-Jõesuu	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590031	Narva	59.37722	28.19028	66980	Narva	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590203	Mikitamäe	58.00083	27.54806	345	Mikitamäe	Võru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590292	Meeksi	58.22778	27.43222	129	Meeksi vald	Põlva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590447	Maardu	59.46529	24.98215	16630	Maardu	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590657	Lihula	58.68139	23.84528	1457	Lihula+Lihula vald	Pärnu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590888	Kuusalu	59.44389	25.44139	1238	Kuusalu vald	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+590939	Kuressaare	58.24806	22.50389	14921	Kuressaare	Saare maakond+Saaremaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+591201	Kolkja	58.54556	27.215	397	Kolkja	Tartu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+591260	Kohtla-Järve	59.39861	27.27306	46060	Kohtla-Järve	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+591313	Kiviõli	59.35306	26.97111	6953	Kiviõli	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+591723	Kalana	58.71778	26.03972	129	Kalana	Jõgeva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+591893	Jõhvi	59.35917	27.42111	11469	Jõhvi	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+591902	Jõgeva	58.74667	26.39389	6396	Jõgeva	Jõgeva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592035	Imavere	58.73306	25.7725	486	Imavere vald	Järva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592055	Illuka	59.23778	27.48472	0	Illuka vald	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592062	Iisaku	59.10139	27.30806	916	Iisaku vald	Ida-Viru maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592225	Haapsalu	58.94306	23.54139	11805	Haapsalu	Lääne maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592276	Emmaste	58.70361	22.61694	277	Emmaste	Hiiu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592279	Elva	58.2225	26.42111	5819	Elva	Tartu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592334	Avinurme	58.98222	26.86417	779	Avinurme vald	Jõgeva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592557	Alatskivi	58.59806	27.13361	430	Alatskivi	Tartu maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+592611	Aegviidu	59.28583	25.61417	910	Aegviidu	Harju maakond+Harjumaa	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+11599220	Kääpa	58.69413	26.88395	0	Kääpa	Jõgeva maakond	Eesti Vabariik+Eesti Nõukogude Sotsialistlik Vabariik+Eesti
+350203	Rosetta	31.39951	30.41718	64481	Rashīd	Al Buḩayrah	Egiptus
+358245	Dahab	28.48208	34.49505	8000	Dahab+Dhahab		Egiptus
+358619	Port Said	31.25654	32.28411	538378	Port Said		Egiptus
+359792	Aswan	24.09082	32.89942	241261	Aswān		Egiptus
+359796	Suez	29.97371	32.52627	488125	Suess	As Suways	Egiptus
+360630	Cairo	30.06263	31.24967	7734614	Kairo		Egiptus
+361055	Ismailia	30.60427	32.27225	284813	Al-Ismā’īlīyah	Al Ismā‘īlīyah	Egiptus
+361058	Alexandria	31.20176	29.91582	3811516	Aleksandria		Egiptus
+361546	Arish	31.13159	33.79844	128855	Al-‘Arīsh	Shamāl Sīnāʼ	Egiptus
+343300	Asmara	15.33805	38.93184	563930	Asmara	Maʼākel	Eritrea
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo	Castilla–La Mancha	Hispaania+España
+2509954	Valencia	39.46975	-0.37739	814208	Valencia	Valencia	Hispaania+España
+2510409	Toledo	39.8581	-4.02263	82291	Toledo	Castilla–La Mancha	Hispaania+España
+2513416	Murcia	37.98704	-1.13004	436870	Murcia	Murcia	Hispaania+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	Hispaania+España
+2514169	Marbella	36.51543	-4.88583	134623	Marbella	Andaluusia	Hispaania+España
+2517117	Granada	37.18817	-3.60667	234325	Grenada	Andaluusia	Hispaania+España
+2517346	Garafía	28.81667	-17.93333	1929	Garafía vald	Kanaari saared	Hispaania+España
+2519240	Córdoba	37.89155	-4.77275	328428	Córdoba	Andaluusia	Hispaania+España
+2521420	Badajoz	38.87789	-6.97061	148334	Badajoz	Extremadura	Hispaania+España
+3104324	Zaragoza	41.65606	-0.87734	674317	Zaragoza+ZGZ	Aragón	Hispaania+España
+3105184	Vilanova i la Geltrú	41.22392	1.72511	65890	Vilanova i la Geltrú	Catalunya	Hispaania+España
+3107677	Tortosa	40.81249	0.5216	35143	Tortosa	Catalunya	Hispaania+España
+3108286	Terrassa	41.56667	2.01667	210941	Terrassa	Catalunya	Hispaania+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	Hispaania+España
+3109718	Santander	43.46472	-3.80444	182700	Santander	Kantaabria+Cantabria	Hispaania+España
+3110044	Donostia / San Sebastián	43.31283	-1.97499	185357	Donostia	Euskadi	Hispaania+España
+3113664	Petilla de Aragón	42.45	-1.11667	32	Petilla de Aragóni vald	Navarra	Hispaania+España
+3117460	Marañón	42.62941	-2.43931	62	Marañóni jõgi	Navarra	Hispaania+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Hispaania+España
+3121456	Girona	41.98311	2.82493	96188	Girona	Catalunya	Hispaania+España
+3127461	Burgos	42.34106	-3.70184	178966	Burgos	Castilla-León+Castilla y León	Hispaania+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Catalunya	Hispaania+España
+3129111	Ayerbe	42.27267	-0.68844	1096	Ayerbe	Aragón	Hispaania+España
+3129879	Arancón	41.80017	-2.28141	108	Arancóni vald	Castilla-León+Castilla y León	Hispaania+España
+3130313	Almazán	41.48648	-2.53088	5773	Almazáni vald	Castilla-León+Castilla y León	Hispaania+España
+331180	Mek'ele	13.49667	39.47528	215546	Mek’ele		Etioopia
+335035	Harar	9.31387	42.11815	90218	Harer	Hārerī Hizb	Etioopia
+338832	Dire Dawa	9.59306	41.86611	252279	Dire Dawa	Dirē Dawa	Etioopia
+344979	Addis Ababa	9.02497	38.74689	2757729	Addis Abeba	Ādīs Ābeba+Addis Ababa Region	Etioopia
+630768	Ylivieska	64.08333	24.55	13159	Ylivieska	Põhja-Pohjanmaa	Soome+Some
+630779	Ylitornio	66.30893	23.67734	5104	Ylitornio vald		Soome+Some
+631376	Virrat	62.24759	23.78004	7707	Virrati linn	Pirkanmaa	Soome+Some
+631707	Vihti	60.41699	24.31965	26280	Vihti vald	Uusimaa maakond+Uusimaa	Soome+Some
+632370	Varkaus	62.31533	27.873	22365	Varkaus		Soome+Some
+632542	Vammala	61.33333	22.9	14982	Vammala linn	Pirkanmaa	Soome+Some
+632672	Valkeakoski	61.26421	24.03122	20376	Valkeakoski linn	Pirkanmaa	Soome+Some
+632978	Vaasa	63.096	21.61577	57014	Vaasa	Pohjanmaa	Soome+Some
+633221	Uusikaupunki	60.80043	21.40841	16226	Uusikaupunki linn	Päris-Soome	Soome+Some
+633268	Utsjoki	69.90864	27.02843	1401	Utsjoki vald		Soome+Some
+633591	Tuusula	60.40368	25.02638	34725	Tuusula vald	Uusimaa maakond+Uusimaa	Soome+Some
+633679	Turku	60.45148	22.26869	175945	Turu	Päris-Soome	Soome+Some
+634093	Tornio	65.84811	24.14662	21236	Tornio linn		Soome+Some
+634331	Tohmajärvi	62.18333	30.38333	4911	Tohmajärvi vald		Soome+Some
+634963	Tampere	61.49911	23.78712	202687	Tampere	Pirkanmaa	Soome+Some
+635150	Taipalsaari	61.15	28.05	4778	Taipalsaari		Soome+Some
+635696	Suomussalmi	64.88685	28.90778	9974	Suomussalmi vald	Kainuu	Soome+Some
+636173	Sotkamo	64.13333	28.41667	10368	Sotkamo vald	Kainuu	Soome+Some
+636345	Somero	60.61667	23.53333	9840	Somero linn	Päris-Soome	Soome+Some
+636464	Sodankylä	67.41667	26.6	8942	Sodankylä vald		Soome+Some
+637219	Seinäjoki	62.79446	22.82822	32149	Seinäjoki linn	Lõuna-Pohjanmaa	Soome+Some
+637292	Savonlinna	61.8699	28.87999	27353	Savonlinna		Soome+Some
+637948	Salo	60.38333	23.13333	24900	Salo linn	Päris-Soome	Soome+Some
+638074	Salla	66.83333	28.66667	4401	Salla vald		Soome+Some
+638321	Saarijärvi	62.70486	25.25396	10011	Saarijärvi linn		Soome+Some
+638936	Rovaniemi	66.5	25.71667	34781	Rovaniemi linn		Soome+Some
+639406	Riihimäki	60.73769	24.77726	26451	Riihimäki		Soome+Some
+639734	Rauma	61.12724	21.51127	36550	Rauma linn		Soome+Some
+639888	Ranua	65.91667	26.53333	4833	Ranua vald		Soome+Some
+640276	Raahe	64.68333	24.48333	22217	Raahe linn	Põhja-Pohjanmaa	Soome+Some
+640384	Pyhtää	60.49349	26.54346	4964	Pyhtää vald	Kymenlaakso	Soome+Some
+640441	Pyhäjärvi	63.66667	25.9	6138	Pyhäjärvi linn	Põhja-Pohjanmaa	Soome+Some
+640803	Pudasjärvi	65.38333	26.91667	9459	Pudasjärvi linn	Põhja-Pohjanmaa	Soome+Some
+640893	Posio	66.10856	28.17186	4252	Posio vald		Soome+Some
+640999	Pori	61.48333	21.78333	76772	Pori		Soome+Some
+641869	Pieksämäki	62.3	27.13333	12167	Pieksämäki linn		Soome+Some
+641974	Petäjävesi	62.25	25.2	3610	Petäjävesi vald		Soome+Some
+642377	Pelkosenniemi	67.11083	27.51056	1221	Pelkosenniemi vald		Soome+Some
+642455	Pedersöre	63.65	22.68333	10436	Pedersöre vald	Pohjanmaa	Soome+Some
+642657	Parkano	62.01667	23.01667	7213	Parkano linn	Pirkanmaa	Soome+Some
+642976	Pälkäne	61.33424	24.27197	4262	Pälkäne vald	Pirkanmaa	Soome+Some
+643492	Oulu	65.01236	25.46816	128618	Oulu linn	Põhja-Pohjanmaa	Soome+Some
+643629	Orivesi	61.67766	24.3572	8846	Orivesi linn	Pirkanmaa	Soome+Some
+643644	Orimattila	60.80487	25.72964	14603	Orimattila linn		Soome+Some
+644171	Nurmijärvi	60.46407	24.8073	37073	Nurmijärvi vald	Uusimaa maakond+Uusimaa	Soome+Some
+644450	Nokia	61.46667	23.5	28676	Nokia	Pirkanmaa	Soome+Some
+644632	Nilsiä	63.20746	28.08222	6474	Nilsiä		Soome+Some
+645081	Närpes	62.47283	21.33707	0	Närpesi linn	Pohjanmaa	Soome+Some
+645672	Muonio	67.95	23.7	2412	Muonio vald		Soome+Some
+646005	Mikkeli	61.68857	27.27227	46550	Mikkeli		Soome+Some
+646723	Mäntsälä	60.63333	25.31667	18074	Mäntsälä vald	Uusimaa maakond+Uusimaa	Soome+Some
+647571	Lovisa	60.45659	26.22505	15466	Loviisa linn	Uusimaa maakond+Uusimaa	Soome+Some
+647731	Loimaa	60.84972	23.0561	0	Loimaa linn	Päris-Soome	Soome+Some
+647751	Lohja	60.24859	24.06534	35960	Lohja linn	Uusimaa maakond+Uusimaa	Soome+Some
+647851	Liperi	62.53333	29.36667	11386	Liperi vald		Soome+Some
+648090	Lieksa	63.31667	30.01667	13703	Lieksa linn		Soome+Some
+648366	Lempäälä	61.31667	23.75	18096	Lempäälä vald	Pirkanmaa	Soome+Some
+648738	Laukaa	62.41407	25.95194	17093	Laukaa vald		Soome+Some
+648900	Lappeenranta	61.05871	28.18871	59276	Lappeenranta linn		Soome+Some
+649360	Lahti	60.98267	25.66151	98826	Lahti		Soome+Some
+649630	Kirkkonummi	60.12381	24.43853	32920	Kirkkonummi vald	Uusimaa maakond+Uusimaa	Soome+Some
+649924	Kuusamo	65.96667	29.18333	17400	Kuusamo linn	Põhja-Pohjanmaa	Soome+Some
+650224	Kuopio	62.89238	27.67703	89104	Kuopio linn		Soome+Some
+650705	Kuhmo	64.13333	29.51667	10214	Kuhmo linn	Kainuu	Soome+Some
+650859	Kouvola	60.86667	26.7	31133	Kouvola linn	Kymenlaakso	Soome+Some
+650946	Kotka	60.4664	26.94582	54616	Kotka linn	Kymenlaakso	Soome+Some
+651659	Kontiolahti	62.76023	29.84711	12411	Kontiolahti vald		Soome+Some
+651943	Kokkola	63.83847	23.13066	35586	Kokkola linn		Soome+Some
+651980	Kokemäki	61.25647	22.35643	8390	Kokemäki linn		Soome+Some
+652590	Kittilä	67.66474	24.89356	5713	Kittilä vald		Soome+Some
+652615	Kitee	62.1	30.15	9777	Kitee		Soome+Some
+652977	Keuruu	62.26667	24.7	10942	Keuruu linn		Soome+Some
+653185	Kerava	60.40338	25.105	31347	Kerava	Uusimaa maakond+Uusimaa	Soome+Some
+653272	Kemijärvi	66.66667	27.41667	8883	Kemijärvi linn		Soome+Some
+653559	Kauniainen	60.21209	24.72756	8688	Kauniainen	Uusimaa maakond+Uusimaa	Soome+Some
+653616	Kauhava	63.10299	23.07129	7896	Kauhava linn	Lõuna-Pohjanmaa	Soome+Some
+653960	Karkkila	60.53418	24.20977	8811	Karkkila linn	Uusimaa maakond+Uusimaa	Soome+Some
+654047	Karis	60.07178	23.66163	8853	Karis	Uusimaa maakond+Uusimaa	Soome+Some
+654440	Kangasala	61.46383	24.07602	24291	Kangasala vald	Pirkanmaa	Soome+Some
+654837	Kalajoki	64.25	23.95	8869	Kalajoki linn	Põhja-Pohjanmaa	Soome+Some
+654899	Kajaani	64.22728	27.72846	35375	Kajaani linn	Kainuu	Soome+Some
+655069	Kaavi	62.98333	28.5	3538	Kaavi vald		Soome+Some
+655194	Jyväskylä	62.24147	25.72088	85026	Jyväskylä linn		Soome+Some
+655533	Juankoski	63.06667	28.35	5514	Juankoski linn		Soome+Some
+655563	Joutseno	61.11796	28.50763	10603	Joutseno		Soome+Some
+655581	Joutsa	61.73333	26.11667	4060	Joutsa vald		Soome+Some
+655808	Joensuu	62.60118	29.76316	53388	Joensuu linn		Soome+Some
+655958	Järvenpää	60.47369	25.08992	38148	Järvenpää	Uusimaa maakond+Uusimaa	Soome+Some
+656073	Janakkala	60.9	24.6	15698	Janakkala vald		Soome+Some
+656083	Jämsä	61.8642	25.19002	15261	Jämsä		Soome+Some
+656652	Ingå	60.04587	24.00459	5205	Ingå vald	Uusimaa maakond+Uusimaa	Soome+Some
+656688	Imatra	61.17185	28.75242	29615	Imatra linn		Soome+Some
+656709	Ilomantsi	62.67162	30.93276	6408	Ilomantsi vald		Soome+Some
+656789	Ikaalinen	61.76951	23.0658	7309	Ikaalineni linn	Pirkanmaa	Soome+Some
+656820	Iisalmi	63.55915	27.19067	22588	Iisalmi linn		Soome+Some
+656851	Ii	65.31735	25.3731	6546	Ii vald	Põhja-Pohjanmaa	Soome+Some
+656913	Hyvinge	60.63333	24.86667	43515	Hyvinkää	Uusimaa maakond+Uusimaa	Soome+Some
+657180	Huittinen	61.18333	22.7	8952	Huittineni linn		Soome+Some
+658225	Helsinki	60.16952	24.93545	558457	Helsingi	Uusimaa maakond+Uusimaa	Soome+Some
+658318	Heinävesi	62.43333	28.6	4457	Heinävesi+Heinävesi vald		Soome+Some
+659024	Hankasalmi	62.38333	26.43333	5372	Hankasalmi vald		Soome+Some
+659101	Hanko	59.83333	22.95	9962	Hanko	Uusimaa maakond+Uusimaa	Soome+Some
+659169	Hamina	60.56974	27.19794	21712	Hamina	Kymenlaakso	Soome+Some
+659180	Hämeenlinna	60.99596	24.46434	47261	Hämeenlinna		Soome+Some
+659184	Hämeenkyrö	61.63913	23.19531	9996	Hämeenkyrö vald	Pirkanmaa	Soome+Some
+659431	Hailuoto	65.009	24.71385	955	Hailuoto	Põhja-Pohjanmaa	Soome+Some
+659554	Haapavesi	64.13333	25.36667	7717	Haapavesi linn	Põhja-Pohjanmaa	Soome+Some
+659935	Forssa	60.81462	23.62146	17852	Forssa		Soome+Some
+660158	Espoo	60.2052	24.6522	256760	Espoo	Uusimaa maakond+Uusimaa	Soome+Some
+660229	Enontekiö	68.38573	23.63215	2145	Enontekiö vald		Soome+Some
+660325	Ekenäs	59.97359	23.43389	14377	Ekenäs	Uusimaa maakond+Uusimaa	Soome+Some
+660374	Dragsfjärd	60.06667	22.48333	3309	Dragsfjärdi vald	Päris-Soome	Soome+Some
+660561	Porvoo	60.39233	25.66507	47192	Porvoo	Uusimaa maakond+Uusimaa	Soome+Some
+660927	Askola	60.53333	25.6	4515	Askola vald	Uusimaa maakond+Uusimaa	Soome+Some
+661352	Alavus	62.58333	23.61667	9422	Alavus	Lõuna-Pohjanmaa	Soome+Some
+661576	Alajärvi	63	23.81667	8793	Alajärvi linn	Lõuna-Pohjanmaa	Soome+Some
+661896	Ähtäri	62.55403	24.06186	6835	Ähtäri linn	Lõuna-Pohjanmaa	Soome+Some
+662095	Äänekoski	62.6	25.73333	13406	Äänekoski linn		Soome+Some
+2611396	Tórshavn	62.00973	-6.77164	13200	Tórshavn		Fääri saared
+2970777	Vannes	47.66667	-2.75	54020	Vannes+56000	Bretagnei poolsaar+Bretagne	Prantsusmaa+France
+2973783	Strasbourg	48.58392	7.74553	274845	Strasbourg+67000	ACAL	Prantsusmaa+France
+2976341	Salon-de-Provence	43.64074	5.09545	41397	Salon-de-Provence+13300	Provence-Alpes-Côte d'Azur	Prantsusmaa+France
+2983990	Rennes	48.11198	-1.67429	209375	Rennes+35000	Bretagnei poolsaar+Bretagne	Prantsusmaa+France
+2984701	Quimper	48	-4.1	63849	Quimper+29000	Bretagnei poolsaar+Bretagne	Prantsusmaa+France
+2986275	Pontcharra	45.4329	6.01424	6948	Pontcharra vald		Prantsusmaa+France
+2988507	Paris	48.85341	2.3488	2138551	Pariis+75001		Prantsusmaa+France
+2990440	Nice	43.70313	7.26608	338620	Nice+06000	Provence-Alpes-Côte d'Azur	Prantsusmaa+France
+2990969	Nantes	47.21725	-1.55336	277269	Nantes+44000+http://www.nantes.fr/		Prantsusmaa+France
+2994160	Metz	49.11911	6.17269	123914	Metz+57000	ACAL	Prantsusmaa+France
+2995469	Marseille	43.29695	5.38107	794811	Marseille+13001	Provence-Alpes-Côte d'Azur	Prantsusmaa+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Prantsusmaa+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Prantsusmaa+France
+3014816	Gravelines	50.98651	2.12807	13137	Gravelines	http://en.wikipedia.org/wiki/Hauts-de-France	Prantsusmaa+France
+3025466	Cherbourg-Octeville	49.63984	-1.61636	26655	Cherbourg+50100		Prantsusmaa+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Bordeaux+33000		Prantsusmaa+France
+3035681	Avignon	43.94834	4.80892	89769	Avignon+84000	Provence-Alpes-Côte d'Azur	Prantsusmaa+France
+3037854	Amiens	49.9	2.3	143086	Amiens+80000	http://en.wikipedia.org/wiki/Hauts-de-France	Prantsusmaa+France
+3038266	Albertville	45.67452	6.39061	19113	Albertville+73200		Prantsusmaa+France
+3038498	Aigueperse	46.02284	3.20231	2614	Aigueperse		Prantsusmaa+France
+3038638	Agde	43.31083	3.47583	23001	Agdei vald+34300		Prantsusmaa+France
+3038789	Abbeville	50.1	1.83333	26461	Abbeville+80100	http://en.wikipedia.org/wiki/Hauts-de-France	Prantsusmaa+France
+2399697	Libreville	0.39241	9.45356	578156	Libreville		Gabon
+2636432	Swansea	51.62079	-3.94323	300352	Swansea	Galles	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2640194	Plymouth	50.37153	-4.14305	260203	Plymouth	Inglismaa	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	London	Inglismaa	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2644080	Llanfairpwllgwyngyll	53.22141	-4.20329	3107	Llanfair­pwllgwyn­gyllgo­gery­chwyrn­drobwll­llanty­silio­gogo­goch	Galles	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool	Inglismaa	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glasgow	苏格兰	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2651048	Dover	51.12598	1.31257	41709	Dover	Inglismaa	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmingham	Inglismaa	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Belfast		Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2657060	Armagh	54.35	-6.66667	14801	Armagh		Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Aberdeen	苏格兰	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+7911271	Canvey Island	51.52199	0.5809	38170	Canvey saar	Inglismaa	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Orkney saared	苏格兰	Ühendkuningriik+Suurbritannia+http://en.wikipedia.org/wiki/United_Kingdom
+611694	Telavi	41.91978	45.47315	21800	Thelavi	Kahhethi	Gruusia
+611717	Tbilisi	41.69411	44.83368	1049498	Thbilisi	T'bilisi	Gruusia
+611847	Sokhumi	43.00697	40.9893	81546	Suhhumi	Abhaasia	Gruusia
+612287	Rust’avi	41.54949	44.99323	50000	Rusthavi	Khvemo Kharthli	Gruusia
+612536	Ozurgeti	41.92442	42.00682	20636	Ozurgethi		Gruusia
+612890	Mtskheta	41.84514	44.71875	7423	Mtshetha	Mtshetha-Mthianethi	Gruusia
+613607	Kutaisi	42.26791	42.69459	178338	Khuthaisi	Imerethi	Gruusia
+613762	Kobuleti	41.82143	41.77921	18600	Khobulethi	Ajaria	Gruusia
+613988	Khashuri	41.99414	43.59994	27811	Hašuri	Šida Kharthli	Gruusia
+614455	Gori	41.98422	44.11578	46676	Gori	Šida Kharthli	Gruusia
+614622	Gagra	43.27858	40.27124	8266	Gagra	Abhaasia	Gruusia
+615403	Borjomi	41.85272	43.41284	13825	Bordžomi	Samtshe-Džavahhethi	Gruusia
+615532	Batumi	41.64228	41.63392	121806	Bathumi	Ajaria	Gruusia
+615860	Akhaltsikhe	41.63901	42.98262	17298	Ahhaltsihhe	Samtshe-Džavahhethi	Gruusia
+3382160	Cayenne	4.93333	-52.33333	61550	Cayenne		Prantsuse Guajaana
+2306104	Accra	5.55602	-0.1969	1963264	Accra	Greater Accra	Ghana
+2411585	Gibraltar	36.14474	-5.35257	26544	Gibraltar		Gibraltar
+3419842	Sisimiut	66.93946	-53.6735	5227	Sisimiut		Gröönimaa
+3421319	Nuuk	64.18347	-51.72157	14798	Nuuk		Gröönimaa
+2413753	Brikama	13.27136	-16.64944	77700	Brikama	Western	Gambia
+2413876	Banjul	13.45274	-16.57803	34589	Banjul	Banjul	Gambia
+2422465	Conakry	9.53795	-13.67729	1767200	Conakry	Conakry	Guinea
+2306774	San Antonio de Palé	-1.4068	5.63178	4433	Pagalu	Annobón	Ekvatoriaal-Guinea+Guinee Espagnol
+253759	Sitia	35.20783	26.10467	8707	Sitía		Kreeka+Griekanmua
+253996	Sérifos	37.15397	24.50614	364	Sérifos		Kreeka+Griekanmua
+255274	Piraeus	37.94745	23.63708	163688	Pireus		Kreeka+Griekanmua
+260133	Chalkída	38.46354	23.60284	59125	Chalkída		Kreeka+Griekanmua
+263219	Delphi	38.47942	22.49357	2373	Delfi		Kreeka+Griekanmua
+264371	Athens	37.97945	23.71622	664046	Ateena		Kreeka+Griekanmua
+734077	Thessaloníki	40.64361	22.93086	354290	Thessaloníki		Kreeka+Griekanmua
+3598132	Guatemala City	14.64072	-90.51327	994938	Guatemala	Guatemala	Guatemala
+2374775	Bissau	11.86357	-15.59767	388028	Bissau	Bissau Region	Guinea-Bissau
+3186886	Zagreb	45.81444	15.97798	698966	Zagreb	Grad Zagreb	Horvaatia
+3186952	Zadar	44.11972	15.24222	71258	Zadar	Zadarska	Horvaatia
+3190941	Šibenik	43.72722	15.90583	37112	Šibenik	Šibensko-Kniniska	Horvaatia
+3191648	Rijeka	45.32673	14.44241	141172	Rijeka	Primorsko-Goranska	Horvaatia
+3192224	Pula	44.86833	13.84806	59078	Pula		Horvaatia
+3202523	Cres	44.96092	14.41246	2289	Cresi saar	Primorsko-Goranska	Horvaatia
+3718426	Port-au-Prince	18.53917	-72.335	1234742	Port-au-Prince	Ouest	Haiti+Haiiti
+3728474	Okap	19.75938	-72.19815	134815	Cap-Haïtien	Nord	Haiti+Haiiti
+721472	Debrecen	47.53333	21.63333	204124	Debrecen	Hajdú-Bihari komitaat	Ungari
+3042824	Visegrád	47.78526	18.9709	1713	Visegrád		Ungari
+3052009	Győr	47.68333	17.63512	128265	Győr		Ungari
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Ungari
+1215502	Banda Aceh	5.54167	95.33333	250757	Banda Aceh	Aceh	Indoneesia+http://en.wikipedia.org/wiki/Indonesia
+1625822	Surabaya	-7.24917	112.75083	2374658	Surabaya	Jawa Timur	Indoneesia+http://en.wikipedia.org/wiki/Indonesia
+1627896	Semarang	-6.99306	110.42083	1288084	Semarang		Indoneesia+http://en.wikipedia.org/wiki/Indonesia
+1636308	Manokwari	-0.86291	134.06402	53190	Manokwari	Irian Jaya Barat	Indoneesia+http://en.wikipedia.org/wiki/Indonesia
+1639693	Komodo	-8.5895	119.4913	2000	Komodo	Nusa Tenggara Timur	Indoneesia+http://en.wikipedia.org/wiki/Indonesia
+2082600	Jayapura	-2.53371	140.71813	134895	Jayapura	Papua	Indoneesia+http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	Dublin	Leinsteri provints	Iirimaa+Iiri+Ire
+2965140	Cork	51.89797	-8.47061	190384	Cork	Munsteri provints	Iirimaa+Iiri+Ire
+2965260	Cobh	51.85722	-8.29917	10501	Cobh	Munsteri provints	Iirimaa+Iiri+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Jeruusalemm		Iisrael
+293100	Safed	32.96465	35.496	27816	Tsfat		Iisrael
+293619	Sederot	31.525	34.59693	20228	Sederot	HaDarom	Iisrael
+293788	Ramat Gan	32.08227	34.81065	128095	Ramat-Gan		Iisrael
+294098	Nazareth	32.69925	35.30483	64800	Naatsaret		Iisrael
+294514	Kfar Saba	32.175	34.90694	80773	Kfar Sava	HaMerkaz	Iisrael
+295530	Beersheba	31.25181	34.7913	186600	Beer-Sheva	HaDarom	Iisrael
+1258526	Ranchi	23.34316	85.3094	846454	Rānchi	Jhārkhand+JH+Jharkhand	India
+1272832	Dharamsala	32.22006	76.32013	19540	Dharamsala	HP	India
+1274746	Chandigarh	30.73629	76.7884	960787	Chandigarh	CH+Chandīgarh	India
+1275339	Mumbai	19.07283	72.88261	12691836	Mumbai	MH+Mahārāshtra	India
+1279233	Ahmedabad	23.02579	72.58727	3719710	Ahmadabad	GJ	India
+94824	Karbala	32.61603	44.02488	434450	Karbalā’	Karbalāʼ	Iraak
+98182	Baghdad	33.34058	44.40088	7216000	Bagdad		Iraak
+98717	Ramadi	33.42056	43.30778	274539	Ar-Ramādī	Al Anbār	Iraak
+98860	Najaf	32.02594	44.34625	482576	An-Najaf	An Najaf	Iraak
+99135	Kufa	32.05114	44.44017	110000	Al-Kūfah	An Najaf	Iraak
+112931	Tehran	35.69439	51.42151	7153309	Teheran	Tehrān	Iraan
+115019	Shiraz	29.61031	52.53113	1249942	Shīrāz		Iraan
+116996	Sari	36.56332	53.06009	255396	Sārī		Iraan
+119208	Qom	34.6401	50.8764	900000	Qom	Qom	Iraan
+121110	Piranshahr	36.701	45.1413	61973	Pīrānshahr	Āz̄ārbāyjān-e Gharbī	Iraan
+122285	Neyshābūr	36.21329	58.79575	220929	Neyshābūr	Khorāsān-e Raẕāvī	Iraan
+124665	Mashhad	36.31559	59.56796	2307177	Mashhad	Khorāsān-e Raẕāvī	Iraan
+144448	Ahvaz	31.31901	48.6842	841145	Ahvāz		Iraan
+145459	Abadan	30.3392	48.3043	370180	Ābādān		Iraan
+2627309	Sauðárkrókur	65.74611	-19.63944	2575	Sauðárkrókur+550		Island
+2633274	Akureyri	65.68353	-18.0878	17693	Akureyri+600		Island
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavík+101		Island
+3415496	Keflavík	64.00492	-22.56242	0	Keflavík+230		Island
+3415667	Ísafjörður	66.07475	-23.13498	2624	Ísafjörður+400		Island
+3416706	Hafnarfjörður	64.0671	-21.93774	26808	Hafnarfjörður+220		Island
+2522699	Zaccanopoli	38.66548	15.92874	779	Zambrone	Calabria	Itaalia
+2522997	Stilo	38.47628	16.46746	1889	Stilo vald	Calabria	Itaalia
+2523137	Sersale	39.01013	16.7296	4421	Sersale vald	Calabria	Itaalia
+2523388	San Pietro Apostolo	39.00413	16.46783	1463	San Pietro Apostolo vald	Calabria	Itaalia
+2523500	San Demetrio Corone	39.5699	16.36149	2281	San Demetrio Corone	Calabria	Itaalia
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Sitsiilia maakond	Itaalia
+2524769	Ferruzzano	38.03699	16.08918	302	Ferruzzano vald	Calabria	Itaalia
+2525370	Caraffa del Bianco	38.09259	16.08766	515	Caraffa del Bianco vald	Calabria	Itaalia
+2525408	Candidoni	38.50548	16.0863	268	Candidoni vald	Calabria	Itaalia
+2525473	Cagliari	39.23054	9.11917	149257	Cagliari		Itaalia
+3163995	Voghera	44.99151	9.01175	36054	Voghera		Itaalia
+3164039	Viterbo	42.41937	12.1056	47134	Viterbo	Lazio	Itaalia
+3164074	Vinci	43.78133	10.92365	1519	Vinci	Toscana	Itaalia
+3164376	Vigevano	45.31407	8.85437	57970	Vigevano		Itaalia
+3164419	Vicenza	45.54672	11.5475	107129	Vicenza		Itaalia
+3164433	Viareggio	43.86693	10.2502	49099	Viareggio	Toscana	Itaalia
+3164527	Verona	45.4299	10.98444	219103	Verona		Itaalia
+3164565	Vercelli	45.32163	8.41989	45593	Vercelli	Piemonte	Itaalia
+3164603	Venice	45.43713	12.33265	51298	Venezia		Itaalia
+3164699	Varese	45.82058	8.82511	76851	Varese		Itaalia
+3165083	Tuscania	42.41889	11.86846	7226	Tuscania	Lazio	Itaalia
+3165201	Treviso	45.66673	12.2416	77604	Treviso		Itaalia
+3165243	Trento	46.06787	11.12108	80425	Trento		Itaalia
+3165524	Turin	45.07049	7.68682	870456	Torino	Piemonte	Itaalia
+3165612	Todi	42.77881	12.41202	5620	Todi		Itaalia
+3166018	Susa	45.13677	7.05809	5596	Susa	Piemonte	Itaalia
+3166034	Sulmona	42.04945	13.92578	21086	Sulmona		Itaalia
+3166101	Stresa	45.88158	8.53834	3985	Stresa	Piemonte	Itaalia
+3166236	Spoleto	42.74071	12.73899	19266	Spoleto		Itaalia
+3166397	Sondrio	46.16852	9.87134	19208	Sondrio		Itaalia
+3166548	Siena	43.31822	11.33064	42867	Siena	Toscana	Itaalia
+3166596	Sestriere	44.95864	6.87751	838	Sestriere	Piemonte	Itaalia
+3166598	Sesto San Giovanni	45.53329	9.22585	76509	Sesto San Giovanni		Itaalia
+3166979	Scanno	41.90442	13.87961	1900	Scanno		Itaalia
+3168096	San Mango sul Calore	40.9589	14.97251	644	San Mango sul Calore vald		Itaalia
+3168752	Sabbioneta	44.99787	10.48848	1624	Sabbioneta		Itaalia
+3168843	Rovigo	45.06982	11.79022	39347	Rovigo		Itaalia
+3169059	Romanengo	45.37815	9.78777	2921	Romanengo vald		Itaalia
+3169070	Rome	41.89193	12.51133	2318895	Rooma	Lazio	Itaalia
+3169361	Rimini	44.05755	12.56528	118673	Rimini	Emilia-Romagna	Itaalia
+3169561	Ravenna	44.41344	12.20121	80868	Ravenna	Emilia-Romagna	Itaalia
+3169921	Prato	43.8805	11.09699	181820	Prato	Toscana	Itaalia
+3169934	Prata di Principato Ultra	40.98626	14.83803	2273	Prata di Principato Ultra vald		Itaalia
+3170647	Pisa	43.70853	10.4036	77007	Pisa	Toscana	Itaalia
+3171058	Piacenza	45.05242	9.69342	93228	Piacenza	Emilia-Romagna	Itaalia
+3171180	Perugia	43.1122	12.38878	120137	Perugia		Itaalia
+3171366	Pavia	45.19205	9.15917	65734	Pavia		Itaalia
+3171457	Parma	44.79935	10.32618	146299	Parma	Emilia-Romagna	Itaalia
+3171728	Padova	45.40797	11.88586	203725	Padova		Itaalia
+3171874	Orvieto	42.71924	12.11249	5440	Orvieto		Itaalia
+3172189	Novara	45.44694	8.62118	93295	Novara	Piemonte	Itaalia
+3172394	Naples	40.85216	14.26811	959470	Napoli		Itaalia
+3172557	Mortara	45.2494	8.73302	13986	Mortara		Itaalia
+3172589	Morimondo	45.35381	8.95626	435	Morimondo		Itaalia
+3172629	Monza	45.58005	9.27246	119618	Monza		Itaalia
+3172931	Montefiascone	42.54255	12.03192	10637	Montefiascone	Lazio	Itaalia
+3173331	Modena	44.64783	10.92539	158886	Modena	Emilia-Romagna	Itaalia
+3173435	Milan	45.46427	9.18951	1236837	Milano		Itaalia
+3173775	Massa	44.03541	10.13927	64783	Massa	Toscana	Itaalia
+3174032	Maranello	44.53101	10.86888	9228	Maranello	Emilia-Romagna	Itaalia
+3174051	Mantova	45.16031	10.79784	39260	Mantova provints		Itaalia
+3174530	Lucca	43.84369	10.50447	81748	Lucca	Toscana	Itaalia
+3174921	Legnano	45.59788	8.91506	57589	Legnano		Itaalia
+3174945	Lecco	45.85589	9.39704	46580	Lecco		Itaalia
+3175081	La Spezia	44.103	9.82375	88491	La Spezia	Liguuria	Itaalia
+3175121	L'Aquila	42.35055	13.39954	33691	L'Aquila		Itaalia
+3175173	Lanciano	42.22718	14.39024	30705	Lanciano		Itaalia
+3175532	Imperia	43.88917	8.03933	38675	Imperia	Liguuria	Itaalia
+3175537	Imola	44.35916	11.7132	52981	Imola	Emilia-Romagna	Itaalia
+3175687	Gubbio	43.34996	12.57309	14378	Gubbio		Itaalia
+3176219	Genoa	44.40478	8.94439	580223	Genova	Liguuria	Itaalia
+3176353	Galluccio	41.35232	13.95372	52	Galluccio vald		Itaalia
+3177019	Fiesole	43.80455	11.29487	2725	Fiesole	Toscana	Itaalia
+3177480	Dragoni	41.27619	14.30368	2108	Dragoni vald		Itaalia
+3177532	Domodossola	46.1165	8.29313	17778	Domodossola	Piemonte	Itaalia
+3177571	Dobbiaco	46.72878	12.22225	2373	Dobbiaco vald		Itaalia
+3177838	Cremona	45.13325	10.02129	59561	Cremona		Itaalia
+3177948	Cortona	43.27467	11.98533	2167	Cortona	Toscana	Itaalia
+3178229	Como	45.80819	9.0832	81975	Como		Itaalia
+3178758	Chiusano di San Domenico	40.93312	14.91634	1434	Chiusano di San Domenico vald		Itaalia
+3179425	Castiglione a Casauria	42.23601	13.89832	281	Castiglione a Casauria vald		Itaalia
+3180175	Casalmorano	45.28766	9.8986	1466	Casalmorano vald		Itaalia
+3180423	Carrara	44.07926	10.09789	58666	Carrara	Toscana	Itaalia
+3180630	Capri	40.55073	14.24263	6770	Capri		Itaalia
+3180781	Cantagallo	44.02205	11.07971	60	Cantagallo vald	Toscana	Itaalia
+3180874	Candela	41.13601	15.51537	2197	Kandela	Apuulia	Itaalia
+3181355	Busto Arsizio	45.61128	8.84914	79519	Busto Arsizio		Itaalia
+3181554	Brescia	45.53558	10.21472	184826	Brescia		Itaalia
+3181913	Bolzano	46.49067	11.33982	99049	Bolzano		Itaalia
+3181917	Bolsena	42.64326	11.98514	3468	Bolsena järv	Lazio	Itaalia
+3181928	Bologna	44.49381	11.33875	366133	Bologna	Emilia-Romagna	Itaalia
+3182043	Biella	45.56304	8.05796	43030	Biella	Piemonte	Itaalia
+3182116	Besano	45.88949	8.89068	2594	Besano vald		Itaalia
+3182164	Bergamo	45.69601	9.66721	114162	Bergamo		Itaalia
+3182210	Belluno	46.14262	12.2156	25064	Belluno		Itaalia
+3182351	Bari	41.11148	16.8554	277387	Bari	Apuulia	Itaalia
+3182697	Atri	42.57642	13.98899	5854	Atri		Itaalia
+3182714	Asti	44.90162	8.20751	61254	Asti	Piemonte	Itaalia
+3182722	Assisi	43.06671	12.62109	3732	Assisi		Itaalia
+3182812	Arona	45.7589	8.55715	12970	Arona	Piemonte	Itaalia
+3183053	Annicco	45.24344	9.87905	1499	Annicco vald		Itaalia
+3183364	Alba	44.6999	8.0347	24923	Alba	Piemonte	Itaalia
+3183443	Aggius	40.92995	9.06517	1381	Aggiuse vald		Itaalia
+6534552	Ome	45.62728	10.12137	2761	Ome vald		Itaalia
+6534705	Isola del Giglio	42.35791	10.90724	1406	Giglio saar	Toscana	Itaalia
+6534991	Spinadesco	45.14917	9.92637	1529	Spinadesco vald		Itaalia
+6535093	Brunello	45.76497	8.79533	862	Brunello vald		Itaalia
+250441	Amman	31.95522	35.94503	1275857	‘Ammān		Jordaania+Jordan+Al Mamlakah al Urdunīyah al Hāshimīyah
+250774	Aqaba	29.52667	35.00778	95048	Al-‘Aqabah		Jordaania+Jordan+Al Mamlakah al Urdunīyah al Hāshimīyah
+1848354	Yokohama	35.43333	139.65	3574443	Yokohama	Kanagawa prefektuur	Jaapan
+1849094	Usuki	33.12342	131.80401	35001	Usuki		Jaapan
+1849796	Tsu	34.73333	136.51667	163461	Tsu		Jaapan
+1850147	Tokyo	35.6895	139.69171	8336599	Tōkyō		Jaapan
+1851717	Shizuoka	34.98333	138.38333	701561	Shizuoka	Shizuoka prefektuur	Jaapan
+1852736	Satsumasendai	31.81667	130.3	73132	Sendai		Jaapan
+1853909	Osaka	34.69374	135.50218	2592413	Ōsaka		Jaapan
+1856057	Nagoya	35.18147	136.90641	2191279	Nagoya		Jaapan
+1856177	Nagasaki	32.75	129.88333	410204	Nagasaki		Jaapan
+1857553	Matsudo	35.77995	139.90144	470277	Matsudo		Jaapan
+1857843	Maebashi	36.4	139.08333	282711	Maebashi	Gumma prefektuur	Jaapan
+1857910	Kyoto	35.02107	135.75385	1459640	Kyōto		Jaapan
+1859171	Kobe	34.6913	135.183	1528478	Kōbe	Hyōgo prefektuur	Jaapan
+1859642	Kawasaki	35.52056	139.71722	1306785	Kawasaki	Kanagawa prefektuur	Jaapan
+1860672	Kamakura	35.30889	139.55028	166016	Kamakura	Kanagawa prefektuur	Jaapan
+1860827	Kagoshima	31.56667	130.55	555352	Kagoshima		Jaapan
+1862415	Hiroshima	34.4	132.45	1143841	Hiroshima		Jaapan
+1863289	Hamamatsu	34.7	137.73333	605098	Hamamatsu	Shizuoka prefektuur	Jaapan
+1863967	Fukuoka	33.6	130.41667	1392289	Fukuoka	Fukuoka prefektuur	Jaapan
+1926099	Matsuyama	33.83916	132.76574	443322	Matsuyama		Jaapan
+2111855	Mobara	35.42583	140.29608	97315	Mobara		Jaapan
+2113015	Chiba	35.6	140.11667	919729	Chiba		Jaapan
+2128295	Sapporo	43.06667	141.35	1883027	Sapporo		Jaapan
+2130057	Hirosaki	40.59306	140.4725	174972	Hirosaki	Aomori prefektuur	Jaapan
+186301	Mombasa	-4.05466	39.66359	799668	Mombasa		Kenya+Keenia
+191220	Kitale	1.01572	35.00622	75123	Kitale		Kenya+Keenia
+1527004	Balykchy	42.46017	76.18709	40000	Balõktšõ	Ysyk-Köl	Kõrgõzstan+Kirgiisi
+1527534	Osh	40.52828	72.7985	200000	Oš		Kõrgõzstan+Kirgiisi
+1528249	Jalal-Abad	40.93333	73	75700	Džalal-Abad+Džalalabat		Kõrgõzstan+Kirgiisi
+1528675	Bishkek	42.87	74.59	900000	Biškek	Gorod Bishkek	Kõrgõzstan+Kirgiisi
+1822214	Siem Reap	13.36179	103.86056	139458	Siĕm Réab		Kambodža+KambodĪa+http://en.wikipedia.org/wiki/Cambodia
+1871859	Pyongyang	39.03385	125.75432	3222000	P'yŏngyang		Põhja-Korea+http://en.wikipedia.org/wiki/North_Korea
+2044757	Chongjin	41.79556	129.77583	327000	Chŏngjin	Hamgyŏng-bukto	Põhja-Korea+http://en.wikipedia.org/wiki/North_Korea
+1835235	Daejeon	36.32139	127.41972	1475221	Daejeon+Taejŏn		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1835329	Daegu	35.87028	128.59111	2566540	Daegu+Taegu		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1835848	Seoul	37.566	126.9784	10349312	Seoul+Sŏul		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1838524	Busan	35.10278	129.04028	3678555	Busan+Pusan		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1841811	Gwangju	35.15472	126.91556	1416938	Gwangju		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1843137	Kang-neung	37.75556	128.89611	180611	Gangneung		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1843564	Incheon	37.45646	126.70515	2628000	Inch'ŏn+JCN		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1845136	Chuncheon	37.87472	127.73417	209746	Ch'unch'ŏn		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1845759	Cheonan	36.8065	127.1522	365114	Ch'ŏnan		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+1846266	Jeju City	33.50972	126.52194	408364	Cheju		Lõuna-Korea+Lõuna Korea+http://en.wikipedia.org/wiki/South_Korea
+608668	Oral	51.23333	51.36667	200000	Oral		Kasahstan
+610529	Atyrau	47.11667	51.88333	180000	Atõrau		Kasahstan
+610611	Aqtöbe	50.27969	57.20718	262457	Aktöbe	Aqtöbe	Kasahstan
+1518542	Taldykorgan	45.01556	78.37389	116558	Taldõkorgan		Kasahstan
+1518980	Shymkent	42.3	69.6	414032	Šõmkent		Kasahstan
+1519422	Semey	50.42675	80.26669	292780	Semej		Kasahstan
+1519922	Kyzylorda	44.85278	65.50917	300000	Kõzõlorda		Kasahstan
+1519928	Kostanay	53.21435	63.62463	210000	Kostanaj		Kasahstan
+1524325	Ekibastuz	51.72371	75.32287	121470	Jekibastuz		Kasahstan
+1526273	Astana	51.1801	71.44598	345604	Astana	Astana Qalasy	Kasahstan
+1526384	Almaty	43.25667	76.92861	2000900	Almatõ	Almaty Qalasy	Kasahstan
+1651944	Vientiane	17.96667	102.6	196731	Viangchan		Laose DRV+Laos
+266826	Tripoli	34.43352	35.84415	229398	Tripoli	Liban-Nord	Liibanon
+268064	Sidon	33.55751	35.37148	163554	Şaydā	Lõuna-Liibanoni kubernerkond+Liban-Sud	Liibanon
+276781	Beirut	33.89332	35.50157	1916100	Beirut		Liibanon
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Liechtenstein
+593063	Visaginas	55.59678	26.43984	28348	Visaginas		Leedu+http://en.wikipedia.org/wiki/Lithuania
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Leedu+http://en.wikipedia.org/wiki/Lithuania
+593672	Utena	55.49764	25.59918	33240	Utena		Leedu+http://en.wikipedia.org/wiki/Lithuania
+593733	Ukmerge	55.25	24.75	25886	Ukmergė		Leedu+http://en.wikipedia.org/wiki/Lithuania
+593926	Telsiai	55.98139	22.24722	30098	Telšiai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+593959	Taurage	55.25222	22.28972	27662	Tauragė		Leedu+http://en.wikipedia.org/wiki/Lithuania
+594656	Silute	55.34889	21.48306	21760	Šilutė		Leedu+http://en.wikipedia.org/wiki/Lithuania
+594739	Šiauliai	55.93333	23.31667	130587	Šiauliai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+595213	Rokiškis	55.95867	25.59466	16255	Rokiškis		Leedu+http://en.wikipedia.org/wiki/Lithuania
+595378	Raseiniai	55.37973	23.12386	12523	Raseiniai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+595449	Radviliskis	55.81667	23.53333	20339	Radviliškis		Leedu+http://en.wikipedia.org/wiki/Lithuania
+595596	Prienai	54.636	23.94585	11352	Prienai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+596128	Panevėžys	55.73333	24.35	117395	Panevėžys+Ponewiesch		Leedu+http://en.wikipedia.org/wiki/Lithuania
+596238	Palanga	55.9175	21.06861	17796	Palanga		Leedu+http://en.wikipedia.org/wiki/Lithuania
+597188	Mazeikiai	56.31667	22.33333	41309	Mažeikiai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+597231	Marijampolė	54.55991	23.35412	47613	Marijampolė		Leedu+http://en.wikipedia.org/wiki/Lithuania
+597596	Lazdijai	54.23326	23.51466	4975	Lazdijai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+597806	Kupiskis	55.83333	24.96667	8263	Kupiškis		Leedu+http://en.wikipedia.org/wiki/Lithuania
+598098	Klaipėda	55.70888	21.14312	192307	Klaipėda		Leedu+http://en.wikipedia.org/wiki/Lithuania
+598257	Kelmė	55.63009	22.9349	10626	Kelmė		Leedu+http://en.wikipedia.org/wiki/Lithuania
+598272	Kėdainiai	55.28782	23.97275	31980	Kėdainiai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+598567	Kaišiadorys	54.86528	24.46815	9867	Kaišiadorys		Leedu+http://en.wikipedia.org/wiki/Lithuania
+598796	Joniškis	56.23939	23.61541	11113	Joniškis		Leedu+http://en.wikipedia.org/wiki/Lithuania
+598998	Ignalina	55.34063	26.16049	6421	Ignalina		Leedu+http://en.wikipedia.org/wiki/Lithuania
+599757	Druskininkai	54.01573	23.98703	17791	Druskininkai		Leedu+http://en.wikipedia.org/wiki/Lithuania
+601084	Alytus	54.39635	24.04142	70747	Alytus		Leedu+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Luxembourg		Luksemburg
+453754	Valmiera	57.54108	25.42751	26963	Valmiera	Valmieras Rajons	Läti
+454768	Tukums	56.96694	23.15528	18348	Tukums		Läti
+454970	Talsi	57.24562	22.58137	12022	Talsi		Läti
+455718	Sigulda	57.15194	24.86472	10422	Sigulda	Sigulda	Läti
+455898	Salaspils	56.86014	24.36544	17606	Salaspils	Salaspils	Läti
+455910	Salacgrīva	57.75361	24.35806	3427	Salatsi	Salacgrīvas	Läti
+456008	Rūjiena	57.89752	25.33155	3638	Ruhja	Rūjienas	Läti
+456172	Riga	56.946	24.10589	742572	Riia	Riga	Läti
+456202	Rēzekne	56.51028	27.34	38340	Rēzekne	Rēzekne	Läti
+457065	Ogre	56.8162	24.61401	26760	Ogre		Läti
+457161	Naukšēni	57.88349	25.45609	0	Nausküla		Läti
+457776	Ludza	56.53958	27.71891	10514	Ludza		Läti
+457890	Limbaži	57.51287	24.71941	8974	Limbaži		Läti
+457954	Liepāja	56.52707	21.02357	85132	Liepāja	Liepāja	Läti
+458460	Kuldīga	56.97399	21.95721	13289	Kuldīga		Läti
+458687	Koknese	56.65163	25.43637	0	Koknese		Läti
+459201	Jūrmala	56.968	23.77038	54088	Jūrmala		Läti
+459279	Jelgava	56.65	23.71278	61791	Jelgava		Läti
+459283	Jēkabpils	56.49903	25.85735	27078	Jēkabpils	Jēkabpilsi piirkond+http://jekabpilsnovads.lv/+Jēkabpils novads	Läti
+459598	Ikšķile	56.83333	24.5	3368	Ikšķile		Läti
+460312	Dobele	56.625	23.27861	11225	Dobele		Läti
+460413	Daugavpils	55.88333	26.53333	111564	Daugavpils+Väinalinn	Daugavpilsi piirkond+http://www.daugavpilsnovads.lv/	Läti
+460570	Cēsis	57.31188	25.27456	18198	Cēsis	Cēsu Rajons	Läti
+461114	Bauska	56.40794	24.19443	10532	Bauska	Bauskas Rajons	Läti
+461336	Auce	56.45981	22.90169	3125	Auce		Läti
+461528	Alūksne	57.42162	27.04662	2264	Alūksne	Alūksnes Novads	Läti
+461602	Aizpute	56.72108	21.60156	5634	Aizpute		Läti
+461628	Ainaži	57.86361	24.35778	1278	Heinaste	Salacgrīvas	Läti
+461631	Aglona	56.13333	27.01667	0	Aglona		Läti
+81302	Tobruk	32.08361	23.97639	121052	Ţubruq		Liibüa
+2461874	Smara	26.73841	-11.67194	42056	Es-Smara		Maroko
+2538475	Rabat	34.01325	-6.83255	1655753	Rabat		Maroko
+2553604	Casablanca	33.58831	-7.61138	3144909	Casablanca		Maroko
+2561668	Agadir	30.42018	-9.59815	698310	Agadir		Maroko
+618405	Comrat	46.29456	28.6565	22911	Comrat	Găgăuzia	Moldova+Moldova Vabariik
+618426	Chisinau	47.00556	28.8575	635994	Chişinău		Moldova+Moldova Vabariik
+618577	Bender	46.83156	29.47769	110175	Tighina	Bender	Moldova+Moldova Vabariik
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Montenegro
+3193131	Plužine	43.15278	18.83944	1494	Plužine vald		Montenegro
+3193228	Plav	42.59694	19.94556	3615	Plavi vald		Montenegro
+3197896	Kolašin	42.82229	19.51653	2989	Kolašini vald		Montenegro
+3202641	Cetinje	42.39063	18.91417	15137	Cetinje		Montenegro
+3204509	Bar	42.09306	19.10028	17727	Bari vald		Montenegro
+1053384	Toamasina	-18.1492	49.40234	206373	Toamasina		Madagaskar
+1069129	Antsiranana	-12.31732	49.29188	82937	Antsiran̈ana		Madagaskar
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarivo		Madagaskar
+785842	Skopje	41.99646	21.43141	474889	Skopje		Makedoonia Vabariik+Makedoonia+ARYM+FYROM
+787487	Ohrid	41.11722	20.80194	54908	Ohrid		Makedoonia Vabariik+Makedoonia+ARYM+FYROM
+2449067	Timbuktu	16.77348	-3.00742	32460	Tombouctou		Mali
+2460596	Bamako	12.65	-8	1297281	Bamako	Bamako	Mali
+1298824	Yangon	16.80528	96.15611	4477638	Yangon	Yangon	Myanmar+Birma
+1311874	Mandalay	21.97473	96.08359	1208099	Mandalay piirkond	Mandalay	Myanmar+Birma
+2028462	Ulan Bator	47.90771	106.88324	844818	Ulaanbaatar	Ulaanbaatar	Mongoolia
+2031405	Erdenet	49.03333	104.08333	79647	Erdenet	Orhon	Mongoolia
+2377450	Nouakchott	18.08581	-15.9785	661400	Nouakchott		Mauritaania
+2378538	Kiffa	16.62073	-11.40208	40281	Kifa		Mauritaania
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Malta+Malta saar
+934154	Port Louis	-20.16194	57.49889	155226	Port Louis		Mauritius
+923295	Zomba	-15.38596	35.3188	80932	Zomba		Malawi
+927967	Lilongwe	-13.96692	33.78725	646750	Lilongwe		Malawi
+3530597	Mexico City	19.42847	-99.12766	12294193	México	The Federal District+Distrito Federal	Mehhiko
+3533462	Acapulco de Juárez	16.86336	-99.8901	652136	Acapulco	GRO	Mehhiko
+3981941	Tepic	21.50951	-104.89569	280592	Tepic	Nayariti osariik+NAY	Mehhiko
+4004898	Hermosillo	29.1026	-110.97732	595811	Hermosillo	Sonora osariik+SON	Mehhiko
+4013516	Colima	19.24997	-103.72714	127235	Colima	Colima osariik+COL	Mehhiko
+1732752	Johor Bahru	1.4655	103.7578	802489	Johor Bahru	Johori osariik+JHR+Johor	Malaisia
+877178	Katima Mulilo	-17.5	24.26667	25027	Katima Mulilo		Namiibia
+3352136	Windhoek	-22.55941	17.08323	268132	Windhoek	Khomasi ringkond+Khomas	Namiibia
+3355672	Lüderitz	-26.64807	15.15383	15137	Lüderitz	Karas	Namiibia
+3356264	Keetmanshoop	-26.58333	18.13333	15608	Keetmanshoop	Karas	Namiibia
+3359638	Walvis Bay	-22.9575	14.50528	52058	Walvis Bay	Erongo	Namiibia
+2139521	Nouméa	-22.27407	166.44884	93060	Nouméa		Uus-Kaledoonia
+2440485	Niamey	13.51366	2.1098	774235	Niamey	Niamey	Niger
+2445704	Diffa	13.31536	12.61135	27948	Diffa		Niger
+2320576	Umuahia	5.52491	7.49461	264662	Umuahia	Abia	Nigeeria
+2352778	Abuja	9.05785	7.49508	590400	Abuja	Föderaalne pealinnaala+FCTA+Abuja Federal Capital Territory	Nigeeria
+2353151	Aba	5.10658	7.36667	897560	Aba	Abia	Nigeeria
+2745912	Utrecht	52.09083	5.12222	290529	Utrecht	ut+Utrecht	Holland+Madalmaad
+2747373	The Hague	52.07667	4.29861	474292	Haag	Lõuna-Holland+zh+Zuid-Holland	Holland+Madalmaad
+2747891	Rotterdam	51.9225	4.47917	598199	Rotterdam	Lõuna-Holland+zh+Zuid-Holland	Holland+Madalmaad
+2751792	Leeuwarden	53.20139	5.80859	91424	Leeuwarden	fr	Holland+Madalmaad
+2753638	Hoorn	52.6425	5.05972	68852	Hoorn	nh+Nord-Holland+Noord-Holland	Holland+Madalmaad
+2756136	Emmen	52.77917	6.90694	57010	Emmeni vald	dr	Holland+Madalmaad
+2756669	Dordrecht	51.81	4.67361	119260	Dordrecht	Lõuna-Holland+zh+Zuid-Holland	Holland+Madalmaad
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Holland+Madalmaad
+779146	Kvalsund	70.50271	23.97974	0	Kvalsundi vald		Norra
+779330	Kautokeino	69.01247	23.04116	2000	Guovdageaidnu vald		Norra
+779683	Hammerfest	70.66336	23.68209	6788	Hammerfesti vald		Norra
+780717	Båtsfjord	70.63428	29.7175	2166	Båtsfjordi vald		Norra
+847633	Alta	69.96887	23.27165	12077	Alta vald		Norra
+3131329	Voss	60.62869	6.41474	5571	Vossi vald	Hordaland	Norra
+3133681	Tvedestrand	58.62203	8.93147	1975	Tvedestrandi vald		Norra
+3133880	Trondheim	63.43049	10.39506	147139	Trondheim	Sør-Trøndelag	Norra
+3133895	Tromsø	69.6489	18.95508	52436	Tromsø	Troms	Norra
+3135601	Stryn	61.90259	6.7179	2106	Stryni vald	Sogn og Fjordane	Norra
+3137115	Stavanger	58.97005	5.73332	121610	Stavanger	Rogaland	Norra
+3137942	Sola	58.88854	5.65285	0	Sola vald	Rogaland	Norra
+3139075	Skien	59.20962	9.60897	50595	Skieni vald		Norra
+3140390	Sandefjord	59.13118	10.21665	42654	Sandefjordi vald		Norra
+3140398	Sande	59.58679	10.20809	1389	Sande vald		Norra
+3141332	Røros	62.57468	11.3842	3496	Rørosi vald	Sør-Trøndelag	Norra
+3141747	Risør	58.72057	9.23422	4475	Risøri vald		Norra
+3142657	Porsgrunn	59.14054	9.6561	34377	Porsgrunni vald		Norra
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norra
+3143513	Oppdal	62.59431	9.6912	3706	Oppdali vald	Sør-Trøndelag	Norra
+3145375	Moss	59.43403	10.65771	34492	Mossi vald		Norra
+3145580	Molde	62.73752	7.15912	18594	Molde	Møre og Romsdal	Norra
+3146463	Mandal	58.0274	7.45342	10143	Mandali vald	Vest-Agder	Norra
+3147474	Lillehammer	61.11514	10.46628	19096	Lillehammer		Norra
+3148129	Larvik	59.05328	10.03517	23113	Larviki vald		Norra
+3149312	Kristiansund	63.11045	7.72795	16785	Kristiansund	Møre og Romsdal	Norra
+3149412	Kragerø	58.8693	9.41494	5158	Kragerø vald		Norra
+3155041	Grimstad	58.3405	8.59343	9561	Grimstadi vald		Norra
+3155573	Gjøvik	60.79574	10.69155	17596	Gjøviki vald		Norra
+3158300	Elverum	60.88191	11.56231	12490	Elverumi vald		Norra
+3159016	Drammen	59.74389	10.20449	90722	Drammen		Norra
+3160881	Bodø	67.28	14.40501	34073	Bodø vald	Nordland	Norra
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norra
+3162108	Ballangen	68.34283	16.83145	956	Ballangeni vald	Nordland	Norra
+3162651	Askim	59.58326	11.16286	12482	Askimi vald		Norra
+3162657	Asker	59.83333	10.43721	0	Askeri vald		Norra
+3162955	Arendal	58.46151	8.77253	30916	Arendali vald		Norra
+3163215	Åmli	58.76566	8.48392	572	Åmli vald		Norra
+3163392	Ålesund	62.47225	6.15492	44096	Ålesund	Møre og Romsdal	Norra
+3163410	Ål	60.63024	8.56071	2278	Åli vald		Norra
+3336587	Askøy	60.4	5.18333	17224	Askøy vald	Hordaland	Norra
+7626337	Vang	61.12529	8.5729	0	Vangi vald		Norra
+1283240	Kathmandu	27.70169	85.3206	1442271	Katmandu		Nepal+Nepaal
+7626461	Yaren	-0.55085	166.9252	1100	Yareni ringkond	Yaren+Yareni ringkond	Nauru
+287286	Muscat	23.58413	58.40778	797000	Masqaţ		Omaan
+3696183	Iquitos	-3.74912	-73.25383	437620	Iquitos	Loreto piirkond	Peruu
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Peruu
+2088122	Port Moresby	-9.44314	147.17972	283733	Port Moresby		Paapua Uus-Guinea+Papua Uus Guinea
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Filipiinid
+1722769	Bulusan	12.74936	124.12087	6648	Bulusani vald		Filipiinid
+1166993	Rawalpindi	33.6007	73.0679	1743101	Rāwalpindi	Punjab	Pakistan
+1172451	Lahore	31.558	74.35071	6310888	Lahore	Punjab	Pakistan
+1174872	Karachi	24.8608	67.0104	11624219	Karachi	Sindhi provints	Pakistan
+753866	Zamość	50.72314	23.25196	66034	Zamość	Lublini vojevoodkond+Lubelskie	Poola
+756135	Warsaw	52.22977	21.01178	1702139	Varssavi	Masoovia vojevoodkond+Mazowieckie	Poola
+757718	Suwałki	54.11175	22.93087	69222	Suwałki	Podlaasia vojevoodkond+Podlaskie	Poola
+759734	Rzeszów	50.04132	21.99901	158382	Rzeszów	Podkarpacie vojevoodkond+Podkarpackie	Poola
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lublini vojevoodkond+Lubelskie	Poola
+765876	Lublin	51.25	22.56667	360044	Lublin	Lublini vojevoodkond+Lubelskie	Poola
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lublini vojevoodkond+Lubelskie	Poola
+772621	Ełk	53.82824	22.36469	55769	Ełk	Warmia-Masuuria vojevoodkond	Poola
+774558	Chełm	51.14312	23.4716	68043	Chełm	Lublini vojevoodkond+Lubelskie	Poola
+775922	Biłgoraj	50.54114	22.72204	26987	Biłgoraj	Lublini vojevoodkond+Lubelskie	Poola
+776069	Białystok	53.13333	23.16433	291855	Białystok	Podlaasia vojevoodkond+Podlaskie	Poola
+776597	Augustów	53.84321	22.97979	29752	Augustów	Podlaasia vojevoodkond+Podlaskie	Poola
+3081368	Wrocław	51.1	17.03333	634893	Wrocław	Alam-Sileesia vojevoodkond+Dolnośląskie	Poola
+3082801	Uniejów	51.97428	18.79308	2932	Uniejów	Łódźi vojevoodkond+Łódzkie	Poola
+3083829	Szczecin	53.42894	14.55302	407811	Szczecin	Lääne-Pomorze vojevoodkond	Poola
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście	Lääne-Pomorze vojevoodkond	Poola
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Sileesia vojevoodkond+Śląskie	Poola
+3084840	Stargard	53.33672	15.0499	71224	Stargard	Lääne-Pomorze vojevoodkond	Poola
+3085128	Sosnowiec	50.28682	19.10385	227295	Sosnowiec	Sileesia vojevoodkond+Śląskie	Poola
+3085151	Sopot	54.4418	18.56003	40142	Sopot	Pomorze vojevoodkond+Pomorskie	Poola
+3088972	Piotrków Trybunalski	51.40547	19.70321	80128	Piotrków Trybunalski	Łódźi vojevoodkond+Łódzkie	Poola
+3089779	Ostróda	53.69671	19.96486	33524	Ostróda	Warmia-Masuuria vojevoodkond	Poola
+3092472	Malbork	54.03591	19.0266	38655	Malbork	Pomorze vojevoodkond+Pomorskie	Poola
+3093066	Łowicz	52.10714	19.94525	29809	Łowicz	Łódźi vojevoodkond+Łódzkie	Poola
+3093133	Łódź	51.75	19.46667	768755	Łódź	Łódźi vojevoodkond+Łódzkie	Poola
+3094802	Kraków	50.06143	19.93658	755050	Kraków	Väike-Poola vojevoodkond+Małopolskie	Poola
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Sileesia vojevoodkond+Śląskie	Poola
+3097902	Iława	53.59601	19.56849	32557	Iława	Warmia-Masuuria vojevoodkond	Poola
+3098218	Grudziądz	53.48411	18.75366	99486	Grudziądz	Kujawy-Pomorze vojevoodkond+Kujawsko-Pomorskie	Poola
+3099424	Gdynia	54.51889	18.53188	253730	Gdynia	Pomorze vojevoodkond+Pomorskie	Poola
+3099434	Gdańsk	54.35205	18.64637	461865	Gdańsk	Pomorze vojevoodkond+Pomorskie	Poola
+3100946	Częstochowa	50.79646	19.12409	248125	Częstochowa	Sileesia vojevoodkond+Śląskie	Poola
+3102014	Bydgoszcz	53.1235	18.00762	366452	Bydgoszcz	Kujawy-Pomorze vojevoodkond+Kujawsko-Pomorskie	Poola
+282239	Ramallah	31.89964	35.20422	24599	Rām Allāh		Palestiina ala
+284899	Jericho	31.86667	35.45	19783	Jeeriko		Palestiina ala
+7303419	East Jerusalem	31.78336	35.23388	428304	Ida-Jeruusalemm		Palestiina ala
+2267057	Lisbon	38.71667	-9.13333	517802	Lissabon	Lisboa	Portugal
+2267827	Funchal	32.66568	-16.92547	100847	Funchal		Portugal
+2735943	Porto	41.14961	-8.61099	249633	Porto	Porto	Portugal
+2740637	Coimbra	40.20564	-8.41955	106582	Coimbra	Coimbra	Portugal
+3439389	Asunción	-25.30066	-57.63591	1482200	Asunción		Paraguay
+290030	Doha	25.28545	51.53096	344939	Ad-Dawḩah		Katar
+665087	Timişoara	45.75372	21.22571	315053	Timişoara		Rumeenia
+666767	Slatina	44.43333	24.36667	78988	Slatina	Olti maakond	Rumeenia
+667268	Sibiu	45.8	24.15	151894	Sibiu	Sibiu	Rumeenia
+667873	Satu Mare	47.79926	22.86255	112490	Satu Mare		Rumeenia
+670889	Piatra Neamţ	46.91667	26.33333	102688	Piatra Neamţ		Rumeenia
+671768	Oradea	47.0458	21.91833	206614	Oradea		Rumeenia
+675810	Iaşi	47.16667	27.6	318012	Iași		Rumeenia
+677106	Giurgiu	43.88333	25.96667	69067	Giurgiu		Rumeenia
+677697	Galaţi	45.45	28.05	294087	Galați		Rumeenia
+680332	Craiova	44.31667	23.8	304142	Craiova		Rumeenia
+680963	Constanţa	44.18073	28.63432	303399	Constanța		Rumeenia
+681290	Cluj-Napoca	46.76667	23.6	316748	Cluj-Napoca		Rumeenia
+683506	Bucharest	44.43225	26.10626	1877155	Bukarest		Rumeenia
+684039	Botoşani	47.75	26.66667	114783	Botoşani		Rumeenia
+686254	Arad	46.18333	21.31667	169065	Arad		Rumeenia
+786827	Požarevac	44.62133	21.18782	41736	Požarevac	Central Serbia	Serbia
+792680	Belgrade	44.80401	20.46513	1273651	Belgrad	Central Serbia	Serbia
+3194360	Novi Sad	45.25167	19.83694	215400	Novi Sad		Serbia
+461699	Sasovo	54.35369	41.91986	29858	Sassovo+Сасово	Rjazan	Venemaa
+462413	Zlynka	52.4267	31.7378	5260	Zlõnka	Brjansk	Venemaa
+462444	Zlatoust	55.17111	59.65083	191366	Zlatoust	Tsjeljabinsk	Venemaa
+466060	Yuzhno-Sukhokumsk	44.65811	45.6436	10665	Južno-Suhhokumsk	Dagestani Vabariik	Venemaa
+466806	Yoshkar-Ola	56.63877	47.89078	279100	Joškar-Ola		Venemaa
+466885	Yeysk	46.7055	38.2739	87814	Jeisk	Krasnodarskiy Kray	Venemaa
+467978	Yelets	52.62366	38.50169	115688	Jelets	Lipetsk	Venemaa
+469960	Vytegra	61.00636	36.44811	11099	Võtegra	Vologda	Venemaa
+469995	Vysotsk	60.62879	28.57048	1873	Võssotsk+Uuras		Venemaa
+470368	Vyritsa	59.40778	30.34806	11107	Võritsa		Venemaa
+470546	Vyborg	60.70763	28.75283	78633	Viiburi		Venemaa
+470905	Vuktyl	63.85667	57.30944	13693	Vuktõl		Venemaa
+471101	Vsevolozhsk	60.01512	30.67314	48224	Vsevoložsk		Venemaa
+471656	Voskresensk	55.31733	38.65264	77086	Voskressensk	Moskva oblast+MO	Venemaa
+472045	Voronezh	51.67204	39.1843	848752	Voronež	Voronezj	Venemaa
+472357	Volosovo	59.44525	29.48911	12096	Volossovo		Venemaa
+472459	Vologda	59.2239	39.88398	314900	Vologda	Vologda	Venemaa
+472722	Volkhov	59.9258	32.33819	45673	Volhov		Venemaa
+472761	Volgodonsk	47.51361	42.15139	167731	Volgodonsk		Venemaa
+473247	Vladimir	56.13655	40.39658	310024	Vladimir	Vladimir	Venemaa
+473249	Vladikavkaz	43.03667	44.66778	317370	Vladikavkaz		Venemaa
+475955	Velizh	55.60564	31.19673	8146	Veliž	Smolensk	Venemaa
+476077	Velikiye Luki	56.34	30.54517	103149	Velikije Luki	Pskov	Venemaa
+477494	Uzlovaya	53.98179	38.17118	58458	Uzlovaja	Tula	Venemaa
+477795	Ustyuzhna	58.8394	36.4321	10566	Ustjužna	Vologda	Venemaa
+479123	Ulyanovsk	54.32824	48.38657	640680	Uljanovsk	Uljanovski oblast+Uljanovsk	Venemaa
+479411	Ukhta	63.56705	53.68348	102187	Uhta		Venemaa
+479561	Ufa	54.74306	55.96779	1033338	Ufa		Venemaa
+480060	Tver	56.85836	35.90057	400212	Tver		Venemaa
+480562	Tula	54.19609	37.61822	468825	Tula	Tula	Venemaa
+480716	Tuapse	44.1053	39.0802	64234	Tuapse	Krasnodarskiy Kray	Venemaa
+481985	Torzhok	57.0436	34.96221	48546	Toržok		Venemaa
+482283	Tol’yatti	53.5303	49.3461	702879	Togliatti	Samara	Venemaa
+483019	Tikhvin	59.64511	33.52937	62075	Tihvin		Venemaa
+483029	Tikhoretsk	45.85472	40.12528	64387	Tihhoretsk	Krasnodarskiy Kray	Venemaa
+483137	Teykovo	56.85796	40.53692	36015	Teikovo	Ivanovo	Venemaa
+484646	Tambov	52.73169	41.44326	290933	Tambov	Tambov	Venemaa
+484907	Taganrog	47.23617	38.89688	279056	Taganrog		Venemaa
+485239	Syktyvkar	61.67642	50.80994	230139	Sõktõvkar		Venemaa
+485824	Suzdal’	56.42274	40.44668	11183	Suzdal	Vladimir	Venemaa
+487495	Sterlitamak	53.62462	55.95015	267231	Sterlitamak		Venemaa
+489088	Staraya Russa	57.99439	31.36081	34303	Staraja Russa	Novgorod	Venemaa
+489158	Staraya Ladoga	59.99872	32.29413	2000	Staraja Ladoga		Venemaa
+489862	Spas-Klepiki	55.13472	40.17673	5942	Spass-Klepiki	Rjazan	Venemaa
+490996	Solnechnogorsk	56.18333	36.98333	58891	Solnetšnogorsk	Moskva oblast+MO	Venemaa
+491023	Solikamsk	59.6316	56.7685	100812	Solikamsk	Permi krai+Perm	Venemaa
+491422	Sochi	43.59917	39.72569	327608	Sotši	Krasnodarskiy Kray	Venemaa
+491687	Smolensk	54.7818	32.0401	320991	Smolensk+Смоленск	Smolensk	Venemaa
+492162	Slantsy	59.11817	28.09137	36209	Slantsõ		Venemaa
+493231	Shuya	56.84865	41.38833	60705	Šuja	Ivanovo	Venemaa
+493463	Shumerlya	55.5005	46.41288	35220	Šumerlja	Tšuvaššia	Venemaa
+494884	Shenkursk	62.1091	42.89595	5893	Šenkursk		Venemaa
+495206	Shchigry	51.87555	36.90432	19198	Štšigrõ	Kursk	Venemaa
+495518	Shatura	55.57253	39.53682	30069	Šatura	Moskva oblast+MO	Venemaa
+496015	Shakhty	47.70911	40.21443	221312	Šahtõ		Venemaa
+496278	Severomorsk	69.06889	33.41622	53921	Severomorsk	Murmanski oblast+Murmansk	Venemaa
+496285	Severodvinsk	64.5635	39.8302	194292	Severodvinsk		Venemaa
+496527	Serpukhov	54.91578	37.41114	128158	Serpuhhov	Moskva oblast+MO	Venemaa
+496638	Sergiyev Posad	56.3	38.13333	109252	Sergijev Possad+Сергиев Посад	Moskva oblast+MO	Venemaa
+498001	Sebezh	56.28511	28.48187	6688	Sebež	Pskov	Venemaa
+498525	Sarov	54.93583	43.32352	88000	Sarov	Nizjnij Novgorod	Venemaa
+498677	Saratov	51.54056	46.00861	863725	Saratov	Saratov	Venemaa
+498698	Saransk	54.1838	45.1749	303394	Saransk		Venemaa
+498817	Saint Petersburg	59.93863	30.31413	5028000	Peterburi+Санкт-Петербург	Peterburi	Venemaa
+499099	Samara	53.20007	50.15	1134730	Samara	Samara	Venemaa
+499292	Salavat	53.38365	55.90773	159893	Salavat		Venemaa
+499717	Rzhev	56.26241	34.32817	62246	Ržev		Venemaa
+500004	Rybinsk	58.0446	38.84259	216724	Rõbinsk	Jaroslavl	Venemaa
+500096	Ryazan’	54.6269	39.6916	520173	Rjazan	Rjazan	Venemaa
+500886	Rtishchevo	52.26041	43.78745	44013	Rtištševo	Saratov	Venemaa
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov Doni ääres		Venemaa
+501183	Rostov	57.1914	39.41394	33803	Rostov+Ростов	Jaroslavl	Venemaa
+502965	Ramenskoye	55.56694	38.23028	96000	Ramenskoje	Moskva oblast+MO	Venemaa
+503374	Pytalovo	57.06791	27.91384	6767	Põtalovo	Pskov	Venemaa
+503550	Pyatigorsk	44.04861	43.05944	142865	Pjatigorsk	Stavropol'skiy Kray	Venemaa
+503878	Pustoshka	56.33547	29.36901	5253	Pustoška	Pskov	Venemaa
+503965	Pushkinskiye Gory	57.02085	28.9103	5920	Puškinskije Gorõ	Pskov	Venemaa
+503977	Pushkino	56.01722	37.86667	102816	Puškino	Moskva oblast+MO	Venemaa
+504269	Pudozh	61.80415	36.5277	10605	Puudosi	Karjala Vabariik	Venemaa
+504294	Puchezh	56.97878	43.16761	9881	Putšež	Ivanovo	Venemaa
+504341	Pskov	57.8136	28.3496	201990	Pihkva	Pskov	Venemaa
+504409	Pryazha	61.69258	33.62159	4156	Prääsä	Karjala Vabariik	Venemaa
+506278	Porkhov	57.76502	29.55612	11886	Porhov	Pskov	Venemaa
+509697	Petushki	55.92639	39.46104	15866	Petuški	Vladimir	Venemaa
+509820	Petrozavodsk	61.78491	34.34691	265025	Petroskoi	Karjala Vabariik	Venemaa
+510291	Peterhof	59.88333	29.9	73199	Peterhof	Peterburi	Venemaa
+511565	Penza	53.20066	45.00464	512602	Penza	Penza	Venemaa
+511785	Pechory	57.81642	27.6119	13246	Petseri	Pskov	Venemaa
+511794	Pechora	65.14717	57.22439	46113	Petšora		Venemaa
+514259	Ostashkov	57.14667	33.10753	19563	Ostaškov+Осташков		Venemaa
+514734	Orsk	51.20487	58.56685	246836	Orsk	Orenburg	Venemaa
+515003	Orenburg	51.7727	55.0988	550204	Orenburg+Оренбург	Orenburg	Venemaa
+515012	Orël	52.96508	36.07849	324200	Orjol	Orjol	Venemaa
+515024	Orekhovo-Zuyevo	55.80672	38.96178	120000	Orehhovo-Zujevo	Moskva oblast+MO	Venemaa
+515403	Olonets	60.98475	32.96976	10005	Aunus	Karjala Vabariik	Venemaa
+516215	Odintsovo	55.67798	37.27773	137041	Odintsovo+Одинцово	Moskva oblast+MO	Venemaa
+516436	Obninsk	55.09681	36.61006	107392	Obninsk	Kaluga	Venemaa
+517269	Novozybkov	52.5396	31.9275	42571	Novozõbkov	Brjansk	Venemaa
+517836	Novotroitsk	51.20301	58.32665	106186	Novotroitsk	Orenburg	Venemaa
+517963	Novoshakhtinsk	47.76037	39.93335	99478	Novošahtinsk		Venemaa
+518236	Novorzhev	57.02942	29.33378	3988	Novoržev	Pskov	Venemaa
+518255	Novorossiysk	44.72439	37.76752	241856	Novorossiisk	Krasnodarskiy Kray	Venemaa
+518557	Novomoskovsk	54.0105	38.2846	130982	Novomoskovsk	Tula	Venemaa
+518659	Novokuybyshevsk	53.0959	49.9462	111800	Novokuibõševsk	Samara	Venemaa
+518970	Novocherkassk	47.42096	40.09185	166974	Novotšerkassk		Venemaa
+518976	Novocheboksarsk	56.11095	47.47755	128468	Novotšeboksarsk	Tšuvaššia	Venemaa
+519336	Velikiy Novgorod	58.52131	31.27104	215062	Veliki Novgorod	Novgorod	Venemaa
+520068	Noginsk	55.86647	38.4438	115979	Noginsk	Moskva oblast+MO	Venemaa
+521118	Nizhnekamsk	55.63657	51.82447	234297	Nižnekamsk		Venemaa
+522377	Nevinnomyssk	44.6333	41.9444	134345	Nevinnomõssk	Stavropol'skiy Kray	Venemaa
+522594	Nerekhta	57.45881	40.57471	25352	Nerehta	Kostroma	Venemaa
+523064	Nazran’	43.22597	44.77323	164131	Nazran		Venemaa
+523750	Naberezhnyye Chelny	55.72545	52.41122	509870	Naberežnõje Tšelnõ		Venemaa
+523812	Mytishchi	55.91163	37.73076	160542	Mõtištši+Мытищи	Moskva oblast+MO	Venemaa
+523859	Myshkin	57.78973	38.45448	5932	Mõškin	Jaroslavl	Venemaa
+524294	Murom	55.575	42.0426	126931	Murom	Vladimir	Venemaa
+524305	Murmansk	68.97917	33.09251	319263	Murmansk	Murmanski oblast+Murmansk	Venemaa
+524712	Mozhaysk	55.50194	36.02722	31557	Možaisk	Moskva oblast+MO	Venemaa
+524901	Moscow	55.75222	37.61556	10381222	Moskva		Venemaa
+526480	Mineralnye Vody	44.21028	43.13528	76280	Mineralnõje Vodõ	Stavropol'skiy Kray	Venemaa
+527012	Mikhaylovka	50.06	43.2379	58898	Mihhailovka	Volgograd	Venemaa
+527191	Michurinsk	52.8978	40.4907	93499	Mitšurinsk	Tambov	Venemaa
+532096	Makhachkala	42.97638	47.50236	497959	Mahhatškala	Dagestani Vabariik	Venemaa
+532288	Magnitogorsk	53.41861	59.04722	413351	Magnitogorsk	Tsjeljabinsk	Venemaa
+532615	Lyubertsy	55.67719	37.89322	154650	Ljubertsõ	Moskva oblast+MO	Venemaa
+534341	Lomonosov	59.90612	29.77253	42505	Lomonossov	Peterburi	Venemaa
+534701	Livny	52.42534	37.60689	52915	Livnõ	Orjol	Venemaa
+535121	Lipetsk	52.60311	39.57076	515655	Lipetsk	Lipetsk	Venemaa
+538560	Kursk	51.73733	36.18735	409431	Kursk	Kursk	Venemaa
+539817	Kudymkar	59.01306	54.65556	31596	Kudõmkar	Permi krai+Perm	Venemaa
+540251	Krymsk	44.92934	37.99117	57555	Krõmsk+Крымск	Krasnodarskiy Kray	Venemaa
+540771	Kronshtadt	59.99541	29.76668	43005	Kroonlinn	Peterburi	Venemaa
+541116	Kresttsy	58.2452	32.51647	9737	Kresttsõ	Novgorod	Venemaa
+542420	Krasnodar	45.04484	38.97603	649851	Krasnodar+Краснодар	Krasnodarskiy Kray	Venemaa
+542463	Krasnoarmeysk	56.1	38.13333	25688	Krasnoarmeisk	Moskva oblast+MO	Venemaa
+542681	Krasnaya Polyana	43.67952	40.20403	4020	Punase Lageda	Krasnodarskiy Kray	Venemaa
+543460	Kovrov	56.35722	41.31917	154224	Kovrov	Vladimir	Venemaa
+543704	Kotlas	61.25745	46.64963	59180	Kotlas		Venemaa
+543878	Kostroma	57.76647	40.92686	277656	Kostroma	Kostroma	Venemaa
+543899	Kostomuksha	64.571	30.57667	30135	Kostamus+Kostamuš	Karjala Vabariik	Venemaa
+545626	Kondopoga	62.20565	34.26138	34360	Kontupohja	Karjala Vabariik	Venemaa
+546230	Kolomna	55.07944	38.77833	147690	Kolomna	Moskva oblast+MO	Venemaa
+546672	Kokhma	56.93487	41.0915	28984	Kohma	Ivanovo	Venemaa
+547475	Klintsy	52.76019	32.23935	66336	Klintsõ	Brjansk	Venemaa
+547523	Klin	56.33333	36.73333	80778	Klin	Moskva oblast+MO	Venemaa
+548114	Kislovodsk	43.91333	42.72083	132771	Kislovodsk	Stavropol'skiy Kray	Venemaa
+548395	Kirovo-Chepetsk	58.55386	50.03986	90252	Kirovo-Tšepetsk	Kirov	Venemaa
+548408	Kirov	58.59665	49.66007	457383	Kirov	Kirov	Venemaa
+548442	Kirishi	59.44712	32.02049	56190	Kiriši		Venemaa
+548602	Kingisepp	59.37331	28.61343	50566	Kingissepp		Venemaa
+548605	Kineshma	57.43914	42.12894	92983	Kinešma	Ivanovo	Venemaa
+548652	Kimry	56.86667	37.35	52070	Kimrõ		Venemaa
+549797	Kholm	57.14543	31.1778	4000	Holm	Novgorod	Venemaa
+550280	Khimki	55.89704	37.42969	239967	Himki+Химки	Moskva oblast+MO	Venemaa
+550512	Kharovsk	59.96425	40.19121	11115	Harovsk	Vologda	Venemaa
+551487	Kazan	55.78874	49.12214	1104738	Kaasan		Venemaa
+551891	Kasimov	54.94111	41.39528	35355	Kassimov	Rjazan	Venemaa
+551964	Kashira	54.84444	38.16694	40084	Kašira	Moskva oblast+MO	Venemaa
+551986	Kashin	57.35917	37.60806	16598	Kašin		Venemaa
+553190	Kandalaksha	67.162	32.41229	38431	Kandalakša	Murmanski oblast+Murmansk	Venemaa
+553216	Kanash	55.50962	47.49127	49886	Kanaš	Tšuvaššia	Venemaa
+553287	Kamyshin	50.09833	45.41601	128626	Kamõšin	Volgograd	Venemaa
+553915	Kaluga	54.5293	36.27542	338978	Kaluga	Kaluga	Venemaa
+554234	Kaliningrad	54.70649	20.51095	434954	Kaliningrad	Kaliningrad	Venemaa
+554840	Izhevsk	56.84976	53.20448	631038	Iževsk		Venemaa
+554873	Izborsk	57.70757	27.86291	1003	Vana-Irboska+Irboska+Изборск	Pskov	Venemaa
+555312	Ivanovo	56.99719	40.97139	420839	Ivanovo+Иваново	Ivanovo	Venemaa
+555624	Ivangorod	59.37155	28.21625	11074	Jaanilinn		Venemaa
+557882	Gusev	54.59222	22.19972	28690	Gussev	Kaliningrad	Venemaa
+558118	Gudermes	43.35071	46.10925	32769	Gudermess		Venemaa
+558418	Groznyy	43.31195	45.68895	226100	Groznõi		Venemaa
+561347	Glazov	58.1393	52.658	100676	Glazov		Venemaa
+561667	Gelendzhik	44.5622	38.0848	50715	Gelendžik	Krasnodarskiy Kray	Venemaa
+561679	Gdov	58.74424	27.81977	5521	Oudova	Pskov	Venemaa
+561887	Gatchina	59.57639	30.12833	89761	Gattšina		Venemaa
+562161	Galich	58.37884	42.34633	18594	Galitš	Kostroma	Venemaa
+562237	Gagarin	55.55291	34.99537	28879	Gagarin	Smolensk	Venemaa
+563514	Elista	46.30778	44.25583	106971	Elista		Venemaa
+563523	Elektrostal’	55.78959	38.44671	144387	Elektrostal+Электросталь	Moskva oblast+MO	Venemaa
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzeržinsk	Nizjnij Novgorod	Venemaa
+564719	Dubna	56.73333	37.16667	60604	Dubna	Moskva oblast+MO	Venemaa
+566532	Derbent	42.06779	48.28987	105965	Derbent	Dagestani Vabariik	Venemaa
+566868	Dedovichi	57.55166	29.95018	9606	Dedovitši	Pskov	Venemaa
+567774	Chudovo	59.11667	31.68333	17377	Tšudovo	Novgorod	Venemaa
+569154	Cherkessk	44.22333	42.05778	116224	Tšerkessk		Venemaa
+569223	Cherepovets	59.13333	37.9	315738	Tšerepovets	Vologda	Venemaa
+569591	Chekhov	55.1477	37.47728	75643	Tšehhov	Moskva oblast+MO	Venemaa
+569696	Cheboksary	56.13222	47.25194	446781	Tšeboksarõ+Чебоксары	Tšuvaššia	Venemaa
+569955	Chapayevsk	52.9771	49.7086	70147	Tšapajevsk	Samara	Venemaa
+570427	Buzuluk	52.7807	52.2635	87714	Buzuluk	Orenburg	Venemaa
+571476	Bryansk	53.25209	34.37167	427236	Brjansk	Brjansk	Venemaa
+571557	Bronnitsy	55.42112	38.26188	18645	Bronnitsõ	Moskva oblast+MO	Venemaa
+572154	Borovichi	58.38778	33.91546	56571	Borovitši	Novgorod	Venemaa
+572525	Borisoglebsk	51.36713	42.08494	68597	Borissoglebsk	Voronezj	Venemaa
+576566	Bezhetsk	57.78506	36.69651	28114	Bežetsk		Venemaa
+576572	Bezhanitsy	56.97669	29.89065	4711	Bežanitsõ	Pskov	Venemaa
+576697	Beslan	43.19217	44.54313	35604	Beslan		Venemaa
+577206	Berezniki	59.4091	56.8204	167748	Berezniki	Permi krai+Perm	Venemaa
+578072	Belgorod	50.61074	36.58015	345289	Belgorod	Belgorod	Venemaa
+578155	Belaya Kalitva	48.18585	40.77424	47521	Belaja Kalitva		Venemaa
+579460	Balashov	51.5502	43.1667	98107	Balašov	Saratov	Venemaa
+579464	Balashikha	55.80945	37.95806	150103	Balašihha	Moskva oblast+MO	Venemaa
+579492	Balakovo	52.02782	47.8007	199572	Balakovo	Saratov	Venemaa
+580497	Astrakhan	46.34968	48.04076	502533	Astrahan	Astrakhan	Venemaa
+580724	Arzamas	55.39485	43.83992	109479	Arzamass	Nizjnij Novgorod	Venemaa
+580922	Armavir	44.9892	41.1234	199548	Armavir	Krasnodarskiy Kray	Venemaa
+581357	Apatity	67.56414	33.4031	61186	Apatitõ	Murmanski oblast+Murmansk	Venemaa
+582182	Anapa	44.89084	37.3239	53600	Anapa	Krasnodarskiy Kray	Venemaa
+583794	Akhty	41.45968	47.73123	14080	Ahtõ	Dagestani Vabariik	Venemaa
+583983	Agryz	56.52034	52.99422	18601	Agrõz		Venemaa
+795243	Snezhnogorsk	69.19333	33.25314	12014	Snežnogorsk+Снежногорск	Murmanski oblast+Murmansk	Venemaa
+863061	Usinsk	65.99389	57.52806	44078	Ussinsk		Venemaa
+1486209	Yekaterinburg	56.8519	60.6122	1349772	Jekaterinburg	Sverdlovsk	Venemaa
+1486910	Vorkuta	67.49884	64.05253	80039	Vorkuta		Venemaa
+1487281	Verkhnyaya Pyshma	56.97047	60.58219	59061	Verhnjaja Põšma	Sverdlovsk	Venemaa
+1488754	Tyumen	57.15222	65.52722	519119	Tjumen		Venemaa
+1489425	Tomsk	56.49771	84.97437	485519	Tomsk	Tomsk	Venemaa
+1490624	Surgut	61.25	73.41667	300367	Surgut	Khanty-Mansiyskiy Avtonomnyy Okrug	Venemaa
+1493197	Salekhard	66.53	66.60194	38025	Salehard+Салехард	Yamalo-Nenetskiy Avtonomnyy Okrug	Venemaa
+1495974	Osinniki	53.6239	87.3598	48919	Ossinniki	Kemerovo	Venemaa
+1496153	Omsk	54.99244	73.36859	1129281	Omsk	Omsk	Venemaa
+1496747	Novosibirsk	55.0415	82.9346	1419007	Novosibirsk	Novosibirsk	Venemaa
+1496990	Novokuznetsk	53.7557	87.1099	539616	Novokuznetsk+Новокузнецк	Kemerovo	Venemaa
+1497543	Nizhnevartovsk	60.9344	76.5531	244937	Nižnevartovsk	Khanty-Mansiyskiy Avtonomnyy Okrug	Venemaa
+1498087	Nadym	65.53333	72.51667	46339	Nadõm	Yamalo-Nenetskiy Avtonomnyy Okrug	Venemaa
+1498129	Myski	53.709	87.8014	44082	Mõski	Kemerovo	Venemaa
+1498693	Minusinsk	53.71028	91.6875	72781	Minussinsk	Krasnoyarskiy Kray	Venemaa
+1498894	Miass	55.045	60.10833	167500	Miass	Tsjeljabinsk	Venemaa
+1498920	Mezhdurechensk	53.69417	88.06028	101026	Mežduretšensk	Kemerovo	Venemaa
+1500607	Lesosibirsk	58.23583	92.48278	65945	Lessosibirsk	Krasnoyarskiy Kray	Venemaa
+1500665	Leninsk-Kuznetsky	54.6567	86.1737	109023	Leninsk-Kuznetski	Kemerovo	Venemaa
+1500933	Labytnangi	66.65722	66.41833	27067	Labõtnangi	Yamalo-Nenetskiy Avtonomnyy Okrug	Venemaa
+1500973	Kyzyl	51.71472	94.45338	108240	Kõzõl		Venemaa
+1501141	Kuybyshev	55.44753	78.32181	48308	Kuibõšev	Novosibirsk	Venemaa
+1503772	Khanty-Mansiysk	61.00417	69.00194	67800	Hantõ-Mansiisk	Khanty-Mansiyskiy Avtonomnyy Okrug	Venemaa
+1503901	Kemerovo	55.33333	86.08333	477090	Kemerovo	Kemerovo	Venemaa
+1504769	Kamyshlov	56.84278	62.71111	28006	Kamõšlov	Sverdlovsk	Venemaa
+1505453	Ishim	56.11281	69.49015	67762	Išim		Venemaa
+1506271	Gorno-Altaysk	51.96056	85.91892	54917	Gorno-Altaisk	Altay	Venemaa
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Tšeljabinsk	Tsjeljabinsk	Venemaa
+1510018	Biysk	52.53639	85.20722	215430	Biisk	Altayskiy Kray	Venemaa
+1510853	Barnaul	53.36056	83.76361	599579	Barnaul	Altayskiy Kray	Venemaa
+1512165	Achinsk	56.2694	90.4993	117634	Atšinsk	Krasnoyarskiy Kray	Venemaa
+1512236	Abakan	53.71556	91.42917	167289	Abakan		Venemaa
+1540356	Raduzhny	62.09611	77.475	47679	Radužnõi	Khanty-Mansiyskiy Avtonomnyy Okrug	Venemaa
+2013348	Vladivostok	43.10562	131.87353	587022	Vladivostok	Primorskiy Kray	Venemaa
+2014006	Ussuriysk	43.80291	131.94578	157068	Ussuriisk	Primorskiy Kray	Venemaa
+2014407	Ulan-Ude	51.82721	107.60627	360278	Ulan-Ude		Venemaa
+2014718	Tynda	55.156	124.72479	37335	Tõnda	Amur	Venemaa
+2014833	Tura	64.27769	100.21849	5444	Tura	Krasnoyarskiy Kray	Venemaa
+2019528	Nakhodka	42.81384	132.87348	146920	Nahhodka	Primorskiy Kray	Venemaa
+2019951	Mirny	62.53528	113.96111	40308	Mirnõi	Sakha	Venemaa
+2022890	Khabarovsk	48.48271	135.08379	579000	Habarovsk	Khabarovskiy Kray	Venemaa
+2023469	Irkutsk	52.29778	104.29639	586695	Irkutsk	Irkutsk	Venemaa
+2025339	Chita	52.03171	113.50087	308500	Tšita	Zabaykalsky	Venemaa
+2026609	Blagoveshchensk	50.27961	127.5405	221296	Blagoveštšensk	Amur	Venemaa
+2026643	Birobidzhan	48.79284	132.92386	76146	Birobidžan	Juudi autonoomne oblast	Venemaa
+2027667	Angarsk	52.53667	103.88639	243158	Angarsk	Irkutsk	Venemaa
+2027968	Aldan	58.61021	125.39613	24426	Aldan	Sakha	Venemaa
+2119441	Yuzhno-Sakhalinsk	46.95407	142.73603	176484	Južno-Sahhalinsk	Sakhalin	Venemaa
+2122104	Petropavlovsk-Kamchatsky	53.04444	158.65076	187282	Petropavlovsk-Kamtšatski	Kamtsjatka	Venemaa
+2122605	Okhotsk	59.362	143.21468	5570	Ohhotsk	Khabarovskiy Kray	Venemaa
+2123628	Magadan	59.5638	150.80347	95282	Magadan	Magadan	Venemaa
+2127202	Anadyr	64.73424	177.5103	10332	Anadõr	Chukotskiy Avtonomnyy Okrug	Venemaa
+6313621	Magas	43.22257	44.77261	2502	Magass		Venemaa
+6695754	Kogalym	62.26537	74.47906	57800	Kogalõm	Khanty-Mansiyskiy Avtonomnyy Okrug	Venemaa
+202061	Kigali	-1.94995	30.05885	745261	Kigali		Rwanda+Ruanda
+104515	Mecca	21.42664	39.82563	1323624	Meka	Makkah	Saudi Araabia
+105343	Jeddah	21.54238	39.19797	2867446	Jiddah	Makkah	Saudi Araabia
+108410	Riyadh	24.68773	46.72185	4205961	Ar-Riyāḑ		Saudi Araabia
+109223	Medina	24.46861	39.61417	1300000	Mediina		Saudi Araabia
+110690	Abha	18.21639	42.50528	210886	Abhā		Saudi Araabia
+365137	Omdurman	15.64453	32.47773	1200000	Umm Durmān		Sudaan
+372753	Kassala	15.45099	36.39998	401477	Kassalā		Sudaan
+379062	Al Qadarif	14.03493	35.38344	363945	Al-Qaḑārif		Sudaan
+379252	Khartoum	15.55177	32.53241	1974647	Hartum		Sudaan
+2662689	Visby	57.64089	18.29602	23402	Visby		Rootsi+Ruoččii
+2664454	Västerås	59.61617	16.55276	117746	Västerås	Västmanlands län	Rootsi+Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Rootsi+Ruoččii
+2679302	Sigtuna	59.61731	17.72361	9074	Sigtuna	Stockholms Län	Rootsi+Ruoččii
+2692969	Malmö	55.60587	13.00073	301706	Malmö	Skåne län	Rootsi+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Rootsi+Ruoččii
+2701713	Karlskrona	56.16156	15.58661	36477	Karlskrona		Rootsi+Ruoččii
+3192241	Ptuj	46.42005	15.87018	18164	Ptuj		Sloveenia
+3194648	Murska Sobota	46.6625	16.16639	11614	Murska Sobota		Sloveenia
+3195506	Maribor	46.55472	15.64667	95171	Maribor		Sloveenia
+3196359	Ljubljana	46.05108	14.50513	272220	Ljubljana		Sloveenia
+724443	Košice	48.71395	21.25808	236563	Košice	Košický kraj	Slovakkia
+3056508	Žilina	49.22315	18.73941	85985	Žilina	Žilinský kraj	Slovakkia
+3057124	Trnava	48.37741	17.58723	69785	Trnava	Trnavský kraj	Slovakkia
+3057789	Ružomberok	49.0748	19.30751	30806	Ružomberok	Žilinský kraj	Slovakkia
+3058531	Nitra	48.30763	18.08453	86329	Nitra	Nitriansky kraj	Slovakkia
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	Slovakkia
+3061186	Banská Bystrica	48.73946	19.15349	82336	Banská Bystrica	Banskobystrický kraj	Slovakkia
+2409306	Freetown	8.484	-13.22994	802639	Freetown		Sierra Leone
+53654	Mogadishu	2.03711	45.34375	2587183	Muqdisho		Somaalia
+64013	Bosaso	11.28421	49.18158	74287	Boosaaso		Somaalia
+64536	Baidoa	3.11383	43.6498	129839	Baydhabo		Somaalia
+169577	Homs	34.72682	36.72339	775404	Ḩimş		Süüria
+170063	Aleppo	36.20124	37.16117	1602264	Ḩalab		Süüria
+2427123	N'Djamena	12.10672	15.0444	721081	N’Djamena+N'Djamena	Chari-Baguirmi	Tšaad+Tiaad
+2365267	Lomé	6.12874	1.22154	749700	Lomé	Rannikupiirkond	Togo
+1150515	Surat Thani	9.14011	99.33311	127201	Surat Thani	Surat Thani	Tai
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Tai
+1220253	Istaravshan	39.9142	69.00328	52851	Istaravšon		Tadžikistan+TadĪikistan
+1220798	Panjakent	39.49524	67.60931	35085	Pandžakent		Tadžikistan+TadĪikistan
+1221874	Dushanbe	38.53575	68.77905	679400	Dušanbe		Tadžikistan+TadĪikistan
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat	Ahali vilajett	Türkmenistan
+601594	Türkmenbaşy	40.02216	52.95517	68292	Türkmenbaşy	Balkani vilajett	Türkmenistan
+2473449	Kairouan	35.6781	10.09633	119794	Al-Qayrawān	Al Qayrawān	Tuneesia
+325363	Adana	37.00167	35.32889	1248988	Adana	Adana provints	Türgi+Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Bursa		Türgi+Turkanmua
+752015	Amasya	40.65333	35.83306	82896	Amasya ringkond	Amasya provints	Türgi+Turkanmua
+160196	Dodoma	-6.17221	35.73947	180541	Dodoma	Dodoma	Tansaania+Tanzania
+161325	Arusha	-3.36667	36.68333	341136	Arusha	Arusha	Tansaania+Tanzania
+686729	Vasylivka	47.43694	35.27417	15012	Vassõlivka		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+686803	Zvenihorodka	49.07866	30.96755	19161	Zvenõgorodka	Cherkas'ka Oblast'+Cherkasy	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+686967	Zhytomyr	50.26487	28.67669	282192	Žõtomõr	Zhytomyr	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+687093	Zhovkva	50.05825	23.9726	12973	Žovkva	Lviv	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+688373	Yasynuvata	48.1298	37.8594	37600	Jassõnuvata	Donetsk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+688533	Yalta	44.50218	34.16624	77003	Jalta		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+689198	Volnovakha	47.60103	37.49674	23731	Volnovahha	Donetsk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+690548	Uzhgorod	48.61667	22.3	117878	Užgorod	Zakarpattia	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+692194	Sumy	50.9216	34.80029	294456	Sumõ	Sumõ oblast+Sumy	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+692315	Sudak	44.84924	34.97471	16597	Sudak		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+692975	Stakhanov	48.56818	38.64352	84425	Stahhanov	Luhansk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+693468	Sloviansk	48.86667	37.61667	124800	Slovjansk	Donetsk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+693805	Simferopol	44.95719	34.11079	336460	Simferopol		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+694423	Sevastopol	44.58883	33.5224	416263	Sevastopol		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+694910	Saki	45.13424	33.59996	28322	Sakõ		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+696643	Poltava	49.59373	34.54073	317847	Poltava	Poltava oblast+Poltava	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Odessa	Odessa oblast	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+699942	Nizhyn	51.04801	31.88688	75499	Nižõn		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+701075	Myrhorod	49.96854	33.60886	41377	Mõrgorod	Poltava oblast+Poltava	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+701404	Melitopol	46.84891	35.36533	158000	Melitopol		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Lviv	Lviv	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+702563	Lutuhyne	48.40507	39.22675	18830	Lutugõne	Luhansk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kiiev		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+703845	Kryvyi Rih	47.90966	33.38044	652380	Krõvõi Rig	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+704147	Kremenchuk	49.06802	33.42041	227494	Krementšuk+Kremenchuk	Poltava oblast+Poltava	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+705812	Kropyvnytskyi	48.5132	32.2597	249454	Kirovograd	Kirovohrad+http://en.wikipedia.org/wiki/Kropyvnytskyi	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Herson	Hersoni oblast+Kherson	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+706483	Kharkiv	49.98081	36.25272	1430885	Harkiv	Kharkiv	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+706524	Kerch	45.3531	36.47429	148932	Kertš		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+706950	Kamianets-Podilskyi	48.6845	26.58559	100000	Kamjanets-Podilskõi	Khmelnytskyi	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+707753	Horlivka	48.33576	38.05325	278550	Gorlivka	Donetsk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Tšernivtsi		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+710735	Chernihiv	51.50551	31.28487	307684	Tšernigiv		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Tšerkassõ	Cherkas'ka Oblast'+Cherkasy	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+711134	Burshtyn	49.25867	24.62777	14729	Merevaik	Ivano-Frankivsk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+711348	Buchach	49.06254	25.38798	12082	Butšatš	Ternopil	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+711669	Boryslav	49.28672	23.43238	36704	Borõslav	Lviv	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+713259	Antratsyt	48.11503	39.09128	61600	Antratsõt	Luhansk	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+713513	Alushta	44.67728	34.4097	29586	Alušta		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+713514	Alupka	44.41808	34.04531	7849	Alupka		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+6930327	Slavutych	51.51964	30.73434	25000	Slavutõtš	Kiievi oblast	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+4142290	Dover	39.15817	-75.52437	37522	Dover	Delaware+DE	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4164138	Miami	25.77427	-80.19366	441003	Miami	FL+Florida	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	Atlanta	GA+Georgia	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	New Orleans	Louisiana osariik+LA+Louisiana	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	Missouri osariik+MO+Missouri	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Philadelphia	PA	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	Austin	TX+Texas	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4683416	Corpus Christi	27.80058	-97.39638	324074	Corpus Christi	TX+Texas	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	Dallas	TX+Texas	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Houston	TX+Texas	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4726206	San Antonio	29.42412	-98.49363	1469845	San Antonio	TX+Texas	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4788158	Suffolk	36.72836	-76.58496	88161	Suffolk	VA+Virginia	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4853828	Des Moines	41.60054	-93.60911	210330	Des Moines	Iowa+IA	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Chicago	IL+Illinois	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Boston	MA+Massachusetts	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4957003	Augusta	44.31062	-69.77949	18471	Augusta	ME+Maine	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4975802	Portland	43.66147	-70.25533	66881	Portland	ME+Maine	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroit	MI	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+4998830	Lansing	42.73253	-84.55553	115056	Lansing	MI	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5045360	Saint Paul	44.94441	-93.09327	285068	Saint Paul	MN+Minnesota	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5101798	Newark	40.73566	-74.17237	281944	Newark	New Jersey osariik+NJ+New Jersey	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5110302	Brooklyn	40.6501	-73.94958	2300664	Brooklyn+BK	New Yorgi osariik+NY	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5123831	Lake Placid	44.27962	-73.98198	2465	Lake Placid	New Yorgi osariik+NY	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	New Yorgi osariik+NY	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5140405	Syracuse	43.04812	-76.14742	144142	Syracuse	New Yorgi osariik+NY	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5206379	Pittsburgh	40.44062	-79.99589	304391	Pittsburgh	PA	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5263045	Milwaukee	43.0389	-87.90647	600155	Milwaukee	WI	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	CA+Calif+California	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	Sacramento	CA+Calif+California	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	CA+Calif+California	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San Jose	CA+Calif+California	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5501344	Carson City	39.1638	-119.7674	54521	Carson City	NV+Nevada	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas	NV+Nevada	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5525577	Lubbock	33.57786	-101.85517	249042	Lubbock	TX+Texas	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5554072	Juneau	58.30194	-134.41972	32756	Juneau	AK+Alaska	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5725846	Eugene	44.05207	-123.08675	163460	Eugene	Oregon+OR	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+5746545	Portland	45.52345	-122.67621	632309	Portland	Oregon+OR	Ameerika Ühendriigid+U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Uruguay
+1217662	Bukhara	39.77472	64.42861	247644	Buhhaara		Usbekistan
+1512569	Tashkent	41.26465	69.21627	1978028	Toshkent	Toshkent Shahri	Usbekistan
+1513604	Khiwa	41.37833	60.36389	55567	Hiiva	Khorazm Wiloyati	Usbekistan
+1514588	Andijon	40.78206	72.34424	318419	Andijon		Usbekistan
+3648559	Barcelona	10.13625	-64.68618	424795	Barcelona		Venezuela+Venetsueela
+1581130	Hanoi	21.0245	105.84117	1431270	Hanoi	Ha Nội	Vietnam
+786714	Pristina	42.67272	21.16688	550000	Priština		
+786950	Podujeva	42.91056	21.19306	35000	Podujevo		
+787157	Peć	42.65913	20.28828	48962	Pejë		
+71137	Sanaa	15.35472	44.20667	1937451	Şan‘ā'		Jeemen
+964137	Pretoria	-25.74486	28.18783	1619438	Pretoria	Gautengi provints+Gauteng	Lõuna-Aafrika Vabariik+Lõuna-Aafrika
+971534	Nelspruit	-25.47448	30.97033	110159	Nelspruit	Mpumalanga provints+Mpumalanga	Lõuna-Aafrika Vabariik+Lõuna-Aafrika
+993800	Johannesburg	-26.20227	28.04363	2026469	Johannesburg	Gautengi provints+Gauteng	Lõuna-Aafrika Vabariik+Lõuna-Aafrika
+3369157	Cape Town	-33.92584	18.42322	3433441	Kaplinn	Western Cape	Lõuna-Aafrika Vabariik+Lõuna-Aafrika
+895953	Zambezi	-13.54323	23.10467	7074	Zambezi	North-Western	Sambia+Zambia
+886763	Masvingo	-20.06373	30.82766	76290	Masvingo	Masvingo	Zimbabwe
+894701	Bulawayo	-20.15	28.58333	699385	Bulawayo	Bulawayo	Zimbabwe

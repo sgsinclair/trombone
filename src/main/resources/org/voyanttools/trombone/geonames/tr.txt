@@ -1,0 +1,1816 @@
+292223	Dubai	25.0657	55.17128	1137347	Dubai	Dubai	Birleşik Arap Emirlikleri+UAE
+292672	Sharjah	25.33737	55.41206	543733	Şarika		Birleşik Arap Emirlikleri+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu Dabi		Birleşik Arap Emirlikleri+UAE
+1120985	Zaranj	30.95962	61.86037	49851	Zerenc		Afganistan
+1123004	Taloqan	36.73605	69.53451	64256	Talukan	Takhār	Afganistan
+1133453	Maymana	35.92139	64.78361	75900	Meymene	Faryab Vilayeti	Afganistan
+1138336	Kandahār	31.61332	65.71013	391190	Kandehar		Afganistan
+1138958	Kabul	34.52813	69.17233	3043532	Kâbil		Afganistan
+1142264	Farah	32.37451	62.11638	43561	Ferah		Afganistan
+1145352	Charikar	35.01361	69.17139	53676	Çarikar	Parvān	Afganistan
+1147290	Balkh	36.75635	66.8972	114883	Belh	Belh Vilayeti	Afganistan
+782756	Korçë	40.61861	20.78083	58259	Görice		Arnavutluk+Arnavutluk Cumhuriyeti
+3183875	Tirana	41.3275	19.81889	374801	Tiran		Arnavutluk+Arnavutluk Cumhuriyeti
+3184081	Shkodër	42.06828	19.51258	88245	İşkodra		Arnavutluk+Arnavutluk Cumhuriyeti
+3184935	Lezhë	41.78361	19.64361	18695	Leş		Arnavutluk+Arnavutluk Cumhuriyeti
+3185211	Kavajë	41.18556	19.55694	29354	Kavalye		Arnavutluk+Arnavutluk Cumhuriyeti
+3186145	Ballsh	40.59889	19.73472	10361	Ballsha		Arnavutluk+Arnavutluk Cumhuriyeti
+174710	Yeghegnadzor	39.76389	45.33239	8200	Yeğegnadzor	Vayotsʼ Dzor	Ermenistan
+174823	Meghri	38.90292	46.24458	4540	Meğri	Syunikʼ	Ermenistan
+174979	Artashat	39.96144	44.54447	20562	Artaşat	Ararat	Ermenistan
+616052	Yerevan	40.18111	44.51361	1093485	Erivan	Yerevan	Ermenistan
+616627	Ijevan	40.87877	45.14851	14737	İcevan	Tavush	Ermenistan
+616635	Gyumri	40.7942	43.84528	148381	Gümrü	Shirak	Ermenistan
+616752	Dilijan	40.7417	44.8501	13478	Dilican	Tavush	Ermenistan
+616877	Ashtarak	40.2991	44.36204	18779	Aştarak	Aragatsotn	Ermenistan
+3429886	Posadas	-27.36708	-55.89608	323739	Posadas	MN	Arjantin
+3833367	Ushuaia	-54.8	-68.3	58028	Ushuaia	TF+Tierra del Fuego	Arjantin
+3838583	Rosario	-32.94682	-60.63932	1173533	Rosario	SF+Santa Fe	Arjantin
+3858677	El Calafate	-50.34075	-72.27682	8000	El Calafate	SC+Santa Cruz	Arjantin
+2760772	Ybbs an der Donau	48.16667	15.08333	5676	İps	Aşağı Avusturya	Avusturya
+2761369	Vienna	48.20849	16.37208	1691468	Viyana+Beç		Avusturya
+2762077	Waidhofen an der Ybbs	47.96004	14.77361	11774	Waidhofen-Ybbs	Aşağı Avusturya	Avusturya
+2772400	Linz	48.30639	14.28611	181162	Linz		Avusturya
+2775220	Innsbruck	47.26266	11.39454	112467	İnnsbruck		Avusturya
+2781373	Bruck an der Leitha	48.01667	16.76667	7339	Bruck-Leitha	Aşağı Avusturya	Avusturya
+2781503	Bregenz	47.50311	9.7471	27611	Bregenz	Vorarlberg	Avusturya
+2781520	Braunau am Inn	48.25628	13.04343	16403	Braunau am Inn		Avusturya
+2147714	Sydney	-33.86785	151.20732	4627345	Sidney	NSW	Avustralya
+2158177	Melbourne	-37.814	144.96332	4246375	Melbourne	VIC	Avustralya
+2172517	Canberra	-35.28346	149.12807	367752	Kanberra	Avustralya Başkent Bölgesi+ACT+Australian Capital Territory	Avustralya
+635815	Sund	60.25	20.11667	1080	Sund		Åland+Aland Adaları
+636158	Sottunga	60.13023	20.66683	144	Sottunga		Åland+Aland Adaları
+647455	Lumparland	60.11695	20.25819	335	Lumparland		Åland+Aland Adaları
+650395	Kumlinge	60.26013	20.77892	384	Kumlinge		Åland+Aland Adaları
+651986	Kökar	59.92051	20.90883	355	Kökar		Åland+Aland Adaları
+660521	Brändö	60.41165	21.04534	515	Brändö		Åland+Aland Adaları
+3041732	Mariehamn	60.09726	19.93481	10682	Mariehamn		Åland+Aland Adaları
+3041776	Hammarland	60.21667	19.75	1395	Hammarland		Åland+Aland Adaları
+3041798	Finström	60.26667	19.93333	2412	Finström		Åland+Aland Adaları
+3041807	Eckerö	60.21249	19.61442	1028	Eckerö		Åland+Aland Adaları
+146958	Yaycı	38.94052	45.73244	8500	Yaycı+http://en.wikipedia.org/wiki/Yayc%C4%B1	Nahçıvan+Nahçıvan Özerk Cumhuriyeti+Naxçivan	Azerbaycan
+146970	Xankandi	39.8177	46.7528	53100	Hankendi+Khankendi+Xankǝndi	Xankǝndi	Azerbaycan
+147105	Shushi	39.76006	46.74989	18662	Şuşa	Şuşa	Azerbaycan
+147282	Sedarak	39.71427	44.88455	1853	Sederek	Nahçıvan+Nahçıvan Özerk Cumhuriyeti+Naxçivan	Azerbaycan
+147305	Qubadlı	39.34441	46.58183	6890	Kubadlı	Qubadlı	Azerbaycan
+147774	Xocalı	39.91297	46.79028	5810	Hocalı Rayonu	Xocalı	Azerbaycan
+148225	Deste	38.88375	45.90963	4282	Deste	Nahçıvan+Nahçıvan Özerk Cumhuriyeti+Naxçivan	Azerbaycan
+148251	Culfa	38.95397	45.62961	10820	Culfa	Nahçıvan+Nahçıvan Özerk Cumhuriyeti+Naxçivan	Azerbaycan
+584716	Yelenendorf	40.58584	46.3189	17816	Xanlar	Goygol Rayon	Azerbaycan
+584717	Xaçmaz	41.46426	48.80565	37175	Haçmaz	Xaçmaz	Azerbaycan
+585226	Qazax	41.09246	45.36561	18903	Kazah	Qazax	Azerbaycan
+585514	Mingelchaur	40.76395	47.05953	95453	Mingachevir	Mingǝcevir	Azerbaycan
+586523	Ganja	40.68278	46.36056	313300	Ganca+Gence	Gǝncǝ	Azerbaycan
+587057	Barda	40.37577	47.12619	37372	Berde	Bǝrdǝ	Azerbaycan
+587084	Baku	40.37767	49.89201	1116513	Bakü	Baki	Azerbaycan
+3187609	Visoko	43.98889	18.17806	17890	Visoko	Federation of Bosnia and Herzegovina	Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3187681	Višegrad	43.7826	19.29256	6087	Vişegrad		Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3190159	Srebrenica	44.10748	19.29669	2862	Srebrenitsa		Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3191281	Sarajevo	43.84864	18.35644	696731	Saraybosna	Federation of Bosnia and Herzegovina	Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3194828	Mostar	43.34333	17.80806	104518	Mostar	Federation of Bosnia and Herzegovina	Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3200396	Goražde	43.66795	18.97564	17650	Gorajde	Federation of Bosnia and Herzegovina	Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3200837	Foča	43.50646	18.77854	14615	Foça		Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3204222	Bihać	44.81694	15.87083	75641	Bihaç	Federation of Bosnia and Herzegovina	Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+3204541	Banja Luka	44.77842	17.19386	221106	Banya Luka		Bosna Hersek+Bosna-Hersek+Bosna ve Hersek
+1185241	Dhaka	23.7104	90.40744	10356500	Dakka		Bangladeş
+2792482	Leuven	50.87959	4.70093	92892	Leuven		Belçika
+2797656	Gent	51.05	3.71667	231493	Gent		Belçika
+2800866	Brussels	50.85045	4.34878	1019022	Brüksel	Brussels-Capital Region	Belçika
+2802170	Beringen	51.04954	5.22606	40930	Beringen		Belçika
+2803138	Antwerpen	51.21989	4.40346	459805	Antwerp		Belçika
+725271	Zlatograd	41.3795	25.09605	7331	Darıdere		Bulgaristan
+725712	Vratsa	43.21	23.5625	64941	İvraca		Bulgaristan
+725905	Vidin	43.99	22.8725	54409	Vidin		Bulgaristan
+726050	Varna	43.21667	27.91667	312770	Varna		Bulgaristan
+726174	Targovishte	43.2512	26.57215	37774	Eski Cuma	Tŭrgovishte	Bulgaristan
+726418	Dobrich	43.56667	27.83333	94831	Dobriç		Bulgaristan
+726546	Svilengrad	41.76667	26.2	19279	Cisri Mustafapaşa		Bulgaristan
+726848	Stara Zagora	42.43278	25.64194	143431	Eski Zağra		Bulgaristan
+727011	Sofia	42.69751	23.32415	1152556	Sofya		Bulgaristan
+727079	Sliven	42.68583	26.32917	96368	Islimiye+Sliven		Bulgaristan
+727221	Silistra	44.11667	27.26667	39715	Silistre		Bulgaristan
+727233	Shumen	43.27064	26.92286	87283	Şumnu		Bulgaristan
+727523	Ruse	43.85639	25.97083	156238	Rusçuk		Bulgaristan
+728193	Plovdiv	42.15	24.75	340494	Filibe		Bulgaristan
+728203	Pleven	43.41667	24.61667	118675	Plevne		Bulgaristan
+728288	Petrich	41.39846	23.20702	30308	Petriç		Bulgaristan
+728378	Pazardzhik	42.2	24.33333	75977	Pazarcık	Pazardzhik	Bulgaristan
+728742	Nova Zagora	42.48333	26.01667	24340	Yeni Zağra		Bulgaristan
+728782	Nikopol	43.70255	24.89645	4137	Niğbolu		Bulgaristan
+729114	Montana	43.4125	23.225	47445	Kutlu Viçe+Montana	Montana	Bulgaristan
+729559	Lovech	43.13333	24.71667	42211	Lofça		Bulgaristan
+729730	Kyustendil	42.28389	22.69111	48286	Köstendil		Bulgaristan
+729794	Kardzhali	41.65	25.36667	51000	Kırcaali		Bulgaristan
+730496	Kazanlak	42.61667	25.4	55196	Kazanlık		Bulgaristan
+730565	Karlovo	42.63333	24.8	19958	Karlıova		Bulgaristan
+730837	Ivaylovgrad	41.52672	26.1249	3969	Ortaköy		Bulgaristan
+731100	Gyovren	41.66326	24.37557	1040	Gövren		Bulgaristan
+731108	Gotse Delchev	41.56667	23.73333	20471	Nevrâkop		Bulgaristan
+731549	Gabrovo	42.87472	25.33417	66175	Gabrovo	Gabrova	Bulgaristan
+732770	Burgas	42.50606	27.46781	195966	Burgaz		Bulgaristan
+733191	Blagoevgrad	42.01667	23.1	71306	Yukarı Cuma+Gorna Djoumaia		Bulgaristan
+733579	Aytos	42.7	27.25	20986	Aytos		Bulgaristan
+290340	Manama	26.22787	50.58565	147074	Manama	Muḩāfaz̧at al ‘Āşimah	Bahreyn
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Bandar Seri Begavan		Brunei
+3901874	Vallegrande	-18.48923	-64.10609	8422	Vallegrande	Santa Cruz	Bolivya
+3903987	Sucre	-19.03332	-65.26274	224838	Sucre	Chuquisaca	Bolivya
+3911925	La Paz	-16.5	-68.15	812799	La Paz	La Paz	Bolivya
+3386496	Teresina	-5.08917	-42.80194	744512	Teresina	PI+Piauí	Brezilya
+3388368	São Luís	-2.52972	-44.30278	917237	Sao Luis	MA+Maranhão	Brezilya
+3390760	Recife	-8.05389	-34.88111	1478098	Recife	PE	Brezilya
+3394023	Natal	-5.795	-35.20944	763043	Natal	RN+Rio Grande do Norte	Brezilya
+3395981	Maceió	-9.66583	-35.73528	954991	Maceio	AL+Alagoas	Brezilya
+3396016	Macapá	0.03889	-51.06639	338936	Macapa	AP+Amapá	Brezilya
+3397277	João Pessoa	-7.115	-34.86306	650883	João Pessoa+Joao Pessoa	PB+Paraíba	Brezilya
+3399415	Fortaleza	-3.71722	-38.54306	2400000	Fortaleza	CE+Ceará	Brezilya
+3405870	Belém	-1.45583	-48.50444	1407737	Belém	PA+Pará	Brezilya
+3444924	Vitória	-20.31944	-40.33778	312656	Vitória	ES	Brezilya
+3448439	São Paulo	-23.5475	-46.63611	10021295	Sao Paulo	SP+São Paulo	Brezilya
+3450554	Salvador	-12.97111	-38.51083	2711840	Salvador	BA	Brezilya
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brezilya
+3452925	Porto Alegre	-30.03306	-51.23	1372741	Porto Alegre	RS+Rio Grande do Sul	Brezilya
+3454031	Petrópolis	-22.505	-43.17861	272691	Petropolis	RJ	Brezilya
+3462377	Goiânia	-16.67861	-49.25389	1171195	Goiânia+Goiania	GO	Brezilya
+3463237	Florianópolis	-27.59667	-48.54917	412724	Florianópolis+Florianopolis	SC+Santa Catarina	Brezilya
+3464975	Curitiba	-25.42778	-49.27306	1718421	Curitiba	PR+Paraná	Brezilya
+3465038	Cuiabá	-15.59611	-56.09667	521934	Cuiabá+Cuiaba	MT+Mato Grosso	Brezilya
+3467747	Campo Grande	-20.44278	-54.64639	729151	Campo Grande	MS	Brezilya
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasília+Brasilia	Federal Bölge+DF	Brezilya
+3469989	Birigui	-21.28861	-50.34	102277	Birigüi	SP+São Paulo	Brezilya
+3470127	Belo Horizonte	-19.92083	-43.93778	2373224	Belo Horizonte	MG	Brezilya
+3471872	Aracaju	-10.91111	-37.07167	490175	Aracaju	SE+Sergipe	Brezilya
+3662574	Rio Branco	-9.97472	-67.81	257642	Rio Branco	AC+Acre	Brezilya
+3662762	Porto Velho	-8.76194	-63.90389	306180	Porto Velho	RO+Rondônia	Brezilya
+3663517	Manaus	-3.10194	-60.025	1598210	Manaus	AM	Brezilya
+3664980	Boa Vista	2.81972	-60.67333	235150	Boa Vista	RR+Roraima	Brezilya
+933088	Serowe	-22.38754	26.71077	47419	Serove	Central	Botsvana+Botsvana Cumhuriyeti+Botswana
+933773	Gaborone	-24.65451	25.90859	208411	Gaborone		Botsvana+Botsvana Cumhuriyeti+Botswana
+625144	Minsk	53.9	27.56667	1742124	Minsk		Beyaz Rusya
+3582672	Belmopan	17.25	-88.76667	13381	Belmopán	Cayo	Belize
+5913490	Calgary	51.05011	-114.08529	1019942	Calgary	AB+Alberta	Kanada
+5920288	Charlottetown	46.23899	-63.13414	42402	Charlottetown	Prens Edward Adası+PE+PEI+Prince Edward Island	Kanada
+5957776	Fredericton	45.94541	-66.66558	52337	Fredericton	NB+New Brunswick	Kanada
+5983607	Inuvik	68.34986	-133.72181	3022	İnuvik	NT+Northwest Territories	Kanada
+5989045	Kamloops	50.66648	-120.3192	68714	Kamloops	Britanya Kolumbiyası+BC+British Columbia	Kanada
+5990579	Kelowna	49.88307	-119.48568	125109	Kelowna	Britanya Kolumbiyası+BC+British Columbia	Kanada
+6076211	Moncton	46.09454	-64.7965	87467	Moncton	NB+New Brunswick	Kanada
+6077243	Montréal	45.50884	-73.58781	1600000	Montreal	QC	Kanada
+6085772	Nanaimo	49.16638	-123.94003	84905	Nanaimo	Britanya Kolumbiyası+BC+British Columbia	Kanada
+6094817	Ottawa	45.41117	-75.69812	812129	Ottawa	ON+Ontario	Kanada
+6113365	Prince George	53.9166	-122.75301	65558	Prince George	Britanya Kolumbiyası+BC+British Columbia	Kanada
+6138517	Saint John	45.27271	-66.06766	87857	Saint John	NB+New Brunswick	Kanada
+6141256	Saskatoon	52.13238	-106.66892	198958	Saskatoon	SK+Saskatchewan	Kanada
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	Kanada
+6173331	Vancouver	49.24966	-123.11934	600000	Vancouver	Britanya Kolumbiyası+BC+British Columbia	Kanada
+6183235	Winnipeg	49.8844	-97.14704	632063	Vinnipeg+WPG	MB+Manitoba	Kanada
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinşasa	Kinshasa	Kongo Demokratik Cumhuriyeti+Demokratik Kongo Cumhuriyeti+Kongo Cumhuriyeti
+2317397	Bandundu	-3.31687	17.38063	118211	Bandundu Bölgesi		Kongo Demokratik Cumhuriyeti+Demokratik Kongo Cumhuriyeti+Kongo Cumhuriyeti
+2260535	Brazzaville	-4.26613	15.28318	1284609	Brazavil	Brazzaville	Kongo+Kongo Cumhuriyeti+Kongo - Brazzaville
+2657896	Zürich	47.36667	8.55	341730	Zürih	ZH	İsviçre
+2659601	Montreux	46.43301	6.91143	22897	Montrö	VD	İsviçre
+2659994	Lausanne	46.516	6.63282	116751	Lozan+1000	VD	İsviçre
+2660646	Genève	46.20222	6.14569	183981	Cenevre+Genève+1200	Cenevre	İsviçre
+2661552	Bern	46.94809	7.44744	121631	Bern		İsviçre
+2661604	Basel	47.55839	7.57327	164488	Basel+EAP+4000		İsviçre
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Yamoussoukro		Fildişi Sahilleri+Fildişi Kıyısı+Fildişi Sahili+Côte de l’Ivoire
+2293538	Abidjan	5.30966	-4.01266	3677115	Abidjan+Abican		Fildişi Sahilleri+Fildişi Kıyısı+Fildişi Sahili+Côte de l’Ivoire
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaiso	Valparaíso	Şili
+3868707	Valdivia	-39.81422	-73.24589	133419	Valdivia	Los Ríos	Şili
+3871336	Santiago	-33.45694	-70.64827	4837295	Santiago+Stgo.	Santiago Metropolitan bölgesi	Şili
+3871781	San Pedro de Atacama	-22.9111	-68.20113	2000	San Pedro de Atacama	Antofagasta	Şili
+3874787	Punta Arenas	-53.15483	-70.91129	117430	Punta Arenas	Magallanes	Şili
+3874960	Puerto Montt	-41.4693	-72.94237	160054	Puerto Montt	Los Lagos	Şili
+3882428	Los Ángeles	-37.46973	-72.35366	125430	Los Angeles	Biobío	Şili
+3887127	Iquique	-20.22036	-70.13913	227499	Iquique	Tarapacá bölgesi	Şili
+3892870	Curicó	-34.98279	-71.23943	102438	Curicó	Maule	Şili
+3893656	Copiapó	-27.36679	-70.3314	129280	Copiapó	Atacama	Şili
+3893894	Concepción	-36.82699	-73.04977	215413	Concepcion	Biobío	Şili
+3897347	Calama	-22.45667	-68.92371	143084	Calama	Antofagasta	Şili
+3899361	Arica	-18.4746	-70.29792	185999	Arica	Arica y Parinacota	Şili
+3899539	Antofagasta	-23.65236	-70.3954	309832	Antofagasta	Antofagasta	Şili
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaunde+Yaounde		Kamerun
+1280849	Kashgar	39.47066	75.98951	274717	Kaşgar		Çin+Çin Halk Cumhuriyeti
+1529102	Ürümqi	43.80096	87.60046	3029372	Urumçi		Çin+Çin Halk Cumhuriyeti
+1784658	Zhengzhou	34.75778	113.64861	4253913	Çengçou		Çin+Çin Halk Cumhuriyeti
+1790630	Xi’an	34.25833	108.92861	6501190	Xi'an	Şensi+Shaanxi	Çin+Çin Halk Cumhuriyeti
+1791247	Wuhan	30.58333	114.26667	9785388	Vuhan+武汉		Çin+Çin Halk Cumhuriyeti
+1792947	Tianjin	39.14222	117.17667	11090314	Tianjin+Tiençin		Çin+Çin Halk Cumhuriyeti
+1796236	Shanghai	31.22222	121.45806	22315474	Şanghay+Şangay		Çin+Çin Halk Cumhuriyeti
+1799962	Nanjing	32.06167	118.77778	7165292	Nankin		Çin+Çin Halk Cumhuriyeti
+1805179	Jiujiang	29.70475	116.00206	258807	Ciuciang		Çin+Çin Halk Cumhuriyeti
+1814906	Chongqing	29.56278	106.55278	7457600	Çongçing		Çin+Çin Halk Cumhuriyeti
+1815286	Chengdu	30.66667	104.06667	7415590	Çengdu	Sichuan	Çin+Çin Halk Cumhuriyeti
+1816670	Beijing	39.9075	116.39723	11716620	Pekin		Çin+Çin Halk Cumhuriyeti
+2036892	Hohhot	40.81056	111.65222	774477	Huhhot		Çin+Çin Halk Cumhuriyeti
+2038180	Changchun	43.88	125.32278	4193073	Çangçun		Çin+Çin Halk Cumhuriyeti
+3674962	Medellín	6.25184	-75.56359	1999979	Medellin		Kolombiya
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		Kolombiya
+3536729	Santiago de Cuba	20.02083	-75.82667	555865	Santiago de Cuba	Santiago de Cuba	Küba
+3537906	Santa Clara	22.40694	-79.96472	250512	Santa Clara	Villa Clara	Küba
+3553478	Havana	23.13302	-82.38304	2163824	Havana		Küba
+3567597	Bayamo	20.37417	-76.64361	192632	Bayamo	Granma	Küba
+3513090	Willemstad	12.1084	-68.93354	125000	Willemstad		
+145952	Ýpsonas	34.68797	32.96191	7348	İpsona	Limasol İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146154	Frénaros	35.04121	33.92242	3450	Frenaros	Magosa İlçesi+Gazimağusa+Gazi Magosa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146187	Peristeróna	35.12928	33.07858	2190	Perısterona	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146192	Péra	35.0335	33.25413	1060	Pera	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146209	Paralímni	35.03945	33.98181	11836	Paralımnı	Magosa İlçesi+Gazimağusa+Gazi Magosa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146214	Paphos	34.77679	32.42451	35961	Baf	Baf İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146216	Páno Polemídia	34.70559	32.99269	3781	Yukarı Polemitya+Yukarı Binatlı	Limasol İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146225	Páno Defterá	35.07778	33.26584	1983	Pano Deftera	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146268	Nicosia	35.17531	33.3642	200452	Lefkoşa	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146375	Liopétri	35.00885	33.89256	4005	Lıopetrı	Magosa İlçesi+Gazimağusa+Gazi Magosa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146384	Limassol	34.68406	33.03794	154000	Limasol	Limasol İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146392	Léfka	35.11199	32.84997	7835	Lefke	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146400	Larnaca	34.92291	33.6233	72000	Larnaka	Larnaka İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146412	Kyrenia	35.33634	33.31729	26701	Girne	Girne İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146455	Kokkinotrimithiá	35.15303	33.19966	3223	Kokıno Trımıthıa	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146461	Klírou	35.02004	33.17806	1623	Klırou	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146617	Famagusta	35.12054	33.93894	42526	Gazimağusa+Mağusa	Magosa İlçesi+Gazimağusa+Gazi Magosa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146661	Derýneia	35.06484	33.96083	5161	Yukarı Derinya	Magosa İlçesi+Gazimağusa+Gazi Magosa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146666	Dáli	35.02294	33.42195	6085	Dalı	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146748	Ayia Napa	34.98213	34.00183	2798	Ayia Napa	Magosa İlçesi+Gazimağusa+Gazi Magosa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146761	Avgórou	35.03615	33.83918	4177	Avghorou	Magosa İlçesi+Gazimağusa+Gazi Magosa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+146791	Ergátes	35.05365	33.24292	1656	Ergates	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+414384	Méniko	35.10945	33.14474	1023	Menıko	Lefkoşa İlçesi	Kıbrıs+Güney Kıbrıs Rum Kesimi+Kıbrıs Cumhuriyeti
+3061344	Znojmo	48.8555	16.0488	35280	Znaym	Güney Moravya ili+Jihomoravský kraj	Çek Cumhuriyeti+Çekya+Czechia
+3064373	Tachov	49.79528	12.63365	12640	Tachov	Plzeňský kraj	Çek Cumhuriyeti+Çekya+Czechia
+3067696	Prague	50.08804	14.42076	1165581	Prag+Praha	Hlavní město Praha	Çek Cumhuriyeti+Çekya+Czechia
+3070720	Mikulov	48.80556	16.6378	7608	Nikolsburg	Güney Moravya ili+Jihomoravský kraj	Çek Cumhuriyeti+Çekya+Czechia
+3073803	Karlovy Vary	50.23271	12.87117	51807	Karlsbad	Karlovarský kraj	Çek Cumhuriyeti+Çekya+Czechia
+2803560	Zwickau	50.72724	12.48839	98796	Zwickau		Almanya
+2804748	Zerbst	51.9662	12.08517	15680	Zerbst/Anhalt	Saksonya-Anhalt+Sassen-Anholt	Almanya
+2809346	Wiesbaden	50.08258	8.24932	272432	Wiesbaden	Hessen	Almanya
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Almanya
+2811698	Weißwasser	51.50403	14.64017	22099	Weißwasser/Oberlausitz		Almanya
+2811909	Weißenburg in Bayern	49.03095	10.97221	17801	Weißenburg	Bavyera+Bayern	Almanya
+2817220	Villingen-Schwenningen	48.06226	8.49358	81770	Villingen Schwenningen	Baden-Württemberg	Almanya
+2820860	Tübingen	48.52266	9.05222	83416	Tübingen	Baden-Württemberg	Almanya
+2821164	Trier	49.75565	6.63935	100129	Trier	Renanya-Palatina	Almanya
+2825297	Stuttgart	48.78232	9.17702	589793	Stuttgart	Baden-Württemberg	Almanya
+2831580	Solingen	51.17343	7.0845	164359	Solingen	Kuzey Ren-Vestfalya+NRW	Almanya
+2842647	Saarbrücken	49.23262	7.00982	181227	Saarbrücken	Saarland	Almanya
+2848273	Remscheid	51.17983	7.1925	117118	Remscheid	Kuzey Ren-Vestfalya+NRW	Almanya
+2849483	Regensburg	49.01513	12.10161	129151	Regensburg	Bavyera+Bayern	Almanya
+2849647	Recklinghausen	51.61379	7.19738	122438	Recklinghausen	Kuzey Ren-Vestfalya+NRW	Almanya
+2852458	Potsdam	52.39886	13.06566	145292	Potsdam+Podstupim	Brandenburg+http://www.brandenburg.de	Almanya
+2853292	Plauen	50.4973	12.13782	66412	Plauen		Almanya
+2855745	Paderborn	51.71905	8.75439	142161	Paderborn	Kuzey Ren-Vestfalya+NRW	Almanya
+2860410	Oberhausen	51.47805	6.8625	219176	Oberhausen	Kuzey Ren-Vestfalya+NRW	Almanya
+2861650	Nürnberg	49.45421	11.07752	499237	Nuremberg	Bavyera+Bayern	Almanya
+2862026	Norderstedt	53.6859	9.98041	71439	Norderstedt	Schleswig-Holstein	Almanya
+2867543	Münster	51.96236	7.62571	270184	Münster	Kuzey Ren-Vestfalya+NRW	Almanya
+2867714	Munich	48.13743	11.57549	1260391	Münih	Bavyera+Bayern	Almanya
+2867838	Mülheim	51.43218	6.87967	171000	Mülheim an der Ruhr	Kuzey Ren-Vestfalya+NRW	Almanya
+2869894	Mönchengladbach	51.18539	6.44172	261742	Mönchengladbach	Kuzey Ren-Vestfalya+NRW	Almanya
+2872347	Meiderich	51.46667	6.76667	45297	Meiderich/Beeck	Kuzey Ren-Vestfalya+NRW	Almanya
+2873759	Marburg an der Lahn	50.80904	8.77069	78895	Marburg	Hessen	Almanya
+2873891	Mannheim	49.4891	8.46694	307960	Mannheim	Baden-Württemberg	Almanya
+2875392	Ludwigsburg	48.89731	9.19161	87603	Ludwigsburg	Baden-Württemberg	Almanya
+2875601	Lübeck	53.86893	10.68729	212207	Lübeck	Schleswig-Holstein	Almanya
+2878234	Leverkusen	51.0303	6.98432	162738	Leverkusen	Kuzey Ren-Vestfalya+NRW	Almanya
+2879139	Leipzig	51.33962	12.37129	504971	Leipzig		Almanya
+2882588	Kulmbach	50.10068	11.45032	27565	Kulmbach	Bavyera+Bayern	Almanya
+2885679	Konstanz	47.66033	9.17582	81275	Konstanz	Baden-Württemberg	Almanya
+2886242	Köln	50.93333	6.95	963395	Köln	Kuzey Ren-Vestfalya+NRW	Almanya
+2887835	Kleve	51.78826	6.13865	49072	Kleve	Kuzey Ren-Vestfalya+NRW	Almanya
+2891122	Kiel	54.32133	10.13489	232758	Kiel	Schleswig-Holstein	Almanya
+2892518	Kassel	51.31667	9.5	194501	Kassel	Hessen	Almanya
+2892794	Karlsruhe	49.00937	8.40444	283799	Karlsruhe	Baden-Württemberg	Almanya
+2894003	Kaiserslautern	49.443	7.77161	98732	Kaiserslautern	Renanya-Palatina	Almanya
+2895044	Jena	50.92878	11.5899	104712	Jena		Almanya
+2904789	Hildesheim	52.15077	9.95112	103052	Hildesheim	Aşağı Saksonya+Neddersassen+Läichsaksen+Donja Saska	Almanya
+2905891	Herne	51.5388	7.22572	172108	Herne	Kuzey Ren-Vestfalya+NRW	Almanya
+2907911	Heidelberg	49.40768	8.69079	143345	Heidelberg	Baden-Württemberg	Almanya
+2910831	Hannover	52.37052	9.73322	515140	Hannover+Hannauver	Aşağı Saksonya+Neddersassen+Läichsaksen+Donja Saska	Almanya
+2911240	Hamm	51.68033	7.82089	185327	Hamm	Kuzey Ren-Vestfalya+NRW	Almanya
+2911271	Hameln	52.10397	9.35623	58666	Hamelin	Aşağı Saksonya+Neddersassen+Läichsaksen+Donja Saska	Almanya
+2911298	Hamburg	53.57532	10.01534	1739117	Hamburg+HH	HH+H+H+Hamburg	Almanya
+2912621	Hagen	51.36081	7.47168	198972	Hagen	Kuzey Ren-Vestfalya+NRW	Almanya
+2915028	Großsolt	54.7	9.51667	1870	Grosssolt	Schleswig-Holstein	Almanya
+2916570	Großenwiehe	54.7	9.25	2829	Grossenwiehe	Schleswig-Holstein	Almanya
+2919765	Glücksburg	54.83522	9.54853	5946	Glücksburg	Schleswig-Holstein	Almanya
+2920512	Gießen	50.58727	8.67554	74411	Giessen	Hessen	Almanya
+2921232	Gera	50.88029	12.08187	104659	Gera		Almanya
+2921466	Gelsenkirchen	51.50508	7.09654	270028	Gelsenkirchen	Kuzey Ren-Vestfalya+NRW	Almanya
+2923588	Fürstenwalde	52.36067	14.06185	33539	Fürstenwalde/Spree	Brandenburg+http://www.brandenburg.de	Almanya
+2924206	Fröndenberg	51.47563	7.76946	22964	Fröndenberg/Ruhr	Kuzey Ren-Vestfalya+NRW	Almanya
+2925177	Freiburg	47.9959	7.85222	215966	Freiburg im Breisgau	Baden-Württemberg	Almanya
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Almanya
+2925630	Frankenberg	50.91297	13.04011	16850	Frankenberg/Sa.		Almanya
+2926271	Flensburg	54.78431	9.43961	85838	Flensburg	Schleswig-Holstein	Almanya
+2928810	Essen	51.45657	7.01228	593085	Essen	Kuzey Ren-Vestfalya+NRW	Almanya
+2929670	Erfurt	50.9787	11.03283	203254	Erfurt		Almanya
+2931414	Eislingen	48.69515	9.70676	20585	Eislingen/Fils	Baden-Württemberg	Almanya
+2934246	Düsseldorf	51.22172	6.77616	573057	Düsseldorf	Kuzey Ren-Vestfalya+NRW	Almanya
+2934691	Duisburg	51.43247	6.76516	504358	Duisburg	Kuzey Ren-Vestfalya+NRW	Almanya
+2935022	Dresden	51.05089	13.73832	486854	Dresden		Almanya
+2935517	Dortmund	51.51494	7.466	588462	Dortmund	Kuzey Ren-Vestfalya+NRW	Almanya
+2937959	Dessau	51.83864	12.24555	77315	Dessau	Saksonya-Anhalt+Sassen-Anholt	Almanya
+2940132	Chemnitz	50.8357	12.92922	247220	Chemnitz		Almanya
+2940383	Calw	48.71419	8.74031	23740	Calw	Baden-Württemberg	Almanya
+2944388	Bremen	53.07516	8.80777	546501	Bremen	Bremen	Almanya
+2945024	Braunschweig	52.26594	10.52673	244715	Braunschweig	Aşağı Saksonya+Neddersassen+Läichsaksen+Donja Saska	Almanya
+2945756	Bottrop	51.52392	6.9285	119909	Bottrop	Kuzey Ren-Vestfalya+NRW	Almanya
+2947416	Bochum	51.48165	7.21648	385729	Bochum	Kuzey Ren-Vestfalya+NRW	Almanya
+2949186	Bielefeld	52.03333	8.53333	331906	Bielefeld+http://de.wikipedia.org/wiki/Bielefeld	Kuzey Ren-Vestfalya+NRW	Almanya
+2949423	Biberach an der Riß	48.09345	9.79053	32333	Biberach	Baden-Württemberg	Almanya
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Almanya
+2950978	Bensheim	49.68369	8.61839	39439	Bensheim	Hessen	Almanya
+2953459	Bad Frankenhausen	51.35609	11.09977	8824	Bad Frankenhausen/Kyffhäuser		Almanya
+2954172	Augsburg	48.37154	10.89851	259196	Augsburg	Bavyera+Bayern	Almanya
+2955394	Artern	51.36431	11.29167	6270	Artern/Unstrut		Almanya
+3247449	Aachen	50.77664	6.08342	265208	Aachen	Kuzey Ren-Vestfalya+NRW	Almanya
+220782	Tadjoura	11.78528	42.88444	22193	Tadjourah	Tadjourah Bölgesi	Cibuti
+221527	Obock	11.96306	43.29056	17776	Obuk	Obuk Bölgesi	Cibuti
+223817	Djibouti	11.58901	43.14503	623891	Cibuti	Djibouti	Cibuti
+2615876	Odense	55.39594	10.38831	145931	Odense		Danimarka
+2618425	Copenhagen	55.67594	12.56553	1153615	Kopenhag		Danimarka
+2624341	Ballerup	55.73165	12.36328	40000	Ballerup Belediyesi		Danimarka
+2624652	Århus	56.15674	10.21076	237551	Århus		Danimarka
+2475687	Tlemcen	34.87833	-1.315	132341	Tilimsan	Tlemcen	Cezayir
+2481007	Sidi Bel Abbès	35.18994	-0.63085	191769	Sidi Belabbas	Sidi Bel Abbès	Cezayir
+2481700	Sétif	36.19112	5.41373	288461	Setif	Sétif	Cezayir
+2490098	Mascara	35.39664	0.14027	150000	Muaskar	Mascara	Cezayir
+2496049	Ghardaïa	32.49094	3.67347	93423	Gardaya	Ghardaïa	Cezayir
+2503769	Blida	36.47004	2.8277	182447	Buleyde	Blida	Cezayir
+2507480	Algiers	36.73225	3.08746	1977663	Cezayir	Alger	Cezayir
+3652462	Quito	-0.22985	-78.52495	1399814	Quito	Pichincha	Ekvador
+588335	Tartu	58.38062	26.72509	101092	Tartu	Tartu ili	Estonya
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harju ili+Harjumaa	Estonya
+589663	Paldiski	59.35667	24.05306	4202	Paldiski	Harju ili+Harjumaa	Estonya
+347796	Sohag	26.55695	31.69478	209419	Sevhac	Sūhāj	Mısır
+350203	Rosetta	31.39951	30.41718	64481	Reşid	Al Buḩayrah	Mısır
+358048	Damietta	31.41648	31.81332	76839	Dimyat		Mısır
+359792	Aswan	24.09082	32.89942	241261	Asvan		Mısır
+359796	Suez	29.97371	32.52627	488125	Süveyş	As Suways	Mısır
+360502	Luxor	25.69893	32.6421	422407	El-Uksur		Mısır
+360630	Cairo	30.06263	31.24967	7734614	Kahire		Mısır
+360761	Al Manşūrah	31.03637	31.38069	420195	Mansura		Mısır
+361055	Ismailia	30.60427	32.27225	284813	İsmailiye	Al Ismā‘īlīyah	Mısır
+361058	Alexandria	31.20176	29.91582	3811516	İskenderiye		Mısır
+361291	Hurghada	27.25738	33.81291	95622	Hurgada		Mısır
+361546	Arish	31.13159	33.79844	128855	El Ariş	Shamāl Sīnāʼ	Mısır
+330546	Massawa	15.60811	39.47455	23100	Massava	Semēnawī Kʼeyih Bahrī	Eritre
+343300	Asmara	15.33805	38.93184	563930	Asmara	Maʼākel	Eritre
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo	Kastilya-La Mancha	İspanya+España
+2509581	Villaluenga del Rosario	36.69644	-5.38601	495	Villaluenga del Rosario	Endülüs	İspanya+España
+2509600	Vilafranca de Bonany	39.56894	3.08815	2521	Vilafranca de Bonany	Islles Baleares+Islas Baleares	İspanya+España
+2509783	Vejer de la Frontera	36.24456	-5.96953	12973	Vejer de la Frontera	Endülüs	İspanya+España
+2509929	Valldemossa	39.71042	2.6223	1910	Valldemossa	Islles Baleares+Islas Baleares	İspanya+España
+2509954	Valencia	39.46975	-0.37739	814208	Valensiya	Valencia	İspanya+España
+2510112	Ubrique	36.67777	-5.446	16979	Ubrique	Endülüs	İspanya+España
+2510116	Úbeda	38.01328	-3.3705	35649	Úbeda	Endülüs	İspanya+España
+2510186	Trebujena	36.87075	-6.17586	6806	Trebujena	Endülüs	İspanya+España
+2510599	Tarifa	36.01393	-5.60695	17793	Tarifa	Endülüs	İspanya+España
+2510799	Son Servera	39.62073	3.36008	12215	Son Servera	Islles Baleares+Islas Baleares	İspanya+España
+2510821	Sóller	39.76623	2.71521	13942	Sóller	Islles Baleares+Islas Baleares	İspanya+España
+2510911	Sevilla	37.38283	-5.97317	703206	Sevilla	Endülüs	İspanya+España
+2510919	Ses Salines	39.33831	3.05274	4290	ses Salines	Islles Baleares+Islas Baleares	İspanya+España
+2511106	Santanyí	39.35461	3.12907	12664	Santanyí	Islles Baleares+Islas Baleares	İspanya+España
+2511143	Santa Margalida	39.70143	3.10215	11537	Santa Margalida	Islles Baleares+Islas Baleares	İspanya+España
+2511162	Santa Eulària des Riu	38.98457	1.53409	31314	Santa Eulària des Riu	Islles Baleares+Islas Baleares	İspanya+España
+2511166	Santa Eugènia	39.62361	2.83864	1420	Santa Eugènia	Islles Baleares+Islas Baleares	İspanya+España
+2511230	San Sebastián de la Gomera	28.09163	-17.11331	8964	San Sebastián de La Gomera	Kanarya Adaları	İspanya+España
+2511306	Sanlúcar de Barrameda	36.77808	-6.3515	65805	Sanlúcar de Barrameda	Endülüs	İspanya+España
+2511347	Sant Joan	39.59621	3.0392	0	Sant Joan	Islles Baleares+Islas Baleares	İspanya+España
+2511388	San Fernando	36.4759	-6.19817	96366	San Fernando	Endülüs	İspanya+España
+2511420	Sencelles	39.64598	2.89769	2656	Sencelles	Islles Baleares+Islas Baleares	İspanya+España
+2511503	Salobreña	36.74277	-3.58717	12747	Salobreña	Endülüs	İspanya+España
+2511649	Rute	37.3269	-4.36827	10559	Rute	Endülüs	İspanya+España
+2511700	Rota	36.62545	-6.3622	29179	Rota	Endülüs	İspanya+España
+2512160	Puigpunyent	39.62514	2.52759	1513	Puigpunyent	Islles Baleares+Islas Baleares	İspanya+España
+2512164	Puerto Serrano	36.92209	-5.54304	6807	Puerto Serrano	Endülüs	İspanya+España
+2512169	Puerto Real	36.52819	-6.19011	40183	Puerto Real	Endülüs	İspanya+España
+2512294	Prado del Rey	36.78756	-5.55589	5851	Prado del Rey	Endülüs	İspanya+España
+2512432	Pollença	39.87678	3.01626	17260	Pollença	Islles Baleares+Islas Baleares	İspanya+España
+2512950	Palos de la Frontera	37.23457	-6.89471	7956	Palos de la Frontera	Endülüs	İspanya+España
+2512989	Palma	39.56939	2.65024	401270	Palma de Mallorca	Islles Baleares+Islas Baleares	İspanya+España
+2513073	Órjiva	36.90259	-3.42379	5217	Órgiva	Endülüs	İspanya+España
+2513120	Olvera	36.93418	-5.26678	8515	Olvera	Endülüs	İspanya+España
+2513416	Murcia	37.98704	-1.13004	436870	Murcia	Murcia	İspanya+España
+2513477	Motril	36.75066	-3.5179	60279	Motril	Endülüs	İspanya+España
+2513509	Morón de la Frontera	37.12084	-5.45403	28455	Morón de la Frontera	Endülüs	İspanya+España
+2513590	Montuïri	39.56742	2.98189	2594	Montuïri	Islles Baleares+Islas Baleares	İspanya+España
+2513601	Montilla	37.58627	-4.63805	23840	Montilla	Endülüs	İspanya+España
+2513791	Moguer	37.27559	-6.83851	19569	Moguer	Endülüs	İspanya+España
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	İspanya+España
+2513961	Medina Sidonia	36.45695	-5.92717	11683	Medina-Sidonia	Endülüs	İspanya+España
+2513983	Mazarrón	37.5992	-1.31493	35221	Mazarrón	Murcia	İspanya+España
+2514097	Marratxí	39.62142	2.7253	33348	Marratxí	Islles Baleares+Islas Baleares	İspanya+España
+2514134	Maria de la Salut	39.66306	3.073	2118	Maria de la Salut	Islles Baleares+Islas Baleares	İspanya+España
+2514158	Marchena	37.329	-5.41681	19768	Marchena	Endülüs	İspanya+España
+2514216	Manacor	39.56964	3.20955	40548	Manacor	Islles Baleares+Islas Baleares	İspanya+España
+2514256	Málaga	36.72016	-4.42034	568305	Malaga	Endülüs	İspanya+España
+2514301	Maó	39.88853	4.26583	29125	Maó	Islles Baleares+Islas Baleares	İspanya+España
+2514984	Llucmajor	39.49093	2.89108	36078	Llucmajor	Islles Baleares+Islas Baleares	İspanya+España
+2514987	Llubí	39.69933	3.00681	2030	Llubí	Islles Baleares+Islas Baleares	İspanya+España
+2514988	Lloseta	39.71849	2.8669	5295	Lloseta	Islles Baleares+Islas Baleares	İspanya+España
+2515072	Lepe	37.25482	-7.20433	25886	Lepe	Endülüs	İspanya+España
+2515096	Lebrija	36.92077	-6.07529	26434	Lebrija	Endülüs	İspanya+España
+2515158	Laujar de Andarax	36.99516	-2.89033	1811	Láujar de Andarax	Endülüs	İspanya+España
+2515624	sa Pobla	39.7692	3.02394	12766	sa Pobla	Islles Baleares+Islas Baleares	İspanya+España
+2515812	La Línea de la Concepción	36.16809	-5.34777	64595	La Línea de la Concepción	Endülüs	İspanya+España
+2516315	Jimena de la Frontera	36.43517	-5.45387	10431	Jimena de la Frontera	Endülüs	İspanya+España
+2516326	Jerez de la Frontera	36.68645	-6.13606	207532	Jerez de la Frontera	Endülüs	İspanya+España
+2516395	Jaén	37.76922	-3.79028	116557	Jaén	Endülüs	İspanya+España
+2516401	Jabugo	37.91622	-6.72968	0	Jabugo	Endülüs	İspanya+España
+2516499	Huétor-Tájar	37.19834	-4.04692	9105	Huétor Tájar	Endülüs	İspanya+España
+2516548	Huelva	37.26638	-6.94004	148806	Huelva	Endülüs	İspanya+España
+2517049	Grazalema	36.76018	-5.36839	2160	Grazalema	Endülüs	İspanya+España
+2517117	Granada	37.18817	-3.60667	234325	Granada+Gırnata	Endülüs	İspanya+España
+2517236	Gibraleón	37.37628	-6.96895	12258	Gibraleón	Endülüs	İspanya+España
+2517750	Felanitx	39.4696	3.14831	18270	Felanitx	Islles Baleares+Islas Baleares	İspanya+España
+2517880	Esporles	39.66794	2.57867	4457	Esporles	Islles Baleares+Islas Baleares	İspanya+España
+2518207	El Puerto de Santa María	36.59389	-6.23298	87696	El Puerto de Santa María	Endülüs	İspanya+España
+2518770	Écija	37.5422	-5.0826	40400	Écija	Endülüs	İspanya+España
+2518794	Dos Hermanas	37.28287	-5.92088	122943	Dos Hermanas	Endülüs	İspanya+España
+2518859	Deià	39.74806	2.64823	656	Deià	Islles Baleares+Islas Baleares	İspanya+España
+2519233	Coria del Río	37.28766	-6.0541	28100	Coria del Río	Endülüs	İspanya+España
+2519240	Córdoba	37.89155	-4.77275	328428	Córdoba	Endülüs	İspanya+España
+2519283	Consell	39.66861	2.81267	2877	Consell	Islles Baleares+Islas Baleares	İspanya+España
+2519289	Conil de la Frontera	36.27719	-6.0885	20984	Conil de la Frontera	Endülüs	İspanya+España
+2519477	Chipiona	36.73663	-6.43703	18583	Chipiona	Endülüs	İspanya+España
+2519513	Chiclana de la Frontera	36.41976	-6.14367	77293	Chiclana de la Frontera	Endülüs	İspanya+España
+2519763	Castellar de la Frontera	36.31736	-5.45407	2932	Castellar de la Frontera	Endülüs	İspanya+España
+2520200	Capdepera	39.70237	3.43532	11911	Capdepera	Islles Baleares+Islas Baleares	İspanya+España
+2520403	Campos	39.43099	3.01935	9765	Campos	Islles Baleares+Islas Baleares	İspanya+España
+2520453	Campanet	39.7747	2.96506	2515	Campanet	Islles Baleares+Islas Baleares	İspanya+España
+2520493	Calvià	39.5657	2.50621	51774	Calvià	Islles Baleares+Islas Baleares	İspanya+España
+2520600	Cadiz	36.52672	-6.2891	126766	Cádiz	Endülüs	İspanya+España
+2520724	Bunyola	39.69634	2.69955	5475	Bunyola	Islles Baleares+Islas Baleares	İspanya+España
+2520943	Binissalem	39.68744	2.84396	6326	Binissalem	Islles Baleares+Islas Baleares	İspanya+España
+2521124	Benaocaz	36.70069	-5.42222	728	Benaocaz	Endülüs	İspanya+España
+2521335	Barbate	36.19237	-5.92186	22912	Barbate	Endülüs	İspanya+España
+2521361	Banyalbufar	39.68734	2.51409	568	Banyalbufar	Islles Baleares+Islas Baleares	İspanya+España
+2521413	Baeza	37.99384	-3.47103	16253	Baeza	Endülüs	İspanya+España
+2521456	Ayamonte	37.21329	-7.40807	20334	Ayamonte	Endülüs	İspanya+España
+2521534	Artà	39.69315	3.34979	6649	Artà	Islles Baleares+Islas Baleares	İspanya+España
+2521606	Ariany	39.65048	3.11055	750	Ariany	Islles Baleares+Islas Baleares	İspanya+España
+2521665	Arcos de la Frontera	36.75075	-5.81056	31210	Arcos de la Frontera	Endülüs	İspanya+España
+2521741	Andratx	39.57553	2.42017	11685	Andratx	Islles Baleares+Islas Baleares	İspanya+España
+2521804	Altea	38.59885	-0.05139	23780	Altea	Valencia	İspanya+España
+2521847	Almuñécar	36.73393	-3.69072	27696	Almuñécar	Endülüs	İspanya+España
+2521857	Almonte	37.2647	-6.51667	21782	Almonte	Endülüs	İspanya+España
+2521886	Almería	36.83814	-2.45974	188810	Almería	Endülüs	İspanya+España
+2521937	Almadén de la Plata	37.87221	-6.08085	0	Almadén de la Plata	Endülüs	İspanya+España
+2522013	Algeciras	36.13326	-5.45051	116209	Algeciras	Endülüs	İspanya+España
+2522036	Algaida	39.55899	2.89541	4258	Algaida	Islles Baleares+Islas Baleares	İspanya+España
+2522091	Alcúdia	39.85316	3.12138	19071	Alcúdia	Islles Baleares+Islas Baleares	İspanya+España
+2522161	Alcalá del Valle	36.90448	-5.1724	5323	Alcalá del Valle	Endülüs	İspanya+España
+2522162	Alcalá de los Gazules	36.46212	-5.72382	5639	Alcalá de los Gazules	Endülüs	İspanya+España
+2522165	Alcalá de Guadaira	37.33791	-5.83951	70155	Alcalá de Guadaira	Endülüs	İspanya+España
+2522261	Alaró	39.70441	2.79181	4707	Alaró	Islles Baleares+Islas Baleares	İspanya+España
+2565056	Punta Umbría	37.18213	-6.96605	14708	Punta Umbría	Endülüs	İspanya+España
+3104324	Zaragoza	41.65606	-0.87734	674317	Zaragoza+ZGZ	Aragón	İspanya+España
+3104345	Zambrana	42.66102	-2.87909	367	Zambrana	Euskadi	İspanya+España
+3104499	Gasteiz / Vitoria	42.84998	-2.67268	235661	Vitoria-Gasteiz	Euskadi	İspanya+España
+3105976	Vigo	42.23282	-8.72264	297332	Vigo	Galiçya+Galicia	İspanya+España
+3107546	Trazo	43.01667	-8.53333	3592	Trazo	Galiçya+Galicia	İspanya+España
+3107775	Torrelavega	43.34943	-4.04785	55297	Torrelavega	Kantabria+Cantabria	İspanya+España
+3108286	Terrassa	41.56667	2.01667	210941	Terrassa	Catalunya	İspanya+España
+3109369	Sarria	42.78148	-7.41431	13508	Sarria	Galiçya+Galicia	İspanya+España
+3109450	San Vicente de la Barquera	43.38509	-4.39934	4475	San Vicente de la Barquera	Kantabria+Cantabria	İspanya+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galiçya+Galicia	İspanya+España
+3110955	Samaniego	42.56854	-2.67974	321	Samaniego	Euskadi	İspanya+España
+3110962	Sama	43.29568	-5.68416	45565	Langreo	Asturias	İspanya+España
+3111855	Ribadesella	43.46145	-5.05955	6245	Ribadesella	Asturias	İspanya+España
+3112154	Redondela	42.28337	-8.6096	30001	Redondela	Galiçya+Galicia	İspanya+España
+3113272	Pola de Allande	43.27307	-6.62152	2223	Allande	Asturias	İspanya+España
+3114643	Padrón	42.73875	-8.66057	9039	Padrón	Galiçya+Galicia	İspanya+España
+3114711	Oviedo	43.36029	-5.84476	224005	Oviedo	Asturias	İspanya+España
+3115739	Narón	43.50175	-8.19082	37712	Narón	Galiçya+Galicia	İspanya+España
+3115943	Mugardos	43.4604	-8.25507	5514	Mugardos	Galiçya+Galicia	İspanya+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	İspanya+España
+3118228	Laudio / Llodio	43.14322	-2.96204	18314	Llodio	Euskadi	İspanya+España
+3118304	Llanes	43.41982	-4.75485	14013	Llanes	Asturias	İspanya+España
+3118475	Leza	42.56552	-2.63324	229	Leza	Euskadi	İspanya+España
+3119658	Lagrán	42.62625	-2.58385	197	Lagrán	Euskadi	İspanya+España
+3120412	Illas	43.49716	-5.97499	1014	Illas	Asturias	İspanya+España
+3121424	Gijón	43.53573	-5.66152	277554	Gijón+Xixón	Asturias	İspanya+España
+3124967	Ciutadella	40.00112	3.84144	29160	Ciutadella	Islles Baleares+Islas Baleares	İspanya+España
+3125526	Cee	42.95466	-9.188	7381	Cee	Galiçya+Galicia	İspanya+España
+3125602	Catoira	42.66748	-8.72323	3519	Catoira	Galiçya+Galicia	İspanya+España
+3125621	Castro-Urdiales	43.38285	-3.22043	31670	Castro-Urdiales	Kantabria+Cantabria	İspanya+España
+3126369	Carballo	43.213	-8.69104	30990	Carballo	Galiçya+Galicia	İspanya+España
+3126571	Cangas de Onís	43.3514	-5.12916	6623	Cangas de Onís	Asturias	İspanya+España
+3128071	Betanzos	43.28042	-8.21467	13680	Betanzos	Galiçya+Galicia	İspanya+España
+3128247	Berantevilla	42.68254	-2.85832	454	Berantevilla	Euskadi	İspanya+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barselona	Catalunya	İspanya+España
+3129111	Ayerbe	42.27267	-0.68844	1096	Ayerbe	Aragón	İspanya+España
+3129135	Avilés	43.55473	-5.92483	84242	Avilés	Asturias	İspanya+España
+3129492	Armiñón	42.72313	-2.87172	157	Armiñón	Euskadi	İspanya+España
+3129864	Aranga	43.23469	-8.01705	2246	Aranga	Galiçya+Galicia	İspanya+España
+3130124	Amurrio	43.05	-3	10089	Amurrio	Euskadi	İspanya+España
+3130354	Allariz	42.19044	-7.80175	5392	Allariz	Galiçya+Galicia	İspanya+España
+3131093	Abegondo	43.21667	-8.28333	5711	Abegondo	Galiçya+Galicia	İspanya+España
+3131136	Abadín	43.36667	-7.48333	3193	Abadín	Galiçya+Galicia	İspanya+España
+344420	Axum	14.12109	38.72337	41249	Aksum		Etiyopya
+344979	Addis Ababa	9.02497	38.74689	2757729	Addis Ababa	Ādīs Ābeba+Addis Ababa Region	Etiyopya
+633679	Turku	60.45148	22.26869	175945	Turku		Finlandiya
+635336	Sysmä	61.5	25.68333	4570	Sysmä		Finlandiya
+637835	Sammatti	60.31991	23.82085	1171	Sammatti		Finlandiya
+642118	Pernå	60.44869	26.03187	3938	Pernå		Finlandiya
+643492	Oulu	65.01236	25.46816	128618	Oulu		Finlandiya
+649360	Lahti	60.98267	25.66151	98826	Lahti		Finlandiya
+655312	Juuka	63.23333	29.25	6035	Juuka		Finlandiya
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Finlandiya
+659101	Hanko	59.83333	22.95	9962	Hanko		Finlandiya
+660561	Porvoo	60.39233	25.66507	47192	Porvoo		Finlandiya
+2081986	Palikir - National Government Center	6.92477	158.16109	0	Palikir		Mikronezya Federal Devletleri+Mikronezya Federal Eyaletleri
+2619693	Hoyvík	62.03407	-6.78127	2777	Hoyvík		Faroe Adaları
+2970606	Vatan	47.07447	1.8101	1970	Vatan		Fransa+France
+2973783	Strasbourg	48.58392	7.74553	274845	Strazburg+67000	ACAL	Fransa+France
+2974678	Sèvres	48.82292	2.21757	23724	Sevr+92310		Fransa+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Fransa+France
+2990969	Nantes	47.21725	-1.55336	277269	Nantes+44000+http://www.nantes.fr/		Fransa+France
+2994160	Metz	49.11911	6.17269	123914	Metz+57000	ACAL	Fransa+France
+2995469	Marseille	43.29695	5.38107	794811	Marsilya+13001	Provence-Alpes-Côte d'Azur	Fransa+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Fransa+France
+3003603	Le Mans	48	0.2	144515	Le Mans+72000		Fransa+France
+3018679	Ferney-Voltaire	46.25858	6.11063	7742	Ferney Voltaire+01210		Fransa+France
+3035009	Barbizon	48.44346	2.60313	1629	Barbizon		Fransa+France
+3038334	Ajaccio	41.91886	8.73812	54364	Ajaccio+20000		Fransa+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Aix-en-Provence+13080	Provence-Alpes-Côte d'Azur	Fransa+France
+2633352	York	53.95763	-1.08271	153717	York+Jórvík	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2633563	Worcester	52.18935	-2.22001	101659	Worcester	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2633691	Wolverhampton	52.58547	-2.12296	252791	Wolverhampton	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2633858	Winchester	51.06513	-1.3187	46074	Winchester	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2634910	Wakefield	53.68331	-1.49768	78978	Wakefield	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2635412	Truro	50.26526	-5.05436	23041	Truro	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2636531	Sunderland	54.90465	-1.38222	335415	Sunderland	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2636841	Stoke-on-Trent	53.00415	-2.18538	372775	Stoke-on-Trent	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2637487	Southampton	50.90395	-1.40428	246201	Southampton	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2638077	Sheffield	53.38297	-1.4659	685368	Sheffield	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2638664	Salisbury	51.06931	-1.79569	44748	Salisbury	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2638671	Salford	53.48771	-2.29042	72750	Salford	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2638867	St Albans	51.75	-0.33333	84561	St Albans	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2639912	Preston	53.76282	-2.70452	313332	Preston	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2639996	Portsmouth	50.79899	-1.09125	194150	Portsmouth	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2640194	Plymouth	50.37153	-4.14305	260203	Plymouth	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2640354	Peterborough	52.57364	-0.24777	163379	Peterborough	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2640729	Oxford	51.75222	-1.25596	171380	Oxford	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2641170	Nottingham	52.9536	-1.15047	729977	Nottingham	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2641181	Norwich	52.62783	1.29834	213166	Norwich	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2641673	Newcastle upon Tyne	54.97328	-1.61396	192382	Newcastle upon Tyne	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2641674	Newcastle under Lyme	53	-2.23333	75794	Newcastle-under-Lyme	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchester	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2643741	City of London	51.51279	-0.09184	8072	Londra Şehri	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londra	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2644120	Llandudno	53.32498	-3.83148	15371	Llundadno	Galles	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Liverpool	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2644487	Lincoln	53.22683	-0.53792	114879	Lincoln	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2644531	Lichfield	52.68154	-1.82549	32877	Lichfield	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2644668	Leicester	52.6386	-1.13169	508916	Leicester	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2644688	Leeds	53.79648	-1.54785	455123	Leeds	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2645425	Kingston upon Hull	53.7446	-0.33525	314018	Kingston upon Hull	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2647074	Hereford	52.05684	-2.71482	60415	Hereford	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2648404	Gloucester	51.86568	-2.2431	150053	Gloucester	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2649808	Exeter	50.7236	-3.52751	117763	Exeter	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2650023	Ely	52.39964	0.26196	19090	Ely	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Edinburgh	苏格兰	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2650628	Durham	54.77676	-1.57566	47785	Durham	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2651347	Derby	52.92277	-1.47663	270468	Derby	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2652221	Coventry	52.40656	-1.51217	359262	Coventry	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2653192	Chichester	50.83673	-0.78003	31654	Chichester	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2653228	Chester	53.1905	-2.89189	90524	Chester	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2653775	Carlisle	54.8951	-2.9382	78470	Carlisle	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2653877	Canterbury	51.27904	1.07992	55240	Canterbury	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2653941	Cambridge	52.2	0.11667	158434	Cambridge	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2654675	Bristol	51.45523	-2.59665	617280	Bristol	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2654993	Bradford	53.79391	-1.75206	299310	Bradford	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2655603	Birmingham	52.48142	-1.89983	984333	Birmingham	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Belfast		Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2656173	Bath	51.3751	-2.36172	94782	Bath	İngiltere	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Aberdeen	苏格兰	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Orkney Adaları	苏格兰	Birleşik Krallık+İngiltere+http://en.wikipedia.org/wiki/United_Kingdom
+610824	Zugdidi	42.5088	41.87088	73006	Zugdidi		Gürcistan
+611694	Telavi	41.91978	45.47315	21800	Telavi	Kaheti	Gürcistan
+611717	Tbilisi	41.69411	44.83368	1049498	Tiflis	T'bilisi	Gürcistan
+611847	Sokhumi	43.00697	40.9893	81546	Sohumi+Sohum	Abhazya	Gürcistan
+611902	Sighnaghi	41.62046	45.92198	1923	Siğnaği	Kaheti	Gürcistan
+612287	Rust’avi	41.54949	44.99323	50000	Rustavi		Gürcistan
+612890	Mtskheta	41.84514	44.71875	7423	Mtsheta	Mtsheta-Mtianeti	Gürcistan
+613607	Kutaisi	42.26791	42.69459	178338	Kutaisi+Kutayıs	İmereti	Gürcistan
+614455	Gori	41.98422	44.11578	46676	Gori	Şida Kartli	Gürcistan
+614622	Gagra	43.27858	40.27124	8266	Gagra	Abhazya	Gürcistan
+615403	Borjomi	41.85272	43.41284	13825	Borcomi	Samtshe-Cavaheti	Gürcistan
+615419	Bolnisi	41.44794	44.53838	13800	Bolnisi		Gürcistan
+615532	Batumi	41.64228	41.63392	121806	Batum	Ajaria	Gürcistan
+615860	Akhaltsikhe	41.63901	42.98262	17298	Ahıska	Samtshe-Cavaheti	Gürcistan
+2306104	Accra	5.55602	-0.1969	1963264	Accra+Akra	Greater Accra	Gana
+2411585	Gibraltar	36.14474	-5.35257	26544	Cebelitarık		Cebelitarık
+3421319	Nuuk	64.18347	-51.72157	14798	Nuuk		Grönland
+2413876	Banjul	13.45274	-16.57803	34589	Banjul	Banjul	Gambia+Gambiya
+251833	Volos	39.36103	22.94248	86048	Volos		Yunanistan+Griekanmua
+252664	Tríkala	39.55493	21.76837	61653	Tırhala		Yunanistan+Griekanmua
+254352	Rethymno	35.36555	24.48232	32468	Resmo		Yunanistan+Griekanmua
+254698	Préveza	38.95617	20.7505	17283	Preveze		Yunanistan+Griekanmua
+255274	Piraeus	37.94745	23.63708	163688	Pire		Yunanistan+Griekanmua
+255683	Pátra	38.24444	21.73444	168034	Patras		Yunanistan+Griekanmua
+255736	Párga	39.28572	20.40044	2379	Parga+پارغه		Yunanistan+Griekanmua
+256637	Náfplio	37.56863	22.80691	14582	Mora Yenişehri		Yunanistan+Griekanmua
+256639	Náfpaktos	38.39167	21.8275	13415	Inebahtı		Yunanistan+Griekanmua
+256866	Mytilene	39.10772	26.55529	28322	Midilli		Yunanistan+Griekanmua
+258576	Lárisa	39.63689	22.41761	144651	Yenişehir		Yunanistan+Griekanmua
+258620	Lamía	38.9	22.43333	52006	Izdin		Yunanistan+Griekanmua
+259289	Kórinthos	37.94007	22.9513	30176	Korint		Yunanistan+Griekanmua
+259973	Chios	38.36778	26.13583	23953	Sakız		Yunanistan+Griekanmua
+260114	Chaniá	35.51124	24.02921	53910	Hanya		Yunanistan+Griekanmua
+260989	Kardítsa	39.36485	21.92191	32789	Kardiça		Yunanistan+Griekanmua
+261745	Irákleion	35.32787	25.14341	137154	Kandiye		Yunanistan+Griekanmua
+261779	Ioánnina	39.66486	20.85189	65574	Yanya		Yunanistan+Griekanmua
+261814	Ierápetra	35.01186	25.74234	12355	Yerapetra		Yunanistan+Griekanmua
+262698	Émponas	36.22683	27.85645	1061	Empona		Yunanistan+Griekanmua
+264371	Athens	37.97945	23.71622	664046	Atina		Yunanistan+Griekanmua
+264559	Árta	39.16014	20.98561	21895	Arta		Yunanistan+Griekanmua
+734077	Thessaloníki	40.64361	22.93086	354290	Selânik+Selanik		Yunanistan+Griekanmua
+734187	Souflí	41.19194	26.29944	4149	Sofulu		Yunanistan+Griekanmua
+734330	Sérres	41.08499	23.54757	58287	Serez		Yunanistan+Griekanmua
+734336	Sélero	41.13382	24.99408	2059	Gökçeler		Yunanistan+Griekanmua
+734426	Ptolemaḯda	40.51472	21.67861	30045	Kayılar		Yunanistan+Griekanmua
+735563	Kozáni	40.30069	21.78896	36481	Kozani		Yunanistan+Griekanmua
+735640	Komotiní	41.11917	25.40535	45631	Gümülcine		Yunanistan+Griekanmua
+735861	Kavála	40.93959	24.40687	54027	Kavala		Yunanistan+Griekanmua
+735927	Kastoria	40.52165	21.26341	13387	Kesriye		Yunanistan+Griekanmua
+736083	Kalamariá	40.5825	22.95028	91617	Kalamarya		Yunanistan+Griekanmua
+736108	Irákleia	41.18217	23.28243	3786	Barakli Cuma		Yunanistan+Griekanmua
+736229	Flórina	40.78197	21.40981	17686	Florina		Yunanistan+Griekanmua
+736354	Echínos	41.27558	24.97237	2162	Şahin Köyü		Yunanistan+Griekanmua
+736364	Dráma	41.15283	24.1473	44823	Drama		Yunanistan+Griekanmua
+736687	Asvestochóri	40.64125	23.02528	6404	Kireç Kjoj		Yunanistan+Griekanmua
+736727	Arrianá	41.08131	25.69494	1158	Kozlukebir		Yunanistan+Griekanmua
+736928	Alexandroupoli	40.84995	25.87644	52979	Dedeağaç		Yunanistan+Griekanmua
+1819729	Hong Kong	22.27832	114.17469	7012738	Hong Kong		Hong Kong+http://en.wikipedia.org/wiki/Hong_Kong
+3186886	Zagreb	45.81444	15.97798	698966	Zagreb+Zagrep	Grad Zagreb	Hırvatistan
+3190813	Sisak	45.46611	16.37833	35748	Sisak	Sisačko-Moslavačka	Hırvatistan
+3190941	Šibenik	43.72722	15.90583	37112	Şibenik	Šibensko-Kniniska	Hırvatistan
+3201047	Dubrovnik	42.64807	18.09216	28428	Dubrovnik	Dubrovačko-Neretvanska	Hırvatistan
+721239	Eger	47.90265	20.37329	56647	Eğri		Macaristan
+722439	Békés	46.76667	21.13333	21198	Békés		Macaristan
+3042824	Visegrád	47.78526	18.9709	1713	Vişegrad		Macaristan
+3042929	Veszprém	47.09327	17.91149	62023	Veszprém		Macaristan
+3044469	Szigetvár	46.04865	17.80554	11267	Zigetvar		Macaristan
+3047679	Nagykanizsa	46.45347	16.99104	50823	Kanije	Zala ili	Macaristan
+3047967	Mohács	45.99306	18.68306	18711	Mohaç		Macaristan
+3053163	Esztergom	47.7928	18.74148	28785	Estergon	Komárom-Esztergom ili	Macaristan
+3053454	Dunaszekcső	46.08663	18.75865	2151	Sekçöy		Macaristan
+3054643	Budapest	47.49801	19.03991	1741041	Budapeşte		Macaristan
+1642911	Jakarta	-6.21462	106.84513	8540121	Jakarta+Cakarta	Jakarta Raya	Endonezya+http://en.wikipedia.org/wiki/Indonesia
+2964180	Gaillimh	53.27194	-9.04889	70686	Galway		İrlanda+Ire
+2964574	Dublin	53.33306	-6.24889	1024027	Dublin		İrlanda+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Kudüs		İsrail
+293322	Tiberias	32.79221	35.53124	39790	Tiberya		İsrail
+293397	Tel Aviv	32.08088	34.78057	432892	Tel Aviv		İsrail
+294098	Nazareth	32.69925	35.30483	64800	Nasıra		İsrail
+294760	Hod HaSharon	32.15934	34.8932	43185	Hod HaŞaron	HaMerkaz	İsrail
+294778	Herzliya	32.16627	34.82536	83600	Herzliya		İsrail
+294801	Haifa	32.81841	34.9885	267300	Hayfa	Hayfa Bölgesi	İsrail
+295530	Beersheba	31.25181	34.7913	186600	Beerşeba	HaDarom	İsrail
+295629	Ashdod	31.79213	34.64966	224656	Aşdod	HaDarom	İsrail
+1259297	Pudukkottai	10.38128	78.82141	112118	Pudukottai	TN+Tamil Nādu	Hindistan
+1261481	New Delhi	28.63576	77.22445	317797	Yeni Delhi	DL	Hindistan
+1262321	Mysore	12.29791	76.63925	868313	Maisur	KA+Karnātaka	Hindistan
+1269300	Jamshedpur	22.80278	86.18545	616338	Cemşidpur	JH+Jharkhand	Hindistan
+1269515	Jaipur	26.91962	75.78781	2711758	Jaipur	Racastan+RJ+Rājasthān	Hindistan
+1275004	Kolkata	22.56263	88.36304	4631392	Kalküta	Batı Bengal+WB+West Bengal	Hindistan
+1275120	Bulandshahr	28.40392	77.85773	198612	Bülendşehr	Uttar Pradeş+UP	Hindistan
+1275339	Mumbai	19.07283	72.88261	12691836	Bombay+Mumbai	Maharaştra+MH+Mahārāshtra	Hindistan
+1277333	Bengaluru	12.97194	77.59369	5104047	Bangalore	KA+Karnātaka	Hindistan
+1278710	Amritsar	31.62234	74.87534	1092450	Amritsar	PB	Hindistan
+90150	Tikrīt	34.61581	43.67861	42477	Tıkrit	Şalāḩ ad Dīn	Irak
+94787	Kirkuk	35.46806	44.39222	601433	Kerkük		Irak
+94824	Karbala	32.61603	44.02488	434450	Kerbela	Karbalāʼ	Irak
+95446	Erbil	36.19257	44.01062	932800	Erbil	Arbīl	Irak
+96205	Ḩalabjah	35.17778	45.98611	57333	Halepçe	As Sulaymānīyah	Irak
+98182	Baghdad	33.34058	44.40088	7216000	Bağdat		Irak
+98463	As Sulaymānīyah	35.56496	45.4329	723170	Süleymaniye	As Sulaymānīyah	Irak
+98860	Najaf	32.02594	44.34625	482576	Necef	An Najaf	Irak
+99072	Mosul	36.335	43.11889	1739800	Musul	Nīnawá	Irak
+99131	Al Kūt	32.5128	45.81817	315162	Kut	Wāsiţ	Irak
+99135	Kufa	32.05114	44.44017	110000	Kufe	An Najaf	Irak
+99532	Basrah	30.50852	47.7804	2600000	Basra		Irak
+66093	Yasuj	30.66824	51.58796	96786	Yasuc	Kohgīlūyeh va Būyer Aḩmad	İran
+112931	Tehran	35.69439	51.42151	7153309	Tahran	Tehrān	İran
+113646	Tabriz	38.08	46.2919	1424641	Tebriz		İran
+113659	Tabas	33.59586	56.92437	49993	Tebes	Yazd	İran
+114259	Sirjan	29.45137	55.6809	207645	Sircan		İran
+115019	Shiraz	29.61031	52.53113	1249942	Şiraz		İran
+117392	Saqqez	36.24992	46.2735	151237	Saggız	Kordestān	İran
+117574	Sanandaj	35.31495	46.99883	349176	Senendec	Kordestān	İran
+118063	Sabzevar	36.2126	57.68191	226183	Sebzevar	Khorāsān-e Raẕāvī	İran
+118743	Rasht	37.27611	49.58862	594590	Reşt	Gīlān	İran
+119208	Qom	34.6401	50.8764	900000	Kum	Qom	İran
+121110	Piranshahr	36.701	45.1413	61973	Piranşehr	Āz̄ārbāyjān-e Gharbī	İran
+121801	Orūmīyeh	37.55274	45.07605	577307	Urmiye	Āz̄ārbāyjān-e Gharbī	İran
+124665	Mashhad	36.31559	59.56796	2307177	Meşhed	Khorāsān-e Raẕāvī	İran
+127319	Khorramshahr	30.44079	48.18428	330606	Hürremşehr		İran
+128226	Kermanshah	34.31417	47.065	621100	Kirmanşah	Kermānshāh	İran
+128747	Karaj	35.83266	50.99155	1448075	Kerec		İran
+134613	Ferdows	34.0185	58.17222	0	Firdevs	Khorāsān-e Jonūbī	İran
+137436	Darreh Shahr	33.14447	47.3799	24961	Dereşehr	Īlām	İran
+141349	Bardaskan	35.26218	57.97075	28233	Berdesken	Khorāsān-e Raẕāvī	İran
+141681	Bandar Abbas	27.1865	56.2808	352173	Bender Abbas	Hürmüzgan	İran
+143083	Ardabīl	38.2498	48.2933	410753	Erdebil	Ardabīl	İran
+144616	Ahar	38.4774	47.0699	94348	Eher		İran
+145459	Abadan	30.3392	48.3043	370180	Abadan		İran
+418863	Isfahan	32.65246	51.67462	1547164	İsfahan		İran
+1161724	Chabahar	25.2919	60.643	47287	Çabahar		İran
+8521444	Bandar-e Emam Khomeyni	30.43698	49.10288	0	Bender İmam Humeyni		İran
+3413829	Reykjavík	64.13548	-21.89541	118918	Reykjavik+101		İzlanda
+2522776	Vibo Valentia	38.67618	16.10094	19263	Vibo Valentia	Calabria+Kalabriya	İtalya
+2523083	Siracusa	37.07542	15.28664	97472	Siraküza	Sicilya Özerk Bölgesi	İtalya
+2523630	Reggio Calabria	38.11047	15.66129	169140	Reggio Calabria	Calabria+Kalabriya	İtalya
+2523920	Palermo	38.13205	13.33561	648260	Palermo	Sicilya Özerk Bölgesi	İtalya
+2524907	Cosenza	39.2989	16.25307	63852	Cosenza	Calabria+Kalabriya	İtalya
+2524928	Corleone	37.81338	13.3017	10290	Corleone	Sicilya Özerk Bölgesi	İtalya
+2525059	Catanzaro	38.88247	16.60086	78970	Catanzaro	Calabria+Kalabriya	İtalya
+2525473	Cagliari	39.23054	9.11917	149257	Cagliari		İtalya
+2525693	Aragona	37.39904	13.61974	8779	Aragona	Sicilya Özerk Bölgesi	İtalya
+3164527	Verona	45.4299	10.98444	219103	Verona		İtalya
+3164603	Venice	45.43713	12.33265	51298	Venedik		İtalya
+3165185	Trieste	45.64953	13.77678	187056	Trieste	FVG	İtalya
+3165243	Trento	46.06787	11.12108	80425	Trento		İtalya
+3165261	Treia	43.3085	13.31036	2299	Treia		İtalya
+3165524	Turin	45.07049	7.68682	870456	Torino	Piyemonte+Piemonte	İtalya
+3165926	Taranto	40.46438	17.24707	181082	Taranto		İtalya
+3167777	San Remo	43.81725	7.7772	47043	San Remo	Ligurya	İtalya
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	İtalya
+3169361	Rimini	44.05755	12.56528	118673	Rimini	Emilia-Romagna	İtalya
+3169561	Ravenna	44.41344	12.20121	80868	Ravenna	Emilia-Romagna	İtalya
+3170027	Potenza	40.64175	15.80794	56433	Potenza		İtalya
+3170094	Portoferraio	42.81233	10.31297	8296	Portoferraio	Toskana	İtalya
+3170647	Pisa	43.70853	10.4036	77007	Pisa	Toskana	İtalya
+3171180	Perugia	43.1122	12.38878	120137	Perugia		İtalya
+3172394	Naples	40.85216	14.26811	959470	Napoli		İtalya
+3173331	Modena	44.64783	10.92539	158886	Modena	Emilia-Romagna	İtalya
+3173435	Milan	45.46427	9.18951	1236837	Milano		İtalya
+3173721	Matera	40.66599	16.60463	54891	Matera		İtalya
+3174032	Maranello	44.53101	10.86888	9228	Maranello	Emilia-Romagna	İtalya
+3174051	Mantova	45.16031	10.79784	39260	Mantova ili		İtalya
+3174214	Maiori	40.64848	14.6407	5268	Maiori		İtalya
+3174380	Macerata	43.29789	13.45293	30842	Macerata		İtalya
+3174659	Livorno	43.54427	10.32615	153773	Livorno	Toskana	İtalya
+3174945	Lecco	45.85589	9.39704	46580	Lecco		İtalya
+3176219	Genoa	44.40478	8.94439	580223	Cenova	Ligurya	İtalya
+3176885	Foggia	41.45845	15.55188	137032	Foggia		İtalya
+3176959	Florence	43.77925	11.24626	349296	Floransa	Toskana	İtalya
+3181528	Brindisi	40.63215	17.93607	78548	Brindisi		İtalya
+3181913	Bolzano	46.49067	11.33982	99049	Bozen-Bolzano		İtalya
+3181928	Bologna	44.49381	11.33875	366133	Bolonya	Emilia-Romagna	İtalya
+3182164	Bergamo	45.69601	9.66721	114162	Bergamo		İtalya
+3182997	Aosta	45.73764	7.31722	32295	Aosta	Valle di Aosta	İtalya
+3183089	Ancona	43.5942	13.50337	89994	Ancona		İtalya
+248946	Irbid	32.55556	35.85	307480	İrbid		Ürdün+Al Mamlakah al Urdunīyah al Hāshimīyah
+250441	Amman	31.95522	35.94503	1275857	Amman		Ürdün+Al Mamlakah al Urdunīyah al Hāshimīyah
+250774	Aqaba	29.52667	35.00778	95048	Akabe		Ürdün+Al Mamlakah al Urdunīyah al Hāshimīyah
+1848445	Honmachi	32.50439	130.59952	104341	Yatsuşiro		Japonya
+1850147	Tokyo	35.6895	139.69171	8336599	Tokyo		Japonya
+1852225	Shimonoseki	33.95	130.95	245786	Şimonoseki		Japonya
+1853909	Osaka	34.69374	135.50218	2592413	Osaka		Japonya
+1857910	Kyoto	35.02107	135.75385	1459640	Kyoto		Japonya
+1859171	Kobe	34.6913	135.183	1528478	Kobe	Hyōgo ili	Japonya
+1861416	Ishigaki	24.34478	124.15717	44802	İshigaki		Japonya
+1862415	Hiroshima	34.4	132.45	1143841	Hiroşima		Japonya
+6822137	Misato	35.84373	139.88347	0	Misato, Saitama		Japonya
+184745	Nairobi	-1.28333	36.81667	2750547	Nairobi	Nairobi Area	Kenya
+1222662	Isfana	39.83895	69.5276	16952	İsfana		Kırgızistan
+1527004	Balykchy	42.46017	76.18709	40000	Balıkçı	Ysyk-Köl	Kırgızistan
+1527513	Uzgen	40.76994	73.30068	40360	Özçent		Kırgızistan
+1527534	Osh	40.52828	72.7985	200000	Oş		Kırgızistan
+1528121	Karakol	42.49068	78.39362	70171	Karakol	Ysyk-Köl	Kırgızistan
+1528249	Jalal-Abad	40.93333	73	75700	Celal-Abad		Kırgızistan
+1528675	Bishkek	42.87	74.59	900000	Bişkek	Gorod Bishkek	Kırgızistan
+1821306	Phnom Penh	11.56245	104.91601	1573544	Phnom Penh		Kamboçya+http://en.wikipedia.org/wiki/Cambodia
+921772	Moroni	-11.70216	43.25506	42872	Moroni	Grande Comore	Komorlar+Comoros+Komor+Komoros
+1871859	Pyongyang	39.03385	125.75432	3222000	Pyongyang		Kuzey Kore+Kore Demokratik Halk Cumhuriyeti+http://en.wikipedia.org/wiki/North_Korea
+1835329	Daegu	35.87028	128.59111	2566540	Daegu		Güney Kore+Kore Cumhuriyeti+http://en.wikipedia.org/wiki/South_Korea
+1835848	Seoul	37.566	126.9784	10349312	Seul		Güney Kore+Kore Cumhuriyeti+http://en.wikipedia.org/wiki/South_Korea
+1838524	Busan	35.10278	129.04028	3678555	Pusan+Busan		Güney Kore+Kore Cumhuriyeti+http://en.wikipedia.org/wiki/South_Korea
+1843564	Incheon	37.45646	126.70515	2628000	İncheon+JCN		Güney Kore+Kore Cumhuriyeti+http://en.wikipedia.org/wiki/South_Korea
+1845136	Chuncheon	37.87472	127.73417	209746	Çunçeon		Güney Kore+Kore Cumhuriyeti+http://en.wikipedia.org/wiki/South_Korea
+610529	Atyrau	47.11667	51.88333	180000	Atırav		Kazakistan
+610612	Aktau	43.65	51.16667	147443	Aktav		Kazakistan
+1518542	Taldykorgan	45.01556	78.37389	116558	Taldikorgan		Kazakistan
+1518980	Shymkent	42.3	69.6	414032	Çimkent		Kazakistan
+1519922	Kyzylorda	44.85278	65.50917	300000	Kızılorda		Kazakistan
+1520172	Petropavl	54.86667	69.15	200920	Kızılyar		Kazakistan
+1526273	Astana	51.1801	71.44598	345604	Astana	Astana Qalasy	Kazakistan
+1526384	Almaty	43.25667	76.92861	2000900	Almatı	Almaty Qalasy	Kazakistan
+266045	Zahlé	33.84675	35.90203	78145	Zahle	Béqaa	Lübnan
+266826	Tripoli	34.43352	35.84415	229398	Trablusşam	Liban-Nord	Lübnan
+268064	Sidon	33.55751	35.37148	163554	Sayda	Cenub ili+Liban-Sud	Lübnan
+273203	Jbaïl	34.12111	35.64806	20784	Biblos	Mont-Liban	Lübnan
+276781	Beirut	33.89332	35.50157	1916100	Beyrut		Lübnan
+3042030	Vaduz	47.14151	9.52154	5197	Vaduz		Liechtenstein+Lihtenştayn
+1248991	Colombo	6.93194	79.84778	648034	Kolombo	Western	Sri Lanka
+593116	Vilnius	54.68916	25.2798	542366	Vilnüs		Litvanya+http://en.wikipedia.org/wiki/Lithuania
+593672	Utena	55.49764	25.59918	33240	Utena ili		Litvanya+http://en.wikipedia.org/wiki/Lithuania
+598998	Ignalina	55.34063	26.16049	6421	Ignalina		Litvanya+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Lüksemburg		Lüksemburg
+456172	Riga	56.946	24.10589	742572	Riga	Riga	Letonya
+88319	Benghazi	32.11486	20.06859	650629	Bingazi	Banghāzī	Libya
+89113	Ajdabiya	30.75545	20.22625	134358	Ecdebiye		Libya
+2210247	Tripoli	32.87519	13.18746	1150989	Trablus		Libya
+2212775	Sabhā	27.03766	14.42832	130000	Sebha	Sabhā	Libya
+2214846	Mişrātah	32.37535	15.09254	386120	Misrata	Mişrātah	Libya
+2528910	Tétouan	35.57845	-5.36837	326261	Tetuan		Fas
+2538475	Rabat	34.01325	-6.83255	1655753	Rabat		Fas
+2540483	Oujda-Angad	34.68139	-1.90858	405253	Ucda		Fas
+2542051	Mohammedia	33.68607	-7.38298	187708	Muhammediye		Fas
+2548885	Fès	34.03313	-5.00028	964891	Fes		Fas
+2549263	Essaouira	31.5125	-9.77	70634	Suvayr		Fas
+2553604	Casablanca	33.58831	-7.61138	3144909	Kazablanka		Fas
+618405	Comrat	46.29456	28.6565	22911	Komrat	Găgăuzia	Moldovya Cumhuriyeti+Moldova+Moldovya
+618426	Chisinau	47.00556	28.8575	635994	Kişinev		Moldovya Cumhuriyeti+Moldova+Moldovya
+3193044	Podgorica	42.44111	19.26361	136473	Podgorica		Karadağ
+3197896	Kolašin	42.82229	19.51653	2989	Kolaşin		Karadağ
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarivo		Madagaskar
+785082	Tetovo	42.00973	20.97155	72944	Kalkandelen		Makedonya+ARYM+FYROM
+785482	Shtip	41.74583	22.19583	48279	İştip		Makedonya+ARYM+FYROM
+785842	Skopje	41.99646	21.43141	474889	Üsküp		Makedonya+ARYM+FYROM
+786238	Rostusa	41.61	20.6	9147	Rostuşa	Mavrova ve Rostuşa Belediyesi	Makedonya+ARYM+FYROM
+786735	Prilep	41.34514	21.55504	73814	pirlepe+Pirlepe		Makedonya+ARYM+FYROM
+787487	Ohrid	41.11722	20.80194	54908	Ohri		Makedonya+ARYM+FYROM
+787574	Novo Selo	41.41486	22.88164	11818	Yeniköy		Makedonya+ARYM+FYROM
+788886	Kumanovo	42.13222	21.71444	76275	Kumanova		Makedonya+ARYM+FYROM
+789342	Konče	41.49511	22.38359	3475	Konçe		Makedonya+ARYM+FYROM
+789527	Kičevo	41.51267	20.95886	31123	Kırçova		Makedonya+ARYM+FYROM
+791606	Debar	41.52444	20.52421	18074	Debre		Makedonya+ARYM+FYROM
+792578	Bitola	41.03143	21.33474	86528	Manastır		Makedonya+ARYM+FYROM
+7886881	Centar Župa	41.47849	20.55945	45412	Merkez Jupa		Makedonya+ARYM+FYROM
+2460596	Bamako	12.65	-8	1297281	Bamako	Bamako	Mali
+2028462	Ulan Bator	47.90771	106.88324	844818	Ulan Batur	Ulaanbaatar	Moğolistan
+1821274	Macau	22.20056	113.54611	520400	Makao		Macau+Makao
+2377450	Nouakchott	18.08581	-15.9785	661400	Nuakşot		Moritanya
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Malta
+2563191	Birkirkara	35.89722	14.46111	21676	Birkirkara		Malta
+1282027	Male	4.17521	73.50916	103693	Male		Maldivler
+3530597	Mexico City	19.42847	-99.12766	12294193	Ciudad de Mexico	The Federal District+Distrito Federal	Meksika
+3533462	Acapulco de Juárez	16.86336	-99.8901	652136	Acapulco	GRO	Meksika
+3981609	Tijuana	32.5027	-117.00371	1376457	Tijuana	BCN+BC+Baja California	Meksika
+4013708	Ciudad Juárez	31.72024	-106.46084	1512354	Ciudad Juarez	CHH+CH	Meksika
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Kuala Lumpur	KUL	Malezya
+2332459	Lagos	6.45407	3.39467	9000000	Lagos		Nijerya
+2335204	Kano	12.00012	8.51672	3626068	Kano		Nijerya
+2339354	Ibadan	7.37756	3.90591	3565108	İbadan	Oyo	Nijerya
+3617763	Managua	12.13282	-86.2504	973087	Managua	Managua	Nikaragua
+2743477	Zwolle	52.5125	6.09444	111805	Zwolle	ov+Overijssel	Hollanda
+2747373	The Hague	52.07667	4.29861	474292	Lahey	Güney Hollanda+zh+Zuid-Holland	Hollanda
+2747891	Rotterdam	51.9225	4.47917	598199	Rotterdam	Güney Hollanda+zh+Zuid-Holland	Hollanda
+2753106	Kampen	52.555	5.91111	48980	Kampen	ov+Overijssel	Hollanda
+2755003	Haarlem	52.38084	4.63683	147590	Haarlem	nh+Nord-Holland+Noord-Holland	Hollanda
+2756253	Eindhoven	51.44083	5.47778	209620	Eindhoven	Kuzey Brabant+nb+Noord-Brabant	Hollanda
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Hollanda
+3133895	Tromsø	69.6489	18.95508	52436	Tromso	Troms	Norveç
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norveç
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norveç
+1283240	Kathmandu	27.70169	85.3206	1442271	Katmandu		Nepal
+286282	Sohar	24.34745	56.70937	108274	Sahar		Umman
+287286	Muscat	23.58413	58.40778	797000	Maskat		Umman
+3936456	Lima	-12.04318	-77.02824	7737002	Lima	Lima Province	Peru
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Filipinler+Filipinler Cumhuriyeti
+1166993	Rawalpindi	33.6007	73.0679	1743101	Ravalpindi	Punjab	Pakistan
+1167528	Quetta	30.18414	67.00141	733675	Ketta	Balochistān	Pakistan
+1168197	Peshawar	34.008	71.57849	1218773	Peşaver		Pakistan
+1169825	Multān	30.19679	71.47824	1437230	Multan	Punjab	Pakistan
+1172451	Lahore	31.558	74.35071	6310888	Lahor	Punjab	Pakistan
+1174872	Karachi	24.8608	67.0104	11624219	Karaçi	Sind Eyaleti	Pakistan
+1176615	Islamabad	33.72148	73.04329	601600	İslamabad	Islāmābād	Pakistan
+1176734	Hyderabad	25.39242	68.37366	1386330	Haydarabad	Sind Eyaleti	Pakistan
+1177446	Gwadar	25.12163	62.32541	51901	Gvadar	Balochistān	Pakistan
+1181065	Chitral	35.84623	71.7858	0	Çitral		Pakistan
+1181611	Chaman	30.91769	66.45259	88568	Çaman	Balochistān	Pakistan
+756135	Warsaw	52.22977	21.01178	1702139	Varşova	Mazowieckie	Polonya
+764862	Międzyrzec Podlaski	51.9864	22.78248	17158	Międzyrzec Podlaski	Lubelskie	Polonya
+765876	Lublin	51.25	22.56667	360044	Lublin	Lubelskie	Polonya
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polonya
+3080944	Żagań	51.61759	15.31486	26251	Żagań	Lubuskie	Polonya
+3083271	Toruń	53.01375	18.59814	208717	Toruń	Kujawsko-Pomorskie	Polonya
+3083829	Szczecin	53.42894	14.55302	407811	Szczecin		Polonya
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Polonya
+3083988	Świętochłowice	50.29636	18.91726	55600	Świętochłowice	Śląskie	Polonya
+3093133	Łódź	51.75	19.46667	768755	Łódź	Łódzkie	Polonya
+3094802	Kraków	50.06143	19.93658	755050	Kraków	Małopolskie	Polonya
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polonya
+3099434	Gdańsk	54.35205	18.64637	461865	Gdansk	Pomorskie	Polonya
+3103856	Barcin	52.86607	17.94625	7682	Barçın	Kujawsko-Pomorskie	Polonya
+4568127	San Juan	18.46633	-66.10572	418140	San Juan		Porto Riko
+281133	Gaza	31.50161	34.46672	410000	Gazze	Gazze Şeridi	Filistin Bölgesi
+284315	Bethlehem	31.70487	35.20376	29019	Betlehem		Filistin Bölgesi
+284899	Jericho	31.86667	35.45	19783	Eriha		Filistin Bölgesi
+285066	Hebron	31.52935	35.0938	160470	El Halil		Filistin Bölgesi
+7303419	East Jerusalem	31.78336	35.23388	428304	Doğu Kudüs		Filistin Bölgesi
+2261598	Vila Real de Santo António	37.195	-7.41766	11560	Vila Real de Santo António	Faro	Portekiz
+2262744	Tavira	37.12734	-7.64861	15133	Tavira	Faro	Portekiz
+2262912	Sintra	38.80097	-9.37826	26193	Sintra	Lisboa	Portekiz
+2262926	Silves	37.18921	-8.43822	10917	Silves	Faro	Portekiz
+2262963	Setúbal	38.5244	-8.8882	117110	Setúbal		Portekiz
+2263480	Santarém	39.23333	-8.68333	29385	Santarém	Santarém	Portekiz
+2264923	Peniche	39.3558	-9.38112	15662	Peniche	Leiria	Portekiz
+2265223	Palmela	38.56902	-8.90126	16934	Palmela		Portekiz
+2265467	Odivelas	38.79269	-9.1838	54624	Odivelas	Lisboa	Portekiz
+2265552	Nazaré	39.60289	-9.06836	8993	Nazaré	Leiria	Portekiz
+2266961	Lourinhã	39.24166	-9.31254	9196	Lourinhã	Lisboa	Portekiz
+2266977	Loures	38.83091	-9.16845	66231	Loures	Lisboa	Portekiz
+2267057	Lisbon	38.71667	-9.13333	517802	Lizbon	Lisboa	Portekiz
+2267095	Leiria	39.74362	-8.80705	45112	Leiria	Leiria	Portekiz
+2269594	Cascais	38.69681	-9.42147	36436	Cascais	Lisboa	Portekiz
+2270770	Bombarral	39.26723	-9.15795	5852	Bombarral	Leiria	Portekiz
+2271006	Batalha	39.66025	-8.82475	7910	Batalha	Leiria	Portekiz
+2271071	Barreiro	38.66314	-9.0724	51280	Barreiro		Portekiz
+2271772	Amadora	38.75382	-9.23083	178858	Amadora	Lisboa	Portekiz
+2271961	Almada	38.67902	-9.1569	34008	Almada		Portekiz
+2272222	Albufeira	37.08819	-8.2503	15851	Albufeira	Faro	Portekiz
+2272447	Abrantes	39.46667	-8.2	13646	Abrantes	Santarém	Portekiz
+2732438	Vila Real	41.30062	-7.74413	17001	Vila Real	Vila Real	Portekiz
+2732544	Vila Nova de Gaia	41.13363	-8.61742	70811	Vila Nova de Gaia	Porto	Portekiz
+2732649	Vila do Conde	41.35481	-8.7434	27642	Vila do Conde	Porto	Portekiz
+2732978	Valongo	41.19501	-8.51027	21328	Valongo	Porto	Portekiz
+2733851	Soure	40.05989	-8.62605	8416	Soure	Coimbra	Portekiz
+2735787	Póvoa de Varzim	41.38344	-8.76364	29044	Póvoa de Varzim	Porto	Portekiz
+2736429	Penela	40.03333	-8.38333	0	Penela	Coimbra	Portekiz
+2736469	Penafiel	41.20835	-8.28285	8065	Penafiel	Porto	Portekiz
+2736793	Pampilhosa da Serra	40.0462	-7.95182	1389	Pampilhosa da Serra	Coimbra	Portekiz
+2736883	Paços de Ferreira	41.27657	-8.37617	6782	Paços de Ferreira	Porto	Portekiz
+2737038	Oliveira do Hospital	40.3618	-7.86014	4704	Oliveira do Hospital	Coimbra	Portekiz
+2737046	Oliveira de Azemeis	40.84101	-8.47555	11771	Oliveira de Azeméis		Portekiz
+2737437	Montemor-o-Velho	40.17287	-8.68616	3154	Montemor-o-Velho	Coimbra	Portekiz
+2737523	Monção	42.07892	-8.48076	19738	Monção	Viana do Castelo	Portekiz
+2737641	Miranda do Corvo	40.09318	-8.33261	7857	Miranda do Corvo	Coimbra	Portekiz
+2737744	Melgaço	42.11337	-8.26016	0	Melgaço	Viana do Castelo	Portekiz
+2737921	Marco de Canavezes	41.18389	-8.14864	0	Marco de Canaveses	Porto	Portekiz
+2738154	Lousã	40.11673	-8.24921	11445	Lousã	Coimbra	Portekiz
+2738752	Guimarães	41.44443	-8.29619	40604	Guimarães	Braga	Portekiz
+2738785	Guarda	40.53733	-7.26575	32111	Guarda	Guarda	Portekiz
+2738974	Góis	40.15735	-8.11007	0	Góis	Coimbra	Portekiz
+2739590	Figueira da Foz	40.15085	-8.86179	12050	Figueira da Foz	Coimbra	Portekiz
+2739693	Felgueiras	41.36806	-8.19396	0	Felgueiras	Porto	Portekiz
+2739868	Espinho	41.00763	-8.64125	9566	Espinho		Portekiz
+2740593	Condeixa-a-Nova	40.11573	-8.49834	17078	Condeixa-a-Nova	Coimbra	Portekiz
+2740637	Coimbra	40.20564	-8.41955	106582	Coimbra	Coimbra	Portekiz
+2742032	Braga	41.55032	-8.42005	121394	Braga	Braga	Portekiz
+2742504	Baião	41.16273	-8.0347	0	Baião	Porto	Portekiz
+2742611	Aveiro	40.64427	-8.64554	54162	Aveiro		Portekiz
+3436714	Villarrica	-25.74946	-56.43518	41157	Villarrica		Paraguay
+3439389	Asunción	-25.30066	-57.63591	1482200	Asuncion		Paraguay
+290030	Doha	25.28545	51.53096	344939	Doha		Katar
+662187	Zimnicea	43.66667	25.36667	15228	Zimniçe		Romanya
+664518	Tulcea	45.16667	28.8	92475	Tulca		Romanya
+665087	Timişoara	45.75372	21.22571	315053	Temeşvar		Romanya
+673636	Medgidia	44.25	28.28333	43315	Mecidiye		Romanya
+673921	Mangalia	43.8	28.58333	39619	Mankalya		Romanya
+674230	Măcin	45.24371	28.13564	10295	Maçin		Romanya
+675606	Ineu	46.43372	21.84048	10051	Yanova		Romanya
+675810	Iaşi	47.16667	27.6	318012	Yaş		Romanya
+677106	Giurgiu	43.88333	25.96667	69067	Yergoğu		Romanya
+677697	Galaţi	45.45	28.05	294087	Galați		Romanya
+680963	Constanţa	44.18073	28.63432	303399	Köstence+Küstence		Romanya
+681290	Cluj-Napoca	46.76667	23.6	316748	Kaloşvar		Romanya
+682321	Cernavodă	44.33957	28.03273	18502	Boğazköy		Romanya
+683506	Bucharest	44.43225	26.10626	1877155	Bükreş		Romanya
+685997	Babadag	44.9	28.71667	10101	Babadağ+Babadağı		Romanya
+785756	Smederevo	44.66278	20.93	62000	Semendire	Central Serbia	Sırbistan
+786827	Požarevac	44.62133	21.18782	41736	Pasarofça	Central Serbia	Sırbistan
+787595	Novi Pazar	43.13667	20.51222	85996	Yenipazar	Central Serbia	Sırbistan
+787607	Novi Beograd	44.80556	20.42417	0	Yeni Belgrad	Central Serbia	Sırbistan
+788709	Leskovac	42.99806	21.94611	94758	Leskofça	Central Serbia	Sırbistan
+788975	Kruševac	43.58	21.33389	75256	Alacahisar	Central Serbia	Sırbistan
+790560	Golubac	44.65296	21.63199	1655	Güvercinlik	Central Serbia	Sırbistan
+791471	Dobanovci	44.82631	20.22487	7592	Dobanovçe	Central Serbia	Sırbistan
+792173	Bujanovac	42.45917	21.76667	0	Bujanovce	Central Serbia	Sırbistan
+792680	Belgrade	44.80401	20.46513	1273651	Belgrad	Central Serbia	Sırbistan
+792814	Bečej	45.61632	20.03331	25774	Beçe		Sırbistan
+3190101	Sremski Karlovci	45.2025	19.93444	8839	Karlofça		Sırbistan
+3190776	Sjenica	43.27306	19.99944	0	Seniçe	Central Serbia	Sırbistan
+3191376	Šabac	44.74667	19.69	55114	Böğürdelen	Central Serbia	Sırbistan
+3193406	Petrovaradin	45.24667	19.87944	13917	Petervaradin		Sırbistan
+3194407	Nova Varoš	43.46056	19.81139	0	Yeni Varoş	Central Serbia	Sırbistan
+3204692	Bač	45.39194	19.23667	0	Baç		Sırbistan
+479561	Ufa	54.74306	55.96779	1033338	Ufa		Rusya Federasyonu+Rusya
+481985	Torzhok	57.0436	34.96221	48546	Torjok		Rusya Federasyonu+Rusya
+485239	Syktyvkar	61.67642	50.80994	230139	Sıktıvkar	Komi Cumhuriyeti	Rusya Federasyonu+Rusya
+490068	Sovetsk	55.08392	21.87851	43309	Sovyetsk	Kaliningrad	Rusya Federasyonu+Rusya
+491687	Smolensk	54.7818	32.0401	320991	Smolensk+Смоленск	Smolensk	Rusya Federasyonu+Rusya
+496015	Shakhty	47.70911	40.21443	221312	Şahti		Rusya Federasyonu+Rusya
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sankt Peterburg+Санкт-Петербург		Rusya Federasyonu+Rusya
+499717	Rzhev	56.26241	34.32817	62246	Rjev		Rusya Federasyonu+Rusya
+500004	Rybinsk	58.0446	38.84259	216724	Rıbinsk	Jaroslavl	Rusya Federasyonu+Rusya
+510291	Peterhof	59.88333	29.9	73199	Petergof		Rusya Federasyonu+Rusya
+515024	Orekhovo-Zuyevo	55.80672	38.96178	120000	Orehovo-Zuyevo	Moskova Oblastı+MO	Rusya Federasyonu+Rusya
+517836	Novotroitsk	51.20301	58.32665	106186	Novotroytsk	Orenburg	Rusya Federasyonu+Rusya
+518970	Novocherkassk	47.42096	40.09185	166974	Novoçerkassk		Rusya Federasyonu+Rusya
+519336	Velikiy Novgorod	58.52131	31.27104	215062	Veliki Novgorod	Novgorod	Rusya Federasyonu+Rusya
+521118	Nizhnekamsk	55.63657	51.82447	234297	Tübenkama		Rusya Federasyonu+Rusya
+523812	Mytishchi	55.91163	37.73076	160542	Mıytişçi+Мытищи	Moskova Oblastı+MO	Rusya Federasyonu+Rusya
+524901	Moscow	55.75222	37.61556	10381222	Moskova+Moskva		Rusya Federasyonu+Rusya
+527529	Menzelinsk	55.72706	53.10258	16858	Minzele		Rusya Federasyonu+Rusya
+542420	Krasnodar	45.04484	38.97603	649851	Krasnodar+Краснодар	Krasnodarskiy Kray	Rusya Federasyonu+Rusya
+550280	Khimki	55.89704	37.42969	239967	Himki+Химки	Moskova Oblastı+MO	Rusya Federasyonu+Rusya
+553216	Kanash	55.50962	47.49127	49886	Kanaş	Çuvaşistan	Rusya Federasyonu+Rusya
+554234	Kaliningrad	54.70649	20.51095	434954	Kaliningrad	Kaliningrad	Rusya Federasyonu+Rusya
+554840	Izhevsk	56.84976	53.20448	631038	İjevsk		Rusya Federasyonu+Rusya
+555312	Ivanovo	56.99719	40.97139	420839	İvanovo+Иваново	Ivanovo	Rusya Federasyonu+Rusya
+558418	Groznyy	43.31195	45.68895	226100	Grozni		Rusya Federasyonu+Rusya
+561887	Gatchina	59.57639	30.12833	89761	Gatçina		Rusya Federasyonu+Rusya
+563708	Dzerzhinsk	56.24143	43.45539	233126	Dzerjinsk	Nizjnij Novgorod	Rusya Federasyonu+Rusya
+569223	Cherepovets	59.13333	37.9	315738	Çerepovets	Vologda	Rusya Federasyonu+Rusya
+569696	Cheboksary	56.13222	47.25194	446781	Şupaşkar+Чебоксары	Çuvaşistan	Rusya Federasyonu+Rusya
+572154	Borovichi	58.38778	33.91546	56571	Boroviçi	Novgorod	Rusya Federasyonu+Rusya
+576697	Beslan	43.19217	44.54313	35604	Beslan		Rusya Federasyonu+Rusya
+579464	Balashikha	55.80945	37.95806	150103	Balaşiha	Moskova Oblastı+MO	Rusya Federasyonu+Rusya
+580054	Azov	47.10779	39.41648	82133	Azak		Rusya Federasyonu+Rusya
+580497	Astrakhan	46.34968	48.04076	502533	Astrahan	Astrakhan	Rusya Federasyonu+Rusya
+1488754	Tyumen	57.15222	65.52722	519119	Tümen		Rusya Federasyonu+Rusya
+1497543	Nizhnevartovsk	60.9344	76.5531	244937	Nijnevartovsk	Khanty-Mansiyskiy Avtonomnyy Okrug	Rusya Federasyonu+Rusya
+1498129	Myski	53.709	87.8014	44082	Tomazak	Kemerovo	Rusya Federasyonu+Rusya
+1500973	Kyzyl	51.71472	94.45338	108240	Kızıl		Rusya Federasyonu+Rusya
+1503772	Khanty-Mansiysk	61.00417	69.00194	67800	Hantı-Mansiysk	Khanty-Mansiyskiy Avtonomnyy Okrug	Rusya Federasyonu+Rusya
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Çelyabinsk	Tsjeljabinsk	Rusya Federasyonu+Rusya
+1510853	Barnaul	53.36056	83.76361	599579	Barnaul	Altayskiy Kray	Rusya Federasyonu+Rusya
+1512165	Achinsk	56.2694	90.4993	117634	Açinsk	Krasnoyarskiy Kray	Rusya Federasyonu+Rusya
+2013348	Vladivostok	43.10562	131.87353	587022	Vladivostok	Primorskiy Kray	Rusya Federasyonu+Rusya
+2014407	Ulan-Ude	51.82721	107.60627	360278	Ulan Ude		Rusya Federasyonu+Rusya
+2019951	Mirny	62.53528	113.96111	40308	Mirney	Sakha	Rusya Federasyonu+Rusya
+2022890	Khabarovsk	48.48271	135.08379	579000	Habarovsk	Khabarovskiy Kray	Rusya Federasyonu+Rusya
+2023469	Irkutsk	52.29778	104.29639	586695	İrkutsk	Irkutsk	Rusya Federasyonu+Rusya
+2026609	Blagoveshchensk	50.27961	127.5405	221296	Blagoveşçensk	Amur	Rusya Federasyonu+Rusya
+2119441	Yuzhno-Sakhalinsk	46.95407	142.73603	176484	Yujno-Sahalinsk	Sakhalin	Rusya Federasyonu+Rusya
+2122104	Petropavlovsk-Kamchatsky	53.04444	158.65076	187282	Petropavlovsk-Kamçatski	Kamtsjatka	Rusya Federasyonu+Rusya
+2127202	Anadyr	64.73424	177.5103	10332	Anadır	Chukotskiy Avtonomnyy Okrug	Rusya Federasyonu+Rusya
+6695754	Kogalym	62.26537	74.47906	57800	Kogalım	Khanty-Mansiyskiy Avtonomnyy Okrug	Rusya Federasyonu+Rusya
+202061	Kigali	-1.94995	30.05885	745261	Kigali		Ruanda
+100768	Unayzah	26.08793	43.96368	0	Uneyze		Suudi Arabistan
+101312	Turaif	31.67252	38.66374	40819	Tureyf		Suudi Arabistan
+101628	Tabuk	28.3998	36.57151	455450	Tebük		Suudi Arabistan
+104515	Mecca	21.42664	39.82563	1323624	Mekke	Makkah	Suudi Arabistan
+105343	Jeddah	21.54238	39.19797	2867446	Cidde	Makkah	Suudi Arabistan
+108410	Riyadh	24.68773	46.72185	4205961	Riyad		Suudi Arabistan
+109223	Medina	24.46861	39.61417	1300000	Medine		Suudi Arabistan
+109323	Khobar	26.27944	50.20833	165799	El Huber		Suudi Arabistan
+109353	Al Kharj	24.15541	47.33457	425300	El-Harc		Suudi Arabistan
+110336	Dammam	26.43442	50.10326	768602	Ed Dammam		Suudi Arabistan
+365137	Omdurman	15.64453	32.47773	1200000	Omdurman		Sudan
+379062	Al Qadarif	14.03493	35.38344	363945	El-Gadarif		Sudan
+379252	Khartoum	15.55177	32.53241	1974647	Hartum		Sudan
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm+Stokolm	Stockholms Län	İsveç+Ruoččii
+2686657	Örebro	59.27412	15.2066	115765	Örebro, İsveç	Örebro ili+Örebro län	İsveç+Ruoččii
+2692969	Malmö	55.60587	13.00073	301706	Malmö	Skåne län	İsveç+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	İsveç+Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Ljubljana		Slovenya
+2729907	Longyearbyen	78.22334	15.64689	2060	Longyearbyen		Svalbard ve Jan Mayen Adaları
+724443	Košice	48.71395	21.25808	236563	Kösice	Košický kraj	Slovakya
+3057339	Šurany	48.08613	18.18447	10491	Şuran	Nitriansky kraj	Slovakya
+3059101	Levice	48.21563	18.60705	37574	Levice	Nitriansky kraj	Slovakya
+3060242	Fiľakovo	48.26757	19.82473	10198	Filakovo	Banskobystrický kraj	Slovakya
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	Slovakya
+3168070	San Marino	43.93667	12.44639	4500	San Marino şehri	San Marino	San Marino
+3172906	Monte Giardino	43.90878	12.48201	910	Montegiardino	Montegiardino	San Marino
+53654	Mogadishu	2.03711	45.34375	2587183	Mogadişu		Somali
+3383330	Paramaribo	5.86638	-55.16682	223757	Paramaribo	Paramaribo	Surinam
+3583361	San Salvador	13.68935	-89.18718	525990	San Salvador	San Salvador	El Salvador
+163568	Tall Ḩamīs	36.75678	41.39943	0	Tall Ḩamīs		Suriye
+165509	Ra’s al ‘Ayn	36.85034	40.07055	0	Ra’s al ‘Ayn		Suriye
+165757	Al Qaḩţānīyah	37.029	41.54596	0	Qubūr al Bīḑ		Suriye
+167357	Manbij	36.52815	37.95495	68888	Münbiç		Suriye
+169389	Idlib	35.93062	36.63393	128840	İdlip		Suriye
+169577	Homs	34.72682	36.72339	775404	Humus		Suriye
+170063	Aleppo	36.20124	37.16117	1602264	Halep		Suriye
+170654	Damascus	33.5102	36.29128	1569394	Şam	Şam	Suriye
+170794	Deir ez-Zor	35.33588	40.14084	242565	Deyrizor		Suriye
+170887	Ad Darbāsīyah	37.07279	40.65199	21481	Darbāsīyah		Suriye
+173230	Amude	37.10417	40.93	0	‘Āmūdah		Suriye
+173377	Al Qāmishlī	37.05215	41.23142	0	Al Qāmishlī		Suriye
+173576	Latakia	35.53168	35.79011	340181	Lazkiye		Suriye
+1609350	Bangkok	13.75398	100.50144	5104476	Bangkok		Tayland
+1221874	Dushanbe	38.53575	68.77905	679400	Duşanbe		Tacikistan
+1645457	Dili	-8.55861	125.57361	150000	Dili		Doğu Timor
+161616	Balkanabat	39.51075	54.36713	87822	Balkanabat	Balkan vilayeti	Türkmenistan
+162183	Ashgabat	37.95	58.38333	727700	Aşkabat	Ahal vilayeti	Türkmenistan
+601734	Daşoguz	41.83625	59.96661	166500	Daşoğuz	Dashhowuz Oblasty	Türkmenistan
+1218667	Mary	37.59378	61.83031	114680	Mary	Mary vilayeti	Türkmenistan
+1219649	Türkmenabat	39.07328	63.57861	234817	Türkmenabat	Lebap vilayeti	Türkmenistan
+2464041	Zaghouan	36.40291	10.14292	16911	Zağvan	Zaghwān	Tunus
+2464470	Tunis	36.81897	10.16579	693210	Tunus	Tūnis	Tunus
+2464648	Tozeur	33.91968	8.13352	34943	Tuzer	Tawzar	Tunus
+2464701	Tataouine	32.92967	10.45177	62577	Tatavin	Tatavin ili+Taţāwīn	Tunus
+2465840	Sidi Bouzid	35.03823	9.48494	42098	Sidi Bu Zeyd	Sīdī Bū Zayd	Tunus
+2467454	Sfax	34.74056	10.76028	277278	Safakes	Şafāqis	Tunus
+2467815	Radès	36.76806	10.27528	44298	Rades	Tūnis	Tunus
+2468369	Gabès	33.88146	10.0982	110075	Gabes	Qābis	Tunus
+2469274	Manouba	36.80803	10.09721	24948	Manuba	Manuba ili	Tunus
+2469473	Medenine	33.35495	10.50548	61705	Medenin	Madanīn	Tunus
+2472479	Ben Arous	36.75306	10.21889	74932	Ben Arus	Bin ‘Arūs	Tunus
+2472774	Béja	36.72564	9.18169	57233	Bace	Bājah	Tunus
+2473247	Ariana	36.86012	10.19337	97687	Aryana	Ariana	Tunus
+2473449	Kairouan	35.6781	10.09633	119794	Kayravan	Al Qayrawān	Tunus
+2473457	Kasserine	35.16758	8.83651	81987	Kassarin	Al Qaşrayn	Tunus
+2473493	Monastir	35.77799	10.82617	71546	Munastır	Al Munastīr	Tunus
+2473572	Mahdia	35.50472	11.06222	45977	Mehdiye	Al Mahdīyah	Tunus
+296247	Salat	37.84172	40.8865	6677	Yukarısalat	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296555	Yücebağ	38.39367	41.26713	0	Yücebağ	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296562	Yozgat	39.82	34.80444	87881	Yozgat	Yozgat	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296639	Yolboyu	37.89764	40.00086	0	Yolboyu	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296644	Yolbaşı	37.38717	41.31778	5400	Yolbaşı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296653	Yolağzı	37.52554	41.3534	2600	Yolağzı	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296757	Yiğityolu	35.99563	36.26004	0	Karbeyaz Bucağı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296790	Yeşilyurt	38.33972	28.66444	0	Yeşilyurt	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296832	Yeşilli	37.33813	40.81739	32072	Yeşilli	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296860	Yeşilhisar	38.34972	35.08667	14354	Yeşilhisar	Kayseri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296885	Yeşilalan	37.46066	40.78441	3791	Yeşilalan	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296898	Yerkesik	37.13625	28.28403	0	Yerkesik	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296947	Yenipınar	37.84291	41.30137	1100	Yenipınar	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296948	Yenipazar	39.46361	35.08306	0	Yenipazar	Yozgat	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+296976	Yeniköy	39.77874	28.00299	0	Yeniköy		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297027	Yeniköy	37.88042	41.05004	3269	Yeniköy	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297090	Didim	37.38496	27.25643	26000	Yenihisar+Didim	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297097	Yenifoça	38.73333	26.83333	3742	Yenifoça		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297172	Yenice	37.82837	28.57115	0	Yenice	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297404	Yayvantepe	37.30131	41.52061	1813	Yayvantepe	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297416	Yaylı	37.20293	40.75375	1581	Yaylı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297466	Yayladağı	35.9025	36.06272	8308	Yayladağ	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297499	Yayla	38.63092	40.52793	0	Yayla	Bingöl	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297621	Yarpuzlu	38.05414	38.5213	0	Yarpuzlu		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297628	Yarma	37.81149	32.88278	2601	Yarma	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297704	Yaprakbaşı	37.65409	40.54635	1483	Yaprakbaşı	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297757	Yanarsu	38.03641	41.55227	0	Yanarsu	Siirt	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297784	Yamaç	38.77623	40.43894	0	Yamaç	Bingöl	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297831	Yalınca	37.85657	43.5223	0	Yalınca+Yalınızca	Van+Van İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297838	Yalıkavak	37.10528	27.29722	11227	Ortakent	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297856	Yalangöz	36.5768	36.50766	0	Yalankoz+Yalangöz	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297882	Yakapınar	36.97342	35.62043	0	Misis	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297899	Yakacık	36.756	36.21432	0	Karşı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297917	Yahyalı	38.10228	35.35704	25019	Yahyalı	Kayseri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+297991	Yağcılar	39.41712	28.38109	0	Yağcılar		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298117	Van	38.49457	43.38323	371713	Van	Van+Van İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298235	Yeşilüzümlü	36.73361	29.23333	0	Yeşilüzümlü	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298299	Uşak	38.67351	29.4058	152862	Uşak	Uşak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298326	Ürgüp	38.6296	34.91199	16642	Ürgüp		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298333	Şanlıurfa	37.16708	38.79392	449549	Şanlıurfa	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298414	Ulukışla	37.54776	34.48528	0	Şücaeddin		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298533	Kerh	37.8257	40.54402	1983	Üçtepe	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298585	Reshidi	37.49471	40.96806	1220	Üçkavak	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298659	Melefan	38.18022	41.5687	0	Tuzlagözü	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298815	Turgut	38.62694	31.81083	0	Turgut	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298935	Torbalı	38.1519	27.36223	50303	Tepeköy+Torbalı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+298953	Toptepe	37.26113	41.24948	1491	Toptepe	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299031	Topaklı	39.00555	34.82644	0	Topaklı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299044	Pınarbaşı	36.7034	34.3627	10964	Pınarbaşı	Mersin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299087	Toklar	38.41806	36.015	0	Toklar	Kayseri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299272	Telminar	37.11129	41.38359	1441	Tepeüstü	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299354	Tepealtı	37.09595	41.36834	1333	Tepealtı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299357	Tepe	37.78943	40.77161	0	Tepe	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299582	Tatvan	38.49221	42.28269	73222	Tatvan	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299814	Taşağıl	36.9224	31.23608	0	Taşağıl	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299817	Tarsus	36.91766	34.89277	256482	Tarsus	Mersin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299858	Tanyeri	39.61137	39.83151	0	Tanyeri	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299873	Tanır	38.41944	36.91222	0	Tanır	Kahramanmaraş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+299958	Tahir	39.85586	42.42834	0	Tahir	Ağrı	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300015	Suvarlı	37.53867	37.6321	0	Suvarlı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300027	Şenocak	37.65035	40.69441	1576	Şenocak	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300087	Avine	37.57373	40.73252	4139	Sürgücü	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300091	Sürgü	38.00548	37.9635	0	Sürgü	Malatya+Malatya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300155	Sülüklü	38.88111	32.3425	0	Sülüklü	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300430	Söğütlü	38.80019	40.66971	0	Söğütlü	Bingöl	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300438	Kindirip	37.44706	41.21976	7798	Söğütlü	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300603	Sivrice	37.27675	41.33569	1467	Sivrice	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300619	Sivas	39.74833	37.01611	264022	Sivas		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300750	Sincan	39.47167	37.87083	0	Sincan		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300754	Sinanpaşa	38.74444	30.24278	5940	Sinanpaşa+Sincanlı	Afyonkarahisar	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300767	Sinanköy	37.86166	40.99283	1726	Sinanköy	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300796	Silvan	38.13708	41.00817	65956	Silvan	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300799	Sille	37.92731	32.41995	0	Sille	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300808	Silifke	36.37778	33.93444	75315	Silifke	Mersin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+300822	Siirt	37.9293	41.94134	114034	Siirt	Siirt	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301064	Servi	38.57038	40.32004	0	Servi	Bingöl	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301116	Şereflikoçhisar	38.93925	33.5386	44101	Koçhisar+Şerefli	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301158	Şenyurt	37.07932	40.64246	1950	Şenyurt	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301167	Ebish	37.46347	41.18863	8975	Şenköy	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301238	Side	36.76667	31.38889	10505	Side	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301303	Seki	36.80378	29.65155	0	Seki	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301326	Şehit Nusretbey	36.84667	38.73583	0	Şehit Nusretbey	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301353	Şefaatlı	39.5043	34.7563	13922	Şefaatlı	Yozgat	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301431	Savur	37.53544	40.87876	8658	Savur	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301451	Kayacık	38.34142	40.61336	0	Kayacık	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301483	Sason	38.32767	41.41377	11403	Sason	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301657	Seri	37.36001	41.30055	1059	Sarıköy	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301660	Sarıkonak	38.24309	41.95933	0	Sarıkonak	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301790	Sarıbeyler	39.39833	27.57722	0	Sarıbeyler		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301953	Şamlı	39.81184	27.84559	0	Şamlı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301961	Şambayat	37.68441	38.04676	0	Şambayat		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+301975	Samandağ	36.08012	35.97603	0	Samandağı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302400	Reis	38.27139	31.57139	0	Reis	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302492	Poyraz	38.68596	39.023	0	Poyraz	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302525	Polatlı	39.57715	32.14132	93262	Polatlı	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302645	Pınardere	37.47231	40.83402	4044	Pınardere	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302788	Pazarköy	39.8532	27.40299	0	Pazarköy	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302898	Pamukören	37.92317	28.54175	0	Geneviş	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302903	Pamukkale	37.91644	29.11729	10000	Pamukkale	Denizli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302912	Palu	38.69135	39.91984	11271	Palu	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302954	Özpınar	38.00478	42.24386	0	Özpınar	Siirt	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+302986	Özdere	38.01611	27.12806	13500	Özdere Cumhuriyet		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303046	Oymataş	37.79856	41.02083	1907	Oymataş	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303062	Oyalı	37.22126	41.73862	2267	Oyalı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303138	Ovabağ	37.70849	39.98697	0	Ovabağ	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303195	Osmaniye	37.07417	36.24778	202837	Osmaniye	Osmaniye	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303203	Osmancalı	38.7625	27.25306	0	Osmancalı	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303282	Ortaköy	39.42153	36.23403	0	Ortaköy		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303305	Ortaköy	37.22089	40.78476	5120	Ortaköy	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303325	Ortyakent Yahşi	37.04944	27.34833	0	Yahşikent+Ortyakent Yahşi	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303353	Ortaca	37.47394	41.55598	2599	Ortaca	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303532	Ömerli	37.39903	40.95442	7194	Ömerli	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303538	Ömerköy	39.83063	28.06682	0	Ömerköy		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303645	Oğuz	39.5059	38.88369	0	Oğuz	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303646	Oğuz	37.81487	41.37425	0	Oğuz	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303648	Dara	37.17902	40.95455	2802	Oğuz	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303700	Ödemiş	38.2278	27.96955	67153	Ödemiş		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303750	Nusaybin	37.07028	41.21465	88977	Nusaybin	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303766	Nurettin	39.28104	42.50746	0	Konakkuran+Nurettin	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303767	Nurettin	39.22883	42.41832	0	Nurettin	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303827	Niğde	37.96583	34.67935	91039	Niğde		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303831	Nevşehir	38.625	34.71222	75527	Nevşehir		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303872	Nazimiye	39.17986	39.82843	3396	Nazimiye	Tunceli+Tunceli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303873	Nazilli	37.91631	28.32225	119370	Nazilli	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+303906	Narlıdere	38.2268	41.89014	0	Narlıdere	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304077	Musabeyli	39.83306	34.62306	0	Musabeyli	Yozgat	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304081	Muş	38.73163	41.48482	82536	Muş	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304110	Muratlı	36.96167	40.10056	2064	Muratlı	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304139	Muradiye	38.66025	27.33836	0	Muradiye	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304244	Mollakendi	38.57735	39.33292	0	Mollakendi	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304341	Minare	36.93083	39.00444	1240	Minare	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304382	Midyat	37.41908	41.33909	76268	Midyat	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304453	Meydan	38.35585	41.76941	0	Meydan	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304531	Mersin	36.81196	34.63886	537842	Mersin+İçel	Mersin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304536	Mermer	38.11828	40.44874	0	Mermer	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304569	Mercimekkale	38.92945	41.50325	0	Mercimekkale	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304734	Mazıdağı	37.47801	40.48152	13138	Mazıdağı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304782	Marmaris	36.855	28.27417	33731	Marmaris	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304797	Mardin	37.31309	40.74357	71373	Mardin	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304818	Mansurlu	37.84853	35.65436	0	Mansurlu	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304854	Manavgat	36.78667	31.44306	99254	Manavgat	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+304922	Malatya	38.35018	38.31667	441805	Malatya	Malatya+Malatya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305089	Lice	38.45821	40.63888	16336	Lice	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305263	Kutlubey	37.30719	41.1772	1685	Kutlubey	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305268	Kütahya	39.42417	29.98333	185008	Kütahya	Kütahya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305359	Kuşadası	37.85562	27.2566	63177	Kuşadası	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305429	Kuruçay	39.64024	38.47422	0	Kuruçay	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305510	Kurthasanlı	38.32611	32.17528	0	Kurthasanlı	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305542	Kurşunlu	38.65328	37.85081	0	Kurşunlu	Malatya+Malatya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305685	Kumlu	37.17222	40.73536	1274	Kumlu	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305750	Kulp	38.49754	41.00668	26569	Kulp	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+305996	Denizgiren	38.55734	26.39305	0	Küçük Bahçe+Denizgiren		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306041	Kozluk	38.19118	41.47775	29502	Kozluk	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306112	Kozan	37.45517	35.81573	88115	Kozan	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306207	Kovancılar	38.71882	39.86268	22976	Kovancılar	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306264	Kösreli	37.1625	35.97834	0	Kösreli	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306308	Köseli	37.83879	40.60811	1238	Köseli	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306346	Kösefakılı	39.59386	34.13625	0	Kösefakılı	Kırşehir	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306408	Korucu	39.47028	27.36528	0	Korucu		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306476	Korkut	38.7339	41.78396	8078	Korkut	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306522	Köprülü	36.7323	32.18497	0	Köprülü	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306570	Konyaaltı	36.86644	30.63031	0	Konyaaltı	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306571	Konya	37.87135	32.48464	875530	Konya	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306616	Konakpınar	39.43389	27.83623	0	Konakpınar		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306890	Kocatepe	37.22922	40.16104	0	Kocatepe	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306935	Kocaköy	38.28889	40.49786	6485	Kocaköy	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+306943	Kocakoç	39.11664	39.65931	0	Kocakoç	Tunceli+Tunceli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307084	Kızıltepe	37.18836	40.57723	150174	Kızıltepe	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307327	Kızılcabölük	37.61191	29.01838	0	Kızılcabölük	Denizli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307379	Kızılağaç	38.78019	41.31385	0	Kızılağaç	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307515	Kırşehir	39.14583	34.16389	94336	Kırşehir	Kırşehir	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307625	Kırka	39.27944	30.52639	4097	Kırka	Eskişehir	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307683	Kireç	39.55517	28.36506	0	Kireç		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307864	Kilis	36.71611	37.115	82301	Kilis	Kilis	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+307948	Kasaba	39.31361	40.35028	0	Kiğı	Bingöl	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308219	Kemer	36.6481	29.3591	0	Kemer	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308224	Kemalpaşa	38.42621	27.41731	30411	Karabel		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308274	Kelekçi	37.24073	29.30425	0	Kelekçi	Denizli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308455	Kazancı	37.77106	40.6	1401	Kazancı	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308464	Kayseri	38.73222	35.48528	592840	Kayseri	Kayseri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308490	Kaynar	38.89917	36.45417	0	Kaynar	Kayseri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308496	Kaynakkaya	37.33968	40.93274	1571	Kaynakkaya	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308569	Kayapınar	37.93733	40.17756	0	Kayapınar	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308572	Kayapınar	37.55762	41.16231	5226	Kayapınar	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308576	Kayapa	39.49271	27.44547	0	Kayapa		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308584	Kayalıpınar	37.32983	41.2276	1332	Kayalıpınar	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308632	Kayadibi	39.47993	36.71245	0	Kayadibi		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308811	Kavakbaşı	38.48337	41.81967	0	Kavakbaşı	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308821	Kavak	39.29205	37.48127	0	Kavak		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308840	Kavacık	39.67551	28.49446	0	Kavacık		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+308948	Kaş	36.20176	29.63766	7800	Kaş	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+309312	Karataş	36.58204	35.37014	9221	Küçükkarataş	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+309452	Karaoğlanlı	38.52917	27.56667	0	Karaoğlanlı	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+309527	Karaman	37.18111	33.215	120399	Karaman	Karaman+Karaman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+309622	Karaköy	39.09101	41.68301	0	Karaköy	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+309647	Ağrı	39.71944	43.05139	92022	Ağrı	Ağrı	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+310028	Karaçay	36.13551	36.07743	0	Karaçay	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+310343	Karaağıl	39.13609	42.08459	0	Karaağıl	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+310516	Kanlıavşar	37.21646	38.30936	0	Kanlıavşar	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+310859	Kahramanmaraş	37.5847	36.92641	376045	Kahramanmaraş	Kahramanmaraş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+310982	Kabala	37.34585	40.80059	9275	Kabala	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311014	Kabahaydar	37.4	39.08333	0	Kabahaydar	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311046	İzmir	38.41273	27.13838	2500603	İzmir		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311073	Isparta	37.76444	30.55222	172334	Isparta	Isparta+Isparta İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311104	İslahiye	37.025	36.63056	0	İslahiye	Gaziantep	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311111	İskenderun	36.58718	36.17347	159965	İskenderun	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311191	Kavsan	37.65653	40.65806	1017	İşgören	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311535	Ilıca	39.87583	27.77639	0	Ilıca		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311538	Ilıcalar	38.98034	40.67394	0	Ilıcalar	Bingöl	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311599	İkizce	39.59516	32.66097	0	İkizce	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311628	Aviski	37.96459	41.33119	4065	İkiköprü	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311665	Iğdır	39.92371	44.045	75721	Iğdır	Iğdır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311704	İdil	37.33481	41.88944	22960	Idil	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311708	Teffi	37.55781	41.09551	1677	İçören	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311713	İçme	38.61257	39.5513	0	İçme	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311877	Hotamış	37.64004	33.31862	0	Hotamış	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+311903	Horsunlu	37.91441	28.59151	0	Horsunlu	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312024	Hizan	38.22498	42.4183	15302	Hizan	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312073	Hisar	37.60094	41.22799	2194	Hisarköy	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312114	Hınıs	39.35766	41.69253	35472	Hınıs	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312132	Himmetdede	38.91028	35.09607	0	Himmetdede	Kayseri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312143	Hilal	37.47528	42.78583	2606	Hilal	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312156	Hıdırbey	36.20802	36.12787	0	Hıdırbey+Çekmece	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312253	Hazro	38.24903	40.77129	6291	Hazro	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312314	Haydarlı	38.25972	30.38583	0	Haydarlı	Afyonkarahisar	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312363	Hatunsaray	37.58753	32.34802	0	Hatunsaray	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312441	Hasbek	39.54945	35.54772	0	Hasbek	Yozgat	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312479	Hasankeyf	37.70612	41.4048	3676	Hasankeyf	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312501	Hasançelebi	38.95093	37.88064	0	Hasançelebi	Malatya+Malatya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312663	Hani	38.40741	40.38578	11055	Hani	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312699	Hanköy	36.95081	40.19855	2123	Han+Hanköy	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+312708	Hamzalı	38.34159	41.16254	0	Hamzalı	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313179	Haberli	37.3051	41.61758	174	Haberli	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313209	Güzelsu	36.89472	31.85639	0	Güzelsu	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313331	Güroymak	38.5758	42.01558	25826	Güroymak	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313635	Becuh	37.39141	42.99018	3372	Günyazı	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313640	Gülveren	37.48711	41.49446	2162	Gülveren	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313713	Güllü	38.27114	29.10451	2000	Güllü	Uşak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313825	Gözpınar	37.97717	41.45761	3574	Gözpınar	Siirt	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313905	Payamlı	37.03651	38.61337	0	Dolunay	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313947	Göreme	38.6437	34.83529	6350	Göreme		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+313995	Gömeç	39.39016	26.84127	4380	Gömeç		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314033	Gölova	36.79917	30.03889	0	Gölova	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314106	Gölcük	39.31309	27.98319	0	Gölcük		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314214	Gökoğlan	39.54648	41.30402	0	Gökoğlan	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314262	Gökdere	38.7428	40.20815	0	Gökdere	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314364	Selah	37.20541	40.69748	4729	Gökçe	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314459	Girmeli	37.11106	41.4196	0	Girmeli	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314526	Geyikpınar	38.31759	41.82065	0	Geyikpınar	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314608	Gerdzhyush	37.56249	41.37753	8590	Gercüş	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314648	Genç	38.74773	40.55343	22493	Genç	Bingöl	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314677	Gelinkaya	37.41683	41.26994	6470	Gelinkaya	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314744	Gedikbaşı	39.48939	38.24743	0	Gedikbaşı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314812	Gazipaşa	36.26942	32.31792	18371	Gazipaşa	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+314830	Gaziantep	37.05944	37.3825	1065975	Gaziantep	Gaziantep	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315081	Eymirli	37.1703	40.68684	1021	Eymirli	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315127	Evciler	39.77556	26.77167	0	Evciler	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315185	Eşme	37.15569	40.64142	1316	Eşme	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315202	Eskişehir	39.77667	30.52056	514869	Eskişehir	Eskişehir	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315368	Erzurum	39.90861	41.27694	420691	Erzurum	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315373	Erzincan	39.73919	39.49015	114027	Erzincan	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315408	Erköklü	37.86182	41.14413	1099	Erköklü	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315410	Erkilet	38.82043	35.44011	0	Erkilet	Kayseri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315795	Elbistan	38.20591	37.1983	80456	Elbistan	Kahramanmaraş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315808	Elazığ	38.67431	39.22321	298004	Elâzığ	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+315953	Eğil	38.25748	40.07435	4820	Eğil	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316096	Duruca	37.09309	41.30986	3846	Duruca	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316270	Dorumali	36.805	38.85306	1243	Dorumali	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316411	Doğubayazıt	39.54694	44.08417	70171	Doğubeyazıt+Doğubayazıt	Ağrı	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316473	Doğankavak	37.96265	41.22675	2132	Doğankavak	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316501	Doğanbeyli	39.69517	39.03499	0	Doğanbeyli	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316525	Dodurga	39.79972	29.91722	2398	Dodurga	Bilecik	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316541	Diyarbakır	37.91363	40.21721	644763	Diyarbakır	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316592	Direkli	39.71167	36.65167	0	Direkli		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316625	Dinek	37.32481	32.61602	0	Dinek	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316746	Dicle	38.36571	40.0645	13017	Dicle	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316823	Devecikonağı	39.91486	28.56176	0	Devecikonağı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316899	Derik	37.36336	40.26473	0	Derik	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+316909	Dereyanı	37.42746	40.86096	1111	Dereyanı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317075	Dere	38.98295	39.30017	0	Dere	Tunceli+Tunceli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317109	Denizli	37.77417	29.0875	313238	Denizli	Denizli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317133	Demiryol	37.91751	41.14984	1388	Demiryol	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317177	Adala	38.57757	28.26847	0	Adala+Karataş	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317413	Değirmendere	38.11361	27.14139	0	Değirmendere		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317455	Dedeli	39.17435	43.05524	0	Dedeli	Ağrı	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317524	Davulga	38.97917	31.37139	0	Davulga	Afyonkarahisar	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317616	Danişment	39.86917	27.63306	0	Danişment		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317749	Dağlıca	37.36658	44.08528	0	Dağlıca	Hakkâri	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317752	Dağkızılca	38.311	27.39081	0	Dağkızılca		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317801	Dadaşköy	39.94489	41.25465	0	Dadaşköy+Dadaşkent	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+317864	Cumaçay	39.91524	43.18653	0	Cumaçay	Ağrı	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318177	Çokak	37.73613	36.32865	0	Çokak	Kahramanmaraş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318396	Çınaraltı	37.3849	40.85938	1334	Çınaraltı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318404	Çınar	37.72226	40.40696	0	Çınar	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318531	Çiğil	37.47923	33.31805	0	Çiğil	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318567	Girikbedro	37.18028	42.42111	1865	Çiftlikköyü	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318576	Çiftlik	39.78276	40.63484	0	Çiftlik	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318609	Çiftehan	37.51233	34.76953	0	Çiftehan		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318637	Çiçekli	39.05468	39.41604	0	Çiçekli	Tunceli+Tunceli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318668	Ceylanpınar	36.84722	40.05	31488	Ceylanpınar	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318675	Ceyhan	37.02472	35.8175	96303	Ceyhan	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318679	Çevrimova	37.84003	41.27288	1276	Çevrimova	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318694	Cevizlik	38.17554	42.22602	0	Cevizlik	Siirt	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+318829	Cengerli	39.79426	38.84814	0	Cengerli	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319015	Çaylar	39.26731	41.28344	0	Çaylar	Muş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319094	Çaybağı	38.69401	39.62022	0	Çaybağı	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319118	Çavuşlu	37.50179	41.24877	8555	Çavuşlu	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319149	Çavuş	37.60963	31.93135	0	Çavuş	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319323	Malabadi	38.15162	41.20256	0	Çatakköprü	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319525	Çan	39.14833	40.20348	0	Çan	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319761	Çalpınar	37.36542	41.18576	1294	Çalpınar	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319910	Çakırlar	36.87145	30.56208	0	Çakırlar	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319928	Çakırbeyli	37.73501	27.82388	0	Çakırbeyli	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+319977	Menteşe	37.11667	28.26667	0	Menteşe+Çakallar	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320007	Çağlayan	39.58502	39.68702	0	Çağlayan	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320017	Çağış	39.51881	28.01224	0	Çağış		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320177	Nikfer	37.40542	29.13727	5474	Nikfer	Denizli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320201	Cinatamiho	37.27304	41.03364	1066	Büyükkardeş+Büyük Kardeş+Cinatamaho	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320304	Armutlu	39.5755	38.42722	0	Armutlu	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320374	Buharkent	37.96397	28.7427	7723	Çubukdağı	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320392	Burdur	37.72028	30.29083	66158	Burdur	Burdur+Burdur İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320402	Burç	37.01362	37.17913	0	Burç	Gaziantep	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320523	Bucakkışla	36.95443	33.02196	0	Bucakkışla	Karaman+Karaman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320528	Buca	38.3983	27.16662	0	Buca		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320635	Taliban	37.981	41.41328	1140	Bozhüyük	Siirt	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320700	Bozcaada	39.835	26.06972	2635	Bozcaada	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320730	Bozarmut	37.30917	28.16972	2168	Aşağı Bozarmut	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320859	Borlu	38.75291	28.46744	0	Borlu	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320924	Böğürtlen	37.16632	38.0811	0	Böğürtlen	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+320995	Bodrum	37.03833	27.42917	39317	Bodrum	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321025	Bitlis	38.40115	42.10784	46111	Bitlis	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321031	Bismil	37.84514	40.65931	74493	Bismil	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321088	Binatlı	37.84708	41.21608	2259	Binatlı	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321297	Beyçayırı	38.01412	41.32372	0	Beyçayırı	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321327	Beşpınar	37.83709	41.60219	1227	Beşpınar	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321360	Beşiri	37.91573	41.2865	9513	Beşiri	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321426	Bergama	39.12074	27.18052	57200	Bergama		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321632	Bekirhan	38.14086	41.29351	0	Bekirhan	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321682	Bedirli	39.58276	36.62049	0	Bedirli		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321743	Bayraklı	38.46717	27.16384	0	Bayraklı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321836	Batman	37.88738	41.13221	381990	Batman	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321850	Başyurt	38.83505	39.97929	0	Başyurt	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+321935	Başkavak	37.56468	40.88757	2032	Başkavak	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322001	Barla	38.01778	30.78278	0	Barla	Isparta+Isparta İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322002	Barıştepe	37.4832	41.40251	1452	Barıştepe	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322076	Balpınar	37.86804	41.05536	2879	Balpınar	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322165	Balıkesir	39.64917	27.88611	238151	Balıkesir		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322202	Balcı	38.72532	34.10123	0	Balcı	Aksaray+Aksaray İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322312	Bahşılı	39.80017	33.43701	0	Bahşılı	Kırıkkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322461	Bağlıca	37.52705	40.68618	1329	Bağlıca	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322516	Bağdere	38.11442	40.73382	0	Bağdere	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322601	Babatorun	36.07743	36.29051	0	Babatorun	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322813	Aydınkonak	37.89461	41.16405	1181	Aydınkonak	Batman+Batman İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+322817	İbradı	37.09694	31.59917	8883	Aydınkent	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323457	Aşağı Beğdeş	36.81472	38.91917	1119	Aşağı Beğdeş	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323653	Arıcak	38.5634	40.1248	5168	Arıcak	Elazığ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323733	Aran	37.44768	40.74755	1256	Aran	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323736	Aralık	37.82945	40.68025	1756	Aralık	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323777	Antalya	36.90812	30.69556	758188	Antalya	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323779	Antakya	36.20655	36.15722	210000	Antakya	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Ankara	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323854	Ambar	37.85305	40.52798	5063	Ambar	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323906	Altınözü	36.11244	36.24488	4844	Altınözü	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323921	Altınkum	38.26374	41.0625	2000	Altınkum	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323927	Altunhisar	37.99159	34.37334	3658	Anduğu+Ortaköy		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+323965	Alpköy	39.61393	39.18639	0	Alpköy	Erzincan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324172	Alaşehir	38.35083	28.51718	48147	Alaşehir	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324190	Alanya	36.54375	31.99982	112969	Alanya	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324320	Alacahan	39.10667	37.57556	0	Alacahan		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324490	Akşehir	38.3575	31.41639	64446	Akşehir	Konya+Konya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324496	Aksaray	38.37255	34.02537	152201	Aksaray	Aksaray+Aksaray İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324632	Akköy	37.49139	27.26944	0	Akköy	Aydın	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324681	Akıncı	37.16643	40.84706	0	Akıncı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+324698	Akhisar	38.91852	27.84006	84659	Akhisar	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325028	Akarsu	37.22616	41.05138	5440	Akarsu	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325066	Ahmetli	38.5196	27.93865	11377	Ahmetli	Manisa+Manisa İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325067	Ahmetli	38.17817	39.85627	0	Ahmetli	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325103	Ahlat	38.7489	42.48007	64695	Ahlat	Bitlis+Bitlis İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325236	Akcakışla	39.53818	36.33626	0	Akcakışla		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325277	Ağaçlı	38.51728	40.90401	0	Ağaçlı	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325303	Afyonkarahisar	38.75667	30.54333	146136	Afyon+Afyonkarahisar	Afyonkarahisar	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325330	Adıyaman	37.76441	38.27629	223744	Adıyaman		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325363	Adana	37.00167	35.32889	1248988	Adana	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325420	Acırlı	37.45549	41.29499	7553	Acırlı	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+325449	Acıgöl	38.55028	34.50917	6749	Acıgöl		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+392051	Çardaklı	37.23098	42.58409	1171	Çardaklı	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+392059	Ballı	37.41333	42.83944	1050	Ballı	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+392066	Yemişli	37.3671	43.07717	2011	Yemişli	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+436138	Yeşildere	36.973	37.49488	2701	Yeşildere	Gaziantep	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+437241	Aşağı Karafakılı	36.77885	36.55776	1138	Aşağı Karafakılı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+437736	Çırtıman	36.52531	36.18129	1878	Çırtıman	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+437794	Kızkalesi	36.46192	34.14199	1742	Kızkalesi	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438046	Kuzeytepe	36.26505	36.1535	4889	Kuzeytepe+Güzeltepe	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438056	Kastal	36.2476	36.2409	5637	Kastal	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438084	Açıkdere	36.21909	36.25992	1408	Açıkdere+Habestüylü	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438096	Toygarlı	36.21261	36.07262	2875	Toygarlı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438116	Gümüşgöze	36.14785	36.13284	3925	Gümüşgöze	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438119	Dursunlu	36.16736	36.15788	5147	Dursunlu	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438129	Boynuyoğun	36.16935	36.34249	1536	Boynuyoğun	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438158	Uzunbağ	36.14023	36.03603	2984	Uzunbağ	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438161	Büyükçat	36.115	36.0774	1481	Büyükçat	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438162	Balıklıdere	36.12096	36.10481	1096	Balıklıdere	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438184	Hacıpaşa	36.06907	36.37076	3274	Hacıpaşa	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438234	Samankaya	36.15027	36.12829	1272	Samankaya	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438236	Anayazı	36.32107	36.19061	2365	Anayazı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438237	Karasüleymanlı	36.34191	36.41431	1660	Karasüleymanlı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438241	Büyük Dalyan	36.28824	36.20903	1901	Büyük Dalyan+Büyükdalyan	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438243	Günyazı	36.23307	36.11702	2154	Günyazı	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438245	Tepehan	36.15853	36.2286	2483	Tepehan	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438392	Uzunkavak	36.3524	36.41952	1013	Uzunkavak	Hatay	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438909	Başaran	37.47655	43.12984	1366	Başaran	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+438967	Doruklu	37.2555	42.33518	1264	Doruklu	Şırnak	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+439098	Akdiken	36.725	39.30861	1119	Akdiken	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+439099	Bulutlu	36.73583	39.39389	1146	Bulutlu	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+439101	Pekmezli	36.75361	39.45	4300	Pekmezli+Pekmezci	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+439119	Koyunluca	36.82278	39.34333	1028	Koyunluca	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+439215	Yukarı Taşyalak	36.96306	40.13194	1268	Yukarı Taşyalak	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+439221	Işıklar	36.99417	40.12639	1164	Işıklar+Yusufharabası	Şanlıurfa	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+439228	Çıplak	36.94472	40.2375	1424	Çıplak	Mardin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+442301	Batikent	39.96833	32.73083	300000	Batıkent	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+737119	Yuvacık	40.68815	29.96738	7338	Yuvacık	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738025	Yalova	40.65501	29.27693	71289	Yalova	Yalova+Yalova İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738124	Yağlıdere	40.54432	39.52762	4058	Yağlıdere		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738168	Vezirhan	40.24472	30.02	3123	Vezirhan	Bilecik	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738251	Uzunköprü	41.26597	26.6885	36470	Uzunköprü	Edirne	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738276	Uzundere	40.53218	41.53832	5555	Azortuzundere	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738333	Uruş	40.24903	32.13785	0	Uruş	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738349	Ünye	41.13139	37.2825	77585	Ünye	Ordu	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738372	Umurbey	40.41472	29.18306	3479	Umurbey		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738648	Trabzon	41.005	39.72694	244083	Trabzon	Trabzon+Trabzon İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738743	Tokat	40.31389	36.55444	129702	Tokat		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738858	Tepecik	41.02931	28.54978	21699	Tepecik	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738927	Tekirdağ	40.9781	27.51101	122287	Tekirdağ+Rodosçuk+Tekfurdağ	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738941	Teke	41.0605	29.65381	0	Teke	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+738962	Tavşanlı	40.81876	29.51136	2073	Tavşanlı	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739067	Taşköprü	40.67361	29.39111	3129	Taşköprü	Yalova+Yalova İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739188	Susuzmüsellim	41.09889	27.0675	0	Susuzmüsellim	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739215	Sürmene	40.90588	40.12792	20039	Sürmene	Trabzon+Trabzon İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739425	Söğütlü	40.9059	30.47448	8051	Söğütlü	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739600	Sinop	42.02683	35.16253	34834	Sinop	Sinop	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739605	Sinekli	41.22798	28.19043	0	Sinekli	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739741	Seydim	40.54302	34.73812	0	Seydim	Çorum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739777	Sergen	41.70528	27.70833	0	Sergen	Kırklareli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+739914	Şebin Karahisar	40.28833	38.42361	47360	Şebin Karahisar	Giresun	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740000	Şarköy	40.61395	27.11563	0	Şarköy	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740070	Sarıköy	40.2075	27.59611	0	Sarıköy		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740190	Saraycık	40.95017	35.11165	0	Saraycık	Amasya+Amasya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740264	Samsun	41.27976	36.3361	394050	Samsun	Samsun+Samsun İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740412	Şahin	41.02167	26.8425	0	Şahin	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740430	Safranbolu	41.25083	32.69417	35242	Safranbolu		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740483	Rize	41.02083	40.52194	92772	Rize		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740656	Peçenek	40.41857	32.30833	0	Peçenek	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+740986	Ortacalar	41.27896	41.37887	0	Ortacalar+Ortaköy-Bucak	Artvin+Livane	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741100	Ordu	40.97782	37.89047	116788	Ordu	Ordu	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741335	Narlıca	40.38583	29.48111	2033	Narlıca		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741542	Mezraa	41.19764	35.11684	0	Mezraa	Samsun+Samsun İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741725	Marmara Ereğlisi	40.97003	27.95528	10956	Marmara Ereğlisi	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741812	Mahmutbey	41.05361	28.82556	0	Mahmutbey	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741850	Maçka	40.81072	39.60465	13078	Maçka	Trabzon+Trabzon İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741855	Lüleburgaz	41.40385	27.35918	90899	Lüleburgaz	Kırklareli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+741878	Lapseki	40.34417	26.68556	10076	Lapseki	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+742143	Kurtkale	41.26546	43.1258	0	Kurtkale	Ardahan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+742171	Kurşunlu	40.03712	29.65972	3461	Kurşunlu		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+742215	Küplü	40.09837	30.0001	660	Küplü	Bilecik	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+742266	Kumburgaz	41.02108	28.48033	11949	Kumburgaz	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+742292	Kullar	40.72419	29.98943	8820	Kullar	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+742763	Kolay	41.41824	35.80136	0	Kolay	Samsun+Samsun İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743106	Kışlaköy	40.32353	42.02233	0	Kışlaköy	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743166	Kırklareli	41.73508	27.22521	58223	Kırklareli	Kırklareli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743230	Dikmen	41.65	35.26667	0	Dikmen	Sinop	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743256	Kirazlı	40.09964	29.04163	2663	Kirazlı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743616	Kaytazdere	40.68225	29.53236	3464	Kaytazdere	Yalova+Yalova İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743633	Kaynarca	41.03083	30.3075	6183	Şeyhler+Şeyhlü+Kaynarca	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743882	Kastamonu	41.37805	33.77528	70402	Kastamonu	Kastamonu+Kastamonu İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+743952	Kars	40.59825	43.08548	77486	Kars	Kars	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744107	Karaşar	40.32573	31.98682	0	Karaşar	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744110	Karapürçek	40.64194	30.53944	4705	Karapürçek	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744138	Oğuzlar	40.75353	34.70275	0	Oğuzlar	Çorum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744283	Karakasım	41.51718	26.64381	0	Karakasım	Edirne	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744404	Karadere	40.73174	30.83992	0	Karadere	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744514	Karacaköy	41.40338	28.38055	3105	Karacaköy	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744560	Karabulduk	40.82043	38.54941	0	Karabulduk	Giresun	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744562	Karabük	41.20488	32.62768	97481	Karabük		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744574	Karabiga	40.40361	27.30389	0	Karabiga	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744745	Kâmil	41.10364	34.76298	0	Kâmil	Çorum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+744966	Kabalı	41.85211	35.06249	0	Kabalı	Sinop	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745026	İznik	40.42861	29.72111	22230	İznik		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745028	İzmit	40.76694	29.91694	196571	Nikomedia	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745044	Istanbul	41.01384	28.94966	14804116	İstanbul+Istanbul+http://en.wikipedia.org/wiki/Istanbul	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745164	İnhisar	40.04932	30.38521	2718	İnhisar	Bilecik	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745169	İnegol	40.07806	29.51333	133959	İnegöl		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745175	İnebolu	41.97472	33.76083	9935	İnebolu	Kastamonu+Kastamonu İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745383	İhsaniye	40.69087	29.83472	9186	İhsaniye	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745407	İğdir	40.26633	35.62645	0	İğdir		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745753	Hasköy	41.63822	26.85746	0	Hasköy	Edirne	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745775	Hasayaz	40.24067	33.328	0	Hasayaz	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745922	Hamzabey	40.13583	29.52639	1096	Hamzabey		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+745937	Hamidiye	41.15128	26.66411	0	Hamidiye	Edirne	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746163	Dokurcun	40.5732	30.86784	0	Dokurcun	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746180	Çayırova	40.83444	29.4	0	Çayırova	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746225	Güvem	40.59069	32.66111	0	Güvem	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746425	Gumushkhane	40.46001	39.47176	32250	Gümüşhane		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746436	Gümüş	40.84018	35.17195	0	Gümüş	Amasya+Amasya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746666	Gölcük	40.70323	29.87216	56189	Gölcük	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746874	Göbel	40.01972	28.14556	0	Göbel		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746881	Giresun	40.91698	38.38741	98864	Giresun	Giresun	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746958	Gemlik	40.43094	29.15969	71063	Gemlik		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+746983	Gelibolu	40.41028	26.67083	25178	Gelibolu	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+747014	Gebze	40.80276	29.43068	281436	Gebze	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+747205	Eymir	40.01927	35.20788	0	Eymir	Yozgat	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+747459	Erenler	40.75504	30.39344	0	Erenler	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+747705	Eflani	41.42289	32.95761	4425	Çelebiler		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+747712	Edirne	41.67719	26.55597	126470	Edirne	Edirne	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+747714	Edincik	40.34229	27.86129	0	Aydıncık		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+747912	Karşıyaka	40.6936	29.94154	3221	Döngel+Karşıyaka	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748032	Doğançay	40.62647	30.33557	0	Doğançay	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748378	Demirtaş	40.27194	29.09833	6702	Demirtaş		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748383	Pulur	40.16023	39.89239	1875	Demirözü		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748638	Darıca	40.0206	27.86374	0	Darıca		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748685	Dambaslar	41.22417	27.24806	0	Dambaslar	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748879	Çorum	40.54889	34.95333	183418	Çorum	Çorum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748893	Çorlu	41.15917	27.8	202578	Çorlu	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+748922	Çöpköy	41.21972	26.82278	0	Çöpköy	Edirne	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749025	Çırçır	40.055	36.775	0	Çırçır		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749274	Çerkezköy	41.28629	27.99939	84234	Çerkezköy	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749288	Çerçiler	41.3945	35.23665	0	Çerçiler	Sinop	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749701	Çarşıbaşı	41.08278	39.38278	0	Çarşıbaşı	Trabzon+Trabzon İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749748	Khanjarah	40.59995	33.6153	71379	Çankırı	Çankırı	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749762	Çandır	40.25717	33.46868	0	Çandır	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749780	Çanakkale	40.15552	26.41271	87791	Çanakkale	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+749833	Çamlıkaya	40.6391	41.15218	0	Çamlıkaya	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750043	Çakırlı	40.51806	29.45222	2071	Çakırlı		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750059	Çakırca	40.47056	29.66333	1256	Çakırca		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750062	Çakıralan	41.16824	35.76017	0	Çakıralan	Samsun+Samsun İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750165	Laçin	40.77486	34.88068	2471	Laçin	Çorum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750170	Büyükköy	41.01489	40.67302	0	Büyükköy		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750180	Büyükkarıştıran	41.30028	27.54528	0	Büyükkarıştıran	Kırklareli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750228	Büyükçavuşlu	41.24002	28.06331	3840	Büyükçavuşlu	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Bursa		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750516	Bolu	40.73583	31.60611	96629	Bolu	Bolu+Bolu İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750539	Boğazkale	40.02191	34.60947	0	Hattuşaş+Boğazkale	Çorum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750590	Eminbey	41.54755	42.78199	0	Eminbey	Ardahan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750697	Beyçayırı	40.25515	26.92442	0	Beyçayırı	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750703	Beyazköy	41.34833	27.70389	0	Anıttepe	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+750938	Bayburt	40.25631	40.22289	31258	Bayburt		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+751080	Banarlı	41.06702	27.33575	0	Banarlı	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+751114	Ballı	40.83028	27.05548	0	Ballı	Tekirdağ	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+751128	Balıklıçeşme	40.31029	27.08171	0	Balıklıçeşme	Çanakkale	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+751922	Arifiye	40.70036	30.35076	0	Arifiye	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+751952	Ardahan	41.10871	42.70222	21020	Ardahan	Ardahan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+752015	Amasya	40.65333	35.83306	82896	Amasya	Amasya+Amasya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+752770	Ağlı	41.68602	33.55383	0	Ağlı+Kuruoğlu+Ağılpazarı	Kastamonu+Kastamonu İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+752850	Adapazarı	40.78056	30.40333	286787	Adapazarı	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+862940	Halıdere	40.71604	29.75223	3073	Halıdere	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+6955677	Çankaya	39.9179	32.86268	792189	Çankaya	Ankara	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+7280504	Yaniklar	36.70827	29.05081	2598	Yanıklar	Muğla	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+7569266	Güce	40.8932	38.7982	0	Güce	Giresun	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+7642511	Kamışlı	37.55519	34.9472	0	Kamışlı	Adana	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+7698659	Köprübaşı	41.04754	35.51687	0	Köprübaşı	Samsun+Samsun İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+7699594	Çayırkent	41.17128	36.32883	0	Çayırkent	Samsun+Samsun İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8074174	Muratpaşa	36.89157	30.76498	450000	Muratpaşa	Antalya	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8281779	Ortaköy	40.97305	30.67686	0	Ortaköy	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8307891	Ovacık	36.17132	33.55581	0	Ovacık	Mersin	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8322507	Kazımpaşa	40.7916	30.295	0	Kazımpaşa	Sakarya+Sakarya İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8383537	Akçaova	41.0366	29.9018	0	Akçaova	Kocaeli+Kocaeli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8384779	Termal	40.60779	29.1736	0	Termal	Yalova+Yalova İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8521963	Yıldırım	40.18851	29.10974	0	Yıldırım		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8542938	Osmangazi	40.19671	29.05935	0	Osmangazi		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8543049	Büyükorhan	39.77102	28.88614	0	Büyükorhan		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8605047	Akçasır	38.44722	41.26513	0	Akçasır	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+8605049	Taşburun	39.98607	44.22359	0	Taşburun	Iğdır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10048770	Bağlar	37.91375	40.20584	0	Bağlar	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10048774	Sur	37.91351	40.22859	0	Sur	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10048815	Yenişehir	37.94146	40.13801	0	Yenişehir	Diyarbakır	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10331001	Palandöken	39.88898	41.28055	0	Palandöken	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10331003	Kazımkarabekir	39.91598	41.28145	0	Kazımkarabekir	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10332081	Yakutiye	39.89821	41.26916	0	Yakutiye	Erzurum	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10345206	Tepebaşı	39.81091	30.52551	0	Tepebaşı	Eskişehir	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10345207	Odunpazarı	39.76821	30.53538	0	Odunpazarı	Eskişehir	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10345315	Pamukkale	37.7912	29.10141	0	Pamukkale	Denizli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10346824	Nilüfer	40.21401	28.91567	0	Nilüfer		Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10354266	Çaybağı	38.82855	39.61057	0	Çaybağı	Tunceli+Tunceli İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10376352	İlkadım	41.28732	36.29046	0	İlkadım	Samsun+Samsun İli	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10400338	Ümraniye	41.03291	29.10137	0	Ümraniye	İstanbul	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10402306	Altınordu	40.98404	37.87348	0	Altınordu	Ordu	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+10636468	Kürecik	38.33675	37.74142	0	Kürecik	Kahramanmaraş	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+11197786	Doğruyol	41.06132	43.32201	0	Doğruyol	Ardahan	Türkiye Cumhuriyeti+Türkiye+Turkanmua
+1668341	Taipei	25.04776	121.53185	7871900	Taipei		Çin Cumhuriyeti
+160196	Dodoma	-6.17221	35.73947	180541	Dodoma	Dodoma	Tanzanya
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Darüsselam	Dar es Salaam	Tanzanya
+687196	Zhovti Vody	48.34493	33.50374	51559	Jovti Vodi	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+688105	Yevpatoriya	45.20091	33.36655	106202	Evpatorya		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+688533	Yalta	44.50218	34.16624	77003	Yalta		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+690548	Uzhgorod	48.61667	22.3	117878	Ujgorod	Zakarpattia	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+692315	Sudak	44.84924	34.97471	16597	Sudak		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+693805	Simferopol	44.95719	34.11079	336460	Akmescit		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+694423	Sevastopol	44.58883	33.5224	416263	Akyar+Sivastopol		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+694792	Sarny	51.33795	26.60191	27097	Sarnı	Rivne	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Odessa		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+698770	Ochakiv	46.61283	31.54982	16300	Özi	Mykolaiv	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+699453	Novomyrhorod	48.78105	31.64204	12728	Novomırhorod	Kirovohrad+http://en.wikipedia.org/wiki/Kropyvnytskyi	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+703261	Lenino	45.29857	35.77708	7871	Yedi Kuyu		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kiev		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+704147	Kremenchuk	49.06802	33.42041	227494	Kremençug+Kremenchuk	Poltava	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Herson	Kherson	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+706483	Kharkiv	49.98081	36.25272	1430885	Kharkov	Kharkiv	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+706524	Kerch	45.3531	36.47429	148932	Kerç		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+707308	Izmayil	45.34929	28.84079	82485	İsmail+Hacidar		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+709161	Feodosiya	45.03677	35.37789	68562	Feodosya		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+710473	Chyhyryn	49.08376	32.65549	11515	Çehrin	Cherkas'ka Oblast'+Cherkasy	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Çernivtsi		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+710735	Chernihiv	51.50551	31.28487	307684	Çernigiv		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Çerkassi	Cherkas'ka Oblast'+Cherkasy	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+711416	Brody	50.08791	25.15027	23239	Brodi	Lviv	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+712441	Berdychiv	49.89928	28.60235	86250	Berdiçev	Zhytomyr	Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+712576	Inkerman	44.61391	33.6098	10204	İnkerman		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+712930	Balaklava	44.51118	33.59942	18649	Balıklava		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+712969	Bakhchisaray	44.75525	33.85782	27351	Bahçesaray		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+713513	Alushta	44.67728	34.4097	29586	Aluşta		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+713514	Alupka	44.41808	34.04531	7849	Alupka		Ukrayna+http://en.wikipedia.org/wiki/Ukraine
+232422	Kampala	0.31628	32.58219	1353189	Kampala	Central Region	Uganda
+4148411	Boca Raton	26.35869	-80.0831	93235	WTA Boca Raton	FL+Florida	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4160021	Jacksonville	30.33218	-81.65565	868031	Jacksonville	FL+Florida	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4164138	Miami	25.77427	-80.19366	441003	Miami	FL+Florida	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	Atlanta	GA+Georgia	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4299276	Louisville	38.25424	-85.75941	243639	Louisville	KY+Kentucky	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4315588	Baton Rouge	30.45075	-91.15455	228590	Baton Rouge	LA+Louisiana	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4347778	Baltimore	39.29038	-76.61219	621849	Baltimore	Maryland+MD	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4393217	Kansas City	39.09973	-94.57857	475378	Kansas City	MO+Missouri	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4508722	Cincinnati	39.12711	-84.51439	296943	Cincinnati	OH	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4509177	Columbus	39.96118	-82.99879	850106	Columbus	OH	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Philadelphia	Pensilvanya+PA	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4641239	Memphis	35.14953	-90.04898	655770	Memphis	TN+Tennessee	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	Austin	Teksas+TX+Texas	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4684888	Dallas	32.78306	-96.80667	1300092	Dallas	Teksas+TX+Texas	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4691930	Fort Worth	32.72541	-97.32085	833319	Fort Worth	Teksas+TX+Texas	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Houston	Teksas+TX+Texas	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4726206	San Antonio	29.42412	-98.49363	1469845	San Antonio	Teksas+TX+Texas	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4835797	Hartford	41.76371	-72.68509	124006	Hartford	Connecticut+CT	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4839366	New Haven	41.30815	-72.92816	130322	New Haven	Connecticut+CT	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Şikago	IL+Illinois	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Boston	MA+Massachusetts	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4931972	Cambridge	42.3751	-71.10561	110402	Cambridge	MA+Massachusetts	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4975802	Portland	43.66147	-70.25533	66881	Portland	ME+Maine	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4984247	Ann Arbor	42.27756	-83.74088	117070	Ann Arbor	MI	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroit	MI	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+4994358	Grand Rapids	42.96336	-85.66809	195097	Grand Rapids	MI	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5037649	Minneapolis	44.97997	-93.26384	410939	Minneapolis	MN+Minnesota	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5045360	Saint Paul	44.94441	-93.09327	285068	St. Paul	MN+Minnesota	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5048796	Stewartville	43.85552	-92.48851	6037	Stewartville/Minnesota	MN+Minnesota	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5074472	Omaha	41.25626	-95.94043	443885	Omaha	NE	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5101073	Mendham	40.77593	-74.60071	5001	Mendham Borough	NJ+New Jersey	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5109177	Binghamton	42.09869	-75.91797	46032	Binghamton	New York+NY	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5110302	Brooklyn	40.6501	-73.94958	2300664	Brooklyn+BK	New York+NY	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5113481	Coney Island	40.57788	-73.99403	60000	Coney Adası	New York+NY	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York kenti+New York+NYC+NY	New York+NY	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5150529	Cleveland	41.4995	-81.69541	388072	Cleveland	OH	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5197079	Lancaster	40.03788	-76.30551	59339	Lancaster	Pensilvanya+PA	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5206379	Pittsburgh	40.44062	-79.99589	304391	Pittsburgh	Pensilvanya+PA	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5263045	Milwaukee	43.0389	-87.90647	600155	Milwaukee	WI	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Phoenix	Arizona+AZ	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5368335	Los Altos	37.38522	-122.11413	30671	Los Altos	Kaliforniya+CA+Calif+California	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	Kaliforniya+CA+Calif+California	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5391811	San Diego	32.71533	-117.15726	1394928	San Diego	Kaliforniya+CA+Calif+California	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Francisco+SF	Kaliforniya+CA+Calif+California	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5392171	San Jose	37.33939	-121.89496	1026908	San Jose	Kaliforniya+CA+Calif+California	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5393015	Santa Clara	37.35411	-121.95524	126215	Santa Clara	Kaliforniya+CA+Calif+California	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Denver	Kolorado+CO+Colorado	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Las Vegas	NV+Nevada	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5520993	El Paso	31.75872	-106.48693	681124	El Paso	Teksas+TX+Texas	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5525577	Lubbock	33.57786	-101.85517	249042	Lubbock	Teksas+TX+Texas	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5554072	Juneau	58.30194	-134.41972	32756	Juneau	AK+Alaska	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5746545	Portland	45.52345	-122.67621	632309	Portland	Oregon+OR	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5780993	Salt Lake City	40.76078	-111.89105	192672	Salt Lake City+SLC	UT+Utah	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5785243	Aberdeen	46.97537	-123.81572	16276	Abardeen	Vaşington+WA+Washington	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5808079	Redmond	47.67399	-122.12151	60598	Redmond	Vaşington+WA+Washington	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Seattle	Vaşington+WA+Washington	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5879400	Anchorage	61.21806	-149.90028	298695	Anchorage	AK+Alaska	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+5880054	Barrow	71.29058	-156.78872	4384	Barrow	AK+Alaska	Amerika Birleşik Devletleri+ABD+U.S.+USA+U.S.A.
+3441575	Montevideo	-34.90328	-56.18816	1270737	Montevideo		Uruguay
+601294	Nukus	42.45306	59.61028	230006	Nukus	Qoraqalpog iston	Özbekistan
+1216187	Shahrisabz	39.05778	66.83417	57051	Şehr-i-Sebz		Özbekistan
+1216265	Samarqand	39.65417	66.95972	319366	Semerkant		Özbekistan
+1216311	Qarshi	38.86056	65.78905	222898	Karşi		Özbekistan
+1217662	Bukhara	39.77472	64.42861	247644	Buhara		Özbekistan
+1512569	Tashkent	41.26465	69.21627	1978028	Taşkent	Toshkent Shahri	Özbekistan
+1512955	Rishton	40.35667	71.28472	0	Riştan	Farg ona	Özbekistan
+1513064	Olmaliq	40.84472	69.59833	121207	Almalık		Özbekistan
+1513131	Navoiy	40.08444	65.37917	129725	Nevai		Özbekistan
+1513157	Namangan	40.9983	71.67257	432456	Nemengan		Özbekistan
+1513886	Jizzax	40.11583	67.84222	152642	Cizzak		Özbekistan
+1513966	Guliston	40.48972	68.78417	53373	Gülistan		Özbekistan
+1514210	Chirchiq	41.46889	69.58222	167842	Çirçig		Özbekistan
+1514588	Andijon	40.78206	72.34424	318419	Andican		Özbekistan
+3645532	Ciudad Bolívar	8.12923	-63.54086	338000	Ciudad Bolivar		Venezuela
+3646738	Caracas	10.48801	-66.87919	3000000	Karakas	Venezuela Başkent Bölgesi	Venezuela
+1566559	Tây Ninh	11.31004	106.09828	36456	Tay Ninh	Tây Ninh	Vietnam
+1580240	Huế	16.4619	107.59546	287217	Hué	Thừa Thiên-Huế	Vietnam
+1581130	Hanoi	21.0245	105.84117	1431270	Hanoi	Ha Nội	Vietnam
+784097	Vushtrri	42.82306	20.9675	30651	Vuçitërn+Vıçıtırın		Kosova
+785485	Shtime	42.43306	21.03972	35000	Ştimle		Kosova
+786714	Pristina	42.67272	21.16688	550000	Priştine		Kosova
+786950	Podujeva	42.91056	21.19306	35000	Podujeva		Kosova
+788187	Mamuša	42.33083	20.72694	5507	Mamuşa		Kosova
+789721	Kačanik	42.23194	21.25944	9800	Kaçanik		Kosova
+993800	Johannesburg	-26.20227	28.04363	2026469	Johannesburg	Gauteng	Güney Afrika+Güney Afrika Cumhuriyeti
+3369157	Cape Town	-33.92584	18.42322	3433441	Cape Town	Western Cape	Güney Afrika+Güney Afrika Cumhuriyeti

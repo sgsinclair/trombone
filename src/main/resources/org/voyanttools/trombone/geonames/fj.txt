@@ -1,0 +1,3 @@
+2198148	Suva	-18.14161	178.44149	77366	Suva		Viti
+2643743	London	51.50853	-0.12574	7556900	Lodoni		http://en.wikipedia.org/wiki/United_Kingdom
+281184	Jerusalem	31.76904	35.21633	801000	Jerusalemi		Isireli

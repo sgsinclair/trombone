@@ -1,0 +1,1416 @@
+292672	Sharjah	25.33737	55.41206	543733	Charjah		Emirelezhioù Arab Unanet+UAE
+2761353	Wiener Neustadt	47.80485	16.23196	38481	Wiener Neustadt	Aostria-Izel	Aostria
+2762372	Villach	46.61028	13.85583	58882	Villach	Karintia	Aostria
+2764359	Steyr	48.04274	14.42127	39566	Steyr		Aostria
+2764786	Spittal an der Drau	46.8	13.5	16363	Spittal an der Drau	Karintia	Aostria
+2766429	Sankt Pölten	48.2	15.63333	49001	Sankt Pölten	Aostria-Izel	Aostria
+2766824	Salzburg	47.79941	13.04399	150269	Salzburg		Aostria
+2771335	Mödling	48.08605	16.28921	20710	Mödling	Aostria-Izel	Aostria
+2772173	Lustenau	47.42642	9.65851	20218	Lustenau	Vorarlberg	Aostria
+2772400	Linz	48.30639	14.28611	181162	Linz		Aostria
+2772635	Leonding	48.27965	14.2533	22736	Leonding		Aostria
+2772649	Leoben	47.3765	15.09144	24809	Leoben	Stiria	Aostria
+2773300	Kufstein	47.58333	12.16667	16115	Kufstein		Aostria
+2773549	Krems an der Donau	48.40921	15.61415	23932	Krems	Aostria-Izel	Aostria
+2773964	Kleinzell im Mühlkreis	48.45585	13.99195	1448	Kleinzell		Aostria
+2774326	Klagenfurt am Wörthersee	46.62472	14.30528	90610	Klagenfurt	Karintia	Aostria
+2775220	Innsbruck	47.26266	11.39454	112467	Innsbruck		Aostria
+2776951	Hallein	47.68333	13.1	18980	Hallein		Aostria
+2778067	Graz	47.06667	15.45	222326	Graz	Stiria	Aostria
+2779674	Feldkirch	47.23306	9.6	31082	Feldkirch	Vorarlberg	Aostria
+2780190	Eisenstadt	47.84565	16.52327	12190	Eisenstadt	Burgenland+Bgld	Aostria
+2780741	Dornbirn	47.41427	9.74195	43013	Dornbirn	Vorarlberg	Aostria
+2781371	Bruck an der Mur	47.41667	15.28333	13254	Bruck an der Mur	Stiria	Aostria
+2781503	Bregenz	47.50311	9.7471	27611	Bregenz	Vorarlberg	Aostria
+2781680	Bludenz	47.15476	9.82255	13904	Bludenz	Vorarlberg	Aostria
+2782067	Baden	48.00543	16.23264	24893	Baden	Aostria-Izel	Aostria
+587084	Baku	40.37767	49.89201	1116513	Bakou	Baki	Azerbaidjan
+2785341	Tournai	50.60715	3.38932	67721	Tournai	Wallonia+Walloon	Belgia
+2789786	Ostend	51.21551	2.927	69011	Oostende		Belgia
+2790150	Nieuwpoort	51.13008	2.75135	10845	Nieuwpoort		Belgia
+2794210	Knokke-Heist	51.35	3.26667	33781	Knokke-Heist		Belgia
+2795100	Ieper	50.85114	2.88569	35089	Ieper		Belgia
+2797656	Gent	51.05	3.71667	231493	Gent		Belgia
+2799369	Diksmuide	51.03248	2.86384	15515	Diksmuide		Belgia
+2799577	De Panne	51.09793	2.59368	9799	De Panne		Belgia
+2800931	Brugge	51.20892	3.22424	116709	Brugge		Belgia
+2801858	Blankenberge	51.31306	3.13227	18230	Blankenberge		Belgia
+2802816	Baarle-Hertog	51.40504	4.89226	2305	Baarle-Hertog		Belgia
+726050	Varna	43.21667	27.91667	312770	Varna		Bulgaria
+727011	Sofia	42.69751	23.32415	1152556	Sofia		Bulgaria
+727523	Ruse	43.85639	25.97083	156238	Rouse		Bulgaria
+728193	Plovdiv	42.15	24.75	340494	Plovdiv		Bulgaria
+732770	Burgas	42.50606	27.46781	195966	Burgas		Bulgaria
+3903987	Sucre	-19.03332	-65.26274	224838	Sucre	Chuquisaca	Bolivia
+3911925	La Paz	-16.5	-68.15	812799	La Paz	La Paz	Bolivia
+3405870	Belém	-1.45583	-48.50444	1407737	Belém do Pará	PA+Pará	Brazil
+3449720	Santo Amaro	-12.54667	-38.71194	46748	Santo Amaro da Purificação	BA	Brazil
+3450554	Salvador	-12.97111	-38.51083	2711840	Salvador da Bahia	BA	Brazil
+3466779	Cascavel	-24.95583	-53.45528	257172	Naer-ourouler	PR+Paraná	Brazil
+3467747	Campo Grande	-20.44278	-54.64639	729151	Campo Grande	MS	Brazil
+625665	Mahilyow	53.9168	30.3449	369200	Mahilioŭ	Mahilyowskaya Voblastsʼ	Byelarus+Belarus
+6325494	Québec	46.81228	-71.21454	528595	Kebek+Québec	QC	Kanada
+2661552	Bern	46.94809	7.44744	121631	Bern		Suis
+1816670	Beijing	39.9075	116.39723	11716620	Beijing		Republik Pobl Sina+Sina
+3687238	Cartagena	10.39972	-75.51444	952024	Cartagena de Indias	Bolívar	Kolombia
+3550598	Las Tunas	20.96167	-76.95111	203684	Victoria de Las Tunas	Las Tunas	Kuba
+146268	Nicosia	35.17531	33.3642	200452	Nikozia		Kiprenez+Republik Kiprenez
+146384	Limassol	34.68406	33.03794	154000	Lemesós		Kiprenez+Republik Kiprenez
+3073803	Karlovy Vary	50.23271	12.87117	51807	Karlovy Vary	Karlovarský kraj	Republik Tchek+Czechia
+3078610	Brno	49.19522	16.60796	369559	Brno	Rannvro Moravia ar Su+Jihomoravský kraj	Republik Tchek+Czechia
+2809346	Wiesbaden	50.08258	8.24932	272432	Wiesbaden	Hessen	Alamagn
+2821292	Alt-Treptow	52.48863	13.4586	10859	Treptow	Berlin	Alamagn
+2867714	Munich	48.13743	11.57549	1260391	München+Munich	Bayern	Alamagn
+2867996	Mühlhausen	51.20896	10.45275	38108	Mühlhausen/Thüringen		Alamagn
+2907911	Heidelberg	49.40768	8.69079	143345	Heidelberg	Baden-Württemberg	Alamagn
+2911271	Hameln	52.10397	9.35623	58666	Hamelin	Saks-Izel+Neddersassen+Läichsaksen+Donja Saska	Alamagn
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Alamagn
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Alamagn
+2616599	Nakskov	54.83038	11.13567	14081	Naskov	Sjælland	Danmark
+2618425	Copenhagen	55.67594	12.56553	1153615	Kopenhagen		Danmark
+2503769	Blida	36.47004	2.8277	182447	El Bouleida	Blida	Aljeria
+2507480	Algiers	36.73225	3.08746	1977663	Aljer	Alger	Aljeria
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harjumaa	Estonia
+590031	Narva	59.37722	28.19028	66980	Narva		Estonia
+360995	Giza	30.00808	31.21093	2443203	Gizah	Al Jīzah	Egipt
+361058	Alexandria	31.20176	29.91582	3811516	Aleksandria		Egipt
+2509491	Villarrobledo	39.26992	-2.60119	26642	Villarrobledo	Kastilha-La Mancha	Spagn+España
+2509954	Valencia	39.46975	-0.37739	814208	València	Valencia	Spagn+España
+2511306	Sanlúcar de Barrameda	36.77808	-6.3515	65805	Sanlúcar de Barrameda	Andalouzia	Spagn+España
+2514256	Málaga	36.72016	-4.42034	568305	Málaga	Andalouzia	Spagn+España
+2521420	Badajoz	38.87789	-6.97061	148334	Badajoz	Estremadura+Extremadura	Spagn+España
+2521978	Alicante	38.34517	-0.48149	334757	Alacant	Valencia	Spagn+España
+3106050	Vic	41.93012	2.25486	39844	Vic	Katalonia+Catalunya	Spagn+España
+3107316	Ujué	42.5	-1.5	239	Uxue	Navarra	Spagn+España
+3107941	Torelló	42.04627	2.26679	13808	Torelló	Katalonia+Catalunya	Spagn+España
+3109442	Sant Vicenç dels Horts	41.39317	2.00689	27701	Sant Vicenç dels Horts	Katalonia+Catalunya	Spagn+España
+3109546	Sant Just Desvern	41.38389	2.06758	15811	Sant Just Desvern	Katalonia+Catalunya	Spagn+España
+3109983	Santa Coloma de Cervelló	41.36736	2.01426	7086	Santa Coloma de Cervelló	Katalonia+Catalunya	Spagn+España
+3110044	Donostia / San Sebastián	43.31283	-1.97499	185357	Donostia	Euskadi	Spagn+España
+3110519	Sant Joan Despí	41.36718	2.0574	32030	Sant Joan Despí	Katalonia+Catalunya	Spagn+España
+3110581	San Ildefonso	40.90182	-4.00685	5426	La Granja de San Ildefonso	Kastilha ha León+Castilla y León	Spagn+España
+3110589	Sangüesa	42.57483	-1.28283	5030	Zangoza	Navarra	Spagn+España
+3110834	Sant Boi de Llobregat	41.34357	2.03659	82428	Sant Boi de Llobregat	Katalonia+Catalunya	Spagn+España
+3111108	Salamanca	40.96882	-5.66388	155619	Salamanca	Kastilha ha León+Castilla y León	Spagn+España
+3111607	Ripoll	42.20064	2.19033	11057	Ripoll	Katalonia+Catalunya	Spagn+España
+3112732	Puente la Reina	42.67291	-1.81412	2577	Gares	Navarra	Spagn+España
+3113664	Petilla de Aragón	42.45	-1.11667	32	Petilla Aragoi	Navarra	Spagn+España
+3113800	Peralta	42.33834	-1.80035	5722	Azkoien	Navarra	Spagn+España
+3114472	Pamplona	42.81687	-1.64323	198491	Iruñea	Navarra	Spagn+España
+3114516	Pallejà	41.42394	1.99505	11134	Pallejà	Katalonia+Catalunya	Spagn+España
+3114938	Orís	42.05967	2.22066	0	Orís	Katalonia+Catalunya	Spagn+España
+3115093	Olot	42.18096	2.49012	33524	Olot	Katalonia+Catalunya	Spagn+España
+3115162	Olite	42.47971	-1.65196	3431	Erriberri	Navarra	Spagn+España
+3116456	Monreal	42.70421	-1.50785	369	Elo	Navarra	Spagn+España
+3116562	Molins de Rei	41.41667	2.01667	24067	Molins de Rei	Katalonia+Catalunya	Spagn+España
+3117383	Markina-Xemein	43.26667	-2.5	0	Markina	Euskadi	Spagn+España
+3117460	Marañón	42.62941	-2.43931	62	Marañon	Navarra	Spagn+España
+3117539	Manlleu	42.00228	2.28476	20647	Manlleu	Katalonia+Catalunya	Spagn+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Spagn+España
+3119645	Laguardia	42.55461	-2.58528	1498	Guardia	Euskadi	Spagn+España
+3120998	Güeñes	43.21252	-3.09497	6147	Gueñes	Euskadi	Spagn+España
+3121397	Gironella	42.03433	1.88019	4867	Gironella	Katalonia+Catalunya	Spagn+España
+3121762	Galar	42.76147	-1.69881	1368	Galar Zendea	Navarra	Spagn+España
+3122762	Estella-Lizarra	42.67182	-2.03226	14238	Lizarra	Navarra	Spagn+España
+3122826	Esplugues de Llobregat	41.37732	2.08809	46862	Esplugues de Llobregat	Katalonia+Catalunya	Spagn+España
+3124201	Cubelles	41.20772	1.67267	13711	Cubelles	Katalonia+Catalunya	Spagn+España
+3124569	Cornellà de Llobregat	41.35	2.08333	86519	Cornellà de Llobregat	Katalonia+Catalunya	Spagn+España
+3126835	Campdevànol	42.22445	2.1686	3349	Campdevànol	Katalonia+Catalunya	Spagn+España
+3127035	Caldes de Montbui	41.63333	2.16667	16885	Caldes de Montbui	Katalonia+Catalunya	Spagn+España
+3128026	Bilbao	43.26271	-2.92528	354860	Bilbo	Euskadi	Spagn+España
+3128535	Sant Esteve d'en Bas	42.11809	2.45682	1451	Bas	Katalonia+Catalunya	Spagn+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barcelona	Katalonia+Catalunya	Spagn+España
+3128819	Barásoain	42.60339	-1.64658	572	Barasoain	Navarra	Spagn+España
+3129588	Arguedas	42.17759	-1.59719	2380	Arketas	Navarra	Spagn+España
+3130946	Adiós	42.68635	-1.73532	161	Adios	Navarra	Spagn+España
+658225	Helsinki	60.16952	24.93545	558457	Helsinki		Finland
+2967110	Zuydcoote	51.06096	2.49338	1660	Zuidkote	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2967183	Yvignac-la-Tour	48.35	-2.18333	1124	Ivinieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2967203	Yssingeaux	45.13333	4.11667	7286	Sinjau+43200		Bro-C'hall+Frañs+France
+2967234	Yffiniac	48.48428	-2.67647	4392	Ilfinieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2967325	Wissembourg	49.03708	7.94548	8800	Weißenburg+67160	ACAL	Bro-C'hall+Frañs+France
+2967549	Vue	47.19953	-1.8775	1324	Gwagenez	Broioù al Liger	Bro-C'hall+Frañs+France
+2967879	Vitré	48.11776	-1.20577	17266	Gwitreg+35500	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2968536	Villeneuve-lès-Maguelone	43.53333	3.86667	8343	Vilanòva de Magalona+34750		Bro-C'hall+Frañs+France
+2969105	Vignoc	48.24842	-1.78169	1190	Gwinieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2969111	Vigneux-de-Bretagne	47.32547	-1.73678	5095	Gwinieg-Breizh	Broioù al Liger	Bro-C'hall+Frañs+France
+2969197	Le Vieux-Marché	48.6	-3.45	1138	Ar C'houerc'had	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2969316	Vieillevigne	46.97214	-1.43405	3529	Henwinieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2969465	Vezin-le-Coquet	48.11857	-1.75466	4416	Gwezin+35132	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2969612	Vertou	47.16869	-1.46929	22921	Gwerzhav+44120	Broioù al Liger	Bro-C'hall+Frañs+France
+2969741	Vern-sur-Seiche	48.04514	-1.60057	8110	Gwern-ar-Sec'h+Gwern-ar-Sech+35770	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2970293	Vay	47.55466	-1.70095	1333	Gwez	Broioù al Liger	Bro-C'hall+Frañs+France
+2970747	Varades	47.38458	-1.02842	3452	Gwared	Broioù al Liger	Bro-C'hall+Frañs+France
+2970777	Vannes	47.66667	-2.75	54020	Gwened+56000	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2970923	Vallet	47.16227	-1.26607	7483	Gwaled	Broioù al Liger	Bro-C'hall+Frañs+France
+2971258	Uzès	44.01362	4.41529	7841	Usès+30700		Bro-C'hall+Frañs+France
+2971286	Ustaritz	43.3965	-1.45603	5662	Uztaritze		Bro-C'hall+Frañs+France
+2971333	Urt	43.49009	-1.29744	1858	Ahurti		Bro-C'hall+Frañs+France
+2971336	Urrugne	43.36361	-1.69921	7580	Urruña+64122		Bro-C'hall+Frañs+France
+2971357	Urcuit	43.48594	-1.33668	1936	Urketa		Bro-C'hall+Frañs+France
+2971482	Tulle	45.26667	1.76667	16969	Tula+19000		Bro-C'hall+Frañs+France
+2971680	Trignac	47.31809	-2.18895	7132	Trinieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2971723	Trévou-Tréguignec	48.81869	-3.34132	1421	An Trevoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971751	Trévé	48.21147	-2.79317	1382	Treve	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971796	Tresbœuf	47.88333	-1.55	1011	Trevo	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971825	Trémuson	48.52325	-2.84833	1763	Tremuzon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971856	Tréméven	47.9	-3.53333	2125	Tremeven-Kemperle	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971876	Tremblay	48.42216	-1.47555	1571	Kreneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971889	Trélivan	48.43198	-2.11748	2286	Trelivan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971893	Trélévern	48.81071	-3.37141	1374	Trelêvern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971908	Treillières	47.3306	-1.61918	6572	Trelier	Broioù al Liger	Bro-C'hall+Frañs+France
+2971926	Trégunc	47.85	-3.85	6775	Tregon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971929	Tréguier	48.78333	-3.23333	3011	Landreger	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971976	Treffléan	47.68163	-2.61287	1544	Trevlean	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971978	Treffiagat	47.81667	-4.26667	2376	Triagad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2971988	Trédarzec	48.78583	-3.201	1068	Tredarzeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2972009	Trébeurden	48.76667	-3.56667	3617	Trebeurden	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2972128	Touvois	46.90208	-1.68333	1407	Tolvez	Broioù al Liger	Bro-C'hall+Frañs+France
+2972191	Tours	47.38333	0.68333	141621	Teurgn+37000		Bro-C'hall+Frañs+France
+2972315	Toulouse	43.60426	1.44367	433055	Tolosa+Toloza+31000		Bro-C'hall+Frañs+France
+2972457	Torcé	48.0612	-1.26708	1007	Tourc'heg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2972462	Tonquédec	48.66886	-3.39712	1120	Tonkedeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2972544	Tinténiac	48.3286	-1.8363	2877	Tintenieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2972696	Thouaré-sur-Loire	47.26893	-1.43834	7172	Tarvieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2972979	Theix	47.62916	-2.65186	5402	Teiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973197	Telgruc-sur-Mer	48.23333	-4.35	1944	Terrug	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973219	Teillé	47.4617	-1.2781	1407	Tilhieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2973297	Taupont	47.95961	-2.43933	2051	Talbont	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973303	Taulé	48.6	-3.9	2941	Taole	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973317	Tassin-la-Demi-Lune	45.75499	4.78812	16920	Tassin-la-Demi-Lune+69160		Bro-C'hall+Frañs+France
+2973385	Tarbes	43.23333	0.08333	52106	Tarba+65000		Bro-C'hall+Frañs+France
+2973492	Talensac	48.10847	-1.92829	2250	Talenseg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973579	Taden	48.4753	-2.01946	1909	Taden	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973637	Surzur	47.5785	-2.62892	2597	Surzhur	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973702	Sulniac	47.67375	-2.57136	2386	Sulnieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973748	Sucé-sur-Erdre	47.33333	-1.53333	6335	Sulieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2973783	Strasbourg	48.58392	7.74553	274845	Straßburg+67000	ACAL	Bro-C'hall+Frañs+France
+2973821	Steenwerck	50.70199	2.77829	3331	Steenwerk	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2973825	Steene	50.95228	2.36813	1212	Stene	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2973826	Steenbecque	50.67421	2.48442	1674	Steenbeke	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2973858	Spézet	48.2	-3.71667	1881	Speied	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2973959	Souraïde	43.34154	-1.47559	1161	Zuraide		Bro-C'hall+Frañs+France
+2974108	Soudan	47.73777	-1.30566	2199	Saoudan	Broioù al Liger	Bro-C'hall+Frañs+France
+2974423	Sizun	48.4	-4.08333	1970	Sizun	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2974424	Sixt-sur-Aff	47.77648	-2.07867	2093	Seizh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2974485	Sion-les-Mines	47.73476	-1.5919	1478	Hezin-ar-Mengleuzioù	Broioù al Liger	Bro-C'hall+Frañs+France
+2974629	Sibiril	48.66667	-4.06667	1207	Sibirill	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2974691	Sévignac	48.33297	-2.33915	1077	Sevinieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2974701	Sévérac	47.55008	-2.07496	1288	Severeg	Broioù al Liger	Bro-C'hall+Frañs+France
+2974733	Sète	43.4028	3.69278	40736	Seta+34200		Bro-C'hall+Frañs+France
+2974745	Servon-sur-Vilaine	48.12114	-1.45971	3328	Servon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2974949	Sérent	47.82333	-2.50571	2905	Serent	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2975046	Sens-de-Bretagne	48.33245	-1.53535	1851	Sen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2975113	Séné	47.619	-2.737	8465	Sine	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2975485	Scaër	48.03333	-3.7	5525	Skaer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2975588	Saverne	48.74164	7.36221	12439	Zabern+67700	ACAL	Bro-C'hall+Frañs+France
+2975597	Savenay	47.36072	-1.94215	6770	Savenneg	Broioù al Liger	Bro-C'hall+Frañs+France
+2975702	Sautron	47.26274	-1.67107	7405	Saotron	Broioù al Liger	Bro-C'hall+Frañs+France
+2975916	Sarzeau	47.52772	-2.76933	7116	Sarzhav	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2975931	Sartène	41.61667	8.98333	3674	Sartè		Bro-C'hall+Frañs+France
+2976021	Sare	43.3126	-1.58012	2330	Sara		Bro-C'hall+Frañs+France
+2976117	Santec	48.7	-4.03333	2272	Santeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976537	Saint-Yvi	47.96667	-3.93333	2774	Sant-Ivi	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976581	Saint-Vincent-sur-Oust	47.7001	-2.14657	1180	Sant-Visant-an-Oust+Sant-Visant-an-Oud	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976603	Saint-Vincent-des-Landes	47.65695	-1.49572	1424	Sant-Visant-al-Lann	Broioù al Liger	Bro-C'hall+Frañs+France
+2976678	Saint-Viaud	47.25619	-2.01833	1992	Sant-Widel-Skovrid	Broioù al Liger	Bro-C'hall+Frañs+France
+2976730	Saint-Urbain	48.4	-4.23333	1273	Lannurvan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976742	Saint-Tropez	43.26932	6.63981	5939	Sant Tropetz+83990		Bro-C'hall+Frañs+France
+2976756	Saint-Thuriau	48.01667	-2.95	2000	Sant-Turiav	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976757	Saint-Thurial	48.02924	-1.93181	1770	Sant-Turiav-Porc'hoed	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976759	Saint-Thonan	48.48333	-4.33333	1238	Sant-Tonan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976791	Saint-Thégonnec	48.51667	-3.95	2387	Sant-Tegoneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976846	Saint-Sulpice-la-Forêt	48.21667	-1.57972	1423	Sant-Suleg-ar-C'hoad+Sant-Suleg-ar-Choad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976969	Saint-Senoux	47.90552	-1.78819	1167	Sant-Senour	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2976984	Saint-Sébastien-sur-Loire	47.20768	-1.50332	29238	Sant-Sebastian-an-Enk+44230	Broioù al Liger	Bro-C'hall+Frañs+France
+2977019	Saint-Sauveur-des-Landes	48.34278	-1.31248	1244	Kersalver-al-Lann	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977085	Saint-Samson-sur-Rance	48.49252	-2.02865	1232	Sant-Samzun	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977189	Saint-Renan	48.43333	-4.61667	7231	Lokournan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977299	Saint-Quay-Portrieux	48.64992	-2.83059	3024	Sant-Ke-Porzh-Olued	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977300	Saint-Quay-Perros	48.78333	-3.45	1501	Sant-Ke-Perroz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977388	Saint-Pol-sur-Mer	51.03116	2.33983	23635	Sint-Pols-aan-Zee	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2977390	Saint-Pol-de-Léon	48.68333	-3.98333	7627	Kastell-Paol	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977414	Saint-Pierre-Quiberon	47.52061	-3.13084	2322	Sant-Pêr-Kiberen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977497	Saint-Pierre-de-Plesguen	48.44638	-1.91278	2174	Sant-Pêr-Plewenn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977593	Saint-Philibert	47.58821	-2.99978	1344	Sant-Filberzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977602	Saint-Philbert-de-Grand-Lieu	47.0358	-1.6412	6757	Sant-Filberzh-Deaz	Broioù al Liger	Bro-C'hall+Frañs+France
+2977610	Saint-Perreux	47.66952	-2.10809	1136	Sant-Pereg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977614	Saint-Père-en-Retz	47.20559	-2.04095	3882	Sant-Pêr-Raez	Broioù al Liger	Bro-C'hall+Frañs+France
+2977616	Saint-Père	48.58727	-1.92413	2008	Sant-Pêr-Poualed	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977631	Saint-Pée-sur-Nivelle	43.35564	-1.55013	4682	Senpere		Bro-C'hall+Frañs+France
+2977780	Saint-Pabu	48.56667	-4.6	1561	Sant-Pabu	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977814	Saint-Ouen-des-Alleux	48.32805	-1.4259	1004	Sant-Owen-an-Alloz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977855	Saint-Nolff	47.70365	-2.65209	3571	Sant-Nolf	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977869	Saint-Nicolas-du-Pélem	48.31222	-3.16465	1959	Sant-Nikolaz-ar-Pelem	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2977879	Saint-Nicolas-de-Redon	47.64343	-2.06305	3055	Sant-Nikolaz-an-Hent	Broioù al Liger	Bro-C'hall+Frañs+France
+2977921	Saint-Nazaire	47.28333	-2.2	67054	Sant-Nazer+44600	Broioù al Liger	Bro-C'hall+Frañs+France
+2977943	Saint-Molf	47.39167	-2.42357	1617	Sant-Molf	Broioù al Liger	Bro-C'hall+Frañs+France
+2978004	Saint-Michel-Chef-Chef	47.18072	-2.14869	3435	Sant-Mikael-Keveger	Broioù al Liger	Bro-C'hall+Frañs+France
+2978057	Saint-Même-le-Tenu	47.02005	-1.79459	1138	Sant-Masen-ar-Porzh	Broioù al Liger	Bro-C'hall+Frañs+France
+2978062	Saint-Méloir-des-Ondes	48.6379	-1.90448	3289	Sant-Meleg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978067	Saint-Méen-le-Grand	48.18971	-2.19486	4028	Sant-Meven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978070	Saint-Médard-sur-Ille	48.27202	-1.65968	1248	Sant-Marzh-an-Il	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978211	Saint-Martin-sur-Oust	47.746	-2.25343	1384	Sant-Varzhin-an-Oud	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978351	Saint-Martin-des-Champs	48.58333	-3.83333	5033	Sant-Martin-war-ar-Maez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978520	Saint-Mars-la-Jaille	47.52566	-1.18483	2371	Sant-Marzh-an-Olivenn	Broioù al Liger	Bro-C'hall+Frañs+France
+2978524	Saint-Mars-du-Désert	47.3656	-1.40678	4002	Sant-Marzh-an-Dezerzh	Broioù al Liger	Bro-C'hall+Frañs+France
+2978529	Saint-Mars-de-Coutais	47.11153	-1.73437	2360	Sant-Marzh-ar-C'hoad+Sant-Marzh-ar-Choad	Broioù al Liger	Bro-C'hall+Frañs+France
+2978560	Saint-Marc-le-Blanc	48.36498	-1.40938	1190	Sant-Mezar-Elvinieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978636	Saint-Malo-de-Guersac	47.35345	-2.17773	3408	Sant-Maloù-Gwersac'h+Sant-Maloù-Gwersach	Broioù al Liger	Bro-C'hall+Frañs+France
+2978640	Saint-Malo	48.65	-2.01667	50676	Sant-Maloù+35400	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978662	Saint-Lyphard	47.39822	-2.30642	3463	Sant-Lefer	Broioù al Liger	Bro-C'hall+Frañs+France
+2978668	Saint-Lunaire	48.63811	-2.11392	2480	Sant-Luner	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2978669	Saint-Lumine-de-Coutais	47.05399	-1.72777	1770	Sant-Leven-ar-C'hoad+Sant-Leven-ar-Choad	Broioù al Liger	Bro-C'hall+Frañs+France
+2978670	Saint-Lumine-de-Clisson	47.08413	-1.33524	1451	Sant-Leven-Klison	Broioù al Liger	Bro-C'hall+Frañs+France
+2978814	Saint-Léger-les-Vignes	47.13587	-1.7306	1245	Sant-Lezer-ar-Gwiniegi	Broioù al Liger	Bro-C'hall+Frañs+France
+2979021	Saint-Just	47.76581	-1.96096	1020	Sant-Yust	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979109	Saint-Julien-de-Concelles	47.25285	-1.38428	6758	Sant-Juluan-Kankell	Broioù al Liger	Bro-C'hall+Frañs+France
+2979128	Saint-Julien	48.45142	-2.8125	1897	Sant-Juluan-Pentevr	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979160	Saint-Jouan-des-Guérets	48.59932	-1.97372	2725	Sant-Yowan-an-Havreg+35430	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979179	Saint-Joachim	47.38349	-2.19239	4087	Sant-Yoasin	Broioù al Liger	Bro-C'hall+Frañs+France
+2979195	Saint-Jean-sur-Couesnon	48.29013	-1.36835	1015	Sant-Yann-ar-C'houenon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979207	Saint-Jean-Pied-de-Port	43.16363	-1.23738	1824	Donibane Garazi		Bro-C'hall+Frañs+France
+2979230	Saint-Jean-la-Poterie	47.63581	-2.1242	1453	Sant-Yann-ar-Wern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979309	Saint-Jean-de-Luz	43.38871	-1.66267	14514	Donibane Lohizune+64500		Bro-C'hall+Frañs+France
+2979344	Saint-Jean-de-Boiseau	47.19315	-1.7234	4906	Sant-Yann-ar-Granneg	Broioù al Liger	Bro-C'hall+Frañs+France
+2979370	Saint-Jean-Brévelay	47.84497	-2.72231	2647	Sant-Yann-Brevele	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979398	Saint-Jans-Cappel	50.76387	2.72227	1513	Sint-Janskappel	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2979405	Saint-Jacut-les-Pins	47.68581	-2.21514	1677	Sant-Yagu-ar-Bineg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979415	Saint-Jacques-de-la-Lande	48.06514	-1.72086	8505	Sant-Jakez-Al-Lann+Sant-Jakez-al-Lann	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979551	Saint-Hilaire-de-Clisson	47.06222	-1.30778	1754	Sant-Eler-Neved	Broioù al Liger	Bro-C'hall+Frañs+France
+2979552	Saint-Hilaire-de-Chaléons	47.10196	-1.8669	1760	Sant-Eler-Kaleon	Broioù al Liger	Bro-C'hall+Frañs+France
+2979589	Saint-Herblon	47.40786	-1.09738	1950	Sant-Ervlon-ar-Roz	Broioù al Liger	Bro-C'hall+Frañs+France
+2979590	Saint-Herblain	47.21765	-1.64841	46898	Sant-Ervlan+44800	Broioù al Liger	Bro-C'hall+Frañs+France
+2979595	Saint-Hélen	48.47002	-1.95894	1093	Sant-Haelen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979619	Saint-Grégoire	48.15085	-1.68706	8058	Sant-Gregor+35760	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979638	Saint-Gonnery	48.12465	-2.81848	1013	Sant-Goneri	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979673	Saint-Gilles	48.15381	-1.82477	3797	Sant-Jili-Roazhon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979680	Saint-Gildas-des-Bois	47.51622	-2.03659	3239	Gweltaz-Lambrizig	Broioù al Liger	Bro-C'hall+Frañs+France
+2979681	Saint-Gildas-de-Rhuys	47.5006	-2.83825	1533	Lokentaz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979783	Saint-Germain-en-Laye	48.9	2.08333	41142	Saint-Germain-en-Laye+78100		Bro-C'hall+Frañs+France
+2979784	Saint-Germain-en-Coglès	48.40531	-1.26369	1957	Sant-Jermen-Gougleiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2979873	Saint-Géréon	47.36774	-1.20262	2727	Sant-Gerent	Broioù al Liger	Bro-C'hall+Frañs+France
+2979926	Saint-Georges-de-Reintembault	48.50744	-1.24328	1841	Sant-Jord-Restembaod	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980127	Saint-Fiacre-sur-Maine	47.14255	-1.41714	1071	Sant-Fieg-ar-Mewan	Broioù al Liger	Bro-C'hall+Frañs+France
+2980184	Saint-Évarzec	47.93333	-4.01667	3091	Sant-Evarzeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980231	Saint-Étienne-en-Coglès	48.40172	-1.32812	1562	Sant-Stefan-Gougleiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980240	Saint-Étienne-du-Bois	46.28766	5.29481	2257	Sant-Stefan-ar-C'hoad		Bro-C'hall+Frañs+France
+2980259	Saint-Étienne-de-Montluc	47.2769	-1.78072	6809	Sant-Stefan-Brengoloù	Broioù al Liger	Bro-C'hall+Frañs+France
+2980260	Saint-Étienne-de-Mer-Morte	46.92848	-1.74272	1084	Sant-Stefan-Melveuzh+Sant-Stefan-Melveurzh	Broioù al Liger	Bro-C'hall+Frañs+France
+2980278	Saint-Étienne-de-Baïgorry	43.17533	-1.3467	1646	Baigorri		Bro-C'hall+Frañs+France
+2980325	Saintes-Maries-de-la-Mer	43.45214	4.42913	2341	Lei Santei Marias de la Mar+13460		Bro-C'hall+Frañs+France
+2980345	Sainte-Reine-de-Bretagne	47.44131	-2.19238	1829	Santez-Rouanez-Breizh	Broioù al Liger	Bro-C'hall+Frañs+France
+2980350	Saint-Erblon	48.01895	-1.65162	2431	Sant-Ervlon-an-Dezerzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980372	Sainte-Pazanne	47.10301	-1.8095	3734	Santez-Pezhenn	Broioù al Liger	Bro-C'hall+Frañs+France
+2980446	Sainte-Marie	47.69429	-2.0019	1949	Lokmaria-Redon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980488	Sainte-Luce-sur-Loire	47.25381	-1.4843	13056	Santez-Lusenn+44980	Broioù al Liger	Bro-C'hall+Frañs+France
+2980547	Sainte-Hélène	47.71976	-3.20359	1050	Santez-Elen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980761	Sainte-Anne-sur-Brivet	47.46071	-2.00415	2086	Santez-Anna-ar-Brived	Broioù al Liger	Bro-C'hall+Frañs+France
+2980805	Saint-Donan	48.46958	-2.88442	1421	Sant-Donan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980806	Saint-Domineuc	48.37191	-1.87544	1576	Landoveneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980808	Saint-Dolay	47.54476	-2.15466	2116	Sant-Aelwez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2980849	Saint-Didier	48.09506	-1.37276	1400	Sant-Ider	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981008	Saint-Coulomb	48.67465	-1.91092	2398	Sant-Kouloum	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981237	Saint-Cast-le-Guildo	48.63028	-2.25777	3363	Sant-Kast-ar-Gwildoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981243	Saint-Carreuc	48.39889	-2.73056	1274	Sant-Kareg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981247	Saint-Caradec	48.19429	-2.84386	1191	Sant-Karadeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981267	Saint-Broladre	48.58677	-1.65769	1020	Sant-Brewalaer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981280	Saint-Brieuc	48.51513	-2.76838	52774	Sant-Brieg+22000	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981285	Saint-Brice-en-Coglès	48.41157	-1.37019	2617	Sant-Brizh-Gougleiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981294	Saint-Briac-sur-Mer	48.62189	-2.13435	1934	Sant-Briag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981296	Saint-Brevin-les-Pins	47.25	-2.16667	10396	Sant-Brewenn	Broioù al Liger	Bro-C'hall+Frañs+France
+2981304	Saint-Brandan	48.39008	-2.86875	2232	Sant-Vedan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981473	Saint-Barnabé	48.13712	-2.70483	1414	Sant-Barnev	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981515	Saint-Avé	47.69085	-2.74648	8907	Sant-Teve+56890	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981565	Saint-Aubin-du-Cormier	48.25843	-1.40252	3269	Sant-Albin-an-Hiliber	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981574	Saint-Aubin-des-Châteaux	47.72047	-1.48876	1411	Sant-Albin-ar-C'hestell+Sant-Albin-ar-Chestell	Broioù al Liger	Bro-C'hall+Frañs+France
+2981639	Saint-Armel	48.01305	-1.59152	1708	Sant-Armael	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981745	Saint-André-des-Eaux	47.31461	-2.31105	3873	Sant-Andrev-an-Dour	Broioù al Liger	Bro-C'hall+Frañs+France
+2981876	Saint-Alban	48.5563	-2.54013	1635	Sant-Alvan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2981923	Saint-Agathon	48.55867	-3.10525	1876	Sant-Eganton	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982023	Saffré	47.50143	-1.57856	2884	Saverieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2982207	Ruffiac	47.81866	-2.28238	1452	Rufieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982293	Roz-sur-Couesnon	48.58867	-1.59213	1038	Roz-an-Arvor	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982298	Roz-Landrieux	48.54337	-1.81586	1151	Roz-Lanrieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982615	Rougé	47.78367	-1.44763	2328	Ruzieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2982652	Rouen	49.44313	1.09932	112787	Rouan+76000		Bro-C'hall+Frañs+France
+2982682	Rouans	47.18321	-1.85929	2283	Rodent	Broioù al Liger	Bro-C'hall+Frañs+France
+2982711	Rostrenen	48.23696	-3.31442	4011	Rostrenenn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982745	Rosporden	47.96667	-3.83333	6779	Rosporden	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982747	Rospez	48.7294	-3.38364	1621	Rospezh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982809	Roscoff	48.72381	-3.98709	3772	Rosko+29680	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982811	Roscanvel	48.3152	-4.54937	1027	Roskañvel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2982876	Roquebrune-Cap-Martin	43.76408	7.48207	11834	Ròcabruna Caup Martin		Bro-C'hall+Frañs+France
+2982977	Romillé	48.21619	-1.89229	2951	Rovelieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2983046	Romagné	48.34019	-1.27751	1806	Rovenieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2983106	Rohan	48.06833	-2.7512	1639	Roc'han	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2983154	Rodez	44.35258	2.57338	28337	Rodés+12000		Bro-C'hall+Frañs+France
+2983590	Rieux	47.59781	-2.10828	2736	Reoz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2983631	Riec-sur-Belon	47.83333	-3.7	4230	Rieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2983705	Ribeauvillé	48.1951	7.31938	4961	Rappoltsweiler+68150	ACAL	Bro-C'hall+Frañs+France
+2983730	Riantec	47.71093	-3.31629	4945	Rianteg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2983735	Riaillé	47.51797	-1.29404	1916	Rialeg	Broioù al Liger	Bro-C'hall+Frañs+France
+2983770	Rezé	47.18144	-1.54965	39248	Reudied+44400	Broioù al Liger	Bro-C'hall+Frañs+France
+2983798	Rexpoëde	50.93926	2.53914	1598	Rekspoede	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2983885	Retiers	47.91392	-1.37967	3536	Rester	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2983990	Rennes	48.11198	-1.67429	209375	Roazhon+35000+Rennes	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984005	Renescure	50.72754	2.36801	2169	Ruisscheure	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2984038	Remouillé	47.05587	-1.37682	1558	Ruvelieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2984147	Réguiny	47.97649	-2.74478	1698	Regini	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984192	Redon	47.65	-2.08333	9472	Redon+35600	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984198	Rédené	47.85	-3.46667	2456	Redene	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984432	Rannée	47.92383	-1.24124	1221	Radenez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984640	Quistinic	47.9041	-3.134	1337	Kistinid	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984649	Quintin	48.40342	-2.9105	2994	Kintin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984699	Quimperlé	47.86667	-3.55	12312	Kemperle+29300	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984701	Quimper	48	-4.1	63849	Kemper+29000	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984708	Quilly	47.46131	-1.95274	1001	Killig	Broioù al Liger	Bro-C'hall+Frañs+France
+2984741	Quiberon	47.48412	-3.11963	5430	Kiberen+56170	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984759	Quévert	48.46402	-2.08745	3325	Kever	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984760	Quéven	47.78333	-3.41667	9316	Kewenn+56530	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984781	Questembert	47.66296	-2.4522	6392	Kistreberzh+56230	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984783	Quessoy	48.42208	-2.66089	3600	Kesoue	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984794	Querrien	47.96667	-3.53333	1689	Kerien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984830	Quemper-Guézennec	48.70378	-3.10522	1074	Kemper-Gwezhenneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984835	Quéménéven	48.11667	-4.11667	1157	Kemeneven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984852	Quédillac	48.24904	-2.14241	1074	Kedilieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2984853	Québriac	48.34444	-1.82723	1141	Kevrieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2985282	Priziac	48.06667	-3.41667	1310	Prizieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2985290	Privas	44.73333	4.6	9545	Privàs+07000		Bro-C'hall+Frañs+France
+2985302	Prinquiau	47.36215	-2.00952	2243	Prevenkel	Broioù al Liger	Bro-C'hall+Frañs+France
+2985490	Préfailles	47.12839	-2.21693	1185	Pradvael	Broioù al Liger	Bro-C'hall+Frañs+France
+2985579	Prat	48.67677	-3.29707	1049	Prad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2985787	Poullaouen	48.33333	-3.65	1364	Poullaouen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2985788	Poullan-sur-Mer	48.08333	-4.41667	1769	Poullann	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2985807	Pouldreuzic	47.95	-4.36667	1902	Pouldreuzig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2985810	Pouldergat	48.05	-4.33333	1347	Pouldregad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2985932	Port-Saint-Père	47.13294	-1.7485	2306	Porzh-Pêr	Broioù al Liger	Bro-C'hall+Frañs+France
+2985963	Port-Louis	47.70704	-3.35484	3020	Porzh-Loeiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986046	Porspoder	48.5	-4.76667	1651	Porspoder	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986059	Pornichet	47.26682	-2.33794	10584	Pornizhan	Broioù al Liger	Bro-C'hall+Frañs+France
+2986060	Pornic	47.11205	-2.08888	12897	Pornizh+44210	Broioù al Liger	Bro-C'hall+Frañs+France
+2986066	Pordic	48.57051	-2.81783	5441	Porzhig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986102	Pont-Scorff	47.83343	-3.40251	2826	Pont-Skorf	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986121	Pontrieux	48.70111	-3.15967	1301	Pontrev	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986160	Pontivy	48.06667	-2.98333	16752	Pondivi+Pondi+56300	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986271	Pontchâteau	47.43797	-2.09011	8474	Pontkastell-Keren	Broioù al Liger	Bro-C'hall+Frañs+France
+2986286	Pont-Aven	47.85	-3.75	3129	Pont-Aven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986410	Pommerit-le-Vicomte	48.61989	-3.09	1810	Pañvrid-ar-Beskont	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986411	Pommerit-Jaudy	48.73058	-3.24208	1187	Peurid-ar-Roc'h+Peurid-ar-Roch	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986418	Pommeret	48.46378	-2.62689	1796	Peuñvrid	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986589	Pocé-les-Bois	48.11626	-1.25168	1062	Pozieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986592	Pluzunet	48.64076	-3.37113	1029	Plûned	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986593	Pluvigner	47.77627	-3.01013	5775	Pleuwigner	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986600	Plurien	48.62559	-2.40423	1283	Plurien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986601	Pluneret	47.67525	-2.95782	3987	Plunered	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986605	Plumieux	48.10303	-2.58382	1131	Pluvaeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986608	Plumergat	47.74134	-2.91501	3156	Pluvergad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986609	Plumelin	47.86036	-2.88754	1900	Pluverin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986610	Pluméliau	47.95769	-2.97494	3327	Pluniav	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986611	Plumelec	47.83754	-2.63987	2553	Pluveleg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986613	Plumaugat	48.25479	-2.23843	1041	Pluvaelgad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986615	Pluherlin	47.69632	-2.36349	1219	Pluhernin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986616	Pluguffan	47.98333	-4.18333	3370	Pluguen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986618	Pluduno	48.5311	-2.26848	1798	Pludunoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986620	Plozévet	47.98333	-4.41667	2901	Plozeved	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986624	Plouzévédé	48.6	-4.11667	1429	Gwitevede	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986626	Plouzané	48.38333	-4.61667	13118	Plouzane	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986628	Plouvorn	48.58333	-4.03333	2725	Plouvorn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986629	Plouvien	48.53333	-4.45	3346	Plouvien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986632	Plourivo	48.7455	-3.07075	2094	Plourivioù+Plourivoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986633	Plourin-lès-Morlaix	48.53333	-3.78333	4815	Plourin-Montroulez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986635	Plouray	48.1458	-3.38671	1105	Plourae	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986638	Plounévez-Quintin	48.28333	-3.23333	1101	Plounevez-Kintin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986639	Plounévez-Moëdec	48.56667	-3.45	1398	Plounevez-Moedeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986640	Plounévez-Lochrist	48.61667	-4.21667	2463	Gwinevez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986641	Plounévézel	48.3	-3.6	1046	Plonevell	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986642	Plounéventer	48.51667	-4.21667	1567	Gwineventer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986644	Plounéour-Trez	48.65	-4.31667	1238	Plouneour-Traezh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986645	Plounéour-Ménez	48.45	-3.88333	1229	Plouneour-Menez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986646	Ploumoguer	48.4	-4.71667	1726	Plonger	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986647	Ploumilliau	48.68333	-3.51667	2268	Plouilio	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986649	Ploumagoar	48.54509	-3.13233	4603	Plouvagor	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986652	Plouisy	48.57817	-3.18434	2053	Plouizi	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986653	Plouigneau	48.56667	-3.7	4311	Plouigno	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986654	Plouider	48.61667	-4.3	1855	Plouider	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986655	Plouhinec	48.01667	-4.48333	4428	Ploeneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986657	Plouharnel	47.59804	-3.11274	1812	Plouharnel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986660	Plouha	48.6765	-2.92842	4435	Plouha	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986661	Plouguin	48.53333	-4.6	2058	Plougin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986662	Plouguiel	48.79742	-3.23883	1962	Priel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986663	Plouguernével	48.2394	-3.25071	2343	Plougernevel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986664	Plouguerneau	48.6	-4.5	5883	Plougerne	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986665	Plouguenast	48.28208	-2.70443	1806	Plougonwaz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986666	Plougrescant	48.84026	-3.22886	1462	Plougouskant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986668	Plougourvest	48.55	-4.08333	1207	Gwikourvest	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986669	Plougoumelen	47.6507	-2.91716	1885	Plougouvelen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986670	Plougoulm	48.66667	-4.05	1718	Plougouloum	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986672	Plougonven	48.51667	-3.71667	3261	Plougonven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986673	Plougonvelin	48.34059	-4.71846	3009	Plougonvelen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986674	Plougastel-Daoulas	48.36667	-4.36667	13679	Plougastell-Daoulaz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986676	Plougasnou	48.7	-3.8	3575	Plouganoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986678	Ploufragan	48.49141	-2.79458	11577	Ploufragan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986681	Plouézec	48.75122	-2.98467	3321	Ploueg-ar-Mor	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986682	Plouescat	48.66667	-4.16667	3891	Ploueskad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986683	Plouër-sur-Rance	48.52669	-2.00298	2848	Plouhern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986685	Plouénan	48.63333	-4	2499	Plouenan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986688	Plouédern	48.48333	-4.25	2700	Plouedern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986689	Plouëc-du-Trieux	48.68333	-3.2	1133	Ploueg-Pontrev	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986691	Ploudaniel	48.53333	-4.31667	3910	Plouzeniel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986692	Ploudalmézeau	48.53333	-4.65	5243	Gwitalmeze	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986693	Ploubezre	48.7	-3.45	2762	Ploubêr	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986694	Ploubazlanec	48.8	-3.03333	3536	Plaeraneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986695	Ploubalay	48.58109	-2.14069	2506	Plouvalae	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986696	Plouay	47.91444	-3.33384	5166	Ploue	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986697	Plouasne	48.30081	-2.00698	1451	Plouan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986698	Plouarzel	48.43333	-4.73333	2596	Plouarzhel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986699	Plouaret	48.61667	-3.46667	2207	Plouared	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986700	Plouagat	48.53611	-2.99956	2288	Plagad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986706	Plonévez-Porzay	48.1	-4.21667	1687	Plonevez-Porzhe	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986707	Plonévez-du-Faou	48.25	-3.83333	2332	Plonevez-ar-Faou	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986708	Plonéour-Lanvern	47.9	-4.28333	5038	Ploneour-Lanwern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986709	Plonéis	48.01667	-4.21667	1504	Ploneiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986710	Plomodiern	48.18333	-4.23333	2108	Ploudiern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986712	Plomeur	47.83333	-4.28333	3402	Ploveur	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986713	Plomelin	47.93333	-4.15	4318	Ploveilh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986723	Plogonnec	48.08333	-4.18333	2974	Plogoneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986724	Plogoff	48.037	-4.66606	1649	Plougoñ	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986725	Plogastel-Saint-Germain	47.98333	-4.26667	1804	Plogastell-Sant-Jermen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986726	Ploëzal	48.71534	-3.20333	1230	Pleuzal	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986728	Plœuc-sur-Lié	48.35	-2.75	3061	Ploheg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986729	Ploërmel	47.93172	-2.39781	8422	Ploermael+56800	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986730	Ploeren	47.65713	-2.86397	4245	Ploveren	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986731	Ploërdut	48.08742	-3.2855	1400	Pleurdud	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986732	Ploemeur	47.73333	-3.43333	20652	Plañvour+56270	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986733	Ploemel	47.65153	-3.0703	2340	Pleñver	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986735	Plobannalec-Lesconil	47.81667	-4.21667	3182	Pornaleg-Leskonil	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986746	Pleyber-Christ	48.5	-3.86667	2903	Pleiber-Krist	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986747	Pleyben	48.23333	-3.96667	3938	Pleiben	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986756	Pleuven	47.9	-4.03333	2598	Pluwenn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986757	Pleurtuit	48.57858	-2.05805	4989	Plevrestud+Pleurestud	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986760	Pleumeur-Gautier	48.80044	-3.15578	1186	Pleuveur-Gaoter	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986761	Pleumeur-Bodou	48.76667	-3.51667	4027	Pleuveur-Bodoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986762	Pleumeleuc	48.18438	-1.91962	2330	Pleveleg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986766	Pleugueneuc	48.39735	-1.90301	1403	Plegeneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986767	Pleugriffet	47.98594	-2.68454	1194	Ploueg-Grifed	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986768	Pleudihen-sur-Rance	48.51667	-1.96667	2618	Pleudehen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986769	Pleudaniel	48.76644	-3.14033	1041	Planiel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986770	Pleucadeuc	47.75876	-2.37362	1595	Plegadeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986771	Pleubian	48.84267	-3.139	2804	Pleuvihan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986772	Plestin-les-Grèves	48.65844	-3.63056	3700	Plistin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986774	Plestan	48.42266	-2.44777	1447	Plestan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986785	Plessé	47.5418	-1.88609	3833	Plesei	Broioù al Liger	Bro-C'hall+Frañs+France
+2986786	Plessala	48.27642	-2.61876	1795	Plesala	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986793	Plescop	47.69726	-2.8056	4275	Pleskob	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986795	Plérin	48.54249	-2.77983	13860	Plerin+22190	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986796	Plerguer	48.52676	-1.84769	1967	Plergar	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986800	Pléneuf-Val-André	48.593	-2.54675	3942	Pleneg-Nantraezh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986801	Plénée-Jugon	48.36462	-2.40036	2405	Plened-Yugon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986802	Plémy	48.33644	-2.68244	1585	Plevig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986803	Plémet	48.17601	-2.59325	3161	Plezeved	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986804	Plélo	48.55534	-2.94634	2745	Pleuloc'h	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986806	Plélan-le-Petit	48.43157	-2.2174	1575	Plelann-Vihan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986807	Plélan-le-Grand	48.00124	-2.09914	3220	Plelann-Veur	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986814	Pleine-Fougères	48.53308	-1.56534	1795	Planfili	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986816	Pléhédel	48.69645	-3.00833	1180	Plehedel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986817	Pléguien	48.63525	-2.94001	1049	Plian	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986818	Plédran	48.446	-2.74667	5550	Pledran	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986819	Plédéliac	48.45	-2.38333	1284	Pledeliav	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986820	Pléchâtel	47.89496	-1.74876	2128	Plegastell	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986830	Plaudren	47.77868	-2.69331	1549	Plaodren	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986875	Planguenoual	48.533	-2.57642	1614	Plangonwal	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986894	Plancoët	48.52199	-2.2354	2703	Plangoed	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986944	Plaintel	48.40733	-2.81733	3693	Pleneventer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986952	Plaine-Haute	48.44442	-2.85416	1262	Plenaod	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2986991	Plabennec	48.50244	-4.42656	7585	Plabenneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2987043	Piriac-sur-Mer	47.37938	-2.54616	2046	Penc'herieg+Pencherieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2987046	Piré-sur-Seiche	48.00958	-1.42909	2065	Pereg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2987056	Pipriac	47.80953	-1.94638	3208	Presperieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2987658	Petit-Mars	47.39512	-1.45262	2629	Kervarc'h+Kervarch	Broioù al Liger	Bro-C'hall+Frañs+France
+2987863	Perros-Guirec	48.81454	-3.43963	8062	Perroz-Gireg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2987914	Perpignan	42.69764	2.89541	110706	Perpinyà+66000		Bro-C'hall+Frañs+France
+2987967	Périgueux	45.18333	0.71667	34770	Periguers+24000		Bro-C'hall+Frañs+France
+2988054	Penvénan	48.81182	-3.2955	2545	Perwenan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988119	Pénestin	47.48226	-2.47275	1627	Pennestin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988128	Pencran	48.43333	-4.23333	1330	Penn-ar-C'hrann	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988215	Peillac	47.71391	-2.21971	1787	Paolieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988229	Pédernec	48.59682	-3.26948	1725	Pederneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988268	Péaule	47.57972	-2.35601	2362	Pleaol	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988323	Paulx	46.96181	-1.7552	1473	Palud	Broioù al Liger	Bro-C'hall+Frañs+France
+2988507	Paris	48.85341	2.3488	2138551	Pariz+75001		Bro-C'hall+Frañs+France
+2988518	Parigné	48.42727	-1.1921	1241	Parinieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988634	Pannecé	47.48583	-1.2394	1025	Panezeg	Broioù al Liger	Bro-C'hall+Frañs+France
+2988656	Pancé	47.88181	-1.65953	1048	Pantieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988670	Pamiers	43.11667	1.6	16997	Pàmias+09100		Bro-C'hall+Frañs+France
+2988794	Paimpont	48.01809	-2.17105	1549	Pempont	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988796	Paimpol	48.77841	-3.04375	8603	Pempoull+22500	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988797	Paimboeuf	47.28654	-2.03048	3015	Pembo	Broioù al Liger	Bro-C'hall+Frañs+France
+2988853	Pacé	48.14848	-1.77327	8608	Pazieg+35740	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2988856	Pabu	48.58608	-3.13608	2829	Pabu	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2989058	Oudon	47.34774	-1.285	2845	Oudon	Broioù al Liger	Bro-C'hall+Frañs+France
+2989122	Ossé	48.05542	-1.45029	1013	Oc'heg+Ocheg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2989170	Orvault	47.27095	-1.6219	25338	Orvez+44700	Broioù al Liger	Bro-C'hall+Frañs+France
+2989317	Orléans	47.90289	1.90389	124149	Orleañs+45000		Bro-C'hall+Frañs+France
+2989382	Orgères	47.99886	-1.66781	3143	An Heizeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2989460	Orange	44.1392	4.80791	30530	Aurenja+84100		Bro-C'hall+Frañs+France
+2989876	Nozay	47.56495	-1.62629	3419	Nozieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2989914	Noyal-sur-Vilaine	48.11219	-1.52333	4823	Noal-ar-Gwilen+35530	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2989918	Noyal-Pontivy	48.06667	-2.88333	3533	Noal-Pondivi+Noal-Pondi	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2989920	Noyal-Muzillac	47.59169	-2.45557	2053	Noal-Muzilheg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2989952	Nouvoitou	48.04105	-1.54714	2785	Neveztell	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2990039	Notre-Dame-des-Landes	47.38048	-1.70904	1773	Kernitron-al-Lann	Broioù al Liger	Bro-C'hall+Frañs+France
+2990080	Nostang	47.7487	-3.18639	1261	Lostenk	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2990085	Nort-sur-Erdre	47.43881	-1.49833	6461	Enorzh	Broioù al Liger	Bro-C'hall+Frañs+France
+2990331	Nivillac	47.53371	-2.28298	3433	Nivilieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2990363	Nîmes	43.83333	4.35	148236	Nimes+30000		Bro-C'hall+Frañs+France
+2990392	Nieppe	50.70425	2.83506	7638	Niepkerke	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2990440	Nice	43.70313	7.26608	338620	Nisa+06000		Bro-C'hall+Frañs+France
+2990471	Névez	47.81924	-3.79225	2560	Nevez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2990606	Neulliac	48.12836	-2.98289	1575	Neulieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2990683	Neuf-Brisach	48.01783	7.52795	2249	Neu-Breisach	ACAL	Bro-C'hall+Frañs+France
+2990919	Narbonne	43.18396	3.00141	50776	Narbona+11100		Bro-C'hall+Frañs+France
+2990969	Nantes	47.21725	-1.55336	277269	Naoned+44000+http://www.nantes.fr/	Broioù al Liger	Bro-C'hall+Frañs+France
+2990970	Nanterre	48.89198	2.20675	86719	Nanterre+92000		Bro-C'hall+Frañs+France
+2991030	Naizin	47.98993	-2.83287	1625	Neizin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2991077	Muzillac	47.55451	-2.48041	4308	Muzilheg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2991153	Muret	43.46667	1.35	24313	Murèth+31600		Bro-C'hall+Frañs+France
+2991161	Mûr-de-Bretagne	48.2	-2.98333	2183	Mur	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2991214	Mulhouse	47.75	7.33333	111430	Mülhausen	ACAL	Bro-C'hall+Frañs+France
+2991285	Mouzillon	47.14096	-1.28191	2385	Maodilon	Broioù al Liger	Bro-C'hall+Frañs+France
+2991292	Mouzeil	47.44738	-1.34786	1306	Mouzel	Broioù al Liger	Bro-C'hall+Frañs+France
+2991343	Moustoir-Ac	47.85461	-2.83481	1520	Moustoer-Logunec'h	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2991546	Mouguerre	43.46795	-1.41824	4392	Mugerre		Bro-C'hall+Frañs+France
+2991772	Morlaix	48.58333	-3.83333	17516	Montroulez+29600	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2991866	Moréac	47.91967	-2.81934	3097	Mourieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2991868	Mordelles	48.07571	-1.84286	6484	Morzhell	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992065	Montreuil-sur-Ille	48.30788	-1.6688	1705	Mousterel-an-Il	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992070	Montreuil-sous-Pérouse	48.15176	-1.23946	1020	Mousterel-ar-Veineg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992074	Montreuil-le-Gast	48.24647	-1.72498	1750	Mousterel-ar-Gwast	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992166	Montpellier	43.61092	3.87723	248252	Montpelhièr+34000		Bro-C'hall+Frañs+France
+2992206	Montoir-de-Bretagne	47.33012	-2.15107	6762	Mouster-al-Loc'h+Mouster-al-Loch	Broioù al Liger	Bro-C'hall+Frañs+France
+2992537	Montgermont	48.15592	-1.71464	3012	Menezgervant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992581	Montfort-sur-Meu	48.13542	-1.95201	6007	Moñforzh+35160	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992654	Montesquieu-Volvestre	43.20725	1.22862	2635	Montesquiu de Volvèstre		Bro-C'hall+Frañs+France
+2992669	Monterfil	48.06733	-1.97905	1078	Mousterfil	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992674	Monterblanc	47.74211	-2.6795	2226	Sterwenn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2992703	Montélimar	44.55838	4.75094	35637	Montelaimar+26200		Bro-C'hall+Frañs+France
+2992771	Mont-de-Marsan	43.89022	-0.49713	36205	Lo Mont de Marsan+40000		Bro-C'hall+Frañs+France
+2992925	Montbert	47.05613	-1.4889	2481	Monteverzh	Broioù al Liger	Bro-C'hall+Frañs+France
+2992998	Montauban-de-Bretagne	48.19933	-2.04476	4552	Menezalban	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2993002	Montauban	44.01667	1.35	52434	Montalban+82000		Bro-C'hall+Frañs+France
+2993245	Monnières	47.13301	-1.35317	1659	Meliner	Broioù al Liger	Bro-C'hall+Frañs+France
+2993308	Monflanquin	44.52966	0.76772	2372	Montflanquin		Bro-C'hall+Frañs+France
+2993562	Molac	47.73011	-2.43484	1072	Moulleg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2993590	Moisdon-la-Rivière	47.62175	-1.37258	1789	Maezon-ar-Stêr	Broioù al Liger	Bro-C'hall+Frañs+France
+2993647	Moëlan-sur-Mer	47.81418	-3.62892	6984	Molan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2993692	Missillac	47.48155	-2.16	4180	Merzhelieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2993796	Minihy-Tréguier	48.77746	-3.22883	1128	Ar Vinic'hi+Ar Vinichi	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2993801	Miniac-Morvan	48.51477	-1.89955	3045	Minieg-Morvan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2993875	Millau	44.1	3.08333	23307	Milhau+12100		Bro-C'hall+Frañs+France
+2993884	Milizac	48.46667	-4.56667	3038	Milizag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994146	Meucon	47.71648	-2.7617	1361	Meukon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994168	Méteren	50.73333	2.7	2116	Meteren	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2994201	Messac	47.82399	-1.81085	2530	Mezeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994203	Mesquer	47.39919	-2.45986	1585	Mesker	Broioù al Liger	Bro-C'hall+Frañs+France
+2994268	Meslan	47.99502	-3.43285	1278	Mêlann	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994280	Mésanger	47.43131	-1.22798	3435	Mezansker	Broioù al Liger	Bro-C'hall+Frañs+France
+2994351	Merlevenez	47.73563	-3.23047	2457	Brelevenez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994431	Merdrignac	48.19372	-2.41533	3159	Medrigneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994608	Ménéac	48.13972	-2.46134	1808	Menieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994653	Melrand	47.98002	-3.10941	1631	Mêlrant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994676	Mellac	47.90345	-3.57675	2432	Mellag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994692	Melgven	47.90626	-3.83518	3115	Mêlwenn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994697	Melesse	48.21771	-1.69496	5675	Meled	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994743	Meillac	48.41174	-1.81378	1497	Melieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994773	Médréac	48.26703	-2.06618	1634	Mederieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994902	Mazamet	43.49001	2.37304	11479	Masamet+81200		Bro-C'hall+Frañs+France
+2994952	Maxent	47.98333	-2.03333	1140	Skirioù-Masen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2994981	Mauves-sur-Loire	47.29738	-1.38763	2579	Malvid	Broioù al Liger	Bro-C'hall+Frañs+France
+2995009	Mauron	48.08257	-2.28477	3426	Maoron	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2995058	Maure-de-Bretagne	47.89239	-1.99104	2711	Anast	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2995107	Mauléon-Licharre	43.22684	-0.88038	3313	Maule-Lextarre		Bro-C'hall+Frañs+France
+2995175	Matignon	48.59627	-2.29125	1620	Matignon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2995329	Marzan	47.54069	-2.32466	1806	Marzhan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2995398	Martigné-Ferchaud	47.82934	-1.31911	2619	Mazhinieg-Houarnruz+Marzhinieg-Houarnruz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2995469	Marseille	43.29695	5.38107	794811	Marsilha+13001		Bro-C'hall+Frañs+France
+2995507	Marsac-sur-Don	47.59648	-1.67952	1305	Marzheg	Broioù al Liger	Bro-C'hall+Frañs+France
+2995782	Marguerittes	43.8596	4.44517	8974	Margarida		Bro-C'hall+Frañs+France
+2996306	Malville	47.35905	-1.86227	3271	Kerwall	Broioù al Liger	Bro-C'hall+Frañs+France
+2996427	Malguénac	48.08008	-3.05248	1791	Malgeneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2996440	Malestroit	47.80934	-2.38457	2675	Malestred	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2996505	Malansac	47.67724	-2.29543	2041	Malañseg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2996628	Maisdon-sur-Sèvre	47.09714	-1.38	2218	Maezon-ar-Gwini	Broioù al Liger	Bro-C'hall+Frañs+France
+2996711	Maillane	43.83114	4.78152	2043	Malhana		Bro-C'hall+Frañs+France
+2996832	Maël-Carhaix	48.28444	-3.42322	1509	Mêl-Karaez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2996905	Machecoul	46.99358	-1.82352	6054	Machikoul	Broioù al Liger	Bro-C'hall+Frañs+France
+2997064	Lusanger	47.68153	-1.58857	1023	Luzevieg	Broioù al Liger	Bro-C'hall+Frañs+France
+2997146	Luitré	48.28247	-1.11866	1298	Loezherieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997300	Loyat	47.98933	-2.38344	1550	Loiad+Louad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997331	Louvigné-du-Désert	48.48047	-1.12537	4467	Louvigneg-an-Dezerzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997332	Louvigné-de-Bais	48.04898	-1.33091	1539	Louvigneg-Baez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997395	Lourdes	43.1	-0.05	15786	Lourd+65100		Bro-C'hall+Frañs+France
+2997457	Loudun	47.00788	0.08296	8510	Loudun+86200		Bro-C'hall+Frañs+France
+2997465	Loudéac	48.17826	-2.75433	10552	Loudieg+22600	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997511	Louargat	48.56576	-3.3375	2231	Louergad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997514	Louannec	48.79423	-3.412	2547	Louaneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997577	Lorient	47.75	-3.36667	58112	An Oriant+56100	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997616	Loperhet	48.37725	-4.30608	3524	Loperc'hed+Loperched	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997617	Lopérec	48.27734	-4.04756	1129	Lopereg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997621	Loon-Plage	50.99647	2.2177	6640	Loon	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+2997897	Logonna-Daoulas	48.32308	-4.29675	1659	Logonna-Daoulas+Logonna-Daoulaz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997943	Loctudy	47.83333	-4.16667	3867	Loktudi	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997947	Locquirec	48.69243	-3.64554	1367	Lokireg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997957	Locoal-Mendon	47.7052	-3.10796	2322	Lokoal-Mendon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997959	Locmiquélic	47.72499	-3.34153	4181	Lokmikaelig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997961	Locminé	47.88619	-2.83536	3976	Logunec'h+Logunech+56500	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2997964	Locmariaquer	47.56915	-2.94468	1468	Lokmaria-Kaer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2998061	Livré-sur-Changeon	48.21937	-1.34438	1366	Liverieg-Kenton	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2998286	Limoges	45.83153	1.25781	141176	Lemojez+87000		Bro-C'hall+Frañs+France
+2998298	Limerzel	47.63619	-2.35448	1185	Lizmerzher	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2998404	Ligné	47.41096	-1.37726	3222	Legneg	Broioù al Liger	Bro-C'hall+Frañs+France
+2998423	Liffré	48.21324	-1.50838	7034	Liverieg+35340	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2998574	Hôpital-Camfrout	48.32789	-4.24155	1751	An Ospital	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2998663	Lézardrieux	48.7851	-3.10588	1708	Lezardrev	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2998731	Le Vivier-sur-Mer	48.60169	-1.77303	1097	Gwiver	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2999089	Le Trévoux	47.89478	-3.6408	1374	An Treoù-Kernev+An Treoù-Kerne	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2999203	Le Theil-de-Bretagne	47.9195	-1.42975	1237	An Tilh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+2999236	Le Temple-de-Bretagne	47.32737	-1.78904	1665	Templ-Breizh	Broioù al Liger	Bro-C'hall+Frañs+France
+2999485	Les Touches	47.44249	-1.43097	2111	An Dosenneg	Broioù al Liger	Bro-C'hall+Frañs+France
+2999572	Les Sorinières	47.14831	-1.52932	6698	Kersoren	Broioù al Liger	Bro-C'hall+Frañs+France
+3000090	Le Sourn	48.04262	-2.9879	2008	Ar Sorn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3000174	Lesneven	48.57233	-4.32133	7144	Lesneven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3000205	Les Moutiers-en-Retz	47.06375	-1.999	1145	Mousteroù-Raez	Broioù al Liger	Bro-C'hall+Frañs+France
+3001546	Les Champs-Géraux	48.41647	-1.97087	1004	Maez-Geraod	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3002351	Le Rheu	48.10228	-1.79733	6601	Reuz+35650	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3002373	Le Relecq-Kerhuon	48.40691	-4.39359	11911	Ar Releg-Kerhuon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3002465	Le Puy-en-Velay	45.04366	3.88523	22718	Lo Puèi de Velai+43000		Bro-C'hall+Frañs+France
+3002534	Le Pouliguen	47.26973	-2.4278	5438	Ar Poulgwenn	Broioù al Liger	Bro-C'hall+Frañs+France
+3002954	Le Pertre	48.03373	-1.03735	1374	Ar Perzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3002981	Le Pellerin	47.19915	-1.75514	4147	Pentelloù	Broioù al Liger	Bro-C'hall+Frañs+France
+3003042	Le Pallet	47.13809	-1.33476	2574	Ar Palez	Broioù al Liger	Bro-C'hall+Frañs+France
+3003045	Le Palais	47.34557	-3.15411	2645	Porzh-Lae	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3003253	Mont-Dore	45.56667	2.81667	1787	Le Mont-Dore		Bro-C'hall+Frañs+France
+3003332	Le Minihic-sur-Rance	48.57835	-2.00876	1303	Minic'hi-Poudour+Minichi-Poudour	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3003603	Le Mans	48	0.2	144515	Ar Mañs+72000	Broioù al Liger	Bro-C'hall+Frañs+France
+3003661	Le Loroux-Bottereau	47.23763	-1.34952	5326	Lavreer-Botorel+Al Lavreer-Botorel	Broioù al Liger	Bro-C'hall+Frañs+France
+3003730	Le Landreau	47.20512	-1.30452	2674	Lannerell	Broioù al Liger	Bro-C'hall+Frañs+France
+3003777	Léhon	48.44432	-2.04578	2708	Lehon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3003796	Le Havre	49.4938	0.10767	185972	An Havr Nevez+An Havr-Nevez+76600		Bro-C'hall+Frañs+France
+3004114	Legé	46.88484	-1.60127	3916	Levieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3004119	Le Gâvre	47.52131	-1.74905	1026	Gavr+Ar Chavr	Broioù al Liger	Bro-C'hall+Frañs+France
+3004222	Le Folgoët	48.56359	-4.33641	3286	Ar Folgoad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3004224	Le Fœil	48.43333	-2.91667	1186	Ar Fouilh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3004244	Leffrinckoucke	51.03457	2.46452	5095	Leffrinkhoeke	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3004304	Le Faouët	48.03299	-3.49048	3032	Ar Faoued	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3004306	Le Faou	48.29456	-4.17927	1703	Ar Faou	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3004321	Le Drennec	48.53475	-4.37008	1614	An Dreneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3004418	Le Croisic	47.29189	-2.5138	4593	Ar Groazig	Broioù al Liger	Bro-C'hall+Frañs+France
+3004444	Lécousse	48.36458	-1.21289	3202	Eskuz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3004513	Le Conquet	48.36053	-4.77086	2516	Konk-Leon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3004813	Le Cellier	47.31988	-1.34584	3596	Keller	Broioù al Liger	Bro-C'hall+Frañs+France
+3005202	Le Bono	47.64129	-2.94902	1994	Ar Bonoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3005282	Le Bignon	47.09722	-1.49167	2793	Bignon	Broioù al Liger	Bro-C'hall+Frañs+France
+3005425	La Vraie-Croix	47.68954	-2.54274	1138	Langroez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006090	La Turballe	47.34686	-2.50734	4356	An Turball	Broioù al Liger	Bro-C'hall+Frañs+France
+3006137	La Trinité-sur-Mer	47.5868	-3.02994	1641	An Drinded-Karnag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006283	La Teste-de-Buch	44.62875	-1.14059	27253	La Tèsta de Bug+33260		Bro-C'hall+Frañs+France
+3006349	Lassy	47.97829	-1.8719	1297	Lazig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006627	Larressore	43.36792	-1.43976	1426	Larresoro		Bro-C'hall+Frañs+France
+3006767	La Roche-sur-Yon	46.66667	-1.43333	59410	La-Roche-sur-Yon+85000	Broioù al Liger	Bro-C'hall+Frañs+France
+3006780	La Roche-Maurice	48.47455	-4.20211	1791	Ar Roc'h-Morvan+Ar Roch-Morvan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006787	La Rochelle	46.16667	-1.15	76810	Ar Rochell+17000		Bro-C'hall+Frañs+France
+3006796	La Roche-Derrien	48.74627	-3.26142	1063	Ar Roc'h-Derrien+Ar Roch-Derrien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006876	Larmor-Plage	47.70646	-3.38339	9151	An Arvor	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006877	Larmor-Baden	47.58341	-2.8944	1023	An Arvor-Baden	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006929	La Richardais	48.60641	-2.03639	2207	Kerricharzh-an-Arvor	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3006999	La Remaudière	47.23762	-1.24358	1068	Kerravaot	Broioù al Liger	Bro-C'hall+Frañs+France
+3007004	La Regrippière	47.18167	-1.1762	1167	Skouvlant	Broioù al Liger	Bro-C'hall+Frañs+France
+3007259	La Planche	47.01619	-1.43159	2239	Ar Plank	Broioù al Liger	Bro-C'hall+Frañs+France
+3007262	La Plaine-sur-Mer	47.13619	-2.19182	2711	Plaen-Raez	Broioù al Liger	Bro-C'hall+Frañs+France
+3007481	Lanvollon	48.63117	-2.98641	1474	Lannolon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007488	Lanvéoc	48.28799	-4.46277	2282	Lañveog	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007489	Lanvénégen	47.99811	-3.54134	1184	Lannejenn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007496	Lanvallay	48.45543	-2.02803	3269	Lanvalae	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007516	Lantic	48.60641	-2.882	1167	Lannidig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007552	Lanrodec	48.51622	-3.03122	1133	Lanrodeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007553	Lanrivoaré	48.4731	-4.6387	1346	Lanriware	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007570	Lanouée	48.00225	-2.58157	1638	Lannoez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007609	Lannion	48.73333	-3.46667	21473	Lannuon+22300	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007610	Lannilis	48.57091	-4.52233	4686	Lanniliz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007636	Lanmeur	48.64733	-3.71645	2195	Lanneur	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007663	Languidic	47.83266	-3.15821	7000	Langedig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007666	Langueux	48.495	-2.7185	6822	Langaeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007687	Langonnet	48.10511	-3.49356	2064	Langoned	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007689	Langon	47.72057	-1.8501	1411	Landegon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007696	Langoat	48.75061	-3.28121	1119	Langoad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007729	Langeais	47.32587	0.40136	4034	Langeais		Bro-C'hall+Frañs+France
+3007794	Lanester	47.76132	-3.33965	24352	Lannarstêr+56600	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007803	Landunvez	48.53466	-4.72545	1442	Landunvez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007806	Landudec	47.99983	-4.33641	1209	Landudeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007818	Landrévarzec	48.09177	-4.06044	1567	Landrevarzeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007842	Landivisiau	48.50784	-4.06833	8747	Landivizio+29400	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007858	Landévant	47.76499	-3.12221	2270	Landevant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007874	Landerneau	48.45252	-4.25252	16052	Landerne+29800	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007882	Landeleau	48.22734	-3.7285	1029	Landelo	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007883	Landéhen	48.43022	-2.53999	1028	Landehen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007885	Landéda	48.58733	-4.571	3082	Landeda	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007889	Landéan	48.41253	-1.15245	1314	Landean	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007902	Landaul	47.74785	-3.07694	1434	Landaol	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007919	Lancieux	48.60767	-2.1503	1264	Lanseeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007972	Lampaul-Plouarzel	48.44727	-4.76045	2010	Lambaol-Blouarzhel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3007973	Lampaul-Guimiliau	48.49156	-4.04144	2077	Lambaol-Gwimilio	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3008096	La Montagne	47.18651	-1.68272	6012	Ar Menez	Broioù al Liger	Bro-C'hall+Frañs+France
+3008140	La Mézière	48.21829	-1.75514	3808	Magoer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3008185	La Meilleraye-de-Bretagne	47.55941	-1.402	1113	Melereg-Breizh	Broioù al Liger	Bro-C'hall+Frañs+France
+3008192	La Méaugon	48.49933	-2.8385	1173	Lanvealgon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3008225	Lamballe	48.46762	-2.51436	12344	Lambal+22400	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3008470	La Limouzinière	46.99274	-1.59722	1518	Kerlouevig	Broioù al Liger	Bro-C'hall+Frañs+France
+3008665	Laillé	47.97848	-1.71676	3879	Lalieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3008719	Lahonce	43.48248	-1.39101	2046	Lehuntze		Bro-C'hall+Frañs+France
+3008809	La Haie-Fouassière	47.15492	-1.39794	4047	An Hae-Foazer	Broioù al Liger	Bro-C'hall+Frañs+France
+3008857	La Guerche-de-Bretagne	47.94112	-1.22869	4552	Gwerc'h-Breizh+Gwerch-Breizh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3008884	La Grigonnais	47.52724	-1.66781	1314	Kerrigon	Broioù al Liger	Bro-C'hall+Frañs+France
+3009038	La Gouesnière	48.60467	-1.894	1164	Gouenaer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3009050	La Gorgue	50.6379	2.71502	5327	De Gorge	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3009239	La Gacilly	47.76562	-2.1322	2453	Gazilieg+56200	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3009266	La Fresnais	48.59478	-1.84186	2143	An Onneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3009289	Lafrançaise	44.12791	1.24141	2799	La Francesa		Bro-C'hall+Frañs+France
+3009352	La Forêt-Fouesnant	47.9101	-3.97858	2955	Ar Forest-Fouenant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3009390	La Forest-Landerneau	48.42589	-4.31578	1686	Ar Forest-Landerne	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3009639	La Dominelais	47.76229	-1.68819	1123	Doveneleg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3010040	La Chevrolière	47.09124	-1.60973	5220	Kerc'hevrel+Kerchevrel	Broioù al Liger	Bro-C'hall+Frañs+France
+3010226	La Chapelle-Thouarault	48.12486	-1.86619	2113	Bredual	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3010237	La Chapelle-sur-Erdre	47.29583	-1.55309	18481	Chapel-Erzh+44240	Broioù al Liger	Bro-C'hall+Frañs+France
+3010312	La Chapelle-Launay	47.37226	-1.97071	2467	Chapel-ar-Wern	Broioù al Liger	Bro-C'hall+Frañs+France
+3010316	La Chapelle-Janson	48.34775	-1.10209	1268	Chapel-Yent	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3010321	La Chapelle-Heulin	47.17667	-1.34	1997	Chapel-Huelin	Broioù al Liger	Bro-C'hall+Frañs+France
+3010368	La Chapelle-des-Marais	47.44845	-2.23834	3183	Chapel-ar-Geunioù	Broioù al Liger	Bro-C'hall+Frañs+France
+3010369	La Chapelle-des-Fougeretz	48.17705	-1.73143	3621	Chapel-Felgeriz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3010396	La Chapelle-Basse-Mer	47.27086	-1.33913	4595	Chapel-Baz-Meur	Broioù al Liger	Bro-C'hall+Frañs+France
+3010726	La Bruffière	47.01492	-1.1973	3320	Brufer	Broioù al Liger	Bro-C'hall+Frañs+France
+3010854	La Boussac	48.5126	-1.66088	1062	Labouseg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3010911	La Bouëxière	48.18333	-1.43333	3960	Beuzid-ar-C'hoadoù+Beuzid-ar-Choadoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3011090	La Bernerie-en-Retz	47.0804	-2.03642	2296	Kerverner-Raez	Broioù al Liger	Bro-C'hall+Frañs+France
+3011093	La Bernardière	47.04952	-1.26587	1252	Kervernarzh	Broioù al Liger	Bro-C'hall+Frañs+France
+3011506	Kervignac	47.76289	-3.23778	4477	Kervignag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3011563	Kersaint-Plabennec	48.47166	-4.37233	1166	Kersent-Plabenneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3011624	Kernilis	48.57075	-4.418	1174	Kerniliz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3011686	Kerlouan	48.645	-4.36556	2405	Kerlouan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012217	Bourg de Joué-sur-Erdre	47.49596	-1.42047	1834	Yaoued	Broioù al Liger	Bro-C'hall+Frañs+France
+3012248	Josselin	47.9572	-2.54713	2756	Josilin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012399	Javené	48.31933	-1.2163	1682	Yaoueneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012495	Janzé	47.95915	-1.49829	5927	Gentieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012506	Jans	47.62029	-1.61438	1081	Hentieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3012636	Itxassou	43.32893	-1.40617	1918	Itsasu		Bro-C'hall+Frañs+France
+3012647	Istres	43.51667	4.98333	44373	Istre+13118		Bro-C'hall+Frañs+France
+3012664	Issoire	45.55	3.25	15984	Soire+63500		Bro-C'hall+Frañs+France
+3012676	Issé	47.62419	-1.45152	1937	Izeg	Broioù al Liger	Bro-C'hall+Frañs+France
+3012732	Irvillac	48.37011	-4.21223	1064	Irvilhag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012738	Irodouër	48.24932	-1.94959	1523	Irodouer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012778	Inguiniel	47.97658	-3.28072	2042	An Ignel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012905	Iffendic	48.12981	-2.03486	3357	Ilfentig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3012937	Hyères	43.12038	6.12857	50487	Ieras+83400		Bro-C'hall+Frañs+France
+3013026	Huelgoat	48.36111	-3.74578	1759	An Uhelgoad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013044	Hoymille	50.97187	2.44738	3275	Hooimille	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3013174	Hondschoote	50.978	2.58372	3742	Hondschote	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3013263	Hirel	48.60502	-1.80224	1288	Hirel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013283	Hillion	48.51429	-2.66634	3943	Hilion	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013457	Héric	47.41417	-1.65309	4286	Hierig	Broioù al Liger	Bro-C'hall+Frañs+France
+3013484	Herbignac	47.44822	-2.3181	4724	Erbigneg	Broioù al Liger	Bro-C'hall+Frañs+France
+3013504	Henvic	48.63256	-3.92623	1247	Henvig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013514	Hénon	48.38433	-2.68334	1794	Henon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013521	Hennebont	47.80512	-3.27337	14288	Henbont+56700	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013534	Hendaye	43.37172	-1.77382	14415	Hendaia+64700		Bro-C'hall+Frañs+France
+3013536	Hénanbihen	48.56072	-2.37602	1354	Henant-Bihan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013596	Hédé-Bazouges	48.3	-1.8	2076	Hazhoù+Hazhoù-Bazeleg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3013619	Hazebrouck	50.72374	2.53729	23307	Hazebroek+59190	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3013635	Haverskerque	50.64089	2.54162	1475	Haverskerke	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3013766	Haute-Goulaine	47.19905	-1.42941	5290	Gorre-Goulen	Broioù al Liger	Bro-C'hall+Frañs+France
+3013877	Hasparren	43.38377	-1.30499	6250	Hazparne		Bro-C'hall+Frañs+France
+3013971	Hanvec	48.32692	-4.15951	1690	Hañveg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014192	Guissény	48.63292	-4.40884	1938	Gwiseni	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014196	Guiscriff	48.04944	-3.64356	2554	Gwiskri	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014208	Guipry	47.82637	-1.84218	3281	Gwipri	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014212	Guipel	48.29937	-1.71866	1557	Gwipedel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014213	Guipavas	48.43522	-4.39722	13755	Gwipavaz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014221	Guingamp	48.55	-3.15	9023	Gwengamp+22200	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014239	Guilvinec	47.79861	-4.28111	3201	Ar Gelveneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014255	Guilliers	48.04286	-2.40562	1453	Gwiler-Porc'hoed	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014274	Guillac	47.91096	-2.46571	1170	Gilieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014280	Guilers	48.42545	-4.55801	7328	Gwiler-Leon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014294	Guignen	47.92009	-1.86161	2645	Gwinien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014304	Guiclan	48.54967	-3.96211	2138	Gwiglann	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014305	Guichen	47.96762	-1.79534	7142	Gwizien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014340	Guéthary	43.42285	-1.61073	1370	Getaria		Bro-C'hall+Frañs+France
+3014365	Guern	48.02964	-3.09145	1500	Gwern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014369	Guerlesquin	48.51758	-3.58583	1451	Gwerliskin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014383	Guéret	46.16667	1.86667	15853	Garait+23000		Bro-C'hall+Frañs+France
+3014392	Guérande	47.32911	-2.42829	16523	Gwenrann+44350	Broioù al Liger	Bro-C'hall+Frañs+France
+3014393	Guer	47.90619	-2.12314	6308	Gwern-Porc'hoed+Gwern-Porchoed+56380	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014398	Guenrouet	47.51881	-1.95381	2601	Gwenred	Broioù al Liger	Bro-C'hall+Frañs+France
+3014402	Guénin	47.90757	-2.97941	1304	Gwennin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014403	Guengat	48.04193	-4.2047	1686	Gwengad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014412	Guémené-sur-Scorff	48.06667	-3.2	1289	Ar Gemene	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014413	Guémené-Penfao	47.63333	-1.83333	4963	Gwenvenez-Penfaou	Broioù al Liger	Bro-C'hall+Frañs+France
+3014421	Guégon	47.93707	-2.5645	2587	Gwegon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014579	Groix	47.63887	-3.4543	2429	Enez-Groe+Groe	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Bro-C'hall+Frañs+France
+3014816	Gravelines	50.98651	2.12807	13137	Grevelingen	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3014856	Grasse	43.66667	6.91667	47581	Grassa+06130		Bro-C'hall+Frañs+France
+3015125	Grand-Fougeray	47.7239	-1.7321	2156	Felgerieg-Veur	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015126	Grand-Fort-Philippe	50.99961	2.10784	6188	Groot-Fort-Filips	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3015160	Grande-Synthe	51.0154	2.29975	23213	Groot-Sinten+59760	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3015305	Grand-Champ	47.75804	-2.84635	4528	Gregam	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015422	Grâces	48.55651	-3.18533	2549	Gras-Gwengamp	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015434	Goven	48.00638	-1.84629	3291	Goven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015522	Gourin	48.13866	-3.60755	5005	Gourin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015596	Gouézec	48.16911	-3.97277	1033	Gouezeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015601	Gouesnou	48.45267	-4.46456	6388	Gouenoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015602	Gouesnach	47.9104	-4.1145	2396	Gouenac'h	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015614	Goudelin	48.60375	-3.01842	1521	Goudelin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015625	Gouarec	48.22725	-3.17994	1081	Gwareg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015635	Gosné	48.24674	-1.46558	1499	Goneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3015658	Gorges	47.09917	-1.30024	3087	Gored	Broioù al Liger	Bro-C'hall+Frañs+France
+3015764	Godewaersvelde	50.79399	2.64456	1977	Godewaarsvelde	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3015800	Glomel	48.223	-3.39696	1535	Groñvel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3016130	Ghyvelde	51.05275	2.52642	3110	Gijvelde	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3016152	Gévezé	48.21933	-1.78952	3287	Gevrezeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3016162	Gétigné	47.0765	-1.2481	3326	Yestinieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3016166	Gestel	47.80361	-3.44245	2403	Yestael	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3016847	Gaël	48.13209	-2.22267	1486	Gwazel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3016947	Frossay	47.24451	-1.93557	2463	Frozieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3017609	Fougères	48.35	-1.2	23719	Felger	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3017624	Fouesnant	47.89187	-4.01484	8722	Fouen+Fouenant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3017686	Fort-Mardyck	51.02899	2.30724	3845	Fort-Mardijk	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3018174	Foix	42.96667	1.6	9860	Fois+09000		Bro-C'hall+Frañs+France
+3018257	Flines-lez-Raches	50.41667	3.18333	5567	Flines-lez-Râches	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3018506	Figeac	44.6	2.03333	11491	Fijac+46100		Bro-C'hall+Frañs+France
+3018659	Ferrette	47.49196	7.31937	1047	Pfirt	ACAL	Bro-C'hall+Frañs+France
+3018692	Férel	47.48203	-2.34227	2189	Ferel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3018781	Fégréac	47.58476	-2.0441	2156	Fegerieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3018859	Fay-de-Bretagne	47.41453	-1.79155	2687	Faouell	Broioù al Liger	Bro-C'hall+Frañs+France
+3019265	Évreux	49.02414	1.15082	57795	Evreux+27000		Bro-C'hall+Frañs+France
+3019271	Évran	48.37987	-1.98076	1561	Evrann	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019367	Étrelles	48.06031	-1.19402	2395	Stredell	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019423	Étel	47.65614	-3.20018	2068	An Intel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019480	Étables-sur-Mer	48.63333	-2.83333	2623	Staol	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019578	Estaires	50.64574	2.72782	5979	Stegers	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3019638	Esquibien	48.02506	-4.56139	1707	An Eskevien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019643	Esquelbecq	50.88694	2.43215	2181	Ekelsbeke	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3019699	Espelette	43.34015	-1.44737	2032	Ezpeleta		Bro-C'hall+Frañs+France
+3019766	La Baule-Escoublac	47.29221	-2.36395	17775	Ar Baol-Skoubleg+44500	Broioù al Liger	Bro-C'hall+Frañs+France
+3019875	Erquy	48.63186	-2.4628	3722	Erge-ar-Mor	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019920	Ergué-Gabéric	47.99562	-4.02223	7326	An Erge-Vras	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019930	Erdeven	47.6421	-3.15706	2725	An Ardeven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019940	Ercé-près-Liffré	48.25454	-1.5156	1493	Herzieg-Liverieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019941	Ercé-en-Lamée	47.83048	-1.55867	1260	Herzieg-Mez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019943	Erbrée	48.09745	-1.12479	1655	Ervored	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3019944	Erbray	47.65492	-1.31783	2609	Ervoreg	Broioù al Liger	Bro-C'hall+Frañs+France
+3020004	Epiniac	48.5	-1.7	1133	Sperneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3020271	Elven	47.7323	-2.58956	3824	An Elven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3020283	Elliant	47.99417	-3.88966	2929	Eliant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3020374	Edern	48.1	-3.98333	1907	Edern	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3020495	Échirolles	45.1439	5.72883	33088	Échirolles+38130		Bro-C'hall+Frañs+France
+3020686	Dunkerque	51.03297	2.377	71287	Dukark+59140	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3020828	Drefféac	47.47464	-2.05774	1452	Devrieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3020850	Draguignan	43.53333	6.46667	38573	Draguinhan		Bro-C'hall+Frañs+France
+3020996	Douarnenez	48.09542	-4.32904	16590	Douarnenez+29100	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021093	Donges	47.31824	-2.07538	6749	Donez	Broioù al Liger	Bro-C'hall+Frañs+France
+3021235	Domalain	47.99617	-1.2425	1628	Domalan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021240	Domagné	48.07081	-1.39291	1794	Dovanieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021264	Dol-de-Bretagne	48.54765	-1.75018	5394	Dol+Bro Zol	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021328	Dirinon	48.39775	-4.27017	2528	Dirinonn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021348	Dingé	48.35702	-1.71489	1452	Dingad	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021349	Dinéault	48.21922	-4.16411	1974	Dineol	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021351	Dinard	48.63143	-2.06144	11993	Dinarzh+35800	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021356	Dinan	48.45	-2.03333	12237	Dinan+22100	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021552	Derval	47.66724	-1.6699	3127	Derwal	Broioù al Liger	Bro-C'hall+Frañs+France
+3021747	Daoulas	48.36089	-4.25977	1896	Daoulaz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3021861	Damgan	47.51799	-2.57698	1415	Dagman	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3022153	Cugand	47.06318	-1.2527	3189	Kugant	Broioù al Liger	Bro-C'hall+Frañs+France
+3022242	Crozon	48.24643	-4.48993	8123	Kroazon+Kraozon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3022300	Crossac	47.41119	-2.16952	2329	Kraozieg+Kroazieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3022491	Crevin	47.93333	-1.66667	1872	Kreven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3022611	Créhen	48.54546	-2.21307	1576	Krehen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3022619	Crédin	48.03462	-2.7663	1478	Kerzhin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3022726	Crach	47.617	-3.0017	3241	Krac'h	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3023315	Couffé	47.3912	-1.29321	1936	Koufeg	Broioù al Liger	Bro-C'hall+Frañs+France
+3023324	Couëron	47.21508	-1.72171	19466	Koeron	Broioù al Liger	Bro-C'hall+Frañs+France
+3023356	Coudekerque-Branche	51.02288	2.39359	25201	Nieuw-Koudekerke+59210	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3023357	Coudekerque-Village	51	2.41667	1147	Koudekerke-Dorp	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3023511	Corseul	48.4818	-2.16947	1877	Kersaout	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3023512	Corsept	47.27703	-2.05904	2116	Korzed	Broioù al Liger	Bro-C'hall+Frañs+France
+3023545	Corps-Nuds	47.97915	-1.58409	2679	Kornuz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3023661	Corlay	48.31725	-3.05733	1021	Korle	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3023697	Cordemais	47.29107	-1.87869	2747	Kordevez	Broioù al Liger	Bro-C'hall+Frañs+France
+3023777	Coray	48.05934	-3.83056	1704	Kore	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3023874	Conquereuil	47.62524	-1.75105	1029	Konkerel	Broioù al Liger	Bro-C'hall+Frañs+France
+3024035	Concarneau	47.87502	-3.92245	21397	Konk-Kerne+29900	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024112	Combrit	47.88734	-4.15817	3339	Kombrid	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024137	Combourg	48.41267	-1.74424	5362	Komborn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024210	Colpo	47.81778	-2.81002	1922	Kolpoù	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024314	Collioure	42.52462	3.08235	3171	Cotlliure		Bro-C'hall+Frañs+France
+3024456	Coëtmieux	48.49117	-2.60067	1317	Koedmaeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024459	Coësmes	47.88325	-1.44074	1168	Koem	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024572	Clohars-Fouesnant	47.89657	-4.06396	1994	Kloar-Fouenant	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024573	Clohars-Carnoët	47.79606	-3.58502	4085	Kloar-Karnoed	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024578	Clisson	47.08714	-1.28286	6480	Klison+44190	Broioù al Liger	Bro-C'hall+Frañs+France
+3024681	Cléguérec	48.12577	-3.07162	2790	Klegereg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024682	Cléguer	47.85407	-3.38219	3278	Kleger	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024691	Cléder	48.663	-4.102	3837	Kleder	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024692	Cléden-Poher	48.23644	-3.66911	1115	Kledenn-Poc'hêr+Kledenn-Pochêr	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024926	Cintré	48.10504	-1.87162	1601	Kentreg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3024979	Ciboure	43.38287	-1.676	6814	Ziburu		Bro-C'hall+Frañs+France
+3025379	Chevaigné	48.21153	-1.62933	1756	Kavaneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3025428	Cherrueix	48.60629	-1.70405	1043	Kerruer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3025472	Chéraute	43.23096	-0.86831	1325	Sohüta		Bro-C'hall+Frañs+France
+3025609	Chéméré	47.11667	-1.91667	1707	Keverieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3025774	Chavagne	48.05438	-1.78571	3378	Kavan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3025826	Chauvé	47.15174	-1.98489	1822	Kalveg	Broioù al Liger	Bro-C'hall+Frañs+France
+3026070	Châtillon-en-Vendelais	48.22409	-1.17695	1709	Kastellan-Gwennel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026234	Châteauneuf-du-Faou	48.18755	-3.81789	3841	Kastell-Nevez-ar-Faou	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026262	Châteaulin	48.2	-4.08333	5379	Kastellin	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026275	Châteaugiron	48.04629	-1.50438	6274	Kastell-Geron	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026303	Châteaubriant	47.71667	-1.38333	13024	Kastell-Briant+44110	Broioù al Liger	Bro-C'hall+Frañs+France
+3026306	Châteaubourg	48.11119	-1.40019	5362	Kastell-Bourc'h+35220	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026438	Chasné-sur-Illet	48.24247	-1.56138	1236	Kadeneg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026465	Chartres-de-Bretagne	48.03924	-1.70533	7074	Karnod+35131	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026467	Chartres	48.44685	1.48925	43838	Chartrez+28000		Bro-C'hall+Frañs+France
+3026842	Chantepie	48.08885	-1.61524	7560	Kantpig+35135	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3026870	Chanteloup	47.96574	-1.61517	1304	Kantlou	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3027767	Cesson-Sévigné	48.1212	-1.603	16222	Saozon-Sevigneg+35510	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028118	Cavan	48.67242	-3.34606	1184	Kawan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028198	Caulnes	48.28804	-2.15518	2320	Kaon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028217	Caudan	47.80877	-3.3425	7241	Kaodan+56850	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028263	Castres	43.6	2.25	47275	Castras+81100		Bro-C'hall+Frañs+France
+3028322	Castelsarrasin	44.03333	1.1	13260	Los Sarrasins+82100		Bro-C'hall+Frañs+France
+3028425	Cast	48.15712	-4.13889	1469	Kast	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028428	Casson	47.38761	-1.55654	1432	Kazon	Broioù al Liger	Bro-C'hall+Frañs+France
+3028535	Carquefou	47.29821	-1.49024	18056	Kerc'hfaou+Kerchfaou+44470	Broioù al Liger	Bro-C'hall+Frañs+France
+3028542	Carpentras	44.05	5.05	29709	Carpentràs+84200		Bro-C'hall+Frañs+France
+3028554	Caro	47.86429	-2.31924	1164	Karozh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028575	Carnac	47.58351	-3.07884	4777	Karnag+56340	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028603	Carhaix-Plouguer	48.27594	-3.57326	8270	Karaez+Karaez-Plougêr+29270	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028608	Carentoir	47.81667	-2.13333	2752	Karantoer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028641	Carcassonne	43.21667	2.35	49600	Carcassona+11000		Bro-C'hall+Frañs+France
+3028667	Carantec	48.66811	-3.91545	2904	Karanteg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028690	Cappelle-la-Grande	50.99979	2.35848	8293	Kapelle	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3028808	Cannes	43.55135	7.01275	70011	Canas+06150		Bro-C'hall+Frañs+France
+3028832	Canet-en-Roussillon	42.7	3.01667	11148	Canet de Rosselló+66140		Bro-C'hall+Frañs+France
+3028868	Cancale	48.67601	-1.85231	5751	Kankaven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028954	Campénéac	47.95733	-2.29277	1564	Kempenieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3028966	Campbon	47.4131	-1.96857	3327	Kambon	Broioù al Liger	Bro-C'hall+Frañs+France
+3029002	Camors	47.84739	-2.99981	2508	Kamorzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3029041	Cambo-les-Bains	43.35851	-1.40105	4800	Kanbo		Bro-C'hall+Frañs+France
+3029068	Camaret-sur-Mer	48.27497	-4.59615	2612	Kameled	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3029126	Callac	48.40292	-3.428	2564	Kallag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3029213	Cahors	44.4491	1.43663	23331	Caors+46000		Bro-C'hall+Frañs+France
+3029257	Caden	47.63124	-2.28704	1521	Kaden	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3029697	Bubry	47.96336	-3.17108	2523	Bubri	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3029713	Bruz	48.0242	-1.74591	14533	Bruz+35170	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3029890	Brouckerque	50.95476	2.29378	1208	Broekkerke	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3029925	Broons	48.31748	-2.25952	2542	Bronn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3029974	Brive-la-Gaillarde	45.15	1.53333	53466	Briva+19100		Bro-C'hall+Frañs+France
+3029987	Briscous	43.45958	-1.33353	2160	Beskoitze		Bro-C'hall+Frañs+France
+3029995	Brioude	45.3	3.4	7451	Briude+43100		Bro-C'hall+Frañs+France
+3030057	Brignoles	43.4	6.06667	15027	Brinholà+83170		Bro-C'hall+Frañs+France
+3030102	Briec	48.10167	-3.99833	4880	Brieg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030264	Bretignolles-sur-Mer	46.63333	-1.86667	3293	Brétignolles-sur-Mer	Broioù al Liger	Bro-C'hall+Frañs+France
+3030283	Breteil	48.14534	-1.89886	3242	Brezhiel	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030300	Brest	48.39029	-4.48628	144899	Brest+29200	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030403	Bréhand	48.40333	-2.57412	1321	Brehant-Monkontour	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030440	Brech	47.72134	-2.99862	5071	Brec'h	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030444	Brécé	48.10839	-1.48086	1572	Brec'heg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030456	Bréal-sous-Montfort	48.04876	-1.86438	4168	Breal-Moñforzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030473	Bray-Dunes	51.07786	2.51673	4681	Brayduinen	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3030522	Brasparts	48.30167	-3.95516	1071	Brasparzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030565	Brandérion	47.79412	-3.19474	1030	Branderion+Prederion	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3030603	Brains	47.1685	-1.7229	2325	Brenn	Broioù al Liger	Bro-C'hall+Frañs+France
+3030718	Bouvron	47.41726	-1.84679	2618	Bolvronn	Broioù al Liger	Bro-C'hall+Frañs+France
+3030822	Boussay	47.04476	-1.18476	2553	Beuzid-Klison	Broioù al Liger	Bro-C'hall+Frañs+France
+3030953	Bourg-Saint-Andéol	44.37566	4.64273	8301	Lo Borg Sant Andiòu		Bro-C'hall+Frañs+France
+3030970	Bourgneuf-en-Retz	47.04122	-1.95019	2591	Bourc'hnevez-Raez+Bourchnevez-Raez	Broioù al Liger	Bro-C'hall+Frañs+France
+3031019	Bourg-des-Comptes	47.92934	-1.74534	2188	Gwikomm	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3031027	Bourg-Blanc	48.49867	-4.50406	3231	Ar Vourc'h-Wenn+Ar Vourch-Wenn	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3031029	Bourgbarré	47.99515	-1.61419	2521	Bourvarred	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3031081	Bourbriac	48.47384	-3.18758	2349	Boulvriag	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3031085	Bourbourg	50.94783	2.19576	7059	Broekburg	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3031222	Bouin	46.97314	-1.9983	2385	Bonn	Broioù al Liger	Bro-C'hall+Frañs+France
+3031268	Bouguenais	47.17762	-1.62143	16824	Kervegon+44340	Broioù al Liger	Bro-C'hall+Frañs+France
+3031389	Boucau	43.5277	-1.46556	7532	Bokale		Bro-C'hall+Frañs+France
+3031403	Bouaye	47.14263	-1.69306	5673	Bouez	Broioù al Liger	Bro-C'hall+Frañs+France
+3031582	Bordeaux	44.84044	-0.5805	231844	Bourdel+33000		Bro-C'hall+Frañs+France
+3031743	Bonnemain	48.46652	-1.76774	1249	Bonmaen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3031865	Bollezeele	50.86687	2.34751	1376	Bollezele	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3032033	Boisgervilly	48.16692	-2.06426	1350	Koad-Yarnvili	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3032062	Bois-de-Cené	46.93689	-1.88656	1364	Koed-Keneg	Broioù al Liger	Bro-C'hall+Frañs+France
+3032125	Bohars	48.42983	-4.51292	3350	Boc'harzh+Bocharzh	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3032160	Bodilis	48.52978	-4.11567	1439	Bodiliz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3032213	Blois	47.58333	1.33333	53660	Blois+Bleaz+41000		Bro-C'hall+Frañs+France
+3032319	Blaringhem	50.6911	2.40321	2063	Blaringem	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3032462	Blain	47.47655	-1.76285	8274	Blaen	Broioù al Liger	Bro-C'hall+Frañs+France
+3032469	Blagnac	43.63276	1.39399	24263	Blanhac+31700		Bro-C'hall+Frañs+France
+3032600	Binic	48.60074	-2.82602	3272	Binig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3032685	Bignan	47.87935	-2.77153	2532	Begnen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3032726	Bierne	50.96232	2.40963	1781	Bieren	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3032767	Bidart	43.4376	-1.59127	5021	Bidarte		Bro-C'hall+Frañs+France
+3032771	Bidache	43.48299	-1.14121	1152	Bidaxune		Bro-C'hall+Frañs+France
+3032833	Béziers	43.34122	3.21402	74081	Besièrs+34500		Bro-C'hall+Frañs+France
+3032898	Beuzec-Cap-Sizun	48.07567	-4.512	1097	Beuzeg-ar-C'hab+Beuzeg-ar-Chab	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3032965	Betton	48.18048	-1.63829	9343	Bezhon+35830	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033108	Besné	47.4	-2.08976	2212	Gwennenid	Broioù al Liger	Bro-C'hall+Frañs+France
+3033123	Besançon	47.24878	6.01815	128426	Besançon+25000		Bro-C'hall+Frañs+France
+3033236	Berrien	48.40278	-3.75266	1012	Berrien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033238	Berric	47.63326	-2.5225	1100	Berrig	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033303	Berné	47.9947	-3.39421	1327	Berne	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033363	Bergues	50.96882	2.43242	4355	Sint-Winoksbergen	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3033470	Bénodet	47.87531	-4.1058	2898	Benoded	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033534	Belz	47.67506	-3.168	3523	Belz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033618	Belligné	47.46774	-1.0278	1690	Belenieg	Broioù al Liger	Bro-C'hall+Frañs+France
+3033681	Belle-Isle-en-Terre	48.54478	-3.395	1139	Benac'h+Benach	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033851	Beignon	47.972	-2.16933	1074	Benion	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033884	Bégard	48.62754	-3.30067	4779	Bear	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033885	Béganne	47.5967	-2.24162	1407	Begaon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3033908	Bédée	48.17953	-1.94477	3478	Bezeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3034374	Beaucé	48.3389	-1.15804	1178	Belzeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3034413	Bazouges-la-Pérouse	48.42606	-1.57431	1849	Bazeleg-ar-Veineg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3034475	Bayonne	43.48333	-1.48333	44396	Baiona+64100		Bro-C'hall+Frañs+France
+3034538	Baulon	47.9859	-1.93114	1491	Beloen	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3034582	Baud	47.87474	-3.0176	5206	Baod	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3034585	Batz-sur-Mer	47.2775	-2.48027	3243	Bourc'h-Baz+Bourch-Baz	Broioù al Liger	Bro-C'hall+Frañs+France
+3034640	Bastia	42.70278	9.45	41001	Bastìa+20200		Bro-C'hall+Frañs+France
+3034649	Bassussarry	43.44272	-1.51647	2429	Basusarri		Bro-C'hall+Frañs+France
+3034697	Indre	47.2	-1.66667	3897	Antr	Broioù al Liger	Bro-C'hall+Frañs+France
+3034699	Basse-Goulaine	47.21167	-1.46748	8160	Goueled-Goulen	Broioù al Liger	Bro-C'hall+Frañs+France
+3035040	Barbechat	47.2775	-1.28524	1140	Bargazh	Broioù al Liger	Bro-C'hall+Frañs+France
+3035088	Bapaume	50.10379	2.84966	4157	Bapaume+62450	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3035139	Bannalec	47.93229	-3.69759	5068	Banaleg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035263	Balazé	48.16797	-1.19157	2101	Belezeg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035309	Bais	48.00959	-1.28983	2109	Baez	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035316	Bains-sur-Oust	47.70362	-2.07047	3317	Baen-Ballon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035324	Bain-de-Bretagne	47.84418	-1.68486	6098	Baen-Veur	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035389	Baguer-Pican	48.55253	-1.69837	1080	Bagar-Bihan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035390	Baguer-Morvan	48.52531	-1.77332	1465	Bagar-Morvan	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035416	Bagnères-de-Luchon	42.79079	0.59315	3380	Banhèras de Luishon		Bro-C'hall+Frañs+France
+3035418	Bagnères-de-Bigorre	43.06667	0.15	8967	Banhèras de Bigòrra+65200		Bro-C'hall+Frañs+France
+3035459	Baden	47.61734	-2.91987	3611	Baden	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3035576	Ayguesvives	43.43636	1.59505	2030	Aigas Vivas		Bro-C'hall+Frañs+France
+3035696	Avessac	47.65324	-1.98961	2346	Avezeg	Broioù al Liger	Bro-C'hall+Frañs+France
+3036016	Aurillac	44.91667	2.45	34724	Orlhac+15000		Bro-C'hall+Frañs+France
+3036059	Auray	47.67025	-2.99183	12269	An Alre+56400	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3036215	Augan	47.91943	-2.27905	1374	Algam	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3036229	Audruicq	50.87795	2.07975	4680	Ouderwijk	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3036247	Audierne	48.0164	-4.53838	2601	Gwaien	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3036512	Assérac	47.42881	-2.38916	1466	Azereg	Broioù al Liger	Bro-C'hall+Frañs+France
+3036596	Ascain	43.34521	-1.62073	3365	Azkaine		Bro-C'hall+Frañs+France
+3036601	Arzon	47.54852	-2.88989	2193	Arzhon-Rewiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3036609	Arzano	47.90136	-3.44032	1398	An Arzhanaou	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3036679	Arthon-en-Retz	47.11586	-1.9426	2888	Arzhon-Raez	Broioù al Liger	Bro-C'hall+Frañs+France
+3036791	Arradon	47.62709	-2.8215	5206	Aradon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3036938	Arles	43.67681	4.63031	53431	Arle+13104		Bro-C'hall+Frañs+France
+3037016	Argentré-du-Plessis	48.05697	-1.14601	4007	Argantred-ar-Genkiz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3037070	Argelès-Gazost	43.01667	-0.1	3516	Argelèrs+65400		Bro-C'hall+Frañs+France
+3037113	Ardres	50.85786	1.98168	4240	Aarden	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3037245	Arcangues	43.43124	-1.52237	2947	Arrangoitze		Bro-C'hall+Frañs+France
+3037253	Arcachon	44.65	-1.16667	12321	Arcaishon+33120		Bro-C'hall+Frañs+France
+3037282	Arbonne	43.43248	-1.55118	1479	Arbona		Bro-C'hall+Frañs+France
+3037418	Antrain	48.46031	-1.48354	1523	Entraven	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3037456	Antibes	43.56241	7.12777	76393	Antíbol+06160		Bro-C'hall+Frañs+France
+3037612	Anglet	43.47664	-1.51346	40658	Angelu+64600		Bro-C'hall+Frañs+France
+3037656	Angers	47.46667	-0.55	168279	Añje+49000	Broioù al Liger	Bro-C'hall+Frañs+France
+3037672	Anetz	47.38059	-1.10583	1468	Arned	Broioù al Liger	Bro-C'hall+Frañs+France
+3037797	Ancenis	47.36667	-1.16667	7840	Ankiniz+44150	Broioù al Liger	Bro-C'hall+Frañs+France
+3037899	Ambon	47.55367	-2.55512	1341	Ambon	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3037969	Amanlis	48.00752	-1.47677	1568	Amanliz	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3038176	Allaire	47.63752	-2.16324	3427	Alaer	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3038261	Albi	43.9298	2.148	52409	Albi+81000		Bro-C'hall+Frañs+France
+3038334	Ajaccio	41.91886	8.73812	54364	Aiacciu+20000		Bro-C'hall+Frañs+France
+3038354	Aix-en-Provence	43.5283	5.44973	146821	Ais de Provença+13080		Bro-C'hall+Frañs+France
+3038393	Aire-sur-la-Lys	50.63871	2.39876	10397	Ariën+62120	http://en.wikipedia.org/wiki/Hauts-de-France	Bro-C'hall+Frañs+France
+3038493	Aigues-Mortes	43.56683	4.19068	6526	Aigas Mòrtas		Bro-C'hall+Frañs+France
+3038520	Aigrefeuille-sur-Maine	47.07888	-1.40254	2355	Kelenneg-ar-Mewan	Broioù al Liger	Bro-C'hall+Frañs+France
+3038698	Acigné	48.13333	-1.53704	5746	Egineg	Breizh+Istor Breizh+Bretagne	Bro-C'hall+Frañs+France
+3038799	Abbaretz	47.55314	-1.532	1627	Abarrez	Broioù al Liger	Bro-C'hall+Frañs+France
+6615510	Geneston	47.05639	-1.51139	2217	Banaleg-ar-Gevred	Broioù al Liger	Bro-C'hall+Frañs+France
+2633352	York	53.95763	-1.08271	153717	York+Jórvík	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2633485	Wrexham	53.04664	-2.99132	65692	Wrecsam	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2633858	Winchester	51.06513	-1.3187	46074	Winchester	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2634124	Whitchurch	52.96667	-2.68333	9710	Yr Eglwys Wen	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2634560	Welshpool	52.65973	-3.1471	5948	Y Trallwng	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2634920	Wadebridge	50.51734	-4.83633	6599	Ponsrys	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2635199	Ullapool	57.89872	-5.16039	1510	Ullapul	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2635412	Truro	50.26526	-5.05436	23041	Truru	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2635651	Torpoint	50.37505	-4.19566	7717	Penntorr	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2635754	Tobermory	56.62198	-6.07231	1010	Tobar Mhoire	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2636104	Tenby	51.67279	-4.70447	4696	Dinbych-y-Pysgod	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2636432	Swansea	51.62079	-3.94323	300352	Abertawe	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2636790	Stornoway	58.20925	-6.38649	7500	Steòrnabhagh	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2636910	Stirling	56.11903	-3.93682	36440	Sruighlea	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2638651	Saltash	50.40959	-4.22514	15566	Essa	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2638778	St Ives	50.20861	-5.4875	9966	Porth Ia	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2638853	St Austell	50.3425	-4.77442	25447	Austol	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2638925	Ruthin	53.11368	-3.31782	5461	Rhuthun	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2639409	Rhyl	53.31929	-3.49228	25874	Y Rhyl	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2639470	Rhayader	52.30154	-3.51146	1824	Rhaeadr Gwy	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2639524	Redruth	50.23315	-5.22434	42690	Resrudh	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2639700	Raglan	51.765	-2.85331	1183	Rhaglan	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2639924	Presteigne	52.27183	-3.00579	2056	Llanandras	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2639996	Portsmouth	50.79899	-1.09125	194150	Portsmouth	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2640006	Portree	57.41288	-6.19418	2410	Port Rìgh	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2640358	Perth	56.39522	-3.43139	47180	Peairt	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2640377	Penzance	50.11861	-5.53715	19872	Pennsans	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2640413	Penryn	50.16812	-5.10416	7326	Pennrynn	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2640677	Paisley	55.83173	-4.43254	76220	Pàislig	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2640685	Padstow	50.53885	-4.93664	2296	Lannwedhenek	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2640967	Omagh	54.6	-7.3	21056	An Ómaigh		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2641108	Oban	56.41535	-5.47184	8540	An t-Òban	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2641523	Newtown	52.51667	-3.3	11357	Y Drenewydd	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2641589	Newquay	50.41557	-5.07319	20189	Tewynblustri	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2641596	Newport	52.01667	-4.83333	851	Trefdraeth	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2641598	Newport	51.58774	-2.99835	306844	Casnewydd	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2642135	Motherwell	55.78924	-3.99187	32120	Tobar na Màthar	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2642313	Monmouth	51.81265	-2.71363	10110	Menoe	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2642384	Moffat	55.33527	-3.44142	2550	Am Magh Fada	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2642687	Mevagissey	50.27324	-4.79166	2117	Lannvorek	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2642705	Merthyr Tydfil	51.74794	-3.37779	43820	Merthyr Tudful	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2642755	Menai Bridge	53.22775	-4.16926	4958	Porthaethwy	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2643076	Marazion	50.12556	-5.47505	1294	Marghasyow	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2643123	Manchester	53.48095	-2.23743	395515	Manchester	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2643583	Lostwithiel	50.40784	-4.67023	2659	Lostwydhyel	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2643741	City of London	51.51279	-0.09184	8072	Kêr Londrez	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londrez	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2643825	Lochgilphead	56.03796	-5.43206	2390	Ceann Loch Gilb	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2643933	Llantwit Major	51.4107	-3.48632	14384	Llanilltud Fawr	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2644122	Llandrindod Wells	52.24164	-3.37868	5309	Llandrindod	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2644127	Llandovery	51.99415	-3.79637	2065	Llanymddyfri	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2644204	Livingston	55.90288	-3.52261	56570	Baile Dhùnlèibhe	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2644409	Liskeard	50.4545	-4.46517	9237	Lyskerrys	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2644811	Launceston	50.63699	-4.36006	8910	Lannstefan	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2644981	Lampeter	52.11285	-4.08039	2970	Llanbedr Pont Steffan	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2645198	Kirkwall	58.98479	-2.95873	7150	Baile na h-Eaglaise	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2645261	Kirkintilloch	55.93933	-4.15262	19630	Cair Cheann Tulaich	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2645605	Kilmarnock	55.61171	-4.49581	46350	Cille Mheàrnaig	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2645970	Jedburgh	55.47997	-2.552	3980	Deadard	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2646032	Irvine	55.6194	-4.65508	33740	Irbhinn	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2646088	Inverness	57.47908	-4.22398	46870	Inbhir Nis	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2646452	Hugh Town	49.91447	-6.31145	1068	Tre Huw	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2646673	Holywell	53.27466	-3.22895	6969	Treffynnon	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2646686	Holyhead	53.30621	-4.63211	11431	Caergybi	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2647143	Helston	50.10319	-5.27045	12184	Hellys	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2647311	Haverfordwest	51.80169	-4.96914	14596	Hwlffordd	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2647570	Hamilton	55.76667	-4.03333	53200	Hamaltan	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2647686	Haddington	55.95612	-2.78332	9020	Baile Adainn	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2647840	Grosmont	51.91667	-2.86667	0	Y Grysmwnt	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2647948	Greenock	55.94838	-4.76121	43690	Grianaig	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2648438	Glenrothes	56.19514	-3.17316	39100	Gleann Rathais	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glascho	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2648683	Giffnock	55.80373	-4.29488	12070	Giofnag	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2649126	Fowey	50.33634	-4.6386	2131	Fowydh	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2649169	Fort William	56.81648	-5.11208	5830	An Gearasdan	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2649207	Forfar	56.64382	-2.89001	13970	Baile Fharfair	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2649258	Folkestone	51.08169	1.16734	66429	Folkestone	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2649715	Falmouth	50.15441	-5.07113	31988	Aberfala	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2649984	Enniskillen	54.34615	-7.64133	14472	Inis Ceithleann		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2650122	Elgin	57.64947	-3.31843	22980	Eilginn	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Dinedin	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2650729	Dungannon	54.50344	-6.76723	11935	Dún Geanainn		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2650752	Dundee	56.46913	-2.97489	147710	Dùn Dèagh	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2650798	Dumfries	55.06959	-3.61139	33280	Dùn Phrìs	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2650802	Dumbarton	55.94433	-4.57061	19950	Dùn Breatann	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2651023	Downpatrick	54.32814	-5.71529	10507	Dún Pádraig		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2651386	Denbigh	53.18333	-3.41667	8514	Dinbych	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2651587	Dalkeith	55.89317	-3.06806	12720	Dail Chèith	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2651654	Cwmbran	51.65446	-3.02281	48157	Cwmbrân	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2651986	Crickhowell	51.85992	-3.13771	2063	Crucywel	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2651994	Criccieth	52.92053	-4.2346	1753	Cricieth	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2652209	Cowbridge	51.46028	-3.44167	3804	Y Bont-faen	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2652513	Colwyn Bay	53.29483	-3.72674	34284	Bae Colwyn	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2652586	Coleraine	55.13333	-6.66667	25681	Cúil Raithin		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653256	Chepstow	51.64087	-2.67683	16169	Cas-gwent	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653755	Carmarthen	51.85552	-4.30535	15854	Caerfyrddin	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653818	Cardigan	52.08373	-4.66228	5301	Aberteifi	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653822	Cardiff	51.48	-3.18	447287	Kerdiz	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653915	Campbeltown	55.42583	-5.60764	4800	Ceann Loch Chille Chiarain	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653927	Camelford	50.62185	-4.67963	2335	Ryskammel	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653941	Cambridge	52.2	0.11667	158434	Cambridge	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2653945	Camborne	50.21306	-5.29731	22500	Kammbronn	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654092	Caernarfon	53.14126	-4.27016	9730	Caernarfon	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654093	Caerleon	51.60952	-2.95378	8747	Caerllion	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654229	Burry Port	51.68435	-4.24687	8310	Porth Tywyn	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654359	Builth Wells	52.1494	-3.40469	2829	Llanfair-ym-Muallt	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654380	Bude	50.82435	-4.5413	7011	Porth Bud	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654710	Brighton	50.82838	-0.13947	139001	Brighton	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654817	Brecon	51.94612	-3.38887	8250	Aberhonddu	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2654824	Brechin	56.72993	-2.65729	7520	Breichinn	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2655273	Bodmin	50.47151	-4.7243	14614	Bosvenegh	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2655984	Belfast	54.59682	-5.92541	274770	Béal Feirste		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2656073	Beaumaris	53.26315	-4.09233	1370	Biwmares	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2656076	Beauly	57.48345	-4.46144	1360	A Mhanachainn	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2656235	Barry	51.39979	-3.2838	54673	Y Barri	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2656311	Barmouth	52.72377	-4.05748	2315	Abermaw	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2656396	Bangor	54.65338	-5.66895	60385	Beannchar		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2656615	Bala	52.91111	-3.59722	1974	Y Bala	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2656708	Ayr	55.46273	-4.63393	47190	Inbhir Àir	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2657060	Armagh	54.35	-6.66667	14801	Ard Mhacha		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2657255	Antrim	54.7	-6.2	19661	Aontroim		Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2657471	Alloa	56.11586	-3.78997	20390	Alamhagh	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2657782	Aberystwyth	52.41548	-4.08292	18749	Aberystwyth	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2657784	Abertillery	51.72981	-3.13432	10946	Abertyleri	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Obar Dheathain	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+2657835	Aberdare	51.71438	-3.44918	31135	Aberdâr	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+3345093	Looe	50.35778	-4.45418	5112	Logh	Bro-Saoz	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+6620349	Tintern	51.69677	-2.68142	750	Tyndyrn	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+8299616	Deeside	53.20053	-3.03841	32000	Glannau Dyfrdwy	Kembre+Galles	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+8299623	Orkney	58.98465	-2.95953	20100	Inizi Orch	Skos+苏格兰	Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon+Rouantelezh-Unanet+http://en.wikipedia.org/wiki/United_Kingdom
+3042287	Saint Peter Port	49.45981	-2.53527	16488	Saint Pierre Port		Gwernenez
+256866	Mytilene	39.10772	26.55529	28322	Mitilíni		Gres+Griekanmua
+264371	Athens	37.97945	23.71622	664046	Aten		Gres+Griekanmua
+3718426	Port-au-Prince	18.53917	-72.335	1234742	Port-au-Prince	Ouest	Republik Haiti+Haiti
+3045190	Sopron	47.68501	16.59049	57210	Sopron		Hungaria
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Hungaria
+2082600	Jayapura	-2.53371	140.71813	134895	Port Numbay	Papua	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+2960964	Loch Garman	52.33417	-6.4575	19913	Loch Garman	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2960970	Westport	53.8	-9.51667	6200	Cathair na Mart		Republik Iwerzhon+Iwerzhon+Ire
+2960992	Waterford	52.25833	-7.11194	47904	Port Láirge	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2961099	Tuam	53.51667	-8.85	6130	Tuaim		Republik Iwerzhon+Iwerzhon+Ire
+2961123	Tralee	52.27042	-9.70264	22941	Trá Lí	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2961192	Tipperary	52.47333	-8.15583	4976	Tiobraid Árann	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2961423	Sligo	54.26969	-8.46943	20228	Sligeach		Republik Iwerzhon+Iwerzhon+Ire
+2961730	Roscrea	52.95111	-7.80167	5403	Ros Cré	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2962010	Portumna	53.08917	-8.21889	1530	Port Omna		Republik Iwerzhon+Iwerzhon+Ire
+2962334	Naas	53.21583	-6.66694	20713	An Nás	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2962568	Monaghan	54.25	-6.96667	5937	Muineachán	Cúige Uladh	Republik Iwerzhon+Iwerzhon+Ire
+2962613	Millstreet	52.05935	-9.06031	1574	Sráid an Mhuilinn	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2962668	Maynooth	53.385	-6.59361	12510	Maigh Nuad	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2962714	Mallow	52.13333	-8.63333	9495	Mala	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2962943	Luimneach	52.66472	-8.62306	90054	Luimneach	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2962961	Letterkenny	54.95	-7.73333	16901	Leitir Ceanainn	Cúige Uladh	Republik Iwerzhon+Iwerzhon+Ire
+2963218	Kilrush	52.63972	-9.48333	2712	Cill Rois	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2963311	Killorglin	52.1	-9.78333	2082	Cill Orglan	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2963398	Kilkenny	52.65417	-7.25222	21589	Cill Chainnigh	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2963436	Kildare	53.15611	-6.91444	8142	Cill Dara	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2964180	Gaillimh	53.27194	-9.04889	70686	Gaillimh		Republik Iwerzhon+Iwerzhon+Ire
+2964320	Fermoy	52.13583	-8.27583	4933	Mainistir Fhear Maí	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2964405	Ennis	52.84361	-8.98639	24427	Inis	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2964496	Dunmanway	51.71667	-9.11667	1585	Dún Mánmhaí	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2964506	Dún Laoghaire	53.29395	-6.13586	185400	Dún Laoghaire	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2964540	Dundalk	54	-6.41667	33428	Dún Dealgan	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2964574	Dublin	53.33306	-6.24889	1024027	Dulenn	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2964782	Dingle	52.14083	-10.26889	1965	An Daingean	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2965140	Cork	51.89797	-8.47061	190384	Korkig	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2965260	Cobh	51.85722	-8.29917	10501	An Cóbh	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2965402	Clonakilty	51.62306	-8.87056	4065	Cloich na Coillte	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2965449	Clifden	53.48907	-10.0191	2056	An Clochán		Republik Iwerzhon+Iwerzhon+Ire
+2965535	Cavan	53.99083	-7.36056	6388	An Cabhán	Cúige Uladh	Republik Iwerzhon+Iwerzhon+Ire
+2965654	Castlebar	53.85	-9.3	12874	Caisleán an Bharraigh		Republik Iwerzhon+Iwerzhon+Ire
+2965726	Carrick-on-Suir	52.34917	-7.41306	5710	Carraig na Siúire	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2965727	Carrick-on-Shannon	53.94694	-8.09	3980	Cora Droma Rúisc		Republik Iwerzhon+Iwerzhon+Ire
+2965733	Carrickmacross	53.97278	-6.71889	3995	Carraig Mhachaire Rois	Cúige Uladh	Republik Iwerzhon+Iwerzhon+Ire
+2965873	Cahir	52.37694	-7.92167	3578	An Chathair	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2966022	Bray	53.20278	-6.09833	6477	Bré	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+2966356	Bantry	51.68333	-9.45	3348	Beanntraí	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+2966715	Ballinrobe	53.63333	-9.23333	2704	Baile an Róba		Republik Iwerzhon+Iwerzhon+Ire
+2966753	Ballinasloe	53.3275	-8.21944	6388	Béal Átha na Sluaighe		Republik Iwerzhon+Iwerzhon+Ire
+2966778	Ballina	54.11667	-9.16667	10087	Béal an Átha		Republik Iwerzhon+Iwerzhon+Ire
+2966843	Athenry	53.29639	-8.74306	3950	Baile Átha an Rí		Republik Iwerzhon+Iwerzhon+Ire
+2966883	Arklow	52.79306	-6.14139	11761	An tInbhear Mór	Cúige Laighean	Republik Iwerzhon+Iwerzhon+Ire
+3310247	Shannon	52.70389	-8.86417	9673	An tSionna	Cúige Mumhan	Republik Iwerzhon+Iwerzhon+Ire
+281184	Jerusalem	31.76904	35.21633	801000	Jeruzalem		Israel
+3042192	Ramsey	54.32273	-4.38526	7309	Rhumsaa		Manav+Enez Vanav
+3042198	Peel	54.22209	-4.69099	3781	Purt ny h-Inshey		Manav+Enez Vanav
+3042237	Douglas	54.15	-4.48333	26218	Doolish		Manav+Enez Vanav
+3042255	Castletown	54.07445	-4.65365	3100	Balley Chashtal		Manav+Enez Vanav
+1277333	Bengaluru	12.97194	77.59369	5104047	Bangalore	KA+Karnātaka	India
+2523083	Siracusa	37.07542	15.28664	97472	Sirakuza	Sikilia	Italia
+2524144	Militello Rosmarino	38.04575	14.67584	646	Militello Rosmarino	Sikilia	Italia
+2525473	Cagliari	39.23054	9.11917	149257	Casteddu		Italia
+3165185	Trieste	45.64953	13.77678	187056	Trieste	FVG	Italia
+3165524	Turin	45.07049	7.68682	870456	Torino	Piemonte	Italia
+3167022	Savona	44.30905	8.47715	58283	Savona		Italia
+3169070	Rome	41.89193	12.51133	2318895	Roma	Lazio	Italia
+3170754	Pieve di Cadore	46.42466	12.36416	3342	Pieve di Cadore		Italia
+3172394	Naples	40.85216	14.26811	959470	Napoli		Italia
+3174051	Mantova	45.16031	10.79784	39260	Proviñs Mantova		Italia
+3175081	La Spezia	44.103	9.82375	88491	La Spezia		Italia
+3180630	Capri	40.55073	14.24263	6770	Enez Capri		Italia
+3180874	Candela	41.13601	15.51537	2197	Candela		Italia
+3181913	Bolzano	46.49067	11.33982	99049	Bozen-Bolzano	Su Tirol	Italia
+3181928	Bologna	44.49381	11.33875	366133	Bologna	Emilia-Romagna	Italia
+1856177	Nagasaki	32.75	129.88333	410204	Nagasaki		Japan+Japon
+2128295	Sapporo	43.06667	141.35	1883027	Sapporo		Japan+Japon
+1528675	Bishkek	42.87	74.59	900000	Bichkek	Gorod Bishkek	Kirgizstan+Kyrgyzstan
+267008	Tyre	33.27333	35.19389	135204	Tir	Liban-Sud	Liban
+276781	Beirut	33.89332	35.50157	1916100	Beirout		Liban
+593116	Vilnius	54.68916	25.2798	542366	Vilnius		Lituania+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Luksembourg		Luksembourg
+456172	Riga	56.946	24.10589	742572	Rīga+Riga	Riga	Latvia
+457954	Liepāja	56.52707	21.02357	85132	Liepaja	Liepaja+Liepāja	Latvia
+1821274	Macau	22.20056	113.54611	520400	Makao		Macau
+2562305	Valletta	35.89972	14.51472	6794	Valletta		Malta
+2755251	Groningen	53.21917	6.56667	181194	Groningen	gr+Groningen	Izelvroioù
+2757345	Delft	52.00667	4.35556	95060	Delft	zh+Zuid-Holland	Izelvroioù
+2759554	Baarle-Nassau	51.4475	4.92917	2585	Baarle-Nassau	nb+Noord-Brabant	Izelvroioù
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Izelvroioù
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norvegia
+3144987	Narvik	68.43838	17.4272	14114	Narvik	Nordland	Norvegia
+3161732	Bergen	60.39299	5.32415	213585	Bergen	Hordaland	Norvegia
+287286	Muscat	23.58413	58.40778	797000	Masqat		Oman
+3941584	Cusco	-13.52264	-71.96734	312140	Qusqu		Perou
+1701668	Manila	14.6042	120.9822	1600000	Manila	Metro Manila	Filipinez
+756135	Warsaw	52.22977	21.01178	1702139	Varsovia	Mazowieckie	Polonia
+776069	Białystok	53.13333	23.16433	291855	Białystok	Podlaskie	Polonia
+284899	Jericho	31.86667	35.45	19783	Jeriko		Tiriadoù Palestina
+285066	Hebron	31.52935	35.0938	160470	Al-Khalil		Tiriadoù Palestina
+2262963	Setúbal	38.5244	-8.8882	117110	Setúbal		Portugal
+2267057	Lisbon	38.71667	-9.13333	517802	Lisbon	Lisboa	Portugal
+683844	Braşov	45.64861	25.60613	276088	Braşov		Roumania
+470546	Vyborg	60.70763	28.75283	78633	Viborg		Rusia
+479123	Ulyanovsk	54.32824	48.38657	640680	Oulyanovsk	Uljanovsk	Rusia
+480562	Tula	54.19609	37.61822	468825	Toula	Tula	Rusia
+480716	Tuapse	44.1053	39.0802	64234	Touapse	Krasnodarskiy Kray	Rusia
+494884	Shenkursk	62.1091	42.89595	5893	Chenkoursk		Rusia
+498817	Saint Petersburg	59.93863	30.31413	5028000	Sant-Petersbourg+Санкт-Петербург		Rusia
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov-an-Don		Rusia
+509820	Petrozavodsk	61.78491	34.34691	265025	Petroskoi	Republik Karelia	Rusia
+515003	Orenburg	51.7727	55.0988	550204	Orenbourg+Оренбург	Orenburg	Rusia
+524294	Murom	55.575	42.0426	126931	Mourom	Vladimir	Rusia
+524305	Murmansk	68.97917	33.09251	319263	Mourmansk	Murmansk	Rusia
+524901	Moscow	55.75222	37.61556	10381222	Moskov+Moskva		Rusia
+551487	Kazan	55.78874	49.12214	1104738	Qazan		Rusia
+554234	Kaliningrad	54.70649	20.51095	434954	Kaliningrad	Kaliningrad	Rusia
+563514	Elista	46.30778	44.25583	106971	Elst		Rusia
+569696	Cheboksary	56.13222	47.25194	446781	Choupachkar+Чебоксары		Rusia
+580497	Astrakhan	46.34968	48.04076	502533	Astrachan	Astrakhan	Rusia
+1488754	Tyumen	57.15222	65.52722	519119	Tyoumen		Rusia
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Tchelyabinsk	Tsjeljabinsk	Rusia
+1510853	Barnaul	53.36056	83.76361	599579	Barnaoul	Altayskiy Kray	Rusia
+2023469	Irkutsk	52.29778	104.29639	586695	Irkoutsk	Irkutsk	Rusia
+2026609	Blagoveshchensk	50.27961	127.5405	221296	Blagovechtchensk	Amur	Rusia
+2673730	Stockholm	59.33258	18.0649	1515017	Stockholm	Stockholms Län	Sveden+Ruoččii
+2701680	Karlstad	59.3793	13.50357	61492	Karlstad	Värmlands län	Sveden+Ruoččii
+724443	Košice	48.71395	21.25808	236563	Košice	Košický kraj	Slovakia
+3060972	Bratislava	48.14816	17.10674	423737	Bratislava	Bratislavský kraj	Slovakia
+3168070	San Marino	43.93667	12.44639	4500	Kêr San Marino	San Marino	San Marino
+53654	Mogadishu	2.03711	45.34375	2587183	Muqdisho		Somalia
+170654	Damascus	33.5102	36.29128	1569394	Damask		Siria
+2427123	N'Djamena	12.10672	15.0444	721081	Ndjamena	Chari-Baguirmi	Tchad
+162183	Ashgabat	37.95	58.38333	727700	Aşgabat		Turkmenistan
+2464470	Tunis	36.81897	10.16579	693210	Tuniz	Tūnis	Tunizia
+299817	Tarsus	36.91766	34.89277	256482	Tars		Turkia+Turkanmua
+323777	Antalya	36.90812	30.69556	758188	Antalya		Turkia+Turkanmua
+698740	Odessa	46.47747	30.73262	1001558	Odesa		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Kyiv		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Tchernivtsi		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+712165	Bila Tserkva	49.80939	30.11209	199163	Bila Tserkva		Ukraina+http://en.wikipedia.org/wiki/Ukraine
+712374	Бережани	49.45	24.93333	16962	Berejani+Berezhany	Ternopil	Ukraina+http://en.wikipedia.org/wiki/Ukraine
+4280539	Topeka	39.04833	-95.67804	127265	Topeka	KS+Kansas	Stadoù-Unanet+U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint-Louis	MO+Missouri	Stadoù-Unanet+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	New York+NY	Stadoù-Unanet+U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Denver	CO+Colorado	Stadoù-Unanet+U.S.+USA+U.S.A.
+1512569	Tashkent	41.26465	69.21627	1978028	Tochkent	Toshkent Shahri	Ouzbekistan
+3632308	Mérida	8.58972	-71.15611	300000	Santiago de los Caballeros de Mérida		Venezuela
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		Venezuela
+1581130	Hanoi	21.0245	105.84117	1431270	Ha Noi	Ha Nội	Viêt Nam
+786714	Pristina	42.67272	21.16688	550000	Pristina+Prishtina		
+71137	Sanaa	15.35472	44.20667	1937451	Sana'a		Yemen
+3369157	Cape Town	-33.92584	18.42322	3433441	Ar Chab	Western Cape	Suafrika

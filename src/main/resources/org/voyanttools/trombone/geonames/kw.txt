@@ -1,0 +1,106 @@
+2392087	Porto-Novo	6.49646	2.60359	234168	Porto Novo	Quémé	Benin
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brasil
+6167865	Toronto	43.70011	-79.4163	2600000	Toronto	ON+Ontario	
+3893894	Concepción	-36.82699	-73.04977	215413	Concepcion	Biobío	Chile
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	Almayn
+2950159	Berlin	52.52437	13.41053	3426354	Berlin	Berlin	Almayn
+223817	Djibouti	11.58901	43.14503	623891	Sita Jibouti	Djibouti	Jibouti
+2513947	Melilla	35.29369	-2.93833	73460	Melilla	Melilla	Spayn+España
+2517117	Granada	37.18817	-3.60667	234325	Grenayd	Andalousi	Spayn+España
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galisi+Galicia	Spayn+España
+2970777	Vannes	47.66667	-2.75	54020	Venetens+56000	Breten Vian+Bretagne	Pow Frynk+Pow Frenk+France
+2977390	Saint-Pol-de-Léon	48.68333	-3.98333	7627	Kastell-Paol	Breten Vian+Bretagne	Pow Frynk+Pow Frenk+France
+2982809	Roscoff	48.72381	-3.98709	3772	Rosko+29680	Breten Vian+Bretagne	Pow Frynk+Pow Frenk+France
+2983990	Rennes	48.11198	-1.67429	209375	Roazhon+35000+Rennes	Breten Vian+Bretagne	Pow Frynk+Pow Frenk+France
+2984701	Quimper	48	-4.1	63849	Kemper+29000	Breten Vian+Bretagne	Pow Frynk+Pow Frenk+France
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Pow Frynk+Pow Frenk+France
+2990969	Nantes	47.21725	-1.55336	277269	Naoned+44000+http://www.nantes.fr/		Pow Frynk+Pow Frenk+France
+2991772	Morlaix	48.58333	-3.83333	17516	Montroulez+29600	Breten Vian+Bretagne	Pow Frynk+Pow Frenk+France
+2633352	York	53.95763	-1.08271	153717	Evrek+Jórvík	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2633485	Wrexham	53.04664	-2.99132	65692	Wreksam	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2634560	Welshpool	52.65973	-3.1471	5948	Y Trallwng	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2634920	Wadebridge	50.51734	-4.83633	6599	Ponsrys	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2635412	Truro	50.26526	-5.05436	23041	Truru	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2635651	Torpoint	50.37505	-4.19566	7717	Penntorr	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2638651	Saltash	50.40959	-4.22514	15566	Essa	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2638778	St Ives	50.20861	-5.4875	9966	Porth Ia	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2638828	Saint Columb Major	50.43163	-4.94336	3170	Synt Colom Veur+Synt Colom Gwartha	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2638853	St Austell	50.3425	-4.77442	25447	Austol	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2638925	Ruthin	53.11368	-3.31782	5461	Rhuthun	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2639014	Ruabon	52.9878	-3.03883	3091	Rhiwabon	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2639409	Rhyl	53.31929	-3.49228	25874	Y Rhyl	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2639524	Redruth	50.23315	-5.22434	42690	Ryd Ruth+Resrudh	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2640152	Polperro	50.3313	-4.5222	1206	Porthpyra	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2640194	Plymouth	50.37153	-4.14305	260203	Aberplymm	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2640367	Perranporth	50.34377	-5.15558	3210	Porthpyran	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2640377	Penzance	50.11861	-5.53715	19872	Pennsans	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2640413	Penryn	50.16812	-5.10416	7326	Penrynn	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2640685	Padstow	50.53885	-4.93664	2296	Lannwedhenek	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2640729	Oxford	51.75222	-1.25596	171380	Rysoghen	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2641589	Newquay	50.41557	-5.07319	20189	Tewyn Plustry	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2641598	Newport	51.58774	-2.99835	306844	Trefdraeth	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2641676	Newcastle Emlyn	52.04056	-4.4667	1883	Castellnewydd Emlyn	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2642313	Monmouth	51.81265	-2.71363	10110	Trefynwy	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2642687	Mevagissey	50.27324	-4.79166	2117	Lannvorek	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2642755	Menai Bridge	53.22775	-4.16926	4958	Porthaethwy	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2643076	Marazion	50.12556	-5.47505	1294	Marghas Yow+Marghasyow	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2643583	Lostwithiel	50.40784	-4.67023	2659	Lostwydhyel	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2643736	Derry	54.9981	-7.30934	83652	Ker Dherow		Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Loundres	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2643933	Llantwit Major	51.4107	-3.48632	14384	Llanilltud Fawr	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2644022	Llangoed	53.2942	-4.08772	849	Langoes	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2644122	Llandrindod Wells	52.24164	-3.37868	5309	Llandrindod	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2644127	Llandovery	51.99415	-3.79637	2065	Llanymddyfri	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2644409	Liskeard	50.4545	-4.46517	9237	Lyskerrys	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2644811	Launceston	50.63699	-4.36006	8910	Lannstefan	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2644981	Lampeter	52.11285	-4.08039	2970	Llanbedr Pont Steffan	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2646686	Holyhead	53.30621	-4.63211	11431	Caergybi	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2647143	Helston	50.10319	-5.27045	12184	Hellys+Henlys	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2647311	Haverfordwest	51.80169	-4.96914	14596	Hwlffordd	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2649126	Fowey	50.33634	-4.6386	2131	Fowy	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2649715	Falmouth	50.15441	-5.07113	31988	Aberfala	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2649808	Exeter	50.7236	-3.52751	117763	Karesk	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2651386	Denbigh	53.18333	-3.41667	8514	Dinbych	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2651986	Crickhowell	51.85992	-3.13771	2063	Crughywel	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2652513	Colwyn Bay	53.29483	-3.72674	34284	Bae Colwyn	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2653131	Chirk	52.93586	-3.05738	4007	Y Waun	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2653256	Chepstow	51.64087	-2.67683	16169	Cas-gwent	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2653755	Carmarthen	51.85552	-4.30535	15854	Karvyrdhin	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2653818	Cardigan	52.08373	-4.66228	5301	Aberteifi	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2653822	Cardiff	51.48	-3.18	447287	Kardydh	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2653927	Camelford	50.62185	-4.67963	2335	Ryskammel	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2653945	Camborne	50.21306	-5.29731	22500	Kamm-Bron+Cambron	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2654092	Caernarfon	53.14126	-4.27016	9730	Karnarvon	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2654093	Caerleon	51.60952	-2.95378	8747	Caerllion	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2654359	Builth Wells	52.1494	-3.40469	2829	Llanfair-ym-Muallt	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2654380	Bude	50.82435	-4.5413	7011	Porthbud	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2654394	Buckley	53.16667	-3.08333	63576	Bwcle	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2654437	Brynmawr	51.8	-3.18333	14924	Bryn-mawr	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2654817	Brecon	51.94612	-3.38887	8250	Aberhonddu	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2655273	Bodmin	50.47151	-4.7243	14614	Bosvenegh	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2656073	Beaumaris	53.26315	-4.09233	1370	Biwmaris	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2656311	Barmouth	52.72377	-4.05748	2315	Bermo	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2656615	Bala	52.91111	-3.59722	1974	Y Bala	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2657784	Abertillery	51.72981	-3.13432	10946	Abertyleri	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+2657835	Aberdare	51.71438	-3.44918	31135	Aberdâr	Galles	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+3345093	Looe	50.35778	-4.45418	5112	Logh	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+6943072	St Mary's	49.91719	-6.29517	1666	Ennor	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+8299848	Tintagel	50.66317	-4.75047	1028	Dyntagell+Tre war Venydh	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+8299858	Isles of Scilly	49.92515	-6.29894	2100	Syllan+Enesek Syllan	Pow Sows	Rywvaneth Unys+http://en.wikipedia.org/wiki/United_Kingdom
+3186886	Zagreb	45.81444	15.97798	698966	Zagreb	Grad Zagreb	Kroati
+3054643	Budapest	47.49801	19.03991	1741041	Budapest		Hungari
+2964574	Dublin	53.33306	-6.24889	1024027	Dulyn		Repoblek Iwerdhon+Ire
+1277333	Bengaluru	12.97194	77.59369	5104047	Bengalour	KA+Karnātaka	Eynda
+3169070	Rome	41.89193	12.51133	2318895	Rom	Lazio	Itali
+3176959	Florence	43.77925	11.24626	349296	Florens	Toscana	Itali
+456172	Riga	56.946	24.10589	742572	Rīga	Riga	Latvi
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norgagh
+2186239	New Plymouth	-39.06667	174.08333	49168	Aberplymm Nowydh		Mordir Nowydh
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Poloni
+3370726	Edinburgh of the Seven Seas	-37.06757	-12.31155	271	Karedin an Seyth Moryow		
+170654	Damascus	33.5102	36.29128	1569394	Damask		Syri
+4801859	Charleston	38.34982	-81.63262	49736	Charleston	Vyrjynia West+WV+West Virginia	Statys Unys+U.S.+USA+U.S.A.
+5128581	New York City	40.71427	-74.00597	8175133	Evrek Nowydh+NYC+NY	Stat Evrek Nowydh+NY	Statys Unys+U.S.+USA+U.S.A.
+5368335	Los Altos	37.38522	-122.11413	30671	Los Altos	Kaliforni+CA+Calif+California	Statys Unys+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Angeles	Kaliforni+CA+Calif+California	Statys Unys+U.S.+USA+U.S.A.
+786714	Pristina	42.67272	21.16688	550000	Prishtina		

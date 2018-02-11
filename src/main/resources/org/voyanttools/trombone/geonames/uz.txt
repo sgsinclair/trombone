@@ -1,0 +1,404 @@
+292913	Al Ain	24.19167	55.76056	408733	Al Ayn		Birlashgan Arab Amirliklari+UAE
+292968	Abu Dhabi	24.46667	54.36667	603492	Abu-Dabi		Birlashgan Arab Amirliklari+UAE
+1138958	Kabul	34.52813	69.17233	3043532	Kobul		Афғонистон+Afgʻoniston
+1147290	Balkh	36.75635	66.8972	114883	Balx		Афғонистон+Afgʻoniston
+3430863	Mar del Plata	-38.00228	-57.55754	553935	Mar-del-plata	BA+Buenos Aires	
+3432043	La Plata	-34.92145	-57.95453	694167	La-Plata	BA+Buenos Aires	
+3841956	Paraná	-31.73197	-60.5238	262295	Parana	ER+Entre Ríos	
+2766757	Sankt Anton am Arlberg	47.1275	10.26372	2848	St. Anton am Arlberg		
+2779973	Bad Erlach	47.72722	16.21444	2822	Erlach		
+2147714	Sydney	-33.86785	151.20732	4627345	Sidney	NSW	Avstraliya
+2172517	Canberra	-35.28346	149.12807	367752	Kanberra	ACT+Australian Capital Territory	Avstraliya
+2174003	Brisbane	-27.46794	153.02809	2189878	Brisben	QLD	Avstraliya
+148619	Ağdam	39.99096	46.92736	39451	Agʻdam	Ağdam	
+587084	Baku	40.37767	49.89201	1116513	Boku	Baki	
+587378	Ağdaş	40.64699	47.4738	23528	Agʻdash	Ağdaş	
+3191281	Sarajevo	43.84864	18.35644	696731	Sarayevo	Federation of Bosnia and Herzegovina	Bosniya va Gersegovina
+1185241	Dhaka	23.7104	90.40744	10356500	Dakka		
+2803138	Antwerpen	51.21989	4.40346	459805	Antverpen		
+2357048	Ouagadougou	12.36566	-1.53388	1086505	Uagadugu		
+727011	Sofia	42.69751	23.32415	1152556	Sofiya		
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Bandar-Seri-Begavan		
+3903987	Sucre	-19.03332	-65.26274	224838	Sukre	Chuquisaca	Boliviya
+3911925	La Paz	-16.5	-68.15	812799	La-Pas	La Paz	Boliviya
+3390760	Recife	-8.05389	-34.88111	1478098	Resifi	Pernambuku+PE	Бразилия
+3395981	Maceió	-9.66583	-35.73528	954991	Maseyo	AL+Alagoas	Бразилия
+3405870	Belém	-1.45583	-48.50444	1407737	Belen	Para+PA+Pará	Бразилия
+3448439	São Paulo	-23.5475	-46.63611	10021295	San Paulu	SP+São Paulo	Бразилия
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio-de-Janeyro	RJ	Бразилия
+3452925	Porto Alegre	-30.03306	-51.23	1372741	Portu-Alegri	RS+Rio Grande do Sul	Бразилия
+3462377	Goiânia	-16.67861	-49.25389	1171195	Goyaniya	Goyas+GO	Бразилия
+3463237	Florianópolis	-27.59667	-48.54917	412724	Florianopolis	SC+Santa Catarina	Бразилия
+3464975	Curitiba	-25.42778	-49.27306	1718421	Kuritiba	PR+Paraná	Бразилия
+3465038	Cuiabá	-15.59611	-56.09667	521934	Kuyaba	Matu-Grosu+MT+Mato Grosso	Бразилия
+3467747	Campo Grande	-20.44278	-54.64639	729151	Kampu-Grandi	Matu-Grosu-du-Sul+MS	Бразилия
+3469058	Brasília	-15.77972	-47.92972	2207718	Brazilia	DF	Бразилия
+3470127	Belo Horizonte	-19.92083	-43.93778	2373224	Belu-Orizonti	Minas-Jerais+MG	Бразилия
+3662574	Rio Branco	-9.97472	-67.81	257642	Riu-Branku	AC+Acre	Бразилия
+5913490	Calgary	51.05011	-114.08529	1019942	Kalgari	AB+Alberta	
+5969782	Hamilton	43.25011	-79.84963	519949	Gamilton	ON+Ontario	
+6173331	Vancouver	49.24966	-123.11934	600000	Vankuver	Britaniya Kolumbiyasi+BC+British Columbia	
+6325494	Québec	46.81228	-71.21454	528595	Kvebek+Québec	QC	
+2657896	Zürich	47.36667	8.55	341730	Syurix	ZH	
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Yamusukro		Côte de l’Ivoire
+3893894	Concepción	-36.82699	-73.04977	215413	Konsepsion	Biobío	Chili
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaunde		
+1280849	Kashgar	39.47066	75.98951	274717	Qashqar		Хитой
+1791247	Wuhan	30.58333	114.26667	9785388	Uxan+武汉		Хитой
+1793511	Taiyuan	37.86944	112.56028	3426519	Tayyuan		Хитой
+1799869	Nanning	22.81667	108.31667	803788	Nannin		Хитой
+1799962	Nanjing	32.06167	118.77778	7165292	Nankin		Хитой
+1804430	Lanzhou	36.05701	103.83987	2628426	Lanchjou		Хитой
+1804879	Kaifeng	34.7986	114.30742	900000	Kayfin		Хитой
+1805753	Jinan	36.66833	116.99722	4335989	Szinan		Хитой
+1809461	Guiyang	26.58333	106.71667	1171633	Guyyan		Хитой
+1809858	Guangzhou	23.11667	113.25	11071424	Guanchjou		Хитой
+1815286	Chengdu	30.66667	104.06667	7415590	Chendu	Sichuan	Хитой
+1815577	Changsha	28.19874	112.97087	3093980	Chansha		Хитой
+1886760	Suzhou	31.30408	120.59538	5345961	Suchjou		Хитой
+2034937	Shenyang	41.79222	123.43278	6255921	Shenyan		Хитой
+3685533	Cúcuta	7.89391	-72.50782	721398	Kukuta	Norte de Santander	
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		
+3689147	Barranquilla	10.96854	-74.78132	1380425	Barrankilya		
+3689759	Aracataca	10.59181	-74.18983	27704	Arakataka	Magdalena	
+3553478	Havana	23.13302	-82.38304	2163824	Gavana		
+3374333	Praia	14.93152	-23.51254	113364	Praya	Praia	
+3513090	Willemstad	12.1084	-68.93354	125000	Villemstad		
+146268	Nicosia	35.17531	33.3642	200452	Nikosiya		
+3071961	Liberec	50.76711	15.05619	97770	Liberets	Liberecký kraj	Czechia
+2805753	Wuppertal	51.27027	7.16755	360797	Vuppertal	NRW	Олмония+Olmoniya
+2811698	Weißwasser	51.50403	14.64017	22099	Weißwasser/Oberlausitz		Олмония+Olmoniya
+2811909	Weißenburg in Bayern	49.03095	10.97221	17801	Weißenburg	Bayern	Олмония+Olmoniya
+2824841	Sulzbach	49.29882	7.05696	18364	Sulzbach/Saar	Saarland	Олмония+Olmoniya
+2826584	Stollberg	50.70999	12.78034	12948	Stollberg/Erzgeb.		Олмония+Olmoniya
+2832013	Simmern	49.98198	7.52351	7979	Simmern/Hunsrück		Олмония+Olmoniya
+2834978	Schwarzenberg	50.53791	12.78522	18523	Schwarzenberg/Erzgeb.		Олмония+Olmoniya
+2842688	Saalfeld	50.64826	11.36536	28023	Saalfeld/Saale		Олмония+Olmoniya
+2857847	Oettingen in Bayern	48.95274	10.60465	5336	Oettingen in Bavariya	Bayern	Олмония+Olmoniya
+2858586	Oberweißbach	50.58231	11.14382	1653	Oberweißbach/Thüringer Wald		Олмония+Olmoniya
+2867714	Munich	48.13743	11.57549	1260391	Munhen	Bayern	Олмония+Olmoniya
+2867996	Mühlhausen	51.20896	10.45275	38108	Mühlhausen/Thüringen		Олмония+Olmoniya
+2868531	Mühlberg	51.43453	13.22177	4758	Mühlberg/Elbe	Brandenburg+http://www.brandenburg.de	Олмония+Olmoniya
+2873891	Mannheim	49.4891	8.46694	307960	Mannheim	Baden-Württemberg	Олмония+Olmoniya
+2875623	Lübbenau	51.86217	13.95168	17461	Lübbenau/Spreewald	Brandenburg+http://www.brandenburg.de	Олмония+Olmoniya
+2886242	Köln	50.93333	6.95	963395	Kyoln	NRW	Олмония+Olmoniya
+2891282	Ketzin	52.47809	12.8453	6500	Ketzin/Havel	Brandenburg+http://www.brandenburg.de	Олмония+Olmoniya
+2923588	Fürstenwalde	52.36067	14.06185	33539	Fürstenwalde/Spree	Brandenburg+http://www.brandenburg.de	Олмония+Olmoniya
+2924206	Fröndenberg	51.47563	7.76946	22964	Fröndenberg/Ruhr	NRW	Олмония+Olmoniya
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt am Main	Hessen	Олмония+Olmoniya
+2925630	Frankenberg	50.91297	13.04011	16850	Frankenberg/Sa.		Олмония+Olmoniya
+2931414	Eislingen	48.69515	9.70676	20585	Eislingen/Fils	Baden-Württemberg	Олмония+Olmoniya
+2934246	Düsseldorf	51.22172	6.77616	573057	Dusseldorf	NRW	Олмония+Olmoniya
+2937959	Dessau	51.83864	12.24555	77315	Dessau-Roßlau	Sassen-Anholt	Олмония+Olmoniya
+2944440	Breitungen	50.76355	10.32724	5281	Breitungen/Werra		Олмония+Olmoniya
+2946821	Boizenburg	53.38153	10.72375	10783	Boizenburg/Elbe	Mecklenburg-Vorpommern	Олмония+Olmoniya
+2953459	Bad Frankenhausen	51.35609	11.09977	8824	Bad Frankenhausen/Kyffhäuser		Олмония+Olmoniya
+2955394	Artern	51.36431	11.29167	6270	Artern/Unstrut		Олмония+Olmoniya
+2624886	Aalborg	57.048	9.9187	122219	Olborg		
+3575635	Roseau	15.30174	-61.38808	16571	Rozo	Saint George	Dominika
+2507480	Algiers	36.73225	3.08746	1977663	Jazoir	Alger	
+361055	Ismailia	30.60427	32.27225	284813	Ismoiliya	Al Ismā‘īlīyah	
+361058	Alexandria	31.20176	29.91582	3811516	Aleksandriya		
+343300	Asmara	15.33805	38.93184	563930	Asmera	Maʼākel	
+2509954	Valencia	39.46975	-0.37739	814208	Valensiya	Valencia	España
+2517740	Fernán-Núñez	37.67044	-4.7264	9374	Fernán Núñez		España
+2520493	Calvià	39.5657	2.50621	51774	Calviá	Islles Baleares+Islas Baleares	España
+2521978	Alicante	38.34517	-0.48149	334757	Alikante	Valencia	España
+2522258	Albacete	38.99424	-1.85643	169716	Albasete		España
+3104219	Zumarraga	43.08858	-2.31408	10104	Zumárraga	Euskadi	España
+3106672	Valladolid	41.65518	-4.72372	317864	Valyadolid	Castilla y León	España
+3110643	Sant Feliu de Guíxols	41.78333	3.03333	21977	San Felíu de Guixols	Catalunya	España
+3111468	Roda de Barà	41.18645	1.45893	4464	Roda de Bará	Catalunya	España
+3117383	Markina-Xemein	43.26667	-2.5	0	Marquina-Jeméin	Euskadi	España
+3118135	Lomas	42.27362	-4.55095	54	Lomas de Campos	Castilla y León	España
+3119841	A Coruña	43.37135	-8.396	246056	La-Korunya	Galicia	España
+3129738	Arcos	42.26664	-3.75458	0	Arcos de la Llana	Castilla y León	España
+3130637	Albocàsser	40.35	0.03333	1391	Albocácer	Valencia	España
+9883562	Olivenza	38.68269	-7.10046	0	Olivenza - Olivença	Extremadura	España
+633679	Turku	60.45148	22.26869	175945	Abo		
+649360	Lahti	60.98267	25.66151	98826	Laxti		
+2973783	Strasbourg	48.58392	7.74553	274845	Straatsburg+67000	ACAL	Франция+France
+2980916	Saint-Denis	48.93333	2.36667	96128	Sen-Deni+93200		Франция+France
+2982652	Rouen	49.44313	1.09932	112787	Ruan+76000		Франция+France
+2988507	Paris	48.85341	2.3488	2138551	Parij+75001		Франция+France
+2996944	Lyon	45.74846	4.84671	472317	Lion		Франция+France
+2998324	Lille	50.63297	3.05858	228328	Lill+59000	http://en.wikipedia.org/wiki/Hauts-de-France	Франция+France
+3012834	Illkirch-Graffenstaden	48.52894	7.71523	27261	Illkirch-Graffenshaharen+67400	ACAL	Франция+France
+3037456	Antibes	43.56241	7.12777	76393	Antib+06160		Франция+France
+3037656	Angers	47.46667	-0.55	168279	Anje+49000		Франция+France
+2399697	Libreville	0.39241	9.45356	578156	Librevil		
+2644688	Leeds	53.79648	-1.54785	455123	Lids	Angliya	Бирлашган Қироллик+http://en.wikipedia.org/wiki/United_Kingdom
+2648579	Glasgow	55.86515	-4.25763	591620	Glazgo	苏格兰	Бирлашган Қироллик+http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Aberdin	苏格兰	Бирлашган Қироллик+http://en.wikipedia.org/wiki/United_Kingdom
+614622	Gagra	43.27858	40.27124	8266	Gagra	Abxaziya	Gurjiston
+2306104	Accra	5.55602	-0.1969	1963264	Akkra	Greater Accra	
+2374775	Bissau	11.86357	-15.59767	388028	Bisau	Bissau Region	
+1819729	Hong Kong	22.27832	114.17469	7012738	Gon Kong		http://en.wikipedia.org/wiki/Hong_Kong
+3054643	Budapest	47.49801	19.03991	1741041	Budapesht		Mojariston
+281184	Jerusalem	31.76904	35.21633	801000	Quddus		Isroil
+293397	Tel Aviv	32.08088	34.78057	432892	Tel-aviv		Isroil
+294801	Haifa	32.81841	34.9885	267300	Hayfa		Isroil
+1263780	Mangalore	12.91723	74.85603	417387	Mangalor	KA+Karnātaka	Ҳиндистон+Hindiston
+1265873	Kozhikode	11.24802	75.7804	439922	Kojikode	KL	Ҳиндистон+Hindiston
+1273294	Delhi	28.65195	77.23149	10927986	Dehli	DL	Ҳиндистон+Hindiston
+1273865	Coimbatore	11.00555	76.96612	959823	Koimbatur	TN+Tamil Nādu	Ҳиндистон+Hindiston
+1275004	Kolkata	22.56263	88.36304	4631392	Kalkutta	Gʻarbiy bengaliya+WB+West Bengal	Ҳиндистон+Hindiston
+1279186	Aizawl	23.72894	92.71791	265331	Ai jal	MZ+Mizoram	Ҳиндистон+Hindiston
+1279233	Ahmedabad	23.02579	72.58727	3719710	Ahmadobod	GJ	Ҳиндистон+Hindiston
+94824	Karbala	32.61603	44.02488	434450	Karbalo	Karbalāʼ	Iroq
+128234	Kerman	30.28321	57.07879	577514	Kermon		Eron
+144448	Ahvaz	31.31901	48.6842	841145	Ahvoz		Eron
+145459	Abadan	30.3392	48.3043	370180	Obodon		Eron
+418863	Isfahan	32.65246	51.67462	1547164	Isfahon		Eron
+9533872	Rey	35.59354	51.43997	0	Ray	Tehrān	Eron
+3165912	Tarvisio	46.50567	13.58689	2509	Tarvisio	FVG	Италия
+3174051	Mantova	45.16031	10.79784	39260	Mantuya		Италия
+3174186	Malè	46.35356	10.91246	1872	Malé		Италия
+3181303	Caderzone Terme	46.12945	10.75619	645	Caderzone		Италия
+1859642	Kawasaki	35.52056	139.71722	1306785	Kavasaki		Япония+Yaponiya
+1222554	Tayan	39.9026	71.10826	0	Taen		Qirgʻiziston
+1222635	Aydarken	39.94319	71.34184	11857	Xaydarkon		Qirgʻiziston
+1527103	Uch-Korgon	40.22881	72.05924	0	Uch-Qo‘rg‘on		Qirgʻiziston
+1527199	Tokmok	42.84194	75.30149	63047	Toʻqmoq		Qirgʻiziston
+1527513	Uzgen	40.76994	73.30068	40360	Oʻzgan		Qirgʻiziston
+1527534	Osh	40.52828	72.7985	200000	Oʻsh		Qirgʻiziston
+1527566	Orozbekovo	40.05689	71.66945	0	O‘rozbekovo		Qirgʻiziston
+1527719	Kyzyl-Kyya	40.25684	72.12793	32000	Qizilqiya		Qirgʻiziston
+1527903	Kochkor-Ata	41.03709	72.4832	14814	Qo‘chqor-Ota		Qirgʻiziston
+1527951	Khalmion	40.21218	71.63274	0	Xalmion		Qirgʻiziston
+1528091	Kara Suu	40.7046	72.86666	17800	Qora-Suu		Qirgʻiziston
+1528121	Karakol	42.49068	78.39362	70171	Qoraqoʻl	Ysyk-Köl	Qirgʻiziston
+1528161	Kara-Dzhygach	40.12209	72.09271	0	Qora-Jig‘ach		Qirgʻiziston
+1528249	Jalal-Abad	40.93333	73	75700	Jalolobod		Qirgʻiziston
+1528717	Bazar-Korgon	41.0376	72.74586	27704	Bozor-Qo‘rg‘on		Qirgʻiziston
+1528735	Batken	40.06259	70.81939	10155	Botken		Qirgʻiziston
+1528856	Alga	40.2363	71.49899	0	Olg‘a		Qirgʻiziston
+1528875	Ala-Buka	41.4105	71.48628	0	Ola-Bo‘ka		Qirgʻiziston
+8139689	Kara-Dëbë	40.24428	72.04475	0	Qora-Dyobyo		Qirgʻiziston
+8375150	Kara-Bak	40.16169	70.81959	0	Qora-Bak		Qirgʻiziston
+8376052	Kyrgyz-Kyshtak	40.31055	71.34966	0	Qirg‘iz-Qishtak		Qirgʻiziston
+8376054	Kyzyl-Bulak	40.0517	71.73726	0	Qizil-Buloq		Qirgʻiziston
+8376076	Boz-Adyr	39.9986	71.07338	0	Bo‘z-Adir		Qirgʻiziston
+8388007	Ormosh	39.94591	71.26086	0	O‘rmosh		Qirgʻiziston
+3575551	Basseterre	17.29484	-62.7261	12920	Baster	Saint George Basseterre	
+1845457	Jeonju	35.82194	127.14889	711424	Chonju		http://en.wikipedia.org/wiki/South_Korea
+608668	Oral	51.23333	51.36667	200000	Oʻral		Qozogʻiston
+610529	Atyrau	47.11667	51.88333	180000	Atirau		Qozogʻiston
+610612	Aktau	43.65	51.16667	147443	Aqtau		Qozogʻiston
+1518542	Taldykorgan	45.01556	78.37389	116558	Taldiqoʻrgʻan		Qozogʻiston
+1518945	Slavyanka	40.66338	68.5451	9752	Mirzakent		Qozogʻiston
+1519922	Kyzylorda	44.85278	65.50917	300000	Qiziloʻrda		Qozogʻiston
+1519928	Kostanay	53.21435	63.62463	210000	Qoʻstanay		Qozogʻiston
+1522203	Kokshetau	53.28333	69.4	124444	Koʻkshetau		Qozogʻiston
+1526038	Atbasar	51.80652	68.35996	34797	Otbosar		Qozogʻiston
+1526168	Arys	42.43015	68.8087	36285	Oris		Qozogʻiston
+1526193	Arkalyk	50.24915	66.92027	42000	Orqaliq		Qozogʻiston
+1526265	Aral	46.8	61.66667	33017	Aralsk		Qozogʻiston
+1526384	Almaty	43.25667	76.92861	2000900	Almati	Almaty Qalasy	Qozogʻiston
+1651944	Vientiane	17.96667	102.6	196731	Ventyan		
+1655559	Luang Prabang	19.88601	102.13503	47378	Luangprabang	Louangphabang	
+268064	Sidon	33.55751	35.37148	163554	Sayda	Liban-Sud	Lebanon+Livan
+276781	Beirut	33.89332	35.50157	1916100	Bayrut		Lebanon+Livan
+1248991	Colombo	6.93194	79.84778	648034	Kolombo	Western	
+2274895	Monrovia	6.30054	-10.7969	939524	Monroviya		
+2538475	Rabat	34.01325	-6.83255	1655753	Rabot		
+2553604	Casablanca	33.58831	-7.61138	3144909	Kasablanka		
+2449067	Timbuktu	16.77348	-3.00742	32460	Tombuktu		
+1290596	Taungoo	18.94291	96.43408	106945	Taungu	Bago	
+2377450	Nouakchott	18.08581	-15.9785	661400	Nuakshot		
+2378736	Kaédi	16.15027	-13.5037	55374	Kaedi		
+934154	Port Louis	-20.16194	57.49889	155226	Port-lui		
+927967	Lilongwe	-13.96692	33.78725	646750	Lilongve		
+3985606	San Luis Potosí	22.14982	-100.97916	677704	San-Luis-Potosi	SLP	Meksika
+3988086	Saltillo	25.42321	-101.0053	621250	Saltilo	COA+Coah	Meksika
+3991164	Santiago de Querétaro	20.58806	-100.38806	626495	Keretaro	QUE+Qro+Querétaro de Arteaga	Meksika
+4005270	Guanajuato	21.01858	-101.2591	78364	Guanaxuato	GUA+Gto	Meksika
+4019233	Aguascalientes	21.88234	-102.28259	658179	Aguaskalentes	AGU+Ags	Meksika
+3352136	Windhoek	-22.55941	17.08323	268132	Vindxuk	Khomas	
+3618030	León	12.43787	-86.87804	144538	Leon	León	
+2745912	Utrecht	52.09083	5.12222	290529	Utrext	ut+Utrecht	
+2179537	Wellington	-41.28664	174.77557	381900	Vellington		Yangi Zelandiya
+2192362	Christchurch	-43.53333	172.63333	363926	Kraystcherch		Yangi Zelandiya
+3696183	Iquitos	-3.74912	-73.25383	437620	Ikitos		Peru
+3941584	Cusco	-13.52264	-71.96734	312140	Kusko		Peru
+3946083	Callao	-12.05659	-77.11814	813264	Kalyao		Peru
+1166993	Rawalpindi	33.6007	73.0679	1743101	Ravalpindi	Punjab	
+1167528	Quetta	30.18414	67.00141	733675	Kvetta	Balochistān	
+1168197	Peshawar	34.008	71.57849	1218773	Peshovar		
+1172451	Lahore	31.558	74.35071	6310888	Lohur	Punjab	
+1174872	Karachi	24.8608	67.0104	11624219	Karochi		
+1176734	Hyderabad	25.39242	68.37366	1386330	Haydarobod		
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Polsha
+3080985	Zabrze	50.32492	18.78576	192177	Zabje	Śląskie	Polsha
+3083829	Szczecin	53.42894	14.55302	407811	Shchetsin		Polsha
+3093133	Łódź	51.75	19.46667	768755	Lodz	Łódzkie	Polsha
+3095049	Koszalin	54.19438	16.17222	107450	Koshalin		Polsha
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Polsha
+3099424	Gdynia	54.51889	18.53188	253730	Gdinya	Pomorskie	Polsha
+3103719	Będzin	50.32607	19.12565	58236	Bendzin	Śląskie	Polsha
+4030723	Adamstown	-25.06597	-130.10147	46	Adamstaun		
+2267827	Funchal	32.66568	-16.92547	100847	Funshal		Portugaliya
+2272447	Abrantes	39.46667	-8.2	13646	Abrantish	Santarém	Portugaliya
+2743292	Águeda	40.5772	-8.44442	11941	Ageda		Portugaliya
+290030	Doha	25.28545	51.53096	344939	Doʻha		Qatar
+485239	Syktyvkar	61.67642	50.80994	230139	Siktivkar		Россия
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov-Don		Россия
+524901	Moscow	55.75222	37.61556	10381222	Moskva		Россия
+551487	Kazan	55.78874	49.12214	1104738	Qozon		Россия
+566532	Derbent	42.06779	48.28987	105965	Darband	Dogʻiston	Россия
+569696	Cheboksary	56.13222	47.25194	446781	Cheboksari+Чебоксары		Россия
+580497	Astrakhan	46.34968	48.04076	502533	Astraxon	Astrakhan	Россия
+581357	Apatity	67.56414	33.4031	61186	Apatit	Murmansk	Россия
+1500973	Kyzyl	51.71472	94.45338	108240	Qizil		Россия
+1503772	Khanty-Mansiysk	61.00417	69.00194	67800	Xanti-mansiysk	Khanty-Mansiyskiy Avtonomnyy Okrug	Россия
+2013348	Vladivostok	43.10562	131.87353	587022	Vladivostok	Primorskiy Kray	Россия
+2019528	Nakhodka	42.81384	132.87348	146920	Naxodka	Primorskiy Kray	Россия
+2022890	Khabarovsk	48.48271	135.08379	579000	Xabarovsk	Khabarovskiy Kray	Россия
+2127202	Anadyr	64.73424	177.5103	10332	Anadir	Chukotskiy Avtonomnyy Okrug	Россия
+108410	Riyadh	24.68773	46.72185	4205961	Ar-Riyod		
+109223	Medina	24.46861	39.61417	1300000	Madina		
+241131	Victoria	-4.62001	55.45501	22881	Viktoriya		
+377039	Port Sudan	19.61745	37.21644	489725	Port-sudan		Sudan
+2673730	Stockholm	59.33258	18.0649	1515017	Stokgolm	Stockholms Län	Ruoččii
+2701713	Karlskrona	56.16156	15.58661	36477	Karlskruna		Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Lyublyana		
+2409306	Freetown	8.484	-13.22994	802639	Fritaun		
+3168070	San Marino	43.93667	12.44639	4500	San-Marino	San Marino	
+2410763	São Tomé	0.33654	6.72732	53300	San-Tome		
+3583361	San Salvador	13.68935	-89.18718	525990	San-Salvador	San Salvador	
+167357	Manbij	36.52815	37.95495	68888	Giyerapol		Suriya
+169577	Homs	34.72682	36.72339	775404	Hims		Suriya
+170063	Aleppo	36.20124	37.16117	1602264	Halab		Suriya
+170654	Damascus	33.5102	36.29128	1569394	Damashq		Suriya
+170794	Deir ez-Zor	35.33588	40.14084	242565	Dayr uz-Zur		Suriya
+173576	Latakia	35.53168	35.79011	340181	Latakiya		Suriya
+2365267	Lomé	6.12874	1.22154	749700	Lome		Togo
+1221583	Qubodiyon	37.40973	68.18644	0	Kabodiyon		
+1222009	Boshchorbogh	37.52027	68.12825	4237	Boshgorbog		
+1514844	Pakhtakoron	40.15709	68.74659	8220	Paxtakoron		
+1514879	Khŭjand	40.28256	69.62216	144865	Xoʻjand		
+161616	Balkanabat	39.51075	54.36713	87822	Bolqonobod	Bolqon viloyati	Turkmaniston
+162183	Ashgabat	37.95	58.38333	727700	Ashxobod	Ahal viloyati	Turkmaniston
+601594	Türkmenbaşy	40.02216	52.95517	68292	Turkmanboshi	Bolqon viloyati	Turkmaniston
+601734	Daşoguz	41.83625	59.96661	166500	Toshhovuz	Dashhowuz Oblasty	Turkmaniston
+1218667	Mary	37.59378	61.83031	114680	Mari	Mari viloyati	Turkmaniston
+1219649	Türkmenabat	39.07328	63.57861	234817	Turkmanobod	Lebap viloyati	Turkmaniston
+2473449	Kairouan	35.6781	10.09633	119794	Qayruvon	Al Qayrawān	
+306571	Konya	37.87135	32.48464	875530	Koʻniya		Turkiya+Turkanmua
+307654	Kırıkkale	39.84528	33.50639	211138	Qirqqalʼa		Turkiya+Turkanmua
+308464	Kayseri	38.73222	35.48528	592840	Qayseri		Turkiya+Turkanmua
+311046	İzmir	38.41273	27.13838	2500603	Izmir		Turkiya+Turkanmua
+311111	İskenderun	36.58718	36.17347	159965	Aleksandretta		Turkiya+Turkanmua
+315368	Erzurum	39.90861	41.27694	420691	Arzirum		Turkiya+Turkanmua
+323777	Antalya	36.90812	30.69556	758188	Antaliya		Turkiya+Turkanmua
+745175	İnebolu	41.97472	33.76083	9935	İnebolu		Turkiya+Turkanmua
+747712	Edirne	41.67719	26.55597	126470	Adrianopol		Turkiya+Turkanmua
+749780	Çanakkale	40.15552	26.41271	87791	Chanoqqalʼa		Turkiya+Turkanmua
+752850	Adapazarı	40.78056	30.40333	286787	Adapazari		Turkiya+Turkanmua
+3573890	Port of Spain	10.66668	-61.51889	49031	Port-of-speyn	Port-of-Spain	
+148730	Zanzibar	-6.16394	39.19793	403658	Zanjibar	Zanzibar Urban/West	
+702550	Lviv	49.83826	24.02324	717803	Lvov	Lviv	http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Xerson	Kherson	http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Chernovsi		http://en.wikipedia.org/wiki/Ukraine
+712165	Bila Tserkva	49.80939	30.11209	199163	Belaya serkov		http://en.wikipedia.org/wiki/Ukraine
+4152888	DeFuniak Springs	30.72102	-86.11522	5795	De Funiak Springs	FL+Florida	Қўшма Штатлар+U.S.+USA+U.S.A.
+4152890	DeLand	29.02832	-81.30312	30195	De Land	FL+Florida	Қўшма Штатлар+U.S.+USA+U.S.A.
+4152926	DeBary	28.88305	-81.30868	19998	De Bary	FL+Florida	Қўшма Штатлар+U.S.+USA+U.S.A.
+4157898	Hallandale Beach	25.9812	-80.14838	39488	Hallandale	FL+Florida	Қўшма Штатлар+U.S.+USA+U.S.A.
+4159839	Islamorada	24.9243	-80.62784	7131	Islamorada, Village of Islands	FL+Florida	Қўшма Штатлар+U.S.+USA+U.S.A.
+4161075	LaBelle	26.76173	-81.43841	4753	Labelle	FL+Florida	Қўшма Штатлар+U.S.+USA+U.S.A.
+4347778	Baltimore	39.29038	-76.61219	621849	Baltimor	MD+Maryland	Қўшма Штатлар+U.S.+USA+U.S.A.
+4406831	Saint Charles	38.78394	-90.48123	65794	St. Charles	Missuri+MO+Missouri	Қўшма Штатлар+U.S.+USA+U.S.A.
+4407010	Saint Joseph	39.76861	-94.84663	76780	St. Joseph	Missuri+MO+Missouri	Қўшма Штатлар+U.S.+USA+U.S.A.
+4407066	St. Louis	38.62727	-90.19789	315685	Saint Louis	Missuri+MO+Missouri	Қўшма Штатлар+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Filadelfiya	Pennsilvaniya+PA	Қўшма Штатлар+U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	Ostin	TX+Texas	Қўшма Штатлар+U.S.+USA+U.S.A.
+4691930	Fort Worth	32.72541	-97.32085	833319	Fort Uert	TX+Texas	Қўшма Штатлар+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Hyuston	TX+Texas	Қўшма Штатлар+U.S.+USA+U.S.A.
+4835512	Guilford	41.28899	-72.68176	22498	Guilford Center	Konnektikut+CT+Connecticut	Қўшма Штатлар+U.S.+USA+U.S.A.
+4838116	Madison	41.27954	-72.59843	19100	Madison Center	Konnektikut+CT+Connecticut	Қўшма Штатлар+U.S.+USA+U.S.A.
+4845056	Wallingford	41.45704	-72.82316	17712	Wallingford Center	Konnektikut+CT+Connecticut	Қўшма Штатлар+U.S.+USA+U.S.A.
+4853551	De Witt	41.82336	-90.53819	5242	DeWitt	Ayova+IA+Iowa	Қўшма Штатлар+U.S.+USA+U.S.A.
+4990729	Detroit	42.33143	-83.04575	677116	Detroyt	MI	Қўшма Штатлар+U.S.+USA+U.S.A.
+5100144	Lake Como	40.15984	-74.02819	1759	South Belmar	Nyu-Jersi+NJ+New Jersey	Қўшма Штатлар+U.S.+USA+U.S.A.
+5143211	Wappingers Falls	41.59648	-73.91097	5552	Wappinger	Nyu York+NY	Қўшма Штатлар+U.S.+USA+U.S.A.
+5201734	Monroeville	40.42118	-79.7881	28176	Municipality of Monroeville	Pennsilvaniya+PA	Қўшма Штатлар+U.S.+USA+U.S.A.
+5346462	Emeryville	37.83132	-122.28525	11694	Emerivill	Kaliforniya+CA+Calif+California	Қўшма Штатлар+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Los Anjeles	Kaliforniya+CA+Calif+California	Қўшма Штатлар+U.S.+USA+U.S.A.
+5380748	Palo Alto	37.44188	-122.14302	66853	Palo-Alto	Kaliforniya+CA+Calif+California	Қўшма Штатлар+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	San Fransisko+SF	Kaliforniya+CA+Calif+California	Қўшма Штатлар+U.S.+USA+U.S.A.
+5454711	Albuquerque	35.08449	-106.65114	559121	Albukerke	N'yu-Meksiko+NM+New Mexico	Қўшма Штатлар+U.S.+USA+U.S.A.
+5637146	Anaconda	46.12854	-112.94226	9417	Anaconda-Deer Lodge County	MT	Қўшма Штатлар+U.S.+USA+U.S.A.
+5809844	Seattle	47.60621	-122.33207	684451	Sietl	Vashington shtati+WA+Washington	Қўшма Штатлар+U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Gonolulu	Gavayi+HI+Hawaii	Қўшма Штатлар+U.S.+USA+U.S.A.
+5879400	Anchorage	61.21806	-149.90028	298695	Ankorij	AK+Alaska	Қўшма Штатлар+U.S.+USA+U.S.A.
+6332309	Cutler Bay	25.5783	-80.3377	44865	Cutler Ridge+Cutler Bay	FL+Florida	Қўшма Штатлар+U.S.+USA+U.S.A.
+7259489	Scott Air Force Base	38.5427	-89.85035	3612	Scott AFB+Scott Air Force Base	Illinoys+IL+Illinois	Қўшма Штатлар+U.S.+USA+U.S.A.
+7261152	Fairchild Air Force Base	47.61879	-117.64826	2776	Fairchild AFB+Fairchild Air Force Base	Vashington shtati+WA+Washington	Қўшма Штатлар+U.S.+USA+U.S.A.
+601306	Qanliko‘l	42.8395	59.00093	0	Qanliko‘l	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+601417	Oltinko‘l	43.06874	58.90372	59122	Oltinko‘l	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+601423	Oqmang‘it	42.59889	59.53444	0	Oqmang‘it	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+829955	Qo‘ng‘irot Shahri	43.05207	58.84596	0	Qo‘ng‘irot Shahri	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+829959	Xo‘jayli Shahri	42.40881	59.44544	0	Xo‘jayli Shahri	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+829962	Mo‘ynoq Shahri	43.77877	59.03039	0	Mo‘ynoq Shahri	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1215856	Mug‘lon Shahar	38.91878	65.41217	0	Mug‘lon Shahar	Qashqadaryo Viloyati	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1215957	Tirmiz	37.22417	67.27833	140385	Tirmiz		Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1216115	Sho‘rchi	37.99944	67.7875	24900	Sho‘rchi		Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1216189	Shohimardon	39.98322	71.80512	5100	Shohimardon	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1216265	Samarqand	39.65417	66.95972	319366	Samarqand		Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1216982	Kattaqo‘rg‘on	39.89889	66.25611	59382	Kattaqo‘rg‘on		Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1217262	G‘uzor	38.62083	66.24806	25368	G‘uzor	Qashqadaryo Viloyati	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1217662	Bukhara	39.77472	64.42861	247644	Buxoro	Buxoro+Buxoro Viloyati	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1346492	Yakkabog‘ Shahri	38.97664	66.68867	0	Yakkabog‘ Shahri	Qashqadaryo Viloyati	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1346571	Ravon	39.97724	71.13467	0	Ravon	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512319	Yozyovon	40.66139	71.74361	0	Yozyovon	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512320	Yaypan	40.37583	70.81556	20332	Yaypan	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512351	Yangiqo‘rg‘on	40.55389	71.14667	0	Yangiqo‘rg‘on	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512403	Vodil	40.17424	71.73013	0	Vodil	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512501	Uchqŭrghon Shahri	41.11371	72.07915	33323	Uchqŭrghon Shahri	Namangan	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512502	Uchko‘prik	40.54222	71.06083	0	Uchkuprik+Uchko‘prik	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512549	To‘rqao‘rg‘on	40.99984	71.51162	27862	To‘rqao‘rg‘on	Namangan	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512569	Tashkent	41.26465	69.21627	1978028	Toshkent+Toshkent shahri	Toshkent Shahri	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512699	Taxtako‘pir	43.01171	60.30111	0	Taxtako‘pir	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512832	Shahrixon	40.71331	72.05706	0	Shahrikhon+Shahrixon	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512955	Rishton	40.35667	71.28472	0	Rishton	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1512979	Qo‘qon	40.52861	70.9425	187477	Qoʻqon+Qo`qon+Qo‘qon	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513010	Poytug‘	40.8977	72.2449	0	Poytug‘	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513040	Paxtaobod	40.92936	72.49687	0	Pakhtaobod+Paxtaobod	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513131	Navoiy	40.08444	65.37917	129725	Navoiy		Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513132	Navbahor	40.48104	70.77093	0	Navbahor	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513243	Marg‘ilon	40.47237	71.72463	133490	Marg`ilon+Marg‘ilon	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513271	Asaka	40.64153	72.23868	56736	Asaka	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513327	Kuyganyor	40.85444	72.30734	0	Kuyganyor	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513331	Quvasoy	40.29721	71.98026	32024	Quvasoy	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513364	Qo‘rg‘ontepa	40.73192	72.76177	25861	Qŭrghontepa+Qo‘rg‘ontepa	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513491	Yangi Marg‘ilon	40.42722	71.71889	14114	Yangi Marg‘ilon	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513600	Xo‘jaobod	40.66886	72.56002	16889	Khŭjaobod+Xo‘jaobod	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513604	Khiwa	41.37833	60.36389	55567	Xiva	Khorazm Wiloyati	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513650	Hamza	40.42762	71.50534	13470	Hamza	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1513733	Qorao‘zak	43.02207	60.01701	0	Qorao‘zak	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514019	Fergana	40.38421	71.78432	164322	Farghona+Farg'ona+Фарғона+Fargʻona	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514178	Dang‘ara	40.58389	70.91444	0	Dang‘ara	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514210	Chirchiq	41.46889	69.58222	167842	Chirchiq		Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514325	Buloqboshi	40.62907	72.50212	0	Buloqbashi+Buloqboshi	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514330	Bo‘ka	40.81108	69.19417	19642	Bo‘ka+Bŭka		Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514382	Beshariq	40.43583	70.61028	21984	Beshariq	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514483	Bag‘dod	40.46306	71.21222	0	Bag‘dod	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514588	Andijon	40.78206	72.34424	318419	Andijon	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514608	Oltinko‘l	40.80104	72.17306	0	Oltinkŭl+Oltinko‘l	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514615	Oltiariq	40.39194	71.47417	25543	Oltiariq	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1514683	Oxunboboyev	40.71984	72.64282	0	Okhunboboyew+Oxunboboyev	Андижон+Андижон вилояти	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1526979	Quva	40.52204	72.07292	33167	Quva	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1538222	To‘rtko‘l Shahri	41.56055	61.0018	0	To‘rtko‘l Shahri	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1538223	Bo‘ston Shahri	41.84607	60.94744	0	Bo‘ston Shahri	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1538224	Mang‘it Shahri	42.12215	60.06276	0	Mang‘it Shahri	Qoraqalpog iston	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+1538293	Langar	40.5205	71.66015	0	Langar	Farg ona	Ŭzbekiston Respublikasi+Ўзбекистон+Oʻzbekiston+O‘zbekiston+O‘zbekiston Respublikasi
+3577887	Kingstown	13.15527	-61.22742	24518	Kingstaun	Saint George	Sent Vinsent va Grenadinlar
+3625549	Valencia	10.16202	-68.00765	1385083	Valensiya		
+3646738	Caracas	10.48801	-66.87919	3000000	Karakas		
+786714	Pristina	42.67272	21.16688	550000	Prishtina		
+415189	Aden	12.77944	45.03667	550602	Adan	‘Adan	Yaman
+964137	Pretoria	-25.74486	28.18783	1619438	Pretoriya	Gauteng	
+990930	Kimberley	-28.73226	24.76232	142089	Kimberli		
+993800	Johannesburg	-26.20227	28.04363	2026469	Yoxannesburg	Gauteng	
+3369157	Cape Town	-33.92584	18.42322	3433441	Keyptaun	Western Cape	

@@ -1,0 +1,9 @@
+330546	Massawa	15.60811	39.47455	23100	ምጽዋ+Mits’iwa+ምጽዋዕ	ዞባ ሰሜናዊ ቀይሕ ባሕሪ+Semēnawī Kʼeyih Bahrī	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+333287	Keren	15.77792	38.45107	74800	Keren+ከረን	Zoba Ānseba+ዞባ ዓንስባ+ዞባ ኣንሰባ+Ānseba	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+338345	Edd	13.93088	41.6938	11259	‘Idī	ዞባ ደቡባዊ ቀይሕ ባሕሪ+Debubawī Kʼeyih Bahrī	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+339537	Dek’emhāre	15.07	39.0475	10959	Dek’emhāre+ደቀምሓረ	Debub	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+342711	Barentu	15.10582	37.59067	15891	Barentu+ባረንቱ	Zoba Gash-Barka+ዞባ ጋሽ ባርካ+Gash Barka	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+343300	Asmara	15.33805	38.93184	563930	Asmera+ኣስመራ	Maʼākel	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+343386	Assab	13.00917	42.73944	21300	ዓስብ+‘Aseb	ዞባ ደቡባዊ ቀይሕ ባሕሪ+Debubawī Kʼeyih Bahrī	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+344426	Ak’ordat	15.54798	37.88291	8857	Ak’ordat+ኣቆርዳት+ኣቁርደት	Zoba Gash-Barka+ዞባ ጋሽ ባርካ+Gash Barka	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra
+344901	Mendefera	14.88722	38.81528	17781	መንደፈራ+Mendefera	Debub	Hagere Ērtra+ኤርትራ+Hagere Iertra+Iertra

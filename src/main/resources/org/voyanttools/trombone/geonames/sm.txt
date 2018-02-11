@@ -1,0 +1,4 @@
+5881576	Pago Pago	-14.27806	-170.7025	11500	PagoPago		
+281184	Jerusalem	31.76904	35.21633	801000	Ierusalema		
+2179537	Wellington	-41.28664	174.77557	381900	Ueligitone	Ueligitone	Niu Sila
+4035045	Satupa‘itea	-13.76593	-172.32686	0	Satupa‘itea+Satupaitea		Malo Sa’oloto Tuto’atasi o Samoa+Samoa

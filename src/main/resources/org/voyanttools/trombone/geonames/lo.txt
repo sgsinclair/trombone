@@ -1,0 +1,21 @@
+1809858	Guangzhou	23.11667	113.25	11071424	ກວ່າງໂຈວ		ຈີນ
+3128760	Barcelona	41.38879	2.15899	1621537	ບາກເຊໂລນ	Catalunya	ສະເປນ+España
+2985229	Provins	48.55	3.3	12685	ປະໂລແວງ+77160		ຝລັ່ງ+France
+3031582	Bordeaux	44.84044	-0.5805	231844	ບອກໂດ+33000		ຝລັ່ງ+France
+2643743	London	51.50853	-0.12574	7556900	ລອນດອນ	ປະເທດອັງກິດ	ສະຫະລາດຊະອານາຈັກ+http://en.wikipedia.org/wiki/United_Kingdom
+2649957	Epsom	51.3305	-0.27011	27065	ເມືອງເອັບຊຳ	ປະເທດອັງກິດ	ສະຫະລາດຊະອານາຈັກ+http://en.wikipedia.org/wiki/United_Kingdom
+281184	Jerusalem	31.76904	35.21633	801000	ເຢ​ຣູ​ຊາ​ເລັມ		ອິສລະເອວ
+1651944	Vientiane	17.96667	102.6	196731	Viangchan+ວຽງຈັນ		Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+1654379	Pakse	15.12022	105.79898	88332	ປາກເຊ+ເມືອງປາກເຊ	ຈຳປາສັກ+Champasak	Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+1654401	Pakkading	18.32459	103.99378	0	Ban Paknamkading	ແຂວງບໍລິຄໍາໄຊ+ລິຄຳໄຊ+Bolikhamxai	Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+1655073	Ban Xiang-Ngeun	19.75859	102.18232	0	Ban Xiang-Ngeun	Louangphabang	Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+1655123	Muang Phônsavan	19.45	103.21667	37507	ໂພນສະຫວັນ	Xiangkhoang	Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+1655559	Luang Prabang	19.88601	102.13503	47378	ຫລວງພະບາງ+ເມືອງຫຼວງພະບາງ	Louangphabang	Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+1655562	Luang Namtha	20.9486	101.40188	3225	ມ. ນາແລ, ຫລວງນໍ້າທາ	Loungnamtha	Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+1956309	Muang Nalè	20.53212	101.44678	0	Muang Nalè	Loungnamtha	Sathalanalat Paxathipatai Paxaxôn Lao+ລາວ+ປະເທດລາວ
+2553604	Casablanca	33.58831	-7.61138	3144909	ກາຊາບັງກາ		ໂມລັອກໂຄ
+766980	Kurów	51.38941	22.18637	2804	ຄູໂຣ	Lubelskie	ໂປແລນ
+768217	Końskowola	51.40922	22.05175	2208	ໂກຣິສໂກໂວລາ	Lubelskie	ໂປແລນ
+1880252	Singapore	1.28967	103.85007	3547809	ປະເທດສິງກະໂປ		ສິງກະໂປ
+1609350	Bangkok	13.75398	100.50144	5104476	ບາງກອກ		ປະເທດໄທ
+1583477	Dien Bien Phu	21.38602	103.02301	40282	ດຽນບຽນຟູ		ຫວຽດນາມ

@@ -1,0 +1,57 @@
+3183875	Tirana	41.3275	19.81889	374801	Tirana		Albania
+2240449	Luanda	-8.83682	13.23432	2776168	Luanda	Luanda	Angola
+3868626	Valparaíso	-33.036	-71.62963	282448	Valparaiso	Valparaíso	Shili
+2036502	Jilin	43.85083	126.56028	1881977	Jilin City		Sina
+2509954	Valencia	39.46975	-0.37739	814208	Valantsa	Valencia	Espaina+España
+2510911	Sevilla	37.38283	-5.97317	703206	Sevila		Espaina+España
+3128760	Barcelona	41.38879	2.15899	1621537	Barselona	Catalunya	Espaina+España
+344979	Addis Ababa	9.02497	38.74689	2757729	Addis Abeba	Ādīs Ābeba+Addis Ababa Region	Etiopia+Ethiopia
+2988507	Paris	48.85341	2.3488	2138551	Paris+75001		Frantsa+France
+3003253	Mont-Dore	45.56667	2.81667	1787	Le Mont-Dore		Frantsa+France
+1214026	Sabang	5.88969	95.31644	24519	Kota Sabang	Aceh	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1214520	Medan	3.58333	98.66667	1750971	Kota Medan		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1215502	Banda Aceh	5.54167	95.33333	250757	Kota Banda Aceh	Aceh	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1624494	Tegal	-6.8694	109.1402	237084	Kota Tegal		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1624725	Tarakan	3.31332	117.59152	97478	Kota Tarakan		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1624863	Tanjung Pinang	0.91667	104.45833	192493	Kota Tanjungpinang	Kepulauan Riau	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1625084	Tangerang	-6.17806	106.63	1372124	Kota Tangerang		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1625812	Surakarta	-7.55611	110.83167	555308	Kota Surakarta		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1625822	Surabaya	-7.24917	112.75083	2374658	Kota Surabaya	Jawa Timur	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1626381	Sukabumi	-6.91806	106.92667	276414	Kota Sukabumi		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1627896	Semarang	-6.99306	110.42083	1288084	Kota Semarang		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1629001	Samarinda	-0.49167	117.14583	355160	Kota Samarinda	Kalimantan Timur	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1630789	Pontianak	-0.03194	109.325	455173	Kota Pontianak	Kalimantan Barat	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1631761	Pekanbaru	0.51667	101.44167	703956	Kota Pekanbaru	Riau	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1633419	Padang	-0.94924	100.35427	840352	Kota Padang	Sumatera Barat	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1635882	Mataram	-8.58333	116.11667	318674	Kota Mataram		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1636544	Manado	1.48218	124.84892	451893	Kota Manado		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1636722	Malang	-7.9797	112.6304	746716	Kota Malang	Jawa Timur	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1636884	Magelang	-7.47056	110.21778	111461	Kota Magelang		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1640344	Kendari	-3.9778	122.51507	195006	Kota Kendari	Sulawesi Tenggara	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1640660	Kediri	-7.81667	112.01667	235143	Kota Kediri	Jawa Timur	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1645528	Denpasar	-8.65	115.21667	834881	Kota Denpasar	Bali	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1646170	Cirebon	-6.7063	108.557	254298	Kota Cirebon		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1647866	Bukittinggi	-0.30907	100.37055	98746	Kota Bukittinggi	Sumatera Barat	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1648473	Bogor	-6.59444	106.78917	800000	Kota Bogor		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1649150	Bengkulu	-3.80044	102.26554	309712	Kota Bengkulu	Bengkulu	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1649378	Bekasi	-6.2349	106.9896	1520119	Kota Bekasi		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1650357	Bandung	-6.92222	107.60694	1699719	Kota Bandung		Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1650527	Balikpapan	-1.26753	116.82887	433866	Kota Balikpapan	Kalimantan Timur	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1651531	Ambon	-3.69583	128.18333	355596	Kota Ambon	Maluku Province	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+2057087	Kupang	-10.17083	123.60694	282396	Kota Kupang	Nusa Tenggara Timur	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+2082600	Jayapura	-2.53371	140.71813	134895	Kota Jayapura	Papua	Indonezia+http://en.wikipedia.org/wiki/Indonesia
+1273123	Devanhalli	13.24655	77.71183	25228	Devanahalli	KA+Karnātaka	India+Indy
+1273294	Delhi	28.65195	77.23149	10927986	Faritani Delhi	DL	India+Indy
+1161724	Chabahar	25.2919	60.643	47287	Chah Bahar		Iran
+1053384	Toamasina	-18.1492	49.40234	206373	Toamasina	Atsinanana	Repoblikan’i Madagasikara+Madagasikara
+1062663	Mahajanga	-15.71667	46.31667	154657	Mahajanga		Repoblikan’i Madagasikara+Madagasikara
+1070940	Antananarivo	-18.91368	47.53613	1391433	Antananarivo		Repoblikan’i Madagasikara+Madagasikara
+3143244	Oslo	59.91273	10.74609	580000	Oslo	Oslo	Norvezy+Nôrvezy
+287286	Muscat	23.58413	58.40778	797000	Masqat		Oman
+1701668	Manila	14.6042	120.9822	1600000	Manille	Metro Manila	Filipina
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Pôlôna
+3096472	Katowice	50.25841	19.02754	317316	Katowice	Śląskie	Pôlôna
+170654	Damascus	33.5102	36.29128	1569394	Damaskosy		Syria
+160263	Dar es Salaam	-6.82349	39.26951	2698652	Dar es Salam	Dar es Salaam	Tanzania
+4407010	Saint Joseph	39.76861	-94.84663	76780	St. Joseph	Misoria+MO+Missouri	Etazonia+U.S.+USA+U.S.A.
+4853551	De Witt	41.82336	-90.53819	5242	DeWitt	IA+Iowa	Etazonia+U.S.+USA+U.S.A.

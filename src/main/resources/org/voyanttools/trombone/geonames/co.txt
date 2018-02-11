@@ -1,0 +1,143 @@
+2792413	Liège	50.63373	5.56749	182597	Liegi	Wallonia+Walloon	
+3399415	Fortaleza	-3.71722	-38.54306	2400000	Fortaleza	CE+Ceará	Brasile
+3448439	São Paulo	-23.5475	-46.63611	10021295	São Paulo	SP+São Paulo	Brasile
+3449433	Santos	-23.96083	-46.33361	411403	Santos	SP+São Paulo	Brasile
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Brasile
+3452925	Porto Alegre	-30.03306	-51.23	1372741	Porto Alegre	RS+Rio Grande do Sul	Brasile
+3464975	Curitiba	-25.42778	-49.27306	1718421	Curitiba	PR+Paraná	Brasile
+3467865	Campinas	-22.90556	-47.06083	1031554	Campinas	SP+São Paulo	Brasile
+3469058	Brasília	-15.77972	-47.92972	2207718	Brasilia	DF	Brasile
+3470127	Belo Horizonte	-19.92083	-43.93778	2373224	Belo Horizonte	MG	Brasile
+3662762	Porto Velho	-8.76194	-63.90389	306180	Porto Velho	RO+Rondônia	Brasile
+3663517	Manaus	-3.10194	-60.025	1598210	Manaus	AM	Brasile
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogotà		
+2867714	Munich	48.13743	11.57549	1260391	Monacu di Baviera	Bayern	
+2875601	Lübeck	53.86893	10.68729	212207	Lubecca	Schleswig-Holstein	
+2879139	Leipzig	51.33962	12.37129	504971	Lipsia		
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt	Hessen	
+2935022	Dresden	51.05089	13.73832	486854	Dresda		
+3247449	Aachen	50.77664	6.08342	265208	Aquisgrana	NRW	
+588409	Tallinn	59.43696	24.75353	394024	Tallinn	Harjumaa	
+3117735	Madrid	40.4165	-3.70256	3255944	Madridi	Madrid	Spagna+España
+2970033	Ventiseri	41.94169	9.33173	2652	Vintìsari		Francia+France
+2972315	Toulouse	43.60426	1.44367	433055	Tolosa+31000		Francia+France
+2973317	Tassin-la-Demi-Lune	45.75499	4.78812	16920	Tassin-la-Demi-Lune+69160		Francia+France
+2973783	Strasbourg	48.58392	7.74553	274845	Strasburgu+67000	ACAL	Francia+France
+2975931	Sartène	41.61667	8.98333	3674	Sartè		Francia+France
+2976014	Sari-Solenzara	41.83519	9.3747	1150	Sari è Sulinzara		Francia+France
+2976140	Santa-Maria-di-Lota	42.74783	9.43202	2014	Santa Maria di Lota		Francia+France
+2976180	San-Nicolao	42.36939	9.50943	1462	Santu Niculaiu di Moriani		Francia+France
+2976186	San-Martino-di-Lota	42.73163	9.43966	2780	San Martinu di Lota		Francia+France
+2980115	Saint-Florent	42.6815	9.30396	1619	San Fiurenzu		Francia+France
+2985196	Prunelli-di-Fiumorbo	42.01047	9.32473	2988	I Pruneddi di Fiumorbu		Francia+France
+2985266	Propriano	41.67525	8.90302	3312	Prupià		Francia+France
+2985947	Porto-Vecchio	41.59101	9.27947	11820	Portivechju+20137		Francia+France
+2988063	Penta-di-Casinca	42.46687	9.45902	2670	A Penta di Casinca		Francia+France
+2988507	Paris	48.85341	2.3488	2138551	Parighji+75001		Francia+France
+2991727	Morosaglia	42.436	9.30694	1105	Merusaglia		Francia+France
+2994768	Megève	45.85233	6.61286	5129	Megève		Francia+France
+2995469	Marseille	43.29695	5.38107	794811	Marseglia+13001		Francia+France
+2997132	Lumio	42.5759	8.8355	1008	Lumiu		Francia+France
+2998330	L'Île-Rousse	42.63371	8.93764	2774	Lìsula		Francia+France
+3014517	Grosseto-Prugna	41.87097	8.96403	2628	U Grussetu+20128		Francia+France
+3014728	Grenoble	45.16667	5.71667	158552	Grenoble+38000		Francia+France
+3016133	Ghisonaccia	42.01621	9.40412	3515	Ghisunaccia		Francia+France
+3020495	Échirolles	45.1439	5.72883	33088	Échirolles+38130		Francia+France
+3023506	Corte	42.30956	9.14917	7217	Corti		Francia+France
+3027804	Cervione	42.33096	9.49112	1589	Cervioni		Francia+France
+3028606	Cargèse	42.13629	8.59586	1032	Carghjese		Francia+France
+3029090	Calvi	42.56604	8.75713	5477	Calvi		Francia+France
+3029140	Calenzana	42.50839	8.85594	1882	Calenzana		Francia+France
+3031801	Bonifacio	41.3874	9.15941	2781	Bunifaziu		Francia+France
+3032668	Biguglia	42.62589	9.43324	5552	Biguglia		Francia+France
+3034640	Bastia	42.70278	9.45	41001	Bastìa+20200		Francia+France
+3037372	Appietto	42.01454	8.76789	1218	Appiettu		Francia+France
+3038012	Altkirch	47.61667	7.25	5564	Altkirch+68130	ACAL	Francia+France
+3038225	Aléria	42.1024	9.51575	2163	Aleria		Francia+France
+3038305	Alata	41.97749	8.74232	2584	Alata		Francia+France
+3038334	Ajaccio	41.91886	8.73812	54364	Aiacciu+20000		Francia+France
+3038653	Afa	41.98362	8.79469	2157	Afà		Francia+France
+2643743	London	51.50853	-0.12574	7556900	Londra		Regnu Unitu+http://en.wikipedia.org/wiki/United_Kingdom
+1275004	Kolkata	22.56263	88.36304	4631392	Calcutta	WB+West Bengal	India
+2522750	Villalba	37.65457	13.84452	1689	Villalba		Italia
+2522876	Trapani	38.0176	12.53617	58681	Tràpani		Italia
+2523920	Palermo	38.13205	13.33561	648260	Palermu		Italia
+2524322	Maletto	37.82914	14.86403	3877	Malettu		Italia
+2524815	Erice	38.03785	12.58778	565	Èrici		Italia
+2524819	Enna	37.5655	14.27433	22998	Castrugiuvanni		Italia
+2525041	Cefalù	38.03856	14.02285	11613	Cifalù		Italia
+2525068	Catania	37.49223	15.07041	290927	Catania		Italia
+2525473	Cagliari	39.23054	9.11917	149257	Càgliari		Italia
+2525764	Agrigento	37.31065	13.57661	32514	Girgenti		Italia
+2525774	Acquaviva Platani	37.57174	13.70156	795	Acquaviva Platani		Italia
+3164074	Vinci	43.78133	10.92365	1519	Vinci	Toscana	Italia
+3164433	Viareggio	43.86693	10.2502	49099	Viareggiu	Toscana	Italia
+3164533	Vernio	44.04755	11.15052	5535	Vernio	Toscana	Italia
+3164699	Varese	45.82058	8.82511	76851	Varese		Italia
+3165012	Uzzano	43.89728	10.70403	152	Uzzano	Toscana	Italia
+3165524	Turin	45.07049	7.68682	870456	Turinu	Piemonte	Italia
+3165771	Terni	42.56335	12.64329	97050	Terni		Italia
+3165926	Taranto	40.46438	17.24707	181082	Taranto		Italia
+3166236	Spoleto	42.74071	12.73899	19266	Spoleto		Italia
+3166397	Sondrio	46.16852	9.87134	19208	Sondrio		Italia
+3166548	Siena	43.31822	11.33064	42867	Siena	Toscana	Italia
+3166903	Sciolze	45.09453	7.87818	307	Sciolze	Piemonte	Italia
+3168813	Rufina	43.82396	11.48673	4809	Rufina	Toscana	Italia
+3169526	Reggello	43.67967	11.52976	3729	Reggello	Toscana	Italia
+3169921	Prato	43.8805	11.09699	181820	Pratu	Toscana	Italia
+3170191	Pontremoli	44.37515	9.87888	5208	Pontremoli	Toscana	Italia
+3170538	Podenzana	44.20625	9.94199	1819	Podenzana	Toscana	Italia
+3170621	Pistoia	43.93064	10.92365	73832	Pistoia	Toscana	Italia
+3170647	Pisa	43.70853	10.4036	77007	Pisa	Toscana	Italia
+3171148	Pescia	43.8871	10.68849	11567	Pescia	Toscana	Italia
+3171180	Perugia	43.1122	12.38878	120137	Perugia		Italia
+3171985	Orbetello	42.44158	11.2214	5779	Orbetellu	Toscana	Italia
+3172087	Olbia	40.92337	9.49802	42930	Tarranóa		Italia
+3172669	Montignoso	44.02405	10.17259	10023	Montignoso	Toscana	Italia
+3172996	Montecatini-Terme	43.88153	10.7723	17954	Montecatini Terme	Toscana	Italia
+3173093	Montale	43.93486	11.01655	6316	Montale	Toscana	Italia
+3173754	Massarosa	43.86638	10.34458	10881	Massarosa	Toscana	Italia
+3173775	Massa	44.03541	10.13927	64783	Massa	Toscana	Italia
+3174112	Manciano	42.58875	11.51806	3104	Manciano	Toscana	Italia
+3174530	Lucca	43.84369	10.50447	81748	Lucca	Toscana	Italia
+3174638	Lodi	45.30989	9.50085	40767	Lodi		Italia
+3174659	Livorno	43.54427	10.32615	153773	Livornu	Toscana	Italia
+3175528	Impruneta	43.68453	11.25434	4576	Impruneta	Toscana	Italia
+3176661	Fosdinovo	44.1332	10.01778	403	Fosdinovo	Toscana	Italia
+3176885	Foggia	41.45845	15.55188	137032	Foggia		Italia
+3176919	Fivizzano	44.23784	10.1265	1323	Fivizzano	Toscana	Italia
+3176952	Firenzuola	44.11968	11.38185	1765	Firenzuola	Toscana	Italia
+3177019	Fiesole	43.80455	11.29487	2725	Fiesole	Toscana	Italia
+3177400	Empoli	43.71795	10.94758	34394	Empoli	Toscana	Italia
+3177655	Cutigliano	44.10059	10.75617	399	Cutigliano	Toscana	Italia
+3177825	Crespina	43.57304	10.56431	592	Crespina	Toscana	Italia
+3177838	Cremona	45.13325	10.02129	59561	Cremona		Italia
+3178801	Chiesina Uzzanese	43.83891	10.72044	2186	Chiesina Uzzanese	Toscana	Italia
+3179035	Cerreto Guidi	43.75851	10.88191	2602	Cerreto Guidi	Toscana	Italia
+3179252	Cavriglia-Monastero	43.52025	11.48693	2195	Cavriglia	Toscana	Italia
+3179470	Castelsardo	40.91256	8.71453	3747	Caltheddu		Italia
+3180423	Carrara	44.07926	10.09789	58666	Carrara	Toscana	Italia
+3180734	Capannoli	43.58856	10.67328	4334	Capannoli	Toscana	Italia
+3180781	Cantagallo	44.02205	11.07971	60	Cantagallo	Toscana	Italia
+3181351	Buti	43.72857	10.5845	2100	Buti	Toscana	Italia
+3181528	Brindisi	40.63215	17.93607	78548	Brindisi		Italia
+3181554	Brescia	45.53558	10.21472	184826	Brescia		Italia
+3181819	Borgo a Buggiano	43.87522	10.73482	7302	Buggiano	Toscana	Italia
+3182164	Bergamo	45.69601	9.66721	114162	Bergamo		Italia
+3182351	Bari	41.11148	16.8554	277387	Bari		Italia
+3182358	Barga	44.0731	10.47789	3255	Barga	Toscana	Italia
+3182686	Aulla	44.20632	9.97853	4321	Aulla	Toscana	Italia
+3183147	Altopascio	43.81618	10.67668	9413	Altopascio	Toscana	Italia
+3183441	Agliana	43.90246	11.00531	14561	Agliana	Toscana	Italia
+3183443	Aggius	40.92995	9.06517	1381	Agghju		Italia
+3183565	Abetone	44.14595	10.66407	151	Abetone	Toscana	Italia
+6534705	Isola del Giglio	42.35791	10.90724	1406	Isula di u Gigliu	Toscana	Italia
+3143244	Oslo	59.91273	10.74609	580000	Oslu	Oslo	Nurvegia
+3941584	Cusco	-13.52264	-71.96734	312140	Cuscu		Perù
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	
+3099434	Gdańsk	54.35205	18.64637	461865	Gdansk	Pomorskie	
+2267057	Lisbon	38.71667	-9.13333	517802	Lisbona	Lisboa	Portugallu
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Rostov sopra-u-Donu		
+524901	Moscow	55.75222	37.61556	10381222	Moscù+Moskva		
+2673730	Stockholm	59.33258	18.0649	1515017	Stoccolma	Stockholms Län	Svezia+Ruoččii
+3646738	Caracas	10.48801	-66.87919	3000000	Caracas		

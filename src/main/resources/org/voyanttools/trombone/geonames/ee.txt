@@ -1,0 +1,4 @@
+591313	Kiviõli	59.35306	26.97111	6953	Kiviõli		Estonia nutome
+593926	Telsiai	55.98139	22.24722	30098	Telšiai		Lituania nutome+http://en.wikipedia.org/wiki/Lithuania
+768217	Końskowola	51.40922	22.05175	2208	Kɔnyskɔvɔla	Lubelskie	Poland nutome
+3093158	Łobez	53.63918	15.62129	10609	Lobez		Poland nutome

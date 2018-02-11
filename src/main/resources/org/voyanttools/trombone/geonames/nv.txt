@@ -1,0 +1,34 @@
+3466779	Cascavel	-24.95583	-53.45528	257172	Tłʼiish áníní	PR+Paraná	
+5284580	Holbrook	34.90225	-110.15818	5019	Tʼiisyaakin	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5289626	Chinle	36.15445	-109.55261	4518	Chʼínílį́	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5294810	Flagstaff	35.19807	-111.65127	70320	Kinłání	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5295585	Ganado	35.7114	-109.54205	1210	Lókʼaahnteel	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5296013	Globe	33.39422	-110.7865	7396	Béésh Bá Hooghan	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5300830	Kayenta	36.72778	-110.25458	5189	Tó Dínéeshzheeʼ	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5307778	Page	36.91472	-111.45583	7490	Naʼníʼá Hótsaa	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Hoozdoh	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5312476	Safford	32.83395	-109.70758	9683	Achʼįʼ Náhiłtį́į́	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5314943	Snowflake	34.51337	-110.07845	5666	Tó Diłhił Biih Yílį́	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5315525	Springerville	34.13355	-109.28834	1954	Tsé Noodǫ́ǫ́z	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5316405	Superior	33.29395	-111.09623	2943	Yoołgai	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5318279	Tuba City	36.13499	-111.23986	8611	Tó Naneesdizí	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5321390	Window Rock	35.68057	-109.05259	2712	Tségháhoodzání	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5321473	Winslow	35.02419	-110.69736	9600	Béésh Sinil	Hoozdo Hahoodzo+AZ+Arizona	U.S.+USA+U.S.A.
+5326297	Barstow	34.89859	-117.02282	23692	Báshdo	Akééháshį́į́h Hahoodzo+CA+Calif+California	U.S.+USA+U.S.A.
+5418104	Cortez	37.34888	-108.58593	8715	Tsé Yaatóhí	Dibé Nitsaa Hahoodzo+CO+Colorado	U.S.+USA+U.S.A.
+5420241	Durango	37.27528	-107.88007	18006	Kin Łání	Dibé Nitsaa Hahoodzo+CO+Colorado	U.S.+USA+U.S.A.
+5433784	Pagosa Springs	37.26945	-107.00976	1756	Tó Sido Háálį́	Dibé Nitsaa Hahoodzo+CO+Colorado	U.S.+USA+U.S.A.
+5438881	Silverton	37.81194	-107.66451	637	Tónhidigaii	Dibé Nitsaa Hahoodzo+CO+Colorado	U.S.+USA+U.S.A.
+5454711	Albuquerque	35.08449	-106.65114	559121	Beeʼeldííl Dahsinil	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5456049	Aztec	36.82223	-107.99285	6147	Kinteel	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5457198	Bernalillo	35.30004	-106.55114	8843	Kin Noodǫ́ǫ́z	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5467328	Farmington	36.72806	-108.21869	42871	Tótaʼ	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5468773	Gallup	35.52808	-108.74258	23240	Naʼnízhoozhí	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5469841	Grants	35.1476	-107.85261	9239	Naatooh Sikʼaiʼí	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5490263	Santa Fe	35.68698	-105.9378	84099	Yootó	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5491999	Socorro	34.0584	-106.89142	8722	Sighóla	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5493811	Taos	36.40725	-105.57307	5740	Tówoł	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5494507	Tierra Amarilla	36.70029	-106.54976	382	Łitsooí	Yootó Hahoodzo+NM+New Mexico	U.S.+USA+U.S.A.
+5506956	Las Vegas	36.17497	-115.13722	623747	Naʼazhǫǫsh Hátsoh	Naʼazhǫǫsh Hahoodzo+NV+Nevada	U.S.+USA+U.S.A.
+5541458	Kanab	37.04749	-112.52631	4394	Kʼaiʼ Bił Hahazteel	Áshįįh Biiʼtó Hahoodzo+UT+Utah	U.S.+USA+U.S.A.
+5543377	Monticello	37.87138	-109.34289	2069	Maadíséloo	Áshįįh Biiʼtó Hahoodzo+UT+Utah	U.S.+USA+U.S.A.

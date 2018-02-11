@@ -1,0 +1,58 @@
+2640084	Portaferry	54.38086	-5.54569	2525	पोर्ताफेर्री		http://en.wikipedia.org/wiki/United_Kingdom
+2642376	Moira	54.48021	-6.22822	4098	मोइरा		http://en.wikipedia.org/wiki/United_Kingdom
+2643211	Maghera	54.8439	-6.67145	4085	मघेरा		http://en.wikipedia.org/wiki/United_Kingdom
+2647957	Greenisland	54.70081	-5.87479	5073	ग्रीनिस्लंद		http://en.wikipedia.org/wiki/United_Kingdom
+2649398	Fintona	54.5	-7.31667	1373	फिन्तोना		http://en.wikipedia.org/wiki/United_Kingdom
+2650726	Dungiven	54.93333	-6.91667	3066	दुन्गिवें		http://en.wikipedia.org/wiki/United_Kingdom
+2653534	Castlewellan	54.2569	-5.94446	2499	कास्त्लेवेल्लन		http://en.wikipedia.org/wiki/United_Kingdom
+2654175	Bushmills	55.20493	-6.51918	1309	बुश्मिल्ल्स		http://en.wikipedia.org/wiki/United_Kingdom
+2657182	Ardglass	54.26312	-5.60981	1676	अर्द्ग्लास		http://en.wikipedia.org/wiki/United_Kingdom
+4076784	Montgomery	32.36681	-86.29997	200602	मोन्टगोमरी	AL+Alabama	U.S.+USA+U.S.A.
+4119403	Little Rock	34.74648	-92.28959	197992	लिटिल रक	AR	U.S.+USA+U.S.A.
+4142290	Dover	39.15817	-75.52437	37522	डोभर	डेलावेर+DE+Delaware	U.S.+USA+U.S.A.
+4174715	Tallahassee	30.43826	-84.28073	189907	टालाहासे	फ्लोरिडा+FL+Florida	U.S.+USA+U.S.A.
+4180439	Atlanta	33.749	-84.38798	463878	एट्लान्टा	GA+Georgia	U.S.+USA+U.S.A.
+4259418	Indianapolis	39.76838	-86.15804	829718	इन्डियानापोलिस	इन्डियाना+IN+Indiana	U.S.+USA+U.S.A.
+4292188	Frankfort	38.20091	-84.87328	27830	फ्र्यांकफोर्ट	केन्चकी+KY+Kentucky	U.S.+USA+U.S.A.
+4315588	Baton Rouge	30.45075	-91.15455	228590	बेटन रु	लुइजियाना+LA+Louisiana	U.S.+USA+U.S.A.
+4347242	Annapolis	38.97845	-76.49218	39474	एनापोलिस	मेरील्यान्ड+MD+Maryland	U.S.+USA+U.S.A.
+4392388	Jefferson City	38.5767	-92.17352	43169	जेफर्सन सिटी	मिसौरी+MO+Missouri	U.S.+USA+U.S.A.
+4431410	Jackson	32.29876	-90.18481	170674	ज्याकसन	मिसिसिप्पी+MS+Mississippi	U.S.+USA+U.S.A.
+4487042	Raleigh	35.7721	-78.63861	451066	र्यालेइ	उत्तर क्यारोलिना+NC+North Carolina	U.S.+USA+U.S.A.
+4509177	Columbus	39.96118	-82.99879	850106	कोलम्बस	ओहायो+OH	U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	ओक्लाहोमा सिटी	ओक्लाहोमा+OK+Oklahoma	U.S.+USA+U.S.A.
+4575352	Columbia	34.00071	-81.03481	133803	कोलम्बिया	दक्षिण क्यारोलिना+SC+South Carolina	U.S.+USA+U.S.A.
+4644585	Nashville	36.16589	-86.78444	530852	न्यास्भिल्ल	टेनिसी+TN+Tennessee	U.S.+USA+U.S.A.
+4671654	Austin	30.26715	-97.74306	931830	अस्टिन	टेक्सास+TX+Texas	U.S.+USA+U.S.A.
+4781708	Richmond	37.55376	-77.46026	220289	रिचमन्ड	भर्जिनिया+VA+Virginia	U.S.+USA+U.S.A.
+4801859	Charleston	38.34982	-81.63262	49736	चार्ल्सटन	पश्चिम भर्जिनिया+WV+West Virginia	U.S.+USA+U.S.A.
+4835797	Hartford	41.76371	-72.68509	124006	हार्टफोर्ड	कनेक्टिकट+CT+Connecticut	U.S.+USA+U.S.A.
+4853828	Des Moines	41.60054	-93.60911	210330	डेस् म्वाने	आयोवा+IA+Iowa	U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	बोस्टन	म्यासेच्युसेट्स+MA+Massachusetts	U.S.+USA+U.S.A.
+4953804	Uxbridge	42.07732	-71.62951	12614	ऊक्ष्ब्रिद्गे	म्यासेच्युसेट्स+MA+Massachusetts	U.S.+USA+U.S.A.
+4957003	Augusta	44.31062	-69.77949	18471	अगस्टा	मेइन+ME+Maine	U.S.+USA+U.S.A.
+4998830	Lansing	42.73253	-84.55553	115056	ल्यान्सिंग	मिसिगन+MI	U.S.+USA+U.S.A.
+5045360	Saint Paul	44.94441	-93.09327	285068	सन्त पल	मिनेसोटा+MN+Minnesota	U.S.+USA+U.S.A.
+5072006	Lincoln	40.8	-96.66696	277348	लिंकन	नेब्रास्का+NE	U.S.+USA+U.S.A.
+5084868	Concord	43.20814	-71.53757	42620	कन्कर्ड	न्हु ह्याम्प्शायर+NH+New Hampshire	U.S.+USA+U.S.A.
+5105496	Trenton	40.21705	-74.74294	84225	ट्रेन्टन	न्हु जर्सी+NJ+New Jersey	U.S.+USA+U.S.A.
+5106834	Albany	42.65258	-73.75623	98469	अल्बानी	न्हु यर्क+NY	U.S.+USA+U.S.A.
+5192726	Harrisburg	40.2737	-76.88442	49081	ह्यारिसबर्ग	पेन्सिल्भेनिया+PA	U.S.+USA+U.S.A.
+5224151	Providence	41.82399	-71.41283	179207	प्रोभिडेन्स	रोड टापू+RI	U.S.+USA+U.S.A.
+5238685	Montpelier	44.26006	-72.57539	7592	मोन्टपेलियर	भर्मोन्ट+VT+Vermont	U.S.+USA+U.S.A.
+5261457	Madison	43.07305	-89.40123	248951	मेडिसन	विन्कोसिन+WI	U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	फिनिक्स	अराइजोना+AZ+Arizona	U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	सेक्रामेन्टो	क्यालिफोर्निया+CA+Calif+California	U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	डेन्भर	कोलोर्याडो+CO+Colorado	U.S.+USA+U.S.A.
+5490263	Santa Fe	35.68698	-105.9378	84099	सान्ता फे	NM+New Mexico	U.S.+USA+U.S.A.
+5501344	Carson City	39.1638	-119.7674	54521	कार्सन सिटी	नेभेदा+NV+Nevada	U.S.+USA+U.S.A.
+5554072	Juneau	58.30194	-134.41972	32756	जुन्यु	अलास्का+AK+Alaska	U.S.+USA+U.S.A.
+5586437	Boise	43.6135	-116.20345	145987	बोइज	आइडाहो+ID+Idaho	U.S.+USA+U.S.A.
+5656882	Helena	46.59271	-112.03611	30581	हेलेना	मोन्टाना+MT	U.S.+USA+U.S.A.
+5688025	Bismarck	46.80833	-100.78374	71167	बिस्मार्क	उत्तर डेकोटा+ND	U.S.+USA+U.S.A.
+5750162	Salem	44.9429	-123.0351	164549	सालेम	ओरेगन+OR	U.S.+USA+U.S.A.
+5767918	Pierre	44.36832	-100.35097	14002	पियेरे	दक्षिण ड्याकोटा+SD+South Dakota	U.S.+USA+U.S.A.
+5780993	Salt Lake City	40.76078	-111.89105	192672	साल्ट लेक सिटी+SLC	उटाह+UT+Utah	U.S.+USA+U.S.A.
+5805687	Olympia	47.03787	-122.9007	50302	ओलम्पिया	वासिंगटन+WA+Washington	U.S.+USA+U.S.A.
+5821086	Cheyenne	41.13998	-104.82025	63335	चेइनी	वायोमिंग+WY	U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	होनालुलु	हवाई+HI+Hawaii	U.S.+USA+U.S.A.

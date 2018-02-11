@@ -1,0 +1,332 @@
+2147714	Sydney	-33.86785	151.20732	4627345	Sydney	NSW	Australië
+2783188	Zonhoven	50.99064	5.36819	19922	Zoneve		Belsj
+2783864	Wellen	50.84096	5.33867	6804	Wille		Belsj
+2783870	Welkenraedt	50.6605	5.97034	9006	Wellekete	Wallonia+Walloon	Belsj
+2783941	Wavre	50.71717	4.60138	32112	Waver	Wallonia+Walloon	Belsj
+2784066	Waremme	50.6976	5.25524	13737	Wèrm	Wallonia+Walloon	Belsj
+2784821	Verviers	50.58907	5.86241	52824	Verviers	Wallonia+Walloon	Belsj
+2785389	Tongeren	50.78054	5.46484	29816	Tóngere		Belsj
+2785593	Theux	50.53323	5.81245	11587	Theux	Wallonia+Walloon	Belsj
+2785612	Tessenderlo	51.06513	5.08856	16574	Loei		Belsj
+2786545	Sint-Truiden	50.81679	5.18647	37859	Sintruin		Belsj
+2786824	Seraing	50.58362	5.50115	60737	Seraing	Wallonia+Walloon	Belsj
+2788849	Plombières	50.73656	5.95922	9596	Blieberig+Plombières	Wallonia+Walloon	Belsj
+2789403	Overpelt	51.21038	5.41557	13344	Pelt		Belsj
+2790357	Neerpelt	51.22807	5.4427	16122	Neerpelt		Belsj
+2790471	Namur	50.4669	4.86746	106284	Name	Wallonia+Walloon	Belsj
+2790869	Mons	50.45413	3.95229	91277	Berge	Wallonia+Walloon	Belsj
+2791537	Mechelen	51.02574	4.47762	77530	Mechele		Belsj
+2791961	Maasmechelen	50.96545	5.69452	36251	Mechele		Belsj
+2791964	Maaseik	51.09802	5.78379	23684	Mezeik		Belsj
+2792179	Lommel	51.23074	5.31349	31993	Lommel		Belsj
+2792332	Lincent	50.71222	5.03654	2884	Liessem	Wallonia+Walloon	Belsj
+2792348	Limbourg	50.61222	5.9412	5612	Laeboer+Limbourg	Wallonia+Walloon	Belsj
+2792413	Liège	50.63373	5.56749	182597	Luuk	Wallonia+Walloon	Belsj
+2792482	Leuven	50.87959	4.70093	92892	Leuve		Belsj
+2792856	Leopoldsburg	51.11667	5.25	14149	Leopoldsburg		Belsj
+2793508	La Louvière	50.48657	4.18785	76668	La Louvière	Wallonia+Walloon	Belsj
+2794445	Kinrooi	51.14543	5.74207	11946	Kinjer		Belsj
+2795113	Huy	50.51894	5.23284	19973	Hoei	Wallonia+Walloon	Belsj
+2795648	Hoeselt	50.84714	5.48767	9265	Hoeiselt		Belsj
+2795912	Herve	50.64083	5.79353	16544	Herf	Wallonia+Walloon	Belsj
+2795985	Herk-de-Stad	50.94013	5.16636	11566	Herk		Belsj
+2796297	Heers	50.75383	5.3021	6689	Hiër		Belsj
+2796491	Hasselt	50.93106	5.33781	69222	Hasselt		Belsj
+2796715	Halen	50.94837	5.11096	8548	Hôle		Belsj
+2797523	Gingelom	50.74792	5.13422	7930	Gingelom		Belsj
+2797656	Gent	51.05	3.71667	231493	Gent		Belsj
+2797670	Genk	50.965	5.50082	63666	Genk		Belsj
+2797713	Gembloux	50.56149	4.69889	21676	Gembloers	Wallonia+Walloon	Belsj
+2798573	Eupen	50.6279	6.03647	18029	Eupe	Wallonia+Walloon	Belsj
+2799645	Dendermonde	51.02869	4.10106	43055	Dendermonde		Belsj
+2799997	Crisnée	50.71703	5.39802	2587	Gerstekaove	Wallonia+Walloon	Belsj
+2800481	Charleroi	50.41136	4.44448	200132	Charleroi	Wallonia+Walloon	Belsj
+2800866	Brussels	50.85045	4.34878	1019022	Brussel	Brussels-Capital Region	Belsj
+2800931	Brugge	51.20892	3.22424	116709	Brögge		Belsj
+2801093	Bree	51.14152	5.5969	14363	Bree		Belsj
+2801467	Borgloon	50.80505	5.34366	9955	Loeën		Belsj
+2801754	Bocholt	51.17337	5.57994	12346	Bóggetj		Belsj
+2801924	Bilzen	50.87325	5.5184	29622	Bilze		Belsj
+2802170	Beringen	51.04954	5.22606	40930	Berringe		Belsj
+2802583	Bastogne	50.00347	5.71844	14395	Bastenake	Wallonia+Walloon	Belsj
+2802816	Baarle-Hertog	51.40504	4.89226	2305	Baarle-Hertog		Belsj
+2802985	Aubel	50.70189	5.85812	4119	Aobel	Wallonia+Walloon	Belsj
+2803073	Arlon	49.68333	5.81667	26179	Aarle	Wallonia+Walloon	Belsj
+2803138	Antwerpen	51.21989	4.40346	459805	Antwerpe		Belsj
+2803242	Amblève	50.35357	6.17002	5221	Amel	Wallonia+Walloon	Belsj
+2803246	Amay	50.54829	5.30974	13307	Amay	Wallonia+Walloon	Belsj
+2803285	Alken	50.87553	5.30558	10933	Alleke		Belsj
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Rio de Janeiro	RJ	Braziel
+2657896	Zürich	47.36667	8.55	341730	Zeurich	ZH	
+146384	Limassol	34.68406	33.03794	154000	Lemesos		
+146617	Famagusta	35.12054	33.93894	42526	Mağusa		
+3067696	Prague	50.08804	14.42076	1165581	Praag+Praha	Hlavní město Praha	Tsjechië+Czechia
+2805385	Xanten	51.65877	6.45297	21587	Sante	NRW	Duutsjlandj
+2805644	Würselen	50.81809	6.1347	37074	Wösjele	NRW	Duutsjlandj
+2809889	Wetzlar	50.56109	8.50495	52656	Wetzlar	Hessen	Duutsjlandj
+2813390	Wegberg	51.14221	6.28436	29622	Berk	NRW	Duutsjlandj
+2813786	Wassenberg	51.10009	6.15484	16641	Wasseberg	NRW	Duutsjlandj
+2815035	Waldfeucht	51.0661	5.98815	9305	Vuch	NRW	Duutsjlandj
+2815651	Wachtendonk	51.40916	6.33894	7823	Wachtedónk	NRW	Duutsjlandj
+2817311	Viersen	51.25435	6.39441	76153	Veeëse	NRW	Duutsjlandj
+2817506	Vettweiß	50.73333	6.6	9116	Fettweĳß	NRW	Duutsjlandj
+2817724	Velbert	51.33537	7.04348	87669	Vèlbed	NRW	Duutsjlandj
+2826304	Straelen	51.4419	6.26639	15325	Straele	NRW	Duutsjlandj
+2826595	Stolberg	50.77368	6.22595	58874	Sjtolberg	NRW	Duutsjlandj
+2831580	Solingen	51.17343	7.0845	164359	Solich	NRW	Duutsjlandj
+2832023	Simmerath	50.6	6.3	15646	Zömmert	NRW	Duutsjlandj
+2832521	Siegburg	50.80019	7.20769	39135	Sieburch	NRW	Duutsjlandj
+2838744	Schleiden	50.52896	6.47692	14160	Sjleie	NRW	Duutsjlandj
+2844277	Roetgen	50.65	6.2	8177	Ruutsje	NRW	Duutsjlandj
+2844862	Rösrath	50.89559	7.18175	26868	Rösrod	NRW	Duutsjlandj
+2851746	Pulheim	50.99965	6.80632	53762	Pullem	NRW	Duutsjlandj
+2863223	Niederkassel	50.81503	7.03777	36480	Neddekaassel	NRW	Duutsjlandj
+2864118	Neuss	51.19807	6.68504	152457	Nuus	NRW	Duutsjlandj
+2877142	Lindlar	51.01959	7.37758	22723	Lenkeln	NRW	Duutsjlandj
+2877648	Limburg an der Lahn	50.3836	8.0503	33820	Limburg an der Lahn	Hessen	Duutsjlandj
+2884509	Krefeld	51.33645	6.55381	237984	Krievel	NRW	Duutsjlandj
+2885397	Korschenbroich	51.19139	6.51352	33406	Korsjebrooch	NRW	Duutsjlandj
+2886242	Köln	50.93333	6.95	963395	Kölle	NRW	Duutsjlandj
+2894375	Kaarst	51.22929	6.61883	42112	Kaasj	NRW	Duutsjlandj
+2894553	Jülich	50.92149	6.36267	33911	Jöllesch	NRW	Duutsjlandj
+2894637	Jüchen	51.1	6.5	22562	Juche	NRW	Duutsjlandj
+2898111	Hückelhoven	51.0555	6.22658	39828	Hukkelhaove	NRW	Duutsjlandj
+2904795	Hilden	51.16818	6.93093	56565	Hilde	NRW	Duutsjlandj
+2905455	Herzogenrath	50.86874	6.09317	47381	Roa	NRW	Duutsjlandj
+2907585	Heiligenhaus	51.32662	6.97106	27700	Hillijehoes	NRW	Duutsjlandj
+2921528	Geldern	51.51908	6.32363	34013	Geldere	NRW	Duutsjlandj
+2921837	Geilenkirchen	50.96745	6.11763	28334	Jellekerke	NRW	Duutsjlandj
+2925259	Frechen	50.91485	6.8118	48733	Frechem	NRW	Duutsjlandj
+2925533	Frankfurt am Main	50.11552	8.68417	650000	Frankfurt am Main	Hessen	Duutsjlandj
+2928810	Essen	51.45657	7.01228	593085	Esse	NRW	Duutsjlandj
+2929622	Erkelenz	51.07947	6.31531	44650	Erkelens	NRW	Duutsjlandj
+2934246	Düsseldorf	51.22172	6.77616	573057	Dusseldörp	NRW	Duutsjlandj
+2934691	Duisburg	51.43247	6.76516	504358	Duusbörg	NRW	Duutsjlandj
+2935825	Dormagen	51.09683	6.83167	63582	Dormaje	NRW	Duutsjlandj
+2950159	Berlin	52.52437	13.41053	3426354	Berlien	Berlien+Berlin	Duutsjlandj
+2951648	Bedburg	50.99258	6.57128	24937	Bebber	NRW	Duutsjlandj
+2953302	Baesweiler	50.90964	6.18874	27834	Baaswieler	NRW	Duutsjlandj
+2958141	Alsdorf	50.87673	6.16399	46340	Elsdörp	NRW	Duutsjlandj
+2958516	Alfter	50.73333	7.01667	21814	Alefte	NRW	Duutsjlandj
+3247449	Aachen	50.77664	6.08342	265208	Aoke	NRW	Duutsjlandj
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostella	Galicia	Spanje+España
+3117735	Madrid	40.4165	-3.70256	3255944	Madrid	Madrid	Spanje+España
+2973783	Strasbourg	48.58392	7.74553	274845	Sjtraasburg+67000	ACAL	Frankriek+France
+2973826	Steenbecque	50.67421	2.48442	1674	Steenbeke	http://en.wikipedia.org/wiki/Hauts-de-France	Frankriek+France
+2988507	Paris	48.85341	2.3488	2138551	Paries+75001		Frankriek+France
+2996944	Lyon	45.74846	4.84671	472317	Lyon		Frankriek+France
+3029162	Calais	50.95194	1.85635	74433	Kales+62100	http://en.wikipedia.org/wiki/Hauts-de-France	Frankriek+France
+2641673	Newcastle upon Tyne	54.97328	-1.61396	192382	Newcastle-upon-Tyne	Ingeland	Vereineg Keuninkriek+http://en.wikipedia.org/wiki/United_Kingdom
+2643743	London	51.50853	-0.12574	7556900	Londe	Ingeland	Vereineg Keuninkriek+http://en.wikipedia.org/wiki/United_Kingdom
+614622	Gagra	43.27858	40.27124	8266	Gagra		Georgië
+255274	Piraeus	37.94745	23.63708	163688	Pireas		Griekeland+Griekanmua
+3054643	Budapest	47.49801	19.03991	1741041	Boedapes		Hongarieë
+281184	Jerusalem	31.76904	35.21633	801000	Jeruzalem		Israël
+295530	Beersheba	31.25181	34.7913	186600	Beer Sjeva	HaDarom	Israël
+1275339	Mumbai	19.07283	72.88261	12691836	Bombay	MH+Mahārāshtra	India
+3164603	Venice	45.43713	12.33265	51298	Venies		Italië
+3169070	Rome	41.89193	12.51133	2318895	Roeme	Lazio	Italië
+3176959	Florence	43.77925	11.24626	349296	Florence		Italië
+1850147	Tokyo	35.6895	139.69171	8336599	Tokio		Japan
+2960316	Luxembourg	49.61167	6.13	76684	Luxembörg		Luxembörg
+1821274	Macau	22.20056	113.54611	520400	Makau		
+2743477	Zwolle	52.5125	6.09444	111805	Zwolle	ov+Overijssel	Nederland
+2743493	Zwijndrecht	51.8175	4.63333	45696	Zwijndrecht	Zuud-Holland+zh+Zuid-Holland	Nederland
+2743608	Zutphen	52.13833	6.20139	36188	Zutfen	GLD+gd+Gelderland	Nederland
+2743856	Zoetermeer	52.0575	4.49306	115845	Zeutermaer+Zoetermeer	Zuud-Holland+zh+Zuid-Holland	Nederland
+2743977	Zeist	52.09	5.23333	60949	Zeist	ut+Utrecht	Nederland
+2744042	Zandvoort	52.37125	4.53306	16868	Zandvoort	nh+Nord-Holland+Noord-Holland	Nederland
+2744114	Zaanstad	52.45313	4.81356	140085	Zaanstad	nh+Nord-Holland+Noord-Holland	Nederland
+2744156	Woudrichem	51.815	5.00139	14208	Woudrichem	Noord-Braobant+nb+Noord-Brabant	Nederland
+2744248	Woerden	52.085	4.88333	48431	Woerden	ut+Utrecht	Nederland
+2744257	Woensdrecht	51.42897	4.30355	1340	Woensdrecht	Noord-Braobant+nb+Noord-Brabant	Nederland
+2744477	Wijlre	50.83333	5.89583	1960	Wielder	lb	Nederland
+2744514	Wijchen	51.80917	5.725	32693	Wijchen	GLD+gd+Gelderland	Nederland
+2744815	Wessem	51.15954	5.88146	2050	Wèssem	lb	Nederland
+2744827	Werkendam	51.81	4.89444	26362	Werkendam	Noord-Braobant+nb+Noord-Brabant	Nederland
+2744904	Weesp	52.3075	5.04167	17802	Weesp	nh+Nord-Holland+Noord-Holland	Nederland
+2744911	Weert	51.25167	5.70694	48662	Wieërt	lb	Nederland
+2745123	Waalwijk	51.6825	5.07083	45610	Waalwijk	Noord-Braobant+nb+Noord-Brabant	Nederland
+2745127	Waalre	51.38667	5.44444	6445	Waalre	Noord-Braobant+nb+Noord-Brabant	Nederland
+2745392	Vlissingen	51.4425	3.57361	45273	Vlissinge+Vlissingen	zl+Zeeland	Nederland
+2745467	Vlaardingen	51.9125	4.34167	73798	Vlaardinge	Zuud-Holland+zh+Zuid-Holland	Nederland
+2745641	Venlo	51.37	6.16806	92403	Venlo	lb	Nederland
+2745673	Velsen-Zuid	52.46	4.65	67758	Velsen	nh+Nord-Holland+Noord-Holland	Nederland
+2745726	Veghel	51.61667	5.54861	25352	Veghel	Noord-Braobant+nb+Noord-Brabant	Nederland
+2745774	Veenendaal	52.02863	5.55891	61271	Veenendaal	ut+Utrecht	Nederland
+2745860	Valkenswaard	51.35083	5.45972	31071	Valkeswaerd	Noord-Braobant+nb+Noord-Brabant	Nederland
+2745906	Vaals	50.77083	6.01806	6970	Vols	lb	Nederland
+2745912	Utrecht	52.09083	5.12222	290529	Utrei+Utrech	ut+Utrecht	Nederland
+2745926	Urmond	50.99083	5.77222	3560	Uermend+Werment	lb	Nederland
+2745932	Urk	52.6625	5.60139	17345	Urk	fl+Flevoland	Nederland
+2745978	Uitgeest	52.52917	4.70972	11794	Uitgeest	nh+Nord-Holland+Noord-Holland	Nederland
+2746005	Uden	51.66083	5.61944	34601	Uden	Noord-Braobant+nb+Noord-Brabant	Nederland
+2746014	Ubachsberg	50.85333	5.94861	1420	De Berg	lb	Nederland
+2746301	Tilburg	51.55551	5.0913	199613	Tilburg	Noord-Braobant+nb+Noord-Brabant	Nederland
+2746342	Thorn	51.16167	5.84167	2295	Toear	lb	Nederland
+2746351	Tholen	51.53167	4.22083	7475	Tholen	zl+Zeeland	Nederland
+2746420	Terneuzen	51.33583	3.82778	27930	Terneuze+Terneuzen	zl+Zeeland	Nederland
+2746504	Tegelen	51.34417	6.13611	20190	Tegele	lb	Nederland
+2746804	Steenbergen	51.58417	4.31944	23582	Steenbergen	Noord-Braobant+nb+Noord-Brabant	Nederland
+2746932	Spijkenisse	51.845	4.32917	74988	Spijkenisse	Zuud-Holland+zh+Zuid-Holland	Nederland
+2746964	Spaubeek	50.94	5.84306	3360	Sjpawbik+Spaubeek	lb	Nederland
+2747010	Son	51.51136	5.49282	4930	Son	Noord-Braobant+nb+Noord-Brabant	Nederland
+2747021	Someren	51.385	5.71111	10690	Zomere	Noord-Braobant+nb+Noord-Brabant	Nederland
+2747063	Sneek	53.03297	5.6589	32811	Sneek	fr	Nederland
+2747203	Sittard	50.99833	5.86944	48400	Zittert	lb	Nederland
+2747227	Sint-Oedenrode	51.5675	5.45972	16931	Sint-Oedenrode	Noord-Braobant+nb+Noord-Brabant	Nederland
+2747229	Sint Odiliënberg	51.14333	6	2810	Berg	lb	Nederland
+2747290	Sint Anthonis	51.62667	5.88194	3340	Sintunnis	Noord-Braobant+nb+Noord-Brabant	Nederland
+2747312	Simpelveld	50.83417	5.98194	2405	Zumpelveld	lb	Nederland
+2747373	The Hague	52.07667	4.29861	474292	D'n Haog	Zuud-Holland+zh+Zuid-Holland	Nederland
+2747382	Sevenum	51.4125	6.0375	5035	Zaerem	lb	Nederland
+2747550	Schinveld	50.96917	5.97917	4685	Sjilvend	lb	Nederland
+2747561	Schimmert	50.90667	5.82361	2310	Sjömmert	lb	Nederland
+2747584	Schijndel	51.6225	5.43194	23239	Schijndel	Noord-Braobant+nb+Noord-Brabant	Nederland
+2747596	Schiedam	51.91917	4.38889	75438	Schiedam	Zuud-Holland+zh+Zuid-Holland	Nederland
+2747599	Scheveningen	52.10461	4.27557	23000	Sjeveninge	Zuud-Holland+zh+Zuid-Holland	Nederland
+2747720	Schagen	52.7875	4.79861	5910	Schagen	nh+Nord-Holland+Noord-Holland	Nederland
+2747891	Rotterdam	51.9225	4.47917	598199	Rotterdam	Zuud-Holland+zh+Zuid-Holland	Nederland
+2747930	Roosendaal	51.53083	4.46528	77725	Roosendaal	Noord-Braobant+nb+Noord-Brabant	Nederland
+2748000	Roermond	51.19417	5.9875	44975	Remunj	lb	Nederland
+2748236	Renkum	51.97667	5.73333	9421	Renkum	GLD+gd+Gelderland	Nederland
+2748413	Purmerend	52.505	4.95972	76745	Purmerend	nh+Nord-Holland+Noord-Holland	Nederland
+2749234	Oss	51.765	5.51806	76430	Oss	Noord-Braobant+nb+Noord-Brabant	Nederland
+2749286	Opmeer	52.70667	4.94444	11183	Opmeer	nh+Nord-Holland+Noord-Holland	Nederland
+2749450	Oosterhout	51.645	4.85972	53107	Oosterhout	Noord-Braobant+nb+Noord-Brabant	Nederland
+2749680	Oisterwijk	51.57917	5.18889	25980	Oisterwijk	Noord-Braobant+nb+Noord-Brabant	Nederland
+2749683	Oirschot	51.505	5.31389	10393	Oirschot	Noord-Braobant+nb+Noord-Brabant	Nederland
+2749685	Oirsbeek	50.95083	5.90833	3600	Oeësjbik	lb	Nederland
+2749723	Oegstgeest	52.18	4.46944	21149	Oegstgeest	Zuud-Holland+zh+Zuid-Holland	Nederland
+2749745	Obdam	52.67583	4.90694	5690	Obdam	nh+Nord-Holland+Noord-Holland	Nederland
+2749753	Nuth	50.9175	5.88611	4585	Nut	lb	Nederland
+2750053	Nijmegen	51.8425	5.85278	158732	Nimwege	GLD+gd+Gelderland	Nederland
+2750325	Nieuwegein	52.02917	5.08056	61489	Nieuwegein	ut+Utrecht	Nederland
+2750467	Nederweert	51.28583	5.74861	7205	Ni-jwieërt	lb	Nederland
+2750521	Naarden	52.29583	5.1625	17115	Naarden	nh+Nord-Holland+Noord-Holland	Nederland
+2750539	Munstergeleen	50.975	5.86389	4580	Munstergelaen	lb	Nederland
+2750624	Montfort	51.12583	5.94861	2815	Mofert	lb	Nederland
+2750769	Moerdijk	51.70167	4.62639	1030	Moerdijk	Noord-Braobant+nb+Noord-Brabant	Nederland
+2750884	Middelharnis	51.7575	4.16528	17554	Middelharnis	Zuud-Holland+zh+Zuid-Holland	Nederland
+2750896	Middelburg	51.5	3.61389	46485	Middelburg	zl+Zeeland	Nederland
+2750995	Meijel	51.34417	5.88472	5180	Mael	lb	Nederland
+2751037	Meerssen	50.8875	5.75	5650	Meersje	lb	Nederland
+2751073	Medemblik	52.77167	5.10556	41500	Medemblik	nh+Nord-Holland+Noord-Holland	Nederland
+2751077	Mechelen	50.79583	5.92639	1375	Mechele	lb	Nederland
+2751199	Margraten	50.82083	5.82083	3320	Mergraote	lb	Nederland
+2751283	Maastricht	50.84833	5.68889	122378	Mestreech	lb	Nederland
+2751285	Maassluis	51.92333	4.25	32780	Maassluis	Zuud-Holland+zh+Zuid-Holland	Nederland
+2751301	Maasbree	51.3575	6.04861	5045	Bree	lb	Nederland
+2751303	Maasbracht	51.13929	5.88627	5680	Brach	lb	Nederland
+2751325	Maarheeze	51.31167	5.61667	4715	Mâres	Noord-Braobant+nb+Noord-Brabant	Nederland
+2751456	Loon op Zand	51.6275	5.075	23000	Loon op Zand	Noord-Braobant+nb+Noord-Brabant	Nederland
+2751543	Lith	51.80583	5.43889	2895	Lith	Noord-Braobant+nb+Noord-Brabant	Nederland
+2751738	Lelystad	52.50833	5.475	70741	Lelystad	fl+Flevoland	Nederland
+2751773	Leiden	52.15833	4.49306	119713	Leie	Zuud-Holland+zh+Zuid-Holland	Nederland
+2751792	Leeuwarden	53.20139	5.80859	91424	Liewarde+Leeuwarden+Leewarden	fr	Nederland
+2751808	Leerdam	51.89333	5.09167	20758	Leerdam	Zuud-Holland+zh+Zuid-Holland	Nederland
+2751813	Leens	53.36	6.37917	1675	Lèns	gr+Groningen	Nederland
+2751874	Laren	52.25667	5.22778	11508	Laren	nh+Nord-Holland+Noord-Holland	Nederland
+2751980	Landsmeer	52.43083	4.91528	1800	Landsmeer	nh+Nord-Holland+Noord-Holland	Nederland
+2752646	Klimmen	50.87583	5.88056	1780	Klumme	lb	Nederland
+2752923	Kerkrade	50.86583	6.0625	49777	Kirchroa	lb	Nederland
+2752954	Kerensheide	50.9721	5.77666	2740	De Kaereshei	lb	Nederland
+2753011	Katwijk aan den Rijn	52.19417	4.42222	5940	Katwijk	Zuud-Holland+zh+Zuid-Holland	Nederland
+2753167	Kaalheide	50.86505	6.03643	2840	Kaalhei	lb	Nederland
+2753468	Huizen	52.29917	5.24167	45292	Huizen	nh+Nord-Holland+Noord-Holland	Nederland
+2753638	Hoorn	52.6425	5.05972	68852	Hoorn	nh+Nord-Holland+Noord-Holland	Nederland
+2753996	Hoensbroek	50.92387	5.92528	25000	Gebrook	lb	Nederland
+2754064	Hilversum	52.22333	5.17639	83640	Hilversum	nh+Nord-Holland+Noord-Holland	Nederland
+2754111	Heythuysen	51.25	5.89861	6420	Heitse	lb	Nederland
+2754147	Heumen	51.765	5.84444	1010	Heume	GLD+gd+Gelderland	Nederland
+2754447	Helmond	51.48167	5.66111	74740	Hèllemed	Noord-Braobant+nb+Noord-Brabant	Nederland
+2754516	Heiloo	52.60252	4.68815	20510	Heiloo	nh+Nord-Holland+Noord-Holland	Nederland
+2754652	Heerlen	50.88365	5.98154	93084	Heële	lb	Nederland
+2754659	Heerhugowaard	52.67144	4.84862	47580	Heerhugowaard	nh+Nord-Holland+Noord-Holland	Nederland
+2754669	Heerenveen	52.95929	5.91854	43094	Hereveen+Heerenveen	fr	Nederland
+2754682	Heer	50.83836	5.72989	7615	Hier	lb	Nederland
+2754692	Heemstede	52.34992	4.62301	25562	Heemstede	nh+Nord-Holland+Noord-Holland	Nederland
+2754697	Heemskerk	52.51108	4.67165	36170	Heemskerk	nh+Nord-Holland+Noord-Holland	Nederland
+2754837	Harenkarspel	52.73416	4.77682	15941	Harenkarspel	nh+Nord-Holland+Noord-Holland	Nederland
+2754975	Haelen	51.23583	5.95694	9935	Hale	lb	Nederland
+2755003	Haarlem	52.38084	4.63683	147590	Haarlem	nh+Nord-Holland+Noord-Holland	Nederland
+2755009	Haaren	51.6025	5.22222	3835	Haaren	Noord-Braobant+nb+Noord-Brabant	Nederland
+2755045	Gulpen	50.81583	5.88889	3560	Gulpe	lb	Nederland
+2755251	Groningen	53.21917	6.56667	181194	Groninge	gr+Groningen	Nederland
+2755272	Groesbeek	51.77667	5.93611	18741	Groesbeek	GLD+gd+Gelderland	Nederland
+2755358	Grave	51.75902	5.73882	12999	Grave	Noord-Braobant+nb+Noord-Brabant	Nederland
+2755420	Gouda	52.01667	4.70833	71952	Gouda	Zuud-Holland+zh+Zuid-Holland	Nederland
+2755464	Goirle	51.52083	5.06667	22646	Goirle	Noord-Braobant+nb+Noord-Brabant	Nederland
+2755476	Goes	51.50417	3.88889	36931	Goes	zl+Zeeland	Nederland
+2755584	Gennep	51.69833	5.97361	16642	Gennep	lb	Nederland
+2755616	Geleen	50.97417	5.82917	32790	Gelaen	lb	Nederland
+2755669	Geertruidenberg	51.70167	4.85694	20941	Geertruidenberg	Noord-Braobant+nb+Noord-Brabant	Nederland
+2755920	Ferwert	53.33784	5.82533	1935	Ferwerd	fr	Nederland
+2756071	Enschede	52.21833	6.89583	153655	Ensjedee	ov+Overijssel	Nederland
+2756077	Enkhuizen	52.70333	5.29167	17365	Enkhuze+Enkhuizen	nh+Nord-Holland+Noord-Holland	Nederland
+2756136	Emmen	52.77917	6.90694	57010	Emme	dr	Nederland
+2756169	Elsloo	50.94917	5.77083	7220	Aelse	lb	Nederland
+2756253	Eindhoven	51.44083	5.47778	209620	Eindhove	Noord-Braobant+nb+Noord-Brabant	Nederland
+2756283	Eijsden	50.78	5.7177	11795	Èèsjde	lb	Nederland
+2756342	Eersel	51.3575	5.31806	18185	Eersel	Noord-Braobant+nb+Noord-Brabant	Nederland
+2756358	Eenrum	53.3625	6.45833	1365	Ènram	gr+Groningen	Nederland
+2756507	Duiven	51.94667	6.01389	25469	Duiven	GLD+gd+Gelderland	Nederland
+2756559	Dronten	52.525	5.71806	28073	Dronten	fl+Flevoland	Nederland
+2756669	Dordrecht	51.81	4.67361	119260	Dordrech	Zuud-Holland+zh+Zuid-Holland	Nederland
+2756723	Dongen	51.62667	4.93889	25464	Dongen	Noord-Braobant+nb+Noord-Brabant	Nederland
+2756888	Diemen	52.33964	4.96256	24361	Diemen	nh+Nord-Holland+Noord-Holland	Nederland
+2756987	Deventer	52.255	6.16389	97331	Deventer	ov+Overijssel	Nederland
+2757220	Den Helder	52.95988	4.75933	59569	Den Helder	nh+Nord-Holland+Noord-Holland	Nederland
+2757340	Delfzijl	53.33	6.91806	28649	Delfzijl	gr+Groningen	Nederland
+2757345	Delft	52.00667	4.35556	95060	Delft	Zuud-Holland+zh+Zuid-Holland	Nederland
+2757874	Cuijk	51.73083	5.87917	3610	Kuuk	Noord-Braobant+nb+Noord-Brabant	Nederland
+2757890	Cranendonck	51.30417	5.58889	19966	Kranedonk	Noord-Braobant+nb+Noord-Brabant	Nederland
+2757991	Castricum	52.54833	4.66944	35256	Castricum	nh+Nord-Holland+Noord-Holland	Nederland
+2758012	Capelle aan den IJssel	51.92917	4.57778	65255	Capelle aan den IJssel	Zuud-Holland+zh+Zuid-Holland	Nederland
+2758064	Bussum	52.27333	5.16111	31334	Bussum	nh+Nord-Holland+Noord-Holland	Nederland
+2758166	Budel	51.27167	5.575	7895	Buul	Noord-Braobant+nb+Noord-Brabant	Nederland
+2758174	Brunssum	50.94667	5.97083	29254	Broensem	lb	Nederland
+2758275	Broekhem	50.87119	5.82069	1960	Brokem	lb	Nederland
+2758401	Breda	51.58656	4.77596	167673	Breda	Noord-Braobant+nb+Noord-Brabant	Nederland
+2758429	Brachterbeek	51.14694	5.90446	1220	Brachterbaek	lb	Nederland
+2758460	Boxtel	51.59083	5.32917	29511	Boxtel	Noord-Braobant+nb+Noord-Brabant	Nederland
+2758462	Boxmeer	51.64667	5.94722	12407	Boksmaer	Noord-Braobant+nb+Noord-Brabant	Nederland
+2758587	Borssele	51.42333	3.73472	22285	Borsele	zl+Zeeland	Nederland
+2758598	Borne	52.30136	6.7482	20550	Borne	ov+Overijssel	Nederland
+2758602	Born	51.03167	5.80972	2430	Bor	lb	Nederland
+2758682	Bolsward	53.06555	5.53176	9160	Bolsward	fr	Nederland
+2758770	Bocholtz	50.81833	6.00556	4340	Bóches	lb	Nederland
+2758804	Bloemendaal	52.4025	4.62222	3905	Bloemendaal	nh+Nord-Holland+Noord-Holland	Nederland
+2758868	Blaricum	52.2725	5.24167	5060	Blaricum	nh+Nord-Holland+Noord-Holland	Nederland
+2758878	Bladel	51.36833	5.22083	9785	Bladel	Noord-Braobant+nb+Noord-Brabant	Nederland
+2758998	Beverwijk	52.48333	4.65694	37585	Beverwijk	nh+Nord-Holland+Noord-Holland	Nederland
+2759040	Best	51.5075	5.39028	29074	Best	Noord-Braobant+nb+Noord-Brabant	Nederland
+2759132	Bergeijk	51.31917	5.35833	18181	Bergeijk	Noord-Braobant+nb+Noord-Brabant	Nederland
+2759145	Bergen op Zoom	51.495	4.29167	66256	Bergen op Zoom	Noord-Braobant+nb+Noord-Brabant	Nederland
+2759199	Bennebroek	52.32083	4.59861	5140	Bennebroek	nh+Nord-Holland+Noord-Holland	Nederland
+2759350	Beek	50.94083	5.79722	8415	Baek	lb	Nederland
+2759544	Baarn	52.21167	5.2875	24584	Baarn	ut+Utrecht	Nederland
+2759549	Baarlo	51.33083	6.09444	5215	Baolder	lb	Nederland
+2759554	Baarle-Nassau	51.4475	4.92917	2585	Baarle-Nassau	Noord-Braobant+nb+Noord-Brabant	Nederland
+2759621	Asten	51.40417	5.74861	9535	Aste	Noord-Braobant+nb+Noord-Brabant	Nederland
+2759633	Assen	52.99667	6.5625	62237	Asse	dr	Nederland
+2759661	Arnhem	51.98	5.91111	141674	Arnem	GLD+gd+Gelderland	Nederland
+2759684	Arcen	51.47667	6.18056	8793	Árse	lb	Nederland
+2759706	Apeldoorn	52.21	5.96944	136670	Apeldoorn	GLD+gd+Gelderland	Nederland
+2759794	Amsterdam	52.37403	4.88969	741636	Amsterdam	nh+Nord-Holland+Noord-Holland	Nederland
+2759798	Amstelveen	52.30083	4.86389	79639	Amstelveen	nh+Nord-Holland+Noord-Holland	Nederland
+2759821	Amersfoort	52.155	5.3875	139914	Amersfoort	ut+Utrecht	Nederland
+2759850	Amby	50.86215	5.73226	6535	Amie	lb	Nederland
+2759875	Alphen aan den Rijn	52.12917	4.65546	70251	Alphen aan den Rijn	Zuud-Holland+zh+Zuid-Holland	Nederland
+2759899	Alkmaar	52.63167	4.74861	94853	Alkmaar	nh+Nord-Holland+Noord-Holland	Nederland
+2760067	Abcoude	52.2725	4.96944	6920	Abcoude	ut+Utrecht	Nederland
+2760123	Aalten	51.925	6.58056	19141	Aalten	GLD+gd+Gelderland	Nederland
+2760134	Aalsmeer	52.25917	4.75972	22991	Aalsmeer	nh+Nord-Holland+Noord-Holland	Nederland
+2760144	Aalburg	51.75482	5.13156	5788	Aalburg	Noord-Braobant+nb+Noord-Brabant	Nederland
+756135	Warsaw	52.22977	21.01178	1702139	Warschau	Mazowieckie	Pole
+766980	Kurów	51.38941	22.18637	2804	Kurów	Lubelskie	Pole
+3083829	Szczecin	53.42894	14.55302	407811	Stettin		Pole
+3083955	Świnoujście	53.91053	14.24712	40919	Świnoujście		Pole
+524901	Moscow	55.75222	37.61556	10381222	Moskou+Moskva		
+5128581	New York City	40.71427	-74.00597	8175133	New York+NYC+NY	NY	U.S.+USA+U.S.A.
+5389489	Sacramento	38.58157	-121.4944	490712	Sacramento Stad	Californië+CA+Calif+California	U.S.+USA+U.S.A.

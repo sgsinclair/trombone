@@ -1,0 +1,6 @@
+3109642	Santiago de Compostela	42.88052	-8.54569	95092	Santiago de Compostela	Galicia	España
+598818	Jonava	55.08333	24.28333	34993	Yonawa		http://en.wikipedia.org/wiki/Lithuania
+3081368	Wrocław	51.1	17.03333	634893	Wroclaw	Dolnośląskie	
+5780993	Salt Lake City	40.76078	-111.89105	192672	Sol Lek Siti+SLC	Yuta+UT+Utah	U.S.+USA+U.S.A.
+3632308	Mérida	8.58972	-71.15611	300000	Santiago de los Caballeros de Mérida		
+2135171	Port-Vila	-17.73381	168.32188	35901	Port Vila	Shefa	Ripablik blong Vanuatu+Vanuatu

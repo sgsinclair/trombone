@@ -1,0 +1,27 @@
+2240449	Luanda	-8.83682	13.23432	2776168	Lwanda	Luanda	Angóla
+425378	Bujumbura	-3.3822	29.3644	331700	Bujumbúra	Bujumbura Mairie	Burundi
+3469058	Brasília	-15.77972	-47.92972	2207718	Brazilia	DF	Brezílɛ
+6077243	Montréal	45.50884	-73.58781	1600000	Montréal	QC	Kanada
+212730	Kisangani	0.51528	25.19099	539158	Kisangáni		Kongó-Kinsásá+Repibiki demokratiki ya Kongó
+217695	Bunia	1.55941	30.25224	96764	Búnya		Kongó-Kinsásá+Repibiki demokratiki ya Kongó
+2312895	Mbandaka	0.04865	18.26034	184185	Mbándáká	Équateur	Kongó-Kinsásá+Repibiki demokratiki ya Kongó
+2313002	Matadi	-5.83861	13.46306	180109	Matádi	Bas-Congo	Kongó-Kinsásá+Repibiki demokratiki ya Kongó
+2314302	Kinshasa	-4.32758	15.31357	7785965	Kinshasa+Kinsásá	Kinshasa	Kongó-Kinsásá+Repibiki demokratiki ya Kongó
+2316702	Boma	-5.85098	13.05364	162521	Bóma	Bas-Congo	Kongó-Kinsásá+Repibiki demokratiki ya Kongó
+2260535	Brazzaville	-4.26613	15.28318	1284609	Brazzaville	Brazzaville	Republiki ya Kɔ́ngɔ+Kongo
+2658665	Schwyz	47.02076	8.65414	14177	Shvits		Swisɛ
+2220957	Yaoundé	3.86667	11.51667	1299369	Yaundé		Kamɛrune
+3688689	Bogotá	4.60971	-74.08175	7674366	Bogota		Kolombi
+2507480	Algiers	36.73225	3.08746	1977663	Alje	Alger	Alizɛri
+2988507	Paris	48.85341	2.3488	2138551	Pari+75001		Falansia+Falánsɛ+France
+2643743	London	51.50853	-0.12574	7556900	Londoni	Ingɛlandi	Angɛlɛtɛ́lɛ+http://en.wikipedia.org/wiki/United_Kingdom
+281184	Jerusalem	31.76904	35.21633	801000	Yerusalémi		Isirayelɛ
+3172394	Naples	40.85216	14.26811	959470	Nápoli		Itali
+186301	Mombasa	-4.05466	39.66359	799668	Mombása		Kenya
+593116	Vilnius	54.68916	25.2798	542366	Wilna		Litwani+http://en.wikipedia.org/wiki/Lithuania
+785842	Skopje	41.99646	21.43141	474889	Skopye		Masedwanɛ+ARYM+FYROM
+1821274	Macau	22.20056	113.54611	520400	Makau		
+1174872	Karachi	24.8608	67.0104	11624219	Karaci		Pakisitá
+105343	Jeddah	21.54238	39.19797	2867446	Cidda	Makkah	Alabi Sawuditɛ
+3196359	Ljubljana	46.05108	14.50513	272220	Lyublyana		Siloveni
+703448	Kyiv	50.45466	30.5238	2797553	Kyjiw		Ikrɛni+http://en.wikipedia.org/wiki/Ukraine

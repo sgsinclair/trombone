@@ -1,0 +1,648 @@
+292968	Abu Dhabi	24.46667	54.36667	603492	Абу-Даби хот		Арабын Нэгдсэн Эмирт Улс+UAE
+1123004	Taloqan	36.73605	69.53451	64256	Талукан	Takhār	Афганистан
+1135689	Kunduz	36.72895	68.857	161902	Кундуз хот	Кундуз аймаг	Афганистан
+1138958	Kabul	34.52813	69.17233	3043532	Кабул		Афганистан
+782756	Korçë	40.61861	20.78083	58259	Корча		
+3183875	Tirana	41.3275	19.81889	374801	Тиран хот		
+3185728	Durrës	41.32306	19.44139	122034	Дуррес		
+616052	Yerevan	40.18111	44.51361	1093485	Ереван	Yerevan	
+616530	Vanadzor	40.80456	44.4939	101098	Ванадзор	Lorri	
+616629	Hrazdan	40.49748	44.7662	40795	Раздан	Kotaykʼ	
+616635	Gyumri	40.7942	43.84528	148381	Гюмри	Shirak	
+6696480	McMurdo Station	-77.846	166.676	1258	Макмөрдо		
+3432135	Lanús	-34.70252	-58.3955	0	Ланус	BA+Buenos Aires	
+3435910	Buenos Aires	-34.61315	-58.37723	13076300	Буэнос-Айрес	CF	
+3835869	Santiago del Estero	-27.79511	-64.26149	354692	Сантьяго-дель-Эстеро	SE+Santiago del Estero	
+3838583	Rosario	-32.94682	-60.63932	1173533	Росарио	SF+Santa Fe	
+3860259	Córdoba	-31.4135	-64.18105	1428214	Кордова хот	CD+Córdoba	
+2778067	Graz	47.06667	15.45	222326	Грац	Штир	
+2145110	Wagga Wagga	-35.12577	147.35375	46913	Уогга-Уогга	NSW	
+2147714	Sydney	-33.86785	151.20732	4627345	Сидней	NSW	
+2149645	Shepparton	-36.38047	145.39867	38773	Шеппартон	VIC	
+2155472	Newcastle	-32.92715	151.77647	308308	Австралын Ньюкасл	NSW	
+2163355	Hobart	-42.87936	147.32941	216656	Хобарт	TAS	
+2165798	Geelong	-38.14711	144.36069	226034	Желон	VIC	
+2171507	Wollongong	-34.424	150.89345	292190	Вуллонгон	NSW	
+2172517	Canberra	-35.28346	149.12807	367752	Канберра	Австралийн Нийслэлийн Нутаг Дэвсгэр+ACT+Australian Capital Territory	
+2174003	Brisbane	-27.46794	153.02809	2189878	Брисбэн	QLD	
+2176187	Bendigo	-36.75818	144.28024	100617	Бендиго	VIC	
+2177091	Ballarat	-37.56622	143.84957	97937	Балларат	VIC	
+148445	Astara	38.45598	48.87498	15190	Астара		
+586523	Ganja	40.68278	46.36056	313300	Гянжа	Gǝncǝ	
+587057	Barda	40.37577	47.12619	37372	Барде хот	Bǝrdǝ	
+587084	Baku	40.37767	49.89201	1116513	Баку	Baki	
+587378	Ağdaş	40.64699	47.4738	23528	Агдаш	Ağdaş	
+3191281	Sarajevo	43.84864	18.35644	696731	Сараево	Federation of Bosnia and Herzegovina	Босни ба Херцеговина
+1185241	Dhaka	23.7104	90.40744	10356500	Дакка		Бангладеш
+1205733	Chittagong	22.3384	91.83168	3920222	Читтагонг	Читтагонг муж	Бангладеш
+1336135	Khulna	22.80979	89.56439	1342339	Кхулна		Бангладеш
+2797656	Gent	51.05	3.71667	231493	Гент		
+726050	Varna	43.21667	27.91667	312770	Варна хот		
+726418	Dobrich	43.56667	27.83333	94831	Добрич		
+726848	Stara Zagora	42.43278	25.64194	143431	Стара-Загора		
+727011	Sofia	42.69751	23.32415	1152556	Софи		
+727079	Sliven	42.68583	26.32917	96368	Сливен		
+728193	Plovdiv	42.15	24.75	340494	Пловдив		
+728203	Pleven	43.41667	24.61667	118675	Плевен		
+732770	Burgas	42.50606	27.46781	195966	Бургас хот		
+290340	Manama	26.22787	50.58565	147074	Манама	Muḩāfaz̧at al ‘Āşimah	
+425378	Bujumbura	-3.3822	29.3644	331700	Бужумбура	Bujumbura Mairie	Бурунди
+1820906	Bandar Seri Begawan	4.89035	114.94006	64409	Бандар Сери Бегаван		
+3390760	Recife	-8.05389	-34.88111	1478098	Ресифи	PE	Бразили
+3399415	Fortaleza	-3.71722	-38.54306	2400000	Форталеза	CE+Ceará	Бразили
+3405870	Belém	-1.45583	-48.50444	1407737	Белен	PA+Pará	Бразили
+3449433	Santos	-23.96083	-46.33361	411403	Сантус хот	SP+São Paulo	Бразили
+3450554	Salvador	-12.97111	-38.51083	2711840	Салвадор	BA	Бразили
+3451190	Rio de Janeiro	-22.90642	-43.18223	6023699	Рио-де-Жанейро	RJ	Бразили
+3452925	Porto Alegre	-30.03306	-51.23	1372741	Порту-Алегри	RS+Rio Grande do Sul	Бразили
+3462377	Goiânia	-16.67861	-49.25389	1171195	Гояния	GO	Бразили
+3464460	Dourados	-22.22111	-54.80556	162202	Дорадус	MS	Бразили
+3464975	Curitiba	-25.42778	-49.27306	1718421	Куритиба	PR+Paraná	Бразили
+3469058	Brasília	-15.77972	-47.92972	2207718	Бразилиа	DF	Бразили
+3470127	Belo Horizonte	-19.92083	-43.93778	2373224	Белу-Оризонти	MG	Бразили
+1252416	Thimphu	27.46609	89.64191	98676	Тхимпху		Бутан+Bh2utan
+5913490	Calgary	51.05011	-114.08529	1019942	Калгари	Альберта+AB+Alberta	
+5990579	Kelowna	49.88307	-119.48568	125109	Келоуна	Бритиш Коламбиа+BC+British Columbia	
+6094817	Ottawa	45.41117	-75.69812	812129	Оттава	Онтарио+ON+Ontario	
+6167865	Toronto	43.70011	-79.4163	2600000	Торонто	Онтарио+ON+Ontario	
+6173331	Vancouver	49.24966	-123.11934	600000	Ванкувер	Бритиш Коламбиа+BC+British Columbia	
+2657896	Zürich	47.36667	8.55	341730	Цюрих хот	ZH	
+2661039	Davos	46.80429	9.83723	11024	Давос		
+2661552	Bern	46.94809	7.44744	121631	Берн		
+2661604	Basel	47.55839	7.57327	164488	Базель хот+EAP+4000		
+2279755	Yamoussoukro	6.82055	-5.27674	194530	Ямусукро хот		Côte de l’Ivoire
+2293538	Abidjan	5.30966	-4.01266	3677115	Абижан хот		Côte de l’Ivoire
+3868626	Valparaíso	-33.036	-71.62963	282448	Вальпараисо	Valparaíso	Чили
+3893894	Concepción	-36.82699	-73.04977	215413	Консепшон	Biobío	Чили
+3899539	Antofagasta	-23.65236	-70.3954	309832	Антофагаста	Antofagasta	Чили
+1279945	Jiuquan	39.74318	98.51736	72732	Жючуань		Хятад улс
+1280737	Lhasa	29.65	91.1	118721	Лхас		Хятад улс
+1280849	Kashgar	39.47066	75.98951	274717	Кашгар		Хятад улс
+1281184	Golmud	36.40672	94.90061	0	Голмуд		Хятад улс
+1281378	Delingha	37.376	97.37457	0	Delhi		Хятад улс
+1529102	Ürümqi	43.80096	87.60046	3029372	Өрөмч хот		Хятад улс
+1529376	Korla	41.76055	86.15231	179465	Хорол хот		Хятад улс
+1529401	Karamay	45.58473	84.88724	260000	Карамай хот		Хятад улс
+1784658	Zhengzhou	34.75778	113.64861	4253913	Жөнжоу		Хятад улс
+1785036	Zhangye	38.93417	100.45167	96228	Жанъе		Хятад улс
+1786657	Yinchuan	38.46806	106.27306	475101	Иньчуань		Хятад улс
+1788852	Xining	36.62554	101.75739	767531	Шинин		Хятад улс
+1790923	Wuxi	31.56887	120.28857	3543719	Үши		Хятад улс
+1791247	Wuhan	30.58333	114.26667	9785388	Үхань+武汉		Хятад улс
+1791249	Wuhai	39.68442	106.81583	218427	Үхай хот		Хятад улс
+1792283	Ulan	39.09374	107.98022	0	Ulan		Хятад улс
+1793511	Taiyuan	37.86944	112.56028	3426519	Тайюань		Хятад улс
+1795270	Shijiazhuang	38.04139	114.47861	2834942	Шижяжуан		Хятад улс
+1797929	Qingdao	36.06488	120.38042	3718835	Чиндао		Хятад улс
+1799155	Oljoq	38.17979	107.47506	0	Oljoq		Хятад улс
+1799397	Ningbo	29.87819	121.54945	3491597	Нинбо		Хятад улс
+1799869	Nanning	22.81667	108.31667	803788	Наньнин		Хятад улс
+1799962	Nanjing	32.06167	118.77778	7165292	Наньжин		Хятад улс
+1803318	Linyi	35.06306	118.34278	270669	Линьи		Хятад улс
+1804430	Lanzhou	36.05701	103.83987	2628426	Ланьжоу		Хятад улс
+1804651	Kunming	25.03889	102.71833	3855346	Күньмин		Хятад улс
+1804879	Kaifeng	34.7986	114.30742	900000	Кайфэн		Хятад улс
+1805753	Jinan	36.66833	116.99722	4335989	Жинань		Хятад улс
+1808722	Hefei	31.86389	117.28083	3310268	Хөфэй		Хятад улс
+1808926	Hangzhou	30.29365	120.16142	6241971	Ханжоу		Хятад улс
+1809858	Guangzhou	23.11667	113.25	11071424	Гуанжоу		Хятад улс
+1811746	Ehen Hudag	39.21074	101.66898	0	Ehen Hudag+Alxa Youqi		Хятад улс
+1812545	Dongguan	23.01797	113.74866	8000000	Дунгуань		Хятад улс
+1815286	Chengdu	30.66667	104.06667	7415590	Чөндү	Sichuan	Хятад улс
+1815456	Changzhou	31.77359	119.95401	949018	Чанжоу хот		Хятад улс
+1815577	Changsha	28.19874	112.97087	3093980	Чанша		Хятад улс
+1816670	Beijing	39.9075	116.39723	11716620	Бээжин		Хятад улс
+1886760	Suzhou	31.30408	120.59538	5345961	Сүжоу		Хятад улс
+2033196	Zhangjiakou	40.81	114.87944	692602	Хаалган		Хятад улс
+2033791	Xin Bulag	42.2375	113.83639	0	Xin Bulag		Хятад улс
+2034062	Xamba	40.88472	107.14	0	Xamba		Хятад улс
+2034292	Uliastai	45.55	116.83333	0	Uliastai		Хятад улс
+2034310	Ulan Hua	41.51306	111.69639	0	Ulan Hua		Хятад улс
+2034400	Tongliao	43.6125	122.26528	261110	Тонляо хот		Хятад улс
+2034430	Togrog Ul	40.7867	113.205	0	Togrog Ul+Togrog Ul Xiang		Хятад улс
+2034937	Shenyang	41.79222	123.43278	6255921	Шэньян хот		Хятад улс
+2035202	Saihan Tal	42.73583	112.65139	0	Saihan Tal		Хятад улс
+2035583	Nirji	48.48333	124.48333	0	Nirji		Хятад улс
+2035836	Manzhouli	49.6	117.43333	54808	Манжуур		Хятад улс
+2035850	Mandalt	43.84028	113.71556	0	Mandalt		Хятад улс
+2036502	Jilin	43.85083	126.56028	1881977	Гирин хот		Хятад улс
+2036595	Jalai Nur	49.45	117.7	107828	Jalai Nur		Хятад улс
+2036602	Inder	46.7	122.93333	0	Inder		Хятад улс
+2036892	Hohhot	40.81056	111.65222	774477	Хөх хот		Хятад улс
+2036897	Hobor	41.27154	112.62663	0	Hobor		Хятад улс
+2037013	Harbin	45.75	126.65	5878939	Харбин		Хятад улс
+2037045	Haliut	41.55611	108.51972	0	Haliut		Хятад улс
+2037346	Fuxin	42.01556	121.65889	689050	Фүшинь хот		Хятад улс
+2037860	Daqing	46.58333	125	203488	Дачин		Хятад улс
+2037927	Dalain Hob	41.96528	101.06389	0	Dalain Hob		Хятад улс
+2038067	Chifeng	42.26833	118.96361	346654	Улаанхад		Хятад улс
+2038087	Chengde	40.9519	117.95883	449325	Чэндэ		Хятад улс
+2038180	Changchun	43.88	125.32278	4193073	Чанчүнь хот		Хятад улс
+2038377	Bayan Tuohai	49.13333	119.73333	0	Bayan Tohoi		Хятад улс
+2038395	Bayan Huxu	45.15	121.4	0	Bayan Huxu		Хятад улс
+2038397	Bayan Hure	49.5	119.51667	0	Bayan Hure		Хятад улс
+2038411	Bayan Gol	40.3	106.98333	0	Bayan Gol		Хятад улс
+2038432	Baotou	40.65222	109.82222	1301768	Бугат хот		Хятад улс
+2038656	Amgalang	48.25	118.2	0	Amgalang		Хятад улс
+2050964	Bayinbaolige	41.09139	107.06639	0	Dong Xur Miao+Urad Houqi		Хятад улс
+2050968	Ulashan	40.665	108.74472	0	Ulashan		Хятад улс
+8054538	Wenquan	47.1756	119.94809	0	Arxan		Хятад улс
+8347664	Ordos	39.6086	109.78157	1940653	Ордос хот		Хятад улс
+3674962	Medellín	6.25184	-75.56359	1999979	Медельин		
+3688689	Bogotá	4.60971	-74.08175	7674366	Богота		
+3553478	Havana	23.13302	-82.38304	2163824	Гавана		
+3068927	Opava	49.93866	17.90257	60252	Опава	Moravskoslezský kraj	Czechia
+3078610	Brno	49.19522	16.60796	369559	Брно	Jihomoravský kraj	Czechia
+2805753	Wuppertal	51.27027	7.16755	360797	Вупперталь	NRW	Герман
+2808833	Wildpoldsried	47.76667	10.4	2501	Вилдполдсрид	Bayern	Герман
+2818067	Uetersen	53.68769	9.66394	17921	Итерзен	Шлесвиг-Хольштайн+Schleswig-Holstein	Герман
+2825297	Stuttgart	48.78232	9.17702	589793	Штуттгарт	Baden-Württemberg	Герман
+2842884	Rüsselsheim	49.98955	8.42251	59730	Рюсселсхайм	Hessen	Герман
+2867543	Münster	51.96236	7.62571	270184	Мюнстер	NRW	Герман
+2867714	Munich	48.13743	11.57549	1260391	Мюнхен	Bayern	Герман
+2879139	Leipzig	51.33962	12.37129	504971	Лайпциг		Герман
+2886242	Köln	50.93333	6.95	963395	Кёльн	NRW	Герман
+2897216	Hürth	50.87079	6.86761	54678	Хюрт	NRW	Герман
+2910831	Hannover	52.37052	9.73322	515140	Ханновер+Hannauver	Доор Саксон+Neddersassen+Läichsaksen+Donja Saska	Герман
+2928810	Essen	51.45657	7.01228	593085	Эссен	NRW	Герман
+2934246	Düsseldorf	51.22172	6.77616	573057	Дюссельдорф	NRW	Герман
+2934691	Duisburg	51.43247	6.76516	504358	Дуйсбург	NRW	Герман
+2935022	Dresden	51.05089	13.73832	486854	Дрезден		Герман
+2942073	Büdingen	50.29013	9.1114	21579	Бюдингэн	Hessen	Герман
+3247449	Aachen	50.77664	6.08342	265208	Ахен	NRW	Герман
+2485926	Oran	35.69906	-0.63588	645984	Оран	Oran	
+2503769	Blida	36.47004	2.8277	182447	Блида	Blida	
+2505572	Batna	35.55597	6.17414	280798	Батна		
+2507480	Algiers	36.73225	3.08746	1977663	Алжир хот	Alger	
+588409	Tallinn	59.43696	24.75353	394024	Таллин	Harjumaa	
+590031	Narva	59.37722	28.19028	66980	Нарва		
+591260	Kohtla-Järve	59.39861	27.27306	46060	Кохтла-Ярве		
+361058	Alexandria	31.20176	29.91582	3811516	Александрия		
+343300	Asmara	15.33805	38.93184	563930	Асмара	Maʼākel	
+2509954	Valencia	39.46975	-0.37739	814208	Валенсиа	Valencia	España
+2511174	Santa Cruz de Tenerife	28.46824	-16.25462	222417	Санта Круз де Тенерифе		España
+2520058	Cartagena	37.60512	-0.98623	211996	Картахена	Murcia	España
+3106672	Valladolid	41.65518	-4.72372	317864	Вальядолид	Castilla y León	España
+3117735	Madrid	40.4165	-3.70256	3255944	Мадрид	Madrid	España
+3123124	Entrena	42.38782	-2.53066	1248	Энтрена	La Rioja	España
+3128026	Bilbao	43.26271	-2.92528	354860	Бильбао	Euskadi	España
+3128760	Barcelona	41.38879	2.15899	1621537	Барселон	Catalunya	España
+3130313	Almazán	41.48648	-2.53088	5773	Алмазан	Castilla y León	España
+3130672	Albelda de Iregua	42.35837	-2.47278	2644	Альбельда-де-Ирегва	La Rioja	España
+331180	Mek'ele	13.49667	39.47528	215546	Мэкэле		
+336014	Gondar	12.6	37.46667	153914	Гондэр		
+634963	Tampere	61.49911	23.78712	202687	Тампере		
+2988507	Paris	48.85341	2.3488	2138551	Парис+75001		Франц улс+Франц+France
+2990440	Nice	43.70313	7.26608	338620	Ницца+06000		Франц улс+Франц+France
+2995469	Marseille	43.29695	5.38107	794811	Марсель+13001		Франц улс+Франц+France
+2643743	London	51.50853	-0.12574	7556900	Лондон	Англи	http://en.wikipedia.org/wiki/United_Kingdom
+2644210	Liverpool	53.41058	-2.97794	864122	Ливерпүүл	Англи	http://en.wikipedia.org/wiki/United_Kingdom
+2650225	Edinburgh	55.95206	-3.19648	464990	Эдинбург	苏格兰	http://en.wikipedia.org/wiki/United_Kingdom
+2656490	Ballymena	54.86357	-6.27628	28932	Бэллимена		http://en.wikipedia.org/wiki/United_Kingdom
+2657832	Aberdeen	57.14369	-2.09814	196670	Абердин	苏格兰	http://en.wikipedia.org/wiki/United_Kingdom
+611717	Tbilisi	41.69411	44.83368	1049498	Тбилис	T'bilisi	Гүрж
+612890	Mtskheta	41.84514	44.71875	7423	Мцхета		Гүрж
+614622	Gagra	43.27858	40.27124	8266	Гагра	Абхаз орон	Гүрж
+2298890	Kumasi	6.68848	-1.62443	1468609	Кумаси	Ashanti	
+3421319	Nuuk	64.18347	-51.72157	14798	Нуук		
+2419992	Kankan	10.38542	-9.30568	114009	Канкан	Kankan	
+255274	Piraeus	37.94745	23.63708	163688	Пирей		Griekanmua
+1819729	Hong Kong	22.27832	114.17469	7012738	Хонконг		http://en.wikipedia.org/wiki/Hong_Kong
+3186886	Zagreb	45.81444	15.97798	698966	Загреб	Grad Zagreb	
+3054643	Budapest	47.49801	19.03991	1741041	Будапешт		Унгар
+1642911	Jakarta	-6.21462	106.84513	8540121	Жакарта	Jakarta Raya	http://en.wikipedia.org/wiki/Indonesia
+2964574	Dublin	53.33306	-6.24889	1024027	Дублин		Ire
+281184	Jerusalem	31.76904	35.21633	801000	Иерусалим		
+293397	Tel Aviv	32.08088	34.78057	432892	Тел-Авив		
+1253102	Visakhapatnam	17.68009	83.20161	1063178	Вишакхапатнам	Андра Прадеш+AP+Andhra Pradesh	Энэтхэг
+1264521	Madurai	9.91769	78.11898	909908	Мадурай	TN+Tamil Nādu	Энэтхэг
+1264527	Chennai	13.08784	80.27847	4328063	Ченнай	TN+Tamil Nādu	Энэтхэг
+1264621	Madanapalle	13.5503	78.50288	108593	Маданапалле	Андра Прадеш+AP+Andhra Pradesh	Энэтхэг
+1264733	Lucknow	26.83928	80.92313	2472011	Лакхнау	Уттар Прадеш+UP	Энэтхэг
+1269515	Jaipur	26.91962	75.78781	2711758	Жайпур	RJ+Rājasthān	Энэтхэг
+1273294	Delhi	28.65195	77.23149	10927986	Дели	DL	Энэтхэг
+1275004	Kolkata	22.56263	88.36304	4631392	Калькутта	WB+West Bengal	Энэтхэг
+1275339	Mumbai	19.07283	72.88261	12691836	Мумбай	Махараштра+MH+Mahārāshtra	Энэтхэг
+1279233	Ahmedabad	23.02579	72.58727	3719710	Ахмадабад	GJ	Энэтхэг
+99072	Mosul	36.335	43.11889	1739800	Мосул хот	Nīnawá	
+2525473	Cagliari	39.23054	9.11917	149257	Кальяри		Итали
+3165524	Turin	45.07049	7.68682	870456	Турин	Piemonte	Итали
+3169070	Rome	41.89193	12.51133	2318895	Ром	Лацио муж+Lazio	Итали
+3173435	Milan	45.46427	9.18951	1236837	Mилан		Итали
+3176959	Florence	43.77925	11.24626	349296	Флоренц		Итали
+250441	Amman	31.95522	35.94503	1275857	Амман		Al Mamlakah al Urdunīyah al Hāshimīyah
+1849372	Uji	34.89044	135.80325	192925	Үжи		Япон
+1849814	Toyota	35.08333	137.15	362383	Тоёота хот		Япон
+1850181	Tokorozawa	35.79916	139.46903	339435	Токорозава		Япон
+1853574	Ōtsu	35	135.86667	298164	Оцү	Шига+Shiga	Япон
+1854902	Numazu	35.1	138.86667	204318	Нүмазү		Япон
+1857910	Kyoto	35.02107	135.75385	1459640	Киото		Япон
+1859307	Kitakyushu	33.85181	130.85034	997536	Китакюшю		Япон
+1859891	Kasugai	35.24762	136.97229	298589	Касүгаи		Япон
+1863289	Hamamatsu	34.7	137.73333	605098	Хамамацү		Япон
+1864134	Fuji	35.16667	138.68333	240014	Фүжи		Япон
+2111834	Morioka	39.7	141.15	295172	Мориока	Иватэ	Япон
+2128574	Otaru	43.18944	141.00222	143792	Отарү		Япон
+2130188	Hakodate	41.77583	140.73667	275730	Хакодатэ		Япон
+6822182	Yachiyo	35.73531	140.12445	0	Ячиё		Япон
+184745	Nairobi	-1.28333	36.81667	2750547	Найроби	Nairobi Area	
+186301	Mombasa	-4.05466	39.66359	799668	Момбаса		
+1527004	Balykchy	42.46017	76.18709	40000	Балагч	Ysyk-Köl	
+1527199	Tokmok	42.84194	75.30149	63047	Токмок		
+1527513	Uzgen	40.76994	73.30068	40360	Өзгөн		
+1527534	Osh	40.52828	72.7985	200000	Ош		
+1528121	Karakol	42.49068	78.39362	70171	Харгол	Ysyk-Köl	
+1528249	Jalal-Abad	40.93333	73	75700	Жалал-Абад		
+1528675	Bishkek	42.87	74.59	900000	Бишкек	Gorod Bishkek	
+1822214	Siem Reap	13.36179	103.86056	139458	Сиемреап		http://en.wikipedia.org/wiki/Cambodia
+1831797	Battambang	13.10271	103.19822	150444	Батдамбан		http://en.wikipedia.org/wiki/Cambodia
+921772	Moroni	-11.70216	43.25506	42872	Морони	Grande Comore	
+1871859	Pyongyang	39.03385	125.75432	3222000	Пхеньян		http://en.wikipedia.org/wiki/North_Korea
+2044757	Chongjin	41.79556	129.77583	327000	Чонжинь	Hamgyŏng-bukto	http://en.wikipedia.org/wiki/North_Korea
+1835329	Daegu	35.87028	128.59111	2566540	Тэгү		http://en.wikipedia.org/wiki/South_Korea
+1835848	Seoul	37.566	126.9784	10349312	Сөүл		http://en.wikipedia.org/wiki/South_Korea
+1838469	Pyeongchang	37.37028	128.39306	9940	Пёнчан-гүнь		http://en.wikipedia.org/wiki/South_Korea
+1839652	Osan	37.15222	127.07056	158978	Усань		http://en.wikipedia.org/wiki/South_Korea
+1839726	Asan	36.78361	127.00417	97749	Асань		http://en.wikipedia.org/wiki/South_Korea
+1840211	Nonsan	36.20389	127.08472	43845	Нуньсань		http://en.wikipedia.org/wiki/South_Korea
+1840536	Naju	35.0292	126.7175	42459	Нажү		http://en.wikipedia.org/wiki/South_Korea
+1841811	Gwangju	35.15472	126.91556	1416938	Куанжү		http://en.wikipedia.org/wiki/South_Korea
+1843491	Iksan	35.94389	126.95444	283501	Иксан		http://en.wikipedia.org/wiki/South_Korea
+1843564	Incheon	37.45646	126.70515	2628000	Инчон+JCN		http://en.wikipedia.org/wiki/South_Korea
+1845136	Chuncheon	37.87472	127.73417	209746	Чүньчонь		http://en.wikipedia.org/wiki/South_Korea
+1845457	Jeonju	35.82194	127.14889	711424	Чоньжү		http://en.wikipedia.org/wiki/South_Korea
+1845759	Cheonan	36.8065	127.1522	365114	Чонань		http://en.wikipedia.org/wiki/South_Korea
+1846326	Changwon	35.22806	128.68111	550000	Чанвон		http://en.wikipedia.org/wiki/South_Korea
+1846986	Andong	36.56636	128.72275	129319	Аньдун		http://en.wikipedia.org/wiki/South_Korea
+1884138	Yeosu	34.76062	127.66215	295538	Ёсү		http://en.wikipedia.org/wiki/South_Korea
+1897122	Namyangju	37.63667	127.21417	90798	Намъянжү хот		http://en.wikipedia.org/wiki/South_Korea
+608668	Oral	51.23333	51.36667	200000	Орал		
+1516905	Taraz	42.9	71.36667	358153	Тараз		
+1518980	Shymkent	42.3	69.6	414032	Шымкент		
+1519422	Semey	50.42675	80.26669	292780	Семей		
+1519928	Kostanay	53.21435	63.62463	210000	Костанай		
+1520172	Petropavl	54.86667	69.15	200920	Петропавл		
+1520240	Pavlodar	52.28333	76.96667	329002	Павлодар		
+1526384	Almaty	43.25667	76.92861	2000900	Алматы	Almaty Qalasy	
+1651944	Vientiane	17.96667	102.6	196731	Вьентьян		
+1654379	Pakse	15.12022	105.79898	88332	Паксе	Champasak	
+1655559	Luang Prabang	19.88601	102.13503	47378	Луанг Прабанг	Louangphabang	
+276781	Beirut	33.89332	35.50157	1916100	Бейрут		
+1248991	Colombo	6.93194	79.84778	648034	Коломбо	Western	
+598316	Kaunas	54.90272	23.90961	374643	Каунас		Литва+http://en.wikipedia.org/wiki/Lithuania
+2960316	Luxembourg	49.61167	6.13	76684	Люксембург		
+2210247	Tripoli	32.87519	13.18746	1150989	Триполи		
+1053384	Toamasina	-18.1492	49.40234	206373	Туамасина		
+1070940	Antananarivo	-18.91368	47.53613	1391433	Антананариву		
+1298824	Yangon	16.80528	96.15611	4477638	Янгон хот	Yangon	
+1311874	Mandalay	21.97473	96.08359	1208099	Мандалай	Mandalay	
+1514961	Uyenchi Somon	46.05	92.01667	0	Üyönch	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1514975	Uujim	48.9	89.61667	0	Uujim	Баян-Өлгий Аймаг+Bayan-Ölgiy+Баян-Өлгий+Bayan-Ölgiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1514993	Urdgol	47.83333	92.65	0	Urdgol	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515007	Uliastay	47.74167	96.84444	16240	Улиастай+Uliastay	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515018	Ulaantolgoy	46.68333	92.78333	0	Ulaantolgoy	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515029	Ulaangom	49.98111	92.06667	28085	Улаангом+Ulaangom	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515097	Tsetsegnuur	46.6	93.26667	0	Tsetsegnuur	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515101	Tsenher	46.91667	92.11667	0	Tsenher	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515106	Tseel	45.56667	95.86667	0	Tseel	Говь-Алтай Аймаг+Gobi-Altai Aimak+Gov’-Altay aymag+Govĭ-Altay+Gow’ Altaï+Говь-Алтай+Govĭ-Altay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515114	Tsalgar	49.71667	93.26667	0	Tsalgar	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515117	Tsahir	48.07972	98.85167	0	Tsahir	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515124	Tsagaantüngi	49.05	90.45	0	Tsagaantüngi	Баян-Өлгий Аймаг+Bayan-Ölgiy+Баян-Өлгий+Bayan-Ölgiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515167	Tosontsengel	48.75667	98.28389	9526	Tosontsengel	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515172	Tooromt	50.46667	93.58333	0	Tooromt	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515180	Tolbo	48.41667	90.28333	0	Tolbo	Баян-Өлгий Аймаг+Bayan-Ölgiy+Баян-Өлгий+Bayan-Ölgiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515194	Vlaa Vula	50.68333	99.23333	0	Tögöl	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515229	Talshand	45.33333	97.98333	0	Talshand	Говь-Алтай Аймаг+Gobi-Altai Aimak+Gov’-Altay aymag+Govĭ-Altay+Gow’ Altaï+Говь-Алтай+Govĭ-Altay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515329	Sharga	49.8	98.8	0	Sharga	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515331	Sharga	46.25	95.26667	0	Sharga	Говь-Алтай Аймаг+Gobi-Altai Aimak+Gov’-Altay aymag+Govĭ-Altay+Gow’ Altaï+Говь-Алтай+Govĭ-Altay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515332	Sharbulag	48.81667	93.1	0	Sharbulag	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515378	Sangiyn Dalay	45.13333	97.75	0	Sangiyn Dalay	Говь-Алтай Аймаг+Gobi-Altai Aimak+Gov’-Altay aymag+Govĭ-Altay+Gow’ Altaï+Говь-Алтай+Govĭ-Altay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515392	Rashaant	47.76667	90.83333	0	Rashaant	Баян-Өлгий Аймаг+Bayan-Ölgiy+Баян-Өлгий+Bayan-Ölgiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515405	Telmin Suma	48.64278	97.61861	0	Övögdiy	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515416	Orgil	48.58722	99.35083	0	Orgil	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515436	Ölgii	48.96833	89.9625	28400	Өлгий	Баян-Өлгий Аймаг+Bayan-Ölgiy+Баян-Өлгий+Bayan-Ölgiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515454	Nuga	48.31667	95.11667	0	Nuga	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515498	Naranbulag	49.36667	92.56667	0	Naranbulag	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515532	Tsagaanhayrhan	49.4	94.23333	0	Möndööhöö	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515549	Mandal	49.9	99.43333	0	Mandal	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515578	Jargalant	47.15	99.63333	0	Jargalant	Баянхонгор Аймаг+Bayanhongor+Bayankhongor+Баянхонгор+Bayanhongor Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515621	Ider	48.77278	99.87389	0	Ider	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515659	Hunt	47.86667	99.46667	0	Hunt	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515787	Havtsal	50.1	91.66667	0	Havtsal	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515806	Har-Us	49.03333	92.03333	0	Har-Us	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1515807	Har-Us	48.48333	91.43333	0	Har-Us	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516023	Dzalaa	44.53333	99.26667	0	Dzalaa	Баянхонгор Аймаг+Bayanhongor+Bayankhongor+Баянхонгор+Bayanhongor Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516040	Duut	47.51667	91.63333	0	Duut	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516048	Khovd	48.00556	91.64194	30500	Ховд	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516069	Tsagaannuur	51.35639	99.34444	0	Tsagaannuur	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516099	Darvi	46.45	94.11667	0	Darvi	Говь-Алтай Аймаг+Gobi-Altai Aimak+Gov’-Altay aymag+Govĭ-Altay+Gow’ Altaï+Говь-Алтай+Govĭ-Altay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516136	Chandmanĭ	48.05	96.25	0	Chandmanĭ	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516144	Buyant	48.06667	91.81667	0	Buyant+Буянт	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516173	Bürenhayrhan	46.09237	91.54796	0	Bürenhayrhan	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516187	Bulgan	44.78333	98.65	0	Bulgan	Баянхонгор Аймаг+Bayanhongor+Bayankhongor+Баянхонгор+Bayanhongor Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516196	Bugat	49.53333	93.81667	0	Bugat	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516198	Buga	49.01667	90.18333	0	Buga	Баян-Өлгий Аймаг+Bayan-Ölgiy+Баян-Өлгий+Bayan-Ölgiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516205	Altay sumu	45.8	92.28333	0	Bor-Üdzüür	Ховд Аймаг+Hovd+Ховд+Hovd Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516257	Bayshint	49.66667	90.28333	0	Bayshint	Увс Аймаг+Uvs+Uvs nuur aymag+Увс+Uvs Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516274	Bayan-Ovoo	44.61667	94.91667	0	Bayan-Ovoo	Говь-Алтай Аймаг+Gobi-Altai Aimak+Gov’-Altay aymag+Govĭ-Altay+Gow’ Altaï+Говь-Алтай+Govĭ-Altay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516308	Bayan	49.43333	99.6	0	Bayan	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516329	Balgatay	46.9	97.15	0	Balgatay	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516393	Altai	46.37222	96.25833	15800	Алтай	Говь-Алтай Аймаг+Gobi-Altai Aimak+Gov’-Altay aymag+Govĭ-Altay+Gow’ Altaï+Говь-Алтай+Govĭ-Altay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1516400	Altan	48.11667	95.71667	0	Altan	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1538308	Horgo	48.16	99.87556	0	Horgo	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028359	Ulaan-Uul	44.33333	111.23333	0	Ulaan-Uul	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028411	Ulaanjirem	45.05	105.56667	0	Ulaanjirem	Дундговь Аймаг+Dund-gobi+Dundgov’ aymag+Dundgovĭ+Dundgow’+Дундговь+Dundgovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028429	Ulaanhudag	47.33333	104.5	1500	Ulaanhudag	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028445	Ulaan-Ereg	46.9	109.75	0	Ulaan-Ereg	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028462	Ulan Bator	47.90771	106.88324	844818	Улаанбаатар	Ulaanbaatar+Ulaanbaatar Hot	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028562	Tsul-Ulaan	47.83333	104.5	0	Tsul-Ulaan	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028581	Tsomog	45.91667	109.06667	0	Tsomog	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028606	Tsetserleg	47.475	101.45417	5876	Цэцэрлэг+Tsetserleg+Цэцэрлэг хот	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028614	Tsengel	49.47833	100.88944	0	Tsengel	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028653	Tsant	46.18333	106.71667	0	Tsant	Дундговь Аймаг+Dund-gobi+Dundgov’ aymag+Dundgovĭ+Dundgow’+Дундговь+Dundgovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028792	Tsagaanders	48.05	114.36667	0	Tsagaanders	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028905	Naran-mandokhu Somon	44.4	108.25	0	Töhöm	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2028961	Teel	48.04639	100.50917	0	Teel	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029117	Dashinchilling	47.85	104.05	0	Süüj	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029130	Sümiyn Bulag	49.13333	114.88333	0	Sümiyn Bulag	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029156	Sühbaatar	50.23139	106.20778	24235	Сүхбаатар+Sühbaatar	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029241	Shiree	45.85	103.4	0	Shiree	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029321	Sharhulsan	44.65	104.05	0	Sharhulsan	Өмнөговь Аймаг+Ömnögov’ aymag+Ömnögovĭ+Ömnögow’+Ömönö Gobi Aymag+Yuzhno-gobiyskiy Aymag+Yuzhno-Gobiyskiy Aymak+Өмнөговь+Ömnögovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029419	Sergelen	48.56667	114.08333	0	Sergelen	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029420	Sergelen	46.2	111.81667	0	Sergelen	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029427	Senj	44.71667	110.76667	0	Senj	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029433	Selenge	49.43333	101.46667	0	Selenge	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029463	Saynshand	43.61667	102.53333	0	Saynshand	Өмнөговь Аймаг+Ömnögov’ aymag+Ömnögovĭ+Ömnögow’+Ömönö Gobi Aymag+Yuzhno-gobiyskiy Aymag+Yuzhno-Gobiyskiy Aymak+Өмнөговь+Ömnögovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029494	Sangiyn Dalay	46.65	103.31667	0	Sangiyn Dalay	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029525	Rashaant	49.12667	101.42806	0	Rashaant	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029527	Rashaant	45.3	106.2	0	Rashaant	Дундговь Аймаг+Dund-gobi+Dundgov’ aymag+Dundgovĭ+Dundgow’+Дундговь+Dundgovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029542	Övt	46.81667	102.25	0	Övt	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029588	Orhontuul	48.94972	104.97583	0	Orhontuul	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029610	Onon	48.61667	110.6	0	Onon	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029635	Ongi	46.46667	102.28333	0	Ongi	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029636	Ongi	45.45	103.9	0	Ongi	Дундговь Аймаг+Dund-gobi+Dundgov’ aymag+Dundgovĭ+Dundgow’+Дундговь+Dundgovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029656	Undurkhaan	47.31944	110.65556	14723	Өндөрхаан	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029700	Öldziyt	44.68333	109.01667	0	Öldziyt	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029784	Nüden	43.58333	110.46667	0	Nüden	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029840	Nart	49.145	105.38833	0	Nart	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029945	Murun-kuren	49.63417	100.1625	27690	Мөрөн+Mörön	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029961	Mönhbulag	46.75	103.51667	0	Mönhbulag	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2029989	Modot	47.75	109.05	0	Modot	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030040	Mardzad	45.95	102.05	0	Mardzad	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030053	Manhan	50.12139	100.04306	0	Manhan	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030065	Mandalgovi	45.7625	106.27083	15430	Мандалговь+Mandalgovĭ	Дундговь Аймаг+Dund-gobi+Dundgov’ aymag+Dundgovĭ+Dundgow’+Дундговь+Dundgovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030066	Dzüünkharaa	48.63333	106.73333	0	Dzüünkharaa	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030067	Mandal	48.63111	103.52917	0	Mandal	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030078	Maanĭt	48.29667	103.42556	0	Maanĭt	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030079	Maanĭt	47.25	107.53333	0	Maanĭt	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030085	Sujji	47.86667	105.25	0	Lün	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030161	Javarthushuu	49.15	112.73333	0	Javarthushuu	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030170	Jargalant	50.0675	105.88056	0	Jargalant	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030173	Jargalant	48.52056	105.86833	0	Jargalant	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030176	Jargalant	47.53333	100.21667	0	Jargalant	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030208	Ingettolgoy	49.46167	103.97417	0	Ingettolgoy	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030251	Ihbulag	43.2	107.2	0	Ihbulag	Өмнөговь Аймаг+Ömnögov’ aymag+Ömnögovĭ+Ömnögow’+Ömönö Gobi Aymag+Yuzhno-gobiyskiy Aymag+Yuzhno-Gobiyskiy Aymak+Өмнөговь+Ömnögovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030296	Huurch	50.10361	105.42	0	Huurch	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030316	Hutag	49.395	102.69333	0	Hutag	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030368	Hüremt	48.66306	102.62278	0	Hüremt	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030392	Hulstay	48.43333	114.86667	0	Hulstay	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030428	Khujirt	46.89704	102.76903	0	Хужирт	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030429	Hujirt	46.6	104.58333	0	Hujirt	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030465	Noyon Suma	43.17361	102.13194	0	Hövüün	Өмнөговь Аймаг+Ömnögov’ aymag+Ömnögovĭ+Ömnögow’+Ömönö Gobi Aymag+Yuzhno-gobiyskiy Aymag+Yuzhno-Gobiyskiy Aymak+Өмнөговь+Ömnögovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030470	Khuvsget	43.60639	109.63806	0	Hövsgöl	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030473	Hovd	44.66667	102.38333	0	Hovd	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030512	Horiult	45.2	100.76667	0	Horiult	Баянхонгор Аймаг+Bayanhongor+Bayankhongor+Баянхонгор+Bayanhongor Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030525	Tsagaan-Owoo	48.4	113.43333	0	Höövör	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030526	Bayan Uula Sumu	45.16667	101.4	0	Höövör	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030531	Hoolt	45.53333	102.98333	0	Hoolt	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030570	Hongor	45.8	111.2	0	Hongor	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030646	Undur Sume	50.47278	100.92778	0	Höhöö	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030764	Herlen	47.3	110.56667	0	Herlen	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030813	Haylaastay	46.9	113.41667	0	Haylaastay	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030841	Havirga	45.66667	113.08333	0	Havirga	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030849	Hatavch	46.16667	112.95	0	Hatavch	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030915	Orhon	49.8325	106.13639	0	Orhon	Darhan-Uul Aymag+Darhan-Uul+Дархан-Уул+Дархан-Уул Аймаг+Darhan Uul	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2030996	Haraat	46.41667	107.65	0	Haraat	Дундговь Аймаг+Dund-gobi+Dundgov’ aymag+Dundgovĭ+Dundgow’+Дундговь+Dundgovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031016	Hanhöhiy	47.61667	112.13333	0	Hanhöhiy	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031368	Ergel	43.15	109.13333	0	Ergel	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031405	Erdenet	49.03333	104.08333	79647	Эрдэнэт+Эрдэнэт хот+Erdenet	Orhon+Орхон+Orhon Aymag+Орхон Аймаг	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031408	Eg-Uur	50.10944	101.57528	0	Eg-Uur	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031411	Enhtal	49.2475	105.37361	0	Enhtal	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031484	Eg	48.68333	110.18333	0	Eg	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031517	Dzuunmod	47.70694	106.95278	14660	Dzuunmod+Зуунмод	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031553	Dzüünbulag	46.38333	112.18333	0	Dzüünbulag	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031601	Dzogsool	46.8	107.15	0	Dzogsool	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031613	Dzelter	50.31556	105.04583	0	Dzelter	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031728	Dund-Urt	48.03791	105.9219	0	Dund-Urt	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031964	Darhan	49.48667	105.92278	74300	Дархан+Darhan	Darhan-Uul Aymag+Darhan-Uul+Дархан-Уул+Дархан-Уул Аймаг+Darhan Uul	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2031966	Darhan	46.61667	109.41667	0	Darhan	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032007	Dalandzadgad	43.57083	104.425	15093	Даланзадгад+Dalandzadgad	Өмнөговь Аймаг+Ömnögov’ aymag+Ömnögovĭ+Ömnögow’+Ömönö Gobi Aymag+Yuzhno-gobiyskiy Aymag+Yuzhno-Gobiyskiy Aymak+Өмнөговь+Ömnögovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032050	Choyr	46.36111	108.36111	9895	Чойр+Choyr	Govĭsümber Aymag+Govĭsümber+Говьсүмбэр+Govĭ-Sumber	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032054	Choibalsan	48.07257	114.53264	23	Чойбалсан+Choybalsan	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032058	Chonogol	45.9	115.36667	0	Chonogol	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032070	Chandmanĭ	45.53333	110.46667	0	Chandmanĭ	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032081	Saynshand	44.88239	110.11631	19891	Сайншанд	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032085	Buyant	46.25	110.83333	0	Buyant	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032200	Bulgan	50.54194	101.51417	0	Bulgan	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032201	Bulgan	48.8125	103.53472	17348	Булган+Bulgan	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032226	Bulag	48.2	108.48333	0	Bulag	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032252	Bugat	49.06667	103.66583	0	Bugat	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032255	Bugant	49.58333	106.85	0	Bugant	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032327	Bornuur	48.46667	106.26667	0	Bornuur	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032432	Bayshint	47.41667	104.81667	0	Bayshint	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032436	Bayasgalant	46.98333	112.05	0	Bayasgalant	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032473	Bayantsagaan	48.73167	100.76	0	Bayantsagaan	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032480	Bayantöhöm	46.91667	105.05	0	Bayantöhöm	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032490	Bayan-Ovoo	49.01667	111.63333	0	Bayan-Ovoo	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032533	Bayanhongor	46.19444	100.71806	26252	Баянхонгор+Bayanhongor	Баянхонгор Аймаг+Bayanhongor+Bayankhongor+Баянхонгор+Bayanhongor Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032586	Bayanbulag	47.86667	109.91667	0	Bayanbulag	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032593	Bayanbaraat	46.86667	106.25	0	Bayanbaraat	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032594	Bayan	48.55	111.08333	0	Bayan	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032595	Bayan	47.91667	112.95	0	Bayan	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032596	Bayan	47.45	103.15	0	Bayan	Архангай Аймаг+Arhangay+Архангай+Arhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032597	Bayan	47.16667	110.81667	0	Bayan	Хэнтий Аймаг+Hentiy+Хэнтий+Hentiy Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032598	Bayan	46.25	110.16667	0	Bayan	Дорноговь Аймаг+Dorno-Gobi Aimak+Dornogov’ aymag+Dornogovĭ+Dorono Gobi Aymag+Дорноговь+Dornogovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032614	Baruun-Urt	46.68056	113.27917	15805	Баруун-Урт	Сүхбаатар Аймаг+Sühbaatar+Сүхбаатар+Sühbaatar Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032663	Hushaat	49.5	105.61667	0	Hushaat	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032767	Badrah	49.61833	101.98972	0	Badrah	Хөвсгөл Аймаг+Hövsgöl+Хөвсгөл+Hövsgöl Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032789	Avdzaga	47.63333	103.51667	0	Avdzaga	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032814	Arvayheer	46.26389	102.775	25622	Арвайхээр+Arvayheer	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032860	Argatay	45.76667	107.98333	0	Argatay	Дундговь Аймаг+Dund-gobi+Dundgov’ aymag+Dundgovĭ+Dundgow’+Дундговь+Dundgovĭ Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032899	Ar-Asgat	48.26222	105.41194	0	Ar-Asgat	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032960	Altanbulag	50.31556	106.49861	500	Altanbulag	Сэлэнгэ Аймаг+Selenge+Сэлэнгэ+Selenge Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+2032961	Altanbulag	47.7	106.4	0	Altanbulag	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6988111	Asgat	49.51082	96.79944	0	Asgat	Завхан Аймаг+Dzavhan+Завхан+Dzavhan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6988118	Ulaanshiveet	47.28948	103.85659	0	Ulaanshiveet	Булган Аймаг+Bulgan+Булган+Bulgan Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6997293	Sümber	47.65858	118.51014	0	Sümber	Дорнод Аймаг+Дорнод+Choybalsan Aymag+Dornod+Dornod Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6997301	Bayantal	46.62134	108.35804	0	Bayantal	Govĭsümber Aymag+Govĭsümber+Говьсүмбэр+Govĭ-Sumber	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6997302	Shiveegovi	46.09081	108.68306	0	Shiveegovi	Govĭsümber Aymag+Govĭsümber+Говьсүмбэр+Govĭ-Sumber	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6997320	Hongor	49.23012	105.89674	0	Hongor	Darhan-Uul Aymag+Darhan-Uul+Дархан-Уул+Дархан-Уул Аймаг+Darhan Uul	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6997333	Jargalant	49.12915	104.40803	0	Jargalant	Orhon+Орхон+Orhon Aymag+Орхон Аймаг	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+6997380	Höshigiyn-Ar	47.55717	106.96333	0	Höshigiyn-Ar	Төв Аймаг+Töv+Төв+Töv Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+7648891	Kharkhorin	47.19245	102.81349	8977	Хархорин	Өвөрхангай Аймаг+Övörhangay+Övörkhangay+Өвөрхангай+Övörhangay Aymag	Mongol Uls+Монгоп Улс+Bügd Nayramdah Mongol Ard Uls+Монгол улс
+1821274	Macau	22.20056	113.54611	520400	Макао		
+2562305	Valletta	35.89972	14.51472	6794	Валлетта		
+3522507	Oaxaca	17.06542	-96.72365	262566	Оаксака де Хуарез	OAX	Мексик
+3981609	Tijuana	32.5027	-117.00371	1376457	Тихуана	BCN+BC+Baja California	Мексик
+1735161	Kuala Lumpur	3.1412	101.68653	1453975	Куала Лумпур	KUL	
+3352136	Windhoek	-22.55941	17.08323	268132	Виндхук	Khomas	
+2441291	Maradi	13.5	7.10174	163487	Маради	Maradi	
+2352778	Abuja	9.05785	7.49508	590400	Абужа	FCTA+Abuja Federal Capital Territory	
+3617763	Managua	12.13282	-86.2504	973087	Манагуа	Managua	
+2745912	Utrecht	52.09083	5.12222	290529	Утрехт хот	ut+Utrecht	
+2747891	Rotterdam	51.9225	4.47917	598199	Роттердам	zh+Zuid-Holland	
+2755003	Haarlem	52.38084	4.63683	147590	Хаарлем	nh+Nord-Holland+Noord-Holland	
+2756253	Eindhoven	51.44083	5.47778	209620	Эйндховен хот	nb+Noord-Brabant	
+2758401	Breda	51.58656	4.77596	167673	Бреда хот	nb+Noord-Brabant	
+2759794	Amsterdam	52.37403	4.88969	741636	Амстердам	nh+Nord-Holland+Noord-Holland	
+3133880	Trondheim	63.43049	10.39506	147139	Тронхейм	Sør-Trøndelag	
+1282898	Pokhara	28.26689	83.96851	200000	Покхара		
+1283240	Kathmandu	27.70169	85.3206	1442271	Катманду		
+2179537	Wellington	-41.28664	174.77557	381900	Веллингтон		Шинэ Зеланд
+2186280	Nelson	-41.27078	173.28404	59200	Нелсон		Шинэ Зеланд
+2193733	Auckland	-36.84853	174.76349	417910	Окленд		Шинэ Зеланд
+287286	Muscat	23.58413	58.40778	797000	Маскат		
+1166993	Rawalpindi	33.6007	73.0679	1743101	Равалпинди	Punjab	
+1172451	Lahore	31.558	74.35071	6310888	Лахор	Punjab	
+1174872	Karachi	24.8608	67.0104	11624219	Карачи		
+1176615	Islamabad	33.72148	73.04329	601600	Исламабад	Islāmābād	
+759412	Siedlce	52.16772	22.29006	77185	Седльце	Mazowieckie	
+766980	Kurów	51.38941	22.18637	2804	Куров	Lubelskie	
+768217	Końskowola	51.40922	22.05175	2208	Консковол	Lubelskie	
+3093133	Łódź	51.75	19.46667	768755	Лодзь	Łódzkie	
+3093158	Łobez	53.63918	15.62129	10609	Лобез		
+3094802	Kraków	50.06143	19.93658	755050	Краков	Małopolskie	
+3102014	Bydgoszcz	53.1235	18.00762	366452	Быдгощ	Kujawsko-Pomorskie	
+2262963	Setúbal	38.5244	-8.8882	117110	Сетубал		
+290030	Doha	25.28545	51.53096	344939	Доха		
+667268	Sibiu	45.8	24.15	151894	Сибиу	Sibiu	
+671768	Oradea	47.0458	21.91833	206614	Орадя хот		
+680332	Craiova	44.31667	23.8	304142	Крайова хот		
+681290	Cluj-Napoca	46.76667	23.6	316748	Клуж-Напока хот		
+783814	Zrenjanin	45.38361	20.38194	79773	Зренянин		Серби
+787237	Pančevo	44.87083	20.64028	76654	Панчево		Серби
+788709	Leskovac	42.99806	21.94611	94758	Лесковац	Central Serbia	Серби
+789107	Kraljevo	43.72583	20.68944	82846	Кралево	Central Serbia	Серби
+789128	Kragujevac	44.01667	20.91667	147473	Крагуевац	Central Serbia	Серби
+792078	Čačak	43.89139	20.34972	117072	Чачак	Central Serbia	Серби
+3194360	Novi Sad	45.25167	19.83694	215400	Нови-Сад хот		Серби
+468902	Yaroslavl	57.62987	39.87368	606730	Ярославль	Jaroslavl	Орос
+472757	Volgograd	48.71939	44.50183	1011417	Волгоград+Volgograd	Volgograd	Орос
+473247	Vladimir	56.13655	40.39658	310024	Владимир хот	Vladimir	Орос
+473249	Vladikavkaz	43.03667	44.66778	317370	Владикавказ		Орос
+479123	Ulyanovsk	54.32824	48.38657	640680	Ульяновск	Ульяновск муж+Uljanovsk	Орос
+480060	Tver	56.85836	35.90057	400212	Тверь		Орос
+480562	Tula	54.19609	37.61822	468825	Тула	Tula	Орос
+498677	Saratov	51.54056	46.00861	863725	Саратов	Saratov	Орос
+499099	Samara	53.20007	50.15	1134730	Самар хот	Samara	Орос
+501175	Rostov-na-Donu	47.23135	39.72328	1074482	Донын Ростов		Орос
+509820	Petrozavodsk	61.78491	34.34691	265025	Петрозаводск	Бүгд Найрамдах Карель Улс	Орос
+511196	Perm	58.01046	56.25017	982419	Пермь	Perm	Орос
+554840	Izhevsk	56.84976	53.20448	631038	Ижевск		Орос
+557413	Iki-Burul	45.82083	44.64722	3709	Ихбуурал		Орос
+559475	Gorodovikovsk	46.08785	41.93353	9809	Байшинтай+Городовиковск		Орос
+563514	Elista	46.30778	44.25583	106971	Элст		Орос
+578072	Belgorod	50.61074	36.58015	345289	Белгород	Belgorod	Орос
+580222	Avtovo	59.87167	30.26583	44667	Автово		Орос
+580497	Astrakhan	46.34968	48.04076	502533	Астрахань	Astrakhan	Орос
+1488754	Tyumen	57.15222	65.52722	519119	Тюмень хот		Орос
+1489425	Tomsk	56.49771	84.97437	485519	Томск	Tomsk	Орос
+1496153	Omsk	54.99244	73.36859	1129281	Омск	Omsk	Орос
+1496747	Novosibirsk	55.0415	82.9346	1419007	Новосибирск	Novosibirsk	Орос
+1500973	Kyzyl	51.71472	94.45338	108240	Кызыл		Орос
+1503901	Kemerovo	55.33333	86.08333	477090	Кемерово хот	Kemerovo	Орос
+1508291	Chelyabinsk	55.15402	61.42915	1062919	Челябинск	Tsjeljabinsk	Орос
+1510853	Barnaul	53.36056	83.76361	599579	Барнаул	Altayskiy Kray	Орос
+1512064	Ak-Dovurak	51.18333	90.6	12593	Ак-Довурак		Орос
+1512236	Abakan	53.71556	91.42917	167289	Абакан		Орос
+2012728	Zakamensk	50.3741	103.2863	12250	Захаамин хот		Орос
+2013348	Vladivostok	43.10562	131.87353	587022	Владивосток	Primorskiy Kray	Орос
+2014407	Ulan-Ude	51.82721	107.60627	360278	Улаан-Удэ		Орос
+2019326	Nerchinsk	51.98333	116.58333	15360	Нэрчүү	Zabaykalsky	Орос
+2023469	Irkutsk	52.29778	104.29639	586695	Эрхүү хот	Irkutsk	Орос
+2119441	Yuzhno-Sakhalinsk	46.95407	142.73603	176484	Южно-Сахалинск	Sakhalin	Орос
+202905	Gisenyi	-1.70278	29.25639	83623	Гисэньи		
+602150	Umeå	63.82842	20.25972	83249	Умео		Ruoččii
+605155	Kiruna	67.85572	20.22513	17037	Кируна	Norrbottens Län	Ruoččii
+2664454	Västerås	59.61617	16.55276	117746	Вестерос	Västmanlands län	Ruoččii
+2666199	Uppsala	59.85882	17.63889	149245	Өпсала	Uppsala Län	Ruoččii
+2673730	Stockholm	59.33258	18.0649	1515017	Стокгольм	Stockholms Län	Ruoččii
+2686657	Örebro	59.27412	15.2066	115765	Эребру	Örebro län	Ruoččii
+2688368	Norrköping	58.59419	16.1826	93765	Норршёпин	Östergötlands län	Ruoččii
+2693678	Lund	55.70584	13.19321	87244	Лөнд	Skåne län	Ruoččii
+2694762	Linköping	58.41086	15.62157	106502	Линьшөпин	Östergötlands län	Ruoččii
+2702979	Jönköping	57.78145	14.15618	93797	Йёньшөпин	Jönköpings län	Ruoččii
+2706767	Helsingborg	56.04673	12.69437	104250	Хельсинборг	Skåne län	Ruoččii
+2711537	Göteborg	57.70716	11.96679	572799	Гётеборг	Västra Götalands län	Ruoččii
+3196359	Ljubljana	46.05108	14.50513	272220	Люблян		
+3060972	Bratislava	48.14816	17.10674	423737	Братислав	Bratislavský kraj	
+2246452	Saint-Louis	16.01793	-16.48962	176000	Сенегалын Сен-Луи		
+363619	Yei	4.09444	30.67639	40382	Ей		
+170063	Aleppo	36.20124	37.16117	1602264	Халеб хот		
+170654	Damascus	33.5102	36.29128	1569394	Дамаск		
+1609350	Bangkok	13.75398	100.50144	5104476	Бангкок		
+1645457	Dili	-8.55861	125.57361	150000	Дили хот		
+162183	Ashgabat	37.95	58.38333	727700	Ашхабад	Ахал муж	Туркменистан
+601734	Daşoguz	41.83625	59.96661	166500	Дашогуз	Dashhowuz Oblasty	Туркменистан
+1219649	Türkmenabat	39.07328	63.57861	234817	Түркменабат	Лебап муж	Туркменистан
+2464470	Tunis	36.81897	10.16579	693210	Тунис хот	Tūnis	
+309527	Karaman	37.18111	33.215	120399	Караман		Turkanmua
+323786	Ankara	39.91987	32.85427	3517182	Анкара хот		Turkanmua
+325363	Adana	37.00167	35.32889	1248988	Адана		Turkanmua
+750269	Bursa	40.19559	29.06013	1412701	Бурса		Turkanmua
+1668355	Tainan	22.99083	120.21333	771235	Тайнань		Тайвань
+1668399	Taichung	24.1469	120.6839	1040725	Тайжун		Тайвань
+1675151	Hsinchu	24.80361	120.96861	404109	Шиньжү		Тайвань
+152451	Musoma	-1.5	33.8	121119	Мусома	Mara	
+692194	Sumy	50.9216	34.80029	294456	Сумы	Sumy	http://en.wikipedia.org/wiki/Ukraine
+693468	Sloviansk	48.86667	37.61667	124800	Славянск	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+693805	Simferopol	44.95719	34.11079	336460	Симфереполь		http://en.wikipedia.org/wiki/Ukraine
+694423	Sevastopol	44.58883	33.5224	416263	Севастополь		http://en.wikipedia.org/wiki/Ukraine
+696643	Poltava	49.59373	34.54073	317847	Полтав	Poltava	http://en.wikipedia.org/wiki/Ukraine
+698740	Odessa	46.47747	30.73262	1001558	Одесс		http://en.wikipedia.org/wiki/Ukraine
+702550	Lviv	49.83826	24.02324	717803	Львов	Lviv	http://en.wikipedia.org/wiki/Ukraine
+702658	Luhansk	48.56705	39.31706	452000	Луханск	Luhansk	http://en.wikipedia.org/wiki/Ukraine
+703448	Kyiv	50.45466	30.5238	2797553	Киев		http://en.wikipedia.org/wiki/Ukraine
+703845	Kryvyi Rih	47.90966	33.38044	652380	Кривой Рог	Dnipropetrovs'ka Oblast'+http://en.wikipedia.org/wiki/Dnipropetrovsk_Obla%E2%80%A6+Dnipropetrovsk	http://en.wikipedia.org/wiki/Ukraine
+704147	Kremenchuk	49.06802	33.42041	227494	Кременчук+Kremenchuk	Poltava	http://en.wikipedia.org/wiki/Ukraine
+705812	Kropyvnytskyi	48.5132	32.2597	249454	Кировоград	Kirovohrad+http://en.wikipedia.org/wiki/Kropyvnytskyi	http://en.wikipedia.org/wiki/Ukraine
+706448	Kherson	46.65581	32.6178	320477	Херсон	Kherson	http://en.wikipedia.org/wiki/Ukraine
+707753	Horlivka	48.33576	38.05325	278550	Горловк	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+709717	Donetsk	48.023	37.80224	1024700	Донецк	Donetsk	http://en.wikipedia.org/wiki/Ukraine
+710719	Chernivtsi	48.29149	25.94034	236250	Черновцы		http://en.wikipedia.org/wiki/Ukraine
+710791	Cherkasy	49.42854	32.06207	297568	Черкас хот	Cherkas'ka Oblast'+Cherkasy	http://en.wikipedia.org/wiki/Ukraine
+4167147	Orlando	28.53834	-81.37924	270934	Орландо	Флорида+FL+Florida	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4174757	Tampa	27.94752	-82.45843	369075	Тампа	Флорида+FL+Florida	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4259418	Indianapolis	39.76838	-86.15804	829718	Индианаполис	Индиана муж+IN+Indiana	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4335045	New Orleans	29.95465	-90.07507	389617	Нью-Орлеанс	Луйзиана+LA+Louisiana	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4508722	Cincinnati	39.12711	-84.51439	296943	Цинциннати	Охайо+OH	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4544349	Oklahoma City	35.46756	-97.51643	631346	Оклахома-Сити	Оклахома+OK+Oklahoma	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4560349	Philadelphia	39.95233	-75.16379	1567442	Филадельфия	Пеннсилвани+PA	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4699066	Houston	29.76328	-95.36327	2296224	Хьюстон	Техас+TX+Texas	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4887398	Chicago	41.85003	-87.65005	2720546	Чикаго	Иллиной+IL+Illinois	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+4930956	Boston	42.35843	-71.05977	667137	Бостон	Массачусеттс+MA+Massachusetts	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5074472	Omaha	41.25626	-95.94043	443885	Омаха	Небраска+NE	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5308655	Phoenix	33.44838	-112.07404	1563025	Финикс	Аризона+AZ+Arizona	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5368361	Los Angeles	34.05223	-118.24368	3971883	Лос-Анжелес	Калифорни+CA+Calif+California	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5378880	Ojai	34.44805	-119.24289	7627	Охай	Калифорни+CA+Calif+California	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5391959	San Francisco	37.77493	-122.41942	864816	Сан-Франциско+SF	Калифорни+CA+Calif+California	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5393212	Santa Monica	34.01945	-118.49119	93220	Санта-Моника	Калифорни+CA+Calif+California	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5419384	Denver	39.73915	-104.9847	682545	Денвер	Колорадо+CO+Colorado	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+5856195	Honolulu	21.30694	-157.85833	371657	Хонолулу	Хавай+HI+Hawaii	Америкийн Нэгдсэн Улс+U.S.+USA+U.S.A.
+1216311	Qarshi	38.86056	65.78905	222898	Харш хот		
+1217662	Bukhara	39.77472	64.42861	247644	Бухар		
+1512569	Tashkent	41.26465	69.21627	1978028	Ташкент	Toshkent Shahri	
+1513157	Namangan	40.9983	71.67257	432456	Наманган		
+3625549	Valencia	10.16202	-68.00765	1385083	Валенс		
+3633009	Maracaibo	10.66663	-71.61245	2225000	Маракайбо		
+3646738	Caracas	10.48801	-66.87919	3000000	Каракас		
+3648522	Barquisimeto	10.0647	-69.35703	809490	Баркисимето		
+1572151	Nha Trang	12.24507	109.19432	283441	Нячанг	Khánh Hòa	
+1580240	Huế	16.4619	107.59546	287217	Хюэ	Thừa Thiên-Huế	
+1580541	Hội An	15.87944	108.335	32757	Хой Ань	Quảng Nam	
+1581130	Hanoi	21.0245	105.84117	1431270	Ханой	Ha Nội	
+786714	Pristina	42.67272	21.16688	550000	Приштина		
+415189	Aden	12.77944	45.03667	550602	Аден хот	‘Adan	
+3369157	Cape Town	-33.92584	18.42322	3433441	Кейптаун	Western Cape	
+909137	Lusaka	-15.40669	28.28713	1267440	Лусака	Lusaka	
+890299	Harare	-17.82772	31.05337	1542813	Хараре		
