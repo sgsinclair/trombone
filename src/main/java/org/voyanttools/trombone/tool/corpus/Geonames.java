@@ -44,6 +44,7 @@ import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.Stripper;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -68,6 +69,10 @@ public class Geonames extends AbstractContextTerms {
 	List<Map.Entry<String, AtomicInteger>> connectionsCount = new ArrayList<Map.Entry<String, AtomicInteger>>();
 	List<ConnectionOccurrence> connectionOccurrences = new ArrayList<ConnectionOccurrence>();
 	
+	private int cityTotal = 0;
+	
+	private int connectionsTotal = 0;
+	
 	/**
 	 * @param storage
 	 * @param parameters
@@ -75,6 +80,10 @@ public class Geonames extends AbstractContextTerms {
 	public Geonames(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		minPopulation = parameters.getParameterIntValue("minPopulation", 0);
+	}
+	
+	public float getVersion() {
+		return super.getVersion()+6;
 	}
 
 	@Override
@@ -100,7 +109,7 @@ public class Geonames extends AbstractContextTerms {
 		Map<String, City> cities = getAllCorpusCities(corpusMapper).stream()
 				.filter(city -> city.population>minPopulation)
 				.collect(Collectors.toMap(City::getId, c->c));
-
+		
 		CityOccurrenceIterator<CityOccurrence> cityOccurrenceIterator = getCityOccurrenceIterator(corpusMapper);
 		CityOccurrence cityOccurrence;
 		CityOccurrence previousCityOccurrence = null;
@@ -109,17 +118,23 @@ public class Geonames extends AbstractContextTerms {
 		int counter = 0;
 		while(cityOccurrenceIterator.hasNext()) {
 			cityOccurrence = cityOccurrenceIterator.next();
-			if (cityOccurrence!=null && (acceptAllDocs || docIndices.contains(cityOccurrence.docIndex)) && cities.containsKey(cityOccurrence.id) && counter>=start && connectionOccurrences.size()<limit) {
+			if (cityOccurrence!=null && (acceptAllDocs || docIndices.contains(cityOccurrence.docIndex)) && cities.containsKey(cityOccurrence.id)) {
 				if (citiesIdCount.containsKey(cityOccurrence.id)==false) {
 					citiesIdCount.put(cityOccurrence.id, new AtomicInteger(1));
 				} else {
 					citiesIdCount.get(cityOccurrence.id).incrementAndGet();
 				}
-				if (previousCityOccurrence!=null && previousCityOccurrence.docIndex==cityOccurrence.docIndex && previousCityOccurrence.id!=cityOccurrence.id) {
+				if (previousCityOccurrence!=null && previousCityOccurrence.docIndex==cityOccurrence.docIndex && previousCityOccurrence.id.equals(cityOccurrence.id)==false) {
 					String cid = StringUtils.joinWith("-", previousCityOccurrence.id, cityOccurrence.id);
 					if (connectionsCount.containsKey(cid)==false) {connectionsCount.put(cid, new AtomicInteger(1));}
 					else {connectionsCount.get(cid).incrementAndGet();}
-					connectionOccurrences.add(new ConnectionOccurrence(previousCityOccurrence, cityOccurrence));
+					if (counter>=start && connectionOccurrences.size()<limit) {
+						try {
+							connectionOccurrences.add(new ConnectionOccurrence(previousCityOccurrence, cityOccurrence));
+						} catch (CloneNotSupportedException e) {
+							e.printStackTrace();
+						}
+					}
 				}
 				previousCityOccurrence = cityOccurrence;
 			}
@@ -129,20 +144,28 @@ public class Geonames extends AbstractContextTerms {
 		
 		if (parameters.getParameterBooleanValue("suppressCities")!=true) {
 			Map<City, Integer> citiesCount = new HashMap<City, Integer>();
-//			Collection<City> cities = getAllCorpusCities(corpusMapper);
 			for (City city : cities.values()) {
 				if (citiesIdCount.containsKey(city.id)) {
 					citiesCount.put(city, citiesIdCount.get(city.id).get());
 				}
 			}
+			cityTotal = citiesCount.size();
+			int max = parameters.getParameterIntValue("citiesMaxCount", Integer.MAX_VALUE);
+			if (max==0) {max=Integer.MAX_VALUE;}
 			citiesCountList = citiesCount.entrySet().stream()
 					.sorted((c1, c2) -> c1.getValue()==c2.getValue() ? c1.getKey().label.compareTo(c2.getKey().label): Integer.compare(c2.getValue(), c1.getValue()))
-					.collect(Collectors.toList());			
+					.limit(max)
+					.collect(Collectors.toList());
+			
 		}
 		
+		connectionsTotal = connectionsCount.size();
 		if (parameters.getParameterBooleanValue("suppressConnectionCounts")!=true) {
+			int max = parameters.getParameterIntValue("connectionsMaxCount", Integer.MAX_VALUE);
+			if (max==0) {max=Integer.MAX_VALUE;}
 			this.connectionsCount = connectionsCount.entrySet().stream()
 					.sorted((c1, c2) -> Integer.compare(c2.getValue().get(), c1.getValue().get()))
+					.limit(max)
 					.collect(Collectors.toList());
 		}
 		
@@ -195,6 +218,10 @@ public class Geonames extends AbstractContextTerms {
 		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = this.getDocumentSpansData(corpusMapper, queries);
 		Pattern quotePattern = Pattern.compile("\"");
 		List<CityOccurrence> cityOccurrences = new ArrayList<CityOccurrence>();
+		
+		Stripper stripper = new Stripper(Stripper.TYPE.ALL);
+		String[] parts = new String[3];
+		Pattern whitespaces = Pattern.compile("\\s+");
 		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			Set<Integer> positions = new HashSet<Integer>();
 			List<DocumentSpansData> dsdList = dsd.getValue();
@@ -204,7 +231,7 @@ public class Geonames extends AbstractContextTerms {
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			String document = corpusMapper.getCorpus().getDocument(corpusDocIndex).getDocumentString();
 			int lastToken = totalTokens[corpusDocIndex];
-			Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, dsd.getValue(), false);
+			Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, dsd.getValue(), true);
 			for (DocumentSpansData dsdItem : dsdList) {
 				String form = quotePattern.matcher(dsdItem.queryString).replaceAll("");
 				City city = citiesByForm.get(form);
@@ -225,7 +252,24 @@ public class Geonames extends AbstractContextTerms {
 						}
 						List<String> words = IntStream.range(sd[0], sd[1]).mapToObj(i -> termsOfInterest.get(i).getText()).collect(Collectors.toList());
 						StringUtils.join(words, ' ');
-						cityOccurrences.add(new CityOccurrence(corpusDocIndex, sd[0], city.id, StringUtils.join(words, ' ')));
+						
+						parts[0] = document.substring(termsOfInterest.get(Math.max(0, sd[0]-5)).getStartOffset(), Math.max(0, termsOfInterest.get(sd[0]).getStartOffset()));
+						parts[1] = document.substring(termsOfInterest.get(sd[0]).getStartOffset(), termsOfInterest.get(sd[1]-1).getEndOffset());
+						parts[2] = "";
+						if (termsOfInterest.containsKey(sd[1])) {
+							for (int i=sd[1]+5; i>sd[1]; i--) {
+								if (termsOfInterest.containsKey(i)) {
+									parts[2] = document.substring(termsOfInterest.get(sd[1]).getStartOffset(), termsOfInterest.get(i).getEndOffset());
+									break;
+								}
+							}	
+						}
+						for (int i=0, len=parts.length; i<len; i++) {
+							if (parts[i].isEmpty()==false) {
+								parts[i] = whitespaces.matcher(stripper.strip(parts[i])).replaceAll(" ");
+							}
+						}
+						cityOccurrences.add(new CityOccurrence(corpusDocIndex, sd[0], city.id, StringUtils.join(words, ' '), parts[0], parts[1], parts[2]));
 					}
 				}
 			}
@@ -390,16 +434,22 @@ public class Geonames extends AbstractContextTerms {
 		}
 	}
 	
-	private class CityOccurrence implements Comparable<CityOccurrence> {
+	private static class CityOccurrence implements Comparable<CityOccurrence>, Cloneable {
 		private int docIndex;
 		private int position;
 		private String id;
 		private String form;
-		private CityOccurrence(int docIndex, int position, String id, String form) {
+		private String left;
+		private String middle;
+		private String right;
+		private CityOccurrence(int docIndex, int position, String id, String form, String left, String middle, String right) {
 			this.docIndex = docIndex;
 			this.position = position;
 			this.id = id;
 			this.form = form;
+			this.left = left;
+			this.middle = middle;
+			this.right = right;
 		}
 		@Override
 		public int compareTo(CityOccurrence o) {
@@ -407,8 +457,12 @@ public class Geonames extends AbstractContextTerms {
 		}
 		
 		public String toString() {
-			return StringUtils.joinWith("\t", docIndex, position, id, form);
+			return StringUtils.joinWith("\t", docIndex, position, id, form, left, middle, right);
 		}
+		public CityOccurrence clone() throws CloneNotSupportedException {
+			return  (CityOccurrence) super.clone();
+		}
+
 	}
 	
 	public interface CityOccurrenceIterator<CityOccurrence> extends Iterator<CityOccurrence>, AutoCloseable {
@@ -443,8 +497,8 @@ public class Geonames extends AbstractContextTerms {
 			}
 			if (line!=null) {
 				String[] parts = StringUtils.split(line, "\t");
-				if (parts.length==4) {
-					return new CityOccurrence(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), parts[2], parts[3]);
+				if (parts.length==7) {
+					return new CityOccurrence(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), parts[2], parts[3], parts[4], parts[5], parts[6]);
 				}
 				return null;
 			}
@@ -488,21 +542,13 @@ public class Geonames extends AbstractContextTerms {
 	
 	private class ConnectionOccurrence {
 		private int docIndex;
-		private String sourceId;
-		private int sourcePosition;
-		private String sourceForm;
-		private String targetId;
-		private int targetPosition;
-		private String targetForm;
-		ConnectionOccurrence(CityOccurrence left, CityOccurrence right) {
+		private CityOccurrence left;
+		private CityOccurrence right;
+		ConnectionOccurrence(CityOccurrence left, CityOccurrence right) throws CloneNotSupportedException {
 			if (left.docIndex!=right.docIndex) {throw new IllegalArgumentException("Occurrences must belong to the same document.");}
 			docIndex = left.docIndex;
-			sourceId = left.id;
-			targetId = right.id;
-			sourcePosition = left.position;
-			targetPosition = right.position;
-			sourceForm = left.form;
-			targetForm = right.form;
+			this.left = left.clone();
+			this.right = right.clone();
 		}
 	}
 	public static class GeonamesConverter implements Converter {
@@ -522,6 +568,13 @@ public class Geonames extends AbstractContextTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			Geonames geonames = (Geonames) source;
 			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cities", String.class);
+	        
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			writer.setValue(String.valueOf(String.valueOf(geonames.cityTotal)));
+			writer.endNode();
+	        
+	        
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cities", String.class);
 			for (Map.Entry<City, Integer> cityCount : geonames.citiesCountList) {
 				
@@ -544,9 +597,18 @@ public class Geonames extends AbstractContextTerms {
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "population", Integer.class);
 				writer.setValue(String.valueOf(city.population));
 				writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "forms", List.class);
+		        context.convertAnother(city.forms);
+				writer.endNode();
 				
 				writer.endNode();
 			}
+			writer.endNode();
+			writer.endNode();
+			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionCounts", String.class);
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			writer.setValue(String.valueOf(String.valueOf(geonames.connectionsTotal)));
 			writer.endNode();
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionCounts", String.class);
@@ -555,6 +617,7 @@ public class Geonames extends AbstractContextTerms {
 				writer.setValue(String.valueOf(String.valueOf(connectionCount.getValue().get())));
 				writer.endNode();
 			}
+			writer.endNode();
 			writer.endNode();
 
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connections", String.class);
@@ -571,27 +634,20 @@ public class Geonames extends AbstractContextTerms {
 		        writer.endNode();				
 		        
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "source", String.class);
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", Integer.class);
-		        writer.setValue(occurrence.sourceId);
-		        writer.endNode();				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
-		        writer.setValue(String.valueOf(occurrence.sourcePosition));
-		        writer.endNode();				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "form", String.class);
-		        writer.setValue(String.valueOf(occurrence.sourceForm));
-		        writer.endNode();				
+		        context.convertAnother(occurrence.left);
 				writer.endNode();
 				
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "target", String.class);
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", Integer.class);
-		        writer.setValue(occurrence.targetId);
-		        writer.endNode();				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
-		        writer.setValue(String.valueOf(occurrence.targetPosition));
-		        writer.endNode();	
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "form", String.class);
-		        writer.setValue(String.valueOf(occurrence.targetForm));
-		        writer.endNode();				
+		        context.convertAnother(occurrence.right);
+//		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", Integer.class);
+//		        writer.setValue(occurrence.targetId);
+//		        writer.endNode();				
+//		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
+//		        writer.setValue(String.valueOf(occurrence.targetPosition));
+//		        writer.endNode();	
+//		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "form", String.class);
+//		        writer.setValue(String.valueOf(occurrence.targetForm));
+//		        writer.endNode();				
 				writer.endNode();
 				
 				writer.endNode();
