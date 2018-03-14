@@ -3,6 +3,7 @@
  */
 package org.voyanttools.trombone.util;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
@@ -53,15 +54,34 @@ public class Stripper {
 	}
 	
 	public String strip(String string) {
+		return strip(string, false);
+	}
+	
+	public String strip(String string, boolean keepOffsets) {
+		Matcher matcher = null;
 		if (type==TYPE.ALL) {
-			return allTags.matcher(string).replaceAll("");
+			matcher = allTags.matcher(string);
 		}
 		else if (type==TYPE.BLOCKSONLY && string.contains("<")) {
-			string = notBlockTags.matcher(string).replaceAll("");
+			matcher = notBlockTags.matcher(string);
 			// string = isBlockTags.matcher(string).replaceAll("<!--$1$2-->");
-			return string;
 		}
-		else {return string;}
+		if (matcher!=null) {
+			if (keepOffsets) {
+				StringBuffer sb = new StringBuffer();
+				while (matcher.find()) {
+				    matcher.appendReplacement(sb, StringUtils.repeat(' ', matcher.group().length()));
+				}
+				matcher.appendTail(sb);
+				assert sb.length() == string.length();
+				return sb.toString();
+			} else {
+				return matcher.replaceAll("");
+			}
+			
+		} else {
+			return string;		
+		}
 	}
 
 }
