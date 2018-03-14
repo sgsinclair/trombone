@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.DoubleSummaryStatistics;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -37,6 +38,7 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.analysis.LexicalAnalyzer;
+import org.voyanttools.trombone.model.Confidence;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.Keywords;
@@ -48,6 +50,7 @@ import org.voyanttools.trombone.util.Stripper;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
@@ -83,7 +86,7 @@ public class Geonames extends AbstractContextTerms {
 	}
 	
 	public float getVersion() {
-		return super.getVersion()+6;
+		return super.getVersion()+7;
 	}
 
 	@Override
@@ -114,6 +117,7 @@ public class Geonames extends AbstractContextTerms {
 		CityOccurrence cityOccurrence;
 		CityOccurrence previousCityOccurrence = null;
 		Map<String, AtomicInteger> citiesIdCount = new HashMap<String, AtomicInteger>();
+		Map<String, Collection<Confidence>> citiesIdConfidences = new HashMap<String, Collection<Confidence>>();
 		Map<String, AtomicInteger> connectionsCount = new HashMap<String, AtomicInteger>();
 		int counter = 0;
 		while(cityOccurrenceIterator.hasNext()) {
@@ -123,6 +127,11 @@ public class Geonames extends AbstractContextTerms {
 					citiesIdCount.put(cityOccurrence.id, new AtomicInteger(1));
 				} else {
 					citiesIdCount.get(cityOccurrence.id).incrementAndGet();
+				}
+				if (citiesIdConfidences.containsKey(cityOccurrence.id)==false) {
+					citiesIdConfidences.put(cityOccurrence.id, new ArrayList<Confidence>(cityOccurrence.confidences));
+				} else {
+					citiesIdConfidences.get(cityOccurrence.id).addAll(cityOccurrence.confidences);
 				}
 				if (previousCityOccurrence!=null && previousCityOccurrence.docIndex==cityOccurrence.docIndex && previousCityOccurrence.id.equals(cityOccurrence.id)==false) {
 					String cid = StringUtils.joinWith("-", previousCityOccurrence.id, cityOccurrence.id);
@@ -143,9 +152,30 @@ public class Geonames extends AbstractContextTerms {
 		}
 		
 		if (parameters.getParameterBooleanValue("suppressCities")!=true) {
+			
 			Map<City, Integer> citiesCount = new HashMap<City, Integer>();
 			for (City city : cities.values()) {
 				if (citiesIdCount.containsKey(city.id)) {
+					if (citiesIdConfidences.containsKey(city.id)) {
+						Collection<Confidence> confidences = citiesIdConfidences.get(city.id);
+						double allWeights = confidences.stream()
+							.mapToDouble(c -> c.getWeight())
+							.sum();
+						Map<Confidence.Type, List<Confidence>> confidencesByType = confidences.stream()
+							.collect(Collectors.groupingBy(Confidence::getType));
+						for (Map.Entry<Confidence.Type, List<Confidence>> entry : confidencesByType.entrySet()) {
+							double weights = entry.getValue().stream()
+								.mapToDouble(Confidence::getWeight)
+								.sum();
+							float weight = (float) (weights / allWeights);
+							float average = (float) entry.getValue().stream()
+									.mapToDouble(Confidence::getValue)
+									.average()
+									.getAsDouble();
+							city.addConfidence(new Confidence(entry.getKey(), average, weight));
+						}
+						
+					}
 					citiesCount.put(city, citiesIdCount.get(city.id).get());
 				}
 			}
@@ -169,6 +199,11 @@ public class Geonames extends AbstractContextTerms {
 					.collect(Collectors.toList());
 		}
 		
+	}
+
+	private Object averagingDouble(Object object) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -199,12 +234,13 @@ public class Geonames extends AbstractContextTerms {
 		Collection<City> cities = getAllCorpusCities(corpusMapper);
 		
 		// organize by form while checking population
-		Map<String, City> citiesByForm = new HashMap<String, City>();
+		Map<String, List<City>> citiesByForm = new HashMap<String, List<City>>();
 		for (City city : cities) {
 			for (String form : city.forms) {
-				if (citiesByForm.containsKey(form)==false || citiesByForm.get(form).population<city.population) {
-					citiesByForm.put(form, city);
+				if (citiesByForm.containsKey(form)==false) {
+					citiesByForm.put(form, new ArrayList<City>());
 				}
+				citiesByForm.get(form).add(city);
 			}
 		}
 				
@@ -222,6 +258,8 @@ public class Geonames extends AbstractContextTerms {
 		Stripper stripper = new Stripper(Stripper.TYPE.ALL);
 		String[] parts = new String[3];
 		Pattern whitespaces = Pattern.compile("\\s+");
+		List<CityOccurrence> cityOccurrenceCandidates;
+//		Object<CityOccurrence, City>[] obj;
 		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			Set<Integer> positions = new HashSet<Integer>();
 			List<DocumentSpansData> dsdList = dsd.getValue();
@@ -231,21 +269,38 @@ public class Geonames extends AbstractContextTerms {
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			String document = corpusMapper.getCorpus().getDocument(corpusDocIndex).getDocumentString();
 			int lastToken = totalTokens[corpusDocIndex];
+			
 			Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, dsd.getValue(), true);
 			for (DocumentSpansData dsdItem : dsdList) {
+				cityOccurrenceCandidates = new ArrayList<CityOccurrence>();
 				String form = quotePattern.matcher(dsdItem.queryString).replaceAll("");
-				City city = citiesByForm.get(form);
-				if (city==null) {
-					continue;
-				}				
+				City city = null;
+				List<City> formCities = citiesByForm.get(form);
+				if (formCities.size()==0) {continue;} // this shouldn't happen
+				Collections.sort(formCities); // for now just take top population city
+				if (formCities.size()>=1) {city = formCities.get(0);}
+				//	TODO: make a selection from the cities
+//				else {
+//					for (City c : formCities) {
+////						c.
+//					}
+//					Collection<Confidence> confidences = new ArrayList<Confidence>();
+//					
+//				}
+				if (city==null) {continue;}
+				boolean hasLowerCaseInitial = false;
+				boolean isLowerCaseInitial = false;
 				for(int[] sd : dsdItem.spansData) {
 					boolean hasOverlap = false;
 					for (int i=sd[0]; i<sd[1]; i++) {
-						if (positions.contains(i) || Character.isLowerCase(document.charAt(termsOfInterest.get(i).getStartOffset()))) {
+						isLowerCaseInitial = Character.isLowerCase(document.charAt(termsOfInterest.get(i).getStartOffset()));
+						hasLowerCaseInitial = hasLowerCaseInitial || isLowerCaseInitial;
+						if (positions.contains(i) || isLowerCaseInitial) {
 							hasOverlap=true;
 							break;
 						}
 					}
+					
 					if (!hasOverlap) { // check all positions before filling
 						for (int i=sd[0]; i<sd[1]; i++) {
 							positions.add(i);
@@ -269,12 +324,23 @@ public class Geonames extends AbstractContextTerms {
 								parts[i] = whitespaces.matcher(stripper.strip(parts[i])).replaceAll(" ");
 							}
 						}
-						cityOccurrences.add(new CityOccurrence(corpusDocIndex, sd[0], city.id, StringUtils.join(words, ' '), parts[0], parts[1], parts[2]));
+						CityOccurrence cityOccurrence = new CityOccurrence(corpusDocIndex, sd[0], city.id, StringUtils.join(words, ' '), parts[0], parts[1], parts[2], new Confidence(Confidence.Type.GeonamesLookup));
+						cityOccurrence.addConfidence(new Confidence(Confidence.Type.InitialUppercase));
+						if (words.size()>1) {
+							cityOccurrence.addConfidence(new Confidence(Confidence.Type.IsMultiTerm));
+						}
+						cityOccurrenceCandidates.add(cityOccurrence);
 					}
 				}
+				if (hasLowerCaseInitial) { // lower confidence scores if we have a lowercase word in any of the occurrences
+					for (CityOccurrence cityOccurrence : cityOccurrenceCandidates) {
+						cityOccurrence.addConfidence(new Confidence(Confidence.Type.HasLowerCaseForm));
+					}
+				}
+				cityOccurrences.addAll(cityOccurrenceCandidates);
 			}
 		}
-		
+				
 		// order by id and position
 		Collections.sort(cityOccurrences);
 		return cityOccurrences;
@@ -326,7 +392,7 @@ public class Geonames extends AbstractContextTerms {
 						String[] admins = StringUtils.split(parts[i], '+');
 						for (String c : cityParts) {
 							for (String a : admins) {
-								forms.add(c+" "+a);
+								forms.add(c+", "+a);
 							}
 						}
 						// for admin and country send city + admin or country
@@ -350,6 +416,7 @@ public class Geonames extends AbstractContextTerms {
 			}
 		}
 		
+		/*
 		// try to cull cities by population
 		Map<String, City> citiesByLabel = new HashMap<String, City>();
 		for (City city : citiesById.values()) {
@@ -365,6 +432,20 @@ public class Geonames extends AbstractContextTerms {
 		}
 		
 		Collection<City> cities = citiesByLabel.values().stream().collect(Collectors.toSet());
+		
+		// set population confidence based on actual values
+		double max = cities.stream()
+			.mapToDouble(c -> Math.sqrt(c.population))
+			.max().getAsDouble();
+		
+		cities.stream()
+			.forEach(c -> c.addConfidence(new Confidence(Confidence.Type.Population, (float) (Math.sqrt(c.population)/max)))); 
+			
+		*/
+		
+		// note that we may have duplicates with the same form
+		Collection<City> cities = new ArrayList<City>(citiesById.values());
+		
 		storage.store(cities, id, Location.cache);
 		return cities;
 		
@@ -409,7 +490,7 @@ public class Geonames extends AbstractContextTerms {
 		return phrases.isEmpty() ? null : phrases;
 	}
 
-	private static class City implements Serializable {
+	private static class City implements Comparable<City>, Serializable {
 		
 		private String id;
 		private String label;
@@ -417,6 +498,7 @@ public class Geonames extends AbstractContextTerms {
 		private String longitude;
 		private int population;
 		private Set<String> forms;
+		private Collection<Confidence> confidences;
 		private City(String id, String label, String latitude, String longitude, int population, Set<String> forms) {
 			this.id = id;
 			this.label = label;
@@ -424,16 +506,26 @@ public class Geonames extends AbstractContextTerms {
 			this.longitude = longitude;
 			this.population = population;
 			this.forms = new HashSet<String>(forms);
+			confidences = new ArrayList<Confidence>();
 		}
 		
+		private void addConfidence(Confidence confidence) {
+			confidences.add(confidence);
+		}
 		private String getId() {
 			return id;
 		}
 		public String toString() {
 			return label+" ("+id+": "+population+") "+StringUtils.join(forms, ", ");
 		}
+
+		@Override
+		public int compareTo(City o) {
+			return Integer.compare(o.population, this.population);
+		}
 	}
 	
+	@XStreamConverter(CityOccurrenceConverter.class)
 	private static class CityOccurrence implements Comparable<CityOccurrence>, Cloneable {
 		private int docIndex;
 		private int position;
@@ -442,7 +534,14 @@ public class Geonames extends AbstractContextTerms {
 		private String left;
 		private String middle;
 		private String right;
-		private CityOccurrence(int docIndex, int position, String id, String form, String left, String middle, String right) {
+		private Collection<Confidence> confidences;
+		private CityOccurrence(int docIndex, int position, String id, String form, String left, String middle, String right, String confidences) {
+			this(docIndex, position, id, form, left, middle, right, new ArrayList<Confidence>(Arrays.asList(confidences.split(";")).stream().map(confidence -> Confidence.fromString(confidence)).collect(Collectors.toList())));
+		}
+		private CityOccurrence(int docIndex, int position, String id, String form, String left, String middle, String right, Confidence confidence) {
+			this(docIndex, position, id, form, left, middle, right, new ArrayList<Confidence>(Arrays.asList(confidence)));
+		}
+		private CityOccurrence(int docIndex, int position, String id, String form, String left, String middle, String right, Collection<Confidence> confidences) {
 			this.docIndex = docIndex;
 			this.position = position;
 			this.id = id;
@@ -450,14 +549,18 @@ public class Geonames extends AbstractContextTerms {
 			this.left = left;
 			this.middle = middle;
 			this.right = right;
+			this.confidences = confidences;
 		}
 		@Override
 		public int compareTo(CityOccurrence o) {
 			return docIndex==o.docIndex ? Integer.compare(position, o.position) : Integer.compare(docIndex, o.docIndex);
 		}
-		
-		public String toString() {
-			return StringUtils.joinWith("\t", docIndex, position, id, form, left, middle, right);
+		private void addConfidence(Confidence confidence) {
+			confidences.add(confidence);
+		}
+		public String toString() { // make sure this corresponds with how StoredCityOccurrenceIterator reads values
+			String confidence = confidences.stream().map(Confidence::toString).collect(Collectors.joining(";"));
+			return StringUtils.joinWith("\t", docIndex, position, id, form, left, middle, right, confidence);
 		}
 		public CityOccurrence clone() throws CloneNotSupportedException {
 			return  (CityOccurrence) super.clone();
@@ -468,7 +571,7 @@ public class Geonames extends AbstractContextTerms {
 	public interface CityOccurrenceIterator<CityOccurrence> extends Iterator<CityOccurrence>, AutoCloseable {
 	}
 	
-	private class StoredCityOccurrenceIterator implements CityOccurrenceIterator<CityOccurrence> {
+	private static class StoredCityOccurrenceIterator implements CityOccurrenceIterator<CityOccurrence> {
 		
 		private BufferedReader reader;
 		private StoredCityOccurrenceIterator(Reader reader) {
@@ -497,8 +600,8 @@ public class Geonames extends AbstractContextTerms {
 			}
 			if (line!=null) {
 				String[] parts = StringUtils.split(line, "\t");
-				if (parts.length==7) {
-					return new CityOccurrence(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), parts[2], parts[3], parts[4], parts[5], parts[6]);
+				if (parts.length==8) {
+					return new CityOccurrence(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), parts[2], parts[3], parts[4], parts[5], parts[6], parts[7]);
 				}
 				return null;
 			}
@@ -517,7 +620,7 @@ public class Geonames extends AbstractContextTerms {
 		
 	}
 	
-	private class IterableCityOccurrenceIterator implements CityOccurrenceIterator<CityOccurrence> {
+	private static class IterableCityOccurrenceIterator implements CityOccurrenceIterator<CityOccurrence> {
 		
 		private Iterator<CityOccurrence> iterator;
 		private IterableCityOccurrenceIterator(Iterable<CityOccurrence> iterable) {
@@ -538,6 +641,60 @@ public class Geonames extends AbstractContextTerms {
 		public void close() throws Exception {
 			// ignore
 		}
+	}
+	
+	public static class CityOccurrenceConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class arg0) {
+			return arg0.isAssignableFrom(CityOccurrence.class);
+		}
+
+		@Override
+		public void marshal(Object arg0, HierarchicalStreamWriter writer, MarshallingContext context) {
+			CityOccurrence cityOccurrence = (CityOccurrence) arg0;
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+			writer.setValue(String.valueOf(cityOccurrence.docIndex));
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
+			writer.setValue(String.valueOf(cityOccurrence.position));
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
+			writer.setValue(String.valueOf(cityOccurrence.id));
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "form", String.class);
+			writer.setValue(String.valueOf(cityOccurrence.form));
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "left", String.class);
+			writer.setValue(String.valueOf(cityOccurrence.left));
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "middle", String.class);
+			writer.setValue(String.valueOf(cityOccurrence.middle));
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "right", String.class);
+			writer.setValue(String.valueOf(cityOccurrence.right));
+			writer.endNode();
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidences", String.class);
+			for (Confidence confidence : cityOccurrence.confidences) {
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, confidence.name(), String.class);
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "value", Float.class);
+				writer.setValue(String.valueOf(confidence.getValue()));
+				writer.endNode();
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "weight", Float.class);
+				writer.setValue(String.valueOf(confidence.getWeight()));
+				writer.endNode();
+				writer.endNode();
+			}
+			writer.endNode();
+
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader arg0, UnmarshallingContext arg1) {
+			return null;
+		}
+		
 	}
 	
 	private class ConnectionOccurrence {
@@ -600,6 +757,14 @@ public class Geonames extends AbstractContextTerms {
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "forms", List.class);
 		        context.convertAnother(city.forms);
 				writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidence", Integer.class);
+				writer.setValue(String.valueOf(Confidence.getConfidence(city.confidences)));
+				writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidences", String.class);
+		        for (Confidence confidence : city.confidences) {
+		        		context.convertAnother(confidence);
+		        }
+				writer.endNode();
 				
 				writer.endNode();
 			}
@@ -638,16 +803,7 @@ public class Geonames extends AbstractContextTerms {
 				writer.endNode();
 				
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "target", String.class);
-		        context.convertAnother(occurrence.right);
-//		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", Integer.class);
-//		        writer.setValue(occurrence.targetId);
-//		        writer.endNode();				
-//		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
-//		        writer.setValue(String.valueOf(occurrence.targetPosition));
-//		        writer.endNode();	
-//		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "form", String.class);
-//		        writer.setValue(String.valueOf(occurrence.targetForm));
-//		        writer.endNode();				
+		        context.convertAnother(occurrence.right);			
 				writer.endNode();
 				
 				writer.endNode();

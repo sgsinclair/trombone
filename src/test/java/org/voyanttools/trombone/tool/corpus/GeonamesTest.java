@@ -14,19 +14,19 @@ public class GeonamesTest {
 	@Test
 	public void test() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
-		String text1 = "London, Ontario and Montreal and London, England and Montreal and London and Montreal.";
+		String text1 = "Most of London, Ontario and Montreal and most of London, England and Montreal and London and Montreal.";
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"string="+text1,"includeCities=true"});
 		Geonames geonamesTool = new Geonames(storage, parameters);
 		geonamesTool.run();
-		assertEquals(3, geonamesTool.citiesCountList.size());
+		assertEquals(4, geonamesTool.citiesCountList.size());
 		assertEquals(3, (int) geonamesTool.citiesCountList.get(0).getValue());
 		assertEquals(1, (int) geonamesTool.citiesCountList.get(2).getValue());
 		assertEquals(4, geonamesTool.connectionsCount.size());
-		assertEquals("6058560-6077243", geonamesTool.connectionsCount.get(0).getKey());
+		assertEquals("6077243-2643743", geonamesTool.connectionsCount.get(0).getKey());
 		assertEquals(2, geonamesTool.connectionsCount.get(0).getValue().get());
-		assertEquals("2643743-6077243", geonamesTool.connectionsCount.get(3).getKey());
-		assertEquals(1, geonamesTool.connectionsCount.get(3).getValue().get());
-		assertEquals(5, geonamesTool.connectionOccurrences.size());
+		assertEquals("6058560-6077243", geonamesTool.connectionsCount.get(2).getKey());
+		assertEquals(1, geonamesTool.connectionsCount.get(2).getValue().get());
+		assertEquals(6, geonamesTool.connectionOccurrences.size());
 		
 	}
 
