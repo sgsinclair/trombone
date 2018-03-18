@@ -49,6 +49,10 @@ public class CorpusTermCorrelations extends AbstractTerms {
 	public CorpusTermCorrelations(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		minInDocumentsCountRatio = parameters.getParameterFloatValue("minInDocumentsCountRatio", 0);
+		if (limit==Integer.MAX_VALUE) { // don't allow no limit
+			message("This tool can't be called with no limit to the number of correlations, so the limit has been set to 10,000");
+			limit = 10000;
+		}
 	}
 
 	/* (non-Javadoc)
@@ -119,6 +123,11 @@ public class CorpusTermCorrelations extends AbstractTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			CorpusTermCorrelations corpusTermCorrelations = (CorpusTermCorrelations) source;
 			
+			if (corpusTermCorrelations.hasMessages()) {
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "messages", List.class);
+				context.convertAnother(corpusTermCorrelations.getMessages());
+		        writer.endNode();
+			}
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(corpusTermCorrelations.getTotal()));
 			writer.endNode();

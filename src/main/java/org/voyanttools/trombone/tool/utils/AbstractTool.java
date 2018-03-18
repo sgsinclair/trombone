@@ -34,6 +34,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
 
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
@@ -51,6 +54,8 @@ import edu.stanford.nlp.util.StringUtils;
  *
  */
 public abstract class AbstractTool implements RunnableTool {
+	
+	private List<Message> messages = null;
 
 	@XStreamOmitField
 	protected FlexibleParameters parameters;
@@ -74,6 +79,32 @@ public abstract class AbstractTool implements RunnableTool {
 		this.storage = storage;
 		this.parameters = parameters;
 		this.isVerbose = parameters.getParameterBooleanValue("verbose");
+	}
+	
+	protected void message(String message) {
+		message(Message.Type.info, message);
+	}
+	protected void message(Message.Type type, String message) {
+		StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+		int i = 1;
+		if (stackTraceElements.length>1) {
+			i++;
+			if (stackTraceElements.length>2 && stackTraceElements[i].getClassName().equals("org.voyanttools.trombone.tool.utils.AbstractTool") && stackTraceElements[i].getMethodName().equals("message")) {
+				i++;
+			}
+		}
+		if (messages==null) {
+			messages = new ArrayList<Message>();
+		}
+		messages.add(new Message(type, message, stackTraceElements[i].getClassName(), stackTraceElements[i].getMethodName(), stackTraceElements[i].getLineNumber()));
+	}
+	
+	public boolean hasMessages() {
+		return messages!=null && messages.isEmpty()==false;
+	}
+	
+	public List<Message> getMessages() {
+		return messages;
 	}
 	
 	public float getVersion() {
