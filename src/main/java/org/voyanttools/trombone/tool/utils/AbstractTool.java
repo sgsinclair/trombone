@@ -81,9 +81,19 @@ public abstract class AbstractTool implements RunnableTool {
 		this.isVerbose = parameters.getParameterBooleanValue("verbose");
 	}
 	
+	/**
+	 * Create a message intended for the client (which may or may not appear to the user).
+	 * @param message the message (default type {@link Message.Type.info}
+	 */
 	protected void message(String message) {
 		message(Message.Type.info, message);
 	}
+	
+	/**
+	 * Create a message intended for the client (which may or may not appear to the user).
+	 * @param message the message
+	 * @param type the {@link Message.Type}
+	 */
 	protected void message(Message.Type type, String message) {
 		StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
 		int i = 1;
@@ -99,10 +109,18 @@ public abstract class AbstractTool implements RunnableTool {
 		messages.add(new Message(type, message, stackTraceElements[i].getClassName(), stackTraceElements[i].getMethodName(), stackTraceElements[i].getLineNumber()));
 	}
 	
+	/**
+	 * Determine if this tool has any messages.
+	 * @return whether or not this tool has any messages
+	 */
 	public boolean hasMessages() {
 		return messages!=null && messages.isEmpty()==false;
 	}
 	
+	/**
+	 * Get the list of messages for this tool
+	 * @return a list of {@link Message messages}
+	 */
 	public List<Message> getMessages() {
 		return messages;
 	}
