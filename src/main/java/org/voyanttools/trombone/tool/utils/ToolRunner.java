@@ -32,12 +32,11 @@ import java.util.List;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.InputSourcesBuilder;
-import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.tool.corpus.CorpusExporter;
-import org.voyanttools.trombone.tool.corpus.CorpusManager;
 import org.voyanttools.trombone.tool.corpus.CorpusMetadata;
 import org.voyanttools.trombone.tool.resource.StoredResource;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -45,8 +44,6 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs

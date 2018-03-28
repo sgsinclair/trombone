@@ -14,6 +14,7 @@ import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
+import org.voyanttools.trombone.util.NumberUtils;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -24,8 +25,6 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-
-import edu.stanford.nlp.util.ArrayUtils;
 
 @XStreamAlias("termCorrelations")
 @XStreamConverter(DocumentTermCorrelations.DocumentTermCorrelationsConverter.class)
@@ -84,7 +83,9 @@ public class DocumentTermCorrelations extends AbstractTerms {
 				if (outer.getDocId().equals(inner.getDocId())==false) {continue;} // different docs, maybe from querying
 				if (outer.equals(inner)) {continue;} // same word
 				if (!half || (half && outer.getTerm().compareTo(inner.getTerm())>0)) {
-					double correlation = correlationer.correlation(ArrayUtils.toDouble(outer.getRelativeDistributions(distributionBins)), ArrayUtils.toDouble(inner.getRelativeDistributions(distributionBins)));
+					double correlation = correlationer.correlation(
+							NumberUtils.getDoubles(outer.getRelativeDistributions(distributionBins)),
+							NumberUtils.getDoubles(inner.getRelativeDistributions(distributionBins)));
 					total++;
 					queue.offer(new DocumentTermsCorrelation(inner, outer, (float) correlation));
 				}

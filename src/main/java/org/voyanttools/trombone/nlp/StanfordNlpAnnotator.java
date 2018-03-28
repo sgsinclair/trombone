@@ -92,7 +92,7 @@ public class StanfordNlpAnnotator implements NlpAnnotator {
 			String term = entity.get(TextAnnotation.class);
 			String normalized = entity.get(NormalizedNamedEntityTagAnnotation.class);
 			EntityType type = EntityType.getForgivingly(entity.get(NamedEntityTagAnnotation.class));
-			DocumentEntity e = new DocumentEntity(corpusDocumentIndex, term, normalized, type, positions.isEmpty() ? coreMaps.size() : positions.size(),  positions.isEmpty() ? null : ArrayUtils.toPrimitive(positions.toArray(new Integer[0])));
+			DocumentEntity e = new DocumentEntity(corpusDocumentIndex, term, normalized, type, positions.isEmpty() ? coreMaps.size() : positions.size(),  positions.isEmpty() ? null : ArrayUtils.toPrimitive(positions.toArray(new Integer[0])), null);
 			entities.add(e);
 		}
 		

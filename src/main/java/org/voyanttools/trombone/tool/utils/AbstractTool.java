@@ -24,7 +24,6 @@ package org.voyanttools.trombone.tool.utils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -34,20 +33,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
 
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.model.Corpus;
-import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.VariantsDB;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -63,7 +57,7 @@ public abstract class AbstractTool implements RunnableTool {
 	@XStreamOmitField
 	protected transient Storage storage;
 	
-	private static float VERSION = 5.4f;
+	private static float VERSION = 5.5f;
 	
 	@XStreamOmitField
 	private boolean isVerbose;
@@ -83,18 +77,10 @@ public abstract class AbstractTool implements RunnableTool {
 	
 	/**
 	 * Create a message intended for the client (which may or may not appear to the user).
-	 * @param message the message (default type {@link Message.Type.info}
-	 */
-	protected void message(String message) {
-		message(Message.Type.info, message);
-	}
-	
-	/**
-	 * Create a message intended for the client (which may or may not appear to the user).
 	 * @param message the message
 	 * @param type the {@link Message.Type}
 	 */
-	protected void message(Message.Type type, String message) {
+	protected void message(Message.Type type, String code, String message) {
 		StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
 		int i = 1;
 		if (stackTraceElements.length>1) {
@@ -106,7 +92,7 @@ public abstract class AbstractTool implements RunnableTool {
 		if (messages==null) {
 			messages = new ArrayList<Message>();
 		}
-		messages.add(new Message(type, message, stackTraceElements[i].getClassName(), stackTraceElements[i].getMethodName(), stackTraceElements[i].getLineNumber()));
+		messages.add(new Message(type, code, message, stackTraceElements[i].getClassName(), stackTraceElements[i].getMethodName(), stackTraceElements[i].getLineNumber()));
 	}
 	
 	/**

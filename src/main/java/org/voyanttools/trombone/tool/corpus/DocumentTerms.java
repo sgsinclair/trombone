@@ -29,6 +29,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
@@ -45,7 +46,6 @@ import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
-import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
@@ -62,8 +62,6 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs

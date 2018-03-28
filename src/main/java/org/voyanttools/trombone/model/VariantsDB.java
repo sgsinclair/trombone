@@ -7,14 +7,13 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.storage.Storage;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -46,7 +45,7 @@ public class VariantsDB extends AbstractDB {
 				setDB("variants-"+dbId, false);
 				map = db.getHashMap("variants");
 				for (String line : FileUtils.readLines(file)) {
-					List<String> parts = StringUtils.split("\t");
+					List<String> parts = Arrays.asList(StringUtils.split(line, "\t"));
 					put(parts.remove(0), parts.toArray(new String[0]));
 				}
 				if (readOnly!=false) { // give a read-only view

@@ -108,11 +108,13 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		<!--  loaded by tika
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-compress</artifactId>
 			<version>1.12</version>
 		</dependency>
+		 -->
 		<dependency>
 			<groupId>it.svario.xpathapi</groupId>
 			<artifactId>xpathapi-jaxp</artifactId>
@@ -127,7 +129,7 @@
 		<dependency>
 			<groupId>org.apache.tika</groupId>
 			<artifactId>tika-parsers</artifactId>
-			<version>1.14</version>
+			<version>1.17</version>
 		</dependency>
 		<!-- <dependency> <groupId>org.apache.lucene</groupId> <artifactId>lucene-core</artifactId> 
 			<version>6.1.0</version> </dependency> -->
@@ -226,7 +228,7 @@
 			<artifactId>stanford-corenlp</artifactId>
 			<version>3.8.0</version>
 			<exclusions>
-				<exclusion> <!--  exclude here since newer version gets included under org.ejml -->
+				<exclusion><!--  exclude here since newer version gets included under org.ejml -->
 					<groupId>com.googlecode.efficient-java-matrix-library</groupId>
 					<artifactId>ejml</artifactId>
 				</exclusion>
@@ -237,7 +239,7 @@
 		    <artifactId>stanford-corenlp</artifactId>
 		    <version>3.8.0</version>
 			<exclusions>
-				<exclusion> <!--  exclude here since newer version gets included under org.ejml -->
+				<exclusion><!--  exclude here since newer version gets included under org.ejml -->
 					<groupId>com.googlecode.efficient-java-matrix-library</groupId>
 					<artifactId>ejml</artifactId>
 				</exclusion>
@@ -316,10 +318,12 @@
 				</dependency> -->
 		</dependencies>
 	</dependencyManagement>
+	<!--
 	<repositories>
 		<repository>
 			<id>ukp-oss-model-releases</id>
 			<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-model-releases-local</url>
 		</repository>
 	</repositories>
+	 -->
 </project>

@@ -725,6 +725,12 @@ public class Geonames extends AbstractContextTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			Geonames geonames = (Geonames) source;
 			
+			if (geonames.hasMessages()) {
+				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "messages", List.class);
+				context.convertAnother(geonames.getMessages());
+				writer.endNode();
+			}
+			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cities", String.class);
 	        
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);

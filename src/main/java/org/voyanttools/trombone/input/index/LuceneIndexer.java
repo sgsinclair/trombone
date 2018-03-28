@@ -33,6 +33,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.lucene.LucenePackage;
 import org.apache.lucene.document.Document;
@@ -67,8 +68,6 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TextUtils;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs

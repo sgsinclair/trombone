@@ -26,6 +26,7 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -33,19 +34,17 @@ import java.util.Map;
 import java.util.UUID;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.store.RAMDirectory;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
-import org.voyanttools.trombone.nlp.NlpAnnotator;
 import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.storage.file.FileMigrator;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * An in-memory implementation of the {@link StoredDocumentSourceStorage}. This
@@ -139,7 +138,7 @@ public class MemoryStorage implements Storage {
 	@Override
 	public List<String> retrieveStrings(String id, Location location) throws IOException {
 		String string = retrieveString(id, location);
-		return StringUtils.split(string, "\n");
+		return Arrays.asList(StringUtils.split(string, "\n"));
 	}
 
 	@Override

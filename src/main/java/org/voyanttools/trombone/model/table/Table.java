@@ -4,11 +4,13 @@
 package org.voyanttools.trombone.model.table;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import edu.stanford.nlp.util.ArrayUtils;
-import edu.stanford.nlp.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import cc.mallet.util.ArrayUtils;
 
 /**
  * @author sgs
@@ -102,11 +104,15 @@ public class Table implements Serializable {
 	}
 	
 	public double[] getColumnAsDoubles(String column) {
-		return ArrayUtils.toDoubleArray(getColumn(column));
+		return Arrays.stream(getColumn(column))
+			.mapToDouble(Double::valueOf)
+			.toArray();
 	}
 
 	public double[] getColumnAsDoubles(int column) {
-		return ArrayUtils.toDoubleArray(getColumn(column));
+		return Arrays.stream(getColumn(column))
+				.mapToDouble(Double::valueOf)
+				.toArray();
 	}
 	
 	public int getColumnsCount() {

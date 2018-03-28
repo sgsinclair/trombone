@@ -16,24 +16,27 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 public class Message {
 
 	private Type type;
+	private String code;
 	private String message;
 	private String className;
 	private String methodName;
 	private int lineNumber;
 
 	public enum Type {
-		info, warn, error, debug
+		INFO, WARN, ERROR, DEBUG
 	}
 
 	/**
 	 * @param type the message type (info, warn, error, debug)
+	 * @param code the short codename for the message
 	 * @param message the message (no facility for localization for now)
 	 * @param className the class that called the message
 	 * @param methodName the method from which the message was created
 	 * @param lineNumber the line number from which the message was created
 	 */
-	public Message(Type type, String message, String className, String methodName, int lineNumber) {
+	public Message(Type type, String code, String message, String className, String methodName, int lineNumber) {
 		this.type = type;
+		this.code = code;
 		this.message = message;
 		this.methodName = methodName;
 		this.className = className;

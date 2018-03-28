@@ -17,14 +17,16 @@ public class DocumentEntity implements Serializable, Comparable<DocumentEntity> 
 	private EntityType type;
 	private int rawFreq;
 	private int[] positions;
+	private float[] confidences;
 
-	public DocumentEntity(int docIndex, String term, String normalized, EntityType type, int rawFreq, int[] positions) {
+	public DocumentEntity(int docIndex, String term, String normalized, EntityType type, int rawFreq, int[] positions, float[] confidences) {
 		this.docIndex = docIndex;
 		this.term = term;
 		this.normalized = normalized;
 		this.type = type;
 		this.rawFreq = rawFreq;
 		this.positions = positions;
+		this.confidences = confidences;
 	}
 	
 	public int getDocIndex() {

@@ -8,16 +8,18 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
-import org.apache.commons.math3.stat.correlation.SpearmansCorrelation;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.CorpusTermsCorrelation;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.utils.Message;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
+import org.voyanttools.trombone.util.NumberUtils;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -27,8 +29,6 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-
-import edu.stanford.nlp.util.ArrayUtils;
 
 /**
  * @author sgs
@@ -50,7 +50,7 @@ public class CorpusTermCorrelations extends AbstractTerms {
 		super(storage, parameters);
 		minInDocumentsCountRatio = parameters.getParameterFloatValue("minInDocumentsCountRatio", 0);
 		if (limit==Integer.MAX_VALUE) { // don't allow no limit
-			message("This tool can't be called with no limit to the number of correlations, so the limit has been set to 10,000");
+			message(Message.Type.WARN, "mandatoryLimit", "This tool can't be called with no limit to the number of correlations, so the limit has been set to 10,000");
 			limit = 10000;
 		}
 	}
@@ -80,8 +80,9 @@ public class CorpusTermCorrelations extends AbstractTerms {
 				if ((inner.getInDocumentsCount()*100)/docsCount<minInDocumentsCountRatio) {continue;}
 				if (outer.getTerm().equals(inner.getTerm())==true) {continue;}
 				if (!half || (half && outer.getTerm().compareTo(inner.getTerm())>0)) {
-//					double correlation = pearsonCorrelation.correlation(ArrayUtils.toDouble(outer.getRelativeDistributions()), ArrayUtils.toDouble(inner.getRelativeDistributions()));
-					double correlation = correlationer.correlation(ArrayUtils.toDouble(outer.getRelativeDistributions()), ArrayUtils.toDouble(inner.getRelativeDistributions()));
+					double correlation = correlationer.correlation(
+							NumberUtils.getDoubles(outer.getRelativeDistributions()),
+							NumberUtils.getDoubles(inner.getRelativeDistributions()));
 					total++;
 					queue.offer(new CorpusTermsCorrelation(inner, outer, (float) correlation));
 				}

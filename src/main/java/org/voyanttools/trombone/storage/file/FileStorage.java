@@ -34,12 +34,14 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
@@ -49,8 +51,6 @@ import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * A file-system implementation of {@link Storage}.
@@ -197,7 +197,7 @@ public class FileStorage implements Storage {
 	@Override
 	public List<String> retrieveStrings(String id, Location location) throws IOException {
 		String string = retrieveString(id, location);
-		return StringUtils.split(string, "\n");
+		return Arrays.asList(StringUtils.split(string, "\n"));
 	}
 
 	@Override

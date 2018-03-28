@@ -28,6 +28,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.Normalizer;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -37,6 +38,7 @@ import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.UriInputSource;
 import org.voyanttools.trombone.storage.Storage;
@@ -46,8 +48,6 @@ import org.voyanttools.trombone.storage.file.FileMigrationFactory;
 import org.voyanttools.trombone.storage.file.FileStorage;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
-import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author sgs
@@ -127,7 +127,7 @@ public class Keywords {
 						if (file!=null) {
 							// add to lower case here, though not sure we want it this universal
 							String contents = FileUtils.readFileToString(file).toLowerCase();
-							List<String> keywordsList = StringUtils.split(contents, "\n");
+							List<String> keywordsList = Arrays.asList(StringUtils.split(contents, "\n"));
 							storage.storeStrings(keywordsList, refId, Storage.Location.object);
 							add(keywordsList);
 						}
