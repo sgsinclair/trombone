@@ -102,6 +102,7 @@ public interface Storage {
 	
 
 	public Writer getStoreWriter(String id, Location location) throws IOException;
+	public Writer getStoreWriter(String string, Location cache, boolean append) throws IOException;
 	public Reader getStoreReader(String id, Location location) throws IOException;
 	
 //	public Writer getStoreCachedStringWriter(String id) throws IOException;
@@ -125,6 +126,5 @@ public interface Storage {
 //	public NlpAnnotator getNlpAnnotator(String languageCode);
 	
 	public NlpFactory getNlpAnnotatorFactory();
-
 
 }

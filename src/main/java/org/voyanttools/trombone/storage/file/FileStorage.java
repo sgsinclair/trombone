@@ -277,11 +277,15 @@ public class FileStorage implements Storage {
 	}
 	
 	public Writer getStoreWriter(String id, Location location) throws IOException {
+		return getStoreWriter(id, location, false);
+	}
+	
+	public Writer getStoreWriter(String id, Location location, boolean append) throws IOException {
 		File file = getResourceFile(id, location);
 		if (file.getParentFile().exists()==false) { // make sure directory exists
 			file.getParentFile().mkdirs();
 		}
-		return new FileWriter(file);
+		return new FileWriter(file, append);
 	}
 	
 	public Reader getStoreReader(String id, Location location) throws IOException {

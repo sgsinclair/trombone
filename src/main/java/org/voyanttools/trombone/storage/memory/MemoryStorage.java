@@ -176,19 +176,30 @@ public class MemoryStorage implements Storage {
 
 	@Override
 	public Writer getStoreWriter(String id, Location location) throws IOException {
-		return new MemoryStorageStringWriter(id, Storage.Location.cache);
+		return getStoreWriter(id, location, false);
+	}
+	
+	@Override
+	public Writer getStoreWriter(String id, Location location, boolean append) throws IOException {
+		return new MemoryStorageStringWriter(id, Storage.Location.cache, append);
 	}
 	
 	private class MemoryStorageStringWriter extends StringWriter {
 		private String id;
 		private Location location;
-		private MemoryStorageStringWriter(String id, Location location) {
+		private boolean append;
+		private MemoryStorageStringWriter(String id, Location location, boolean append) {
 			this.id = id;
 			this.location = location;
+			this.append = append;
 		}
 		@Override
 		public void close() throws IOException {
-			storeString(this.toString(), id, location);
+			if (append && isStored(id, location)) { // we can append
+				storeString(retrieveString(id, location)+this.toString(), id, location);
+			} else {
+				storeString(this.toString(), id, location);
+			}
 			super.close();
 		}
 		
