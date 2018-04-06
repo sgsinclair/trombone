@@ -31,7 +31,7 @@ import org.voyanttools.trombone.input.source.InputSourcesBuilder;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -58,9 +58,8 @@ class DocumentStorer extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
-		
 		InputSourcesBuilder inputSourcesBuilder = new InputSourcesBuilder(parameters);
-		List<InputSource> inputSources = inputSourcesBuilder.getInputSources();
+		List<InputSource> inputSources = inputSourcesBuilder.getInputSources(storage);
 		run(inputSources);
 		
 	}

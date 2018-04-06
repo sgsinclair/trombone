@@ -16,7 +16,7 @@ import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileMigrator;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;

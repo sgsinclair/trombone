@@ -112,7 +112,7 @@ public class FileTrombone4_1Migrator extends FileTrombone4_0Migrator {
 		
 		// create input sources (nothing should be stored at this point)
 		InputSourcesBuilder inputSourcesBulider = new InputSourcesBuilder(corpusCreationParams);
-		List<InputSource> inputSources = inputSourcesBulider.getInputSources();
+		List<InputSource> inputSources = inputSourcesBulider.getInputSources(storage);
 		
 		// something didn't work, parameters may not have contained real input (like when we have corpus creation step)
 		if (inputSources.isEmpty()) {return null;}

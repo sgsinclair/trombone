@@ -16,7 +16,7 @@ import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.CorpusTermsCorrelation;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.utils.Message;
+import org.voyanttools.trombone.tool.util.Message;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 import org.voyanttools.trombone.util.NumberUtils;

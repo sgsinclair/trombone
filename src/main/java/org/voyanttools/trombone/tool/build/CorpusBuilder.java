@@ -39,7 +39,7 @@ import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

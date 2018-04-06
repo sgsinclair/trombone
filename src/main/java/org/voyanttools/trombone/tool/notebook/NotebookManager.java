@@ -15,7 +15,7 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.storage.file.FileMigrationFactory;
 import org.voyanttools.trombone.storage.file.FileStorage;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;

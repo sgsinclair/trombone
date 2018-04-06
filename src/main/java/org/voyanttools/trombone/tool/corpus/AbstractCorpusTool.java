@@ -12,7 +12,7 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

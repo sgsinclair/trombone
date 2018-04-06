@@ -32,7 +32,7 @@ import org.voyanttools.trombone.tool.build.DocumentExpander;
 import org.voyanttools.trombone.tool.build.DocumentExtractor;
 import org.voyanttools.trombone.tool.build.DocumentIndexer;
 import org.voyanttools.trombone.tool.build.DocumentStorer;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;

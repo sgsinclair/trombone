@@ -8,7 +8,7 @@ import java.io.IOException;
 import org.voyanttools.trombone.model.table.Correlations;
 import org.voyanttools.trombone.model.table.Table;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;

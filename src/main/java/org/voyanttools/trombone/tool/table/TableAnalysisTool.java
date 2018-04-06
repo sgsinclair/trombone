@@ -9,7 +9,7 @@ import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisTool;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
-import org.voyanttools.trombone.tool.utils.AbstractTool;
+import org.voyanttools.trombone.tool.util.AbstractTool;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 public abstract class TableAnalysisTool extends AbstractTool implements AnalysisTool {

@@ -30,7 +30,7 @@ import java.io.Writer;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.utils.ToolRunner;
+import org.voyanttools.trombone.tool.util.ToolRunner;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 /**

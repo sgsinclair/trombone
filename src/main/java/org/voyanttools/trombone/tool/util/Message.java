@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.voyanttools.trombone.tool.utils;
+package org.voyanttools.trombone.tool.util;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
