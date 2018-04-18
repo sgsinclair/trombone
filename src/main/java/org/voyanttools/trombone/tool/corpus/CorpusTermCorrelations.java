@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.stream.IntStream;
 
 import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
+import org.apache.commons.math3.stat.regression.SimpleRegression;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.CorpusTermsCorrelation;
@@ -55,6 +56,9 @@ public class CorpusTermCorrelations extends AbstractTerms {
 		}
 	}
 
+	public float getVersion() {
+		return super.getVersion()+1;
+	}
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractTerms#runQueries(org.voyanttools.trombone.lucene.CorpusMapper, org.voyanttools.trombone.model.Keywords, java.lang.String[])
 	 */
@@ -71,7 +75,7 @@ public class CorpusTermCorrelations extends AbstractTerms {
 	}
 	
 	private void populate(List<CorpusTerm> outerList, List<CorpusTerm> innerList, boolean half, int docsCount) {
-		PearsonsCorrelation correlationer = new PearsonsCorrelation();
+		SimpleRegression regression = new SimpleRegression();
 		Comparator<CorpusTermsCorrelation> comparator = CorpusTermsCorrelation.getComparator(CorpusTermsCorrelation.Sort.getForgivingly(parameters));
 		FlexibleQueue<CorpusTermsCorrelation> queue = new FlexibleQueue<CorpusTermsCorrelation>(comparator, start+limit);
 		for (CorpusTerm outer : outerList) {
@@ -80,11 +84,12 @@ public class CorpusTermCorrelations extends AbstractTerms {
 				if ((inner.getInDocumentsCount()*100)/docsCount<minInDocumentsCountRatio) {continue;}
 				if (outer.getTerm().equals(inner.getTerm())==true) {continue;}
 				if (!half || (half && outer.getTerm().compareTo(inner.getTerm())>0)) {
-					double correlation = correlationer.correlation(
-							NumberUtils.getDoubles(outer.getRelativeDistributions()),
-							NumberUtils.getDoubles(inner.getRelativeDistributions()));
-					total++;
-					queue.offer(new CorpusTermsCorrelation(inner, outer, (float) correlation));
+					float[] outerCounts = outer.getRelativeDistributions();
+					float[] innerCounts = inner.getRelativeDistributions();
+					for (int i=0, len=outerCounts.length; i<len; i++) {
+						regression.addData(outerCounts[i], innerCounts[i]);
+					}
+					queue.offer(new CorpusTermsCorrelation(inner, outer, (float) regression.getR(), (float) regression.getSignificance()));
 				}
 			}
 		}
@@ -170,8 +175,11 @@ public class CorpusTermCorrelations extends AbstractTerms {
 					writer.endNode();
 		        }
 		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", Integer.class);
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", Float.class);
 				writer.setValue(String.valueOf(corpusTermCorrelation.getCorrelation()));
+				writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "significance", Float.class);
+				writer.setValue(String.valueOf(corpusTermCorrelation.getSignificance()));
 				writer.endNode();
 				
 				writer.endNode();

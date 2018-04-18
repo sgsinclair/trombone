@@ -10,6 +10,7 @@ public class DocumentTermsCorrelation {
 	private DocumentTerm source;
 	private DocumentTerm target;
 	private float correlation;
+	private float significance;
 	
 	public enum Sort {CORRELATIONASC, CORRELATIONDESC, CORRELATIONABS;
 		public static Sort getForgivingly(FlexibleParameters parameters) {
@@ -22,14 +23,19 @@ public class DocumentTermsCorrelation {
 			return valueOf(sortPrefix+dirSuffix);
 		}		
 	}
-	public DocumentTermsCorrelation(DocumentTerm source, DocumentTerm target, float correlation) {
+	public DocumentTermsCorrelation(DocumentTerm source, DocumentTerm target, float correlation, float significance) {
 		this.source = source;
 		this.target = target;
 		this.correlation = correlation;
+		this.significance = significance;
 	}
 	
 	public float getCorrelation() {
 		return correlation;
+	}
+	
+	public float getSignificance() {
+		return significance;
 	}
 	
 	public DocumentTerm[] getDocumentTerms() {
@@ -82,4 +88,5 @@ public class DocumentTermsCorrelation {
 			else {return compare;}
 		}
 	};
+
 }

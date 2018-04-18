@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
+import org.apache.commons.math3.stat.regression.SimpleRegression;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.DocumentTermsCorrelation;
@@ -39,6 +40,10 @@ public class DocumentTermCorrelations extends AbstractTerms {
 		super(storage, parameters);
 		distributionBins = parameters.getParameterIntValue("bins", 10);
 		correlations = new ArrayList<DocumentTermsCorrelation>();
+	}
+	
+	public float getVersion() {
+		return super.getVersion()+1;
 	}
 
 	@Override
@@ -74,20 +79,23 @@ public class DocumentTermCorrelations extends AbstractTerms {
 	}
 	
 	private void populate(List<DocumentTerm> outerList, List<DocumentTerm> innerList, boolean half) {
-		PearsonsCorrelation correlationer = new PearsonsCorrelation();
 //		SpearmansCorrelation spearmansCorrelation = new SpearmansCorrelation();
 		Comparator<DocumentTermsCorrelation> comparator = DocumentTermsCorrelation.getComparator(DocumentTermsCorrelation.Sort.getForgivingly(parameters));
 		FlexibleQueue<DocumentTermsCorrelation> queue = new FlexibleQueue<DocumentTermsCorrelation>(comparator, start+limit);
+		SimpleRegression regression = new SimpleRegression();
 		for (DocumentTerm outer : outerList) {
 			for (DocumentTerm inner : innerList) {
 				if (outer.getDocId().equals(inner.getDocId())==false) {continue;} // different docs, maybe from querying
 				if (outer.equals(inner)) {continue;} // same word
 				if (!half || (half && outer.getTerm().compareTo(inner.getTerm())>0)) {
-					double correlation = correlationer.correlation(
-							NumberUtils.getDoubles(outer.getRelativeDistributions(distributionBins)),
-							NumberUtils.getDoubles(inner.getRelativeDistributions(distributionBins)));
+					regression.clear();
+					float[] outerCounts = outer.getRelativeDistributions(distributionBins);
+					float[] innerCounts = inner.getRelativeDistributions(distributionBins);
+					for (int i=0, len=outerCounts.length; i<len; i++) {
+						regression.addData(outerCounts[i], innerCounts[i]);
+					}
+					queue.offer(new DocumentTermsCorrelation(inner, outer, (float) regression.getR(), (float) regression.getSignificance()));
 					total++;
-					queue.offer(new DocumentTermsCorrelation(inner, outer, (float) correlation));
 				}
 			}
 		}
@@ -175,8 +183,12 @@ public class DocumentTermCorrelations extends AbstractTerms {
 					writer.endNode();
 		        }
 		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", Integer.class);
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", Float.class);
 				writer.setValue(String.valueOf(documentTermCorrelation.getCorrelation()));
+				writer.endNode();
+				
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "significance", Float.class);
+				writer.setValue(String.valueOf(documentTermCorrelation.getSignificance()));
 				writer.endNode();
 				
 				writer.endNode();

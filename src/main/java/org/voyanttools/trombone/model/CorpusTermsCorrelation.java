@@ -17,6 +17,7 @@ public class CorpusTermsCorrelation {
 	private CorpusTerm source;
 	private CorpusTerm target;
 	private float correlation;
+	private float significance;
 	
 	public enum Sort {CORRELATIONASC, CORRELATIONDESC, CORRELATIONABS;
 		
@@ -34,13 +35,17 @@ public class CorpusTermsCorrelation {
 	/**
 	 * 
 	 */
-	public CorpusTermsCorrelation(CorpusTerm source, CorpusTerm target, float correlation) {
+	public CorpusTermsCorrelation(CorpusTerm source, CorpusTerm target, float correlation, float significance) {
 		this.source = source;
 		this.target = target;
 		this.correlation = correlation;
+		this.significance = significance;
 	}
 	public float getCorrelation() {
 		return correlation;
+	}
+	public float getSignificance() {
+		return significance;
 	}
 	public static Comparator<CorpusTermsCorrelation> getComparator(Sort sort) {
 		switch (sort) {
