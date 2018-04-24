@@ -143,7 +143,8 @@ public class FlexibleParameters implements Cloneable, Serializable {
 		try {
 			in = new FileInputStream(parametersFile);
 			parameters = (FlexibleParameters) xstream.fromXML(in);
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
+			throw new IOException("Unable to load parameters file: "+parametersFile, e);
 		}
 		finally {
 			if (in!=null) {
