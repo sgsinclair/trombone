@@ -34,6 +34,8 @@ public class Progress {
 	
 	private String message;
 	
+	private transient boolean isNew = false; // transient, not stored
+	
 	Progress(Storage storage, String id, long start, long current, float completion, Status status, String code, String message) {
 		this.storage = storage;
 		this.id = id;
@@ -45,13 +47,19 @@ public class Progress {
 		this.message = message;
 	}
 	
-	public static Progress getNewProgress(Storage storage) throws IOException {
-		long now = Calendar.getInstance().getTimeInMillis();
-		Progress progress = new Progress(storage, UUID.randomUUID().toString(), now, now, 0f, Status.LAUNCH, "launch", "Launching.");
-		progress.store();
-		return progress;
+	public void abort(String code, String message) throws IOException {
+		update(-1, Status.ABORTED, code, message);
 	}
 	
+	public void update(float completion, Status status, String code, String message) throws IOException {
+		if (completion>this.completion) {this.completion = completion;}
+		this.current = Calendar.getInstance().getTimeInMillis();
+		this.status = status;
+		this.code = code;
+		this.message = message;
+		store();
+	}
+
 	public void store() throws IOException {
 		current = Calendar.getInstance().getTimeInMillis();
 		Writer writer = storage.getStoreWriter(id+"-progress", Location.cache, true);
@@ -59,13 +67,34 @@ public class Progress {
 		writer.close();
 	}
 
-	static Progress retrieve(Storage storage, String id) throws IOException {
-		List<String> lines = storage.retrieveStrings(id+"-progress", Location.cache);
-		String last = lines.get(lines.size()-1);
-		String[] parts = last.split("\t");
-		return new Progress(storage, parts[0], Long.valueOf(parts[1]), Long.valueOf(parts[2]), Float.valueOf(parts[3]), Status.valueOf(parts[4]), parts[5], parts[6]);
+	public static Progress retrieve(Storage storage, String id) throws IOException {
+		if (isStored(storage, id)) {
+			List<String> lines = storage.retrieveStrings(id+"-progress", Location.cache);
+			String last = lines.get(lines.size()-1);
+			String[] parts = last.split("\t");
+			return new Progress(storage, parts[0], Long.valueOf(parts[1]), Long.valueOf(parts[2]), Float.valueOf(parts[3]), Status.valueOf(parts[4]), parts[5], parts[6]);
+		} else {
+			long now = Calendar.getInstance().getTimeInMillis();
+			Progress progress = new Progress(storage, id, now, now, 0f, Status.LAUNCH, "launch", "Launching.");
+			progress.store();
+			progress.isNew = true;
+			return progress;
+		}
 	}
-
+	
+	public static boolean isStored(Storage storage, String id) {
+		return storage.isStored(id+"-progress", Location.cache);
+	}
+	
+	/**
+	 * Determines if this has just been created (shouldn't be true after any operations, retrievals, etc.)
+	 * 
+	 * @return whether or not this has just been created
+	 */
+	public boolean isNew() {
+		return isNew;
+	}
+	
 	String getId() {
 		return id;
 	}
@@ -81,11 +110,7 @@ public class Progress {
 	private boolean check(int max, long val, String code, String message) throws IOException {
 		long now = Calendar.getInstance().getTimeInMillis();
 		if (Calendar.getInstance().getTimeInMillis()-val>max) {
-			status = Status.ABORTED;
-			this.code = code;
-			this.message = "Too much time elapsed since start";
-			this.current = now;
-			store();
+			this.update(-1, Status.ABORTED, code, "Too much time elapsed since start");
 			return false;
 		} else {
 			return true;
@@ -95,5 +120,4 @@ public class Progress {
 	public boolean isActive() {
 		return status==Status.LAUNCH || status==Status.RUNNING;
 	}
-
 }

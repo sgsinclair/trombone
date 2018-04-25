@@ -38,6 +38,7 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.ToolFactory;
 import org.voyanttools.trombone.tool.corpus.CorpusExporter;
 import org.voyanttools.trombone.tool.corpus.CorpusMetadata;
+import org.voyanttools.trombone.tool.progress.Progressable;
 import org.voyanttools.trombone.tool.resource.StoredResource;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
@@ -128,16 +129,20 @@ public class ToolRunner extends AbstractTool {
 		}
 		else {
 			long start = Calendar.getInstance().getTimeInMillis();
+			boolean hasProgress = false;
 			for (RunnableTool tool : tools) {
 				tool.run();
 				results.add(tool);
+				if (tool instanceof Progressable && ((Progressable) tool).getProgress()!=null) {
+					hasProgress = true;
+				}
 			}
 			duration = Calendar.getInstance().getTimeInMillis() - start;
 			voyantVersion = parameters.getParameterValue("VOYANT_VERSION", "");
 			voyantBuild = parameters.getParameterValue("VOYANT_BUILD", "");
 
 			ToolSerializer toolSerializer = new ToolSerializer(parameters, this);
-			if (parameters.getParameterBooleanValue("noCache") || hasParameterSources==true) { // use the configured writer directly
+			if (parameters.getParameterBooleanValue("noCache") || hasParameterSources==true || hasProgress) { // use the configured writer directly
 				toolSerializer.run(writer); 
 			}
 			else { // try to cache

@@ -144,7 +144,9 @@ public class FlexibleParameters implements Cloneable, Serializable {
 			in = new FileInputStream(parametersFile);
 			parameters = (FlexibleParameters) xstream.fromXML(in);
 		} catch (Exception e) {
-			throw new IOException("Unable to load parameters file: "+parametersFile, e);
+			// show file but not too much
+			String f = parametersFile.getParentFile().getParentFile().getName()+File.pathSeparator+parametersFile.getParentFile().getName()+File.pathSeparator+parametersFile.getName();
+			throw new IOException("Unable to load parameters file: "+f, e);
 		}
 		finally {
 			if (in!=null) {
@@ -154,7 +156,8 @@ public class FlexibleParameters implements Cloneable, Serializable {
 		return parameters;
 	}
 	
-	public void saveFlexibleParameters(File file) throws IOException {
+	public synchronized void saveFlexibleParameters(File file) throws IOException {
+		// synchronize to avoid two threads writing to same file
 		OutputStream outputStream = null;
 		outputStream = new FileOutputStream(file);
 		Writer writer = new OutputStreamWriter(outputStream, Charset.forName("UTF-8"));

@@ -21,9 +21,11 @@
  ******************************************************************************/
 package org.voyanttools.trombone.model;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.Normalizer;
@@ -169,6 +171,25 @@ public class Keywords {
 				this.keywords.add(word.trim());
 			}
 		}
+	}
+	
+	public static Keywords getStopListForLangCode(Storage storage, String code) throws IOException {
+		Keywords keywords = new Keywords();
+		if (code.equals("en")) {
+			keywords.load(storage, new String[]{"stop.en.taporware.txt"});
+		} else {
+			InputStream in = Keywords.class.getResourceAsStream("/org/voyanttools/trombone/keywords");
+			BufferedReader br = new BufferedReader( new InputStreamReader( in ) );
+			String resource;
+		    while( (resource = br.readLine()) != null ) {
+		    		if (resource.startsWith("stop."+code+".")) {
+		    			keywords.load(storage, new String[]{resource});
+		    			break;
+		    		}
+		    }
+		    br.close();
+		}
+	    return keywords;
 	}
 
 }

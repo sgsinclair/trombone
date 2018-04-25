@@ -200,12 +200,12 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 
 	}
 	
-	List<Kwic> getContexts() {
+	public List<Kwic> getContexts() {
 		return contexts;
 	}
 	
 	@Override
-	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
+	public void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
 		this.contexts = getKwics(corpusMapper, documentSpansDataMap);
 	}

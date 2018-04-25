@@ -199,8 +199,11 @@ public class Kwic implements Serializable {
 			int i = Integer.compare(kwic1.docIndex, kwic2.docIndex);
 			if (i==0) {
 				i = Integer.compare(kwic1.position, kwic2.position);
-				if (i==0) {
-					i = kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
+				if (i==0) { // by length, note that geonames analysis depends on this behaviour
+					i = Integer.compare(kwic2.getNormalizedTerm().length(), kwic1.getNormalizedTerm().length());
+					if (i==0) {
+						i = kwic1.getNormalizedTerm().compareTo(kwic2.getNormalizedTerm());
+					}
 				}
 			}
 			return i;
@@ -304,6 +307,10 @@ public class Kwic implements Serializable {
 		return position;
 	}
 	public int getDocIndex() {
-		return position;
+		return docIndex;
+	}
+
+	public String getTerm() {
+		return term;
 	}
 }

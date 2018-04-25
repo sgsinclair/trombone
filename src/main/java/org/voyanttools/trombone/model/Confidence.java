@@ -1,5 +1,7 @@
 package org.voyanttools.trombone.model;
 
+import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Collection;
 
 import org.voyanttools.trombone.model.Confidence.ConfidenceConverter;
@@ -13,14 +15,16 @@ import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 @XStreamConverter(ConfidenceConverter.class)
-public class Confidence {
+public class Confidence implements Serializable {
 
 	public enum Type {
 		InitialUppercase(.9f, 1f),
 		HasLowerCaseForm(.1f, 1f),
 		GeonamesLookup(.5f, 1f),
 		IsMultiTerm(.8f,1f),
-		Population(.5f, 1f);
+		Population(.5f, 1f), // value is meant to be set
+		PrecededByPunctuation(.2f, 1f),
+		GeoDistance(.5f, 1f); // value is meant to be set
 		private float value;
 		private float weight;
 		private Type(float value, float weight) {
@@ -80,6 +84,9 @@ public class Confidence {
 		}
 	}
 	
+	public static float getConfidence(Confidence[] confidences) {
+		return getConfidence(Arrays.asList(confidences));
+	}
 	public static float getConfidence(Collection<Confidence> confidences) {
 		double weightsSum = confidences.stream()
 			.mapToDouble(Confidence::getWeight)
