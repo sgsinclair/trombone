@@ -296,6 +296,13 @@
             <artifactId>jblas</artifactId>
             <version>1.2.3</version>
         </dependency>
+        <!--  used by pacte client, we specify version because tika uses an older version that doesn't work properly -->
+        
+          	<dependency>
+  		<groupId>org.apache.httpcomponents</groupId>
+  		<artifactId>httpclient</artifactId>
+  		<version>4.5.4</version>
+  	</dependency>
         <!-- end used by t-SNE -->
 
 
