@@ -89,6 +89,15 @@ public class Kwic implements Serializable {
 	@XStreamOmitField
 	String leftNormalizedReverseSort = null;
 	
+	/**
+	 * @param corpusDocumentIndex the position of the kwic's document in the corpus
+	 * @param queryString the query string that led to finding this kwic
+	 * @param term the term that matched
+	 * @param position the term position in the document
+	 * @param left text to the left
+	 * @param middle the keyword text
+	 * @param right text to the right
+	 */
 	public Kwic(int corpusDocumentIndex, String queryString,
 			String term, int position, String left,
 			String middle, String right) {

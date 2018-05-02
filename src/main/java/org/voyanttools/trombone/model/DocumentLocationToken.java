@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class DocumentLocationToken extends DocumentEntityToken implements Serializable {
 	
-	private Location location;
+	protected Location location;
 
 	/**
 	 * @param docId
@@ -33,7 +33,7 @@ public class DocumentLocationToken extends DocumentEntityToken implements Serial
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("(").append(docIndex).append(":").append(position).append(") ").append(term).append(" (").append(location.getBestName()).append("): ").append(Confidence.getConfidence(Arrays.asList(confidences)));
+		sb.append("(").append(docIndex).append(":").append(position).append(") ").append(term).append(" (").append(location.getFullName()).append("): ").append(Confidence.getConfidence(Arrays.asList(confidences)));
 		return sb.toString();
 	}
 
@@ -51,5 +51,9 @@ public class DocumentLocationToken extends DocumentEntityToken implements Serial
 
 	public Confidence[] getConfidences() {
 		return confidences;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
 	}
 }

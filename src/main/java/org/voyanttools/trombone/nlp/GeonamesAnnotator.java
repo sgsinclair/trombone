@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.OptionalInt;
 import java.util.Set;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -16,6 +17,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
+import org.apache.lucene.analysis.tokenattributes.OffsetAttributeImpl;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.PhraseQuery;
@@ -48,8 +51,7 @@ public class GeonamesAnnotator {
 		this.parameters = parameters;
 	}
 	
-	public List<DocumentLocationToken> getDocumentLocationTokens(CorpusMapper corpusMapper, FlexibleParameters parameters) throws IOException {
-		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical); // quick lookup
+	public List<DocumentLocationToken> getDocumentLocationTokens(CorpusMapper corpusMapper, FlexibleParameters parameters) throws IOException {		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, TokenType.lexical); // quick lookup
 		IndexSearcher searcher = corpusMapper.getSearcher();
 		Analyzer analyzer = new LexicalAnalyzer();
 		Location reusableLocation = new Location();
@@ -59,6 +61,9 @@ public class GeonamesAnnotator {
 		List<String> words = new ArrayList<String>();
 		Set<String> forms = new HashSet<String>();
 		Set<String> seenLocations = new HashSet<String>();
+		
+		Keywords names = new Keywords();
+		names.load(corpusMapper.getStorage(), new String[]{"stop.en.common-names.txt"});
 		
 		// first we go through the corpus to look for location candidates
 		for (String lang : corpusMapper.getCorpus().getLanguageCodes()) {
@@ -152,12 +157,14 @@ public class GeonamesAnnotator {
 				.findFirst().get());
 		}
 		
+		String[] preferredCoordinates = parameters.getParameterValue("preferredCoordinates","").split(",");
+		
 		// determine the very simple mean latitude and longitude (this doesn't take into consideration the shape of the globe)
-		double latMean = locationsForAveraging.stream()
+		double latMean = preferredCoordinates.length==2 ? Double.valueOf(preferredCoordinates[0]) : locationsForAveraging.stream()
 			.mapToDouble(Location::getLat)
 			.average().getAsDouble();
 		// determine the very simple mean latitude and longitude (this doesn't take into consideration the shape of the globe)
-		double lngMean = locationsForAveraging.stream()
+		double lngMean = preferredCoordinates.length==2 ? Double.valueOf(preferredCoordinates[1]) : locationsForAveraging.stream()
 			.mapToDouble(Location::getLng)
 			.average().getAsDouble();
 		double maxDistance = locationsForAveraging.stream()
@@ -179,21 +186,33 @@ public class GeonamesAnnotator {
 		params.setParameter("context", 1);		
 		DocumentContexts documentContexts = new DocumentContexts(storage, params);
 		documentContexts.runQueries(corpusMapper, new Keywords(), queries);
-		List<Kwic> kwics = documentContexts.getContexts();
 		int pos = -1;
 		Pattern punctuationNonWord = Pattern.compile("[.!?][^\\p{L}]*$/");
 		Set<Location> locations = new HashSet<Location>();
 		int docIndex = -1;
 		String docString = "";
+		Pattern word = Pattern.compile("\\p{L}+");
+		boolean hasLowerCase;
 		for (Kwic kwic : documentContexts.getContexts()) {
 			if (kwic.getPosition()>=pos) {
+				Matcher matcher = word.matcher(kwic.getMiddle());
+				hasLowerCase = false;
+				while (matcher.find()) {
+					if (Character.isUpperCase(matcher.group().charAt(0))==false) {
+						hasLowerCase = true;
+						break;
+					}
+				}
+				if (hasLowerCase) {
+					continue;
+				}
 				String term = kwic.getTerm();
 				pos = kwic.getPosition()+term.split(" ").length;
 				if (kwic.getDocIndex()>docIndex) { // update string if we have new doc
 					docIndex = kwic.getDocIndex();
 					docString = corpusMapper.getCorpus().getDocument(docIndex).getDocumentString();
 				}
-				if (Character.isUpperCase(kwic.getMiddle().charAt(0))==false) {continue;}
+//				if (Character.isUpperCase(kwic.getMiddle().charAt(0))==false) {continue;}
 				List<Confidence> confidences = new ArrayList<Confidence>();
 				assert formsToGeonameIds.containsKey(term) : "Can't find term: "+term;
 				locations.clear();
@@ -205,12 +224,16 @@ public class GeonamesAnnotator {
 				
 				Location location = locations.stream()
 					.sorted((l1, l2) -> Double.compare(Math.hypot(latMean-l1.getLat(), lngMean-l1.getLng()), Math.hypot(latMean-l2.getLat(), lngMean-l2.getLng())))
+//					.sorted((l1, l2) -> Integer.compare(l2.getPopulation(),  l1.getPopulation()))
 					.findFirst().get();
-				double distance = Math.hypot(latMean-location.getLat(), lngMean-location.getLng());				
+				double distance = Math.hypot(latMean-location.getLat(), lngMean-location.getLng());
 				confidences.add(new Confidence(Type.GeoDistance, (float) (distance/maxDistance)));
-				confidences.add(new Confidence(Type.Population, location.getPopulation()/maxPopulation));
+				confidences.add(new Confidence(Type.Population, (float) location.getPopulation()/maxPopulation));
 				confidences.add(new Confidence(Type.InitialUppercase));
 				confidences.add(new Confidence(Type.GeonamesLookup));
+				if (names.isKeyword(term)) {
+					confidences.add(new Confidence(Type.IsPersonName));
+				}
 				if (punctuationNonWord.matcher(kwic.getLeft()).find()) {
 					confidences.add(new Confidence(Confidence.Type.PrecededByPunctuation));
 				}

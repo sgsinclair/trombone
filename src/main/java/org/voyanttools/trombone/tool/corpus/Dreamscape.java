@@ -8,20 +8,31 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
+import org.json.JSONObject;
 import org.voyanttools.trombone.lucene.CorpusMapper;
+import org.voyanttools.trombone.lucene.LuceneHelper;
 import org.voyanttools.trombone.model.Confidence;
 import org.voyanttools.trombone.model.CorpusLocation;
 import org.voyanttools.trombone.model.CorpusLocationConnection;
+import org.voyanttools.trombone.model.DocumentKwicLocationToken;
 import org.voyanttools.trombone.model.DocumentLocationToken;
+import org.voyanttools.trombone.model.IndexedDocument;
+import org.voyanttools.trombone.model.Kwic;
 import org.voyanttools.trombone.model.Location;
+import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.progress.Progress;
 import org.voyanttools.trombone.tool.progress.Progressable;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.GeonamesIterator;
+import org.voyanttools.trombone.util.Stripper;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -46,7 +57,11 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 	
 	private List<CorpusLocationConnection> connections = new ArrayList<CorpusLocationConnection>();
 	
-	private List<DocumentLocationToken[]> connectionOccurrences = new ArrayList<DocumentLocationToken[]>();
+	private List<DocumentKwicLocationToken[]> connectionOccurrences = new ArrayList<DocumentKwicLocationToken[]>();
+	
+	private int occurrencesTotal = 0;
+	
+	private List<DocumentKwicLocationToken> occurrences = new ArrayList<DocumentKwicLocationToken>();
 	
 	private int total = 0;
 	
@@ -58,14 +73,50 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 	@Override
 	public void run(CorpusMapper corpusMapper) throws IOException {
 		FlexibleParameters params = new FlexibleParameters();
+		if (parameters.containsKey("source")) {
+			params.setParameter("source", parameters.getParameterValue("source"));
+		}
+		if (parameters.containsKey("preferredCoordinates")) {
+			params.setParameter("preferredCoordinates", parameters.getParameterValue("preferredCoordinates"));
+		}
 		DocumentLocationTokens documentLocationTokens = new DocumentLocationTokens(storage, params);
 		List<DocumentLocationToken> tokens = documentLocationTokens.getLocationTokens(corpusMapper);
 		
 		if (tokens==null) {
 			progress = documentLocationTokens.getProgress();
+			return;
 		} else {
-			Map<String, List<String>> locationIdsToFormsMap = new HashMap<String, List<String>>();
+			
+			// determine if we have any overrides
 			Map<String, Location> locationIdToLocationsMap = new HashMap<String, Location>();
+			Map<String, String> overrides = new HashMap<String, String>();
+			if (parameters.containsKey("overridesId")) {
+				String overridesString = storage.retrieveString(parameters.getParameterValue("overridesId"), Storage.Location.object);
+				JSONObject all = new JSONObject(overridesString);
+				for (String key : all.keySet()) {
+					String val =  all.getString(key);
+					overrides.put(key,val);
+					if (val.isEmpty()==false) {
+						locationIdToLocationsMap.put(val, null);
+					}
+				}
+			}
+
+			// load any locations that are mapped to ensure we have them
+			if (locationIdToLocationsMap.isEmpty()==false) {
+				GeonamesIterator iterator = new GeonamesIterator("en");
+				Location reusableLocation = null;
+				while(iterator.hasNext()) {
+					reusableLocation = iterator.next(reusableLocation);
+					if (locationIdToLocationsMap.containsKey(reusableLocation.getId())) {
+						locationIdToLocationsMap.put(reusableLocation.getId(), reusableLocation.clone());
+					}
+				}
+				iterator.close();
+			}
+			
+			List<DocumentLocationToken[]> connectionOccurrences = new ArrayList<DocumentLocationToken[]>();
+			Map<String, List<String>> locationIdsToFormsMap = new HashMap<String, List<String>>();
 			Map<String, AtomicInteger> locationConnectionToLocationIds = new HashMap<String, AtomicInteger>();
 			Location location;
 			String id;
@@ -75,15 +126,65 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 			int minPopulation = parameters.getParameterIntValue("minPopulation", 0);
 			int start = parameters.getParameterIntValue("start", 0);
 			int limit = parameters.getParameterIntValue("limit", Integer.MAX_VALUE);
+			Map<String, List<DocumentLocationToken>> locationIdsToTokens = new HashMap<String, List<DocumentLocationToken>>();
+			for (String locationId : parameters.getParameterValues("locationId")) {
+				locationIdsToTokens.put(locationId, new ArrayList<DocumentLocationToken>());
+			}
+			Set<String> connectionIds = new HashSet<String>();
+			if (parameters.containsKey("sourceId") && parameters.containsKey("targetId")) {
+				connectionIds.add(parameters.getParameterValue("sourceId"));
+				connectionIds.add(parameters.getParameterValue("targetId"));
+			}
+			boolean filterHasLowerCaseForm = parameters.getParameterBooleanValue("filterHasLowerCaseForm");
+			boolean filterIsPersonName = parameters.getParameterBooleanValue("filterIsPersonName");
 			for (DocumentLocationToken token : tokens) {
 				location = token.getLocation();
 				if (location.getPopulation()<minPopulation) {continue;}
+				if (filterHasLowerCaseForm || filterIsPersonName) {
+					boolean skip = false;
+					for (Confidence confidence : token.getConfidences()) {
+						if ((filterHasLowerCaseForm && confidence.getType()==Confidence.Type.HasLowerCaseForm) ||
+								filterIsPersonName && confidence.getType()==Confidence.Type.IsPersonName) {
+							skip = true;
+							break;
+						}
+					}
+					if (skip) {continue;}
+				}
+				
+				// we have an override for this location
+				if (overrides.containsKey(location.getId())) {
+					String altId = overrides.get(location.getId());
+					if (altId.isEmpty()) {continue;} // empty location mapping, so just ignore this token
+					if (locationIdToLocationsMap.containsKey(altId)) {
+						location = locationIdToLocationsMap.get(altId);
+						if (location!=null) {
+							token.setLocation(location);
+						} else {
+							continue; // this shouldn't happen, so continue
+						}
+					} else {
+						continue; // this shouldn't happen, so continue
+					}
+					
+				}
 				id = location.getId();
+				
+				// we have defined sourceId and targetId but no match
+				if (connectionIds.isEmpty()==false && connectionIds.contains(id)==false) {
+					continue;
+				}
+
 				if (locationIdsToFormsMap.containsKey(id)==false) {
 					locationIdsToFormsMap.put(id, new ArrayList<String>());
 					locationIdToLocationsMap.put(id, location.clone());
 				}
 				locationIdsToFormsMap.get(id).add(token.getTerm());
+				if (locationIdsToTokens.containsKey(id)) {
+					locationIdsToTokens.get(id).add(token);
+					occurrencesTotal++;
+				}
+				
 				if (token.getDocIndex()>docIndex) {
 					docIndex = token.getDocIndex();
 					previousId = "";
@@ -129,6 +230,82 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 				Collections.sort(connections); // make sure in order of rawfreq
 			}
 			
+			//
+			if (parameters.getParameterBooleanValue("suppressConnectionOccurrences")==false) {
+				Map<Integer, List<DocumentLocationToken[]>> docToTokenConnections = new HashMap<Integer, List<DocumentLocationToken[]>>();
+				for (DocumentLocationToken[] connectionOccurrence : connectionOccurrences) {
+					docIndex = connectionOccurrence[0].getDocIndex();
+					if (docToTokenConnections.containsKey(docIndex)==false) {
+						docToTokenConnections.put(docIndex, new ArrayList<DocumentLocationToken[]>());
+					}
+					docToTokenConnections.get(docIndex).add(connectionOccurrence);
+				}
+				Set<Integer> positions = new HashSet<Integer>();
+				Stripper stripper = new Stripper(Stripper.TYPE.ALL);
+				int context = parameters.getParameterIntValue("context", 2);
+				for (Map.Entry<Integer, List<DocumentLocationToken[]>> entry : docToTokenConnections.entrySet()) {
+					positions.clear();
+					for (DocumentLocationToken[] documentLocationToken : entry.getValue()) {
+						positions.add(documentLocationToken[0].getPosition());
+						positions.add(documentLocationToken[1].getPosition());
+					}
+					docIndex = entry.getKey();
+					IndexedDocument doc = corpusMapper.getCorpus().getDocument(docIndex);
+					List<Kwic> kwics = LuceneHelper.getKwicsFromPositions(corpusMapper, doc, TokenType.lexical, positions, context);
+					Map<Integer, Kwic> positionToKwic = new HashMap<Integer, Kwic>();
+					kwics.forEach(kwic -> positionToKwic.put(kwic.getPosition(), kwic));
+					for (DocumentLocationToken[] documentLocationToken : entry.getValue()) {
+						Kwic kwic1 = positionToKwic.get(documentLocationToken[0].getPosition());
+						Kwic kwic2 = positionToKwic.get(documentLocationToken[1].getPosition());
+						this.connectionOccurrences.add(new DocumentKwicLocationToken[]{
+							new DocumentKwicLocationToken(
+									documentLocationToken[0], stripper.strip(kwic1.getLeft()), stripper.strip(kwic1.getRight())
+							),
+							new DocumentKwicLocationToken(
+									documentLocationToken[1], stripper.strip(kwic2.getLeft()), stripper.strip(kwic2.getRight())
+							)
+						});
+					}
+					
+				}
+			}
+			
+			if (locationIdsToTokens.isEmpty()==false) {
+				Map<Integer, List<DocumentLocationToken>> docToTokens = new HashMap<Integer, List<DocumentLocationToken>>();
+				for (List<DocumentLocationToken> tokensList : locationIdsToTokens.values()) {
+					for (DocumentLocationToken token : tokensList) {
+						docIndex = token.getDocIndex();
+						if (docToTokens.containsKey(docIndex)==false) {
+							docToTokens.put(docIndex, new ArrayList<DocumentLocationToken>());
+						}
+						if (docToTokens.size()<=limit) {
+							docToTokens.get(docIndex).add(token);
+						}
+					}
+				}
+				Set<Integer> positions = new HashSet<Integer>();
+				int context = parameters.getParameterIntValue("context", 2);
+				Stripper stripper = new Stripper(Stripper.TYPE.ALL);
+				for (Map.Entry<Integer, List<DocumentLocationToken>> entry : docToTokens.entrySet()) {
+					positions.clear();
+					for (DocumentLocationToken documentLocationToken : entry.getValue()) {
+						positions.add(documentLocationToken.getPosition());
+					}
+					docIndex = entry.getKey();
+					IndexedDocument doc = corpusMapper.getCorpus().getDocument(docIndex);
+					List<Kwic> kwics = LuceneHelper.getKwicsFromPositions(corpusMapper, doc, TokenType.lexical, positions, context);
+					Map<Integer, Kwic> positionToKwic = new HashMap<Integer, Kwic>();
+					kwics.forEach(kwic -> positionToKwic.put(kwic.getPosition(), kwic));
+					for (DocumentLocationToken documentLocationToken : entry.getValue()) {
+						Kwic kwic = positionToKwic.get(documentLocationToken.getPosition());
+						this.occurrences.add(new DocumentKwicLocationToken(
+								documentLocationToken, stripper.strip(kwic.getLeft()), stripper.strip(kwic.getRight())
+						));
+					}
+					
+				}
+
+			}
 		}
 	}
 
@@ -170,7 +347,7 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 		        writer.setValue(String.valueOf(location.getRawFreq()));
 		        writer.endNode();
 		        writer.startNode("label");
-		        writer.setValue(location.getLocation().getBestName());
+		        writer.setValue(location.getLocation().getName());
 		        writer.endNode();
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "forms", Map.class);
 		        context.convertAnother(location.getForms());
@@ -190,15 +367,64 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 			writer.endNode();
 
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionOccurrences", String.class);
+
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "occurrences", String.class);
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        writer.setValue(String.valueOf(dreamscape.occurrences.size()));
+	        writer.endNode();
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "occurrences", Map.class);
+			for (DocumentKwicLocationToken token : dreamscape.occurrences) {
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "occurrence", String.class);
+		        writer.startNode("term");
+		        writer.setValue(token.getTerm());
+		        writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+		        writer.setValue(String.valueOf(token.getDocIndex()));			        
+		        writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
+		        writer.setValue(String.valueOf(token.getPosition()));	       
+		        writer.endNode();
+		        writer.startNode("location");
+		        writer.setValue(token.getLocation().getId());
+		        writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidence", Integer.class);
+		        writer.setValue(String.valueOf(token.getConfidence()));	       
+		        writer.endNode();
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidences", String.class);
+		        for (Confidence confidence : token.getConfidences()) {
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, confidence.name(), String.class);
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "value", Float.class);
+			        writer.setValue(String.valueOf(confidence.getValue()));	       
+			        writer.endNode();
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "weight", Float.class);
+			        writer.setValue(String.valueOf(confidence.getWeight()));	       
+			        writer.endNode();				        
+		        		writer.endNode();
+		        }
+		        writer.endNode();
+		        writer.startNode("left");
+		        writer.setValue(token.getLeft());
+		        writer.endNode();
+		        writer.startNode("right");
+		        writer.setValue(token.getRight());
+		        writer.endNode();
+		        writer.endNode();
+			}
+			writer.endNode();
+			writer.endNode();
+			
+			
+			
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionOccurrences", String.class);
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
 	        writer.setValue(String.valueOf(dreamscape.total));
 	        writer.endNode();
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionOccurrences", Map.class);
-			for (DocumentLocationToken[] tokens : dreamscape.connectionOccurrences) {
+			for (DocumentKwicLocationToken[] tokens : dreamscape.connectionOccurrences) {
 		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionOccurrence", String.class);
 		        int i = 0;
-		        for (DocumentLocationToken token : tokens) {
+		        for (DocumentKwicLocationToken token : tokens) {
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, i++==0 ? "source" : "target", String.class);
 			        writer.startNode("term");
 			        writer.setValue(token.getTerm());
@@ -226,6 +452,12 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 				        writer.endNode();				        
 			        		writer.endNode();
 			        }
+			        writer.endNode();
+			        writer.startNode("left");
+			        writer.setValue(token.getLeft());
+			        writer.endNode();
+			        writer.startNode("right");
+			        writer.setValue(token.getRight());
 			        writer.endNode();
 			        writer.endNode();
 		        }

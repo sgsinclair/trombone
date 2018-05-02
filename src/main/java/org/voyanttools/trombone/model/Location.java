@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 import edu.stanford.nlp.util.StringUtils;
 
-public class Location implements Cloneable, Serializable {
+public class Location implements Cloneable, Serializable, Comparable<Location> {
 
 	public enum Type {
 		CITY, REGION, COUNTRY, UNKNOWN;
@@ -133,11 +133,14 @@ public class Location implements Cloneable, Serializable {
 	 * 
 	 * @return
 	 */
-	public String getBestName() {
+	public String getFullName() {
 		StringBuilder sb = new StringBuilder(names[0]);
-//		if (countries!=null && countries.length>0 && (type==Type.CITY || type==Type.REGION)) {
-//			sb.append(", ").append(countries[0]);
-//		}
+		if (regions!=null && regions.length>0 && type==Type.CITY) {
+			sb.append(", ").append(regions[0]);
+		}
+		if (countries!=null && countries.length>0 && (type==Type.CITY || type==Type.REGION)) {
+			sb.append(", ").append(countries[0]);
+		}
 		return sb.toString();
 	}
 	
@@ -166,6 +169,17 @@ public class Location implements Cloneable, Serializable {
 		} catch (CloneNotSupportedException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	public String[] getNames() {
+		return names;
+	}
+	public String getName() {
+		// TODO Auto-generated method stub
+		return names==null || names.length==0 ? "?" : names[0];
+	}
+	@Override
+	public int compareTo(Location o) {
+		return Integer.compare(o.population, population);
 	}
 
 }

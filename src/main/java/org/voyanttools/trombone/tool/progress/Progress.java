@@ -36,6 +36,8 @@ public class Progress {
 	
 	private transient boolean isNew = false; // transient, not stored
 	
+	public static Progress DUMMY = new Progress(null, null, 0, 0, 0, null, null, null);
+	
 	Progress(Storage storage, String id, long start, long current, float completion, Status status, String code, String message) {
 		this.storage = storage;
 		this.id = id;
@@ -52,19 +54,23 @@ public class Progress {
 	}
 	
 	public void update(float completion, Status status, String code, String message) throws IOException {
-		if (completion>this.completion) {this.completion = completion;}
-		this.current = Calendar.getInstance().getTimeInMillis();
-		this.status = status;
-		this.code = code;
-		this.message = message;
-		store();
+		if (storage!=null) {
+			if (completion>this.completion) {this.completion = completion;}
+			this.current = Calendar.getInstance().getTimeInMillis();
+			this.status = status;
+			this.code = code;
+			this.message = message;
+			store();
+		}
 	}
 
 	public void store() throws IOException {
-		current = Calendar.getInstance().getTimeInMillis();
-		Writer writer = storage.getStoreWriter(id+"-progress", Location.cache, true);
-		writer.append(id+"\t"+String.valueOf(start)+"\t"+String.valueOf(current)+"\t"+String.valueOf(completion)+"\t"+status.name()+"\t"+code+"\t"+message.replaceAll("\n", " ")+"\n");
-		writer.close();
+		if (storage!=null) {
+			current = Calendar.getInstance().getTimeInMillis();
+			Writer writer = storage.getStoreWriter(id+"-progress", Location.cache, true);
+			writer.append(id+"\t"+String.valueOf(start)+"\t"+String.valueOf(current)+"\t"+String.valueOf(completion)+"\t"+status.name()+"\t"+code+"\t"+message.replaceAll("\n", " ")+"\n");
+			writer.close();			
+		}
 	}
 
 	public static Progress retrieve(Storage storage, String id) throws IOException {
@@ -95,7 +101,7 @@ public class Progress {
 		return isNew;
 	}
 	
-	String getId() {
+	public String getId() {
 		return id;
 	}
 	
@@ -118,6 +124,6 @@ public class Progress {
 	}
 
 	public boolean isActive() {
-		return status==Status.LAUNCH || status==Status.RUNNING;
+		return status!=null && (status==Status.LAUNCH || status==Status.RUNNING);
 	}
 }

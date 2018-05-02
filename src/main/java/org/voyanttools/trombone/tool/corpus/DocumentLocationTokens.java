@@ -3,14 +3,18 @@
  */
 package org.voyanttools.trombone.tool.corpus;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentLocationToken;
 import org.voyanttools.trombone.model.Keywords;
+import org.voyanttools.trombone.nlp.CrimGeonameAnnotator;
 import org.voyanttools.trombone.nlp.GeonamesAnnotator;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
@@ -35,8 +39,15 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 	private List<DocumentLocationToken> locations = new ArrayList<DocumentLocationToken>();
 	
 	private enum Source {
-		GEONAMES;
+		GEONAMES, CRIM;
 		private static Source valueOfForgivingly(String source) {
+			if (source!=null) {
+				for (Source s : Source.values()) {
+					if (s.name().equalsIgnoreCase(source)) {
+						return s;
+					}
+				}
+			}
 			return GEONAMES;
 		}
 	}
@@ -76,7 +87,9 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 	}
 	
 	List<DocumentLocationToken> getLocationTokens(CorpusMapper corpusMapper) throws IOException {
-		String id = "locationTokens-"+getVersion()+"-"+corpusMapper.getCorpus().getId()+"-"+source.name();
+		StringBuilder sb = new StringBuilder();
+		sb.append("preferredCoordinates").append(parameters.getParameterValue("preferredCoordinates", ""));
+		String id = "locationTokens-"+getVersion()+"-"+corpusMapper.getCorpus().getId()+"-"+source.name()+DigestUtils.md5Hex(sb.toString());
 		if (storage.isStored(id, Location.cache)) {
 			try {
 				return (List<DocumentLocationToken>) storage.retrieve(id, Location.cache);
@@ -86,29 +99,79 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 		} else {
 			progress = Progress.retrieve(storage, id);
 			if (progress.isNew()) {
-				Executors.newSingleThreadExecutor().execute(new Runnable() {
-					@Override
-					public void run() {
-						GeonamesAnnotator annotator = new GeonamesAnnotator(storage, parameters);
-						List<DocumentLocationToken> tokens;
-						try {
-							// TODO, it might be better to do this one document at a time
-							progress.update(.5f, Status.RUNNING, "geolocationRunning", "Geolocation is running.");
-							tokens = annotator.getDocumentLocationTokens(corpusMapper, parameters);
-							storage.store(tokens, id, Location.cache);
-							progress.update(1, Status.FINISHED, "geolocationFinished", "Geolocation has completed.");
-						} catch (IOException e) {
-							try {
-								progress.update(1, Status.ABORTED, "geolocationException", "Geolocation has failed. "+e.getMessage());
-							} catch (IOException e1) {
-							}
-							throw new RuntimeException(e);
-						}
-					}
-				});
+				Source source = Source.valueOfForgivingly(parameters.getParameterValue("source", ""));
+				switch(source) {
+					case CRIM:
+						getCrimLocationTokens(corpusMapper, progress);
+						break;
+					default:
+						getGeonamesLocationTokens(corpusMapper, progress);
+						break;
+				}
 			}
 			return null;
 		}
+	}
+	
+	private void getCrimLocationTokens(CorpusMapper corpusMapper, Progress progress) throws IOException {
+		String configFilename = System.getProperty("ca.crim.nlp.configfile","");
+		if (configFilename.isEmpty()) {
+			throw new IllegalStateException("No configuration file exists for CRIM NLP.");
+		}
+		File configFile = new File(configFilename);
+		if (configFile.exists()==false) {
+			throw new IllegalArgumentException("Configuration file not found for CRIM NLP.");
+		}
+		CrimGeonameAnnotator annotator = new CrimGeonameAnnotator(configFile, "en");
+		ExecutorService executorService = Executors.newSingleThreadExecutor();
+		executorService.execute(new Runnable() {
+			@Override
+			public void run() {
+				List<DocumentLocationToken> tokens;
+				try {
+					// TODO, it might be better to do this one document at a time
+					progress.update(.5f, Status.RUNNING, "geolocationRunning", "Geolocation is running.");
+					tokens = annotator.getDocumentLocationTokens(corpusMapper, parameters, progress);
+					storage.store(tokens, progress.getId(), Location.cache);
+					progress.update(1, Status.FINISHED, "geolocationFinished", "Geolocation has completed.");
+				} catch (Exception e) {
+					try {
+						progress.update(1, Status.ABORTED, "geolocationException", "Geolocation has failed. "+e.getMessage());
+					} catch (IOException e1) {
+					}
+					throw new RuntimeException(e);
+				} finally {
+					executorService.shutdown();
+				}
+			}
+		});
+	}
+	
+	private void getGeonamesLocationTokens(CorpusMapper corpusMapper, Progress progress) {
+		ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+		executorService.execute(new Runnable() {
+			@Override
+			public void run() {
+				GeonamesAnnotator annotator = new GeonamesAnnotator(storage, parameters);
+				List<DocumentLocationToken> tokens;
+				try {
+					// TODO, it might be better to do this one document at a time
+					progress.update(.5f, Status.RUNNING, "geolocationRunning", "Geolocation is running.");
+					tokens = annotator.getDocumentLocationTokens(corpusMapper, parameters);
+					storage.store(tokens, progress.getId(), Location.cache);
+					progress.update(1, Status.FINISHED, "geolocationFinished", "Geolocation has completed.");
+				} catch (Exception e) {
+					try {
+						progress.update(1, Status.ABORTED, "geolocationException", "Geolocation has failed. "+e.getMessage());
+					} catch (IOException e1) {
+					}
+					throw new RuntimeException(e);
+				} finally {
+					executorService.shutdown();
+				}
+			}
+		});
 	}
 
 	@Override

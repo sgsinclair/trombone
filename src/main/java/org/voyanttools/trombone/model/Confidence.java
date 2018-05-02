@@ -24,7 +24,9 @@ public class Confidence implements Serializable {
 		IsMultiTerm(.8f,1f),
 		Population(.5f, 1f), // value is meant to be set
 		PrecededByPunctuation(.2f, 1f),
-		GeoDistance(.5f, 1f); // value is meant to be set
+		GeoDistance(.5f, 1f), // value is meant to be set
+		Pacte(.5f, 1f), // value meant to be set
+		IsPersonName(.2f, 1f);
 		private float value;
 		private float weight;
 		private Type(float value, float weight) {
