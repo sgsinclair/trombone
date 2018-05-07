@@ -82,7 +82,9 @@ public class CrimGeonameAnnotator {
 				geonameIds.add(entry.get("geoname"));
 				docId = id;
 			}
-			docIdToEntryMaps.put(docId, entries);
+			if (docId!=null && entries.isEmpty()==false) {
+				docIdToEntryMaps.put(docId, entries);
+			}
 		}
 		zipFile.delete();
 		
