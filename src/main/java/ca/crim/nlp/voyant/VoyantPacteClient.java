@@ -31,6 +31,11 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
+import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.file.FileStorage;
+import org.voyanttools.trombone.tool.progress.Progress;
+import org.voyanttools.trombone.tool.progress.Progress.Status;
+import org.voyanttools.trombone.util.TestHelper;
 
 import ca.crim.nlp.pacte.QuickConfig;
 import ca.crim.nlp.pacte.client.services.NERService;
@@ -82,8 +87,10 @@ public class VoyantPacteClient {
         assert configFile.exists() : "Config file does not exist: "+configFile;
         loClient = new VoyantPacteClient(configFile);
         
-
-        Map<String, String> lasAnnots = loClient.getNERAnnotations(lsInput);
+        Storage storage = new FileStorage();
+        Progress progress = Progress.retrieve(storage, UUID.randomUUID().toString());
+        Map<String, String> lasAnnots = loClient.getNERAnnotations(lsInput, progress);
+        storage.destroy();
         if (lasAnnots == null) {
             System.err.println("The NER process could not process the file.");
             return;
@@ -138,8 +145,9 @@ public class VoyantPacteClient {
      * 
      * @param tsFilePath
      * @return
+     * @throws IOException 
      */
-    public Map<String, String> getNERAnnotations(String tsFilePath) {
+    public Map<String, String> getNERAnnotations(String tsFilePath, Progress progress) throws IOException {
         Map<String, String> lasAnnotations = new HashMap<String, String>();
         String lsUserSpace = null;
         String lsUserId = null;
@@ -165,12 +173,29 @@ public class VoyantPacteClient {
 
         // Monitor the execution by polling
         lsResult = poNER.checkStatus().toLowerCase();
+        int current = 0;
+        String currentString = "\"current\": ";
+		progress.update(.1f, Status.RUNNING, "pactePending", "Pending Geolocation with PACTE");
         while (lsResult.contains("\"status\": \"pending\"") || lsResult.contains("\"status\": \"progress\"")) {
             try {
                 Thread.sleep(200);
                 lsResult = poNER.checkStatus().toLowerCase();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                int pos = lsResult.indexOf(currentString);
+                if (pos>-1) {
+                	pos+=currentString.length();
+                	int newCurrent = Integer.parseInt(lsResult.substring(pos, lsResult.indexOf(',', pos)));
+                	if (newCurrent>current) {
+                		progress.update((float) newCurrent/100, Status.RUNNING, "pacteAnalysis", "Geolocation with PACTE");
+                		current = newCurrent;
+                	}
+                }
+            } catch (Exception e) {
+            	try {
+					progress.update(1f, Status.ABORTED, "pacteError", "Error during PACTE Geolocation: "+e.getMessage());
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
+            	throw new RuntimeException(e);
             }
         }
 

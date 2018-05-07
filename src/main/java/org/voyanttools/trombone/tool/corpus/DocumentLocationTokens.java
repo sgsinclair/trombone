@@ -7,8 +7,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -87,9 +89,14 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 	}
 	
 	List<DocumentLocationToken> getLocationTokens(CorpusMapper corpusMapper) throws IOException {
+		
+		// build an ID that includes the version, the annotator and selected parameters
 		StringBuilder sb = new StringBuilder();
 		sb.append("preferredCoordinates").append(parameters.getParameterValue("preferredCoordinates", ""));
-		String id = "locationTokens-"+getVersion()+"-"+corpusMapper.getCorpus().getId()+"-"+source.name()+DigestUtils.md5Hex(sb.toString());
+		String commonId = "locationTokens-"+getVersion()+"-"+source.name()+DigestUtils.md5Hex(sb.toString());
+
+		// first try retrieving an existing corpus cache
+		String id = commonId+"-corpus-"+corpusMapper.getCorpus().getId();
 		if (storage.isStored(id, Location.cache)) {
 			try {
 				return (List<DocumentLocationToken>) storage.retrieve(id, Location.cache);
@@ -97,6 +104,28 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 				throw new RuntimeException(e);
 			}
 		} else {
+			
+			// next try retrieving from existing document caches
+			List<DocumentLocationToken> tokens = new ArrayList<DocumentLocationToken>();
+			for (String docId : corpusMapper.getCorpus().getDocumentIds()) {
+				String cachedDocId = getDocumentTokensCacheId(docId);
+				if (storage.isStored(cachedDocId, Location.cache)) {
+					try {
+						tokens.addAll((List<DocumentLocationToken>) storage.retrieve(cachedDocId, Location.cache));
+					} catch (ClassNotFoundException e) {
+						throw new IOException(e);
+					}
+				}
+				else {
+					tokens = null;
+					break;
+				}
+					
+			}
+			
+			// we found stored tokens for all documents
+			if (tokens!=null) {return tokens;}
+			
 			progress = Progress.retrieve(storage, id);
 			if (progress.isNew()) {
 				Source source = Source.valueOfForgivingly(parameters.getParameterValue("source", ""));
@@ -111,6 +140,16 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 			}
 			return null;
 		}
+	}
+	
+	private String getDocumentTokensCacheId(String docId) {
+		return getCommonId()+"-document-"+docId;
+	}
+	
+	private String getCommonId() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("preferredCoordinates").append(parameters.getParameterValue("preferredCoordinates", ""));
+		return "locationTokens-"+getVersion()+"-"+source.name()+DigestUtils.md5Hex(sb.toString());
 	}
 	
 	private void getCrimLocationTokens(CorpusMapper corpusMapper, Progress progress) throws IOException {
@@ -132,7 +171,8 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 					// TODO, it might be better to do this one document at a time
 					progress.update(.5f, Status.RUNNING, "geolocationRunning", "Geolocation is running.");
 					tokens = annotator.getDocumentLocationTokens(corpusMapper, parameters, progress);
-					storage.store(tokens, progress.getId(), Location.cache);
+					storage.store(tokens, progress.getId(), Location.cache); // corpus
+					cacheForDocuments(corpusMapper, tokens); // docs
 					progress.update(1, Status.FINISHED, "geolocationFinished", "Geolocation has completed.");
 				} catch (Exception e) {
 					try {
@@ -159,7 +199,8 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 					// TODO, it might be better to do this one document at a time
 					progress.update(.5f, Status.RUNNING, "geolocationRunning", "Geolocation is running.");
 					tokens = annotator.getDocumentLocationTokens(corpusMapper, parameters);
-					storage.store(tokens, progress.getId(), Location.cache);
+					storage.store(tokens, progress.getId(), Location.cache); // corpus
+					cacheForDocuments(corpusMapper, tokens); // docs
 					progress.update(1, Status.FINISHED, "geolocationFinished", "Geolocation has completed.");
 				} catch (Exception e) {
 					try {
@@ -172,6 +213,19 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 				}
 			}
 		});
+	}
+	
+	private void cacheForDocuments(CorpusMapper corpusMapper, List<DocumentLocationToken> tokens) throws IOException {
+		Map<Integer, List<DocumentLocationToken>> mappedTokens = tokens.stream()
+			.collect(Collectors.groupingBy(DocumentLocationToken::getDocIndex));
+		for (Map.Entry<Integer, List<DocumentLocationToken>> entry : mappedTokens.entrySet()) {
+			String docId = getDocumentTokensCacheId(corpusMapper.getDocumentIdFromDocumentPosition(entry.getKey()));
+			try {
+				storage.store(entry.getValue(), docId, Location.cache);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	}
 
 	@Override

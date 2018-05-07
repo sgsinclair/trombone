@@ -65,7 +65,7 @@ public class CrimGeonameAnnotator {
 		
 		progress.update(.1f, Status.RUNNING, "crimZip", "Transferring data to annotation server.");
 		File zipFile = getZipFile(corpusMapper);
-		Map<String, String> fileToJsonMap = voyantPacteClient.getNERAnnotations(zipFile.toString());
+		Map<String, String> fileToJsonMap = voyantPacteClient.getNERAnnotations(zipFile.toString(), progress);
 
 		progress.update(.5f, Status.RUNNING, "crimProcess", "Processing annotation results.");
 		// go through all files to collect relevant geoname IDs and entey maps
