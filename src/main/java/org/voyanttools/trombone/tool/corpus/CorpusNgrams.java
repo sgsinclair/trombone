@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.voyanttools.trombone.lucene.CorpusMapper;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusNgram;
 import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.Keywords;
@@ -47,28 +48,33 @@ public class CorpusNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 	@Override
 	public float getVersion() {
-		return super.getVersion()+1;
+		return super.getVersion()+2;
 	}
 
 	
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		FlexibleParameters localParameters = parameters.clone();
-		localParameters.setParameter("limit", Integer.MAX_VALUE); // we need all ngrams for documents in order to determine corpus collocates
-		localParameters.setParameter("start", 0);
-		DocumentNgrams documentNgrams = new DocumentNgrams(storage, localParameters);
+		DocumentNgrams documentNgrams = getDocumentNgrams(corpusMapper.getCorpus());
 		List<DocumentNgram> docNgrams = documentNgrams.getNgrams(corpusMapper, stopwords, queries);
 		addFromDocumentNgrams(docNgrams, corpusMapper.getCorpus().size());
 	}
 	
 	@Override
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
+		DocumentNgrams documentNgrams = getDocumentNgrams(corpusMapper.getCorpus());
+		List<DocumentNgram> docNgrams = documentNgrams.getNgrams(corpusMapper, stopwords);
+		addFromDocumentNgrams(docNgrams, corpusMapper.getCorpus().size());
+	}
+	
+	private DocumentNgrams getDocumentNgrams(Corpus corpus) throws IOException {
 		FlexibleParameters localParameters = parameters.clone();
 		localParameters.setParameter("limit", Integer.MAX_VALUE); // we need all ngrams for documents in order to determine corpus collocates
 		localParameters.setParameter("start", 0);
-		DocumentNgrams documentNgrams = new DocumentNgrams(storage, localParameters);
-		List<DocumentNgram> docNgrams = documentNgrams.getNgrams(corpusMapper, stopwords);
-		addFromDocumentNgrams(docNgrams, corpusMapper.getCorpus().size());
+		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpus);
+		if (ids.size()<corpus.size()) {
+			localParameters.setParameter("docId", ids.toArray(new String[0]));
+		}
+		return new DocumentNgrams(storage, localParameters);
 	}
 	
 	private void addFromDocumentNgrams(List<DocumentNgram> docNgrams, int docs) {

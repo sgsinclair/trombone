@@ -26,8 +26,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.PostingsEnum;
@@ -204,10 +206,14 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		FlexibleQueue<DocumentNgram> queue = new FlexibleQueue<DocumentNgram>(comparator, start+limit);
 		
+		Set<String> validIds = new HashSet<String>();
+		validIds.addAll(this.getCorpusStoredDocumentIdsFromParameters(corpus));
 		OverlapFilter filter = getDocumentNgramsOverlapFilter(parameters);
 		DocIdSetIterator it = corpusMapper.getDocIdSet().iterator();
 		while (it.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
 			int luceneDoc = it.docID();
+			String docId = corpusMapper.getDocumentIdFromLuceneId(luceneDoc);
+			if (validIds.contains(docId)==false) {continue;}
 			int corpusDocumentIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
 			int lastToken = totalTokens[corpusDocumentIndex];	
 			
