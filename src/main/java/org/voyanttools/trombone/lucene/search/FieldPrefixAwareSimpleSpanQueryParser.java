@@ -24,6 +24,7 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.RegexpQuery;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TermRangeQuery;
+import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
 import org.apache.lucene.search.spans.SpanNearQuery;
@@ -144,7 +145,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 					int count = 0;
 					for (SpanQuery spanQuery : ((SpanOrQuery) q).getClauses()) {
 						// we need to double-check that this term is in the corpus (the query rewrite method includes all terms)
-						if (searcher.search(spanQuery, 1).totalHits==1) {
+						if (searcher.search(spanQuery, 1).totalHits>0) {
 							map.put(spanQuery.toString(defaultPrefix), spanQuery);
 							count++;
 						}

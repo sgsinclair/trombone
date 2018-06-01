@@ -50,7 +50,7 @@ public class CorpusTermsTest {
 		String keepCorpusId = creator.getStoredId();
 		
 		parameters = new FlexibleParameters();
-		parameters.addParameter("string",  "dark and stormy night in document three");
+		parameters.addParameter("string",  "dark and stormy night in document three war");
 		parameters.addParameter("tool", "StepEnabledIndexedCorpusCreator");
 		parameters.addParameter("noCache", 1);
 		creator = new RealCorpusCreator(storage, parameters);
@@ -63,6 +63,19 @@ public class CorpusTermsTest {
 		CorpusTerm corpusTerm;
 		CorpusTerms corpusTermFrequencies;
 		List<CorpusTerm> corpusTerms;
+		
+		// we want all forms
+		parameters.setParameter("query", "^w*");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(2, corpusTerms.size());
+		corpusTerm = corpusTerms.get(0);
+		assertEquals("was", corpusTerm.getTerm());
+		assertEquals(3, corpusTerm.getRawFreq());
+		corpusTerm = corpusTerms.get(1);
+		assertEquals("worst", corpusTerm.getTerm());
+		assertEquals(1, corpusTerm.getRawFreq());
 		
 		// we're expanding the term here
 		parameters.setParameter("query", "dar*");
@@ -358,7 +371,7 @@ public class CorpusTermsTest {
 		assertEquals(3, corpusTerms.size());
 		
 		// testing with not – for now only concerned with inDocumentsCountOnly
-		parameters.setParameter("query", "^-wa*,-dar*,-ligh*");
+		parameters.setParameter("query", "-wa*,-dar*,-ligh*");
 		parameters.removeParameter("withDistributions");
 		parameters.setParameter("inDocumentsCountOnly", "true");
 		parameters.removeParameter("bins");
