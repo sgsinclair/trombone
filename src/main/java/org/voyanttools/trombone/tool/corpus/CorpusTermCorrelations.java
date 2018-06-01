@@ -18,6 +18,7 @@ import org.voyanttools.trombone.model.CorpusTermsCorrelation;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.util.Message;
+import org.voyanttools.trombone.tool.util.Message.Type;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 import org.voyanttools.trombone.util.NumberUtils;
@@ -57,14 +58,17 @@ public class CorpusTermCorrelations extends AbstractTerms {
 	}
 
 	public float getVersion() {
-		return super.getVersion()+1;
+		return super.getVersion()+2;
 	}
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractTerms#runQueries(org.voyanttools.trombone.lucene.CorpusMapper, org.voyanttools.trombone.model.Keywords, java.lang.String[])
 	 */
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		if (corpusMapper.getCorpus().size()<2) {return;}
+		if (corpusMapper.getCorpus().size()<2) {
+			corpusNeedsMultipleDocuments();
+			return;
+		}
 		CorpusTerms corpusTermsTool = getCorpusTerms();
 		corpusTermsTool.runQueries(corpusMapper, stopwords, queries);
 		List<CorpusTerm> outerCorpusTerms = corpusTermsTool.getCorpusTerms();
@@ -107,11 +111,19 @@ public class CorpusTermCorrelations extends AbstractTerms {
 	 */
 	@Override
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
-		if (corpusMapper.getCorpus().size()<2) {return;}
+		if (corpusMapper.getCorpus().size()<2) {
+			corpusNeedsMultipleDocuments();
+			return;
+		}
 		CorpusTerms corpusTermsTool = getCorpusTerms();
 		corpusTermsTool.runAllTerms(corpusMapper, stopwords);
 		populate(corpusTermsTool.getCorpusTerms(), corpusTermsTool.getCorpusTerms(), true, corpusMapper.getCorpus().size());
 	}
+	
+	private void corpusNeedsMultipleDocuments() {
+		this.message(Type.ERROR, "corpusCorrelationsRequireMultipleDocuments", "Corpus Term Correlations is a tool that requires multiple documents");
+	}
+
 	public static class CorpusTermCorrelationsConverter implements Converter {
 
 		/* (non-Javadoc)
@@ -129,11 +141,8 @@ public class CorpusTermCorrelations extends AbstractTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			CorpusTermCorrelations corpusTermCorrelations = (CorpusTermCorrelations) source;
 			
-			if (corpusTermCorrelations.hasMessages()) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "messages", List.class);
-				context.convertAnother(corpusTermCorrelations.getMessages());
-		        writer.endNode();
-			}
+			corpusTermCorrelations.writeMessages(writer, context);
+
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(corpusTermCorrelations.getTotal()));
 			writer.endNode();

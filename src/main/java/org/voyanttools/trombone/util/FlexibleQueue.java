@@ -35,8 +35,12 @@ public class FlexibleQueue<T> {
 	 */
 	public FlexibleQueue(Comparator<T> comparator, int size) {
 		this.comparator = comparator;
-		if (size < ArrayUtil.MAX_ARRAY_LENGTH && size>0) {luceneQueue = new LuceneQueue(comparator, size);}
-		else {list = new ArrayList<T>();}
+		if (size>0 && size<100000) { // a bit arbitrary, a queue is faster, but all values need to be initialized, so a memory hog
+			luceneQueue = new LuceneQueue(comparator, size);
+		}
+		else {
+			list = new ArrayList<T>();
+		}
 	}
 
 	public void offer(T element) {

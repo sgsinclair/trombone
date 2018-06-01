@@ -42,6 +42,9 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
@@ -200,5 +203,19 @@ public abstract class AbstractTool implements RunnableTool {
 		}
 		if (variantsDB!=null) {variantsDB.close();}
 		return queries.toArray(new String[0]);
+	}
+	
+	/**
+	 * This should only be used during tool serialization to show messages from tools.
+	 * @param tool
+	 * @param writer
+	 * @param context
+	 */
+	protected void writeMessages(HierarchicalStreamWriter writer, MarshallingContext context) {
+		if (this.hasMessages()) {
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "messages", List.class);
+			context.convertAnother(this.getMessages());
+			writer.endNode();
+		}
 	}
 }

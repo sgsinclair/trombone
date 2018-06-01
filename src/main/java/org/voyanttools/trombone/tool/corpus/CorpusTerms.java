@@ -54,6 +54,7 @@ import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.Message.Type;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
@@ -118,7 +119,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public float getVersion() {
-		return super.getVersion()+17;
+		return super.getVersion()+18;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {

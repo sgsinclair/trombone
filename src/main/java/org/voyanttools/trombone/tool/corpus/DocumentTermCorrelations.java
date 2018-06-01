@@ -13,6 +13,7 @@ import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.DocumentTermsCorrelation;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.Message.Type;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 import org.voyanttools.trombone.util.NumberUtils;
@@ -43,7 +44,7 @@ public class DocumentTermCorrelations extends AbstractTerms {
 	}
 	
 	public float getVersion() {
-		return super.getVersion()+1;
+		return super.getVersion()+2;
 	}
 
 	@Override
@@ -69,6 +70,7 @@ public class DocumentTermCorrelations extends AbstractTerms {
 			populate(documentTermsTool.getDocumentTerms(), documentTermsTool.getDocumentTerms(), true);
 		}
 	}
+	
 	
 	private DocumentTerms getDocumentTermsTool(String id) {
 		FlexibleParameters params = new FlexibleParameters();
