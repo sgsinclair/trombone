@@ -287,6 +287,9 @@ public enum DocumentFormat {
 	 */
 	public static DocumentFormat fromContentType(String contentType) {
 		contentType = contentType.toUpperCase();
+		if (contentType.indexOf(";")>-1) { // consider the first part (ignore things like charset)
+			contentType = contentType.substring(0, contentType.indexOf(";"));
+		}
 		for (DocumentFormat format : DocumentFormat.values()) {
 			for (String ext : format.extensions) {
 				if (contentType.contains(ext.toUpperCase())) { // contains
