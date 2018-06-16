@@ -177,6 +177,19 @@ public class CorpusTermsTest {
 		assertEquals("\"it was\"", corpusTerm.getTerm());
 		assertEquals(3, corpusTerm.getRawFreq());
 
+// TODO: this should work but doesn't!!
+//		parameters.setParameter("query", "\"it wa*\"");
+//		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+//		corpusTermFrequencies.run();		
+//		assertEquals(1, corpusTermFrequencies.getTotal());
+//		// we sort by reverse frequency by default
+//		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+//		assertEquals(1, corpusTerms.size());
+//		corpusTerm = corpusTerms.get(0);
+////		assertEquals(1, corpusTerm.getDocumentIndex());
+//		assertEquals("\"it wa*\"", corpusTerm.getTerm());
+//		assertEquals(3, corpusTerm.getRawFreq());
+		
 		// phrase with no quotes (treated as a phrase)
 		parameters.setParameter("query", "it was");
 		corpusTermFrequencies = new CorpusTerms(storage, parameters);

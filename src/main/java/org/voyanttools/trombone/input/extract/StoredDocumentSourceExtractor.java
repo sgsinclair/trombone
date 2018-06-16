@@ -23,12 +23,15 @@ package org.voyanttools.trombone.input.extract;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 
 import org.apache.commons.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSource;
@@ -79,11 +82,40 @@ public class StoredDocumentSourceExtractor {
 	}
 	
 	public List<StoredDocumentSource> getExtractedStoredDocumentSources(List<StoredDocumentSource> storedDocumentSources) throws IOException {
+		boolean verbose = parameters.getParameterBooleanValue("verbose");
+		
+		/*
+		// we will run in parallel, but since order matters, we need a map
+		Map<String, StoredDocumentSource> map = new HashMap<String, StoredDocumentSource>();
+		try {
+			storedDocumentSources.parallelStream().forEach(storedDocumentSource -> {
+				try {
+					if (verbose) {
+						System.out.println("Extracting document "+storedDocumentSource.getId()+" ("+storedDocumentSource.getMetadata().getLocation()+")");
+					}
+					StoredDocumentSource sds = getExtractedStoredDocumentSource(storedDocumentSource);
+					if (sds!=null) {
+						map.put(storedDocumentSource.getId(), sds);
+					}
+				} catch (Exception e) {
+					throw new RuntimeException("Unable to extract document: "+storedDocumentSource.getId()+" ("+storedDocumentSource.getMetadata().getLocation()+")", e);
+				}
+			});
+		} catch (Exception e) {
+			throw new IOException(e.getMessage(), e);
+		}
+		
+		return storedDocumentSources.stream()
+			.map(StoredDocumentSource::getId)
+			.filter(id -> map.containsKey(id))
+			.map(id -> map.get(id))
+			.collect(Collectors.toList());
+		*/
+
 		List<StoredDocumentSource> extractedStoredDocumentSources = new ArrayList<StoredDocumentSource>();
 		int processors = Runtime.getRuntime().availableProcessors();
 		ExecutorService executor = Executors.newFixedThreadPool(processors);
 		List<Future<StoredDocumentSource>> list = new ArrayList<Future<StoredDocumentSource>>();
-		boolean verbose = parameters.getParameterBooleanValue("verbose");
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 			Callable<StoredDocumentSource> worker = new CallableExtractor(this, storedDocumentSource, verbose);
 			Future<StoredDocumentSource> submit = executor.submit(worker);
@@ -97,8 +129,10 @@ public class StoredDocumentSourceExtractor {
 				}
 			}
 		} catch (InterruptedException e) {
+			executor.shutdownNow();
 			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
 		} catch (ExecutionException e) {
+			executor.shutdownNow();
 			throw new IllegalStateException("An error occurred during multi-threaded document expansion.", e);
 		}
 		executor.shutdown();
