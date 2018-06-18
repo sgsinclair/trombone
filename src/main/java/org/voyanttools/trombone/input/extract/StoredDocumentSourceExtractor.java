@@ -62,6 +62,8 @@ public class StoredDocumentSourceExtractor {
 	
 	private XmlExtractor xmlExtractor = null;
 	
+	private HtmlExtractor htmlExtractor = null;
+	
 	private BagItExtractor bagItExtractor = null;
 	
 //	static {
@@ -175,11 +177,21 @@ public class StoredDocumentSourceExtractor {
 			if (bagItExtractor==null) {bagItExtractor = new BagItExtractor(storedDocumentSourceStorage, parameters);}
 			extractedInputSource = bagItExtractor.getExtractableInputSource(storedDocumentSource);
 		}
-		else {
+		// for now we'll only use the HTML extractor if there are special queries, otherwise use Tika
+		else if (format==DocumentFormat.HTML && getHtmlExtractor().hasQueries()) {
+			extractedInputSource = getHtmlExtractor().getExtractableInputSource(storedDocumentSource);
+		} else {
 			if (tikaExtractor==null) {tikaExtractor = new TikaExtractor(storedDocumentSourceStorage, parameters);}
 			extractedInputSource =  tikaExtractor.getExtractableInputSource(storedDocumentSource);
 		}
 		return storedDocumentSourceStorage.getStoredDocumentSource(extractedInputSource);
+	}
+	
+	private HtmlExtractor getHtmlExtractor() {
+		if (htmlExtractor==null) {
+			htmlExtractor = new HtmlExtractor(storedDocumentSourceStorage, parameters);
+		}
+		return htmlExtractor;
 	}
 	
 	private class CallableExtractor implements Callable<StoredDocumentSource> {

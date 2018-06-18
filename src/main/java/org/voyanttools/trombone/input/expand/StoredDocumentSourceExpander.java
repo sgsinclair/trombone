@@ -72,6 +72,11 @@ public class StoredDocumentSourceExpander implements Expander {
 	private Expander xmlExpander;
 
 	/**
+	 * the expander for HTML documents
+	 */
+	private Expander htmlExpander;
+	
+	/**
 	 * the expander for XSL documents
 	 */
 	private Expander xslExpander;
@@ -108,6 +113,7 @@ public class StoredDocumentSourceExpander implements Expander {
 		this.archiveExpander = null;
 		this.compressedExpander = null;
 		this.xmlExpander = null;
+		this.htmlExpander = null;
 		this.bagItExpander = null;
 		this.parameters = parameters;
 	}
@@ -195,6 +201,10 @@ public class StoredDocumentSourceExpander implements Expander {
 			storedDocumentSources.addAll(expandXml(storedDocumentSource));
 		}
 		
+		else if (format==DocumentFormat.HTML) {
+			storedDocumentSources.addAll(expandHtml(storedDocumentSource));
+		}
+		
 
 		// no expansion needed or known
 		else {
@@ -276,6 +286,26 @@ public class StoredDocumentSourceExpander implements Expander {
 		}
 		// this will deal fine when no expansion is needed
 		return this.xmlExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+	}
+	
+	/**
+	 * Expand the specified StoredDocumentSource archive and add it to the
+	 * specified list of StoredDocumentSources.
+	 * 
+	 * @param storedDocumentSource
+	 *            the stored document source to expand (or add as is)
+	 * @return a list of expanded document sources
+	 * @throws IOException
+	 *             an IO Exception
+	 */
+	List<StoredDocumentSource> expandHtml(
+			StoredDocumentSource storedDocumentSource) throws IOException {
+		if (this.htmlExpander == null) {
+			this.htmlExpander = new HtmlExpander(storedDocumentSourceStorage,
+					parameters);
+		}
+		// this will deal fine when no expansion is needed
+		return this.htmlExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
 
 	/**

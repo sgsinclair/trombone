@@ -79,7 +79,9 @@ public class TikaExtractor implements Extractor {
 	public InputSource getExtractableInputSource(StoredDocumentSource storedDocumentSource) throws IOException {
 		StringBuilder id = new StringBuilder(storedDocumentSource.getId()).append("tika-extracted");
 		// not sure why we can't use all params, but just in case
-		for (String param : new String[]{"language","inputRemoveFrom","inputRemoveFromAfter","inputRemoveUntil","inputRemoveUntilAfter"}) {
+		for (String param : new String[]{"language",
+				"inputRemoveFrom","inputRemoveFromAfter","inputRemoveUntil","inputRemoveUntilAfter",
+				"htmlContentQuery","htmlAuthorQuery","htmlTitleQuery","htmlPublisherQuery","htmlPubDateQuery","htmlKeywordQuery","htmlCollectionQuery","htmlExtraMetadataQuery"}) {
 			if (parameters.containsKey(param)) {
 				id.append(param).append(parameters.getParameterValue(param));
 			}

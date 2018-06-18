@@ -95,5 +95,9 @@ public class StringInputSource implements InputSource {
 	public String getUniqueId() {
 		return id;
 	}
+	
+	public String getString() {
+		return string;
+	}
 
 }
