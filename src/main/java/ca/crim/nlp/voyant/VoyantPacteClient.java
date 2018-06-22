@@ -35,7 +35,6 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.tool.progress.Progress;
 import org.voyanttools.trombone.tool.progress.Progress.Status;
-import org.voyanttools.trombone.util.TestHelper;
 
 import ca.crim.nlp.pacte.QuickConfig;
 import ca.crim.nlp.pacte.client.services.NERService;
