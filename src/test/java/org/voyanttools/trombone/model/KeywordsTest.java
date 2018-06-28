@@ -3,8 +3,13 @@ package org.voyanttools.trombone.model;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.io.File;
+import java.nio.file.Files;
+
+import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.util.EmbeddedWebServer;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -33,6 +38,25 @@ public class KeywordsTest {
 		assertTrue(keywords.isKeyword("testzz"));
 		assertTrue(keywords.isKeyword("testaa"));
 		assertFalse(keywords.isKeyword("word"));
+		
+		storage.destroy();
+		
+		// test with local resources
+		FileStorage fileStorage = new FileStorage(TestHelper.getTemporaryTestStorageDirectory());
+		File resources = fileStorage.getLocalResourcesDirectory();
+		File keywordsFile = new File(resources, "keywords");
+		keywordsFile.mkdirs();
+		File stopListFile = new File(keywordsFile, "stop.en.taporware.txt");
+		FileUtils.write(stopListFile, "cheeze\nwhiz", "UTF-8");
+		keywords.load(fileStorage, new String[]{"stop.en.taporware.txt"});
+		assertTrue(keywords.isKeyword("cheeze"));
+		assertFalse(keywords.isKeyword("cheezes"));
+		assertTrue(stopListFile.delete());
+		assertTrue(keywordsFile.delete());
+		assertTrue(resources.delete());
+		
+		fileStorage.destroy();
+		
 
 		/* FIXME: re-enable this 
 		// try with a URL

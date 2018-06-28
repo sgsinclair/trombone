@@ -111,6 +111,23 @@ public class Keywords {
 				}
 			}
 			else if (ref.startsWith(STOPWORDS_FILE_PREFIX)) {
+				
+				// first check to see if there's a local copy of the file that takes precedence
+				if (storage instanceof FileStorage) {
+					File resources = ((FileStorage) storage).getLocalResourcesDirectory();
+					File keywords = new File(resources, "keywords");
+					File file = new File(keywords, new File(ref).getName());
+					if (file.exists()) {
+						try {
+							List<String> refs = FileUtils.readLines(file);
+							add(refs);
+							return;
+						} catch (IOException e) {
+							throw new IOException("Unable to find local stopwords directory", e);
+						}
+					}
+				}
+				
 				try(InputStream is = getClass().getResourceAsStream("/org/voyanttools/trombone/keywords/"+ref)) {
 					List<String> refs = IOUtils.readLines(is);
 					add(refs);

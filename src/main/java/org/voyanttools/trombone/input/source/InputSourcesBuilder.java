@@ -68,8 +68,7 @@ public class InputSourcesBuilder {
 		if (storage instanceof FileStorage && params.containsKey("localSource")) {
 			String name = new File(params.getParameterValue("localSource")).getName();
 			if (name.isEmpty()==false && name.contains("/")==false && name.contains(".")==false) {
-				File rootData = ((FileStorage) storage).storageLocation.getParentFile();
-				File sources = new File(rootData, "trombone-local-sources");
+				File sources = ((FileStorage) storage).getLocalSourcesDirectory();
 				localFileSource = new File(sources, new File(name).getName());
 				if (localFileSource.exists()==false) {localFileSource=null;}
 			}
