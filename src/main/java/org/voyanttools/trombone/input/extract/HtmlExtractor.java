@@ -21,6 +21,7 @@ import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.JsoupHelper;
+import org.voyanttools.trombone.util.LangDetector;
 
 /**
  * @author sgs
@@ -103,11 +104,17 @@ public class HtmlExtractor implements Extractor, Serializable {
 			String htmlContentQuery = parameters.getParameterValue("htmlContentQuery", "body");
 			Elements elements = doc.select(htmlContentQuery);			
 			// if no content matched and not content query then we may have a document without a body, so use the entire document
+			String string;
 			if (elements.isEmpty() && parameters.containsKey("htmlContentQuery")==false) {
 				extractedContent = doc.outerHtml();
+				string = doc.text();
 			} else {
+				string = elements.text();
 				extractedContent = elements.outerHtml();
 			}
+			
+			metadata.setLanguageCode(LangDetector.langDetector.detect(string, parameters));
+
 			
 			String value = JsoupHelper.getQueryValue(doc, parameters.getParameterValue("htmlTitleQuery", "head title"));
 			if (value!=null && value.isEmpty()==false) {
