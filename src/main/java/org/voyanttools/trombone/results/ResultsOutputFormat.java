@@ -43,8 +43,8 @@ public enum ResultsOutputFormat {
 
 		@Override
 		public String getContentType() {
-
-			return "text/javascript;charset=UTF-8";
+			// change from text/javascript to application/json
+			return "application/json;charset=UTF-8";
 
 		}
 	},
