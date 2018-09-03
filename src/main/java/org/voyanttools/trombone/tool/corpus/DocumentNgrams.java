@@ -49,12 +49,14 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("documentNgrams")
 public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 	@XStreamOmitField
@@ -94,7 +96,7 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 	@Override
 	public float getVersion() {
-		return super.getVersion()+2;
+		return super.getVersion()+3;
 	}
 	
 
