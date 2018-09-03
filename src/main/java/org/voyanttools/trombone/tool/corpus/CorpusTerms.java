@@ -119,7 +119,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public float getVersion() {
-		return super.getVersion()+18;
+		return super.getVersion()+19;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -175,7 +175,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			}
 			//total++;
 			if (termFreq>minRawFreq) {
-				CorpusTerm corpusTerm = new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins);
+				CorpusTerm corpusTerm = new CorpusTerm(termString, termFreq, totalCorpusTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins);
 				offer(queue, corpusTerm);
 			}
 //			queue.offer(new CorpusTerm(termString, termFreq, totalTokens, termsMap.getValue().size(), corpusSize, documentRawFreqs, documentRelativeFreqs, bins));
@@ -515,7 +515,10 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 
 
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-					writer.setValue(String.valueOf((float) corpusTerm.getRawFreq() / corpusTerms.totalTokens));
+					writer.setValue(String.valueOf((float) corpusTerm.getRelativeFrequency()));					
+					// why was this being used before instead of a simple call to relativeFrequency()?
+					// writer.setValue(String.valueOf((float) corpusTerm.getRawFreq() / corpusTerms.totalTokens));
+
 					writer.endNode();
 					
 					if (withRawDistributions || withRelativeDistributions) {
