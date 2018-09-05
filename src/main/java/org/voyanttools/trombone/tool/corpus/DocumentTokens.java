@@ -254,6 +254,8 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 			else {tokenType = TokenType.opentag;}
 			if (tag.charAt(1)!='?') { // skip tag declarations
 				documentTokens.add(new DocumentToken(documentId, documentIndex, tag, tokenType, -1, startoffset+start, startoffset+start+tag.length(), -1)); // -1 position
+			} else if (!tag.startsWith("?xml ", 1)){ // omit xml version declaration
+				documentTokens.add(new DocumentToken(documentId, documentIndex, tag, TokenType.processinginstruction, -1, startoffset+start, startoffset+start+tag.length(), -1));
 			}
 			start += tag.length();
 		}
