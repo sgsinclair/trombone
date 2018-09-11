@@ -439,6 +439,21 @@ public class CorpusTermsTest {
 		assertEquals(-0.090, corpusTerms.get(1).getComparisonCorpusRelativeFrequencyDifference(), .01); // and
 		assertEquals(-0.142, corpusTerms.get(2).getComparisonCorpusRelativeFrequencyDifference(), .01); // document
 		
+		// test comparison corpus with no query
+		parameters.removeParameter("query");
+		parameters.setParameter("comparisonCorpus", comparisonCorpusId);
+		parameters.setParameter("sort", "COMPARISONCORPUSRELATIVEFREQ");
+		parameters.setParameter("dir", "DESC");
+		parameters.removeParameter("inDocumentsCountOnly");
+		corpusTermFrequencies = new CorpusTerms(storage, parameters);
+		corpusTermFrequencies.run();
+		assertEquals(12, corpusTermFrequencies.getTotal());
+		corpusTerms = corpusTermFrequencies.getCorpusTerms();
+		assertEquals(12, corpusTerms.size());
+		assertEquals(0.157, corpusTerms.get(0).getComparisonCorpusRelativeFrequencyDifference(), .01); // it
+		assertEquals(0.0526, corpusTerms.get(6).getComparisonCorpusRelativeFrequencyDifference(), .01); // and
+		assertEquals(-0.090, corpusTerms.get(11).getComparisonCorpusRelativeFrequencyDifference(), .01); // document
+		
 		// test whitelist
 		String[] keys = parameters.getKeys().toArray(new String[0]);
 		for (String key : keys) {

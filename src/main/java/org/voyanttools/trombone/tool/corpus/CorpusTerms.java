@@ -515,11 +515,15 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 
 
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-					writer.setValue(String.valueOf((float) corpusTerm.getRelativeFrequency()));					
+					writer.setValue(String.valueOf((float) corpusTerm.getRelativeFrequency()));	
+					writer.endNode();
 					// why was this being used before instead of a simple call to relativeFrequency()?
 					// writer.setValue(String.valueOf((float) corpusTerm.getRawFreq() / corpusTerms.totalTokens));
 
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "comparisonRelativeFreqDifference", Float.class);
+					writer.setValue(String.valueOf(corpusTerm.getComparisonCorpusRelativeFrequencyDifference()));
 					writer.endNode();
+					
 					
 					if (withRawDistributions || withRelativeDistributions) {
 						
