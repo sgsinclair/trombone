@@ -234,14 +234,22 @@ public class LuceneIndexer implements Indexer {
 		executor = Executors.newFixedThreadPool(processors);
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSourceForLucene) {
 			Runnable worker = new StoredDocumentSourceIndexer(storage, indexWriter, indexSearcher, storedDocumentSource, corpusId, verbose);
-			executor.execute(worker);
+			try {
+				executor.execute(worker);
+			} catch (Exception e) {
+				executor.shutdown();
+				throw e;
+			}
 		}
 		executor.shutdown();
 		try {
 			if (!executor.awaitTermination(parameters.getParameterIntValue("luceneIndexingTimeout", 60*10), TimeUnit.SECONDS)) { // default 10 minutes
+				executor.shutdownNow();
 				throw new InterruptedException("Lucene indexing has run out of time.");
 			}
 		} catch (InterruptedException e) {
+			executor.shutdownNow();
+			Thread.currentThread().interrupt();
 			throw new RuntimeException("Lucene indexing has been interrupted.", e);
 		}
 		finally {

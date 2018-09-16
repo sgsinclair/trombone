@@ -213,6 +213,7 @@ public class DocumentLocationTokens extends AbstractTerms implements Progressabl
 				}
 			}
 		});
+		
 	}
 	
 	private void cacheForDocuments(CorpusMapper corpusMapper, List<DocumentLocationToken> tokens) throws IOException {
