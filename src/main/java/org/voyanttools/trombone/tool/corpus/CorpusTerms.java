@@ -119,7 +119,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public float getVersion() {
-		return super.getVersion()+19;
+		return super.getVersion()+20;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -521,7 +521,8 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 					// writer.setValue(String.valueOf((float) corpusTerm.getRawFreq() / corpusTerms.totalTokens));
 
 			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "comparisonRelativeFreqDifference", Float.class);
-					writer.setValue(String.valueOf(corpusTerm.getComparisonCorpusRelativeFrequencyDifference()));
+			        float val = corpusTerm.getComparisonCorpusRelativeFrequencyDifference();
+					writer.setValue(Float.isNaN(val) ? "0" :  String.valueOf(corpusTerm.getComparisonCorpusRelativeFrequencyDifference()));
 					writer.endNode();
 					
 					
