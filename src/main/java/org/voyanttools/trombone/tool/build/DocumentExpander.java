@@ -87,6 +87,9 @@ class DocumentExpander extends AbstractTool {
 			storedDocumentSources.addAll(expander.getExpandedStoredDocumentSources(storedDocumentSource));
 		}
 		
+		if (storedDocumentSources.isEmpty()) {
+			throw new IllegalArgumentException("An attempt to expand document sources has failed. Please check your settings.");
+		}
 		List<String> expandedIds = new ArrayList<String>();
 		for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
 			expandedIds.add(storedDocumentSource.getId());

@@ -373,9 +373,12 @@ public class XmlExtractor implements Extractor, Serializable {
 			XPath xpath = xpathFactory.newXPath();
 			try {
 				nodeList = (NodeList) xpath.evaluate(xmlContentXpath, doc.getDocumentElement(), XPathConstants.NODESET);
+				if (nodeList.getLength()==0) {
+					throw new XPathExpressionException(xmlContentXpath);
+				}
 			} catch (XPathExpressionException e) {
 				throw new IllegalArgumentException(
-						"A problem was encountered proccesing this XPath query: " + xmlContentXpath, e);
+						"A problem was encountered proccesing this XPath query: " + xmlContentXpath+" (for document: "+this.metadata.getLocation()+")", e);
 			}
 			
 			Node newParentNode;

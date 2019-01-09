@@ -239,6 +239,10 @@ class XmlExpander implements Expander {
 
 		List<NodeInputSource> nodeInputSources = getChildStoredDocumentSources(doc, xmlDocumentsXpath, parentId, parentMetadata);
 		
+		if (nodeInputSources.isEmpty()) {
+			throw new IllegalArgumentException("Unable to expand documents using the provided xmlDocumentsXPath argument: "+xmlDocumentsXpath+" for document: "+parentMetadata.getLocation());
+		}
+		
 		if (nodeInputSources.isEmpty()==false) {
 			if (xmlGroupByXpath.isEmpty()==false) {
 				Map<String, List<NodeInputSource>> groupedNodeInputSources = new HashMap<String, List<NodeInputSource>>();

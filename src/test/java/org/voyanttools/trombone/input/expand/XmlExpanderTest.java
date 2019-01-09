@@ -139,8 +139,14 @@ public class XmlExpanderTest {
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		inputSource = new FileInputSource(TestHelper.getResource("xml/rss.xml"));
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
-		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
-		assertEquals("XML file with creator (no namespace) should contain no documents", 0, expandedSourceDocumentSources.size());
+		try {
+			expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
+		} catch (Exception e) {
+			assertTrue(e instanceof IllegalArgumentException);
+			assertTrue(e.getMessage().indexOf("//creator")>-1); // we show XPath
+		}
+//		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXml(storedDocumentSource);
+//		assertEquals("XML file with creator (no namespace) should contain no documents", 0, expandedSourceDocumentSources.size());
 		
 		// RSS documents within a zip archive (nested expansion)
 		parameters = new FlexibleParameters(new String[]{"inputFormat=RSS","splitDocuments=true"});
