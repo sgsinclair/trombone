@@ -29,6 +29,7 @@ import java.util.concurrent.Callable;
 import org.apache.tika.io.IOUtils;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
+import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
@@ -84,6 +85,8 @@ public class StoredDocumentSourceExpander implements Expander {
 	private Expander obApiSearchJsonExpander;
 	
 	private Expander bagItExpander;
+	
+	private Expander jsonLinesFeaturesExpander;
 
 	/**
 	 * Create a new instance of this expander with the specified storage
@@ -158,12 +161,15 @@ public class StoredDocumentSourceExpander implements Expander {
 		format = storedDocumentSource.getMetadata().getDocumentFormat();
 
 		String inputFormatString = parameters.getParameterValue("inputFormat", "").toUpperCase();
+		
 		if (inputFormatString.isEmpty()==false) {
+
 			if (format!=DocumentFormat.ARCHIVE && format!=DocumentFormat.COMPRESSED) { // make sure it's not container format (where the inputFormat parameters probably applies to the contents, not the container)
 				// is it ok to have unrecognized here?
 				DocumentFormat f = DocumentFormat.getForgivingly(inputFormatString);
 				if (f!=DocumentFormat.UNKNOWN) { // only set if we have a real format (could be an XML profile)
 					format = f;
+					
 				}
 			}
 		}
@@ -203,6 +209,12 @@ public class StoredDocumentSourceExpander implements Expander {
 		
 		else if (format==DocumentFormat.HTML) {
 			storedDocumentSources.addAll(expandHtml(storedDocumentSource));
+		}
+		
+		else if (format==DocumentFormat.JSONLINESFEATURES) {
+			// we set the non-consumptive mode password
+			this.parameters.setParameter(CorpusAccess.ACCESS.name().toLowerCase()+"Password", Math.random());
+			storedDocumentSources.addAll(expandJsonLinesFeatures(storedDocumentSource));
 		}
 		
 
@@ -326,6 +338,14 @@ public class StoredDocumentSourceExpander implements Expander {
 		return this.bagItExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
 
+	List<StoredDocumentSource> expandJsonLinesFeatures(
+			StoredDocumentSource storedDocumentSource) throws IOException {
+		if (this.jsonLinesFeaturesExpander == null) {
+			this.jsonLinesFeaturesExpander = new JsonLinesFeaturesExpander(storedDocumentSourceStorage, parameters);
+		}
+		return this.jsonLinesFeaturesExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+	}
+	
 	private class CallableExpander implements Callable<StoredDocumentSource> {
 
 		private StoredDocumentSourceStorage storedDocumentSourceStorage;

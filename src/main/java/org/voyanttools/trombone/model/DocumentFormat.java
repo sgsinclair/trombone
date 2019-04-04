@@ -166,6 +166,12 @@ public enum DocumentFormat {
 	
 	BAGIT("zip"),
 	
+	JSONLINES("jsonl"), // note there's a duplication of the extension so this has to be specified
+	
+	JSONLINESFEATURES("jsonl"), // note there's a duplication of the extension so this has to be specified
+	
+	JSONFEATURES("json"), // note there's a duplication of the extension so this has to be specified
+	
 	/**
 	 * A compressed file ("bzip2", "bz2", "gzip", "gz", "pack200", "xz")
 	 */
