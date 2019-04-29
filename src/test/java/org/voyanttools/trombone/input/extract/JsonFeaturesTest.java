@@ -12,7 +12,6 @@ import org.voyanttools.trombone.model.DocumentFormat;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.tool.corpus.CorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
@@ -22,7 +21,6 @@ public class JsonFeaturesTest {
 	@Test
 	public void test() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
-		StoredDocumentSourceStorage storeDocumentSourceStorage = storage.getStoredDocumentSourceStorage();
 		FlexibleParameters parameters = new FlexibleParameters();
 		
 		parameters.setParameter("file", TestHelper.getResource("formats/rnadnatinysample.jsonl.zip").getAbsolutePath());
@@ -42,6 +40,7 @@ public class JsonFeaturesTest {
 		assertEquals("Acta Biotechnologica volume 18 issue 3", documentMetadata.getTitle());
 		assertEquals("rnadnatinysample.jsonl (1)", documentMetadata.getLocation());
 		assertEquals(DocumentFormat.JSONFEATURES, documentMetadata.getDocumentFormat());
+
 
 	}
 
