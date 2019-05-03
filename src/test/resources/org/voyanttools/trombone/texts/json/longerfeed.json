@@ -1,0 +1,31 @@
+{
+	"rss": {
+		"channel": {
+			"title": "Website Feed",
+        	"description": "Website Feed coded manually",
+        	"link": "http://www.yourdomain.com",
+        	"dc:creator": "Me (me@example.com)",
+        	"items": [{
+	            "title": "A Special Event by Jill",
+	            "description": "A Special Teleconference for our customers about our products by Jill",
+	            "link": "http://www.yourdomain.com/events.htm",
+	            "author": "Jill Blow"
+        	},{
+	            "title": "Announcing new Products",
+	            "description": "Announcing a new line of products",
+	            "link": "http://www.yourdomain.com/events.htm",
+	            "author": "Joe Blow"
+        	},{
+	            "title": "A Special Event",
+	            "description": "A Special Teleconference for our customers about our products",
+	            "link": "http://www.yourdomain.com/events.htm",
+	            "author": "Joe Blow"
+        	},{
+	            "title": "Announcing new Products by Jill",
+	            "description": "Announcing a new line of products",
+	            "link": "http://www.yourdomain.com/events.htm",
+	            "author": "Jill Blow"
+        	}]
+		}
+	}
+}

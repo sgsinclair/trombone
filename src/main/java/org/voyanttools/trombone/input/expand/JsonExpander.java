@@ -5,8 +5,11 @@ package org.voyanttools.trombone.input.expand;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
 import javax.json.Json;
@@ -18,6 +21,7 @@ import javax.json.JsonValue;
 import javax.json.JsonValue.ValueType;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.Source;
 import org.voyanttools.trombone.input.source.StringInputSource;
@@ -83,6 +87,36 @@ public class JsonExpander implements Expander {
 		} else {
 			strings.add(jsonValue.toString()); // this could be a string or something else
 		}
+		
+		/* groupBy is tricky because documents are combined in ways that may conflict 
+		 * with the other extraction options (especially since Pointer expects absolute
+		 * addresses from root). So for now we'll skip.
+		 
+		String groupByPointer = parameters.getParameterValue("jsonGroupByPointer", "");
+		if (groupByPointer.isEmpty()==false) {
+			Map<String, List<String>> stringsMap = new HashMap<String, List<String>>();
+			for (String string : strings) {
+				 JsonReader jsonStringReader = Json.createReader(new StringReader(string));
+				 JsonStructure jsonStringStructure = jsonStringReader.read();
+				 JsonValue jsonStringValue;
+				 try {
+					 jsonStringValue = jsonStringStructure.getValue(groupByPointer);					 
+				 } catch (JsonException e) {
+					throw new IOException("Unable to find the specified jsonGroupByPointer: "+groupByPointer+" for document "+string.substring(0, 30)+"…"); 
+				 }
+				 String stringValue = jsonStringValue.toString(); // doesn't matter if it has quotes, etc.
+				 if (stringsMap.containsKey(stringValue)==false) {
+					 stringsMap.put(stringValue, new ArrayList<String>());
+				 }
+				 stringsMap.get(stringValue).add(string);
+			}
+			
+			strings.clear();
+			for (Map.Entry<String, List<String>> entry : stringsMap.entrySet()) {
+				strings.add(StringUtils.join(entry.getValue(),"\n"));
+			}
+		}
+		*/
 		
 		DocumentMetadata parentMetadata = storedDocumentSource.getMetadata();
 		String parentId = storedDocumentSource.getId();

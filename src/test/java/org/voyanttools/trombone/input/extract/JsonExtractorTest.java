@@ -96,7 +96,43 @@ public class JsonExtractorTest {
 		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(1).getId()));
 		assertTrue(contents.startsWith("Announcing a new line of products"));
 		
-		
+
+		// with group by expansion
+		parameters = new FlexibleParameters();
+		parameters.setParameter("jsonDocumentsPointer", "/rss/channel/items");
+		parameters.setParameter("jsonGroupByPointer", "/author");
+		parameters.setParameter("jsonContentPointer", "/description");
+		parameters.setParameter("jsonTitlePointer", "/title");
+		parameters.setParameter("jsonAuthorPointer", "/author");
+		parameters.setParameter("jsonPubPlacePointer", "/link");
+		parameters.setParameter("jsonPublisherPointer", "/link");
+		parameters.setParameter("jsonPubDatePointer", "/link");
+		parameters.setParameter("jsonKeywordPointer", "/link");
+		parameters.setParameter("jsonCollectionPointer", "/link");
+		inputSource = new FileInputSource(TestHelper.getResource("json/longerfeed.json"));
+		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
+		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+		storedDocumentSourceExtractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, parameters);
+		extractedStoredDocumentSources = storedDocumentSourceExtractor.getExtractedStoredDocumentSources(expandedSourceDocumentSources);
+		assertEquals(2, extractedStoredDocumentSources.size());
+		metadata = extractedStoredDocumentSources.get(0).getMetadata();
+		assertEquals(DocumentFormat.JSON, metadata.getDocumentFormat());
+		assertEquals("A Special Event", metadata.getTitle());
+		assertEquals("Joe Blow", metadata.getAuthor());
+		assertEquals("http://www.yourdomain.com/events.htm", metadata.getPubDate());
+		assertEquals("http://www.yourdomain.com/events.htm", metadata.getKeywords());
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(0).getId()));
+		assertTrue(contents.startsWith("A Special Teleconference for our customers about our products"));
+		metadata = extractedStoredDocumentSources.get(1).getMetadata();
+		assertEquals(DocumentFormat.JSON, metadata.getDocumentFormat());
+		assertEquals("Announcing new Products", metadata.getTitle());
+		assertEquals("Joe Blow", metadata.getAuthor());
+		assertEquals("http://www.yourdomain.com/events.htm", metadata.getPubDate());
+		assertEquals("http://www.yourdomain.com/events.htm", metadata.getKeywords());
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(1).getId()));
+		assertTrue(contents.startsWith("Announcing a new line of products"));
+
 	}
 
 }
