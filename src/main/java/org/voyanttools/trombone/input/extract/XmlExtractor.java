@@ -145,6 +145,10 @@ public class XmlExtractor implements Extractor, Serializable {
 						else if (name.equals("teiCorpus")) guessedFormat = DocumentFormat.TEICORPUS;
 						else if (name.equals("rss")) guessedFormat = DocumentFormat.RSS;
 						else if (name.equals("EEBO")) guessedFormat = DocumentFormat.EEBODREAM;
+						else if (name.equals("FictionBook")) guessedFormat = DocumentFormat.FICTIONBOOK;
+						if (guessedFormat.isXml()) {
+							storedDocumentSource.getMetadata().setDocumentFormat(guessedFormat);
+						}
 					}
 				}
 				finally {
@@ -235,7 +239,13 @@ public class XmlExtractor implements Extractor, Serializable {
 			this.storedDocumentSource = storedDocumentSource;
 			this.metadata = storedDocumentSource.getMetadata().asParent(storedDocumentSourceId, DocumentMetadata.ParentType.EXTRACTION);
 			this.metadata.setLocation(storedDocumentSource.getMetadata().getLocation());
-			this.metadata.setDocumentFormat(DocumentFormat.XML);
+			try {
+				if (this.metadata.getDocumentFormat().isXml()==false) {
+					this.metadata.setDocumentFormat(DocumentFormat.XML);
+				}
+			} catch (IOException e) { // fail silently
+				this.metadata.setDocumentFormat(DocumentFormat.XML);
+			}
 			this.localParameters = localParameters;
 		}
 

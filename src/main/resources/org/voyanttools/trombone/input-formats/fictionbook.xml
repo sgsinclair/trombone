@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="xmlContentXpath">//*[local-name()='body']</entry>
+    <entry key="xmlTitleXpath">//*[local-name()='description']//*[local-name()='book-title']</entry>
+    <entry key="xmlAuthorXpath">//*[local-name()='description']//*[local-name()='author']</entry>
+    <entry key="xmlPubDateXpath">//*[local-name()='description']//*[local-name()='date']</entry>
+</properties>

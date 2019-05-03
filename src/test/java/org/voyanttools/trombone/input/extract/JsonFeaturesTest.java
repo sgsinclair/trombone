@@ -41,7 +41,7 @@ public class JsonFeaturesTest {
 		assertEquals("rnadnatinysample.jsonl (1)", documentMetadata.getLocation());
 		assertEquals(DocumentFormat.JSONFEATURES, documentMetadata.getDocumentFormat());
 
-
+		storage.destroy();
 	}
 
 }

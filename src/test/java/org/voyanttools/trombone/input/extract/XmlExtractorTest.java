@@ -206,6 +206,18 @@ public class XmlExtractorTest {
 		inputStream.close();
 		assertTrue(contents.contains("<a>") && contents.contains("<b>") && !contents.contains("<z>"));
 		
+		extractor = new StoredDocumentSourceExtractor(storeDocumentSourceStorage, new FlexibleParameters());
+		inputSource = new FileInputSource(TestHelper.getResource("xml/fictionbook.xml"));
+		storedDocumentSource = storeDocumentSourceStorage.getStoredDocumentSource(inputSource);
+		extractedStoredDocumentSource = extractor.getExtractedStoredDocumentSource(storedDocumentSource);
+		metadata = extractedStoredDocumentSource.getMetadata();
+		assertEquals("A Study in Scarlet", metadata.getTitle());
+		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
+		contents = IOUtils.toString(inputStream);
+		inputStream.close();
+		assertTrue(contents.contains("Frontispiece, with the caption"));
+		assertFalse(contents.contains("Project Gutenberg"));
+
 		
 		storage.destroy();
 

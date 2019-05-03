@@ -133,6 +133,7 @@ public class JsonExtractorTest {
 		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(1).getId()));
 		assertTrue(contents.startsWith("Announcing a new line of products"));
 
+		storage.destroy();
 	}
 
 }

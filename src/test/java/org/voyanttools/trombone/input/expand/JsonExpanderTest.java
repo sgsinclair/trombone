@@ -155,6 +155,8 @@ public class JsonExpanderTest {
 		finally {
 			if (inputStream!=null) {inputStream.close();}
 		}
+		
+		storage.destroy();
 
 	}
 }

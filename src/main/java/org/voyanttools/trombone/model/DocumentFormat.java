@@ -107,6 +107,11 @@ public enum DocumentFormat {
 	 */
 	DTOC("xml"),
 	
+	/*
+	 * The FictionBook format
+	 */
+	FICTIONBOOK("xml"),
+	
 	/**
 	 * An MS Word file (.doc).
 	 */
