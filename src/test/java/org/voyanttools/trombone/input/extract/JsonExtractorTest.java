@@ -98,6 +98,7 @@ public class JsonExtractorTest {
 		
 
 		// with group by expansion
+		/* ignoring groupBy for now
 		parameters = new FlexibleParameters();
 		parameters.setParameter("jsonDocumentsPointer", "/rss/channel/items");
 		parameters.setParameter("jsonGroupByPointer", "/author");
@@ -132,6 +133,7 @@ public class JsonExtractorTest {
 		assertEquals("http://www.yourdomain.com/events.htm", metadata.getKeywords());
 		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(1).getId()));
 		assertTrue(contents.startsWith("Announcing a new line of products"));
+		*/
 
 		storage.destroy();
 	}
