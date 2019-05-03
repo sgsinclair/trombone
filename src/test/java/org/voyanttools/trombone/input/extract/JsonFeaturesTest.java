@@ -23,7 +23,7 @@ public class JsonFeaturesTest {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		FlexibleParameters parameters = new FlexibleParameters();
 		
-		parameters.setParameter("file", TestHelper.getResource("formats/rnadnatinysample.jsonl.zip").getAbsolutePath());
+		parameters.setParameter("file", TestHelper.getResource("json/rnadnatinysample.jsonl.zip").getAbsolutePath());
 		parameters.setParameter("inputFormat", "JSONLINESFEATURES");
 		
 		CorpusCreator creator = new CorpusCreator(storage, parameters);

@@ -87,6 +87,10 @@ public class StoredDocumentSourceExpander implements Expander {
 	private Expander bagItExpander;
 	
 	private Expander jsonLinesFeaturesExpander;
+	
+	private Expander jsonLinesExpander;
+	
+	private Expander jsonExpander;
 
 	/**
 	 * Create a new instance of this expander with the specified storage
@@ -217,6 +221,13 @@ public class StoredDocumentSourceExpander implements Expander {
 			storedDocumentSources.addAll(expandJsonLinesFeatures(storedDocumentSource));
 		}
 		
+		else if (format==DocumentFormat.JSONLINES) {
+			storedDocumentSources.addAll(expandJsonLines(storedDocumentSource));
+		}
+		
+		else if (format==DocumentFormat.JSON) {
+			storedDocumentSources.addAll(expandJson(storedDocumentSource));
+		}
 
 		// no expansion needed or known
 		else {
@@ -344,6 +355,22 @@ public class StoredDocumentSourceExpander implements Expander {
 			this.jsonLinesFeaturesExpander = new JsonLinesFeaturesExpander(storedDocumentSourceStorage, parameters);
 		}
 		return this.jsonLinesFeaturesExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+	}
+	
+	List<StoredDocumentSource> expandJsonLines(
+			StoredDocumentSource storedDocumentSource) throws IOException {
+		if (this.jsonLinesExpander == null) {
+			this.jsonLinesExpander = new JsonLinesExpander(storedDocumentSourceStorage, parameters);
+		}
+		return this.jsonLinesExpander.getExpandedStoredDocumentSources(storedDocumentSource);
+	}
+	
+	List<StoredDocumentSource> expandJson(
+			StoredDocumentSource storedDocumentSource) throws IOException {
+		if (this.jsonExpander == null) {
+			this.jsonExpander = new JsonExpander(storedDocumentSourceStorage, parameters);
+		}
+		return this.jsonExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 	}
 	
 	private class CallableExpander implements Callable<StoredDocumentSource> {

@@ -245,7 +245,7 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	}
 	
 	public String getKeywords() {
-		return getProperty("keywords", "");
+		return getProperty("keyword", "");
 	}
 	
 	public String getLanguageCode() {
@@ -380,7 +380,7 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	}
 	
 	public void setKeywords(String value) {
-		setProperty("keywords", value);
+		setProperty("keyword", value);
 	}
 
 	public void setLanguageCode(String lang) {

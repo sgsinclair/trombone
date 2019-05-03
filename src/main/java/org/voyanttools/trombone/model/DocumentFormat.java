@@ -143,12 +143,7 @@ public enum DocumentFormat {
 	 * An EPUB file (.epub).
 	 */
 	EPUB("epub"),
-	
-	/**
-	 * For Old Bailey adapter http://www.oldbaileyonline.org/obapi/
-	 */
-	OBAPISEARCHJSON("json"),
-	
+		
 	/**
 	 * Old Bailey XML
 	 */
@@ -170,8 +165,15 @@ public enum DocumentFormat {
 	
 	JSONLINESFEATURES("jsonl"), // note there's a duplication of the extension so this has to be specified
 	
+	JSON("json"), // note there's a duplication of the extension so this has to be specified
+
 	JSONFEATURES("json"), // note there's a duplication of the extension so this has to be specified
-	
+		
+	/**
+	 * For Old Bailey adapter http://www.oldbaileyonline.org/obapi/
+	 */
+	OBAPISEARCHJSON("json"),
+
 	/**
 	 * A compressed file ("bzip2", "bz2", "gzip", "gz", "pack200", "xz")
 	 */

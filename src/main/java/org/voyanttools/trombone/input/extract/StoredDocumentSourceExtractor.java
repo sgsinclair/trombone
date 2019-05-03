@@ -67,7 +67,9 @@ public class StoredDocumentSourceExtractor {
 	private BagItExtractor bagItExtractor = null;
 	
 	private JsonFeaturesExtractor jsonFeaturesExtractor = null; 
-	
+
+	private JsonExtractor jsonExtractor = null; 
+
 //	static {
 //		try {
 ////			DetectorFactory.loadProfiles("af","am","ar","az","be","bg","bn","bo","ca","cs","cy","da","de","dv","el","en","es","et","eu","fa","fi","fo","fr","ga","gn","gu","he","hi","hr","hu","hy","id","is","it","ja","jv","ka","kk","km","kn","ko","ky","lb","lij","ln","lt","lv","mi","mk","ml","mn","mr","mt","my","ne","nl","no","os","pa","pl","pnb","pt","qu","ro","ru","si","sk","so","sq","sr","sv","sw","ta","te","th","tk","tl","tr","tt","ug","uk","ur","uz","vi","yi","yo","zh-cn","zh-tw");
@@ -181,6 +183,9 @@ public class StoredDocumentSourceExtractor {
 		} else if (format==DocumentFormat.JSONFEATURES || format==DocumentFormat.JSONLINESFEATURES) {
 			if (jsonFeaturesExtractor==null) {jsonFeaturesExtractor = new JsonFeaturesExtractor(storedDocumentSourceStorage, parameters);}
 			extractedInputSource = jsonFeaturesExtractor.getExtractableInputSource(storedDocumentSource);
+		} else if (format==DocumentFormat.JSON || format==DocumentFormat.JSONLINES) {
+			if (jsonExtractor==null) {jsonExtractor = new JsonExtractor(storedDocumentSourceStorage, parameters);}
+			extractedInputSource = jsonExtractor.getExtractableInputSource(storedDocumentSource);
 		}
 		// for now we'll only use the HTML extractor if there are special queries, otherwise use Tika
 		else if (format==DocumentFormat.HTML && getHtmlExtractor().hasQueries()) {
