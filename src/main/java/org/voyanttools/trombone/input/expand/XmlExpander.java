@@ -34,6 +34,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.regex.Pattern;
 
 import javax.xml.namespace.QName;
 import javax.xml.parsers.DocumentBuilder;
@@ -65,6 +66,7 @@ import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
@@ -243,6 +245,29 @@ class XmlExpander implements Expander {
 			throw new IllegalArgumentException("Unable to expand documents using the provided xmlDocumentsXPath argument: "+xmlDocumentsXpath+" for document: "+parentMetadata.getLocation());
 		}
 		
+		// check for stylesheet processing instruction
+		List<String> cssList = new ArrayList<String>();
+		if (DocumentFormat.getForgivingly(parameters.getParameterValue("inputFormat", ""))==DocumentFormat.DTOC) {
+			NodeList children = doc.getChildNodes();
+			for (int i=0, len=children.getLength(); i<len; i++) {
+				Node node = children.item(i);
+				if (node.getNodeType()==Node.PROCESSING_INSTRUCTION_NODE && node.getNodeName().equals("xml-stylesheet")) {
+					String val = node.getNodeValue();
+					String href = "href=\"";
+					int start = val.indexOf(href);
+					if (start>-1) {
+						start+=href.length();
+						String url = val.substring(start, val.indexOf("\"", start));
+						if (url.trim().isEmpty()==false) {
+							cssList.add(url);
+						}
+					}
+				}
+			}
+		}
+		String[] cssArray = cssList.toArray(new String[0]);
+
+		
 		if (nodeInputSources.isEmpty()==false) {
 			if (xmlGroupByXpath.isEmpty()==false) {
 				Map<String, List<NodeInputSource>> groupedNodeInputSources = new HashMap<String, List<NodeInputSource>>();
@@ -276,17 +301,25 @@ class XmlExpander implements Expander {
 						}
 						NodeInputSource newNodeInputSource = getChildStoredDocumentSource(newParentNode, parentId, parentMetadata, parentId+";group:"+key);
 						newNodeInputSource.documentMetadata.setTitle(key);
+						if (cssArray.length>0) {
+							newNodeInputSource.documentMetadata.setCss(cssArray);
+						}
 						childStoredDocumentSources.add(getStoredDocumentSource(newNodeInputSource));
 //					}
 				}
 			}
 			else {
 				for (NodeInputSource nodeInputSource : nodeInputSources) {
+					if (cssArray.length>0) {
+						nodeInputSource.documentMetadata.setCss(cssArray);
+					}
 					childStoredDocumentSources.add(getStoredDocumentSource(nodeInputSource));
 				}
 			}
 			
 		}
+		
+
 		// each node is a separate document
 //		if (xmlDocumentsXpaths.length == 1) {
 //			childStoredDocumentSources.addAll(getChildStoredDocumentSources(

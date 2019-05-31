@@ -161,7 +161,7 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 	public String getAuthor() {
 		return getProperty("author", "");
 	}
-
+	
 	/**
 	 * Get the default {@link DocumentFormat} of the metadata (or
 	 * {@link DocumentFormat#UNKNOWN} if unknown). This differs from the
@@ -337,6 +337,10 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
 
 	public void setAuthors(String[] values) {
 		setProperty("author", values);
+	}
+	
+	public void setCss(String[] values) {
+		setProperty("css", values);
 	}
 
 	/**
