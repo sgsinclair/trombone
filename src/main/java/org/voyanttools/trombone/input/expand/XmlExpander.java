@@ -199,7 +199,7 @@ class XmlExpander implements Expander {
 
 		DocumentMetadata parentMetadata = storedDocumentSource.getMetadata();
 		String parentId = storedDocumentSource.getId();
-		String multipleExpandedStoredDocumentSourcesPrefix = DigestUtils.md5Hex(xmlDocumentsXpath+xmlGroupByXpath);
+		String multipleExpandedStoredDocumentSourcesPrefix = DigestUtils.md5Hex(xmlDocumentsXpath+xmlGroupByXpath+"1");
 		childStoredDocumentSources = storedDocumentSourceStorage.getMultipleExpandedStoredDocumentSources(parentId, multipleExpandedStoredDocumentSourcesPrefix);
 		if (childStoredDocumentSources != null && childStoredDocumentSources.isEmpty() == false) {
 			return childStoredDocumentSources;
