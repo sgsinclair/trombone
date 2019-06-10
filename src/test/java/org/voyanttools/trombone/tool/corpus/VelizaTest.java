@@ -1,20 +1,13 @@
 package org.voyanttools.trombone.tool.corpus;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
-import java.text.BreakIterator;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
-import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.TextField;
 import org.junit.Test;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.memory.MemoryStorage;
-import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
@@ -22,7 +15,13 @@ public class VelizaTest {
 
 	@Test
 	public void test() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+
+	public void test(Storage storage) throws IOException {
 
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr")});
 		CorpusCreator creator = new CorpusCreator(storage, parameters);
@@ -85,6 +84,8 @@ public class VelizaTest {
 		String string = "This is a sentence.  It has fruits, vegetables,\n etc. but does not have meat.  Mr. Smith went to Washington.";
 		List<String> sentences = veliza.getSentences(string);
 		assertEquals(3, sentences.size());
+		
+		storage.destroy();
 	}
 
 }

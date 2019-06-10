@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.lucene.search.Query;
 import org.junit.Test;
 import org.voyanttools.trombone.storage.Storage;
@@ -14,7 +15,7 @@ public class FieldPrefixAwareSimpleQueryParserTest {
 	@Test
 	public void test() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
-		FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(null, storage.getLuceneManager().getAnalyzer());
+		FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(null, storage.getLuceneManager().getAnalyzer(RandomStringUtils.randomAlphabetic(10)));
 		Query query;
 		
 		// simple default TokenType

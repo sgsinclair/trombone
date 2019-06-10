@@ -13,10 +13,16 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
 public class DocumentNgramsTest {
-
+	
 	@Test
 	public void test() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+
+	public void test(Storage storage) throws IOException {
 		
 		// add another file to the storage
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr")});
@@ -57,6 +63,8 @@ public class DocumentNgramsTest {
 			assertEquals(ngram.toString(), ngram.getTerm().split("\\s+").length, ngram.getLength());
 //			System.out.println(ngram);
 		}
+		
+		storage.destroy();
 	}
 
 }

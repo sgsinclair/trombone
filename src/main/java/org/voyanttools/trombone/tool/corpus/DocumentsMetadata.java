@@ -63,7 +63,7 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 			weights.put("author", 1f);
 			weights.put(TokenType.lexical.name(), 1f);
 			IndexSearcher indexSearcher = corpusMapper.getSearcher();
-			SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(indexSearcher.getIndexReader(), storage.getLuceneManager().getAnalyzer(), weights);
+			SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(indexSearcher.getIndexReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), weights);
 			
 			Set<String> idsSet = new HashSet<String>();
 			for (String queryString : queries) {

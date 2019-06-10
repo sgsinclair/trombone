@@ -153,7 +153,7 @@ public class DocumentsFinder extends AbstractTerms {
 	private Query getFacetAwareQuery(CorpusMapper corpusMapper, String[] queryStrings) throws IOException {
 		
 		FacetsConfig config = new FacetsConfig();
-		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer());
+		SimpleQueryParser queryParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()));
 		
 
 		Map<String, List<Query>> fieldedQueries = new HashMap<String, List<Query>>();

@@ -124,8 +124,8 @@ public class LuceneIndexer implements Indexer {
 		
 		// determine if we need to modify the Lucene index
 		Collection<StoredDocumentSource> storedDocumentSourceForLucene = new ArrayList<StoredDocumentSource>();
-		if (storage.getLuceneManager().directoryExists()) {
-			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		if (storage.getLuceneManager().directoryExists(corpusId)) {
+			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpusId));
 			Terms terms = reader.terms("id");
 			if (terms==null) {
 				storedDocumentSourceForLucene.addAll(storedDocumentSources);
@@ -165,7 +165,7 @@ public class LuceneIndexer implements Indexer {
 	}
 	private void indexStream(Collection<StoredDocumentSource> storedDocumentSourceForLucene, String corpusId) throws CorruptIndexException, LockObtainFailedException, IOException {
 		// index documents (or at least add corpus to document if not already there), we need to get a new writer
-		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
+		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter(corpusId);
 		DirectoryReader indexReader = DirectoryReader.open(indexWriter);
 		IndexSearcher indexSearcher = new IndexSearcher(indexReader);		
 		boolean verbose = parameters.getParameterBooleanValue("verbose");
@@ -189,7 +189,7 @@ public class LuceneIndexer implements Indexer {
 		}
 		
 		indexReader = DirectoryReader.open(indexWriter);
-		storage.getLuceneManager().setDirectoryReader(indexReader); // make sure it's available afterwards				
+		storage.getLuceneManager().setDirectoryReader(corpusId, indexReader); // make sure it's available afterwards				
 
 		
 		// now determine which documents need to be analyzed
@@ -223,7 +223,7 @@ public class LuceneIndexer implements Indexer {
 	}
 	private void indexExecutorService(Collection<StoredDocumentSource> storedDocumentSourceForLucene, String corpusId) throws CorruptIndexException, LockObtainFailedException, IOException {
 		// index documents (or at least add corpus to document if not already there), we need to get a new writer
-		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter();
+		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter(corpusId);
 		DirectoryReader indexReader = DirectoryReader.open(indexWriter);
 		IndexSearcher indexSearcher = new IndexSearcher(indexReader);		
 		boolean verbose = parameters.getParameterBooleanValue("verbose");
@@ -268,7 +268,7 @@ public class LuceneIndexer implements Indexer {
 		}
 		
 		indexReader = DirectoryReader.open(indexWriter);
-		storage.getLuceneManager().setDirectoryReader(indexReader); // make sure it's available afterwards				
+		storage.getLuceneManager().setDirectoryReader(corpusId, indexReader); // make sure it's available afterwards				
 
 		
 		// now determine which documents need to be analyzed

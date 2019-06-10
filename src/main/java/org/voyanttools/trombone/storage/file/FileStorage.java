@@ -42,12 +42,16 @@ import java.util.UUID;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
+import org.voyanttools.trombone.lucene.PerCorpusIndexLuceneManager;
+import org.voyanttools.trombone.lucene.SingleIndexLuceneManager;
 import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
+import org.voyanttools.trombone.storage.DirectoryFactory;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -69,6 +73,8 @@ public class FileStorage implements Storage {
 	 */
 	public static final File DEFAULT_TROMBOME_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), DEFAULT_TROMBOME_DIRECTORY_NAME);
 	
+	private static final String LUCENE_DIRECTORY_NAME = "lucene";
+	private static final String LUCENE_PER_CORPUS_DIRECTORY_NAME = "lucene-per-corpus";
 	
 	/**
 	 * the actual base directory used for storage
@@ -86,13 +92,15 @@ public class FileStorage implements Storage {
 	private LuceneManager luceneManager = null;
 	
 	private NlpFactory nlpAnnotatorFactory = new NlpFactory();
+	
+	private FlexibleParameters parameters;
 
 	/**
 	 * Create a new instance in the default location.
 	 * @throws IOException 
 	 */
 	public FileStorage() throws IOException {
-		this(DEFAULT_TROMBOME_DIRECTORY);
+		this(DEFAULT_TROMBOME_DIRECTORY, new FlexibleParameters());
 	}
 	
 	/**
@@ -102,7 +110,7 @@ public class FileStorage implements Storage {
 	 * @throws IOException 
 	 */
 	public FileStorage(FlexibleParameters parameters) throws IOException {
-		this(parameters.containsKey("dataDirectory") ? new File(parameters.getParameterValue("dataDirectory")) : DEFAULT_TROMBOME_DIRECTORY);
+		this(parameters.containsKey("dataDirectory") ? new File(parameters.getParameterValue("dataDirectory")) : DEFAULT_TROMBOME_DIRECTORY, parameters);
 	}
 	
 
@@ -113,7 +121,18 @@ public class FileStorage implements Storage {
 	 * @throws IOException 
 	 */
 	public FileStorage(File storageLocation) throws IOException {
+		this(storageLocation, new FlexibleParameters());
+	}
+
+	/**
+	 * Create a new instance at the specified File location
+	 * 
+	 * @param storageLocation the file location to use for this storage
+	 * @throws IOException 
+	 */
+	public FileStorage(File storageLocation, FlexibleParameters parameters) throws IOException {
 		System.out.println("Trombone FileStorage location: "+storageLocation);
+		this.parameters = parameters;
 		this.storageLocation = storageLocation;
 		if (storageLocation.exists()==false) {
 			if (!storageLocation.mkdirs()) {
@@ -121,7 +140,7 @@ public class FileStorage implements Storage {
 			}
 		}
 	}
-
+	
 	public StoredDocumentSourceStorage getStoredDocumentSourceStorage() {
 		if (documentSourceStorage==null) {
 			documentSourceStorage = new FileStoredDocumentSourceStorage(this.storageLocation);
@@ -130,22 +149,42 @@ public class FileStorage implements Storage {
 	}
 
 	public void destroy() throws IOException {
-		getLuceneManager().getIndexWriter().close();
+		getLuceneManager().closeAll();
 		FileUtils.deleteDirectory(storageLocation);
 	}
 
 	@Override
 	public LuceneManager getLuceneManager() throws IOException {
 		if (luceneManager==null) {
-			Path path = Paths.get(storageLocation.getPath(), "lucene");
-			if (Files.exists(path)==false) {
-				Files.createDirectories(path);
+			if (parameters.getParameterValue("storage", "file").toLowerCase().equals("file-per-corpus")) {
+				if (Files.exists(Paths.get(storageLocation.getPath(), LUCENE_DIRECTORY_NAME))) {
+					System.err.println("\n"+
+					"*** WARNING: This instance has been configured for per-corpus Lucene index but\n"+
+					"*** a directory for Lucene (as a combined index) already exists, which could\n"+
+					"*** cause confusion and mayhem. Please consider changing the data directory\n"+
+					"*** or move the existing data directory. Adding a dot and a number to this\n"+
+					"*** data directory will facilitate data migration.\n\n");
+				}
+				Path path = Paths.get(storageLocation.getPath(), LUCENE_PER_CORPUS_DIRECTORY_NAME);
+				DirectoryFactory directoryFactory = new PerCorpusDirectoryFactory(path);
+				luceneManager = new PerCorpusIndexLuceneManager(this, directoryFactory);
+			} else {
+				if (Files.exists(Paths.get(storageLocation.getPath(), LUCENE_PER_CORPUS_DIRECTORY_NAME))) {
+					System.err.println("\n"+
+					"*** WARNING: This instance has been configured for one Lucene index but a\n"+
+					"*** directory for Lucene with an index per corpus already exists, which could\n"+
+					"*** cause confusion and mayhem. Please consider changing the data directory or\n"+
+					"*** move the existing data directory. Adding a dot and a number to this data\n"+
+					"*** directory will facilitate data migration.");
+				}
+				Path path = Paths.get(storageLocation.getPath(), LUCENE_DIRECTORY_NAME);
+				DirectoryFactory directoryFactory = new SingleDirectoryFactory(path);
+				luceneManager = new SingleIndexLuceneManager(this, directoryFactory);
 			}
-			luceneManager = new LuceneManager(this, new NIOFSDirectory(path));
 		}
 		return luceneManager;
 	}
-
+	
 	@Override
 	public boolean hasStoredString(String id, Location location) {
 		return getResourceFile(id, location).exists();

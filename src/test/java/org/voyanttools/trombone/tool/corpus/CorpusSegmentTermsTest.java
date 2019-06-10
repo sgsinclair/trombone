@@ -20,7 +20,13 @@ public class CorpusSegmentTermsTest {
 
 	@Test
 	public void test() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+
+	public void test(Storage storage) throws IOException {
 		
 		// add another file to the storage
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr")});
@@ -48,6 +54,8 @@ public class CorpusSegmentTermsTest {
 		assertEquals(5, corpusSegmentTerms.segmentMarkers.size()); // corpus is lop-sided so we get 4 segments instead of 6
 		assertEquals("droit", corpusSegmentTerms.sortedSegmentTerms.get(0).getKey());
 		assertEquals("derechos", corpusSegmentTerms.sortedSegmentTerms.get(corpusSegmentTerms.sortedSegmentTerms.size()-1).getKey());
+	
+		storage.destroy();
 	}
 
 }

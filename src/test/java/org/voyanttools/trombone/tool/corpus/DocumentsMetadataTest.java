@@ -1,12 +1,11 @@
 package org.voyanttools.trombone.tool.corpus;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.List;
 
 import org.junit.Test;
-import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.storage.Storage;
@@ -14,10 +13,16 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
 public class DocumentsMetadataTest {
-
+	
 	@Test
 	public void test() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+
+	public void test(Storage storage) throws IOException {
 
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"file="+TestHelper.getResource("udhr")});
 		CorpusCreator creator = new CorpusCreator(storage, parameters);
@@ -47,6 +52,8 @@ public class DocumentsMetadataTest {
 		document = documents.get(0);
 		metadata = document.getMetadata();
 		assertEquals(28, metadata.getSentencesCount());
+		
+		storage.destroy();
 	}
 
 }

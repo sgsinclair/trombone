@@ -1,26 +1,30 @@
 package org.voyanttools.trombone.tool.corpus;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.List;
 
 import org.junit.Test;
 import org.voyanttools.trombone.model.DocumentToken;
-import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.TestHelper;
 
 public class DocumentTokensTest {
-
+	
 	@Test
 	public void test() throws IOException {
-		
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
 
+	public void test(Storage storage) throws IOException {
+		
 		FlexibleParameters parameters;
 		
 		parameters = new FlexibleParameters();
@@ -47,11 +51,19 @@ public class DocumentTokensTest {
 		assertEquals(44, tokens.size());
 		assertEquals("it", tokens.get(2).getLemma());
 		
+		storage.destroy();
+		
 	}
 	
 	@Test
 	public void testLanguages() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			testLanguages(storage);
+		}
+	}
+
+	public void testLanguages(Storage storage) throws IOException {
 
 		FlexibleParameters parameters;
 		
@@ -98,6 +110,8 @@ public class DocumentTokensTest {
 			hasException = true;
 		}
 		assertTrue(hasException);
+		
+		storage.destroy();
 	}
 
 }

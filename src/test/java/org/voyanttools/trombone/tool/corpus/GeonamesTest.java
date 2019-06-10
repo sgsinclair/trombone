@@ -18,7 +18,14 @@ public class GeonamesTest {
 
 	@Test
 	public void test() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+
+	public void test(Storage storage) throws IOException {
+
 		String text1 = "Most of London, Ontario and Montreal and most of London, England and Montreal and London and Montreal.";
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"string="+text1,"includeCities=true"});
 		Geonames geonamesTool = new Geonames(storage, parameters);
@@ -38,7 +45,13 @@ public class GeonamesTest {
 	
 	@Test
 	public void testGeoanmesAnnotator() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			testGeoanmesAnnotator(storage);
+		}
+	}
+	
+	public void testGeoanmesAnnotator(Storage storage) throws IOException {
 		String text1 = "Most of London, Ontario and Montreal and most of London, England and Montreal and London and Montreal, London.";
 		FlexibleParameters parameters = new FlexibleParameters(new String[]{"string="+text1,"includeCities=true"});
 //		CorpusCreator creator = new CorpusCreator(storage, parameters);

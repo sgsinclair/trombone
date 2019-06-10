@@ -189,7 +189,7 @@ public class CorpusManager extends AbstractTool {
 			}
 			
 			String corpusId = storage.storeStrings(keepers, Storage.Location.object);
-			FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=corpus"});
+			FlexibleParameters params = new FlexibleParameters(new String[]{"storedId="+corpusId,"nextCorpusCreatorStep=index"}); // re-index in case we have per-corpus index
 			RealCorpusCreator realCorpusCreator = new RealCorpusCreator(storage, params);
 			realCorpusCreator.run(); // make sure to create corpus
 			this.id = realCorpusCreator.getStoredId();

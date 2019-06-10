@@ -3,12 +3,10 @@
  */
 package org.voyanttools.trombone.tool;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
-import org.apache.commons.codec.digest.DigestUtils;
-import org.junit.Test;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.file.FileStorage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
@@ -28,7 +26,7 @@ public class TableManagerTest {
 		tableManager.run();
 	}
 
-	@Test
+	//@Test
 	public void test() throws IOException {
 		Storage storage = new FileStorage();
 		FlexibleParameters parameters = new FlexibleParameters();		

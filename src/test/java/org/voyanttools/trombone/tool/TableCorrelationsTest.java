@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class TableCorrelationsTest {
 
-	@Test
+	//@Test
 	public void test() throws IOException {
 //		Storage storage = new MemoryStorage();
 //		FlexibleParameters parameters = new FlexibleParameters();

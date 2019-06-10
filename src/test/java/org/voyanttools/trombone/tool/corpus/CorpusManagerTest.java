@@ -15,6 +15,7 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.TestHelper;
 
 /**
  * @author sgs
@@ -24,7 +25,14 @@ public class CorpusManagerTest {
 
 	@Test
 	public void test() throws IOException {
-		Storage storage = new MemoryStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+
+	public void test(Storage storage) throws IOException {
+
 		String[] strings = new String[]{"It was a dark and stormy night.", "It was the best of times it was the worst of times."};
 		FlexibleParameters parameters;
 		parameters = new FlexibleParameters();
@@ -79,7 +87,7 @@ public class CorpusManagerTest {
 		parameters.setParameter("corpus", corpusId);
 		assertEquals(2, CorpusManager.getCorpus(storage, parameters).size());
 
-		
+		storage.destroy();
 		
 	}
 }

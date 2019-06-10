@@ -36,10 +36,12 @@ import java.util.UUID;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.voyanttools.trombone.lucene.LuceneManager;
+import org.voyanttools.trombone.lucene.SingleIndexLuceneManager;
 import org.voyanttools.trombone.nlp.NlpFactory;
 import org.voyanttools.trombone.storage.CorpusStorage;
 import org.voyanttools.trombone.storage.Storage;
@@ -91,7 +93,7 @@ public class MemoryStorage implements Storage {
 	@Override
 	public LuceneManager getLuceneManager() throws CorruptIndexException, IOException {
 		if (luceneManager==null) {
-			luceneManager = new LuceneManager(this, new RAMDirectory());
+			luceneManager = new SingleIndexLuceneManager(this, new MemoryDirectoryFactory());
 		}
 		return luceneManager;
 	}

@@ -1,21 +1,30 @@
 package org.voyanttools.trombone.tool;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 import java.io.IOException;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.Test;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.resource.StoredResource;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.TestHelper;
 
 public class StoredResourceTest {
-
+	
 	@Test
 	public void test() throws IOException {
-		Storage storage = new MemoryStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+
+
+	public void test(Storage storage) throws IOException {
+
 		FlexibleParameters parameters = new FlexibleParameters();
 		
 		// test verifying resource that doesn't exist
@@ -56,7 +65,8 @@ public class StoredResourceTest {
 		storedResource = new StoredResource(storage, parameters);
 		storedResource.run();
 		assertEquals(test, storedResource.getResource());
-
+		
+		storage.destroy();
 		
 	}
 

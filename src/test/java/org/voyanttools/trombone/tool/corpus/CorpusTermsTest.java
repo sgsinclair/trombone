@@ -4,8 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Set;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
@@ -16,17 +16,24 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.TestHelper;
 
 public class CorpusTermsTest {
 
 	@Test
 	public void testLexical() throws IOException {
-		Storage storage = new MemoryStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			testLexical(storage);
+		}
+	}
+
+	public void testLexical(Storage storage) throws IOException {
 		
 		// add an additional document to the corpus
 		Document document = new Document();
 		document.add(new TextField("lexical", "dark and stormy night in document one", Field.Store.YES));
-		storage.getLuceneManager().addDocument(document);
+		storage.getLuceneManager().addDocument(RandomStringUtils.randomAlphabetic(10), document);
 		
 		RealCorpusCreator creator;
 		FlexibleParameters parameters;

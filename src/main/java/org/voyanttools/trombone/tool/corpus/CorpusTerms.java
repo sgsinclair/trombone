@@ -252,7 +252,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		try {
 			FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
 			if (parameters.getParameterBooleanValue("inDocumentsCountOnly")) { // no spans required to count per-document frequencies
-				FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
+				FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
 				Map<String, Query> queriesMap;
 				try {
 					queriesMap = queriesMap = parser.getQueriesMap(queries, false);
@@ -262,7 +262,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 				runQueriesInDocumentsCountOnly(corpusMapper, queue, queriesMap);
 			}
 			else {
-				FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
+				FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
 				Map<String, SpanQuery> queriesMap;
 				try {
 					queriesMap = parser.getSpanQueriesMap(queries, false);

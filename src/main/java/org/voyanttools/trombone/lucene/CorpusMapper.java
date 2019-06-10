@@ -150,7 +150,7 @@ public class CorpusMapper {
 	 * @throws IOException
 	 */
 	private void buildFromTermsEnum() throws IOException {
-		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
+		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpus.getId()));
 		
 		Terms terms = reader.terms("id");
 		TermsEnum termsEnum = terms.iterator();

@@ -25,6 +25,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.voyanttools.trombone.storage.Storage;
@@ -41,6 +43,15 @@ public class TestHelper {
 //		return new FileStorage(getTemporaryTestStorageDirectory());
 		return new MemoryStorage();
 	}
+	
+	public static List<Storage> getDefaultTestStorages() throws IOException {
+		List<Storage> storages = new ArrayList<Storage>();
+		storages.add(new MemoryStorage());
+		storages.add(new FileStorage(getTemporaryTestStorageDirectory()));
+		storages.add(new FileStorage(getTemporaryTestStorageDirectory(), new FlexibleParameters(new String[] {"storage=file-per-corpus"})));
+		return storages;
+	}
+
 	public static File getTemporaryTestStorageDirectory() throws IOException {
 		File file = new File(FileStorage.DEFAULT_TROMBOME_DIRECTORY+"_test_"+UUID.randomUUID());
 		System.out.println("Temporary storage created: "+file.toString());

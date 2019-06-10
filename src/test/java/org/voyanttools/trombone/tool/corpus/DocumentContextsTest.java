@@ -13,6 +13,7 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.memory.MemoryStorage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
 import org.voyanttools.trombone.util.FlexibleParameters;
+import org.voyanttools.trombone.util.TestHelper;
 
 public class DocumentContextsTest {
 
@@ -97,7 +98,14 @@ public class DocumentContextsTest {
 	
 	@Test
 	public void testResults() throws IOException {
-		Storage storage = new MemoryStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			testResults(storage);
+		}
+	}
+	
+
+	public void testResults(Storage storage) throws IOException {
 		
 		FlexibleParameters parameters;
 		parameters = new FlexibleParameters();

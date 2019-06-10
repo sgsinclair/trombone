@@ -368,8 +368,8 @@ public class TromboneMigration {
 		creator.run();
 		String corpusIdToMigrate = creator.getStoredId();
 		
-		storage.getLuceneManager().getIndexWriter().commit();
-		storage.getLuceneManager().getIndexWriter().close();
+		storage.getLuceneManager().getIndexWriter(corpusIdToMigrate).commit();
+		storage.getLuceneManager().getIndexWriter(corpusIdToMigrate).close();
 		FileUtils.moveDirectory(current, recovery);
 		assertTrue(recovery.exists());
 		assertFalse(current.exists());

@@ -28,6 +28,7 @@ import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
 import org.voyanttools.trombone.input.source.FileInputSource;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.input.source.StringInputSource;
+import org.voyanttools.trombone.lucene.PerCorpusIndexLuceneManager;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.DocumentMetadata;
@@ -63,15 +64,16 @@ public class LuceneIndexerTest {
 		storedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(one));
 		storedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(two));
 		LuceneIndexer luceneIndexer = new LuceneIndexer(storage, new FlexibleParameters());
-		luceneIndexer.index(storedDocumentSources);
+		String corpusId = luceneIndexer.index(storedDocumentSources);
 		
 		// make sure we have exactly two documents in the lucene index
-		assertEquals(2, storage.getLuceneManager().getDirectoryReader().numDocs());
+		assertEquals(2, storage.getLuceneManager().getDirectoryReader(corpusId).numDocs());
 		storedDocumentSources.add(storedDocumentSourceStorage.getStoredDocumentSource(three));
 		luceneIndexer.index(storedDocumentSources);
 		
 		// make sure we have exactly three documents in the lucene index (no duplicates from the first time we added)
-		assertEquals(3, storage.getLuceneManager().getDirectoryReader().numDocs());
+		boolean isPerCorpusLuceneIndex = storage.getLuceneManager() instanceof PerCorpusIndexLuceneManager;
+		assertEquals(isPerCorpusLuceneIndex ? 2 : 3, storage.getLuceneManager().getDirectoryReader(corpusId).numDocs());
 		
 		storage.destroy();
 	}
@@ -262,7 +264,8 @@ public class LuceneIndexerTest {
 	public void testI18n() throws IOException {
 		Storage storage = TestHelper.getDefaultTestStorage();
 		
-		Map<String, Integer> docsToTokensMap = new HashMap<String, Integer>();
+		Map<String, Integer> docsToTokensMap;
+		Map<String, Map<String, Integer>> corpusDocsToTokensMap = new HashMap<String, Map<String, Integer>>();
 		
 		// extract and index with no parameters
 		FlexibleParameters parameters = new FlexibleParameters();
@@ -277,8 +280,10 @@ public class LuceneIndexerTest {
 		LuceneIndexer luceneIndexer = new LuceneIndexer(storage, parameters);
 		String id = luceneIndexer.index(extractedDocumentSources);
 		List<String> ids = storage.retrieveStrings(id, Storage.Location.object);
+		docsToTokensMap = new HashMap<String, Integer>();
 		docsToTokensMap.put(ids.get(0), 8);
 		docsToTokensMap.put(ids.get(1), 8);
+		corpusDocsToTokensMap.put(id, docsToTokensMap);
 		
 		// now re-extract and index with tokenization parameter
 		parameters.addParameter("tokenization", "wordBoundaries");
@@ -286,19 +291,25 @@ public class LuceneIndexerTest {
 		// indexer should create new documents in index because of parameters
 		id = luceneIndexer.index(extractedDocumentSources);
 		ids = storage.retrieveStrings(id, Storage.Location.object);
+		docsToTokensMap = new HashMap<String, Integer>();
 		docsToTokensMap.put(ids.get(0), 1);
 		docsToTokensMap.put(ids.get(1), 7);
+		corpusDocsToTokensMap.put(id, docsToTokensMap);
 		// make sure we have new metadata
 		assertEquals(0, storedDocumentSourceStorage.getStoredDocumentSourceMetadata(ids.get(0)).getLastTokenPositionIndex(TokenType.lexical));
 
 		// finally, go through and check our token counts
-		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader());
-		assertEquals(4, reader.maxDoc());
-		IndexSearcher searcher = new IndexSearcher(reader);
-		for (Map.Entry<String, Integer> entry : docsToTokensMap.entrySet()) {
-			TopDocs topDocs = searcher.search(new TermQuery(new Term("id", entry.getKey())), 1);
-			int doc = topDocs.scoreDocs[0].doc;
-			assertEquals((int) entry.getValue(), (int) reader.getTermVector(doc, TokenType.lexical.name()).size());
+		boolean isPerCorpusLuceneIndex = storage.getLuceneManager() instanceof PerCorpusIndexLuceneManager;
+		for (Map.Entry<String, Map<String, Integer>> corpusMapEntry : corpusDocsToTokensMap.entrySet()) {
+			String corpusId = corpusMapEntry.getKey();
+			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpusId));
+			assertEquals(isPerCorpusLuceneIndex ? 2 : 4, reader.maxDoc());
+			IndexSearcher searcher = new IndexSearcher(reader);
+			for (Map.Entry<String, Integer> entry : corpusMapEntry.getValue().entrySet()) {
+				TopDocs topDocs = searcher.search(new TermQuery(new Term("id", entry.getKey())), 1);
+				int doc = topDocs.scoreDocs[0].doc;
+				assertEquals((int) entry.getValue(), (int) reader.getTermVector(doc, TokenType.lexical.name()).size());		
+			}
 		}
 		
 		storage.destroy();

@@ -118,6 +118,7 @@ public class XslExpanderTest {
 		}
 		catch (IllegalArgumentException e) {
 		}
+
 		
 		/* ROWS */
 		
@@ -126,7 +127,7 @@ public class XslExpanderTest {
 		parameters.setParameter("tableDocuments", "rows");
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
-		assertEquals("phrase1 phrase 2", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		assertEquals("1.0+1.2", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals("1.0+1.2", expandedSourceDocumentSources.get(0).getMetadata().getLocation());
 		assertEquals(1, expandedSourceDocumentSources.size());
 		
@@ -137,7 +138,7 @@ public class XslExpanderTest {
 		storedDocumentSourceExpander = new StoredDocumentSourceExpander(storedDocumentSourceStorage, parameters);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.expandXsl(storedDocumentSource);
 		assertEquals(1, expandedSourceDocumentSources.size());
-		assertEquals("phrase1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
+		assertEquals("1.0.2", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals("1.0.2", expandedSourceDocumentSources.get(0).getMetadata().getLocation());
 		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
 		contents = IOUtils.toString(inputStream);
@@ -158,7 +159,7 @@ public class XslExpanderTest {
 		contents = IOUtils.toString(inputStream);
 		inputStream.close();
 //		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
-		assertEquals(2, contents.split("\n+").length);
+		assertEquals(1, contents.split("\n+").length);
 		
 		// first and second columns
 		parameters = new FlexibleParameters();

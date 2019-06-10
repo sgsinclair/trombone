@@ -12,7 +12,14 @@ public class CorpusFacetsTest {
 
 	@Test
 	public void test() throws IOException {
-		Storage storage = TestHelper.getDefaultTestStorage();
+		for (Storage storage : TestHelper.getDefaultTestStorages()) {
+			System.out.println("Testing with "+storage.getClass().getSimpleName()+": "+storage.getLuceneManager().getClass().getSimpleName());
+			test(storage);
+		}
+	}
+	
+	public void test(Storage storage) throws IOException {
+
 		FlexibleParameters parameters = new FlexibleParameters();
 		parameters.setParameter("file", TestHelper.getResource("xml/rss.xml").toString());
 		parameters.setParameter("inputFormat", "RSS");
@@ -30,6 +37,8 @@ public class CorpusFacetsTest {
 		parameters.setParameter("query", "Joe");
 		corpusFacets = new CorpusFacets(storage, parameters);
 		corpusFacets.run();
+		
+		storage.destroy();
 
 	}
 

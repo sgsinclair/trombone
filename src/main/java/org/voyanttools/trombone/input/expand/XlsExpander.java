@@ -311,7 +311,7 @@ public class XlsExpander implements Expander {
 			metadata.setAuthors(authors.toArray(new String[0]));
 		}
 		metadata.setDocumentFormat(DocumentFormat.TEXT);
-		String id = DigestUtils.md5Hex(parentId + location);
+		String id = DigestUtils.md5Hex(parentId + location + title + StringUtils.join(authors));
 		InputSource inputSource = new StringInputSource(id, metadata, string);
 		return storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 	}
