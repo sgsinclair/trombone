@@ -5,12 +5,8 @@ package org.voyanttools.trombone.tool.notebook;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URISyntaxException;
 
-import org.apache.cxf.helpers.IOUtils;
-import org.voyanttools.trombone.input.source.UriInputSource;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
 import org.voyanttools.trombone.storage.file.FileMigrationFactory;
@@ -27,9 +23,9 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 @XStreamAlias("notebook")
 public class NotebookManager extends AbstractTool {
 	
-	String notebook = null; // notebook source (ID, URL, etc.)
+	String id = null; // notebook source (ID, URL, etc.)
 	
-	String jsonData = null; // notebook data as JSON
+	String data = null; // notebook data as JSON
 	
 	public NotebookManager(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
@@ -40,56 +36,57 @@ public class NotebookManager extends AbstractTool {
 
 	@Override
 	public void run() throws IOException {
-		if (parameters.containsKey("jsonData")) { // this might be provided by Trombone
-			jsonData = parameters.getParameterValue("jsonData");
-		} 
-		if (parameters.containsKey("notebook")) {
-			notebook = parameters.getParameterValue("notebook");
-			if (parameters.getParameterBooleanValue("autosave")) {
-				notebook+="."+parameters.getParameterValue("VOYANT_REMOTE_ID","unknown").replaceAll("\\W+", "_")+".autosave";
+		String action = parameters.getParameterValue("action", "");
+		
+		// SAVE NOTEBOOK
+		if (action.equals("save")) {
+			String data = parameters.getParameterValue("data");
+			if (data.trim().isEmpty()) {
+				throw new IOException("Notebook contains no data.");
 			}
-			if (jsonData==null && notebook.startsWith("http")) {
-				URI uri;
-				try {
-					uri = new URI(notebook);
-				} catch (URISyntaxException e) {
-					throw new IllegalArgumentException("Unable to parse URL: "+notebook);
-				}
-				UriInputSource inputSource = new UriInputSource(uri);
-				InputStream is = null;
-				try {
-					is = inputSource.getInputStream();
-					jsonData = IOUtils.toString(is, "UTF-8");
-				} finally {
-					if (is!=null) is.close();
-				}
-			} else if (jsonData!=null && notebook!=null && notebook.isEmpty()==false && parameters.getParameterBooleanValue("autosave")) {
-				// notebook and jsonData defined, let's assume auto-save
-				storage.storeString(jsonData, notebook, Location.notebook, true);
-				jsonData = null;
-				return;
-			} else if (jsonData==null) {
-				if (storage.isStored(notebook, Location.notebook)) {
-					jsonData = storage.retrieveString(notebook, Storage.Location.notebook);
-				} else if (storage instanceof FileStorage) {
-					File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, notebook, Location.notebook);
-					if (file!=null && file.exists()) {
-						((FileStorage) storage).copyResource(file, notebook, Storage.Location.notebook);
-						jsonData = storage.retrieveString(notebook, Storage.Location.notebook);
-					}
-					
-				}
+			if (parameters.getParameterValue("id","").trim().isEmpty()==false) {
+				id = parameters.getParameterValue("id");
 			} else {
-				
+				while(true) {
+					id = RandomStringUtils.randomAlphanumeric(6);
+					if (storage.isStored(id, Location.notebook)==false) {
+						break;
+					}
+				}
 			}
-		} else if (jsonData!=null) { // we have sent data but no notebook, so we're saving
-			// assign new notebook ID
-			notebook = storage.storeString(jsonData, Location.notebook);
-			jsonData = null;
-			return;
+			storage.storeString(data, id+".html", Location.notebook, true);
 		}
-		if (jsonData==null && !parameters.getParameterBooleanValue("failQuietly")) {
-			throw new RuntimeException("Unable to locate requested notebook.");
+		
+		// CHECK IF NOTEBOOK EXISTS
+		else if (action.equals("exists")) {
+			id = parameters.getParameterValue("id");
+			data = storage.isStored(id+".html", Location.notebook) ? "true" : "false";
 		}
+		
+		// LOAD NOTEBOOK
+		else if (action.equals("load")) {
+			id = parameters.getParameterValue("id");
+			if (id==null && parameters.getParameterValue("data", "").trim().isEmpty()==false) {
+				data = parameters.getParameterValue("data"); // has been set by server
+			}
+			else if (storage.isStored(id+".html", Location.notebook)) {
+				data = storage.retrieveString(id+".html", Location.notebook);
+			} else if (storage.isStored(id, Location.notebook)) { // this is for version 2.4
+				data = storage.retrieveString(id, Location.notebook);
+			} else if (storage instanceof FileStorage) {
+				File file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id+".html", Location.notebook);
+				if (file==null || !file.exists()) { // this is for version 2.4 and lower
+					file = FileMigrationFactory.getStoredObjectFile((FileStorage) storage, id, Location.notebook);					
+				}
+				if (file!=null && file.exists()) {
+					((FileStorage) storage).copyResource(file, id+".html", Storage.Location.notebook);
+					data = storage.retrieveString(id+".html", Location.notebook);
+				}
+			}
+			if (data==null) {
+				throw new IOException("Unable to retrieve notebook: "+id);
+			}
+		}
+
 	}
 }
