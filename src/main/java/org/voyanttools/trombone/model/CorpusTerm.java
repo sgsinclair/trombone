@@ -13,7 +13,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 public class CorpusTerm implements Serializable {
 
 	public enum Sort {
-		INDOCUMENTSCOUNTASC, INDOCUMENTSCOUNTDESC, RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC, RELATIVEPEAKEDNESSASC, RELATIVEPEAKEDNESSDESC, RELATIVESKEWNESSASC, RELATIVESKEWNESSDESC, COMPARISONCORPUSRELATIVEFREQASC, COMPARISONCORPUSRELATIVEFREQDESC;
+		INDOCUMENTSCOUNTASC, INDOCUMENTSCOUNTDESC, RAWFREQASC, RAWFREQDESC, TERMASC, TERMDESC, RELATIVEPEAKEDNESSASC, RELATIVEPEAKEDNESSDESC, RELATIVESKEWNESSASC, RELATIVESKEWNESSDESC, COMPARISONRELATIVEFREQDIFFERENCEASC, COMPARISONRELATIVEFREQDIFFERENCEDESC;
 
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
@@ -22,7 +22,7 @@ public class CorpusTerm implements Serializable {
 			else if (sort.startsWith("INDOCUMENTSCOUNT")) {sortPrefix = "INDOCUMENTSCOUNT";}
 			else if (sort.startsWith("RELATIVEPEAK")) {sortPrefix = "RELATIVEPEAKEDNESS";}
 			else if (sort.startsWith("RELATIVESKEW")) {sortPrefix = "RELATIVESKEWNESS";}
-			else if (sort.startsWith("COMPARISONCORPUSRELATIVEFREQ")) {sortPrefix = "COMPARISONCORPUSRELATIVEFREQ";}
+			else if (sort.startsWith("COMPARISONRELATIVEFREQDIFFERENCE")) {sortPrefix = "COMPARISONRELATIVEFREQDIFFERENCE";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
@@ -184,9 +184,9 @@ public class CorpusTerm implements Serializable {
 			return InDocumentsCountAscendingComparator;
 		case INDOCUMENTSCOUNTDESC:
 			return InDocumentsCountDescendingComparator;
-		case COMPARISONCORPUSRELATIVEFREQASC:
+		case COMPARISONRELATIVEFREQDIFFERENCEASC:
 			return ComparisonCorpusRelativeFrequencyAscendingComparator;
-		case COMPARISONCORPUSRELATIVEFREQDESC:
+		case COMPARISONRELATIVEFREQDIFFERENCEDESC:
 			return ComparisonCorpusRelativeFrequencyDescendingComparator;
 		default: // rawFrequencyDesc
 			return RawFrequencyDescendingComparator;
