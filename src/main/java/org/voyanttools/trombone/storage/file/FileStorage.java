@@ -156,7 +156,8 @@ public class FileStorage implements Storage {
 	@Override
 	public LuceneManager getLuceneManager() throws IOException {
 		if (luceneManager==null) {
-			if (parameters.getParameterValue("storage", "file").toLowerCase().equals("file-per-corpus")) {
+			// file-per-corpus is now the default
+			if (parameters.getParameterValue("storage", "file-per-corpus").toLowerCase().equals("file-per-corpus")) {
 				if (Files.exists(Paths.get(storageLocation.getPath(), LUCENE_DIRECTORY_NAME))) {
 					System.err.println("\n"+
 					"*** WARNING: This instance has been configured for per-corpus Lucene index but\n"+
@@ -257,7 +258,7 @@ public class FileStorage implements Storage {
 		}
 	}
 	
-	File getResourceFile(String id, Location location) {
+	public File getResourceFile(String id, Location location) {
 		id = new File(id).getName(); // make sure we're not doing any directory traversal
 		// package level for migrators
 		if (id==null) {
