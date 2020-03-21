@@ -15,9 +15,9 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 @XStreamAlias("storedResource")
 public class StoredResource extends AbstractTool {
 	
-	private String id = "";
+	protected String id = "";
 	
-	private String resource = "";
+	protected String resource = "";
 	
 	public StoredResource(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);

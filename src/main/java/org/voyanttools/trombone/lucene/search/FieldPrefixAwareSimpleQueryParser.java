@@ -63,14 +63,14 @@ public class FieldPrefixAwareSimpleQueryParser extends SimpleQueryParser {
 	}
 	
 	
-	public Map<String, Query> getQueriesMap(String[] queries) {
-		Map<String, Query> map = new HashMap<String, Query>();
-		for (String query : queries) {
-			if (query.trim().isEmpty()) {continue;}
-			map.put(query, parse(query));
-		}
-		return map;
-	}
+//	public Map<String, Query> getQueriesMap(String[] queries) {
+//		Map<String, Query> map = new HashMap<String, Query>();
+//		for (String query : queries) {
+//			if (query.trim().isEmpty()) {continue;}
+//			map.put(query, parse(query));
+//		}
+//		return map;
+//	}
 
 	public Map<String, Query> getQueriesMap(String[] queries, boolean isQueryExpand) throws IOException {
 		Map<String, Query> map = new HashMap<String, Query>();

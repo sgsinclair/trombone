@@ -134,7 +134,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 			if (query.trim().isEmpty()) {continue;}
 			if (containsAlphaNumeric(query)==false) {continue;}
 			boolean isReallyQueryExpand = isQueryExpand;
-			if (query.startsWith("^")) {
+			if (query.startsWith("^") && query.startsWith("^@")==false) {
 				isReallyQueryExpand = true;
 				query = query.substring(1);
 			}
@@ -159,7 +159,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 				if (q instanceof SpanOrQuery) {
 					SpanOrQuery orq = (SpanOrQuery) q;
 					
-					if (((SpanOrQuery) q).getClauses().length>0) {
+					if (orq.getClauses().length>0) {
 						// check if it looks like an and query: +this +that
 						if (StringUtils.countMatches(query,"+") == orq.getClauses().length) {
 							// create an AND query by having a huge slop TODO: is this an important performance hit?

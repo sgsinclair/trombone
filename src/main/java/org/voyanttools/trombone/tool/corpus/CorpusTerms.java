@@ -44,8 +44,6 @@ import org.apache.lucene.search.spans.SpanTermQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
-import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
 import org.voyanttools.trombone.lucene.search.LuceneDocIdsCollector;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTerm;
@@ -118,7 +116,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 	
 	public float getVersion() {
-		return super.getVersion()+21;
+		return super.getVersion()+22;
 	}
 
 	private FlexibleQueue<CorpusTerm> runAllTermsWithDistributionsDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
@@ -251,23 +249,11 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		try {
 			FlexibleQueue<CorpusTerm> queue = new FlexibleQueue<CorpusTerm>(comparator, start+limit);
 			if (parameters.getParameterBooleanValue("inDocumentsCountOnly")) { // no spans required to count per-document frequencies
-				FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-				Map<String, Query> queriesMap;
-				try {
-					queriesMap = queriesMap = parser.getQueriesMap(queries, false);
-				} catch (Exception e) {
-					throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
-				}
+				Map<String, Query> queriesMap = getCategoriesAwareQueryMap(corpusMapper, queries);
 				runQueriesInDocumentsCountOnly(corpusMapper, queue, queriesMap);
 			}
 			else {
-				FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-				Map<String, SpanQuery> queriesMap;
-				try {
-					queriesMap = parser.getSpanQueriesMap(queries, false);
-				} catch (Exception e) {
-					throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
-				}
+				Map<String, SpanQuery> queriesMap = getCategoriesAwareSpanQueryMap(corpusMapper, queries);
 				runSpanQueries(corpusMapper, queue, queriesMap);
 			}
 			terms.addAll(queue.getOrderedList());
