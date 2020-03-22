@@ -11,6 +11,9 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.corpus.CorpusManager;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("storedCategories")
 public class StoredCategories extends StoredResource {
 
 	public StoredCategories(Storage storage, FlexibleParameters parameters) {
@@ -40,6 +43,7 @@ public class StoredCategories extends StoredResource {
 				File resourcesFile = new File(resourcesDir, localId);
 				if (resourcesFile.exists()) {
 					resource = FileUtils.readFileToString(resourcesFile, Charset.forName("UTF-8"));
+					this.id = id;
 					return;
 				}
 			}
