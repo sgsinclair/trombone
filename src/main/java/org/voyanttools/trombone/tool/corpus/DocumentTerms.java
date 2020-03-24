@@ -133,13 +133,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		
-		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-		Map<String, SpanQuery> queriesMap;
-		try {
-			queriesMap = parser.getSpanQueriesMap(queries, false);
-		} catch (Exception e) {
-			throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
-		}
+		Map<String, SpanQuery> queriesMap = getCategoriesAwareSpanQueryMap(corpusMapper, queries);
 	
 		Corpus corpus = corpusMapper.getCorpus();
 		Map<Integer, List<Integer>> positionsMap = new HashMap<Integer, List<Integer>>();

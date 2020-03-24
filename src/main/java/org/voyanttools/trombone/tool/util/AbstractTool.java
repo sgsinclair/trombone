@@ -60,7 +60,7 @@ public abstract class AbstractTool implements RunnableTool {
 	@XStreamOmitField
 	protected transient Storage storage;
 	
-	private static float VERSION = 5.6f;
+	private static float VERSION = 5.7f;
 	
 	@XStreamOmitField
 	private boolean isVerbose;

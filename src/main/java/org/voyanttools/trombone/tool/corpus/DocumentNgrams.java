@@ -107,13 +107,8 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 
 	List<DocumentNgram> getNgrams(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
-		FieldPrefixAwareSimpleSpanQueryParser parser = new FieldPrefixAwareSimpleSpanQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), tokenType==TokenType.other ? parameters.getParameterValue("tokenType") : tokenType.name());
-		Map<String, SpanQuery> queriesMap;
-		try {
-			queriesMap = parser.getSpanQueriesMap(queries, false);
-		} catch (Exception e) {
-			throw new IllegalArgumentException("Unable to parse queries: "+StringUtils.join(queries, "; "), e);
-		}
+
+		Map<String, SpanQuery> queriesMap = getCategoriesAwareSpanQueryMap(corpusMapper, queries);
 
 		Corpus corpus = corpusMapper.getCorpus();
 		int docIndexInCorpus; // this should always be changed on the first span

@@ -58,7 +58,7 @@ public class CorpusTermCorrelations extends AbstractTerms {
 	}
 
 	public float getVersion() {
-		return super.getVersion()+2;
+		return super.getVersion()+3;
 	}
 	/* (non-Javadoc)
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractTerms#runQueries(org.voyanttools.trombone.lucene.CorpusMapper, org.voyanttools.trombone.model.Keywords, java.lang.String[])
@@ -103,6 +103,9 @@ public class CorpusTermCorrelations extends AbstractTerms {
 		FlexibleParameters params = new FlexibleParameters();
 		params.addParameter("withDistributions", "relative");
 		params.addParameter("minRawFreq", 2);
+		if  (parameters.containsKey("categories")) {
+			params.addParameter("categories", parameters.getParameterValue("categories", ""));
+		}
 		return new CorpusTerms(storage, params);
 	}
 
