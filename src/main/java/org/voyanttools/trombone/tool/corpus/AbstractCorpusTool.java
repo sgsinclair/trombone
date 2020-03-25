@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -155,15 +156,19 @@ public abstract class AbstractCorpusTool extends AbstractTool {
 		}
 		
 		// remove map items that are simply the category names
+		Set<String> toBeRemoved = new HashSet<String>();
 		for (String key : queriesMap.keySet()) {
 			if (key.contains("@") && queriesMap.get(key) instanceof SpanTermQuery) {
 				Matcher matcher = categoryPattern.matcher(key);
 				if (matcher.find()) { 
 					if (matcher.group(1).equals(((SpanTermQuery) queriesMap.get(key)).getTerm().text())) {
-						queriesMap.remove(key);
+						toBeRemoved.add(key);
 					}
 				}
 			}
+		}
+		for (String key : toBeRemoved) {
+			queriesMap.remove(key);
 		}
 
 		return 	queriesMap;
