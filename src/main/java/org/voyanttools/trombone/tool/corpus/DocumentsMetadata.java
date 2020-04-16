@@ -57,6 +57,8 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 		List<String> ids = new ArrayList<String>(); // maintain insertion order, especially for no queries
 		String[] queries = getQueries();
 		
+		Set<String> validIds = new HashSet<String>(getCorpusStoredDocumentIdsFromParameters(corpus));
+		
 		if (queries.length>0) {
 			Map<String, Float> weights = new HashMap<String, Float>();
 			weights.put("title", 1f);
@@ -78,14 +80,19 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 			if (sort==Sort.INDEXASC) {
 				// insert them in order
 				for (String id : corpus.getDocumentIds()) {
-					if (idsSet.contains(id)) {ids.add(id);}
+					if (idsSet.contains(id) && validIds.contains(id)) {ids.add(id);}
 				}
 			} else {
+				for (String id : idsSet) {
+					if (validIds.contains(id)) {
+						ids.add(id);
+					}
+				}
 				ids.addAll(idsSet);
 			}
 		}
 		else {
-			ids.addAll(corpus.getDocumentIds());
+			ids.addAll(validIds);
 		}
 		total = ids.size();
 		
@@ -133,7 +140,7 @@ public class DocumentsMetadata extends AbstractCorpusTool {
 	
 	@Override
 	public float getVersion() {
-		return super.getVersion()+9;
+		return super.getVersion()+10;
 	}
 
 
