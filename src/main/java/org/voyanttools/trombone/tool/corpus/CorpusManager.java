@@ -89,6 +89,10 @@ public class CorpusManager extends AbstractTool {
 				return;
 			}
 			
+			if (parameters.getParameterBooleanValue("failQuietly")) {
+				return;
+			}
+
 			// otherwise we have a problem Houston
 			else {
 				throw new IllegalArgumentException("A corpus was specified but does not exist, could not be migrated and could not be recreated: "+corpusId);
