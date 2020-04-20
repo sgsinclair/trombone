@@ -84,7 +84,7 @@ public class DocumentCollocate  implements Serializable {
 					if (t.name().toLowerCase().equals(compareString)) return t;
 				}
 			}
-			return contextDocRelDiffDesc;
+			return rawDesc;
 		}
 	}
 	
@@ -122,8 +122,9 @@ public class DocumentCollocate  implements Serializable {
 		case docRawDesc: return DocumentRawFrequencyDescendingComparator;
 		case docRawAsc: return DocumentRawFrequencyAscendingComparator;
 		case contextDocRelDiffAsc: return ContextDocumentRelativeDifferenceAscendingComparator;
+		case contextDocRelDiffDesc: return ContextDocumentRelativeDifferenceDescendingComparator;
 		default: // contextDocumentRelativeDifferenceDescending
-			return ContextDocumentRelativeDifferenceAscendingComparator;
+			return ContextRawFrequencyDescendingComparator;
 		}
 	}
 
@@ -131,7 +132,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
-			
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termContextDocumentRelativeFrequencyDifference==documentCollocate2.termContextDocumentRelativeFrequencyDifference) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -147,6 +149,8 @@ public class DocumentCollocate  implements Serializable {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
 			
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termContextDocumentRelativeFrequencyDifference==documentCollocate2.termContextDocumentRelativeFrequencyDifference) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -161,6 +165,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termContextRawFrequency==documentCollocate2.termContextRawFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -175,6 +181,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termContextRawFrequency==documentCollocate2.termContextRawFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -188,6 +196,8 @@ public class DocumentCollocate  implements Serializable {
 	private static Comparator<DocumentCollocate> TermAscendingComparator = new Comparator<DocumentCollocate>() {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {			
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.term.equals(documentCollocate2.term)) {
 				return documentCollocate1.termContextDocumentRelativeFrequencyDifference > documentCollocate2.termContextDocumentRelativeFrequencyDifference ? 1 : -1;
 			}
@@ -200,6 +210,8 @@ public class DocumentCollocate  implements Serializable {
 	private static Comparator<DocumentCollocate> TermDescendingComparator = new Comparator<DocumentCollocate>() {
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {			
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.term.equals(documentCollocate2.term)) {
 				return documentCollocate1.termContextDocumentRelativeFrequencyDifference > documentCollocate2.termContextDocumentRelativeFrequencyDifference ? 1 : -1;
 			}
@@ -213,6 +225,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termContextRelativeFrequency==documentCollocate2.termContextRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -227,6 +241,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termContextRelativeFrequency==documentCollocate2.termContextRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -241,6 +257,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termDocumentRelativeFrequency==documentCollocate2.termDocumentRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -255,6 +273,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termDocumentRelativeFrequency==documentCollocate2.termDocumentRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -269,6 +289,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termDocumentRawFrequency==documentCollocate2.termDocumentRawFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
@@ -283,6 +305,8 @@ public class DocumentCollocate  implements Serializable {
 
 		@Override
 		public int compare(DocumentCollocate documentCollocate1, DocumentCollocate documentCollocate2) {
+			if (documentCollocate1==null) {return 1;} // not sure of this
+			if (documentCollocate2==null) {return -1;}
 			if (documentCollocate1.termDocumentRelativeFrequency==documentCollocate2.termDocumentRelativeFrequency) {
 				return documentCollocate1.getNormalizedTerm().compareTo(documentCollocate2.getNormalizedTerm());
 			}
