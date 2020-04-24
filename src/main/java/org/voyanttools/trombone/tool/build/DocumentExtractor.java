@@ -27,6 +27,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
+import org.apache.lucene.search.Sort;
 import org.voyanttools.trombone.input.extract.StoredDocumentSourceExtractor;
 import org.voyanttools.trombone.model.DocumentMetadata;
 import org.voyanttools.trombone.model.StoredDocumentSource;
@@ -91,6 +92,9 @@ class DocumentExtractor extends AbstractTool {
 		// sort documents if needed
 		if (parameters.containsKey("sort")) {
 			Collections.sort(storedDocumentSources, StoredDocumentSource.getComparator(parameters));
+		} else {
+			// use default, descending titles
+			Collections.sort(storedDocumentSources, StoredDocumentSource.getComparator(new FlexibleParameters()));
 		}
 		
 		List<String> extractedIds = new ArrayList<String>();
