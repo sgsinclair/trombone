@@ -96,9 +96,9 @@ public class DocumentCollocate  implements Serializable {
 		this.keywordContextRawFrequency = keywordContextRawFrequency;
 		this.term = term;
 		this.termContextRawFrequency = termContextRawFrequency;
-		this.termContextRelativeFrequency = termContextRawFrequency / contextTotalTokens;
+		this.termContextRelativeFrequency = (float) termContextRawFrequency / contextTotalTokens;
 		this.termDocumentRawFrequency = termDocumentRawFrequency;
-		this.termDocumentRelativeFrequency = termDocumentRawFrequency / documentTotalTokens;
+		this.termDocumentRelativeFrequency = (float) termDocumentRawFrequency / documentTotalTokens;
 		termContextDocumentRelativeFrequencyDifference = termContextRelativeFrequency-termDocumentRelativeFrequency;
 		
 	}

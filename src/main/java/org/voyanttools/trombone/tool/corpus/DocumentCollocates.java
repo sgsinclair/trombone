@@ -27,8 +27,10 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.lucene.index.LeafReader;
@@ -45,12 +47,14 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 /**
  * @author sgs
  *
  */
+@XStreamAlias("documentCollocates")
 public class DocumentCollocates extends AbstractContextTerms {
 
 	private List<DocumentCollocate> collocates = new ArrayList<DocumentCollocate>();
@@ -103,11 +107,16 @@ public class DocumentCollocates extends AbstractContextTerms {
 
 		Keywords stopwords = getStopwords(corpus);
 		
+		List<String> idsList = this.getCorpusStoredDocumentIdsFromParameters(corpus);
+		Set<String> idsHash = new HashSet<String>(idsList);
+		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
 		FlexibleQueue<DocumentCollocate> queue = new FlexibleQueue<DocumentCollocate>(comparator, limit);
 		for (Map.Entry<Integer, List<DocumentSpansData>> dsd : documentSpansDataMap.entrySet()) {
 			int luceneDoc = dsd.getKey();
 			int corpusDocIndex = corpusMapper.getDocumentPositionFromLuceneId(luceneDoc);
+			String id = corpusMapper.getDocumentIdFromDocumentPosition(corpusDocIndex);
+			if (idsHash.contains(id)==false) {continue;}
 			int lastToken = totalTokens[corpusDocIndex];
 			FlexibleQueue<DocumentCollocate> q = getCollocates(reader, luceneDoc, corpusDocIndex, lastToken, dsd.getValue(), stopwords);
 			for (DocumentCollocate c : q.getUnorderedList()) {
@@ -215,12 +224,6 @@ public class DocumentCollocates extends AbstractContextTerms {
 				contextTotalTokens += termsMapEntry.getValue().intValue();
 			}
 			
-			/*
-			 * 	public DocumentCollocate(int corpusDocumentIndex, String keyword, String term,
-			int keywordContextRawFrequency, int termContextRawFrequency, int termDocumentRawFrequency,
-			int totalContextTokens, int totalDocumentTokens) {
-
-			 */
 			// and now to create document collocate objects
 			for (Map.Entry<String, AtomicInteger> termsMapEntry : termsMap.entrySet()) {
 				String term = termsMapEntry.getKey();
