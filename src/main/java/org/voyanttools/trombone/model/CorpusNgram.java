@@ -163,4 +163,20 @@ public class CorpusNgram {
 		return "{"+term+": "+rawFreq+" ("+length+")";
 	}
 
+	public String getTerm() {
+		return term;
+	}
+
+	public int getRawFreq() {
+		return rawFreq;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public Object getDistributions() {
+		return distributions;
+	}
+
 }

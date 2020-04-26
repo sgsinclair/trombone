@@ -22,13 +22,21 @@ import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
  *
  */
 @XStreamAlias("corpusNgrams")
+@XStreamConverter(CorpusNgrams.CorpusNgramsConverter.class)
 public class CorpusNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 	private List<CorpusNgram> ngrams = new ArrayList<CorpusNgram>();
@@ -110,5 +118,59 @@ public class CorpusNgrams extends AbstractTerms implements ConsumptiveTool {
 		}
 		DocumentNgram docNgram = currentList.get(0);
 		return new CorpusNgram(docNgram.getTerm(), docNgram.getLength(), rawFreqs);
+	}
+	
+	public static class CorpusNgramsConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return CorpusNgrams.class.isAssignableFrom(type);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+			CorpusNgrams corpusNgrams = (CorpusNgrams) source;
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			writer.setValue(String.valueOf(corpusNgrams.total));
+			writer.endNode();
+			
+			FlexibleParameters parameters = corpusNgrams.getParameters();
+			boolean withDistributions = parameters.getParameterBooleanValue("withDistributions");
+			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "ngrams", Map.class);
+	        for (CorpusNgram corpusNgram : corpusNgrams.ngrams) {
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
+		        
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
+				writer.setValue(corpusNgram.getTerm());
+				writer.endNode();
+
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+				writer.setValue(String.valueOf(corpusNgram.getRawFreq()));
+				writer.endNode();
+
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "length", Integer.class);
+				writer.setValue(String.valueOf(corpusNgram.getLength()));
+				writer.endNode();
+
+	        	if (withDistributions) {
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
+			        context.convertAnother(corpusNgram.getDistributions());
+			        writer.endNode();
+	        	}
+	        	
+	        	writer.endNode();
+	        }
+	        writer.endNode();
+
+			
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+			return null;
+		}
+		
 	}
 }

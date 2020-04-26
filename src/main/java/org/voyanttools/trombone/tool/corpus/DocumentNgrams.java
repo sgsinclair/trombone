@@ -31,7 +31,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -40,23 +39,29 @@ import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.Spans;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentNgram;
 import org.voyanttools.trombone.model.Keywords;
-import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
  *
  */
 @XStreamAlias("documentNgrams")
+@XStreamConverter(DocumentNgrams.DocumentNgramsConverter.class)
 public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	
 	@XStreamOmitField
@@ -453,5 +458,60 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 
 	List<DocumentNgram> getNgrams() {
 		return ngrams;
+	}
+	
+	public static class DocumentNgramsConverter implements Converter {
+		@Override
+		public boolean canConvert(Class type) {
+			return DocumentNgrams.class.isAssignableFrom(type);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+			DocumentNgrams documentNgrams = (DocumentNgrams) source;
+			
+			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			writer.setValue(String.valueOf(documentNgrams.total));
+			writer.endNode();
+			
+			FlexibleParameters parameters = documentNgrams.getParameters();
+			boolean withPositions = parameters.getParameterBooleanValue("withPositions");
+			
+	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "ngrams", Map.class);
+	        for (DocumentNgram documentNgram : documentNgrams.ngrams) {
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
+		        
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
+				writer.setValue(documentNgram.getTerm());
+				writer.endNode();
+
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+				writer.setValue(String.valueOf(documentNgram.getRawFreq()));
+				writer.endNode();
+
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "length", Integer.class);
+				writer.setValue(String.valueOf(documentNgram.getLength()));
+				writer.endNode();
+
+		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+				writer.setValue(String.valueOf(documentNgram.getCorpusDocumentIndex()));
+				writer.endNode();
+				
+	        	if (withPositions) {
+			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "positions", List.class);
+			        context.convertAnother(documentNgram.getPositions());
+			        writer.endNode();
+	        	}
+	        	
+	        	writer.endNode();
+	        }
+	        writer.endNode();
+
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+			return null;
+		}		
 	}
 }

@@ -55,6 +55,9 @@ public class DocumentNgram implements Comparable<DocumentNgram> {
 	public String getTerm() {
 		return term;
 	}
+	public int getRawFreq() {
+		return rawFreq;
+	}
 	public int getLength() {
 		return length;
 	}
@@ -173,4 +176,5 @@ public class DocumentNgram implements Comparable<DocumentNgram> {
 		}
 		
 	};
+
 }
