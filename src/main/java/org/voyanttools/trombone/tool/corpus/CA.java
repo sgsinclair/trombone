@@ -42,7 +42,7 @@ public class CA extends CorpusAnalysisTool {
 
 	@Override
 	public double[][] getInput() throws IOException {
-		return buildFrequencyMatrix(MatrixType.TERM, 3);
+		return buildFrequencyMatrix(MatrixType.TERM, 2);
 	}
 	
 	@Override
@@ -55,9 +55,14 @@ public class CA extends CorpusAnalysisTool {
 		int numDocs = ids.size();
 		
 		int dimensions;
-		if (divisionType == DivisionType.DOCS) dimensions = Math.min(numDocs, getDimensions());
-		else dimensions = Math.min(getBins(), getDimensions());
-		if (numDocs == 3) dimensions = 2; // make sure there's no ArrayOutOfBoundsException
+		if (divisionType == DivisionType.DOCS) {
+			dimensions = Math.min(numDocs-1, getDimensions());
+			if (dimensions < 1) {
+				dimensions = 1; // should not ever be here
+			}
+		} else {
+			dimensions = Math.min(getBins(), getDimensions());
+		}
 		
 		double[][] rowProjections = ca.getRowProjections();
 		int i, j;
