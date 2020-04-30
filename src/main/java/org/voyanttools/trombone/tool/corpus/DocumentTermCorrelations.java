@@ -6,17 +6,14 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.DocumentTermsCorrelation;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
-import org.voyanttools.trombone.tool.util.Message.Type;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
-import org.voyanttools.trombone.util.NumberUtils;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -53,22 +50,35 @@ public class DocumentTermCorrelations extends AbstractTerms {
 		DocumentTerms documentTermsTool = getDocumentTermsTool(null);
 		documentTermsTool.runQueries(corpusMapper, stopwords, queries);
 		List<DocumentTerm> outerList = documentTermsTool.getDocumentTerms();
-		populate(documentTermsTool.getDocumentTerms(), documentTermsTool.getDocumentTerms(), true);
+		//populate(documentTermsTool.getDocumentTerms(), documentTermsTool.getDocumentTerms(), true);
+		Comparator<DocumentTermsCorrelation> comparator = DocumentTermsCorrelation.getComparator(DocumentTermsCorrelation.Sort.getForgivingly(parameters));
+		FlexibleQueue<DocumentTermsCorrelation> queue = new FlexibleQueue<DocumentTermsCorrelation>(comparator, start+limit);
 		for (String id : ids) {
 			documentTermsTool = getDocumentTermsTool(id);
 			documentTermsTool.runAllTerms(corpusMapper, stopwords);
-			populate(outerList, documentTermsTool.getDocumentTerms(), true);
+			List<DocumentTermsCorrelation> dtc = getDocumentTermsCorrelationList(outerList, documentTermsTool.getDocumentTerms(), true);
+			for (DocumentTermsCorrelation d : dtc) {
+				queue.offer(d);
+			}
 		}
+		correlations = queue.getOrderedList(start);
 	}
 
 	@Override
 	protected void runAllTerms(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		List<String> ids = this.getCorpusStoredDocumentIdsFromParameters(corpusMapper.getCorpus());
+		Comparator<DocumentTermsCorrelation> comparator = DocumentTermsCorrelation.getComparator(DocumentTermsCorrelation.Sort.getForgivingly(parameters));
+		FlexibleQueue<DocumentTermsCorrelation> queue = new FlexibleQueue<DocumentTermsCorrelation>(comparator, start+limit);
 		for (String id : ids) {
 			DocumentTerms documentTermsTool = getDocumentTermsTool(id);
 			documentTermsTool.runAllTerms(corpusMapper, stopwords);
-			populate(documentTermsTool.getDocumentTerms(), documentTermsTool.getDocumentTerms(), true);
+			getDocumentTermsCorrelationList(documentTermsTool.getDocumentTerms(), documentTermsTool.getDocumentTerms(), true);
+			List<DocumentTermsCorrelation> dtc = getDocumentTermsCorrelationList(documentTermsTool.getDocumentTerms(), documentTermsTool.getDocumentTerms(), true);
+			for (DocumentTermsCorrelation d : dtc) {
+				queue.offer(d);
+			}
 		}
+		correlations = queue.getOrderedList(start);
 	}
 	
 	
@@ -80,7 +90,7 @@ public class DocumentTermCorrelations extends AbstractTerms {
 		return new DocumentTerms(storage, params);
 	}
 	
-	private void populate(List<DocumentTerm> outerList, List<DocumentTerm> innerList, boolean half) {
+	private List<DocumentTermsCorrelation> getDocumentTermsCorrelationList(List<DocumentTerm> outerList, List<DocumentTerm> innerList, boolean half) {
 //		SpearmansCorrelation spearmansCorrelation = new SpearmansCorrelation();
 		Comparator<DocumentTermsCorrelation> comparator = DocumentTermsCorrelation.getComparator(DocumentTermsCorrelation.Sort.getForgivingly(parameters));
 		FlexibleQueue<DocumentTermsCorrelation> queue = new FlexibleQueue<DocumentTermsCorrelation>(comparator, start+limit);
@@ -101,7 +111,7 @@ public class DocumentTermCorrelations extends AbstractTerms {
 				}
 			}
 		}
-		correlations.addAll(queue.getOrderedList(start));
+		return queue.getOrderedList(start);
 	}
 
 	public static class DocumentTermCorrelationsConverter implements Converter {
@@ -127,6 +137,7 @@ public class DocumentTermCorrelations extends AbstractTerms {
 			
 			FlexibleParameters parameters = documentTermCorrelations.getParameters();
 			boolean termsOnly = parameters.getParameterBooleanValue("termsOnly");
+			boolean withDistributions = parameters.getParameterBooleanValue("withDistributions");
 			
 			
 	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlations", Map.class);
@@ -176,11 +187,13 @@ public class DocumentTermCorrelations extends AbstractTerms {
 						writer.setValue(documentTerm.getDocId());
 						writer.endNode();
 
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-				        float[] distributions = documentTerm.getRelativeDistributions(documentTermCorrelations.distributionBins).clone();
-				        // clone to avoid empty on subsequent instances 
-				        context.convertAnother(distributions.clone());
-				        writer.endNode();
+						if (withDistributions) {
+					        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
+					        float[] distributions = documentTerm.getRelativeDistributions(documentTermCorrelations.distributionBins).clone();
+					        // clone to avoid empty on subsequent instances 
+					        context.convertAnother(distributions.clone());
+					        writer.endNode();
+						}
 			        }
 					writer.endNode();
 		        }

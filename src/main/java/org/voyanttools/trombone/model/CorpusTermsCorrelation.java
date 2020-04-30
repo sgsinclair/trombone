@@ -60,11 +60,11 @@ public class CorpusTermsCorrelation {
 	private static Comparator<CorpusTermsCorrelation> TieBreaker = new Comparator<CorpusTermsCorrelation>() {
 		@Override
 		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
-			int compare = Integer.compare(o2.source.getRawFrequency()+o2.target.getRawFrequency(), o1.source.getRawFrequency()+o1.target.getRawFrequency());
+			int compare = Integer.compare(o2.source.getRawFrequency(), o1.source.getRawFrequency());
 			if (compare!=0) {return compare;}
-			compare = Integer.compare(o2.source.getInDocumentsCount()+o2.target.getInDocumentsCount(), o1.source.getInDocumentsCount()+o1.target.getInDocumentsCount());
+			compare = Integer.compare(o2.source.getInDocumentsCount(), o1.source.getInDocumentsCount());
 			if (compare!=0) {return compare;}
-			compare = o1.source.getTerm().compareTo(o2.source.getTerm());
+			compare = o2.source.getTerm().compareTo(o1.source.getTerm());
 			if (compare!=0) {return compare;}
 			return o1.target.getTerm().compareTo(o2.target.getTerm());
 		}
@@ -73,7 +73,7 @@ public class CorpusTermsCorrelation {
 	public static Comparator<CorpusTermsCorrelation> CorrelationAscending = new Comparator<CorpusTermsCorrelation>() {
 		@Override
 		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
-			int compare = Float.compare(o1.getCorrelation(), o2.getCorrelation());
+			int compare = Float.compare(o2.getCorrelation(), o1.getCorrelation());
 			if (compare==0) {return TieBreaker.compare(o1, o2);}
 			else {return compare;}
 		}
@@ -82,7 +82,7 @@ public class CorpusTermsCorrelation {
 	public static Comparator<CorpusTermsCorrelation> CorrelationDescending = new Comparator<CorpusTermsCorrelation>() {
 		@Override
 		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
-			int compare = Float.compare(o2.getCorrelation(), o1.getCorrelation());
+			int compare = Float.compare(o1.getCorrelation(), o2.getCorrelation());
 			if (compare==0) {return TieBreaker.compare(o1, o2);}
 			else {return compare;}
 		}
@@ -91,7 +91,7 @@ public class CorpusTermsCorrelation {
 	public static Comparator<CorpusTermsCorrelation> CorrelationAbsolute = new Comparator<CorpusTermsCorrelation>() {
 		@Override
 		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
-			int compare = Float.compare(Math.abs(o2.getCorrelation()), Math.abs(o1.getCorrelation()));
+			int compare = Float.compare(Math.abs(o1.getCorrelation()), Math.abs(o2.getCorrelation()));
 			if (compare==0) {return TieBreaker.compare(o1, o2);}
 			else {return compare;}
 		}

@@ -152,6 +152,7 @@ public class CorpusTermCorrelations extends AbstractTerms {
 			
 			FlexibleParameters parameters = corpusTermCorrelations.getParameters();
 			boolean termsOnly = parameters.getParameterBooleanValue("termsOnly");
+			boolean withDistributions = parameters.getParameterBooleanValue("withDistributions");
 //			termsOnly = true;
 			
 			
@@ -180,9 +181,12 @@ public class CorpusTermCorrelations extends AbstractTerms {
 				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeSkewness", Float.class);
 						writer.setValue(String.valueOf(corpusTerm.getSkewness()));
 						writer.endNode();
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-				        context.convertAnother(corpusTerm.getRelativeDistributions());
-				        writer.endNode();
+						
+						if (withDistributions) {
+					        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
+					        context.convertAnother(corpusTerm.getRelativeDistributions());
+					        writer.endNode();
+						}
 			        }
 					writer.endNode();
 		        }
