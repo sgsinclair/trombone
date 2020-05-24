@@ -180,8 +180,22 @@ public class StoredDocumentSourceExpander implements Expander {
 
 		// if we have a string and an unknown format, we have to have a peek
 		if (format == DocumentFormat.UNKNOWN && storedDocumentSource.getMetadata().getSource()==Source.STRING) {
-			String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
-			format = DocumentFormat.fromString(string);
+			
+			// first see if we have XML parameters set, which would suggest XML content
+			for (String key : parameters.getKeys()) {
+				if (key.startsWith("xml") && parameters.getParameterValue(key).isEmpty()==false) {
+					format = DocumentFormat.XML;
+					break;
+				}
+			}
+			
+			// otherwise have a peek at the contents
+			if (format!=DocumentFormat.XML) {
+				String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
+				format = DocumentFormat.fromString(string);
+			}
+			
+			// if we've found something, write it to the metadata
 			if (format != DocumentFormat.UNKNOWN) {
 				DocumentMetadata metadata = storedDocumentSource.getMetadata();
 				metadata.setDefaultFormat(format);

@@ -164,12 +164,23 @@ public class StoredDocumentSourceExtractor {
 		}
 		
 		if (format==DocumentFormat.UNKNOWN && storedDocumentSource.getMetadata().getSource()==Source.STRING) {
-			String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
-			format = DocumentFormat.fromString(string);
-			if (format != DocumentFormat.UNKNOWN) {
-				DocumentMetadata metadata = storedDocumentSource.getMetadata();
-				metadata.setDefaultFormat(format);
-				storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(storedDocumentSource.getId(), metadata);
+			// first, try to see if there are XML parameters
+			for (String key : parameters.getKeys()) {
+				if (key.startsWith("xml") && parameters.getParameterValue(key).isEmpty()==false) {
+					format = DocumentFormat.XML;
+					break;
+				}
+			}
+			
+			// next try reading part of string
+			if (format!=DocumentFormat.XML) {
+				String string = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(storedDocumentSource.getId()));
+				format = DocumentFormat.fromString(string);
+				if (format != DocumentFormat.UNKNOWN) {
+					DocumentMetadata metadata = storedDocumentSource.getMetadata();
+					metadata.setDefaultFormat(format);
+					storedDocumentSourceStorage.updateStoredDocumentSourceMetadata(storedDocumentSource.getId(), metadata);
+				}
 			}
 		}
 		
