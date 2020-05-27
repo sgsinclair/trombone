@@ -36,6 +36,8 @@ import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusMetadata;
 import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
+import org.voyanttools.trombone.model.DocumentFormat;
+import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
@@ -98,6 +100,17 @@ public class CorpusBuilder extends AbstractTool {
 			}
 			if (parameters.containsKey("subTitle")) {
 				metadata.setSubTitle(parameters.getParameterValue("subTitle"));
+			}
+			
+			if (DocumentFormat.getForgivingly(parameters.getParameterValue("inputFormat", ""))==DocumentFormat.DTOC) {
+				int dtocIndexDoc = parameters.getParameterIntValue("dtocIndexDoc", 0);
+				try {
+					IndexedDocument doc = corpus.getDocument(dtocIndexDoc);
+					doc.getMetadata().setExtra("isDtocIndex", "true");
+					storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(doc.getId(), doc.getMetadata());
+				} catch (IOException e) {
+					// index out of bounds
+				}
 			}
 			
 			storage.getCorpusStorage().storeCorpus(corpus, parameters);

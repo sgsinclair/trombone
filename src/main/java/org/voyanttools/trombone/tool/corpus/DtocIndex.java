@@ -5,13 +5,13 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
 
 import org.apache.tika.io.IOUtils;
 import org.voyanttools.trombone.input.extract.XmlExtractor;
 import org.voyanttools.trombone.input.source.InputSource;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentMetadata;
+import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.StoredDocumentSource;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
@@ -97,7 +97,16 @@ public class DtocIndex extends AbstractTool {
 	}
 	
 	private String getOriginalDocId(Corpus corpus) throws IOException {
-		// this is the simplest possible scenario where a DTOC XML file was loaded and parsed, we need to handle other scenarios
+        // check for a document with the isDtocIndex property
+		for (String docId : corpus.getDocumentIds()) {
+			IndexedDocument doc = corpus.getDocument(docId);
+			String isDtocIndex = doc.getMetadata().getExtra("isDtocIndex");
+			if (isDtocIndex != null && isDtocIndex.equals("true")) {
+				return docId;
+			}
+		}
+		
+        // if there's none then default to the first document
 		String id = corpus.getDocument(0).getMetadata().getFlexibleParameters().getParameterValue("parent_parent_id");
 		return id;
 	}
