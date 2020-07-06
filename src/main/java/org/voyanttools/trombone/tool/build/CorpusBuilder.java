@@ -103,13 +103,15 @@ public class CorpusBuilder extends AbstractTool {
 			}
 			
 			if (DocumentFormat.getForgivingly(parameters.getParameterValue("inputFormat", ""))==DocumentFormat.DTOC) {
-				int dtocIndexDoc = parameters.getParameterIntValue("dtocIndexDoc", 0);
-				try {
-					IndexedDocument doc = corpus.getDocument(dtocIndexDoc);
-					doc.getMetadata().setExtra("isDtocIndex", "true");
-					storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(doc.getId(), doc.getMetadata());
-				} catch (IOException e) {
-					// index out of bounds
+				int dtocIndexDoc = parameters.getParameterIntValue("dtocIndexDoc", -1);
+				if (dtocIndexDoc != -1) {
+					try {
+						IndexedDocument doc = corpus.getDocument(dtocIndexDoc);
+						doc.getMetadata().setExtra("isDtocIndex", "true");
+						storage.getStoredDocumentSourceStorage().updateStoredDocumentSourceMetadata(doc.getId(), doc.getMetadata());
+					} catch (IOException e) {
+						// index out of bounds
+					}
 				}
 			}
 			
