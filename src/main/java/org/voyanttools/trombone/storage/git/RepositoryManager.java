@@ -8,12 +8,15 @@ import java.util.List;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.api.errors.NoHeadException;
 import org.eclipse.jgit.api.errors.RefNotFoundException;
+import org.eclipse.jgit.errors.MissingObjectException;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.lib.ObjectLoader;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.lib.StoredConfig;
+import org.eclipse.jgit.notes.Note;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.revwalk.RevTree;
 import org.eclipse.jgit.revwalk.RevWalk;
@@ -89,14 +92,22 @@ public class RepositoryManager {
 	}
 	
 	
-	public void addFile(String repoName, String filename, String content) throws IOException, GitAPIException {
+	public RevCommit addFile(String repoName, String filename, String content) throws IOException, GitAPIException {
 		File file = new File(storageLocation, repoName+File.separator+filename);
 		FileUtils.writeStringToFile(file, content, "UTF-8");
 		
-		Git git = new Git(getRepository(repoName));
-		git.add().addFilepattern(filename).call();
-		
-		git.commit().setMessage("Added file: "+filename).call();
+		try (Git git = new Git(getRepository(repoName))) {
+			git.add().addFilepattern(filename).call();
+			RevCommit commit = git.commit().setMessage("Added file: "+filename).call();
+			return commit;
+		}
+	}
+	
+	public Note addNoteToCommit(String repoName, RevCommit commit, String noteContent) throws IOException, GitAPIException {
+		try (Git git = new Git(getRepository(repoName))) {
+			Note note = git.notesAdd().setMessage(noteContent).setObjectId(commit).call();
+			return note;
+		}
 	}
 	
 	
@@ -141,6 +152,22 @@ public class RepositoryManager {
 		}
 	}
 	
+	public static List<String> getRepositoryContents(Repository repository, String filter) throws IOException {
+		RevTree tree = getTree(repository);
+		try (TreeWalk treeWalk = new TreeWalk(repository)) {
+            treeWalk.addTree(tree);
+            treeWalk.setRecursive(false);
+            treeWalk.setFilter(PathFilter.create(filter));
+        
+            ArrayList<String> contents = new ArrayList<String>();
+            while(treeWalk.next()) {
+            	contents.add(treeWalk.getNameString());
+            }
+            
+            return contents;
+		}
+	}
+	
 	public static boolean doesRepositoryFileExist(Repository repository, String filename) throws IOException {
 		RevTree tree = getTree(repository);
 		try (TreeWalk treeWalk = new TreeWalk(repository)) {
@@ -166,11 +193,27 @@ public class RepositoryManager {
             }
             
             ObjectLoader loader = repository.open(treeWalk.getObjectId(0));
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            loader.copyTo(baos);
-            String contents = baos.toString(Charset.forName("UTF-8"));
+            String contents = RepositoryManager.getStringFromObjectLoader(loader);
             
             return contents;
 		}
+	}
+	
+	public static RevCommit getMostRecentCommitForFile(Repository repository, String filename) throws IOException, GitAPIException {
+		try (Git git = new Git(repository)) {
+			Iterable<RevCommit> logs = git.log()
+		            .addPath(filename)
+		            .setMaxCount(1)
+		            .call();
+			
+			RevCommit rc = logs.iterator().next();
+			return rc;
+		}
+	}
+	
+	public static String getStringFromObjectLoader(ObjectLoader loader) throws IOException {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        loader.copyTo(baos);
+        return baos.toString(Charset.forName("UTF-8"));
 	}
 }
