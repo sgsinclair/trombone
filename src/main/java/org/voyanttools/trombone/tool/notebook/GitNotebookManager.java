@@ -222,6 +222,7 @@ public class GitNotebookManager extends AbstractTool {
 //						System.out.println("no note for "+notebook);
 						String metadata = getMetadataFromNotebook(rm, notebook.replaceFirst(".html$", ""));
 						if (metadata != null) {
+							rm.addNoteToCommit(NOTEBOOK_REPO_NAME, rc, metadata);
 							notes.add(metadata);
 						}
 					}
