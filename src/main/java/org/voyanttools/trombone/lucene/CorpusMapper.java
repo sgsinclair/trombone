@@ -30,7 +30,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
@@ -51,6 +53,7 @@ import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.SparseFixedBitSet;
 import org.voyanttools.trombone.lucene.search.DocumentFilter;
 import org.voyanttools.trombone.lucene.search.DocumentFilterSpans;
+import org.voyanttools.trombone.lucene.search.FilteredCorpusDirectoryReader;
 import org.voyanttools.trombone.lucene.search.FilteredCorpusReader;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.storage.Storage;
@@ -62,7 +65,7 @@ import org.voyanttools.trombone.storage.Storage;
 public class CorpusMapper {
 	
 	Storage storage;
-	LeafReader reader;
+	DirectoryReader reader;
 	IndexSearcher searcher;
 	Corpus corpus;
 	private List<Integer> luceneIds = null;
@@ -100,7 +103,7 @@ public class CorpusMapper {
 		return bitSet;
 	}
 	
-	public LeafReader getLeafReader() throws IOException {
+	public DirectoryReader getLeafReader() throws IOException {
 		if (reader==null) {
 			build();
 		}
@@ -150,31 +153,34 @@ public class CorpusMapper {
 	 * @throws IOException
 	 */
 	private void buildFromTermsEnum() throws IOException {
-		LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpus.getId()));
+		DirectoryReader dr = storage.getLuceneManager().getDirectoryReader(corpus.getId());
+		for (LeafReaderContext rc : dr.leaves()) {
+			LeafReader reader = rc.reader();
 		
-		Terms terms = reader.terms("id");
-		TermsEnum termsEnum = terms.iterator();
-		BytesRef bytesRef = termsEnum.next();
-		int doc;
-		String id;
-		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
-		bitSet = new SparseFixedBitSet(reader.numDocs());
-		Bits liveBits = reader.getLiveDocs();
-		while (bytesRef!=null) {
-			PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.NONE);
-			doc = postingsEnum.nextDoc();
-			if (doc!=PostingsEnum.NO_MORE_DOCS) {
-				id = bytesRef.utf8ToString();
-				if (ids.contains(id)) {
-					bitSet.set(doc);
-					luceneIds.add(doc);
-					documentIdToLuceneIdMap.put(id, doc);
-					luceneIdToDocumentIdMap.put(doc, id);
+			Terms terms = reader.terms("id");
+			TermsEnum termsEnum = terms.iterator();
+			BytesRef bytesRef = termsEnum.next();
+			int doc;
+			String id;
+			Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
+			bitSet = new SparseFixedBitSet(reader.numDocs());
+			Bits liveBits = reader.getLiveDocs();
+			while (bytesRef!=null) {
+				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.NONE);
+				doc = postingsEnum.nextDoc();
+				if (doc!=PostingsEnum.NO_MORE_DOCS) {
+					id = bytesRef.utf8ToString();
+					if (ids.contains(id)) {
+						bitSet.set(doc);
+						luceneIds.add(doc);
+						documentIdToLuceneIdMap.put(id, doc);
+						luceneIdToDocumentIdMap.put(doc, id);
+					}
 				}
+				bytesRef = termsEnum.next();
 			}
-			bytesRef = termsEnum.next();
 		}
-		this.reader = new FilteredCorpusReader(reader, bitSet);
+		this.reader = new FilteredCorpusDirectoryReader(dr);
 	}
 	
 	public String getDocumentIdFromDocumentPosition(int documentPosition) {
@@ -206,7 +212,7 @@ public class CorpusMapper {
 	 * @throws IOException
 	 */
 	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
-		SpanWeight weight = spanQuery.createWeight(getSearcher(), false);
+		SpanWeight weight = spanQuery.createWeight(getSearcher(), false, 1f);
 		Spans spans = weight.getSpans(getLeafReader().getContext(), SpanWeight.Postings.POSITIONS);
 		return spans != null ? new DocumentFilterSpans(spans, bitSet) : null;
 	}

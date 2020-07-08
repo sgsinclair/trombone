@@ -20,26 +20,24 @@ public class TromboneICUTokenizerConfig extends DefaultICUTokenizerConfig {
 
 	private String language;
 	private static String TIBETAN = "bo";
-	private static BreakIterator TROMBONE_WORD_BREAK_ITERATOR;
+	private static RuleBasedBreakIterator TROMBONE_WORD_BREAK_ITERATOR;
 
 	public TromboneICUTokenizerConfig(boolean cjkAsWords, boolean myanmarAsWords, String language) {
 		super(cjkAsWords, myanmarAsWords);
 		this.language = language;
-		InputStream is = this.getClass().getResourceAsStream("tromboneDefault.rbbi");
 		String rules;
-		try {
-			rules = IOUtils.toString(is);
+		try (InputStream is = this.getClass().getResourceAsStream("tromboneDefault.rbbi")) {
+			rules = IOUtils.toString(is, "UTF-8");
 		} catch (IOException e) {
 			throw new RuntimeException("Unable to load trombone break iterator rules.", e);
 		}
-		IOUtils.closeQuietly(is);
 		TROMBONE_WORD_BREAK_ITERATOR = new RuleBasedBreakIterator(rules);
 	}
 
 	  @Override
-	  public BreakIterator getBreakIterator(int script) {
+	  public RuleBasedBreakIterator getBreakIterator(int script) {
 		  if (language.equals(TIBETAN)) {
-			  return (BreakIterator) TROMBONE_WORD_BREAK_ITERATOR.clone();
+			  return (RuleBasedBreakIterator) TROMBONE_WORD_BREAK_ITERATOR.clone();
 		  } else {
 			 return super.getBreakIterator(script);
 		  }

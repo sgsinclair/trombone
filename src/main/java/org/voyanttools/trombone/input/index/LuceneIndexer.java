@@ -24,12 +24,7 @@ package org.voyanttools.trombone.input.index;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
-import java.text.NumberFormat;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.Temporal;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -54,8 +49,8 @@ import org.apache.lucene.index.IndexOptions;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.PostingsEnum;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -125,20 +120,37 @@ public class LuceneIndexer implements Indexer {
 		// determine if we need to modify the Lucene index
 		Collection<StoredDocumentSource> storedDocumentSourceForLucene = new ArrayList<StoredDocumentSource>();
 		if (storage.getLuceneManager().directoryExists(corpusId)) {
-			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpusId));
-			Terms terms = reader.terms("id");
-			if (terms==null) {
-				storedDocumentSourceForLucene.addAll(storedDocumentSources);
-			}
-			else {
-				TermsEnum termsEnum = terms.iterator();		
-				for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-					String id = storedDocumentSource.getId();
-					if (!termsEnum.seekExact(new BytesRef(id))) {
-						storedDocumentSourceForLucene.add(storedDocumentSource);
+			DirectoryReader dr = storage.getLuceneManager().getDirectoryReader(corpusId);
+			for (LeafReaderContext rc : dr.leaves()) {
+				LeafReader reader = rc.reader();
+				Terms terms = reader.terms("id");
+				if (terms==null) {
+					storedDocumentSourceForLucene.addAll(storedDocumentSources);
+				}
+				else {
+					TermsEnum termsEnum = terms.iterator();		
+					for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+						String id = storedDocumentSource.getId();
+						if (!termsEnum.seekExact(new BytesRef(id))) {
+							storedDocumentSourceForLucene.add(storedDocumentSource);
+						}
 					}
 				}
 			}
+//			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpusId));
+//			Terms terms = reader.terms("id");
+//			if (terms==null) {
+//				storedDocumentSourceForLucene.addAll(storedDocumentSources);
+//			}
+//			else {
+//				TermsEnum termsEnum = terms.iterator();		
+//				for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+//					String id = storedDocumentSource.getId();
+//					if (!termsEnum.seekExact(new BytesRef(id))) {
+//						storedDocumentSourceForLucene.add(storedDocumentSource);
+//					}
+//				}
+//			}
 		}
 		else {
 			storedDocumentSourceForLucene.addAll(storedDocumentSources);

@@ -140,7 +140,7 @@ public abstract class AbstractQueryParser {
 			}
 			else { // separate each wildcard term into its own query
 				Set<Term> terms = new HashSet<Term>();
-				Weight weight = query.createWeight(indexSearcher, false);
+				Weight weight = query.createWeight(indexSearcher, false, 1f);
 				weight.extractTerms(terms);
 				for (Term t : terms) {
 					// we don't need to analyze term here since it's already from the index
