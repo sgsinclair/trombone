@@ -5,12 +5,14 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.api.errors.NoHeadException;
 import org.eclipse.jgit.api.errors.RefNotFoundException;
-import org.eclipse.jgit.errors.MissingObjectException;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.lib.ObjectLoader;
@@ -23,8 +25,6 @@ import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.treewalk.filter.PathFilter;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.output.ByteArrayOutputStream;
 
 
 public class RepositoryManager {
@@ -213,5 +213,13 @@ public class RepositoryManager {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
         loader.copyTo(baos);
         return baos.toString(Charset.forName("UTF-8"));
+	}
+	
+	public static Set<String> getUntrackedFiles(Repository repository) throws GitAPIException {
+		try(Git git = new Git(repository)) {
+			Status status = git.status().call();
+			Set<String> untracked = status.getUntracked();
+			return untracked;
+		}
 	}
 }

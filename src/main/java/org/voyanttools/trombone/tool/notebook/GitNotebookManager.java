@@ -6,29 +6,21 @@ package org.voyanttools.trombone.tool.notebook;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.mail.MessagingException;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.RefNotFoundException;
 import org.eclipse.jgit.errors.IncorrectObjectTypeException;
-import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.lib.ObjectLoader;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.notes.Note;
 import org.eclipse.jgit.revwalk.RevCommit;
-import org.eclipse.jgit.revwalk.RevWalk;
-import org.eclipse.jgit.treewalk.TreeWalk;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -199,6 +191,8 @@ public class GitNotebookManager extends AbstractTool {
 		
 		else if (action.equals("catalogue")) {
 			try {
+				handleUntrackedFiles(rm);
+				
 				Repository notebookRepo = rm.getRepository(NOTEBOOK_REPO_NAME);
 				List<String> files = RepositoryManager.getRepositoryContents(notebookRepo);
 				List<String> notebooks = files.stream().filter(f -> f.endsWith(".html")).collect(Collectors.toList());
@@ -256,6 +250,27 @@ public class GitNotebookManager extends AbstractTool {
 	
 	private String getAccessCodeFile(RepositoryManager rm, String filename) throws IOException, GitAPIException {
 		return RepositoryManager.getRepositoryFile(rm.getRepository(NOTEBOOK_REPO_NAME), filename);
+	}
+	
+	private void handleUntrackedFiles(RepositoryManager rm) throws IOException, GitAPIException {
+		Repository repo = rm.getRepository(NOTEBOOK_REPO_NAME);
+		File work = repo.getWorkTree();
+		Set<String> untracked = RepositoryManager.getUntrackedFiles(repo);
+		for (String filename : untracked) {
+			File untrackedFile = new File(work, filename);
+			if (untrackedFile.exists()) {
+				try (Git git = new Git(repo)) {
+					git.add().addFilepattern(filename).call();
+					RevCommit commit = git.commit().setMessage("Added file: "+filename).call();
+					if (filename.endsWith(".html")) {
+						String notebookMetadata = getMetadataFromNotebook(rm, filename);
+						if (notebookMetadata != null) {
+							rm.addNoteToCommit(NOTEBOOK_REPO_NAME, commit, notebookMetadata);
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	private void migrateNotebook(RepositoryManager rm, String id, String data) throws IOException, GitAPIException {
