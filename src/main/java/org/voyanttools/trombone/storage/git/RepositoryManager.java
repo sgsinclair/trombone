@@ -50,7 +50,7 @@ public class RepositoryManager {
 	public Git setupRepository(String repoName) throws IOException, GitAPIException {
 		File repoFile = new File(storageLocation, repoName);
 		if (repoFile.exists() == false) {
-			if (!repoFile.mkdir()) {
+			if (!repoFile.mkdirs()) {
 				throw new IOException("Unable to create git directory: "+storageLocation);
 			}
 		}
