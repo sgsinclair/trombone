@@ -38,6 +38,7 @@
 		<github.global.server>github</github.global.server>
 		<dkpro.core.version>1.8.0</dkpro.core.version>
 		<dl4j.version>1.0.0-beta6</dl4j.version>
+		<lucene.version>8.5.2</lucene.version>
 	</properties>
 	<build>
 		<plugins>
@@ -142,35 +143,35 @@
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-facet</artifactId>
-			<version>7.7.3</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-analyzers-icu</artifactId>
-			<version>7.7.3</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-queryparser</artifactId>
-			<version>7.7.3</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<!-- <dependency> <groupId>org.apache.lucene</groupId> <artifactId>lucene-analyzers-common</artifactId> 
 			<version>6.1.0</version> </dependency> -->
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-analyzers-smartcn</artifactId>
-			<version>7.7.3</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-test-framework</artifactId>
-			<version>7.7.3</version>
+			<version>${lucene.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-misc</artifactId>
-			<version>7.7.3</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.optimaize.languagedetector</groupId>
@@ -201,7 +202,7 @@
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-highlighter</artifactId>
-			<version>7.7.3</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
