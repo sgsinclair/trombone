@@ -31,9 +31,7 @@ public class RepositoryManager {
 
 	public static final String DEFAULT_TROMBOME_DIRECTORY_NAME = "trombone5_2";
 	
-	public static final String GIT_HOME = DEFAULT_TROMBOME_DIRECTORY_NAME + File.separator + "git";
-	
-	public static final File DEFAULT_GIT_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), GIT_HOME);
+	public static final File DEFAULT_GIT_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), DEFAULT_TROMBOME_DIRECTORY_NAME);
 	
 	public static final String DEFAULT_GIT_NAME = "spyral";
 	public static final String DEFAULT_GIT_EMAIL = "spyral@voyant-tools.org";

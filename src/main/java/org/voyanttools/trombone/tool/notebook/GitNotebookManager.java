@@ -51,8 +51,7 @@ public class GitNotebookManager extends AbstractTool {
 	
 	final static String ID_AND_CODE_TEMPLATE = "^[\\w-]{4,16}$"; // regex for matching notebook id and access code
 	
-	final static String NOTEBOOK_REPO_NAME = "spyral";
-	final static String ACCESS_CODE_REPO_NAME = "spyral";
+	final static String NOTEBOOK_REPO_NAME = "notebook";
 	
 	String id = null; // notebook source (ID, URL, etc.)
 	
@@ -117,7 +116,7 @@ public class GitNotebookManager extends AbstractTool {
 				try {
 					RevCommit commit = rm.addFile(NOTEBOOK_REPO_NAME, id+".html", notebookData);
 					rm.addNoteToCommit(NOTEBOOK_REPO_NAME, commit, notebookMetadata);
-					rm.addFile(ACCESS_CODE_REPO_NAME, id, accessCode);
+					rm.addFile(NOTEBOOK_REPO_NAME, id, accessCode);
 				} catch (IOException | GitAPIException e) {
 					throw new IOException(e.toString());
 				}
@@ -244,13 +243,6 @@ public class GitNotebookManager extends AbstractTool {
 			} catch (RefNotFoundException e) {
 				try (Git git = rm.setupRepository(NOTEBOOK_REPO_NAME)) {}
 			}
-			
-			try {
-				rm.getRepository(ACCESS_CODE_REPO_NAME);
-			} catch (RefNotFoundException e) {
-				try (Git git = rm.setupRepository(ACCESS_CODE_REPO_NAME)) {}
-			}
-			
 
 			return rm;
 		} catch (GitAPIException e) {
@@ -263,7 +255,7 @@ public class GitNotebookManager extends AbstractTool {
 	}
 	
 	private String getAccessCodeFile(RepositoryManager rm, String filename) throws IOException, GitAPIException {
-		return RepositoryManager.getRepositoryFile(rm.getRepository(ACCESS_CODE_REPO_NAME), filename);
+		return RepositoryManager.getRepositoryFile(rm.getRepository(NOTEBOOK_REPO_NAME), filename);
 	}
 	
 	private void migrateNotebook(RepositoryManager rm, String id, String data) throws IOException, GitAPIException {
@@ -278,7 +270,7 @@ public class GitNotebookManager extends AbstractTool {
 		if (notebookMetadata != null) {
 			rm.addNoteToCommit(NOTEBOOK_REPO_NAME, commit, notebookMetadata);
 		}
-		rm.addFile(ACCESS_CODE_REPO_NAME, id, accessCode);
+		rm.addFile(NOTEBOOK_REPO_NAME, id, accessCode);
 	}
 	
 	private String getMetadataFromNotebook(RepositoryManager rm, String notebookId) {
