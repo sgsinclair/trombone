@@ -5,10 +5,16 @@ package org.voyanttools.trombone.tool.notebook;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.mail.MessagingException;
 
@@ -194,17 +200,21 @@ public class GitNotebookManager extends AbstractTool {
 				handleUntrackedFiles(rm);
 				
 				Repository notebookRepo = rm.getRepository(NOTEBOOK_REPO_NAME);
-				List<String> files = RepositoryManager.getRepositoryContents(notebookRepo);
+				
+				File repoDir = notebookRepo.getWorkTree();
+				List<String> files = listFilesNewestFirst(repoDir);
+//				List<String> files = RepositoryManager.getRepositoryContents(notebookRepo);
 				List<String> notebooks = files.stream().filter(f -> f.endsWith(".html")).collect(Collectors.toList());
 				
 				List<String> notes = new ArrayList<String>();
 				
+				int count = 0;
+				int max = parameters.getParameterIntValue("limit", 100);
 				for (String notebook : notebooks) {
-//					System.out.println("---");
-//					System.out.println(notebook);
-					
+					if (count >= max) {
+						break;
+					}
 					RevCommit rc = RepositoryManager.getMostRecentCommitForFile(notebookRepo, notebook);
-//					System.out.println(rc.getName());
 					
 					try (Git git = new Git(notebookRepo)) {
 						Note note = git.notesShow().setObjectId(rc).call();
@@ -219,7 +229,7 @@ public class GitNotebookManager extends AbstractTool {
 							notes.add(metadata);
 						}
 					}
-					
+					count++;
 				}
 				
 				data = "["+String.join(",", notes)+"]";
@@ -250,6 +260,21 @@ public class GitNotebookManager extends AbstractTool {
 	
 	private String getAccessCodeFile(RepositoryManager rm, String filename) throws IOException, GitAPIException {
 		return RepositoryManager.getRepositoryFile(rm.getRepository(NOTEBOOK_REPO_NAME), filename);
+	}
+	
+	// from: https://stackoverflow.com/a/17625095
+	private static List<String> listFilesNewestFirst(File directory) throws IOException {
+	    try (final Stream<Path> fileStream = Files.list(directory.toPath())) {
+	        return fileStream
+	            .map(Path::toFile)
+	            .collect(Collectors.toMap(Function.identity(), File::lastModified))
+	            .entrySet()
+	            .stream()
+	            .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+	            .map(Map.Entry::getKey)
+	            .map(File::getName)
+	            .collect(Collectors.toList());
+	    }
 	}
 	
 	private void handleUntrackedFiles(RepositoryManager rm) throws IOException, GitAPIException {

@@ -198,8 +198,10 @@ public class RepositoryManager {
 	}
 	
 	public static RevCommit getMostRecentCommitForFile(Repository repository, String filename) throws IOException, GitAPIException {
+		ObjectId head = repository.resolve(Constants.HEAD);
 		try (Git git = new Git(repository)) {
 			Iterable<RevCommit> logs = git.log()
+					.add(head)
 		            .addPath(filename)
 		            .setMaxCount(1)
 		            .call();
