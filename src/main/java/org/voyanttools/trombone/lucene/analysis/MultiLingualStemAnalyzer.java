@@ -40,7 +40,7 @@ public class MultiLingualStemAnalyzer extends LexicalAnalyzer {
 			throw new IllegalArgumentException("This language ("+sl+") can't be stemmed currently.");
 		}
 		TokenStreamComponents tsc = super.createComponents(fieldName);
-		return new TokenStreamComponents(tsc.getTokenizer(), new SnowballFilter(tsc.getTokenStream(), StringUtils.capitalize(sl.name().toLowerCase())));
+		return new TokenStreamComponents(tsc.getSource(), new SnowballFilter(tsc.getTokenStream(), StringUtils.capitalize(sl.name().toLowerCase())));
 	}
 
 }
