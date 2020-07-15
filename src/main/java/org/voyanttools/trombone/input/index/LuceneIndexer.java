@@ -441,7 +441,7 @@ public class LuceneIndexer implements Indexer {
 			try {
 				
 				TopDocs topDocs = indexSearcher.search(new TermQuery(new Term("id", id)), 1);
-				if (topDocs.totalHits>0) { // already indexed
+				if (topDocs.totalHits.value>0) { // already indexed
 					return;
 				}
 					

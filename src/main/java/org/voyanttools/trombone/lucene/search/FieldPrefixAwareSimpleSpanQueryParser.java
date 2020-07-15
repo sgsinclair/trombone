@@ -145,7 +145,7 @@ public class FieldPrefixAwareSimpleSpanQueryParser extends
 					int count = 0;
 					for (SpanQuery spanQuery : ((SpanOrQuery) q).getClauses()) {
 						// we need to double-check that this term is in the corpus (the query rewrite method includes all terms)
-						if (searcher.search(spanQuery, 1).totalHits>0) {
+						if (searcher.search(spanQuery, 1).totalHits.value>0) {
 							map.put(spanQuery.toString(defaultPrefix), spanQuery);
 							count++;
 						}

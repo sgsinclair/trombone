@@ -122,7 +122,7 @@ public class GeonamesAnnotator {
 				        			 }
 				        			 Query query = builder.build();
 				        			TopDocs topDocs = searcher.search(query, 1);
-				        			if (topDocs.totalHits>0) {
+				        			if (topDocs.totalHits.value>0) {
 				        				form = StringUtils.join(words, ' ');
 				        			}   			
 				        		}
