@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -58,7 +58,7 @@ public class LuceneHelper {
 		
 	}
 	public static Map<Integer, int[]> getPositionToOffsetsMap(CorpusMapper corpusMapper, IndexedDocument doc, TokenType tokenType, Set<Integer> positions) throws IOException {
-		LeafReader reader = corpusMapper.getLeafReader();
+		IndexReader reader = corpusMapper.getIndexReader();
 		int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(doc.getId());
 		Map<Integer, int[]> map = new HashMap<Integer, int[]>();
 		Terms terms = reader.getTermVector(luceneDoc, tokenType.name());

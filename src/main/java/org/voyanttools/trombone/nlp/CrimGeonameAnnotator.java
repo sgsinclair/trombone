@@ -17,7 +17,7 @@ import java.util.UUID;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -126,7 +126,7 @@ public class CrimGeonameAnnotator {
 			Set<Integer> startOffsets) throws IOException {
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		int luceneDocId = corpusMapper.getLuceneIdFromDocumentId(docId);
-		LeafReader reader = corpusMapper.getLeafReader();
+		IndexReader reader = corpusMapper.getIndexReader();
 		Terms terms = reader.getTermVector(luceneDocId, TokenType.lexical.name());
 		TermsEnum termsEnum = null;
 		if (terms!=null) {

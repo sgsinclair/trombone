@@ -126,7 +126,7 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 			int currentDocTokensCount = 0;
 
 			int luceneDoc = corpusMapper.getLuceneIdFromDocumentId(id);
-			Terms terms = corpusMapper.getLeafReader().getTermVector(luceneDoc, tokenType.name());
+			Terms terms = corpusMapper.getIndexReader().getTermVector(luceneDoc, tokenType.name());
 			if (terms==null) {continue;}
 			TermsEnum termsEnum = terms.iterator();
 			Map<String, Integer> docFreqs = new HashMap<String, Integer>();

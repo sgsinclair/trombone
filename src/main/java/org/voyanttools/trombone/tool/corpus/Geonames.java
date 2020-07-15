@@ -35,13 +35,13 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.lucene.analysis.LexicalAnalyzer;
 import org.voyanttools.trombone.model.Confidence;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.Keywords;
+import org.voyanttools.trombone.model.TermInfo;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
@@ -270,7 +270,7 @@ public class Geonames extends AbstractContextTerms {
 			String document = corpusMapper.getCorpus().getDocument(corpusDocIndex).getDocumentString();
 			int lastToken = totalTokens[corpusDocIndex];
 			
-			Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, dsd.getValue(), true);
+			Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getIndexReader(), luceneDoc, lastToken, dsd.getValue(), true);
 			for (DocumentSpansData dsdItem : dsdList) {
 				cityOccurrenceCandidates = new ArrayList<CityOccurrence>();
 				String form = quotePattern.matcher(dsdItem.queryString).replaceAll("");

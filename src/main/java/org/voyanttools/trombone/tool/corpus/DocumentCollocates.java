@@ -24,7 +24,6 @@ package org.voyanttools.trombone.tool.corpus;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -33,7 +32,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -89,7 +88,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 	@Override
 	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
-		this.collocates = getCollocates(corpusMapper.getLeafReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
+		this.collocates = getCollocates(corpusMapper.getIndexReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 
 	/* (non-Javadoc)
@@ -101,7 +100,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 	}
 
 
-	List<DocumentCollocate> getCollocates(LeafReader reader,
+	List<DocumentCollocate> getCollocates(IndexReader reader,
 			CorpusMapper corpusMapper, Corpus corpus,
 			Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 
@@ -127,12 +126,12 @@ public class DocumentCollocates extends AbstractContextTerms {
 		return queue.getOrderedList();
 	}
 
-	private FlexibleQueue<DocumentCollocate> getCollocates(LeafReader LeafReader,
+	private FlexibleQueue<DocumentCollocate> getCollocates(IndexReader indexReader,
 			int luceneDoc, int corpusDocIndex, int lastToken,
 			List<DocumentSpansData> documentSpansData, Keywords stopwords) throws IOException {
 		
 		
-		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(LeafReader, luceneDoc, lastToken, documentSpansData, true);
+		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(indexReader, luceneDoc, lastToken, documentSpansData, true);
 
 		Map<String, Map<String, AtomicInteger>> mapOfTermsMap = new HashMap<String, Map<String, AtomicInteger>>();
 		
@@ -193,7 +192,7 @@ public class DocumentCollocates extends AbstractContextTerms {
 		// gather document frequency for strings of interest
 		int documentTotalTokens = 0;
 		
-		Terms terms = LeafReader.getTermVector(luceneDoc, tokenType.name());
+		Terms terms = indexReader.getTermVector(luceneDoc, tokenType.name());
 		TermsEnum termsEnum = terms.iterator();
 		while(true) {
 			BytesRef term = termsEnum.next();

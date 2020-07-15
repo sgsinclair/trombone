@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -40,7 +40,6 @@ import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
@@ -48,7 +47,6 @@ import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
-import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -157,7 +155,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 						int docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
 						positionsMap.put(docIndexInCorpus, new ArrayList<Integer>());
 						int pos = spans.nextStartPosition();
-						while (pos!=spans.NO_MORE_POSITIONS) {
+						while (pos!=Spans.NO_MORE_POSITIONS) {
 							positionsMap.get(docIndexInCorpus).add(pos);
 							pos = spans.nextStartPosition();
 						}
@@ -199,7 +197,7 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 	
 	private void runAllTermsFromDocumentTermVectors(CorpusMapper corpusMapper, Keywords stopwords) throws IOException {
 		FlexibleQueue<DocumentTerm> queue = new FlexibleQueue<DocumentTerm>(comparator, start+limit);
-		LeafReader reader = corpusMapper.getLeafReader();
+		IndexReader reader = corpusMapper.getIndexReader();
 		Corpus corpus = corpusMapper.getCorpus();
 		CorpusTermMinimalsDB corpusTermMinimalsDB = CorpusTermMinimalsDB.getInstance(corpusMapper, tokenType);
 		TermsEnum termsEnum = null;

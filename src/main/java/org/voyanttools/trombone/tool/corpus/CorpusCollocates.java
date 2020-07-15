@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.IndexReader;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusCollocate;
@@ -71,7 +71,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 			throws IOException {
 		this.queries = queries; // FIXME: this should be set by superclass
 		Map<Integer, List<DocumentSpansData>> documentSpansDataMap = getDocumentSpansData(corpusMapper, queries);
-		this.collocates = getCollocates(corpusMapper.getLeafReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
+		this.collocates = getCollocates(corpusMapper.getIndexReader(), corpusMapper, corpusMapper.getCorpus(), documentSpansDataMap);
 	}
 
 	/* (non-Javadoc)
@@ -83,7 +83,7 @@ public class CorpusCollocates extends AbstractContextTerms {
 	}
 
 
-	private List<CorpusCollocate> getCollocates(LeafReader reader,
+	private List<CorpusCollocate> getCollocates(IndexReader reader,
 			CorpusMapper corpusMapper, Corpus corpus,
 			Map<Integer, List<DocumentSpansData>> documentSpansDataMap) throws IOException {
 		

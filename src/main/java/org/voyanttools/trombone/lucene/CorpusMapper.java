@@ -31,10 +31,10 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.PostingsEnum;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.BooleanClause;
@@ -104,7 +104,7 @@ public class CorpusMapper {
 		return bitSet;
 	}
 	
-	public DirectoryReader getLeafReader() throws IOException {
+	public IndexReader getIndexReader() throws IOException {
 		if (reader==null) {
 			build();
 		}
@@ -113,7 +113,7 @@ public class CorpusMapper {
 	
 	public IndexSearcher getSearcher() throws IOException {
 		if (searcher==null) {
-			searcher = new IndexSearcher(getLeafReader());
+			searcher = new IndexSearcher(getIndexReader());
 		}
 		return searcher;
 	}
@@ -230,7 +230,7 @@ public class CorpusMapper {
 //	}
 
 	public BitSet getBitSetFromDocumentIds(Collection<String> documentIds) throws IOException {
-		BitSet subBitSet = new SparseFixedBitSet(getLeafReader().numDocs());
+		BitSet subBitSet = new SparseFixedBitSet(getIndexReader().numDocs());
 		for (String id : documentIds) {
 			subBitSet.set(getLuceneIdFromDocumentId(id));
 		}

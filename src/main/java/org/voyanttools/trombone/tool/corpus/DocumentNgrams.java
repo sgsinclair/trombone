@@ -352,7 +352,7 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 	private SimplifiedTermInfo[] getSparseSimplifiedTermInfoArray(CorpusMapper corpusMapper, int luceneDoc, int lastTokenOffset) throws IOException {
 		
 		Keywords stopwords = this.getStopwords(corpusMapper.getCorpus());
-		Terms terms = corpusMapper.getLeafReader().getTermVector(luceneDoc, tokenType.name());
+		Terms terms = corpusMapper.getIndexReader().getTermVector(luceneDoc, tokenType.name());
 		TermsEnum termsEnum = terms.iterator();
 		SimplifiedTermInfo[] simplifiedTermInfoArray = new SimplifiedTermInfo[lastTokenOffset+1];
 		while(true) {

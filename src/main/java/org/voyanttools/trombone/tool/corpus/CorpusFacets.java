@@ -74,10 +74,10 @@ public class CorpusFacets extends AbstractTerms {
 		
 		String defaultPrefix = parameters.getParameterValue("facet", "");
 		String defaultNonFacetedPrefix = defaultPrefix.replace("facet.", "");
-		FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), defaultPrefix);
-		FieldPrefixAwareSimpleQueryParser nonFacetedParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getLeafReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), defaultNonFacetedPrefix);
+		FieldPrefixAwareSimpleQueryParser parser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getIndexReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), defaultPrefix);
+		FieldPrefixAwareSimpleQueryParser nonFacetedParser = new FieldPrefixAwareSimpleQueryParser(corpusMapper.getIndexReader(), storage.getLuceneManager().getAnalyzer(corpusMapper.getCorpus().getId()), defaultNonFacetedPrefix);
 		
-		SortedSetDocValuesReaderState state = new DefaultSortedSetDocValuesReaderState(corpusMapper.getLeafReader());
+		SortedSetDocValuesReaderState state = new DefaultSortedSetDocValuesReaderState(corpusMapper.getIndexReader());
 		
 		String[] queryStrings = getQueries(queries);
 		

@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.lucene.search.vectorhighlight.FieldTermStack.TermInfo;
 import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.Kwic;
+import org.voyanttools.trombone.model.TermInfo;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -86,7 +86,7 @@ public class DocumentContexts extends AbstractContextTerms implements Consumptiv
 
 		int position = parameters.getParameterIntValue("position", -1);
 		
-		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getLeafReader(), luceneDoc, lastToken, documentSpansData, overlapStrategy==Kwic.OverlapStrategy.merge);
+		Map<Integer, TermInfo> termsOfInterest = getTermsOfInterest(corpusMapper.getIndexReader(), luceneDoc, lastToken, documentSpansData, overlapStrategy==Kwic.OverlapStrategy.merge);
 		
 		Stripper stripper = new Stripper(parameters.getParameterValue("stripTags"));
 
