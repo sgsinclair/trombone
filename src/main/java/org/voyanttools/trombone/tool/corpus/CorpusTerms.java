@@ -33,9 +33,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.LeafReader;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.index.TermContext;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.index.TermStates;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.spans.SpanOrQuery;
@@ -265,7 +265,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 
 	private void runSpanQueries(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, Map<String, SpanQuery> queriesMap) throws IOException {
-		Map<Term, TermContext> termContexts = new HashMap<Term, TermContext>();
+//		Map<Term, TermStates> termContexts = new HashMap<Term, TermStates>();
 		boolean needDistributions = withDistributions || corpusTermSort.needDistributions();
 		CorpusTermMinimalsDB corpusTermMinimalsDB = null; // only create it if we need it
 		int totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
