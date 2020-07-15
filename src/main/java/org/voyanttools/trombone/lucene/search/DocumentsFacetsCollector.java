@@ -17,29 +17,29 @@ import org.apache.lucene.util.FixedBitSet;
  */
 public class DocumentsFacetsCollector extends FacetsCollector {
 	
-	BitSet documentBits;
+	DocIdSet documentBits;
 
-	public DocumentsFacetsCollector(BitSet bitSet) {
+	public DocumentsFacetsCollector(DocIdSet bitSet) {
 		super(true);
 		documentBits = bitSet;
 	}
 
-	@Override
-	  protected Docs createDocs(final int maxDoc) {
-		    return new Docs() {
-		      private final FixedBitSet bits = new FixedBitSet(maxDoc);
-		      
-		      @Override
-		      public void addDoc(int docId) throws IOException {
-		    	  if (documentBits.get(docId)) {
-				        bits.set(docId);
-		    	  }
-		      }
-		      
-		      @Override
-		      public DocIdSet getDocIdSet() {
-		        return new BitDocIdSet(bits);
-		      }
-		    };
-		  }
+//	@Override
+//	  protected Docs createDocs(final int maxDoc) {
+//		    return new Docs() {
+//		      private final FixedBitSet bits = new FixedBitSet(maxDoc);
+//		      
+//		      @Override
+//		      public void addDoc(int docId) throws IOException {
+//		    	  if (documentBits.get(docId)) {
+//				        bits.set(docId);
+//		    	  }
+//		      }
+//		      
+//		      @Override
+//		      public DocIdSet getDocIdSet() {
+//		        return new BitDocIdSet(bits);
+//		      }
+//		    };
+//		  }
 }
