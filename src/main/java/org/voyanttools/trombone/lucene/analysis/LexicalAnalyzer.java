@@ -31,8 +31,8 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.cn.smart.HMMChineseTokenizer;
+import org.apache.lucene.analysis.core.LetterTokenizer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
-import org.apache.lucene.analysis.core.LowerCaseTokenizer;
 import org.apache.lucene.analysis.core.UnicodeWhitespaceTokenizer;
 import org.apache.lucene.analysis.icu.segmentation.ICUTokenizer;
 import org.apache.tika.io.IOUtils;
@@ -104,8 +104,9 @@ public class LexicalAnalyzer extends Analyzer {
 	@Override
 	protected TokenStreamComponents createComponents(String fieldName) {
 		if (fieldName.equals(TokenType.lexical.name()) && parameters.getParameterValue("tokenization", "").equals("wordBoundaries")) {
-			Tokenizer tokenizer = new LowerCaseTokenizer();
-			return new TokenStreamComponents(tokenizer);
+			Tokenizer tokenizer = new LetterTokenizer();
+			TokenStream stream = new LowerCaseFilter(tokenizer);
+			return new TokenStreamComponents(tokenizer, stream);
 		}
 		else if (fieldName.equals(TokenType.lexical.name()) && parameters.getParameterValue("tokenization", "").equals("whitespace")) {
 			Tokenizer tokenizer = new UnicodeWhitespaceTokenizer();
