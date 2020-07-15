@@ -42,6 +42,7 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreMode;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanWeight;
 import org.apache.lucene.search.spans.Spans;
@@ -212,7 +213,7 @@ public class CorpusMapper {
 	 * @throws IOException
 	 */
 	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
-		SpanWeight weight = spanQuery.createWeight(getSearcher(), false, 1f);
+		SpanWeight weight = spanQuery.createWeight(getSearcher(), ScoreMode.COMPLETE_NO_SCORES, 1f);
 		Spans spans = weight.getSpans(getLeafReader().getContext(), SpanWeight.Postings.POSITIONS);
 		return spans != null ? new DocumentFilterSpans(spans, bitSet) : null;
 	}
