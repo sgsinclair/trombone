@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.index.LeafReaderContext;
+import org.apache.lucene.search.Scorable;
+import org.apache.lucene.search.ScoreMode;
 import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.SimpleCollector;
 import org.apache.lucene.util.BitSet;
@@ -22,7 +24,7 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 
 	private Map<Integer, Integer> luceneDocIds = new HashMap<Integer,Integer>();
 	private int base = 0;
-	private Scorer scorer = null;
+	private Scorable scorer = null;
 	private int rawFreq = 0;
 	private BitSet bitSet;
 
@@ -35,7 +37,7 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 		// FIXME: determine if we're slowly iterating over all documents in the index and if we can use another doc id iterator
 		if (bitSet.get(doc) && isSeen(absoluteDoc)==false) {
 			scorer.score();
-			int freq = scorer.freq();
+			int freq = (int) scorer.score();
 			rawFreq += freq;
 			luceneDocIds.put(absoluteDoc, freq);
 		}
@@ -59,7 +61,7 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 	}
 	
 	@Override
-	public void setScorer(Scorer scorer) {
+	public void setScorer(Scorable scorer) {
 		this.scorer = scorer;
 	}
 
@@ -68,8 +70,8 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 	}
 
 	@Override
-	public boolean needsScores() {
-		return true; // can this be set to false while ensuring that setScorer is called?
+	public ScoreMode scoreMode() {
+		return ScoreMode.COMPLETE;
 	}
 	
 }
