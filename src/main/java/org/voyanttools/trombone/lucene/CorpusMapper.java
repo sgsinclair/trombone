@@ -54,6 +54,7 @@ import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.SparseFixedBitSet;
 import org.voyanttools.trombone.lucene.search.DocumentFilter;
 import org.voyanttools.trombone.lucene.search.DocumentFilterSpans;
+import org.voyanttools.trombone.lucene.search.DocumentFilterSpansWrapper;
 import org.voyanttools.trombone.lucene.search.FilteredCorpusDirectoryReader;
 import org.voyanttools.trombone.lucene.search.FilteredCorpusReader;
 import org.voyanttools.trombone.model.Corpus;
@@ -155,6 +156,8 @@ public class CorpusMapper {
 	 */
 	private void buildFromTermsEnum() throws IOException {
 		DirectoryReader dr = storage.getLuceneManager().getDirectoryReader(corpus.getId());
+		bitSet = new SparseFixedBitSet(dr.numDocs());
+		
 		for (LeafReaderContext rc : dr.leaves()) {
 			LeafReader reader = rc.reader();
 		
@@ -164,7 +167,7 @@ public class CorpusMapper {
 			int doc;
 			String id;
 			Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
-			bitSet = new SparseFixedBitSet(reader.numDocs());
+			
 			Bits liveBits = reader.getLiveDocs();
 			while (bytesRef!=null) {
 				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.NONE);
@@ -181,7 +184,7 @@ public class CorpusMapper {
 				bytesRef = termsEnum.next();
 			}
 		}
-		this.reader = new FilteredCorpusDirectoryReader(dr);
+		this.reader = dr;//new FilteredCorpusDirectoryReader(dr);
 	}
 	
 	public String getDocumentIdFromDocumentPosition(int documentPosition) {
@@ -214,8 +217,18 @@ public class CorpusMapper {
 	 */
 	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
 		SpanWeight weight = spanQuery.createWeight(getSearcher(), ScoreMode.COMPLETE_NO_SCORES, 1f);
-		Spans spans = weight.getSpans(getLeafReader().getContext(), SpanWeight.Postings.POSITIONS);
-		return spans != null ? new DocumentFilterSpans(spans, bitSet) : null;
+		List<LeafReaderContext> leaves = getIndexReader().getContext().leaves();
+		DocumentFilterSpans[] spans = new DocumentFilterSpans[leaves.size()];
+		int count = 0;
+		for (LeafReaderContext context : leaves) {
+			Spans span = weight.getSpans(context, SpanWeight.Postings.POSITIONS);
+			if (span == null) {
+				return null;
+			}
+			spans[count] = new DocumentFilterSpans(span, bitSet);
+			count++;
+		}
+		return new DocumentFilterSpansWrapper(spans);
 	}
 	
 //	public Filter getFilter() throws IOException {
