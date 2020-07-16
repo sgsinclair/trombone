@@ -22,10 +22,10 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
  */
 public class LuceneDocIdsCollector extends SimpleCollector {
 
-	private Map<Integer, Integer> luceneDocIds = new HashMap<Integer,Integer>();
+	private Map<Integer, Float> luceneDocIds = new HashMap<Integer,Float>();
 	private int base = 0;
 	private Scorable scorer = null;
-	private int rawFreq = 0;
+	private float score = 0;
 	private BitSet bitSet;
 
 	public LuceneDocIdsCollector(CorpusMapper corpusMapper) throws IOException  {
@@ -37,14 +37,14 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 		// FIXME: determine if we're slowly iterating over all documents in the index and if we can use another doc id iterator
 		if (bitSet.get(doc) && isSeen(absoluteDoc)==false) {
 			scorer.score();
-			int freq = (int) scorer.score();
-			rawFreq += freq;
-			luceneDocIds.put(absoluteDoc, freq);
+			float docScore = scorer.score();
+			score += docScore;
+			luceneDocIds.put(absoluteDoc, docScore);
 		}
 	}
 	
-	public int getRawFreq() {
-		return rawFreq;
+	public float getScore() {
+		return score;
 	}
 	
 	public int getInDocumentsCount() {
@@ -72,6 +72,10 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 	@Override
 	public ScoreMode scoreMode() {
 		return ScoreMode.COMPLETE;
+	}
+
+	public int getRawFreq() {
+		return (int) score;
 	}
 	
 }
