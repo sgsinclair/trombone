@@ -17,6 +17,33 @@ public class DocumentFilterSpansWrapper extends Spans {
 	}
 	
 	@Override
+	public int nextDoc() throws IOException {
+		int nextDFS = this.nextDFS();
+		if (nextDFS == DocIdSetIterator.NO_MORE_DOCS) {
+			return nextDFS;
+		}
+		
+		DocumentFilterSpans dfs = spans[nextDFS];
+		
+		int result = dfs.nextDoc();
+		
+		if (result == DocIdSetIterator.NO_MORE_DOCS || result == Spans.NO_MORE_POSITIONS) {
+			return nextDoc();
+		}
+		
+		return result;
+	}
+	
+	@Override
+	public int advance(int target) throws IOException {
+		int i = nextDoc();
+		while(i < target && i != DocIdSetIterator.NO_MORE_DOCS) {
+			i = nextDoc();
+		}
+		return i;
+	}
+	
+	@Override
 	public int nextStartPosition() throws IOException {
 		return spans[dfs].nextStartPosition();
 	}
@@ -49,30 +76,6 @@ public class DocumentFilterSpansWrapper extends Spans {
 	@Override
 	public int docID() {
 		return spans[dfs].docID();
-	}
-
-	@Override
-	public int nextDoc() throws IOException {
-		int nextDFS = this.nextDFS();
-		if (nextDFS == DocIdSetIterator.NO_MORE_DOCS) {
-			return nextDFS;
-		}
-		
-		DocumentFilterSpans dfs = spans[nextDFS];
-		
-		int result = dfs.nextDoc();
-		
-		if (result == DocIdSetIterator.NO_MORE_DOCS || result == Spans.NO_MORE_POSITIONS) {
-			return nextDoc();
-		}
-		
-		return result;
-	}
-
-	@Override
-	public int advance(int target) throws IOException {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 	@Override

@@ -156,10 +156,13 @@ public class CorpusMapper {
 	 */
 	private void buildFromTermsEnum() throws IOException {
 		DirectoryReader dr = storage.getLuceneManager().getDirectoryReader(corpus.getId());
+		System.out.println("num docs: "+dr.numDocs());
 		bitSet = new SparseFixedBitSet(dr.numDocs());
 		
+		int docIndex = -1;
 		for (LeafReaderContext rc : dr.leaves()) {
 			LeafReader reader = rc.reader();
+			System.out.println(reader.getMetaData().toString());
 		
 			Terms terms = reader.terms("id");
 			TermsEnum termsEnum = terms.iterator();
@@ -167,24 +170,27 @@ public class CorpusMapper {
 			int doc;
 			String id;
 			Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
+			System.out.println(ids.toString());
 			
 			Bits liveBits = reader.getLiveDocs();
 			while (bytesRef!=null) {
 				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.NONE);
 				doc = postingsEnum.nextDoc();
+				docIndex++;
 				if (doc!=PostingsEnum.NO_MORE_DOCS) {
 					id = bytesRef.utf8ToString();
+					System.out.println(docIndex+", "+id);
 					if (ids.contains(id)) {
-						bitSet.set(doc);
-						luceneIds.add(doc);
-						documentIdToLuceneIdMap.put(id, doc);
-						luceneIdToDocumentIdMap.put(doc, id);
+						bitSet.set(docIndex);
+						luceneIds.add(docIndex);
+						documentIdToLuceneIdMap.put(id, docIndex);
+						luceneIdToDocumentIdMap.put(docIndex, id);
 					}
 				}
 				bytesRef = termsEnum.next();
 			}
 		}
-		this.reader = dr;//new FilteredCorpusDirectoryReader(dr);
+		this.reader = new FilteredCorpusDirectoryReader(dr, bitSet);
 	}
 	
 	public String getDocumentIdFromDocumentPosition(int documentPosition) {
@@ -218,17 +224,23 @@ public class CorpusMapper {
 	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
 		SpanWeight weight = spanQuery.createWeight(getSearcher(), ScoreMode.COMPLETE_NO_SCORES, 1f);
 		List<LeafReaderContext> leaves = getIndexReader().getContext().leaves();
-		DocumentFilterSpans[] spans = new DocumentFilterSpans[leaves.size()];
+		List<DocumentFilterSpans> spans = new ArrayList<DocumentFilterSpans>();
+//		DocumentFilterSpans[] spans = new DocumentFilterSpans[leaves.size()];
 		int count = 0;
 		for (LeafReaderContext context : leaves) {
-			Spans span = weight.getSpans(context, SpanWeight.Postings.POSITIONS);
-			if (span == null) {
-				return null;
+			System.out.println(context.toString());
+			if (bitSet.get(count) == true) {
+				Spans span = weight.getSpans(context, SpanWeight.Postings.POSITIONS);
+				if (span != null) {
+					spans.add(new DocumentFilterSpans(span, bitSet));
+				}
 			}
-			spans[count] = new DocumentFilterSpans(span, bitSet);
 			count++;
 		}
-		return new DocumentFilterSpansWrapper(spans);
+		if (spans.isEmpty()) {
+			return null;
+		}
+		return new DocumentFilterSpansWrapper(spans.toArray(new DocumentFilterSpans[0]));
 	}
 	
 //	public Filter getFilter() throws IOException {
