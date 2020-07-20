@@ -150,7 +150,11 @@ public class FileStorage implements Storage {
 
 	public void destroy() throws IOException {
 		getLuceneManager().closeAll();
-		FileUtils.deleteDirectory(storageLocation);
+		if (System.getProperty("os.name").startsWith("Windows")) {
+			FileUtils.forceDeleteOnExit(storageLocation);
+		} else {
+			FileUtils.deleteDirectory(storageLocation);
+		}
 	}
 
 	@Override
