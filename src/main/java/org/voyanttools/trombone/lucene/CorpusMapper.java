@@ -54,6 +54,7 @@ import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.SparseFixedBitSet;
 import org.voyanttools.trombone.lucene.search.DocumentFilter;
 import org.voyanttools.trombone.lucene.search.DocumentFilterSpans;
+import org.voyanttools.trombone.lucene.search.SpansList;
 import org.voyanttools.trombone.lucene.search.DocumentFilterSpansWrapper;
 import org.voyanttools.trombone.lucene.search.FilteredCorpusDirectoryReader;
 import org.voyanttools.trombone.lucene.search.FilteredCorpusReader;
@@ -228,23 +229,19 @@ public class CorpusMapper {
 	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
 		SpanWeight weight = spanQuery.createWeight(getSearcher(), ScoreMode.COMPLETE_NO_SCORES, 1f);
 		List<LeafReaderContext> leaves = getIndexReader().getContext().leaves();
-		List<DocumentFilterSpans> spans = new ArrayList<DocumentFilterSpans>();
-//		DocumentFilterSpans[] spans = new DocumentFilterSpans[leaves.size()];
-		int count = 0;
+		SpansList spansList = new SpansList();
 		for (LeafReaderContext context : leaves) {
-			System.out.println(context.toString());
-			if (bitSet.get(count) == true) {
+			if (bitSet.get(context.ord) == true) {
 				Spans span = weight.getSpans(context, SpanWeight.Postings.POSITIONS);
 				if (span != null) {
-					spans.add(new DocumentFilterSpans(span, bitSet));
+					spansList.addSpans(context.ord, span);
 				}
 			}
-			count++;
 		}
-		if (spans.isEmpty()) {
+		if (spansList.isEmpty()) {
 			return null;
 		}
-		return new DocumentFilterSpansWrapper(spans.toArray(new DocumentFilterSpans[0]));
+		return spansList;
 	}
 	
 //	public Filter getFilter() throws IOException {
