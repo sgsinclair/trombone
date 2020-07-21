@@ -156,30 +156,34 @@ public class CorpusMapper {
 	 */
 	private void buildFromTermsEnum() throws IOException {
 		DirectoryReader dr = storage.getLuceneManager().getDirectoryReader(corpus.getId());
-		System.out.println("num docs: "+dr.numDocs());
+//		System.out.println("num docs: "+dr.numDocs());
 		bitSet = new SparseFixedBitSet(dr.numDocs());
 		
-		int docIndex = -1;
+		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
+		
+		// assuming one doc per leaf
 		for (LeafReaderContext rc : dr.leaves()) {
 			LeafReader reader = rc.reader();
-			System.out.println(reader.getMetaData().toString());
+//			System.out.println("db: "+rc.docBase+", ord: "+rc.ord+", dbP: "+rc.docBaseInParent+", orgP: "+rc.ordInParent);
+			
+			int docIndex = rc.ord;
+			
+			if (reader.numDocs() > 1) {
+				throw new Error("Too many docs in this leaf!");
+			}
 		
 			Terms terms = reader.terms("id");
 			TermsEnum termsEnum = terms.iterator();
 			BytesRef bytesRef = termsEnum.next();
 			int doc;
 			String id;
-			Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
-			System.out.println(ids.toString());
 			
-			Bits liveBits = reader.getLiveDocs();
 			while (bytesRef!=null) {
 				PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.NONE);
 				doc = postingsEnum.nextDoc();
-				docIndex++;
 				if (doc!=PostingsEnum.NO_MORE_DOCS) {
 					id = bytesRef.utf8ToString();
-					System.out.println(docIndex+", "+id);
+//					System.out.println(docIndex+", "+id);
 					if (ids.contains(id)) {
 						bitSet.set(docIndex);
 						luceneIds.add(docIndex);
@@ -190,7 +194,7 @@ public class CorpusMapper {
 				bytesRef = termsEnum.next();
 			}
 		}
-		this.reader = new FilteredCorpusDirectoryReader(dr, bitSet);
+		this.reader = dr;//new FilteredCorpusDirectoryReader(dr, bitSet);
 	}
 	
 	public String getDocumentIdFromDocumentPosition(int documentPosition) {
