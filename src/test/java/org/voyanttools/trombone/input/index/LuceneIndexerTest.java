@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.LeafReader;
-import org.apache.lucene.index.SlowCompositeReaderWrapper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.search.IndexSearcher;
@@ -302,7 +302,7 @@ public class LuceneIndexerTest {
 		boolean isPerCorpusLuceneIndex = storage.getLuceneManager() instanceof PerCorpusIndexLuceneManager;
 		for (Map.Entry<String, Map<String, Integer>> corpusMapEntry : corpusDocsToTokensMap.entrySet()) {
 			String corpusId = corpusMapEntry.getKey();
-			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpusId));
+			DirectoryReader reader = storage.getLuceneManager().getDirectoryReader(corpusId);
 			assertEquals(isPerCorpusLuceneIndex ? 2 : 4, reader.maxDoc());
 			IndexSearcher searcher = new IndexSearcher(reader);
 			for (Map.Entry<String, Integer> entry : corpusMapEntry.getValue().entrySet()) {
