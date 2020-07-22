@@ -36,7 +36,9 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.index.TermStates;
+import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.RegexpQuery;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.spans.SpanOrQuery;
 import org.apache.lucene.search.spans.SpanQuery;
@@ -380,12 +382,21 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	}
 
 	private void addToQueueFromQueryWithoutDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Query query) throws IOException {
-		totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
-
-		LuceneDocIdsCollector collector = new LuceneDocIdsCollector(corpusMapper);
-		corpusMapper.getSearcher().search(query, collector);
-		CorpusTerm corpusTerm = new CorpusTerm(queryString, collector.getRawFreq(), totalTokens, collector.getInDocumentsCount(), corpusMapper.getCorpus().size());
-		offer(queue, corpusTerm);
+		if (query instanceof BooleanQuery || query instanceof RegexpQuery) {
+			// these types of queries use ConstantScoreWeight and always return 1 for score, so we can use collector
+			totalTokens = corpusMapper.getCorpus().getTokensCount(tokenType);
+			
+			LuceneDocIdsCollector collector = new LuceneDocIdsCollector(corpusMapper);
+			corpusMapper.getSearcher().search(query, collector);
+			CorpusTerm corpusTerm = new CorpusTerm(queryString, collector.getRawFreq(), totalTokens, collector.getInDocumentsCount(), corpusMapper.getCorpus().size());
+			offer(queue, corpusTerm);			
+		} else {
+			// we actually do need to get distributions in order to determine an accurate raw frequency, due to collector changes
+			Spans spans = corpusMapper.getFilteredSpans((SpanQuery) query);
+			if (spans!=null) {
+				addToQueueFromSpansWithDistributions(corpusMapper, queue, queryString, spans);
+			}
+		}
 	}
 	
 	private void addToQueueFromSpansWithDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Spans spans) throws IOException {

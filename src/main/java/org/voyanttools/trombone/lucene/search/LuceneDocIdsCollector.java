@@ -4,14 +4,12 @@
 package org.voyanttools.trombone.lucene.search;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.search.Scorable;
 import org.apache.lucene.search.ScoreMode;
-import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.SimpleCollector;
 import org.apache.lucene.util.BitSet;
 import org.voyanttools.trombone.lucene.CorpusMapper;
@@ -22,7 +20,7 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
  */
 public class LuceneDocIdsCollector extends SimpleCollector {
 
-	private Map<Integer, Float> luceneDocIds = new HashMap<Integer,Float>();
+	private Set<Integer> luceneDocIds = new HashSet<Integer>();
 	private int base = 0;
 	private Scorable scorer = null;
 	private float score = 0;
@@ -36,10 +34,9 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 		int absoluteDoc = base+doc;
 		// FIXME: determine if we're slowly iterating over all documents in the index and if we can use another doc id iterator
 		if (bitSet.get(doc) && isSeen(absoluteDoc)==false) {
-			scorer.score();
 			float docScore = scorer.score();
 			score += docScore;
-			luceneDocIds.put(absoluteDoc, docScore);
+			luceneDocIds.add(absoluteDoc);
 		}
 	}
 	
@@ -52,7 +49,7 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 	}
 	
 	protected boolean isSeen(int doc) {
-		return luceneDocIds.containsKey(doc);
+		return luceneDocIds.contains(doc);
 	}
 	
 	@Override
@@ -66,14 +63,15 @@ public class LuceneDocIdsCollector extends SimpleCollector {
 	}
 
 	public Set<Integer> getLuceneDocIds() {
-		return luceneDocIds.keySet();
+		return luceneDocIds;
 	}
 
 	@Override
 	public ScoreMode scoreMode() {
 		return ScoreMode.COMPLETE;
 	}
-
+	
+	@Deprecated
 	public int getRawFreq() {
 		return (int) score;
 	}
