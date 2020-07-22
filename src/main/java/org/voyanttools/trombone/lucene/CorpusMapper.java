@@ -162,19 +162,13 @@ public class CorpusMapper {
 		
 		Set<String> ids = new HashSet<String>(getCorpusDocumentIds());
 		
-		// assuming one doc per leaf
 		for (LeafReaderContext rc : dr.leaves()) {
+			int docBase = rc.docBase;
+			
 			LeafReader reader = rc.reader();
-//			System.out.println("db: "+rc.docBase+", ord: "+rc.ord+", dbP: "+rc.docBaseInParent+", orgP: "+rc.ordInParent);
-			
-			int docIndex = rc.ord;
-			
-			if (reader.numDocs() > 1) {
-				throw new Error("Too many docs in this leaf!");
-			}
-		
 			Terms terms = reader.terms("id");
 			TermsEnum termsEnum = terms.iterator();
+			
 			BytesRef bytesRef = termsEnum.next();
 			int doc;
 			String id;
@@ -184,12 +178,13 @@ public class CorpusMapper {
 				doc = postingsEnum.nextDoc();
 				if (doc!=PostingsEnum.NO_MORE_DOCS) {
 					id = bytesRef.utf8ToString();
-//					System.out.println(docIndex+", "+id);
+					int luceneId = docBase+doc;
+//					System.out.println(luceneId+", "+id);
 					if (ids.contains(id)) {
-						bitSet.set(docIndex);
-						luceneIds.add(docIndex);
-						documentIdToLuceneIdMap.put(id, docIndex);
-						luceneIdToDocumentIdMap.put(docIndex, id);
+						bitSet.set(luceneId);
+						luceneIds.add(luceneId);
+						documentIdToLuceneIdMap.put(id, luceneId);
+						luceneIdToDocumentIdMap.put(luceneId, id);
 					}
 				}
 				bytesRef = termsEnum.next();
