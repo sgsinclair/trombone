@@ -121,36 +121,35 @@ public class LuceneIndexer implements Indexer {
 		Collection<StoredDocumentSource> storedDocumentSourceForLucene = new ArrayList<StoredDocumentSource>();
 		if (storage.getLuceneManager().directoryExists(corpusId)) {
 			DirectoryReader dr = storage.getLuceneManager().getDirectoryReader(corpusId);
+			
+			// collect the id terms from each leaf
+			List<TermsEnum> idTerms = new ArrayList<TermsEnum>();
 			for (LeafReaderContext rc : dr.leaves()) {
 				LeafReader reader = rc.reader();
 				Terms terms = reader.terms("id");
-				if (terms==null) {
-					storedDocumentSourceForLucene.addAll(storedDocumentSources);
-				}
-				else {
-					TermsEnum termsEnum = terms.iterator();		
-					for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-						String id = storedDocumentSource.getId();
-						if (!termsEnum.seekExact(new BytesRef(id))) {
-							storedDocumentSourceForLucene.add(storedDocumentSource);
-						}
-					}
+				if (terms!=null) {
+					idTerms.add(terms.iterator());
 				}
 			}
-//			LeafReader reader = SlowCompositeReaderWrapper.wrap(storage.getLuceneManager().getDirectoryReader(corpusId));
-//			Terms terms = reader.terms("id");
-//			if (terms==null) {
-//				storedDocumentSourceForLucene.addAll(storedDocumentSources);
-//			}
-//			else {
-//				TermsEnum termsEnum = terms.iterator();		
-//				for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
-//					String id = storedDocumentSource.getId();
-//					if (!termsEnum.seekExact(new BytesRef(id))) {
-//						storedDocumentSourceForLucene.add(storedDocumentSource);
-//					}
-//				}
-//			}
+			
+			// test new ids against leaf ids
+			if (idTerms.isEmpty()) {
+				storedDocumentSourceForLucene.addAll(storedDocumentSources);
+			} else {
+				for (StoredDocumentSource storedDocumentSource : storedDocumentSources) {
+					String id = storedDocumentSource.getId();
+					boolean match = false;
+					for (TermsEnum termsEnum : idTerms) {
+						if (termsEnum.seekExact(new BytesRef(id))) {
+							match = true;
+							break;
+						}
+					}
+					if (!match) {
+						storedDocumentSourceForLucene.add(storedDocumentSource);
+					}
+				}	
+			}
 		}
 		else {
 			storedDocumentSourceForLucene.addAll(storedDocumentSources);
