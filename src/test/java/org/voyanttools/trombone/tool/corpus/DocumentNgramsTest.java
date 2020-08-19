@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.junit.Test;
+import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentNgram;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.util.FlexibleParameters;
@@ -31,6 +32,12 @@ public class DocumentNgramsTest {
 		
 		parameters.setParameter("corpus", creator.getStoredId());
 
+//		Corpus corpus = storage.getCorpusStorage().getCorpus(creator.getStoredId());
+//		for (String docId : corpus.getDocumentIds()) {
+//			System.out.println(corpus.getDocumentPosition(docId)+": "+docId);
+//		}
+		System.out.println("ngrams test");
+		
 		DocumentNgrams documentNgrams;
 		List<DocumentNgram> ngrams;
 		

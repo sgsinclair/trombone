@@ -41,13 +41,14 @@ public class TestHelper {
 	
 	public static Storage getDefaultTestStorage() throws IOException {
 //		return new FileStorage(getTemporaryTestStorageDirectory());
-		return new MemoryStorage();
+//		return new MemoryStorage();
+		return new FileStorage(getTemporaryTestStorageDirectory(), new FlexibleParameters(new String[] {"storage=file-per-corpus"}));
 	}
 	
 	public static List<Storage> getDefaultTestStorages() throws IOException {
 		List<Storage> storages = new ArrayList<Storage>();
-		storages.add(new MemoryStorage());
-		storages.add(new FileStorage(getTemporaryTestStorageDirectory()));
+//		storages.add(new MemoryStorage());
+//		storages.add(new FileStorage(getTemporaryTestStorageDirectory()));
 		storages.add(new FileStorage(getTemporaryTestStorageDirectory(), new FlexibleParameters(new String[] {"storage=file-per-corpus"})));
 		return storages;
 	}

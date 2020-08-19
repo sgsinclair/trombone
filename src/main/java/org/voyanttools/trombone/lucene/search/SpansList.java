@@ -26,10 +26,17 @@ public class SpansList extends Spans {
 	private final List<Spans> spans;
 
 	private final Map<Integer, Integer> spansIndexToBitsMap;
+	
+	private boolean isDebug = false;
 
 	public SpansList() {
 		spans = new ArrayList<Spans>();
 		spansIndexToBitsMap = new HashMap<Integer, Integer>();
+	}
+	
+	public SpansList(boolean debug) {
+		this();
+		isDebug = debug;
 	}
 
 	public void addSpans(int luceneId, Spans span) {
@@ -37,6 +44,10 @@ public class SpansList extends Spans {
 		spans.add(span);
 
 		spansIndexToBitsMap.put(index, luceneId);
+		
+		if (isDebug) {
+			System.out.println("bitset: "+index+", luceneId: "+luceneId);
+		}
 	}
 
 	public boolean isEmpty() {

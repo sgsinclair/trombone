@@ -211,7 +211,15 @@ public class CorpusMapper {
 	 * @throws IOException
 	 */
 	public Spans getFilteredSpans(SpanQuery spanQuery) throws IOException {
-		return getFilteredSpans(spanQuery, getBitSet());
+		return getFilteredSpans(spanQuery, getBitSet(), false);
+	}
+	
+	public Spans getFilteredSpans(SpanQuery spanQuery, boolean debug) throws IOException {
+		return getFilteredSpans(spanQuery, getBitSet(), debug);
+	}
+	
+	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
+		return getFilteredSpans(spanQuery, getBitSet(), false);
 	}
 	
 	/**
@@ -221,14 +229,17 @@ public class CorpusMapper {
 	 * @return
 	 * @throws IOException
 	 */
-	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
+	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet, boolean debug) throws IOException {
 		SpanWeight weight = spanQuery.createWeight(getSearcher(), ScoreMode.COMPLETE_NO_SCORES, 1f);
 		List<LeafReaderContext> leaves = getIndexReader().getContext().leaves();
-		SpansList spansList = new SpansList();
+		SpansList spansList = new SpansList(debug);
 		for (LeafReaderContext context : leaves) {
 			if (bitSet.get(context.ord) == true) {
 				Spans span = weight.getSpans(context, SpanWeight.Postings.POSITIONS);
 				if (span != null) {
+					if (debug) {
+						System.out.println("docPos: "+getDocumentPositionFromLuceneId(context.ord));
+					}
 					spansList.addSpans(context.ord, span);
 				}
 			}

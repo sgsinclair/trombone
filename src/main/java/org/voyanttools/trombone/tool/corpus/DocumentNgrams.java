@@ -121,15 +121,19 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 		
 		for (Map.Entry<String, SpanQuery> spanQueryEntry : queriesMap.entrySet()) {
 //			CorpusTermMinimal corpusTermMinimal = corpusTermMinimalsDB.get(queryString);
-			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue());
+			Spans spans = corpusMapper.getFilteredSpans(spanQueryEntry.getValue(), true);
 			if (spans != null) {
 				Map<Integer, List<int[]>> documentAndPositionsMap = new HashMap<Integer, List<int[]>>();
 				int doc = spans.nextDoc();
-				while(doc!=spans.NO_MORE_DOCS) {
+				while(doc!=DocIdSetIterator.NO_MORE_DOCS) {
 					int pos = spans.nextStartPosition();
 					docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
+					if (docIndexInCorpus != 2) {
+						docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);	
+					}
+					System.out.println("lId: "+doc+", index: "+docIndexInCorpus);
 					documentAndPositionsMap.put(docIndexInCorpus, new ArrayList<int[]>());
-					while(pos!=spans.NO_MORE_POSITIONS) {
+					while(pos!=Spans.NO_MORE_POSITIONS) {
 						documentAndPositionsMap.get(docIndexInCorpus).add(new int[]{spans.startPosition(), spans.endPosition()});
 						pos = spans.nextStartPosition();
 					}
@@ -148,6 +152,9 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 		}
 		
 		int[] totalTokens = corpus.getLastTokenPositions(tokenType);
+		for (int k = 0; k < totalTokens.length; k++) {
+			System.out.println(k+": "+totalTokens[k]);
+		}
 		StringBuilder realTermBuilder = new StringBuilder();
 		String realTerm;
 		List<DocumentNgram> allNgrams = new ArrayList<DocumentNgram>();
@@ -155,12 +162,23 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 		for (Map.Entry<Integer, Map<String, List<int[]>>> docEntry : docTermPositionsMap.entrySet()) {
 			docIndexInCorpus = docEntry.getKey();
 			SimplifiedTermInfo[] sparseSimplifiedTermInfoArray = getSparseSimplifiedTermInfoArray(corpusMapper, corpusMapper.getLuceneIdFromDocumentPosition(docIndexInCorpus), totalTokens[docIndexInCorpus]);
+			
+			System.out.println("doc "+docIndexInCorpus+": "+sparseSimplifiedTermInfoArray.length);
+//			if (sparseSimplifiedTermInfoArray.length != 1629) {
+//				System.out.println("here");
+//			}
+			
 			Map<String, List<int[]>> realStringsMap = new HashMap<String, List<int[]>>();
 			for (Map.Entry<String, List<int[]>> termEntry : docEntry.getValue().entrySet()) {
 //				new Ngram(docIndexInCorpus, term, positions, length)
 				for (int[] positions : termEntry.getValue()) {
+//					System.out.println(termEntry.getKey()+": "+positions.length);
 					for (int i=positions[0]; i<positions[1]; i++) {
-						realTermBuilder.append(sparseSimplifiedTermInfoArray[i].term).append(" ");
+						try {
+							realTermBuilder.append(sparseSimplifiedTermInfoArray[i].term).append(" ");
+						} catch (Exception e) {
+							System.out.println("out of bounds: "+i);
+						}
 					}
 					realTerm = realTermBuilder.toString().trim();
 					realTermBuilder.setLength(0);
@@ -174,7 +192,7 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 			for (Map.Entry<String, List<int[]>> realTermMap : realStringsMap.entrySet()) {
 				List<int[]> values = realTermMap.getValue();
 				DocumentNgram ngram = new DocumentNgram(docIndexInCorpus, realTermMap.getKey(), values, values.get(0)[1]+1-values.get(0)[0]);
-				ngrams.add(new DocumentNgram(docIndexInCorpus, realTermMap.getKey(), values, values.get(0)[1]+1-values.get(0)[0]));
+				ngrams.add(ngram);
 			}
 			
 			// we need to go through our first list to see if any of them are long enough
