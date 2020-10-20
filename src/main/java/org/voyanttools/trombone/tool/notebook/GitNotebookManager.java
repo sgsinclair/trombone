@@ -5,30 +5,28 @@ package org.voyanttools.trombone.tool.notebook;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.mail.MessagingException;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.RefNotFoundException;
 import org.eclipse.jgit.errors.IncorrectObjectTypeException;
-import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.lib.ObjectLoader;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.notes.Note;
 import org.eclipse.jgit.revwalk.RevCommit;
-import org.eclipse.jgit.revwalk.RevWalk;
-import org.eclipse.jgit.treewalk.TreeWalk;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -51,8 +49,7 @@ public class GitNotebookManager extends AbstractTool {
 	
 	final static String ID_AND_CODE_TEMPLATE = "^[\\w-]{4,16}$"; // regex for matching notebook id and access code
 	
-	final static String NOTEBOOK_REPO_NAME = "spyral";
-	final static String ACCESS_CODE_REPO_NAME = "spyral";
+	final static String NOTEBOOK_REPO_NAME = "notebook";
 	
 	String id = null; // notebook source (ID, URL, etc.)
 	
@@ -117,7 +114,7 @@ public class GitNotebookManager extends AbstractTool {
 				try {
 					RevCommit commit = rm.addFile(NOTEBOOK_REPO_NAME, id+".html", notebookData);
 					rm.addNoteToCommit(NOTEBOOK_REPO_NAME, commit, notebookMetadata);
-					rm.addFile(ACCESS_CODE_REPO_NAME, id, accessCode);
+					rm.addFile(NOTEBOOK_REPO_NAME, id, accessCode);
 				} catch (IOException | GitAPIException e) {
 					throw new IOException(e.toString());
 				}
@@ -200,18 +197,24 @@ public class GitNotebookManager extends AbstractTool {
 		
 		else if (action.equals("catalogue")) {
 			try {
+				handleUntrackedFiles(rm);
+				
 				Repository notebookRepo = rm.getRepository(NOTEBOOK_REPO_NAME);
-				List<String> files = RepositoryManager.getRepositoryContents(notebookRepo);
+				
+				File repoDir = notebookRepo.getWorkTree();
+				List<String> files = listFilesNewestFirst(repoDir);
+//				List<String> files = RepositoryManager.getRepositoryContents(notebookRepo);
 				List<String> notebooks = files.stream().filter(f -> f.endsWith(".html")).collect(Collectors.toList());
 				
 				List<String> notes = new ArrayList<String>();
 				
+				int count = 0;
+				int max = parameters.getParameterIntValue("limit", 100);
 				for (String notebook : notebooks) {
-//					System.out.println("---");
-//					System.out.println(notebook);
-					
+					if (count >= max) {
+						break;
+					}
 					RevCommit rc = RepositoryManager.getMostRecentCommitForFile(notebookRepo, notebook);
-//					System.out.println(rc.getName());
 					
 					try (Git git = new Git(notebookRepo)) {
 						Note note = git.notesShow().setObjectId(rc).call();
@@ -226,7 +229,7 @@ public class GitNotebookManager extends AbstractTool {
 							notes.add(metadata);
 						}
 					}
-					
+					count++;
 				}
 				
 				data = "["+String.join(",", notes)+"]";
@@ -244,13 +247,6 @@ public class GitNotebookManager extends AbstractTool {
 			} catch (RefNotFoundException e) {
 				try (Git git = rm.setupRepository(NOTEBOOK_REPO_NAME)) {}
 			}
-			
-			try {
-				rm.getRepository(ACCESS_CODE_REPO_NAME);
-			} catch (RefNotFoundException e) {
-				try (Git git = rm.setupRepository(ACCESS_CODE_REPO_NAME)) {}
-			}
-			
 
 			return rm;
 		} catch (GitAPIException e) {
@@ -263,7 +259,43 @@ public class GitNotebookManager extends AbstractTool {
 	}
 	
 	private String getAccessCodeFile(RepositoryManager rm, String filename) throws IOException, GitAPIException {
-		return RepositoryManager.getRepositoryFile(rm.getRepository(ACCESS_CODE_REPO_NAME), filename);
+		return RepositoryManager.getRepositoryFile(rm.getRepository(NOTEBOOK_REPO_NAME), filename);
+	}
+	
+	// from: https://stackoverflow.com/a/17625095
+	private static List<String> listFilesNewestFirst(File directory) throws IOException {
+	    try (final Stream<Path> fileStream = Files.list(directory.toPath())) {
+	        return fileStream
+	            .map(Path::toFile)
+	            .collect(Collectors.toMap(Function.identity(), File::lastModified))
+	            .entrySet()
+	            .stream()
+	            .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+	            .map(Map.Entry::getKey)
+	            .map(File::getName)
+	            .collect(Collectors.toList());
+	    }
+	}
+	
+	private void handleUntrackedFiles(RepositoryManager rm) throws IOException, GitAPIException {
+		Repository repo = rm.getRepository(NOTEBOOK_REPO_NAME);
+		File work = repo.getWorkTree();
+		Set<String> untracked = RepositoryManager.getUntrackedFiles(repo);
+		for (String filename : untracked) {
+			File untrackedFile = new File(work, filename);
+			if (untrackedFile.exists()) {
+				try (Git git = new Git(repo)) {
+					git.add().addFilepattern(filename).call();
+					RevCommit commit = git.commit().setMessage("Added file: "+filename).call();
+					if (filename.endsWith(".html")) {
+						String notebookMetadata = getMetadataFromNotebook(rm, filename);
+						if (notebookMetadata != null) {
+							rm.addNoteToCommit(NOTEBOOK_REPO_NAME, commit, notebookMetadata);
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	private void migrateNotebook(RepositoryManager rm, String id, String data) throws IOException, GitAPIException {
@@ -278,7 +310,7 @@ public class GitNotebookManager extends AbstractTool {
 		if (notebookMetadata != null) {
 			rm.addNoteToCommit(NOTEBOOK_REPO_NAME, commit, notebookMetadata);
 		}
-		rm.addFile(ACCESS_CODE_REPO_NAME, id, accessCode);
+		rm.addFile(NOTEBOOK_REPO_NAME, id, accessCode);
 	}
 	
 	private String getMetadataFromNotebook(RepositoryManager rm, String notebookId) {

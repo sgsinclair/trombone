@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -113,7 +114,9 @@ class BagItExpander implements Expander {
 				expandedStoredDocumentSources.add(storedDocumentSource);
 
 		}
-		for (File childFile : currentDirectory.listFiles()) {
+		File[] files = currentDirectory.listFiles();
+		Arrays.sort(files); // sort files to ensure that order is consistent across operating systems
+		for (File childFile : files) {
 			if (childFile.isDirectory()) { // recurse (even for "data" directory)
 				addFromDirectory(base, childFile, parentStoredDocumentSource, expandedStoredDocumentSources);
 			}

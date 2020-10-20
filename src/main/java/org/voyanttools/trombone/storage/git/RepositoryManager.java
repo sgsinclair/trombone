@@ -5,12 +5,14 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.api.errors.NoHeadException;
 import org.eclipse.jgit.api.errors.RefNotFoundException;
-import org.eclipse.jgit.errors.MissingObjectException;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.lib.ObjectLoader;
@@ -23,17 +25,13 @@ import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.treewalk.filter.PathFilter;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.output.ByteArrayOutputStream;
 
 
 public class RepositoryManager {
 
 	public static final String DEFAULT_TROMBOME_DIRECTORY_NAME = "trombone5_2";
 	
-	public static final String GIT_HOME = DEFAULT_TROMBOME_DIRECTORY_NAME + File.separator + "git";
-	
-	public static final File DEFAULT_GIT_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), GIT_HOME);
+	public static final File DEFAULT_GIT_DIRECTORY = new File(System.getProperty("java.io.tmpdir"), DEFAULT_TROMBOME_DIRECTORY_NAME);
 	
 	public static final String DEFAULT_GIT_NAME = "spyral";
 	public static final String DEFAULT_GIT_EMAIL = "spyral@voyant-tools.org";
@@ -52,7 +50,7 @@ public class RepositoryManager {
 	public Git setupRepository(String repoName) throws IOException, GitAPIException {
 		File repoFile = new File(storageLocation, repoName);
 		if (repoFile.exists() == false) {
-			if (!repoFile.mkdir()) {
+			if (!repoFile.mkdirs()) {
 				throw new IOException("Unable to create git directory: "+storageLocation);
 			}
 		}
@@ -200,8 +198,10 @@ public class RepositoryManager {
 	}
 	
 	public static RevCommit getMostRecentCommitForFile(Repository repository, String filename) throws IOException, GitAPIException {
+		ObjectId head = repository.resolve(Constants.HEAD);
 		try (Git git = new Git(repository)) {
 			Iterable<RevCommit> logs = git.log()
+					.add(head)
 		            .addPath(filename)
 		            .setMaxCount(1)
 		            .call();
@@ -215,5 +215,13 @@ public class RepositoryManager {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
         loader.copyTo(baos);
         return baos.toString(Charset.forName("UTF-8"));
+	}
+	
+	public static Set<String> getUntrackedFiles(Repository repository) throws GitAPIException {
+		try(Git git = new Git(repository)) {
+			Status status = git.status().call();
+			Set<String> untracked = status.getUntracked();
+			return untracked;
+		}
 	}
 }
