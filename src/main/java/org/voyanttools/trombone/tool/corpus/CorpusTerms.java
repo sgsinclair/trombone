@@ -393,33 +393,33 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		} else {
 			// we actually do need to get distributions in order to determine an accurate raw frequency, due to collector changes
 			Spans spans = corpusMapper.getFilteredSpans((SpanQuery) query);
-			if (spans!=null) {
-				addToQueueFromSpansWithDistributions(corpusMapper, queue, queryString, spans);
-			}
+			addToQueueFromSpansWithDistributions(corpusMapper, queue, queryString, spans);
 		}
 	}
 	
 	private void addToQueueFromSpansWithDistributions(CorpusMapper corpusMapper, FlexibleQueue<CorpusTerm> queue, String queryString, Spans spans) throws IOException {
 		Corpus corpus = corpusMapper.getCorpus();
 		int docIndexInCorpus = -1; // this should always be changed on the first span
-		int tokensCounts[] = corpus.getTokensCounts(tokenType);
 		Map<Integer, AtomicInteger> positionsMap = new HashMap<Integer, AtomicInteger>();
-		int totalTokens = corpus.getTokensCount(tokenType);
-		int doc = spans.nextDoc();
-		while(doc!=Spans.NO_MORE_DOCS) {
-			docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
-			int pos = spans.nextStartPosition();
-			while (pos!=Spans.NO_MORE_POSITIONS) {
-				if (positionsMap.containsKey(docIndexInCorpus)==false) {
-					positionsMap.put(docIndexInCorpus, new AtomicInteger(1));
+		if (spans != null) {
+			int doc = spans.nextDoc();
+			while(doc!=Spans.NO_MORE_DOCS) {
+				docIndexInCorpus = corpusMapper.getDocumentPositionFromLuceneId(doc);
+				int pos = spans.nextStartPosition();
+				while (pos!=Spans.NO_MORE_POSITIONS) {
+					if (positionsMap.containsKey(docIndexInCorpus)==false) {
+						positionsMap.put(docIndexInCorpus, new AtomicInteger(1));
+					}
+					else {
+						positionsMap.get(docIndexInCorpus).incrementAndGet();
+					}
+					pos = spans.nextStartPosition();
 				}
-				else {
-					positionsMap.get(docIndexInCorpus).incrementAndGet();
-				}
-				pos = spans.nextStartPosition();
+				doc = spans.nextDoc();
 			}
-			doc = spans.nextDoc();
 		}
+		int tokensCounts[] = corpus.getTokensCounts(tokenType);
+		int totalTokens = corpus.getTokensCount(tokenType);
 		int[] rawFreqs = new int[corpus.size()];
 		float[] relativeFreqs = new float[corpus.size()];
 		int freq = 0;
