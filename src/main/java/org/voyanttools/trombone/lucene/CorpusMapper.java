@@ -219,7 +219,7 @@ public class CorpusMapper {
 	}
 	
 	public Spans getFilteredSpans(SpanQuery spanQuery, BitSet bitSet) throws IOException {
-		return getFilteredSpans(spanQuery, getBitSet(), false);
+		return getFilteredSpans(spanQuery, bitSet, false);
 	}
 	
 	/**
