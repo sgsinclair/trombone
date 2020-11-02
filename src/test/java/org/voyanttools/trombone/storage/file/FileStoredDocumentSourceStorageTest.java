@@ -35,7 +35,7 @@ import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.StoredDocumentSourceStorage;
 import org.voyanttools.trombone.util.TestHelper;
 
-import junit.framework.Assert;
+import static org.junit.Assert.*;
 
 /**
  * @author sgs
@@ -66,27 +66,27 @@ public class FileStoredDocumentSourceStorageTest {
 		String contents;
 		try {
 			inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(id1);
-			contents = IOUtils.toString(inputStream);
+			contents = IOUtils.toString(inputStream, "UTF-8");
 		}
 		finally {
 			if (inputStream != null) inputStream.close();
 		}	
-		Assert.assertTrue("raw contents should be the same", contents.equals(STRING_TEST));
+		assertTrue("raw contents should be the same", contents.equals(STRING_TEST));
 		DocumentMetadata m1 = inputSource1.getMetadata();
 		DocumentMetadata m2 = storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id1);
-		Assert.assertTrue("metadata from original and retrieved should be the same", inputSource1.getMetadata().equals(storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id1)));
+		assertTrue("metadata from original and retrieved should be the same", inputSource1.getMetadata().equals(storedDocumentSourceStorage.getStoredDocumentSourceMetadata(id1)));
 		
 		InputSource inputSource2 = new StringInputSource(STRING_TEST);
 		StoredDocumentSource storedDocumentSource2 = storedDocumentSourceStorage.getStoredDocumentSource(inputSource2);
 		String id2 = storedDocumentSource2.getId();
-		Assert.assertEquals("old and new IDs should be identical", id1, id2);
+		assertEquals("old and new IDs should be identical", id1, id2);
 		
 		// confirm that files haven't changed
 		File inputSourceDirectory2 = ((FileStoredDocumentSourceStorage) storedDocumentSourceStorage).getDocumentSourceDirectory(id2);
-		Assert.assertEquals(inputSourceDirectory1.toString(), inputSourceDirectory2.toString());
-		Assert.assertEquals("old and new modified dates of directory should be identical", dir_modified, inputSourceDirectory2.lastModified());
-		Assert.assertEquals("old and new modified dates of rawbytes file should be identical", rawbytes_modified, ((FileStoredDocumentSourceStorage) storedDocumentSourceStorage).getRawbytesFile(id2).lastModified());
-		Assert.assertEquals("old and new modified dates of metadata file should be identical", metadata_modified, ((FileStoredDocumentSourceStorage) storedDocumentSourceStorage).getMetadataFile(id2).lastModified());
+		assertEquals(inputSourceDirectory1.toString(), inputSourceDirectory2.toString());
+		assertEquals("old and new modified dates of directory should be identical", dir_modified, inputSourceDirectory2.lastModified());
+		assertEquals("old and new modified dates of rawbytes file should be identical", rawbytes_modified, ((FileStoredDocumentSourceStorage) storedDocumentSourceStorage).getRawbytesFile(id2).lastModified());
+		assertEquals("old and new modified dates of metadata file should be identical", metadata_modified, ((FileStoredDocumentSourceStorage) storedDocumentSourceStorage).getMetadataFile(id2).lastModified());
 		
 		storage.destroy();
 	}

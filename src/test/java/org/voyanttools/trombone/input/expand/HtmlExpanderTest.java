@@ -44,7 +44,7 @@ public class HtmlExpanderTest {
 			assertEquals("HTML without expansion parameters should have one doc", 1, expandedSourceDocumentSources.size());
 			expandedStoredDocumentSource = expandedSourceDocumentSources.get(0);
 			assertEquals("HTML without expansion parameters should be original source", expandedStoredDocumentSource.getId(), source.getId());
-			contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()));
+			contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()), "UTF-8");
 			assertTrue(contents.contains("résumé"));
 		}
 		
@@ -54,7 +54,7 @@ public class HtmlExpanderTest {
 			expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(source);
 			assertEquals("HTML p selector should have two docs",2, expandedSourceDocumentSources.size());
 			expandedStoredDocumentSource = expandedSourceDocumentSources.get(0);
-			contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()));
+			contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()), "UTF-8");
 			assertTrue(contents.contains("résumé"));
 		}
 
@@ -66,7 +66,7 @@ public class HtmlExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 		assertEquals("2 docs (grouped by author)", 2, expandedSourceDocumentSources.size());
 		expandedStoredDocumentSource = expandedSourceDocumentSources.get(0);
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()), "UTF-8");
 		assertEquals("2 occurrences of author 1", 2, StringUtils.countMatches(contents, "Author 1"));
 		
 		// group by using valid value as @attr
@@ -77,7 +77,7 @@ public class HtmlExpanderTest {
 		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 		assertEquals("2 docs (grouped by author)", 2, expandedSourceDocumentSources.size());
 		expandedStoredDocumentSource = expandedSourceDocumentSources.get(0);
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedStoredDocumentSource.getId()), "UTF-8");
 		assertEquals("2 occurrences of author 1", 2, StringUtils.countMatches(contents, "Author 1"));
 		
 		// group by using invalid value

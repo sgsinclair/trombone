@@ -192,7 +192,7 @@ public class XmlExpanderTest {
 		storedDocumentSource = storedDocumentSourceStorage.getStoredDocumentSource(inputSource);
 		expandedSourceDocumentSources = storedDocumentSourceExpander.getExpandedStoredDocumentSources(storedDocumentSource);
 		assertEquals("XML namespaces example should have three documents", 3, expandedSourceDocumentSources.size());
-		assertTrue("Make sure our first table still has &amp; entity", IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId())).contains("&amp;"));
+		assertTrue("Make sure our first table still has &amp; entity", IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()), "UTF-8").contains("&amp;"));
 		
 		// test groupby xpath
 		parameters = new FlexibleParameters(new String[]{"xmlDocumentsXpath=//*[local-name()='table']","xmlGroupByXpath=//*[local-name()='length']"});

@@ -42,14 +42,14 @@ public class DocumentExtractorTest {
 		List<StoredDocumentSource> storedDocumentSources = extractor.getStoredDocumentSources();
 		
 		// make sure we have some plausible content
-		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
+		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt"), "UTF-8").get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		String original;
 		InputStream is = null;
 		try {
 			String id = storedDocumentSources.get(0).getId();
 			is = storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(id);
-			original = IOUtils.toString(is);
+			original = IOUtils.toString(is, "UTF-8");
 		}
 		finally {
 			if (is!=null) is.close();

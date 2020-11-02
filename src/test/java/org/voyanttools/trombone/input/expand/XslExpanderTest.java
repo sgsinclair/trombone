@@ -69,7 +69,7 @@ public class XslExpanderTest {
 		assertEquals(1, expandedSourceDocumentSources.size());
 		assertEquals("phrase1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 //		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(1, contents.split("\n").length);
@@ -84,7 +84,7 @@ public class XslExpanderTest {
 		assertEquals("1.0.1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals(1, expandedSourceDocumentSources.size());
 		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 //		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(2, contents.split("\n+").length);
@@ -141,7 +141,7 @@ public class XslExpanderTest {
 		assertEquals("1.0.2", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals("1.0.2", expandedSourceDocumentSources.get(0).getMetadata().getLocation());
 		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 //		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(1, contents.split("\n").length);
@@ -156,7 +156,7 @@ public class XslExpanderTest {
 		assertEquals("1.0.1", expandedSourceDocumentSources.get(0).getMetadata().getTitle());
 		assertEquals(2, expandedSourceDocumentSources.size());
 		inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 //		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId()));
 		assertEquals(1, contents.split("\n+").length);

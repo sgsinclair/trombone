@@ -42,7 +42,7 @@ public class BagItExtractorTest {
 		assertEquals("A Beautiful Possibility", metadata.getTitle());
 		assertEquals("Edith Ferguson Black", metadata.getAuthor());
 		InputStream is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		String contents = IOUtils.toString(is);
+		String contents = IOUtils.toString(is, "UTF-8");
 		assertTrue(contents.contains("In one of the fairest"));
 		is.close();
 		
@@ -56,7 +56,7 @@ public class BagItExtractorTest {
 		assertEquals("Further Chronicles of Avonlea", metadata.getTitle());
 		assertEquals("L. M. (Lucy Maud) Montgomery", metadata.getAuthor());
 		is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(is);
+		contents = IOUtils.toString(is, "UTF-8");
 		assertTrue(contents.contains("Max always blesses the animal"));
 		assertFalse(contents.contains("GutenTag"));
 		is.close();
@@ -65,7 +65,7 @@ public class BagItExtractorTest {
 		assertEquals("Anne of the Island", metadata.getTitle());
 		assertEquals("L. M. (Lucy Maud) Montgomery", metadata.getAuthor());
 		is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(is);
+		contents = IOUtils.toString(is, "UTF-8");
 		assertTrue(contents.contains("Harvest is ended and summer is gone"));
 		assertFalse(contents.contains("GutenTag"));
 		is.close();
@@ -82,7 +82,7 @@ public class BagItExtractorTest {
 		assertEquals("Further Chronicles of Avonlea", metadata.getTitle());
 		assertEquals("L. M. (Lucy Maud) Montgomery", metadata.getAuthor());
 		is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(is);
+		contents = IOUtils.toString(is, "UTF-8");
 		assertTrue(contents.contains("Max always blesses the animal"));
 		assertFalse(contents.contains("GutenTag"));
 		is.close();
@@ -91,7 +91,7 @@ public class BagItExtractorTest {
 		assertEquals("Rainbow Valley", metadata.getTitle());
 		assertEquals("L. M. (Lucy Maud) Montgomery", metadata.getAuthor());
 		is = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(is);
+		contents = IOUtils.toString(is, "UTF-8");
 		assertTrue(contents.contains("apple-green evening in May"));
 		assertFalse(contents.contains("GutenTag"));
 		is.close();

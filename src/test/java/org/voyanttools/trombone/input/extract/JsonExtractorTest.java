@@ -41,7 +41,7 @@ public class JsonExtractorTest {
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals(DocumentFormat.JSON, metadata.getDocumentFormat());
 		assertEquals("{\"rss\":{\"channel\":{\"", metadata.getTitle());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()), "UTF-8");
 		assertTrue(contents.startsWith("{\"rss\":{\"channel\":{\"title\":\"Website Feed\""));
 
 		// most parameters
@@ -61,7 +61,7 @@ public class JsonExtractorTest {
 		assertEquals("Me (me@example.com)", metadata.getAuthor());
 		assertEquals("http://www.yourdomain.com", metadata.getPubDate());
 		assertEquals("http://www.yourdomain.com", metadata.getKeywords());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()), "UTF-8");
 		assertTrue(contents.startsWith("Website Feed coded manually"));
 		
 		// with expansion
@@ -85,7 +85,7 @@ public class JsonExtractorTest {
 		assertEquals("Joe Blow", metadata.getAuthor());
 		assertEquals("http://www.yourdomain.com/events.htm", metadata.getPubDate());
 		assertEquals("http://www.yourdomain.com/events.htm", metadata.getKeywords());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(0).getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(0).getId()), "UTF-8");
 		assertTrue(contents.startsWith("A Special Teleconference for our customers about our products"));
 		metadata = extractedStoredDocumentSources.get(1).getMetadata();
 		assertEquals(DocumentFormat.JSON, metadata.getDocumentFormat());
@@ -93,7 +93,7 @@ public class JsonExtractorTest {
 		assertEquals("Joe Blow", metadata.getAuthor());
 		assertEquals("http://www.yourdomain.com/events.htm", metadata.getPubDate());
 		assertEquals("http://www.yourdomain.com/events.htm", metadata.getKeywords());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(1).getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSources.get(1).getId()), "UTF-8");
 		assertTrue(contents.startsWith("Announcing a new line of products"));
 		
 

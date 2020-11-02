@@ -72,7 +72,7 @@ public class JsonExpanderTest {
 		inputStream = null;
 		try {
 			inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
-			assertTrue(IOUtils.toString(inputStream).startsWith("{\"title\":\"Website Feed"));
+			assertTrue(IOUtils.toString(inputStream, "UTF-8").startsWith("{\"title\":\"Website Feed"));
 		}
 		finally {
 			if (inputStream!=null) {inputStream.close();}
@@ -90,7 +90,7 @@ public class JsonExpanderTest {
 		inputStream = null;
 		try {
 			inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(0).getId());
-			assertTrue(IOUtils.toString(inputStream).startsWith("{\"title\":\"A Special Event"));
+			assertTrue(IOUtils.toString(inputStream, "UTF-8").startsWith("{\"title\":\"A Special Event"));
 		}
 		finally {
 			if (inputStream!=null) {inputStream.close();}
@@ -133,7 +133,7 @@ public class JsonExpanderTest {
 		inputStream = null;
 		try {
 			inputStream = storedDocumentSourceStorage.getStoredDocumentSourceInputStream(expandedSourceDocumentSources.get(1).getId());
-			assertTrue(IOUtils.toString(inputStream).startsWith("{ \"title\": \"Announcing new Products"));
+			assertTrue(IOUtils.toString(inputStream, "UTF-8").startsWith("{ \"title\": \"Announcing new Products"));
 		}
 		finally {
 			if (inputStream!=null) {inputStream.close();}

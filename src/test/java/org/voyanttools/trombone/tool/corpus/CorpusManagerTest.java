@@ -58,7 +58,7 @@ public class CorpusManagerTest {
 		corpusManager.run();
 		corpus = corpusManager.getCorpus();
 		assertEquals(1, corpus.size());
-		assertTrue(IOUtils.toString(storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(corpus.getDocument(0).getId())).contains(strings[1]));
+		assertTrue(IOUtils.toString(storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(corpus.getDocument(0).getId()), "UTF-8").contains(strings[1]));
 		
 		// try to keep only one document
 		parameters.clear();
@@ -69,7 +69,7 @@ public class CorpusManagerTest {
 		corpusManager.run();
 		corpus = corpusManager.getCorpus();
 		assertEquals(1, corpus.size());
-		assertTrue(IOUtils.toString(storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(corpus.getDocument(0).getId())).contains(strings[0]));
+		assertTrue(IOUtils.toString(storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(corpus.getDocument(0).getId()), "UTF-8").contains(strings[0]));
 		
 		// reverse the order
 		parameters.clear();
@@ -80,7 +80,7 @@ public class CorpusManagerTest {
 		corpusManager.run();
 		corpus = corpusManager.getCorpus();
 		assertEquals(2, corpus.size());
-		assertTrue(IOUtils.toString(storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(corpus.getDocument(0).getId())).contains(strings[1]));
+		assertTrue(IOUtils.toString(storage.getStoredDocumentSourceStorage().getStoredDocumentSourceInputStream(corpus.getDocument(0).getId()), "UTF-8").contains(strings[1]));
 		
 		// make sure we still have two documents in our original corpus
 		parameters.clear();

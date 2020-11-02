@@ -42,7 +42,7 @@ public class HtmlExtractorTest {
 		storedDocumentSourceExtractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, parameters);
 		extractedStoredDocumentSource = storedDocumentSourceExtractor.getExtractedStoredDocumentSource(longerStoredDocumentSource);
 		assertEquals("Authors", extractedStoredDocumentSource.getMetadata().getAuthor());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()), "UTF-8");
 		assertEquals("en", extractedStoredDocumentSource.getMetadata().getLanguageCode());
 		assertTrue(contents.contains("Content"));
 		
@@ -51,7 +51,7 @@ public class HtmlExtractorTest {
 		storedDocumentSourceExtractor = new StoredDocumentSourceExtractor(storedDocumentSourceStorage, parameters);
 		extractedStoredDocumentSource = storedDocumentSourceExtractor.getExtractedStoredDocumentSource(longerStoredDocumentSource);
 		assertEquals("Authors", extractedStoredDocumentSource.getMetadata().getAuthor());
-		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
+		contents = IOUtils.toString(storedDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()), "UTF-8");
 		assertEquals("en", extractedStoredDocumentSource.getMetadata().getLanguageCode());
 		assertFalse(contents.contains("Content"));
 		

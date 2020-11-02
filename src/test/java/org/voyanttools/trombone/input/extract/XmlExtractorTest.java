@@ -61,7 +61,7 @@ public class XmlExtractorTest {
 		InputStream inputStream;
 		String contents;
 		
-		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt")).get(0).trim();
+		String line = FileUtils.readLines(TestHelper.getResource("formats/chars_utf8.txt"), "UTF-8").get(0).trim();
 		line = line.substring(line.indexOf("I"));
 		
 		inputSource = new FileInputSource(TestHelper.getResource("formats/chars_utf8.xml"));
@@ -71,7 +71,7 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("", metadata.getTitle());
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 		assertTrue("ensure we have some content in XML", contents.contains(line)==true);
 
@@ -84,7 +84,7 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for XML document", "", metadata.getTitle());
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 //		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have stripped out other content", contents.contains("<body>")==false);
@@ -99,7 +99,7 @@ public class XmlExtractorTest {
 		// this should be blank rather than the title tag (for generic XML)
 		assertEquals("title for XML document", "", metadata.getTitle());
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 		//		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		assertTrue("ensure we have stripped out other content", contents.contains("<head>")==false);
@@ -116,7 +116,7 @@ public class XmlExtractorTest {
 //		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
 //		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
@@ -133,7 +133,7 @@ public class XmlExtractorTest {
 //		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
 //		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		assertTrue("ensure we have stripped out other content in RSS feed", contents.contains("<link>")==false);
@@ -150,7 +150,7 @@ public class XmlExtractorTest {
 //		assertEquals("author for RSS feed", "Me (me@example.com)", metadata.getAuthor());
 //		contents = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 		assertFalse(contents.contains("<!--")); // make sure we've stripped out XML comments during extraction
 		
@@ -202,7 +202,7 @@ public class XmlExtractorTest {
 		assertEquals("c", metadata.getTitle());
 //		String string = IOUtils.toString(storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId()));
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 		assertTrue(contents.contains("<a>") && contents.contains("<b>") && !contents.contains("<z>"));
 		
@@ -213,7 +213,7 @@ public class XmlExtractorTest {
 		metadata = extractedStoredDocumentSource.getMetadata();
 		assertEquals("A Study in Scarlet", metadata.getTitle());
 		inputStream = storeDocumentSourceStorage.getStoredDocumentSourceInputStream(extractedStoredDocumentSource.getId());
-		contents = IOUtils.toString(inputStream);
+		contents = IOUtils.toString(inputStream, "UTF-8");
 		inputStream.close();
 		assertTrue(contents.contains("Frontispiece, with the caption"));
 		assertFalse(contents.contains("Project Gutenberg"));
