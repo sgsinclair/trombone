@@ -52,6 +52,7 @@ import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
@@ -61,7 +62,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -72,7 +72,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 @XStreamAlias("corpusTerms")
 @XStreamConverter(CorpusTerms.CorpusTermsConverter.class)
 public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
-	
+
 	private List<CorpusTerm> terms = new ArrayList<CorpusTerm>();
 	
 	@XStreamOmitField
@@ -440,7 +440,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		}
 		queue.offer(corpusTerm);
 		total++;
-		totalTokens+=corpusTerm.getRawFreq();
+		totalTokens+=corpusTerm.getRawFrequency();
 	}
 
 	List<CorpusTerm> getCorpusTerms() {
@@ -469,9 +469,9 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			CorpusTerms corpusTerms = (CorpusTerms) source;
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(corpusTerms.getTotal()));
-			writer.endNode();
+	        ToolSerializer.endNode(writer);
 			
 			FlexibleParameters parameters = corpusTerms.getParameters();
 			String freqsMode = parameters.getParameterValue("withDistributions");			
@@ -479,66 +479,18 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			boolean withRelativeDistributions = freqsMode != null && !withRawDistributions && (freqsMode.equals("relative") || parameters.getParameterBooleanValue("withDistributions"));		
 			boolean inDocumentsCountOnly = parameters.getParameterBooleanValue("inDocumentsCountOnly");
 			
+			// these are required by the CorpusTerm converter
+			context.put("withRawDistributions", withRawDistributions);
+			context.put("withRelativeDistributions", withRelativeDistributions);
+			context.put("inDocumentsCountOnly", inDocumentsCountOnly);
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
+			ToolSerializer.startNode(writer, "terms", List.class);
 			for (CorpusTerm corpusTerm : corpusTerms) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
-		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-				writer.setValue(corpusTerm.getTerm());
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "inDocumentsCount", Integer.class);
-				writer.setValue(String.valueOf(corpusTerm.getInDocumentsCount()));
-				writer.endNode();
-				
-				if (!inDocumentsCountOnly) {
-					
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-					writer.setValue(String.valueOf(corpusTerm.getRawFreq()));
-					writer.endNode();
-
-
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-					writer.setValue(String.valueOf((float) corpusTerm.getRelativeFrequency()));	
-					writer.endNode();
-					// why was this being used before instead of a simple call to relativeFrequency()?
-					// writer.setValue(String.valueOf((float) corpusTerm.getRawFreq() / corpusTerms.totalTokens));
-
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "comparisonRelativeFreqDifference", Float.class);
-			        float val = corpusTerm.getComparisonCorpusRelativeFrequencyDifference();
-					writer.setValue(Float.isNaN(val) ? "0" :  String.valueOf(corpusTerm.getComparisonCorpusRelativeFrequencyDifference()));
-					writer.endNode();
-					
-					
-					if (withRawDistributions || withRelativeDistributions) {
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativePeakedness", Float.class);
-						writer.setValue(String.valueOf(corpusTerm.getPeakedness()));
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeSkewness", Float.class);
-						writer.setValue(String.valueOf(corpusTerm.getSkewness()));
-						writer.endNode();
-						
-						if (withRawDistributions) {
-					        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-					        context.convertAnother(corpusTerm.getRawDistributions());
-					        writer.endNode();
-						}
-						
-						if (withRelativeDistributions) {
-					        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-					        context.convertAnother(corpusTerm.getRelativeDistributions());
-					        writer.endNode();
-						}
-					}
-
-				}
-				
-				writer.endNode();
+				writer.startNode("term");
+		        context.convertAnother(corpusTerm);
+		        writer.endNode();
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		/* (non-Javadoc)

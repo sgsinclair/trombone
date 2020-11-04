@@ -82,12 +82,11 @@ public class ToolSerializer implements RunnableTool {
 		if (xs == null) return; // don't serialize results, therefore no output data is emitted
 		
 		xs.autodetectAnnotations(true);
+//		xs.setMode(XStream.NO_REFERENCES);
 		xs.toXML(runnableTool, fileWriter!=null ? fileWriter : writer);
 		if (fileWriter!=null) {
 			fileWriter.close();
 		}
-		
-		
 	}
 
 	public void run() throws IOException {
@@ -100,6 +99,22 @@ public class ToolSerializer implements RunnableTool {
 			Writer writer = new OutputStreamWriter(System.out);
 			run(writer);
 			writer.close();
+		}
+	}
+	
+	public static void startNode(HierarchicalStreamWriter writer, String nodeName, Class<?> clazz) {
+		if (writer.underlyingWriter() instanceof JsonWriter) {
+			((JsonWriter)writer.underlyingWriter()).startNode(nodeName, clazz);
+		} else {
+			writer.startNode(nodeName);
+		}
+	}
+	
+	public static void endNode(HierarchicalStreamWriter writer) {
+		if (writer.underlyingWriter() instanceof JsonWriter) {
+			((JsonWriter)writer.underlyingWriter()).endNode();
+		} else {
+			writer.endNode();
 		}
 	}
 
