@@ -75,7 +75,6 @@ public class ToolSerializer implements RunnableTool {
 				@Override
 				public HierarchicalStreamWriter createWriter(Writer writer) {
 					return new JsonWriter(fileWriter!=null ? fileWriter : writer, JsonWriter.DROP_ROOT_MODE);
-			
 				}
 			});
 		}

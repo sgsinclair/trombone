@@ -474,7 +474,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 	        ToolSerializer.endNode(writer);
 			
 			FlexibleParameters parameters = corpusTerms.getParameters();
-			String freqsMode = parameters.getParameterValue("withDistributions");			
+			String freqsMode = parameters.getParameterValue("withDistributions");
 			boolean withRawDistributions = freqsMode != null && freqsMode.equals("raw");
 			boolean withRelativeDistributions = freqsMode != null && !withRawDistributions && (freqsMode.equals("relative") || parameters.getParameterBooleanValue("withDistributions"));		
 			boolean inDocumentsCountOnly = parameters.getParameterBooleanValue("inDocumentsCountOnly");
@@ -486,9 +486,7 @@ public class CorpusTerms extends AbstractTerms implements Iterable<CorpusTerm> {
 			
 			ToolSerializer.startNode(writer, "terms", List.class);
 			for (CorpusTerm corpusTerm : corpusTerms) {
-				writer.startNode("term");
 		        context.convertAnother(corpusTerm);
-		        writer.endNode();
 			}
 			ToolSerializer.endNode(writer);
 		}

@@ -27,10 +27,10 @@ import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.DocumentFilter;
 import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleQueryParser;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -38,7 +38,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -223,25 +222,30 @@ public class CorpusFacets extends AbstractTerms {
 			
 			
 			int total = 0;
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "facets", Map.class);
+	        ToolSerializer.startNode(writer, "facets", Map.class);
 			for (LabelAndValueAndDim facetResult : corpusFacets.facetResults) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "labels", String.class); // not written in JSON
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "facet", String.class);
+		        writer.startNode("labels"); // not written in JSON
+		        
+		        writer.startNode("facet");
 				writer.setValue(facetResult.dim);
 				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "label", String.class);
+		        
+				writer.startNode("label");
 				writer.setValue(facetResult.labelAndValue.label);
 				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "inDocumentsCount", Integer.class);
+				
+				ToolSerializer.startNode(writer, "inDocumentsCount", Integer.class);
 				writer.setValue(String.valueOf(facetResult.labelAndValue.value));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
+				
 				writer.endNode();
 				total++;
 			}
-			writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(total));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		/* (non-Javadoc)

@@ -3,12 +3,12 @@ package org.voyanttools.trombone.model;
 import java.io.IOException;
 import java.util.List;
 
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -24,8 +24,7 @@ public class DocumentConverter implements Converter {
 	}
 
 	@Override
-	public void marshal(Object source, HierarchicalStreamWriter writer,
-			MarshallingContext context) {
+	public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 		
 		final DocumentContainer doc = (DocumentContainer) source;
 
@@ -39,21 +38,21 @@ public class DocumentConverter implements Converter {
 		
 		FlexibleParameters params = metadata.getFlexibleParameters();
 		
-		ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
+		writer.startNode("id");
 		writer.setValue(doc.getId());
 		writer.endNode();
 		for (String key : params.getKeys()) {
 			String[] values = params.getParameterValues(key);
 			if (values.length>0) {
 				if (values.length==1) {
-					ExtendedHierarchicalStreamWriterHelper.startNode(writer, key, String.class);
+					writer.startNode(key);
 					writer.setValue(values[0]);
 					writer.endNode();
 				}
 				else {
-					ExtendedHierarchicalStreamWriterHelper.startNode(writer, key, List.class);
+					ToolSerializer.startNode(writer, key, List.class);
 					context.convertAnother(values);
-					writer.endNode();
+					ToolSerializer.endNode(writer);
 				}
 			}
 		}

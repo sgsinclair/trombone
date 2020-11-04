@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import org.voyanttools.trombone.model.Confidence.ConfidenceConverter;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -116,15 +116,17 @@ public class Confidence implements Serializable {
 		@Override
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			Confidence confidence = (Confidence) source;
-			
 	        
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, confidence.type.name(), String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "value", Float.class);
+	        writer.startNode(confidence.type.name());
+	        
+	        ToolSerializer.startNode(writer, "value", Float.class);
 			writer.setValue(String.valueOf(confidence.value));
-			writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "weight", Float.class);
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "weight", Float.class);
 			writer.setValue(String.valueOf(confidence.weight));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
+			
 			writer.endNode();
 
 		}

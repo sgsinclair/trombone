@@ -389,6 +389,8 @@ public class CorpusTerm implements Serializable {
 			boolean withRelativeDistributions = Boolean.TRUE.equals(context.get("withRelativeDistributions"));
 			boolean inDocumentsCountOnly = Boolean.TRUE.equals(context.get("inDocumentsCountOnly"));
 	        
+			writer.startNode("term");
+			
 	        writer.startNode("term");
 			writer.setValue(corpusTerm.getTerm());
 			writer.endNode();
@@ -416,13 +418,11 @@ public class CorpusTerm implements Serializable {
 				if (withRawDistributions || withRelativeDistributions) {
 					
 			        ToolSerializer.startNode(writer, "relativePeakedness", Float.class);
-			        float pval = corpusTerm.getPeakedness();
-					writer.setValue(Float.isNaN(pval) ? "0" :  String.valueOf(pval));
+					writer.setValue(String.valueOf(corpusTerm.getPeakedness()));
 					ToolSerializer.endNode(writer);
 					
 			        ToolSerializer.startNode(writer, "relativeSkewness", Float.class);
-			        float sval = corpusTerm.getSkewness();
-					writer.setValue(Float.isNaN(sval) ? "0" :  String.valueOf(sval));
+					writer.setValue(String.valueOf(corpusTerm.getSkewness()));
 					ToolSerializer.endNode(writer);
 					
 					ToolSerializer.startNode(writer, "distributions", List.class);
@@ -435,6 +435,8 @@ public class CorpusTerm implements Serializable {
 				}
 
 			}
+			
+			writer.endNode();
 		}
 
 		@Override

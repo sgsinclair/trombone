@@ -7,14 +7,25 @@ import java.text.Normalizer;
 import java.util.Comparator;
 import java.util.List;
 
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
  *
  */
+
+@XStreamAlias("ngram")
+@XStreamConverter(DocumentNgram.DocumentNgramConverter.class)
 public class DocumentNgram implements Comparable<DocumentNgram> {
 
 	public enum Sort {
@@ -177,4 +188,52 @@ public class DocumentNgram implements Comparable<DocumentNgram> {
 		
 	};
 
+	public static class DocumentNgramConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return DocumentNgram.class.isAssignableFrom(type);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+			DocumentNgram documentNgram = (DocumentNgram) source;
+			
+			boolean withPositions = Boolean.TRUE.equals(context.get("withPositions"));
+			
+			writer.startNode("ngram"); // not written in JSON
+	        
+	        writer.startNode("term");
+			writer.setValue(documentNgram.getTerm());
+			writer.endNode();
+
+	        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
+			writer.setValue(String.valueOf(documentNgram.getRawFreq()));
+			ToolSerializer.endNode(writer);
+
+			ToolSerializer.startNode(writer, "length", Integer.class);
+			writer.setValue(String.valueOf(documentNgram.getLength()));
+			ToolSerializer.endNode(writer);
+
+			ToolSerializer.startNode(writer, "docIndex", Integer.class);
+			writer.setValue(String.valueOf(documentNgram.getCorpusDocumentIndex()));
+			ToolSerializer.endNode(writer);
+			
+        	if (withPositions) {
+        		ToolSerializer.startNode(writer, "positions", List.class);
+		        context.convertAnother(documentNgram.getPositions());
+		        ToolSerializer.endNode(writer);
+        	}
+        	
+        	writer.endNode();
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+	
 }
