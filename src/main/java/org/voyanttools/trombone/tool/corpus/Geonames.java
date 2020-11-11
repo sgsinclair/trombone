@@ -45,16 +45,15 @@ import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.Stripper;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -647,43 +646,53 @@ public class Geonames extends AbstractContextTerms {
 
 		@Override
 		public boolean canConvert(Class arg0) {
-			return arg0.isAssignableFrom(CityOccurrence.class);
+			return CityOccurrence.class.isAssignableFrom(arg0);
 		}
 
 		@Override
 		public void marshal(Object arg0, HierarchicalStreamWriter writer, MarshallingContext context) {
 			CityOccurrence cityOccurrence = (CityOccurrence) arg0;
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+			ToolSerializer.startNode(writer, "docIndex", Integer.class);
 			writer.setValue(String.valueOf(cityOccurrence.docIndex));
-			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "position", Integer.class);
 			writer.setValue(String.valueOf(cityOccurrence.position));
-			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
+			ToolSerializer.endNode(writer);
+			
+			writer.startNode("id");
 			writer.setValue(String.valueOf(cityOccurrence.id));
 			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "form", String.class);
+			
+			writer.startNode("form");
 			writer.setValue(String.valueOf(cityOccurrence.form));
 			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "left", String.class);
+			
+			writer.startNode("left");
 			writer.setValue(String.valueOf(cityOccurrence.left));
 			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "middle", String.class);
+			
+			writer.startNode("middle");
 			writer.setValue(String.valueOf(cityOccurrence.middle));
 			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "right", String.class);
+			
+			writer.startNode("right");
 			writer.setValue(String.valueOf(cityOccurrence.right));
 			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidences", String.class);
+			
+			writer.startNode("confidences");
 			for (Confidence confidence : cityOccurrence.confidences) {
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, confidence.name(), String.class);
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "value", Float.class);
+				writer.startNode(confidence.name());
+				
+				ToolSerializer.startNode(writer, "value", Float.class);
 				writer.setValue(String.valueOf(confidence.getValue()));
-				writer.endNode();
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "weight", Float.class);
+				ToolSerializer.endNode(writer);
+				
+				ToolSerializer.startNode(writer, "weight", Float.class);
 				writer.setValue(String.valueOf(confidence.getWeight()));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
+				
 				writer.endNode();
 			}
 			writer.endNode();
@@ -726,47 +735,53 @@ public class Geonames extends AbstractContextTerms {
 			Geonames geonames = (Geonames) source;
 			
 			if (geonames.hasMessages()) {
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "messages", List.class);
+				ToolSerializer.startNode(writer, "messages", List.class);
 				context.convertAnother(geonames.getMessages());
-				writer.endNode();
+				ToolSerializer.endNode(writer);
 			}
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cities", String.class);
+			
+	        writer.startNode("cities");
 	        
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(String.valueOf(geonames.cityTotal)));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 	        
-	        
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cities", String.class);
+	        writer.startNode("cities");
 			for (Map.Entry<City, Integer> cityCount : geonames.citiesCountList) {
-				
 				City city = cityCount.getKey();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, city.id, String.class); // not written in JSON
+				
+		        writer.startNode(city.id); // not written in JSON
 
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+		        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
 				writer.setValue(String.valueOf(cityCount.getValue()));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
 
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "label", String.class);
+		        writer.startNode("label");
 				writer.setValue(String.valueOf(city.label));
 				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "latitude", Float.class);
+				
+				ToolSerializer.startNode(writer, "latitude", Float.class);
 				writer.setValue(String.valueOf(city.latitude));
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "longitude", Float.class);
+				ToolSerializer.endNode(writer);
+				
+				ToolSerializer.startNode(writer, "longitude", Float.class);
 				writer.setValue(String.valueOf(city.longitude));
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "population", Integer.class);
+				ToolSerializer.endNode(writer);
+				
+				ToolSerializer.startNode(writer, "population", Integer.class);
 				writer.setValue(String.valueOf(city.population));
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "forms", List.class);
+				ToolSerializer.endNode(writer);
+				
+				ToolSerializer.startNode(writer, "forms", List.class);
 		        context.convertAnother(city.forms);
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidence", Integer.class);
+		        ToolSerializer.endNode(writer);
+				
+		        ToolSerializer.startNode(writer, "confidence", Integer.class);
 				writer.setValue(String.valueOf(Confidence.getConfidence(city.confidences)));
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidences", String.class);
+				ToolSerializer.endNode(writer);
+		        
+				writer.startNode("confidences");
 		        for (Confidence confidence : city.confidences) {
 		        		context.convertAnother(confidence);
 		        }
@@ -775,46 +790,53 @@ public class Geonames extends AbstractContextTerms {
 				writer.endNode();
 			}
 			writer.endNode();
+			
 			writer.endNode();
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionCounts", String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			
+	        writer.startNode("connectionCounts");
+	        
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(String.valueOf(geonames.connectionsTotal)));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionCounts", String.class);
+	        writer.startNode("connectionCounts");
 			for (Map.Entry<String, AtomicInteger> connectionCount : geonames.connectionsCount) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, connectionCount.getKey(), Integer.class);
+				ToolSerializer.startNode(writer, connectionCount.getKey(), Integer.class);
 				writer.setValue(String.valueOf(String.valueOf(connectionCount.getValue().get())));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
 			}
 			writer.endNode();
+			
 			writer.endNode();
 
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connections", String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			
+	        writer.startNode("connections");
+	        
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(String.valueOf(geonames.total)));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connections", Map.class);
+			ToolSerializer.startNode(writer, "connections", Map.class);
 			for (ConnectionOccurrence occurrence : geonames.connectionOccurrences) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connection", String.class);
+		        writer.startNode("connection");
 		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+		        ToolSerializer.startNode(writer, "docIndex", Integer.class);
 		        writer.setValue(String.valueOf(occurrence.docIndex));
-		        writer.endNode();				
+		        ToolSerializer.endNode(writer);
 		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "source", String.class);
+		        writer.startNode("source");
 		        context.convertAnother(occurrence.left);
 				writer.endNode();
 				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "target", String.class);
+		        writer.startNode("target");
 		        context.convertAnother(occurrence.right);			
 				writer.endNode();
 				
 				writer.endNode();
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
+			
 			writer.endNode();
 		}
 
@@ -822,8 +844,7 @@ public class Geonames extends AbstractContextTerms {
 		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
 		 */
 		@Override
-		public Object unmarshal(HierarchicalStreamReader arg0,
-				UnmarshallingContext arg1) {
+		public Object unmarshal(HierarchicalStreamReader arg0, UnmarshallingContext arg1) {
 			// TODO Auto-generated method stub
 			return null;
 		}

@@ -29,6 +29,7 @@ import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.nlp.PosLemmas;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.storage.Storage.Location;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.Stripper;
 
@@ -38,7 +39,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -284,33 +284,27 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 		 * @see com.thoughtworks.xstream.converters.Converter#marshal(java.lang.Object, com.thoughtworks.xstream.io.HierarchicalStreamWriter, com.thoughtworks.xstream.converters.MarshallingContext)
 		 */
 		@Override
-		public void marshal(Object source, HierarchicalStreamWriter writer,
-				MarshallingContext context) {
-			
-			
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			DocumentTokens documentTokens = (DocumentTokens) source;
 			
-			writer.startNode("total");
+			ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(documentTokens.total));
-			writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", List.class);
-	        for (DocumentToken documentToken :  documentTokens.getDocumentTokens()) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "token", String.class);
-		        
+			ToolSerializer.endNode(writer);
+	        
+			ToolSerializer.startNode(writer, "tokens", List.class);
+	        for (DocumentToken documentToken : documentTokens.getDocumentTokens()) {
+		        writer.startNode("token");
 		        context.convertAnother(documentToken);
-		        
 		        writer.endNode();
 	        }
-	        writer.endNode();
-
+	        ToolSerializer.endNode(writer);
 		}
 
 		/* (non-Javadoc)
 		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
 		 */
 		@Override
-		public Object unmarshal(HierarchicalStreamReader reader,
-				UnmarshallingContext context) {
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
 			return null;
 		}
 

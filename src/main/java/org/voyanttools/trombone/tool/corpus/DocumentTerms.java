@@ -40,7 +40,6 @@ import org.apache.lucene.util.BitSet;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
 import org.voyanttools.trombone.lucene.CorpusMapper;
-import org.voyanttools.trombone.lucene.search.FieldPrefixAwareSimpleSpanQueryParser;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.CorpusAccess;
 import org.voyanttools.trombone.model.CorpusAccessException;
@@ -48,8 +47,8 @@ import org.voyanttools.trombone.model.CorpusTermMinimal;
 import org.voyanttools.trombone.model.CorpusTermMinimalsDB;
 import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.Keywords;
-import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
@@ -59,7 +58,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -308,9 +306,9 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			DocumentTerms documentTerms = (DocumentTerms) source;
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(documentTerms.getTotal()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
 			FlexibleParameters parameters = documentTerms.getParameters();
 			String freqsMode = parameters.getParameterValue("withDistributions");			
@@ -320,80 +318,24 @@ public class DocumentTerms extends AbstractTerms implements Iterable<DocumentTer
 			boolean withOffsets = parameters.getParameterBooleanValue("withOffsets");
 			boolean withPositions = parameters.getParameterBooleanValue("withPositions");
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
+			context.put("withRawDistributions", withRawDistributions);
+			context.put("withRelativeDistributions", withRelativeDistributions);
+			context.put("bins", bins);
+			context.put("withOffsets", withOffsets);
+			context.put("withPositions", withPositions);
+			
+			ToolSerializer.startNode(writer, "terms", Map.class);
 			for (DocumentTerm documentTerm : documentTerms) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
-		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-				writer.setValue(documentTerm.getTerm());
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-				writer.setValue(String.valueOf(documentTerm.getRawFrequency()));
-				writer.endNode();
-
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-				writer.setValue(String.valueOf(documentTerm.getRelativeFrequency()));
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "zscore", Float.class);
-				writer.setValue(String.valueOf(documentTerm.getZscore()));
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "zscoreRatio", Float.class);
-				writer.setValue(String.valueOf(documentTerm.getZscoreRatio()));
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tfidf", Float.class);
-				writer.setValue(String.valueOf(documentTerm.getTfIdf()));
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTermsCount", Integer.class);
-				writer.setValue(String.valueOf(documentTerm.getTotalTermsCount()));
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
-				writer.setValue(String.valueOf(documentTerm.getDocIndex()));
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docId", String.class);
-				writer.setValue(documentTerm.getDocId());
-				writer.endNode();
-
-				if (withRawDistributions) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-			        context.convertAnother(documentTerm.getRawDistributions(bins));
-			        writer.endNode();
-				}
-				if (withRelativeDistributions) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-			        context.convertAnother(documentTerm.getRelativeDistributions(bins));
-			        writer.endNode();
-				}
-				
-				if (withOffsets) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "offsets", List.class);
-			        context.convertAnother(documentTerm.getOffsets());
-			        writer.endNode();
-				}
-				
-				if (withPositions) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "positions", List.class);
-			        context.convertAnother(documentTerm.getPositions());
-			        writer.endNode();
-				}
-				
-				writer.endNode();
+		        context.convertAnother(documentTerm);
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		/* (non-Javadoc)
 		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
 		 */
 		@Override
-		public Object unmarshal(HierarchicalStreamReader arg0,
-				UnmarshallingContext arg1) {
+		public Object unmarshal(HierarchicalStreamReader arg0, UnmarshallingContext arg1) {
 			// TODO Auto-generated method stub
 			return null;
 		}

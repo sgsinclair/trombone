@@ -12,6 +12,7 @@ import org.voyanttools.trombone.model.DocumentTerm;
 import org.voyanttools.trombone.model.DocumentTermsCorrelation;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
@@ -21,7 +22,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -131,92 +131,31 @@ public class DocumentTermCorrelations extends AbstractTerms {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			DocumentTermCorrelations documentTermCorrelations = (DocumentTermCorrelations) source;
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(documentTermCorrelations.getTotal()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
 			FlexibleParameters parameters = documentTermCorrelations.getParameters();
 			boolean termsOnly = parameters.getParameterBooleanValue("termsOnly");
 			boolean withDistributions = parameters.getParameterBooleanValue("withDistributions");
 			
+			context.put("termsOnly", termsOnly);
+			context.put("withDistributions", withDistributions);
+			context.put("distributionBins", documentTermCorrelations.distributionBins);
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlations", Map.class);
+			
+			ToolSerializer.startNode(writer, "correlations", Map.class);
 			for (DocumentTermsCorrelation documentTermCorrelation : documentTermCorrelations.correlations) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", String.class); // not written in JSON
-		        
-		        int i = 0;
-		        for (DocumentTerm documentTerm : documentTermCorrelation.getDocumentTerms()) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, i++==0 ? "source" : "target", String.class);
-			        if (termsOnly) {
-						writer.setValue(documentTerm.getTerm());
-			        } else {
-			        	
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-						writer.setValue(documentTerm.getTerm());
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-						writer.setValue(String.valueOf(documentTerm.getRawFrequency()));
-						writer.endNode();
-
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
-						writer.setValue(String.valueOf(documentTerm.getRelativeFrequency()));
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "zscore", Float.class);
-						writer.setValue(String.valueOf(documentTerm.getZscore()));
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "zscoreRatio", Float.class);
-						writer.setValue(String.valueOf(documentTerm.getZscoreRatio()));
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tfidf", Float.class);
-						writer.setValue(String.valueOf(documentTerm.getTfIdf()));
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTermsCount", Integer.class);
-						writer.setValue(String.valueOf(documentTerm.getTotalTermsCount()));
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
-						writer.setValue(String.valueOf(documentTerm.getDocIndex()));
-						writer.endNode();
-						
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docId", String.class);
-						writer.setValue(documentTerm.getDocId());
-						writer.endNode();
-
-						if (withDistributions) {
-					        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-					        float[] distributions = documentTerm.getRelativeDistributions(documentTermCorrelations.distributionBins).clone();
-					        // clone to avoid empty on subsequent instances 
-					        context.convertAnother(distributions.clone());
-					        writer.endNode();
-						}
-			        }
-					writer.endNode();
-		        }
-		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", Float.class);
-				writer.setValue(String.valueOf(documentTermCorrelation.getCorrelation()));
-				writer.endNode();
-				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "significance", Float.class);
-				writer.setValue(String.valueOf(documentTermCorrelation.getSignificance()));
-				writer.endNode();
-				
-				writer.endNode();
+		        context.convertAnother(documentTermCorrelation);
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		/* (non-Javadoc)
 		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
 		 */
 		@Override
-		public Object unmarshal(HierarchicalStreamReader arg0,
-				UnmarshallingContext arg1) {
+		public Object unmarshal(HierarchicalStreamReader arg0, UnmarshallingContext arg1) {
 			// TODO Auto-generated method stub
 			return null;
 		}

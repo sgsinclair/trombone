@@ -1,10 +1,19 @@
 package org.voyanttools.trombone.model;
 
 import java.util.Comparator;
+import java.util.List;
 
-import org.voyanttools.trombone.model.CorpusTermsCorrelation.Sort;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+
+@XStreamConverter(DocumentTermsCorrelation.DocumentTermsCorrelationConverter.class)
 public class DocumentTermsCorrelation {
 
 	private DocumentTerm source;
@@ -88,5 +97,95 @@ public class DocumentTermsCorrelation {
 			else {return compare;}
 		}
 	};
+	
+	public static class DocumentTermsCorrelationConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return DocumentTermsCorrelation.class.isAssignableFrom(type);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+			DocumentTermsCorrelation documentTermCorrelation = (DocumentTermsCorrelation) source;
+			
+			boolean withDistributions = Boolean.TRUE.equals(context.get("withDistributions"));
+			boolean termsOnly = Boolean.TRUE.equals(context.get("termsOnly"));
+			int distributionBins = Integer.parseInt(String.valueOf(context.get("distributionBins")));
+			
+			writer.startNode("correlation"); // not written in JSON
+	        
+	        int i = 0;
+	        for (DocumentTerm documentTerm : documentTermCorrelation.getDocumentTerms()) {
+		        writer.startNode(i++==0 ? "source" : "target");
+		        
+		        if (termsOnly) {
+					writer.setValue(documentTerm.getTerm());
+		        } else {
+			        writer.startNode("term");
+					writer.setValue(documentTerm.getTerm());
+					writer.endNode();
+					
+			        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
+					writer.setValue(String.valueOf(documentTerm.getRawFrequency()));
+					ToolSerializer.endNode(writer);
+
+					ToolSerializer.startNode(writer, "relativeFreq", Float.class);
+					writer.setValue(String.valueOf(documentTerm.getRelativeFrequency()));
+					ToolSerializer.endNode(writer);
+					
+					ToolSerializer.startNode(writer, "zscore", Float.class);
+					writer.setValue(String.valueOf(documentTerm.getZscore()));
+					ToolSerializer.endNode(writer);
+					
+					ToolSerializer.startNode(writer, "zscoreRatio", Float.class);
+					writer.setValue(String.valueOf(documentTerm.getZscoreRatio()));
+					ToolSerializer.endNode(writer);
+					
+					ToolSerializer.startNode(writer, "tfidf", Float.class);
+					writer.setValue(String.valueOf(documentTerm.getTfIdf()));
+					ToolSerializer.endNode(writer);
+					
+					ToolSerializer.startNode(writer, "totalTermsCount", Integer.class);
+					writer.setValue(String.valueOf(documentTerm.getTotalTermsCount()));
+					ToolSerializer.endNode(writer);
+					
+					ToolSerializer.startNode(writer, "docIndex", Integer.class);
+					writer.setValue(String.valueOf(documentTerm.getDocIndex()));
+					ToolSerializer.endNode(writer);
+					
+			        writer.startNode("docId");
+					writer.setValue(documentTerm.getDocId());
+					writer.endNode();
+
+					if (withDistributions) {
+						ToolSerializer.startNode(writer, "distributions", List.class);
+				        float[] distributions = documentTerm.getRelativeDistributions(distributionBins).clone();
+				        // clone to avoid empty on subsequent instances 
+				        context.convertAnother(distributions.clone());
+				        ToolSerializer.endNode(writer);
+					}
+		        }
+		        
+				writer.endNode();
+	        }
+	        
+	        ToolSerializer.startNode(writer, "correlation", Float.class);
+			writer.setValue(String.valueOf(documentTermCorrelation.getCorrelation()));
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "significance", Float.class);
+			writer.setValue(String.valueOf(documentTermCorrelation.getSignificance()));
+			ToolSerializer.endNode(writer);
+			
+			writer.endNode();
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	}
 
 }

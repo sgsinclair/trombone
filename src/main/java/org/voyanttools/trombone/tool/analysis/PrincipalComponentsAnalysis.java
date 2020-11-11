@@ -5,6 +5,16 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.voyanttools.trombone.model.CorpusTerm;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
+
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
 
@@ -146,6 +156,7 @@ public class PrincipalComponentsAnalysis {
 		return this.eigenvalues.length;
 	}
 
+	@XStreamConverter(PrincipleComponent.PrincipleComponentConverter.class)
 	public static class PrincipleComponent implements Comparable<PrincipleComponent> {
 		public double eigenValue;
 		public double[] eigenVector;
@@ -198,6 +209,41 @@ public class PrincipalComponentsAnalysis {
 		
 			return (int) Math.round(this.eigenValue);
 		
+		}
+		
+		public static class PrincipleComponentConverter implements Converter {
+
+			@Override
+			public boolean canConvert(Class type) {
+				return PrincipleComponent.class.isAssignableFrom(type);
+			}
+
+			@Override
+			public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+				PrincipleComponent pc = (PrincipleComponent) source;
+				
+				writer.startNode("principalComponent");
+				
+				ToolSerializer.startNode(writer, "eigenValue", Double.class);
+				writer.setValue(String.valueOf(pc.eigenValue));
+				ToolSerializer.endNode(writer);
+				
+				float[] vectorFloat = new float[pc.eigenVector.length];
+				for (int i = 0, size = pc.eigenVector.length; i < size; i++)  {
+					vectorFloat[i] = (float) pc.eigenVector[i];
+				}
+				ToolSerializer.startNode(writer, "eigenVectors", vectorFloat.getClass());
+				context.convertAnother(vectorFloat);
+				ToolSerializer.endNode(writer);
+				
+				writer.endNode();
+			}
+
+			@Override
+			public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+				// TODO Auto-generated method stub
+				return null;
+			}
 		}
 	}
 

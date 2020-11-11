@@ -7,6 +7,7 @@ import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
 import org.voyanttools.trombone.tool.analysis.TSNEAnalysis;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -14,7 +15,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -76,9 +76,9 @@ public class TSNE extends TableAnalysisTool {
 	        
 			final List<RawCATerm> caTerms = tsne.getAnalysisTerms();
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
+			ToolSerializer.startNode(writer, "totalTerms", Integer.class);
 			writer.setValue(String.valueOf(caTerms.size()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
 			AnalysisUtils.outputTerms(caTerms, false, writer, context);
 		}
@@ -87,8 +87,7 @@ public class TSNE extends TableAnalysisTool {
 		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
 		 */
 		@Override
-		public Object unmarshal(HierarchicalStreamReader reader,
-				UnmarshallingContext context) {
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
 			return null;
 		}
 

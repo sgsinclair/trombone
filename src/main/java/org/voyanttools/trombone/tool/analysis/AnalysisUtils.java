@@ -13,10 +13,10 @@ import org.voyanttools.trombone.model.RawAnalysisTerm;
 import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.model.RawCATerm.CategoryType;
 import org.voyanttools.trombone.model.table.Table;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 public final class AnalysisUtils {
@@ -174,50 +174,51 @@ public final class AnalysisUtils {
 	}
 	
 	public static void outputTerms(List<RawCATerm> terms, boolean includeCAFields, HierarchicalStreamWriter writer, MarshallingContext context) {
-		ExtendedHierarchicalStreamWriterHelper.startNode(writer, "tokens", Map.class);
+		ToolSerializer.startNode(writer, "tokens", Map.class);
 		for (RawCATerm term : terms) {
 			writer.startNode("token");
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
+			writer.startNode("term");
 			writer.setValue(term.getTerm());
 			writer.endNode();
 			
 			if (includeCAFields) {
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "category", String.class);
+				writer.startNode("category");
 				writer.setValue(String.valueOf(((RawCATerm)term).getCategory()).toLowerCase());
 				writer.endNode();
 				
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+				ToolSerializer.startNode(writer, "docIndex", Integer.class);
 				writer.setValue(String.valueOf(((RawCATerm)term).getDocIndex()));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
 			}
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+			ToolSerializer.startNode(writer, "rawFreq", Integer.class);
 			writer.setValue(String.valueOf(term.getRawFrequency()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeFreq", Float.class);
+			ToolSerializer.startNode(writer, "relativeFreq", Float.class);
 			writer.setValue(String.valueOf(term.getRelativeFrequency()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "cluster", Integer.class);
+			ToolSerializer.startNode(writer, "cluster", Integer.class);
 			writer.setValue(String.valueOf(term.getCluster()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "clusterCenter", Boolean.class);
+			ToolSerializer.startNode(writer, "clusterCenter", Boolean.class);
 			writer.setValue(String.valueOf(term.isClusterCenter()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
 			double[] vectorDouble = term.getVector();
 			float[] vectorFloat = new float[vectorDouble.length];
 			for (int i = 0, size = vectorDouble.length; i < size; i++) 
 				vectorFloat[i] = (float) vectorDouble[i];
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "vector", vectorFloat.getClass());
+			
+			ToolSerializer.startNode(writer, "vector", vectorFloat.getClass());
             context.convertAnother(vectorFloat);
-            writer.endNode();
+            ToolSerializer.endNode(writer);
 			
         	writer.endNode();
 		}
-		writer.endNode();
+		ToolSerializer.endNode(writer);
 	}
 }

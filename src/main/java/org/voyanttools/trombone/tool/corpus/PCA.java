@@ -5,13 +5,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
 
-import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.RawCATerm;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
 import org.voyanttools.trombone.tool.analysis.PrincipalComponentsAnalysis;
 import org.voyanttools.trombone.tool.analysis.PrincipalComponentsAnalysis.PrincipleComponent;
-import org.voyanttools.trombone.tool.corpus.CorpusAnalysisTool.MatrixType;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -19,7 +18,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -76,41 +74,24 @@ public class PCA extends CorpusAnalysisTool {
 			
 			final SortedSet<PrincipleComponent> principalComponents = pca.pca.getPrincipleComponents();
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
+			ToolSerializer.startNode(writer, "totalTerms", Integer.class);
 			writer.setValue(String.valueOf(pcaTerms.size()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "principalComponents", Map.Entry.class);
+			ToolSerializer.startNode(writer, "principalComponents", Map.Entry.class);
 			for (PrincipleComponent pc : principalComponents) {
-				writer.startNode("principalComponent");
-				
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "eigenValue", Double.class);
-				writer.setValue(String.valueOf(pc.eigenValue));
-				writer.endNode();
-				
-				float[] vectorFloat = new float[pc.eigenVector.length];
-				for (int i = 0, size = pc.eigenVector.length; i < size; i++)  {
-					vectorFloat[i] = (float) pc.eigenVector[i];
-				}
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "eigenVectors", vectorFloat.getClass());
-				context.convertAnother(vectorFloat);
-				writer.endNode();
-				
-				writer.endNode();
+				context.convertAnother(pc);
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
 			AnalysisUtils.outputTerms(pcaTerms, false, writer, context);
-	        
-
 		}
 
 		/* (non-Javadoc)
 		 * @see com.thoughtworks.xstream.converters.Converter#unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader, com.thoughtworks.xstream.converters.UnmarshallingContext)
 		 */
 		@Override
-		public Object unmarshal(HierarchicalStreamReader reader,
-				UnmarshallingContext context) {
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
 			return null;
 		}
 	}
