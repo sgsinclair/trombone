@@ -30,6 +30,7 @@ import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.progress.Progress;
 import org.voyanttools.trombone.tool.progress.Progressable;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.GeonamesIterator;
 import org.voyanttools.trombone.util.Stripper;
@@ -39,7 +40,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -318,7 +318,7 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 
 		@Override
 		public boolean canConvert(Class type) {
-			return type.isAssignableFrom(Dreamscape.class);
+			return Dreamscape.class.isAssignableFrom(type);
 		}
 
 		@Override
@@ -327,165 +327,217 @@ public class Dreamscape extends AbstractCorpusTool implements Progressable {
 			Dreamscape dreamscape = (Dreamscape) source;
 			
 			if (dreamscape.progress!=null) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "progress", String.class);
+		        writer.startNode("progress");
 				context.convertAnother(dreamscape.progress);
 				writer.endNode();
 			}
 			
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "locations", String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        writer.startNode("locations");
+	        
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 	        writer.setValue(String.valueOf(dreamscape.locations.size()));
-	        writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "locations", String.class);
+	        ToolSerializer.endNode(writer);
+	        
+	        writer.startNode("locations");
 			for (CorpusLocation location : dreamscape.locations) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, location.getId(), String.class);
+				writer.startNode(location.getId());
+		        
 		        writer.startNode("id");
 		        writer.setValue(location.getId());
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+		        
+		        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
 		        writer.setValue(String.valueOf(location.getRawFreq()));
-		        writer.endNode();
+		        ToolSerializer.endNode(writer);
+		        
 		        writer.startNode("label");
 		        writer.setValue(location.getLocation().getName());
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "forms", Map.class);
+		        
+		        ToolSerializer.startNode(writer, "forms", Map.class);
 		        context.convertAnother(location.getForms());
-		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lat", Float.class);
+		        ToolSerializer.endNode(writer);
+		        
+		        ToolSerializer.startNode(writer, "lat", Float.class);
 		        writer.setValue(String.valueOf(location.getLocation().getLat()));
-		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lng", Float.class);
+		        ToolSerializer.endNode(writer);
+		        
+		        ToolSerializer.startNode(writer, "lng", Float.class);
 		        writer.setValue(String.valueOf(location.getLocation().getLng()));
-		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "population", Float.class);
+		        ToolSerializer.endNode(writer);
+		        
+		        ToolSerializer.startNode(writer, "population", Float.class);
 		        writer.setValue(String.valueOf(location.getLocation().getPopulation()));
-		        writer.endNode();
+		        ToolSerializer.endNode(writer);
+		        
 		        writer.endNode();
 			}
 			writer.endNode();
+			
 			writer.endNode();
 
 			
 
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "occurrences", String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        writer.startNode("occurrences");
+	        
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 	        writer.setValue(String.valueOf(dreamscape.occurrences.size()));
-	        writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "occurrences", Map.class);
+	        ToolSerializer.endNode(writer);
+	        
+	        ToolSerializer.startNode(writer, "occurrences", Map.class);
 			for (DocumentKwicLocationToken token : dreamscape.occurrences) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "occurrence", String.class);
+		        writer.startNode("occurrence");
+		        
 		        writer.startNode("term");
 		        writer.setValue(token.getTerm());
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+		        
+		        ToolSerializer.startNode(writer, "docIndex", Integer.class);
 		        writer.setValue(String.valueOf(token.getDocIndex()));			        
-		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
+		        ToolSerializer.endNode(writer);
+		        
+		        ToolSerializer.startNode(writer, "position", Integer.class);
 		        writer.setValue(String.valueOf(token.getPosition()));	       
-		        writer.endNode();
+		        ToolSerializer.endNode(writer);
+		        
 		        writer.startNode("location");
 		        writer.setValue(token.getLocation().getId());
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidence", Integer.class);
+		        
+		        ToolSerializer.startNode(writer, "confidence", Integer.class);
 		        writer.setValue(String.valueOf(token.getConfidence()));	       
-		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidences", String.class);
+		        ToolSerializer.endNode(writer);
+		        
+		        writer.startNode("confidences");
 		        for (Confidence confidence : token.getConfidences()) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, confidence.name(), String.class);
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "value", Float.class);
+		        	writer.startNode(confidence.name());
+			        
+			        ToolSerializer.startNode(writer, "value", Float.class);
 			        writer.setValue(String.valueOf(confidence.getValue()));	       
-			        writer.endNode();
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "weight", Float.class);
+			        ToolSerializer.endNode(writer);
+			        
+			        ToolSerializer.startNode(writer, "weight", Float.class);
 			        writer.setValue(String.valueOf(confidence.getWeight()));	       
-			        writer.endNode();				        
-		        		writer.endNode();
+			        ToolSerializer.endNode(writer);
+			        
+		        	writer.endNode();
 		        }
 		        writer.endNode();
+		        
 		        writer.startNode("left");
 		        writer.setValue(token.getLeft());
 		        writer.endNode();
+		        
 		        writer.startNode("right");
 		        writer.setValue(token.getRight());
 		        writer.endNode();
+		        
 		        writer.endNode();
 			}
+			ToolSerializer.endNode(writer);
+			
 			writer.endNode();
-			writer.endNode();
 			
 			
 			
+			writer.startNode("connectionOccurrences");
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionOccurrences", String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			ToolSerializer.startNode(writer, "total", Integer.class);
 	        writer.setValue(String.valueOf(dreamscape.total));
-	        writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionOccurrences", Map.class);
+	        ToolSerializer.endNode(writer);
+	        
+	        ToolSerializer.startNode(writer, "connectionOccurrences", Map.class);
 			for (DocumentKwicLocationToken[] tokens : dreamscape.connectionOccurrences) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connectionOccurrence", String.class);
+		        writer.startNode("connectionOccurrence");
+		        
 		        int i = 0;
 		        for (DocumentKwicLocationToken token : tokens) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, i++==0 ? "source" : "target", String.class);
+			        writer.startNode(i++==0 ? "source" : "target");
+			        
 			        writer.startNode("term");
 			        writer.setValue(token.getTerm());
 			        writer.endNode();
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
+			        
+			        ToolSerializer.startNode(writer, "docIndex", Integer.class);
 			        writer.setValue(String.valueOf(token.getDocIndex()));			        
-			        writer.endNode();
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "position", Integer.class);
+			        ToolSerializer.endNode(writer);
+			        
+			        ToolSerializer.startNode(writer, "position", Integer.class);
 			        writer.setValue(String.valueOf(token.getPosition()));	       
-			        writer.endNode();
+			        ToolSerializer.endNode(writer);
+			        
 			        writer.startNode("location");
 			        writer.setValue(token.getLocation().getId());
 			        writer.endNode();
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidence", Integer.class);
+			        
+			        ToolSerializer.startNode(writer, "confidence", Integer.class);
 			        writer.setValue(String.valueOf(token.getConfidence()));	       
-			        writer.endNode();
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "confidences", String.class);
+			        ToolSerializer.endNode(writer);
+			        
+			        writer.startNode("confidences");
 			        for (Confidence confidence : token.getConfidences()) {
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, confidence.name(), String.class);
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "value", Float.class);
+			        	writer.startNode(confidence.name());
+				        
+				        ToolSerializer.startNode(writer, "value", Float.class);
 				        writer.setValue(String.valueOf(confidence.getValue()));	       
-				        writer.endNode();
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "weight", Float.class);
+				        ToolSerializer.endNode(writer);
+				        
+				        ToolSerializer.startNode(writer, "weight", Float.class);
 				        writer.setValue(String.valueOf(confidence.getWeight()));	       
-				        writer.endNode();				        
-			        		writer.endNode();
+				        ToolSerializer.endNode(writer);
+				        
+			        	writer.endNode();
 			        }
 			        writer.endNode();
+			        
 			        writer.startNode("left");
 			        writer.setValue(token.getLeft());
 			        writer.endNode();
+			        
 			        writer.startNode("right");
 			        writer.setValue(token.getRight());
 			        writer.endNode();
+			        
 			        writer.endNode();
 		        }
+		        
 				writer.endNode();
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
+			
 			writer.endNode();
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connections", String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			
+			
+	        writer.startNode("connections");
+	        
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 	        writer.setValue(String.valueOf(dreamscape.connections.size()));
-	        writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connections", Map.class);
+	        ToolSerializer.endNode(writer);
+	        
+	        ToolSerializer.startNode(writer, "connections", Map.class);
 			for (CorpusLocationConnection connection : dreamscape.connections) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "connection", String.class);
+		        writer.startNode("connection");
+		        
 				Location[] locations = connection.getLocations();
+				
 				writer.startNode("source");
 		        writer.setValue(locations[0].getId());
 		        writer.endNode();
+		        
 				writer.startNode("target");
 		        writer.setValue(locations[1].getId());
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+		        
+		        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
 		        writer.setValue(String.valueOf(connection.getRawFreq()));
-		        writer.endNode();
+		        ToolSerializer.endNode(writer);
+		        
 		        writer.endNode();
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
+			
 			writer.endNode();
 
 

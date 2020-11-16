@@ -5,17 +5,27 @@ package org.voyanttools.trombone.model;
 
 import java.text.Normalizer;
 import java.util.Comparator;
+import java.util.List;
 
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
  *
  */
+
 @XStreamAlias("ngram")
+@XStreamConverter(CorpusNgram.CorpusNgramConverter.class)
 public class CorpusNgram {
 
 	public enum Sort {
@@ -179,4 +189,48 @@ public class CorpusNgram {
 		return distributions;
 	}
 
+	public static class CorpusNgramConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return CorpusNgram.class.isAssignableFrom(type);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+			CorpusNgram corpusNgram = (CorpusNgram) source;
+			
+			boolean withDistributions = Boolean.TRUE.equals(context.get("withDistributions"));
+			
+			writer.startNode("ngram");
+	        
+	        writer.startNode("term");
+			writer.setValue(corpusNgram.getTerm());
+			writer.endNode();
+
+	        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
+			writer.setValue(String.valueOf(corpusNgram.getRawFreq()));
+			ToolSerializer.endNode(writer);
+
+			ToolSerializer.startNode(writer, "length", Integer.class);
+			writer.setValue(String.valueOf(corpusNgram.getLength()));
+			ToolSerializer.endNode(writer);
+
+        	if (withDistributions) {
+        		ToolSerializer.startNode(writer, "distributions", List.class);
+		        context.convertAnother(corpusNgram.getDistributions());
+		        ToolSerializer.endNode(writer);
+        	}
+        	
+        	writer.endNode();
+			
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
 }

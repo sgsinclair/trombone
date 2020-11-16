@@ -16,6 +16,7 @@ import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
@@ -25,7 +26,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -272,29 +272,31 @@ public class SemanticGraph extends AbstractCorpusTool {
 //		        writer.endNode();
 //			}
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "edges", List.class);
+	        ToolSerializer.startNode(writer, "edges", List.class);
 			for (Map.Entry<String, AtomicInteger> entry : edgeFreqs.entrySet()) {
 				String[] parts = entry.getKey().split(" - ");
 
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "edge", String.class);
+				writer.startNode("edge");
 				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "source", String.class);
+				writer.startNode("source");
 		        writer.setValue(parts[0]);
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "target", String.class);
+		        
+		        writer.startNode("target");
 		        writer.setValue(parts[1]);
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
+		        
+		        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
 		        writer.setValue(String.valueOf(entry.getValue().get()));
-		        writer.endNode();
+		        ToolSerializer.endNode(writer);
+		        
 		        writer.endNode();
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		@Override
-		public Object unmarshal(HierarchicalStreamReader arg0,
-				UnmarshallingContext arg1) {
+		public Object unmarshal(HierarchicalStreamReader arg0, UnmarshallingContext arg1) {
 			return null;
 		}
 		

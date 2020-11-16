@@ -29,12 +29,12 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -187,55 +187,54 @@ public class CorpusMetadata implements Serializable {
 				MarshallingContext context) {
 			final CorpusMetadata corpusMetadata = ((CorpusMetadata) source);
 			
-//			writer.startNode("id");
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "id", String.class);
+			writer.startNode("id");
 			writer.setValue(corpusMetadata.getId());
 			writer.endNode();
 			
 			String alias = corpusMetadata.getAlias();
 			if (alias!=null && alias.isEmpty()==false) {
-				ExtendedHierarchicalStreamWriterHelper.startNode(writer, "alias", String.class);
+				writer.startNode("alias");
 				writer.setValue(alias);
 				writer.endNode();
 			}
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "title", String.class);
+			writer.startNode("title");
 			writer.setValue(corpusMetadata.getTitle());
 			writer.endNode();
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "subTitle", String.class);
+			writer.startNode("subTitle");
 			writer.setValue(corpusMetadata.getSubTitle());
 			writer.endNode();
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documentsCount", Integer.class);
+			ToolSerializer.startNode(writer, "documentsCount", Integer.class);
 			writer.setValue(String.valueOf(corpusMetadata.getDocumentIds().size()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "createdTime", Integer.class);
+			ToolSerializer.startNode(writer, "createdTime", Integer.class);
 			writer.setValue(String.valueOf(String.valueOf(corpusMetadata.getCreatedTime())));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "createdDate", String.class);
+			writer.startNode("createdDate");
 			Calendar calendar = Calendar.getInstance();
 			calendar.setTimeInMillis(corpusMetadata.getCreatedTime());
 			writer.setValue(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(calendar.getTime()));
 			writer.endNode();
 
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lexicalTokensCount", Integer.class);
+			ToolSerializer.startNode(writer, "lexicalTokensCount", Integer.class);
 			writer.setValue(String.valueOf(corpusMetadata.getTokensCount(TokenType.lexical)));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lexicalTypesCount", Integer.class);
+			ToolSerializer.startNode(writer, "lexicalTypesCount", Integer.class);
 			writer.setValue(String.valueOf(corpusMetadata.getTypesCount(TokenType.lexical)));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "noPasswordAccess", String.class);
+			writer.startNode("noPasswordAccess");
 			writer.setValue(corpusMetadata.getNoPasswordAccess().name());
 			writer.endNode();
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "languageCodes", List.class);
+			ToolSerializer.startNode(writer, "languageCodes", List.class);
 	        context.convertAnother(corpusMetadata.getLanguageCodes());
-	        writer.endNode();
+	        ToolSerializer.endNode(writer);
 		}
 
 		@Override

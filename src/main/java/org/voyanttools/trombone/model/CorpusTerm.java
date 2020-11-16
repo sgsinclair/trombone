@@ -3,13 +3,22 @@ package org.voyanttools.trombone.model;
 import java.io.Serializable;
 import java.text.Normalizer;
 import java.util.Comparator;
+import java.util.List;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
+@XStreamConverter(CorpusTerm.CorpusTermConverter.class)
 public class CorpusTerm implements Serializable {
 
 	public enum Sort {
@@ -363,6 +372,79 @@ public class CorpusTerm implements Serializable {
 	@Override
 	public String toString() {
 		return "{"+term+": "+rawFreq+" ("+getRelativeFreq()+")";
+	}
+	
+	public static class CorpusTermConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return CorpusTerm.class.isAssignableFrom(type);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+			CorpusTerm corpusTerm = (CorpusTerm) source;
+			
+			boolean withRawDistributions = Boolean.TRUE.equals(context.get("withRawDistributions"));
+			boolean withRelativeDistributions = Boolean.TRUE.equals(context.get("withRelativeDistributions"));
+			boolean inDocumentsCountOnly = Boolean.TRUE.equals(context.get("inDocumentsCountOnly"));
+	        
+			writer.startNode("term");
+			
+	        writer.startNode("term");
+			writer.setValue(corpusTerm.getTerm());
+			writer.endNode();
+			
+	        ToolSerializer.startNode(writer, "inDocumentsCount", Integer.class);
+			writer.setValue(String.valueOf(corpusTerm.getInDocumentsCount()));
+			ToolSerializer.endNode(writer);
+			
+			if (!inDocumentsCountOnly) {
+				
+		        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
+				writer.setValue(String.valueOf(corpusTerm.getRawFrequency()));
+				ToolSerializer.endNode(writer);
+
+		        ToolSerializer.startNode(writer, "relativeFreq", Float.class);
+				writer.setValue(String.valueOf((float) corpusTerm.getRelativeFrequency()));	
+				ToolSerializer.endNode(writer);
+
+		        ToolSerializer.startNode(writer, "comparisonRelativeFreqDifference", Float.class);
+		        float ccrfdval = corpusTerm.getComparisonCorpusRelativeFrequencyDifference();
+				writer.setValue(Float.isNaN(ccrfdval) ? "0" :  String.valueOf(ccrfdval));
+				ToolSerializer.endNode(writer);
+				
+				
+				if (withRawDistributions || withRelativeDistributions) {
+					
+			        ToolSerializer.startNode(writer, "relativePeakedness", Float.class);
+					writer.setValue(String.valueOf(corpusTerm.getPeakedness()));
+					ToolSerializer.endNode(writer);
+					
+			        ToolSerializer.startNode(writer, "relativeSkewness", Float.class);
+					writer.setValue(String.valueOf(corpusTerm.getSkewness()));
+					ToolSerializer.endNode(writer);
+					
+					ToolSerializer.startNode(writer, "distributions", List.class);
+					if (withRawDistributions) {
+				        context.convertAnother(corpusTerm.getRawDistributions());
+					} else {
+				        context.convertAnother(corpusTerm.getRelativeDistributions());
+					}
+					ToolSerializer.endNode(writer);
+				}
+
+			}
+			
+			writer.endNode();
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
 	}
 
 }

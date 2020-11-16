@@ -43,6 +43,7 @@ import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.DocumentNgram;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
 
@@ -52,7 +53,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -173,7 +173,7 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 			List<DocumentNgram> ngrams = new ArrayList<DocumentNgram>();
 			for (Map.Entry<String, List<int[]>> realTermMap : realStringsMap.entrySet()) {
 				List<int[]> values = realTermMap.getValue();
-				DocumentNgram ngram = new DocumentNgram(docIndexInCorpus, realTermMap.getKey(), values, values.get(0)[1]+1-values.get(0)[0]);
+				//DocumentNgram ngram = new DocumentNgram(docIndexInCorpus, realTermMap.getKey(), values, values.get(0)[1]+1-values.get(0)[0]);
 				ngrams.add(new DocumentNgram(docIndexInCorpus, realTermMap.getKey(), values, values.get(0)[1]+1-values.get(0)[0]));
 			}
 			
@@ -470,42 +470,20 @@ public class DocumentNgrams extends AbstractTerms implements ConsumptiveTool {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			DocumentNgrams documentNgrams = (DocumentNgrams) source;
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			// TODO total is never updated
+			ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(documentNgrams.total));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
 			FlexibleParameters parameters = documentNgrams.getParameters();
 			boolean withPositions = parameters.getParameterBooleanValue("withPositions");
+			context.put("withPositions", withPositions);
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "ngrams", Map.class);
+			ToolSerializer.startNode(writer, "ngrams", Map.class);
 	        for (DocumentNgram documentNgram : documentNgrams.ngrams) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
-		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-				writer.setValue(documentNgram.getTerm());
-				writer.endNode();
-
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-				writer.setValue(String.valueOf(documentNgram.getRawFreq()));
-				writer.endNode();
-
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "length", Integer.class);
-				writer.setValue(String.valueOf(documentNgram.getLength()));
-				writer.endNode();
-
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIndex", Integer.class);
-				writer.setValue(String.valueOf(documentNgram.getCorpusDocumentIndex()));
-				writer.endNode();
-				
-	        	if (withPositions) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "positions", List.class);
-			        context.convertAnother(documentNgram.getPositions());
-			        writer.endNode();
-	        	}
-	        	
-	        	writer.endNode();
+		        context.convertAnother(documentNgram);
 	        }
-	        writer.endNode();
+	        ToolSerializer.endNode(writer);
 
 		}
 

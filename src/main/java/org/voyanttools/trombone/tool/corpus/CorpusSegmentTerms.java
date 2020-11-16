@@ -21,6 +21,7 @@ import org.voyanttools.trombone.model.CorpusTerm;
 import org.voyanttools.trombone.model.DocumentToken;
 import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -29,7 +30,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -145,48 +145,50 @@ public class CorpusSegmentTerms extends AbstractCorpusTool {
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			CorpusSegmentTerms corpusSegmentTerms = (CorpusSegmentTerms) source;
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(corpusSegmentTerms.total));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "segments", Map.class);
+			ToolSerializer.startNode(writer, "segments", Map.class);
 	        for (DocumentToken[] documentTokens : corpusSegmentTerms.segmentMarkers) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "segment", String.class); // not written in JSON
+		        writer.startNode("segment"); // not written in JSON
 		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "start-position", Integer.class);
+		        ToolSerializer.startNode(writer, "start-position", Integer.class);
 				writer.setValue(String.valueOf(documentTokens[0].getPosition()));
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "start-docIndex", Integer.class);
+				ToolSerializer.endNode(writer);
+				
+				ToolSerializer.startNode(writer, "start-docIndex", Integer.class);
 				writer.setValue(String.valueOf(documentTokens[0].getDocIndex()));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
 
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "end-position", Integer.class);
+				ToolSerializer.startNode(writer, "end-position", Integer.class);
 				writer.setValue(String.valueOf(documentTokens[1].getPosition()));
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "end-docIndex", Integer.class);
+				ToolSerializer.endNode(writer);
+				
+				ToolSerializer.startNode(writer, "end-docIndex", Integer.class);
 				writer.setValue(String.valueOf(documentTokens[1].getDocIndex()));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
 
 				writer.endNode();
 	        }
-	        writer.endNode();
+	        ToolSerializer.endNode(writer);
 
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "terms", Map.class);
+	        ToolSerializer.startNode(writer, "terms", Map.class);
 			for (Map.Entry<String, double[]> corpusSegmentTerm : corpusSegmentTerms.sortedSegmentTerms) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class); // not written in JSON
+		        writer.startNode("term"); // not written in JSON
 		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
+		        writer.startNode("term");
 				writer.setValue(corpusSegmentTerm.getKey());
 				writer.endNode();
 				
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreqs", List.class);
+				ToolSerializer.startNode(writer, "rawFreqs", List.class);
 		        context.convertAnother(corpusSegmentTerm.getValue());
-		        writer.endNode();
+		        ToolSerializer.endNode(writer);
 
 
 				writer.endNode();
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		/* (non-Javadoc)

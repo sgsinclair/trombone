@@ -32,6 +32,7 @@ import org.voyanttools.trombone.model.CorpusAccessException;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.build.RealCorpusCreator;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -39,7 +40,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -61,8 +61,7 @@ public class DocumentsFinder extends AbstractTerms {
 	 * @param storage
 	 * @param parameters
 	 */
-	public DocumentsFinder(Storage storage,
-			FlexibleParameters parameters) {
+	public DocumentsFinder(Storage storage, FlexibleParameters parameters) {
 		super(storage, parameters);
 		includeDocIds = parameters.getParameterBooleanValue("includeDocIds");
 		withDistributions = parameters.getParameterBooleanValue("withDistributions");
@@ -211,45 +210,48 @@ public class DocumentsFinder extends AbstractTerms {
 
 		@Override
 		public boolean canConvert(Class type) {
-			return type.isAssignableFrom(DocumentsFinder.class);
+			return DocumentsFinder.class.isAssignableFrom(type);
 		}
 
 		@Override
-		public void marshal(Object source, HierarchicalStreamWriter writer,
-				MarshallingContext context) {
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
 			DocumentsFinder finder = (DocumentsFinder) source;
-//	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "corpus", String.class);
-//			writer.setValue(finder.corpusId);
-//			writer.endNode();
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "documentsCount", Integer.class);
+			
+			ToolSerializer.startNode(writer, "documentsCount", Integer.class);
 			writer.setValue(String.valueOf(finder.total));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "corpus", String.class);
+			writer.startNode("corpus");
 			writer.setValue(finder.corpusId);
 			writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "queries", Map.class);
+			
+			ToolSerializer.startNode(writer, "queries", Map.class);
 			for (Map.Entry<String, String[]> count : finder.queryDocumentidsMap.entrySet()) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "queries", String.class); // not written in JSON
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "query", String.class);
+		        writer.startNode("queries"); // not written in JSON
+		        
+		        writer.startNode("query");
 				writer.setValue(count.getKey());
 				writer.endNode();
-				writer.startNode("count");
+				
+				ToolSerializer.startNode(writer, "count", Integer.class);
 				writer.setValue(String.valueOf(count.getValue().length));
-				writer.endNode();
+				ToolSerializer.endNode(writer);
+				
 				if (finder.includeDocIds) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "docIds", Map.class);
+					ToolSerializer.startNode(writer, "docIds", Map.class);
 			        context.convertAnother(count.getValue());
-			        writer.endNode();
+			        ToolSerializer.endNode(writer);
 				}
+				
 				if (finder.withDistributions) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", Map.class);
+					ToolSerializer.startNode(writer, "distributions", Map.class);
 			        context.convertAnother(finder.distributions);
-			        writer.endNode();
+			        ToolSerializer.endNode(writer);
 				}
+				
 				writer.endNode();
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		@Override

@@ -18,6 +18,7 @@ import org.voyanttools.trombone.model.CorpusTermsCorrelation;
 import org.voyanttools.trombone.model.Keywords;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.util.Message;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.tool.util.Message.Type;
 import org.voyanttools.trombone.util.FlexibleParameters;
 import org.voyanttools.trombone.util.FlexibleQueue;
@@ -28,7 +29,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -127,6 +127,10 @@ public class CorpusTermCorrelations extends AbstractTerms {
 		this.message(Type.ERROR, "corpusCorrelationsRequireMultipleDocuments", "Corpus Term Correlations is a tool that requires multiple documents");
 	}
 
+	public List<CorpusTermsCorrelation> getCorrelations() {
+		return this.correlations;
+	}
+	
 	public static class CorpusTermCorrelationsConverter implements Converter {
 
 		/* (non-Javadoc)
@@ -146,61 +150,23 @@ public class CorpusTermCorrelations extends AbstractTerms {
 			
 			corpusTermCorrelations.writeMessages(writer, context);
 
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 			writer.setValue(String.valueOf(corpusTermCorrelations.getTotal()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
 			FlexibleParameters parameters = corpusTermCorrelations.getParameters();
 			boolean termsOnly = parameters.getParameterBooleanValue("termsOnly");
 			boolean withDistributions = parameters.getParameterBooleanValue("withDistributions");
 //			termsOnly = true;
 			
+			context.put("termsOnly", termsOnly);
+			context.put("withDistributions", withDistributions);
 			
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlations", Map.class);
+			ToolSerializer.startNode(writer, "correlations", Map.class);
 			for (CorpusTermsCorrelation corpusTermCorrelation : corpusTermCorrelations.correlations) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", String.class); // not written in JSON
-		        
-		        int i = 0;
-		        for (CorpusTerm corpusTerm : corpusTermCorrelation.getCorpusTerms()) {
-			        ExtendedHierarchicalStreamWriterHelper.startNode(writer, i++==0 ? "source" : "target", String.class);
-			        if (termsOnly) {
-						writer.setValue(corpusTerm.getTerm());
-			        } else {
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "term", String.class);
-						writer.setValue(corpusTerm.getTerm());
-						writer.endNode();
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "inDocumentsCount", Integer.class);
-						writer.setValue(String.valueOf(corpusTerm.getInDocumentsCount()));
-						writer.endNode();
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "rawFreq", Integer.class);
-						writer.setValue(String.valueOf(corpusTerm.getRawFreq()));
-						writer.endNode();
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativePeakedness", Float.class);
-						writer.setValue(String.valueOf(corpusTerm.getPeakedness()));
-						writer.endNode();
-				        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "relativeSkewness", Float.class);
-						writer.setValue(String.valueOf(corpusTerm.getSkewness()));
-						writer.endNode();
-						
-						if (withDistributions) {
-					        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "distributions", List.class);
-					        context.convertAnother(corpusTerm.getRelativeDistributions());
-					        writer.endNode();
-						}
-			        }
-					writer.endNode();
-		        }
-		        
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "correlation", Float.class);
-				writer.setValue(String.valueOf(corpusTermCorrelation.getCorrelation()));
-				writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "significance", Float.class);
-				writer.setValue(String.valueOf(corpusTermCorrelation.getSignificance()));
-				writer.endNode();
-				
-				writer.endNode();
+		        context.convertAnother(corpusTermCorrelation);
 			}
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 		}
 
 		/* (non-Javadoc)

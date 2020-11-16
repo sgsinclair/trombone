@@ -24,16 +24,25 @@ package org.voyanttools.trombone.model;
 import java.text.Normalizer;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 /**
  * @author sgs
  *
  */
+@XStreamConverter(DocumentTerm.DocumentTermConverter.class)
 public class DocumentTerm {
 
 	public enum Sort {
@@ -400,5 +409,93 @@ public class DocumentTerm {
 			}
 		}
 		return tfidf;
+	}
+	
+	public static class DocumentTermConverter implements Converter {
+
+		@Override
+		public boolean canConvert(Class type) {
+			return DocumentTerm.class.isAssignableFrom(type);
+		}
+
+		@Override
+		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
+			DocumentTerm documentTerm = (DocumentTerm) source;
+			
+			boolean withRawDistributions = Boolean.TRUE.equals(context.get("withRawDistributions"));
+			boolean withRelativeDistributions = Boolean.TRUE.equals(context.get("withRelativeDistributions"));
+			boolean withOffsets = Boolean.TRUE.equals(context.get("withOffsets"));
+			boolean withPositions = Boolean.TRUE.equals(context.get("withPositions"));
+			int bins = Integer.parseInt(String.valueOf(context.get("bins")));
+			
+			writer.startNode("term"); // not written in JSON
+	        
+	        writer.startNode("term");
+			writer.setValue(documentTerm.getTerm());
+			writer.endNode();
+			
+	        ToolSerializer.startNode(writer, "rawFreq", Integer.class);
+			writer.setValue(String.valueOf(documentTerm.getRawFrequency()));
+			ToolSerializer.endNode(writer);
+
+			ToolSerializer.startNode(writer, "relativeFreq", Float.class);
+			writer.setValue(String.valueOf(documentTerm.getRelativeFrequency()));
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "zscore", Float.class);
+			writer.setValue(String.valueOf(documentTerm.getZscore()));
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "zscoreRatio", Float.class);
+			writer.setValue(String.valueOf(documentTerm.getZscoreRatio()));
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "tfidf", Float.class);
+			writer.setValue(String.valueOf(documentTerm.getTfIdf()));
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "totalTermsCount", Integer.class);
+			writer.setValue(String.valueOf(documentTerm.getTotalTermsCount()));
+			ToolSerializer.endNode(writer);
+			
+			ToolSerializer.startNode(writer, "docIndex", Integer.class);
+			writer.setValue(String.valueOf(documentTerm.getDocIndex()));
+			ToolSerializer.endNode(writer);
+			
+	        writer.startNode("docId");
+			writer.setValue(documentTerm.getDocId());
+			writer.endNode();
+
+			if (withRawDistributions) {
+				ToolSerializer.startNode(writer, "distributions", List.class);
+		        context.convertAnother(documentTerm.getRawDistributions(bins));
+		        ToolSerializer.endNode(writer);
+			}
+			if (withRelativeDistributions) {
+				ToolSerializer.startNode(writer, "distributions", List.class);
+		        context.convertAnother(documentTerm.getRelativeDistributions(bins));
+		        ToolSerializer.endNode(writer);
+			}
+			
+			if (withOffsets) {
+				ToolSerializer.startNode(writer, "offsets", List.class);
+		        context.convertAnother(documentTerm.getOffsets());
+		        ToolSerializer.endNode(writer);
+			}
+			
+			if (withPositions) {
+				ToolSerializer.startNode(writer, "positions", List.class);
+		        context.convertAnother(documentTerm.getPositions());
+		        ToolSerializer.endNode(writer);
+			}
+			
+			writer.endNode();
+		}
+
+		@Override
+		public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
 }

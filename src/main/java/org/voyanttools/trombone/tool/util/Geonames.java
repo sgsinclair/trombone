@@ -20,7 +20,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -73,33 +72,42 @@ public class Geonames extends AbstractTool {
 
 		@Override
 		public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-			
 			Geonames geonames = (Geonames) source;
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "locations", String.class);
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "total", Integer.class);
+			
+	        writer.startNode("locations");
+	        
+	        ToolSerializer.startNode(writer, "total", Integer.class);
 	        writer.setValue(String.valueOf(geonames.locations.size()));
-	        writer.endNode();
-	        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "locations", String.class);
+	        ToolSerializer.endNode(writer);
+	        
+	        writer.startNode("locations");
 			for (Location location : geonames.locations) {
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, location.getId(), String.class);
+		        writer.startNode(location.getId());
+		        
 		        writer.startNode("id");
 		        writer.setValue(location.getId());
 		        writer.endNode();
+		        
 		        writer.startNode("label");
 		        writer.setValue(location.getFullName());
 		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lat", Float.class);
+		        
+		        ToolSerializer.startNode(writer, "lat", Float.class);
 		        writer.setValue(String.valueOf(location.getLat()));
-		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "lng", Float.class);
+		        ToolSerializer.endNode(writer);
+		        
+		        ToolSerializer.startNode(writer, "lng", Float.class);
 		        writer.setValue(String.valueOf(location.getLng()));
-		        writer.endNode();
-		        ExtendedHierarchicalStreamWriterHelper.startNode(writer, "population", Float.class);
+		        ToolSerializer.endNode(writer);
+		        
+		        ToolSerializer.startNode(writer, "population", Float.class);
 		        writer.setValue(String.valueOf(location.getPopulation()));
-		        writer.endNode();
+		        ToolSerializer.endNode(writer);
+		        
 		        writer.endNode();
 			}
 			writer.endNode();
+			
 			writer.endNode();	
 		}
 

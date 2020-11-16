@@ -2,9 +2,7 @@ package org.voyanttools.trombone.tool.corpus;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
-import org.voyanttools.trombone.lucene.CorpusMapper;
 import org.voyanttools.trombone.model.Corpus;
 import org.voyanttools.trombone.model.IndexedDocument;
 import org.voyanttools.trombone.model.Keywords;
@@ -14,6 +12,7 @@ import org.voyanttools.trombone.model.TokenType;
 import org.voyanttools.trombone.storage.Storage;
 import org.voyanttools.trombone.tool.analysis.AnalysisUtils;
 import org.voyanttools.trombone.tool.analysis.CorrespondenceAnalysis;
+import org.voyanttools.trombone.tool.util.ToolSerializer;
 import org.voyanttools.trombone.util.FlexibleParameters;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -21,7 +20,6 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.ExtendedHierarchicalStreamWriterHelper;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
@@ -136,13 +134,13 @@ public class CA extends CorpusAnalysisTool {
 	        
 			final List<RawCATerm> caTerms = ca.getAnalysisTerms();
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "totalTerms", Integer.class);
+			ToolSerializer.startNode(writer, "totalTerms", Integer.class);
 			writer.setValue(String.valueOf(caTerms.size()));
-			writer.endNode();
+			ToolSerializer.endNode(writer);
 			
-			ExtendedHierarchicalStreamWriterHelper.startNode(writer, "dimensions", List.class);
+			ToolSerializer.startNode(writer, "dimensions", List.class);
 	        context.convertAnother(ca.ca.getDimensionPercentages());
-	        writer.endNode();
+	        ToolSerializer.endNode(writer);
 			
 	        AnalysisUtils.outputTerms(caTerms, true, writer, context);
 
