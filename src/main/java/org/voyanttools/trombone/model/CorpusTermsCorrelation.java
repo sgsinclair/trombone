@@ -29,11 +29,12 @@ public class CorpusTermsCorrelation {
 	private float correlation;
 	private float significance;
 	
-	public enum Sort {CORRELATIONASC, CORRELATIONDESC, CORRELATIONABS;
+	public enum Sort {CORRELATIONASC, CORRELATIONDESC, CORRELATIONABS, SIGNIFICANCEASC, SIGNIFICANCEDESC, SIGNIFICANCEABS;
 		
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "CORRELATION"; // default
+			if (sort.startsWith("SIGNIFICANCE")) {sortPrefix = "SIGNIFICANCE";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
@@ -63,8 +64,18 @@ public class CorpusTermsCorrelation {
 			return CorrelationAscending;
 		case CORRELATIONABS:
 			return CorrelationAbsolute;
+		case CORRELATIONDESC:
+			return CorrelationDescending;
+		case SIGNIFICANCEASC:
+			return SignificanceAscending;
+		case SIGNIFICANCEABS:
+			return SignificanceAbsolute;
+		case SIGNIFICANCEDESC:
+			return SignificanceDescending;
+		default:
+			return CorrelationDescending;
 		}
-		return CorrelationDescending;
+		
 	}
 	
 	private static Comparator<CorpusTermsCorrelation> TieBreaker = new Comparator<CorpusTermsCorrelation>() {
@@ -102,6 +113,33 @@ public class CorpusTermsCorrelation {
 		@Override
 		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
 			int compare = Float.compare(Math.abs(o1.getCorrelation()), Math.abs(o2.getCorrelation()));
+			if (compare==0) {return TieBreaker.compare(o1, o2);}
+			else {return compare;}
+		}
+	};
+
+	public static Comparator<CorpusTermsCorrelation> SignificanceAscending = new Comparator<CorpusTermsCorrelation>() {
+		@Override
+		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
+			int compare = Float.compare(o2.getSignificance(), o1.getSignificance());
+			if (compare==0) {return TieBreaker.compare(o1, o2);}
+			else {return compare;}
+		}
+	};
+
+	public static Comparator<CorpusTermsCorrelation> SignificanceDescending = new Comparator<CorpusTermsCorrelation>() {
+		@Override
+		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
+			int compare = Float.compare(o1.getSignificance(), o2.getSignificance());
+			if (compare==0) {return TieBreaker.compare(o1, o2);}
+			else {return compare;}
+		}
+	};
+
+	public static Comparator<CorpusTermsCorrelation> SignificanceAbsolute = new Comparator<CorpusTermsCorrelation>() {
+		@Override
+		public int compare(CorpusTermsCorrelation o1, CorpusTermsCorrelation o2) {
+			int compare = Float.compare(Math.abs(o1.getSignificance()), Math.abs(o2.getSignificance()));
 			if (compare==0) {return TieBreaker.compare(o1, o2);}
 			else {return compare;}
 		}

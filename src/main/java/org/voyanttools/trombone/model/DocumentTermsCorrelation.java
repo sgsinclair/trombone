@@ -21,10 +21,11 @@ public class DocumentTermsCorrelation {
 	private float correlation;
 	private float significance;
 	
-	public enum Sort {CORRELATIONASC, CORRELATIONDESC, CORRELATIONABS;
+	public enum Sort {CORRELATIONASC, CORRELATIONDESC, CORRELATIONABS, SIGNIFICANCEASC, SIGNIFICANCEDESC, SIGNIFICANCEABS;
 		public static Sort getForgivingly(FlexibleParameters parameters) {
 			String sort = parameters.getParameterValue("sort", "").toUpperCase();
 			String sortPrefix = "CORRELATION"; // default
+			if (sort.startsWith("SIGNIFICANCE")) {sortPrefix = "SIGNIFICANCE";}
 			String dir = parameters.getParameterValue("dir", "").toUpperCase();
 			String dirSuffix = "DESC";
 			if (dir.endsWith("ASC")) {dirSuffix="ASC";}
@@ -57,8 +58,17 @@ public class DocumentTermsCorrelation {
 			return CorrelationAscending;
 		case CORRELATIONABS:
 			return CorrelationAbsolute;
+		case CORRELATIONDESC:
+			return CorrelationDescending;
+		case SIGNIFICANCEASC:
+			return SignificanceAscending;
+		case SIGNIFICANCEABS:
+			return SignificanceAbsolute;
+		case SIGNIFICANCEDESC:
+			return SignificanceDescending;
+		default:
+			return CorrelationDescending;
 		}
-		return CorrelationDescending;
 	}
 	private static Comparator<DocumentTermsCorrelation> TieBreaker = new Comparator<DocumentTermsCorrelation>() {
 		@Override
@@ -93,6 +103,33 @@ public class DocumentTermsCorrelation {
 		@Override
 		public int compare(DocumentTermsCorrelation o1, DocumentTermsCorrelation o2) {
 			int compare = Float.compare(Math.abs(o2.getCorrelation()), Math.abs(o1.getCorrelation()));
+			if (compare==0) {return TieBreaker.compare(o1, o2);}
+			else {return compare;}
+		}
+	};
+	
+	public static Comparator<DocumentTermsCorrelation> SignificanceAscending = new Comparator<DocumentTermsCorrelation>() {
+		@Override
+		public int compare(DocumentTermsCorrelation o1, DocumentTermsCorrelation o2) {
+			int compare = Float.compare(o1.getSignificance(), o2.getSignificance());
+			if (compare==0) {return TieBreaker.compare(o1, o2);}
+			else {return compare;}
+		}
+	};
+
+	public static Comparator<DocumentTermsCorrelation> SignificanceDescending = new Comparator<DocumentTermsCorrelation>() {
+		@Override
+		public int compare(DocumentTermsCorrelation o1, DocumentTermsCorrelation o2) {
+			int compare = Float.compare(o2.getSignificance(), o1.getSignificance());
+			if (compare==0) {return TieBreaker.compare(o1, o2);}
+			else {return compare;}
+		}
+	};
+
+	public static Comparator<DocumentTermsCorrelation> SignificanceAbsolute = new Comparator<DocumentTermsCorrelation>() {
+		@Override
+		public int compare(DocumentTermsCorrelation o1, DocumentTermsCorrelation o2) {
+			int compare = Float.compare(Math.abs(o2.getSignificance()), Math.abs(o1.getSignificance()));
 			if (compare==0) {return TieBreaker.compare(o1, o2);}
 			else {return compare;}
 		}
