@@ -5,6 +5,7 @@ package org.voyanttools.trombone.model.table;
 
 import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
 import org.apache.commons.math3.stat.correlation.SpearmansCorrelation;
+import org.apache.commons.math3.stat.correlation.KendallsCorrelation;
 
 /**
  * @author sgs
@@ -15,9 +16,9 @@ public class Correlations {
 	public enum Implementation {
 		pearson, spearman, kendall;
 		public static Implementation getForgivingly(String value) {
-			String v = value!=null ? value.toLowerCase() : "";
+			String v = value != null ? value.toLowerCase() : "";
 			for (Implementation i : Implementation.values()) {
-				if (value.equals(i.name())) return i;
+				if (v.equals(i.name())) return i;
 			}
 			return getDefault();
 		}
@@ -53,11 +54,9 @@ public class Correlations {
 		case spearman:
 			SpearmansCorrelation spearmansCorrelation = new SpearmansCorrelation();
 			return spearmansCorrelation.correlation(xArray, yArray);
-		// FIXME: when Math 3.3 is available, add Kendall's
-	//	case kendall:
-	//		KendallsCorrelation kendallsCorrelation = new KendallsCorrelation();
-	//		correlation = (float) kendallsCorrelation.correlation(x, y);
-	//		break;
+		case kendall:
+			KendallsCorrelation kendallsCorrelation = new KendallsCorrelation();
+			return kendallsCorrelation.correlation(xArray, yArray);
 		default:
 			PearsonsCorrelation pearsonCorrelation = new PearsonsCorrelation();
 			return pearsonCorrelation.correlation(xArray, yArray);
