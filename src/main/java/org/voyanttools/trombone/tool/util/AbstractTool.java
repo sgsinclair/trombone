@@ -165,7 +165,7 @@ public abstract class AbstractTool implements RunnableTool {
 				}
 			}
 			else {
-				keywords.load(storage, parameters.getParameterValues("stopList"));
+				keywords.load(storage, parameters.getParameterValues("stopList"), true);
 			}
 		}
 		return keywords;

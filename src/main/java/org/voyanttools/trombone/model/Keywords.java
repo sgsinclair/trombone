@@ -83,6 +83,10 @@ public class Keywords {
 	}
 
 	public void load(Storage storage, String[] references) throws IOException {
+		load(storage, references, false);
+	}
+	
+	public void load(Storage storage, String[] references, boolean ensureLowercase) throws IOException {
 		for (String ref : references) {
 			ref = ref.trim();
 			if (ref.contains(",")) { // comma-separated references
@@ -160,7 +164,11 @@ public class Keywords {
 				}
 			}
 			else { // individual term, so let's add it
-				keywords.add(ref);
+				if (ensureLowercase) {
+					keywords.add(ref.toLowerCase());
+				} else {
+					keywords.add(ref);
+				}
 			}
 		}
 	}
