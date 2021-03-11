@@ -68,8 +68,7 @@ public class CorpusFacets extends AbstractTerms {
 	 * @see org.voyanttools.trombone.tool.corpus.AbstractTerms#runQueries(org.voyanttools.trombone.lucene.CorpusMapper, org.voyanttools.trombone.model.Keywords, java.lang.String[])
 	 */
 	@Override
-	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords,
-			String[] queries) throws IOException {
+	protected void runQueries(CorpusMapper corpusMapper, Keywords stopwords, String[] queries) throws IOException {
 		
 		String defaultPrefix = parameters.getParameterValue("facet", "");
 		String defaultNonFacetedPrefix = defaultPrefix.replace("facet.", "");

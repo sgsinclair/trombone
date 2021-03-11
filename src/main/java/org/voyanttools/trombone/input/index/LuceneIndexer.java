@@ -167,7 +167,7 @@ public class LuceneIndexer implements Indexer {
 		// index documents (or at least add corpus to document if not already there), we need to get a new writer
 		IndexWriter indexWriter = storage.getLuceneManager().getIndexWriter(corpusId);
 		DirectoryReader indexReader = DirectoryReader.open(indexWriter);
-		IndexSearcher indexSearcher = new IndexSearcher(indexReader);		
+		IndexSearcher indexSearcher = new IndexSearcher(indexReader);
 		boolean verbose = parameters.getParameterBooleanValue("verbose");
 		try {
 			storedDocumentSourceForLucene.parallelStream().forEach(storedDocumentSource -> {

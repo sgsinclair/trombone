@@ -134,7 +134,9 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 				BytesRef term = termsEnum.next();
 				if (term!=null) {
 					String termString = term.utf8ToString();
-					if (stopwords.isKeyword(termString)) {continue;}
+					if (stopwords.isKeyword(termString)) {
+						continue;
+					}
 					PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.OFFSETS);
 					postingsEnum.nextDoc();
 					for (int i=0, len = postingsEnum.freq(); i<len; i++) {
@@ -150,7 +152,6 @@ public class DocumentTokens extends AbstractCorpusTool implements ConsumptiveToo
 				else {break;}
 			}
 			Collections.sort(termInfos);
-			List<DocumentToken> tokens = new ArrayList<DocumentToken>();
 			String document = corpus.getDocument(id).getDocumentString();
 //			String document = reader.document(luceneDoc).get(tokenType.name());
 			
