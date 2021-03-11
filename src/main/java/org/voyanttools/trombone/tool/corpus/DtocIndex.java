@@ -106,9 +106,8 @@ public class DtocIndex extends AbstractTool {
 			}
 		}
 		
-        // if there's none then default to the first document
-		String id = corpus.getDocument(0).getMetadata().getFlexibleParameters().getParameterValue("parent_parent_id");
-		return id;
+		// no index was specified, don't assume default (required for cwrc support)
+		return null;
 	}
 
 
