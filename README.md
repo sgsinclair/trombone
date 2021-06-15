@@ -1,3 +1,6 @@
+#### With the passing of Stéfan Sinclair, this repository has been archived. ####
+#### Please see [voyanttools/trombone](https://github.com/voyanttools/trombone) for future development. ####
+
 Trombone
 ========
 
